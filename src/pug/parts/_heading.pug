@@ -1,0 +1,100 @@
+//----------------------------------------------------
+//- Parts: Heading
+//----------------------------------------------------
+
+.groups
+  h3.heading.is-xl Heading
+  p.texts.is-sm
+    | 見出しを作るには、要素のクラス名を&nbsp;
+    code.code .heading
+    | &nbsp;にします。Utilityの調整モディファイアによってアレンジが可能です。
+    br
+    | HTMLタグによって大きさや装飾が変わることはありません。
+  .group.is-wrap.is-preview
+    p.heading.is-xxl 1番目に大きな見出し
+    p.heading.is-xl 2番目に大きな見出し
+    p.heading.is-lg 3番目に大きな見出し
+    p.heading.is-md 4番目に大きな見出し
+    p.heading.is-sm 5番目に大きな見出し
+    p.heading.is-xs 6番目に大きな見出し
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;p class=&quot;heading is-xxl&quot;&gt;1番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-xl&quot;&gt;2番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-lg&quot;&gt;3番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-md&quot;&gt;4番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-sm&quot;&gt;5番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-xs&quot;&gt;6番目に大きな見出し&lt;/p&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      p.heading.is-xxl 1番目に大きな見出し
+      p.heading.is-xl 2番目に大きな見出し
+      p.heading.is-lg 3番目に大きな見出し
+      p.heading.is-md 4番目に大きな見出し
+      p.heading.is-sm 5番目に大きな見出し
+      p.heading.is-xs 6番目に大きな見出し
+
+.groups
+  h4.heading.is-xl Heading - Strong
+  p.texts.is-sm
+    | 見出しを太字にするには、Utilityの&nbsp;
+    code.code .is-strong
+    | &nbsp;を付与します。
+  .group.is-wrap.is-preview
+    p.heading.is-xxl.is-strong 1番目に大きな見出し
+    p.heading.is-xl.is-strong 2番目に大きな見出し
+    p.heading.is-lg.is-strong 3番目に大きな見出し
+    p.heading.is-md.is-strong 4番目に大きな見出し
+    p.heading.is-sm.is-strong 5番目に大きな見出し
+    p.heading.is-xs.is-strong 6番目に大きな見出し
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;p class=&quot;heading is-xxl is-strong&quot;&gt;1番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-xl is-strong&quot;&gt;2番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-lg is-strong&quot;&gt;3番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-md is-strong&quot;&gt;4番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-sm is-strong&quot;&gt;5番目に大きな見出し&lt;/p&gt;
+      &lt;p class=&quot;heading is-xs is-strong&quot;&gt;6番目に大きな見出し&lt;/p&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      p.heading.is-xxl.is-strong 1番目に大きな見出し
+      p.heading.is-xl.is-strong 2番目に大きな見出し
+      p.heading.is-lg.is-strong 3番目に大きな見出し
+      p.heading.is-md.is-strong 4番目に大きな見出し
+      p.heading.is-sm.is-strong 5番目に大きな見出し
+      p.heading.is-xs.is-strong 6番目に大きな見出し
+
+.groups
+  h4.heading.is-xl Heading - Valuation
+  p.texts.is-sm
+    | 見出しにはリンク化やアイコンを含めるなどの使い方が想定されています。
+  .group.is-wrap.is-preview
+    p.heading.is-xl
+      i.fa.fa-paper-plane(aria-hidden='true')
+      span.text 見出しにアイコンを含んだバリュエーション
+    p.heading.is-xl
+      a.text.is-link.is-dotted
+        i.fa.fa-paper-plane(aria-hidden='true')
+        span.text 見出しにアイコンとリンクを含んだバリュエーション
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;p class=&quot;heading&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-paper-plane&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;見出しにアイコンを含んだバリュエーション&lt;/span&gt;
+      &lt;/p&gt;
+
+      &lt;p class=&quot;heading&quot;&gt;
+        &lt;a class=&quot;text is-link is-dotted&quot;&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-paper-plane&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;text&quot;&gt;見出しにアイコンとリンクを含んだバリュエーション&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/p&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      p.heading
+        i.fa.fa-paper-plane(aria-hidden='true')
+        span.text 見出しにアイコンを含んだバリュエーション
+      p.heading
+        a.text.is-link.is-dotted
+          i.fa.fa-paper-plane(aria-hidden='true')
+          span.text 見出しにアイコンとリンクを含んだバリュエーション

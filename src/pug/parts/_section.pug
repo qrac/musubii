@@ -1,0 +1,71 @@
+//----------------------------------------------------
+//- Parts: Section
+//----------------------------------------------------
+
+.groups
+  h3.heading.is-xl Section
+  p.texts.is-sm
+    | 画面幅100%のブロック要素として使います。
+    br
+    code.code .section
+    | &nbsp;直下に配置する&nbsp;
+    code.code .inner
+    | &nbsp;には画面幅に応じてレスポンシブな固定幅が設定されます。
+  .group.is-wrap
+    .group.is-demo-box-2.is-strong.is-primary.is-round.is-centering.is-break.is-section-anime-1
+      .grid
+        .col.is-mobile-2
+          .group.is-demo-box-1
+            | .section
+        .col.is-mobile-8
+          .group.is-demo-box-2.is-grey
+            .group.is-demo-box-1.is-height-1
+              | .inner
+        .col.is-mobile-2
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;section&quot;&gt;
+        &lt;div class=&quot;inner&quot;&gt;
+          ...
+        &lt;/div&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .section
+        .inner
+          ...
+
+.groups
+  h4.heading.is-xl Section - PC only
+  p.texts.is-sm
+    code.code .section
+    | &nbsp;に&nbsp;
+    code.code .is-pc
+    | &nbsp;を付与することにより、直下&nbsp;
+    code.code .inner
+    | &nbsp;のレスポンシブ設定を解除することもできます。
+    br
+    | 主にPC専用ページを作る際に使用します。合わせてheadのviewportも切り替えてください。
+  .group.is-wrap
+    .group.is-demo-box-2.is-strong.is-primary.is-round
+      .grid
+        .col.is-mobile-2
+          .group.is-demo-box-1
+            | .section .is-pc
+        .col.is-mobile-8
+          .group.is-demo-box-2.is-grey
+            .group.is-demo-box-1.is-height-1
+              | .inner
+        .col.is-mobile-2
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;section is-pc&quot;&gt;
+        &lt;div class=&quot;inner&quot;&gt;
+          ...
+        &lt;/div&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .section.is-pc
+        .inner
+          ...

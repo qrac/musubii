@@ -1,0 +1,24 @@
+//----------------------------------------------------
+// Module: List
+//----------------------------------------------------
+
+.list {
+  &.is-disc,
+  &.is-circle,
+  &.is-decimal {
+    line-height: 1.8;
+    margin-left: 1.5em;
+    > .item {
+      display: list-item;
+    }
+  }
+  &.is-disc > .item {
+    list-style: disc outside;
+  }
+  &.is-circle > .item {
+    list-style: circle outside;
+  }
+  &.is-decimal > .item {
+    list-style: decimal outside;
+  }
+}

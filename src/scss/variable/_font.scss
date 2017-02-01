@@ -1,0 +1,338 @@
+//----------------------------------------------------
+// Variable: Font
+//----------------------------------------------------
+
+$font-sans:
+  -apple-system, BlinkMacSystemFont,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-yakuhanjp:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJP,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-yakuhanjps:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJPs,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-yakuhanjpw:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJP, YakuHanJPs,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-jp:
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-jp-yakuhanjp:
+  YakuHanJP,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-jp-yakuhanjps:
+  YakuHanJPs,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-jp-yakuhanjpw:
+  YakuHanJP, YakuHanJPs,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-yugo:
+  -apple-system, BlinkMacSystemFont,
+  "Yu Gothic", YuGothic,
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-yugo-yakuhanjp:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJP,
+  "Yu Gothic", YuGothic,
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-yugo-yakuhanjps:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJPs,
+  "Yu Gothic", YuGothic,
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-yugo-yakuhanjpw:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJP, YakuHanJPs,
+  "Yu Gothic", YuGothic,
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-meiryo:
+  -apple-system, BlinkMacSystemFont,
+  Meiryo,
+  "Hiragino Sans",
+  YuGothic,
+  sans-serif !default;
+
+$font-sans-meiryo-yakuhanjp:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJP,
+  Meiryo,
+  "Hiragino Sans",
+  YuGothic,
+  sans-serif !default;
+
+$font-sans-meiryo-yakuhanjps:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJPs,
+  Meiryo,
+  "Hiragino Sans",
+  YuGothic,
+  sans-serif !default;
+
+$font-sans-meiryo-yakuhanjpw:
+  -apple-system, BlinkMacSystemFont,
+  YakuHanJP, YakuHanJPs,
+  Meiryo,
+  "Hiragino Sans",
+  YuGothic,
+  sans-serif !default;
+
+$font-sans-ie:
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-ie-yakuhanjp:
+  YakuHanJP,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-ie-yakuhanjps:
+  YakuHanJPs,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-ie-yakuhanjpw:
+  YakuHanJP, YakuHanJPs,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-open:
+  "Open Sans",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-roboto:
+  Roboto,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-oswald:
+  Oswald,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-montserrat:
+  Montserrat,
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-noto:
+  "Noto Sans Japanese",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-noto-yakuhanjp:
+  YakuHanJP,
+  "Noto Sans Japanese",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-noto-yakuhanjps:
+  YakuHanJPs,
+  "Noto Sans Japanese",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-noto-yakuhanjpw:
+  YakuHanJP, YakuHanJPs,
+  "Noto Sans Japanese",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-mplus1p:
+  "Mplus 1p",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-mplus1p-yakuhanjp:
+  YakuHanJP,
+  "Mplus 1p",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-mplus1p-yakuhanjps:
+  YakuHanJPs,
+  "Mplus 1p",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-mplus1p-yakuhanjpw:
+  YakuHanJP, YakuHanJPs,
+  "Mplus 1p",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-roundedmplus1c:
+  "Rounded Mplus 1c",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-sawarabigothic:
+  "Sawarabi Gothic",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-sawarabigothic-yakuhanjp:
+  YakuHanJP,
+  "Sawarabi Gothic",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-sawarabigothic-yakuhanjps:
+  YakuHanJPs,
+  "Sawarabi Gothic",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-sawarabigothic-yakuhanjpw:
+  YakuHanJP, YakuHanJPs,
+  "Sawarabi Gothic",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-nikukyu:
+  "Nikukyu",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-sans-nicomoji:
+  "Nico Moji",
+  "Hiragino Sans",
+  YuGothic,
+  Meiryo,
+  sans-serif !default;
+
+$font-serif:
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-serif-yumi:
+  "Yu Mincho", YuMincho,
+  "Hiragino Mincho ProN",
+  serif !default;
+
+$font-serif-hannari:
+  "Hannari",
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-serif-kokoro:
+  "Kokoro",
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-serif-sawarabimincho:
+  "Sawarabi Mincho",
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-cursive-pacifico:
+  Pacifico,
+  cursive !default;
+
+$font-cursive-lobster:
+  Lobster,
+  cursive !default;
+
+$font-cursive-fredoka:
+  "Fredoka One",
+  cursive !default;
+
+$font-cursive-bungee:
+  Bungee,
+  cursive !default;
+
+$font-cursive-chango:
+  Chango,
+  cursive !default;
+
+$font-mono:
+  Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New",
+  Meiryo,
+  monospace, serif !default;

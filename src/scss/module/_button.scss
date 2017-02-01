@@ -1,0 +1,336 @@
+//----------------------------------------------------
+// Common: Button
+//----------------------------------------------------
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  > .btns {
+    display: inline-flex;
+  }
+  > .btns + .btns {
+    margin-top: 0;
+  }
+  &.is-left {
+    justify-content: flex-start;
+  }
+  &.is-center {
+    justify-content: center;
+  }
+  &.is-right {
+    justify-content: flex-end;
+  }
+  &.is-middle {
+    align-items: center;
+  }
+}
+
+@for $i from 1 through 9 {
+  .btns.is-space-#{$i} {
+    margin-right: $i * -4px;
+    margin-bottom: $i * -4px;
+  }
+  .btns.is-space-#{$i} > .btn,
+  .btns.is-space-#{$i} > .btns {
+    margin-right: $i * 4px;
+    margin-bottom: $i * 4px;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5em;
+  border-radius: 2px;
+  white-space: nowrap;
+  padding: 0 1em;
+  transition: ease-out 0.2s;
+  &.is-disable {
+    cursor: default;
+  }
+  &.is-round {
+    border-radius: 1.25em;
+  }
+  &.is-circle {
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0;
+    border-radius: 1.25em;
+  }
+  &.is-full {
+    display: flex;
+    flex: 1 0 0%;
+    max-width: 100%;
+  }
+  @include firefox {
+    .icon,
+    .fa,
+    .im {
+      margin-top: 0.125em;
+    }
+    .material-icons {
+      margin-top: 0.1875em;
+    }
+  }
+}
+
+.btn.is-floating-1:not(.is-disable) {
+  box-shadow: $shadow-floating-1;
+  &:active {
+    box-shadow: $shadow-floating-active;
+  }
+}
+
+.btn.is-floating-2:not(.is-disable) {
+  box-shadow: $shadow-floating-2;
+  &:active {
+    box-shadow: $shadow-floating-active;
+  }
+}
+
+.btn.is-floating-3:not(.is-disable) {
+  box-shadow: $shadow-floating-3;
+  &:hover,
+  &:active {
+    box-shadow: $shadow-floating-3-hover;
+  }
+}
+
+.btn.is-plain,
+.btn.is-flat {
+  background: $grey-2;
+  border: 1px solid transparent;
+  &:hover {
+    background: darken($grey-2, 5%);
+  }
+  &:active {
+    background: darken($grey-2, 10%);
+  }
+  &.is-primary,
+  &.is-success,
+  &.is-danger {
+    color: $light;
+  }
+  &.is-primary {
+    background: $primary;
+    &:hover {
+      background: darken($primary, 5%);
+    }
+    &:active {
+      background: darken($primary, 10%);
+    }
+  }
+  &.is-success {
+    background: $success;
+    &:hover {
+      background: darken($success, 5%);
+    }
+    &:active {
+      background: darken($success, 10%);
+    }
+  }
+  &.is-danger {
+    background: $danger;
+    &:hover {
+      background: darken($danger, 5%);
+    }
+    &:active {
+      background: darken($danger, 10%);
+    }
+  }
+  &.is-disable,
+  &.is-disable:hover,
+  &.is-disable:active {
+    color: $dark-6;
+    background: $grey-4;
+  }
+}
+
+.btn.is-flat {
+  border-bottom: 3px solid $dark-7;
+  transition: none;
+  &:hover {
+    top: 1px;
+    height: calc(2.5em - 1px);
+    border-bottom-width: 2px;
+  }
+  &:active {
+    top: 2px;
+    height: calc(2.5em - 2px);
+    border-bottom: 1px solid transparent;
+  }
+  &.is-disable,
+  &.is-disable:hover,
+  &.is-disable:active {
+    top: 0;
+    height: 2.5em;
+    border-bottom: 3px solid $dark-9;
+  }
+}
+
+.btn.is-melt {
+  border: 1px solid transparent;
+  &:hover,
+  &:active {
+    background: $dark-9;
+  }
+  &.is-primary {
+    color: $primary;
+  }
+  &.is-success {
+    color: $success;
+  }
+  &.is-danger {
+    color: $danger;
+  }
+  &.is-disable,
+  &.is-disable:hover,
+  &.is-disable:active {
+    color: $dark-6;
+    background: none;
+  }
+}
+
+.btn.is-outline {
+  background: $light;
+  border: 1px solid $dark-7;
+  &:hover {
+    background: darken($light, 5%);
+  }
+  &:active {
+    background: darken($light, 10%);
+  }
+  &.is-primary {
+    color: $primary;
+    border-color: $primary;
+    &:hover {
+      background: $primary;
+    }
+    &:active {
+      background: darken($primary, 5%);
+    }
+  }
+  &.is-success {
+    color: $success;
+    border-color: $success;
+    &:hover {
+      background: $success;
+    }
+    &:active {
+      background: darken($success, 5%);
+    }
+  }
+  &.is-danger {
+    color: $danger;
+    border-color: $danger;
+    &:hover {
+      background: $danger;
+    }
+    &:active {
+      background: darken($danger, 5%);
+    }
+  }
+  &.is-primary:hover,
+  &.is-success:hover,
+  &.is-danger:hover,
+  &.is-primary:active,
+  &.is-success:active,
+  &.is-danger:active {
+    color: $light;
+    border-color: transparent;
+  }
+  &.is-disable,
+  &.is-disable:hover,
+  &.is-disable:active {
+    color: $dark-6;
+    background-color: $dark-6;
+  }
+}
+
+.btn.is-ghost {
+  color: $light;
+  background: transparent;
+  border: 1px solid $light;
+  &:hover {
+    color: $dark-1;
+    background: $light;
+  }
+  &:active {
+    background: darken($light, 5%);
+  }
+  &.is-primary {
+    color: lighten($primary, 30%);
+    border-color: lighten($primary, 30%);
+    &:hover {
+      background: $primary;
+    }
+    &:active {
+      background: darken($primary, 5%);
+    }
+  }
+  &.is-success {
+    color: lighten($success, 30%);
+    border-color: lighten($success, 30%);
+    &:hover {
+      background: $success;
+    }
+    &:active {
+      background: darken($success, 5%);
+    }
+  }
+  &.is-danger {
+    color: lighten($danger, 30%);
+    border-color: lighten($danger, 30%);
+    &:hover {
+      background: $danger;
+    }
+    &:active {
+      background: darken($danger, 5%);
+    }
+  }
+  &.is-primary:hover,
+  &.is-success:hover,
+  &.is-danger:hover,
+  &.is-primary:active,
+  &.is-success:active,
+  &.is-danger:active {
+    color: $light;
+    border-color: transparent;
+  }
+  &.is-disable,
+  &.is-disable:hover,
+  &.is-disable:active {
+    color: $light-4;
+    background-color: $light-8;
+    border-color: $light-4;
+  }
+}
+
+.btns.is-bar {
+  > .btn {
+    border-radius: 0;
+  }
+  > .btn:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    &.is-round {
+      border-top-left-radius: 1.25em;
+      border-bottom-left-radius: 1.25em;
+    }
+  }
+  > .btn:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    &.is-round {
+      border-top-right-radius: 1.25em;
+      border-bottom-right-radius: 1.25em;
+    }
+  }
+  > .btn:nth-child(2),
+  > .btn:nth-child(2) ~ .btn {
+    border-left: none;
+  }
+}

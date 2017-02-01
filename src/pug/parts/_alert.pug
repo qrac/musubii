@@ -1,0 +1,97 @@
+//----------------------------------------------------
+//- Parts: Alert
+//----------------------------------------------------
+
+.groups
+  h3.heading.is-xl Alert
+  p.texts.is-sm
+    | アラートのUIを作るには、テキスト類を&nbsp;
+    code.code .alert
+    | &nbsp;でラッピングします。
+    br
+    | アラートの役割にしたがって&nbsp;
+    code.code .is-primary
+    | &nbsp;
+    code.code .is-info
+    | &nbsp;
+    code.code .is-success
+    | &nbsp;
+    code.code .is-warning
+    | &nbsp;
+    code.code .is-danger
+    | &nbsp;を付与しスタイルを変化させます。
+  .group.is-wrap.is-preview
+    .alert
+      i.fa.fa-thumbs-o-up.is-fit(aria-hidden="true")
+      span.text アプリの通知設定へようこそ！
+    .alert.is-primary
+      i.fa.fa-thumbs-o-up.is-fit(aria-hidden="true")
+      span.text アプリの通知設定へようこそ！
+    .alert.is-info
+      i.fa.fa-info-circle.is-fit(aria-hidden="true")
+      span.text 通知設定に関するチュートリアルはこちら。
+    .alert.is-success
+      i.fa.fa-check.is-fit(aria-hidden="true")
+      span.text 通知設定は自動的に保存されました。
+    .alert.is-warning
+      i.fa.fa-exclamation-triangle.is-fit(aria-hidden="true")
+      span.text 通知設定はアクティベートされていません。
+    .alert.is-danger
+      i.fa.fa-times.is-fit(aria-hidden="true")
+      span.text 通知設定は削除されました。
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;alert&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-thumbs-o-up is-fit&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;アプリの通知設定へようこそ！&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;alert is-primary&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-thumbs-o-up is-fit&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;アプリの通知設定へようこそ！&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;alert is-info&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-info-circle is-fit&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;通知設定に関するチュートリアルはこちら。&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;alert is-success&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-check is-fit&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;通知設定は自動的に保存されました。&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;alert is-warning&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-exclamation-triangle is-fit&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;通知設定はアクティベートされていません。&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;alert is-danger&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-times is-fit&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;通知設定は削除されました。&lt;/span&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .alert
+        i.fa.fa-thumbs-o-up.is-fit(aria-hidden="true")
+        span.text アプリの通知設定へようこそ！
+
+      .alert.is-primary
+        i.fa.fa-thumbs-o-up.is-fit(aria-hidden="true")
+        span.text アプリの通知設定へようこそ！
+
+      .alert.is-info
+        i.fa.fa-info-circle.is-fit(aria-hidden="true")
+        span.text 通知設定に関するチュートリアルはこちら。
+
+      .alert.is-success
+        i.fa.fa-check.is-fit(aria-hidden="true")
+        span.text 通知設定は自動保存されました。
+
+      .alert.is-warning
+        i.fa.fa-exclamation-triangle.is-fit(aria-hidden="true")
+        span.text 通知設定はアクティベートされていません。
+
+      .alert.is-danger
+        i.fa.fa-times.is-fit(aria-hidden="true")
+        span.text 通知設定は削除されました。

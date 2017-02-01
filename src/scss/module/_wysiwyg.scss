@@ -1,0 +1,140 @@
+//----------------------------------------------------
+// Module: WYSIWYG
+//----------------------------------------------------
+
+.wysiwyg {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h5 {
+    font-size: 0.875em;
+  }
+  h6 {
+    font-size: 0.75em;
+  }
+}
+
+.wysiwyg {
+  p {
+    font-size: 0.875em;
+    line-height: 1.8;
+  }
+  small {
+    font-size: 80%;
+  }
+  strong {
+    font-weight: 700;
+  }
+  em {
+    font-style: italic;
+  }
+  del,
+  s {
+    text-decoration: line-through;
+  }
+}
+
+.wysiwyg a {
+  cursor: pointer;
+  color: $primary;
+  border-bottom: 1px dotted;
+  &:hover,
+  &:active {
+    border-bottom-color: transparent;
+  }
+}
+
+.wysiwyg blockquote {
+  color: $dark-5;
+  background-color: $grey-1;
+  border-left: 4px solid $dark-8;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.wysiwyg pre,
+.wysiwyg code {
+  font-family: $font-mono;
+}
+
+.wysiwyg pre {
+  color: $light;
+  background-color: $dark-2;
+  font-size: 0.875em;
+  border-radius: 2px;
+  padding: 20px 25px;
+  white-space: pre;
+  word-wrap: normal;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.wysiwyg :not(pre) code {
+  color: $light;
+  background-color: $dark-2;
+  font-size: 0.765em;
+  border-radius: 2px;
+  padding: 0.2em 0.5em;
+}
+
+.wysiwyg ul,
+.wysiwyg ol {
+  line-height: 1.8;
+  margin-left: 1.5em;
+  > li {
+    display: list-item;
+    font-size: 0.875em;
+  }
+  > li li {
+    font-size: 100%;
+  }
+}
+
+.wysiwyg ul > li {
+  list-style: circle outside;
+}
+
+.wysiwyg ol > li {
+  list-style: decimal outside;
+}
+
+.wysiwyg table {
+  font-size: 0.875em;
+  background-color: $light;
+  border-radius: 2px;
+  thead {
+    background-color: $grey-1;
+  }
+  th {
+    color: $dark-4;
+    font-weight: 700;
+  }
+  th,
+  td {
+    padding: 6px 12px;
+    border: 1px solid $grey-3;
+  }
+}
+
+.wysiwyg hr {
+  height: 1px;
+  background-color: $dark-8;
+}

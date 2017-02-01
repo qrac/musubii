@@ -1,0 +1,20 @@
+{
+  "name": "musubii",
+  "description": "HTML/CSS Framework for JP",
+  "version": "1.0.0",
+  "style": "docs/css/musubii.css",
+  "keywords": ["css", "framework", "musubii", "japanese"],
+  "homepage": "https://github.com/qrac/musubii",
+  "bugs": {
+    "url" : "https://github.com/qrac/musubii"
+  },
+  "author": {
+    "name": "Qrac",
+    "web": "https://twitter.com/Qrac_jp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qrac/musubii.git"
+  },
+  "license": "(MIT)"
+}

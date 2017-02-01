@@ -1,0 +1,183 @@
+//----------------------------------------------------
+// Module: Text
+//----------------------------------------------------
+
+.texts:not(.is-pre) {
+  line-height: 1.8;
+}
+
+.texts,
+.text {
+  &.is-indent {
+    text-indent: 1em;
+  }
+}
+
+.text.is-link {
+  cursor: pointer;
+  text-decoration: underline;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+  &.is-solid,
+  &.is-dotted {
+    text-decoration: none;
+  }
+  &.is-solid {
+    border-bottom: 1px solid;
+  }
+  &.is-dotted {
+    border-bottom: 1px dotted;
+  }
+  &.is-solid:hover,
+  &.is-solid:active,
+  &.is-dotted:hover,
+  &.is-dotted:active {
+    border-bottom-color: transparent;
+  }
+}
+
+.text.is-link-reverse {
+  cursor: pointer;
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+  &.is-solid:hover,
+  &.is-solid:active {
+    border-bottom: 1px solid;
+  }
+  &.is-dotted:hover,
+  &.is-dotted:active {
+    border-bottom: 1px dotted;
+  }
+  &.is-solid:hover,
+  &.is-solid:active,
+  &.is-dotted:hover,
+  &.is-dotted:active {
+    text-decoration: none;
+  }
+}
+
+.text.is-code {
+  background-color: $dark-2;
+  color: $light;
+  font-family: $font-mono;
+  font-size: 0.875em;
+  word-break: break-all;
+  border-radius: 2px;
+  padding: 0.2em 0.5em;
+}
+
+.texts.is-pre {
+  position: relative;
+  color: $light;
+  font-family: $font-mono;
+  font-size: 0.875em;
+  > .text.is-pre-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 0 0 2px 0;
+    font-size: 0.875em;
+    padding: 0 0.5em;
+    margin: 0 0 -20px;
+    opacity: 0.3;
+  }
+  > .text.is-pre-wrap {
+    background-color: $dark-2;
+    border-radius: 2px;
+    padding: 20px 25px;
+    white-space: pre;
+    word-wrap: normal;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+}
+
+.blockquote {
+  color: $dark-5;
+  background-color: $grey-1;
+  border-left: 4px solid $dark-8;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.code {
+  background-color: $dark-2;
+  color: $light;
+  font-family: $font-mono;
+  font-size: 0.875em;
+  word-break: break-all;
+  border-radius: 2px;
+  padding: 0.2em 0.5em;
+}
+
+.pre {
+  position: relative;
+  background-color: $dark-2;
+  border-radius: 2px;
+  color: $light;
+  padding: 20px 0 0;
+  &.is-label:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 0 0 2px 0;
+    font-size: 0.75em;
+    font-family: $font-mono;
+    padding: 0 0.5em;
+    margin: 0 0 -20px;
+    opacity: 0.3;
+  }
+  &.is-label.is-example:before {
+    content: "example";
+  }
+  &.is-label.is-html:before {
+    content: "html";
+  }
+  &.is-label.is-css:before {
+    content: "css";
+  }
+  &.is-label.is-js:before {
+    content: "javascript";
+  }
+  &.is-label.is-md:before {
+    content: "markdown";
+  }
+  &.is-label.is-pug:before {
+    content: "pug";
+  }
+  &.is-label.is-jade:before {
+    content: "jade";
+  }
+  &.is-label.is-scss:before {
+    content: "scss";
+  }
+  &.is-label.is-coffee:before {
+    content: "coffee script";
+  }
+  &.is-label.is-ts:before {
+    content: "typescript";
+  }
+  &.is-label.is-command:before {
+    content: "command";
+  }
+  > .code {
+    display: block;
+    background: none;
+    border-radius: 0;
+    padding: 0 25px 20px;
+    white-space: pre;
+    word-wrap: normal;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+}

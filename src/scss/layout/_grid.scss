@@ -1,0 +1,258 @@
+//----------------------------------------------------
+// Layout: Grid
+//----------------------------------------------------
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  &.is-middle {
+    align-items: center;
+  }
+  &.is-bottom {
+    align-items: flex-end;
+  }
+  &.is-center {
+    justify-content: center;
+  }
+  &.is-end {
+    justify-content: flex-end;
+  }
+  &.is-between {
+    justify-content: space-between;
+  }
+  &.is-around {
+    justify-content: space-around;
+  }
+}
+
+.grid.is-mobile-100vh {
+  height: 100vh;
+}
+
+@include fablet {
+  .grid.is-fablet-100vh {
+    height: 100vh;
+  }
+}
+
+@include tablet {
+  .grid.is-tablet-100vh {
+    height: 100vh;
+  }
+}
+
+@include desktop {
+  .grid.is-desktop-100vh {
+    height: 100vh;
+  }
+}
+
+@include wide {
+  .grid.is-wide-100vh {
+    height: 100vh;
+  }
+}
+
+@include touch {
+  .grid.is-touch-100vh {
+    height: 100vh;
+  }
+}
+
+@include landscape {
+  .grid.is-landscape-100vh {
+    height: 100vh;
+  }
+}
+
+@include portrait {
+  .grid.is-portrait-100vh {
+    height: 100vh;
+  }
+}
+
+@for $i from 1 through 9 {
+  .grid.is-space-#{$i} {
+    margin: 0 $i * -2px $i * -4px;
+  }
+  .grid.is-space-#{$i} > .col {
+    padding: 0 $i * 2px $i * 4px;
+  }
+  .grid + .grid.is-space-#{$i} {
+    padding: $i * 4px 0 0;
+  }
+}
+
+.col {
+  &.is-stretch {
+    display: flex;
+  }
+}
+
+@for $i from 0 through $split-grid {
+  @if $i == 0 {
+    .col.is-mobile-#{$i} {
+      flex: 1 0 0%;
+      max-width: 100%;
+    }
+  }
+  @else {
+    .col.is-mobile-#{$i} {
+      flex: 0 0 100% / $split-grid * $i;
+      max-width: 100% / $split-grid * $i;
+    }
+  }
+}
+
+
+.col.is-mobile-auto {
+  flex: 0 1 auto;
+  max-width: 100%;
+}
+
+@include fablet {
+  @for $i from 0 through $split-grid {
+    @if $i == 0 {
+      .col.is-fablet-#{$i} {
+        flex: 1 0 0%;
+        max-width: 100%;
+      }
+    }
+    @else {
+      .col.is-fablet-#{$i} {
+        flex: 0 0 100% / $split-grid * $i;
+        max-width: 100% / $split-grid * $i;
+      }
+    }
+  }
+  .col.is-fablet-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include tablet {
+  @for $i from 0 through $split-grid {
+    @if $i == 0 {
+      .col.is-tablet-#{$i} {
+        flex: 1 0 0%;
+        max-width: 100%;
+      }
+    }
+    @else {
+      .col.is-tablet-#{$i} {
+        flex: 0 0 100% / $split-grid * $i;
+        max-width: 100% / $split-grid * $i;
+      }
+    }
+  }
+  .col.is-tablet-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include touch {
+  @for $i from 0 through $split-grid {
+    @if $i == 0 {
+      .col.is-touch-#{$i} {
+        flex: 1 0 0%;
+        max-width: 100%;
+      }
+    }
+    @else {
+      .col.is-touch-#{$i} {
+        flex: 0 0 100% / $split-grid * $i;
+        max-width: 100% / $split-grid * $i;
+      }
+    }
+  }
+  .col.is-touch-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include desktop {
+  @for $i from 0 through $split-grid {
+    @if $i == 0 {
+      .col.is-desktop-#{$i} {
+        flex: 1 0 0%;
+        max-width: 100%;
+      }
+    }
+    @else {
+      .col.is-desktop-#{$i} {
+        flex: 0 0 100% / $split-grid * $i;
+        max-width: 100% / $split-grid * $i;
+      }
+    }
+  }
+  .col.is-desktop-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include wide {
+  @for $i from 0 through $split-grid {
+    @if $i == 0 {
+      .col.is-wide-#{$i} {
+        flex: 1 0 0%;
+        max-width: 100%;
+      }
+    }
+    @else {
+      .col.is-wide-#{$i} {
+        flex: 0 0 100% / $split-grid * $i;
+        max-width: 100% / $split-grid * $i;
+      }
+    }
+  }
+  .col.is-wide-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include landscape {
+  @for $i from 0 through $split-grid {
+    @if $i == 0 {
+      .col.is-landscape-#{$i} {
+        flex: 1 0 0%;
+        max-width: 100%;
+      }
+    }
+    @else {
+      .col.is-landscape-#{$i} {
+        flex: 0 0 100% / $split-grid * $i;
+        max-width: 100% / $split-grid * $i;
+      }
+    }
+  }
+  .col.is-landscape-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include portrait {
+  @for $i from 0 through $split-grid {
+    @if $i == 0 {
+      .col.is-portrait-#{$i} {
+        flex: 1 0 0%;
+        max-width: 100%;
+      }
+    }
+    @else {
+      .col.is-portrait-#{$i} {
+        flex: 0 0 100% / $split-grid * $i;
+        max-width: 100% / $split-grid * $i;
+      }
+    }
+  }
+  .col.is-portrait-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}

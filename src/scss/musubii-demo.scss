@@ -1,0 +1,415 @@
+//----------------------------------------------------
+/*! Musubii Demo */
+//----------------------------------------------------
+
+@import "variable/_customize";
+@import "variable/_moftone";
+@import "variable/_mdtone";
+@import "variable/_iostone";
+@import "variable/_color";
+@import "variable/_breakpoint";
+@import "variable/_split";
+@import "variable/_font";
+@import "variable/_shadow";
+@import "mixin/_mediaquery";
+@import "mixin/_placeholder";
+
+//----------------------------------------------------
+// Project Theme CSS
+//----------------------------------------------------
+
+.musubii.musubii-demo {
+  background: $cyan-500;
+}
+
+.section {
+  &.is-header {
+    background: $cyan-500;
+    padding: 8px 0;
+  }
+  &.is-topcover {
+    background: $cyan-500;
+  }
+  &.is-tab {
+    //position: sticky;
+    //top: 0;
+    background: $cyan-500;
+    z-index: 10;
+  }
+  &.is-main {
+    background: $light;
+    padding: 32px 0;
+  }
+  &.is-footer {
+    max-height: 3.375em;
+    padding: 16px 0;
+    overflow: hidden;
+  }
+}
+
+.group.is-wrap {
+  position: relative;
+  border: 1px solid $grey-300;
+  border-radius: 2px;
+  padding: 20px;
+  &.is-preview:before {
+    content: "Preview";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    border-right: 1px solid $grey-300;
+    border-bottom: 1px solid $grey-300;
+    border-radius: 0 0 2px 0;
+    color: $grey-400;
+    font-size: 0.675em;
+    padding: 0 0.5em;
+  }
+  &.is-paint {
+    background: $cyan-700;
+    border: none;
+    padding: 16px;
+  }
+  &.is-example {
+    background: $grey-100;
+    border: none;
+    padding: 32px;
+  }
+}
+
+.group.is-home-about {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.group.is-home-point {
+  max-width: 700px;
+  padding-bottom: 2em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.group.is-about-graphic-1 {
+  font-size: 3.5em;
+}
+
+.group.is-about-graphic-2 {
+  font-size: 3em;
+}
+
+.group.is-documentation-nav {
+  border-top: 1px solid $grey-300;
+  border-bottom: 1px solid $grey-300;
+  padding: 20px 4px;
+}
+
+.group.is-demo-box-1,
+.group.is-demo-box-2,
+.group.is-demo-box-3 {
+  width: 100%;
+  &.is-primary {
+    background: $primary;
+    color: $light;
+  }
+  &.is-danger {
+    background: $red-50;
+    color: $danger;
+  }
+  &.is-grey {
+    background: $grey-3;
+    color: $light;
+  }
+  &.is-round {
+    border-radius: 2px;
+  }
+  &.is-height-1 {
+    height: 150px;
+  }
+  &.is-height-2 {
+    height: 300px;
+  }
+  &.is-height-3 {
+    height: 450px;
+  }
+}
+
+.group.is-demo-box-1 {
+  padding: 16px 0;
+}
+
+.group.is-demo-box-2 {
+  padding: 0 16px;
+}
+
+.group.is-demo-box-3 {
+  padding: 16px;
+}
+
+.group.is-section-anime-1 {
+  height: 150px;
+  overflow: hidden;
+  animation: demo-section-anime-1 5s linear infinite 0s;
+}
+
+@keyframes demo-section-anime-1 {
+  0% {
+    width: 100%;
+  }
+  22% {
+    width: 100%;
+  }
+  25% {
+    width: 82%;
+  }
+  47% {
+    width: 82%;
+  }
+  50% {
+    width: 64%;
+  }
+  72% {
+    width: 64%;
+  }
+  75% {
+    width: 48%;
+  }
+  97% {
+    width: 48%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.grid.is-demo-box-1 {
+  &.is-height-1 {
+    height: 182px;
+  }
+  &.is-height-2 {
+    height: 332px;
+  }
+  &.is-height-3 {
+    height: 482px;
+  }
+}
+
+.heading.is-demo-space-filter-1 {
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+  &:before {
+    top: -2em;
+    height: 2em;
+    background: rgba($orange-500, 0.3);
+  }
+  &:after {
+    top: 0;
+    height: 1.25em;
+    background: rgba($blue-500, 0.3);
+  }
+}
+
+.text.is-demo-space-filter-2,
+.icon.is-demo-space-filter-2 {
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 100%;
+  }
+  &:before {
+    left: -0.25em;
+    width: 0.25em;
+    background: rgba($orange-500, 0.3);
+  }
+  &:after {
+    left: 0;
+    width: 100%;
+    background: rgba($blue-500, 0.3);
+  }
+}
+
+.text.is-demo-space-filter-3 {
+  position: relative;
+  display: inline-block;
+  border-right: 2px dashed $red-500;
+  > .fa {
+    background: rgba($blue-500, 0.3);
+  }
+}
+
+.logo {
+  &.is-header {
+    cursor: pointer;
+    display: block;
+    width: 130px;
+    margin: 0 0 0 -6px;
+  }
+  &.is-title {
+    display: block;
+    width: 250px;
+    margin: 0 auto 6px;
+  }
+}
+
+.mark-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(1.5em + 1px);
+  .mark-demo-wrap {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1em;
+    height: 1em;
+    background: $dark-6;
+    border-radius: 0.25em;
+  }
+  .mark-demo-japanese {
+    color: $light;
+    font-size: 0.675em;
+  }
+}
+
+.induction.is-release {
+  position: relative;
+  right: -5px;
+}
+
+.btn.is-ghost.is-cyan:hover {
+  color: $cyan-500;
+}
+
+//----------------------------------------------------
+// Labs! > Module: Tab
+//----------------------------------------------------
+
+.tabs {
+  display: flex;
+}
+
+.tabs.is-slide {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.tabs.is-split {
+  > .tab {
+    flex: 1 0 0%;
+  }
+}
+
+.tab {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 4.5em;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0 1em;
+  &.is-current {
+    cursor: default;
+  }
+}
+
+.tab.is-ghost {
+  color: rgba( $white, 0.7 );
+  &:hover,
+  &.active {
+    color: $white;
+  }
+  &.is-current {
+    color: $white;
+    border-bottom-color: rgba( $white, 0.7 );
+  }
+}
+
+//----------------------------------------------------
+// Labs! > CSS Trick
+//----------------------------------------------------
+
+.trick {
+  display: none;
+}
+
+@for $i from 1 through 20 {
+  .trick.is-switch-do-1-#{$i}:not(:checked) ~ *.is-switch-out-1-#{$i},
+  .trick.is-switch-do-1-#{$i}:not(:checked) ~ * *.is-switch-out-1-#{$i} {
+    display: none;
+  }
+  .trick.is-switch-do-1-#{$i}:checked ~ *.is-switch-out-1-#{$i},
+  .trick.is-switch-do-1-#{$i}:checked ~ * *.is-switch-out-1-#{$i} {
+    display: block;
+  }
+}
+
+@for $i from 1 through 20 {
+  .trick.is-switch-do-2-#{$i}:not(:checked) ~ *.is-switch-out-2-#{$i},
+  .trick.is-switch-do-2-#{$i}:not(:checked) ~ * *.is-switch-out-2-#{$i} {
+    display: none;
+  }
+  .trick.is-switch-do-2-#{$i}:checked ~ *.is-switch-out-2-#{$i},
+  .trick.is-switch-do-2-#{$i}:checked ~ * *.is-switch-out-2-#{$i} {
+    display: block;
+  }
+}
+
+//----------------------------------------------------
+// Project CSS Trick
+//----------------------------------------------------
+
+.trick.is-switch-do-1-1 ~ *.is-switch-out-1-topcover,
+.trick.is-switch-do-1-1 ~ * *.is-switch-out-1-topcover {
+  height: 0;
+  opacity: 0;
+  transition: ease 0.3s;
+  overflow: hidden;
+}
+
+.trick.is-switch-do-1-1:checked ~ *.is-switch-out-1-topcover,
+.trick.is-switch-do-1-1:checked ~ * *.is-switch-out-1-topcover {
+  height: 360px;
+  opacity: 1;
+}
+
+@for $i from 1 through 5 {
+  .trick.is-switch-do-1-#{$i}:checked ~ .tab.is-ghost.is-switch-in-1-#{$i},
+  .trick.is-switch-do-1-#{$i}:checked ~ * .tab.is-ghost.is-switch-in-1-#{$i} {
+    cursor: default;
+    color: $white;
+    border-bottom-color: rgba( $white, 0.7 );
+  }
+}
+
+@for $i from 1 through 20 {
+  .trick.is-switch-do-2-#{$i}:not(:checked) ~ *.is-switch-in-2-#{$i},
+  .trick.is-switch-do-2-#{$i}:not(:checked) ~ * *.is-switch-in-2-#{$i} {
+    display: inline-block;
+  }
+  .trick.is-switch-do-2-#{$i}:checked ~ *.is-switch-in-2-#{$i},
+  .trick.is-switch-do-2-#{$i}:checked ~ * *.is-switch-in-2-#{$i} {
+    cursor: default;
+    display: inline-block;
+    color: $primary;
+    font-weight: 700;
+  }
+  .trick.is-switch-do-2-#{$i}:checked ~ *.is-switch-in-2-#{$i}:hover,
+  .trick.is-switch-do-2-#{$i}:checked ~ * *.is-switch-in-2-#{$i}:hover {
+    text-decoration: none;
+  }
+}
