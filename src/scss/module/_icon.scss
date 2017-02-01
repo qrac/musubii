@@ -1,0 +1,49 @@
+//----------------------------------------------------
+// Module: Icon
+//----------------------------------------------------
+
+.icon,
+.im,
+.fa,
+.material-icons {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.material-icons {
+  vertical-align: bottom;
+}
+
+.icon,
+.im,
+.fa,
+.material-icons {
+  + .text {
+    margin-left: 0.25em;
+  }
+  + .icon:not(.is-fit),
+  + .im:not(.is-fit),
+  + .fa:not(.is-fit),
+  + .material-icons:not(.is-fit) {
+    margin-left: 0.25em;
+  }
+}
+
+.text {
+  + .icon,
+  + .im,
+  + .fa,
+  + .material-icons {
+    margin-left: 0.25em;
+  }
+}
+
+.icon,
+.im,
+.fa,
+.material-icons {
+  &.is-fit {
+    width: 1.15em;
+    text-align: center;
+  }
+}

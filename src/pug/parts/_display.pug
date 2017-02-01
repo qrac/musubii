@@ -1,0 +1,107 @@
+//----------------------------------------------------
+//- Parts: Display
+//----------------------------------------------------
+
+.groups
+  h3.heading.is-xl Display
+  p.texts.is-sm
+    | Displayのプロパティを変更するUtilityを、ほぼすべてのモジュールに対して使えます。
+    br
+    code.code display: none;
+    | &nbsp;に関しては、&nbsp;
+    code.code .is-none-(xxxx)
+    | &nbsp;と書き、任意のブレイクポイントを設定してコンテンツを非表示にできます。
+  .group.is-scroll-x
+    table.table.is-border.is-center.is-nowrap.is-sm
+      tbody
+        tr.box.is-stripe
+          td.box.is-paint(width="150") Add Class
+          td .is-block
+          td .is-inline
+          td .is-inline-block
+          td .is-none
+        tr
+          td.box.is-paint Function
+          td display: block;
+          td display: inline;
+          td display: inline-block;
+          td display: none;
+  .group.is-scroll-x
+    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
+      tbody
+        tr.box.is-stripe
+          td.box.is-paint(width="150") Add Class
+          td .is-none-mobile
+          td .is-none-fablet
+          td .is-none-tablet
+          td .is-none-desktop
+          td .is-none-wide
+        tr
+          td.box.is-paint Function
+          td
+            | display: none;
+          td
+            | 576px ~
+            br
+            | display: none;
+          td
+            | 768px ~
+            br
+            | display: none;
+          td
+            | 992px ~
+            br
+            | display: none;
+          td
+            | 1200px ~
+            br
+            | display: none;
+  .group.is-scroll-x
+    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
+      tbody
+        tr.box.is-stripe
+          td.box.is-paint(width="150") Add Class
+          td .is-none-mobile-only
+          td .is-none-fablet-only
+          td .is-none-tablet-only
+          td .is-none-desktop-only
+        tr
+          td.box.is-paint Function
+          td
+            | ~ 575px
+            br
+            | display: none;
+          td
+            | 576px ~ 767px
+            br
+            | display: none;
+          td
+            | 768px ~ 991px
+            br
+            | display: none;
+          td
+            | 992px ~ 1199px
+            br
+            | display: none;
+  .group.is-scroll-x
+    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
+      tbody
+        tr.box.is-stripe
+          td.box.is-paint(width="150") Add Class
+          td .is-none-touch
+          td .is-none-landscape
+          td .is-none-portrait
+        tr
+          td.box.is-paint Function
+          td
+            | ~ 767px
+            br
+            | display: none;
+          td
+            | デバイス横向き
+            br
+            | display: none;
+          td
+            | デバイス縦向き
+            br
+            | display: none;

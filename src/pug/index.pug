@@ -1,0 +1,416 @@
+//----------------------------------------------------
+//- Page: Index
+//----------------------------------------------------
+
+extends base/_layout.pug
+
+block vars
+  include base/_config.pug
+  - var key = "index"
+  - var page = pages[key]
+
+block contents
+
+  - for (var i = 1; i <= 5; i++)
+    if i === 1
+      input.trick(id="switch-1-"+i class="is-switch-do-1-"+i type="radio" name="switch-1" checked)
+    else
+      input.trick(id="switch-1-"+i class="is-switch-do-1-"+i type="radio" name="switch-1")
+
+  - for (var i = 1; i <= 20; i++)
+    if i === 1
+      input.trick(id="switch-2-"+i class="is-switch-do-2-"+i type="radio" name="switch-2" checked)
+    else
+      input.trick(id="switch-2-"+i class="is-switch-do-2-"+i type="radio" name="switch-2")
+
+  include common/_header.pug
+
+  section.section.is-center.is-topcover.is-switch-out-1-topcover
+    .inner
+      img.logo.is-title(src=path.img+"/"+"logo-set-tate-musubii.svg" alt="MUSUBii")
+      p.texts.is-light #{page.desc}
+      p.texts.is-light.is-strong
+        | #{github.ver}
+      p.texts.is-light
+        i.fa.fa-github(aria-hidden="true")
+        a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo)
+          span.text Repository
+        | &nbsp;/&nbsp;
+        a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo+"/releases")
+          span.text Releases
+      .btns.is-center
+        a.btn.is-lg.is-ghost.is-round.is-cyan(href="css/musubii.min.css" download="musubii.min.css")
+          i.fa.fa-download(aria-hidden="true")
+          span.text Download
+
+  section.section.is-tab
+    .inner
+      nav.tabs.is-sm.is-strong.is-uppercase.is-slide
+        label.tab.is-ghost.is-switch-in-1-1(for="switch-1-1") Home
+        label.tab.is-ghost.is-switch-in-1-2(for="switch-1-2") Getting Started
+        label.tab.is-ghost.is-switch-in-1-3(for="switch-1-3") Documentation
+        label.tab.is-ghost.is-switch-in-1-4(for="switch-1-4") Libraries
+        //-label.tab.is-ghost.is-switch-in-1-5(for="switch-1-5") Templates
+
+  main.main
+
+    section.section.is-main.is-home.is-switch-out-1-1
+      .inner
+        .group.is-home-about
+          h2.heading.is-lg.is-primary.is-center 「腹が減ってはコードが書けぬ」
+          h3.texts.is-sm.is-center
+            span.text.is-inline-block Webデザインの
+            span.text.is-inline-block 腹ごなしに、
+            span.text.is-inline-block HTML/CSS
+            span.text.is-inline-block フレームワーク
+            span.text.is-inline-block 「MUSUBii（むすびー）」
+            span.text.is-inline-block を
+            span.text.is-inline-block どうぞ。
+            br
+            span.text.is-inline-block MUSUBiiは、
+            span.text.is-inline-block 日本語サイトの
+            span.text.is-inline-block デザイン・コーディングを
+            span.text.is-inline-block 元気づけます。
+        .group.is-home-point
+          .grid.is-space-2
+            .col.is-mobile-12.is-tablet-0
+              .group.is-about-graphic-2.is-dark-6.is-center
+                i.fa.fa-html5(aria-hidden="true")
+                i.fa.fa-css3(aria-hidden="true")
+              h4.heading.is-center.is-sm OOCSSを応用したラフな設計
+            .col.is-mobile-12.is-tablet-0
+              .group.is-about-graphic-2.is-center
+                .mark-demo(aria-hidden="true")
+                  .mark-demo-wrap
+                    span.mark-demo-japanese あ
+              h4.heading.is-center.is-sm 日本語フォントの利用を想定
+            .col.is-mobile-12.is-tablet-0
+              .group.is-about-graphic-2.is-dark-6.is-center
+                i.fa.fa-file-code-o(aria-hidden="true")
+              h4.heading.is-center.is-sm Javascript 未使用
+
+    section.section.is-main.is-getting-started.is-switch-out-1-2
+      .inner
+        h2.heading.is-xxl Getting Started
+        h3.heading.is-xl Install
+        .group.is-wrap
+          h4.heading.is-lg Download
+          p.texts.is-sm
+            | CSSファイル&nbsp;
+            code.code musubii.min.css
+            | &nbsp;を
+            a.text.is-primary.is-link.is-solid(href="css/musubii.min.css" download="musubii.min.css")
+              | ダウンロード
+              i.fa.fa-download.is-fit(aria-hidden="true")
+            | 後、headで読み込んでください。
+          pre.pre.is-label.is-html
+            code.code.
+              &lt;link rel=&quot;stylesheet&quot; href="css/musubii.min.css"&gt;
+          pre.pre.is-label.is-pug
+            code.code.
+              link(rel="stylesheet" href="css/musubii.min.css")
+          h4.heading.is-lg npm
+          pre.pre.is-label.is-command
+            code.code.
+              npm install musubii
+          //-h4.heading.is-lg CDN
+          //-.texts.is-pre
+            .text.is-pre-label html
+            pre.text.is-pre-wrap
+              code.
+                &lt;link rel="stylesheet" href="xxx"&gt;
+          //-.texts.is-pre
+            .text.is-pre-label pug
+            pre.text.is-pre-wrap
+              code.
+                link(rel="stylesheet" href="xxx")
+        h3.heading.is-xl Basic rules
+        .group.is-wrap
+          h4.heading.is-lg Object + State
+          p.texts.is-sm
+            | OOCSSを踏襲しつつシンプルなCSS設計となっています。
+            br
+            | 要素&nbsp;
+            code.code .(xxxx)
+            | &nbsp;1つに対して、状態&nbsp;
+            code.code .is-(xxxx)
+            | &nbsp;を複数追加してスタイリングするのが基本です。
+            br
+            | また、すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
+            .group.is-wrap.is-example
+              .btns.is-space-1
+                .btn.is-plain.is-primary ボタンの例 A
+                .btn.is-plain.is-success ボタンの例 B
+                .btn.is-plain.is-success.is-flat ボタンの例 C
+                .btn.is-plain.is-success.is-round ボタンの例 D
+                .btn.is-plain.is-success.is-round.is-lg ボタンの例 E
+            pre.pre.is-label.is-html
+              code.code.
+                &lt;div class=&quot;btn is-plain is-primary&quot;&gt;ボタンの例 A&lt;/div&gt;
+                &lt;div class=&quot;btn is-plain is-success&quot;&gt;ボタンの例 B&lt;/div&gt;
+                &lt;div class=&quot;btn is-plain is-success is-flat&quot;&gt;ボタンの例 C&lt;/div&gt;
+                &lt;div class=&quot;btn is-plain is-success is-round&quot;&gt;ボタンの例 D&lt;/div&gt;
+                &lt;div class=&quot;btn is-plain is-success is-round is-lg&quot;&gt;ボタンの例 E&lt;/div&gt;
+            pre.pre.is-label.is-pug
+              code.code.
+                .btn.is-plain.is-primary ボタンの例 A
+                .btn.is-plain.is-success ボタンの例 B
+                .btn.is-plain.is-success.is-flat ボタンの例 C
+                .btn.is-plain.is-success.is-round ボタンの例 D
+                .btn.is-plain.is-success.is-round.is-lg ボタンの例 E
+        .group.is-wrap
+          h4.heading.is-lg CSS Layers
+          p.texts.is-sm
+            | CSSのレイヤーは主に4つに分類されています。
+          ul.list.is-circle.is-sm
+            li.item
+              span.text.is-strong Base
+              | &nbsp;… リセットCSSなどの下地
+            li.item
+              span.text.is-strong Layout
+              | &nbsp;… 余白・マージン・グリッドシステム
+            li.item
+              span.text.is-strong Module
+              | &nbsp;… ボタン・テキスト・リスト・見出しなど
+            li.item
+              span.text.is-strong Utility
+              | &nbsp;… 調整用モディファイア
+        .group.is-wrap
+          h4.heading.is-lg Responsive
+          p.texts.is-sm
+            | 5つの画面サイズで可変するレスポンシブウェブデザインになっています。
+          ul.list.is-circle.is-sm
+            li.item
+              span.text.is-strong Mobile
+              | &nbsp;… ~ 575px
+            li.item
+              span.text.is-strong Fablet
+              | &nbsp;… 576px ~ 767px
+            li.item
+              span.text.is-strong Tablet
+              | &nbsp;… 768px ~ 991px
+            li.item
+              span.text.is-strong Desktop
+              | &nbsp;… 992px ~ 1199px
+            li.item
+              span.text.is-strong Wide
+              | &nbsp;… 1200px ~
+        h3.heading.is-xl Support
+        .group
+          .grid.is-space-2
+            .col.is-mobile-12.is-desktop-6
+              .group.is-scroll-x
+                table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+                  thead
+                    tr.box.is-paint
+                      th
+                        i.fa.fa-chrome(aria-hidden="true")
+                        span.text Chrome
+                      th
+                        i.fa.fa-firefox(aria-hidden="true")
+                        span.text Firefox
+                      th
+                        i.fa.fa-internet-explorer(aria-hidden="true")
+                        span.text IE
+                      th
+                        i.fa.fa-edge(aria-hidden="true")
+                        span.text Ege
+                      th
+                        i.fa.fa-safari(aria-hidden="true")
+                        span.text Safari(Mac)
+                  tbody
+                    tr
+                      td
+                        span.text Newest
+                      td
+                        span.text Newest
+                      td
+                        span.text 11~
+                      td
+                        span.text Newest
+                      td
+                        span.text Newest
+            .col.is-mobile-12.is-desktop-6
+              .group.is-scroll-x
+                table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+                  thead
+                    tr.box.is-paint
+                      th
+                        i.fa.fa-safari(aria-hidden="true")
+                        span.text Safari(iOS)
+                      th
+                        i.fa.fa-chrome(aria-hidden="true")
+                        span.text Chrome(Android)
+                      th
+                        i.fa.fa-globe(aria-hidden="true")
+                        span.text Browser(Android)
+                  tbody
+                    tr
+                      td
+                        span.text Newest
+                      td
+                        span.text Newest
+                      td
+                        span.text 4.4~
+
+    section.section.is-main.is-documentation.is-switch-out-1-3
+      .inner
+        h2.heading.is-xxl Documentation
+        .group.is-documentation-nav
+          p.texts.is-sm
+            span.text Layout >
+            span.text.is-dark-5
+              label.text.is-link-reverse.is-switch-in-2-1(for="switch-2-1") Section
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-2(for="switch-2-2") Space
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-3(for="switch-2-3") Grid
+          p.texts.is-sm
+            span.text Module >
+            span.text.is-dark-5
+              label.text.is-link-reverse.is-switch-in-2-4(for="switch-2-4") Heading
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-5(for="switch-2-5") Text
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-6(for="switch-2-6") Button
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-7(for="switch-2-7") List
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-8(for="switch-2-8") Table
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-9(for="switch-2-9") Form
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-10(for="switch-2-10") Icon
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-11(for="switch-2-11") Alert
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-12(for="switch-2-12") WYSIWYG
+          p.texts.is-sm
+            span.text Utility >
+            span.text.is-dark-5
+              label.text.is-link-reverse.is-switch-in-2-13(for="switch-2-13") Size
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-14(for="switch-2-14") Deco
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-15(for="switch-2-15") Display
+              | &nbsp;/
+              label.text.is-link-reverse.is-switch-in-2-16(for="switch-2-16") Clearfix
+        .groups
+          .content.is-switch-out-2-1
+            include parts/_section.pug
+          .content.is-switch-out-2-2
+            include parts/_space.pug
+          .content.is-switch-out-2-3
+            include parts/_grid
+          .content.is-switch-out-2-4
+            include parts/_heading
+          .content.is-switch-out-2-5
+            include parts/_text.pug
+          .content.is-switch-out-2-6
+            include parts/_btn.pug
+          .content.is-switch-out-2-7
+            include parts/_list.pug
+          .content.is-switch-out-2-8
+            include parts/_table.pug
+          .content.is-switch-out-2-9
+            include parts/_form.pug
+          .content.is-switch-out-2-10
+            include parts/_icon.pug
+          .content.is-switch-out-2-11
+            include parts/_alert.pug
+          .content.is-switch-out-2-12
+            include parts/_wysiwyg.pug
+          .content.is-switch-out-2-13
+            include parts/_size.pug
+          .content.is-switch-out-2-14
+            include parts/_deco.pug
+          .content.is-switch-out-2-15
+            include parts/_display.pug
+          .content.is-switch-out-2-16
+            include parts/_clearfix.pug
+
+    section.section.is-main.is-libraries.is-switch-out-1-4
+      .inner
+        h2.heading.is-xxl Libraries
+        p.texts.is-sm
+          | 既存ライブラリとの併用が可能です。
+        .group.is-wrap
+          h3.heading.is-lg
+            a.text.is-primary.is-link.is-solid(href="https://qrac.github.io/yakuhanjp/" target="_blank")
+              span.text Yaku Han JP
+              i.fa.fa-external-link(aria-hidden="true")
+          p.texts.is-sm
+            | Yaku Han JPをheadで読み込むと、メイリオなどの約物（カッコや句読点）の余白を詰めて表示できます（Yaku Han JPsはカッコのみ）。
+          pre.pre.is-label.is-html
+            code.code.
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/yakuhanjp/1.3.1/css/yakuhanjp.min.css&quot;&gt;
+              &lt;link rel=&quot;stylesheet&quot; href="https://cdn.jsdelivr.net/yakuhanjp/1.3.1/css/yakuhanjp_s.min.css"&gt;
+          pre.pre.is-label.is-pug
+            code.code.
+              link(rel="stylesheet" href="https://cdn.jsdelivr.net/yakuhanjp/1.3.1/css/yakuhanjp.min.css")
+              link(rel="stylesheet" href="https://cdn.jsdelivr.net/yakuhanjp/1.3.1/css/yakuhanjp_s.min.css")
+          h3.heading.is-lg
+            a.text.is-primary.is-link.is-solid(href="http://fontawesome.io/" target="_blank")
+              span.text Font Awesome
+              i.fa.fa-external-link(aria-hidden="true")
+          p.texts.is-sm
+            | Font Awesomeのアイコンを使用できます。jsDelivrからでも読み込めます。
+          pre.pre.is-label.is-html
+            code.code.
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+          pre.pre.is-label.is-pug
+            code.code.
+              link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+              link(rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css")
+          h3.heading.is-lg
+            a.text.is-primary.is-link.is-solid(href="https://material.io/icons/" target="_blank")
+              span.text Material Icons
+              i.fa.fa-external-link(aria-hidden="true")
+          p.texts.is-sm
+            | Googleが提供しているMaterial Iconsを使用できます。
+          pre.pre.is-label.is-html
+            code.code.
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
+          pre.pre.is-label.is-pug
+            code.code.
+              link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+          h3.heading.is-lg
+            a.text.is-primary.is-link.is-solid(href="https://fonts.google.com/" target="_blank")
+              span.text Google Fonts
+              i.fa.fa-external-link(aria-hidden="true")
+          p.texts.is-sm
+            | Googleが提供しているGoogle Fontsを使用できます。以下はOpen Sansを使用する場合の例です。
+          pre.pre.is-label.is-html
+            code.code.
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Open+Sans&quot;&gt;
+          pre.pre.is-label.is-pug
+            code.code.
+              link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans")
+          pre.pre.is-label.is-css
+            code.code.
+              .class {
+                "Open Sans", sans-serif;
+              }
+          h3.heading.is-lg
+            a.text.is-primary.is-link.is-solid(href="https://jquery.com/" target="_blank")
+              span.text jQuery
+              i.fa.fa-external-link(aria-hidden="true")
+          p.texts.is-sm
+            | Javascriptを含みませんので、jQueryなどのライブラリをフラットな状態で使用できます。
+          pre.pre.is-label.is-html
+            code.code.
+              &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js&quot;&gt;
+              &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js&quot;&gt;
+              &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;
+          pre.pre.is-label.is-pug
+            code.code.
+              script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+              script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+              script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+
+    //-section.section.is-main.is-templates.is-switch-out-1-5
+      .inner
+        h2.heading.is-xxl Templates
+
+  include common/_footer.pug

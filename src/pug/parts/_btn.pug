@@ -1,0 +1,589 @@
+//----------------------------------------------------
+//- Parts: Button
+//----------------------------------------------------
+
+.groups
+  h3.heading.is-xl Button
+  p.texts.is-sm
+    | ボタンを作るには、ボタンをまとめるブロック要素のクラス名を&nbsp;
+    code.code .btns
+    | &nbsp;、ボタン自体のクラス名を&nbsp;
+    code.code .btn
+    | &nbsp;にします。
+    br
+    | 装飾をプレーンタイプにするには&nbsp;
+    code.code .btn
+    | &nbsp;に&nbsp;
+    code.code .is-plain
+    | &nbsp;を付与します。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-plain 戻る
+      a.btn.is-plain.is-primary 決定
+      a.btn.is-plain.is-success 登録
+      a.btn.is-plain.is-danger 削除
+      a.btn.is-plain.is-disable 不可
+      a.btn.is-plain.is-primary
+        i.fa.fa-flag(aria-hidden="true")
+        span.text FontAwesome
+      a.btn.is-plain.is-success
+        span.text FontAwesome
+        i.fa.fa-flag(aria-hidden="true")
+      a.btn.is-plain.is-primary
+        i.material-icons face
+        span.text Material Icons
+      a.btn.is-plain.is-success
+        span.text Material Icons
+        i.material-icons face
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;btns is-space-1&quot;&gt;
+        &lt;a class=&quot;btn is-plain&quot;&gt;戻る&lt;/a&gt;
+        &lt;a class=&quot;btn is-plain is-primary&quot;&gt;決定&lt;/a&gt;
+        &lt;a class=&quot;btn is-plain is-success&quot;&gt;登録&lt;/a&gt;
+        &lt;a class=&quot;btn is-plain is-danger&quot;&gt;削除&lt;/a&gt;
+        &lt;a class=&quot;btn is-plain is-disable&quot;&gt;不可&lt;/a&gt;
+        &lt;a class=&quot;btn is-plain is-primary&quot;&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-flag&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;text&quot;&gt;FontAwesome&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;btn is-plain is-success&quot;&gt;
+          &lt;span class=&quot;text&quot;&gt;FontAwesome&lt;/span&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-flag&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;btn is-plain is-primary&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;face&lt;/i&gt;
+          &lt;span class=&quot;text&quot;&gt;Material Icons&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;btn is-plain is-success&quot;&gt;
+          &lt;span class=&quot;text&quot;&gt;Material Icons&lt;/span&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;face&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .btns.is-space-1
+        a.btn.is-plain 戻る
+        a.btn.is-plain.is-primary 決定
+        a.btn.is-plain.is-success 登録
+        a.btn.is-plain.is-danger 削除
+        a.btn.is-plain.is-disable 不可
+        a.btn.is-plain.is-primary
+          i.fa.fa-flag(aria-hidden="true")
+          span.text FontAwesome
+        a.btn.is-plain.is-success
+          span.text FontAwesome
+          i.fa.fa-flag(aria-hidden="true")
+        a.btn.is-plain.is-primary
+          i.material-icons face
+          span.text Material Icons
+        a.btn.is-plain.is-success
+          span.text Material Icons
+          i.material-icons face
+
+.groups
+  h4.heading.is-xl Button - Flat
+  p.texts.is-sm
+    | フラットで若干厚みのある装飾を施すには&nbsp;
+    code.code .btn
+    | &nbsp;に&nbsp;
+    code.code .is-flat
+    | &nbsp;を付与します。
+    br
+    | ホバーとアクティブの動作でボタンを押している印象を与えられます。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-flat 戻る
+      a.btn.is-flat.is-primary 決定
+      a.btn.is-flat.is-success 登録
+      a.btn.is-flat.is-danger 削除
+      a.btn.is-flat.is-disable 不可
+      a.btn.is-flat.is-primary
+        i.fa.fa-flag(aria-hidden="true")
+        span.text FontAwesome
+      a.btn.is-flat.is-success
+        span.text FontAwesome
+        i.fa.fa-flag(aria-hidden="true")
+      a.btn.is-flat.is-primary
+        i.material-icons face
+        span.text Material Icons
+      a.btn.is-flat.is-success
+        span.text Material Icons
+        i.material-icons face
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-flat&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-flat ...
+
+.groups
+  h4.heading.is-xl Button - Melt
+  p.texts.is-sm
+    | ホバーしたときに浮き上がるボタンを作るには&nbsp;
+    code.code .btn
+    | &nbsp;に&nbsp;
+    code.code .is-melt
+    | &nbsp;を付与します。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-melt 戻る
+      a.btn.is-melt.is-primary 決定
+      a.btn.is-melt.is-success 登録
+      a.btn.is-melt.is-danger 削除
+      a.btn.is-melt.is-disable 不可
+      a.btn.is-melt.is-primary
+        i.fa.fa-flag(aria-hidden="true")
+        span.text FontAwesome
+      a.btn.is-melt.is-success
+        span.text FontAwesome
+        i.fa.fa-flag(aria-hidden="true")
+      a.btn.is-melt.is-primary
+        i.material-icons face
+        span.text Material Icons
+      a.btn.is-melt.is-success
+        span.text Material Icons
+        i.material-icons face
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-melt&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-melt ...
+
+.groups
+  h4.heading.is-xl Button - Outline
+  p.texts.is-sm
+    | アウトラインのみでボタンらしさを出すには&nbsp;
+    code.code .btn
+    | &nbsp;に&nbsp;
+    code.code .is-outline
+    | &nbsp;を付与します。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-outline 戻る
+      a.btn.is-outline.is-primary 決定
+      a.btn.is-outline.is-success 登録
+      a.btn.is-outline.is-danger 削除
+      a.btn.is-outline.is-disable 不可
+      a.btn.is-outline.is-primary
+        i.fa.fa-flag(aria-hidden="true")
+        span.text FontAwesome
+      a.btn.is-outline.is-success
+        span.text FontAwesome
+        i.fa.fa-flag(aria-hidden="true")
+      a.btn.is-outline.is-primary
+        i.material-icons face
+        span.text Material Icons
+      a.btn.is-outline.is-success
+        span.text Material Icons
+        i.material-icons face
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-outline&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-outline ...
+
+.groups
+  h4.heading.is-xl Button - Ghost
+  p.texts.is-sm
+    | 背景に色や写真を透かせるボタンを作るには&nbsp;
+    code.code .btn
+    | &nbsp;に&nbsp;
+    code.code .is-ghost
+    | &nbsp;を付与します。
+  .group.is-wrap.is-preview
+    .group.is-wrap.is-paint
+      .btns.is-space-1
+        a.btn.is-ghost 戻る
+        a.btn.is-ghost.is-primary 決定
+        a.btn.is-ghost.is-success 登録
+        a.btn.is-ghost.is-danger 削除
+        a.btn.is-ghost.is-disable 不可
+        a.btn.is-ghost.is-primary
+          i.fa.fa-flag(aria-hidden="true")
+          span.text FontAwesome
+        a.btn.is-ghost.is-success
+          span.text FontAwesome
+          i.fa.fa-flag(aria-hidden="true")
+        a.btn.is-ghost.is-primary
+          i.material-icons face
+          span.text Material Icons
+        a.btn.is-ghost.is-success
+          span.text Material Icons
+          i.material-icons face
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-ghost&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-ghost ...
+
+.groups
+  h4.heading.is-xl Button - Size
+  p.texts.is-sm
+    | サイズを表すクラス名&nbsp;
+    code.code .is-(x)
+    | &nbsp;を付与することでボタンの大きさを変化させられます。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-plain.is-xxs 極小
+      a.btn.is-plain.is-xs 小さい
+      a.btn.is-plain.is-sm 小さめ
+      a.btn.is-plain.is-md 中くらい
+      a.btn.is-plain.is-lg 大きめ
+      a.btn.is-plain.is-xl 大きい
+      a.btn.is-plain.is-xxl 特大
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;btns&quot;&gt;
+        &lt;a class=&quot;btn is-xxs&quot;&gt;極小&lt;/a&gt;
+        &lt;a class=&quot;btn is-xs&quot;&gt;小さい&lt;/a&gt;
+        &lt;a class=&quot;btn is-sm&quot;&gt;小さめ&lt;/a&gt;
+        &lt;a class=&quot;btn is-md&quot;&gt;中くらい&lt;/a&gt;
+        &lt;a class=&quot;btn is-lg&quot;&gt;大きめ&lt;/a&gt;
+        &lt;a class=&quot;btn is-xl&quot;&gt;大きい&lt;/a&gt;
+        &lt;a class=&quot;btn is-xxl&quot;&gt;特大&lt;/a&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .btns
+        a.btn.is-xxs 極小
+        a.btn.is-xs 小さい
+        a.btn.is-sm 小さめ
+        a.btn.is-md 中くらい
+        a.btn.is-lg 大きめ
+        a.btn.is-xl 大きい
+        a.btn.is-xxl 特大
+
+.groups
+  h4.heading.is-xl Button - Align
+  p.texts.is-sm
+    code.code .btns
+    | &nbsp;にクラス名&nbsp;
+    code.code .is-left
+    | &nbsp;
+    code.code .is-center
+    | &nbsp;
+    code.code .is-right
+    | &nbsp;を付与することでボタンの寄せる方向を変化させられます。
+  .group.is-wrap.is-preview
+    .btns.is-left.is-space-1
+      a.btn.is-plain.is-primary
+        | .is-left
+      a.btn.is-plain.is-primary
+        | .is-left
+      a.btn.is-plain.is-primary
+        | .is-left
+    .btns.is-center.is-space-1
+      a.btn.is-plain.is-primary
+        | .is-center
+      a.btn.is-plain.is-primary
+        | .is-center
+      a.btn.is-plain.is-primary
+        | .is-center
+    .btns.is-right.is-space-1
+      a.btn.is-plain.is-primary
+        | .is-right
+      a.btn.is-plain.is-primary
+        | .is-right
+      a.btn.is-plain.is-primary
+        | .is-right
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;btns is-left&quot;&gt;...&lt;/div&gt;
+      &lt;div class=&quot;btns is-center&quot;&gt;...&lt;/div&gt;
+      &lt;div class=&quot;btns is-right&quot;&gt;...&lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .btns.is-left ...
+      .btns.is-center ...
+      .btns.is-right ...
+
+.groups
+  h4.heading.is-xl Button - Space
+  p.texts.is-sm
+    | ボタンの間に溝を作るには、&nbsp;
+    code.code .btns
+    | &nbsp;に&nbsp;
+    code.code .is-space-(x)
+    | &nbsp;を付与します。（x）の中に入れた数字に「4px」を掛けた値が溝となります。
+    br
+    | また、&nbsp;
+    code.code .btns
+    | &nbsp;を入れ子にしてグルーピングを小分けにすることも可能です。
+  .group.is-wrap.is-preview
+    - for (var i = 1; i <= 9; i++)
+      .btns(class="is-space-"+i)
+        a.btn.is-plain.is-primary
+          | .btns .is-space-#{i}
+        a.btn.is-plain.is-primary
+          | .btns .is-space-#{i}
+        a.btn.is-plain.is-primary
+          | .btns .is-space-#{i}
+    .btns.is-space-4
+      .btns.is-space-1
+        a.btn.is-plain.is-primary
+          | .is-space-1
+        a.btn.is-plain.is-primary
+          | .is-space-1
+        a.btn.is-plain.is-primary
+          | .is-space-1
+      .btns.is-space-1
+        a.btn.is-plain.is-primary
+          | .is-space-1
+        a.btn.is-plain.is-primary
+          | .is-space-1
+        a.btn.is-plain.is-primary
+          | .is-space-1
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;btns is-space-(x)&quot;&gt;
+        &lt;a class=&quot;btn&quot;&gt;&lt;/a&gt;
+        &lt;a class=&quot;btn&quot;&gt;&lt;/a&gt;
+        &lt;a class=&quot;btn&quot;&gt;&lt;/a&gt;
+          ...
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .btns.is-space-(x)
+        a.btn
+        a.btn
+        a.btn
+        ...
+
+.groups
+  h4.heading.is-xl Button - Strong
+  p.texts.is-sm
+    code.code .btns
+    | &nbsp;にクラス名&nbsp;
+    code.code .is-strong
+    | &nbsp;を付与することでボタン内のテキストを太字にできます。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-plain.is-strong 戻る
+      a.btn.is-plain.is-strong.is-primary 決定
+      a.btn.is-plain.is-strong.is-success 登録
+      a.btn.is-plain.is-strong.is-danger 削除
+      a.btn.is-plain.is-strong.is-disable 不可
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-plain is-strong&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-plain.is-strong ...
+
+.groups
+  h4.heading.is-xl Button - Floating
+  p.texts.is-sm
+    code.code .btns
+    | &nbsp;にクラス名&nbsp;
+    code.code .is-floating-(x)
+    | &nbsp;を付与することで、いくつかの種類のドロップシャドウを付けられます。
+    br
+    | 「1」よりも「2」の方がシャドウが強く、「3」はシャドウがホバーに反応します。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-plain.is-floating-1 戻る 1
+      a.btn.is-plain.is-floating-1.is-primary 決定 1
+      a.btn.is-plain.is-floating-1.is-success 登録 1
+      a.btn.is-plain.is-floating-1.is-danger 削除 1
+      a.btn.is-plain.is-floating-1.is-disable 不可 1
+    .btns.is-space-1
+      a.btn.is-plain.is-floating-2 戻る 2
+      a.btn.is-plain.is-floating-2.is-primary 決定 2
+      a.btn.is-plain.is-floating-2.is-success 登録 2
+      a.btn.is-plain.is-floating-2.is-danger 削除 2
+      a.btn.is-plain.is-floating-2.is-disable 不可 2
+    .btns.is-space-1
+      a.btn.is-plain.is-floating-3 戻る 3
+      a.btn.is-plain.is-floating-3.is-primary 決定 3
+      a.btn.is-plain.is-floating-3.is-success 登録 3
+      a.btn.is-plain.is-floating-3.is-danger 削除 3
+      a.btn.is-plain.is-floating-3.is-disable 不可 3
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-plain is-floating-(x)&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-plain.floating-(x) ...
+
+.groups
+  h4.heading.is-xl Button - Round
+  p.texts.is-sm
+    code.code .btns
+    | &nbsp;にクラス名&nbsp;
+    code.code .is-round
+    | &nbsp;を付与することでボタンの角を丸められます。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-plain.is-round 戻る
+      a.btn.is-plain.is-round.is-primary 決定
+      a.btn.is-plain.is-round.is-success 登録
+      a.btn.is-plain.is-round.is-danger 削除
+      a.btn.is-plain.is-round.is-disable 不可
+      a.btn.is-outline.is-round 戻る
+      a.btn.is-outline.is-round.is-primary 決定
+      a.btn.is-outline.is-round.is-success 登録
+      a.btn.is-outline.is-round.is-danger 削除
+      a.btn.is-outline.is-round.is-disable 不可
+    .group.is-wrap.is-paint
+      .btns.is-space-1
+        a.btn.is-ghost.is-round 戻る
+        a.btn.is-ghost.is-round.is-primary 決定
+        a.btn.is-ghost.is-round.is-success 登録
+        a.btn.is-ghost.is-round.is-danger 削除
+        a.btn.is-ghost.is-round.is-disable 不可
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-plain is-round&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-plain.is-round ...
+
+.groups
+  h4.heading.is-xl Button - Circle
+  p.texts.is-sm
+    code.code .btns
+    | &nbsp;にクラス名&nbsp;
+    code.code .is-circle
+    | &nbsp;を付与することでボタンの円形にできます。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-plain.is-circle
+        i.fa.fa-angle-left(aria-hidden="true")
+      a.btn.is-plain.is-circle.is-primary
+        i.fa.fa-twitter(aria-hidden="true")
+      a.btn.is-plain.is-circle.is-success
+        i.fa.fa-floppy-o(aria-hidden="true")
+      a.btn.is-plain.is-circle.is-danger
+        i.fa.fa-times(aria-hidden="true")
+      a.btn.is-plain.is-circle.is-disable
+        i.fa.fa-plus(aria-hidden="true")
+      a.btn.is-outline.is-circle
+        i.fa.fa-angle-left(aria-hidden="true")
+      a.btn.is-outline.is-circle.is-primary
+        i.fa.fa-twitter(aria-hidden="true")
+      a.btn.is-outline.is-circle.is-success
+        i.fa.fa-floppy-o(aria-hidden="true")
+      a.btn.is-outline.is-circle.is-danger
+        i.fa.fa-times(aria-hidden="true")
+      a.btn.is-outline.is-circle.is-disable
+        i.fa.fa-plus(aria-hidden="true")
+    .group.is-wrap.is-paint
+      .btns.is-space-1
+        a.btn.is-ghost.is-circle
+          i.fa.fa-angle-left(aria-hidden="true")
+        a.btn.is-ghost.is-circle.is-primary
+          i.fa.fa-twitter(aria-hidden="true")
+        a.btn.is-ghost.is-circle.is-success
+          i.fa.fa-floppy-o(aria-hidden="true")
+        a.btn.is-ghost.is-circle.is-danger
+          i.fa.fa-times(aria-hidden="true")
+        a.btn.is-ghost.is-circle.is-disable
+          i.fa.fa-plus(aria-hidden="true")
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-plain is-circle&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-plain.is-circle ...
+
+.groups
+  h4.heading.is-xl Button - Full
+  p.texts.is-sm
+    code.code .btns
+    | &nbsp;にクラス名&nbsp;
+    code.code .is-full
+    | &nbsp;を付与することでボタンを枠いっぱいに広げられます。
+    br
+    code.code .btns
+    | &nbsp;に複数の&nbsp;
+    code.code .btn
+    | &nbsp;を入れた場合は等分されます。
+  .group.is-wrap.is-preview
+    .btns.is-space-1
+      a.btn.is-plain.is-full 戻る
+      a.btn.is-plain.is-full.is-primary 決定
+      a.btn.is-plain.is-full.is-success 登録
+      a.btn.is-plain.is-full.is-danger 削除
+      a.btn.is-plain.is-full.is-disable 不可
+      a.btn.is-outline.is-full 戻る
+      a.btn.is-outline.is-full.is-primary 決定
+      a.btn.is-outline.is-full.is-success 登録
+      a.btn.is-outline.is-full.is-danger 削除
+      a.btn.is-outline.is-full.is-disable 不可
+    .group.is-wrap.is-paint
+      .btns.is-space-1
+        a.btn.is-ghost.is-full 戻る
+        a.btn.is-ghost.is-full.is-primary 決定
+        a.btn.is-ghost.is-full.is-success 登録
+        a.btn.is-ghost.is-full.is-danger 削除
+        a.btn.is-ghost.is-full.is-disable 不可
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;a class=&quot;btn is-plain is-full&quot;&gt;...&lt;/a&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      a.btn.is-plain.is-full ...
+
+.groups
+  h4.heading.is-xl Button - Bar
+  p.texts.is-sm
+    code.code .btns
+    | &nbsp;にクラス名&nbsp;
+    code.code .is-bar
+    | &nbsp;を付与することで子要素のボタンを連結させられます。
+  .group.is-wrap.is-preview
+    .btns.is-bar
+      a.btn.is-plain
+        i.fa.fa-align-left(aria-hidden="true")
+        span.text 左寄せ
+      a.btn.is-plain
+        i.fa.fa-align-center(aria-hidden="true")
+        span.text 中央寄せ
+      a.btn.is-plain
+        i.fa.fa-align-right(aria-hidden="true")
+        span.text 右寄せ
+    .btns.is-bar
+      a.btn.is-outline.is-full
+        i.fa.fa-align-left(aria-hidden="true")
+        span.text 左寄せ
+      a.btn.is-outline.is-full
+        i.fa.fa-align-center(aria-hidden="true")
+        span.text 中央寄せ
+      a.btn.is-outline.is-full
+        i.fa.fa-align-right(aria-hidden="true")
+        span.text 右寄せ
+    .btns.is-bar
+      a.btn.is-outline.is-round.is-full ラウンド
+      a.btn.is-outline.is-round.is-full ラウンド
+      a.btn.is-outline.is-round.is-full ラウンド
+    .group.is-wrap.is-paint
+      .btns.is-space-2
+        .btns.is-bar
+          a.btn.is-ghost 松
+          a.btn.is-ghost 桜
+          a.btn.is-ghost 芒
+          a.btn.is-ghost 雨
+          a.btn.is-ghost 桐
+        .btns.is-bar
+          a.btn.is-ghost 線と角丸
+          a.btn.is-ghost 自動調整
+      .btns.is-bar
+        a.btn.is-ghost.is-round ラウンド
+        a.btn.is-ghost.is-round ラウンド
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;btns is-bar&quot;&gt;
+        &lt;a class=&quot;btn is-plain&quot;&gt;...&lt;/a&gt;
+        &lt;a class=&quot;btn is-plain&quot;&gt;...&lt;/a&gt;
+        &lt;a class=&quot;btn is-plain&quot;&gt;...&lt;/a&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .btns.is-bar
+        a.btn.is-plain ...
+        a.btn.is-plain ...
+        a.btn.is-plain ...

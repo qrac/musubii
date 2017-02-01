@@ -1,0 +1,259 @@
+//----------------------------------------------------
+//- Parts: Form
+//----------------------------------------------------
+
+.groups
+  h3.heading.is-xl Form
+  p.texts.is-sm
+    | ブラウザデフォルトを拡張する設計ですので、クラスを当てなくても使用できます。
+    br
+    | 親要素に&nbsp;
+    code.code .form
+    | &nbsp;を用いることで、他のモジュールとの距離を調整することができます。
+    br
+    | 要素の間に溝を空けるには、
+    code.code .field
+    | に&nbsp;
+    code.code .is-space-(x)
+    | &nbsp;を付与。（x）の中に入れた数字に「4px」を掛けた値が溝となります。
+  .group.is-wrap.is-preview
+    form.form
+      .group
+        p.heading Text
+        .field.is-space-2
+          input.input.is-width-0(type="text" placeholder="Text")
+          input.input.is-width-0(type="text" placeholder="Text" disabled)
+      .group
+        p.heading Search
+        .field.is-space-2
+          input.input.is-width-0(type="search" placeholder="Search")
+          input.input.is-width-0(type="search" placeholder="Search" disabled)
+      .group
+        .field.is-space-2
+          .field.is-space-2.is-middle
+            p.heading URL
+            input.input.is-width-8(type="url" placeholder="example.com")
+            input.input.is-width-8(type="url" placeholder="example.com" disabled)
+          .field.is-space-2.is-middle
+            p.heading E-mail
+            input.input.is-width-12(type="email" placeholder="example@gmail.com")
+            input.input.is-width-12(type="email" placeholder="example@gmail.com" disabled)
+      .group
+        p.heading TEL
+        .field.is-space-2
+          input.input(type="tel" placeholder="000-000-0000")
+          input.input(type="tel" placeholder="000-000-0000" disabled)
+      .group
+        p.heading Password
+        .field.is-space-2
+          input.input(type="password")
+          input.input(type="password" disabled)
+      .group
+        p.heading Date Time
+        .field.is-space-2
+          input.input(type="datetime")
+          input.input(type="datetime" disabled)
+      .group
+        p.heading Date Time Local
+        .field.is-space-2
+          input.input(type="datetime-local")
+          input.input(type="datetime-local" disabled)
+      .group
+        p.heading Date
+        .field.is-space-2
+          input.input(type="date")
+          input.input(type="date" disabled)
+      .group
+        p.heading Month
+        .field.is-space-2
+          input.input(type="month")
+          input.input(type="month" disabled)
+      .group
+        p.heading Week
+        .field.is-space-2
+          input.input(type="week")
+          input.input(type="week" disabled)
+      .group
+        p.heading Time
+        .field.is-space-2
+          input.input(type="time")
+          input.input(type="time" disabled)
+      .group
+        p.heading Number
+        .field.is-space-2
+          input.input(type="number")
+          input.input(type="number" disabled)
+      .group
+        p.heading File
+        .field.is-space-2
+          input.input(type="file")
+          input.input(type="file" disabled)
+      .group
+        p.heading Color
+        .field.is-space-2
+          input.input(type="color")
+          input.input(type="color" disabled)
+      .group
+        p.heading Range
+        .field.is-space-2
+          input.input(type="range")
+          input.input(type="range" disabled)
+      .group
+        p.heading Textarea
+        .field.is-space-2
+          textarea.textarea.is-width-0
+          textarea.textarea.is-width-0(disabled)
+      .group
+        p.heading Radio
+        .field
+          label
+            input.input(type="radio" name="radio-default-1" checked)
+            span.text むすびー
+          label
+            input.input(type="radio" name="radio-default-1")
+            span.text むすびい
+          label
+            input.input(type="radio" name="radio-default-1" disabled)
+            span.text むすび
+      .group
+        p.heading Checkbox
+        .field
+          label
+            input.input(type="checkbox" name="checkbox-default-1" checked)
+            span.text HTML
+          label
+            input.input(type="checkbox" name="checkbox-default-1")
+            span.text CSS
+          label
+            input.input(type="checkbox" name="checkbox-default-1" disabled)
+            span.text JS
+      .group
+        p.heading Select
+        .field.is-space-2
+          select.select
+            option Select A
+            option Select B
+            option Select C
+            option Select D
+            option Select E
+          select.select(disabled)
+            option Select A
+            option Select B
+            option Select C
+            option Select D
+            option Select E
+      .group
+        p.heading Button
+        .field
+          .btns.is-space-2
+            input.btn.is-plain.is-primary(type="button" value="Input Button")
+            input.btn.is-plain.is-primary.is-disable(type="button" value="Input Button" disabled)
+      .group
+        p.heading Reset
+        .field
+          .btns.is-space-2
+            input.btn.is-plain(type="reset")
+            input.btn.is-plain.is-disable(type="reset" disabled)
+      .group
+        p.heading Submit
+        .field
+          .btns.is-space-2
+            input.btn.is-plain.is-success(type="submit")
+            input.btn.is-plain.is-success.is-disable(type="submit" disabled)
+  pre.pre.is-label.is-html
+    code.code.
+  pre.pre.is-label.is-pug
+    code.code.
+
+.groups
+  h4.heading.is-xl Form - Width
+  p.texts.is-sm
+    code.code .is-width-(x)
+    | &nbsp;を付与すると、横幅を（x）に入れた文字数に制限できます。
+    code.code .is-width-0
+    | &nbsp;にした場合は100%に伸びます。
+  .group.is-scroll-x
+    table.table.is-border.is-center.is-stripe.is-nowrap.is-sm
+      tbody
+        tr.box.is-paint
+          td Add Class
+          td Width
+        tr
+          td .is-width-0
+          td 100%
+  .group
+    .grid.is-space-5
+      .col.is-mobile-12.is-fablet-0
+        .group.is-scroll-x
+          table.table.is-border.is-center.is-stripe.is-nowrap.is-sm
+            tbody
+              tr.box.is-paint
+                td Add Class
+                td Width
+              tr
+                td .is-width-1
+                td 1em
+              tr
+                td .is-width-2
+                td 2em
+              tr
+                td .is-width-3
+                td 3em
+              tr
+                td .is-width-4
+                td 4em
+              tr
+                td .is-width-5
+                td 5em
+              tr
+                td .is-width-6
+                td 6em
+              tr
+                td .is-width-7
+                td 7em
+              tr
+                td .is-width-8
+                td 8em
+              tr
+                td .is-width-9
+                td 9em
+              tr
+                td .is-width-10
+                td 10em
+      .col.is-mobile-12.is-fablet-0
+        .group.is-scroll-x
+          table.table.is-border.is-center.is-stripe.is-nowrap.is-sm
+            tbody
+              tr.box.is-paint
+                td Add Class
+                td Width
+              tr
+                td .is-width-11
+                td 11em
+              tr
+                td .is-width-12
+                td 12em
+              tr
+                td .is-width-13
+                td 13em
+              tr
+                td .is-width-14
+                td 14em
+              tr
+                td .is-width-15
+                td 15em
+              tr
+                td .is-width-16
+                td 16em
+              tr
+                td .is-width-17
+                td 17em
+              tr
+                td .is-width-18
+                td 18em
+              tr
+                td .is-width-19
+                td 19em
+              tr
+                td .is-width-20
+                td 20em

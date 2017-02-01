@@ -1,0 +1,610 @@
+//----------------------------------------------------
+//- Parts: Grid
+//----------------------------------------------------
+
+.groups
+  h3.heading.is-xl Grid
+  p.texts.is-sm
+    | Flexboxを用いた12分割+αのグリッドシステムです。付与するクラス名によって、カラム幅の比率・溝の大きさ・配置の調整が可能になっています。
+    br
+    | 要素を、&nbsp;
+    code.code .group
+    | &nbsp;>&nbsp;
+    code.code .grid
+    | &nbsp;>&nbsp;
+    code.code .col
+    | &nbsp;の順に書くのが基本構造です。
+    code.code .grid
+    | &nbsp;と&nbsp;
+    code.code .col
+    | &nbsp;には状態を表すクラスを付与します。
+  .group.is-wrap.is-preview.is-center.is-strong
+    .grid.is-space-1
+      - for (var i = 1; i <= 3; i++)
+        .col.is-mobile-12.is-desktop-4
+          .group.is-demo-box-1.is-primary.is-round
+            | .col .is-mobile-12 .is-desktop-4
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;group&quot;&gt;
+        &lt;div class=&quot;grid is-space-1&quot;&gt;
+          &lt;div class=&quot;col is-mobile-12 is-desktop-4&quot;&gt;
+            ...
+          &lt;/div&gt;
+          &lt;div class=&quot;col is-mobile-12 is-desktop-4&quot;&gt;
+            ...
+          &lt;/div&gt;
+          &lt;div class=&quot;col is-mobile-12 is-desktop-4&quot;&gt;
+            ...
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .group
+        .grid.is-space-1
+          .col.is-mobile-12.is-desktop-4
+            ...
+          .col.is-mobile-12.is-desktop-4
+            ...
+          .col.is-mobile-12.is-desktop-4
+            ...
+
+.groups
+  h4.heading.is-xl Grid - Space
+  p.texts.is-sm
+    | カラムの間に溝を作るには、&nbsp;
+    code.code .grid
+    | &nbsp;に&nbsp;
+    code.code .is-space-(x)
+    | &nbsp;を付与します。（x）の中に入れた数字に「4px」を掛けた値が溝となります。
+  .group.is-wrap.is-preview.is-center.is-strong
+    - for (var i = 1; i <= 9; i++)
+      .group
+        .grid(class="is-space-"+i)
+          .col.is-mobile-4
+            .group.is-demo-box-1.is-primary.is-round
+              | .grid .is-space-#{i}
+          .col.is-mobile-4
+            .group.is-demo-box-1.is-primary.is-round
+              | .grid .is-space-#{i}
+          .col.is-mobile-4
+            .group.is-demo-box-1.is-primary.is-round
+              | .grid .is-space-#{i}
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;group&quot;&gt;
+        &lt;div class=&quot;grid is-space-(x)&quot;&gt;
+          &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        ...
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .group
+        .grid.is-space-(x)
+          .col
+          .col
+          .col
+        ...
+
+.groups
+  h4.heading.is-xl Grid - Tile
+  p.texts.is-sm
+    | 溝を設定した&nbsp;
+    code.code .grid
+    | &nbsp;を入れ子にすることで、タイル状のレイアウトも作れます。
+  .group.is-wrap.is-preview.is-center.is-strong
+    .group
+      .grid.is-space-1
+        .col.is-mobile-8
+          .grid.is-space-1
+            .col.is-mobile-6
+              .grid.is-space-1
+                .col.is-mobile-12
+                  .group.is-demo-box-1.is-primary.is-round
+                    | Tile A
+                .col.is-mobile-12
+                  .group.is-demo-box-1.is-primary.is-round
+                    | Tile B
+            .col.is-mobile-6.is-stretch
+              .group.is-demo-box-1.is-primary.is-round
+                | Tile C
+          .grid.is-space-1
+            .col.is-mobile-12
+              .group.is-demo-box-1.is-primary.is-round
+                | Tile D
+        .col.is-mobile-4.is-stretch
+          .group.is-demo-box-1.is-primary.is-round
+            | Tile E
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;group&quot;&gt;
+        &lt;div class=&quot;grid is-space-1&quot;&gt;
+          &lt;div class=&quot;col is-mobile-8&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid is-space-1&quot;&gt;
+              &lt;div class=&quot;col is-mobile-6&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;grid is-space-1&quot;&gt;
+                  &lt;div class=&quot;col is-mobile-12&quot;&gt;Tile A&lt;/div&gt;
+                  &lt;div class=&quot;col is-mobile-12&quot;&gt;Tile B&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;div class=&quot;col is-mobile-6 is-stretch&quot;&gt;Tile C&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;grid is-space-1&quot;&gt;
+              &lt;div class=&quot;col is-mobile-12&quot;&gt;Tile D&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;div class=&quot;col is-mobile-4 is-stretch&quot;&gt;Tile E&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .group
+        .grid.is-space-1
+          .col.is-mobile-8
+            .grid.is-space-1
+              .col.is-mobile-6
+                .grid.is-space-1
+                  .col.is-mobile-12 Tile A
+                  .col.is-mobile-12 Tile B
+              .col.is-mobile-6.is-stretch Tile C
+            .grid.is-space-1
+              .col.is-mobile-12 Tile D
+          .col.is-mobile-4.is-stretch Tile E
+
+.groups
+  h4.heading.is-xl Grid - Arrangement
+  p.texts.is-sm
+    | グリッド内の配置をFlexboxのプロパティで簡易的に調整することができます。
+    br
+    | 使用するには、&nbsp;
+    code.code .grid
+    | &nbsp;に&nbsp;
+    code.code .is-center
+    | &nbsp;（横中央寄せ）や&nbsp;
+    code.code .is-between
+    | &nbsp;（等間隔）などの対応したクラスを付与します。
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th .is-middle
+          th .is-bottom
+          th .is-center
+          th .is-end
+          th .is-between
+          th .is-around
+      tbody
+        tr
+          td 縦中央寄せ
+          td 縦末尾寄せ
+          td 横中央寄せ
+          td 横末尾寄せ
+          td 等間隔（端余白なし）
+          td 等間隔（端余白あり）
+  .group.is-wrap.is-preview.is-strong
+    .group.group.is-demo-box-3.is-grey.is-round
+      .grid.is-demo-box-1.is-height-1.is-space-1.is-middle
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-middle
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-middle
+    .group.group.is-demo-box-3.is-grey.is-round
+      .grid.is-demo-box-1.is-height-1.is-space-1.is-bottom
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-bottom
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-bottom
+    .group.group.is-demo-box-3.is-grey.is-round
+      .grid.is-demo-box-1.is-space-1.is-center
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-center
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-center
+    .group.group.is-demo-box-3.is-grey.is-round
+      .grid.is-demo-box-1.is-space-1.is-end
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-end
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-end
+    .group.group.is-demo-box-3.is-grey.is-round
+      .grid.is-demo-box-1.is-space-1.is-between
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-between
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-between
+    .group.group.is-demo-box-3.is-grey.is-round
+      .grid.is-demo-box-1.is-space-1.is-around
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-around
+        .col
+          .group.is-demo-box-3.is-primary.is-round .is-around
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;group&quot;&gt;
+        &lt;div class=&quot;grid is-(xxxx)&quot;&gt;
+          &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
+          &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .group
+        .grid.is-(xxxx)
+          .col: ...
+          .col: ...
+
+.groups
+  h4.heading.is-xl Grid - 100vh
+  p.texts.is-sm
+    code.code .grid
+    | &nbsp;に&nbsp;
+    code.code .is-(xxxx)-100vh
+    | &nbsp;を付与することにより、任意のブレイクポイントでグリッドの高さを100vhにできます。
+    br
+    | （xxxx）には、ブレイクポイントを表すキーワードを入れます。
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Mobile
+              br
+              span.text.is-sm all
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Fablet
+              br
+              span.text.is-sm 576px ~
+          th
+            p
+              i.fa.fa-tablet(aria-hidden="true")
+              span.text Tablet
+              br
+              span.text.is-sm 768px ~
+          th
+            p
+              i.fa.fa-laptop(aria-hidden="true")
+              span.text Desktop
+              br
+              span.text.is-sm 992px ~
+          th
+            p
+              i.fa.fa-desktop(aria-hidden="true")
+              span.text Wide
+              br
+              span.text.is-sm 1200px ~
+      tbody
+        tr
+          td
+            p
+              span.text .is-mobile-100vh
+          td
+            p
+              span.text .is-fablet-100vh
+          td
+            p
+              span.text .is-tablet-100vh
+          td
+            p
+              span.text .is-desktop-100vh
+          td
+            p
+              span.text .is-wide-100vh
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Touch
+              br
+              span.text.is-sm ~ 991px
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Landscape
+              br
+              span.text.is-sm デバイス横向き
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Portrait
+              br
+              span.text.is-sm デバイス縦向き
+      tbody
+        tr
+          td
+            p
+              span.text .is-touch-100vh
+          td
+            p
+              span.text .is-landscape-100vh
+          td
+            p
+              span.text .is-portrait-100vh
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;group&quot;&gt;
+        &lt;div class=&quot;grid is-(xxxx)-100vh&quot;&gt;
+          &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
+          &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .group
+        .grid.is-(xxxx)-100vh
+          .col: ...
+          .col: ...
+
+.groups
+  h4.heading.is-xl Column - Size
+  p.texts.is-sm
+    | カラム幅の比率を変更するには、&nbsp;
+    code.code .col
+    | &nbsp;にサイズを表すクラス名を付与します。サイズは、ディスプレイサイズごとにモバイルファーストな設定が可能です。
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th(width="80")
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Mobile
+              br
+              span.text.is-sm all
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Fablet
+              br
+              span.text.is-sm 576px ~
+          th
+            p
+              i.fa.fa-tablet(aria-hidden="true")
+              span.text Tablet
+              br
+              span.text.is-sm 768px ~
+          th
+            p
+              i.fa.fa-laptop(aria-hidden="true")
+              span.text Desktop
+              br
+              span.text.is-sm 992px ~
+          th
+            p
+              i.fa.fa-desktop(aria-hidden="true")
+              span.text Wide
+              br
+              span.text.is-sm 1200px ~
+      tbody
+        tr
+          td
+            p.text.is-sm
+              | カラムの比率保持
+          td
+            p
+              span.text .is-mobile-1
+              br
+              span.text |
+              br
+              span.text .is-mobile-12
+          td
+            p
+              span.text .is-fablet-1
+              br
+              span.text |
+              br
+              span.text .is-fablet-12
+          td
+            p
+              span.text .is-tablet-1
+              br
+              span.text |
+              br
+              span.text .is-tablet-12
+          td
+            p
+              span.text .is-desktop-1
+              br
+              span.text |
+              br
+              span.text .is-desktop-12
+          td
+            p
+              span.text .is-wide-1
+              br
+              span.text |
+              br
+              span.text .is-wide-12
+        tr
+          td
+            p.text.is-sm
+              | 残っている余白
+              br
+              | いっぱいに広がり等分
+          td
+            p
+              span.text .is-mobile-0
+          td
+            p
+              span.text .is-fablet-0
+          td
+            p
+              span.text .is-tablet-0
+          td
+            p
+              span.text .is-desktop-0
+          td
+            p
+              span.text .is-wide-0
+        tr
+          td
+            p.text.is-sm
+              | 子要素の
+              br
+              | サイズに縮む
+          td
+            p
+              span.text .is-mobile-auto
+          td
+            p
+              span.text .is-fablet-auto
+          td
+            p
+              span.text .is-tablet-auto
+          td
+            p
+              span.text .is-desktop-auto
+          td
+            p
+              span.text .is-wide-auto
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th(width="80")
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Touch
+              br
+              span.text.is-sm ~ 991px
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Landscape
+              br
+              span.text.is-sm デバイス横向き
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Portrait
+              br
+              span.text.is-sm デバイス縦向き
+      tbody
+        tr
+          td
+            p.text.is-sm
+              | カラムの比率保持
+          td
+            p
+              span.text .is-touch-1
+              br
+              span.text |
+              br
+              span.text .is-touch-12
+          td
+            p
+              span.text .is-landscape-1
+              br
+              span.text |
+              br
+              span.text .is-landscape-12
+          td
+            p
+              span.text .is-portrait-1
+              br
+              span.text |
+              br
+              span.text .is-portrait-12
+        tr
+          td
+            p.text.is-sm
+              | 残っている余白
+              br
+              | いっぱいに広がり等分
+          td
+            p
+              span.text .is-touch-0
+          td
+            p
+              span.text .is-landscape-0
+          td
+            p
+              span.text .is-portrait-0
+        tr
+          td
+            p.text.is-sm
+              | 子要素の
+              br
+              | サイズに縮む
+          td
+            p
+              span.text .is-touch-auto
+          td
+            p
+              span.text .is-landscape-auto
+          td
+            p
+              span.text .is-portrait-auto
+  .group.is-wrap.is-preview.is-strong.is-center
+    - for (var i = 1; i <= 12; i++)
+      .grid.is-space-1
+        .col.is-stretch(class="is-mobile-"+i)
+          .group.is-demo-box-1.is-primary.is-round
+            | #{i}
+        .col.is-stretch.is-mobile-0
+          .group.is-demo-box-1.is-grey.is-round
+            | 0
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;group&quot;&gt;
+        &lt;div class=&quot;grid&quot;&gt;
+          &lt;div class=&quot;col is-(xxxx)-(y)&quot;&gt;...&lt;/div&gt;
+          &lt;div class=&quot;col is-(xxxx)-(y)&quot;&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .group
+        .grid
+          .col.is-(xxxx)-(y): ...
+          .col.is-(xxxx)-(y): ...
+
+.groups
+  h4.heading.is-xl Column - Stretch
+  p.texts.is-sm
+    | カラムはデフォルトで高さが揃いますが、更に子要素まで高さを揃えるには、&nbsp;
+    code.code .col
+    | &nbsp;に&nbsp;
+    code.code .is-stretch
+    | &nbsp;を付与します。
+  .group.is-wrap.is-preview.is-center.is-strong
+    .grid.is-space-1
+      .col.is-mobile-0
+        .group.is-demo-box-1.is-grey.is-round
+          | ↓
+          br
+          | ↓
+          br
+          | ↓
+          br
+          | ↓
+      .col.is-mobile-0
+        .group.is-demo-box-1.is-primary.is-round
+          | .is-stretch 無し
+      .col.is-mobile-0.is-stretch
+        .group.is-demo-box-1.is-primary.is-round
+          | .is-stretch あり
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;div class=&quot;group&quot;&gt;
+        &lt;div class=&quot;grid&quot;&gt;
+          &lt;div class=&quot;col is-stretch&quot;&gt;...&lt;/div&gt;
+          &lt;div class=&quot;col is-stretch&quot;&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      .group
+        .grid
+          .col.is-stretch: ...
+          .col.is-stretch: ...

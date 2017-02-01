@@ -1,0 +1,95 @@
+//----------------------------------------------------
+//- Parts: Icon
+//----------------------------------------------------
+
+.groups
+  h3.heading.is-xl Icon
+  p.texts.is-sm
+    | アイコンの利用については、Font Awesome・Material Icons・IcoMoonなどの利用を想定しています。
+    br
+    | 要素のタグは&nbsp;
+    code.code .icon
+    | &nbsp;
+    code.code .im
+    | &nbsp;
+    code.code .fa
+    | &nbsp;
+    code.code .material-icons
+    | &nbsp;のうち、いずれも同じように使用できます。
+    br
+    | HTMLソース上で各種アイコンと&nbsp;
+    code.code .text
+    | &nbsp;が隣り合うと、自動的にmargin-leftが付与され距離が保たれます。
+  .group.is-wrap.is-preview
+    p.texts.is-xl.is-danger
+      i.fa.fa-heart(aria-hidden="true")
+      span.text ハート
+      i.fa.fa-heart(aria-hidden="true")
+      span.text.is-demo-space-filter-2 ハート
+      i.fa.fa-heart(aria-hidden="true")
+      span.text ハート
+      span.icon.is-demo-space-filter-2
+        i.fa.fa-heart(aria-hidden="true")
+      span.text ハート
+      i.fa.fa-heart(aria-hidden="true")
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;p class=&quot;texts&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;ハート&lt;/span&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;text&quot;&gt;ハート&lt;/span&gt;
+        ...
+      &lt;/p&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      p.texts
+        i.fa.fa-heart(aria-hidden="true")
+        span.text ハート
+        i.fa.fa-heart(aria-hidden="true")
+        span.text ハート
+        ...
+
+.groups
+  h4.heading.is-xl Icon - Fit
+  p.texts.is-sm
+    | 各種アイコンのタグに&nbsp;
+    code.code .is-fit
+    | &nbsp;を付与することで、アイコンの領域を一定に統一できます。
+  .group.is-wrap.is-preview
+    .grid.is-space-5
+      .col
+        p.texts.is-xxl
+          span.text.is-demo-space-filter-3
+            i.fa.fa-institution(aria-hidden="true")
+            br
+            i.fa.fa-angle-right(aria-hidden="true")
+      .col
+        p.texts.is-xxl.is-success
+          span.text.is-demo-space-filter-3
+            i.fa.fa-institution.is-fit(aria-hidden="true")
+            br
+            i.fa.fa-angle-right.is-fit(aria-hidden="true")
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;p class=&quot;texts&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-institution&quot;&gt;&lt;/i&gt;
+        &lt;br/&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;
+      &lt;/p&gt;
+
+      &lt;p class=&quot;texts&quot;&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-institution is-fit&quot;&gt;&lt;/i&gt;
+        &lt;br/&gt;
+        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right is-fit&quot;&gt;&lt;/i&gt;
+      &lt;/p&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      p.texts
+        i.fa.fa-institution(aria-hidden="true")
+        br
+        i.fa.fa-angle-right(aria-hidden="true")
+      p.texts
+        i.fa.fa-institution.is-fit(aria-hidden="true")
+        br
+        i.fa.fa-angle-right.is-fit(aria-hidden="true")

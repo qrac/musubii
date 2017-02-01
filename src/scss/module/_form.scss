@@ -1,0 +1,141 @@
+//----------------------------------------------------
+// Module: Form
+//----------------------------------------------------
+
+.form {
+}
+
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  > .field + .field {
+    margin-top: 0;
+  }
+  &.is-left {
+    justify-content: flex-start;
+  }
+  &.is-center {
+    justify-content: center;
+  }
+  &.is-right {
+    justify-content: flex-end;
+  }
+  &.is-middle {
+    align-items: center;
+  }
+}
+
+@for $i from 1 through 9 {
+  .field.is-space-#{$i} {
+    margin-right: $i * -4px;
+    margin-bottom: $i * -4px;
+  }
+  .field.is-space-#{$i} > * {
+    margin-right: $i * 4px;
+    margin-bottom: $i * 4px;
+  }
+  .field.is-space-#{$i} > .field {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.input[type="text"],
+.input[type="search"],
+.input[type="url"],
+.input[type="email"],
+.input[type="tel"],
+.input[type="password"],
+.input[type="datetime"],
+.input[type="datetime-local"],
+.input[type="date"],
+.input[type="month"],
+.input[type="week"],
+.input[type="time"],
+.input[type="number"],
+.select {
+  max-width: 100%;
+  height: 2.5em;
+  background: $light;
+  border: 1px solid $dark-6;
+  border-radius: 2px;
+  padding: calc(0.5em - 1.5px) 0.5em;
+  &[disabled] {
+    background: $grey-3;
+    color: $dark-6;
+  }
+}
+
+.input[type="text"],
+.input[type="search"],
+.input[type="url"],
+.input[type="email"],
+.input[type="tel"],
+.input[type="password"],
+.input[type="datetime"],
+.input[type="datetime-local"],
+.input[type="date"],
+.input[type="month"],
+.input[type="week"],
+.input[type="time"],
+.input[type="number"] {
+  box-shadow: $shadow-input;
+  @include placeholder {
+    color: $dark-6;
+  }
+  &[disabled] {
+    box-shadow: none;
+  }
+}
+
+.select {
+  @include placeholder {
+    color: $dark-1;
+  }
+}
+
+.textarea {
+  min-height: 150px;
+  background: $light;
+  border: 1px solid $dark-6;
+  border-radius: 2px;
+  box-shadow: $shadow-input;
+  padding: calc(0.5em - 1.5px) 0.5em;
+  &[disabled] {
+    background: $grey-3;
+    color: $dark-6;
+    box-shadow: none;
+  }
+}
+
+.input[type="radio"],
+.input[type="checkbox"] {
+  margin-right: 0.25em;
+  ~ *:last-child {
+    margin-right: 1em;
+  }
+  &[disabled] ~ * {
+    color: $dark-5;
+  }
+}
+
+@for $i from 0 through 20 {
+  @if $i == 0 {
+    .field.is-width-#{$i},
+    .input.is-width-#{$i},
+    .select.is-width-#{$i},
+    .textarea.is-width-#{$i} {
+      flex: 1 0 0%;
+      width: 100%;
+    }
+  }
+  @else {
+    .field.is-width-#{$i},
+    .input.is-width-#{$i},
+    .select.is-width-#{$i},
+    .textarea.is-width-#{$i} {
+      flex: 0 0 $i + em;
+      width: $i + em;
+    }
+  }
+}

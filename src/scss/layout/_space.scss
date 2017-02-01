@@ -1,0 +1,149 @@
+//----------------------------------------------------
+// Layout: Space
+//----------------------------------------------------
+
+.groups,
+.group,
+.texts,
+.blockquote,
+.pre,
+.btns,
+.list,
+.table,
+.form,
+.alert,
+.wysiwyg {
+  + .groups {
+    margin-top: 3em;
+  }
+  + .heading {
+    margin-top: 2em;
+  }
+  + .group,
+  + .texts,
+  + .blockquote,
+  + .pre,
+  + .btns,
+  + .list,
+  + .table,
+  + .form,
+  + .alert,
+  + .wysiwyg {
+    margin-top: 1em;
+  }
+  + .field {
+    margin-top: 0.5em;
+  }
+}
+
+.heading {
+  + .groups {
+    margin-top: 3em;
+  }
+  + .heading {
+    margin-top: 1em;
+  }
+  + .group,
+  + .texts,
+  + .blockquote,
+  + .pre,
+  + .btns,
+  + .list,
+  + .table,
+  + .form,
+  + .alert,
+  + .wysiwyg {
+    margin-top: 1em;
+  }
+  + .field {
+    margin-top: 0.5em;
+  }
+}
+
+.field {
+  + .groups {
+    margin-top: 0.5em;
+  }
+  + .heading {
+    margin-top: 0.5em;
+  }
+  + .group,
+  + .texts,
+  + .blockquote,
+  + .pre,
+  + .btns,
+  + .list,
+  + .table,
+  + .form,
+  + .alert,
+  + .wysiwyg {
+    margin-top: 0.5em;
+  }
+  + .field {
+    margin-top: 0.5em;
+  }
+}
+
+.wysiwyg {
+  p,
+  blockquote,
+  pre,
+  ul,
+  ol,
+  table,
+  hr {
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6 {
+      margin-top: 2em;
+    }
+    + p,
+    + blockquote,
+    + pre,
+    + ul,
+    + ol,
+    + table,
+    + hr {
+      margin-top: 1em;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6 {
+      margin-top: 1em;
+    }
+    + p,
+    + blockquote,
+    + pre,
+    + ul,
+    + ol,
+    + table,
+    + hr {
+      margin-top: 1em;
+    }
+  }
+}
+
+.contents {
+}
+
+.content {
+}
+
+.boxs {
+}
+
+.box {
+}
