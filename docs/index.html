@@ -70,7 +70,7 @@
     <section class="section is-center is-topcover is-switch-out-1-topcover">
       <div class="inner"><img class="logo is-title" src="img/logo-set-tate-musubii.svg" alt="MUSUBii">
         <p class="texts is-light">HTML/CSS Framework for JP</p>
-        <p class="texts is-light is-strong">v1.0.0</p>
+        <p class="texts is-light is-strong">v1.1.0</p>
         <p class="texts is-light"><i class="fa fa-github" aria-hidden="true"></i><a class="text is-link-reverse" href="https://github.com/qrac/musubii"><span class="text">Repository</span></a>&nbsp;/&nbsp;<a class="text is-link-reverse" href="https://github.com/qrac/musubii/releases"><span class="text">Releases</span></a></p>
         <div class="btns is-center"><a class="btn is-lg is-ghost is-round is-cyan" href="css/musubii.min.css" download="musubii.min.css"><i class="fa fa-download" aria-hidden="true"></i><span class="text">Download</span></a></div>
       </div>
@@ -2307,42 +2307,396 @@ table.table.is-stripe
             <div class="content is-switch-out-2-9">
               <div class="groups">
                 <h3 class="heading is-xl">Form</h3>
-                <p class="texts is-sm">ブラウザデフォルトを拡張する設計ですので、クラスを当てなくても使用できます。<br>親要素に&nbsp;<code class="code">.form</code>&nbsp;を用いることで、他のモジュールとの距離を調整することができます。<br>要素の間に溝を空けるには、<code class="code">.field</code>に&nbsp;<code class="code">.is-space-(x)</code>&nbsp;を付与。（x）の中に入れた数字に「4px」を掛けた値が溝となります。</p>
+                <p class="texts is-sm">ブラウザデフォルトを拡張する設計ですので、クラスを当てなくても使用できます。<br>親要素に&nbsp;<code class="code">.form</code>&nbsp;を用いることで、他のモジュールとの距離を保つことができます。子要素のデザインはこのタグに依存しません。<br>フォームパーツは&nbsp;<code class="code">.field</code>&nbsp;で囲むことで見出しとの距離を縮め、同時にレスポンシブ対応します。</p>
+                <div class="group is-wrap is-preview">
+                  <div class="group">
+                    <div class="grid is-center">
+                      <div class="col is-mobile-12 is-tablet-4 is-desktop-3">
+                        <div class="group is-demo-box-1">
+                          <form class="form">
+                            <div class="group">
+                              <p class="heading">メールアドレス</p>
+                              <div class="field">
+                                <input class="input is-mobile-0" type="email" placeholder="example@gmail.com">
+                              </div>
+                            </div>
+                            <div class="group">
+                              <p class="heading">パスワード</p>
+                              <div class="field">
+                                <input class="input is-mobile-0" type="password">
+                              </div>
+                            </div>
+                            <div class="group">
+                              <label>
+                                <input class="input" type="checkbox" name="checkbox-default"><span class="text is-sm">次回から自動的にログイン</span>
+                              </label>
+                            </div>
+                            <div class="group">
+                              <div class="btns">
+                                <input class="btn is-plain is-success is-full" type="submit" value="ログイン">
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre is-label is-html"><code class="code">&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;メールアドレス&lt;/p&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;input class=&quot;input is-mobile-0&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;パスワード&lt;/p&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;input class=&quot;input is-mobile-0&quot; type=&quot;password&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;label&gt;
+      &lt;input class=&quot;input&quot; type=&quot;checkbox&quot;&gt;
+      &lt;span class=&quot;text is-sm&quot;&gt;次回から自動的にログイン&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;div class=&quot;btns&quot;&gt;
+      &lt;input class=&quot;btn is-plain is-success is-full&quot; type=&quot;submit&quot; value=&quot;ログイン&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">form.form
+  .group
+    p.heading メールアドレス
+    .field
+      input.input.is-mobile-0(type="email" placeholder="example@gmail.com")
+  .group
+    p.heading パスワード
+    .field
+      input.input.is-mobile-0(type="password")
+  .group
+    label
+      input.input(type="checkbox")
+      span.text.is-sm 次回から自動的にログイン
+  .group
+    .btns
+      input.btn.is-plain.is-success.is-full(type="submit" value="ログイン")
+</code></pre>
+              </div>
+              <div class="groups">
+                <h4 class="heading is-xl">Form - Field</h4>
+                <p class="texts is-sm"><code class="code">.field</code>&nbsp;に&nbsp;<code class="code">.is-space-(x)</code>&nbsp;を付与することで、（x）の中に入れた数字に「4px」を掛けた値が溝となります。<br>また、&nbsp;<code class="code">.field</code>&nbsp;直下の要素はグリッドと同じ&nbsp;<code class="code">.is-(xxxx)-(y)</code>&nbsp;のクラスを付与し12分割レスポンシブでサイズを変更できます。<br><code class="code">.is-middle</code>&nbsp;を付与し天地中央寄せで並べることも可能です。</p>
+                <div class="group is-scroll-x">
+                  <table class="table is-sm is-center is-nowrap is-middle is-border">
+                    <thead>
+                      <tr class="box is-paint">
+                        <th width="80"></th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Mobile</span><br><span class="text is-sm">all</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Fablet</span><br><span class="text is-sm">576px ~</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-tablet" aria-hidden="true"></i><span class="text">Tablet</span><br><span class="text is-sm">768px ~</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-laptop" aria-hidden="true"></i><span class="text">Desktop</span><br><span class="text is-sm">992px ~</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-desktop" aria-hidden="true"></i><span class="text">Wide</span><br><span class="text is-sm">1200px ~</span></p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">パーツの比率保持</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-mobile-1</span><br><span class="text">|</span><br><span class="text">.is-mobile-12</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-fablet-1</span><br><span class="text">|</span><br><span class="text">.is-fablet-12</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-tablet-1</span><br><span class="text">|</span><br><span class="text">.is-tablet-12</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-desktop-1</span><br><span class="text">|</span><br><span class="text">.is-desktop-12</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-wide-1</span><br><span class="text">|</span><br><span class="text">.is-wide-12</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">残っている余白<br>いっぱいに広がり等分</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-mobile-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-fablet-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-tablet-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-desktop-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-wide-0</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">パーツ本来の<br>サイズになる</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-mobile-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-fablet-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-tablet-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-desktop-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-wide-auto</span></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="group is-scroll-x">
+                  <table class="table is-sm is-center is-nowrap is-middle is-border">
+                    <thead>
+                      <tr class="box is-paint">
+                        <th width="80"></th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Touch</span><br><span class="text is-sm">~ 991px</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Landscape</span><br><span class="text is-sm">デバイス横向き</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Portrait</span><br><span class="text is-sm">デバイス縦向き</span></p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">パーツの比率保持</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-touch-1</span><br><span class="text">|</span><br><span class="text">.is-touch-12</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-landscape-1</span><br><span class="text">|</span><br><span class="text">.is-landscape-12</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-portrait-1</span><br><span class="text">|</span><br><span class="text">.is-portrait-12</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">残っている余白<br>いっぱいに広がり等分</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-touch-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-landscape-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-portrait-0</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">パーツ本来の<br>サイズになる</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-touch-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-landscape-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-portrait-auto</span></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="group is-wrap is-preview">
+                  <form class="form">
+                    <div class="group">
+                      <p class="heading">Desktopサイズまでは入力枠がフルサイズ↓</p>
+                      <div class="field is-space-2">
+                        <input class="input is-mobile-12 is-desktop-auto" type="text" placeholder="Text">
+                        <input class="input is-mobile-12 is-desktop-auto" type="text" placeholder="Text">
+                      </div>
+                    </div>
+                    <div class="group">
+                      <p class="heading">誕生日：</p>
+                      <div class="field is-space-2">
+                        <select class="select">
+                          <option>2017</option>
+                          <option>2016</option>
+                          <option>2015</option>
+                          <option>2014</option>
+                        </select>
+                        <select class="select">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                        <select class="select">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="group">
+                      <div class="field is-space-2 is-middle">
+                        <p class="heading">性別：</p>
+                        <select class="select">
+                          <option>男性</option>
+                          <option>女性</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <pre class="pre is-label is-html"><code class="code">&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Desktopサイズまでは入力枠がフルサイズ↓&lt;/p&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;input class=&quot;input is-mobile-12 is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+      &lt;input class=&quot;input is-mobile-12 is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;誕生日&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2 is-middle&quot;&gt;
+      &lt;select class=&quot;select&quot;&gt;
+        &lt;option&gt;2017&lt;/option&gt;
+        &lt;option&gt;2016&lt;/option&gt;
+        ...
+      &lt;/select&gt;
+      &lt;select class=&quot;select&quot;&gt;
+        &lt;option&gt;1&lt;/option&gt;
+        &lt;option&gt;2&lt;/option&gt;
+        ...
+      &lt;/select&gt;
+      &lt;select class=&quot;select&quot;&gt;
+        &lt;option&gt;1&lt;/option&gt;
+        &lt;option&gt;2&lt;/option&gt;
+        ...
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;div class=&quot;field is-space-2 is-middle&quot;&gt;
+      &lt;p class=&quot;heading&quot;&gt;性別：&lt;/p&gt;
+      &lt;select class=&quot;select&quot;&gt;
+        &lt;option&gt;男性&lt;/option&gt;
+        &lt;option&gt;女性&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">form.form
+  .group
+    p.heading Desktopサイズまでは入力枠がフルサイズ↓
+    .field.is-space-2
+      input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+      input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+  .group
+    p.heading 誕生日
+    .field.is-space-2.is-middle
+      select.select
+        option 2017
+        option 2016
+        ...
+      select.select
+        option 1
+        option 2
+        ...
+      select.select
+        option 1
+        option 2
+        ...
+  .group
+    .field.is-space-2.is-middle
+      p.heading 性別：
+      select.select
+        option 男性
+        option 女性
+</code></pre>
+              </div>
+              <div class="groups">
+                <h4 class="heading is-xl">Form - Parts</h4>
+                <p class="texts is-sm">フォームの各パーツは、対応しているHTMLタグの属性と値が使用できます。</p>
                 <div class="group is-wrap is-preview">
                   <form class="form">
                     <div class="group">
                       <p class="heading">Text</p>
                       <div class="field is-space-2">
-                        <input class="input is-width-0" type="text" placeholder="Text">
-                        <input class="input is-width-0" type="text" placeholder="Text" disabled>
+                        <input class="input" type="text" placeholder="Text">
+                        <input class="input" type="text" placeholder="Disabled" disabled>
+                        <input class="input" type="text" value="Readonly" readonly>
                       </div>
                     </div>
                     <div class="group">
                       <p class="heading">Search</p>
                       <div class="field is-space-2">
-                        <input class="input is-width-0" type="search" placeholder="Search">
-                        <input class="input is-width-0" type="search" placeholder="Search" disabled>
+                        <input class="input" type="search" placeholder="Search">
+                        <input class="input" type="search" placeholder="Search" disabled>
                       </div>
                     </div>
                     <div class="group">
+                      <p class="heading">URL</p>
                       <div class="field is-space-2">
-                        <div class="field is-space-2 is-middle">
-                          <p class="heading">URL</p>
-                          <input class="input is-width-8" type="url" placeholder="example.com">
-                          <input class="input is-width-8" type="url" placeholder="example.com" disabled>
-                        </div>
-                        <div class="field is-space-2 is-middle">
-                          <p class="heading">E-mail</p>
-                          <input class="input is-width-12" type="email" placeholder="example@gmail.com">
-                          <input class="input is-width-12" type="email" placeholder="example@gmail.com" disabled>
-                        </div>
+                        <input class="input" type="url" placeholder="example.com">
+                        <input class="input" type="url" placeholder="example.com" disabled>
+                      </div>
+                    </div>
+                    <div class="group">
+                      <p class="heading">E-mail</p>
+                      <div class="field is-space-2">
+                        <input class="input" type="email" placeholder="example@gmail.com">
+                        <input class="input" type="email" placeholder="example@gmail.com" disabled>
                       </div>
                     </div>
                     <div class="group">
                       <p class="heading">TEL</p>
                       <div class="field is-space-2">
-                        <input class="input" type="tel" placeholder="000-000-0000">
-                        <input class="input" type="tel" placeholder="000-000-0000" disabled>
+                        <input class="input" type="tel" size="14" maxlength="12" placeholder="000-000-0000">
+                        <input class="input" type="tel" size="14" maxlength="12" placeholder="000-000-0000" disabled>
                       </div>
                     </div>
                     <div class="group">
@@ -2352,53 +2706,194 @@ table.table.is-stripe
                         <input class="input" type="password" disabled>
                       </div>
                     </div>
-                    <div class="group">
-                      <p class="heading">Date Time</p>
-                      <div class="field is-space-2">
-                        <input class="input" type="datetime">
-                        <input class="input" type="datetime" disabled>
-                      </div>
-                    </div>
+                  </form>
+                </div>
+                <pre class="pre is-label is-html"><code class="code">&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Text&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Disabled&quot; disabled=&quot;&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;text&quot; value=&quot;Readonly&quot; readonly=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Search&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;URL&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;E-mail&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;TEL&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Password&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;password&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;password&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">form.form
+  .group
+    p.heading Text
+    .field.is-space-2
+      input.input(type="text" placeholder="Text")
+      input.input(type="text" placeholder="Disabled" disabled)
+      input.input(type="text" value="Readonly" readonly)
+  .group
+    p.heading Search
+    .field.is-space-2
+      input.input(type="search" placeholder="Search")
+      input.input(type="search" placeholder="Search" disabled)
+  .group
+    p.heading URL
+    .field.is-space-2
+      input.input(type="url" placeholder="example.com")
+      input.input(type="url" placeholder="example.com" disabled)
+  .group
+    p.heading E-mail
+    .field.is-space-2
+      input.input(type="email" placeholder="example@gmail.com")
+      input.input(type="email" placeholder="example@gmail.com" disabled)
+  .group
+    p.heading TEL
+    .field.is-space-2
+      input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000")
+      input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000" disabled)
+  .group
+    p.heading Password
+    .field.is-space-2
+      input.input(type="password")
+      input.input(type="password" disabled)</code></pre>
+                <div class="group is-wrap is-preview">
+                  <form class="form">
                     <div class="group">
                       <p class="heading">Date Time Local</p>
                       <div class="field is-space-2">
-                        <input class="input" type="datetime-local">
-                        <input class="input" type="datetime-local" disabled>
+                        <input class="input" type="datetime-local" value="2017-02-02T00:00:00">
+                        <input class="input" type="datetime-local" value="2017-02-02T00:00:00" disabled>
                       </div>
                     </div>
                     <div class="group">
                       <p class="heading">Date</p>
                       <div class="field is-space-2">
-                        <input class="input" type="date">
-                        <input class="input" type="date" disabled>
+                        <input class="input" type="date" value="2017-02-02">
+                        <input class="input" type="date" value="2017-02-02" disabled>
                       </div>
                     </div>
                     <div class="group">
                       <p class="heading">Month</p>
                       <div class="field is-space-2">
-                        <input class="input" type="month">
-                        <input class="input" type="month" disabled>
+                        <input class="input" type="month" value="2017-02">
+                        <input class="input" type="month" value="2017-02" disabled>
                       </div>
                     </div>
                     <div class="group">
                       <p class="heading">Week</p>
                       <div class="field is-space-2">
-                        <input class="input" type="week">
-                        <input class="input" type="week" disabled>
+                        <input class="input" type="week" value="2017-W05">
+                        <input class="input" type="week" value="2017-W05" disabled>
                       </div>
                     </div>
                     <div class="group">
                       <p class="heading">Time</p>
                       <div class="field is-space-2">
-                        <input class="input" type="time">
-                        <input class="input" type="time" disabled>
+                        <input class="input" type="time" value="00:00:00">
+                        <input class="input" type="time" value="00:00:00" disabled>
                       </div>
                     </div>
+                  </form>
+                </div>
+                <pre class="pre is-label is-html"><code class="code">&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Date Time Local&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Date&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Month&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Week&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;week&quot; value=&quot;2017-W05&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;week&quot; value=&quot;2017-W05&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Time&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">form.form
+  .group
+    p.heading Date Time Local
+    .field.is-space-2
+      input.input(type="datetime-local" value="2017-02-02T00:00:00")
+      input.input(type="datetime-local" value="2017-02-02T00:00:00" disabled)
+  .group
+    p.heading Date
+    .field.is-space-2
+      input.input(type="date" value="2017-02-02")
+      input.input(type="date" value="2017-02-02" disabled)
+  .group
+    p.heading Month
+    .field.is-space-2
+      input.input(type="month" value="2017-02")
+      input.input(type="month" value="2017-02" disabled)
+  .group
+    p.heading Week
+    .field.is-space-2
+      input.input(type="week" value="2017-W05")
+      input.input(type="week" value="2017-W05" disabled)
+  .group
+    p.heading Time
+    .field.is-space-2
+      input.input(type="time" value="00:00:00")
+      input.input(type="time" value="00:00:00" disabled)</code></pre>
+                <div class="group is-wrap is-preview">
+                  <form class="form">
                     <div class="group">
                       <p class="heading">Number</p>
                       <div class="field is-space-2">
-                        <input class="input" type="number">
-                        <input class="input" type="number" disabled>
+                        <input class="input" type="number" step="10">
+                        <input class="input" type="number" step="10" disabled>
                       </div>
                     </div>
                     <div class="group">
@@ -2411,8 +2906,8 @@ table.table.is-stripe
                     <div class="group">
                       <p class="heading">Color</p>
                       <div class="field is-space-2">
-                        <input class="input" type="color">
-                        <input class="input" type="color" disabled>
+                        <input class="input" type="color" value="#1cb4c7">
+                        <input class="input" type="color" value="#1cb4c7" disabled>
                       </div>
                     </div>
                     <div class="group">
@@ -2425,10 +2920,77 @@ table.table.is-stripe
                     <div class="group">
                       <p class="heading">Textarea</p>
                       <div class="field is-space-2">
-                        <textarea class="textarea is-width-0"></textarea>
-                        <textarea class="textarea is-width-0" disabled></textarea>
+                        <textarea class="textarea is-mobile-12"></textarea>
+                        <textarea class="textarea is-mobile-12" disabled></textarea>
                       </div>
                     </div>
+                  </form>
+                </div>
+                <pre class="pre is-label is-html"><code class="code">&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Number&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;File&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;file&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;file&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Color&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Range&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;range&quot;&gt;
+      &lt;input class=&quot;input&quot; type=&quot;range&quot; disabled=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Textarea&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;textarea class=&quot;textarea is-mobile-12&quot;&gt;&lt;/textarea&gt;
+      &lt;textarea class=&quot;textarea is-mobile-12&quot; disabled=&quot;&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">form.form
+  .group
+    p.heading Number
+    .field.is-space-2
+      input.input(type="number" step="10")
+      input.input(type="number" step="10" disabled)
+  .group
+    p.heading File
+    .field.is-space-2
+      input.input(type="file")
+      input.input(type="file" disabled)
+  .group
+    p.heading Color
+    .field.is-space-2
+      input.input(type="color" value="#1cb4c7")
+      input.input(type="color" value="#1cb4c7" disabled)
+  .group
+    p.heading Range
+    .field.is-space-2
+      input.input(type="range")
+      input.input(type="range" disabled)
+  .group
+    p.heading Textarea
+    .field.is-space-2
+      textarea.textarea.is-mobile-12
+      textarea.textarea.is-mobile-12(disabled)</code></pre>
+                <div class="group is-wrap is-preview">
+                  <form class="form">
                     <div class="group">
                       <p class="heading">Radio</p>
                       <div class="field">
@@ -2457,6 +3019,65 @@ table.table.is-stripe
                         </label>
                       </div>
                     </div>
+                  </form>
+                </div>
+                <pre class="pre is-label is-html"><code class="code">&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Radio&lt;/p&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;
+        &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびー&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびい&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすび&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Checkbox&lt;/p&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;
+        &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;HTML&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;CSS&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;JS&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">form.form
+  .group
+    p.heading Radio
+    .field
+      label
+        input.input(type="radio" name="radio-default-1" checked)
+        span.text むすびー
+      label
+        input.input(type="radio" name="radio-default-1")
+        span.text むすびい
+      label
+        input.input(type="radio" name="radio-default-1" disabled)
+        span.text むすび
+  .group
+    p.heading Checkbox
+    .field
+      label
+        input.input(type="checkbox" name="checkbox-default-1" checked)
+        span.text HTML
+      label
+        input.input(type="checkbox" name="checkbox-default-1")
+        span.text CSS
+      label
+        input.input(type="checkbox" name="checkbox-default-1" disabled)
+        span.text JS</code></pre>
+                <div class="group is-wrap is-preview">
+                  <form class="form">
                     <div class="group">
                       <p class="heading">Select</p>
                       <div class="field is-space-2">
@@ -2475,7 +3096,93 @@ table.table.is-stripe
                           <option>Select E</option>
                         </select>
                       </div>
+                      <div class="field is-space-2">
+                        <select class="select" multiple>
+                          <option>Select A</option>
+                          <option>Select B</option>
+                          <option>Select C</option>
+                          <option>Select D</option>
+                          <option>Select E</option>
+                        </select>
+                        <select class="select" multiple disabled>
+                          <option>Select A</option>
+                          <option>Select B</option>
+                          <option>Select C</option>
+                          <option>Select D</option>
+                          <option>Select E</option>
+                        </select>
+                      </div>
                     </div>
+                  </form>
+                </div>
+                <pre class="pre is-label is-html"><code class="code">&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Select&lt;/p&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;select class=&quot;select&quot;&gt;
+        &lt;option&gt;Select A&lt;/option&gt;
+        &lt;option&gt;Select B&lt;/option&gt;
+        &lt;option&gt;Select C&lt;/option&gt;
+        &lt;option&gt;Select D&lt;/option&gt;
+        &lt;option&gt;Select E&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;select class=&quot;select&quot; disabled=&quot;&quot;&gt;
+        &lt;option&gt;Select A&lt;/option&gt;
+        &lt;option&gt;Select B&lt;/option&gt;
+        &lt;option&gt;Select C&lt;/option&gt;
+        &lt;option&gt;Select D&lt;/option&gt;
+        &lt;option&gt;Select E&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field is-space-2&quot;&gt;
+      &lt;select class=&quot;select&quot; multiple=&quot;&quot;&gt;
+        &lt;option&gt;Select A&lt;/option&gt;
+        &lt;option&gt;Select B&lt;/option&gt;
+        &lt;option&gt;Select C&lt;/option&gt;
+        &lt;option&gt;Select D&lt;/option&gt;
+        &lt;option&gt;Select E&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;select class=&quot;select&quot; multiple=&quot;&quot; disabled=&quot;&quot;&gt;
+        &lt;option&gt;Select A&lt;/option&gt;
+        &lt;option&gt;Select B&lt;/option&gt;
+        &lt;option&gt;Select C&lt;/option&gt;
+        &lt;option&gt;Select D&lt;/option&gt;
+        &lt;option&gt;Select E&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">form.form
+  .group
+    p.heading Select
+    .field.is-space-2
+      select.select
+        option Select A
+        option Select B
+        option Select C
+        option Select D
+        option Select E
+      select.select(disabled)
+        option Select A
+        option Select B
+        option Select C
+        option Select D
+        option Select E
+    .field.is-space-2
+      select.select(multiple)
+        option Select A
+        option Select B
+        option Select C
+        option Select D
+        option Select E
+      select.select(multiple disabled)
+        option Select A
+        option Select B
+        option Select C
+        option Select D
+        option Select E</code></pre>
+                <div class="group is-wrap is-preview">
+                  <form class="form">
                     <div class="group">
                       <p class="heading">Button</p>
                       <div class="field">
@@ -2505,134 +3212,54 @@ table.table.is-stripe
                     </div>
                   </form>
                 </div>
-                <pre class="pre is-label is-html"><code class="code"></code></pre>
-                <pre class="pre is-label is-pug"><code class="code"></code></pre>
-              </div>
-              <div class="groups">
-                <h4 class="heading is-xl">Form - Width</h4>
-                <p class="texts is-sm"><code class="code">.is-width-(x)</code>&nbsp;を付与すると、横幅を（x）に入れた文字数に制限できます。<code class="code">.is-width-0</code>&nbsp;にした場合は100%に伸びます。</p>
-                <div class="group is-scroll-x">
-                  <table class="table is-border is-center is-stripe is-nowrap is-sm">
-                    <tbody>
-                      <tr class="box is-paint">
-                        <td>Add Class</td>
-                        <td>Width</td>
-                      </tr>
-                      <tr>
-                        <td>.is-width-0</td>
-                        <td>100%</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="group">
-                  <div class="grid is-space-5">
-                    <div class="col is-mobile-12 is-fablet-0">
-                      <div class="group is-scroll-x">
-                        <table class="table is-border is-center is-stripe is-nowrap is-sm">
-                          <tbody>
-                            <tr class="box is-paint">
-                              <td>Add Class</td>
-                              <td>Width</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-1</td>
-                              <td>1em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-2</td>
-                              <td>2em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-3</td>
-                              <td>3em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-4</td>
-                              <td>4em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-5</td>
-                              <td>5em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-6</td>
-                              <td>6em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-7</td>
-                              <td>7em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-8</td>
-                              <td>8em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-9</td>
-                              <td>9em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-10</td>
-                              <td>10em</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <div class="col is-mobile-12 is-fablet-0">
-                      <div class="group is-scroll-x">
-                        <table class="table is-border is-center is-stripe is-nowrap is-sm">
-                          <tbody>
-                            <tr class="box is-paint">
-                              <td>Add Class</td>
-                              <td>Width</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-11</td>
-                              <td>11em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-12</td>
-                              <td>12em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-13</td>
-                              <td>13em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-14</td>
-                              <td>14em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-15</td>
-                              <td>15em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-16</td>
-                              <td>16em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-17</td>
-                              <td>17em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-18</td>
-                              <td>18em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-19</td>
-                              <td>19em</td>
-                            </tr>
-                            <tr>
-                              <td>.is-width-20</td>
-                              <td>20em</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <pre class="pre is-label is-html"><code class="code">&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Button&lt;/p&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;div class=&quot;btns is-space-2&quot;&gt;
+        &lt;input class=&quot;btn is-plain is-primary&quot; type=&quot;button&quot; value=&quot;Input Button&quot;&gt;
+        &lt;input class=&quot;btn is-plain is-primary is-disable&quot; type=&quot;button&quot; value=&quot;Input Button&quot; disabled=&quot;&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Reset&lt;/p&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;div class=&quot;btns is-space-2&quot;&gt;
+        &lt;input class=&quot;btn is-plain&quot; type=&quot;reset&quot;&gt;
+        &lt;input class=&quot;btn is-plain is-disable&quot; type=&quot;reset&quot; disabled=&quot;&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;group&quot;&gt;
+    &lt;p class=&quot;heading&quot;&gt;Submit&lt;/p&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;div class=&quot;btns is-space-2&quot;&gt;
+        &lt;input class=&quot;btn is-plain is-success&quot; type=&quot;submit&quot;&gt;
+        &lt;input class=&quot;btn is-plain is-success is-disable&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">form.form
+  .group
+    p.heading Button
+    .field
+      .btns.is-space-2
+        input.btn.is-plain.is-primary(type="button" value="Input Button")
+        input.btn.is-plain.is-primary.is-disable(type="button" value="Input Button" disabled)
+  .group
+    p.heading Reset
+    .field
+      .btns.is-space-2
+        input.btn.is-plain(type="reset")
+        input.btn.is-plain.is-disable(type="reset" disabled)
+  .group
+    p.heading Submit
+    .field
+      .btns.is-space-2
+        input.btn.is-plain.is-success(type="submit")
+        input.btn.is-plain.is-success.is-disable(type="submit" disabled)</code></pre>
               </div>
             </div>
             <div class="content is-switch-out-2-10">
