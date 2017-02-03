@@ -9,80 +9,622 @@
     br
     | 親要素に&nbsp;
     code.code .form
-    | &nbsp;を用いることで、他のモジュールとの距離を調整することができます。
+    | &nbsp;を用いることで、他のモジュールとの距離を保つことができます。子要素のデザインはこのタグに依存しません。
     br
-    | 要素の間に溝を空けるには、
+    | フォームパーツは&nbsp;
     code.code .field
-    | に&nbsp;
+    | &nbsp;で囲むことで見出しとの距離を縮め、同時にレスポンシブ対応します。
+  .group.is-wrap.is-preview
+    .group
+      .grid.is-center
+        .col.is-mobile-12.is-tablet-4.is-desktop-3
+          .group.is-demo-box-1
+            form.form
+              .group
+                p.heading メールアドレス
+                .field
+                  input.input.is-mobile-0(type="email" placeholder="example@gmail.com")
+              .group
+                p.heading パスワード
+                .field
+                  input.input.is-mobile-0(type="password")
+              .group
+                label
+                  input.input(type="checkbox" name="checkbox-default")
+                  span.text.is-sm 次回から自動的にログイン
+              .group
+                .btns
+                  input.btn.is-plain.is-success.is-full(type="submit" value="ログイン")
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;form class=&quot;form&quot;&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;メールアドレス&lt;/p&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;input class=&quot;input is-mobile-0&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;パスワード&lt;/p&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;input class=&quot;input is-mobile-0&quot; type=&quot;password&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;label&gt;
+            &lt;input class=&quot;input&quot; type=&quot;checkbox&quot;&gt;
+            &lt;span class=&quot;text is-sm&quot;&gt;次回から自動的にログイン&lt;/span&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;div class=&quot;btns&quot;&gt;
+            &lt;input class=&quot;btn is-plain is-success is-full&quot; type=&quot;submit&quot; value=&quot;ログイン&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      form.form
+        .group
+          p.heading メールアドレス
+          .field
+            input.input.is-mobile-0(type="email" placeholder="example@gmail.com")
+        .group
+          p.heading パスワード
+          .field
+            input.input.is-mobile-0(type="password")
+        .group
+          label
+            input.input(type="checkbox")
+            span.text.is-sm 次回から自動的にログイン
+        .group
+          .btns
+            input.btn.is-plain.is-success.is-full(type="submit" value="ログイン")
+
+.groups
+  h4.heading.is-xl Form - Field
+  p.texts.is-sm
+    code.code .field
+    | &nbsp;に&nbsp;
     code.code .is-space-(x)
-    | &nbsp;を付与。（x）の中に入れた数字に「4px」を掛けた値が溝となります。
+    | &nbsp;を付与することで、（x）の中に入れた数字に「4px」を掛けた値が溝となります。
+    br
+    | また、&nbsp;
+    code.code .field
+    | &nbsp;直下の要素はグリッドと同じ&nbsp;
+    code.code .is-(xxxx)-(y)
+    | &nbsp;のクラスを付与し12分割レスポンシブでサイズを変更できます。
+    br
+    code.code .is-middle
+    | &nbsp;を付与し天地中央寄せで並べることも可能です。
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th(width="80")
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Mobile
+              br
+              span.text.is-sm all
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Fablet
+              br
+              span.text.is-sm 576px ~
+          th
+            p
+              i.fa.fa-tablet(aria-hidden="true")
+              span.text Tablet
+              br
+              span.text.is-sm 768px ~
+          th
+            p
+              i.fa.fa-laptop(aria-hidden="true")
+              span.text Desktop
+              br
+              span.text.is-sm 992px ~
+          th
+            p
+              i.fa.fa-desktop(aria-hidden="true")
+              span.text Wide
+              br
+              span.text.is-sm 1200px ~
+      tbody
+        tr
+          td
+            p.text.is-sm
+              | パーツの比率保持
+          td
+            p
+              span.text .is-mobile-1
+              br
+              span.text |
+              br
+              span.text .is-mobile-12
+          td
+            p
+              span.text .is-fablet-1
+              br
+              span.text |
+              br
+              span.text .is-fablet-12
+          td
+            p
+              span.text .is-tablet-1
+              br
+              span.text |
+              br
+              span.text .is-tablet-12
+          td
+            p
+              span.text .is-desktop-1
+              br
+              span.text |
+              br
+              span.text .is-desktop-12
+          td
+            p
+              span.text .is-wide-1
+              br
+              span.text |
+              br
+              span.text .is-wide-12
+        tr
+          td
+            p.text.is-sm
+              | 残っている余白
+              br
+              | いっぱいに広がり等分
+          td
+            p
+              span.text .is-mobile-0
+          td
+            p
+              span.text .is-fablet-0
+          td
+            p
+              span.text .is-tablet-0
+          td
+            p
+              span.text .is-desktop-0
+          td
+            p
+              span.text .is-wide-0
+        tr
+          td
+            p.text.is-sm
+              | パーツ本来の
+              br
+              | サイズになる
+          td
+            p
+              span.text .is-mobile-auto
+          td
+            p
+              span.text .is-fablet-auto
+          td
+            p
+              span.text .is-tablet-auto
+          td
+            p
+              span.text .is-desktop-auto
+          td
+            p
+              span.text .is-wide-auto
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th(width="80")
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Touch
+              br
+              span.text.is-sm ~ 991px
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Landscape
+              br
+              span.text.is-sm デバイス横向き
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Portrait
+              br
+              span.text.is-sm デバイス縦向き
+      tbody
+        tr
+          td
+            p.text.is-sm
+              | パーツの比率保持
+          td
+            p
+              span.text .is-touch-1
+              br
+              span.text |
+              br
+              span.text .is-touch-12
+          td
+            p
+              span.text .is-landscape-1
+              br
+              span.text |
+              br
+              span.text .is-landscape-12
+          td
+            p
+              span.text .is-portrait-1
+              br
+              span.text |
+              br
+              span.text .is-portrait-12
+        tr
+          td
+            p.text.is-sm
+              | 残っている余白
+              br
+              | いっぱいに広がり等分
+          td
+            p
+              span.text .is-touch-0
+          td
+            p
+              span.text .is-landscape-0
+          td
+            p
+              span.text .is-portrait-0
+        tr
+          td
+            p.text.is-sm
+              | パーツ本来の
+              br
+              | サイズになる
+          td
+            p
+              span.text .is-touch-auto
+          td
+            p
+              span.text .is-landscape-auto
+          td
+            p
+              span.text .is-portrait-auto
+  .group.is-wrap.is-preview
+    form.form
+      .group
+        p.heading Desktopサイズまでは入力枠がフルサイズ↓
+        .field.is-space-2
+          input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+          input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+      .group
+        p.heading 誕生日：
+        .field.is-space-2
+          select.select
+            option 2017
+            option 2016
+            option 2015
+            option 2014
+          select.select
+            option 1
+            option 2
+            option 3
+            option 4
+            option 5
+            option 6
+            option 7
+            option 8
+            option 9
+            option 10
+          select.select
+            option 1
+            option 2
+            option 3
+            option 4
+            option 5
+            option 6
+            option 7
+            option 8
+            option 9
+            option 10
+      .group
+        .field.is-space-2.is-middle
+          p.heading 性別：
+          select.select
+            option 男性
+            option 女性
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;form class=&quot;form&quot;&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Desktopサイズまでは入力枠がフルサイズ↓&lt;/p&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;input class=&quot;input is-mobile-12 is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+            &lt;input class=&quot;input is-mobile-12 is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;誕生日&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2 is-middle&quot;&gt;
+            &lt;select class=&quot;select&quot;&gt;
+              &lt;option&gt;2017&lt;/option&gt;
+              &lt;option&gt;2016&lt;/option&gt;
+              ...
+            &lt;/select&gt;
+            &lt;select class=&quot;select&quot;&gt;
+              &lt;option&gt;1&lt;/option&gt;
+              &lt;option&gt;2&lt;/option&gt;
+              ...
+            &lt;/select&gt;
+            &lt;select class=&quot;select&quot;&gt;
+              &lt;option&gt;1&lt;/option&gt;
+              &lt;option&gt;2&lt;/option&gt;
+              ...
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;div class=&quot;field is-space-2 is-middle&quot;&gt;
+            &lt;p class=&quot;heading&quot;&gt;性別：&lt;/p&gt;
+            &lt;select class=&quot;select&quot;&gt;
+              &lt;option&gt;男性&lt;/option&gt;
+              &lt;option&gt;女性&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      form.form
+        .group
+          p.heading Desktopサイズまでは入力枠がフルサイズ↓
+          .field.is-space-2
+            input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+            input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+        .group
+          p.heading 誕生日
+          .field.is-space-2.is-middle
+            select.select
+              option 2017
+              option 2016
+              ...
+            select.select
+              option 1
+              option 2
+              ...
+            select.select
+              option 1
+              option 2
+              ...
+        .group
+          .field.is-space-2.is-middle
+            p.heading 性別：
+            select.select
+              option 男性
+              option 女性
+
+.groups
+  h4.heading.is-xl Form - Parts
+  p.texts.is-sm
+    | フォームの各パーツは、対応しているHTMLタグの属性と値が使用できます。
   .group.is-wrap.is-preview
     form.form
       .group
         p.heading Text
         .field.is-space-2
-          input.input.is-width-0(type="text" placeholder="Text")
-          input.input.is-width-0(type="text" placeholder="Text" disabled)
+          input.input(type="text" placeholder="Text")
+          input.input(type="text" placeholder="Disabled" disabled)
+          input.input(type="text" value="Readonly" readonly)
       .group
         p.heading Search
         .field.is-space-2
-          input.input.is-width-0(type="search" placeholder="Search")
-          input.input.is-width-0(type="search" placeholder="Search" disabled)
+          input.input(type="search" placeholder="Search")
+          input.input(type="search" placeholder="Search" disabled)
       .group
+        p.heading URL
         .field.is-space-2
-          .field.is-space-2.is-middle
-            p.heading URL
-            input.input.is-width-8(type="url" placeholder="example.com")
-            input.input.is-width-8(type="url" placeholder="example.com" disabled)
-          .field.is-space-2.is-middle
-            p.heading E-mail
-            input.input.is-width-12(type="email" placeholder="example@gmail.com")
-            input.input.is-width-12(type="email" placeholder="example@gmail.com" disabled)
+          input.input(type="url" placeholder="example.com")
+          input.input(type="url" placeholder="example.com" disabled)
+      .group
+        p.heading E-mail
+        .field.is-space-2
+          input.input(type="email" placeholder="example@gmail.com")
+          input.input(type="email" placeholder="example@gmail.com" disabled)
       .group
         p.heading TEL
         .field.is-space-2
-          input.input(type="tel" placeholder="000-000-0000")
-          input.input(type="tel" placeholder="000-000-0000" disabled)
+          input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000")
+          input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000" disabled)
       .group
         p.heading Password
         .field.is-space-2
           input.input(type="password")
           input.input(type="password" disabled)
-      .group
-        p.heading Date Time
-        .field.is-space-2
-          input.input(type="datetime")
-          input.input(type="datetime" disabled)
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;form class=&quot;form&quot;&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Text&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Disabled&quot; disabled=&quot;&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;text&quot; value=&quot;Readonly&quot; readonly=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Search&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;URL&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;E-mail&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;TEL&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Password&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;password&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;password&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      form.form
+        .group
+          p.heading Text
+          .field.is-space-2
+            input.input(type="text" placeholder="Text")
+            input.input(type="text" placeholder="Disabled" disabled)
+            input.input(type="text" value="Readonly" readonly)
+        .group
+          p.heading Search
+          .field.is-space-2
+            input.input(type="search" placeholder="Search")
+            input.input(type="search" placeholder="Search" disabled)
+        .group
+          p.heading URL
+          .field.is-space-2
+            input.input(type="url" placeholder="example.com")
+            input.input(type="url" placeholder="example.com" disabled)
+        .group
+          p.heading E-mail
+          .field.is-space-2
+            input.input(type="email" placeholder="example@gmail.com")
+            input.input(type="email" placeholder="example@gmail.com" disabled)
+        .group
+          p.heading TEL
+          .field.is-space-2
+            input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000")
+            input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000" disabled)
+        .group
+          p.heading Password
+          .field.is-space-2
+            input.input(type="password")
+            input.input(type="password" disabled)
+  .group.is-wrap.is-preview
+    form.form
       .group
         p.heading Date Time Local
         .field.is-space-2
-          input.input(type="datetime-local")
-          input.input(type="datetime-local" disabled)
+          input.input(type="datetime-local" value="2017-02-02T00:00:00")
+          input.input(type="datetime-local" value="2017-02-02T00:00:00" disabled)
       .group
         p.heading Date
         .field.is-space-2
-          input.input(type="date")
-          input.input(type="date" disabled)
+          input.input(type="date" value="2017-02-02")
+          input.input(type="date" value="2017-02-02" disabled)
       .group
         p.heading Month
         .field.is-space-2
-          input.input(type="month")
-          input.input(type="month" disabled)
+          input.input(type="month" value="2017-02")
+          input.input(type="month" value="2017-02" disabled)
       .group
         p.heading Week
         .field.is-space-2
-          input.input(type="week")
-          input.input(type="week" disabled)
+          input.input(type="week" value="2017-W05")
+          input.input(type="week" value="2017-W05" disabled)
       .group
         p.heading Time
         .field.is-space-2
-          input.input(type="time")
-          input.input(type="time" disabled)
+          input.input(type="time" value="00:00:00")
+          input.input(type="time" value="00:00:00" disabled)
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;form class=&quot;form&quot;&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Date Time Local&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Date&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Month&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Week&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;week&quot; value=&quot;2017-W05&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;week&quot; value=&quot;2017-W05&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Time&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      form.form
+        .group
+          p.heading Date Time Local
+          .field.is-space-2
+            input.input(type="datetime-local" value="2017-02-02T00:00:00")
+            input.input(type="datetime-local" value="2017-02-02T00:00:00" disabled)
+        .group
+          p.heading Date
+          .field.is-space-2
+            input.input(type="date" value="2017-02-02")
+            input.input(type="date" value="2017-02-02" disabled)
+        .group
+          p.heading Month
+          .field.is-space-2
+            input.input(type="month" value="2017-02")
+            input.input(type="month" value="2017-02" disabled)
+        .group
+          p.heading Week
+          .field.is-space-2
+            input.input(type="week" value="2017-W05")
+            input.input(type="week" value="2017-W05" disabled)
+        .group
+          p.heading Time
+          .field.is-space-2
+            input.input(type="time" value="00:00:00")
+            input.input(type="time" value="00:00:00" disabled)
+  .group.is-wrap.is-preview
+    form.form
       .group
         p.heading Number
         .field.is-space-2
-          input.input(type="number")
-          input.input(type="number" disabled)
+          input.input(type="number" step="10")
+          input.input(type="number" step="10" disabled)
       .group
         p.heading File
         .field.is-space-2
@@ -91,8 +633,8 @@
       .group
         p.heading Color
         .field.is-space-2
-          input.input(type="color")
-          input.input(type="color" disabled)
+          input.input(type="color" value="#1cb4c7")
+          input.input(type="color" value="#1cb4c7" disabled)
       .group
         p.heading Range
         .field.is-space-2
@@ -101,8 +643,77 @@
       .group
         p.heading Textarea
         .field.is-space-2
-          textarea.textarea.is-width-0
-          textarea.textarea.is-width-0(disabled)
+          textarea.textarea.is-mobile-12
+          textarea.textarea.is-mobile-12(disabled)
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;form class=&quot;form&quot;&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Number&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;File&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;file&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;file&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Color&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Range&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;range&quot;&gt;
+            &lt;input class=&quot;input&quot; type=&quot;range&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Textarea&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;textarea class=&quot;textarea is-mobile-12&quot;&gt;&lt;/textarea&gt;
+            &lt;textarea class=&quot;textarea is-mobile-12&quot; disabled=&quot;&quot;&gt;&lt;/textarea&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      form.form
+        .group
+          p.heading Number
+          .field.is-space-2
+            input.input(type="number" step="10")
+            input.input(type="number" step="10" disabled)
+        .group
+          p.heading File
+          .field.is-space-2
+            input.input(type="file")
+            input.input(type="file" disabled)
+        .group
+          p.heading Color
+          .field.is-space-2
+            input.input(type="color" value="#1cb4c7")
+            input.input(type="color" value="#1cb4c7" disabled)
+        .group
+          p.heading Range
+          .field.is-space-2
+            input.input(type="range")
+            input.input(type="range" disabled)
+        .group
+          p.heading Textarea
+          .field.is-space-2
+            textarea.textarea.is-mobile-12
+            textarea.textarea.is-mobile-12(disabled)
+  .group.is-wrap.is-preview
+    form.form
       .group
         p.heading Radio
         .field
@@ -127,6 +738,67 @@
           label
             input.input(type="checkbox" name="checkbox-default-1" disabled)
             span.text JS
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;form class=&quot;form&quot;&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Radio&lt;/p&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label&gt;
+              &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびー&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label&gt;
+              &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびい&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label&gt;
+              &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすび&lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Checkbox&lt;/p&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label&gt;
+              &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;HTML&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label&gt;
+              &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;CSS&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label&gt;
+              &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;JS&lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      form.form
+        .group
+          p.heading Radio
+          .field
+            label
+              input.input(type="radio" name="radio-default-1" checked)
+              span.text むすびー
+            label
+              input.input(type="radio" name="radio-default-1")
+              span.text むすびい
+            label
+              input.input(type="radio" name="radio-default-1" disabled)
+              span.text むすび
+        .group
+          p.heading Checkbox
+          .field
+            label
+              input.input(type="checkbox" name="checkbox-default-1" checked)
+              span.text HTML
+            label
+              input.input(type="checkbox" name="checkbox-default-1")
+              span.text CSS
+            label
+              input.input(type="checkbox" name="checkbox-default-1" disabled)
+              span.text JS
+  .group.is-wrap.is-preview
+    form.form
       .group
         p.heading Select
         .field.is-space-2
@@ -142,6 +814,91 @@
             option Select C
             option Select D
             option Select E
+        .field.is-space-2
+          select.select(multiple)
+            option Select A
+            option Select B
+            option Select C
+            option Select D
+            option Select E
+          select.select(multiple disabled)
+            option Select A
+            option Select B
+            option Select C
+            option Select D
+            option Select E
+  pre.pre.is-label.is-html
+    code.code.
+      &lt;form class=&quot;form&quot;&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Select&lt;/p&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;select class=&quot;select&quot;&gt;
+              &lt;option&gt;Select A&lt;/option&gt;
+              &lt;option&gt;Select B&lt;/option&gt;
+              &lt;option&gt;Select C&lt;/option&gt;
+              &lt;option&gt;Select D&lt;/option&gt;
+              &lt;option&gt;Select E&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;select&quot; disabled=&quot;&quot;&gt;
+              &lt;option&gt;Select A&lt;/option&gt;
+              &lt;option&gt;Select B&lt;/option&gt;
+              &lt;option&gt;Select C&lt;/option&gt;
+              &lt;option&gt;Select D&lt;/option&gt;
+              &lt;option&gt;Select E&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field is-space-2&quot;&gt;
+            &lt;select class=&quot;select&quot; multiple=&quot;&quot;&gt;
+              &lt;option&gt;Select A&lt;/option&gt;
+              &lt;option&gt;Select B&lt;/option&gt;
+              &lt;option&gt;Select C&lt;/option&gt;
+              &lt;option&gt;Select D&lt;/option&gt;
+              &lt;option&gt;Select E&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;select class=&quot;select&quot; multiple=&quot;&quot; disabled=&quot;&quot;&gt;
+              &lt;option&gt;Select A&lt;/option&gt;
+              &lt;option&gt;Select B&lt;/option&gt;
+              &lt;option&gt;Select C&lt;/option&gt;
+              &lt;option&gt;Select D&lt;/option&gt;
+              &lt;option&gt;Select E&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+  pre.pre.is-label.is-pug
+    code.code.
+      form.form
+        .group
+          p.heading Select
+          .field.is-space-2
+            select.select
+              option Select A
+              option Select B
+              option Select C
+              option Select D
+              option Select E
+            select.select(disabled)
+              option Select A
+              option Select B
+              option Select C
+              option Select D
+              option Select E
+          .field.is-space-2
+            select.select(multiple)
+              option Select A
+              option Select B
+              option Select C
+              option Select D
+              option Select E
+            select.select(multiple disabled)
+              option Select A
+              option Select B
+              option Select C
+              option Select D
+              option Select E
+  .group.is-wrap.is-preview
+    form.form
       .group
         p.heading Button
         .field
@@ -162,98 +919,53 @@
             input.btn.is-plain.is-success.is-disable(type="submit" disabled)
   pre.pre.is-label.is-html
     code.code.
+      &lt;form class=&quot;form&quot;&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Button&lt;/p&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;btns is-space-2&quot;&gt;
+              &lt;input class=&quot;btn is-plain is-primary&quot; type=&quot;button&quot; value=&quot;Input Button&quot;&gt;
+              &lt;input class=&quot;btn is-plain is-primary is-disable&quot; type=&quot;button&quot; value=&quot;Input Button&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Reset&lt;/p&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;btns is-space-2&quot;&gt;
+              &lt;input class=&quot;btn is-plain&quot; type=&quot;reset&quot;&gt;
+              &lt;input class=&quot;btn is-plain is-disable&quot; type=&quot;reset&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;p class=&quot;heading&quot;&gt;Submit&lt;/p&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;btns is-space-2&quot;&gt;
+              &lt;input class=&quot;btn is-plain is-success&quot; type=&quot;submit&quot;&gt;
+              &lt;input class=&quot;btn is-plain is-success is-disable&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
   pre.pre.is-label.is-pug
     code.code.
-
-.groups
-  h4.heading.is-xl Form - Width
-  p.texts.is-sm
-    code.code .is-width-(x)
-    | &nbsp;を付与すると、横幅を（x）に入れた文字数に制限できます。
-    code.code .is-width-0
-    | &nbsp;にした場合は100%に伸びます。
-  .group.is-scroll-x
-    table.table.is-border.is-center.is-stripe.is-nowrap.is-sm
-      tbody
-        tr.box.is-paint
-          td Add Class
-          td Width
-        tr
-          td .is-width-0
-          td 100%
-  .group
-    .grid.is-space-5
-      .col.is-mobile-12.is-fablet-0
-        .group.is-scroll-x
-          table.table.is-border.is-center.is-stripe.is-nowrap.is-sm
-            tbody
-              tr.box.is-paint
-                td Add Class
-                td Width
-              tr
-                td .is-width-1
-                td 1em
-              tr
-                td .is-width-2
-                td 2em
-              tr
-                td .is-width-3
-                td 3em
-              tr
-                td .is-width-4
-                td 4em
-              tr
-                td .is-width-5
-                td 5em
-              tr
-                td .is-width-6
-                td 6em
-              tr
-                td .is-width-7
-                td 7em
-              tr
-                td .is-width-8
-                td 8em
-              tr
-                td .is-width-9
-                td 9em
-              tr
-                td .is-width-10
-                td 10em
-      .col.is-mobile-12.is-fablet-0
-        .group.is-scroll-x
-          table.table.is-border.is-center.is-stripe.is-nowrap.is-sm
-            tbody
-              tr.box.is-paint
-                td Add Class
-                td Width
-              tr
-                td .is-width-11
-                td 11em
-              tr
-                td .is-width-12
-                td 12em
-              tr
-                td .is-width-13
-                td 13em
-              tr
-                td .is-width-14
-                td 14em
-              tr
-                td .is-width-15
-                td 15em
-              tr
-                td .is-width-16
-                td 16em
-              tr
-                td .is-width-17
-                td 17em
-              tr
-                td .is-width-18
-                td 18em
-              tr
-                td .is-width-19
-                td 19em
-              tr
-                td .is-width-20
-                td 20em
+      form.form
+        .group
+          p.heading Button
+          .field
+            .btns.is-space-2
+              input.btn.is-plain.is-primary(type="button" value="Input Button")
+              input.btn.is-plain.is-primary.is-disable(type="button" value="Input Button" disabled)
+        .group
+          p.heading Reset
+          .field
+            .btns.is-space-2
+              input.btn.is-plain(type="reset")
+              input.btn.is-plain.is-disable(type="reset" disabled)
+        .group
+          p.heading Submit
+          .field
+            .btns.is-space-2
+              input.btn.is-plain.is-success(type="submit")
+              input.btn.is-plain.is-success.is-disable(type="submit" disabled)
