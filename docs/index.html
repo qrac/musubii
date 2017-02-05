@@ -70,7 +70,7 @@
     <section class="section is-center is-topcover is-switch-out-1-topcover">
       <div class="inner"><img class="logo is-title" src="img/logo-set-tate-musubii.svg" alt="MUSUBii">
         <p class="texts is-light">HTML/CSS Framework for JP</p>
-        <p class="texts is-light is-strong">v1.1.0</p>
+        <p class="texts is-light is-strong">v1.2.0</p>
         <p class="texts is-light"><i class="fa fa-github" aria-hidden="true"></i><a class="text is-link-reverse" href="https://github.com/qrac/musubii"><span class="text">Repository</span></a>&nbsp;/&nbsp;<a class="text is-link-reverse" href="https://github.com/qrac/musubii/releases"><span class="text">Releases</span></a></p>
         <div class="btns is-center"><a class="btn is-lg is-ghost is-round is-cyan" href="css/musubii.min.css" download="musubii.min.css"><i class="fa fa-download" aria-hidden="true"></i><span class="text">Download</span></a></div>
       </div>
@@ -120,11 +120,22 @@
           <h3 class="heading is-xl">Install</h3>
           <div class="group is-wrap">
             <h4 class="heading is-lg">Download</h4>
-            <p class="texts is-sm">CSSファイル&nbsp;<code class="code">musubii.min.css</code>&nbsp;を<a class="text is-primary is-link is-solid" href="css/musubii.min.css" download="musubii.min.css">ダウンロード<i class="fa fa-download is-fit" aria-hidden="true"></i></a>後、headで読み込んでください。</p>
+            <p class="texts is-sm">CSSファイル&nbsp;<code class="code">musubii.min.css</code>&nbsp;を<a class="text is-primary is-link is-solid" href="css/musubii.min.css" download="musubii.min.css">ダウンロード<i class="fa fa-download is-fit" aria-hidden="true"></i></a>後、読み込んでください。</p>
             <pre class="pre is-label is-html"><code class="code">&lt;link rel=&quot;stylesheet&quot; href="css/musubii.min.css"&gt;</code></pre>
             <pre class="pre is-label is-pug"><code class="code">link(rel="stylesheet" href="css/musubii.min.css")</code></pre>
             <h4 class="heading is-lg">npm</h4>
+            <p class="texts is-sm">npmをお使いの場合は、コマンドでインストールが可能です。</p>
             <pre class="pre is-label is-command"><code class="code">npm install musubii</code></pre>
+            <h4 class="heading is-lg">CDN</h4>
+            <p class="texts is-sm">CDN配信サービスjsDelivrを使用できます。</p>
+            <div class="texts is-pre">
+              <div class="text is-pre-label">html</div>
+              <pre class="text is-pre-wrap"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/1.2.0/css/musubii.min.css"&gt;</code></pre>
+            </div>
+            <div class="texts is-pre">
+              <div class="text is-pre-label">pug</div>
+              <pre class="text is-pre-wrap"><code>link(rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/1.2.0/css/musubii.min.css")</code></pre>
+            </div>
           </div>
           <h3 class="heading is-xl">Basic rules</h3>
           <div class="group is-wrap">
@@ -788,7 +799,7 @@ p.texts テキストテキストテキストテキストテキストテキスト
 </code></pre>
               </div>
               <div class="groups">
-                <h4 class="heading is-xl">Column - Size</h4>
+                <h4 class="heading is-xl">Column - Responsive</h4>
                 <p class="texts is-sm">カラム幅の比率を変更するには、&nbsp;<code class="code">.col</code>&nbsp;にサイズを表すクラス名を付与します。サイズは、ディスプレイサイズごとにモバイルファーストな設定が可能です。</p>
                 <div class="group is-scroll-x">
                   <table class="table is-sm is-center is-nowrap is-middle is-border">
@@ -1662,16 +1673,165 @@ pre.pre.is-label.is-scss
 </code></pre>
               </div>
               <div class="groups">
-                <h4 class="heading is-xl">Button - Full</h4>
-                <p class="texts is-sm"><code class="code">.btns</code>&nbsp;にクラス名&nbsp;<code class="code">.is-full</code>&nbsp;を付与することでボタンを枠いっぱいに広げられます。<br><code class="code">.btns</code>&nbsp;に複数の&nbsp;<code class="code">.btn</code>&nbsp;を入れた場合は等分されます。</p>
+                <h4 class="heading is-xl">Button - Responsive</h4>
+                <p class="texts is-sm"><code class="code">.btns</code>&nbsp;直下のボタンは各デバイスサイズごとに<br><code class="code">.is-(xxxx)-full</code>&nbsp;で100%、&nbsp;<code class="code">.is-(xxxx)-0</code>&nbsp;で等分、&nbsp;<code class="code">.is-(xxxx)-auto</code>&nbsp;で本来のサイズに戻せます。</p>
+                <div class="group is-scroll-x">
+                  <table class="table is-sm is-center is-nowrap is-middle is-border">
+                    <thead>
+                      <tr class="box is-paint">
+                        <th width="80"></th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Mobile</span><br><span class="text is-sm">all</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Fablet</span><br><span class="text is-sm">576px ~</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-tablet" aria-hidden="true"></i><span class="text">Tablet</span><br><span class="text is-sm">768px ~</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-laptop" aria-hidden="true"></i><span class="text">Desktop</span><br><span class="text is-sm">992px ~</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-desktop" aria-hidden="true"></i><span class="text">Wide</span><br><span class="text is-sm">1200px ~</span></p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">100%に広がる</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-mobile-full</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-fablet-full</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-tablet-full</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-desktop-full</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-wide-full</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">余白を等分しつつ広がる</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-mobile-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-fablet-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-tablet-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-desktop-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-wide-0</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">本来のサイズに戻る</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-mobile-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-fablet-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-tablet-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-desktop-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-wide-auto</span></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="group is-scroll-x">
+                  <table class="table is-sm is-center is-nowrap is-middle is-border">
+                    <thead>
+                      <tr class="box is-paint">
+                        <th width="80"></th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Touch</span><br><span class="text is-sm">~ 991px</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Landscape</span><br><span class="text is-sm">デバイス横向き</span></p>
+                        </th>
+                        <th>
+                          <p><i class="fa fa-mobile" aria-hidden="true"></i><span class="text">Portrait</span><br><span class="text is-sm">デバイス縦向き</span></p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">100%に広がる</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-touch-full</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-landscape-full</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-portrait-full</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">余白を等分しつつ広がる</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-touch-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-landscape-0</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-portrait-0</span></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p class="text is-sm">本来のサイズに戻る</p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-touch-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-landscape-auto</span></p>
+                        </td>
+                        <td>
+                          <p><span class="text">.is-portrait-auto</span></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
                 <div class="group is-wrap is-preview">
-                  <div class="btns is-space-1"><a class="btn is-plain is-full">戻る</a><a class="btn is-plain is-full is-primary">決定</a><a class="btn is-plain is-full is-success">登録</a><a class="btn is-plain is-full is-danger">削除</a><a class="btn is-plain is-full is-disable">不可</a><a class="btn is-outline is-full">戻る</a><a class="btn is-outline is-full is-primary">決定</a><a class="btn is-outline is-full is-success">登録</a><a class="btn is-outline is-full is-danger">削除</a><a class="btn is-outline is-full is-disable">不可</a></div>
+                  <div class="btns is-space-1"><a class="btn is-plain is-mobile-0">戻る</a><a class="btn is-plain is-mobile-0 is-primary">決定</a><a class="btn is-plain is-mobile-0 is-success">登録</a><a class="btn is-plain is-mobile-0 is-danger">削除</a><a class="btn is-plain is-mobile-0 is-disable">不可</a></div>
+                  <div class="btns is-space-1"><a class="btn is-outline is-mobile-full is-desktop-0">戻る</a><a class="btn is-outline is-mobile-full is-desktop-0 is-primary">決定</a><a class="btn is-outline is-mobile-full is-desktop-0 is-success">登録</a><a class="btn is-outline is-mobile-full is-desktop-0 is-danger">削除</a><a class="btn is-outline is-mobile-full is-desktop-0 is-disable">不可</a></div>
                   <div class="group is-wrap is-paint">
-                    <div class="btns is-space-1"><a class="btn is-ghost is-full">戻る</a><a class="btn is-ghost is-full is-primary">決定</a><a class="btn is-ghost is-full is-success">登録</a><a class="btn is-ghost is-full is-danger">削除</a><a class="btn is-ghost is-full is-disable">不可</a></div>
+                    <div class="btns is-space-1"><a class="btn is-ghost is-mobile-0">戻る</a><a class="btn is-ghost is-mobile-0 is-primary">決定</a><a class="btn is-ghost is-mobile-0 is-success">登録</a><a class="btn is-ghost is-mobile-0 is-danger">削除</a><a class="btn is-ghost is-mobile-0 is-disable">不可</a></div>
                   </div>
                 </div>
-                <pre class="pre is-label is-html"><code class="code">&lt;a class=&quot;btn is-plain is-full&quot;&gt;...&lt;/a&gt;</code></pre>
-                <pre class="pre is-label is-pug"><code class="code">a.btn.is-plain.is-full ...
+                <pre class="pre is-label is-html"><code class="code">&lt;a class=&quot;btn is-plain is-(xxxx)-(y)&quot;&gt;...&lt;/a&gt;</code></pre>
+                <pre class="pre is-label is-pug"><code class="code">a.btn.is-plain.is-(xxxx)-(y) ...
 </code></pre>
               </div>
               <div class="groups">
@@ -1679,8 +1839,8 @@ pre.pre.is-label.is-scss
                 <p class="texts is-sm"><code class="code">.btns</code>&nbsp;にクラス名&nbsp;<code class="code">.is-bar</code>&nbsp;を付与することで子要素のボタンを連結させられます。</p>
                 <div class="group is-wrap is-preview">
                   <div class="btns is-bar"><a class="btn is-plain"><i class="fa fa-align-left" aria-hidden="true"></i><span class="text">左寄せ</span></a><a class="btn is-plain"><i class="fa fa-align-center" aria-hidden="true"></i><span class="text">中央寄せ</span></a><a class="btn is-plain"><i class="fa fa-align-right" aria-hidden="true"></i><span class="text">右寄せ</span></a></div>
-                  <div class="btns is-bar"><a class="btn is-outline is-full"><i class="fa fa-align-left" aria-hidden="true"></i><span class="text">左寄せ</span></a><a class="btn is-outline is-full"><i class="fa fa-align-center" aria-hidden="true"></i><span class="text">中央寄せ</span></a><a class="btn is-outline is-full"><i class="fa fa-align-right" aria-hidden="true"></i><span class="text">右寄せ</span></a></div>
-                  <div class="btns is-bar"><a class="btn is-outline is-round is-full">ラウンド</a><a class="btn is-outline is-round is-full">ラウンド</a><a class="btn is-outline is-round is-full">ラウンド</a></div>
+                  <div class="btns is-bar"><a class="btn is-outline is-mobile-0"><i class="fa fa-align-left" aria-hidden="true"></i><span class="text">左寄せ</span></a><a class="btn is-outline is-mobile-0"><i class="fa fa-align-center" aria-hidden="true"></i><span class="text">中央寄せ</span></a><a class="btn is-outline is-mobile-0"><i class="fa fa-align-right" aria-hidden="true"></i><span class="text">右寄せ</span></a></div>
+                  <div class="btns is-bar"><a class="btn is-outline is-round is-mobile-0">ラウンド</a><a class="btn is-outline is-round is-mobile-0">ラウンド</a><a class="btn is-outline is-round is-mobile-0">ラウンド</a></div>
                   <div class="group is-wrap is-paint">
                     <div class="btns is-space-2">
                       <div class="btns is-bar"><a class="btn is-ghost">松</a><a class="btn is-ghost">桜</a><a class="btn is-ghost">芒</a><a class="btn is-ghost">雨</a><a class="btn is-ghost">桐</a></div>
@@ -2333,7 +2493,7 @@ table.table.is-stripe
                             </div>
                             <div class="group">
                               <div class="btns">
-                                <input class="btn is-plain is-success is-full" type="submit" value="ログイン">
+                                <input class="btn is-plain is-success is-mobile-0" type="submit" value="ログイン">
                               </div>
                             </div>
                           </form>
@@ -2387,7 +2547,7 @@ table.table.is-stripe
               </div>
               <div class="groups">
                 <h4 class="heading is-xl">Form - Field</h4>
-                <p class="texts is-sm"><code class="code">.field</code>&nbsp;に&nbsp;<code class="code">.is-space-(x)</code>&nbsp;を付与することで、（x）の中に入れた数字に「4px」を掛けた値が溝となります。<br>また、&nbsp;<code class="code">.field</code>&nbsp;直下の要素はグリッドと同じ&nbsp;<code class="code">.is-(xxxx)-(y)</code>&nbsp;のクラスを付与し12分割レスポンシブでサイズを変更できます。<br><code class="code">.is-middle</code>&nbsp;を付与し天地中央寄せで並べることも可能です。</p>
+                <p class="texts is-sm"><code class="code">.field</code>&nbsp;に&nbsp;<code class="code">.is-space-(x)</code>&nbsp;を付与することで、（x）の中に入れた数字に「4px」を掛けた値が溝となります。<br>また、&nbsp;<code class="code">.field</code>&nbsp;直下の要素は各デバイスサイズごとに<br><code class="code">.is-(xxxx)-full</code>&nbsp;で100%、&nbsp;<code class="code">.is-(xxxx)-0</code>&nbsp;で等分、&nbsp;<code class="code">.is-(xxxx)-auto</code>&nbsp;で本来のサイズに戻せます。<br><code class="code">.is-middle</code>&nbsp;を付与し天地中央寄せで並べることも可能です。</p>
                 <div class="group is-scroll-x">
                   <table class="table is-sm is-center is-nowrap is-middle is-border">
                     <thead>
@@ -2413,27 +2573,27 @@ table.table.is-stripe
                     <tbody>
                       <tr>
                         <td>
-                          <p class="text is-sm">パーツの比率保持</p>
+                          <p class="text is-sm">100%に広がる</p>
                         </td>
                         <td>
-                          <p><span class="text">.is-mobile-1</span><br><span class="text">|</span><br><span class="text">.is-mobile-12</span></p>
+                          <p><span class="text">.is-mobile-full</span></p>
                         </td>
                         <td>
-                          <p><span class="text">.is-fablet-1</span><br><span class="text">|</span><br><span class="text">.is-fablet-12</span></p>
+                          <p><span class="text">.is-fablet-full</span></p>
                         </td>
                         <td>
-                          <p><span class="text">.is-tablet-1</span><br><span class="text">|</span><br><span class="text">.is-tablet-12</span></p>
+                          <p><span class="text">.is-tablet-full</span></p>
                         </td>
                         <td>
-                          <p><span class="text">.is-desktop-1</span><br><span class="text">|</span><br><span class="text">.is-desktop-12</span></p>
+                          <p><span class="text">.is-desktop-full</span></p>
                         </td>
                         <td>
-                          <p><span class="text">.is-wide-1</span><br><span class="text">|</span><br><span class="text">.is-wide-12</span></p>
+                          <p><span class="text">.is-wide-full</span></p>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <p class="text is-sm">残っている余白<br>いっぱいに広がり等分</p>
+                          <p class="text is-sm">余白を等分しつつ広がる</p>
                         </td>
                         <td>
                           <p><span class="text">.is-mobile-0</span></p>
@@ -2453,7 +2613,7 @@ table.table.is-stripe
                       </tr>
                       <tr>
                         <td>
-                          <p class="text is-sm">パーツ本来の<br>サイズになる</p>
+                          <p class="text is-sm">本来のサイズに戻る</p>
                         </td>
                         <td>
                           <p><span class="text">.is-mobile-auto</span></p>
@@ -2493,21 +2653,21 @@ table.table.is-stripe
                     <tbody>
                       <tr>
                         <td>
-                          <p class="text is-sm">パーツの比率保持</p>
+                          <p class="text is-sm">100%に広がる</p>
                         </td>
                         <td>
-                          <p><span class="text">.is-touch-1</span><br><span class="text">|</span><br><span class="text">.is-touch-12</span></p>
+                          <p><span class="text">.is-touch-full</span></p>
                         </td>
                         <td>
-                          <p><span class="text">.is-landscape-1</span><br><span class="text">|</span><br><span class="text">.is-landscape-12</span></p>
+                          <p><span class="text">.is-landscape-full</span></p>
                         </td>
                         <td>
-                          <p><span class="text">.is-portrait-1</span><br><span class="text">|</span><br><span class="text">.is-portrait-12</span></p>
+                          <p><span class="text">.is-portrait-full</span></p>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <p class="text is-sm">残っている余白<br>いっぱいに広がり等分</p>
+                          <p class="text is-sm">余白を等分しつつ広がる</p>
                         </td>
                         <td>
                           <p><span class="text">.is-touch-0</span></p>
@@ -2521,7 +2681,7 @@ table.table.is-stripe
                       </tr>
                       <tr>
                         <td>
-                          <p class="text is-sm">パーツ本来の<br>サイズになる</p>
+                          <p class="text is-sm">本来のサイズに戻る</p>
                         </td>
                         <td>
                           <p><span class="text">.is-touch-auto</span></p>
@@ -2541,8 +2701,8 @@ table.table.is-stripe
                     <div class="group">
                       <p class="heading">Desktopサイズまでは入力枠がフルサイズ↓</p>
                       <div class="field is-space-2">
-                        <input class="input is-mobile-12 is-desktop-auto" type="text" placeholder="Text">
-                        <input class="input is-mobile-12 is-desktop-auto" type="text" placeholder="Text">
+                        <input class="input is-mobile-full is-desktop-auto" type="text" placeholder="Text">
+                        <input class="input is-mobile-full is-desktop-auto" type="text" placeholder="Text">
                       </div>
                     </div>
                     <div class="group">
@@ -2595,8 +2755,8 @@ table.table.is-stripe
   &lt;div class=&quot;group&quot;&gt;
     &lt;p class=&quot;heading&quot;&gt;Desktopサイズまでは入力枠がフルサイズ↓&lt;/p&gt;
     &lt;div class=&quot;field&quot;&gt;
-      &lt;input class=&quot;input is-mobile-12 is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
-      &lt;input class=&quot;input is-mobile-12 is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+      &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+      &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;group&quot;&gt;
@@ -2633,8 +2793,8 @@ table.table.is-stripe
   .group
     p.heading Desktopサイズまでは入力枠がフルサイズ↓
     .field.is-space-2
-      input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
-      input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+      input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
+      input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
   .group
     p.heading 誕生日
     .field.is-space-2.is-middle
@@ -2809,13 +2969,6 @@ table.table.is-stripe
                       </div>
                     </div>
                     <div class="group">
-                      <p class="heading">Week</p>
-                      <div class="field is-space-2">
-                        <input class="input" type="week" value="2017-W05">
-                        <input class="input" type="week" value="2017-W05" disabled>
-                      </div>
-                    </div>
-                    <div class="group">
                       <p class="heading">Time</p>
                       <div class="field is-space-2">
                         <input class="input" type="time" value="00:00:00">
@@ -2847,13 +3000,6 @@ table.table.is-stripe
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;group&quot;&gt;
-    &lt;p class=&quot;heading&quot;&gt;Week&lt;/p&gt;
-    &lt;div class=&quot;field is-space-2&quot;&gt;
-      &lt;input class=&quot;input&quot; type=&quot;week&quot; value=&quot;2017-W05&quot;&gt;
-      &lt;input class=&quot;input&quot; type=&quot;week&quot; value=&quot;2017-W05&quot; disabled=&quot;&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;group&quot;&gt;
     &lt;p class=&quot;heading&quot;&gt;Time&lt;/p&gt;
     &lt;div class=&quot;field is-space-2&quot;&gt;
       &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot;&gt;
@@ -2877,11 +3023,6 @@ table.table.is-stripe
     .field.is-space-2
       input.input(type="month" value="2017-02")
       input.input(type="month" value="2017-02" disabled)
-  .group
-    p.heading Week
-    .field.is-space-2
-      input.input(type="week" value="2017-W05")
-      input.input(type="week" value="2017-W05" disabled)
   .group
     p.heading Time
     .field.is-space-2

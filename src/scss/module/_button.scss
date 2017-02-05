@@ -27,11 +27,9 @@
 
 @for $i from 1 through 9 {
   .btns.is-space-#{$i} {
-    margin-right: $i * -4px;
     margin-bottom: $i * -4px;
   }
-  .btns.is-space-#{$i} > .btn,
-  .btns.is-space-#{$i} > .btns {
+  .btns.is-space-#{$i} > * {
     margin-right: $i * 4px;
     margin-bottom: $i * 4px;
   }
@@ -39,41 +37,31 @@
 
 .btn {
   cursor: pointer;
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 2.5em;
+  display: inline-block;
+  align-self: flex-start;
   border-radius: 2px;
+  text-align: center;
   white-space: nowrap;
-  padding: 0 1em;
+  padding: 0.5em 1em;
   transition: ease-out 0.2s;
   &.is-disable {
     cursor: default;
   }
   &.is-round {
-    border-radius: 1.25em;
+    border-radius: 9999em;
   }
   &.is-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 2.5em;
     height: 2.5em;
     padding: 0;
-    border-radius: 1.25em;
+    border-radius: 9999em;
   }
   &.is-full {
-    display: flex;
-    flex: 1 0 0%;
+    flex: 0 0 100%;
     max-width: 100%;
-  }
-  @include firefox {
-    .icon,
-    .fa,
-    .im {
-      margin-top: 0.125em;
-    }
-    .material-icons {
-      margin-top: 0.1875em;
-    }
   }
 }
 
@@ -153,21 +141,18 @@
   border-bottom: 3px solid $dark-7;
   transition: none;
   &:hover {
-    top: 1px;
-    height: calc(2.5em - 1px);
     border-bottom-width: 2px;
+    margin-top: 1px;
   }
   &:active {
-    top: 2px;
-    height: calc(2.5em - 2px);
     border-bottom: 1px solid transparent;
+    margin-top: 2px;
   }
   &.is-disable,
   &.is-disable:hover,
   &.is-disable:active {
-    top: 0;
-    height: 2.5em;
     border-bottom: 3px solid $dark-9;
+    margin-top: 0;
   }
 }
 
@@ -332,5 +317,125 @@
   > .btn:nth-child(2),
   > .btn:nth-child(2) ~ .btn {
     border-left: none;
+  }
+}
+
+.btns > .btn.is-mobile-0 {
+  flex: 1 0 0%;
+  max-width: 100%;
+}
+
+.btns > .btn.is-mobile-full {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.btns > .btn.is-mobile-auto {
+  flex: 0 1 auto;
+  max-width: 100%;
+}
+
+@include fablet {
+  .btns > .btn.is-fablet-0 {
+    flex: 1 0 0%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-fablet-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-fablet-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include tablet {
+  .btns > .btn.is-touch-0 {
+    flex: 1 0 0%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-touch-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-touch-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include touch {
+  .btns > .btn.is-touch-0 {
+    flex: 1 0 0%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-touch-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-touch-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include desktop {
+  .btns > .btn.is-desktop-0 {
+    flex: 1 0 0%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-desktop-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-desktop-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include wide {
+  .btns > .btn.is-wide-0 {
+    flex: 1 0 0%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-wide-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-wide-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include landscape {
+  .btns > .btn.is-landscape-0 {
+    flex: 1 0 0%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-landscape-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-landscape-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+}
+
+@include portrait {
+  .btns > .btn.is-portrait-0 {
+    flex: 1 0 0%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-portrait-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btns > .btn.is-portrait-auto {
+    flex: 0 1 auto;
+    max-width: 100%;
   }
 }

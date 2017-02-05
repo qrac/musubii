@@ -34,7 +34,7 @@
                   span.text.is-sm 次回から自動的にログイン
               .group
                 .btns
-                  input.btn.is-plain.is-success.is-full(type="submit" value="ログイン")
+                  input.btn.is-plain.is-success.is-mobile-0(type="submit" value="ログイン")
   pre.pre.is-label.is-html
     code.code.
       &lt;form class=&quot;form&quot;&gt;
@@ -91,9 +91,14 @@
     br
     | また、&nbsp;
     code.code .field
-    | &nbsp;直下の要素はグリッドと同じ&nbsp;
-    code.code .is-(xxxx)-(y)
-    | &nbsp;のクラスを付与し12分割レスポンシブでサイズを変更できます。
+    | &nbsp;直下の要素は各デバイスサイズごとに
+    br
+    code.code .is-(xxxx)-full
+    | &nbsp;で100%、&nbsp;
+    code.code .is-(xxxx)-0
+    | &nbsp;で等分、&nbsp;
+    code.code .is-(xxxx)-auto
+    | &nbsp;で本来のサイズに戻せます。
     br
     code.code .is-middle
     | &nbsp;を付与し天地中央寄せで並べることも可能です。
@@ -136,48 +141,26 @@
         tr
           td
             p.text.is-sm
-              | パーツの比率保持
+              | 100%に広がる
           td
             p
-              span.text .is-mobile-1
-              br
-              span.text |
-              br
-              span.text .is-mobile-12
+              span.text .is-mobile-full
           td
             p
-              span.text .is-fablet-1
-              br
-              span.text |
-              br
-              span.text .is-fablet-12
+              span.text .is-fablet-full
           td
             p
-              span.text .is-tablet-1
-              br
-              span.text |
-              br
-              span.text .is-tablet-12
+              span.text .is-tablet-full
           td
             p
-              span.text .is-desktop-1
-              br
-              span.text |
-              br
-              span.text .is-desktop-12
+              span.text .is-desktop-full
           td
             p
-              span.text .is-wide-1
-              br
-              span.text |
-              br
-              span.text .is-wide-12
+              span.text .is-wide-full
         tr
           td
             p.text.is-sm
-              | 残っている余白
-              br
-              | いっぱいに広がり等分
+              | 余白を等分しつつ広がる
           td
             p
               span.text .is-mobile-0
@@ -196,9 +179,7 @@
         tr
           td
             p.text.is-sm
-              | パーツ本来の
-              br
-              | サイズになる
+              | 本来のサイズに戻る
           td
             p
               span.text .is-mobile-auto
@@ -241,34 +222,20 @@
         tr
           td
             p.text.is-sm
-              | パーツの比率保持
+              | 100%に広がる
           td
             p
-              span.text .is-touch-1
-              br
-              span.text |
-              br
-              span.text .is-touch-12
+              span.text .is-touch-full
           td
             p
-              span.text .is-landscape-1
-              br
-              span.text |
-              br
-              span.text .is-landscape-12
+              span.text .is-landscape-full
           td
             p
-              span.text .is-portrait-1
-              br
-              span.text |
-              br
-              span.text .is-portrait-12
+              span.text .is-portrait-full
         tr
           td
             p.text.is-sm
-              | 残っている余白
-              br
-              | いっぱいに広がり等分
+              | 余白を等分しつつ広がる
           td
             p
               span.text .is-touch-0
@@ -281,9 +248,7 @@
         tr
           td
             p.text.is-sm
-              | パーツ本来の
-              br
-              | サイズになる
+              | 本来のサイズに戻る
           td
             p
               span.text .is-touch-auto
@@ -298,8 +263,8 @@
       .group
         p.heading Desktopサイズまでは入力枠がフルサイズ↓
         .field.is-space-2
-          input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
-          input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+          input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
+          input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
       .group
         p.heading 誕生日：
         .field.is-space-2
@@ -342,8 +307,8 @@
         &lt;div class=&quot;group&quot;&gt;
           &lt;p class=&quot;heading&quot;&gt;Desktopサイズまでは入力枠がフルサイズ↓&lt;/p&gt;
           &lt;div class=&quot;field&quot;&gt;
-            &lt;input class=&quot;input is-mobile-12 is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
-            &lt;input class=&quot;input is-mobile-12 is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+            &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+            &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
           &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;group&quot;&gt;
@@ -382,8 +347,8 @@
         .group
           p.heading Desktopサイズまでは入力枠がフルサイズ↓
           .field.is-space-2
-            input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
-            input.input.is-mobile-12.is-desktop-auto(type="text" placeholder="Text")
+            input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
+            input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
         .group
           p.heading 誕生日
           .field.is-space-2.is-middle
@@ -541,7 +506,7 @@
         .field.is-space-2
           input.input(type="month" value="2017-02")
           input.input(type="month" value="2017-02" disabled)
-      .group
+      //-.group
         p.heading Week
         .field.is-space-2
           input.input(type="week" value="2017-W05")
@@ -576,13 +541,6 @@
           &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Week&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;week&quot; value=&quot;2017-W05&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;week&quot; value=&quot;2017-W05&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
           &lt;p class=&quot;heading&quot;&gt;Time&lt;/p&gt;
           &lt;div class=&quot;field is-space-2&quot;&gt;
             &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot;&gt;
@@ -608,11 +566,6 @@
           .field.is-space-2
             input.input(type="month" value="2017-02")
             input.input(type="month" value="2017-02" disabled)
-        .group
-          p.heading Week
-          .field.is-space-2
-            input.input(type="week" value="2017-W05")
-            input.input(type="week" value="2017-W05" disabled)
         .group
           p.heading Time
           .field.is-space-2
