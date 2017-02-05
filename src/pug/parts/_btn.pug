@@ -491,42 +491,199 @@
       a.btn.is-plain.is-circle ...
 
 .groups
-  h4.heading.is-xl Button - Full
+  h4.heading.is-xl Button - Responsive
   p.texts.is-sm
     code.code .btns
-    | &nbsp;にクラス名&nbsp;
-    code.code .is-full
-    | &nbsp;を付与することでボタンを枠いっぱいに広げられます。
+    | &nbsp;直下のボタンは各デバイスサイズごとに
     br
-    code.code .btns
-    | &nbsp;に複数の&nbsp;
-    code.code .btn
-    | &nbsp;を入れた場合は等分されます。
+    code.code .is-(xxxx)-full
+    | &nbsp;で100%、&nbsp;
+    code.code .is-(xxxx)-0
+    | &nbsp;で等分、&nbsp;
+    code.code .is-(xxxx)-auto
+    | &nbsp;で本来のサイズに戻せます。
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th(width="80")
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Mobile
+              br
+              span.text.is-sm all
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Fablet
+              br
+              span.text.is-sm 576px ~
+          th
+            p
+              i.fa.fa-tablet(aria-hidden="true")
+              span.text Tablet
+              br
+              span.text.is-sm 768px ~
+          th
+            p
+              i.fa.fa-laptop(aria-hidden="true")
+              span.text Desktop
+              br
+              span.text.is-sm 992px ~
+          th
+            p
+              i.fa.fa-desktop(aria-hidden="true")
+              span.text Wide
+              br
+              span.text.is-sm 1200px ~
+      tbody
+        tr
+          td
+            p.text.is-sm
+              | 100%に広がる
+          td
+            p
+              span.text .is-mobile-full
+          td
+            p
+              span.text .is-fablet-full
+          td
+            p
+              span.text .is-tablet-full
+          td
+            p
+              span.text .is-desktop-full
+          td
+            p
+              span.text .is-wide-full
+        tr
+          td
+            p.text.is-sm
+              | 余白を等分しつつ広がる
+          td
+            p
+              span.text .is-mobile-0
+          td
+            p
+              span.text .is-fablet-0
+          td
+            p
+              span.text .is-tablet-0
+          td
+            p
+              span.text .is-desktop-0
+          td
+            p
+              span.text .is-wide-0
+        tr
+          td
+            p.text.is-sm
+              | 本来のサイズに戻る
+          td
+            p
+              span.text .is-mobile-auto
+          td
+            p
+              span.text .is-fablet-auto
+          td
+            p
+              span.text .is-tablet-auto
+          td
+            p
+              span.text .is-desktop-auto
+          td
+            p
+              span.text .is-wide-auto
+  .group.is-scroll-x
+    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+      thead
+        tr.box.is-paint
+          th(width="80")
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Touch
+              br
+              span.text.is-sm ~ 991px
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Landscape
+              br
+              span.text.is-sm デバイス横向き
+          th
+            p
+              i.fa.fa-mobile(aria-hidden="true")
+              span.text Portrait
+              br
+              span.text.is-sm デバイス縦向き
+      tbody
+        tr
+          td
+            p.text.is-sm
+              | 100%に広がる
+          td
+            p
+              span.text .is-touch-full
+          td
+            p
+              span.text .is-landscape-full
+          td
+            p
+              span.text .is-portrait-full
+        tr
+          td
+            p.text.is-sm
+              | 余白を等分しつつ広がる
+          td
+            p
+              span.text .is-touch-0
+          td
+            p
+              span.text .is-landscape-0
+          td
+            p
+              span.text .is-portrait-0
+        tr
+          td
+            p.text.is-sm
+              | 本来のサイズに戻る
+          td
+            p
+              span.text .is-touch-auto
+          td
+            p
+              span.text .is-landscape-auto
+          td
+            p
+              span.text .is-portrait-auto
   .group.is-wrap.is-preview
     .btns.is-space-1
-      a.btn.is-plain.is-full 戻る
-      a.btn.is-plain.is-full.is-primary 決定
-      a.btn.is-plain.is-full.is-success 登録
-      a.btn.is-plain.is-full.is-danger 削除
-      a.btn.is-plain.is-full.is-disable 不可
-      a.btn.is-outline.is-full 戻る
-      a.btn.is-outline.is-full.is-primary 決定
-      a.btn.is-outline.is-full.is-success 登録
-      a.btn.is-outline.is-full.is-danger 削除
-      a.btn.is-outline.is-full.is-disable 不可
+      a.btn.is-plain.is-mobile-0 戻る
+      a.btn.is-plain.is-mobile-0.is-primary 決定
+      a.btn.is-plain.is-mobile-0.is-success 登録
+      a.btn.is-plain.is-mobile-0.is-danger 削除
+      a.btn.is-plain.is-mobile-0.is-disable 不可
+    .btns.is-space-1
+      a.btn.is-outline.is-mobile-full.is-desktop-0 戻る
+      a.btn.is-outline.is-mobile-full.is-desktop-0.is-primary 決定
+      a.btn.is-outline.is-mobile-full.is-desktop-0.is-success 登録
+      a.btn.is-outline.is-mobile-full.is-desktop-0.is-danger 削除
+      a.btn.is-outline.is-mobile-full.is-desktop-0.is-disable 不可
     .group.is-wrap.is-paint
       .btns.is-space-1
-        a.btn.is-ghost.is-full 戻る
-        a.btn.is-ghost.is-full.is-primary 決定
-        a.btn.is-ghost.is-full.is-success 登録
-        a.btn.is-ghost.is-full.is-danger 削除
-        a.btn.is-ghost.is-full.is-disable 不可
+        a.btn.is-ghost.is-mobile-0 戻る
+        a.btn.is-ghost.is-mobile-0.is-primary 決定
+        a.btn.is-ghost.is-mobile-0.is-success 登録
+        a.btn.is-ghost.is-mobile-0.is-danger 削除
+        a.btn.is-ghost.is-mobile-0.is-disable 不可
   pre.pre.is-label.is-html
     code.code.
-      &lt;a class=&quot;btn is-plain is-full&quot;&gt;...&lt;/a&gt;
+      &lt;a class=&quot;btn is-plain is-(xxxx)-(y)&quot;&gt;...&lt;/a&gt;
   pre.pre.is-label.is-pug
     code.code.
-      a.btn.is-plain.is-full ...
+      a.btn.is-plain.is-(xxxx)-(y) ...
 
 .groups
   h4.heading.is-xl Button - Bar
@@ -547,19 +704,19 @@
         i.fa.fa-align-right(aria-hidden="true")
         span.text 右寄せ
     .btns.is-bar
-      a.btn.is-outline.is-full
+      a.btn.is-outline.is-mobile-0
         i.fa.fa-align-left(aria-hidden="true")
         span.text 左寄せ
-      a.btn.is-outline.is-full
+      a.btn.is-outline.is-mobile-0
         i.fa.fa-align-center(aria-hidden="true")
         span.text 中央寄せ
-      a.btn.is-outline.is-full
+      a.btn.is-outline.is-mobile-0
         i.fa.fa-align-right(aria-hidden="true")
         span.text 右寄せ
     .btns.is-bar
-      a.btn.is-outline.is-round.is-full ラウンド
-      a.btn.is-outline.is-round.is-full ラウンド
-      a.btn.is-outline.is-round.is-full ラウンド
+      a.btn.is-outline.is-round.is-mobile-0 ラウンド
+      a.btn.is-outline.is-round.is-mobile-0 ラウンド
+      a.btn.is-outline.is-round.is-mobile-0 ラウンド
     .group.is-wrap.is-paint
       .btns.is-space-2
         .btns.is-bar

@@ -102,7 +102,7 @@ block contents
             a.text.is-primary.is-link.is-solid(href="css/musubii.min.css" download="musubii.min.css")
               | ダウンロード
               i.fa.fa-download.is-fit(aria-hidden="true")
-            | 後、headで読み込んでください。
+            | 後、読み込んでください。
           pre.pre.is-label.is-html
             code.code.
               &lt;link rel=&quot;stylesheet&quot; href="css/musubii.min.css"&gt;
@@ -110,20 +110,24 @@ block contents
             code.code.
               link(rel="stylesheet" href="css/musubii.min.css")
           h4.heading.is-lg npm
+          p.texts.is-sm
+            | npmをお使いの場合は、コマンドでインストールが可能です。
           pre.pre.is-label.is-command
             code.code.
               npm install musubii
-          //-h4.heading.is-lg CDN
-          //-.texts.is-pre
+          h4.heading.is-lg CDN
+          p.texts.is-sm
+            | CDN配信サービスjsDelivrを使用できます。
+          .texts.is-pre
             .text.is-pre-label html
             pre.text.is-pre-wrap
               code.
-                &lt;link rel="stylesheet" href="xxx"&gt;
-          //-.texts.is-pre
+                &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/1.2.0/css/musubii.min.css"&gt;
+          .texts.is-pre
             .text.is-pre-label pug
             pre.text.is-pre-wrap
               code.
-                link(rel="stylesheet" href="xxx")
+                link(rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/1.2.0/css/musubii.min.css")
         h3.heading.is-xl Basic rules
         .group.is-wrap
           h4.heading.is-lg Object + State
