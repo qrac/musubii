@@ -1,4 +1,4 @@
-/*! Framework: Musubii v1.2.0 MIT by Qrac */
+/*! Framework: Musubii v1.2.1 MIT by Qrac */
 /*! Reset CSS: Shitaji.CSS v3.0.0 CC0 by Qrac */
 * {
   margin: 0;
@@ -2646,7 +2646,7 @@ img[src$=".svg"] {
 }
 
 .table .box.is-danger {
-  background: #fcdfe2;
+  background: #fdd9dd;
 }
 
 .table .box.is-width-1 {
@@ -3334,8 +3334,8 @@ img[src$=".svg"] {
 }
 
 .alert.is-danger {
-  background: #fcdfe2;
-  border-color: #e9afaf;
+  background: #fdd9dd;
+  border-color: #eba8a8;
 }
 
 .alert.is-danger * {

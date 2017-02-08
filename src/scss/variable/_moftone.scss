@@ -1,11 +1,11 @@
 //----------------------------------------------------
-// SCSS Variable: MOFTONE v2.0.0 CC0 by Qrac
+// SCSS Variable: MOFTONE v3.0.0 CC0 by Qrac
 //----------------------------------------------------
 
-$mof-red-50: lighten(desaturate(#ffebee, 15%),3%) !default;
-$mof-red-100: lighten(desaturate(#ffcdd2, 15%),3%) !default;
-$mof-red-200: lighten(desaturate(#ef9a9a, 15%),3%) !default;
-$mof-red-300: lighten(desaturate(#e57373, 15%),3%) !default;
+$mof-red-50: lighten(desaturate(#ffebee, 10%),1%) !default;
+$mof-red-100: lighten(desaturate(#ffcdd2, 10%),2%) !default;
+$mof-red-200: lighten(desaturate(#ef9a9a, 10%),2%) !default;
+$mof-red-300: lighten(desaturate(#e57373, 10%),2%) !default;
 $mof-red-400: lighten(desaturate(#ef5350, 15%),3%) !default;
 $mof-red-500: lighten(desaturate(#f44336, 15%),3%) !default;
 $mof-red-600: lighten(desaturate(#e53935, 15%),3%) !default;
@@ -17,7 +17,7 @@ $mof-red-a200: lighten(desaturate(#ff5252, 25%),3%) !default;
 $mof-red-a400: lighten(desaturate(#ff1744, 25%),3%) !default;
 $mof-red-a700: lighten(desaturate(#d50000, 25%),3%) !default;
 
-$mof-pink-50: lighten(desaturate(#fce4ec, 25%),3%) !default;
+$mof-pink-50: lighten(desaturate(#fce4ec, 25%),1%) !default;
 $mof-pink-100: lighten(desaturate(#f8bbd0, 25%),3%) !default;
 $mof-pink-200: lighten(desaturate(#f48fb1, 25%),3%) !default;
 $mof-pink-300: lighten(desaturate(#f06292, 25%),3%) !default;
@@ -32,11 +32,11 @@ $mof-pink-a200: lighten(desaturate(#ff4081, 35%),3%) !default;
 $mof-pink-a400: lighten(desaturate(#f50057, 35%),3%) !default;
 $mof-pink-a700: lighten(desaturate(#c51162, 35%),3%) !default;
 
-$mof-purple-50: lighten(desaturate(#f3e5f5, 25%),3%) !default;
-$mof-purple-100: lighten(desaturate(#e1bee7, 25%),3%) !default;
-$mof-purple-200: lighten(desaturate(#ce93d8, 25%),3%) !default;
-$mof-purple-300: lighten(desaturate(#ba68c8, 25%),3%) !default;
-$mof-purple-400: lighten(desaturate(#ab47bc, 25%),3%) !default;
+$mof-purple-50: lighten(desaturate(#f3e5f5, 15%),1%) !default;
+$mof-purple-100: lighten(desaturate(#e1bee7, 15%),1%) !default;
+$mof-purple-200: lighten(desaturate(#ce93d8, 15%),1%) !default;
+$mof-purple-300: lighten(desaturate(#ba68c8, 15%),1%) !default;
+$mof-purple-400: lighten(desaturate(#ab47bc, 15%),1%) !default;
 $mof-purple-500: lighten(desaturate(#9c27b0, 25%),3%) !default;
 $mof-purple-600: lighten(desaturate(#8e24aa, 25%),3%) !default;
 $mof-purple-700: lighten(desaturate(#7b1fa2, 25%),3%) !default;
@@ -47,11 +47,11 @@ $mof-purple-a200: lighten(desaturate(#e040fb, 35%),3%) !default;
 $mof-purple-a400: lighten(desaturate(#d500f9, 35%),3%) !default;
 $mof-purple-a700: lighten(desaturate(#aa00ff, 35%),3%) !default;
 
-$mof-deep-purple-50: lighten(desaturate(#ede7f6, 25%),3%) !default;
-$mof-deep-purple-100: lighten(desaturate(#d1c4e9, 25%),3%) !default;
-$mof-deep-purple-200: lighten(desaturate(#b39ddb, 25%),3%) !default;
-$mof-deep-purple-300: lighten(desaturate(#9575cd, 25%),3%) !default;
-$mof-deep-purple-400: lighten(desaturate(#7e57c2, 25%),3%) !default;
+$mof-deep-purple-50: lighten(desaturate(#ede7f6, 15%),1%) !default;
+$mof-deep-purple-100: lighten(desaturate(#d1c4e9, 15%),1%) !default;
+$mof-deep-purple-200: lighten(desaturate(#b39ddb, 15%),1%) !default;
+$mof-deep-purple-300: lighten(desaturate(#9575cd, 15%),1%) !default;
+$mof-deep-purple-400: lighten(desaturate(#7e57c2, 15%),1%) !default;
 $mof-deep-purple-500: lighten(desaturate(#673ab7, 25%),3%) !default;
 $mof-deep-purple-600: lighten(desaturate(#5e35b1, 25%),3%) !default;
 $mof-deep-purple-700: lighten(desaturate(#512da8, 25%),3%) !default;
@@ -62,11 +62,11 @@ $mof-deep-purple-a200: lighten(desaturate(#7c4dff, 35%),3%) !default;
 $mof-deep-purple-a400: lighten(desaturate(#651fff, 35%),3%) !default;
 $mof-deep-purple-a700: lighten(desaturate(#6200ea, 35%),3%) !default;
 
-$mof-indigo-50: lighten(desaturate(#e8eaf6, 25%),3%) !default;
-$mof-indigo-100: lighten(desaturate(#c5cae9, 25%),3%) !default;
-$mof-indigo-200: lighten(desaturate(#9fa8da, 25%),3%) !default;
-$mof-indigo-300: lighten(desaturate(#7986cb, 25%),3%) !default;
-$mof-indigo-400: lighten(desaturate(#5c6bc0, 25%),3%) !default;
+$mof-indigo-50: lighten(desaturate(#e8eaf6, 15%),1%) !default;
+$mof-indigo-100: lighten(desaturate(#c5cae9, 15%),1%) !default;
+$mof-indigo-200: lighten(desaturate(#9fa8da, 15%),1%) !default;
+$mof-indigo-300: lighten(desaturate(#7986cb, 15%),1%) !default;
+$mof-indigo-400: lighten(desaturate(#5c6bc0, 15%),1%) !default;
 $mof-indigo-500: lighten(desaturate(#3f51b5, 25%),3%) !default;
 $mof-indigo-600: lighten(desaturate(#3949ab, 25%),3%) !default;
 $mof-indigo-700: lighten(desaturate(#303f9f, 25%),3%) !default;
@@ -77,7 +77,7 @@ $mof-indigo-a200: lighten(desaturate(#536dfe, 35%),3%) !default;
 $mof-indigo-a400: lighten(desaturate(#3d5afe, 35%),3%) !default;
 $mof-indigo-a700: lighten(desaturate(#304ffe, 35%),3%) !default;
 
-$mof-blue-50: lighten(desaturate(#e3f2fd, 25%),3%) !default;
+$mof-blue-50: lighten(desaturate(#e3f2fd, 25%),0%) !default;
 $mof-blue-100: lighten(desaturate(#bbdefb, 25%),3%) !default;
 $mof-blue-200: lighten(desaturate(#90caf9, 25%),3%) !default;
 $mof-blue-300: lighten(desaturate(#64b5f6, 25%),3%) !default;
@@ -107,9 +107,9 @@ $mof-light-blue-a200: lighten(desaturate(#40c4ff, 35%),3%) !default;
 $mof-light-blue-a400: lighten(desaturate(#00b0ff, 35%),3%) !default;
 $mof-light-blue-a700: lighten(desaturate(#0091ea, 35%),3%) !default;
 
-$mof-cyan-50: lighten(desaturate(#e0f7fa, 15%),5%) !default;
+$mof-cyan-50: lighten(desaturate(#e0f7fa, 15%),2%) !default;
 $mof-cyan-100: lighten(desaturate(#b2ebf2, 15%),5%) !default;
-$mof-cyan-200: lighten(desaturate(#80deea, 15%),5) !default;
+$mof-cyan-200: lighten(desaturate(#80deea, 15%),5%) !default;
 $mof-cyan-300: lighten(desaturate(#4dd0e1, 15%),5%) !default;
 $mof-cyan-400: lighten(desaturate(#26c6da, 15%),5%) !default;
 $mof-cyan-500: lighten(desaturate(#00bcd4, 25%),3%) !default;
@@ -122,11 +122,11 @@ $mof-cyan-a200: lighten(desaturate(#18ffff, 25%),3%) !default;
 $mof-cyan-a400: lighten(desaturate(#00e5ff, 25%),3%) !default;
 $mof-cyan-a700: lighten(desaturate(#00b8d4, 25%),3%) !default;
 
-$mof-teal-50: lighten(desaturate(#e0f2f1, 25%),3%) !default;
-$mof-teal-100: lighten(desaturate(#b2dfdb, 25%),3%) !default;
-$mof-teal-200: lighten(desaturate(#80cbc4, 25%),3%) !default;
-$mof-teal-300: lighten(desaturate(#4db6ac, 25%),3%) !default;
-$mof-teal-400: lighten(desaturate(#26a69a, 25%),3%) !default;
+$mof-teal-50: lighten(desaturate(#e0f2f1, 10%),1%) !default;
+$mof-teal-100: lighten(desaturate(#b2dfdb, 10%),3%) !default;
+$mof-teal-200: lighten(desaturate(#80cbc4, 10%),3%) !default;
+$mof-teal-300: lighten(desaturate(#4db6ac, 10%),3%) !default;
+$mof-teal-400: lighten(desaturate(#26a69a, 15%),3%) !default;
 $mof-teal-500: lighten(desaturate(#009688, 25%),3%) !default;
 $mof-teal-600: lighten(desaturate(#00897b, 25%),3%) !default;
 $mof-teal-700: lighten(desaturate(#00796b, 25%),3%) !default;
@@ -137,7 +137,7 @@ $mof-teal-a200: lighten(desaturate(#64ffda, 35%),3%) !default;
 $mof-teal-a400: lighten(desaturate(#1de9b6, 35%),3%) !default;
 $mof-teal-a700: lighten(desaturate(#00bfa5, 35%),3%) !default;
 
-$mof-green-50: lighten(desaturate(#e8f5e9, 15%),3%) !default;
+$mof-green-50: lighten(desaturate(#e8f5e9, 15%),1%) !default;
 $mof-green-100: lighten(desaturate(#c8e6c9, 15%),3%) !default;
 $mof-green-200: lighten(desaturate(#a5d6a7, 15%),3%) !default;
 $mof-green-300: lighten(desaturate(#81c784, 15%),3%) !default;
@@ -152,7 +152,7 @@ $mof-green-a200: lighten(desaturate(#69f0ae, 25%),3%) !default;
 $mof-green-a400: lighten(desaturate(#00e676, 25%),3%) !default;
 $mof-green-a700: lighten(desaturate(#00c853, 25%),3%) !default;
 
-$mof-light-green-50: lighten(desaturate(#f1f8e9, 25%),3%) !default;
+$mof-light-green-50: lighten(desaturate(#f1f8e9, 25%),1%) !default;
 $mof-light-green-100: lighten(desaturate(#dcedc8, 25%),3%) !default;
 $mof-light-green-200: lighten(desaturate(#c5e1a5, 25%),3%) !default;
 $mof-light-green-300: lighten(desaturate(#aed581, 25%),3%) !default;
@@ -167,7 +167,7 @@ $mof-light-green-a200: lighten(desaturate(#b2ff59, 35%),3%) !default;
 $mof-light-green-a400: lighten(desaturate(#76ff03, 35%),3%) !default;
 $mof-light-green-a700: lighten(desaturate(#64dd17, 35%),3%) !default;
 
-$mof-lime-50: lighten(desaturate(#f9fbe7, 25%),3%) !default;
+$mof-lime-50: lighten(desaturate(#f9fbe7, 25%),0%) !default;
 $mof-lime-100: lighten(desaturate(#f0f4c3, 25%),3%) !default;
 $mof-lime-200: lighten(desaturate(#e6ee9c, 25%),3%) !default;
 $mof-lime-300: lighten(desaturate(#dce775, 25%),3%) !default;
@@ -182,7 +182,7 @@ $mof-lime-a200: lighten(desaturate(#eeff41, 35%),3%) !default;
 $mof-lime-a400: lighten(desaturate(#c6ff00, 35%),3%) !default;
 $mof-lime-a700: lighten(desaturate(#aeea00, 35%),3%) !default;
 
-$mof-yellow-50: lighten(desaturate(#fffde7, 25%),3%) !default;
+$mof-yellow-50: lighten(desaturate(#fffde7, 25%),0%) !default;
 $mof-yellow-100: lighten(desaturate(#fff9c4, 25%),3%) !default;
 $mof-yellow-200: lighten(desaturate(#fff59d, 25%),3%) !default;
 $mof-yellow-300: lighten(desaturate(#fff176, 25%),3%) !default;
@@ -197,7 +197,7 @@ $mof-yellow-a200: lighten(desaturate(#ffff00, 35%),3%) !default;
 $mof-yellow-a400: lighten(desaturate(#ffea00, 35%),3%) !default;
 $mof-yellow-a700: lighten(desaturate(#ffd600, 35%),3%) !default;
 
-$mof-amber-50: lighten(desaturate(#fff8e1, 25%),3%) !default;
+$mof-amber-50: lighten(desaturate(#fff8e1, 25%),1%) !default;
 $mof-amber-100: lighten(desaturate(#ffecb3, 25%),3%) !default;
 $mof-amber-200: lighten(desaturate(#ffe082, 25%),3%) !default;
 $mof-amber-300: lighten(desaturate(#ffd54f, 25%),3%) !default;
@@ -212,7 +212,7 @@ $mof-amber-a200: lighten(desaturate(#ffd740, 35%),3%) !default;
 $mof-amber-a400: lighten(desaturate(#ffc400, 35%),3%) !default;
 $mof-amber-a700: lighten(desaturate(#ffab00, 35%),3%) !default;
 
-$mof-orange-50: lighten(desaturate(#fff3e0, 25%),3%) !default;
+$mof-orange-50: lighten(desaturate(#fff3e0, 25%),1%) !default;
 $mof-orange-100: lighten(desaturate(#ffe0b2, 25%),3%) !default;
 $mof-orange-200: lighten(desaturate(#ffcc80, 25%),3%) !default;
 $mof-orange-300: lighten(desaturate(#ffb74d, 25%),3%) !default;
@@ -227,7 +227,7 @@ $mof-orange-a200: lighten(desaturate(#ffab40, 35%),3%) !default;
 $mof-orange-a400: lighten(desaturate(#ff9100, 35%),3%) !default;
 $mof-orange-a700: lighten(desaturate(#ff6d00, 35%),3%) !default;
 
-$mof-deep-orange-50: lighten(desaturate(#fbe9e7, 25%),3%) !default;
+$mof-deep-orange-50: lighten(desaturate(#fbe9e7, 25%),1%) !default;
 $mof-deep-orange-100: lighten(desaturate(#ffccbc, 25%),3%) !default;
 $mof-deep-orange-200: lighten(desaturate(#ffab91, 25%),3%) !default;
 $mof-deep-orange-300: lighten(desaturate(#ff8a65, 25%),3%) !default;
@@ -242,11 +242,11 @@ $mof-deep-orange-a200: lighten(desaturate(#ff6e40, 35%),3%) !default;
 $mof-deep-orange-a400: lighten(desaturate(#ff3d00, 35%),3%) !default;
 $mof-deep-orange-a700: lighten(desaturate(#dd2c00, 35%),3%) !default;
 
-$mof-brown-50: lighten(desaturate(#efebe9, 10%),3%) !default;
-$mof-brown-100: lighten(desaturate(#d7ccc8, 10%),3%) !default;
-$mof-brown-200: lighten(desaturate(#bcaaa4, 10%),3%) !default;
-$mof-brown-300: lighten(desaturate(#a1887f, 10%),3%) !default;
-$mof-brown-400: lighten(desaturate(#8d6e63, 10%),3%) !default;
+$mof-brown-50: lighten(desaturate(#efebe9, 6%),1%) !default;
+$mof-brown-100: lighten(desaturate(#d7ccc8, 6%),3%) !default;
+$mof-brown-200: lighten(desaturate(#bcaaa4, 6%),3%) !default;
+$mof-brown-300: lighten(desaturate(#a1887f, 6%),3%) !default;
+$mof-brown-400: lighten(desaturate(#8d6e63, 6%),3%) !default;
 $mof-brown-500: lighten(desaturate(#795548, 10%),3%) !default;
 $mof-brown-600: lighten(desaturate(#6d4c41, 10%),3%) !default;
 $mof-brown-700: lighten(desaturate(#5d4037, 10%),3%) !default;
@@ -264,16 +264,16 @@ $mof-grey-700: lighten(desaturate(#616161, 10%),0%) !default;
 $mof-grey-800: lighten(desaturate(#424242, 10%),0%) !default;
 $mof-grey-900: lighten(desaturate(#212121, 10%),0%) !default;
 
-$mof-blue-grey-50: lighten(desaturate(#eceff1, 10%),0%) !default;
-$mof-blue-grey-100: lighten(desaturate(#cfd8dc, 10%),0%) !default;
-$mof-blue-grey-200: lighten(desaturate(#b0bec5, 10%),0%) !default;
-$mof-blue-grey-300: lighten(desaturate(#90a4ae, 10%),0%) !default;
-$mof-blue-grey-400: lighten(desaturate(#78909c, 10%),0%) !default;
-$mof-blue-grey-500: lighten(desaturate(#607d8b, 10%),0%) !default;
-$mof-blue-grey-600: lighten(desaturate(#546e7a, 10%),0%) !default;
-$mof-blue-grey-700: lighten(desaturate(#455a64, 10%),0%) !default;
-$mof-blue-grey-800: lighten(desaturate(#37474f, 10%),0%) !default;
-$mof-blue-grey-900: lighten(desaturate(#263238, 10%),0%) !default;
+$mof-blue-grey-50: lighten(desaturate(#eceff1, 5%),0%) !default;
+$mof-blue-grey-100: lighten(desaturate(#cfd8dc, 5%),0%) !default;
+$mof-blue-grey-200: lighten(desaturate(#b0bec5, 5%),0%) !default;
+$mof-blue-grey-300: lighten(desaturate(#90a4ae, 5%),0%) !default;
+$mof-blue-grey-400: lighten(desaturate(#78909c, 5%),0%) !default;
+$mof-blue-grey-500: lighten(desaturate(#607d8b, 5%),0%) !default;
+$mof-blue-grey-600: lighten(desaturate(#546e7a, 5%),0%) !default;
+$mof-blue-grey-700: lighten(desaturate(#455a64, 5%),0%) !default;
+$mof-blue-grey-800: lighten(desaturate(#37474f, 5%),0%) !default;
+$mof-blue-grey-900: lighten(desaturate(#263238, 5%),0%) !default;
 
 $mof-black: #000000 !default;
 $mof-white: #ffffff !default;
