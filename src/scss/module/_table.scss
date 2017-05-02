@@ -4,9 +4,10 @@
 
 .table {
   width: 100%;
-  background: $light;
+  background-color: $light;
   border-radius: 2px;
   border-collapse: separate;
+  border-spacing: 0;
   th,
   td {
     padding: 0.75em 1em;
@@ -19,6 +20,9 @@
   > thead > tr:last-child > th {
     border-bottom: 2px solid $dark-8;
   }
+}
+
+.table.is-round {
   &:not(.is-line) > thead > tr:first-child > *:first-child {
     border-top-left-radius: 2px;
   }
@@ -76,63 +80,25 @@
 
 .table.is-stripe {
   thead {
-    background: $grey-100;
+    background-color: $grey-100;
   }
   tbody tr:nth-child(even) {
-    background: $grey-100;
+    background-color: $grey-100;
   }
 }
 
-.table .box {
-  &.is-paint-1 {
-    background: $cyan-100;
-  }
-  &.is-paint-2 {
-    background: $cyan-200;
-    color: $light;
-  }
-  &.is-paint-3 {
-    background: $cyan-300;
-    color: $light;
-  }
-  &.is-paint-4 {
-    background: $cyan-400;
-    color: $light;
-  }
-  &.is-paint,
-  &.is-paint-5 {
-    background: $cyan-500;
-    color: $light;
-  }
-  &.is-paint-6 {
-    background: $cyan-600;
-    color: $light;
-  }
-  &.is-paint-7 {
-    background: $cyan-700;
-    color: $light;
-  }
-  &.is-paint-8 {
-    background: $cyan-800;
-    color: $light;
-  }
-  &.is-paint-9 {
-    background: $cyan-900;
+.table * {
+  &.is-paint {
+    background-color: $cyan-500;
     color: $light;
   }
   &.is-stripe {
-    background: $grey-100;
+    background-color: $grey-100;
   }
   &.is-spot {
-    background: $yellow-200;
+    background-color: $yellow-200;
   }
   &.is-danger {
-    background: $red-100;
-  }
-}
-
-@for $i from 1 through $split-table {
-  .table .box.is-width-#{$i} {
-    width: 100% / $split-table * $i;
+    background-color: $red-100;
   }
 }
