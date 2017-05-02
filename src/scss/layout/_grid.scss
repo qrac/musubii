@@ -14,7 +14,7 @@
   &.is-center {
     justify-content: center;
   }
-  &.is-end {
+  &.is-right {
     justify-content: flex-end;
   }
   &.is-between {
@@ -23,68 +23,7 @@
   &.is-around {
     justify-content: space-around;
   }
-}
-
-.grid.is-mobile-100vh {
-  height: 100vh;
-}
-
-@include fablet {
-  .grid.is-fablet-100vh {
-    height: 100vh;
-  }
-}
-
-@include tablet {
-  .grid.is-tablet-100vh {
-    height: 100vh;
-  }
-}
-
-@include desktop {
-  .grid.is-desktop-100vh {
-    height: 100vh;
-  }
-}
-
-@include wide {
-  .grid.is-wide-100vh {
-    height: 100vh;
-  }
-}
-
-@include touch {
-  .grid.is-touch-100vh {
-    height: 100vh;
-  }
-}
-
-@include landscape {
-  .grid.is-landscape-100vh {
-    height: 100vh;
-  }
-}
-
-@include portrait {
-  .grid.is-portrait-100vh {
-    height: 100vh;
-  }
-}
-
-@for $i from 1 through 9 {
-  .grid.is-space-#{$i} {
-    margin: 0 $i * -2px $i * -4px;
-  }
-  .grid.is-space-#{$i} > .col {
-    padding: 0 $i * 2px $i * 4px;
-  }
-  .grid + .grid.is-space-#{$i} {
-    padding: $i * 4px 0 0;
-  }
-}
-
-.col {
-  &.is-stretch {
+  &.is-stretch > .col {
     display: flex;
   }
 }
@@ -103,7 +42,6 @@
     }
   }
 }
-
 
 .col.is-mobile-auto {
   flex: 0 1 auto;
@@ -152,27 +90,6 @@
   }
 }
 
-@include touch {
-  @for $i from 0 through $split-grid {
-    @if $i == 0 {
-      .col.is-touch-#{$i} {
-        flex: 1 0 0%;
-        max-width: 100%;
-      }
-    }
-    @else {
-      .col.is-touch-#{$i} {
-        flex: 0 0 100% / $split-grid * $i;
-        max-width: 100% / $split-grid * $i;
-      }
-    }
-  }
-  .col.is-touch-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
 @include desktop {
   @for $i from 0 through $split-grid {
     @if $i == 0 {
@@ -210,48 +127,6 @@
     }
   }
   .col.is-wide-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include landscape {
-  @for $i from 0 through $split-grid {
-    @if $i == 0 {
-      .col.is-landscape-#{$i} {
-        flex: 1 0 0%;
-        max-width: 100%;
-      }
-    }
-    @else {
-      .col.is-landscape-#{$i} {
-        flex: 0 0 100% / $split-grid * $i;
-        max-width: 100% / $split-grid * $i;
-      }
-    }
-  }
-  .col.is-landscape-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include portrait {
-  @for $i from 0 through $split-grid {
-    @if $i == 0 {
-      .col.is-portrait-#{$i} {
-        flex: 1 0 0%;
-        max-width: 100%;
-      }
-    }
-    @else {
-      .col.is-portrait-#{$i} {
-        flex: 0 0 100% / $split-grid * $i;
-        max-width: 100% / $split-grid * $i;
-      }
-    }
-  }
-  .col.is-portrait-auto {
     flex: 0 1 auto;
     max-width: 100%;
   }
