@@ -55,7 +55,7 @@
 .wysiwyg a {
   cursor: pointer;
   color: $primary;
-  border-bottom: 1px dotted;
+  border-bottom: 1px solid;
   &:hover,
   &:active {
     border-bottom-color: transparent;
@@ -63,36 +63,35 @@
 }
 
 .wysiwyg blockquote {
-  color: $dark-5;
-  background-color: $grey-1;
-  border-left: 4px solid $dark-8;
+  background-color: $grey-100;
+  border-left: 8px solid $dark-9;
   border-radius: 2px;
   padding: 20px;
 }
 
-.wysiwyg pre,
-.wysiwyg code {
+.wysiwyg code,
+.wysiwyg pre {
   font-family: $font-mono;
 }
 
-.wysiwyg pre {
-  color: $light;
-  background-color: $dark-2;
-  font-size: 0.875em;
+.wysiwyg :not(pre) code {
+  padding: 0.2em 0.5em;
+  background-color: $grey-100;
   border-radius: 2px;
+  color: $indigo-500;
+  font-size: 0.765em;
+}
+
+.wysiwyg pre {
   padding: 20px 25px;
+  background-color: $grey-100;
+  border-radius: 2px;
+  color: $indigo-500;
+  font-size: 0.875em;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
-}
-
-.wysiwyg :not(pre) code {
-  color: $light;
-  background-color: $dark-2;
-  font-size: 0.765em;
-  border-radius: 2px;
-  padding: 0.2em 0.5em;
 }
 
 .wysiwyg ul,
@@ -132,9 +131,4 @@
     padding: 6px 12px;
     border: 1px solid $grey-3;
   }
-}
-
-.wysiwyg hr {
-  height: 1px;
-  background-color: $dark-8;
 }
