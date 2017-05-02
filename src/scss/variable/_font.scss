@@ -5,7 +5,7 @@
 $font-sans:
   -apple-system, BlinkMacSystemFont,
   "Hiragino Sans",
-  YuGothic,
+  "Yu Gothic", YuGothic,
   Meiryo,
   sans-serif !default;
 
@@ -13,7 +13,7 @@ $font-sans-yakuhanjp:
   -apple-system, BlinkMacSystemFont,
   YakuHanJP,
   "Hiragino Sans",
-  YuGothic,
+  "Yu Gothic", YuGothic,
   Meiryo,
   sans-serif !default;
 
@@ -21,54 +21,37 @@ $font-sans-yakuhanjps:
   -apple-system, BlinkMacSystemFont,
   YakuHanJPs,
   "Hiragino Sans",
-  YuGothic,
+  "Yu Gothic", YuGothic,
   Meiryo,
   sans-serif !default;
 
-$font-sans-yakuhanjpw:
-  -apple-system, BlinkMacSystemFont,
-  YakuHanJP, YakuHanJPs,
+$font-sans-hiragino:
   "Hiragino Sans",
-  YuGothic,
+  "Yu Gothic", YuGothic,
   Meiryo,
   sans-serif !default;
 
-$font-sans-jp:
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-jp-yakuhanjp:
+$font-sans-hiragino-yakuhanjp:
   YakuHanJP,
   "Hiragino Sans",
-  YuGothic,
+  "Yu Gothic", YuGothic,
   Meiryo,
   sans-serif !default;
 
-$font-sans-jp-yakuhanjps:
+$font-sans-hiragino-yakuhanjps:
   YakuHanJPs,
   "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-jp-yakuhanjpw:
-  YakuHanJP, YakuHanJPs,
-  "Hiragino Sans",
-  YuGothic,
+  "Yu Gothic", YuGothic,
   Meiryo,
   sans-serif !default;
 
 $font-sans-yugo:
-  -apple-system, BlinkMacSystemFont,
   "Yu Gothic", YuGothic,
   "Hiragino Sans",
   Meiryo,
   sans-serif !default;
 
 $font-sans-yugo-yakuhanjp:
-  -apple-system, BlinkMacSystemFont,
   YakuHanJP,
   "Yu Gothic", YuGothic,
   "Hiragino Sans",
@@ -76,96 +59,9 @@ $font-sans-yugo-yakuhanjp:
   sans-serif !default;
 
 $font-sans-yugo-yakuhanjps:
-  -apple-system, BlinkMacSystemFont,
   YakuHanJPs,
   "Yu Gothic", YuGothic,
   "Hiragino Sans",
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-yugo-yakuhanjpw:
-  -apple-system, BlinkMacSystemFont,
-  YakuHanJP, YakuHanJPs,
-  "Yu Gothic", YuGothic,
-  "Hiragino Sans",
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-meiryo:
-  -apple-system, BlinkMacSystemFont,
-  Meiryo,
-  "Hiragino Sans",
-  YuGothic,
-  sans-serif !default;
-
-$font-sans-meiryo-yakuhanjp:
-  -apple-system, BlinkMacSystemFont,
-  YakuHanJP,
-  Meiryo,
-  "Hiragino Sans",
-  YuGothic,
-  sans-serif !default;
-
-$font-sans-meiryo-yakuhanjps:
-  -apple-system, BlinkMacSystemFont,
-  YakuHanJPs,
-  Meiryo,
-  "Hiragino Sans",
-  YuGothic,
-  sans-serif !default;
-
-$font-sans-meiryo-yakuhanjpw:
-  -apple-system, BlinkMacSystemFont,
-  YakuHanJP, YakuHanJPs,
-  Meiryo,
-  "Hiragino Sans",
-  YuGothic,
-  sans-serif !default;
-
-$font-sans-ie:
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-ie-yakuhanjp:
-  YakuHanJP,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-ie-yakuhanjps:
-  YakuHanJPs,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-ie-yakuhanjpw:
-  YakuHanJP, YakuHanJPs,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-open:
-  "Open Sans",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-roboto:
-  Roboto,
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-oswald:
-  Oswald,
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-montserrat:
-  Montserrat,
-  "Hiragino Sans",
-  YuGothic,
   Meiryo,
   sans-serif !default;
 
@@ -192,98 +88,56 @@ $font-sans-noto-yakuhanjps:
   Meiryo,
   sans-serif !default;
 
-$font-sans-noto-yakuhanjpw:
-  YakuHanJP, YakuHanJPs,
-  "Noto Sans Japanese",
-  "Hiragino Sans",
-  YuGothic,
+$font-sans-meiryo:
   Meiryo,
+  "Hiragino Sans",
+  "Yu Gothic", YuGothic,
   sans-serif !default;
 
-$font-sans-mplus1p:
-  "Mplus 1p",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-mplus1p-yakuhanjp:
+$font-sans-meiryo-yakuhanjp:
   YakuHanJP,
-  "Mplus 1p",
-  "Hiragino Sans",
-  YuGothic,
   Meiryo,
+  "Hiragino Sans",
+  "Yu Gothic", YuGothic,
   sans-serif !default;
 
-$font-sans-mplus1p-yakuhanjps:
+$font-sans-meiryo-yakuhanjps:
   YakuHanJPs,
-  "Mplus 1p",
-  "Hiragino Sans",
-  YuGothic,
   Meiryo,
-  sans-serif !default;
-
-$font-sans-mplus1p-yakuhanjpw:
-  YakuHanJP, YakuHanJPs,
-  "Mplus 1p",
   "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-roundedmplus1c:
-  "Rounded Mplus 1c",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-sawarabigothic:
-  "Sawarabi Gothic",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-sawarabigothic-yakuhanjp:
-  YakuHanJP,
-  "Sawarabi Gothic",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-sawarabigothic-yakuhanjps:
-  YakuHanJPs,
-  "Sawarabi Gothic",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-sawarabigothic-yakuhanjpw:
-  YakuHanJP, YakuHanJPs,
-  "Sawarabi Gothic",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-nikukyu:
-  "Nikukyu",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
-  sans-serif !default;
-
-$font-sans-nicomoji:
-  "Nico Moji",
-  "Hiragino Sans",
-  YuGothic,
-  Meiryo,
+  "Yu Gothic", YuGothic,
   sans-serif !default;
 
 $font-serif:
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-serif-yakuhanmp:
+  YakuHanMP,
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-serif-yakuhanmps:
+  YakuHanMPs,
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-serif-hiragino:
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-serif-hiragino-yakuhanmp:
+  YakuHanMP,
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
+
+$font-serif-hiragino-yakuhanmps:
+  YakuHanMPs,
   "Hiragino Mincho ProN",
   "Yu Mincho", YuMincho,
   serif !default;
@@ -293,43 +147,57 @@ $font-serif-yumi:
   "Hiragino Mincho ProN",
   serif !default;
 
-$font-serif-hannari:
-  "Hannari",
+$font-serif-yumi-yakuhanmp:
+  YakuHanMP,
+  "Yu Mincho", YuMincho,
+  "Hiragino Mincho ProN",
+  serif !default;
+
+$font-serif-yumi-yakuhanmps:
+  YakuHanMPs,
+  "Yu Mincho", YuMincho,
+  "Hiragino Mincho ProN",
+  serif !default;
+
+$font-serif-noto:
+  "Noto Serif Japanese",
   "Hiragino Mincho ProN",
   "Yu Mincho", YuMincho,
   serif !default;
 
-$font-serif-kokoro:
-  "Kokoro",
+$font-serif-noto-yakuhanmp:
+  YakuHanMP,
+  "Noto Serif Japanese",
   "Hiragino Mincho ProN",
   "Yu Mincho", YuMincho,
   serif !default;
 
-$font-serif-sawarabimincho:
-  "Sawarabi Mincho",
+$font-serif-noto-yakuhanmps:
+  YakuHanMPs,
+  "Noto Serif Japanese",
   "Hiragino Mincho ProN",
   "Yu Mincho", YuMincho,
   serif !default;
 
-$font-cursive-pacifico:
-  Pacifico,
-  cursive !default;
+$font-serif-meiryo:
+  meiryo,
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
 
-$font-cursive-lobster:
-  Lobster,
-  cursive !default;
+$font-serif-meiryo-yakuhanmp:
+  YakuHanMP,
+  meiryo,
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
 
-$font-cursive-fredoka:
-  "Fredoka One",
-  cursive !default;
-
-$font-cursive-bungee:
-  Bungee,
-  cursive !default;
-
-$font-cursive-chango:
-  Chango,
-  cursive !default;
+$font-serif-meiryo-yakuhanmps:
+  YakuHanMPs,
+  meiryo,
+  "Hiragino Mincho ProN",
+  "Yu Mincho", YuMincho,
+  serif !default;
 
 $font-mono:
   Menlo, Monaco, Consolas,
