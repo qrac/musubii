@@ -5,6 +5,8 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -0.5em;
+  margin-bottom: -0.5em;
   &.is-middle {
     align-items: center;
   }
@@ -25,6 +27,13 @@
   }
   &.is-stretch > .col {
     display: flex;
+  }
+  + .grid {
+    margin-top: 0.5em;
+  }
+  > .col {
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
   }
 }
 
