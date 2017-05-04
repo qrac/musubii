@@ -24,10 +24,6 @@ Webデザインの腹ごなしに、HTML/CSSフレームワーク「MUSUBii（�
 <link rel="stylesheet" href="css/musubii.min.css">
 ```
 
-```pug
-link(rel="stylesheet" href="css/musubii.min.css")
-```
-
 ### npm
 
 npmをお使いの場合は、コマンドでインストールが可能です。
@@ -42,10 +38,6 @@ CDN配信サービスjsDelivrを使用できます。
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/2.0.0/css/musubii.min.css">
-```
-
-```pug
-link(rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/2.0.0/css/musubii.min.css")
 ```
 
 ## Basic rules
@@ -92,4 +84,4 @@ CSSのレイヤーは主に4つに分類されています。
 
 [link-demo-1]:https://qrac.github.io/musubii/
 [link-jsdelivr]:https://www.jsdelivr.com/projects/musubii
-[link-twitter]:https://twitter.com/Qrac_jp
+[link-twitter]:https://twitter.com/Qrac_JP
