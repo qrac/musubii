@@ -41,11 +41,11 @@ npm install musubii
 CDN配信サービスjsDelivrを使用できます。
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/1.2.1/css/musubii.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/2.0.0/css/musubii.min.css">
 ```
 
 ```pug
-link(rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/1.2.1/css/musubii.min.css")
+link(rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/2.0.0/css/musubii.min.css")
 ```
 
 ## Basic rules
