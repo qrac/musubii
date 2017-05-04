@@ -179,7 +179,7 @@
 }
 
 .field > *.is-mobile-full {
-  flex: 0 0 100%;
+  flex: 0 1 100%;
   max-width: 100%;
 }
 
@@ -194,7 +194,7 @@
     max-width: 100%;
   }
   .field > *.is-fablet-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-fablet-auto {
@@ -209,7 +209,7 @@
     max-width: 100%;
   }
   .field > *.is-touch-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-touch-auto {
@@ -224,7 +224,7 @@
     max-width: 100%;
   }
   .field > *.is-desktop-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-desktop-auto {
@@ -239,7 +239,7 @@
     max-width: 100%;
   }
   .field > *.is-wide-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-wide-auto {

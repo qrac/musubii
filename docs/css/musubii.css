@@ -2216,9 +2216,9 @@ img[src$=".svg"] {
 }
 
 .field > *.is-mobile-full {
-  -webkit-flex: 0 0 100%;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
   max-width: 100%;
 }
 
@@ -2237,9 +2237,9 @@ img[src$=".svg"] {
     max-width: 100%;
   }
   .field > *.is-fablet-full {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-fablet-auto {
@@ -2258,9 +2258,9 @@ img[src$=".svg"] {
     max-width: 100%;
   }
   .field > *.is-touch-full {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-touch-auto {
@@ -2279,9 +2279,9 @@ img[src$=".svg"] {
     max-width: 100%;
   }
   .field > *.is-desktop-full {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-desktop-auto {
@@ -2300,9 +2300,9 @@ img[src$=".svg"] {
     max-width: 100%;
   }
   .field > *.is-wide-full {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-wide-auto {
