@@ -1694,9 +1694,9 @@ img[src$=".svg"] {
 
 .btns > .btn.is-mobile-full,
 .btns > .btn.is-full {
-  -webkit-flex: 0 0 100%;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
   max-width: 100%;
 }
 
@@ -1715,9 +1715,9 @@ img[src$=".svg"] {
     max-width: 100%;
   }
   .btns > .btn.is-fablet-full {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .btns > .btn.is-fablet-auto {
@@ -1736,9 +1736,9 @@ img[src$=".svg"] {
     max-width: 100%;
   }
   .btns > .btn.is-touch-full {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .btns > .btn.is-touch-auto {
@@ -1757,9 +1757,9 @@ img[src$=".svg"] {
     max-width: 100%;
   }
   .btns > .btn.is-desktop-full {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .btns > .btn.is-desktop-auto {
@@ -1778,9 +1778,9 @@ img[src$=".svg"] {
     max-width: 100%;
   }
   .btns > .btn.is-wide-full {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .btns > .btn.is-wide-auto {
