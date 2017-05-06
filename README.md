@@ -24,17 +24,13 @@ Webデザインの腹ごなしに、HTML/CSSフレームワーク「MUSUBii（�
 <link rel="stylesheet" href="css/musubii.min.css">
 ```
 
-### npm
-
-npmをお使いの場合は、コマンドでインストールが可能です。
+### [npm][link-npm]
 
 ```
 npm install musubii
 ```
 
-### CDN([jsDelivr][link-jsdelivr])
-
-CDN配信サービスjsDelivrを使用できます。
+### [CDN][link-jsdelivr])
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/2.0.0/css/musubii.min.css">
@@ -48,7 +44,7 @@ OOCSSを踏襲しつつシンプルなCSS設計となっています。
 要素 `.(xxxx)` 1つに対して、状態 `.is-(xxxx)` を複数追加してスタイリングするのが基本です。
 また、すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
 
-### CSS Layers
+### CSS
 
 CSSのレイヤーは主に4つに分類されています。
 
@@ -57,7 +53,7 @@ CSSのレイヤーは主に4つに分類されています。
 - *Module* … ボタン・テキスト・リスト・見出しなど
 - *Utility* … 調整用モディファイア
 
-### Responsive
+### RWD
 
 5つの画面サイズで可変するレスポンシブウェブデザインになっています。
 
@@ -83,5 +79,6 @@ CSSのレイヤーは主に4つに分類されています。
 - Author: [Qrac][link-twitter]
 
 [link-demo-1]:https://qrac.github.io/musubii/
+[link-npm]:https://www.npmjs.com/package/musubii
 [link-jsdelivr]:https://www.jsdelivr.com/projects/musubii
 [link-twitter]:https://twitter.com/Qrac_JP
