@@ -30,12 +30,6 @@ Webデザインの腹ごなしに、HTML/CSSフレームワーク「MUSUBii（�
 npm install musubii
 ```
 
-### [CDN][link-jsdelivr])
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/musubii/2.0.0/css/musubii.min.css">
-```
-
 ## Basic rules
 
 ### Object + State
