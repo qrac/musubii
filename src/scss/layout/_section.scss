@@ -19,15 +19,3 @@
     width: 1140px;
   }
 }
-
-.section.is-pc > .inner {
-  max-width: auto;
-  width: 1024px;
-}
-
-.section > .inner > .tabs {
-  margin: 0 -16px;
-  @include fablet {
-    margin: 0;
-  }
-}

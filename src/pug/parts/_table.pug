@@ -13,16 +13,16 @@
     br
     | 幅の指定や連結は、HTMLタグへの記述で行います。
   .group.is-wrap.is-preview
-    table.table.is-stripe.is-border.is-center.is-middle.is-sm
+    table.table.is-stripe.is-border.is-center.is-round.is-middle.is-sm
       thead
-        tr.box.is-paint-5
+        tr.box.is-paint
           th(width="20")
           th 見出しセル
           th 見出しセル
           th(colspan="2") 見出しセル
       tbody
         tr
-          td.box.is-paint-4(rowspan="2") #1
+          td.box.is-paint(rowspan="2") #1
           td データセル
           td データセル
           td データセル
@@ -33,19 +33,19 @@
           td データセル
           td データセル
         tr
-          td.box.is-paint-3 #2
+          td.box.is-paint #2
           td データセル
           td データセル
           td データセル
           td データセル
         tr
-          td.box.is-paint-2 #3
+          td.box.is-paint #3
           td データセル
           td データセル
           td.box.is-danger エラー表示
           td データセル
         tr
-          td.box.is-paint-1 #4
+          td.box.is-paint #4
           td データセル
           td データセル
           td データセル
@@ -53,101 +53,62 @@
       tfoot
         tr
           th.box.is-right(colspan="5") テーブルフッター
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;table class=&quot;table is-stripe is-border is-center is-middle&quot;&gt;
-        &lt;thead&gt;
-          &lt;tr class=&quot;box is-paint-5&quot;&gt;
-            &lt;th width=&quot;20&quot;&gt;&lt;/th&gt;
-            &lt;th&gt;見出しセル&lt;/th&gt;
-            &lt;th&gt;見出しセル&lt;/th&gt;
-            &lt;th colspan=&quot;2&quot;&gt;見出しセル&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td rowspan=&quot;2&quot; class=&quot;box is-paint-4&quot;&gt;#1&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td class=&quot;box is-spot&quot;&gt;スポット表示&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-3&quot;&gt;#2&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-2&quot;&gt;#3&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td class=&quot;box is-danger&quot;&gt;エラー表示&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-1&quot;&gt;#4&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-            &lt;td&gt;データセル&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-        &lt;tfoot&gt;
-          &lt;tr&gt;
-            &lt;th colspan=&quot;5&quot; class=&quot;box is-right&quot;&gt;テーブルフッター&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/tfoot&gt;
-      &lt;/table&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      table.table.is-stripe.is-border.is-center.is-middle
-        thead
-          tr.box.is-paint-5
-            th(width="20")
-            th 見出しセル
-            th 見出しセル
-            th(colspan="2") 見出しセル
-        tbody
-          tr
-            td.box.is-paint-4(rowspan="2") #1
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-          tr
-            td データセル
-            td.box.is-spot スポット表示
-            td データセル
-            td データセル
-          tr
-            td.box.is-paint-3 #2
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-          tr
-            td.box.is-paint-2 #3
-            td データセル
-            td データセル
-            td.box.is-danger エラー表示
-            td データセル
-          tr
-            td.box.is-paint-1 #4
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-        tfoot
-          tr
-            th.box.is-right(colspan="5") テーブルフッター
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;table class=&quot;table is-stripe is-border is-round is-center is-middle&quot;&gt;
+          &lt;thead&gt;
+            &lt;tr class=&quot;box is-paint&quot;&gt;
+              &lt;th width=&quot;20&quot;&gt;&lt;/th&gt;
+              &lt;th&gt;見出しセル&lt;/th&gt;
+              &lt;th&gt;見出しセル&lt;/th&gt;
+              &lt;th colspan=&quot;2&quot;&gt;見出しセル&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td rowspan=&quot;2&quot; class=&quot;box is-paint&quot;&gt;#1&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td class=&quot;box is-spot&quot;&gt;スポット表示&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td class=&quot;box is-paint&quot;&gt;#2&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td class=&quot;box is-paint&quot;&gt;#3&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td class=&quot;box is-danger&quot;&gt;エラー表示&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td class=&quot;box is-paint&quot;&gt;#4&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+              &lt;td&gt;データセル&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;th colspan=&quot;5&quot; class=&quot;box is-right&quot;&gt;テーブルフッター&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
 
 .groups
   h4.heading.is-xl Table - Line
@@ -225,27 +186,22 @@
           td データセル
           td データセル
           td データセル
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;table class=&quot;table is-line&quot;&gt;
-        ...
-      &lt;/table&gt;
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;table class=&quot;table is-line&quot;&gt;
+          ...
+        &lt;/table&gt;
 
-      &lt;table class=&quot;table is-outline&quot;&gt;
-        ...
-      &lt;/table&gt;
+        &lt;table class=&quot;table is-outline&quot;&gt;
+          ...
+        &lt;/table&gt;
 
-      &lt;table class=&quot;table is-border&quot;&gt;
-        ...
-      &lt;/table&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      table.table.is-line
-        ...
-      table.table.is-outline
-        ...
-      table.table.is-border
-        ...
+        &lt;table class=&quot;table is-border&quot;&gt;
+          ...
+        &lt;/table&gt;
 
 .groups
   h4.heading.is-xl Table - Align
@@ -279,37 +235,27 @@
             | .box .is-left
           td.box.is-center .box .is-center
           td.box.is-right.is-middle .box .is-right .is-middle
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;table class=&quot;table&quot;&gt;
-        &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th class=&quot;box is-left&quot;&gt;&lt;/th&gt;
-            &lt;th class=&quot;box is-center&quot;&gt;&lt;/th&gt;
-            &lt;th class=&quot;box is-right&quot;&gt;&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-left&quot;&gt;&lt;/td&gt;
-            &lt;td class=&quot;box is-center&quot;&gt;&lt;/td&gt;
-            &lt;td class=&quot;box is-right is-middle&quot;&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      table.table
-        thead
-          tr
-            th.box.is-left
-            th.box.is-center
-            th.box.is-right
-        tbody
-          tr
-            td.box.is-left
-            td.box.is-center
-            td.box.is-right.is-middle
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;table class=&quot;table&quot;&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th class=&quot;box is-left&quot;&gt;&lt;/th&gt;
+              &lt;th class=&quot;box is-center&quot;&gt;&lt;/th&gt;
+              &lt;th class=&quot;box is-right&quot;&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td class=&quot;box is-left&quot;&gt;&lt;/td&gt;
+              &lt;td class=&quot;box is-center&quot;&gt;&lt;/td&gt;
+              &lt;td class=&quot;box is-right is-middle&quot;&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
 
 .groups
   h4.heading.is-xl Table - Paint
@@ -317,7 +263,7 @@
     | テーブルのセルを塗るには&nbsp;
     code.code .box
     | &nbsp;と&nbsp;
-    code.code .is-(xxxx)-(y)
+    code.code .is-(xxxx)
     | &nbsp;の形式で塗り設定を行います。
     code.code tr
     | &nbsp;タグに設定して一行すべて塗ることもできます。
@@ -330,32 +276,14 @@
     table.table.is-border.is-sm
       tbody
         tr
-          td.box.is-paint-9 .box .is-paint-9
+          td.box.is-paint .box .is-paint
           td.box.is-dark-6 default
         tr
-          td.box.is-paint-8 .box .is-paint-8
-          td.box.is-dark-6 default
-        tr
-          td.box.is-paint-7 .box .is-paint-7
-          td.box.is-dark-6 default
-        tr
-          td.box.is-paint-6 .box .is-paint-6
+          td.box.is-paint .box .is-paint
           td.box.is-spot .box .is-spot
         tr
-          td.box.is-paint-5 .box .is-paint-5
-          td.box.is-dark-6 default
-        tr
-          td.box.is-paint-4 .box .is-paint-4
+          td.box.is-paint .box .is-paint
           td.box.is-danger .box .is-danger
-        tr
-          td.box.is-paint-3 .box .is-paint-3
-          td.box.is-dark-6 default
-        tr
-          td.box.is-paint-2 .box .is-paint-2
-          td.box.is-dark-6 default
-        tr
-          td.box.is-paint-1 .box .is-paint-1
-          td.box.is-dark-6 default
     table.table.is-stripe.is-border.is-sm
       thead
         tr
@@ -383,86 +311,31 @@
           td データセル
           td データセル
           td データセル
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;table class=&quot;table&quot;&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-9&quot;&gt;&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-8&quot;&gt;&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-7&quot;&gt;&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-6&quot;&gt;&lt;/td&gt;
-            &lt;td class=&quot;box is-spot&quot;&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-5&quot;&gt;&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-4&quot;&gt;&lt;/td&gt;
-            &lt;td class=&quot;box is-danger&quot;&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-3&quot;&gt;&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-2&quot;&gt;&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td class=&quot;box is-paint-1&quot;&gt;&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;table class=&quot;table&quot;&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td class=&quot;box is-paint&quot;&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td class=&quot;box is-paint&quot;&gt;&lt;/td&gt;
+              &lt;td class=&quot;box is-spot&quot;&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td class=&quot;box is-paint&quot;&gt;&lt;/td&gt;
+              &lt;td class=&quot;box is-danger&quot;&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
 
-      &lt;table class=&quot;table is-stripe&quot;&gt;
-        ...
-      &lt;/table&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      table.table
-        tbody
-          tr
-            td.box.is-paint-9
-            td
-          tr
-            td.box.is-paint-8
-            td
-          tr
-            td.box.is-paint-7
-            td
-          tr
-            td.box.is-paint-6
-            td.box.is-spot
-          tr
-            td.box.is-paint-5
-            td
-          tr
-            td.box.is-paint-4
-            td.box.is-danger
-          tr
-            td.box.is-paint-3
-            td
-          tr
-            td.box.is-paint-2
-            td
-          tr
-            td.box.is-paint-1
-            td
-
-      table.table.is-stripe
-        ...
+        &lt;table class=&quot;table is-stripe&quot;&gt;
+          ...
+        &lt;/table&gt;
 
 .groups
   h4.heading.is-xl Table - Scroll
@@ -519,15 +392,13 @@
             td データセル
             td データセル
             td データセル
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;div class=&quot;group is-scroll-x&quot;&gt;
-        &lt;table class=&quot;table&quot;&gt;
-          ...
-        &lt;/table&gt;
-      &lt;/div&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      .group.is-scroll-x
-        table.table
-          ...
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;div class=&quot;group is-scroll-x&quot;&gt;
+          &lt;table class=&quot;table&quot;&gt;
+            ...
+          &lt;/table&gt;
+        &lt;/div&gt;

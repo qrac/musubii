@@ -5,30 +5,10 @@
 body {
   color: $dark-2;
   font-weight: 300;
-  //font-family: $font-sans-yugo;
-  //font-family: $font-sans-yugo-yakuhanjp;
-  //font-family: $font-sans-yugo-yakuhanjps;
-  //font-family: $font-sans-yugo-yakuhanjpw;
-  //font-family: $font-sans;
-  //font-family: $font-sans-yakuhanjp;
-  //font-family: $font-sans-yakuhanjps;
-  font-family: $font-sans-yakuhanjpw;
-  //font-feature-settings: "palt" 1;
+  font-family: $font-sans;
   line-height: 1.5;
-  //@include ie {
-  //  *::-ms-backdrop,
-  //  body {
-  //    font-family: $font-sans-ie;
-  //    font-family: $font-sans-ie-yakuhanjp;
-  //    font-family: $font-sans-ie-yakuhanjps;
-  //    font-family: $font-sans-ie-yakuhanjpw;
-  //  }
-  //}
   @include ie {
-  //  font-family: $font-sans-ie;
-  //  font-family: $font-sans-ie-yakuhanjp;
-  //  font-family: $font-sans-ie-yakuhanjps;
-    font-family: $font-sans-ie-yakuhanjpw;
+    font-family: $font-sans-meiryo;
   }
 }
 
@@ -45,31 +25,37 @@ img {
   src: local("Yu Gothic Medium");
   font-weight: 100;
 }
+
 @font-face {
   font-family: "Yu Gothic";
   src: local("Yu Gothic Medium");
   font-weight: 200;
 }
+
 @font-face {
   font-family: "Yu Gothic";
   src: local("Yu Gothic Medium");
   font-weight: 300;
 }
+
 @font-face {
   font-family: "Yu Gothic";
   src: local("Yu Gothic Medium");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "Yu Gothic";
   src: local("Yu Gothic Bold");
   font-weight: 700;
 }
+
 @font-face {
   font-family: "Yu Gothic";
   src: local("Yu Gothic Medium");
   font-weight: normal;
 }
+
 @font-face {
   font-family: "Yu Gothic";
   src: local("Yu Gothic Bold");

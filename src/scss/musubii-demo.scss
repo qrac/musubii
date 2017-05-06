@@ -1,5 +1,5 @@
 //----------------------------------------------------
-/*! Musubii Demo */
+/*! MUSUBii Demo */
 //----------------------------------------------------
 
 @import "variable/_customize";
@@ -15,35 +15,47 @@
 @import "mixin/_placeholder";
 
 //----------------------------------------------------
-// Project Theme CSS
+// Project CSS
 //----------------------------------------------------
 
-.musubii.musubii-demo {
-  background: $cyan-500;
+.musubii-demo {
+  background-color: $cyan-500;
 }
 
 .section {
   &.is-header {
-    background: $cyan-500;
     padding: 8px 0;
+    background-color: $cyan-500;
+  }
+  &.is-header > .inner {
+    padding: 0 12px 0 10px;
   }
   &.is-topcover {
-    background: $cyan-500;
+    display: flex;
+    align-items: center;
+    height: 360px;
+    padding: 0 0 24px;
+    background-color: $cyan-500;
   }
   &.is-tab {
-    //position: sticky;
-    //top: 0;
-    background: $cyan-500;
-    z-index: 10;
+    position: sticky;
+    top: -1px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    background-color: $cyan-500;
+    z-index: 20;
   }
   &.is-main {
-    background: $light;
-    padding: 32px 0;
+    padding: 48px 0;
+    background-color: $light;
   }
   &.is-footer {
-    max-height: 3.375em;
     padding: 16px 0;
-    overflow: hidden;
+  }
+  > .inner > .tabs {
+  margin: 0 -16px;
+    @include fablet {
+      margin: 0;
+    }
   }
 }
 
@@ -66,19 +78,19 @@
     padding: 0 0.5em;
   }
   &.is-paint {
-    background: $cyan-700;
+    background-color: $cyan-700;
     border: none;
     padding: 16px;
   }
   &.is-example {
-    background: $grey-100;
+    background-color: $grey-100;
     border: none;
     padding: 32px;
   }
 }
 
 .group.is-home-about {
-  padding-top: 2em;
+  padding-top: 1em;
   padding-bottom: 1em;
 }
 
@@ -109,15 +121,15 @@
 .group.is-demo-box-3 {
   width: 100%;
   &.is-primary {
-    background: $primary;
+    background-color: $primary;
     color: $light;
   }
   &.is-danger {
-    background: $red-50;
+    background-color: $red-50;
     color: $danger;
   }
   &.is-grey {
-    background: $grey-3;
+    background-color: $grey-3;
     color: $light;
   }
   &.is-round {
@@ -207,12 +219,12 @@
   &:before {
     top: -2em;
     height: 2em;
-    background: rgba($orange-500, 0.3);
+    background-color: rgba($orange-500, 0.3);
   }
   &:after {
     top: 0;
     height: 1.25em;
-    background: rgba($blue-500, 0.3);
+    background-color: rgba($blue-500, 0.3);
   }
 }
 
@@ -230,12 +242,12 @@
   &:before {
     left: -0.25em;
     width: 0.25em;
-    background: rgba($orange-500, 0.3);
+    background-color: rgba($orange-500, 0.3);
   }
   &:after {
     left: 0;
     width: 100%;
-    background: rgba($blue-500, 0.3);
+    background-color: rgba($blue-500, 0.3);
   }
 }
 
@@ -244,16 +256,32 @@
   display: inline-block;
   border-right: 2px dashed $red-500;
   > .fa {
-    background: rgba($blue-500, 0.3);
+    background-color: rgba($blue-500, 0.3);
+  }
+}
+
+.btn.is-demo-code {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  outline: none;
+  z-index: 10;
+  + .pre {
+    transition: ease 0.2s;
+  }
+  &:not(.is-active) + .pre {
+    height: 0;
+    overflow: hidden;
+  }
+  &.is-active + .pre {
+    margin-top: 1em;
   }
 }
 
 .logo {
   &.is-header {
-    cursor: pointer;
     display: block;
     width: 130px;
-    margin: 0 0 0 -6px;
   }
   &.is-title {
     display: block;
@@ -273,7 +301,7 @@
     align-items: center;
     width: 1em;
     height: 1em;
-    background: $dark-6;
+    background-color: $dark-6;
     border-radius: 0.25em;
   }
   .mark-demo-japanese {
@@ -292,10 +320,6 @@
   color: $cyan-500;
 }
 
-//----------------------------------------------------
-// Labs! > Module: Tab
-//----------------------------------------------------
-
 .tabs {
   display: flex;
 }
@@ -303,6 +327,7 @@
 .tabs.is-slide {
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tabs.is-split {
@@ -323,94 +348,62 @@
   line-height: 1;
   white-space: nowrap;
   padding: 0 1em;
-  &.is-current {
+  &.is-active {
     cursor: default;
   }
 }
 
 .tab.is-ghost {
   color: rgba( $white, 0.7 );
-  &:hover,
-  &.active {
+  &:hover {
     color: $white;
   }
-  &.is-current {
+  &.is-active {
     color: $white;
     border-bottom-color: rgba( $white, 0.7 );
   }
 }
 
-//----------------------------------------------------
-// Labs! > CSS Trick
-//----------------------------------------------------
-
-.trick {
-  display: none;
-}
-
-@for $i from 1 through 20 {
-  .trick.is-switch-do-1-#{$i}:not(:checked) ~ *.is-switch-out-1-#{$i},
-  .trick.is-switch-do-1-#{$i}:not(:checked) ~ * *.is-switch-out-1-#{$i} {
+.section.is-main {
+  &:not(.is-active) {
     display: none;
   }
-  .trick.is-switch-do-1-#{$i}:checked ~ *.is-switch-out-1-#{$i},
-  .trick.is-switch-do-1-#{$i}:checked ~ * *.is-switch-out-1-#{$i} {
+  &.is-active {
     display: block;
   }
 }
 
-@for $i from 1 through 20 {
-  .trick.is-switch-do-2-#{$i}:not(:checked) ~ *.is-switch-out-2-#{$i},
-  .trick.is-switch-do-2-#{$i}:not(:checked) ~ * *.is-switch-out-2-#{$i} {
-    display: none;
-  }
-  .trick.is-switch-do-2-#{$i}:checked ~ *.is-switch-out-2-#{$i},
-  .trick.is-switch-do-2-#{$i}:checked ~ * *.is-switch-out-2-#{$i} {
-    display: block;
-  }
-}
-
-//----------------------------------------------------
-// Project CSS Trick
-//----------------------------------------------------
-
-.trick.is-switch-do-1-1 ~ *.is-switch-out-1-topcover,
-.trick.is-switch-do-1-1 ~ * *.is-switch-out-1-topcover {
-  height: 0;
-  opacity: 0;
-  transition: ease 0.3s;
+.section.is-topcover {
   overflow: hidden;
-}
-
-.trick.is-switch-do-1-1:checked ~ *.is-switch-out-1-topcover,
-.trick.is-switch-do-1-1:checked ~ * *.is-switch-out-1-topcover {
-  height: 360px;
-  opacity: 1;
-}
-
-@for $i from 1 through 5 {
-  .trick.is-switch-do-1-#{$i}:checked ~ .tab.is-ghost.is-switch-in-1-#{$i},
-  .trick.is-switch-do-1-#{$i}:checked ~ * .tab.is-ghost.is-switch-in-1-#{$i} {
-    cursor: default;
-    color: $white;
-    border-bottom-color: rgba( $white, 0.7 );
+  transition: ease-out 0.2s;
+  &:not(.is-active) {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  &.is-active {
+    opacity: 1;
   }
 }
 
-@for $i from 1 through 20 {
-  .trick.is-switch-do-2-#{$i}:not(:checked) ~ *.is-switch-in-2-#{$i},
-  .trick.is-switch-do-2-#{$i}:not(:checked) ~ * *.is-switch-in-2-#{$i} {
-    display: inline-block;
-  }
-  .trick.is-switch-do-2-#{$i}:checked ~ *.is-switch-in-2-#{$i},
-  .trick.is-switch-do-2-#{$i}:checked ~ * *.is-switch-in-2-#{$i} {
+.group.is-documentation-nav .text.is-link-reverse {
+  display: inline-block;
+  line-height: 1;
+  &.is-active {
     cursor: default;
-    display: inline-block;
-    color: $primary;
+    color: $cyan-500;
     font-weight: 700;
   }
-  .trick.is-switch-do-2-#{$i}:checked ~ *.is-switch-in-2-#{$i}:hover,
-  .trick.is-switch-do-2-#{$i}:checked ~ * *.is-switch-in-2-#{$i}:hover {
-    text-decoration: none;
+  &.is-active:hover {
+    border: none;
+  }
+}
+
+.groups.is-documentation-contents > .content {
+  &:not(.is-active) {
+    display: none;
+  }
+  &.is-active {
+    display: block;
   }
 }

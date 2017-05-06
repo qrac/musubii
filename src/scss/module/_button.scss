@@ -1,18 +1,29 @@
 //----------------------------------------------------
-// Common: Button
+// Module: Button
 //----------------------------------------------------
 
 .btns {
   display: flex;
   flex-wrap: wrap;
+  &:not(.is-bar) {
+    margin-left: -0.5em;
+    margin-bottom: -0.5em;
+  }
+  &:not(.is-bar) > * {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+  }
   > .btns {
     display: inline-flex;
   }
   > .btns + .btns {
     margin-top: 0;
   }
-  &.is-left {
-    justify-content: flex-start;
+  &.is-middle {
+    align-items: center;
+  }
+  &.is-bottom {
+    align-items: flex-end;
   }
   &.is-center {
     justify-content: center;
@@ -20,18 +31,11 @@
   &.is-right {
     justify-content: flex-end;
   }
-  &.is-middle {
-    align-items: center;
+  &.is-between {
+    justify-content: space-between;
   }
-}
-
-@for $i from 1 through 9 {
-  .btns.is-space-#{$i} {
-    margin-bottom: $i * -4px;
-  }
-  .btns.is-space-#{$i} > * {
-    margin-right: $i * 4px;
-    margin-bottom: $i * 4px;
+  &.is-around {
+    justify-content: space-around;
   }
 }
 
@@ -39,25 +43,31 @@
   cursor: pointer;
   display: inline-block;
   align-self: flex-start;
-  border-radius: 2px;
-  text-align: center;
   white-space: nowrap;
-  padding: 0.5em 1em;
-  transition: ease-out 0.2s;
-  &.is-disable {
+  padding: 0.75em 1em;
+  border-radius: 2px;
+  line-height: 1;
+  text-align: center;
+  transition: ease-out 0.15s;
+  &.is-disable,
+  &[disabled] {
     cursor: default;
   }
   &.is-round {
-    border-radius: 9999em;
+    border-radius: 999em;
   }
   &.is-circle {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     width: 2.5em;
     height: 2.5em;
     padding: 0;
-    border-radius: 9999em;
+    border-radius: 1.25em;
+  }
+  &.is-circle > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   &.is-full {
     flex: 0 0 100%;
@@ -65,37 +75,18 @@
   }
 }
 
-.btn.is-floating-1:not(.is-disable) {
-  box-shadow: $shadow-floating-1;
-  &:active {
-    box-shadow: $shadow-floating-active;
+.btn.is-floating:not(.is-disable) {
+  box-shadow: $shadow-btn-floating;
+  &:hover {
+    box-shadow: $shadow-btn-floating-hover;
   }
 }
 
-.btn.is-floating-2:not(.is-disable) {
-  box-shadow: $shadow-floating-2;
-  &:active {
-    box-shadow: $shadow-floating-active;
-  }
-}
-
-.btn.is-floating-3:not(.is-disable) {
-  box-shadow: $shadow-floating-3;
-  &:hover,
-  &:active {
-    box-shadow: $shadow-floating-3-hover;
-  }
-}
-
-.btn.is-plain,
-.btn.is-flat {
-  background: $grey-2;
+.btn.is-plain {
+  background-color: $grey-2;
   border: 1px solid transparent;
   &:hover {
-    background: darken($grey-2, 5%);
-  }
-  &:active {
-    background: darken($grey-2, 10%);
+    background-color: darken($grey-2, 5%);
   }
   &.is-primary,
   &.is-success,
@@ -103,64 +94,37 @@
     color: $light;
   }
   &.is-primary {
-    background: $primary;
+    background-color: $primary;
     &:hover {
-      background: darken($primary, 5%);
-    }
-    &:active {
-      background: darken($primary, 10%);
+      background-color: darken($primary, 5%);
     }
   }
   &.is-success {
-    background: $success;
+    background-color: $success;
     &:hover {
-      background: darken($success, 5%);
-    }
-    &:active {
-      background: darken($success, 10%);
+      background-color: darken($success, 5%);
     }
   }
   &.is-danger {
-    background: $danger;
+    background-color: $danger;
     &:hover {
-      background: darken($danger, 5%);
-    }
-    &:active {
-      background: darken($danger, 10%);
+      background-color: darken($danger, 5%);
     }
   }
   &.is-disable,
   &.is-disable:hover,
-  &.is-disable:active {
+  &[disabled],
+  &[disabled]:hover {
     color: $dark-6;
-    background: $grey-4;
-  }
-}
-
-.btn.is-flat {
-  border-bottom: 3px solid $dark-7;
-  transition: none;
-  &:hover {
-    border-bottom-width: 2px;
-    margin-top: 1px;
-  }
-  &:active {
-    border-bottom: 1px solid transparent;
-    margin-top: 2px;
-  }
-  &.is-disable,
-  &.is-disable:hover,
-  &.is-disable:active {
-    border-bottom: 3px solid $dark-9;
-    margin-top: 0;
+    background-color: $grey-4;
   }
 }
 
 .btn.is-melt {
+  background-color: transparent;
   border: 1px solid transparent;
-  &:hover,
-  &:active {
-    background: $dark-9;
+  &:hover {
+    background-color: $dark-9;
   }
   &.is-primary {
     color: $primary;
@@ -173,63 +137,50 @@
   }
   &.is-disable,
   &.is-disable:hover,
-  &.is-disable:active {
+  &[disabled],
+  &[disabled]:hover {
     color: $dark-6;
-    background: none;
+    background-color: transparent;
   }
 }
 
 .btn.is-outline {
-  background: $light;
+  background-color: $light;
   border: 1px solid $dark-7;
   &:hover {
-    background: darken($light, 5%);
-  }
-  &:active {
-    background: darken($light, 10%);
+    background-color: darken($light, 5%);
   }
   &.is-primary {
     color: $primary;
     border-color: $primary;
     &:hover {
-      background: $primary;
-    }
-    &:active {
-      background: darken($primary, 5%);
+      background-color: $primary;
     }
   }
   &.is-success {
     color: $success;
     border-color: $success;
     &:hover {
-      background: $success;
-    }
-    &:active {
-      background: darken($success, 5%);
+      background-color: $success;
     }
   }
   &.is-danger {
     color: $danger;
     border-color: $danger;
     &:hover {
-      background: $danger;
-    }
-    &:active {
-      background: darken($danger, 5%);
+      background-color: $danger;
     }
   }
   &.is-primary:hover,
   &.is-success:hover,
-  &.is-danger:hover,
-  &.is-primary:active,
-  &.is-success:active,
-  &.is-danger:active {
+  &.is-danger:hover {
     color: $light;
     border-color: transparent;
   }
   &.is-disable,
   &.is-disable:hover,
-  &.is-disable:active {
+  &[disabled],
+  &[disabled]:hover {
     color: $dark-6;
     background-color: $dark-6;
   }
@@ -237,57 +188,43 @@
 
 .btn.is-ghost {
   color: $light;
-  background: transparent;
+  background-color: transparent;
   border: 1px solid $light;
   &:hover {
     color: $dark-1;
-    background: $light;
-  }
-  &:active {
-    background: darken($light, 5%);
+    background-color: $light;
   }
   &.is-primary {
     color: lighten($primary, 30%);
     border-color: lighten($primary, 30%);
     &:hover {
-      background: $primary;
-    }
-    &:active {
-      background: darken($primary, 5%);
+      background-color: $primary;
     }
   }
   &.is-success {
     color: lighten($success, 30%);
     border-color: lighten($success, 30%);
     &:hover {
-      background: $success;
-    }
-    &:active {
-      background: darken($success, 5%);
+      background-color: $success;
     }
   }
   &.is-danger {
     color: lighten($danger, 30%);
     border-color: lighten($danger, 30%);
     &:hover {
-      background: $danger;
-    }
-    &:active {
-      background: darken($danger, 5%);
+      background-color: $danger;
     }
   }
   &.is-primary:hover,
   &.is-success:hover,
-  &.is-danger:hover,
-  &.is-primary:active,
-  &.is-success:active,
-  &.is-danger:active {
+  &.is-danger:hover {
     color: $light;
     border-color: transparent;
   }
   &.is-disable,
   &.is-disable:hover,
-  &.is-disable:active {
+  &[disabled],
+  &[disabled]:hover {
     color: $light-4;
     background-color: $light-8;
     border-color: $light-4;
@@ -295,24 +232,26 @@
 }
 
 .btns.is-bar {
+  flex-wrap: nowrap;
   > .btn {
     border-radius: 0;
+    overflow: hidden;
   }
-  > .btn:first-child {
+  > .btn:not(.is-round):first-child {
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
-    &.is-round {
-      border-top-left-radius: 1.25em;
-      border-bottom-left-radius: 1.25em;
-    }
   }
-  > .btn:last-child {
+  > .btn:not(.is-round):last-child {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    &.is-round {
-      border-top-right-radius: 1.25em;
-      border-bottom-right-radius: 1.25em;
-    }
+  }
+  > .btn.is-round:first-child {
+    border-top-left-radius: 999em;
+    border-bottom-left-radius: 999em;
+  }
+  > .btn.is-round:last-child {
+    border-top-right-radius: 999em;
+    border-bottom-right-radius: 999em;
   }
   > .btn:nth-child(2),
   > .btn:nth-child(2) ~ .btn {
@@ -325,8 +264,9 @@
   max-width: 100%;
 }
 
-.btns > .btn.is-mobile-full {
-  flex: 0 0 100%;
+.btns > .btn.is-mobile-full,
+.btns > .btn.is-full {
+  flex: 0 1 100%;
   max-width: 100%;
 }
 
@@ -341,7 +281,7 @@
     max-width: 100%;
   }
   .btns > .btn.is-fablet-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .btns > .btn.is-fablet-auto {
@@ -356,22 +296,7 @@
     max-width: 100%;
   }
   .btns > .btn.is-touch-full {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-touch-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include touch {
-  .btns > .btn.is-touch-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-touch-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .btns > .btn.is-touch-auto {
@@ -386,7 +311,7 @@
     max-width: 100%;
   }
   .btns > .btn.is-desktop-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .btns > .btn.is-desktop-auto {
@@ -401,40 +326,10 @@
     max-width: 100%;
   }
   .btns > .btn.is-wide-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .btns > .btn.is-wide-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include landscape {
-  .btns > .btn.is-landscape-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-landscape-full {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-landscape-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include portrait {
-  .btns > .btn.is-portrait-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-portrait-full {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-portrait-auto {
     flex: 0 1 auto;
     max-width: 100%;
   }

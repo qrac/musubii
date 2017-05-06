@@ -87,6 +87,15 @@
 }
 
 * {
+  &.is-yakuhanjp {
+    font-family: $font-sans-yakuhanjp;
+  }
+  &.is-yakuhanjps {
+    font-family: $font-sans-yakuhanjps;
+  }
+}
+
+* {
   &.is-normal {
     font-weight: 300;
   }
@@ -123,13 +132,6 @@
   &.is-delete {
     text-decoration: line-through;
   }
-  &.is-small {
-    font-size: 80%;
-  }
-  &.is-super {
-    vertical-align: super;
-    font-size: 70%;
-  }
   &.is-capitalize {
     text-transform: capitalize;
   }
@@ -141,11 +143,11 @@
   }
 }
 
-* {
+*:not(.grid):not(.btns):not(.field) {
   &.is-left {
     text-align: left;
   }
-  &.is-center:not(.grid) {
+  &.is-center {
     text-align: center;
   }
   &.is-right {
@@ -157,7 +159,7 @@
   &.is-top {
     vertical-align: top;
   }
-  &.is-middle:not(.grid) {
+  &.is-middle {
     vertical-align: middle;
   }
   &.is-bottom {

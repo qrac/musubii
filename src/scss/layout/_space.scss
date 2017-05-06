@@ -11,6 +11,7 @@
 .list,
 .table,
 .form,
+.fieldset,
 .alert,
 .wysiwyg {
   + .groups {
@@ -30,6 +31,9 @@
   + .alert,
   + .wysiwyg {
     margin-top: 1em;
+  }
+  + .fieldset {
+    margin-top: 1.5em;
   }
   + .field {
     margin-top: 0.5em;
@@ -55,6 +59,7 @@
   + .wysiwyg {
     margin-top: 1em;
   }
+  + .fieldset,
   + .field {
     margin-top: 0.5em;
   }
@@ -134,16 +139,4 @@
       margin-top: 1em;
     }
   }
-}
-
-.contents {
-}
-
-.content {
-}
-
-.boxs {
-}
-
-.box {
 }

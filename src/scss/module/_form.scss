@@ -5,14 +5,31 @@
 .form {
 }
 
+.fieldset {
+  padding: 0;
+  border: none;
+}
+
 .field {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -0.5em;
+  margin-bottom: -0.5em;
+  > * {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  > .field {
+    display: inline-flex;
+  }
   > .field + .field {
     margin-top: 0;
   }
-  &.is-left {
-    justify-content: flex-start;
+  &.is-middle {
+    align-items: center;
+  }
+  &.is-bottom {
+    align-items: flex-end;
   }
   &.is-center {
     justify-content: center;
@@ -20,21 +37,11 @@
   &.is-right {
     justify-content: flex-end;
   }
-  &.is-middle {
-    align-items: center;
+  &.is-between {
+    justify-content: space-between;
   }
-}
-
-@for $i from 1 through 9 {
-  .field.is-space-#{$i} {
-    margin-bottom: $i * -4px;
-  }
-  .field.is-space-#{$i} > * {
-    margin-right: $i * 4px;
-    margin-bottom: $i * 4px;
-  }
-  .field.is-space-#{$i} > .field {
-    margin-bottom: 0;
+  &.is-around {
+    justify-content: space-around;
   }
 }
 
@@ -52,16 +59,16 @@
 .input[type="number"] {
   max-width: 100%;
   height: 2.5em;
-  background: $light;
+  background-color: $light;
   border: 1px solid $dark-6;
   border-radius: 2px;
   padding: calc(0.5em - 1.5px) 0.75em;
   &[disabled] {
-    background: $grey-3;
+    background-color: $grey-3;
     color: $dark-6;
   }
   &[readonly] {
-    background: $grey-2;
+    background-color: $grey-2;
     color: $dark-4;
   }
 }
@@ -114,20 +121,19 @@
 
 .input[type="file"] {
   display: block;
-  flex: 0 0 100%;
   max-width: 70vw;
   overflow: hidden;
 }
 
 .textarea {
   min-height: 150px;
-  background: $light;
+  background-color: $light;
   border: 1px solid $dark-6;
   border-radius: 2px;
   box-shadow: $shadow-input;
   padding: calc(0.5em - 1.5px) 0.5em;
   &[disabled] {
-    background: $grey-3;
+    background-color: $grey-3;
     color: $dark-6;
     box-shadow: none;
   }
@@ -147,7 +153,7 @@
 .select {
   max-width: 100%;
   height: 2.5em;
-  background: $light;
+  background-color: $light;
   border: 1px solid $dark-6;
   border-radius: 2px;
   padding: calc(0.5em - 1.5px) 0.75em;
@@ -159,11 +165,11 @@
     }
   }
   &[disabled] {
-    background: $grey-3;
+    background-color: $grey-3;
     color: $dark-6;
   }
   &[readonly] {
-    background: $grey-2;
+    background-color: $grey-2;
   }
 }
 
@@ -173,7 +179,7 @@
 }
 
 .field > *.is-mobile-full {
-  flex: 0 0 100%;
+  flex: 0 1 100%;
   max-width: 100%;
 }
 
@@ -188,7 +194,7 @@
     max-width: 100%;
   }
   .field > *.is-fablet-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-fablet-auto {
@@ -203,22 +209,7 @@
     max-width: 100%;
   }
   .field > *.is-touch-full {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .field > *.is-touch-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include touch {
-  .field > *.is-touch-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .field > *.is-touch-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-touch-auto {
@@ -233,7 +224,7 @@
     max-width: 100%;
   }
   .field > *.is-desktop-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-desktop-auto {
@@ -248,40 +239,10 @@
     max-width: 100%;
   }
   .field > *.is-wide-full {
-    flex: 0 0 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
   .field > *.is-wide-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include landscape {
-  .field > *.is-landscape-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .field > *.is-landscape-full {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .field > *.is-landscape-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include portrait {
-  .field > *.is-portrait-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .field > *.is-portrait-full {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .field > *.is-portrait-auto {
     flex: 0 1 auto;
     max-width: 100%;
   }
