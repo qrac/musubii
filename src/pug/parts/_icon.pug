@@ -8,13 +8,13 @@
     | アイコンの利用については、Font Awesome・Material Icons・IcoMoonなどの利用を想定しています。
     br
     | 要素のタグは&nbsp;
-    code.code .icon
-    | &nbsp;
-    code.code .im
-    | &nbsp;
     code.code .fa
     | &nbsp;
     code.code .material-icons
+    | &nbsp;
+    code.code .im
+    | &nbsp;
+    code.code .icon
     | &nbsp;のうち、いずれも同じように使用できます。
     br
     | HTMLソース上で各種アイコンと&nbsp;
@@ -32,23 +32,18 @@
         i.fa.fa-heart(aria-hidden="true")
       span.text ハート
       i.fa.fa-heart(aria-hidden="true")
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;
-        &lt;span class=&quot;text&quot;&gt;ハート&lt;/span&gt;
-        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;
-        &lt;span class=&quot;text&quot;&gt;ハート&lt;/span&gt;
-        ...
-      &lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts
-        i.fa.fa-heart(aria-hidden="true")
-        span.text ハート
-        i.fa.fa-heart(aria-hidden="true")
-        span.text ハート
-        ...
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;text&quot;&gt;ハート&lt;/span&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;text&quot;&gt;ハート&lt;/span&gt;
+          ...
+        &lt;/p&gt;
 
 .groups
   h4.heading.is-xl Icon - Fit
@@ -57,39 +52,33 @@
     code.code .is-fit
     | &nbsp;を付与することで、アイコンの領域を一定に統一できます。
   .group.is-wrap.is-preview
-    .grid.is-space-5
-      .col
-        p.texts.is-xxl
-          span.text.is-demo-space-filter-3
-            i.fa.fa-institution(aria-hidden="true")
-            br
-            i.fa.fa-angle-right(aria-hidden="true")
-      .col
-        p.texts.is-xxl.is-success
-          span.text.is-demo-space-filter-3
-            i.fa.fa-institution.is-fit(aria-hidden="true")
-            br
-            i.fa.fa-angle-right.is-fit(aria-hidden="true")
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-institution&quot;&gt;&lt;/i&gt;
-        &lt;br/&gt;
-        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;
-      &lt;/p&gt;
+    .group
+      .grid
+        .col
+          p.texts.is-xxl
+            span.text.is-demo-space-filter-3
+              i.fa.fa-institution(aria-hidden="true")
+              br
+              i.fa.fa-angle-right(aria-hidden="true")
+        .col
+          p.texts.is-xxl.is-success
+            span.text.is-demo-space-filter-3
+              i.fa.fa-institution.is-fit(aria-hidden="true")
+              br
+              i.fa.fa-angle-right.is-fit(aria-hidden="true")
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-institution&quot;&gt;&lt;/i&gt;
+          &lt;br/&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;
+        &lt;/p&gt;
 
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-institution is-fit&quot;&gt;&lt;/i&gt;
-        &lt;br/&gt;
-        &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right is-fit&quot;&gt;&lt;/i&gt;
-      &lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts
-        i.fa.fa-institution(aria-hidden="true")
-        br
-        i.fa.fa-angle-right(aria-hidden="true")
-      p.texts
-        i.fa.fa-institution.is-fit(aria-hidden="true")
-        br
-        i.fa.fa-angle-right.is-fit(aria-hidden="true")
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-institution is-fit&quot;&gt;&lt;/i&gt;
+          &lt;br/&gt;
+          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right is-fit&quot;&gt;&lt;/i&gt;
+        &lt;/p&gt;

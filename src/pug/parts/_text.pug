@@ -10,114 +10,47 @@
     | &nbsp;、インライン要素のクラス名を&nbsp;
     code.code .text
     | &nbsp;にします。
-    br
-    | HTMLタグによって大きさや装飾が変わることはありません。
   .group.is-wrap.is-preview
     p.texts.is-sm
       span.text デフォルト
-      | &nbsp;/&nbsp;
-      span.text.is-strong ストロング
-      | &nbsp;/&nbsp;
-      span.text.is-small スモール
-      | &nbsp;/&nbsp;
+      | ｜
+      strong.text.is-strong ストロング
+      | ｜
+      small.text.is-small スモール
+      | ｜
       span.text.is-italic Italic
-      | &nbsp;/&nbsp;
-      span.text.is-delete 削除
-      | &nbsp;/&nbsp;
+      | ｜
+      del.text.is-delete 削除
+      | ｜
       span.text
         i.fa.fa-thumbs-o-up(aria-hidden="true")
         span.text アイコン追加
         i.material-icons face
-      | &nbsp;/&nbsp;
+      | ｜
       span.text
         span.text 注釈入れ
-        span.text.is-super ※1
-    p.texts.is-sm
-      span.text.is-primary Primary
-      | &nbsp;
-      span.text.is-info Info
-      | &nbsp;
-      span.text.is-success Success
-      | &nbsp;
-      span.text.is-warning Warning
-      | &nbsp;
-      span.text.is-danger Danger
-    p.texts.is-sm
-      span.text.is-capitalize capitalize
-      | &nbsp;/&nbsp;
-      span.text.is-lowercase lowercase
-      | &nbsp;/&nbsp;
-      span.text.is-uppercase uppercase
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;span class=&quot;text&quot;&gt;デフォルト&lt;/span&gt;
-        &lt;span class=&quot;text is-strong&quot;&gt;ストロング&lt;/span&gt;
-        &lt;span class=&quot;text is-small&quot;&gt;スモール&lt;/span&gt;
-        &lt;span class=&quot;text is-italic&quot;&gt;Italic&lt;/span&gt;
-        &lt;span class=&quot;text is-delete&quot;&gt;削除&lt;/span&gt;
-        &lt;span class=&quot;text&quot;&gt;
-          &lt;i class=&quot;fa fa-thumbs-o-up&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-          &lt;span class=&quot;text&quot;&gt;アイコン追加&lt;/span&gt;
-          &lt;i class=&quot;material-icons&quot;&gt;face&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;span class=&quot;text&quot;&gt;
-          &lt;span class=&quot;text&quot;&gt;注釈入れ&lt;/span&gt;
-          &lt;span class=&quot;text is-super&quot;&gt;※1&lt;/span&gt;
-        &lt;/span&gt;
-      &lt;/p&gt;
-
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;span class=&quot;text is-primary&quot;&gt;Primary&lt;/span&gt;
-        &lt;span class=&quot;text is-info&quot;&gt;Info&lt;/span&gt;
-        &lt;span class=&quot;text is-success&quot;&gt;Success&lt;/span&gt;
-        &lt;span class=&quot;text is-warning&quot;&gt;Warning&lt;/span&gt;
-        &lt;span class=&quot;text is-danger&quot;&gt;Danger&lt;/span&gt;
-      &lt;/p&gt;
-
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;span class=&quot;text is-capitalize&quot;&gt;capitalize&lt;/span&gt;
-        &lt;span class=&quot;text is-lowercase&quot;&gt;lowercase&lt;/span&gt;
-        &lt;span class=&quot;text is-uppercase&quot;&gt;uppercase&lt;/span&gt;
-      &lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts
-        span.text デフォルト
-        span.text.is-strong ストロング
-        span.text.is-small スモール
-        span.text.is-italic Italic
-        span.text.is-delete 削除
-        span.text
-          i.fa.fa-thumbs-o-up(aria-hidden="true")
-          span.text アイコン追加
-          i.material-icons face
-        span.text
-          span.text 注釈入れ
-          span.text.is-super ※1
-
-      p.texts.is-sm
-        span.text.is-primary Primary
-        span.text.is-info Info
-        span.text.is-success Success
-        span.text.is-warning Warning
-        span.text.is-danger Danger
-
-      p.texts.is-sm
-        span.text.is-capitalize capitalize
-        span.text.is-lowercase lowercase
-        span.text.is-uppercase uppercase
-
-.groups
-  h4.heading.is-xl Text - Dark & Light
-  p.texts.is-sm
-    code.code .is-dark-(x)
-    | &nbsp;を付与することで黒文字の濃淡を簡単に変えることができます。
-    br
-    | 同じく&nbsp;
-    code.code .is-light-(x)
-    | &nbsp;を付与することで白文字の濃淡を簡単に変えることができます。
-  .group.is-wrap.is-preview
+        sup ※1
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;span class=&quot;text&quot;&gt;デフォルト&lt;/span&gt;
+          &lt;strong class=&quot;text is-strong&quot;&gt;ストロング&lt;/strong&gt;
+          &lt;small class=&quot;text is-small&quot;&gt;スモール&lt;/small&gt;
+          &lt;span class=&quot;text is-italic&quot;&gt;Italic&lt;/span&gt;
+          &lt;del class=&quot;text is-delete&quot;&gt;削除&lt;/del&gt;
+          &lt;span class=&quot;text&quot;&gt;
+            &lt;i class=&quot;fa fa-thumbs-o-up&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;text&quot;&gt;アイコン追加&lt;/span&gt;
+            &lt;i class=&quot;material-icons&quot;&gt;face&lt;/i&gt;
+          &lt;/span&gt;
+          &lt;span class=&quot;text&quot;&gt;
+            &lt;span class=&quot;text&quot;&gt;注釈入れ&lt;/span&gt;
+            &lt;sup&gt;※1&lt;/sup&gt;
+          &lt;/span&gt;
+        &lt;/p&gt;
     p.texts.is-sm
       span.text.is-dark ダーク
       - for (var i = 1; i <= 9; i++)
@@ -129,58 +62,96 @@
         - for (var i = 1; i <= 9; i++)
           | &nbsp;
           span.text(class="is-light-"+i) ライト #{i}
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;span class=&quot;text is-dark&quot;&gt;ダーク&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-1&quot;&gt;ダーク 1&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-2&quot;&gt;ダーク 2&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-3&quot;&gt;ダーク 3&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-4&quot;&gt;ダーク 4&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-5&quot;&gt;ダーク 5&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-6&quot;&gt;ダーク 6&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-7&quot;&gt;ダーク 7&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-8&quot;&gt;ダーク 8&lt;/span&gt;
-        &lt;span class=&quot;text is-dark-9&quot;&gt;ダーク 9&lt;/span&gt;
-      &lt;/p&gt;
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;span class=&quot;text is-dark&quot;&gt;ダーク&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-1&quot;&gt;ダーク 1&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-2&quot;&gt;ダーク 2&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-3&quot;&gt;ダーク 3&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-4&quot;&gt;ダーク 4&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-5&quot;&gt;ダーク 5&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-6&quot;&gt;ダーク 6&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-7&quot;&gt;ダーク 7&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-8&quot;&gt;ダーク 8&lt;/span&gt;
+          &lt;span class=&quot;text is-dark-9&quot;&gt;ダーク 9&lt;/span&gt;
+        &lt;/p&gt;
 
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;span class=&quot;text is-light&quot;&gt;ライト&lt;/span&gt;
-        &lt;span class=&quot;text is-light-1&quot;&gt;ライト 1&lt;/span&gt;
-        &lt;span class=&quot;text is-light-2&quot;&gt;ライト 2&lt;/span&gt;
-        &lt;span class=&quot;text is-light-3&quot;&gt;ライト 3&lt;/span&gt;
-        &lt;span class=&quot;text is-light-4&quot;&gt;ライト 4&lt;/span&gt;
-        &lt;span class=&quot;text is-light-5&quot;&gt;ライト 5&lt;/span&gt;
-        &lt;span class=&quot;text is-light-6&quot;&gt;ライト 6&lt;/span&gt;
-        &lt;span class=&quot;text is-light-7&quot;&gt;ライト 7&lt;/span&gt;
-        &lt;span class=&quot;text is-light-8&quot;&gt;ライト 8&lt;/span&gt;
-        &lt;span class=&quot;text is-light-9&quot;&gt;ライト 9&lt;/span&gt;
-      &lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts
-        span.text.is-dark ダーク
-        span.text.is-dark-1 ダーク 1
-        span.text.is-dark-2 ダーク 2
-        span.text.is-dark-3 ダーク 3
-        span.text.is-dark-4 ダーク 4
-        span.text.is-dark-5 ダーク 5
-        span.text.is-dark-6 ダーク 6
-        span.text.is-dark-7 ダーク 7
-        span.text.is-dark-8 ダーク 8
-        span.text.is-dark-9 ダーク 9
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;span class=&quot;text is-light&quot;&gt;ライト&lt;/span&gt;
+          &lt;span class=&quot;text is-light-1&quot;&gt;ライト 1&lt;/span&gt;
+          &lt;span class=&quot;text is-light-2&quot;&gt;ライト 2&lt;/span&gt;
+          &lt;span class=&quot;text is-light-3&quot;&gt;ライト 3&lt;/span&gt;
+          &lt;span class=&quot;text is-light-4&quot;&gt;ライト 4&lt;/span&gt;
+          &lt;span class=&quot;text is-light-5&quot;&gt;ライト 5&lt;/span&gt;
+          &lt;span class=&quot;text is-light-6&quot;&gt;ライト 6&lt;/span&gt;
+          &lt;span class=&quot;text is-light-7&quot;&gt;ライト 7&lt;/span&gt;
+          &lt;span class=&quot;text is-light-8&quot;&gt;ライト 8&lt;/span&gt;
+          &lt;span class=&quot;text is-light-9&quot;&gt;ライト 9&lt;/span&gt;
+        &lt;/p&gt;
+    p.texts.is-sm
+      a.text.is-link Link
+      | ｜
+      a.text.is-link.is-primary Primary
+      | ｜
+      a.text.is-link.is-info Info
+      | ｜
+      a.text.is-link.is-success Success
+      | ｜
+      a.text.is-link.is-warning Warning
+      | ｜
+      a.text.is-link.is-danger Danger
+    p.texts.is-sm
+      a.text.is-link-reverse Link reverse
+      | ｜
+      a.text.is-link-reverse.is-primary Primary
+      | ｜
+      a.text.is-link-reverse.is-info Info
+      | ｜
+      a.text.is-link-reverse.is-success Success
+      | ｜
+      a.text.is-link-reverse.is-warning Warning
+      | ｜
+      a.text.is-link-reverse.is-danger Danger
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;span class=&quot;text is-link is-primary&quot;&gt;Primary&lt;/span&gt;
+          &lt;span class=&quot;text is-link is-info&quot;&gt;Info&lt;/span&gt;
+          &lt;span class=&quot;text is-link is-success&quot;&gt;Success&lt;/span&gt;
+          &lt;span class=&quot;text is-link is-warning&quot;&gt;Warning&lt;/span&gt;
+          &lt;span class=&quot;text is-link is-danger&quot;&gt;Danger&lt;/span&gt;
+        &lt;/p&gt;
 
-      p.texts
-        span.text.is-light ライト
-        span.text.is-light-1 ライト 1
-        span.text.is-light-2 ライト 2
-        span.text.is-light-3 ライト 3
-        span.text.is-light-4 ライト 4
-        span.text.is-light-5 ライト 5
-        span.text.is-light-6 ライト 6
-        span.text.is-light-7 ライト 7
-        span.text.is-light-8 ライト 8
-        span.text.is-light-9 ライト 9
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;span class=&quot;text is-link-reverse is-primary&quot;&gt;Primary&lt;/span&gt;
+          &lt;span class=&quot;text is-link-reverse is-info&quot;&gt;Info&lt;/span&gt;
+          &lt;span class=&quot;text is-link-reverse is-success&quot;&gt;Success&lt;/span&gt;
+          &lt;span class=&quot;text is-link-reverse is-warning&quot;&gt;Warning&lt;/span&gt;
+          &lt;span class=&quot;text is-link-reverse is-danger&quot;&gt;Danger&lt;/span&gt;
+        &lt;/p&gt;
+    p.texts.is-sm
+      span.text.is-capitalize capitalize
+      | ｜
+      span.text.is-lowercase lowercase
+      | ｜
+      span.text.is-uppercase uppercase
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;span class=&quot;text is-capitalize&quot;&gt;capitalize&lt;/span&gt;
+          &lt;span class=&quot;text is-lowercase&quot;&gt;lowercase&lt;/span&gt;
+          &lt;span class=&quot;text is-uppercase&quot;&gt;uppercase&lt;/span&gt;
+        &lt;/p&gt;
 
 .groups
   h4.heading.is-xl Text - Size
@@ -197,27 +168,20 @@
       span.text.is-lg 大きめ
       span.text.is-xl 大きい
       span.text.is-xxl 特大
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;span class=&quot;text is-xxs&quot;&gt;極小&lt;/span&gt;
-        &lt;span class=&quot;text is-xs&quot;&gt;小さい&lt;/span&gt;
-        &lt;span class=&quot;text is-sm&quot;&gt;小さめ&lt;/span&gt;
-        &lt;span class=&quot;text is-md&quot;&gt;中くらい&lt;/span&gt;
-        &lt;span class=&quot;text is-lg&quot;&gt;大きめ&lt;/span&gt;
-        &lt;span class=&quot;text is-xl&quot;&gt;大きい&lt;/span&gt;
-        &lt;span class=&quot;text is-xxl&quot;&gt;特大&lt;/span&gt;
-      &lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts
-        span.text.is-xxs 極小
-        span.text.is-xs 小さい
-        span.text.is-sm 小さめ
-        span.text.is-md 中くらい
-        span.text.is-lg 大きめ
-        span.text.is-xl 大きい
-        span.text.is-xxl 特大
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts&quot;&gt;
+          &lt;span class=&quot;text is-xxs&quot;&gt;極小&lt;/span&gt;
+          &lt;span class=&quot;text is-xs&quot;&gt;小さい&lt;/span&gt;
+          &lt;span class=&quot;text is-sm&quot;&gt;小さめ&lt;/span&gt;
+          &lt;span class=&quot;text is-md&quot;&gt;中くらい&lt;/span&gt;
+          &lt;span class=&quot;text is-lg&quot;&gt;大きめ&lt;/span&gt;
+          &lt;span class=&quot;text is-xl&quot;&gt;大きい&lt;/span&gt;
+          &lt;span class=&quot;text is-xxl&quot;&gt;特大&lt;/span&gt;
+        &lt;/p&gt;
 
 .groups
   h4.heading.is-xl Text - Align
@@ -234,159 +198,14 @@
     p.texts.is-sm.is-left 左寄せのテキスト
     p.texts.is-sm.is-center 中央寄せのテキスト
     p.texts.is-sm.is-right 右寄せのテキスト
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts is-left&quot;&gt;左寄せのテキスト&lt;/p&gt;
-      &lt;p class=&quot;texts is-center&quot;&gt;中央寄せのテキスト&lt;/p&gt;
-      &lt;p class=&quot;texts is-right&quot;&gt;右寄せのテキスト&lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts.is-left 左寄せのテキスト
-      p.texts.is-center 中央寄せのテキスト
-      p.texts.is-right 右寄せのテキスト
-
-.groups
-  h4.heading.is-xl Text - Indent
-  p.texts.is-sm
-    | 文章の最初の1文字目を全角1スペース分空ける場合は、&nbsp;
-    code.code .is-indent
-    | &nbsp;を付与します。縦書きの場合も有効です。
-  .group.is-wrap.is-preview
-    p.texts.is-sm.is-indent 文章の最初の1文字目を全角1スペース分空ける。主にニュースサイトや文章を縦書きにする場合に使用する。文章の最初の1文字目を全角1スペース分空ける。主にニュースサイトや文章を縦書きにする場合に使用する。文章の最初の1文字目を全角1スペース分空ける。主にニュースサイトや文章を縦書きにする場合に使用する。
-    p.texts.is-sm.is-indent 文章の最初の1文字目を全角1スペース分空ける。主にニュースサイトや文章を縦書きにする場合に使用する。文章の最初の1文字目を全角1スペース分空ける。主にニュースサイトや文章を縦書きにする場合に使用する。文章の最初の1文字目を全角1スペース分空ける。主にニュースサイトや文章を縦書きにする場合に使用する。
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts is-indent&quot;&gt;...&lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts.is-indent ...
-
-.groups
-  h4.heading.is-xl Text - Link
-  p.texts.is-sm
-    | テキストリンクを装飾するには&nbsp;
-    code.code .is-link
-    | &nbsp;を加えます。リンクの下線は&nbsp;
-    code.code .is-solid
-    | &nbsp;
-    code.code .is-dotted
-    | &nbsp;などを付与することで変化せることもできます。
-    br
-    | また、
-    code.code .is-link
-    | &nbsp;を&nbsp;
-    code.code .is-link-reverse
-    | &nbsp;に変えることでホバー時に下線を出すタイプに切り替えられます。
-  .group.is-wrap.is-preview
-    p.texts.is-sm
-      a.text.is-link
-        i.fa.fa-link(aria-hidden="true")
-        span.text リンク
-      | &nbsp;/&nbsp;
-      a.text.is-link.is-solid
-        i.fa.fa-link(aria-hidden="true")
-        span.text ソリッドリンク
-      | &nbsp;/&nbsp;
-      a.text.is-link.is-dotted
-        i.fa.fa-link(aria-hidden="true")
-        span.text ドットリンク
-      | &nbsp;/&nbsp;
-      a.text.is-link.is-primary
-        i.fa.fa-link(aria-hidden="true")
-        span.text リンク
-      | &nbsp;/&nbsp;
-      a.text.is-link.is-solid.is-primary
-        i.fa.fa-link(aria-hidden="true")
-        span.text ソリッドリンク
-      | &nbsp;/&nbsp;
-      a.text.is-link.is-dotted.is-primary
-        i.fa.fa-link(aria-hidden="true")
-        span.text ドットリンク
-    p.texts.is-sm
-      a.text.is-link-reverse
-        i.fa.fa-link(aria-hidden="true")
-        span.text リンク
-      | &nbsp;/&nbsp;
-      a.text.is-link-reverse.is-solid
-        i.fa.fa-link(aria-hidden="true")
-        span.text ソリッドリンク
-      | &nbsp;/&nbsp;
-      a.text.is-link-reverse.is-dotted
-        i.fa.fa-link(aria-hidden="true")
-        span.text ドットリンク
-      | &nbsp;/&nbsp;
-      a.text.is-link-reverse.is-primary
-        i.fa.fa-link(aria-hidden="true")
-        span.text リンク
-      | &nbsp;/&nbsp;
-      a.text.is-link-reverse.is-solid.is-primary
-        i.fa.fa-link(aria-hidden="true")
-        span.text ソリッドリンク
-      | &nbsp;/&nbsp;
-      a.text.is-link-reverse.is-dotted.is-primary
-        i.fa.fa-link(aria-hidden="true")
-        span.text ドットリンク
-    .group.is-wrap.is-paint
-      p.texts.is-sm.is-light
-        a.text.is-link
-          i.fa.fa-link(aria-hidden="true")
-          span.text リンク
-        | &nbsp;/&nbsp;
-        a.text.is-link.is-solid
-          i.fa.fa-link(aria-hidden="true")
-          span.text ソリッドリンク
-        | &nbsp;/&nbsp;
-        a.text.is-link.is-dotted
-          i.fa.fa-link(aria-hidden="true")
-          span.text ドットリンク
-      p.texts.is-sm.is-light
-        a.text.is-link-reverse
-          i.fa.fa-link(aria-hidden="true")
-          span.text リンク
-        | &nbsp;/&nbsp;
-        a.text.is-link-reverse.is-solid
-          i.fa.fa-link(aria-hidden="true")
-          span.text ソリッドリンク
-        | &nbsp;/&nbsp;
-        a.text.is-link-reverse.is-dotted
-          i.fa.fa-link(aria-hidden="true")
-          span.text ドットリンク
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;a class=&quot;text is-link&quot;&gt;リンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link is-solid&quot;&gt;ソリッドリンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link is-dotted&quot;&gt;ドットリンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link is-primary&quot;&gt;リンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link is-solid is-primary&quot;&gt;ソリッドリンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link is-dotted is-primary&quot;&gt;ドットリンク&lt;/a&gt;
-      &lt;/p&gt;
-
-      &lt;p class=&quot;texts&quot;&gt;
-        &lt;a class=&quot;text is-link-reverse&quot;&gt;リンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link-reverse is-solid&quot;&gt;ソリッドリンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link-reverse is-dotted&quot;&gt;ドットリンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link-reverse is-primary&quot;&gt;リンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link-reverse is-solid is-primary&quot;&gt;ソリッドリンク&lt;/a&gt;
-        &lt;a class=&quot;text is-link-reverse is-dotted is-primary&quot;&gt;ドットリンク&lt;/a&gt;
-      &lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts
-        a.text.is-link リンク
-        a.text.is-link.is-solid ソリッドリンク
-        a.text.is-link.is-dotted ドットリンク
-        a.text.is-link.is-primary リンク
-        a.text.is-link.is-solid.is-primary ソリッドリンク
-        a.text.is-link.is-dotted.is-primary ドットリンク
-
-      p.texts
-        a.text.is-link-reverse リンク
-        a.text.is-link-reverse.is-solid ソリッドリンク
-        a.text.is-link-reverse.is-dotted ドットリンク
-        a.text.is-link-reverse.is-primary リンク
-        a.text.is-link-reverse.is-solid.is-primary ソリッドリンク
-        a.text.is-link-reverse.is-dotted.is-primary ドットリンク
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts is-left&quot;&gt;左寄せのテキスト&lt;/p&gt;
+        &lt;p class=&quot;texts is-center&quot;&gt;中央寄せのテキスト&lt;/p&gt;
+        &lt;p class=&quot;texts is-right&quot;&gt;右寄せのテキスト&lt;/p&gt;
 
 .groups
   h4.heading.is-xl Text - Ellipsis
@@ -397,12 +216,12 @@
   .group.is-wrap.is-preview
     p.texts.is-sm.is-ellipsis
       | テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts is-ellipsis&quot;&gt;...&lt;/p&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      p.texts.is-ellipsis ...
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre.is-label.is-html
+      code.code.html.
+        &lt;p class=&quot;texts is-ellipsis&quot;&gt;...&lt;/p&gt;
 
 .groups
   h4.heading.is-xl Text - Blockquote
@@ -413,12 +232,12 @@
   .group.is-wrap.is-preview
     blockquote.blockquote
       | 引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾。
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;blockquote class=&quot;blockquote&quot;&gt;...&lt;/blockquote&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      blockquote.blockquote ...
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;blockquote class=&quot;blockquote&quot;&gt;...&lt;/blockquote&gt;
 
 .groups
   h4.heading.is-xl Text - Code
@@ -431,59 +250,38 @@
     | &nbsp;の中に&nbsp;
     code.code .code
     | &nbsp;を書きます。
-    br
-    code.code .pre
-    | &nbsp;にラベルと言語名&nbsp;
-    code.code .is-label.is-(xxxx)
-    | &nbsp;を付与することで任意のラベルを左上に表示させます。
   .group.is-wrap.is-preview
     p.texts.is-sm
       | テキストの途中に&nbsp;
       code.code code
       | &nbsp;を表示させる。
-    pre.pre.is-label.is-scss
-      code.code.
-        // ブロック要素のコードとラベルの使用例
+    pre.pre
+      code.code.css.
         .texts.is-pre {
           position: relative;
           color: $light;
           font-family: $font-mono;
           font-size: 0.875em;
         }
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;p class=&quot;texts&quot;&gt;
-        テキストの途中に
-        &lt;code class=&quot;code&quot;&gt;code&lt;/code&gt;
-        を表示させる。
-      &lt;/p&gt;
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;p class=&quot;texts&quot;&gt;
+          テキストの途中に
+          &lt;code class=&quot;code&quot;&gt;code&lt;/code&gt;
+          を表示させる。
+        &lt;/p&gt;
 
-      &lt;pre class=&quot;pre is-label is-scss&quot;&gt;
-        &lt;code class=&quot;code&quot;&gt;
-          // ブロック要素のコードとラベルの使用例
-          .pre {
-            position: relative;
-            background-color: $dark-2;
-            border-radius: 2px;
-            color: $light;
-            padding: 20px 0;
-          }
-        &lt;/code&gt;
-      &lt;/pre&gt;
-  pre.pre.is-label.is-html
-    code.code.
-      p.texts
-        | テキストの途中に&nbsp;
-        code.code code
-        | &nbsp;を表示させる。
-
-      pre.pre.is-label.is-scss
-        code.code.
-          // ブロック要素のコードとラベルの使用例
-          .pre {
-            position: relative;
-            background-color: $dark-2;
-            border-radius: 2px;
-            color: $light;
-            padding: 20px 0;
-          }
+        &lt;pre class=&quot;pre&quot;&gt;
+          &lt;code class=&quot;code&quot;&gt;
+            .pre {
+              position: relative;
+              background-color: $dark-2;
+              border-radius: 2px;
+              color: $light;
+              padding: 20px 0;
+            }
+          &lt;/code&gt;
+        &lt;/pre&gt;

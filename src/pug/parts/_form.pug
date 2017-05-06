@@ -9,11 +9,7 @@
     br
     | 親要素に&nbsp;
     code.code .form
-    | &nbsp;を用いることで、他のモジュールとの距離を保つことができます。子要素のデザインはこのタグに依存しません。
-    br
-    | フォームパーツは&nbsp;
-    code.code .field
-    | &nbsp;で囲むことで見出しとの距離を縮め、同時にレスポンシブ対応します。
+    | &nbsp;を用いることで、他のモジュールとの距離を保つことができます。
   .group.is-wrap.is-preview
     .group
       .grid.is-center
@@ -35,63 +31,43 @@
               .group
                 .btns
                   input.btn.is-plain.is-success.is-mobile-0(type="submit" value="ログイン")
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;form class=&quot;form&quot;&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;メールアドレス&lt;/p&gt;
-          &lt;div class=&quot;field&quot;&gt;
-            &lt;input class=&quot;input is-mobile-0&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;form class=&quot;form&quot;&gt;
+          &lt;div class=&quot;group&quot;&gt;
+            &lt;p class=&quot;heading&quot;&gt;メールアドレス&lt;/p&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input is-mobile-0&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;パスワード&lt;/p&gt;
-          &lt;div class=&quot;field&quot;&gt;
-            &lt;input class=&quot;input is-mobile-0&quot; type=&quot;password&quot;&gt;
+          &lt;div class=&quot;group&quot;&gt;
+            &lt;p class=&quot;heading&quot;&gt;パスワード&lt;/p&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input is-mobile-0&quot; type=&quot;password&quot;&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;label&gt;
-            &lt;input class=&quot;input&quot; type=&quot;checkbox&quot;&gt;
-            &lt;span class=&quot;text is-sm&quot;&gt;次回から自動的にログイン&lt;/span&gt;
-          &lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;btns&quot;&gt;
-            &lt;input class=&quot;btn is-plain is-success is-full&quot; type=&quot;submit&quot; value=&quot;ログイン&quot;&gt;
+          &lt;div class=&quot;group&quot;&gt;
+            &lt;label&gt;
+              &lt;input class=&quot;input&quot; type=&quot;checkbox&quot;&gt;
+              &lt;span class=&quot;text is-sm&quot;&gt;次回から自動的にログイン&lt;/span&gt;
+            &lt;/label&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      form.form
-        .group
-          p.heading メールアドレス
-          .field
-            input.input.is-mobile-0(type="email" placeholder="example@gmail.com")
-        .group
-          p.heading パスワード
-          .field
-            input.input.is-mobile-0(type="password")
-        .group
-          label
-            input.input(type="checkbox")
-            span.text.is-sm 次回から自動的にログイン
-        .group
-          .btns
-            input.btn.is-plain.is-success.is-full(type="submit" value="ログイン")
+          &lt;div class=&quot;group&quot;&gt;
+            &lt;div class=&quot;btns&quot;&gt;
+              &lt;input class=&quot;btn is-plain is-success is-full&quot; type=&quot;submit&quot; value=&quot;ログイン&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
 
 .groups
   h4.heading.is-xl Form - Field
   p.texts.is-sm
+    | フォームパーツを&nbsp;
     code.code .field
-    | &nbsp;に&nbsp;
-    code.code .is-space-(x)
-    | &nbsp;を付与することで、（x）の中に入れた数字に「4px」を掛けた値が溝となります。
-    br
-    | また、&nbsp;
-    code.code .field
-    | &nbsp;直下の要素は各デバイスサイズごとに
+    | &nbsp;で囲むと横並びや可変に対応します。
     br
     code.code .is-(xxxx)-full
     | &nbsp;で100%、&nbsp;
@@ -195,79 +171,16 @@
           td
             p
               span.text .is-wide-auto
-  .group.is-scroll-x
-    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
-      thead
-        tr.box.is-paint
-          th(width="80")
-          th
-            p
-              i.fa.fa-mobile(aria-hidden="true")
-              span.text Touch
-              br
-              span.text.is-sm ~ 991px
-          th
-            p
-              i.fa.fa-mobile(aria-hidden="true")
-              span.text Landscape
-              br
-              span.text.is-sm デバイス横向き
-          th
-            p
-              i.fa.fa-mobile(aria-hidden="true")
-              span.text Portrait
-              br
-              span.text.is-sm デバイス縦向き
-      tbody
-        tr
-          td
-            p.text.is-sm
-              | 100%に広がる
-          td
-            p
-              span.text .is-touch-full
-          td
-            p
-              span.text .is-landscape-full
-          td
-            p
-              span.text .is-portrait-full
-        tr
-          td
-            p.text.is-sm
-              | 余白を等分しつつ広がる
-          td
-            p
-              span.text .is-touch-0
-          td
-            p
-              span.text .is-landscape-0
-          td
-            p
-              span.text .is-portrait-0
-        tr
-          td
-            p.text.is-sm
-              | 本来のサイズに戻る
-          td
-            p
-              span.text .is-touch-auto
-          td
-            p
-              span.text .is-landscape-auto
-          td
-            p
-              span.text .is-portrait-auto
   .group.is-wrap.is-preview
     form.form
       .group
         p.heading Desktopサイズまでは入力枠がフルサイズ↓
-        .field.is-space-2
+        .field
           input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
           input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
       .group
         p.heading 誕生日：
-        .field.is-space-2
+        .field
           select.select
             option 2017
             option 2016
@@ -296,80 +209,54 @@
             option 9
             option 10
       .group
-        .field.is-space-2.is-middle
+        .field.is-middle
           p.heading 性別：
           select.select
             option 男性
             option 女性
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;form class=&quot;form&quot;&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Desktopサイズまでは入力枠がフルサイズ↓&lt;/p&gt;
-          &lt;div class=&quot;field&quot;&gt;
-            &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
-            &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;form class=&quot;form&quot;&gt;
+          &lt;div class=&quot;group&quot;&gt;
+            &lt;p class=&quot;heading&quot;&gt;Desktopサイズまでは入力枠がフルサイズ↓&lt;/p&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+              &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;誕生日&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2 is-middle&quot;&gt;
-            &lt;select class=&quot;select&quot;&gt;
-              &lt;option&gt;2017&lt;/option&gt;
-              &lt;option&gt;2016&lt;/option&gt;
-              ...
-            &lt;/select&gt;
-            &lt;select class=&quot;select&quot;&gt;
-              &lt;option&gt;1&lt;/option&gt;
-              &lt;option&gt;2&lt;/option&gt;
-              ...
-            &lt;/select&gt;
-            &lt;select class=&quot;select&quot;&gt;
-              &lt;option&gt;1&lt;/option&gt;
-              &lt;option&gt;2&lt;/option&gt;
-              ...
-            &lt;/select&gt;
+          &lt;div class=&quot;group&quot;&gt;
+            &lt;p class=&quot;heading&quot;&gt;誕生日&lt;/p&gt;
+            &lt;div class=&quot;field is-middle&quot;&gt;
+              &lt;select class=&quot;select&quot;&gt;
+                &lt;option&gt;2017&lt;/option&gt;
+                &lt;option&gt;2016&lt;/option&gt;
+                ...
+              &lt;/select&gt;
+              &lt;select class=&quot;select&quot;&gt;
+                &lt;option&gt;1&lt;/option&gt;
+                &lt;option&gt;2&lt;/option&gt;
+                ...
+              &lt;/select&gt;
+              &lt;select class=&quot;select&quot;&gt;
+                &lt;option&gt;1&lt;/option&gt;
+                &lt;option&gt;2&lt;/option&gt;
+                ...
+              &lt;/select&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;field is-space-2 is-middle&quot;&gt;
-            &lt;p class=&quot;heading&quot;&gt;性別：&lt;/p&gt;
-            &lt;select class=&quot;select&quot;&gt;
-              &lt;option&gt;男性&lt;/option&gt;
-              &lt;option&gt;女性&lt;/option&gt;
-            &lt;/select&gt;
+          &lt;div class=&quot;group&quot;&gt;
+            &lt;div class=&quot;field is-middle&quot;&gt;
+              &lt;p class=&quot;heading&quot;&gt;性別：&lt;/p&gt;
+              &lt;select class=&quot;select&quot;&gt;
+                &lt;option&gt;男性&lt;/option&gt;
+                &lt;option&gt;女性&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      form.form
-        .group
-          p.heading Desktopサイズまでは入力枠がフルサイズ↓
-          .field.is-space-2
-            input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
-            input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
-        .group
-          p.heading 誕生日
-          .field.is-space-2.is-middle
-            select.select
-              option 2017
-              option 2016
-              ...
-            select.select
-              option 1
-              option 2
-              ...
-            select.select
-              option 1
-              option 2
-              ...
-        .group
-          .field.is-space-2.is-middle
-            p.heading 性別：
-            select.select
-              option 男性
-              option 女性
+        &lt;/form&gt;
 
 .groups
   h4.heading.is-xl Form - Parts
@@ -377,298 +264,89 @@
     | フォームの各パーツは、対応しているHTMLタグの属性と値が使用できます。
   .group.is-wrap.is-preview
     form.form
-      .group
-        p.heading Text
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm TEXT
+        .field
           input.input(type="text" placeholder="Text")
           input.input(type="text" placeholder="Disabled" disabled)
           input.input(type="text" value="Readonly" readonly)
-      .group
-        p.heading Search
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm SEARCH
+        .field
           input.input(type="search" placeholder="Search")
           input.input(type="search" placeholder="Search" disabled)
-      .group
-        p.heading URL
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm URL
+        .field
           input.input(type="url" placeholder="example.com")
           input.input(type="url" placeholder="example.com" disabled)
-      .group
-        p.heading E-mail
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm E-MAIL
+        .field
           input.input(type="email" placeholder="example@gmail.com")
           input.input(type="email" placeholder="example@gmail.com" disabled)
-      .group
-        p.heading TEL
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm TEL
+        .field
           input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000")
           input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000" disabled)
-      .group
-        p.heading Password
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm PASSWORD
+        .field
           input.input(type="password")
           input.input(type="password" disabled)
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;form class=&quot;form&quot;&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Text&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Disabled&quot; disabled=&quot;&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;text&quot; value=&quot;Readonly&quot; readonly=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Search&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;URL&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;E-mail&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;TEL&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Password&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;password&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;password&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      form.form
-        .group
-          p.heading Text
-          .field.is-space-2
-            input.input(type="text" placeholder="Text")
-            input.input(type="text" placeholder="Disabled" disabled)
-            input.input(type="text" value="Readonly" readonly)
-        .group
-          p.heading Search
-          .field.is-space-2
-            input.input(type="search" placeholder="Search")
-            input.input(type="search" placeholder="Search" disabled)
-        .group
-          p.heading URL
-          .field.is-space-2
-            input.input(type="url" placeholder="example.com")
-            input.input(type="url" placeholder="example.com" disabled)
-        .group
-          p.heading E-mail
-          .field.is-space-2
-            input.input(type="email" placeholder="example@gmail.com")
-            input.input(type="email" placeholder="example@gmail.com" disabled)
-        .group
-          p.heading TEL
-          .field.is-space-2
-            input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000")
-            input.input(type="tel" size="14" maxlength="12" placeholder="000-000-0000" disabled)
-        .group
-          p.heading Password
-          .field.is-space-2
-            input.input(type="password")
-            input.input(type="password" disabled)
-  .group.is-wrap.is-preview
-    form.form
-      .group
-        p.heading Date Time Local
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm DATETIME LOCAL
+        .field
           input.input(type="datetime-local" value="2017-02-02T00:00:00")
           input.input(type="datetime-local" value="2017-02-02T00:00:00" disabled)
-      .group
-        p.heading Date
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm DATE
+        .field
           input.input(type="date" value="2017-02-02")
           input.input(type="date" value="2017-02-02" disabled)
-      .group
-        p.heading Month
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm MONTH
+        .field
           input.input(type="month" value="2017-02")
           input.input(type="month" value="2017-02" disabled)
-      //-.group
-        p.heading Week
-        .field.is-space-2
+      //-fieldset.fieldset
+        legend.heading.is-sm WEEK
+        .field
           input.input(type="week" value="2017-W05")
           input.input(type="week" value="2017-W05" disabled)
-      .group
-        p.heading Time
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm TIME
+        .field
           input.input(type="time" value="00:00:00")
           input.input(type="time" value="00:00:00" disabled)
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;form class=&quot;form&quot;&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Date Time Local&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Date&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Month&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Time&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      form.form
-        .group
-          p.heading Date Time Local
-          .field.is-space-2
-            input.input(type="datetime-local" value="2017-02-02T00:00:00")
-            input.input(type="datetime-local" value="2017-02-02T00:00:00" disabled)
-        .group
-          p.heading Date
-          .field.is-space-2
-            input.input(type="date" value="2017-02-02")
-            input.input(type="date" value="2017-02-02" disabled)
-        .group
-          p.heading Month
-          .field.is-space-2
-            input.input(type="month" value="2017-02")
-            input.input(type="month" value="2017-02" disabled)
-        .group
-          p.heading Time
-          .field.is-space-2
-            input.input(type="time" value="00:00:00")
-            input.input(type="time" value="00:00:00" disabled)
-  .group.is-wrap.is-preview
-    form.form
-      .group
-        p.heading Number
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm NUMBER
+        .field
           input.input(type="number" step="10")
           input.input(type="number" step="10" disabled)
-      .group
-        p.heading File
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm FILE
+        .field
           input.input(type="file")
           input.input(type="file" disabled)
-      .group
-        p.heading Color
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm COLOR
+        .field
           input.input(type="color" value="#1cb4c7")
           input.input(type="color" value="#1cb4c7" disabled)
-      .group
-        p.heading Range
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm RANGE
+        .field
           input.input(type="range")
           input.input(type="range" disabled)
-      .group
-        p.heading Textarea
-        .field.is-space-2
-          textarea.textarea.is-mobile-12
-          textarea.textarea.is-mobile-12(disabled)
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;form class=&quot;form&quot;&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Number&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;File&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;file&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;file&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Color&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Range&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;range&quot;&gt;
-            &lt;input class=&quot;input&quot; type=&quot;range&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Textarea&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;textarea class=&quot;textarea is-mobile-12&quot;&gt;&lt;/textarea&gt;
-            &lt;textarea class=&quot;textarea is-mobile-12&quot; disabled=&quot;&quot;&gt;&lt;/textarea&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      form.form
-        .group
-          p.heading Number
-          .field.is-space-2
-            input.input(type="number" step="10")
-            input.input(type="number" step="10" disabled)
-        .group
-          p.heading File
-          .field.is-space-2
-            input.input(type="file")
-            input.input(type="file" disabled)
-        .group
-          p.heading Color
-          .field.is-space-2
-            input.input(type="color" value="#1cb4c7")
-            input.input(type="color" value="#1cb4c7" disabled)
-        .group
-          p.heading Range
-          .field.is-space-2
-            input.input(type="range")
-            input.input(type="range" disabled)
-        .group
-          p.heading Textarea
-          .field.is-space-2
-            textarea.textarea.is-mobile-12
-            textarea.textarea.is-mobile-12(disabled)
-  .group.is-wrap.is-preview
-    form.form
-      .group
-        p.heading Radio
+      fieldset.fieldset
+        legend.heading.is-sm TEXTAREA
+        .field
+          textarea.textarea
+          textarea.textarea(disabled)
+      fieldset.fieldset
+        legend.heading.is-sm RADIO
         .field
           label
             input.input(type="radio" name="radio-default-1" checked)
@@ -679,8 +357,8 @@
           label
             input.input(type="radio" name="radio-default-1" disabled)
             span.text むすび
-      .group
-        p.heading Checkbox
+      fieldset.fieldset
+        legend.heading.is-sm CHECKBOX
         .field
           label
             input.input(type="checkbox" name="checkbox-default-1" checked)
@@ -691,70 +369,9 @@
           label
             input.input(type="checkbox" name="checkbox-default-1" disabled)
             span.text JS
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;form class=&quot;form&quot;&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Radio&lt;/p&gt;
-          &lt;div class=&quot;field&quot;&gt;
-            &lt;label&gt;
-              &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびー&lt;/span&gt;
-            &lt;/label&gt;
-            &lt;label&gt;
-              &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびい&lt;/span&gt;
-            &lt;/label&gt;
-            &lt;label&gt;
-              &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすび&lt;/span&gt;
-            &lt;/label&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Checkbox&lt;/p&gt;
-          &lt;div class=&quot;field&quot;&gt;
-            &lt;label&gt;
-              &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;HTML&lt;/span&gt;
-            &lt;/label&gt;
-            &lt;label&gt;
-              &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;CSS&lt;/span&gt;
-            &lt;/label&gt;
-            &lt;label&gt;
-              &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;JS&lt;/span&gt;
-            &lt;/label&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      form.form
-        .group
-          p.heading Radio
-          .field
-            label
-              input.input(type="radio" name="radio-default-1" checked)
-              span.text むすびー
-            label
-              input.input(type="radio" name="radio-default-1")
-              span.text むすびい
-            label
-              input.input(type="radio" name="radio-default-1" disabled)
-              span.text むすび
-        .group
-          p.heading Checkbox
-          .field
-            label
-              input.input(type="checkbox" name="checkbox-default-1" checked)
-              span.text HTML
-            label
-              input.input(type="checkbox" name="checkbox-default-1")
-              span.text CSS
-            label
-              input.input(type="checkbox" name="checkbox-default-1" disabled)
-              span.text JS
-  .group.is-wrap.is-preview
-    form.form
-      .group
-        p.heading Select
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm SELECT
+        .field
           select.select
             option Select A
             option Select B
@@ -767,7 +384,9 @@
             option Select C
             option Select D
             option Select E
-        .field.is-space-2
+      fieldset.fieldset
+        legend.heading.is-sm SELECT MULTIPLE
+        .field
           select.select(multiple)
             option Select A
             option Select B
@@ -780,145 +399,203 @@
             option Select C
             option Select D
             option Select E
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;form class=&quot;form&quot;&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Select&lt;/p&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;select class=&quot;select&quot;&gt;
-              &lt;option&gt;Select A&lt;/option&gt;
-              &lt;option&gt;Select B&lt;/option&gt;
-              &lt;option&gt;Select C&lt;/option&gt;
-              &lt;option&gt;Select D&lt;/option&gt;
-              &lt;option&gt;Select E&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;select class=&quot;select&quot; disabled=&quot;&quot;&gt;
-              &lt;option&gt;Select A&lt;/option&gt;
-              &lt;option&gt;Select B&lt;/option&gt;
-              &lt;option&gt;Select C&lt;/option&gt;
-              &lt;option&gt;Select D&lt;/option&gt;
-              &lt;option&gt;Select E&lt;/option&gt;
-            &lt;/select&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;field is-space-2&quot;&gt;
-            &lt;select class=&quot;select&quot; multiple=&quot;&quot;&gt;
-              &lt;option&gt;Select A&lt;/option&gt;
-              &lt;option&gt;Select B&lt;/option&gt;
-              &lt;option&gt;Select C&lt;/option&gt;
-              &lt;option&gt;Select D&lt;/option&gt;
-              &lt;option&gt;Select E&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;select class=&quot;select&quot; multiple=&quot;&quot; disabled=&quot;&quot;&gt;
-              &lt;option&gt;Select A&lt;/option&gt;
-              &lt;option&gt;Select B&lt;/option&gt;
-              &lt;option&gt;Select C&lt;/option&gt;
-              &lt;option&gt;Select D&lt;/option&gt;
-              &lt;option&gt;Select E&lt;/option&gt;
-            &lt;/select&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      form.form
-        .group
-          p.heading Select
-          .field.is-space-2
-            select.select
-              option Select A
-              option Select B
-              option Select C
-              option Select D
-              option Select E
-            select.select(disabled)
-              option Select A
-              option Select B
-              option Select C
-              option Select D
-              option Select E
-          .field.is-space-2
-            select.select(multiple)
-              option Select A
-              option Select B
-              option Select C
-              option Select D
-              option Select E
-            select.select(multiple disabled)
-              option Select A
-              option Select B
-              option Select C
-              option Select D
-              option Select E
-  .group.is-wrap.is-preview
-    form.form
-      .group
-        p.heading Button
-        .field
-          .btns.is-space-2
-            input.btn.is-plain.is-primary(type="button" value="Input Button")
-            input.btn.is-plain.is-primary.is-disable(type="button" value="Input Button" disabled)
-      .group
-        p.heading Reset
-        .field
-          .btns.is-space-2
-            input.btn.is-plain(type="reset")
-            input.btn.is-plain.is-disable(type="reset" disabled)
-      .group
-        p.heading Submit
-        .field
-          .btns.is-space-2
-            input.btn.is-plain.is-success(type="submit")
-            input.btn.is-plain.is-success.is-disable(type="submit" disabled)
-  pre.pre.is-label.is-html
-    code.code.
-      &lt;form class=&quot;form&quot;&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Button&lt;/p&gt;
-          &lt;div class=&quot;field&quot;&gt;
-            &lt;div class=&quot;btns is-space-2&quot;&gt;
-              &lt;input class=&quot;btn is-plain is-primary&quot; type=&quot;button&quot; value=&quot;Input Button&quot;&gt;
-              &lt;input class=&quot;btn is-plain is-primary is-disable&quot; type=&quot;button&quot; value=&quot;Input Button&quot; disabled=&quot;&quot;&gt;
+      .btns
+        input.btn.is-plain.is-primary(type="button" value="インプットボタン")
+        input.btn.is-plain.is-primary(type="button" value="インプットボタン" disabled)
+      .btns
+        input.btn.is-plain(type="reset")
+        input.btn.is-plain(type="reset" disabled)
+      .btns
+        input.btn.is-plain.is-success(type="submit")
+        input.btn.is-plain.is-success(type="submit" disabled)
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;form class=&quot;form&quot;&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;TEXT&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Disabled&quot; disabled=&quot;&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;text&quot; value=&quot;Readonly&quot; readonly=&quot;&quot;&gt;
             &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Reset&lt;/p&gt;
-          &lt;div class=&quot;field&quot;&gt;
-            &lt;div class=&quot;btns is-space-2&quot;&gt;
-              &lt;input class=&quot;btn is-plain&quot; type=&quot;reset&quot;&gt;
-              &lt;input class=&quot;btn is-plain is-disable&quot; type=&quot;reset&quot; disabled=&quot;&quot;&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;SEARCH&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; disabled=&quot;&quot;&gt;
             &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;p class=&quot;heading&quot;&gt;Submit&lt;/p&gt;
-          &lt;div class=&quot;field&quot;&gt;
-            &lt;div class=&quot;btns is-space-2&quot;&gt;
-              &lt;input class=&quot;btn is-plain is-success&quot; type=&quot;submit&quot;&gt;
-              &lt;input class=&quot;btn is-plain is-success is-disable&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;URL&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot; disabled=&quot;&quot;&gt;
             &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;E-MAIL&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;TEL&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;PASSWORD&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;password&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;password&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;DATETIME LOCAL&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;DATE&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;MONTH&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;TIME&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;NUMBER&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;FILE&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;file&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;file&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;COLOR&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;RANGE&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;range&quot;&gt;
+              &lt;input class=&quot;input&quot; type=&quot;range&quot; disabled=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;TEXTAREA&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;textarea class=&quot;textarea&quot;&gt;&lt;/textarea&gt;
+              &lt;textarea class=&quot;textarea&quot; disabled=&quot;&quot;&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;RADIO&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;label&gt;
+                &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびー&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label&gt;
+                &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびい&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label&gt;
+                &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすび&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;CHECKBOX&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;label&gt;
+                &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;HTML&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label&gt;
+                &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;CSS&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label&gt;
+                &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;JS&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;SELECT&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;select class=&quot;select&quot;&gt;
+                &lt;option&gt;Select A&lt;/option&gt;
+                &lt;option&gt;Select B&lt;/option&gt;
+                &lt;option&gt;Select C&lt;/option&gt;
+                &lt;option&gt;Select D&lt;/option&gt;
+                &lt;option&gt;Select E&lt;/option&gt;
+              &lt;/select&gt;
+              &lt;select class=&quot;select&quot; disabled=&quot;&quot;&gt;
+                &lt;option&gt;Select A&lt;/option&gt;
+                &lt;option&gt;Select B&lt;/option&gt;
+                &lt;option&gt;Select C&lt;/option&gt;
+                &lt;option&gt;Select D&lt;/option&gt;
+                &lt;option&gt;Select E&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;fieldset class=&quot;fieldset&quot;&gt;
+            &lt;legend class=&quot;heading is-sm&quot;&gt;SELECT MULTIPLE&lt;/legend&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;select class=&quot;select&quot; multiple=&quot;&quot;&gt;
+                &lt;option&gt;Select A&lt;/option&gt;
+                &lt;option&gt;Select B&lt;/option&gt;
+                &lt;option&gt;Select C&lt;/option&gt;
+                &lt;option&gt;Select D&lt;/option&gt;
+                &lt;option&gt;Select E&lt;/option&gt;
+              &lt;/select&gt;
+              &lt;select class=&quot;select&quot; multiple=&quot;&quot; disabled=&quot;&quot;&gt;
+                &lt;option&gt;Select A&lt;/option&gt;
+                &lt;option&gt;Select B&lt;/option&gt;
+                &lt;option&gt;Select C&lt;/option&gt;
+                &lt;option&gt;Select D&lt;/option&gt;
+                &lt;option&gt;Select E&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;div class=&quot;btns&quot;&gt;
+            &lt;input class=&quot;btn is-plain is-primary&quot; type=&quot;button&quot; value=&quot;インプットボタン&quot;&gt;
+            &lt;input class=&quot;btn is-plain is-primary&quot; type=&quot;button&quot; value=&quot;インプットボタン&quot; disabled=&quot;&quot;&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-  pre.pre.is-label.is-pug
-    code.code.
-      form.form
-        .group
-          p.heading Button
-          .field
-            .btns.is-space-2
-              input.btn.is-plain.is-primary(type="button" value="Input Button")
-              input.btn.is-plain.is-primary.is-disable(type="button" value="Input Button" disabled)
-        .group
-          p.heading Reset
-          .field
-            .btns.is-space-2
-              input.btn.is-plain(type="reset")
-              input.btn.is-plain.is-disable(type="reset" disabled)
-        .group
-          p.heading Submit
-          .field
-            .btns.is-space-2
-              input.btn.is-plain.is-success(type="submit")
-              input.btn.is-plain.is-success.is-disable(type="submit" disabled)
+          &lt;div class=&quot;btns&quot;&gt;
+            &lt;input class=&quot;btn is-plain&quot; type=&quot;reset&quot;&gt;
+            &lt;input class=&quot;btn is-plain&quot; type=&quot;reset&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;btns&quot;&gt;
+            &lt;input class=&quot;btn is-plain is-success&quot; type=&quot;submit&quot;&gt;
+            &lt;input class=&quot;btn is-plain is-success&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
