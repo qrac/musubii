@@ -2006,10 +2006,11 @@ img[src$=".svg"] {
 .input[type="number"] {
   max-width: 100%;
   height: 2.5em;
+  padding: calc(0.5em - 1.5px) 0.75em;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
-  padding: calc(0.5em - 1.5px) 0.75em;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .input[type="text"][disabled],
@@ -2183,10 +2184,11 @@ img[src$=".svg"] {
 .select {
   max-width: 100%;
   height: 2.5em;
+  padding: calc(0.5em - 1.5px) 0.75em;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
-  padding: calc(0.5em - 1.5px) 0.75em;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .select[multiple] {
