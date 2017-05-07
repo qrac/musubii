@@ -2209,6 +2209,12 @@ img[src$=".svg"] {
   background-color: #eeeeee;
 }
 
+.btn[type="button"],
+.btn[type="reset"],
+.btn[type="submit"] {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .field > *.is-mobile-0 {
   -webkit-flex: 1 0 0%;
   -ms-flex: 1 0 0%;
