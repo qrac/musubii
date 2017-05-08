@@ -362,7 +362,7 @@
       .grid.is-stretch
         .col.is-mobile-0
           .group.is-demo-box-1.is-grey.is-center.is-round
-            | ↓
+            | .is-stretch
             br
             | ↓
             br
@@ -379,6 +379,35 @@
       code.code.html.
         &lt;div class=&quot;group&quot;&gt;
           &lt;div class=&quot;grid is-stretch&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
+            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+.groups
+  h4.heading.is-xl Grid - Gap
+  p.texts.is-sm
+    | グリッドの溝を消す場合は、&nbsp;
+    code.code .grid
+    | &nbsp;に&nbsp;
+    code.code .is-gap-none
+    | &nbsp;を付与します。
+  .group.is-wrap.is-preview.is-strong
+    .group
+      .grid.is-gap-none
+        .col.is-mobile-0
+          .group.is-demo-box-1.is-grey.is-center
+            | .is-gap-none
+        .col.is-mobile-0
+          .group.is-demo-box-1.is-primary.is-center
+            | .is-gap-none
+    //-button.btn.is-demo-code.is-round.is-outline.is-xxs(title="View Code" type="button")
+      i.fa.fa-code.is-dark-5(aria-hidden="true")
+      span.text.is-dark-5 HTML
+    pre.pre
+      code.code.html.
+        &lt;div class=&quot;group&quot;&gt;
+          &lt;div class=&quot;grid is-gap-none&quot;&gt;
             &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
             &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
           &lt;/div&gt;

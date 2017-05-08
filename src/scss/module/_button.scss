@@ -49,6 +49,11 @@
   line-height: 1;
   text-align: center;
   transition: ease-out 0.15s;
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] {
+    color: $dark-2;
+  }
   &.is-disable,
   &[disabled] {
     cursor: default;

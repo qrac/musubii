@@ -32,7 +32,7 @@ npm install musubii
 
 ## Basic rules
 
-### Object + State
+### HTML
 
 OOCSSを踏襲しつつシンプルなCSS設計となっています。
 要素 `.(xxxx)` 1つに対して、状態 `.is-(xxxx)` を複数追加してスタイリングするのが基本です。
