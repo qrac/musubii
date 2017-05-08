@@ -291,13 +291,13 @@ textarea,
 body {
   color: rgba(0, 0, 0, 0.7);
   font-weight: 300;
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
   line-height: 1.5;
 }
 
 @media all and (-ms-high-contrast: none) {
   body {
-    font-family: Meiryo, "Hiragino Sans", "Yu Gothic", YuGothic, sans-serif;
+    font-family: Meiryo, "Hiragino Sans", sans-serif;
   }
 }
 
@@ -308,48 +308,6 @@ img {
 
 img[src$=".svg"] {
   width: 100%;
-}
-
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Bold");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Bold");
-  font-weight: bold;
 }
 
 .section > .inner {
@@ -2699,11 +2657,11 @@ img[src$=".svg"] {
 }
 
 *.is-yakuhanjp {
-  font-family: -apple-system, BlinkMacSystemFont, YakuHanJP, "Hiragino Sans", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, YakuHanJP, "Hiragino Sans", Meiryo, sans-serif;
 }
 
 *.is-yakuhanjps {
-  font-family: -apple-system, BlinkMacSystemFont, YakuHanJPs, "Hiragino Sans", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, YakuHanJPs, "Hiragino Sans", Meiryo, sans-serif;
 }
 
 *.is-normal {
