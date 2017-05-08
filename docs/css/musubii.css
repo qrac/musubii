@@ -295,12 +295,6 @@ body {
   line-height: 1.5;
 }
 
-@media all and (-ms-high-contrast: none) {
-  body {
-    font-family: Meiryo, "Hiragino Sans", sans-serif;
-  }
-}
-
 img {
   max-width: 100%;
   height: auto;
