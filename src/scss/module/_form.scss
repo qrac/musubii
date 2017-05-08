@@ -175,12 +175,6 @@
   }
 }
 
-.btn[type="button"],
-.btn[type="reset"],
-.btn[type="submit"] {
-  color: $dark-2;
-}
-
 .field > *.is-mobile-0 {
   flex: 1 0 0%;
   max-width: 100%;

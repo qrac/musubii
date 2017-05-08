@@ -1445,6 +1445,10 @@ img[src$=".svg"] {
   transition: ease-out 0.15s;
 }
 
+.btn[type="button"], .btn[type="reset"], .btn[type="submit"] {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .btn.is-disable, .btn[disabled] {
   cursor: default;
 }
@@ -2207,12 +2211,6 @@ img[src$=".svg"] {
 
 .select[readonly] {
   background-color: #eeeeee;
-}
-
-.btn[type="button"],
-.btn[type="reset"],
-.btn[type="submit"] {
-  color: rgba(0, 0, 0, 0.7);
 }
 
 .field > *.is-mobile-0 {
