@@ -804,8 +804,20 @@ img[src$=".svg"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.grid:not(.is-gap-none) {
   margin-left: -0.5em;
   margin-bottom: -0.5em;
+}
+
+.grid:not(.is-gap-none) > .col {
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.grid:not(.is-gap-none) + .grid:not(.is-gap-none) {
+  margin-top: 0.5em;
 }
 
 .grid.is-middle {
@@ -848,15 +860,6 @@ img[src$=".svg"] {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.grid + .grid {
-  margin-top: 0.5em;
-}
-
-.grid > .col {
-  padding-left: 0.5em;
-  padding-bottom: 0.5em;
 }
 
 .col.is-mobile-0 {
