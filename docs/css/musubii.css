@@ -1271,7 +1271,7 @@ img[src$=".svg"] {
 
 .text.is-link {
   cursor: pointer;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid currentColor;
 }
 
 .text.is-link:hover {
@@ -1284,7 +1284,7 @@ img[src$=".svg"] {
 }
 
 .text.is-link-reverse:hover {
-  border-color: inherit;
+  border-color: currentColor;
 }
 
 .blockquote {
@@ -2437,7 +2437,7 @@ img[src$=".svg"] {
 .wysiwyg a {
   cursor: pointer;
   color: #1cb4c7;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid currentColor;
 }
 
 .wysiwyg a:hover, .wysiwyg a:active {

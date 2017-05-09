@@ -55,7 +55,7 @@
 .wysiwyg a {
   cursor: pointer;
   color: $primary;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid currentColor;
   &:hover,
   &:active {
     border-bottom-color: transparent;

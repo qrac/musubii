@@ -8,7 +8,7 @@
 
 .text.is-link {
   cursor: pointer;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid currentColor;
   &:hover {
     border-bottom-color: transparent;
   }
@@ -18,7 +18,7 @@
   cursor: pointer;
   border-bottom: 1px solid transparent;
   &:hover {
-    border-color: inherit;
+    border-color: currentColor;
   }
 }
 
