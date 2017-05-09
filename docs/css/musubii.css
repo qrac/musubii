@@ -1,4 +1,4 @@
-/*! MUSUBii v2.1.1 MIT by Qrac */
+/*! MUSUBii v2.1.2 MIT by Qrac */
 /*! Shitaji.CSS v4.1.0 CC0 by Qrac */
 *,
 ::before,
@@ -1271,7 +1271,7 @@ img[src$=".svg"] {
 
 .text.is-link {
   cursor: pointer;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid currentColor;
 }
 
 .text.is-link:hover {
@@ -1284,7 +1284,7 @@ img[src$=".svg"] {
 }
 
 .text.is-link-reverse:hover {
-  border-color: inherit;
+  border-color: currentColor;
 }
 
 .blockquote {
@@ -2437,7 +2437,7 @@ img[src$=".svg"] {
 .wysiwyg a {
   cursor: pointer;
   color: #1cb4c7;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid currentColor;
 }
 
 .wysiwyg a:hover, .wysiwyg a:active {
@@ -2461,7 +2461,7 @@ img[src$=".svg"] {
   background-color: whitesmoke;
   border-radius: 2px;
   color: #646d9f;
-  font-size: 0.765em;
+  font-size: 0.875em;
 }
 
 .wysiwyg pre {
