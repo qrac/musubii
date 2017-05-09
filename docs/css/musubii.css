@@ -2461,7 +2461,7 @@ img[src$=".svg"] {
   background-color: whitesmoke;
   border-radius: 2px;
   color: #646d9f;
-  font-size: 0.765em;
+  font-size: 0.875em;
 }
 
 .wysiwyg pre {
