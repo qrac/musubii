@@ -2,7 +2,7 @@
 
 ## Demo & Document
 
-- [Demo Page][link-demo-1]
+- [Demo Page][link-demo]
 
 ## About
 
@@ -14,7 +14,7 @@ Webデザインの腹ごなしに、HTML/CSSフレームワーク「MUSUBii（�
 - 日本語フォントの利用を想定
 - Javascript 未使用
 
-## Install
+## Use
 
 ### Download
 
@@ -30,7 +30,13 @@ Webデザインの腹ごなしに、HTML/CSSフレームワーク「MUSUBii（�
 npm install musubii
 ```
 
-## Basic
+### [CDN][link-jsdelivr]
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/qrac/musubii@2.1.2/docs/css/musubii.min.css">
+```
+
+## Detail
 
 ### HTML
 
@@ -71,7 +77,7 @@ CSSのレイヤーは主に4つに分類されています。
 - MIT
 - Author: [Qrac][link-twitter]
 
-[link-demo-1]:https://qrac.github.io/musubii/
+[link-demo]:https://qrac.github.io/musubii/
 [link-npm]:https://www.npmjs.com/package/musubii
-[link-jsdelivr]:https://www.jsdelivr.com/projects/musubii
+[link-jsdelivr]:https://cdn.jsdelivr.net/gh/qrac/musubii/
 [link-twitter]:https://twitter.com/Qrac_JP
