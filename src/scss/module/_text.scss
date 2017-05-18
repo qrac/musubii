@@ -2,7 +2,7 @@
 // Module: Text
 //----------------------------------------------------
 
-.texts:not(.is-pre) {
+.texts {
   line-height: 1.8;
 }
 
@@ -29,28 +29,29 @@
   padding: 20px;
 }
 
+.pre,
 .code {
-  background-color: $grey-100;
   color: $indigo-500;
   font-family: $font-mono;
+}
+
+:not(.pre) .code {
+  padding: 0.2em 0.5em;
+  background-color: $grey-100;
+  border-radius: 2px;
   font-size: 0.875em;
   word-break: break-all;
-  border-radius: 2px;
-  padding: 0.2em 0.5em;
 }
 
 .pre {
   background-color: $grey-100;
   border-radius: 2px;
-  color: $indigo-500;
+  white-space: pre;
+  word-wrap: normal;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   > .code {
-    display: block;
-    background-color: transparent;
-    border-radius: 0;
     padding: 20px 25px;
-    white-space: pre;
-    word-wrap: normal;
-    overflow: hidden;
-    overflow-x: auto;
   }
 }

@@ -1,4 +1,4 @@
-/*! MUSUBii v2.1.2 MIT by Qrac */
+/*! MUSUBii v2.2.0 MIT by Qrac */
 /*! Shitaji.CSS v4.1.0 CC0 by Qrac */
 *,
 ::before,
@@ -568,6 +568,102 @@ img[src$=".svg"] {
   margin-top: 0.5em;
 }
 
+.wysiwyg h1 + h1,
+.wysiwyg h1 + h2,
+.wysiwyg h1 + h3,
+.wysiwyg h1 + h4,
+.wysiwyg h1 + h5,
+.wysiwyg h1 + h6,
+.wysiwyg h2 + h1,
+.wysiwyg h2 + h2,
+.wysiwyg h2 + h3,
+.wysiwyg h2 + h4,
+.wysiwyg h2 + h5,
+.wysiwyg h2 + h6,
+.wysiwyg h3 + h1,
+.wysiwyg h3 + h2,
+.wysiwyg h3 + h3,
+.wysiwyg h3 + h4,
+.wysiwyg h3 + h5,
+.wysiwyg h3 + h6,
+.wysiwyg h4 + h1,
+.wysiwyg h4 + h2,
+.wysiwyg h4 + h3,
+.wysiwyg h4 + h4,
+.wysiwyg h4 + h5,
+.wysiwyg h4 + h6,
+.wysiwyg h5 + h1,
+.wysiwyg h5 + h2,
+.wysiwyg h5 + h3,
+.wysiwyg h5 + h4,
+.wysiwyg h5 + h5,
+.wysiwyg h5 + h6,
+.wysiwyg h6 + h1,
+.wysiwyg h6 + h2,
+.wysiwyg h6 + h3,
+.wysiwyg h6 + h4,
+.wysiwyg h6 + h5,
+.wysiwyg h6 + h6 {
+  margin-top: 1em;
+}
+
+.wysiwyg h1 + img,
+.wysiwyg h1 + p,
+.wysiwyg h1 + blockquote,
+.wysiwyg h1 + pre,
+.wysiwyg h1 + ul,
+.wysiwyg h1 + ol,
+.wysiwyg h1 + table,
+.wysiwyg h1 + hr,
+.wysiwyg h2 + img,
+.wysiwyg h2 + p,
+.wysiwyg h2 + blockquote,
+.wysiwyg h2 + pre,
+.wysiwyg h2 + ul,
+.wysiwyg h2 + ol,
+.wysiwyg h2 + table,
+.wysiwyg h2 + hr,
+.wysiwyg h3 + img,
+.wysiwyg h3 + p,
+.wysiwyg h3 + blockquote,
+.wysiwyg h3 + pre,
+.wysiwyg h3 + ul,
+.wysiwyg h3 + ol,
+.wysiwyg h3 + table,
+.wysiwyg h3 + hr,
+.wysiwyg h4 + img,
+.wysiwyg h4 + p,
+.wysiwyg h4 + blockquote,
+.wysiwyg h4 + pre,
+.wysiwyg h4 + ul,
+.wysiwyg h4 + ol,
+.wysiwyg h4 + table,
+.wysiwyg h4 + hr,
+.wysiwyg h5 + img,
+.wysiwyg h5 + p,
+.wysiwyg h5 + blockquote,
+.wysiwyg h5 + pre,
+.wysiwyg h5 + ul,
+.wysiwyg h5 + ol,
+.wysiwyg h5 + table,
+.wysiwyg h5 + hr,
+.wysiwyg h6 + img,
+.wysiwyg h6 + p,
+.wysiwyg h6 + blockquote,
+.wysiwyg h6 + pre,
+.wysiwyg h6 + ul,
+.wysiwyg h6 + ol,
+.wysiwyg h6 + table,
+.wysiwyg h6 + hr {
+  margin-top: 1em;
+}
+
+.wysiwyg img + h1,
+.wysiwyg img + h2,
+.wysiwyg img + h3,
+.wysiwyg img + h4,
+.wysiwyg img + h5,
+.wysiwyg img + h6,
 .wysiwyg p + h1,
 .wysiwyg p + h2,
 .wysiwyg p + h3,
@@ -613,6 +709,15 @@ img[src$=".svg"] {
   margin-top: 2em;
 }
 
+.wysiwyg img + img,
+.wysiwyg img + p,
+.wysiwyg img + blockquote,
+.wysiwyg img + pre,
+.wysiwyg img + ul,
+.wysiwyg img + ol,
+.wysiwyg img + table,
+.wysiwyg img + hr,
+.wysiwyg p + img,
 .wysiwyg p + p,
 .wysiwyg p + blockquote,
 .wysiwyg p + pre,
@@ -620,6 +725,7 @@ img[src$=".svg"] {
 .wysiwyg p + ol,
 .wysiwyg p + table,
 .wysiwyg p + hr,
+.wysiwyg blockquote + img,
 .wysiwyg blockquote + p,
 .wysiwyg blockquote + blockquote,
 .wysiwyg blockquote + pre,
@@ -627,6 +733,7 @@ img[src$=".svg"] {
 .wysiwyg blockquote + ol,
 .wysiwyg blockquote + table,
 .wysiwyg blockquote + hr,
+.wysiwyg pre + img,
 .wysiwyg pre + p,
 .wysiwyg pre + blockquote,
 .wysiwyg pre + pre,
@@ -634,6 +741,7 @@ img[src$=".svg"] {
 .wysiwyg pre + ol,
 .wysiwyg pre + table,
 .wysiwyg pre + hr,
+.wysiwyg ul + img,
 .wysiwyg ul + p,
 .wysiwyg ul + blockquote,
 .wysiwyg ul + pre,
@@ -641,6 +749,7 @@ img[src$=".svg"] {
 .wysiwyg ul + ol,
 .wysiwyg ul + table,
 .wysiwyg ul + hr,
+.wysiwyg ol + img,
 .wysiwyg ol + p,
 .wysiwyg ol + blockquote,
 .wysiwyg ol + pre,
@@ -648,6 +757,7 @@ img[src$=".svg"] {
 .wysiwyg ol + ol,
 .wysiwyg ol + table,
 .wysiwyg ol + hr,
+.wysiwyg table + img,
 .wysiwyg table + p,
 .wysiwyg table + blockquote,
 .wysiwyg table + pre,
@@ -655,6 +765,7 @@ img[src$=".svg"] {
 .wysiwyg table + ol,
 .wysiwyg table + table,
 .wysiwyg table + hr,
+.wysiwyg hr + img,
 .wysiwyg hr + p,
 .wysiwyg hr + blockquote,
 .wysiwyg hr + pre,
@@ -662,90 +773,6 @@ img[src$=".svg"] {
 .wysiwyg hr + ol,
 .wysiwyg hr + table,
 .wysiwyg hr + hr {
-  margin-top: 1em;
-}
-
-.wysiwyg h1 + h1,
-.wysiwyg h1 + h2,
-.wysiwyg h1 + h3,
-.wysiwyg h1 + h4,
-.wysiwyg h1 + h5,
-.wysiwyg h1 + h6,
-.wysiwyg h2 + h1,
-.wysiwyg h2 + h2,
-.wysiwyg h2 + h3,
-.wysiwyg h2 + h4,
-.wysiwyg h2 + h5,
-.wysiwyg h2 + h6,
-.wysiwyg h3 + h1,
-.wysiwyg h3 + h2,
-.wysiwyg h3 + h3,
-.wysiwyg h3 + h4,
-.wysiwyg h3 + h5,
-.wysiwyg h3 + h6,
-.wysiwyg h4 + h1,
-.wysiwyg h4 + h2,
-.wysiwyg h4 + h3,
-.wysiwyg h4 + h4,
-.wysiwyg h4 + h5,
-.wysiwyg h4 + h6,
-.wysiwyg h5 + h1,
-.wysiwyg h5 + h2,
-.wysiwyg h5 + h3,
-.wysiwyg h5 + h4,
-.wysiwyg h5 + h5,
-.wysiwyg h5 + h6,
-.wysiwyg h6 + h1,
-.wysiwyg h6 + h2,
-.wysiwyg h6 + h3,
-.wysiwyg h6 + h4,
-.wysiwyg h6 + h5,
-.wysiwyg h6 + h6 {
-  margin-top: 1em;
-}
-
-.wysiwyg h1 + p,
-.wysiwyg h1 + blockquote,
-.wysiwyg h1 + pre,
-.wysiwyg h1 + ul,
-.wysiwyg h1 + ol,
-.wysiwyg h1 + table,
-.wysiwyg h1 + hr,
-.wysiwyg h2 + p,
-.wysiwyg h2 + blockquote,
-.wysiwyg h2 + pre,
-.wysiwyg h2 + ul,
-.wysiwyg h2 + ol,
-.wysiwyg h2 + table,
-.wysiwyg h2 + hr,
-.wysiwyg h3 + p,
-.wysiwyg h3 + blockquote,
-.wysiwyg h3 + pre,
-.wysiwyg h3 + ul,
-.wysiwyg h3 + ol,
-.wysiwyg h3 + table,
-.wysiwyg h3 + hr,
-.wysiwyg h4 + p,
-.wysiwyg h4 + blockquote,
-.wysiwyg h4 + pre,
-.wysiwyg h4 + ul,
-.wysiwyg h4 + ol,
-.wysiwyg h4 + table,
-.wysiwyg h4 + hr,
-.wysiwyg h5 + p,
-.wysiwyg h5 + blockquote,
-.wysiwyg h5 + pre,
-.wysiwyg h5 + ul,
-.wysiwyg h5 + ol,
-.wysiwyg h5 + table,
-.wysiwyg h5 + hr,
-.wysiwyg h6 + p,
-.wysiwyg h6 + blockquote,
-.wysiwyg h6 + pre,
-.wysiwyg h6 + ul,
-.wysiwyg h6 + ol,
-.wysiwyg h6 + table,
-.wysiwyg h6 + hr {
   margin-top: 1em;
 }
 
@@ -1265,7 +1292,7 @@ img[src$=".svg"] {
   line-height: 1.25;
 }
 
-.texts:not(.is-pre) {
+.texts {
   line-height: 1.8;
 }
 
@@ -1294,31 +1321,32 @@ img[src$=".svg"] {
   padding: 20px;
 }
 
+.pre,
 .code {
-  background-color: whitesmoke;
   color: #646d9f;
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
+}
+
+:not(.pre) .code {
+  padding: 0.2em 0.5em;
+  background-color: whitesmoke;
+  border-radius: 2px;
   font-size: 0.875em;
   word-break: break-all;
-  border-radius: 2px;
-  padding: 0.2em 0.5em;
 }
 
 .pre {
   background-color: whitesmoke;
   border-radius: 2px;
-  color: #646d9f;
-}
-
-.pre > .code {
-  display: block;
-  background-color: transparent;
-  border-radius: 0;
-  padding: 20px 25px;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pre > .code {
+  padding: 20px 25px;
 }
 
 .btns {
@@ -2453,6 +2481,7 @@ img[src$=".svg"] {
 
 .wysiwyg code,
 .wysiwyg pre {
+  color: #646d9f;
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
 }
 
@@ -2460,20 +2489,20 @@ img[src$=".svg"] {
   padding: 0.2em 0.5em;
   background-color: whitesmoke;
   border-radius: 2px;
-  color: #646d9f;
   font-size: 0.875em;
+  word-break: break-all;
 }
 
 .wysiwyg pre {
   padding: 20px 25px;
   background-color: whitesmoke;
   border-radius: 2px;
-  color: #646d9f;
   font-size: 0.875em;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wysiwyg ul,
@@ -2757,6 +2786,7 @@ img[src$=".svg"] {
 *.is-scroll-x {
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 *.is-ellipsis {
