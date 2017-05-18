@@ -50,6 +50,7 @@
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   > .code {
     padding: 20px 25px;
   }

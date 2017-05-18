@@ -1342,6 +1342,7 @@ img[src$=".svg"] {
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .pre > .code {
@@ -2501,6 +2502,7 @@ img[src$=".svg"] {
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wysiwyg ul,
@@ -2784,6 +2786,7 @@ img[src$=".svg"] {
 *.is-scroll-x {
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 *.is-ellipsis {

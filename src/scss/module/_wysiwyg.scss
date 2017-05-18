@@ -92,6 +92,7 @@
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wysiwyg ul,
