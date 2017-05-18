@@ -1292,7 +1292,7 @@ img[src$=".svg"] {
   line-height: 1.25;
 }
 
-.texts:not(.is-pre) {
+.texts {
   line-height: 1.8;
 }
 
@@ -1321,31 +1321,31 @@ img[src$=".svg"] {
   padding: 20px;
 }
 
+.pre,
 .code {
-  background-color: whitesmoke;
   color: #646d9f;
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
+}
+
+:not(.pre) .code {
+  padding: 0.2em 0.5em;
+  background-color: whitesmoke;
+  border-radius: 2px;
   font-size: 0.875em;
   word-break: break-all;
-  border-radius: 2px;
-  padding: 0.2em 0.5em;
 }
 
 .pre {
   background-color: whitesmoke;
   border-radius: 2px;
-  color: #646d9f;
-}
-
-.pre > .code {
-  display: block;
-  background-color: transparent;
-  border-radius: 0;
-  padding: 20px 25px;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
+}
+
+.pre > .code {
+  padding: 20px 25px;
 }
 
 .btns {
@@ -2480,6 +2480,7 @@ img[src$=".svg"] {
 
 .wysiwyg code,
 .wysiwyg pre {
+  color: #646d9f;
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
 }
 
@@ -2487,15 +2488,14 @@ img[src$=".svg"] {
   padding: 0.2em 0.5em;
   background-color: whitesmoke;
   border-radius: 2px;
-  color: #646d9f;
   font-size: 0.875em;
+  word-break: break-all;
 }
 
 .wysiwyg pre {
   padding: 20px 25px;
   background-color: whitesmoke;
   border-radius: 2px;
-  color: #646d9f;
   font-size: 0.875em;
   white-space: pre;
   word-wrap: normal;
