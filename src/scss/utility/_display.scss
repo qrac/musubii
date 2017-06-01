@@ -56,20 +56,5 @@
       display: none;
     }
   }
-  &.is-none-touch {
-    @include touch {
-      display: none;
-    }
-  }
-  &.is-none-landscape {
-    @include landscape {
-      display: none;
-    }
-  }
-  &.is-none-portrait {
-    @include portrait {
-      display: none;
-    }
-  }
 }
 

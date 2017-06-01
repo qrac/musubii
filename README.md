@@ -33,7 +33,7 @@ npm install musubii
 ### [CDN][link-jsdelivr]
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@2.2.0/docs/css/musubii.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@2.3.0/docs/css/musubii.min.css">
 ```
 
 ## Detail
