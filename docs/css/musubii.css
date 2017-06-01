@@ -2859,24 +2859,6 @@ img[src$=".svg"] {
   }
 }
 
-@media screen and (max-width: 991px) {
-  *.is-none-touch {
-    display: none;
-  }
-}
-
-@media all and (orientation: landscape) {
-  *.is-none-landscape {
-    display: none;
-  }
-}
-
-@media all and (orientation: portrait) {
-  *.is-none-portrait {
-    display: none;
-  }
-}
-
 *.is-clearfix:after {
   display: block;
   content: "";
