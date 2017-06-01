@@ -5,8 +5,7 @@
 .table {
   width: 100%;
   background-color: $light;
-  border-radius: 2px;
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
   th,
   td {
@@ -18,63 +17,27 @@
     vertical-align: middle;
   }
   > thead > tr:last-child > th {
-    border-bottom: 2px solid $dark-8;
-  }
-}
-
-.table.is-round {
-  &:not(.is-line) > thead > tr:first-child > *:first-child {
-    border-top-left-radius: 2px;
-  }
-  &:not(.is-line) > thead > tr:first-child > *:last-child {
-    border-top-right-radius: 2px;
-  }
-  &:not(.is-line) > *:last-child > tr:last-child > *:first-child {
-    border-bottom-left-radius: 2px;
-  }
-  &:not(.is-line) > *:last-child > tr:last-child > *:last-child {
-    border-bottom-right-radius: 2px;
-  }
-  &:not(.is-line) > tbody > tr:first-child > *:first-child {
-    border-top-left-radius: 2px;
-  }
-  &:not(.is-line) > thead + tbody > tr:first-child > *:first-child {
-    border-top-left-radius: 0;
-  }
-  &:not(.is-line) > tbody > tr:first-child > *:last-child {
-    border-top-right-radius: 2px;
-  }
-  &:not(.is-line) > thead + tbody > tr:first-child > *:last-child {
-    border-top-right-radius: 0;
+    border-bottom: 2px solid $blue-grey-100;
   }
 }
 
 .table.is-line {
-  border-radius: 0;
-  > thead > tr:first-child > th {
-    border-top: 1px solid $dark-7;
-  }
-  > tbody > tr > td {
-    border-bottom: 1px solid $dark-7;
+  border-top: 1px solid $blue-grey-100;
+  border-bottom: 1px solid $blue-grey-100;
+  > tbody > tr:not(:first-child) > * {
+    border-top: 1px solid $blue-grey-100;
   }
 }
 
 .table.is-outline {
-  border: 1px solid $dark-7;
+  border: 1px solid $blue-grey-100;
 }
 
 .table.is-border {
-  border: 1px solid $dark-7;
-  > thead > tr > *,
-  > tbody > tr:not(:last-child) > * {
-    border-bottom: 1px solid $dark-7;
-  }
-  th:not(:last-child),
-  td:not(:last-child) {
-    border-right: 1px solid $dark-7;
-  }
-  > tfoot > tr:last-child > * {
-    border-top: 1px solid $dark-7;
+  border: 1px solid $blue-grey-100;
+  th,
+  td {
+    border: 1px solid $blue-grey-100;
   }
 }
 

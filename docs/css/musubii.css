@@ -1801,8 +1801,7 @@ img[src$=".svg"] {
 .table {
   width: 100%;
   background-color: #ffffff;
-  border-radius: 2px;
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
 }
 
@@ -1818,73 +1817,29 @@ img[src$=".svg"] {
 }
 
 .table > thead > tr:last-child > th {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-}
-
-.table.is-round:not(.is-line) > thead > tr:first-child > *:first-child {
-  border-top-left-radius: 2px;
-}
-
-.table.is-round:not(.is-line) > thead > tr:first-child > *:last-child {
-  border-top-right-radius: 2px;
-}
-
-.table.is-round:not(.is-line) > *:last-child > tr:last-child > *:first-child {
-  border-bottom-left-radius: 2px;
-}
-
-.table.is-round:not(.is-line) > *:last-child > tr:last-child > *:last-child {
-  border-bottom-right-radius: 2px;
-}
-
-.table.is-round:not(.is-line) > tbody > tr:first-child > *:first-child {
-  border-top-left-radius: 2px;
-}
-
-.table.is-round:not(.is-line) > thead + tbody > tr:first-child > *:first-child {
-  border-top-left-radius: 0;
-}
-
-.table.is-round:not(.is-line) > tbody > tr:first-child > *:last-child {
-  border-top-right-radius: 2px;
-}
-
-.table.is-round:not(.is-line) > thead + tbody > tr:first-child > *:last-child {
-  border-top-right-radius: 0;
+  border-bottom: 2px solid #d1d7da;
 }
 
 .table.is-line {
-  border-radius: 0;
+  border-top: 1px solid #d1d7da;
+  border-bottom: 1px solid #d1d7da;
 }
 
-.table.is-line > thead > tr:first-child > th {
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.table.is-line > tbody > tr > td {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+.table.is-line > tbody > tr:not(:first-child) > * {
+  border-top: 1px solid #d1d7da;
 }
 
 .table.is-outline {
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid #d1d7da;
 }
 
 .table.is-border {
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid #d1d7da;
 }
 
-.table.is-border > thead > tr > *,
-.table.is-border > tbody > tr:not(:last-child) > * {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.table.is-border th:not(:last-child),
-.table.is-border td:not(:last-child) {
-  border-right: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.table.is-border > tfoot > tr:last-child > * {
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+.table.is-border th,
+.table.is-border td {
+  border: 1px solid #d1d7da;
 }
 
 .table.is-stripe thead {
