@@ -45,7 +45,7 @@
   align-self: flex-start;
   white-space: nowrap;
   padding: 0.75em 1em;
-  border-radius: 2px;
+  border-radius: 0.1875em;
   line-height: 1;
   text-align: center;
   transition: ease-out 0.12s;
@@ -243,12 +243,12 @@
     overflow: hidden;
   }
   > .btn:not(.is-round):first-child {
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-top-left-radius: 0.1875em;
+    border-bottom-left-radius: 0.1875em;
   }
   > .btn:not(.is-round):last-child {
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-top-right-radius: 0.1875em;
+    border-bottom-right-radius: 0.1875em;
   }
   > .btn.is-round:first-child {
     border-top-left-radius: 999em;
