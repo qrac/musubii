@@ -1,5 +1,5 @@
 //----------------------------------------------------
-/*! Shitaji.CSS v4.1.0 CC0 by Qrac */
+/*! Shitaji.CSS v4.2.0 CC0 by Qrac */
 //----------------------------------------------------
 
 *,
@@ -201,6 +201,10 @@ button:-moz-focusring,
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
+}
+
+address {
+  font-style: normal;
 }
 
 textarea {
