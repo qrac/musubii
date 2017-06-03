@@ -836,7 +836,7 @@ img[src$=".svg"] {
 
 .col.is-mobile-0 {
   -webkit-box-flex: 1;
-  flex: 1 0 0%;
+  flex: 1 0 auto;
   max-width: 100%;
 }
 
@@ -921,7 +921,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 576px) {
   .col.is-fablet-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .col.is-fablet-1 {
@@ -994,7 +994,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 768px) {
   .col.is-tablet-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .col.is-tablet-1 {
@@ -1067,7 +1067,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 992px) {
   .col.is-desktop-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .col.is-desktop-1 {
@@ -1140,7 +1140,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 1200px) {
   .col.is-wide-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .col.is-wide-1 {
@@ -1579,7 +1579,7 @@ img[src$=".svg"] {
 
 .btns > .btn.is-mobile-0 {
   -webkit-box-flex: 1;
-  flex: 1 0 0%;
+  flex: 1 0 auto;
   max-width: 100%;
 }
 
@@ -1599,7 +1599,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 576px) {
   .btns > .btn.is-fablet-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .btns > .btn.is-fablet-full {
@@ -1617,7 +1617,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 768px) {
   .btns > .btn.is-touch-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .btns > .btn.is-touch-full {
@@ -1635,7 +1635,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 992px) {
   .btns > .btn.is-desktop-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .btns > .btn.is-desktop-full {
@@ -1653,7 +1653,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 1200px) {
   .btns > .btn.is-wide-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .btns > .btn.is-wide-full {
@@ -2033,7 +2033,7 @@ img[src$=".svg"] {
 
 .field > *.is-mobile-0 {
   -webkit-box-flex: 1;
-  flex: 1 0 0%;
+  flex: 1 0 auto;
   max-width: 100%;
 }
 
@@ -2052,7 +2052,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 576px) {
   .field > *.is-fablet-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .field > *.is-fablet-full {
@@ -2070,7 +2070,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 768px) {
   .field > *.is-touch-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .field > *.is-touch-full {
@@ -2088,7 +2088,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 992px) {
   .field > *.is-desktop-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .field > *.is-desktop-full {
@@ -2106,7 +2106,7 @@ img[src$=".svg"] {
 @media screen and (min-width: 1200px) {
   .field > *.is-wide-0 {
     -webkit-box-flex: 1;
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .field > *.is-wide-full {
