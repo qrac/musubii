@@ -45,10 +45,10 @@
   align-self: flex-start;
   white-space: nowrap;
   padding: 0.75em 1em;
-  border-radius: 2px;
+  border-radius: 0.1875em;
   line-height: 1;
   text-align: center;
-  transition: ease-out 0.15s;
+  transition: ease-out 0.12s;
   &[type="button"],
   &[type="reset"],
   &[type="submit"] {
@@ -243,12 +243,12 @@
     overflow: hidden;
   }
   > .btn:not(.is-round):first-child {
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-top-left-radius: 0.1875em;
+    border-bottom-left-radius: 0.1875em;
   }
   > .btn:not(.is-round):last-child {
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-top-right-radius: 0.1875em;
+    border-bottom-right-radius: 0.1875em;
   }
   > .btn.is-round:first-child {
     border-top-left-radius: 999em;
@@ -265,7 +265,7 @@
 }
 
 .btns > .btn.is-mobile-0 {
-  flex: 1 0 0%;
+  flex: 1 0 auto;
   max-width: 100%;
 }
 
@@ -282,7 +282,7 @@
 
 @include fablet {
   .btns > .btn.is-fablet-0 {
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .btns > .btn.is-fablet-full {
@@ -297,7 +297,7 @@
 
 @include tablet {
   .btns > .btn.is-touch-0 {
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .btns > .btn.is-touch-full {
@@ -312,7 +312,7 @@
 
 @include desktop {
   .btns > .btn.is-desktop-0 {
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .btns > .btn.is-desktop-full {
@@ -327,7 +327,7 @@
 
 @include wide {
   .btns > .btn.is-wide-0 {
-    flex: 1 0 0%;
+    flex: 1 0 auto;
     max-width: 100%;
   }
   .btns > .btn.is-wide-full {
