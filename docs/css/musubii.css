@@ -1335,7 +1335,7 @@ img[src$=".svg"] {
   border-radius: 2px;
   line-height: 1;
   text-align: center;
-  transition: ease-out 0.15s;
+  transition: ease-out 0.12s;
 }
 
 .btn[type="button"], .btn[type="reset"], .btn[type="submit"] {
