@@ -908,7 +908,7 @@
               </div>
               <div class="groups">
                 <h4 class="heading is-xl">Button - Size</h4>
-                <p class="texts is-sm">サイズを表すクラス名&nbsp;<code class="code">.is-(x)</code>&nbsp;を付与することでボタンの大きさを変化させられます。</p>
+                <p class="texts is-sm">サイズを表すクラス名&nbsp;<code class="code">.is-(x)</code>&nbsp;を付与することでボタンの大きさを変化させられます。角丸のサイズは相対的に変化します。</p>
                 <div class="group is-wrap is-preview">
                   <div class="btns"><a class="btn is-plain is-xxs">極小</a><a class="btn is-plain is-xs">小さい</a><a class="btn is-plain is-sm">小さめ</a><a class="btn is-plain is-md">中くらい</a><a class="btn is-plain is-lg">大きめ</a><a class="btn is-plain is-xl">大きい</a><a class="btn is-plain is-xxl">特大</a></div>
                   <pre class="pre"><code class="code html">&lt;div class=&quot;btns&quot;&gt;
@@ -1059,10 +1059,10 @@
                   </table>
                 </div>
                 <div class="group is-wrap is-preview">
-                  <div class="btns is-space-1"><a class="btn is-plain is-mobile-0">戻る</a><a class="btn is-plain is-mobile-0 is-primary">決定</a><a class="btn is-plain is-mobile-0 is-success">登録</a><a class="btn is-plain is-mobile-0 is-danger">削除</a><a class="btn is-plain is-mobile-0 is-disable">不可</a></div>
-                  <div class="btns is-space-1"><a class="btn is-outline is-mobile-full is-desktop-0">戻る</a><a class="btn is-outline is-mobile-full is-desktop-0 is-primary">決定</a><a class="btn is-outline is-mobile-full is-desktop-0 is-success">登録</a><a class="btn is-outline is-mobile-full is-desktop-0 is-danger">削除</a><a class="btn is-outline is-mobile-full is-desktop-0 is-disable">不可</a></div>
+                  <div class="btns"><a class="btn is-plain is-mobile-0">戻る</a><a class="btn is-plain is-mobile-0 is-primary">決定</a><a class="btn is-plain is-mobile-0 is-success">登録</a><a class="btn is-plain is-mobile-0 is-danger">削除</a><a class="btn is-plain is-mobile-0 is-disable">不可</a></div>
+                  <div class="btns"><a class="btn is-outline is-mobile-full is-desktop-0">戻る</a><a class="btn is-outline is-mobile-full is-desktop-0 is-primary">決定</a><a class="btn is-outline is-mobile-full is-desktop-0 is-success">登録</a><a class="btn is-outline is-mobile-full is-desktop-0 is-danger">削除</a><a class="btn is-outline is-mobile-full is-desktop-0 is-disable">不可</a></div>
                   <div class="group is-wrap is-paint">
-                    <div class="btns is-space-1"><a class="btn is-ghost is-mobile-0">戻る</a><a class="btn is-ghost is-mobile-0 is-primary">決定</a><a class="btn is-ghost is-mobile-0 is-success">登録</a><a class="btn is-ghost is-mobile-0 is-danger">削除</a><a class="btn is-ghost is-mobile-0 is-disable">不可</a></div>
+                    <div class="btns"><a class="btn is-ghost is-mobile-0">戻る</a><a class="btn is-ghost is-mobile-0 is-primary">決定</a><a class="btn is-ghost is-mobile-0 is-success">登録</a><a class="btn is-ghost is-mobile-0 is-danger">削除</a><a class="btn is-ghost is-mobile-0 is-disable">不可</a></div>
                   </div>
                   <pre class="pre"><code class="code html">&lt;a class=&quot;btn is-plain is-(xxxx)-(y)&quot;&gt;...&lt;/a&gt;
 </code></pre>
@@ -1156,7 +1156,7 @@
                 <h3 class="heading is-xl">Table</h3>
                 <p class="texts is-sm">テーブルの装飾には、親要素に&nbsp;<code class="code">.table</code>&nbsp;、変化させたい箇所に&nbsp;<code class="code">.box</code>&nbsp;を用います。<br>幅の指定や連結は、HTMLタグへの記述で行います。</p>
                 <div class="group is-wrap is-preview">
-                  <table class="table is-stripe is-border is-center is-round is-middle is-sm">
+                  <table class="table is-stripe is-border is-center is-middle is-sm">
                     <thead>
                       <tr class="box is-paint">
                         <th width="20"></th>
@@ -1207,7 +1207,7 @@
                       </tr>
                     </tfoot>
                   </table>
-                  <pre class="pre"><code class="code html">&lt;table class=&quot;table is-stripe is-border is-round is-center is-middle&quot;&gt;
+                  <pre class="pre"><code class="code html">&lt;table class=&quot;table is-stripe is-border is-center is-middle&quot;&gt;
   &lt;thead&gt;
     &lt;tr class=&quot;box is-paint&quot;&gt;
       &lt;th width=&quot;20&quot;&gt;&lt;/th&gt;

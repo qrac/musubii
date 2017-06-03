@@ -13,11 +13,9 @@
 }
 
 .section.is-topcover {
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   height: 360px;
   padding: 0 0 24px;
@@ -350,27 +348,21 @@
 }
 
 .mark-demo {
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   height: calc(1.5em + 1px);
 }
 
 .mark-demo .mark-demo-wrap {
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   width: 1em;
   height: 1em;
@@ -394,8 +386,7 @@
 }
 
 .tabs {
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
 }
 
@@ -406,19 +397,16 @@
 }
 
 .tabs.is-split > .tab {
-  -webkit-flex: 1 0 0%;
-  -ms-flex: 1 0 0%;
+  -webkit-box-flex: 1;
   flex: 1 0 0%;
 }
 
 .tab {
   cursor: pointer;
   position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   height: 4.5em;
   border-top: 4px solid transparent;
@@ -456,7 +444,7 @@
 
 .section.is-topcover {
   overflow: hidden;
-  transition: ease-out 0.2s;
+  transition: ease-out 0.12s;
 }
 
 .section.is-topcover:not(.is-active) {
