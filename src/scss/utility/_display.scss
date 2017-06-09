@@ -2,59 +2,67 @@
 // Utility: Display
 //----------------------------------------------------
 
-* {
-  &.is-block {
-    display: block;
-  }
-  &.is-inline {
-    display: inline;
-  }
-  &.is-inline-block {
-    display: inline-block;
-  }
-  &.is-none,
-  &.is-none-mobile {
+.is-block {
+  display: block;
+}
+
+.is-inline {
+  display: inline;
+}
+
+.is-inline-block {
+  display: inline-block;
+}
+
+.is-none,
+.is-none-mobile {
+  display: none;
+}
+
+.is-none-fablet {
+  @include fablet {
     display: none;
-  }
-  &.is-none-fablet {
-    @include fablet {
-      display: none;
-    }
-  }
-  &.is-none-tablet {
-    @include tablet {
-      display: none;
-    }
-  }
-  &.is-none-desktop {
-    @include desktop {
-      display: none;
-    }
-  }
-  &.is-none-wide {
-    @include wide {
-      display: none;
-    }
-  }
-  &.is-none-mobile-only {
-    @include mobile-only {
-      display: none;
-    }
-  }
-  &.is-none-fablet-only {
-    @include fablet-only {
-      display: none;
-    }
-  }
-  &.is-none-tablet-only {
-    @include tablet-only {
-      display: none;
-    }
-  }
-  &.is-none-desktop-only {
-    @include desktop-only {
-      display: none;
-    }
   }
 }
 
+.is-none-tablet {
+  @include tablet {
+    display: none;
+  }
+}
+
+.is-none-desktop {
+  @include desktop {
+    display: none;
+  }
+}
+
+.is-none-wide {
+  @include wide {
+    display: none;
+  }
+}
+
+.is-none-mobile-only {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.is-none-fablet-only {
+  @include fablet-only {
+    display: none;
+  }
+}
+
+.is-none-tablet-only {
+  @include tablet-only {
+    display: none;
+  }
+}
+
+.is-none-desktop-only {
+  @include desktop-only {
+    display: none;
+  }
+}
