@@ -2,148 +2,171 @@
 // Utility: Deco
 //----------------------------------------------------
 
-* {
-  &.is-dark {
-    color: $dark;
-  }
-  &.is-dark-1 {
-    color: $dark-1;
-  }
-  &.is-dark-2 {
-    color: $dark-2;
-  }
-  &.is-dark-3 {
-    color: $dark-3;
-  }
-  &.is-dark-4 {
-    color: $dark-4;
-  }
-  &.is-dark-5 {
-    color: $dark-5;
-  }
-  &.is-dark-6 {
-    color: $dark-6;
-  }
-  &.is-dark-7 {
-    color: $dark-7;
-  }
-  &.is-dark-8 {
-    color: $dark-8;
-  }
-  &.is-dark-9 {
-    color: $dark-9;
-  }
+.is-dark {
+  color: $dark;
 }
 
-* {
-  &.is-light {
-    color: $light;
-  }
-  &.is-light-1 {
-    color: $light-1;
-  }
-  &.is-light-2 {
-    color: $light-2;
-  }
-  &.is-light-3 {
-    color: $light-3;
-  }
-  &.is-light-4 {
-    color: $light-4;
-  }
-  &.is-light-5 {
-    color: $light-5;
-  }
-  &.is-light-6 {
-    color: $light-6;
-  }
-  &.is-light-7 {
-    color: $light-7;
-  }
-  &.is-light-8 {
-    color: $light-8;
-  }
-  &.is-light-9 {
-    color: $light-9;
-  }
+.is-dark-1 {
+  color: $dark-1;
 }
 
-* {
-  &.is-primary:not(.btn) {
-    color: $primary;
-  }
-  &.is-info:not(.btn) {
-    color: $info;
-  }
-  &.is-success:not(.btn) {
-    color: $success;
-  }
-  &.is-warning:not(.btn) {
-    color: $warning;
-  }
-  &.is-danger:not(.btn) {
-    color: $danger;
-  }
+.is-dark-2 {
+  color: $dark-2;
 }
 
-* {
-  &.is-yakuhanjp {
-    font-family: $font-sans-yakuhanjp;
-  }
-  &.is-yakuhanjps {
-    font-family: $font-sans-yakuhanjps;
-  }
+.is-dark-3 {
+  color: $dark-3;
 }
 
-* {
-  &.is-normal {
-    font-weight: 300;
-  }
-  &.is-strong {
-    font-weight: 700;
-  }
-  &.is-weight-100 {
-    font-weight: 100;
-  }
-  &.is-weight-200 {
-    font-weight: 200;
-  }
-  &.is-weight-300 {
-    font-weight: 300;
-  }
-  &.is-weight-400 {
-    font-weight: 400;
-  }
-  &.is-weight-500 {
-    font-weight: 500;
-  }
-  &.is-weight-700 {
-    font-weight: 700;
-  }
-  &.is-weight-900 {
-    font-weight: 900;
-  }
+.is-dark-4 {
+  color: $dark-4;
 }
 
-* {
-  &.is-italic {
-    font-style: italic;
-  }
-  &.is-delete {
-    text-decoration: line-through;
-  }
-  &.is-capitalize {
-    text-transform: capitalize;
-  }
-  &.is-lowercase {
-    text-transform: lowercase;
-  }
-  &.is-uppercase {
-    text-transform: uppercase;
-  }
+.is-dark-5 {
+  color: $dark-5;
 }
 
-*:not(.grid):not(.btns):not(.field) {
+.is-dark-6 {
+  color: $dark-6;
+}
+
+.is-dark-7 {
+  color: $dark-7;
+}
+
+.is-dark-8 {
+  color: $dark-8;
+}
+
+.is-dark-9 {
+  color: $dark-9;
+}
+
+.is-light {
+  color: $light;
+}
+
+.is-light-1 {
+  color: $light-1;
+}
+
+.is-light-2 {
+  color: $light-2;
+}
+
+.is-light-3 {
+  color: $light-3;
+}
+
+.is-light-4 {
+  color: $light-4;
+}
+
+.is-light-5 {
+  color: $light-5;
+}
+
+.is-light-6 {
+  color: $light-6;
+}
+
+.is-light-7 {
+  color: $light-7;
+}
+
+.is-light-8 {
+  color: $light-8;
+}
+
+.is-light-9 {
+  color: $light-9;
+}
+
+.is-primary:not(.btn) {
+  color: $primary;
+}
+
+.is-info:not(.btn) {
+  color: $info;
+}
+
+.is-success:not(.btn) {
+  color: $success;
+}
+
+.is-warning:not(.btn) {
+  color: $warning;
+}
+
+.is-danger:not(.btn) {
+  color: $danger;
+}
+
+.is-yakuhanjp {
+  font-family: $font-sans-yakuhanjp;
+}
+
+.is-yakuhanjps {
+  font-family: $font-sans-yakuhanjps;
+}
+
+.is-normal {
+  font-weight: 300;
+}
+
+.is-strong {
+  font-weight: 700;
+}
+
+.is-weight-100 {
+  font-weight: 100;
+}
+
+.is-weight-200 {
+  font-weight: 200;
+}
+
+.is-weight-300 {
+  font-weight: 300;
+}
+
+.is-weight-400 {
+  font-weight: 400;
+}
+
+.is-weight-500 {
+  font-weight: 500;
+}
+
+.is-weight-700 {
+  font-weight: 700;
+}
+
+.is-weight-900 {
+  font-weight: 900;
+}
+
+.is-italic {
+  font-style: italic;
+}
+
+.is-delete {
+  text-decoration: line-through;
+}
+
+.is-capitalize {
+  text-transform: capitalize;
+}
+
+.is-lowercase {
+  text-transform: lowercase;
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+:not(.grid):not(.btns):not(.field) {
   &.is-left {
     text-align: left;
   }
@@ -167,27 +190,26 @@
   }
 }
 
-* {
-  &.is-nowrap {
-    white-space: nowrap;
-  }
-  &.is-break {
-    word-break: break-all;
-  }
+.is-nowrap {
+  white-space: nowrap;
 }
 
-* {
-  &.is-centering {
-    margin: 0 auto;
-  }
-  &.is-scroll-x {
-    overflow: hidden;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  &.is-ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.is-break {
+  word-break: break-all;
+}
+
+.is-centering {
+  margin: 0 auto;
+}
+
+.is-scroll-x {
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.is-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

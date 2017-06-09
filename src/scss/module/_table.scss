@@ -24,7 +24,7 @@
 .table.is-line {
   border-top: 1px solid $blue-grey-100;
   border-bottom: 1px solid $blue-grey-100;
-  > tbody > tr:not(:first-child) > * {
+  > tbody > tr:not(:first-child) {
     border-top: 1px solid $blue-grey-100;
   }
 }
@@ -50,7 +50,9 @@
   }
 }
 
-.table * {
+.table tr,
+.table th,
+.table td {
   &.is-paint {
     background-color: $cyan-500;
     color: $light;
