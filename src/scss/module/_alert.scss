@@ -8,23 +8,23 @@
   border-radius: 2px;
   padding: 0.675em 0.875em;
   &.is-primary {
-    background: lighten($cyan-100, 5%);
+    background: lighten($cyan-100, 8%);
     border-color: $cyan-200;
   }
   &.is-info {
-    background: lighten($blue-100, 5%);
+    background: lighten($blue-100, 7%);
     border-color: $blue-200;
   }
   &.is-success {
-    background: lighten($green-100, 5%);
-    border-color: $green-200;
+    background: lighten($green-a100, 7%);
+    border-color: lighten($green-a200, 3%);
   }
   &.is-warning {
-    background: $yellow-200;
-    border-color: $yellow-500;
+    background: lighten($orange-100, 5%);
+    border-color: $orange-200;
   }
   &.is-danger {
-    background: $red-100;
-    border-color: $red-200;
+    background: lighten($red-100, 5%);
+    border-color: lighten($red-a100, 5%);
   }
 }

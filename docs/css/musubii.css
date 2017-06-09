@@ -2197,28 +2197,28 @@ img[src$=".svg"] {
 }
 
 .alert.is-primary {
-  background: #e1f4f6;
+  background: #edf8fa;
   border-color: #9fdde4;
 }
 
 .alert.is-info {
-  background: #e5f0f9;
+  background: #eef5fb;
   border-color: #abd0ed;
 }
 
 .alert.is-success {
-  background: #e7f0e7;
-  border-color: #b8d2b9;
+  background: #eaf8ee;
+  border-color: #96e2bd;
 }
 
 .alert.is-warning {
-  background: #f5eeb7;
-  border-color: #e8db61;
+  background: #faf0df;
+  border-color: #f1cf9d;
 }
 
 .alert.is-danger {
-  background: #fdd9dd;
-  border-color: #eba8a8;
+  background: #fef1f3;
+  border-color: #f4b9b4;
 }
 
 .wysiwyg h1,
@@ -2487,7 +2487,7 @@ img[src$=".svg"] {
 }
 
 .is-warning:not(.btn) {
-  color: #e8db61;
+  color: #e1902a;
 }
 
 .is-danger:not(.btn) {
