@@ -42,7 +42,7 @@
 @for $i from 0 through $split-grid {
   @if $i == 0 {
     .col.is-mobile-#{$i} {
-      flex: 1 0 auto;
+      flex: 1 0 0%;
       max-width: 100%;
     }
   }
@@ -63,7 +63,7 @@
   @for $i from 0 through $split-grid {
     @if $i == 0 {
       .col.is-fablet-#{$i} {
-        flex: 1 0 auto;
+        flex: 1 0 0%;
         max-width: 100%;
       }
     }
@@ -84,7 +84,7 @@
   @for $i from 0 through $split-grid {
     @if $i == 0 {
       .col.is-tablet-#{$i} {
-        flex: 1 0 auto;
+        flex: 1 0 0%;
         max-width: 100%;
       }
     }
@@ -105,7 +105,7 @@
   @for $i from 0 through $split-grid {
     @if $i == 0 {
       .col.is-desktop-#{$i} {
-        flex: 1 0 auto;
+        flex: 1 0 0%;
         max-width: 100%;
       }
     }
@@ -126,7 +126,7 @@
   @for $i from 0 through $split-grid {
     @if $i == 0 {
       .col.is-wide-#{$i} {
-        flex: 1 0 auto;
+        flex: 1 0 0%;
         max-width: 100%;
       }
     }
