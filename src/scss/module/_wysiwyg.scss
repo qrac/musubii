@@ -64,9 +64,10 @@
 
 .wysiwyg blockquote {
   background-color: $grey-100;
-  border-left: 8px solid $dark-9;
-  border-radius: 2px;
-  padding: 20px;
+  border-left: 0.5em solid $dark-9;
+  border-radius: 0.125em;
+  padding: 1.5em;
+  font-size: 0.875em;
 }
 
 .wysiwyg code,
@@ -75,24 +76,29 @@
   font-family: $font-mono;
 }
 
-.wysiwyg :not(pre) code {
-  padding: 0.2em 0.5em;
-  background-color: $grey-100;
-  border-radius: 2px;
-  font-size: 0.875em;
-  word-break: break-all;
+.wysiwyg :not(pre) {
+  > code {
+    padding: 0.2em 0.5em;
+    background-color: $grey-100;
+    border-radius: 0.1875em;
+    font-size: 0.875em;
+    word-break: break-all;
+  }
 }
 
 .wysiwyg pre {
-  padding: 20px 25px;
   background-color: $grey-100;
-  border-radius: 2px;
+  border-radius: 0.125em;
   font-size: 0.875em;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  > code {
+    display: block;
+    padding: 1.25em 1.5em;
+  }
 }
 
 .wysiwyg ul,

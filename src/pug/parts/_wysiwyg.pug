@@ -73,18 +73,16 @@
         | &nbsp;タグで囲む。インラインでコードを表記することができるので、ちょっとしたコードへの説明が容易になります。逆に、コード自体をブロック化して全体を伝える場合は&nbsp;
         code pre
         | &nbsp;で囲み、以下のように表示させます。
-      pre.
-        .wysiwyg pre {
-          color: $light;
-          background-color: $dark-2;
-          font-size: 0.875em;
-          border-radius: 2px;
-          padding: 20px 25px;
-          white-space: pre;
-          word-wrap: normal;
-          overflow: hidden;
-          overflow-x: auto;
-        }
+      pre
+        code.
+          html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            overflow-y: scroll;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+          }
       p
         | WYSIWYGのテキストには、
         strong 強調表示
@@ -117,7 +115,7 @@
             td(align="left") 左寄せ
             td(align="center") 4行目
             td(align="right") 右寄せ
-    pre.pre
+    pre.pre.is-sm
       code.code.html.
         &lt;div class=&quot;wysiwyg&quot;&gt;
           &lt;h1&gt;1番目に大きな見出し&lt;/h1&gt;
@@ -159,17 +157,18 @@
           &lt;p&gt;WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、&lt;a&gt;データベース&lt;/a&gt;からの動的な出力を行う「&lt;strong&gt;WordPress&lt;/strong&gt;」などのプログラムを想定しています。&lt;/p&gt;
           &lt;blockquote&gt;引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾を施しています。&lt;/blockquote&gt;
           &lt;p&gt;文章の途中にコードを書きたい場合は&amp;nbsp;&lt;code&gt;code&lt;/code&gt;&amp;nbsp;タグで囲む。インラインでコードを表記することができるので、ちょっとしたコードへの説明が容易になります。逆に、コード自体をブロック化して全体を伝える場合は&amp;nbsp;&lt;code&gt;pre&lt;/code&gt;&amp;nbsp;で囲み、以下のように表示させます。&lt;/p&gt;
-          &lt;pre&gt;.wysiwyg pre {
-          color: $light;
-          background-color: $dark-2;
-          font-size: 0.875em;
-          border-radius: 2px;
-          padding: 20px 25px;
-          white-space: pre;
-          word-wrap: normal;
-          overflow: hidden;
-          overflow-x: auto;
-        }&lt;/pre&gt;
+          &lt;pre&gt;
+            &lt;code&gt;
+              html {
+                box-sizing: border-box;
+                font-family: sans-serif;
+                overflow-y: scroll;
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+                -webkit-tap-highlight-color: transparent;
+              }
+            &lt;/code&gt;
+          &lt;/pre&gt;
           &lt;p&gt;WYSIWYGのテキストには、&lt;strong&gt;強調表示&lt;/strong&gt;・&lt;em&gt;イタリック表示&lt;/em&gt;・
             &lt;br&gt;
             &lt;s&gt;打ち消し線&lt;/s&gt;などのスタイルを用いることができます。その他、テーブルを組んだ場合は以下の通り。テーブル内のテキストを寄せる方向はインラインで書き込みます。

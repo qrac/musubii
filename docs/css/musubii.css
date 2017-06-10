@@ -1,4 +1,4 @@
-/*! MUSUBii v3.1.0 MIT by Qrac */
+/*! MUSUBii v3.2.0 MIT by Qrac */
 /*! Shitaji.CSS v4.3.0 CC0 by Qrac */
 *,
 ::before,
@@ -1239,9 +1239,9 @@ img[src$=".svg"] {
 
 .blockquote {
   background-color: whitesmoke;
-  border-left: 8px solid rgba(0, 0, 0, 0.05);
-  border-radius: 2px;
-  padding: 20px;
+  border-left: 0.5em solid rgba(0, 0, 0, 0.05);
+  border-radius: 0.125em;
+  padding: 1.5em;
 }
 
 .pre,
@@ -1250,17 +1250,17 @@ img[src$=".svg"] {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
 }
 
-:not(.pre) .code {
+:not(.pre) > .code {
   padding: 0.2em 0.5em;
   background-color: whitesmoke;
-  border-radius: 2px;
+  border-radius: 0.1875em;
   font-size: 0.875em;
   word-break: break-all;
 }
 
 .pre {
   background-color: whitesmoke;
-  border-radius: 2px;
+  border-radius: 0.125em;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
@@ -1269,7 +1269,8 @@ img[src$=".svg"] {
 }
 
 .pre > .code {
-  padding: 20px 25px;
+  display: block;
+  padding: 1.25em 1.5em;
 }
 
 .btns {
@@ -2289,9 +2290,10 @@ img[src$=".svg"] {
 
 .wysiwyg blockquote {
   background-color: whitesmoke;
-  border-left: 8px solid rgba(0, 0, 0, 0.05);
-  border-radius: 2px;
-  padding: 20px;
+  border-left: 0.5em solid rgba(0, 0, 0, 0.05);
+  border-radius: 0.125em;
+  padding: 1.5em;
+  font-size: 0.875em;
 }
 
 .wysiwyg code,
@@ -2300,24 +2302,28 @@ img[src$=".svg"] {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
 }
 
-.wysiwyg :not(pre) code {
+.wysiwyg :not(pre) > code {
   padding: 0.2em 0.5em;
   background-color: whitesmoke;
-  border-radius: 2px;
+  border-radius: 0.1875em;
   font-size: 0.875em;
   word-break: break-all;
 }
 
 .wysiwyg pre {
-  padding: 20px 25px;
   background-color: whitesmoke;
-  border-radius: 2px;
+  border-radius: 0.125em;
   font-size: 0.875em;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.wysiwyg pre > code {
+  display: block;
+  padding: 1.25em 1.5em;
 }
 
 .wysiwyg ul,
