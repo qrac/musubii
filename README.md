@@ -1,6 +1,6 @@
 # MUSUBii
 
-## Demo & Document
+## Demo & Documentation
 
 - [Demo Page][link-demo]
 
@@ -13,28 +13,6 @@ Webデザインの腹ごなしに、HTML/CSSフレームワーク「MUSUBii（�
 - OOCSSを応用したラフな設計
 - 日本語フォントの利用を想定
 - Javascript 未使用
-
-## Use
-
-### Download
-
-ファイルをダウンロード後、CSSファイル `musubii.min.css` を読み込んでお使いください。
-
-```html
-<link rel="stylesheet" href="css/musubii.min.css">
-```
-
-### [npm][link-npm]
-
-```
-npm install musubii
-```
-
-### [CDN][link-jsdelivr]
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@3.1.0/docs/css/musubii.min.css">
-```
 
 ## Detail
 
@@ -61,6 +39,28 @@ CSSのレイヤーは主に4つに分類されています。
 - *Tablet* … 768px ~ 991px
 - *Desktop* … 992px ~ 1199px
 - *Wide* … 1200px ~
+
+## Use
+
+### Download
+
+ファイルをダウンロード後、CSSファイル `musubii.min.css` を読み込んでお使いください。
+
+```html
+<link rel="stylesheet" href="css/musubii.min.css">
+```
+
+### [npm][link-npm]
+
+```
+npm install musubii
+```
+
+### [CDN][link-jsdelivr]
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@3.1.0/docs/css/musubii.min.css">
+```
 
 ## Support
 
