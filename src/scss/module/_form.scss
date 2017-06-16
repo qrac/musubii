@@ -209,15 +209,15 @@
 }
 
 @include tablet {
-  .field > .is-touch-0 {
+  .field > .is-tablet-0 {
     flex: 1 0 auto;
     max-width: 100%;
   }
-  .field > .is-touch-full {
+  .field > .is-tablet-full {
     flex: 0 1 100%;
     max-width: 100%;
   }
-  .field > .is-touch-auto {
+  .field > .is-tablet-auto {
     flex: 0 1 auto;
     max-width: 100%;
   }

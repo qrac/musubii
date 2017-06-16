@@ -1,4 +1,4 @@
-/*! MUSUBii v3.2.0 MIT by Qrac */
+/*! MUSUBii v3.3.0 MIT by Qrac */
 /*! Shitaji.CSS v4.3.0 CC0 by Qrac */
 *,
 ::before,
@@ -1620,17 +1620,17 @@ img[src$=".svg"] {
 }
 
 @media screen and (min-width: 768px) {
-  .btns > .btn.is-touch-0 {
+  .btns > .btn.is-tablet-0 {
     -webkit-box-flex: 1;
     flex: 1 0 auto;
     max-width: 100%;
   }
-  .btns > .btn.is-touch-full {
+  .btns > .btn.is-tablet-full {
     -webkit-box-flex: 0;
     flex: 0 1 100%;
     max-width: 100%;
   }
-  .btns > .btn.is-touch-auto {
+  .btns > .btn.is-tablet-auto {
     -webkit-box-flex: 0;
     flex: 0 1 auto;
     max-width: 100%;
@@ -2084,17 +2084,17 @@ img[src$=".svg"] {
 }
 
 @media screen and (min-width: 768px) {
-  .field > .is-touch-0 {
+  .field > .is-tablet-0 {
     -webkit-box-flex: 1;
     flex: 1 0 auto;
     max-width: 100%;
   }
-  .field > .is-touch-full {
+  .field > .is-tablet-full {
     -webkit-box-flex: 0;
     flex: 0 1 100%;
     max-width: 100%;
   }
-  .field > .is-touch-auto {
+  .field > .is-tablet-auto {
     -webkit-box-flex: 0;
     flex: 0 1 auto;
     max-width: 100%;
