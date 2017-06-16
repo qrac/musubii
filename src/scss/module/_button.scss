@@ -300,15 +300,15 @@
 }
 
 @include tablet {
-  .btns > .btn.is-touch-0 {
+  .btns > .btn.is-tablet-0 {
     flex: 1 0 auto;
     max-width: 100%;
   }
-  .btns > .btn.is-touch-full {
+  .btns > .btn.is-tablet-full {
     flex: 0 1 100%;
     max-width: 100%;
   }
-  .btns > .btn.is-touch-auto {
+  .btns > .btn.is-tablet-auto {
     flex: 0 1 auto;
     max-width: 100%;
   }
