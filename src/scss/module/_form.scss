@@ -179,7 +179,7 @@
 }
 
 .field > .is-mobile-0 {
-  flex: 1 0 auto;
+  flex: 1 0 0%;
   max-width: 100%;
 }
 
@@ -195,7 +195,7 @@
 
 @include fablet {
   .field > .is-fablet-0 {
-    flex: 1 0 auto;
+    flex: 1 0 0%;
     max-width: 100%;
   }
   .field > .is-fablet-full {
@@ -210,7 +210,7 @@
 
 @include tablet {
   .field > .is-tablet-0 {
-    flex: 1 0 auto;
+    flex: 1 0 0%;
     max-width: 100%;
   }
   .field > .is-tablet-full {
@@ -225,7 +225,7 @@
 
 @include desktop {
   .field > .is-desktop-0 {
-    flex: 1 0 auto;
+    flex: 1 0 0%;
     max-width: 100%;
   }
   .field > .is-desktop-full {
@@ -240,7 +240,7 @@
 
 @include wide {
   .field > .is-wide-0 {
-    flex: 1 0 auto;
+    flex: 1 0 0%;
     max-width: 100%;
   }
   .field > .is-wide-full {
