@@ -1762,7 +1762,7 @@ img[src$=".svg"] {
 .table tr.is-spot,
 .table th.is-spot,
 .table td.is-spot {
-  background-color: #f5eeb7;
+  background-color: #f9f2b3;
 }
 
 .table tr.is-danger,
@@ -2213,8 +2213,8 @@ img[src$=".svg"] {
 }
 
 .alert.is-warning {
-  background: #faf0df;
-  border-color: #f1cf9d;
+  background: #fbf0de;
+  border-color: #f4d09a;
 }
 
 .alert.is-danger {
@@ -2493,7 +2493,7 @@ img[src$=".svg"] {
 }
 
 .is-warning:not(.btn) {
-  color: #e1902a;
+  color: #e79024;
 }
 
 .is-danger:not(.btn) {
