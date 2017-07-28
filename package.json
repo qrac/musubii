@@ -1,7 +1,7 @@
 {
   "name": "musubii",
   "description": "HTML/CSS Framework for JP",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "style": "docs/css/musubii.css",
   "keywords": ["css", "framework", "musubii", "japanese"],
   "homepage": "https://github.com/qrac/musubii",

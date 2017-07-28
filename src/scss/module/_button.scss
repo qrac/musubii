@@ -269,7 +269,7 @@
 }
 
 .btns > .btn.is-mobile-0 {
-  flex: 1 0 auto;
+  flex: 1 0 0%;
   max-width: 100%;
 }
 
@@ -286,7 +286,7 @@
 
 @include fablet {
   .btns > .btn.is-fablet-0 {
-    flex: 1 0 auto;
+    flex: 1 0 0%;
     max-width: 100%;
   }
   .btns > .btn.is-fablet-full {
@@ -301,7 +301,7 @@
 
 @include tablet {
   .btns > .btn.is-tablet-0 {
-    flex: 1 0 auto;
+    flex: 1 0 0%;
     max-width: 100%;
   }
   .btns > .btn.is-tablet-full {
@@ -316,7 +316,7 @@
 
 @include desktop {
   .btns > .btn.is-desktop-0 {
-    flex: 1 0 auto;
+    flex: 1 0 0%;
     max-width: 100%;
   }
   .btns > .btn.is-desktop-full {
@@ -331,7 +331,7 @@
 
 @include wide {
   .btns > .btn.is-wide-0 {
-    flex: 1 0 auto;
+    flex: 1 0 0%;
     max-width: 100%;
   }
   .btns > .btn.is-wide-full {
