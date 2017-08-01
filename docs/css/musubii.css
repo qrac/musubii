@@ -1,4 +1,4 @@
-/*! MUSUBii v3.4.0 MIT by Qrac */
+/*! MUSUBii v3.5.0 MIT by Qrac */
 /*! Shitaji.CSS v4.3.0 CC0 by Qrac */
 *,
 ::before,
@@ -1333,9 +1333,9 @@ img[src$=".svg"] {
   display: inline-block;
   align-self: flex-start;
   white-space: nowrap;
-  padding: 0.75em 1em;
+  padding: 0 1em;
   border-radius: 0.1875em;
-  line-height: 1;
+  line-height: 2.5em;
   text-align: center;
   transition: ease-out 0.12s;
 }
@@ -1346,6 +1346,12 @@ img[src$=".svg"] {
 
 .btn.is-disable, .btn[disabled] {
   cursor: default;
+}
+
+.btn.is-full {
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .btn.is-round {
@@ -1371,10 +1377,8 @@ img[src$=".svg"] {
   transform: translate(-50%, -50%);
 }
 
-.btn.is-full {
-  -webkit-box-flex: 0;
-  flex: 0 0 100%;
-  max-width: 100%;
+.btn > .fa {
+  vertical-align: top;
 }
 
 .btn.is-floating:not(.is-disable) {
@@ -1843,12 +1847,13 @@ img[src$=".svg"] {
 .input[type="time"],
 .input[type="number"] {
   max-width: 100%;
-  height: 2.5em;
-  padding: calc(0.5em - 1.5px) 0.75em;
+  height: calc(2.5em + 2px);
+  padding: 0 0.75em;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.7);
+  line-height: 2.5em;
 }
 
 .input[type="text"][disabled],
@@ -2021,12 +2026,13 @@ img[src$=".svg"] {
 
 .select {
   max-width: 100%;
-  height: 2.5em;
-  padding: calc(0.5em - 1.5px) 0.75em;
+  height: calc(2.5em + 2px);
+  padding: 0 0.75em;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.7);
+  line-height: 2.5em;
 }
 
 .select[multiple] {
@@ -2153,7 +2159,7 @@ img[src$=".svg"] {
 .im + .text,
 .fa + .text,
 .material-icons + .text {
-  margin-left: 0.25em;
+  margin-left: 0.375em;
 }
 
 .icon + .icon:not(.is-fit),
@@ -2172,14 +2178,14 @@ img[src$=".svg"] {
 .material-icons + .im:not(.is-fit),
 .material-icons + .fa:not(.is-fit),
 .material-icons + .material-icons:not(.is-fit) {
-  margin-left: 0.25em;
+  margin-left: 0.375em;
 }
 
 .text + .icon,
 .text + .im,
 .text + .fa,
 .text + .material-icons {
-  margin-left: 0.25em;
+  margin-left: 0.375em;
 }
 
 .icon.is-fit,

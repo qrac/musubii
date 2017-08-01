@@ -45,9 +45,9 @@
   display: inline-block;
   align-self: flex-start;
   white-space: nowrap;
-  padding: 0.75em 1em;
+  padding: 0 1em;
   border-radius: 0.1875em;
-  line-height: 1;
+  line-height: 2.5em;
   text-align: center;
   transition: ease-out 0.12s;
   &[type="button"],
@@ -58,6 +58,10 @@
   &.is-disable,
   &[disabled] {
     cursor: default;
+  }
+  &.is-full {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
   &.is-round {
     border-radius: 999em;
@@ -78,9 +82,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  &.is-full {
-    flex: 0 0 100%;
-    max-width: 100%;
+  > .fa {
+    vertical-align: top;
   }
 }
 

@@ -19,13 +19,13 @@
 .fa,
 .material-icons {
   + .text {
-    margin-left: 0.25em;
+    margin-left: 0.375em;
   }
   + .icon:not(.is-fit),
   + .im:not(.is-fit),
   + .fa:not(.is-fit),
   + .material-icons:not(.is-fit) {
-    margin-left: 0.25em;
+    margin-left: 0.375em;
   }
 }
 
@@ -34,7 +34,7 @@
   + .im,
   + .fa,
   + .material-icons {
-    margin-left: 0.25em;
+    margin-left: 0.375em;
   }
 }
 
