@@ -1333,9 +1333,9 @@ img[src$=".svg"] {
   display: inline-block;
   align-self: flex-start;
   white-space: nowrap;
-  padding: 0.75em 1em;
+  padding: 0 1em;
   border-radius: 0.1875em;
-  line-height: 1;
+  line-height: 2.5em;
   text-align: center;
   transition: ease-out 0.12s;
 }
@@ -1346,6 +1346,12 @@ img[src$=".svg"] {
 
 .btn.is-disable, .btn[disabled] {
   cursor: default;
+}
+
+.btn.is-full {
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .btn.is-round {
@@ -1371,10 +1377,8 @@ img[src$=".svg"] {
   transform: translate(-50%, -50%);
 }
 
-.btn.is-full {
-  -webkit-box-flex: 0;
-  flex: 0 0 100%;
-  max-width: 100%;
+.btn > .fa {
+  vertical-align: top;
 }
 
 .btn.is-floating:not(.is-disable) {
