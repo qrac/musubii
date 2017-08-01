@@ -2159,7 +2159,7 @@ img[src$=".svg"] {
 .im + .text,
 .fa + .text,
 .material-icons + .text {
-  margin-left: 0.25em;
+  margin-left: 0.375em;
 }
 
 .icon + .icon:not(.is-fit),
@@ -2178,14 +2178,14 @@ img[src$=".svg"] {
 .material-icons + .im:not(.is-fit),
 .material-icons + .fa:not(.is-fit),
 .material-icons + .material-icons:not(.is-fit) {
-  margin-left: 0.25em;
+  margin-left: 0.375em;
 }
 
 .text + .icon,
 .text + .im,
 .text + .fa,
 .text + .material-icons {
-  margin-left: 0.25em;
+  margin-left: 0.375em;
 }
 
 .icon.is-fit,
