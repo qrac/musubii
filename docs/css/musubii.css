@@ -1788,10 +1788,7 @@ img[src$=".svg"] {
   margin-bottom: -0.5em;
 }
 
-.field > .field,
-.field > .input,
-.field > .textarea,
-.field > .select {
+.field > * {
   margin-left: 0.5em;
   margin-bottom: 0.5em;
 }
