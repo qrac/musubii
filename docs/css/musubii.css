@@ -1677,8 +1677,15 @@ img[src$=".svg"] {
   }
 }
 
+.list > .item:not(:first-child) {
+  margin-top: 0.25em;
+}
+
+.list > .item > .list {
+  margin-top: 0.5em;
+}
+
 .list.is-disc, .list.is-circle, .list.is-decimal {
-  line-height: 1.8;
   margin-left: 1.5em;
 }
 
