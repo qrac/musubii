@@ -27,3 +27,12 @@
     list-style: decimal outside;
   }
 }
+
+.list.is-note {
+  > .item {
+    display: flex;
+  }
+  > .item > *:not(:first-child) {
+    margin-left: 0.25em;
+  }
+}

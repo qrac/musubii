@@ -1705,6 +1705,15 @@ img[src$=".svg"] {
   list-style: decimal outside;
 }
 
+.list.is-note > .item {
+  display: -webkit-box;
+  display: flex;
+}
+
+.list.is-note > .item > *:not(:first-child) {
+  margin-left: 0.25em;
+}
+
 .table {
   width: 100%;
   background-color: #ffffff;
