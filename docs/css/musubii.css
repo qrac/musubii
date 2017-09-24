@@ -2506,11 +2506,11 @@ img[src$=".svg"] {
 }
 
 .is-yakuhanjp {
-  font-family: -apple-system, BlinkMacSystemFont, YakuHanJP, "Hiragino Sans", Meiryo, sans-serif;
+  font-family: YakuHanJP, -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .is-yakuhanjps {
-  font-family: -apple-system, BlinkMacSystemFont, YakuHanJPs, "Hiragino Sans", Meiryo, sans-serif;
+  font-family: YakuHanJPs, -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .is-normal {
