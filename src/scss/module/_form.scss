@@ -15,10 +15,7 @@
   flex-wrap: wrap;
   margin-left: -0.5em;
   margin-bottom: -0.5em;
-  > .field,
-  > .input,
-  > .textarea,
-  > .select {
+  > * {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
   }

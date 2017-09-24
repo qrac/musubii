@@ -1,4 +1,4 @@
-/*! MUSUBii v3.5.0 MIT by Qrac */
+/*! MUSUBii v3.6.0 MIT by Qrac */
 /*! Shitaji.CSS v4.3.0 CC0 by Qrac */
 *,
 ::before,
@@ -75,6 +75,7 @@ dfn {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
 
@@ -1212,7 +1213,6 @@ img[src$=".svg"] {
 
 .heading {
   position: relative;
-  line-height: 1.25;
 }
 
 .texts {
@@ -1677,8 +1677,15 @@ img[src$=".svg"] {
   }
 }
 
+.list > .item:not(:first-child) {
+  margin-top: 0.25em;
+}
+
+.list > .item > .list {
+  margin-top: 0.5em;
+}
+
 .list.is-disc, .list.is-circle, .list.is-decimal {
-  line-height: 1.8;
   margin-left: 1.5em;
 }
 
@@ -1696,6 +1703,15 @@ img[src$=".svg"] {
 
 .list.is-decimal > .item {
   list-style: decimal outside;
+}
+
+.list.is-note > .item {
+  display: -webkit-box;
+  display: flex;
+}
+
+.list.is-note > .item > *:not(:first-child) {
+  margin-left: 0.25em;
 }
 
 .table {
@@ -1788,10 +1804,7 @@ img[src$=".svg"] {
   margin-bottom: -0.5em;
 }
 
-.field > .field,
-.field > .input,
-.field > .textarea,
-.field > .select {
+.field > * {
   margin-left: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -2235,7 +2248,6 @@ img[src$=".svg"] {
 .wysiwyg h5,
 .wysiwyg h6 {
   font-weight: 700;
-  line-height: 1.25;
 }
 
 .wysiwyg h1 {
@@ -2507,11 +2519,11 @@ img[src$=".svg"] {
 }
 
 .is-yakuhanjp {
-  font-family: -apple-system, BlinkMacSystemFont, YakuHanJP, "Hiragino Sans", Meiryo, sans-serif;
+  font-family: YakuHanJP, -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .is-yakuhanjps {
-  font-family: -apple-system, BlinkMacSystemFont, YakuHanJPs, "Hiragino Sans", Meiryo, sans-serif;
+  font-family: YakuHanJPs, -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .is-normal {
@@ -2635,54 +2647,63 @@ img[src$=".svg"] {
 }
 
 .is-none,
-.is-none-mobile {
+.is-none-mobile,
+.is-mobile-none {
   display: none;
 }
 
 @media screen and (min-width: 576px) {
-  .is-none-fablet {
+  .is-none-fablet,
+  .is-fablet-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .is-none-tablet {
+  .is-none-tablet,
+  .is-tablet-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .is-none-desktop {
+  .is-none-desktop,
+  .is-desktop-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .is-none-wide {
+  .is-none-wide,
+  .is-wide-none {
     display: none;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .is-none-mobile-only {
+  .is-none-mobile-only,
+  .is-mobile-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  .is-none-fablet-only {
+  .is-none-fablet-only,
+  .is-fablet-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .is-none-tablet-only {
+  .is-none-tablet-only,
+  .is-tablet-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .is-none-desktop-only {
+  .is-none-desktop-only,
+  .is-desktop-only-none {
     display: none;
   }
 }

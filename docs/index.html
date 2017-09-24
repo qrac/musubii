@@ -42,7 +42,7 @@
     <section class="section is-topcover is-center is-active">
       <div class="inner"><img class="logo is-title" src="img/logo-set-tate-musubii.svg" alt="MUSUBii">
         <h2 class="texts is-light">HTML/CSS Framework for JP</h2>
-        <p class="texts is-light is-strong">v3.5.0</p>
+        <p class="texts is-light is-strong">v3.6.0</p>
         <p class="texts is-light"><i class="fa fa-github" aria-hidden="true"></i><a class="text is-link-reverse" href="https://github.com/qrac/musubii"><span class="text">Repository</span></a>&nbsp;/&nbsp;<a class="text is-link-reverse" href="https://github.com/qrac/musubii/releases"><span class="text">Releases</span></a></p>
         <div class="btns is-center"><a class="btn is-lg is-ghost is-round is-cyan" href="css/musubii.min.css" download="musubii.min.css"><i class="fa fa-download" aria-hidden="true"></i><span class="text">Download</span></a></div>
       </div>
@@ -92,7 +92,7 @@
             <h4 class="heading is-lg"><a class="text is-primary is-link" href="https://www.npmjs.com/package/musubii"><span>npm</span></a></h4>
             <pre class="pre is-sm"><code class="code">npm install musubii</code></pre>
             <h4 class="heading is-lg"><a class="text is-primary is-link" href="https://cdn.jsdelivr.net/npm/musubii/"><span>CDN</span></a></h4>
-            <pre class="pre is-sm"><code class="code html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/musubii@3.4.0/docs/css/musubii.min.css&quot;&gt;</code></pre>
+            <pre class="pre is-sm"><code class="code html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/musubii@3.6.0/docs/css/musubii.min.css&quot;&gt;</code></pre>
           </div>
           <h3 class="heading is-xl">Detail</h3>
           <div class="group is-wrap">
@@ -1094,7 +1094,7 @@
             <div class="content">
               <div class="groups">
                 <h3 class="heading is-xl">List</h3>
-                <p class="texts is-sm">デフォルトスタイルでリストを作る場合、黒丸は&nbsp;<code class="code">.is-disc</code>&nbsp;白丸は&nbsp;<code class="code">.is-circle</code>&nbsp;ナンバリングは&nbsp;<code class="code">.is-decimal</code>&nbsp;を&nbsp;<code class="code">.list</code>&nbsp;に付与します。<br>親要素につけたクラス名によって子要素の&nbsp;<code class="code">.item</code>&nbsp;に装飾を施せます。また、リストは入れ子にできます。</p>
+                <p class="texts is-sm">デフォルトスタイルでリストを作る場合、黒丸は&nbsp;<code class="code">.is-disc</code>&nbsp;白丸は&nbsp;<code class="code">.is-circle</code>&nbsp;ナンバリングは&nbsp;<code class="code">.is-decimal</code>&nbsp;を&nbsp;<code class="code">.list</code>&nbsp;に付与します。<br>親要素につけたクラス名によって子要素の&nbsp;<code class="code">.item</code>&nbsp;に装飾を施せます。また、リストは入れ子にできます。<br>また、&nbsp;<code class="code">.is-note</code>&nbsp;を&nbsp;<code class="code">.list</code>&nbsp;に付与した場合は、直下の要素が横並びになり自由にナンバリング付きの米印などを置けます。</p>
                 <div class="group is-wrap is-preview">
                   <ul class="list is-disc is-sm">
                     <li class="item">リストのテキストは1行目以外をインデントして読みやすくする</li>
@@ -1135,6 +1135,13 @@
                       </ul>
                     </li>
                   </ul>
+                  <ul class="list is-note is-sm">
+                    <li class="item"><span class="text">※1</span><span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span></li>
+                    <li class="item"><span class="text">※2</span><span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span></li>
+                    <li class="item"><span class="text">※3</span><span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span></li>
+                    <li class="item"><span class="text">※</span><span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span></li>
+                    <li class="item"><span class="text">※100</span><span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span></li>
+                  </ul>
                   <pre class="pre is-sm"><code class="code html">&lt;ul class=&quot;list is-disc&quot;&gt;
   &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
   &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
@@ -1148,6 +1155,17 @@
 &lt;ul class=&quot;list is-decimal&quot;&gt;
   &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
   &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&quot;list is-note&quot;&gt;
+  &lt;li class=&quot;item&quot;&gt;
+    &lt;span&gt;※1&lt;/span&gt;
+    &lt;span&gt;...&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;item&quot;&gt;
+    &lt;span&gt;※2&lt;/span&gt;
+    &lt;span&gt;...&lt;/span&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
                 </div>
               </div>
@@ -2689,7 +2707,7 @@
             <div class="content">
               <div class="groups">
                 <h3 class="heading is-xl">Display</h3>
-                <p class="texts is-sm">Displayのプロパティを変更するUtilityを、ほぼすべてのモジュールに対して使えます。<br><code class="code">display: none;</code>&nbsp;に関しては、&nbsp;<code class="code">.is-none-(xxxx)</code>&nbsp;と書き、任意のブレイクポイントを設定してコンテンツを非表示にできます。</p>
+                <p class="texts is-sm">Displayのプロパティを変更するUtilityを、ほぼすべてのモジュールに対して使えます。<br><code class="code">display: none;</code>&nbsp;に関しては、&nbsp;<code class="code">.is-(xxxx)-none</code>&nbsp;と書き、任意のブレイクポイントを設定してコンテンツを非表示にできます。</p>
                 <div class="group is-scroll-x">
                   <table class="table is-border is-center is-nowrap is-sm">
                     <tbody>
@@ -2715,11 +2733,11 @@
                     <tbody>
                       <tr class="box is-stripe">
                         <td class="box is-paint" width="150">Add Class</td>
-                        <td>.is-none-mobile</td>
-                        <td>.is-none-fablet</td>
-                        <td>.is-none-tablet</td>
-                        <td>.is-none-desktop</td>
-                        <td>.is-none-wide</td>
+                        <td>.is-mobile-none</td>
+                        <td>.is-fablet-none</td>
+                        <td>.is-tablet-none</td>
+                        <td>.is-desktop-none</td>
+                        <td>.is-wide-none</td>
                       </tr>
                       <tr>
                         <td class="box is-paint">Function</td>
@@ -2737,10 +2755,10 @@
                     <tbody>
                       <tr class="box is-stripe">
                         <td class="box is-paint" width="150">Add Class</td>
-                        <td>.is-none-mobile-only</td>
-                        <td>.is-none-fablet-only</td>
-                        <td>.is-none-tablet-only</td>
-                        <td>.is-none-desktop-only</td>
+                        <td>.is-mobile-only-none</td>
+                        <td>.is-fablet-only-none</td>
+                        <td>.is-tablet-only-none</td>
+                        <td>.is-desktop-only-none</td>
                       </tr>
                       <tr>
                         <td class="box is-paint">Function</td>

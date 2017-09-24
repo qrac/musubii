@@ -3,10 +3,15 @@
 //----------------------------------------------------
 
 .list {
+  > .item:not(:first-child) {
+    margin-top: 0.25em;
+  }
+  > .item > .list {
+    margin-top: 0.5em;
+  }
   &.is-disc,
   &.is-circle,
   &.is-decimal {
-    line-height: 1.8;
     margin-left: 1.5em;
     > .item {
       display: list-item;
@@ -20,5 +25,14 @@
   }
   &.is-decimal > .item {
     list-style: decimal outside;
+  }
+}
+
+.list.is-note {
+  > .item {
+    display: flex;
+  }
+  > .item > *:not(:first-child) {
+    margin-left: 0.25em;
   }
 }

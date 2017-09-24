@@ -18,6 +18,12 @@
     | 親要素につけたクラス名によって子要素の&nbsp;
     code.code .item
     | &nbsp;に装飾を施せます。また、リストは入れ子にできます。
+    br
+    | また、&nbsp;
+    code.code .is-note
+    | &nbsp;を&nbsp;
+    code.code .list
+    | &nbsp;に付与した場合は、直下の要素が横並びになり自由にナンバリング付きの米印などを置けます。
   .group.is-wrap.is-preview
     ul.list.is-disc.is-sm
       li.item リストのテキストは1行目以外をインデントして読みやすくする
@@ -49,6 +55,22 @@
           li.item リストを入れ子にした場合は、その分インデントを追加して構造を見せる
           li.item リストを入れ子にした場合は、その分インデントを追加して構造を見せる
           li.item リストを入れ子にした場合は、その分インデントを追加して構造を見せる
+    ul.list.is-note.is-sm
+      li.item
+        span.text ※1
+        span.text 自由にナンバリング付きの米印などを置ける注釈用のスタイル
+      li.item
+        span.text ※2
+        span.text 自由にナンバリング付きの米印などを置ける注釈用のスタイル
+      li.item
+        span.text ※3
+        span.text 自由にナンバリング付きの米印などを置ける注釈用のスタイル
+      li.item
+        span.text ※
+        span.text 自由にナンバリング付きの米印などを置ける注釈用のスタイル
+      li.item
+        span.text ※100
+        span.text 自由にナンバリング付きの米印などを置ける注釈用のスタイル
     pre.pre.is-sm
       code.code.html.
         &lt;ul class=&quot;list is-disc&quot;&gt;
@@ -64,4 +86,15 @@
         &lt;ul class=&quot;list is-decimal&quot;&gt;
           &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
           &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul class=&quot;list is-note&quot;&gt;
+          &lt;li class=&quot;item&quot;&gt;
+            &lt;span&gt;※1&lt;/span&gt;
+            &lt;span&gt;...&lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;item&quot;&gt;
+            &lt;span&gt;※2&lt;/span&gt;
+            &lt;span&gt;...&lt;/span&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
