@@ -1213,7 +1213,6 @@ img[src$=".svg"] {
 
 .heading {
   position: relative;
-  line-height: 1.25;
 }
 
 .texts {
@@ -2236,7 +2235,6 @@ img[src$=".svg"] {
 .wysiwyg h5,
 .wysiwyg h6 {
   font-weight: 700;
-  line-height: 1.25;
 }
 
 .wysiwyg h1 {
