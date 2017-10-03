@@ -1,8 +1,4 @@
 /*! MUSUBii Demo */
-.musubii-demo {
-  background-color: #1cb4c7;
-}
-
 .section.is-header {
   padding: 8px 0;
   background-color: #1cb4c7;
@@ -37,7 +33,8 @@
 }
 
 .section.is-footer {
-  padding: 16px 0;
+  background-color: #3a464c;
+  padding: 2em 0;
 }
 
 .section > .inner > .tabs {
@@ -252,6 +249,20 @@
   height: 482px;
 }
 
+.grid.is-gap-6x:not(.is-gap-none) {
+  margin-left: -3em;
+  margin-bottom: -3em;
+}
+
+.grid.is-gap-6x:not(.is-gap-none) > .col {
+  padding-left: 3em;
+  padding-bottom: 3em;
+}
+
+.grid.is-gap-6x:not(.is-gap-none) + .grid.is-gap-6x:not(.is-gap-none) {
+  margin-top: 3em;
+}
+
 .heading.is-demo-space-filter-1 {
   position: relative;
 }
@@ -345,6 +356,11 @@
   display: block;
   width: 250px;
   margin: 0 auto 6px;
+}
+
+.obj.is-footer-logo {
+  display: block;
+  width: 8em;
 }
 
 .mark-demo {

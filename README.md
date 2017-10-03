@@ -76,8 +76,10 @@ npm install musubii
 
 - MIT
 - Author: [Qrac][link-twitter]
+- Author Group: [QRANOKO][link-qranoko]
 
 [link-demo]:https://qrac.github.io/musubii/
 [link-npm]:https://www.npmjs.com/package/musubii
 [link-jsdelivr]:https://cdn.jsdelivr.net/npm/musubii/
 [link-twitter]:https://twitter.com/Qrac_JP
+[link-qranoko]:https://qranoko.jp
