@@ -19,7 +19,7 @@
 //----------------------------------------------------
 
 .musubii-demo {
-  background-color: $cyan-500;
+  //background-color: $cyan-500;
 }
 
 .section {
@@ -49,7 +49,8 @@
     background-color: $light;
   }
   &.is-footer {
-    padding: 16px 0;
+    background-color: $blue-grey-800;
+    padding: 2em 0;
   }
   > .inner > .tabs {
   margin: 0 -16px;
@@ -206,6 +207,18 @@
   }
 }
 
+.grid.is-gap-6x:not(.is-gap-none) {
+  margin-left: -3em;
+  margin-bottom: -3em;
+  > .col {
+    padding-left: 3em;
+    padding-bottom: 3em;
+  }
+  + .grid.is-gap-6x:not(.is-gap-none) {
+    margin-top: 3em;
+  }
+}
+
 .heading.is-demo-space-filter-1 {
   position: relative;
   &:before,
@@ -288,6 +301,11 @@
     width: 250px;
     margin: 0 auto 6px;
   }
+}
+
+.obj.is-footer-logo {
+  display: block;
+  width: 8em;
 }
 
 .mark-demo {
