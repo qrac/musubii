@@ -79,13 +79,13 @@
 
 // Landscape or Portrait
 @mixin landscape {
-  @media all and (orientation:landscape) {
+  @media all and (orientation:portrait) and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
 
 @mixin portrait {
-  @media all and (orientation:portrait) {
+  @media all and (orientation:portrait) and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
