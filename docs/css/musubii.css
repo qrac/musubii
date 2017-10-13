@@ -2594,6 +2594,10 @@ img[src$=".svg"] {
   text-align: right;
 }
 
+:not(.grid):not(.btns):not(.field).is-justify {
+  text-align: justify;
+}
+
 :not(.grid):not(.btns):not(.field).is-baseline {
   vertical-align: baseline;
 }
