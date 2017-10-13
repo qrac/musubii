@@ -15,61 +15,52 @@
 }
 
 .is-none,
-.is-none-mobile,
 .is-mobile-none {
   display: none;
 }
 
-.is-none-fablet,
 .is-fablet-none {
   @include fablet {
     display: none;
   }
 }
 
-.is-none-tablet,
 .is-tablet-none {
   @include tablet {
     display: none;
   }
 }
 
-.is-none-desktop,
 .is-desktop-none {
   @include desktop {
     display: none;
   }
 }
 
-.is-none-wide,
 .is-wide-none {
   @include wide {
     display: none;
   }
 }
 
-.is-none-mobile-only,
 .is-mobile-only-none {
   @include mobile-only {
     display: none;
   }
 }
 
-.is-none-fablet-only,
 .is-fablet-only-none {
   @include fablet-only {
     display: none;
   }
 }
 
-.is-none-tablet-only,
 .is-tablet-only-none {
   @include tablet-only {
     display: none;
   }
 }
 
-.is-none-desktop-only,
 .is-desktop-only-none {
   @include desktop-only {
     display: none;
