@@ -2651,62 +2651,53 @@ img[src$=".svg"] {
 }
 
 .is-none,
-.is-none-mobile,
 .is-mobile-none {
   display: none;
 }
 
 @media screen and (min-width: 576px) {
-  .is-none-fablet,
   .is-fablet-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .is-none-tablet,
   .is-tablet-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .is-none-desktop,
   .is-desktop-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .is-none-wide,
   .is-wide-none {
     display: none;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .is-none-mobile-only,
   .is-mobile-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  .is-none-fablet-only,
   .is-fablet-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .is-none-tablet-only,
   .is-tablet-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .is-none-desktop-only,
   .is-desktop-only-none {
     display: none;
   }
