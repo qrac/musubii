@@ -83,3 +83,42 @@
             | 992px ~ 1199px
             br
             | display: none;
+  .group.is-scroll-x
+    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
+      tbody
+        tr.box.is-stripe
+          td.box.is-paint(width="150") Add Class
+          td .is-mobile-fablet-none
+          td .is-mobile-tablet-none
+          td .is-mobile-desktop-none
+        tr
+          td.box.is-paint Function
+          td
+            | ~ 767px
+            br
+            | display: none;
+          td
+            | ~ 991px
+            br
+            | display: none;
+          td
+            | ~ 1199px
+            br
+            | display: none;
+  .group.is-scroll-x
+    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
+      tbody
+        tr.box.is-stripe
+          td.box.is-paint(width="150") Add Class
+          td .is-landscape-none
+          td .is-portrait-none
+        tr
+          td.box.is-paint Function
+          td
+            | landscape & ~ 991px
+            br
+            | display: none;
+          td
+            | portrait & ~ 991px
+            br
+            | display: none;

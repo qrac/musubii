@@ -66,3 +66,33 @@
     display: none;
   }
 }
+
+.is-mobile-fablet-none {
+  @include mobile-fablet {
+    display: none;
+  }
+}
+
+.is-mobile-tablet-none {
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.is-mobile-desktop-none {
+  @include mobile-desktop {
+    display: none;
+  }
+}
+
+.is-landscape-none {
+  @include landscape {
+    display: none;
+  }
+}
+
+.is-portrait-none {
+  @include portrait {
+    display: none;
+  }
+}

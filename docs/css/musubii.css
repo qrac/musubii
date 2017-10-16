@@ -1,4 +1,4 @@
-/*! MUSUBii v3.7.0 MIT by Qrac */
+/*! MUSUBii v3.8.0 MIT by Qrac */
 /*! Shitaji.CSS v4.3.0 CC0 by Qrac */
 *,
 ::before,
@@ -2703,6 +2703,36 @@ iframe {
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .is-desktop-only-none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .is-mobile-fablet-none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .is-mobile-tablet-none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .is-mobile-desktop-none {
+    display: none;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 991px) {
+  .is-landscape-none {
+    display: none;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 991px) {
+  .is-portrait-none {
     display: none;
   }
 }
