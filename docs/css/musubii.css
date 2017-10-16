@@ -2707,6 +2707,36 @@ iframe {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .is-mobile-fablet-none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .is-mobile-tablet-none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .is-mobile-desktop-none {
+    display: none;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 991px) {
+  .is-landscape-none {
+    display: none;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 991px) {
+  .is-portrait-none {
+    display: none;
+  }
+}
+
 .is-clearfix:after {
   display: block;
   content: "";
