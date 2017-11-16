@@ -33,7 +33,6 @@
 
 .wysiwyg {
   p {
-    font-size: 0.875em;
     line-height: 1.8;
   }
   small {
@@ -66,7 +65,6 @@
   border-left: 0.5em solid $dark-9;
   border-radius: 0.125em;
   padding: 1.5em;
-  font-size: 0.875em;
 }
 
 .wysiwyg code,
@@ -88,7 +86,6 @@
 .wysiwyg pre {
   background-color: $grey-100;
   border-radius: 0.125em;
-  font-size: 0.875em;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
@@ -106,7 +103,6 @@
   margin-left: 1.5em;
   > li {
     display: list-item;
-    font-size: 0.875em;
   }
   > li li {
     font-size: 100%;
@@ -122,7 +118,6 @@
 }
 
 .wysiwyg table {
-  font-size: 0.875em;
   background-color: $light;
   border-radius: 2px;
   thead {
