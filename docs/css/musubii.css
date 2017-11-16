@@ -1,4 +1,4 @@
-/*! MUSUBii v3.8.0 MIT by Qrac */
+/*! MUSUBii v3.9.0 MIT by Qrac */
 /*! Shitaji.CSS v4.3.0 CC0 by Qrac */
 *,
 ::before,
@@ -2279,7 +2279,6 @@ iframe {
 }
 
 .wysiwyg p {
-  font-size: 0.875em;
   line-height: 1.8;
 }
 
@@ -2315,7 +2314,6 @@ iframe {
   border-left: 0.5em solid rgba(0, 0, 0, 0.05);
   border-radius: 0.125em;
   padding: 1.5em;
-  font-size: 0.875em;
 }
 
 .wysiwyg code,
@@ -2335,7 +2333,6 @@ iframe {
 .wysiwyg pre {
   background-color: whitesmoke;
   border-radius: 0.125em;
-  font-size: 0.875em;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
@@ -2357,7 +2354,6 @@ iframe {
 .wysiwyg ul > li,
 .wysiwyg ol > li {
   display: list-item;
-  font-size: 0.875em;
 }
 
 .wysiwyg ul > li li,
@@ -2374,7 +2370,6 @@ iframe {
 }
 
 .wysiwyg table {
-  font-size: 0.875em;
   background-color: #ffffff;
   border-radius: 2px;
 }
