@@ -1,4 +1,4 @@
-/*! MUSUBii v3.9.0 MIT by Qrac */
+/*! MUSUBii v4.0.0 MIT by Qrac */
 /*! Shitaji.CSS v4.3.0 CC0 by Qrac */
 *,
 ::before,
@@ -295,7 +295,6 @@ textarea,
 
 body {
   color: rgba(0, 0, 0, 0.7);
-  font-weight: 300;
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
   line-height: 1.5;
 }
