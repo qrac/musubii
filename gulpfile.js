@@ -30,14 +30,14 @@ const paths = {
   'out_img': './docs/img/'
 }
 
-// Setting : Sass Options
-const sassOptions = {
-  outputStyle: 'expanded'
-}
-
 // Setting : Pug Options
 const pugOptions = {
   pretty: true
+}
+
+// Setting : Sass Options
+const sassOptions = {
+  outputStyle: 'expanded'
 }
 
 // Pug > HTML
@@ -72,7 +72,15 @@ gulp.task('jsconcat', function () {
   return gulp.src(paths.src_js + '**/*.js')
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(concat('app.js'))
-    .pipe(babel({presets: ['env']}))
+    .pipe(babel({
+      'presets': [
+        ['env', {
+          'targets': {
+            'browsers': ['> 3% in JP', 'ie 11', 'android 4.4', 'last 1 versions']
+          }
+        }]
+      ]
+    }))
     .pipe(gulp.dest(paths.out_js))
 });
 
