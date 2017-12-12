@@ -49,7 +49,7 @@ gulp.task('pug', () => {
 });
 
 // Sass > CSS
-gulp.task('scss', function () {
+gulp.task('scss', () => {
   return gulp.src(paths.src_scss + '**/*.scss')
     .pipe(sassGlob())
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
@@ -59,7 +59,7 @@ gulp.task('scss', function () {
 });
 
 // CSS Minify
-gulp.task('cssmin', function () {
+gulp.task('cssmin', () => {
   return gulp.src([paths.out_css + '**/*.css', '!' + paths.out_css + '**/*.min.css'])
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(cleanCSS())
@@ -68,7 +68,7 @@ gulp.task('cssmin', function () {
 });
 
 // JS Concat & Babel
-gulp.task('jsconcat', function () {
+gulp.task('jsconcat', () => {
   return gulp.src(paths.src_js + '**/*.js')
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(concat('app.js'))
@@ -85,7 +85,7 @@ gulp.task('jsconcat', function () {
 });
 
 // JS Uglify
-gulp.task('jsuglify', function () {
+gulp.task('jsuglify', () => {
   return gulp.src([paths.out_js + '**/*.js', '!' + paths.out_js + '**/*.min.js'])
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(uglify())
@@ -124,7 +124,7 @@ gulp.task('reload', () => {
 });
 
 // Watch
-gulp.task('watch', function () {
+gulp.task('watch', () => {
   gulp.watch([paths.src_pug + '**/*.pug', '!' + paths.src_pug + '**/_*.pug'], ['pug']);
   gulp.watch(paths.src_scss + '**/*.scss', ['scss']);
   gulp.watch(paths.src_js + '**/*.js', ['jsconcat']);
