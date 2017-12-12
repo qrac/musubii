@@ -12,7 +12,7 @@
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
+          align-items: center;
   height: 360px;
   padding: 0 0 24px;
   background-color: #1cb4c7;
@@ -174,7 +174,7 @@
   height: 150px;
   overflow: hidden;
   -webkit-animation: demo-section-anime-1 5s linear infinite 0s;
-  animation: demo-section-anime-1 5s linear infinite 0s;
+          animation: demo-section-anime-1 5s linear infinite 0s;
 }
 
 @-webkit-keyframes demo-section-anime-1 {
@@ -367,9 +367,9 @@
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-  justify-content: center;
+          justify-content: center;
   -webkit-box-align: center;
-  align-items: center;
+          align-items: center;
   height: calc(1.5em + 1px);
 }
 
@@ -377,9 +377,9 @@
   display: -webkit-inline-box;
   display: inline-flex;
   -webkit-box-pack: center;
-  justify-content: center;
+          justify-content: center;
   -webkit-box-align: center;
-  align-items: center;
+          align-items: center;
   width: 1em;
   height: 1em;
   background-color: rgba(0, 0, 0, 0.26);
@@ -414,7 +414,7 @@
 
 .tabs.is-split > .tab {
   -webkit-box-flex: 1;
-  flex: 1 0 0%;
+          flex: 1 0 0%;
 }
 
 .tab {
@@ -423,7 +423,7 @@
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
+          align-items: center;
   height: 4.5em;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
