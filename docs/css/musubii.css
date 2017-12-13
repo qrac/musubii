@@ -1,7 +1,7 @@
 /*! MUSUBii v5.0.0 MIT by Qrac */
 body {
   color: rgba(0, 0, 0, 0.7);
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
   line-height: 1.5;
 }
 
@@ -2494,11 +2494,11 @@ textarea,
 }
 
 .is-yakuhanjp {
-  font-family: YakuHanJP, -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
+  font-family: YakuHanJP, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
 }
 
 .is-yakuhanjps {
-  font-family: YakuHanJPs, -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
+  font-family: YakuHanJPs, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
 }
 
 .is-normal {
