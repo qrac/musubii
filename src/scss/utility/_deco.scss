@@ -2,66 +2,28 @@
 // Utility: Deco
 //----------------------------------------------------
 
-@each $key, $value in $colors-dark {
+@each $key, $value in $patterns-color-dark {
   .is-#{$key} {
     color: $value;
   }
 }
 
-@each $key, $value in $colors-light {
+@each $key, $value in $patterns-color-light {
   .is-#{$key} {
     color: $value;
   }
 }
 
-@each $key, $value in $colors-theme {
+@each $key, $value in $patterns-color-theme {
   .is-#{$key}:not(.btn) {
     color: $value;
   }
 }
 
-.is-yakuhanjp {
-  font-family: YakuHanJP, $font-sans;
-}
-
-.is-yakuhanjps {
-  font-family: YakuHanJPs, $font-sans;
-}
-
-.is-normal {
-  font-weight: 300;
-}
-
-.is-strong {
-  font-weight: 700;
-}
-
-.is-weight-100 {
-  font-weight: 100;
-}
-
-.is-weight-200 {
-  font-weight: 200;
-}
-
-.is-weight-300 {
-  font-weight: 300;
-}
-
-.is-weight-400 {
-  font-weight: 400;
-}
-
-.is-weight-500 {
-  font-weight: 500;
-}
-
-.is-weight-700 {
-  font-weight: 700;
-}
-
-.is-weight-900 {
-  font-weight: 900;
+@each $key, $value in $patterns-font-weight {
+  .is-#{$key} {
+    font-weight: $value;
+  }
 }
 
 .is-italic {
@@ -133,4 +95,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.is-yakuhanjp {
+  font-family: YakuHanJP, $font-sans;
+}
+
+.is-yakuhanjps {
+  font-family: YakuHanJPs, $font-sans;
 }

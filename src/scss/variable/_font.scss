@@ -22,3 +22,15 @@ Menlo, Monaco, Consolas,
 "Liberation Mono", "Courier New",
 Meiryo,
 monospace, serif !default;
+
+$patterns-font-weight:(
+  normal: 400,
+  strong: 700,
+  weight-100: 100,
+  weight-200: 200,
+  weight-300: 300,
+  weight-400: 400,
+  weight-500: 500,
+  weight-700: 700,
+  weight-900: 900
+);
