@@ -1956,8 +1956,8 @@ textarea,
 }
 
 .is-clearfix:after {
-  display: block;
   content: "";
+  display: block;
   clear: both;
 }
 
