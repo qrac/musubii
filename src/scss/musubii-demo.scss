@@ -2,13 +2,8 @@
 /*! MUSUBii Demo */
 //----------------------------------------------------
 
-@import "variable/_moftone";
-@import "variable/_mdtone";
-@import "variable/_iostone";
-@import "variable/_color";
-@import "variable/_breakpoint";
-@import "variable/_font";
-@import "variable/_shadow";
+@import "tone/**";
+@import "variable/**";
 @import "mixin/**";
 
 //----------------------------------------------------
