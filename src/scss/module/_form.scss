@@ -66,11 +66,11 @@
   color: $dark-2;
   line-height: 2.5em;
   &[disabled] {
-    background-color: $grey-3;
+    background-color: $grey-300;
     color: $dark-6;
   }
   &[readonly] {
-    background-color: $grey-2;
+    background-color: $grey-200;
     color: $dark-4;
   }
 }
@@ -135,7 +135,7 @@
   box-shadow: $shadow-input;
   padding: calc(0.5em - 1.5px) 0.5em;
   &[disabled] {
-    background-color: $grey-3;
+    background-color: $grey-300;
     color: $dark-6;
     box-shadow: none;
   }
@@ -169,11 +169,11 @@
     }
   }
   &[disabled] {
-    background-color: $grey-3;
+    background-color: $grey-300;
     color: $dark-6;
   }
   &[readonly] {
-    background-color: $grey-2;
+    background-color: $grey-200;
   }
 }
 

@@ -95,10 +95,10 @@
 }
 
 .btn.is-plain {
-  background-color: $grey-2;
+  background-color: $grey-200;
   border: 1px solid transparent;
   &:hover {
-    background-color: darken($grey-2, 5%);
+    background-color: darken($grey-200, 5%);
   }
   &.is-primary,
   &.is-success,
@@ -128,7 +128,7 @@
   &[disabled],
   &[disabled]:hover {
     color: $dark-6;
-    background-color: $grey-4;
+    background-color: $grey-400;
   }
 }
 
