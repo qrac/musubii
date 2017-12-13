@@ -11,6 +11,7 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
+const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
@@ -55,6 +56,7 @@ gulp.task('scss', () => {
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(sass(sassOptions))
     .pipe(autoprefixer(['> 3% in JP', 'ie 11', 'android 4.4', 'last 1 versions']))
+    .pipe(gcmq())
     .pipe(gulp.dest(paths.out_css))
 });
 
