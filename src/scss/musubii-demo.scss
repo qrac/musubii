@@ -2,7 +2,6 @@
 /*! MUSUBii Demo */
 //----------------------------------------------------
 
-@import "variable/_customize";
 @import "variable/_moftone";
 @import "variable/_mdtone";
 @import "variable/_iostone";
@@ -11,8 +10,7 @@
 @import "variable/_split";
 @import "variable/_font";
 @import "variable/_shadow";
-@import "mixin/_mediaquery";
-@import "mixin/_placeholder";
+@import "mixin/**";
 
 //----------------------------------------------------
 // Project CSS
