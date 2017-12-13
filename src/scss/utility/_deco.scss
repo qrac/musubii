@@ -2,36 +2,22 @@
 // Utility: Deco
 //----------------------------------------------------
 
-@each $key, $value in $dark-patterns {
+@each $key, $value in $colors-dark {
   .is-#{$key} {
     color: $value;
   }
 }
 
-@each $key, $value in $light-patterns {
+@each $key, $value in $colors-light {
   .is-#{$key} {
     color: $value;
   }
 }
 
-.is-primary:not(.btn) {
-  color: $primary;
-}
-
-.is-info:not(.btn) {
-  color: $info;
-}
-
-.is-success:not(.btn) {
-  color: $success;
-}
-
-.is-warning:not(.btn) {
-  color: $warning;
-}
-
-.is-danger:not(.btn) {
-  color: $danger;
+@each $key, $value in $colors-theme {
+  .is-#{$key}:not(.btn) {
+    color: $value;
+  }
 }
 
 .is-yakuhanjp {

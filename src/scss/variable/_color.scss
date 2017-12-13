@@ -284,6 +284,14 @@ $success: $green-a700 !default;
 $warning: $orange-600 !default;
 $danger: $red-500 !default;
 
+$colors-theme:(
+  primary: $primary,
+  info: $info,
+  success: $success,
+  warning: $warning,
+  danger: $danger
+);
+
 $dark: $black !default;
 $dark-1: rgba( $black, 0.87 ) !default;
 $dark-2: rgba( $black, 0.7 ) !default;
@@ -295,7 +303,7 @@ $dark-7: rgba( $black, 0.15 ) !default;
 $dark-8: rgba( $black, 0.12 ) !default;
 $dark-9: rgba( $black, 0.05 ) !default;
 
-$dark-patterns:(
+$colors-dark:(
   dark: $dark,
   dark-1: $dark-1,
   dark-2: $dark-2,
@@ -319,7 +327,7 @@ $light-7: rgba( $white, 0.15 ) !default;
 $light-8: rgba( $white, 0.12 ) !default;
 $light-9: rgba( $white, 0.05 ) !default;
 
-$light-patterns:(
+$colors-light:(
   light: $light,
   light-1: $light-1,
   light-2: $light-2,
