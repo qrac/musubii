@@ -9,16 +9,16 @@ $font-sans:
 "Noto Sans Japanese",
 Meiryo,
 "Yu Gothic Medium",
-sans-serif;
+sans-serif !default;
 
 $font-serif:
 "Hiragino Mincho ProN",
 "Noto Serif Japanese",
 "Yu Mincho", YuMincho,
-serif;
+serif !default;
 
 $font-mono:
 Menlo, Monaco, Consolas,
 "Liberation Mono", "Courier New",
 Meiryo,
-monospace, serif;
+monospace, serif !default;
