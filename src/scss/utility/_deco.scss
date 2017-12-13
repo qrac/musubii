@@ -2,84 +2,16 @@
 // Utility: Deco
 //----------------------------------------------------
 
-.is-dark {
-  color: $dark;
+@each $key, $value in $dark-patterns {
+  .is-#{$key} {
+    color: $value;
+  }
 }
 
-.is-dark-1 {
-  color: $dark-1;
-}
-
-.is-dark-2 {
-  color: $dark-2;
-}
-
-.is-dark-3 {
-  color: $dark-3;
-}
-
-.is-dark-4 {
-  color: $dark-4;
-}
-
-.is-dark-5 {
-  color: $dark-5;
-}
-
-.is-dark-6 {
-  color: $dark-6;
-}
-
-.is-dark-7 {
-  color: $dark-7;
-}
-
-.is-dark-8 {
-  color: $dark-8;
-}
-
-.is-dark-9 {
-  color: $dark-9;
-}
-
-.is-light {
-  color: $light;
-}
-
-.is-light-1 {
-  color: $light-1;
-}
-
-.is-light-2 {
-  color: $light-2;
-}
-
-.is-light-3 {
-  color: $light-3;
-}
-
-.is-light-4 {
-  color: $light-4;
-}
-
-.is-light-5 {
-  color: $light-5;
-}
-
-.is-light-6 {
-  color: $light-6;
-}
-
-.is-light-7 {
-  color: $light-7;
-}
-
-.is-light-8 {
-  color: $light-8;
-}
-
-.is-light-9 {
-  color: $light-9;
+@each $key, $value in $light-patterns {
+  .is-#{$key} {
+    color: $value;
+  }
 }
 
 .is-primary:not(.btn) {
