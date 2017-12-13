@@ -2,30 +2,18 @@
 // Utility: Size
 //----------------------------------------------------
 
-.is-xxl {
-  font-size: 200%;
-}
+$patterns-font-size:(
+  xxl: 200%,
+  xl: 150%,
+  lg: 125%,
+  md: 100%,
+  sm: 87.5%,
+  xs: 75%,
+  xxs: 62.5%
+);
 
-.is-xl {
-  font-size: 150%;
-}
-
-.is-lg {
-  font-size: 125%;
-}
-
-.is-md {
-  font-size: 100%;
-}
-
-.is-sm {
-  font-size: 87.5%;
-}
-
-.is-xs {
-  font-size: 75%;
-}
-
-.is-xxs {
-  font-size: 62.5%;
+@each $key, $value in $patterns-font-size {
+  .is-#{$key} {
+    font-size: $value;
+  }
 }
