@@ -2,6 +2,7 @@
 // Layout: Grid
 //----------------------------------------------------
 
+// Number of grid divisions
 $split-grid: 12;
 
 .grid {
@@ -41,106 +42,25 @@ $split-grid: 12;
   }
 }
 
-@for $i from 0 through $split-grid {
-  @if $i == 0 {
-    .col.is-mobile-#{$i} {
-      flex: 1 0 0%;
+@each $key, $breakpoint in $pattern-breakpoint-base {
+  @include mobile-first($breakpoint) {
+    @for $i from 0 through $split-grid {
+      @if $i == 0 {
+        .col.is-#{$key}-#{$i} {
+          flex: 1 0 0%;
+          max-width: 100%;
+        }
+      }
+      @else {
+        .col.is-#{$key}-#{$i} {
+          flex: 0 0 100% / $split-grid * $i;
+          max-width: 100% / $split-grid * $i;
+        }
+      }
+    }
+    .col.is-#{$key}-auto {
+      flex: 0 1 auto;
       max-width: 100%;
     }
-  }
-  @else {
-    .col.is-mobile-#{$i} {
-      flex: 0 0 100% / $split-grid * $i;
-      max-width: 100% / $split-grid * $i;
-    }
-  }
-}
-
-.col.is-mobile-auto {
-  flex: 0 1 auto;
-  max-width: 100%;
-}
-
-@include fablet {
-  @for $i from 0 through $split-grid {
-    @if $i == 0 {
-      .col.is-fablet-#{$i} {
-        flex: 1 0 0%;
-        max-width: 100%;
-      }
-    }
-    @else {
-      .col.is-fablet-#{$i} {
-        flex: 0 0 100% / $split-grid * $i;
-        max-width: 100% / $split-grid * $i;
-      }
-    }
-  }
-  .col.is-fablet-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include tablet {
-  @for $i from 0 through $split-grid {
-    @if $i == 0 {
-      .col.is-tablet-#{$i} {
-        flex: 1 0 0%;
-        max-width: 100%;
-      }
-    }
-    @else {
-      .col.is-tablet-#{$i} {
-        flex: 0 0 100% / $split-grid * $i;
-        max-width: 100% / $split-grid * $i;
-      }
-    }
-  }
-  .col.is-tablet-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include desktop {
-  @for $i from 0 through $split-grid {
-    @if $i == 0 {
-      .col.is-desktop-#{$i} {
-        flex: 1 0 0%;
-        max-width: 100%;
-      }
-    }
-    @else {
-      .col.is-desktop-#{$i} {
-        flex: 0 0 100% / $split-grid * $i;
-        max-width: 100% / $split-grid * $i;
-      }
-    }
-  }
-  .col.is-desktop-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include wide {
-  @for $i from 0 through $split-grid {
-    @if $i == 0 {
-      .col.is-wide-#{$i} {
-        flex: 1 0 0%;
-        max-width: 100%;
-      }
-    }
-    @else {
-      .col.is-wide-#{$i} {
-        flex: 0 0 100% / $split-grid * $i;
-        max-width: 100% / $split-grid * $i;
-      }
-    }
-  }
-  .col.is-wide-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
   }
 }
