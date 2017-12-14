@@ -2257,6 +2257,18 @@ textarea,
   display: inline-block;
 }
 
+.is-mobile-block {
+  display: block;
+}
+
+.is-mobile-inline {
+  display: inline;
+}
+
+.is-mobile-inline-block {
+  display: inline-block;
+}
+
 .is-mobile-none {
   display: none;
 }
@@ -2414,6 +2426,18 @@ textarea,
     max-width: 100%;
   }
 
+  .is-fablet-block {
+    display: block;
+  }
+
+  .is-fablet-inline {
+    display: inline;
+  }
+
+  .is-fablet-inline-block {
+    display: inline-block;
+  }
+
   .is-fablet-none {
     display: none;
   }
@@ -2542,6 +2566,18 @@ textarea,
     -webkit-box-flex: 0;
     flex: 0 1 auto;
     max-width: 100%;
+  }
+
+  .is-tablet-block {
+    display: block;
+  }
+
+  .is-tablet-inline {
+    display: inline;
+  }
+
+  .is-tablet-inline-block {
+    display: inline-block;
   }
 
   .is-tablet-none {
@@ -2674,6 +2710,18 @@ textarea,
     max-width: 100%;
   }
 
+  .is-desktop-block {
+    display: block;
+  }
+
+  .is-desktop-inline {
+    display: inline;
+  }
+
+  .is-desktop-inline-block {
+    display: inline-block;
+  }
+
   .is-desktop-none {
     display: none;
   }
@@ -2804,8 +2852,32 @@ textarea,
     max-width: 100%;
   }
 
+  .is-wide-block {
+    display: block;
+  }
+
+  .is-wide-inline {
+    display: inline;
+  }
+
+  .is-wide-inline-block {
+    display: inline-block;
+  }
+
   .is-wide-none {
     display: none;
+  }
+
+  .is-wide-only-block {
+    display: block;
+  }
+
+  .is-wide-only-inline {
+    display: inline;
+  }
+
+  .is-wide-only-inline-block {
+    display: inline-block;
   }
 
   .is-wide-only-none {
@@ -2814,54 +2886,162 @@ textarea,
 }
 
 @media screen and (max-width: 1199px) {
+  .is-mobile-desktop-block {
+    display: block;
+  }
+
+  .is-mobile-desktop-inline {
+    display: inline;
+  }
+
+  .is-mobile-desktop-inline-block {
+    display: inline-block;
+  }
+
   .is-mobile-desktop-none {
     display: none;
   }
 }
 
 @media screen and (max-width: 991px) {
+  .is-mobile-tablet-block {
+    display: block;
+  }
+
+  .is-mobile-tablet-inline {
+    display: inline;
+  }
+
+  .is-mobile-tablet-inline-block {
+    display: inline-block;
+  }
+
   .is-mobile-tablet-none {
     display: none;
   }
 }
 
 @media all and (orientation: landscape) and (max-width: 991px) {
+  .is-landscape-block {
+    display: block;
+  }
+
+  .is-landscape-inline {
+    display: inline;
+  }
+
+  .is-landscape-inline-block {
+    display: inline-block;
+  }
+
   .is-landscape-none {
     display: none;
   }
 }
 
 @media all and (orientation: portrait) and (max-width: 991px) {
+  .is-portrait-block {
+    display: block;
+  }
+
+  .is-portrait-inline {
+    display: inline;
+  }
+
+  .is-portrait-inline-block {
+    display: inline-block;
+  }
+
   .is-portrait-none {
     display: none;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .is-mobile-fablet-block {
+    display: block;
+  }
+
+  .is-mobile-fablet-inline {
+    display: inline;
+  }
+
+  .is-mobile-fablet-inline-block {
+    display: inline-block;
+  }
+
   .is-mobile-fablet-none {
     display: none;
   }
 }
 
 @media screen and (max-width: 575px) {
+  .is-mobile-only-block {
+    display: block;
+  }
+
+  .is-mobile-only-inline {
+    display: inline;
+  }
+
+  .is-mobile-only-inline-block {
+    display: inline-block;
+  }
+
   .is-mobile-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
+  .is-fablet-only-block {
+    display: block;
+  }
+
+  .is-fablet-only-inline {
+    display: inline;
+  }
+
+  .is-fablet-only-inline-block {
+    display: inline-block;
+  }
+
   .is-fablet-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .is-tablet-only-block {
+    display: block;
+  }
+
+  .is-tablet-only-inline {
+    display: inline;
+  }
+
+  .is-tablet-only-inline-block {
+    display: inline-block;
+  }
+
   .is-tablet-only-none {
     display: none;
   }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+  .is-desktop-only-block {
+    display: block;
+  }
+
+  .is-desktop-only-inline {
+    display: inline;
+  }
+
+  .is-desktop-only-inline-block {
+    display: inline-block;
+  }
+
   .is-desktop-only-none {
     display: none;
   }

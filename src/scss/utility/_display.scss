@@ -16,6 +16,15 @@
 
 @each $key, $mediaquery in $pattern-breakpoint-mediaquery-all {
   @include mediaquery-pattern($mediaquery) {
+    .is-#{$key}-block {
+      display: block;
+    }
+    .is-#{$key}-inline {
+      display: inline;
+    }
+    .is-#{$key}-inline-block {
+      display: inline-block;
+    }
     .is-#{$key}-none {
       display: none;
     }
