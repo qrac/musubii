@@ -177,77 +177,20 @@
   }
 }
 
-.field > .is-mobile-0 {
-  flex: 1 0 0%;
-  max-width: 100%;
-}
-
-.field > .is-mobile-full {
-  flex: 0 1 100%;
-  max-width: 100%;
-}
-
-.field > .is-mobile-auto {
-  flex: 0 1 auto;
-  max-width: 100%;
-}
-
-@include fablet {
-  .field > .is-fablet-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .field > .is-fablet-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .field > .is-fablet-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include tablet {
-  .field > .is-tablet-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .field > .is-tablet-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .field > .is-tablet-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include desktop {
-  .field > .is-desktop-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .field > .is-desktop-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .field > .is-desktop-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include wide {
-  .field > .is-wide-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .field > .is-wide-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .field > .is-wide-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
+@each $key, $breakpoint in $pattern-breakpoint-base {
+  @include mobile-first($breakpoint) {
+    $i: 0; // Syntax error countermeasure
+    .field > .is-#{$key}-#{$i} {
+      flex: 1 0 0%;
+      max-width: 100%;
+    }
+    .field > .is-#{$key}-full {
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+    .field > .is-#{$key}-auto {
+      flex: 0 1 auto;
+      max-width: 100%;
+    }
   }
 }
