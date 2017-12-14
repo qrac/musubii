@@ -100,27 +100,13 @@
   &:hover {
     background-color: darken($grey-200, 5%);
   }
-  &.is-primary,
-  &.is-success,
-  &.is-danger {
-    color: $light;
-  }
-  &.is-primary {
-    background-color: $primary;
-    &:hover {
-      background-color: darken($primary, 5%);
-    }
-  }
-  &.is-success {
-    background-color: $success;
-    &:hover {
-      background-color: darken($success, 5%);
-    }
-  }
-  &.is-danger {
-    background-color: $danger;
-    &:hover {
-      background-color: darken($danger, 5%);
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      background-color: $value;
+      color: $light;
+      &:hover {
+        background-color: darken($value, 5%);
+      }
     }
   }
   &.is-disable,
@@ -138,14 +124,10 @@
   &:hover {
     background-color: $dark-9;
   }
-  &.is-primary {
-    color: $primary;
-  }
-  &.is-success {
-    color: $success;
-  }
-  &.is-danger {
-    color: $danger;
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      color: $value;
+    }
   }
   &.is-disable,
   &.is-disable:hover,
@@ -162,32 +144,16 @@
   &:hover {
     background-color: darken($light, 5%);
   }
-  &.is-primary {
-    color: $primary;
-    border-color: $primary;
-    &:hover {
-      background-color: $primary;
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      border-color: $value;
+      color: $value;
+      &:hover {
+        background-color: $value;
+        border-color: transparent;
+        color: $light;
+      }
     }
-  }
-  &.is-success {
-    color: $success;
-    border-color: $success;
-    &:hover {
-      background-color: $success;
-    }
-  }
-  &.is-danger {
-    color: $danger;
-    border-color: $danger;
-    &:hover {
-      background-color: $danger;
-    }
-  }
-  &.is-primary:hover,
-  &.is-success:hover,
-  &.is-danger:hover {
-    color: $light;
-    border-color: transparent;
   }
   &.is-disable,
   &.is-disable:hover,
@@ -206,32 +172,16 @@
     color: $dark-1;
     background-color: $light;
   }
-  &.is-primary {
-    color: lighten($primary, 30%);
-    border-color: lighten($primary, 30%);
-    &:hover {
-      background-color: $primary;
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      border-color: lighten($value, 30%);
+      color: lighten($value, 30%);
+      &:hover {
+        background-color: $value;
+        border-color: transparent;
+        color: $light;
+      }
     }
-  }
-  &.is-success {
-    color: lighten($success, 30%);
-    border-color: lighten($success, 30%);
-    &:hover {
-      background-color: $success;
-    }
-  }
-  &.is-danger {
-    color: lighten($danger, 30%);
-    border-color: lighten($danger, 30%);
-    &:hover {
-      background-color: $danger;
-    }
-  }
-  &.is-primary:hover,
-  &.is-success:hover,
-  &.is-danger:hover {
-    color: $light;
-    border-color: transparent;
   }
   &.is-disable,
   &.is-disable:hover,
