@@ -42,8 +42,8 @@ $split-grid: 12;
   }
 }
 
-@each $key, $breakpoint in $pattern-breakpoint-base {
-  @include mobile-first($breakpoint) {
+@each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
+  @include mediaquery-pattern($mediaquery) {
     @for $i from 0 through $split-grid {
       @if $i == 0 {
         .col.is-#{$key}-#{$i} {

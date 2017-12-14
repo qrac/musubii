@@ -20,6 +20,14 @@ $pattern-breakpoint-base:(
   wide: $screen-width-wide
 );
 
+$pattern-breakpoint-mediaquery-mobile-first:(
+  mobile: $screen-width-mobile,
+  fablet: "screen and (min-width: $screen-width-fablet)",
+  tablet: "screen and (min-width: $screen-width-tablet)",
+  desktop: "screen and (min-width: $screen-width-desktop)",
+  wide: "screen and (min-width: $screen-width-wide)"
+);
+
 $pattern-breakpoint-mediaquery-all:(
   mobile: $screen-width-mobile,
   fablet: "screen and (min-width: $screen-width-fablet)",

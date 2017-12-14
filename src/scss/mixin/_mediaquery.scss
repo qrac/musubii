@@ -122,17 +122,7 @@
 // Mixin: Media Query / Pattern
 //----------------------------------------------------
 
-@mixin mobile-first($breakpoint) {
-  @if $breakpoint == $screen-width-mobile {
-    @content;
-  } @else {
-    @media screen and (min-width: $breakpoint) {
-      @content;
-    }
-  }
-}
-
-@mixin mediaquery-pattern-all($mediaquery) {
+@mixin mediaquery-pattern($mediaquery) {
   @if $mediaquery == $screen-width-mobile {
     @content;
   } @else {

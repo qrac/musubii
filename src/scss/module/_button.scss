@@ -221,8 +221,8 @@
   }
 }
 
-@each $key, $breakpoint in $pattern-breakpoint-base {
-  @include mobile-first($breakpoint) {
+@each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
+  @include mediaquery-pattern($mediaquery) {
     $i: 0; // Syntax error countermeasure
     .btns > .btn.is-#{$key}-#{$i} {
       flex: 1 0 0%;
