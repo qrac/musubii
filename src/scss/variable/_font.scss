@@ -23,7 +23,21 @@ Menlo, Monaco, Consolas,
 Meiryo,
 monospace, serif !default;
 
-$patterns-font-weight:(
+//----------------------------------------------------
+// Variable: Font / Pattern
+//----------------------------------------------------
+
+$pattern-font-size:(
+  xxl: 200%,
+  xl: 150%,
+  lg: 125%,
+  md: 100%,
+  sm: 87.5%,
+  xs: 75%,
+  xxs: 62.5%
+);
+
+$pattern-font-weight:(
   normal: 400,
   strong: 700,
   weight-100: 100,

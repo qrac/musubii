@@ -2,25 +2,25 @@
 // Utility: Deco
 //----------------------------------------------------
 
-@each $key, $value in $patterns-color-dark {
+@each $key, $value in $pattern-color-dark {
   .is-#{$key} {
     color: $value;
   }
 }
 
-@each $key, $value in $patterns-color-light {
+@each $key, $value in $pattern-color-light {
   .is-#{$key} {
     color: $value;
   }
 }
 
-@each $key, $value in $patterns-color-theme {
+@each $key, $value in $pattern-color-theme {
   .is-#{$key}:not(.btn) {
     color: $value;
   }
 }
 
-@each $key, $value in $patterns-font-weight {
+@each $key, $value in $pattern-font-weight {
   .is-#{$key} {
     font-weight: $value;
   }
