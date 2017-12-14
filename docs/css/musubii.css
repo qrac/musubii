@@ -1336,8 +1336,7 @@ textarea,
   max-width: 100%;
 }
 
-.btns > .btn.is-mobile-full,
-.btns > .btn.is-full {
+.btns > .btn.is-mobile-full {
   -webkit-box-flex: 0;
   flex: 0 1 100%;
   max-width: 100%;

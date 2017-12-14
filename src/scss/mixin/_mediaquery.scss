@@ -27,6 +27,16 @@
   }
 }
 
+@mixin mobile-first($breakpoint) {
+  @if $breakpoint == 0 {
+    @content;
+  } @else {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
 // Size Only
 @mixin mobile-only {
   @media screen and (max-width: $screen-width-fablet - 1px) {

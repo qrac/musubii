@@ -221,78 +221,19 @@
   }
 }
 
-.btns > .btn.is-mobile-0 {
-  flex: 1 0 0%;
-  max-width: 100%;
-}
-
-.btns > .btn.is-mobile-full,
-.btns > .btn.is-full {
-  flex: 0 1 100%;
-  max-width: 100%;
-}
-
-.btns > .btn.is-mobile-auto {
-  flex: 0 1 auto;
-  max-width: 100%;
-}
-
-@include fablet {
-  .btns > .btn.is-fablet-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-fablet-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-fablet-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include tablet {
-  .btns > .btn.is-tablet-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-tablet-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-tablet-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include desktop {
-  .btns > .btn.is-desktop-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-desktop-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-desktop-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include wide {
-  .btns > .btn.is-wide-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-wide-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-wide-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
+@each $key, $breakpoint in $pattern-breakpoint-base {
+  @include mobile-first($breakpoint) {
+    .btns > .btn.is-#{$key}-0 {
+      flex: 1 0 0%;
+      max-width: 100%;
+    }
+    .btns > .btn.is-#{$key}-full {
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+    .btns > .btn.is-#{$key}-auto {
+      flex: 0 1 auto;
+      max-width: 100%;
+    }
   }
 }
