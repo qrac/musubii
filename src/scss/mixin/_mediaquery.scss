@@ -79,7 +79,7 @@
 
 // Landscape or Portrait
 @mixin landscape {
-  @media all and (orientation:portrait) and (max-width: $screen-width-desktop - 1px) {
+  @media all and (orientation:landscape) and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
@@ -127,6 +127,16 @@
     @content;
   } @else {
     @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin mediaquery-pattern-all($mediaquery) {
+  @if $mediaquery == $screen-width-mobile {
+    @content;
+  } @else {
+    @media #{$mediaquery} {
       @content;
     }
   }

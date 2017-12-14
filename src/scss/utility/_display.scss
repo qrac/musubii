@@ -14,85 +14,10 @@
   display: inline-block;
 }
 
-.is-none,
-.is-mobile-none {
-  display: none;
-}
-
-.is-fablet-none {
-  @include fablet {
-    display: none;
-  }
-}
-
-.is-tablet-none {
-  @include tablet {
-    display: none;
-  }
-}
-
-.is-desktop-none {
-  @include desktop {
-    display: none;
-  }
-}
-
-.is-wide-none {
-  @include wide {
-    display: none;
-  }
-}
-
-.is-mobile-only-none {
-  @include mobile-only {
-    display: none;
-  }
-}
-
-.is-fablet-only-none {
-  @include fablet-only {
-    display: none;
-  }
-}
-
-.is-tablet-only-none {
-  @include tablet-only {
-    display: none;
-  }
-}
-
-.is-desktop-only-none {
-  @include desktop-only {
-    display: none;
-  }
-}
-
-.is-mobile-fablet-none {
-  @include mobile-fablet {
-    display: none;
-  }
-}
-
-.is-mobile-tablet-none {
-  @include mobile-tablet {
-    display: none;
-  }
-}
-
-.is-mobile-desktop-none {
-  @include mobile-desktop {
-    display: none;
-  }
-}
-
-.is-landscape-none {
-  @include landscape {
-    display: none;
-  }
-}
-
-.is-portrait-none {
-  @include portrait {
-    display: none;
+@each $key, $mediaquery in $pattern-breakpoint-mediaquery-all {
+  @include mediaquery-pattern-all($mediaquery) {
+    .is-#{$key}-none {
+      display: none;
+    }
   }
 }

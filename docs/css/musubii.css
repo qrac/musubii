@@ -2257,7 +2257,6 @@ textarea,
   display: inline-block;
 }
 
-.is-none,
 .is-mobile-none {
   display: none;
 }
@@ -2808,6 +2807,10 @@ textarea,
   .is-wide-none {
     display: none;
   }
+
+  .is-wide-only-none {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -2822,11 +2825,13 @@ textarea,
   }
 }
 
-@media all and (orientation: portrait) and (max-width: 991px) {
+@media all and (orientation: landscape) and (max-width: 991px) {
   .is-landscape-none {
     display: none;
   }
+}
 
+@media all and (orientation: portrait) and (max-width: 991px) {
   .is-portrait-none {
     display: none;
   }
