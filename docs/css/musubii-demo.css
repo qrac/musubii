@@ -362,12 +362,12 @@
 
 .logo.is-header {
   display: block;
-  width: 130px;
+  width: 8.25em;
 }
 
 .logo.is-title {
   display: block;
-  width: 250px;
+  width: 15.625em;
   margin: 0 auto 6px;
 }
 
