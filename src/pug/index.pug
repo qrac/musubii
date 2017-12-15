@@ -91,21 +91,27 @@ block contents
               | ダウンロード
               i.fa.fa-download.is-fit(aria-hidden="true")
             | 後、読み込んでください。
-          pre.pre.is-sm
-            code.code.html.
-              &lt;link rel=&quot;stylesheet&quot; href="css/musubii.min.css"&gt;
+          .wysiwyg.is-sm
+            :markdown-it
+              ```html
+              <link rel="stylesheet" href="css/musubii.min.css">
+              ```
           h4.heading.is-lg
             a.text.is-primary.is-link(href="https://www.npmjs.com/package/musubii")
               span npm
-          pre.pre.is-sm
-            code.code.
+          .wysiwyg.is-sm
+            :markdown-it
+              ```cmd
               npm install musubii
+              ```
           h4.heading.is-lg
             a.text.is-primary.is-link(href="https://cdn.jsdelivr.net/npm/musubii/")
               span CDN
-          pre.pre.is-sm
-            code.code.html.
-              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css&quot;&gt;
+          .wysiwyg.is-sm
+            :markdown-it
+              ```html
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css">
+              ```
         h3.heading.is-xl Detail
         .group.is-wrap
           h4.heading.is-lg HTML
@@ -123,12 +129,14 @@ block contents
                 .btn.is-plain.is-success ボタンの例 B
                 .btn.is-plain.is-success.is-round ボタンの例 C
                 .btn.is-plain.is-success.is-round.is-lg ボタンの例 D
-            pre.pre.is-sm
-              code.code.html.
-                &lt;div class=&quot;btn is-plain is-primary&quot;&gt;ボタンの例 A&lt;/div&gt;
-                &lt;div class=&quot;btn is-plain is-success&quot;&gt;ボタンの例 B&lt;/div&gt;
-                &lt;div class=&quot;btn is-plain is-success is-round&quot;&gt;ボタンの例 C&lt;/div&gt;
-                &lt;div class=&quot;btn is-plain is-success is-round is-lg&quot;&gt;ボタンの例 D&lt;/div&gt;
+            .wysiwyg.is-sm
+              :markdown-it
+                ```html
+                <div class="btn is-plain is-primary">ボタンの例 A</div>
+                <div class="btn is-plain is-success">ボタンの例 B</div>
+                <div class="btn is-plain is-success is-round">ボタンの例 C</div>
+                <div class="btn is-plain is-success is-round is-lg">ボタンの例 D</div>
+                ```
         .group.is-wrap
           h4.heading.is-lg CSS
           p.texts.is-sm
@@ -317,35 +325,45 @@ block contents
             | &nbsp;
             code.code .is-yakuhanjps
             | &nbsp;で、それぞれ適応できます。
-          pre.pre.is-sm
-            code.code.html.
-              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css&quot;&gt;
-              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css&quot;&gt;
+          .wysiwyg.is-sm
+            :markdown-it
+              ```html
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css">
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css">
+              ```
           h3.heading.is-lg
             a.text.is-primary.is-link(href="http://fontawesome.io/")
               span.text Font Awesome
-          pre.pre.is-sm
-            code.code.html.
-              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
+          .wysiwyg.is-sm
+            :markdown-it
+              ```html
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+              ```
           h3.heading.is-lg
             a.text.is-primary.is-link(href="https://material.io/icons/")
               span.text Material Icons
-          pre.pre.is-sm
-            code.code.html.
-              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
+          .wysiwyg.is-sm
+            :markdown-it
+              ```html
+              <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+              ```
           h3.heading.is-lg
             a.text.is-primary.is-link(href="https://fonts.google.com/")
               span.text Google Fonts
-          pre.pre.is-sm
-            code.code.
-              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=xxxxxx&quot;&gt;
+          .wysiwyg.is-sm
+            :markdown-it
+              ```html
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=xxxxxx">
+              ```
           h3.heading.is-lg
             a.text.is-primary.is-link.is-solid(href="https://jquery.com/")
               span.text jQuery
-          pre.pre.is-sm
-            code.code.html.
-              &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-              &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js&quot;&gt;&lt;/script&gt;
-              &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+          .wysiwyg.is-sm
+            :markdown-it
+              ```html
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+              ```
 
   include common/_footer.pug
