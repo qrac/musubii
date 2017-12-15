@@ -2,6 +2,10 @@
 // Variable: Color
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Change Tone
+//----------------------------------------------------
+
 $red-50: $mof-red-50 !default;
 $red-100: $mof-red-100 !default;
 $red-200: $mof-red-200 !default;
@@ -278,6 +282,10 @@ $blue-grey-900: $mof-blue-grey-900 !default;
 $black: $mof-black !default;
 $white: $mof-white !default;
 
+//----------------------------------------------------
+// / Theme
+//----------------------------------------------------
+
 $primary: $cyan-500 !default;
 $info: $blue-500 !default;
 $success: $green-a700 !default;
@@ -307,7 +315,7 @@ $light-8: rgba( $white, 0.12 ) !default;
 $light-9: rgba( $white, 0.05 ) !default;
 
 //----------------------------------------------------
-// Variable: Color / Pattern
+// / Pattern
 //----------------------------------------------------
 
 $pattern-color-theme:(

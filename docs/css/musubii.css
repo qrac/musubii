@@ -986,6 +986,40 @@ textarea,
   justify-content: space-around;
 }
 
+.btns.is-bar {
+  flex-wrap: nowrap;
+}
+
+.btns.is-bar > .btn {
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.btns.is-bar > .btn:not(.is-round):first-child {
+  border-top-left-radius: 0.1875em;
+  border-bottom-left-radius: 0.1875em;
+}
+
+.btns.is-bar > .btn:not(.is-round):last-child {
+  border-top-right-radius: 0.1875em;
+  border-bottom-right-radius: 0.1875em;
+}
+
+.btns.is-bar > .btn.is-round:first-child {
+  border-top-left-radius: 999em;
+  border-bottom-left-radius: 999em;
+}
+
+.btns.is-bar > .btn.is-round:last-child {
+  border-top-right-radius: 999em;
+  border-bottom-right-radius: 999em;
+}
+
+.btns.is-bar > .btn:nth-child(2),
+.btns.is-bar > .btn:nth-child(2) ~ .btn {
+  border-left: none;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -1294,40 +1328,6 @@ textarea,
   color: rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.5);
-}
-
-.btns.is-bar {
-  flex-wrap: nowrap;
-}
-
-.btns.is-bar > .btn {
-  border-radius: 0;
-  overflow: hidden;
-}
-
-.btns.is-bar > .btn:not(.is-round):first-child {
-  border-top-left-radius: 0.1875em;
-  border-bottom-left-radius: 0.1875em;
-}
-
-.btns.is-bar > .btn:not(.is-round):last-child {
-  border-top-right-radius: 0.1875em;
-  border-bottom-right-radius: 0.1875em;
-}
-
-.btns.is-bar > .btn.is-round:first-child {
-  border-top-left-radius: 999em;
-  border-bottom-left-radius: 999em;
-}
-
-.btns.is-bar > .btn.is-round:last-child {
-  border-top-right-radius: 999em;
-  border-bottom-right-radius: 999em;
-}
-
-.btns.is-bar > .btn:nth-child(2),
-.btns.is-bar > .btn:nth-child(2) ~ .btn {
-  border-left: none;
 }
 
 .btns > .btn.is-mobile-0 {
@@ -2245,30 +2245,22 @@ textarea,
   font-family: YakuHanJPs, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
 }
 
-.is-block {
-  display: block;
-}
-
-.is-inline {
-  display: inline;
-}
-
-.is-inline-block {
-  display: inline-block;
-}
-
+.is-block,
 .is-mobile-block {
   display: block;
 }
 
+.is-inline,
 .is-mobile-inline {
   display: inline;
 }
 
+.is-inline-block,
 .is-mobile-inline-block {
   display: inline-block;
 }
 
+.is-none,
 .is-mobile-none {
   display: none;
 }

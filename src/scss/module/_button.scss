@@ -2,6 +2,10 @@
 // Module: Button
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Set Modifier
+//----------------------------------------------------
+
 .btns {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +43,42 @@
     justify-content: space-around;
   }
 }
+
+//----------------------------------------------------
+// / Set Bar
+//----------------------------------------------------
+
+.btns.is-bar {
+  flex-wrap: nowrap;
+  > .btn {
+    border-radius: 0;
+    overflow: hidden;
+  }
+  > .btn:not(.is-round):first-child {
+    border-top-left-radius: 0.1875em;
+    border-bottom-left-radius: 0.1875em;
+  }
+  > .btn:not(.is-round):last-child {
+    border-top-right-radius: 0.1875em;
+    border-bottom-right-radius: 0.1875em;
+  }
+  > .btn.is-round:first-child {
+    border-top-left-radius: 999em;
+    border-bottom-left-radius: 999em;
+  }
+  > .btn.is-round:last-child {
+    border-top-right-radius: 999em;
+    border-bottom-right-radius: 999em;
+  }
+  > .btn:nth-child(2),
+  > .btn:nth-child(2) ~ .btn {
+    border-left: none;
+  }
+}
+
+//----------------------------------------------------
+// / Single Modifier
+//----------------------------------------------------
 
 .btn {
   cursor: pointer;
@@ -87,12 +127,20 @@
   }
 }
 
+//----------------------------------------------------
+// / Floating
+//----------------------------------------------------
+
 .btn.is-floating:not(.is-disable) {
   box-shadow: $shadow-btn-floating;
   &:hover {
     box-shadow: $shadow-btn-floating-hover;
   }
 }
+
+//----------------------------------------------------
+// / Plain
+//----------------------------------------------------
 
 .btn.is-plain {
   background-color: $grey-200;
@@ -118,6 +166,10 @@
   }
 }
 
+//----------------------------------------------------
+// / Melt
+//----------------------------------------------------
+
 .btn.is-melt {
   background-color: transparent;
   border: 1px solid transparent;
@@ -137,6 +189,10 @@
     background-color: transparent;
   }
 }
+
+//----------------------------------------------------
+// / Outline
+//----------------------------------------------------
 
 .btn.is-outline {
   background-color: $light;
@@ -163,6 +219,10 @@
     background-color: $dark-6;
   }
 }
+
+//----------------------------------------------------
+// / Ghost
+//----------------------------------------------------
 
 .btn.is-ghost {
   color: $light;
@@ -193,33 +253,9 @@
   }
 }
 
-.btns.is-bar {
-  flex-wrap: nowrap;
-  > .btn {
-    border-radius: 0;
-    overflow: hidden;
-  }
-  > .btn:not(.is-round):first-child {
-    border-top-left-radius: 0.1875em;
-    border-bottom-left-radius: 0.1875em;
-  }
-  > .btn:not(.is-round):last-child {
-    border-top-right-radius: 0.1875em;
-    border-bottom-right-radius: 0.1875em;
-  }
-  > .btn.is-round:first-child {
-    border-top-left-radius: 999em;
-    border-bottom-left-radius: 999em;
-  }
-  > .btn.is-round:last-child {
-    border-top-right-radius: 999em;
-    border-bottom-right-radius: 999em;
-  }
-  > .btn:nth-child(2),
-  > .btn:nth-child(2) ~ .btn {
-    border-left: none;
-  }
-}
+//----------------------------------------------------
+// / Responsive Button
+//----------------------------------------------------
 
 @each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
   @include mediaquery-pattern($mediaquery) {

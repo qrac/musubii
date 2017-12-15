@@ -2,8 +2,16 @@
 // Layout: Grid
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Dedicated Variable
+//----------------------------------------------------
+
 // Number of grid divisions
 $split-grid: 12;
+
+//----------------------------------------------------
+// / Basic Modifier
+//----------------------------------------------------
 
 .grid {
   display: flex;
@@ -41,6 +49,10 @@ $split-grid: 12;
     display: flex;
   }
 }
+
+//----------------------------------------------------
+// / Responsive Column
+//----------------------------------------------------
 
 @each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
   @include mediaquery-pattern($mediaquery) {

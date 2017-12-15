@@ -2,6 +2,10 @@
 // Variable: Break Point
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Base
+//----------------------------------------------------
+
 $screen-width-mobile: 0px !default;
 $screen-width-fablet: 576px !default;
 $screen-width-tablet: 768px !default;
@@ -9,7 +13,7 @@ $screen-width-desktop: 992px !default;
 $screen-width-wide: 1200px !default;
 
 //----------------------------------------------------
-// Variable: Break Point / Pattern
+// / Pattern
 //----------------------------------------------------
 
 $pattern-breakpoint-base:(

@@ -2,31 +2,43 @@
 // Utility: Display
 //----------------------------------------------------
 
-.is-block {
-  display: block;
-}
-
-.is-inline {
-  display: inline;
-}
-
-.is-inline-block {
-  display: inline-block;
-}
+//----------------------------------------------------
+// / Responsive Display
+//----------------------------------------------------
 
 @each $key, $mediaquery in $pattern-breakpoint-mediaquery-all {
   @include mediaquery-pattern($mediaquery) {
-    .is-#{$key}-block {
-      display: block;
+    @if $key == "mobile" {
+      .is-block,
+      .is-#{$key}-block {
+        display: block;
+      }
+      .is-inline,
+      .is-#{$key}-inline {
+        display: inline;
+      }
+      .is-inline-block,
+      .is-#{$key}-inline-block {
+        display: inline-block;
+      }
+      .is-none,
+      .is-#{$key}-none {
+        display: none;
+      }
     }
-    .is-#{$key}-inline {
-      display: inline;
-    }
-    .is-#{$key}-inline-block {
-      display: inline-block;
-    }
-    .is-#{$key}-none {
-      display: none;
+    @else {
+      .is-#{$key}-block {
+        display: block;
+      }
+      .is-#{$key}-inline {
+        display: inline;
+      }
+      .is-#{$key}-inline-block {
+        display: inline-block;
+      }
+      .is-#{$key}-none {
+        display: none;
+      }
     }
   }
 }
