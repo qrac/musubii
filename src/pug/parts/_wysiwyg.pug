@@ -115,50 +115,51 @@
             td(align="left") 左寄せ
             td(align="center") 4行目
             td(align="right") 右寄せ
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;wysiwyg&quot;&gt;
-          &lt;h1&gt;1番目に大きな見出し&lt;/h1&gt;
-          &lt;h2&gt;2番目に大きな見出し&lt;/h2&gt;
-          &lt;h3&gt;3番目に大きな見出し&lt;/h3&gt;
-          &lt;h4&gt;4番目に大きな見出し&lt;/h4&gt;
-          &lt;h5&gt;5番目に大きな見出し&lt;/h5&gt;
-          &lt;h6&gt;6番目に大きな見出し&lt;/h6&gt;
-          &lt;p&gt;WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、&lt;a&gt;データベース&lt;/a&gt;からの動的な出力を行う「&lt;strong&gt;WordPress&lt;/strong&gt;」などのプログラムを想定しています。&lt;/p&gt;
-          &lt;p&gt;WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、&lt;a&gt;データベース&lt;/a&gt;からの動的な出力を行う「&lt;strong&gt;WordPress&lt;/strong&gt;」などのプログラムを想定しています。&lt;/p&gt;
-          &lt;ul&gt;
-            &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-            &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-            &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-            &lt;li&gt;リストのテキストはインデントとリストスタイルを施します
-              &lt;ul&gt;
-                &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-                &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-                &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-                &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-          &lt;hr&gt;
-          &lt;p&gt;WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、&lt;a&gt;データベース&lt;/a&gt;からの動的な出力を行う「&lt;strong&gt;WordPress&lt;/strong&gt;」などのプログラムを想定しています。&lt;/p&gt;
-          &lt;ol&gt;
-            &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-            &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-            &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-            &lt;li&gt;リストのテキストはインデントとリストスタイルを施します
-              &lt;ol&gt;
-                &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-                &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-                &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-                &lt;li&gt;リストのテキストはインデントとリストスタイルを施します&lt;/li&gt;
-              &lt;/ol&gt;
-            &lt;/li&gt;
-          &lt;/ol&gt;
-          &lt;p&gt;WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、&lt;a&gt;データベース&lt;/a&gt;からの動的な出力を行う「&lt;strong&gt;WordPress&lt;/strong&gt;」などのプログラムを想定しています。&lt;/p&gt;
-          &lt;blockquote&gt;引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾を施しています。&lt;/blockquote&gt;
-          &lt;p&gt;文章の途中にコードを書きたい場合は&amp;nbsp;&lt;code&gt;code&lt;/code&gt;&amp;nbsp;タグで囲む。インラインでコードを表記することができるので、ちょっとしたコードへの説明が容易になります。逆に、コード自体をブロック化して全体を伝える場合は&amp;nbsp;&lt;code&gt;pre&lt;/code&gt;&amp;nbsp;で囲み、以下のように表示させます。&lt;/p&gt;
-          &lt;pre&gt;
-            &lt;code&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="wysiwyg">
+          <h1>1番目に大きな見出し</h1>
+          <h2>2番目に大きな見出し</h2>
+          <h3>3番目に大きな見出し</h3>
+          <h4>4番目に大きな見出し</h4>
+          <h5>5番目に大きな見出し</h5>
+          <h6>6番目に大きな見出し</h6>
+          <p>WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、<a>データベース</a>からの動的な出力を行う「<strong>WordPress</strong>」などのプログラムを想定しています。</p>
+          <p>WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、<a>データベース</a>からの動的な出力を行う「<strong>WordPress</strong>」などのプログラムを想定しています。</p>
+          <ul>
+            <li>リストのテキストはインデントとリストスタイルを施します</li>
+            <li>リストのテキストはインデントとリストスタイルを施します</li>
+            <li>リストのテキストはインデントとリストスタイルを施します</li>
+            <li>リストのテキストはインデントとリストスタイルを施します
+              <ul>
+                <li>リストのテキストはインデントとリストスタイルを施します</li>
+                <li>リストのテキストはインデントとリストスタイルを施します</li>
+                <li>リストのテキストはインデントとリストスタイルを施します</li>
+                <li>リストのテキストはインデントとリストスタイルを施します</li>
+              </ul>
+            </li>
+          </ul>
+          <hr>
+          <p>WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、<a>データベース</a>からの動的な出力を行う「<strong>WordPress</strong>」などのプログラムを想定しています。</p>
+          <ol>
+            <li>リストのテキストはインデントとリストスタイルを施します</li>
+            <li>リストのテキストはインデントとリストスタイルを施します</li>
+            <li>リストのテキストはインデントとリストスタイルを施します</li>
+            <li>リストのテキストはインデントとリストスタイルを施します
+              <ol>
+                <li>リストのテキストはインデントとリストスタイルを施します</li>
+                <li>リストのテキストはインデントとリストスタイルを施します</li>
+                <li>リストのテキストはインデントとリストスタイルを施します</li>
+                <li>リストのテキストはインデントとリストスタイルを施します</li>
+              </ol>
+            </li>
+          </ol>
+          <p>WYSIWYG内のブロック要素も、他の要素のレギュレーションと近い形で前後のオブジェクトの組み合わせに基づきmargin-topが付与され、ブロックの距離感を保つことができます。主に、<a>データベース</a>からの動的な出力を行う「<strong>WordPress</strong>」などのプログラムを想定しています。</p>
+          <blockquote>引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾を施しています。</blockquote>
+          <p>文章の途中にコードを書きたい場合は&nbsp;<code>code</code>&nbsp;タグで囲む。インラインでコードを表記することができるので、ちょっとしたコードへの説明が容易になります。逆に、コード自体をブロック化して全体を伝える場合は&nbsp;<code>pre</code>&nbsp;で囲み、以下のように表示させます。</p>
+          <pre>
+            <code>
               html {
                 box-sizing: border-box;
                 font-family: sans-serif;
@@ -167,41 +168,42 @@
                 -webkit-text-size-adjust: 100%;
                 -webkit-tap-highlight-color: transparent;
               }
-            &lt;/code&gt;
-          &lt;/pre&gt;
-          &lt;p&gt;WYSIWYGのテキストには、&lt;strong&gt;強調表示&lt;/strong&gt;・&lt;em&gt;イタリック表示&lt;/em&gt;・
-            &lt;br&gt;
-            &lt;s&gt;打ち消し線&lt;/s&gt;などのスタイルを用いることができます。その他、テーブルを組んだ場合は以下の通り。テーブル内のテキストを寄せる方向はインラインで書き込みます。
-          &lt;/p&gt;
-          &lt;table&gt;
-            &lt;thead&gt;
-              &lt;tr&gt;
-                &lt;th align=&quot;left&quot;&gt;Align left&lt;/th&gt;
-                &lt;th align=&quot;center&quot;&gt;Align Center&lt;/th&gt;
-                &lt;th align=&quot;right&quot;&gt;Align Right&lt;/th&gt;
-              &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody&gt;
-              &lt;tr&gt;
-                &lt;td align=&quot;left&quot;&gt;左寄せ&lt;/td&gt;
-                &lt;td align=&quot;center&quot;&gt;通常&lt;/td&gt;
-                &lt;td align=&quot;right&quot;&gt;右寄せ&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;tr&gt;
-                &lt;td align=&quot;left&quot;&gt;左寄せ&lt;/td&gt;
-                &lt;td align=&quot;center&quot;&gt;2行目&lt;/td&gt;
-                &lt;td align=&quot;right&quot;&gt;右寄せ&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;tr&gt;
-                &lt;td align=&quot;left&quot;&gt;左寄せ&lt;/td&gt;
-                &lt;td align=&quot;center&quot;&gt;3行目&lt;/td&gt;
-                &lt;td align=&quot;right&quot;&gt;右寄せ&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;tr&gt;
-                &lt;td align=&quot;left&quot;&gt;左寄せ&lt;/td&gt;
-                &lt;td align=&quot;center&quot;&gt;4行目&lt;/td&gt;
-                &lt;td align=&quot;right&quot;&gt;右寄せ&lt;/td&gt;
-              &lt;/tr&gt;
-            &lt;/tbody&gt;
-          &lt;/table&gt;
-        &lt;/div&gt;
+            </code>
+          </pre>
+          <p>WYSIWYGのテキストには、<strong>強調表示</strong>・<em>イタリック表示</em>・
+            <br>
+            <s>打ち消し線</s>などのスタイルを用いることができます。その他、テーブルを組んだ場合は以下の通り。テーブル内のテキストを寄せる方向はインラインで書き込みます。
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th align="left">Align left</th>
+                <th align="center">Align Center</th>
+                <th align="right">Align Right</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left">左寄せ</td>
+                <td align="center">通常</td>
+                <td align="right">右寄せ</td>
+              </tr>
+              <tr>
+                <td align="left">左寄せ</td>
+                <td align="center">2行目</td>
+                <td align="right">右寄せ</td>
+              </tr>
+              <tr>
+                <td align="left">左寄せ</td>
+                <td align="center">3行目</td>
+                <td align="right">右寄せ</td>
+              </tr>
+              <tr>
+                <td align="left">左寄せ</td>
+                <td align="center">4行目</td>
+                <td align="right">右寄せ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        ```

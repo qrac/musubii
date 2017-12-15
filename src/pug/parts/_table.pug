@@ -53,59 +53,61 @@
       tfoot
         tr
           th.box.is-right(colspan="5") テーブルフッター
-    pre.pre.is-sm
-      code.code.html.
-        &lt;table class=&quot;table is-stripe is-border is-center is-middle&quot;&gt;
-          &lt;thead&gt;
-            &lt;tr class=&quot;box is-paint&quot;&gt;
-              &lt;th width=&quot;20&quot;&gt;&lt;/th&gt;
-              &lt;th&gt;見出しセル&lt;/th&gt;
-              &lt;th&gt;見出しセル&lt;/th&gt;
-              &lt;th colspan=&quot;2&quot;&gt;見出しセル&lt;/th&gt;
-            &lt;/tr&gt;
-          &lt;/thead&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td rowspan=&quot;2&quot; class=&quot;box is-paint&quot;&gt;#1&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td class=&quot;box is-spot&quot;&gt;スポット表示&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td class=&quot;box is-paint&quot;&gt;#2&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td class=&quot;box is-paint&quot;&gt;#3&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td class=&quot;box is-danger&quot;&gt;エラー表示&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td class=&quot;box is-paint&quot;&gt;#4&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-              &lt;td&gt;データセル&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-          &lt;tfoot&gt;
-            &lt;tr&gt;
-              &lt;th colspan=&quot;5&quot; class=&quot;box is-right&quot;&gt;テーブルフッター&lt;/th&gt;
-            &lt;/tr&gt;
-          &lt;/tfoot&gt;
-        &lt;/table&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <table class="table is-stripe is-border is-center is-middle">
+          <thead>
+            <tr class="box is-paint">
+              <th width="20"></th>
+              <th>見出しセル</th>
+              <th>見出しセル</th>
+              <th colspan="2">見出しセル</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2" class="box is-paint">#1</td>
+              <td>データセル</td>
+              <td>データセル</td>
+              <td>データセル</td>
+              <td>データセル</td>
+            </tr>
+            <tr>
+              <td>データセル</td>
+              <td class="box is-spot">スポット表示</td>
+              <td>データセル</td>
+              <td>データセル</td>
+            </tr>
+            <tr>
+              <td class="box is-paint">#2</td>
+              <td>データセル</td>
+              <td>データセル</td>
+              <td>データセル</td>
+              <td>データセル</td>
+            </tr>
+            <tr>
+              <td class="box is-paint">#3</td>
+              <td>データセル</td>
+              <td>データセル</td>
+              <td class="box is-danger">エラー表示</td>
+              <td>データセル</td>
+            </tr>
+            <tr>
+              <td class="box is-paint">#4</td>
+              <td>データセル</td>
+              <td>データセル</td>
+              <td>データセル</td>
+              <td>データセル</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="5" class="box is-right">テーブルフッター</th>
+            </tr>
+          </tfoot>
+        </table>
+        ```
 
 .groups
   h4.heading.is-xl Table - Line
@@ -183,19 +185,21 @@
           td データセル
           td データセル
           td データセル
-    pre.pre.is-sm
-      code.code.html.
-        &lt;table class=&quot;table is-line&quot;&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <table class="table is-line">
           ...
-        &lt;/table&gt;
+        </table>
 
-        &lt;table class=&quot;table is-outline&quot;&gt;
+        <table class="table is-outline">
           ...
-        &lt;/table&gt;
+        </table>
 
-        &lt;table class=&quot;table is-border&quot;&gt;
+        <table class="table is-border">
           ...
-        &lt;/table&gt;
+        </table>
+        ```
 
 .groups
   h4.heading.is-xl Table - Align
@@ -229,24 +233,26 @@
             | .box .is-left
           td.box.is-center .box .is-center
           td.box.is-right.is-middle .box .is-right .is-middle
-    pre.pre.is-sm
-      code.code.html.
-        &lt;table class=&quot;table&quot;&gt;
-          &lt;thead&gt;
-            &lt;tr&gt;
-              &lt;th class=&quot;box is-left&quot;&gt;&lt;/th&gt;
-              &lt;th class=&quot;box is-center&quot;&gt;&lt;/th&gt;
-              &lt;th class=&quot;box is-right&quot;&gt;&lt;/th&gt;
-            &lt;/tr&gt;
-          &lt;/thead&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td class=&quot;box is-left&quot;&gt;&lt;/td&gt;
-              &lt;td class=&quot;box is-center&quot;&gt;&lt;/td&gt;
-              &lt;td class=&quot;box is-right is-middle&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="box is-left"></th>
+              <th class="box is-center"></th>
+              <th class="box is-right"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="box is-left"></td>
+              <td class="box is-center"></td>
+              <td class="box is-right is-middle"></td>
+            </tr>
+          </tbody>
+        </table>
+        ```
 
 .groups
   h4.heading.is-xl Table - Paint
@@ -302,28 +308,30 @@
           td データセル
           td データセル
           td データセル
-    pre.pre.is-sm
-      code.code.html.
-        &lt;table class=&quot;table&quot;&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td class=&quot;box is-paint&quot;&gt;&lt;/td&gt;
-              &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td class=&quot;box is-paint&quot;&gt;&lt;/td&gt;
-              &lt;td class=&quot;box is-spot&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td class=&quot;box is-paint&quot;&gt;&lt;/td&gt;
-              &lt;td class=&quot;box is-danger&quot;&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <table class="table">
+          <tbody>
+            <tr>
+              <td class="box is-paint"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="box is-paint"></td>
+              <td class="box is-spot"></td>
+            </tr>
+            <tr>
+              <td class="box is-paint"></td>
+              <td class="box is-danger"></td>
+            </tr>
+          </tbody>
+        </table>
 
-        &lt;table class=&quot;table is-stripe&quot;&gt;
+        <table class="table is-stripe">
           ...
-        &lt;/table&gt;
+        </table>
+        ```
 
 .groups
   h4.heading.is-xl Table - Scroll
@@ -380,10 +388,12 @@
             td データセル
             td データセル
             td データセル
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group is-scroll-x&quot;&gt;
-          &lt;table class=&quot;table&quot;&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group is-scroll-x">
+          <table class="table">
             ...
-          &lt;/table&gt;
-        &lt;/div&gt;
+          </table>
+        </div>
+        ```

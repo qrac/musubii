@@ -21,9 +21,11 @@
     p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
     p.heading.is-xl.is-demo-space-filter-1 見出し
     p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;heading&quot;&gt;見出し&lt;/p&gt;
-        &lt;p class=&quot;texts&quot;&gt;テキストテキストテキストテキストテキストテキスト&lt;/p&gt;
-        &lt;p class=&quot;heading&quot;&gt;見出し&lt;/p&gt;
-        &lt;p class=&quot;texts&quot;&gt;テキストテキストテキストテキストテキストテキスト&lt;/p&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="heading">見出し</p>
+        <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+        <p class="heading">見出し</p>
+        <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+        ```

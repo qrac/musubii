@@ -25,21 +25,23 @@
           .col.is-mobile-12.is-desktop-4
             .group.is-demo-box-1.is-primary.is-center.is-round
               | .col .is-mobile-12 .is-desktop-4
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-12 is-desktop-4&quot;&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid">
+            <div class="col is-mobile-12 is-desktop-4">
               ...
-            &lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-12 is-desktop-4&quot;&gt;
+            </div>
+            <div class="col is-mobile-12 is-desktop-4">
               ...
-            &lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-12 is-desktop-4&quot;&gt;
+            </div>
+            <div class="col is-mobile-12 is-desktop-4">
               ...
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+            </div>
+          </div>
+        </div>
+        ```
 
 .groups
   h4.heading.is-xl Grid - Arrangement
@@ -60,84 +62,96 @@
           .group.is-demo-box-3.is-primary.is-round .is-middle
         .col
           .group.is-demo-box-3.is-primary.is-round .is-middle
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid is-middle&quot;&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-middle">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```
     .group.group.is-demo-box-3.is-grey.is-round
       .grid.is-demo-box-1.is-height-1.is-bottom
         .col
           .group.is-demo-box-3.is-primary.is-round .is-bottom
         .col
           .group.is-demo-box-3.is-primary.is-round .is-bottom
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid is-bottom&quot;&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-bottom">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```
     .group.group.is-demo-box-3.is-grey.is-round
       .grid.is-demo-box-1.is-center
         .col
           .group.is-demo-box-3.is-primary.is-round .is-center
         .col
           .group.is-demo-box-3.is-primary.is-round .is-center
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid is-center&quot;&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-center">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```
     .group.group.is-demo-box-3.is-grey.is-round
       .grid.is-demo-box-1.is-right
         .col
           .group.is-demo-box-3.is-primary.is-round .is-right
         .col
           .group.is-demo-box-3.is-primary.is-round .is-right
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid is-right&quot;&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-right">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```
     .group.group.is-demo-box-3.is-grey.is-round
       .grid.is-demo-box-1.is-between
         .col
           .group.is-demo-box-3.is-primary.is-round .is-between
         .col
           .group.is-demo-box-3.is-primary.is-round .is-between
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid is-between&quot;&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-between">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```
     .group.group.is-demo-box-3.is-grey.is-round
       .grid.is-demo-box-1.is-around
         .col
           .group.is-demo-box-3.is-primary.is-round .is-around
         .col
           .group.is-demo-box-3.is-primary.is-round .is-around
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid is-around&quot;&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-around">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```
 
 .groups
   h4.heading.is-xl Grid - Responsive
@@ -272,58 +286,60 @@
           .col.is-stretch.is-mobile-0
             .group.is-demo-box-1.is-grey.is-center.is-round
               | 0
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-1&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-2&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-3&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-4&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-5&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-6&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-7&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-8&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-9&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-10&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-11&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;grid&quot;&gt;
-            &lt;div class=&quot;col is-mobile-12&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col is-mobile-0&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid">
+            <div class="col is-mobile-1">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-2">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-3">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-4">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-5">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-6">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-7">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-8">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-9">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-10">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-11">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+          <div class="grid">
+            <div class="col is-mobile-12">...</div>
+            <div class="col is-mobile-0">...</div>
+          </div>
+        </div>
+        ```
 
 .groups
   h4.heading.is-xl Grid - Stretch
@@ -348,14 +364,16 @@
         .col.is-mobile-0
           .group.is-demo-box-1.is-primary.is-center.is-round
             | .is-stretch
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid is-stretch&quot;&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-stretch">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```
 
 .groups
   h4.heading.is-xl Grid - Gap
@@ -374,11 +392,13 @@
         .col.is-mobile-0
           .group.is-demo-box-1.is-primary.is-center
             | .is-gap-none
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;group&quot;&gt;
-          &lt;div class=&quot;grid is-gap-none&quot;&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;col&quot;&gt;...&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-gap-none">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```

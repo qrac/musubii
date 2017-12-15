@@ -31,33 +31,35 @@
               .group
                 .btns
                   input.btn.is-plain.is-success.is-mobile-0(type="submit" value="ログイン")
-    pre.pre.is-sm
-      code.code.html.
-        &lt;form class=&quot;form&quot;&gt;
-          &lt;div class=&quot;group&quot;&gt;
-            &lt;p class=&quot;heading&quot;&gt;メールアドレス&lt;/p&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input is-mobile-0&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;group&quot;&gt;
-            &lt;p class=&quot;heading&quot;&gt;パスワード&lt;/p&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input is-mobile-0&quot; type=&quot;password&quot;&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;group&quot;&gt;
-            &lt;label&gt;
-              &lt;input class=&quot;input&quot; type=&quot;checkbox&quot;&gt;
-              &lt;span class=&quot;text is-sm&quot;&gt;次回から自動的にログイン&lt;/span&gt;
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;group&quot;&gt;
-            &lt;div class=&quot;btns&quot;&gt;
-              &lt;input class=&quot;btn is-plain is-success is-full&quot; type=&quot;submit&quot; value=&quot;ログイン&quot;&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <form class="form">
+          <div class="group">
+            <p class="heading">メールアドレス</p>
+            <div class="field">
+              <input class="input is-mobile-0" type="email" placeholder="example@gmail.com">
+            </div>
+          </div>
+          <div class="group">
+            <p class="heading">パスワード</p>
+            <div class="field">
+              <input class="input is-mobile-0" type="password">
+            </div>
+          </div>
+          <div class="group">
+            <label>
+              <input class="input" type="checkbox">
+              <span class="text is-sm">次回から自動的にログイン</span>
+            </label>
+          </div>
+          <div class="group">
+            <div class="btns">
+              <input class="btn is-plain is-success is-full" type="submit" value="ログイン">
+            </div>
+          </div>
+        </form>
+        ```
 
 .groups
   h4.heading.is-xl Form - Field
@@ -211,46 +213,48 @@
           select.select
             option 男性
             option 女性
-    pre.pre.is-sm
-      code.code.html.
-        &lt;form class=&quot;form&quot;&gt;
-          &lt;div class=&quot;group&quot;&gt;
-            &lt;p class=&quot;heading&quot;&gt;Desktopサイズまでは入力枠がフルサイズ↓&lt;/p&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
-              &lt;input class=&quot;input is-mobile-full is-desktop-auto&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;group&quot;&gt;
-            &lt;p class=&quot;heading&quot;&gt;誕生日&lt;/p&gt;
-            &lt;div class=&quot;field is-middle&quot;&gt;
-              &lt;select class=&quot;select&quot;&gt;
-                &lt;option&gt;2017&lt;/option&gt;
-                &lt;option&gt;2016&lt;/option&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <form class="form">
+          <div class="group">
+            <p class="heading">Desktopサイズまでは入力枠がフルサイズ↓</p>
+            <div class="field">
+              <input class="input is-mobile-full is-desktop-auto" type="text" placeholder="Text">
+              <input class="input is-mobile-full is-desktop-auto" type="text" placeholder="Text">
+            </div>
+          </div>
+          <div class="group">
+            <p class="heading">誕生日</p>
+            <div class="field is-middle">
+              <select class="select">
+                <option>2017</option>
+                <option>2016</option>
                 ...
-              &lt;/select&gt;
-              &lt;select class=&quot;select&quot;&gt;
-                &lt;option&gt;1&lt;/option&gt;
-                &lt;option&gt;2&lt;/option&gt;
+              </select>
+              <select class="select">
+                <option>1</option>
+                <option>2</option>
                 ...
-              &lt;/select&gt;
-              &lt;select class=&quot;select&quot;&gt;
-                &lt;option&gt;1&lt;/option&gt;
-                &lt;option&gt;2&lt;/option&gt;
+              </select>
+              <select class="select">
+                <option>1</option>
+                <option>2</option>
                 ...
-              &lt;/select&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;group&quot;&gt;
-            &lt;div class=&quot;field is-middle&quot;&gt;
-              &lt;p class=&quot;heading&quot;&gt;性別：&lt;/p&gt;
-              &lt;select class=&quot;select&quot;&gt;
-                &lt;option&gt;男性&lt;/option&gt;
-                &lt;option&gt;女性&lt;/option&gt;
-              &lt;/select&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
+              </select>
+            </div>
+          </div>
+          <div class="group">
+            <div class="field is-middle">
+              <p class="heading">性別：</p>
+              <select class="select">
+                <option>男性</option>
+                <option>女性</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        ```
 
 .groups
   h4.heading.is-xl Form - Parts
@@ -402,191 +406,193 @@
       .btns
         input.btn.is-plain.is-success(type="submit")
         input.btn.is-plain.is-success(type="submit" disabled)
-    pre.pre.is-sm
-      code.code.html.
-        &lt;form class=&quot;form&quot;&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;TEXT&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Text&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Disabled&quot; disabled=&quot;&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;text&quot; value=&quot;Readonly&quot; readonly=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;SEARCH&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;URL&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;url&quot; placeholder=&quot;example.com&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;E-MAIL&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;email&quot; placeholder=&quot;example@gmail.com&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;TEL&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;tel&quot; size=&quot;14&quot; maxlength=&quot;12&quot; placeholder=&quot;000-000-0000&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;PASSWORD&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;password&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;password&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;DATETIME LOCAL&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;datetime-local&quot; value=&quot;2017-02-02T00:00:00&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;DATE&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;date&quot; value=&quot;2017-02-02&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;MONTH&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;month&quot; value=&quot;2017-02&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;TIME&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;time&quot; value=&quot;00:00:00&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;NUMBER&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;number&quot; step=&quot;10&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;FILE&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;file&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;file&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;COLOR&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;color&quot; value=&quot;#1cb4c7&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;RANGE&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;range&quot;&gt;
-              &lt;input class=&quot;input&quot; type=&quot;range&quot; disabled=&quot;&quot;&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;TEXTAREA&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;textarea class=&quot;textarea&quot;&gt;&lt;/textarea&gt;
-              &lt;textarea class=&quot;textarea&quot; disabled=&quot;&quot;&gt;&lt;/textarea&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;RADIO&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;label&gt;
-                &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびー&lt;/span&gt;
-              &lt;/label&gt;
-              &lt;label&gt;
-                &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすびい&lt;/span&gt;
-              &lt;/label&gt;
-              &lt;label&gt;
-                &lt;input class=&quot;input&quot; type=&quot;radio&quot; name=&quot;radio-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;むすび&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;CHECKBOX&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;label&gt;
-                &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; checked=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;HTML&lt;/span&gt;
-              &lt;/label&gt;
-              &lt;label&gt;
-                &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot;&gt;&lt;span class=&quot;text&quot;&gt;CSS&lt;/span&gt;
-              &lt;/label&gt;
-              &lt;label&gt;
-                &lt;input class=&quot;input&quot; type=&quot;checkbox&quot; name=&quot;checkbox-default-1&quot; disabled=&quot;&quot;&gt;&lt;span class=&quot;text&quot;&gt;JS&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;SELECT&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;select class=&quot;select&quot;&gt;
-                &lt;option&gt;Select A&lt;/option&gt;
-                &lt;option&gt;Select B&lt;/option&gt;
-                &lt;option&gt;Select C&lt;/option&gt;
-                &lt;option&gt;Select D&lt;/option&gt;
-                &lt;option&gt;Select E&lt;/option&gt;
-              &lt;/select&gt;
-              &lt;select class=&quot;select&quot; disabled=&quot;&quot;&gt;
-                &lt;option&gt;Select A&lt;/option&gt;
-                &lt;option&gt;Select B&lt;/option&gt;
-                &lt;option&gt;Select C&lt;/option&gt;
-                &lt;option&gt;Select D&lt;/option&gt;
-                &lt;option&gt;Select E&lt;/option&gt;
-              &lt;/select&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;fieldset class=&quot;fieldset&quot;&gt;
-            &lt;legend class=&quot;heading is-sm&quot;&gt;SELECT MULTIPLE&lt;/legend&gt;
-            &lt;div class=&quot;field&quot;&gt;
-              &lt;select class=&quot;select&quot; multiple=&quot;&quot;&gt;
-                &lt;option&gt;Select A&lt;/option&gt;
-                &lt;option&gt;Select B&lt;/option&gt;
-                &lt;option&gt;Select C&lt;/option&gt;
-                &lt;option&gt;Select D&lt;/option&gt;
-                &lt;option&gt;Select E&lt;/option&gt;
-              &lt;/select&gt;
-              &lt;select class=&quot;select&quot; multiple=&quot;&quot; disabled=&quot;&quot;&gt;
-                &lt;option&gt;Select A&lt;/option&gt;
-                &lt;option&gt;Select B&lt;/option&gt;
-                &lt;option&gt;Select C&lt;/option&gt;
-                &lt;option&gt;Select D&lt;/option&gt;
-                &lt;option&gt;Select E&lt;/option&gt;
-              &lt;/select&gt;
-            &lt;/div&gt;
-          &lt;/fieldset&gt;
-          &lt;div class=&quot;btns&quot;&gt;
-            &lt;input class=&quot;btn is-plain is-primary&quot; type=&quot;button&quot; value=&quot;インプットボタン&quot;&gt;
-            &lt;input class=&quot;btn is-plain is-primary&quot; type=&quot;button&quot; value=&quot;インプットボタン&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;btns&quot;&gt;
-            &lt;input class=&quot;btn is-plain&quot; type=&quot;reset&quot;&gt;
-            &lt;input class=&quot;btn is-plain&quot; type=&quot;reset&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;btns&quot;&gt;
-            &lt;input class=&quot;btn is-plain is-success&quot; type=&quot;submit&quot;&gt;
-            &lt;input class=&quot;btn is-plain is-success&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <form class="form">
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">TEXT</legend>
+            <div class="field">
+              <input class="input" type="text" placeholder="Text">
+              <input class="input" type="text" placeholder="Disabled" disabled="">
+              <input class="input" type="text" value="Readonly" readonly="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">SEARCH</legend>
+            <div class="field">
+              <input class="input" type="search" placeholder="Search">
+              <input class="input" type="search" placeholder="Search" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">URL</legend>
+            <div class="field">
+              <input class="input" type="url" placeholder="example.com">
+              <input class="input" type="url" placeholder="example.com" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">E-MAIL</legend>
+            <div class="field">
+              <input class="input" type="email" placeholder="example@gmail.com">
+              <input class="input" type="email" placeholder="example@gmail.com" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">TEL</legend>
+            <div class="field">
+              <input class="input" type="tel" size="14" maxlength="12" placeholder="000-000-0000">
+              <input class="input" type="tel" size="14" maxlength="12" placeholder="000-000-0000" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">PASSWORD</legend>
+            <div class="field">
+              <input class="input" type="password">
+              <input class="input" type="password" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">DATETIME LOCAL</legend>
+            <div class="field">
+              <input class="input" type="datetime-local" value="2017-02-02T00:00:00">
+              <input class="input" type="datetime-local" value="2017-02-02T00:00:00" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">DATE</legend>
+            <div class="field">
+              <input class="input" type="date" value="2017-02-02">
+              <input class="input" type="date" value="2017-02-02" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">MONTH</legend>
+            <div class="field">
+              <input class="input" type="month" value="2017-02">
+              <input class="input" type="month" value="2017-02" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">TIME</legend>
+            <div class="field">
+              <input class="input" type="time" value="00:00:00">
+              <input class="input" type="time" value="00:00:00" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">NUMBER</legend>
+            <div class="field">
+              <input class="input" type="number" step="10">
+              <input class="input" type="number" step="10" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">FILE</legend>
+            <div class="field">
+              <input class="input" type="file">
+              <input class="input" type="file" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">COLOR</legend>
+            <div class="field">
+              <input class="input" type="color" value="#1cb4c7">
+              <input class="input" type="color" value="#1cb4c7" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">RANGE</legend>
+            <div class="field">
+              <input class="input" type="range">
+              <input class="input" type="range" disabled="">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">TEXTAREA</legend>
+            <div class="field">
+              <textarea class="textarea"></textarea>
+              <textarea class="textarea" disabled=""></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">RADIO</legend>
+            <div class="field">
+              <label>
+                <input class="input" type="radio" name="radio-default-1" checked=""><span class="text">むすびー</span>
+              </label>
+              <label>
+                <input class="input" type="radio" name="radio-default-1"><span class="text">むすびい</span>
+              </label>
+              <label>
+                <input class="input" type="radio" name="radio-default-1" disabled=""><span class="text">むすび</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">CHECKBOX</legend>
+            <div class="field">
+              <label>
+                <input class="input" type="checkbox" name="checkbox-default-1" checked=""><span class="text">HTML</span>
+              </label>
+              <label>
+                <input class="input" type="checkbox" name="checkbox-default-1"><span class="text">CSS</span>
+              </label>
+              <label>
+                <input class="input" type="checkbox" name="checkbox-default-1" disabled=""><span class="text">JS</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">SELECT</legend>
+            <div class="field">
+              <select class="select">
+                <option>Select A</option>
+                <option>Select B</option>
+                <option>Select C</option>
+                <option>Select D</option>
+                <option>Select E</option>
+              </select>
+              <select class="select" disabled="">
+                <option>Select A</option>
+                <option>Select B</option>
+                <option>Select C</option>
+                <option>Select D</option>
+                <option>Select E</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="heading is-sm">SELECT MULTIPLE</legend>
+            <div class="field">
+              <select class="select" multiple="">
+                <option>Select A</option>
+                <option>Select B</option>
+                <option>Select C</option>
+                <option>Select D</option>
+                <option>Select E</option>
+              </select>
+              <select class="select" multiple="" disabled="">
+                <option>Select A</option>
+                <option>Select B</option>
+                <option>Select C</option>
+                <option>Select D</option>
+                <option>Select E</option>
+              </select>
+            </div>
+          </fieldset>
+          <div class="btns">
+            <input class="btn is-plain is-primary" type="button" value="インプットボタン">
+            <input class="btn is-plain is-primary" type="button" value="インプットボタン" disabled="">
+          </div>
+          <div class="btns">
+            <input class="btn is-plain" type="reset">
+            <input class="btn is-plain" type="reset" disabled="">
+          </div>
+          <div class="btns">
+            <input class="btn is-plain is-success" type="submit">
+            <input class="btn is-plain is-success" type="submit" disabled="">
+          </div>
+        </form>
+        ```

@@ -30,24 +30,26 @@
       span.text
         span.text 注釈入れ
         sup ※1
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;span class=&quot;text&quot;&gt;デフォルト&lt;/span&gt;
-          &lt;strong class=&quot;text is-strong&quot;&gt;ストロング&lt;/strong&gt;
-          &lt;small class=&quot;text is-small&quot;&gt;スモール&lt;/small&gt;
-          &lt;span class=&quot;text is-italic&quot;&gt;Italic&lt;/span&gt;
-          &lt;del class=&quot;text is-delete&quot;&gt;削除&lt;/del&gt;
-          &lt;span class=&quot;text&quot;&gt;
-            &lt;i class=&quot;fa fa-thumbs-o-up&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-            &lt;span class=&quot;text&quot;&gt;アイコン追加&lt;/span&gt;
-            &lt;i class=&quot;material-icons&quot;&gt;face&lt;/i&gt;
-          &lt;/span&gt;
-          &lt;span class=&quot;text&quot;&gt;
-            &lt;span class=&quot;text&quot;&gt;注釈入れ&lt;/span&gt;
-            &lt;sup&gt;※1&lt;/sup&gt;
-          &lt;/span&gt;
-        &lt;/p&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts">
+          <span class="text">デフォルト</span>
+          <strong class="text is-strong">ストロング</strong>
+          <small class="text is-small">スモール</small>
+          <span class="text is-italic">Italic</span>
+          <del class="text is-delete">削除</del>
+          <span class="text">
+            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            <span class="text">アイコン追加</span>
+            <i class="material-icons">face</i>
+          </span>
+          <span class="text">
+            <span class="text">注釈入れ</span>
+            <sup>※1</sup>
+          </span>
+        </p>
+        ```
     p.texts.is-sm
       span.text.is-dark ダーク
       - for (var i = 1; i <= 9; i++)
@@ -59,33 +61,35 @@
         - for (var i = 1; i <= 9; i++)
           | &nbsp;
           span.text(class="is-light-"+i) ライト #{i}
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;span class=&quot;text is-dark&quot;&gt;ダーク&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-1&quot;&gt;ダーク 1&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-2&quot;&gt;ダーク 2&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-3&quot;&gt;ダーク 3&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-4&quot;&gt;ダーク 4&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-5&quot;&gt;ダーク 5&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-6&quot;&gt;ダーク 6&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-7&quot;&gt;ダーク 7&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-8&quot;&gt;ダーク 8&lt;/span&gt;
-          &lt;span class=&quot;text is-dark-9&quot;&gt;ダーク 9&lt;/span&gt;
-        &lt;/p&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts">
+          <span class="text is-dark">ダーク</span>
+          <span class="text is-dark-1">ダーク 1</span>
+          <span class="text is-dark-2">ダーク 2</span>
+          <span class="text is-dark-3">ダーク 3</span>
+          <span class="text is-dark-4">ダーク 4</span>
+          <span class="text is-dark-5">ダーク 5</span>
+          <span class="text is-dark-6">ダーク 6</span>
+          <span class="text is-dark-7">ダーク 7</span>
+          <span class="text is-dark-8">ダーク 8</span>
+          <span class="text is-dark-9">ダーク 9</span>
+        </p>
 
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;span class=&quot;text is-light&quot;&gt;ライト&lt;/span&gt;
-          &lt;span class=&quot;text is-light-1&quot;&gt;ライト 1&lt;/span&gt;
-          &lt;span class=&quot;text is-light-2&quot;&gt;ライト 2&lt;/span&gt;
-          &lt;span class=&quot;text is-light-3&quot;&gt;ライト 3&lt;/span&gt;
-          &lt;span class=&quot;text is-light-4&quot;&gt;ライト 4&lt;/span&gt;
-          &lt;span class=&quot;text is-light-5&quot;&gt;ライト 5&lt;/span&gt;
-          &lt;span class=&quot;text is-light-6&quot;&gt;ライト 6&lt;/span&gt;
-          &lt;span class=&quot;text is-light-7&quot;&gt;ライト 7&lt;/span&gt;
-          &lt;span class=&quot;text is-light-8&quot;&gt;ライト 8&lt;/span&gt;
-          &lt;span class=&quot;text is-light-9&quot;&gt;ライト 9&lt;/span&gt;
-        &lt;/p&gt;
+        <p class="texts">
+          <span class="text is-light">ライト</span>
+          <span class="text is-light-1">ライト 1</span>
+          <span class="text is-light-2">ライト 2</span>
+          <span class="text is-light-3">ライト 3</span>
+          <span class="text is-light-4">ライト 4</span>
+          <span class="text is-light-5">ライト 5</span>
+          <span class="text is-light-6">ライト 6</span>
+          <span class="text is-light-7">ライト 7</span>
+          <span class="text is-light-8">ライト 8</span>
+          <span class="text is-light-9">ライト 9</span>
+        </p>
+        ```
     p.texts.is-sm
       a.text.is-link Link
       | ｜
@@ -110,36 +114,40 @@
       a.text.is-link-reverse.is-warning Warning
       | ｜
       a.text.is-link-reverse.is-danger Danger
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;span class=&quot;text is-link is-primary&quot;&gt;Primary&lt;/span&gt;
-          &lt;span class=&quot;text is-link is-info&quot;&gt;Info&lt;/span&gt;
-          &lt;span class=&quot;text is-link is-success&quot;&gt;Success&lt;/span&gt;
-          &lt;span class=&quot;text is-link is-warning&quot;&gt;Warning&lt;/span&gt;
-          &lt;span class=&quot;text is-link is-danger&quot;&gt;Danger&lt;/span&gt;
-        &lt;/p&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts">
+          <span class="text is-link is-primary">Primary</span>
+          <span class="text is-link is-info">Info</span>
+          <span class="text is-link is-success">Success</span>
+          <span class="text is-link is-warning">Warning</span>
+          <span class="text is-link is-danger">Danger</span>
+        </p>
 
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;span class=&quot;text is-link-reverse is-primary&quot;&gt;Primary&lt;/span&gt;
-          &lt;span class=&quot;text is-link-reverse is-info&quot;&gt;Info&lt;/span&gt;
-          &lt;span class=&quot;text is-link-reverse is-success&quot;&gt;Success&lt;/span&gt;
-          &lt;span class=&quot;text is-link-reverse is-warning&quot;&gt;Warning&lt;/span&gt;
-          &lt;span class=&quot;text is-link-reverse is-danger&quot;&gt;Danger&lt;/span&gt;
-        &lt;/p&gt;
+        <p class="texts">
+          <span class="text is-link-reverse is-primary">Primary</span>
+          <span class="text is-link-reverse is-info">Info</span>
+          <span class="text is-link-reverse is-success">Success</span>
+          <span class="text is-link-reverse is-warning">Warning</span>
+          <span class="text is-link-reverse is-danger">Danger</span>
+        </p>
+        ```
     p.texts.is-sm
       span.text.is-capitalize capitalize
       | ｜
       span.text.is-lowercase lowercase
       | ｜
       span.text.is-uppercase uppercase
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;span class=&quot;text is-capitalize&quot;&gt;capitalize&lt;/span&gt;
-          &lt;span class=&quot;text is-lowercase&quot;&gt;lowercase&lt;/span&gt;
-          &lt;span class=&quot;text is-uppercase&quot;&gt;uppercase&lt;/span&gt;
-        &lt;/p&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts">
+          <span class="text is-capitalize">capitalize</span>
+          <span class="text is-lowercase">lowercase</span>
+          <span class="text is-uppercase">uppercase</span>
+        </p>
+        ```
 
 .groups
   h4.heading.is-xl Text - Size
@@ -156,17 +164,19 @@
       span.text.is-lg 大きめ
       span.text.is-xl 大きい
       span.text.is-xxl 特大
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;span class=&quot;text is-xxs&quot;&gt;極小&lt;/span&gt;
-          &lt;span class=&quot;text is-xs&quot;&gt;小さい&lt;/span&gt;
-          &lt;span class=&quot;text is-sm&quot;&gt;小さめ&lt;/span&gt;
-          &lt;span class=&quot;text is-md&quot;&gt;中くらい&lt;/span&gt;
-          &lt;span class=&quot;text is-lg&quot;&gt;大きめ&lt;/span&gt;
-          &lt;span class=&quot;text is-xl&quot;&gt;大きい&lt;/span&gt;
-          &lt;span class=&quot;text is-xxl&quot;&gt;特大&lt;/span&gt;
-        &lt;/p&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts">
+          <span class="text is-xxs">極小</span>
+          <span class="text is-xs">小さい</span>
+          <span class="text is-sm">小さめ</span>
+          <span class="text is-md">中くらい</span>
+          <span class="text is-lg">大きめ</span>
+          <span class="text is-xl">大きい</span>
+          <span class="text is-xxl">特大</span>
+        </p>
+        ```
 
 .groups
   h4.heading.is-xl Text - Align
@@ -183,11 +193,13 @@
     p.texts.is-sm.is-left 左寄せのテキスト
     p.texts.is-sm.is-center 中央寄せのテキスト
     p.texts.is-sm.is-right 右寄せのテキスト
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts is-left&quot;&gt;左寄せのテキスト&lt;/p&gt;
-        &lt;p class=&quot;texts is-center&quot;&gt;中央寄せのテキスト&lt;/p&gt;
-        &lt;p class=&quot;texts is-right&quot;&gt;右寄せのテキスト&lt;/p&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts is-left">左寄せのテキスト</p>
+        <p class="texts is-center">中央寄せのテキスト</p>
+        <p class="texts is-right">右寄せのテキスト</p>
+        ```
 
 .groups
   h4.heading.is-xl Text - Ellipsis
@@ -198,9 +210,11 @@
   .group.is-wrap.is-preview
     p.texts.is-sm.is-ellipsis
       | テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts is-ellipsis&quot;&gt;...&lt;/p&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts is-ellipsis">...</p>
+        ```
 
 .groups
   h4.heading.is-xl Text - Blockquote
@@ -211,9 +225,11 @@
   .group.is-wrap.is-preview
     blockquote.blockquote
       | 引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾。
-    pre.pre.is-sm
-      code.code.html.
-        &lt;blockquote class=&quot;blockquote&quot;&gt;...&lt;/blockquote&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <blockquote class="blockquote">...</blockquote>
+        ```
 
 .groups
   h4.heading.is-xl Text - Code
@@ -241,16 +257,17 @@
           -webkit-text-size-adjust: 100%;
           -webkit-tap-highlight-color: transparent;
         }
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts&quot;&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts">
           テキストの途中に
-          &lt;code class=&quot;code&quot;&gt;code&lt;/code&gt;
+          <code class="code">code</code>
           を表示させる。
-        &lt;/p&gt;
+        </p>
 
-        &lt;pre class=&quot;pre&quot;&gt;
-          &lt;code class=&quot;code&quot;&gt;
+        <pre class="pre">
+          <code class="code">
             .pre {
               position: relative;
               background-color: $dark-2;
@@ -258,5 +275,6 @@
               color: $light;
               padding: 20px 0;
             }
-          &lt;/code&gt;
-        &lt;/pre&gt;
+          </code>
+        </pre>
+        ```

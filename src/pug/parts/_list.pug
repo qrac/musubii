@@ -71,30 +71,32 @@
       li.item
         span.text ※100
         span.text 自由にナンバリング付きの米印などを置ける注釈用のスタイル
-    pre.pre.is-sm
-      code.code.html.
-        &lt;ul class=&quot;list is-disc&quot;&gt;
-          &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
-          &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
-        &lt;/ul&gt;
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <ul class="list is-disc">
+          <li class="item">...</li>
+          <li class="item">...</li>
+        </ul>
 
-        &lt;ul class=&quot;list is-circle&quot;&gt;
-          &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
-          &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
-        &lt;/ul&gt;
+        <ul class="list is-circle">
+          <li class="item">...</li>
+          <li class="item">...</li>
+        </ul>
 
-        &lt;ul class=&quot;list is-decimal&quot;&gt;
-          &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
-          &lt;li class=&quot;item&quot;&gt;...&lt;/li&gt;
-        &lt;/ul&gt;
+        <ul class="list is-decimal">
+          <li class="item">...</li>
+          <li class="item">...</li>
+        </ul>
 
-        &lt;ul class=&quot;list is-note&quot;&gt;
-          &lt;li class=&quot;item&quot;&gt;
-            &lt;span&gt;※1&lt;/span&gt;
-            &lt;span&gt;...&lt;/span&gt;
-          &lt;/li&gt;
-          &lt;li class=&quot;item&quot;&gt;
-            &lt;span&gt;※2&lt;/span&gt;
-            &lt;span&gt;...&lt;/span&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
+        <ul class="list is-note">
+          <li class="item">
+            <span>※1</span>
+            <span>...</span>
+          </li>
+          <li class="item">
+            <span>※2</span>
+            <span>...</span>
+          </li>
+        </ul>
+        ```
