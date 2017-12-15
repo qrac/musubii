@@ -29,7 +29,7 @@
   &.is-topcover {
     display: flex;
     align-items: center;
-    height: 360px;
+    //height: 360px;
     padding: 0 0 24px;
     background-color: $cyan-500;
   }
@@ -389,7 +389,7 @@
 
 .section.is-topcover {
   overflow: hidden;
-  transition: ease-out 0.12s;
+  //transition: ease-out 0.12s;
   &:not(.is-active) {
     height: 0;
     padding: 0;

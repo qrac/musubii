@@ -14,7 +14,6 @@
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  height: 360px;
   padding: 0 0 24px;
   background-color: #1cb4c7;
 }
@@ -473,7 +472,6 @@
 
 .section.is-topcover {
   overflow: hidden;
-  transition: ease-out 0.12s;
 }
 
 .section.is-topcover:not(.is-active) {
