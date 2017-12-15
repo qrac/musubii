@@ -2,10 +2,18 @@
 // Module: Icon
 //----------------------------------------------------
 
-.icon,
-.im,
-.fa,
-.material-icons {
+//----------------------------------------------------
+// / Dedicated Variable
+//----------------------------------------------------
+
+$icon-class-basic:
+".icon, .im, .fa, .material-icons";
+
+//----------------------------------------------------
+// / Icon Setting
+//----------------------------------------------------
+
+#{$icon-class-basic} {
   font-size: inherit;
   line-height: inherit;
 }
@@ -14,34 +22,36 @@
   vertical-align: bottom;
 }
 
-.icon,
-.im,
-.fa,
-.material-icons {
+//----------------------------------------------------
+// / Combination
+//----------------------------------------------------
+
+#{$icon-class-basic} {
   + .text {
     margin-left: 0.375em;
   }
-  + .icon:not(.is-fit),
-  + .im:not(.is-fit),
-  + .fa:not(.is-fit),
-  + .material-icons:not(.is-fit) {
-    margin-left: 0.375em;
+  + {
+    & #{$icon-class-basic} {
+      &:not(.is-fit) {
+        margin-left: 0.375em;
+      }
+    }
   }
 }
 
 .text {
-  + .icon,
-  + .im,
-  + .fa,
-  + .material-icons {
-    margin-left: 0.375em;
+  + {
+    & #{$icon-class-basic} {
+      margin-left: 0.375em;
+    }
   }
 }
 
-.icon,
-.im,
-.fa,
-.material-icons {
+//----------------------------------------------------
+// / Single Modifier
+//----------------------------------------------------
+
+#{$icon-class-basic} {
   &.is-fit {
     width: 1em;
     text-align: center;
