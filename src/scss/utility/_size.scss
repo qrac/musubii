@@ -2,8 +2,24 @@
 // Utility: Size
 //----------------------------------------------------
 
-@each $key, $value in $pattern-font-size {
-  .is-#{$key} {
-    font-size: $value;
+//----------------------------------------------------
+// / Responsive Size
+//----------------------------------------------------
+
+@each $key-breakpoint, $mediaquery in $pattern-breakpoint-mediaquery-all {
+  @include mediaquery-pattern($mediaquery) {
+    @each $key-size, $value in $pattern-font-size {
+      @if $key-breakpoint == "mobile" {
+        .is-#{$key-size},
+        .is-#{$key-breakpoint}-#{$key-size} {
+          font-size: $value;
+        }
+      }
+      @else {
+        .is-#{$key-breakpoint}-#{$key-size} {
+          font-size: $value;
+        }
+      }
+    }
   }
 }
