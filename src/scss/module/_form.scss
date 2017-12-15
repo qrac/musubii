@@ -204,25 +204,3 @@
     background-color: $grey-200;
   }
 }
-
-//----------------------------------------------------
-// / Responsive Input
-//----------------------------------------------------
-
-@each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
-  @include mediaquery-pattern($mediaquery) {
-    $i: 0; // Syntax error countermeasure
-    .field > .is-#{$key}-#{$i} {
-      flex: 1 0 0%;
-      max-width: 100%;
-    }
-    .field > .is-#{$key}-full {
-      flex: 0 1 100%;
-      max-width: 100%;
-    }
-    .field > .is-#{$key}-auto {
-      flex: 0 1 auto;
-      max-width: 100%;
-    }
-  }
-}

@@ -3,13 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Dedicated Variable
-//----------------------------------------------------
-
-// Number of grid divisions
-$split-grid: 12;
-
-//----------------------------------------------------
 // / Basic Modifier
 //----------------------------------------------------
 
@@ -47,32 +40,5 @@ $split-grid: 12;
   }
   &.is-stretch > .col {
     display: flex;
-  }
-}
-
-//----------------------------------------------------
-// / Responsive Column
-//----------------------------------------------------
-
-@each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
-  @include mediaquery-pattern($mediaquery) {
-    @for $i from 0 through $split-grid {
-      @if $i == 0 {
-        .col.is-#{$key}-#{$i} {
-          flex: 1 0 0%;
-          max-width: 100%;
-        }
-      }
-      @else {
-        .col.is-#{$key}-#{$i} {
-          flex: 0 0 100% / $split-grid * $i;
-          max-width: 100% / $split-grid * $i;
-        }
-      }
-    }
-    .col.is-#{$key}-auto {
-      flex: 0 1 auto;
-      max-width: 100%;
-    }
   }
 }
