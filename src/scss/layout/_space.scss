@@ -6,23 +6,23 @@
 // / Dedicated Variable
 //----------------------------------------------------
 
-$space-basic-mostly:
+$space-class-basic-mostly:
 ".groups, .group, .texts, .blockquote, .pre, .btns, .list, .table, .form, .fieldset, .alert, .wysiwyg";
 
-$space-basic-normal:
+$space-class-basic-normal:
 ".group, .texts, .blockquote, .pre, .btns, .list, .table, .form, .alert, .wysiwyg";
 
-$space-wysiwyg-heading:
+$space-class-wysiwyg-heading:
 "h1, h2, h3, h4, h5, h6";
 
-$space-wysiwyg-normal:
+$space-class-wysiwyg-normal:
 "img, p, blockquote, pre, ul, ol, table, hr";
 
 //----------------------------------------------------
 // / Combination Mostly
 //----------------------------------------------------
 
-#{$space-basic-mostly} {
+#{$space-class-basic-mostly} {
   + .groups {
     margin-top: 3em;
   }
@@ -30,7 +30,7 @@ $space-wysiwyg-normal:
     margin-top: 2em;
   }
   + {
-    & #{$space-basic-normal} {
+    & #{$space-class-basic-normal} {
       margin-top: 1em;
     }
   }
@@ -54,7 +54,7 @@ $space-wysiwyg-normal:
     margin-top: 1em;
   }
   + {
-    & #{$space-basic-normal} {
+    & #{$space-class-basic-normal} {
       margin-top: 1em;
     }
   }
@@ -76,7 +76,7 @@ $space-wysiwyg-normal:
     margin-top: 0.5em;
   }
   + {
-    & #{$space-basic-normal} {
+    & #{$space-class-basic-normal} {
       margin-top: 0.5em;
     }
   }
@@ -90,26 +90,26 @@ $space-wysiwyg-normal:
 //----------------------------------------------------
 
 .wysiwyg {
-  #{$space-wysiwyg-heading} {
+  #{$space-class-wysiwyg-heading} {
     + {
-      & #{$space-wysiwyg-heading} {
+      & #{$space-class-wysiwyg-heading} {
         margin-top: 1em;
       }
     }
     + {
-      & #{$space-wysiwyg-normal} {
+      & #{$space-class-wysiwyg-normal} {
         margin-top: 1em;
       }
     }
   }
-  #{$space-wysiwyg-normal} {
+  #{$space-class-wysiwyg-normal} {
     + {
-      & #{$space-wysiwyg-heading} {
+      & #{$space-class-wysiwyg-heading} {
         margin-top: 2em;
       }
     }
     + {
-      & #{$space-wysiwyg-normal} {
+      & #{$space-class-wysiwyg-normal} {
         margin-top: 1em;
       }
     }
