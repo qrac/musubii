@@ -103,7 +103,10 @@ body {
 }
 
 .obj.is-topcover-illust {
-  width: 23.5em;
+  width: 90vw;
+  @include tablet {
+    width: 23.5em;
+  }
 }
 
 //----------------------------------------------------

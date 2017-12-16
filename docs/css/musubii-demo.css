@@ -65,7 +65,7 @@ body {
 }
 
 .obj.is-topcover-illust {
-  width: 23.5em;
+  width: 90vw;
 }
 
 .tabs {
@@ -510,6 +510,10 @@ body {
 
   .text.is-topcover-2 {
     font-size: 2.875em;
+  }
+
+  .obj.is-topcover-illust {
+    width: 23.5em;
   }
 }
 
