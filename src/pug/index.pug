@@ -20,31 +20,33 @@ block contents
         .group
           .grid.is-middle.is-center.is-gap-6x
             .col
-              h2.heading.is-light
-                span.text.is-block Simple CSS
-                span.text.is-block Framework for JP
-              h3.texts.is-light
-                span.text.is-block MUSUBiiは日本語サイトのインブラウザデザインを想定した
-                span.text.is-block シンプルでレスポンシブな薄味のCSSフレームワークです。
-              .btns.is-center
-                a.btn.is-plain.is-round.is-cyan(href="css/musubii.min.css" download="musubii.min.css")
-                  //-i.fa.fa-download(aria-hidden="true")
+              h2.heading.is-light.is-weight-700
+                span.text.is-block.is-topcover-1 Simple CSS
+                span.text.is-block.is-topcover-2 Framework for JP
+              h3.texts.is-light.is-sm
+                span.text.is-fablet-block MUSUBiiは日本語サイトのインブラウザデザインを想定した
+                span.text.is-fablet-block シンプルでレスポンシブな薄味のCSSフレームワークです。
+              .btns.is-center.is-lg
+                a.btn.is-plain.is-round.is-mobile-full.is-weight-900.is-cyan(href="css/musubii.min.css" download="musubii.min.css")
+                  i.fa.fa-download(aria-hidden="true")
                   span.text Download
-                a.btn.is-ghost.is-round.is-cyan(href="github.url+"/"+github.id+"/"+github.repo")
+                //-a.btn.is-ghost.is-round.is-weight-900.is-cyan(href=github.url+"/"+github.id+"/"+github.repo)
                   //-i.fa.fa-github(aria-hidden="true")
                   span.text Repository
-              p.texts.is-light.is-center
-                a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo)
-                  span.text #{github.ver}
-                | &nbsp;/&nbsp;
+              p.texts.is-light.is-center.is-sm
+                span.text #{github.ver}
+                | ・
                 a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo+"/releases")
                   span.text Releases
+                | ・
+                a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo)
+                  span.text Repository
             .col
-              img(src=path.img+"/"+"illust-topcover.svg" alt="MUSUBii")
+              img.obj.is-topcover-illust(src=path.img+"/"+"illust-topcover.svg" alt="MUSUBii")
 
   main.main
 
-    section.section.is-main.is-home.is-active.is-yakuhanjp
+    section.section.is-main.is-home.is-active
       .inner
         .group.is-home-about
           h2.heading.is-lg.is-primary.is-center 「腹が減ってはコードが書けぬ」
@@ -79,7 +81,7 @@ block contents
                 i.fa.fa-file-code-o(aria-hidden="true")
               h4.heading.is-center.is-sm Javascript 未使用
 
-    section.section.is-main.is-getting-started.is-yakuhanjp
+    section.section.is-main.is-getting-started
       .inner
         h2.heading.is-xxl Getting Started
         h3.heading.is-xl Use
@@ -234,7 +236,7 @@ block contents
                       td
                         span.text 4.4~
 
-    section.section.is-main.is-documentation.is-yakuhanjp
+    section.section.is-main.is-documentation
       .inner
         h2.heading.is-xxl Documentation
         nav.group.is-documentation-nav
@@ -310,7 +312,7 @@ block contents
           .content
             include parts/_clearfix.pug
 
-    section.section.is-main.is-libraries.is-yakuhanjp
+    section.section.is-main.is-libraries
       .inner
         h2.heading.is-xxl Libraries
         p.texts.is-sm
@@ -323,9 +325,9 @@ block contents
             | Yaku Han JPを読み込むと、メイリオなどの約物（カッコや句読点）の余白を詰めて表示できます（Yaku Han JPsはカッコのみ）。
             br
             | MUSUBiiではクラス名&nbsp;
-            code.code .is-yakuhanjp
+            code.code
             | &nbsp;
-            code.code .is-yakuhanjps
+            code.code s
             | &nbsp;で、それぞれ適応できます。
           .wysiwyg.is-sm
             :markdown-it

@@ -1,19 +1,37 @@
 /*! MUSUBii Demo */
 
-.section.is-header {
+body {
+  font-family: Nunito, "Rounded Mplus 1c", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
+}
+
+.sectin.is-header {
   padding: 0.5em 0;
 }
 
 .section.is-topcover {
   background-color: #1cb4c7;
   background-image: url("../img/bg-topcover.svg");
-  background-position: center center;
+  background-position: center bottom;
   background-size: cover;
 }
 
-.section.is-tab {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-  background-color: #1cb4c7;
+.section.is-topcover-content {
+  padding: 6em 0;
+}
+
+.text.is-topcover-1 {
+  font-size: 16.75vw;
+  line-height: 1.1;
+}
+
+.text.is-topcover-2 {
+  font-size: 11vw;
+  line-height: 1.1;
+}
+
+.obj.is-topcover-illust {
+  width: 23.5em;
+  margin-bottom: -0.875em;
 }
 
 .section.is-main {
@@ -24,10 +42,6 @@
 .section.is-footer {
   background-color: #3a464c;
   padding: 2em 0;
-}
-
-.section > .inner > .tabs {
-  margin: 0 -16px;
 }
 
 .group.is-wrap {
@@ -398,6 +412,15 @@
   right: -5px;
 }
 
+.btn.is-plain.is-cyan {
+  background-color: #ffffff;
+  color: #1cb4c7;
+}
+
+.btn.is-plain.is-cyan:hover {
+  background-color: #ebf8f9;
+}
+
 .btn.is-ghost.is-cyan:hover {
   color: #1cb4c7;
 }
@@ -490,9 +513,13 @@
   display: block;
 }
 
-@media screen and (min-width: 576px) {
-  .section > .inner > .tabs {
-    margin: 0;
+@media screen and (min-width: 768px) {
+  .text.is-topcover-1 {
+    font-size: 4.375em;
+  }
+
+  .text.is-topcover-2 {
+    font-size: 2.875em;
   }
 }
 

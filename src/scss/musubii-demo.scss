@@ -11,33 +11,79 @@
 @import "mixin/**";
 
 //----------------------------------------------------
-// / Project SCSS
+// / Demo - Global
 //----------------------------------------------------
+
+body {
+  font-family: Nunito, "Rounded Mplus 1c", $font-sans;
+}
 
 .musubii-demo {
   //background-color: $cyan-500;
 }
 
+//----------------------------------------------------
+// / Demo - Section
+//----------------------------------------------------
+
+.sectin.is-header {
+  padding: 0.5em 0;
+}
+
+.section.is-topcover {
+  background-color: $cyan-500;
+  background-image: url("../img/bg-topcover.svg");
+  background-position: center bottom;
+  background-size: cover;
+  @include ie {
+    background-image: url("../img/bg-topcover.png");
+  }
+}
+
+.section.is-topcover-content {
+  padding: 6em 0;
+}
+
+//----------------------------------------------------
+// / Demo - Text
+//----------------------------------------------------
+
+.text.is-topcover-1 {
+  font-size: 16.75vw;
+  line-height: 1.1;
+  @include tablet {
+    font-size: 4.375em;
+  }
+}
+
+.text.is-topcover-2 {
+  font-size: 11vw;
+  line-height: 1.1;
+  @include tablet {
+    font-size: 2.875em;
+  }
+}
+
+//----------------------------------------------------
+// / Demo - Object
+//----------------------------------------------------
+
+.obj.is-topcover-illust {
+  width: 23.5em;
+  margin-bottom: -0.875em;
+}
+
+
+
+
+
+
+
+
+
+
+
 .section {
-  &.is-header {
-    padding: 0.5em 0;
-  }
-  &.is-topcover {
-    background-color: $cyan-500;
-    background-image: url("../img/bg-topcover.svg");
-    background-position: center center;
-    background-size: cover;
-    @include ie {
-      background-image: url("../img/bg-topcover.png");
-    }
-  }
-  &.is-tab {
-    //position: sticky;
-    //top: -1px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-    background-color: $cyan-500;
-    //z-index: 20;
-  }
   &.is-main {
     padding: 48px 0;
     background-color: $light;
@@ -45,12 +91,6 @@
   &.is-footer {
     background-color: $blue-grey-800;
     padding: 2em 0;
-  }
-  > .inner > .tabs {
-  margin: 0 -16px;
-    @include fablet {
-      margin: 0;
-    }
   }
 }
 
@@ -326,6 +366,14 @@
   position: relative;
   top: -1px;
   right: -5px;
+}
+
+.btn.is-plain.is-cyan {
+  background-color: $light;
+  color: $cyan-500;
+  &:hover {
+    background-color: $cyan-50;
+  }
 }
 
 .btn.is-ghost.is-cyan:hover {
