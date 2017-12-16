@@ -114,7 +114,7 @@ body {
   position: relative;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
-  padding: 20px;
+  padding: 1.25em;
 }
 
 .group.is-wrap.is-preview:before {
@@ -134,13 +134,13 @@ body {
 .group.is-wrap.is-paint {
   background-color: #0d8d9a;
   border: none;
-  padding: 16px;
+  padding: 1em;
 }
 
 .group.is-wrap.is-example {
   background-color: whitesmoke;
   border: none;
-  padding: 32px;
+  padding: 2em;
 }
 
 .group.is-home-about {
@@ -167,7 +167,7 @@ body {
 .group.is-documentation-nav {
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
-  padding: 20px 4px;
+  padding: 1.25em 0.25em;
 }
 
 .group.is-demo-box-1,
@@ -206,35 +206,35 @@ body {
 .group.is-demo-box-1.is-height-1,
 .group.is-demo-box-2.is-height-1,
 .group.is-demo-box-3.is-height-1 {
-  height: 150px;
+  height: 9.375em;
 }
 
 .group.is-demo-box-1.is-height-2,
 .group.is-demo-box-2.is-height-2,
 .group.is-demo-box-3.is-height-2 {
-  height: 300px;
+  height: 18.75em;
 }
 
 .group.is-demo-box-1.is-height-3,
 .group.is-demo-box-2.is-height-3,
 .group.is-demo-box-3.is-height-3 {
-  height: 450px;
+  height: 28.125em;
 }
 
 .group.is-demo-box-1 {
-  padding: 16px 0;
+  padding: 1em 0;
 }
 
 .group.is-demo-box-2 {
-  padding: 0 16px;
+  padding: 0 1em;
 }
 
 .group.is-demo-box-3 {
-  padding: 16px;
+  padding: 1em;
 }
 
 .group.is-section-anime-1 {
-  height: 150px;
+  height: 9.375em;
   overflow: hidden;
   -webkit-animation: demo-section-anime-1 5s linear infinite 0s;
   animation: demo-section-anime-1 5s linear infinite 0s;
@@ -317,15 +317,15 @@ body {
 }
 
 .grid.is-demo-box-1.is-height-1 {
-  height: 182px;
+  height: 11.375em;
 }
 
 .grid.is-demo-box-1.is-height-2 {
-  height: 332px;
+  height: 20.75em;
 }
 
 .grid.is-demo-box-1.is-height-3 {
-  height: 482px;
+  height: 30.125em;
 }
 
 .grid.is-gap-6x:not(.is-gap-none) {
@@ -409,8 +409,8 @@ body {
 
 .btn.is-demo-code {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
+  bottom: 0.5em;
+  right: 0.5em;
   outline: none;
   z-index: 10;
 }
