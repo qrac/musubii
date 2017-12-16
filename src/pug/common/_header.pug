@@ -2,15 +2,15 @@
 //- Parts: Header
 //----------------------------------------------------
 
-header.section.is-header
+header.section.is-topcover-header
   .inner-soft
-    .grid.is-between.is-middle
+    .grid.is-between.is-middle.is-gap-none
       .col
-        h1
-          img.logo.is-header(src=path.img+"/"+"logo-set-yoko-musubii.svg" alt="MUSUBii")
-      .col.is-mobile-tablet-none
-        nav.tabs.is-main.is-sm.is-strong.is-uppercase.is-slide
-          a.tab.is-ghost.is-home.is-active(href="#") Home
-          a.tab.is-ghost(href="#") Getting Started
-          a.tab.is-ghost(href="#") Documentation
-          a.tab.is-ghost(href="#") Libraries
+        h1.obj.is-logo-header-wrap
+          img.obj.is-logo-header(src=path.img+"/"+"logo-set-yoko-musubii.svg" alt="MUSUBii")
+      .col
+        nav.tabs.is-main.is-sm.is-strong.is-uppercase
+          a.tab.is-ghost.is-home.is-active.js-tab(href="#") Home
+          a.tab.is-ghost.js-tab(href="#") Getting Started
+          a.tab.is-ghost.js-tab(href="#") Documentation
+          a.tab.is-ghost.js-tab(href="#") Libraries

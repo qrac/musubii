@@ -31,14 +31,14 @@
   </head>
   <body class="musubii musubii-demo is-wide-lg musubii-demo-index">
     <section class="section is-topcover">
-      <header class="section is-header">
+      <header class="section is-topcover-header">
         <div class="inner-soft">
-          <div class="grid is-between is-middle">
+          <div class="grid is-between is-middle is-gap-none">
             <div class="col">
-              <h1><img class="logo is-header" src="img/logo-set-yoko-musubii.svg" alt="MUSUBii"></h1>
+              <h1 class="obj is-logo-header-wrap"><img class="obj is-logo-header" src="img/logo-set-yoko-musubii.svg" alt="MUSUBii"></h1>
             </div>
-            <div class="col is-mobile-tablet-none">
-              <nav class="tabs is-main is-sm is-strong is-uppercase is-slide"><a class="tab is-ghost is-home is-active" href="#">Home</a><a class="tab is-ghost" href="#">Getting Started</a><a class="tab is-ghost" href="#">Documentation</a><a class="tab is-ghost" href="#">Libraries</a></nav>
+            <div class="col">
+              <nav class="tabs is-main is-sm is-strong is-uppercase"><a class="tab is-ghost is-home is-active js-tab" href="#">Home</a><a class="tab is-ghost js-tab" href="#">Getting Started</a><a class="tab is-ghost js-tab" href="#">Documentation</a><a class="tab is-ghost js-tab" href="#">Libraries</a></nav>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
               <div class="col">
                 <h2 class="heading is-light is-weight-700"><span class="text is-block is-topcover-1">Simple CSS</span><span class="text is-block is-topcover-2">Framework for JP</span></h2>
                 <h3 class="texts is-light is-sm"><span class="text is-fablet-block">MUSUBiiは日本語サイトのインブラウザデザインを想定した</span><span class="text is-fablet-block">シンプルでレスポンシブな薄味のCSSフレームワークです。</span></h3>
-                <div class="btns is-center is-lg"><a class="btn is-plain is-round is-mobile-full is-weight-900 is-cyan" href="css/musubii.min.css" download="musubii.min.css"><i class="fa fa-download" aria-hidden="true"></i><span class="text">Download</span></a></div>
+                <div class="btns is-center is-lg"><a class="btn is-plain is-round is-mobile-full is-weight-900 is-cyan" href="css/musubii.min.css" download="musubii.min.css"><i class="fas fa-cloud-download-alt" aria-hidden="true"></i><span class="text">Download</span></a></div>
                 <p class="texts is-light is-center is-sm"><span class="text">v5.0.0</span>・<a class="text is-link-reverse" href="https://github.com/qrac/musubii/releases"><span class="text">Releases</span></a>・<a class="text is-link-reverse" href="https://github.com/qrac/musubii"><span class="text">Repository</span></a></p>
               </div>
               <div class="col"><img class="obj is-topcover-illust" src="img/illust-topcover.svg" alt="MUSUBii"></div>
@@ -59,8 +59,8 @@
         </div>
       </section>
     </section>
-    <main class="main">
-      <section class="section is-main is-home is-active">
+    <main class="section is-main">
+      <section class="section is-main-content is-home is-active js-tab-content">
         <div class="inner">
           <div class="group is-home-about">
             <h2 class="heading is-lg is-primary is-center">「腹が減ってはコードが書けぬ」</h2>
@@ -88,7 +88,7 @@
           </div>
         </div>
       </section>
-      <section class="section is-main is-getting-started">
+      <section class="section is-main-content is-getting-started js-tab-content">
         <div class="inner">
           <h2 class="heading is-xxl">Getting Started</h2>
           <h3 class="heading is-xl">Use</h3>
@@ -203,7 +203,7 @@
           </div>
         </div>
       </section>
-      <section class="section is-main is-documentation">
+      <section class="section is-main-content is-documentation js-tab-content">
         <div class="inner">
           <h2 class="heading is-xxl">Documentation</h2>
           <nav class="group is-documentation-nav">
@@ -2962,7 +2962,7 @@
           </div>
         </div>
       </section>
-      <section class="section is-main is-libraries">
+      <section class="section is-main-content is-libraries js-tab-content">
         <div class="inner">
           <h2 class="heading is-xxl">Libraries</h2>
           <p class="texts is-sm">各種ライブラリとの併用が可能です。</p>

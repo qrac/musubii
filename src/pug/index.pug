@@ -28,7 +28,7 @@ block contents
                 span.text.is-fablet-block シンプルでレスポンシブな薄味のCSSフレームワークです。
               .btns.is-center.is-lg
                 a.btn.is-plain.is-round.is-mobile-full.is-weight-900.is-cyan(href="css/musubii.min.css" download="musubii.min.css")
-                  i.fa.fa-download(aria-hidden="true")
+                  i.fas.fa-cloud-download-alt(aria-hidden="true")
                   span.text Download
                 //-a.btn.is-ghost.is-round.is-weight-900.is-cyan(href=github.url+"/"+github.id+"/"+github.repo)
                   //-i.fa.fa-github(aria-hidden="true")
@@ -44,9 +44,9 @@ block contents
             .col
               img.obj.is-topcover-illust(src=path.img+"/"+"illust-topcover.svg" alt="MUSUBii")
 
-  main.main
+  main.section.is-main
 
-    section.section.is-main.is-home.is-active
+    section.section.is-main-content.is-home.is-active.js-tab-content
       .inner
         .group.is-home-about
           h2.heading.is-lg.is-primary.is-center 「腹が減ってはコードが書けぬ」
@@ -81,7 +81,7 @@ block contents
                 i.fa.fa-file-code-o(aria-hidden="true")
               h4.heading.is-center.is-sm Javascript 未使用
 
-    section.section.is-main.is-getting-started
+    section.section.is-main-content.is-getting-started.js-tab-content
       .inner
         h2.heading.is-xxl Getting Started
         h3.heading.is-xl Use
@@ -236,7 +236,7 @@ block contents
                       td
                         span.text 4.4~
 
-    section.section.is-main.is-documentation
+    section.section.is-main-content.is-documentation.js-tab-content
       .inner
         h2.heading.is-xxl Documentation
         nav.group.is-documentation-nav
@@ -312,7 +312,7 @@ block contents
           .content
             include parts/_clearfix.pug
 
-    section.section.is-main.is-libraries
+    section.section.is-main-content.is-libraries.js-tab-content
       .inner
         h2.heading.is-xxl Libraries
         p.texts.is-sm
