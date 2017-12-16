@@ -20,25 +20,23 @@
 
 .section {
   &.is-header {
-    padding: 8px 0;
-    background-color: $cyan-500;
-  }
-  &.is-header > .inner {
-    padding: 0 12px 0 10px;
+    padding: 0.5em 0;
   }
   &.is-topcover {
-    display: flex;
-    align-items: center;
-    //height: 360px;
-    padding: 0 0 24px;
     background-color: $cyan-500;
+    background-image: url("../img/bg-topcover.svg");
+    background-position: center center;
+    background-size: cover;
+    @include ie {
+      background-image: url("../img/bg-topcover.png");
+    }
   }
   &.is-tab {
-    position: sticky;
-    top: -1px;
+    //position: sticky;
+    //top: -1px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
     background-color: $cyan-500;
-    z-index: 20;
+    //z-index: 20;
   }
   &.is-main {
     padding: 48px 0;
@@ -387,16 +385,12 @@
   }
 }
 
-.section.is-topcover {
-  overflow: hidden;
-  //transition: ease-out 0.12s;
+.section.is-topcover-content {
   &:not(.is-active) {
-    height: 0;
-    padding: 0;
-    opacity: 0;
+    display: none;
   }
   &.is-active {
-    opacity: 1;
+    display: block;
   }
 }
 

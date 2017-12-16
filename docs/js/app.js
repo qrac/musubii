@@ -40,10 +40,10 @@ $(function () {
         $('.main .section.is-main').eq(index).addClass('is-active').siblings('.section.is-main').removeClass('is-active');
       }
       if ($('.tab.is-home').not('is-active')) {
-        $('.section.is-topcover').removeClass('is-active');
+        $('.section.is-topcover-content').removeClass('is-active');
       }
       if ($('.tab.is-home').hasClass('is-active')) {
-        $('.section.is-topcover').addClass('is-active');
+        $('.section.is-topcover-content').addClass('is-active');
       }
     });
   }

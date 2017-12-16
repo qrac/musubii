@@ -11,34 +11,36 @@ block vars
 
 block contents
 
-  include common/_header.pug
+  section.section.is-topcover
 
-  section.section.is-topcover.is-center.is-active
-    .inner
-      img.logo.is-title(src=path.img+"/"+"logo-set-tate-musubii.svg" alt="MUSUBii")
-      h2.texts.is-light #{page.desc}
-      p.texts.is-light.is-strong
-        | #{github.ver}
-      p.texts.is-light
-        i.fa.fa-github(aria-hidden="true")
-        a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo)
-          span.text Repository
-        | &nbsp;/&nbsp;
-        a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo+"/releases")
-          span.text Releases
-      .btns.is-center
-        a.btn.is-lg.is-ghost.is-round.is-cyan(href="css/musubii.min.css" download="musubii.min.css")
-          i.fa.fa-download(aria-hidden="true")
-          span.text Download
+    include common/_header.pug
 
-  section.section.is-tab
-    .inner
-      nav.tabs.is-main.is-sm.is-strong.is-uppercase.is-slide
-        a.tab.is-ghost.is-home.is-active(href="#") Home
-        a.tab.is-ghost(href="#") Getting Started
-        a.tab.is-ghost(href="#") Documentation
-        a.tab.is-ghost(href="#") Libraries
-        //-a.tab.is-ghost(href="#") Templates
+    section.section.is-topcover-content.is-active
+      .inner-soft
+        .group
+          .grid.is-middle.is-center.is-gap-6x
+            .col
+              h2.heading.is-light
+                span.text.is-block Simple CSS
+                span.text.is-block Framework for JP
+              h3.texts.is-light
+                span.text.is-block MUSUBiiは日本語サイトのインブラウザデザインを想定した
+                span.text.is-block シンプルでレスポンシブな薄味のCSSフレームワークです。
+              .btns.is-center
+                a.btn.is-plain.is-round.is-cyan(href="css/musubii.min.css" download="musubii.min.css")
+                  //-i.fa.fa-download(aria-hidden="true")
+                  span.text Download
+                a.btn.is-ghost.is-round.is-cyan(href="github.url+"/"+github.id+"/"+github.repo")
+                  //-i.fa.fa-github(aria-hidden="true")
+                  span.text Repository
+              p.texts.is-light.is-center
+                a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo)
+                  span.text #{github.ver}
+                | &nbsp;/&nbsp;
+                a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo+"/releases")
+                  span.text Releases
+            .col
+              img(src=path.img+"/"+"illust-topcover.svg" alt="MUSUBii")
 
   main.main
 

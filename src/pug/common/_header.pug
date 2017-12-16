@@ -3,13 +3,14 @@
 //----------------------------------------------------
 
 header.section.is-header
-  .inner
+  .inner-soft
     .grid.is-between.is-middle
       .col
         h1
           img.logo.is-header(src=path.img+"/"+"logo-set-yoko-musubii.svg" alt="MUSUBii")
       .col
-        a.text.is-light.is-strong.is-link-reverse(href="https://medium.com/musubii")
-          i.fa.fa-medium(aria-hidden="true")
-          span.text.is-uppercase Blog
-          i.fa.fa-angle-right(aria-hidden="true")
+        nav.tabs.is-main.is-sm.is-strong.is-uppercase.is-slide
+          a.tab.is-ghost.is-home.is-active(href="#") Home
+          a.tab.is-ghost(href="#") Getting Started
+          a.tab.is-ghost(href="#") Documentation
+          a.tab.is-ghost(href="#") Libraries

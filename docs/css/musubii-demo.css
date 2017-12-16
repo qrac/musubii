@@ -1,30 +1,19 @@
 /*! MUSUBii Demo */
 
 .section.is-header {
-  padding: 8px 0;
-  background-color: #1cb4c7;
-}
-
-.section.is-header > .inner {
-  padding: 0 12px 0 10px;
+  padding: 0.5em 0;
 }
 
 .section.is-topcover {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  padding: 0 0 24px;
   background-color: #1cb4c7;
+  background-image: url("../img/bg-topcover.svg");
+  background-position: center center;
+  background-size: cover;
 }
 
 .section.is-tab {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -1px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
   background-color: #1cb4c7;
-  z-index: 20;
 }
 
 .section.is-main {
@@ -470,18 +459,12 @@
   display: block;
 }
 
-.section.is-topcover {
-  overflow: hidden;
+.section.is-topcover-content:not(.is-active) {
+  display: none;
 }
 
-.section.is-topcover:not(.is-active) {
-  height: 0;
-  padding: 0;
-  opacity: 0;
-}
-
-.section.is-topcover.is-active {
-  opacity: 1;
+.section.is-topcover-content.is-active {
+  display: block;
 }
 
 .group.is-documentation-nav .text.is-link-reverse {
@@ -510,5 +493,11 @@
 @media screen and (min-width: 576px) {
   .section > .inner > .tabs {
     margin: 0;
+  }
+}
+
+@media all and (-ms-high-contrast: none) {
+  .section.is-topcover {
+    background-image: url("../img/bg-topcover.png");
   }
 }
