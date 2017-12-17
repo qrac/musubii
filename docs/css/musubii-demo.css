@@ -25,15 +25,6 @@ body {
 
 .section.is-main-content {
   padding: 3em 0;
-  background-color: #ffffff;
-}
-
-.section.is-main-content:not(.is-active) {
-  display: none;
-}
-
-.section.is-main-content.is-active {
-  display: block;
 }
 
 .section.is-footer {
@@ -102,6 +93,14 @@ body {
 .tab.is-ghost.is-active {
   color: #ffffff;
   border-bottom-color: rgba(255, 255, 255, 0.7);
+}
+
+.tab-content.js-tab-content:not(.is-active) {
+  display: none;
+}
+
+.tab-content.js-tab-content.is-active {
+  display: block;
 }
 
 .group.is-wrap {

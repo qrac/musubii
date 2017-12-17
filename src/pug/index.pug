@@ -30,9 +30,6 @@ block contents
                 a.btn.is-plain.is-round.is-mobile-full.is-weight-900.is-cyan(href="css/musubii.min.css" download="musubii.min.css")
                   i.fas.fa-cloud-download-alt(aria-hidden="true")
                   span.text Download CSS
-                //-a.btn.is-ghost.is-round.is-weight-900.is-cyan(href=github.url+"/"+github.id+"/"+github.repo)
-                  //-i.fa.fa-github(aria-hidden="true")
-                  span.text Repository
               p.texts.is-light.is-center.is-sm
                 span.text #{github.ver}
                 | ・
@@ -46,329 +43,311 @@ block contents
 
   main.section.is-main
 
-    section.section.is-main-content.is-home.is-active.js-tab-content
-      .inner-vw
-        .group.is-home-about
-          h2.heading.is-lg.is-primary.is-center 「腹が減ってはコードが書けぬ」
-          h3.texts.is-sm.is-center
-            span.text.is-inline-block Webデザインの
-            span.text.is-inline-block 腹ごなしに、
-            span.text.is-inline-block HTML/CSS
-            span.text.is-inline-block フレームワーク
-            span.text.is-inline-block 「MUSUBii（むすびー）」
-            span.text.is-inline-block を
-            span.text.is-inline-block どうぞ。
-            br
-            span.text.is-inline-block MUSUBiiは、
-            span.text.is-inline-block 日本語サイトの
-            span.text.is-inline-block デザイン・コーディングを
-            span.text.is-inline-block 元気づけます。
-        .group.is-home-point
-          .grid
-            .col.is-mobile-12.is-tablet-0
-              .group.is-about-graphic-2.is-dark-6.is-center
-                i.fab.fa-html5(aria-hidden="true")
-                i.fab.fa-css3(aria-hidden="true")
-              h4.heading.is-center.is-sm OOCSSを応用したラフな設計
-            .col.is-mobile-12.is-tablet-0
-              .group.is-about-graphic-2.is-center
-                .mark-demo(aria-hidden="true")
-                  .mark-demo-wrap
-                    span.mark-demo-japanese あ
-              h4.heading.is-center.is-sm 日本語フォントの利用を想定
-            .col.is-mobile-12.is-tablet-0
-              .group.is-about-graphic-2.is-dark-6.is-center
-                i.fas.fa-file-code(aria-hidden="true")
-              h4.heading.is-center.is-sm Javascript 未使用
+    .tab-content.is-home.is-active.js-tab-content
+      section.section.is-main-content
+        .inner-vw
+          .group.is-home-about
+            h2.heading.is-lg.is-primary.is-center 腹が減ってはコードが書けぬ
+            h3.texts.is-sm.is-center
+              span.text.is-inline-block web制作の
+              span.text.is-inline-block 腹ごなしに、
+              span.text.is-inline-block CSSフレームワーク
+              span.text.is-inline-block 「MUSUBii（むすびー）」を
+              span.text.is-inline-block どうぞ。
+              br
+              span.text.is-inline-block MUSUBiiは、
+              span.text.is-inline-block 日本語サイトの
+              span.text.is-inline-block デザイン・コーディングを
+              span.text.is-inline-block 元気づけます。
 
-    section.section.is-main-content.is-getting-started.js-tab-content
-      .inner-vw
-        h2.heading.is-xxl Getting Started
-        h3.heading.is-xl Use
-        .group.is-wrap
-          h4.heading.is-lg Download
-          p.texts.is-sm
-            | CSSファイル&nbsp;
-            code.code musubii.min.css
-            | &nbsp;を&nbsp;
-            a.text.is-primary.is-link.is-solid(href="css/musubii.min.css" download="musubii.min.css")
-              | ダウンロード
-              i.fas.fa-cloud-download-alt(aria-hidden="true")
-            | &nbsp;後、読み込んでください。
-          .wysiwyg.is-sm
-            :markdown-it
-              ```html
-              <link rel="stylesheet" href="css/musubii.min.css">
-              ```
-          h4.heading.is-lg
-            a.text.is-primary.is-link(href="https://www.npmjs.com/package/musubii")
-              span npm
-          .wysiwyg.is-sm
-            :markdown-it
-              ```cmd
-              npm install musubii
-              ```
-          h4.heading.is-lg
-            a.text.is-primary.is-link(href="https://cdn.jsdelivr.net/npm/musubii/")
-              span CDN
-          .wysiwyg.is-sm
-            :markdown-it
-              ```html
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css">
-              ```
-        h3.heading.is-xl Detail
-        .group.is-wrap
-          h4.heading.is-lg HTML
-          p.texts.is-sm
-            | 要素&nbsp;
-            code.code .(xxxx)
-            | &nbsp;1つに対して、状態&nbsp;
-            code.code .is-(xxxx)
-            | &nbsp;を複数追加してスタイリングするのが基本です。
-            br
-            | すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
-            .group.is-wrap.is-example
-              .btns
-                .btn.is-plain.is-primary ボタンの例 A
-                .btn.is-plain.is-success ボタンの例 B
-                .btn.is-plain.is-success.is-round ボタンの例 C
-                .btn.is-plain.is-success.is-round.is-lg ボタンの例 D
+    .tab-content.is-getting-started.js-tab-content
+      section.section.is-main-content
+        .inner-vw
+          h2.heading.is-xxl Getting Started
+          h3.heading.is-xl Use
+          .group.is-wrap
+            h4.heading.is-lg Download
+            p.texts.is-sm
+              | CSSファイル&nbsp;
+              code.code musubii.min.css
+              | &nbsp;を&nbsp;
+              a.text.is-primary.is-link.is-solid(href="css/musubii.min.css" download="musubii.min.css")
+                | ダウンロード
+                i.fas.fa-cloud-download-alt(aria-hidden="true")
+              | &nbsp;後、読み込んでください。
             .wysiwyg.is-sm
               :markdown-it
                 ```html
-                <div class="btn is-plain is-primary">ボタンの例 A</div>
-                <div class="btn is-plain is-success">ボタンの例 B</div>
-                <div class="btn is-plain is-success is-round">ボタンの例 C</div>
-                <div class="btn is-plain is-success is-round is-lg">ボタンの例 D</div>
+                <link rel="stylesheet" href="css/musubii.min.css">
                 ```
-        .group.is-wrap
-          h4.heading.is-lg CSS
-          p.texts.is-sm
-            | CSSのレイヤーは主に4つに分類されています。
-          ul.list.is-circle.is-sm
-            li.item
-              span.text.is-strong Base
-              | &nbsp;… リセットCSSなどの下地
-            li.item
-              span.text.is-strong Layout
-              | &nbsp;… 余白・マージン・グリッドシステム
-            li.item
-              span.text.is-strong Module
-              | &nbsp;… ボタン・テキスト・リスト・見出しなど
-            li.item
-              span.text.is-strong Utility
-              | &nbsp;… 調整用モディファイア
-        .group.is-wrap
-          h4.heading.is-lg RWD
-          p.texts.is-sm
-            | 5つの画面サイズで可変するレスポンシブウェブデザインになっています。
-          ul.list.is-circle.is-sm
-            li.item
-              span.text.is-strong Mobile
-              | &nbsp;… ~ 575px
-            li.item
-              span.text.is-strong Fablet
-              | &nbsp;… 576px ~ 767px
-            li.item
-              span.text.is-strong Tablet
-              | &nbsp;… 768px ~ 991px
-            li.item
-              span.text.is-strong Desktop
-              | &nbsp;… 992px ~ 1199px
-            li.item
-              span.text.is-strong Wide
-              | &nbsp;… 1200px ~
-        h3.heading.is-xl Support
-        .group
-          .grid
-            .col.is-mobile-12.is-desktop-6
-              .group.is-scroll-x
-                table.table.is-sm.is-center.is-nowrap.is-middle.is-border
-                  thead
-                    tr.box.is-paint
-                      th
-                        i.fab.fa-chrome(aria-hidden="true")
-                        span.text Chrome
-                      th
-                        i.fab.fa-firefox(aria-hidden="true")
-                        span.text Firefox
-                      th
-                        i.fab.fa-internet-explorer(aria-hidden="true")
-                        span.text IE
-                      th
-                        i.fab.fa-edge(aria-hidden="true")
-                        span.text Ege
-                      th
-                        i.fab.fa-safari(aria-hidden="true")
-                        span.text Safari(Mac)
-                  tbody
-                    tr
-                      td
-                        span.text Newest
-                      td
-                        span.text Newest
-                      td
-                        span.text 11~
-                      td
-                        span.text Newest
-                      td
-                        span.text Newest
-            .col.is-mobile-12.is-desktop-6
-              .group.is-scroll-x
-                table.table.is-sm.is-center.is-nowrap.is-middle.is-border
-                  thead
-                    tr.box.is-paint
-                      th
-                        i.fab.fa-safari(aria-hidden="true")
-                        span.text Safari(iOS)
-                      th
-                        i.fab.fa-chrome(aria-hidden="true")
-                        span.text Chrome(Android)
-                      th
-                        i.fas.fa-globe(aria-hidden="true")
-                        span.text Browser(Android)
-                  tbody
-                    tr
-                      td
-                        span.text Newest
-                      td
-                        span.text Newest
-                      td
-                        span.text 4.4~
+            h4.heading.is-lg
+              a.text.is-primary.is-link(href="https://www.npmjs.com/package/musubii")
+                span npm
+            .wysiwyg.is-sm
+              :markdown-it
+                ```cmd
+                npm install musubii
+                ```
+            h4.heading.is-lg
+              a.text.is-primary.is-link(href="https://cdn.jsdelivr.net/npm/musubii/")
+                span CDN
+            .wysiwyg.is-sm
+              :markdown-it
+                ```html
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css">
+                ```
+          h3.heading.is-xl Detail
+          .group.is-wrap
+            h4.heading.is-lg HTML
+            p.texts.is-sm
+              | 要素&nbsp;
+              code.code .(xxxx)
+              | &nbsp;1つに対して、状態&nbsp;
+              code.code .is-(xxxx)
+              | &nbsp;を複数追加してスタイリングするのが基本です。
+              br
+              | すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
+              .group.is-wrap.is-example
+                .btns
+                  .btn.is-plain.is-primary ボタンの例 A
+                  .btn.is-plain.is-success ボタンの例 B
+                  .btn.is-plain.is-success.is-round ボタンの例 C
+                  .btn.is-plain.is-success.is-round.is-lg ボタンの例 D
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```html
+                  <div class="btn is-plain is-primary">ボタンの例 A</div>
+                  <div class="btn is-plain is-success">ボタンの例 B</div>
+                  <div class="btn is-plain is-success is-round">ボタンの例 C</div>
+                  <div class="btn is-plain is-success is-round is-lg">ボタンの例 D</div>
+                  ```
+          .group.is-wrap
+            h4.heading.is-lg CSS
+            p.texts.is-sm
+              | CSSのレイヤーは主に4つに分類されています。
+            ul.list.is-circle.is-sm
+              li.item
+                span.text.is-strong Base
+                | &nbsp;… リセットCSSなどの下地
+              li.item
+                span.text.is-strong Layout
+                | &nbsp;… 余白・マージン・グリッドシステム
+              li.item
+                span.text.is-strong Module
+                | &nbsp;… ボタン・テキスト・リスト・見出しなど
+              li.item
+                span.text.is-strong Utility
+                | &nbsp;… 調整用モディファイア
+          .group.is-wrap
+            h4.heading.is-lg RWD
+            p.texts.is-sm
+              | 5つの画面サイズで可変するレスポンシブウェブデザインになっています。
+            ul.list.is-circle.is-sm
+              li.item
+                span.text.is-strong Mobile
+                | &nbsp;… ~ 575px
+              li.item
+                span.text.is-strong Fablet
+                | &nbsp;… 576px ~ 767px
+              li.item
+                span.text.is-strong Tablet
+                | &nbsp;… 768px ~ 991px
+              li.item
+                span.text.is-strong Desktop
+                | &nbsp;… 992px ~ 1199px
+              li.item
+                span.text.is-strong Wide
+                | &nbsp;… 1200px ~
+          h3.heading.is-xl Support
+          h4.texts.is-sm 日本で多く使われているブラウザを基準にしています。
+          .group.is-scroll-x
+            table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+              thead
+                tr.box.is-paint
+                  th
+                    i.fab.fa-chrome(aria-hidden="true")
+                    span.text Chrome
+                  th
+                    i.fab.fa-firefox(aria-hidden="true")
+                    span.text Firefox
+                  th
+                    i.fab.fa-internet-explorer(aria-hidden="true")
+                    span.text IE
+                  th
+                    i.fab.fa-edge(aria-hidden="true")
+                    span.text Ege
+                  th
+                    i.fab.fa-safari(aria-hidden="true")
+                    span.text Safari(Mac)
+              tbody
+                tr
+                  td
+                    span.text Newest
+                  td
+                    span.text Newest
+                  td
+                    span.text 11~
+                  td
+                    span.text Newest
+                  td
+                    span.text Newest
+          .group.is-scroll-x
+            table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+              thead
+                tr.box.is-paint
+                  th
+                    i.fab.fa-safari(aria-hidden="true")
+                    span.text Safari(iOS)
+                  th
+                    i.fab.fa-chrome(aria-hidden="true")
+                    span.text Chrome(Android)
+                  th
+                    i.fas.fa-globe(aria-hidden="true")
+                    span.text Browser(Android)
+              tbody
+                tr
+                  td
+                    span.text Newest
+                  td
+                    span.text Newest
+                  td
+                    span.text 4.4~
 
-    section.section.is-main-content.is-documentation.js-tab-content
-      .inner-vw
-        h2.heading.is-xxl Documentation
-        nav.group.is-documentation-nav
-          p.texts.is-sm
-            span.text Layout >&nbsp;
-            span.text.is-dark-5
-              span.text.is-link-reverse.is-active Section
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Space
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Grid
-          p.texts.is-sm
-            span.text Module >&nbsp;
-            span.text.is-dark-5
-              span.text.is-link-reverse Heading
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Text
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Button
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse List
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Table
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Form
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Icon
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Alert
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse WYSIWYG
-          p.texts.is-sm
-            span.text Utility >&nbsp;
-            span.text.is-dark-5
-              span.text.is-link-reverse Size
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Deco
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Display
-              | &nbsp;/&nbsp;
-              span.text.is-link-reverse Clearfix
-        .groups.is-documentation-contents
-          .content.is-active
-            include parts/_section.pug
-          .content
-            include parts/_space.pug
-          .content
-            include parts/_grid
-          .content
-            include parts/_heading
-          .content
-            include parts/_text.pug
-          .content
-            include parts/_btn.pug
-          .content
-            include parts/_list.pug
-          .content
-            include parts/_table.pug
-          .content
-            include parts/_form.pug
-          .content
-            include parts/_icon.pug
-          .content
-            include parts/_alert.pug
-          .content
-            include parts/_wysiwyg.pug
-          .content
-            include parts/_size.pug
-          .content
-            include parts/_deco.pug
-          .content
-            include parts/_display.pug
-          .content
-            include parts/_clearfix.pug
+    .tab-content.is-documentation.js-tab-content
+      section.section.is-main-content
+        .inner-vw
+          h2.heading.is-xxl Documentation
+          nav.group.is-documentation-nav.js-doc-navs
+            p.texts.is-sm
+              span.text Layout >&nbsp;
+              span.text.is-dark-5
+                span.text.is-link-reverse.is-active.js-doc-nav Section
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Space
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Grid
+            p.texts.is-sm
+              span.text Module >&nbsp;
+              span.text.is-dark-5
+                span.text.is-link-reverse.js-doc-nav Heading
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Text
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Button
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav List
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Table
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Form
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Icon
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Alert
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav WYSIWYG
+            p.texts.is-sm
+              span.text Utility >&nbsp;
+              span.text.is-dark-5
+                span.text.is-link-reverse.js-doc-nav Size
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Deco
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Display
+                | &nbsp;/&nbsp;
+                span.text.is-link-reverse.js-doc-nav Clearfix
+          .groups.is-documentation-contents.js-doc-contents
+            .content.is-active.js-doc-content
+              include parts/_section.pug
+            .content.js-doc-content
+              include parts/_space.pug
+            .content.js-doc-content
+              include parts/_grid
+            .content.js-doc-content
+              include parts/_heading
+            .content.js-doc-content
+              include parts/_text.pug
+            .content.js-doc-content
+              include parts/_btn.pug
+            .content.js-doc-content
+              include parts/_list.pug
+            .content.js-doc-content
+              include parts/_table.pug
+            .content.js-doc-content
+              include parts/_form.pug
+            .content.js-doc-content
+              include parts/_icon.pug
+            .content.js-doc-content
+              include parts/_alert.pug
+            .content.js-doc-content
+              include parts/_wysiwyg.pug
+            .content.js-doc-content
+              include parts/_size.pug
+            .content.js-doc-content
+              include parts/_deco.pug
+            .content.js-doc-content
+              include parts/_display.pug
+            .content.js-doc-content
+              include parts/_clearfix.pug
 
-    section.section.is-main-content.is-libraries.js-tab-content
-      .inner-vw
-        h2.heading.is-xxl Libraries
-        p.texts.is-sm
-          | 各種ライブラリとの併用が可能です。
-        .group.is-wrap
-          h3.heading.is-lg
-            a.text.is-primary.is-link(href="https://qrac.github.io/yakuhanjp/")
-              span.text Yaku Han JP
+    .tab-content.is-libraries.js-tab-content
+      section.section.is-main-content
+        .inner-vw
+          h2.heading.is-xxl Libraries
           p.texts.is-sm
-            | Yaku Han JPを読み込むと、メイリオなどの約物（カッコや句読点）の余白を詰めて表示できます（Yaku Han JPsはカッコのみ）。
-            br
-            | MUSUBiiではクラス名&nbsp;
-            code.code .is-yakuhanjp
-            | &nbsp;
-            code.code .is-yakuhanjps
-            | &nbsp;で、それぞれ適応できます。
-          .wysiwyg.is-sm
-            :markdown-it
-              ```html
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css">
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css">
-              ```
-          h3.heading.is-lg
-            a.text.is-primary.is-link(href="http://fontawesome.com/")
-              span.text Font Awesome
-          .wysiwyg.is-sm
-            :markdown-it
-              ```html
-              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
-              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-              ```
-          h3.heading.is-lg
-            a.text.is-primary.is-link(href="https://material.io/icons/")
-              span.text Material Icons
-          .wysiwyg.is-sm
-            :markdown-it
-              ```html
-              <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-              ```
-          h3.heading.is-lg
-            a.text.is-primary.is-link(href="https://fonts.google.com/")
-              span.text Google Fonts
-          .wysiwyg.is-sm
-            :markdown-it
-              ```html
-              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=xxxxxx">
-              ```
-          h3.heading.is-lg
-            a.text.is-primary.is-link.is-solid(href="https://jquery.com/")
-              span.text jQuery
-          .wysiwyg.is-sm
-            :markdown-it
-              ```html
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-              ```
+            | 各種ライブラリとの併用が可能です。
+          .group.is-wrap
+            h3.heading.is-lg
+              a.text.is-primary.is-link(href="https://qrac.github.io/yakuhanjp/")
+                span.text Yaku Han JP
+            p.texts.is-sm
+              | Yaku Han JPを読み込むと、メイリオなどの約物（カッコや句読点）の余白を詰めて表示できます（Yaku Han JPsはカッコのみ）。
+              br
+              | MUSUBiiではクラス名&nbsp;
+              code.code .is-yakuhanjp
+              | &nbsp;
+              code.code .is-yakuhanjps
+              | &nbsp;で、それぞれ適応できます。
+            .wysiwyg.is-sm
+              :markdown-it
+                ```html
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css">
+                ```
+            h3.heading.is-lg
+              a.text.is-primary.is-link(href="http://fontawesome.com/")
+                span.text Font Awesome
+            .wysiwyg.is-sm
+              :markdown-it
+                ```html
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                ```
+            h3.heading.is-lg
+              a.text.is-primary.is-link(href="https://material.io/icons/")
+                span.text Material Icons
+            .wysiwyg.is-sm
+              :markdown-it
+                ```html
+                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+                ```
+            h3.heading.is-lg
+              a.text.is-primary.is-link(href="https://fonts.google.com/")
+                span.text Google Fonts
+            .wysiwyg.is-sm
+              :markdown-it
+                ```html
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=xxxxxx">
+                ```
+            h3.heading.is-lg
+              a.text.is-primary.is-link.is-solid(href="https://jquery.com/")
+                span.text jQuery
+            .wysiwyg.is-sm
+              :markdown-it
+                ```html
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                ```
 
   include common/_footer.pug

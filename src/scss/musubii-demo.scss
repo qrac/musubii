@@ -57,13 +57,6 @@ body {
 
 .section.is-main-content {
   padding: 3em 0;
-  background-color: $light;
-  &:not(.is-active) {
-    display: none;
-  }
-  &.is-active {
-    display: block;
-  }
 }
 
 .section.is-footer {
@@ -160,7 +153,15 @@ body {
   }
 }
 
-
+// JS Tab Content
+.tab-content.js-tab-content {
+  &:not(.is-active) {
+    display: none;
+  }
+  &.is-active {
+    display: block;
+  }
+}
 
 
 
