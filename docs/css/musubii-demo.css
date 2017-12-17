@@ -11,10 +11,6 @@ body {
   background-size: cover;
 }
 
-.sectin.is-topcover-header {
-  padding: 0.5em 0;
-}
-
 .section.is-topcover-content {
   padding: 6em 0;
 }
@@ -71,7 +67,7 @@ body {
 .tabs {
   display: -webkit-box;
   display: flex;
-  max-width: calc(100vw - 2px);
+  max-width: 100vw;
   overflow: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -85,12 +81,14 @@ body {
   -webkit-box-align: center;
   align-items: center;
   height: 4.5em;
+  padding: 0 1em;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  text-align: center;
   line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
   white-space: nowrap;
-  padding: 0 1em;
+  transition: ease-out 0.12s;
 }
 
 .tab.is-active {
@@ -99,10 +97,6 @@ body {
 
 .tab.is-ghost {
   color: rgba(255, 255, 255, 0.7);
-}
-
-.tab.is-ghost:hover {
-  color: #ffffff;
 }
 
 .tab.is-ghost.is-active {
@@ -517,10 +511,23 @@ body {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .tab.is-ghost:not(.is-active):hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .tabs {
     margin-left: -1em;
     margin-right: -1em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section.is-topcover-header {
+    background-color: #1ba8ba;
   }
 }
 

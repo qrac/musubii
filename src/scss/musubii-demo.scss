@@ -36,8 +36,10 @@ body {
   }
 }
 
-.sectin.is-topcover-header {
-  padding: 0.5em 0;
+.section.is-topcover-header {
+  @include mobile-fablet {
+    background-color: darken($cyan-500, 3%);
+  }
 }
 
 .section.is-topcover-content {
@@ -115,7 +117,7 @@ body {
 
 .tabs {
   display: flex;
-  max-width: calc(100vw - 2px);
+  max-width: 100vw;
   overflow: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -131,25 +133,30 @@ body {
   display: flex;
   align-items: center;
   height: 4.5em;
+  padding: 0 1em;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  text-align: center;
   line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
   white-space: nowrap;
-  padding: 0 1em;
+  transition: ease-out 0.12s;
   &.is-active {
     cursor: default;
   }
 }
 
 .tab.is-ghost {
-  color: rgba( $white, 0.7 );
-  &:hover {
-    color: $white;
+  color: $light-2;
+  &:not(.is-active):hover {
+    @include desktop {
+      background-color: $light-7;
+      color: $white;
+    }
   }
   &.is-active {
     color: $white;
-    border-bottom-color: rgba( $white, 0.7 );
+    border-bottom-color: $light-2;
   }
 }
 
