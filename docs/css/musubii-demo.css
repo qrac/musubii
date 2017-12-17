@@ -37,7 +37,7 @@ button {
 }
 
 .section.is-bg-grey {
-  background-color: whitesmoke;
+  background-color: #fafafa;
 }
 
 .section.is-bg-grey :not(.pre) > .code {
