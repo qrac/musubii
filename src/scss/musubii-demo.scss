@@ -18,6 +18,11 @@ body {
   font-family: Nunito, "Rounded Mplus 1c", $font-sans;
 }
 
+button {
+  color: $dark-2;
+  outline: none;
+}
+
 .musubii-demo {
   //background-color: $cyan-500;
 }
@@ -94,6 +99,22 @@ body {
   line-height: 1.1;
   @include tablet {
     font-size: 2.875em;
+  }
+}
+
+//----------------------------------------------------
+// / Demo - Button
+//----------------------------------------------------
+
+.btns.js-demo-code-toggle {
+  &:not(.is-active) .btn:nth-child(2) {
+    display: none;
+  }
+  &:not(.is-active) + .wysiwyg {
+    display: none;
+  }
+  &.is-active .btn:nth-child(1) {
+    display: none;
   }
 }
 
