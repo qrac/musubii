@@ -373,6 +373,12 @@ textarea,
   margin: 0 auto;
 }
 
+.section > .inner-vw {
+  max-width: 100%;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
 .section > .inner-soft {
   max-width: 100%;
   padding: 0 1em;
@@ -2343,6 +2349,10 @@ textarea,
 @media screen and (min-width: 576px) {
   .section > .inner {
     width: 540px;
+  }
+
+  .section > .inner-vw {
+    width: 90vw;
   }
 
   .is-fablet-block {
