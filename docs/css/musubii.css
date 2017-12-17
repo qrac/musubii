@@ -1019,12 +1019,12 @@ textarea,
 }
 
 .btn.is-plain {
-  background-color: #eeeeee;
+  background-color: whitesmoke;
   border: 1px solid transparent;
 }
 
 .btn.is-plain:hover {
-  background-color: #e1e1e1;
+  background-color: #e8e8e8;
 }
 
 .btn.is-plain.is-primary {

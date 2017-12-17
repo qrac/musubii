@@ -143,10 +143,10 @@
 //----------------------------------------------------
 
 .btn.is-plain {
-  background-color: $grey-200;
+  background-color: $grey-100;
   border: 1px solid transparent;
   &:hover {
-    background-color: darken($grey-200, 5%);
+    background-color: darken($grey-100, 5%);
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
