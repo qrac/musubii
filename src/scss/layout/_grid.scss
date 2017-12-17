@@ -35,6 +35,9 @@
   &.is-between {
     justify-content: space-between;
   }
+  &.is-reverse {
+    flex-direction: row-reverse;
+  }
   &.is-around {
     justify-content: space-around;
   }

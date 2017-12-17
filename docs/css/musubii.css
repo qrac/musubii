@@ -358,6 +358,12 @@ textarea,
   justify-content: space-between;
 }
 
+.grid.is-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+}
+
 .grid.is-around {
   justify-content: space-around;
 }
