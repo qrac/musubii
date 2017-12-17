@@ -67,8 +67,8 @@ block contents
           .grid
             .col.is-mobile-12.is-tablet-0
               .group.is-about-graphic-2.is-dark-6.is-center
-                i.fa.fa-html5(aria-hidden="true")
-                i.fa.fa-css3(aria-hidden="true")
+                i.fab.fa-html5(aria-hidden="true")
+                i.fab.fa-css3(aria-hidden="true")
               h4.heading.is-center.is-sm OOCSSを応用したラフな設計
             .col.is-mobile-12.is-tablet-0
               .group.is-about-graphic-2.is-center
@@ -78,7 +78,7 @@ block contents
               h4.heading.is-center.is-sm 日本語フォントの利用を想定
             .col.is-mobile-12.is-tablet-0
               .group.is-about-graphic-2.is-dark-6.is-center
-                i.fa.fa-file-code-o(aria-hidden="true")
+                i.fas.fa-file-code(aria-hidden="true")
               h4.heading.is-center.is-sm Javascript 未使用
 
     section.section.is-main-content.is-getting-started.js-tab-content
@@ -93,7 +93,7 @@ block contents
             | &nbsp;を
             a.text.is-primary.is-link.is-solid(href="css/musubii.min.css" download="musubii.min.css")
               | ダウンロード
-              i.fa.fa-download.is-fit(aria-hidden="true")
+              i.fas.fa-cloud-download-alt(aria-hidden="true")
             | 後、読み込んでください。
           .wysiwyg.is-sm
             :markdown-it
@@ -187,19 +187,19 @@ block contents
                   thead
                     tr.box.is-paint
                       th
-                        i.fa.fa-chrome(aria-hidden="true")
+                        i.fab.fa-chrome(aria-hidden="true")
                         span.text Chrome
                       th
-                        i.fa.fa-firefox(aria-hidden="true")
+                        i.fab.fa-firefox(aria-hidden="true")
                         span.text Firefox
                       th
-                        i.fa.fa-internet-explorer(aria-hidden="true")
+                        i.fab.fa-internet-explorer(aria-hidden="true")
                         span.text IE
                       th
-                        i.fa.fa-edge(aria-hidden="true")
+                        i.fab.fa-edge(aria-hidden="true")
                         span.text Ege
                       th
-                        i.fa.fa-safari(aria-hidden="true")
+                        i.fab.fa-safari(aria-hidden="true")
                         span.text Safari(Mac)
                   tbody
                     tr
@@ -219,13 +219,13 @@ block contents
                   thead
                     tr.box.is-paint
                       th
-                        i.fa.fa-safari(aria-hidden="true")
+                        i.fab.fa-safari(aria-hidden="true")
                         span.text Safari(iOS)
                       th
-                        i.fa.fa-chrome(aria-hidden="true")
+                        i.fab.fa-chrome(aria-hidden="true")
                         span.text Chrome(Android)
                       th
-                        i.fa.fa-globe(aria-hidden="true")
+                        i.fas.fa-globe(aria-hidden="true")
                         span.text Browser(Android)
                   tbody
                     tr
@@ -325,9 +325,9 @@ block contents
             | Yaku Han JPを読み込むと、メイリオなどの約物（カッコや句読点）の余白を詰めて表示できます（Yaku Han JPsはカッコのみ）。
             br
             | MUSUBiiではクラス名&nbsp;
-            code.code
+            code.code .is-yakuhanjp
             | &nbsp;
-            code.code s
+            code.code .is-yakuhanjps
             | &nbsp;で、それぞれ適応できます。
           .wysiwyg.is-sm
             :markdown-it
@@ -336,11 +336,12 @@ block contents
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css">
               ```
           h3.heading.is-lg
-            a.text.is-primary.is-link(href="http://fontawesome.io/")
+            a.text.is-primary.is-link(href="http://fontawesome.com/")
               span.text Font Awesome
           .wysiwyg.is-sm
             :markdown-it
               ```html
+              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
               ```
           h3.heading.is-lg

@@ -38,7 +38,7 @@ body {
 
 .section.is-topcover-header {
   @include mobile-fablet {
-    background-color: darken($cyan-500, 3%);
+    background-color: darken($cyan-500, 2%);
   }
 }
 
@@ -375,7 +375,8 @@ body {
   position: relative;
   display: inline-block;
   border-right: 2px dashed $red-500;
-  > .fa {
+  > .fa,
+  > .fas {
     background-color: rgba($blue-500, 0.3);
   }
 }

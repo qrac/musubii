@@ -397,7 +397,8 @@ body {
   border-right: 2px dashed #e65d53;
 }
 
-.text.is-demo-space-filter-3 > .fa {
+.text.is-demo-space-filter-3 > .fa,
+.text.is-demo-space-filter-3 > .fas {
   background-color: rgba(75, 154, 216, 0.3);
 }
 
@@ -527,7 +528,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .section.is-topcover-header {
-    background-color: #1ba8ba;
+    background-color: #1bacbe;
   }
 }
 

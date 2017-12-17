@@ -9,23 +9,23 @@ footer.section.is-footer
         .col
           p.text.is-sm.is-light
             | License:&nbsp;&nbsp;
-            i.fa.fa-balance-scale(aria-hidden="true")
+            i.fas.fa-balance-scale(aria-hidden="true")
             span.text #{github.license}
         .col
           p.text.is-sm.is-light
             | Author:&nbsp;&nbsp;
-            i.fa.fa-twitter(aria-hidden="true")
+            i.fab.fa-twitter(aria-hidden="true")
             a.text.is-link-reverse(href=twitter.url+"/"+twitter.id target="_blank") Qrac
         .col
           p.text.is-sm.is-light
             | Author Group:&nbsp;&nbsp;
-            i.fa.fa-globe(aria-hidden="true")
+            i.fas.fa-globe(aria-hidden="true")
             a.text.is-link-reverse(href="https://qranoko.jp" target="_blank") QRANOKO
     .groups
       .btns.is-center.is-lg
         each val in contact
           a.btn.is-ghost.is-circle(href="" + val.url + "/" + val.id + "")
-            i.fa(aria-hidden="true" class="fa-" + val.class + "")
+            i.fab(aria-hidden="true" class="fa-" + val.class + "")
     .groups
       .grid.is-center.is-gap-6x
         .col.is-mobile-6.is-tablet-3.is-desktop-auto
@@ -39,13 +39,13 @@ footer.section.is-footer
               span.text Komae, Tokyo, Japan
           ul.list.is-note.is-light.is-sm
             li.item
-              i.icon.fa.fa-hand-o-right(aria-hidden="true")
+              i.icon.fa.fa-hand-point-right(aria-hidden="true")
               a.text.is-link-reverse(href="https://qranoko.jp/about") About
             li.item
-              i.icon.fa.fa-hand-o-right(aria-hidden="true")
+              i.icon.fa.fa-hand-point-right(aria-hidden="true")
               a.text.is-link-reverse(href="https://qranoko.jp/works") Works
             li.item
-              i.icon.fa.fa-hand-o-right(aria-hidden="true")
+              i.icon.fa.fa-hand-point-right(aria-hidden="true")
               a.text.is-link-reverse(href="https://qranoko.jp/contact") Contact
         .col.is-mobile-6.is-tablet-3.is-desktop-auto
           p.heading.is-strong.is-light MEMBER
