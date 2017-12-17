@@ -65,6 +65,11 @@ body {
 
 .section.is-bg-grey {
   background-color: $grey-100;
+  :not(.pre) {
+    > .code {
+      background-color: rgba(black, 0.0375);
+    }
+  }
 }
 
 .section.is-footer {
@@ -193,6 +198,9 @@ body {
   border: 1px solid $grey-300;
   border-radius: 2px;
   padding: 1.25em;
+  &.is-preview {
+    font-family: $font-sans;
+  }
   &.is-preview:before {
     content: "Preview";
     position: absolute;

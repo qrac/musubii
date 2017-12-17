@@ -89,7 +89,7 @@
                 <div class="col">
                   <div class="group is-home-point-textbox">
                     <h2 class="heading is-xl">簡単で分かりやすい記述</h2>
-                    <h3 class="texts is-sm"><span class="text">命名規則は単純で、特定の要素に&nbsp;</span><code class="code">.is-○○</code><span class="text">&nbsp;の装飾classを加えていくだけです。</span><a class="text is-link is-primary" href="https://bulma.io/">Bulma</a><span class="text">と似ています。英小文字・数字・ハイフン1つで繋ぐルールなので覚えやすい。インブラウザデザイン中にスピーディなclass修正・追加を試すことができます。</span></h3>
+                    <h3 class="texts is-sm"><span class="text">命名規則は単純で、特定の要素に&nbsp;</span><code class="code">.is-(xxxx)</code><span class="text">&nbsp;の装飾classを加えていくだけです。</span><a class="text is-link is-primary" href="https://bulma.io/">Bulma</a><span class="text">と似ています。英小文字・数字・ハイフン1つで繋ぐルールなので覚えやすい。インブラウザデザイン中にスピーディなclass修正・追加を試すことができます。</span></h3>
                   </div>
                 </div>
               </div>
@@ -138,7 +138,7 @@
             <h3 class="heading is-xl">Detail</h3>
             <div class="group is-wrap">
               <h4 class="heading is-lg">HTML</h4>
-              <p class="texts is-sm">要素&nbsp;<code class="code">.(xxxx)</code>&nbsp;1つに対して、状態&nbsp;<code class="code">.is-(xxxx)</code>&nbsp;を複数追加してスタイリングするのが基本です。<br>すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
+              <p class="texts is-sm">要素&nbsp;<code class="code">.(xxxx)</code>&nbsp;1つに対して、装飾&nbsp;<code class="code">.is-(xxxx)</code>&nbsp;を複数追加してスタイリングするのが基本です。<br>すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
                 <div class="group is-wrap is-example">
                   <div class="btns">
                     <div class="btn is-plain is-primary">ボタンの例 A</div>
@@ -264,7 +264,9 @@
               <div class="content js-doc-content">
                 <div class="groups">
                   <h3 class="heading is-xl">Space</h3>
-                  <p class="texts is-sm">ブロック要素を並べた場合に、その組み合わせに応じて後ろのコンテンツに&nbsp;<code class="code">margin-top</code>&nbsp;が付与され、コンテンツ間の距離が保たれます。<br>対応しているクラスは以下の通りです。中でも広く距離を取りたい場合は&nbsp;<code class="code">.groups</code>&nbsp;で囲みます。</p>
+                  <p class="texts is-sm">ブロック要素を並べた場合に、その組み合わせに応じて後ろのコンテンツに&nbsp;<code class="code">margin-top</code>&nbsp;が付与され、コンテンツ間の距離が保たれます。
+                    対応しているクラスは以下の通りです。中でも広く距離を取りたい場合は&nbsp;<code class="code">.groups</code>&nbsp;で囲みます。
+                  </p>
                   <div class="group is-wrap is-paint is-light">.groups .group .heading .texts .blockquote .pre .btns .list .table .form .fieldset .field .wysiwyg</div>
                   <p class="texts is-sm">距離を開けたくない場合や、相互作用をリセットさせたい場合は、以下のようなクラス名で囲みます。</p>
                   <div class="group is-wrap is-paint is-light">.contents .content .boxs .box</div>
@@ -2990,32 +2992,43 @@
             <p class="texts is-sm">各種ライブラリとの併用が可能です。</p>
             <div class="group is-wrap">
               <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://qrac.github.io/yakuhanjp/"><span class="text">Yaku Han JP</span></a></h3>
-              <p class="texts is-sm">Yaku Han JPを読み込むと、メイリオなどの約物（カッコや句読点）の余白を詰めて表示できます（Yaku Han JPsはカッコのみ）。MUSUBiiではクラス名&nbsp;<code class="code">.is-yakuhanjp</code>&nbsp;<code class="code">.is-yakuhanjps</code>&nbsp;で、それぞれ適応できます。</p>
+              <p class="texts is-sm">Yaku Han JPを読み込むとカッコや句読点を詰めて表示できます（Yaku Han JPsはカッコのみ）。MUSUBiiではクラス名&nbsp;<code class="code">.is-yakuhanjp</code>&nbsp;<code class="code">.is-yakuhanjps</code>&nbsp;で、それぞれ適応できます。</p>
               <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css&quot;&gt;
 </code></pre>
 
               </div>
+              <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://fonts.google.com/"><span class="text">Google Fonts</span></a></h3>
+              <p class="texts is-sm">GoogleのCDN経由でWeb Fontが使えます。例えばこのデモサイトに適応されている丸ゴシックを使う場合は以下2種類のフォントを読み込みます。</p>
+              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Nunito:400,700,900&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css&quot;&gt;
+</code></pre>
+
+              </div>
               <h3 class="heading is-lg"><a class="text is-primary is-link" href="http://fontawesome.com/"><span class="text">Font Awesome</span></a></h3>
+              <p class="texts is-sm">CDN経由でSVGもしくはWeb Fontを使ったアイコン表示が可能です。バージョン5からはグリフやclass名が多少変更になっており、JSを使ったインラインSVGアイコン表示にも対応しています。</p>
               <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.0.1/css/all.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
 </code></pre>
 
               </div>
               <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://material.io/icons/"><span class="text">Material Icons</span></a></h3>
+              <p class="texts is-sm">GoogleのCDN経由でMaterial Iconsが使えます。</p>
               <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
 </code></pre>
 
               </div>
-              <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://fonts.google.com/"><span class="text">Google Fonts</span></a></h3>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=xxxxxx&quot;&gt;
-</code></pre>
-
-              </div>
               <h3 class="heading is-lg"><a class="text is-primary is-link is-solid" href="https://jquery.com/"><span class="text">jQuery</span></a></h3>
+              <p class="texts is-sm">各バージョンのjQueryをCDN経由で使えます。本家よりもGoogleサーバーからの配信が比較的安定しています。</p>
               <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+              </div>
+              <h3 class="heading is-lg"><a class="text is-primary is-link is-solid" href="https://jp.vuejs.org/"><span class="text">Vue.js</span></a></h3>
+              <p class="texts is-sm">データバインディングなどが得意でUI構築に特化したJSフレームワークを使えます。</p>
+              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;
 </code></pre>
 
               </div>
