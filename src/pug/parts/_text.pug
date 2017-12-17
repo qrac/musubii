@@ -30,6 +30,7 @@
       span.text
         span.text 注釈入れ
         sup ※1
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
@@ -61,6 +62,7 @@
         - for (var i = 1; i <= 9; i++)
           | &nbsp;
           span.text(class="is-light-"+i) ライト #{i}
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
@@ -114,6 +116,7 @@
       a.text.is-link-reverse.is-warning Warning
       | ｜
       a.text.is-link-reverse.is-danger Danger
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
@@ -139,6 +142,7 @@
       span.text.is-lowercase lowercase
       | ｜
       span.text.is-uppercase uppercase
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
@@ -164,6 +168,7 @@
       span.text.is-lg 大きめ
       span.text.is-xl 大きい
       span.text.is-xxl 特大
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
@@ -193,6 +198,7 @@
     p.texts.is-sm.is-left 左寄せのテキスト
     p.texts.is-sm.is-center 中央寄せのテキスト
     p.texts.is-sm.is-right 右寄せのテキスト
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
@@ -210,6 +216,7 @@
   .group.is-wrap.is-preview
     p.texts.is-sm.is-ellipsis
       | テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
@@ -225,6 +232,7 @@
   .group.is-wrap.is-preview
     blockquote.blockquote
       | 引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾。
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
@@ -257,6 +265,7 @@
           -webkit-text-size-adjust: 100%;
           -webkit-tap-highlight-color: transparent;
         }
+    include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
