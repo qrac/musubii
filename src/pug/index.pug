@@ -44,21 +44,59 @@ block contents
   main.section.is-main
 
     .tab-content.is-home.is-active.js-tab-content
+      section.section.is-main-content.is-home-about.is-bg-yellow
+        .inner-vw
+          h2.heading.is-primary.is-strong.is-center.is-lg.is-fablet-xl.is-tablet-xxl 腹が減ってはコードが書けぬ！
+          h3.texts.is-sm.is-center
+            span.text.is-inline-block web制作の
+            span.text.is-inline-block 腹ごなしに、
+            span.text.is-inline-block CSSフレームワーク
+            span.text.is-inline-block 「MUSUBii（むすびー）」を
+            span.text.is-inline-block どうぞ。
+            br
+            span.text.is-inline-block MUSUBiiは、
+            span.text.is-inline-block 日本語サイトの
+            span.text.is-inline-block デザイン・コーディングを
+            span.text.is-inline-block 元気づけます。
       section.section.is-main-content
         .inner-vw
-          .group.is-home-about
-            h2.heading.is-lg.is-primary.is-center 腹が減ってはコードが書けぬ
-            h3.texts.is-sm.is-center
-              span.text.is-inline-block web制作の
-              span.text.is-inline-block 腹ごなしに、
-              span.text.is-inline-block CSSフレームワーク
-              span.text.is-inline-block 「MUSUBii（むすびー）」を
-              span.text.is-inline-block どうぞ。
-              br
-              span.text.is-inline-block MUSUBiiは、
-              span.text.is-inline-block 日本語サイトの
-              span.text.is-inline-block デザイン・コーディングを
-              span.text.is-inline-block 元気づけます。
+          .group
+            .grid.is-middle.is-center.is-gap-6x
+              .col
+                img.obj.is-home-point-illust(src=path.img+"/"+"illust-topcover.svg" alt="必要なものを表す画像")
+              .col
+                .group.is-home-point-textbox
+                  h2.heading.is-xl 必要なものを食べておく
+                  h3.texts.is-sm
+                    span.text web制作は小技の積み重ねなので、毎回1から作っていたら辛いですよね。MUSUBiiにはリセットCSS・ボタン・グリッドなど利用頻度の高い汎用スタイルが詰まっています。まずはMUSUBiiをほおばってからweb制作を始めてみましょう。
+      section.section.is-main-content.is-bg-grey
+        .inner-vw
+          .group
+            .grid.is-middle.is-center.is-gap-6x.is-reverse
+              .col
+                img.obj.is-home-point-illust(src=path.img+"/"+"illust-topcover.svg" alt="簡単を表す画像")
+              .col
+                .group.is-home-point-textbox
+                  h2.heading.is-xl 簡単で分かりやすい記述
+                  h3.texts.is-sm
+                    span.text 命名規則は単純で、特定の要素に&nbsp;
+                    code.code .is-○○
+                    span.text &nbsp;の装飾classを加えていくだけです。
+                    a.text.is-link.is-primary(href="https://bulma.io/") Bulma
+                    span.text と似ています。英小文字・数字・ハイフン1つで繋ぐルールなので覚えやすい。インブラウザデザイン中にスピーディなclass修正・追加を試すことができます。
+      section.section.is-main-content
+        .inner-vw
+          .group
+            .grid.is-middle.is-center.is-gap-6x
+              .col
+                img.obj.is-home-point-illust(src=path.img+"/"+"illust-topcover.svg" alt="最適化を表す画像")
+              .col
+                .group.is-home-point-textbox
+                  h2.heading.is-xl 日本語サイト向けに最適化
+                  h3.texts.is-sm
+                    span.text MUSUBiiは開発者であるデザイナーの
+                    a.text.is-link.is-primary(href="https://twitter.com/Qrac_JP") クラク
+                    span.text が1年で30以上の日本語サイトに組み込み検証を続けた純日本製のフレームワークです。実務に最低限必要なCSSを厳選するとともにブラウザ間のバグフィックスにも努めています。
 
     .tab-content.is-getting-started.js-tab-content
       section.section.is-main-content
@@ -301,9 +339,7 @@ block contents
               a.text.is-primary.is-link(href="https://qrac.github.io/yakuhanjp/")
                 span.text Yaku Han JP
             p.texts.is-sm
-              | Yaku Han JPを読み込むと、メイリオなどの約物（カッコや句読点）の余白を詰めて表示できます（Yaku Han JPsはカッコのみ）。
-              br
-              | MUSUBiiではクラス名&nbsp;
+              | Yaku Han JPを読み込むと、メイリオなどの約物（カッコや句読点）の余白を詰めて表示できます（Yaku Han JPsはカッコのみ）。MUSUBiiではクラス名&nbsp;
               code.code .is-yakuhanjp
               | &nbsp;
               code.code .is-yakuhanjps

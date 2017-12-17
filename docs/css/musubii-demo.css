@@ -27,6 +27,14 @@ body {
   padding: 3em 0;
 }
 
+.section.is-bg-yellow {
+  background-color: #f9f2b3;
+}
+
+.section.is-bg-grey {
+  background-color: whitesmoke;
+}
+
 .section.is-footer {
   background-color: #3a464c;
   padding: 2em 0;
@@ -42,6 +50,10 @@ body {
   line-height: 1.1;
 }
 
+.group.is-home-point-textbox {
+  max-width: 25.45em;
+}
+
 .obj.is-logo-header-wrap {
   padding: 0.875em 0;
 }
@@ -53,6 +65,10 @@ body {
 
 .obj.is-topcover-illust {
   width: 90vw;
+}
+
+.obj.is-home-point-illust {
+  width: 15em;
 }
 
 .tabs {
@@ -134,19 +150,6 @@ body {
   background-color: whitesmoke;
   border: none;
   padding: 2em;
-}
-
-.group.is-home-about {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-.group.is-home-point {
-  max-width: 700px;
-  padding-bottom: 2em;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .group.is-about-graphic-1 {

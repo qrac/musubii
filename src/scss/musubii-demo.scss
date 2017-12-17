@@ -59,6 +59,14 @@ body {
   padding: 3em 0;
 }
 
+.section.is-bg-yellow {
+  background-color: $yellow-200;
+}
+
+.section.is-bg-grey {
+  background-color: $grey-100;
+}
+
 .section.is-footer {
   background-color: $blue-grey-800;
   padding: 2em 0;
@@ -85,6 +93,14 @@ body {
 }
 
 //----------------------------------------------------
+// / Demo - Group
+//----------------------------------------------------
+
+.group.is-home-point-textbox {
+  max-width: 25.45em;
+}
+
+//----------------------------------------------------
 // / Demo - Object
 //----------------------------------------------------
 
@@ -102,6 +118,10 @@ body {
   @include tablet {
     width: 23.5em;
   }
+}
+
+.obj.is-home-point-illust {
+  width: 15em;
 }
 
 //----------------------------------------------------
@@ -196,19 +216,6 @@ body {
     border: none;
     padding: 2em;
   }
-}
-
-.group.is-home-about {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-.group.is-home-point {
-  max-width: 700px;
-  padding-bottom: 2em;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .group.is-about-graphic-1 {
