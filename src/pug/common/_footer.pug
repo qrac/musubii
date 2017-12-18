@@ -69,9 +69,7 @@ footer.section.is-footer
         .col.is-mobile-6.is-tablet-3.is-desktop-auto
           p.heading.is-strong.is-light PROJECT
           ul.list.is-light.is-sm
-            li.item
-              a.text * private
-            //-each val in project
+            each val in project
               li.item
                 a.text.is-link-reverse(href=val.url)= val.title
         .col.is-mobile-6.is-tablet-3.is-desktop-auto
