@@ -57,7 +57,7 @@ $(function () {
 //----------------------------------------------------
 
 $(function () {
-  $('.js-demo-code-toggle').on('click', function () {
-    $(this).toggleClass('is-active');
+  $('.js-demo-code-toggle').children().on('click', function () {
+    $(this).parent().toggleClass('is-active');
   });
 });

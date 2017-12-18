@@ -118,64 +118,72 @@
             <h2 class="heading is-xxl">Getting Started</h2>
             <h3 class="heading is-xl">Use</h3>
             <div class="group is-wrap">
-              <h4 class="heading is-lg">Download</h4>
-              <p class="texts is-sm">CSSファイル&nbsp;<code class="code">musubii.min.css</code>&nbsp;を&nbsp;<a class="text is-primary is-link is-solid" href="css/musubii.min.css" download="musubii.min.css">ダウンロード<i class="fas fa-cloud-download-alt" aria-hidden="true"></i></a>&nbsp;後、読み込んでください。</p>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/musubii.min.css&quot;&gt;
+              <div class="inner">
+                <h4 class="heading is-lg">Download</h4>
+                <p class="texts is-sm">CSSファイル&nbsp;<code class="code">musubii.min.css</code>&nbsp;を&nbsp;<a class="text is-primary is-link is-solid" href="css/musubii.min.css" download="musubii.min.css">ダウンロード<i class="fas fa-cloud-download-alt" aria-hidden="true"></i></a>&nbsp;後、読み込んでください。</p>
+                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/musubii.min.css&quot;&gt;
 </code></pre>
 
-              </div>
-              <h4 class="heading is-lg"><a class="text is-primary is-link" href="https://www.npmjs.com/package/musubii"><span>npm</span></a></h4>
-              <div class="wysiwyg is-sm"><pre><code class="language-cmd">npm install musubii
+                </div>
+                <h4 class="heading is-lg"><a class="text is-primary is-link" href="https://www.npmjs.com/package/musubii"><span>npm</span></a></h4>
+                <div class="wysiwyg is-sm"><pre><code class="language-cmd">npm install musubii
 </code></pre>
 
-              </div>
-              <h4 class="heading is-lg"><a class="text is-primary is-link" href="https://cdn.jsdelivr.net/npm/musubii/"><span>CDN</span></a></h4>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css&quot;&gt;
+                </div>
+                <h4 class="heading is-lg"><a class="text is-primary is-link" href="https://cdn.jsdelivr.net/npm/musubii/"><span>CDN</span></a></h4>
+                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css&quot;&gt;
 </code></pre>
 
+                </div>
               </div>
             </div>
             <h3 class="heading is-xl">Detail</h3>
             <div class="group is-wrap">
-              <h4 class="heading is-lg">HTML</h4>
-              <p class="texts is-sm">要素&nbsp;<code class="code">.(xxxx)</code>&nbsp;1つに対して、装飾&nbsp;<code class="code">.is-(xxxx)</code>&nbsp;を複数追加してスタイリングするのが基本です。<br>すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
-                <div class="group is-wrap is-example">
-                  <div class="btns">
-                    <div class="btn is-plain is-primary">ボタンの例 A</div>
-                    <div class="btn is-plain is-success">ボタンの例 B</div>
-                    <div class="btn is-plain is-success is-round">ボタンの例 C</div>
-                    <div class="btn is-plain is-success is-round is-lg">ボタンの例 D</div>
+              <div class="inner">
+                <h4 class="heading is-lg">HTML</h4>
+                <p class="texts is-sm">要素&nbsp;<code class="code">.(xxxx)</code>&nbsp;1つに対して、装飾&nbsp;<code class="code">.is-(xxxx)</code>&nbsp;を複数追加してスタイリングするのが基本です。<br>すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
+                  <div class="group is-wrap is-example">
+                    <div class="btns">
+                      <div class="btn is-plain is-primary">ボタンの例 A</div>
+                      <div class="btn is-plain is-success">ボタンの例 B</div>
+                      <div class="btn is-plain is-success is-round">ボタンの例 C</div>
+                      <div class="btn is-plain is-success is-round is-lg">ボタンの例 D</div>
+                    </div>
                   </div>
-                </div>
-                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;btn is-plain is-primary&quot;&gt;ボタンの例 A&lt;/div&gt;
+                  <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;btn is-plain is-primary&quot;&gt;ボタンの例 A&lt;/div&gt;
 &lt;div class=&quot;btn is-plain is-success&quot;&gt;ボタンの例 B&lt;/div&gt;
 &lt;div class=&quot;btn is-plain is-success is-round&quot;&gt;ボタンの例 C&lt;/div&gt;
 &lt;div class=&quot;btn is-plain is-success is-round is-lg&quot;&gt;ボタンの例 D&lt;/div&gt;
 </code></pre>
 
-                </div>
-              </p>
+                  </div>
+                </p>
+              </div>
             </div>
             <div class="group is-wrap">
-              <h4 class="heading is-lg">CSS</h4>
-              <p class="texts is-sm">CSSのレイヤーは主に4つに分類されています。</p>
-              <ul class="list is-circle is-sm">
-                <li class="item"><span class="text is-strong">Base</span>&nbsp;… リセットCSSなどの下地</li>
-                <li class="item"><span class="text is-strong">Layout</span>&nbsp;… 余白・マージン・グリッドシステム</li>
-                <li class="item"><span class="text is-strong">Module</span>&nbsp;… ボタン・テキスト・リスト・見出しなど</li>
-                <li class="item"><span class="text is-strong">Utility</span>&nbsp;… 調整用モディファイア</li>
-              </ul>
+              <div class="inner">
+                <h4 class="heading is-lg">CSS</h4>
+                <p class="texts is-sm">CSSのレイヤーは主に4つに分類されています。</p>
+                <ul class="list is-circle is-sm">
+                  <li class="item"><span class="text is-strong">Base</span>&nbsp;… リセットCSSなどの下地</li>
+                  <li class="item"><span class="text is-strong">Layout</span>&nbsp;… 余白・マージン・グリッドシステム</li>
+                  <li class="item"><span class="text is-strong">Module</span>&nbsp;… ボタン・テキスト・リスト・見出しなど</li>
+                  <li class="item"><span class="text is-strong">Utility</span>&nbsp;… 調整用モディファイア</li>
+                </ul>
+              </div>
             </div>
             <div class="group is-wrap">
-              <h4 class="heading is-lg">RWD</h4>
-              <p class="texts is-sm">5つの画面サイズで可変するレスポンシブウェブデザインになっています。</p>
-              <ul class="list is-circle is-sm">
-                <li class="item"><span class="text is-strong">Mobile</span>&nbsp;… ~ 575px</li>
-                <li class="item"><span class="text is-strong">Fablet</span>&nbsp;… 576px ~ 767px</li>
-                <li class="item"><span class="text is-strong">Tablet</span>&nbsp;… 768px ~ 991px</li>
-                <li class="item"><span class="text is-strong">Desktop</span>&nbsp;… 992px ~ 1199px</li>
-                <li class="item"><span class="text is-strong">Wide</span>&nbsp;… 1200px ~</li>
-              </ul>
+              <div class="inner">
+                <h4 class="heading is-lg">RWD</h4>
+                <p class="texts is-sm">5つの画面サイズで可変するレスポンシブウェブデザインになっています。</p>
+                <ul class="list is-circle is-sm">
+                  <li class="item"><span class="text is-strong">Mobile</span>&nbsp;… ~ 575px</li>
+                  <li class="item"><span class="text is-strong">Fablet</span>&nbsp;… 576px ~ 767px</li>
+                  <li class="item"><span class="text is-strong">Tablet</span>&nbsp;… 768px ~ 991px</li>
+                  <li class="item"><span class="text is-strong">Desktop</span>&nbsp;… 992px ~ 1199px</li>
+                  <li class="item"><span class="text is-strong">Wide</span>&nbsp;… 1200px ~</li>
+                </ul>
+              </div>
             </div>
             <h3 class="heading is-xl">Support</h3>
             <h4 class="texts is-sm">日本で多く使われているブラウザを基準にしています。</h4>
@@ -237,25 +245,85 @@
                   <h3 class="heading is-xl">Section</h3>
                   <p class="texts is-sm">画面幅100%のブロック要素として使います。<br><code class="code">.section</code>&nbsp;直下に配置する&nbsp;<code class="code">.inner</code>&nbsp;には画面幅に応じてレスポンシブな固定幅が設定されます。</p>
                   <div class="group is-wrap">
-                    <div class="group is-demo-box-2 is-strong is-primary is-round is-centering is-break is-section-anime-1">
-                      <div class="grid">
-                        <div class="col is-mobile-2">
-                          <div class="group is-demo-box-1">.section</div>
-                        </div>
-                        <div class="col is-mobile-8">
-                          <div class="group is-demo-box-2 is-grey">
-                            <div class="group is-demo-box-1 is-height-1">.inner</div>
+                    <div class="inner">
+                      <div class="group is-demo-box-2 is-strong is-primary is-round">
+                        <div class="group is-demo-box-1">.section
+                          <div class="grid is-gap-none">
+                            <div class="col is-mobile-1"></div>
+                            <div class="col is-mobile-10">
+                              <div class="group is-demo-box-2 is-grey is-round">
+                                <div class="group is-demo-box-1 is-height-1">.inner {<br>&nbsp;&nbsp;width: 540px, 720px, 960px, 1140px;<br>&nbsp;&nbsp;padding: 0 16px;<br>}</div>
+                              </div>
+                            </div>
+                            <div class="col is-mobile-1"></div>
                           </div>
                         </div>
-                        <div class="col is-mobile-2"></div>
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;section&quot;&gt;
   &lt;div class=&quot;inner&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="groups">
+                  <p class="texts is-sm"><code class="code">.inner-soft</code>&nbsp;を使うと固定幅が無くなります。</p>
+                  <div class="group is-wrap">
+                    <div class="inner">
+                      <div class="group is-demo-box-2 is-strong is-primary is-round">
+                        <div class="group is-demo-box-1">.section
+                          <div class="group is-demo-box-2 is-grey is-round">
+                            <div class="group is-demo-box-1 is-height-1">.inner-soft {<br>&nbsp;&nbsp;padding: 0 1em;<br>}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btns is-xs js-demo-code-toggle">
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;inner-soft&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="groups">
+                  <p class="texts is-sm"><code class="code">.inner-view</code>&nbsp;を使うとFablet以上のサイズで幅が割合算出されます。</p>
+                  <div class="group is-wrap">
+                    <div class="inner">
+                      <div class="group is-demo-box-2 is-strong is-primary is-round">
+                        <div class="group is-demo-box-1">.section
+                          <div class="grid is-gap-none">
+                            <div class="col is-mobile-1"></div>
+                            <div class="col is-mobile-10">
+                              <div class="group is-demo-box-2 is-grey is-round">
+                                <div class="group is-demo-box-1 is-height-1">.inner-view {<br>&nbsp;&nbsp;width: 90vw;<br>&nbsp;&nbsp;padding: 0 1em;<br>}</div>
+                              </div>
+                            </div>
+                            <div class="col is-mobile-1"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btns is-xs js-demo-code-toggle">
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;inner-view&quot;&gt;
     ...
   &lt;/div&gt;
 &lt;/div&gt;
@@ -280,7 +348,7 @@
                     <p class="heading is-xl is-demo-space-filter-1">見出し</p>
                     <p class="texts is-ellipsis">テキストテキストテキストテキストテキストテキスト</p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;heading&quot;&gt;見出し&lt;/p&gt;
@@ -312,7 +380,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -348,7 +416,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -371,7 +439,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -394,7 +462,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -417,7 +485,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -440,7 +508,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -463,7 +531,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -666,7 +734,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -739,7 +807,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -768,7 +836,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group&quot;&gt;
@@ -795,7 +863,7 @@
                     <p class="heading is-sm">5番目に大きな見出し</p>
                     <p class="heading is-xs">6番目に大きな見出し</p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;heading is-xxl&quot;&gt;1番目に大きな見出し&lt;/p&gt;
@@ -819,7 +887,7 @@
                       <del class="text is-delete">削除</del>｜<span class="text"><i class="fas fa-thumbs-up" aria-hidden="true"></i><span class="text">アイコン追加</span><i class="material-icons">face</i></span>｜<span class="text"><span class="text">注釈入れ</span><sup>※1</sup></span>
                     </p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts&quot;&gt;
@@ -848,7 +916,7 @@
                       </p>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts&quot;&gt;
@@ -882,7 +950,7 @@
                     <p class="texts is-sm"><a class="text is-link">Link</a>｜<a class="text is-link is-primary">Primary</a>｜<a class="text is-link is-info">Info</a>｜<a class="text is-link is-success">Success</a>｜<a class="text is-link is-warning">Warning</a>｜<a class="text is-link is-danger">Danger</a></p>
                     <p class="texts is-sm"><a class="text is-link-reverse">Link reverse</a>｜<a class="text is-link-reverse is-primary">Primary</a>｜<a class="text is-link-reverse is-info">Info</a>｜<a class="text is-link-reverse is-success">Success</a>｜<a class="text is-link-reverse is-warning">Warning</a>｜<a class="text is-link-reverse is-danger">Danger</a></p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts&quot;&gt;
@@ -905,7 +973,7 @@
                     </div>
                     <p class="texts is-sm"><span class="text is-capitalize">capitalize</span>｜<span class="text is-lowercase">lowercase</span>｜<span class="text is-uppercase">uppercase</span></p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts&quot;&gt;
@@ -924,7 +992,7 @@
                   <div class="group is-wrap is-preview">
                     <p class="texts"><span class="text is-xxs">極小</span><span class="text is-xs">小さい</span><span class="text is-sm">小さめ</span><span class="text is-md">中くらい</span><span class="text is-lg">大きめ</span><span class="text is-xl">大きい</span><span class="text is-xxl">特大</span></p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts&quot;&gt;
@@ -949,7 +1017,7 @@
                     <p class="texts is-sm is-center">中央寄せのテキスト</p>
                     <p class="texts is-sm is-right">右寄せのテキスト</p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts is-left&quot;&gt;左寄せのテキスト&lt;/p&gt;
@@ -966,7 +1034,7 @@
                   <div class="group is-wrap is-preview">
                     <p class="texts is-sm is-ellipsis">テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。</p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts is-ellipsis&quot;&gt;...&lt;/p&gt;
@@ -981,7 +1049,7 @@
                   <div class="group is-wrap is-preview">
                     <blockquote class="blockquote">引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾。</blockquote>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;blockquote class=&quot;blockquote&quot;&gt;...&lt;/blockquote&gt;
@@ -1006,7 +1074,7 @@
   -webkit-tap-highlight-color: transparent;
 }</code></pre>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts&quot;&gt;
@@ -1039,7 +1107,7 @@
                   <div class="group is-wrap is-preview">
                     <div class="btns"><a class="btn is-plain">戻る</a><a class="btn is-plain is-primary">決定</a><a class="btn is-plain is-success">登録</a><a class="btn is-plain is-danger">削除</a><a class="btn is-plain is-disable">不可</a><a class="btn is-plain is-primary"><i class="fas fa-flag" aria-hidden="true"></i><span class="text">FontAwesome</span></a><a class="btn is-plain is-success"><span class="text">FontAwesome</span><i class="fas fa-angle-right is-fit" aria-hidden="true"></i></a><a class="btn is-plain is-primary"><i class="material-icons">face</i><span class="text">Material Icons</span></a><a class="btn is-plain is-success"><span class="text">Material Icons</span><i class="material-icons">keyboard_arrow_right</i></a></div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;btns&quot;&gt;
@@ -1076,7 +1144,7 @@
                   <div class="group is-wrap is-preview">
                     <div class="btns"><a class="btn is-melt">戻る</a><a class="btn is-melt is-primary">決定</a><a class="btn is-melt is-success">登録</a><a class="btn is-melt is-danger">削除</a><a class="btn is-melt is-disable">不可</a><a class="btn is-melt is-primary"><i class="fas fa-flag" aria-hidden="true"></i><span class="text">FontAwesome</span></a><a class="btn is-melt is-success"><span class="text">FontAwesome</span><i class="fas fa-angle-right is-fit" aria-hidden="true"></i></a><a class="btn is-melt is-primary"><i class="material-icons">face</i><span class="text">Material Icons</span></a><a class="btn is-melt is-success"><span class="text">Material Icons</span><i class="material-icons">keyboard_arrow_right</i></a></div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;a class=&quot;btn is-melt&quot;&gt;...&lt;/a&gt;
@@ -1091,7 +1159,7 @@
                   <div class="group is-wrap is-preview">
                     <div class="btns"><a class="btn is-outline">戻る</a><a class="btn is-outline is-primary">決定</a><a class="btn is-outline is-success">登録</a><a class="btn is-outline is-danger">削除</a><a class="btn is-outline is-disable">不可</a><a class="btn is-outline is-primary"><i class="fas fa-flag" aria-hidden="true"></i><span class="text">FontAwesome</span></a><a class="btn is-outline is-success"><span class="text">FontAwesome</span><i class="fas fa-angle-right is-fit" aria-hidden="true"></i></a><a class="btn is-outline is-primary"><i class="material-icons">face</i><span class="text">Material Icons</span></a><a class="btn is-outline is-success"><span class="text">Material Icons</span><i class="material-icons">keyboard_arrow_right</i></a></div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;a class=&quot;btn is-outline&quot;&gt;...&lt;/a&gt;
@@ -1108,7 +1176,7 @@
                       <div class="btns"><a class="btn is-ghost">戻る</a><a class="btn is-ghost is-primary">決定</a><a class="btn is-ghost is-success">登録</a><a class="btn is-ghost is-danger">削除</a><a class="btn is-ghost is-disable">不可</a><a class="btn is-ghost is-primary"><i class="fas fa-flag" aria-hidden="true"></i><span class="text">FontAwesome</span></a><a class="btn is-ghost is-success"><span class="text">FontAwesome</span><i class="fas fa-angle-right is-fit" aria-hidden="true"></i></a><a class="btn is-ghost is-primary"><i class="material-icons">face</i><span class="text">Material Icons</span></a><a class="btn is-ghost is-success"><span class="text">Material Icons</span><i class="material-icons">keyboard_arrow_right</i></a></div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;a class=&quot;btn is-ghost&quot;&gt;...&lt;/a&gt;
@@ -1123,7 +1191,7 @@
                   <div class="group is-wrap is-preview">
                     <div class="btns"><a class="btn is-plain is-xxs">極小</a><a class="btn is-plain is-xs">小さい</a><a class="btn is-plain is-sm">小さめ</a><a class="btn is-plain is-md">中くらい</a><a class="btn is-plain is-lg">大きめ</a><a class="btn is-plain is-xl">大きい</a><a class="btn is-plain is-xxl">特大</a></div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;btns&quot;&gt;
@@ -1148,7 +1216,7 @@
                     <div class="btns is-center"><a class="btn is-plain is-primary">.is-center</a><a class="btn is-plain is-primary">.is-center</a><a class="btn is-plain is-primary">.is-center</a></div>
                     <div class="btns is-right"><a class="btn is-plain is-primary">.is-right</a><a class="btn is-plain is-primary">.is-right</a><a class="btn is-plain is-primary">.is-right</a></div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;btns is-left&quot;&gt;...&lt;/div&gt;
@@ -1165,7 +1233,7 @@
                   <div class="group is-wrap is-preview">
                     <div class="btns"><a class="btn is-plain is-floating">戻る</a><a class="btn is-plain is-floating is-primary">決定</a><a class="btn is-plain is-floating is-success">登録</a><a class="btn is-plain is-floating is-danger">削除</a><a class="btn is-plain is-floating is-disable">不可</a><a class="btn is-plain is-floating is-primary"><i class="fas fa-flag" aria-hidden="true"></i><span class="text">FontAwesome</span></a><a class="btn is-plain is-floating is-success"><span class="text">FontAwesome</span><i class="fas fa-angle-right is-fit" aria-hidden="true"></i></a><a class="btn is-plain is-floating is-primary"><i class="material-icons">face</i><span class="text">Material Icons</span></a><a class="btn is-plain is-floating is-success"><span class="text">Material Icons</span><i class="material-icons">keyboard_arrow_right</i></a></div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;a class=&quot;btn is-plain is-floating&quot;&gt;...&lt;/a&gt;
@@ -1183,7 +1251,7 @@
                       <div class="btns is-sm"><a class="btn is-ghost is-round">戻る</a><a class="btn is-ghost is-round is-primary">決定</a><a class="btn is-ghost is-round is-success">登録</a><a class="btn is-ghost is-round is-danger">削除</a><a class="btn is-ghost is-round is-disable">不可</a><a class="btn is-ghost is-round is-primary"><i class="fas fa-flag" aria-hidden="true"></i><span class="text">FontAwesome</span></a><a class="btn is-ghost is-round is-success"><span class="text">FontAwesome</span><i class="fas fa-angle-right is-fit" aria-hidden="true"></i></a><a class="btn is-ghost is-round is-primary"><i class="material-icons">face</i><span class="text">Material Icons</span></a><a class="btn is-ghost is-round is-success"><span class="text">Material Icons</span><i class="material-icons">keyboard_arrow_right</i></a></div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;a class=&quot;btn is-plain is-round&quot;&gt;...&lt;/a&gt;
@@ -1201,7 +1269,7 @@
                       <div class="btns"><a class="btn is-ghost is-circle"><i class="fas fa-angle-left" aria-hidden="true"></i></a><a class="btn is-ghost is-circle is-primary"><i class="fab fa-twitter" aria-hidden="true"></i></a><a class="btn is-ghost is-circle is-success"><i class="fas fa-save" aria-hidden="true"></i></a><a class="btn is-ghost is-circle is-danger"><i class="fas fa-times" aria-hidden="true"></i></a><a class="btn is-ghost is-circle is-disable"><i class="fas fa-plus" aria-hidden="true"></i></a></div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;a class=&quot;btn is-plain is-circle&quot;&gt;...&lt;/a&gt;
@@ -1306,7 +1374,7 @@
                       <div class="btns"><a class="btn is-ghost is-mobile-full is-tablet-0">戻る</a><a class="btn is-ghost is-mobile-full is-tablet-0 is-primary">決定</a><a class="btn is-ghost is-mobile-full is-tablet-0 is-success">登録</a><a class="btn is-ghost is-mobile-full is-tablet-0 is-danger">削除</a><a class="btn is-ghost is-mobile-full is-tablet-0 is-disable">不可</a></div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;a class=&quot;btn is-plain is-(xxxx)-(y)&quot;&gt;...&lt;/a&gt;
@@ -1330,7 +1398,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;btns is-bar&quot;&gt;
@@ -1396,7 +1464,7 @@
                       <li class="item"><span class="text">※100</span><span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span></li>
                     </ul>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;ul class=&quot;list is-disc&quot;&gt;
@@ -1487,7 +1555,7 @@
                       </tfoot>
                     </table>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;table class=&quot;table is-stripe is-border is-center is-middle&quot;&gt;
@@ -1632,7 +1700,7 @@
                       </tbody>
                     </table>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;table class=&quot;table is-line&quot;&gt;
@@ -1672,7 +1740,7 @@
                       </tbody>
                     </table>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;table class=&quot;table&quot;&gt;
@@ -1753,7 +1821,7 @@
                       </tbody>
                     </table>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;table class=&quot;table&quot;&gt;
@@ -1839,7 +1907,7 @@
                       </table>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;group is-scroll-x&quot;&gt;
@@ -1891,7 +1959,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;form class=&quot;form&quot;&gt;
@@ -2068,7 +2136,7 @@
                       </div>
                     </form>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;form class=&quot;form&quot;&gt;
@@ -2305,7 +2373,7 @@
                       </div>
                     </form>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;form class=&quot;form&quot;&gt;
@@ -2507,7 +2575,7 @@
                   <div class="group is-wrap is-preview">
                     <p class="texts is-xl is-danger"><i class="fas fa-heart" aria-hidden="true"></i><span class="text">ハート</span><i class="fas fa-heart" aria-hidden="true"></i><span class="text is-demo-space-filter-2">ハート</span><i class="fas fa-heart" aria-hidden="true"></i><span class="text">ハート</span><span class="icon is-demo-space-filter-2"><i class="fas fa-heart" aria-hidden="true"></i></span><span class="text">ハート</span><i class="fas fa-heart" aria-hidden="true"></i></p>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts&quot;&gt;
@@ -2537,7 +2605,7 @@
                       </div>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;p class=&quot;texts&quot;&gt;
@@ -2569,7 +2637,7 @@
                     <div class="alert is-warning"><i class="fas fa-exclamation-triangle is-fit" aria-hidden="true"></i><span class="text">通知設定はアクティベートされていません。</span></div>
                     <div class="alert is-danger"><i class="fas fa-times is-fit" aria-hidden="true"></i><span class="text">通知設定は削除されました。</span></div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;alert&quot;&gt;
@@ -2696,7 +2764,7 @@
                       </table>
                     </div>
                     <div class="btns is-xs js-demo-code-toggle">
-                      <button class="btn is-plain is-mobile-full"><span class="text">Open Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                      <button class="btn is-plain is-mobile-full"><span class="text">View Code</span><i class="fas fa-angle-down" aria-hidden="true"></i></button>
                       <button class="btn is-plain is-mobile-full"><span class="text">Close Code</span><i class="fas fa-angle-up" aria-hidden="true"></i></button>
                     </div>
                     <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;div class=&quot;wysiwyg&quot;&gt;
@@ -3175,46 +3243,48 @@
             <h2 class="heading is-xxl">Libraries</h2>
             <p class="texts is-sm">各種ライブラリとの併用が可能です。</p>
             <div class="group is-wrap">
-              <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://qrac.github.io/yakuhanjp/"><span class="text">Yaku Han JP</span></a></h3>
-              <p class="texts is-sm">Yaku Han JPを読み込むとカッコや句読点を詰めて表示できます（Yaku Han JPsはカッコのみ）。MUSUBiiではクラス名&nbsp;<code class="code">.is-yakuhanjp</code>&nbsp;<code class="code">.is-yakuhanjps</code>&nbsp;で、それぞれ適応できます。</p>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css&quot;&gt;
+              <div class="inner">
+                <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://qrac.github.io/yakuhanjp/"><span class="text">Yaku Han JP</span></a></h3>
+                <p class="texts is-sm">Yaku Han JPを読み込むとカッコや句読点を詰めて表示できます（Yaku Han JPsはカッコのみ）。MUSUBiiではクラス名&nbsp;<code class="code">.is-yakuhanjp</code>&nbsp;<code class="code">.is-yakuhanjps</code>&nbsp;で、それぞれ適応できます。</p>
+                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css&quot;&gt;
 </code></pre>
 
-              </div>
-              <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://fonts.google.com/"><span class="text">Google Fonts</span></a></h3>
-              <p class="texts is-sm">GoogleのCDN経由でWeb Fontが使えます。例えばこのデモサイトに適応されている丸ゴシックを使う場合は以下2種類のフォントを読み込みます。</p>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Nunito:400,700,900&quot;&gt;
+                </div>
+                <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://fonts.google.com/"><span class="text">Google Fonts</span></a></h3>
+                <p class="texts is-sm">GoogleのCDN経由でWeb Fontが使えます。例えばこのデモサイトに適応されている丸ゴシックを使う場合は以下2種類のフォントを読み込みます。</p>
+                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Nunito:400,700,900&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css&quot;&gt;
 </code></pre>
 
-              </div>
-              <h3 class="heading is-lg"><a class="text is-primary is-link" href="http://fontawesome.com/"><span class="text">Font Awesome</span></a></h3>
-              <p class="texts is-sm">CDN経由でSVGもしくはWeb Fontを使ったアイコン表示が可能です。バージョン5からはグリフやclass名が多少変更になっており、JSを使ったインラインSVGアイコン表示にも対応しています。</p>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.0.1/css/all.css&quot;&gt;
+                </div>
+                <h3 class="heading is-lg"><a class="text is-primary is-link" href="http://fontawesome.com/"><span class="text">Font Awesome</span></a></h3>
+                <p class="texts is-sm">CDN経由でSVGもしくはWeb Fontを使ったアイコン表示が可能です。バージョン5からはグリフやclass名が多少変更になっており、JSを使ったインラインSVGアイコン表示にも対応しています。</p>
+                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.0.1/css/all.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;
 </code></pre>
 
-              </div>
-              <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://material.io/icons/"><span class="text">Material Icons</span></a></h3>
-              <p class="texts is-sm">GoogleのCDN経由でMaterial Iconsが使えます。</p>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
+                </div>
+                <h3 class="heading is-lg"><a class="text is-primary is-link" href="https://material.io/icons/"><span class="text">Material Icons</span></a></h3>
+                <p class="texts is-sm">GoogleのCDN経由でMaterial Iconsが使えます。</p>
+                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt;
 </code></pre>
 
-              </div>
-              <h3 class="heading is-lg"><a class="text is-primary is-link is-solid" href="https://jquery.com/"><span class="text">jQuery</span></a></h3>
-              <p class="texts is-sm">各バージョンのjQueryをCDN経由で使えます。本家よりもGoogleサーバーからの配信が比較的安定しています。</p>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+                </div>
+                <h3 class="heading is-lg"><a class="text is-primary is-link is-solid" href="https://jquery.com/"><span class="text">jQuery</span></a></h3>
+                <p class="texts is-sm">各バージョンのjQueryをCDN経由で使えます。本家よりもGoogleサーバーからの配信が比較的安定しています。</p>
+                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
-              </div>
-              <h3 class="heading is-lg"><a class="text is-primary is-link is-solid" href="https://jp.vuejs.org/"><span class="text">Vue.js</span></a></h3>
-              <p class="texts is-sm">データバインディングなどが得意でUI構築に特化したJSフレームワークを使えます。</p>
-              <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;
+                </div>
+                <h3 class="heading is-lg"><a class="text is-primary is-link is-solid" href="https://jp.vuejs.org/"><span class="text">Vue.js</span></a></h3>
+                <p class="texts is-sm">データバインディングなどが得意でUI構築に特化したJSフレームワークを使えます。</p>
+                <div class="wysiwyg is-sm"><pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;
 </code></pre>
 
+                </div>
               </div>
             </div>
           </div>

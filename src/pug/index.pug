@@ -104,98 +104,102 @@ block contents
           h2.heading.is-xxl Getting Started
           h3.heading.is-xl Use
           .group.is-wrap
-            h4.heading.is-lg Download
-            p.texts.is-sm
-              | CSSファイル&nbsp;
-              code.code musubii.min.css
-              | &nbsp;を&nbsp;
-              a.text.is-primary.is-link.is-solid(href="css/musubii.min.css" download="musubii.min.css")
-                | ダウンロード
-                i.fas.fa-cloud-download-alt(aria-hidden="true")
-              | &nbsp;後、読み込んでください。
-            .wysiwyg.is-sm
-              :markdown-it
-                ```html
-                <link rel="stylesheet" href="css/musubii.min.css">
-                ```
-            h4.heading.is-lg
-              a.text.is-primary.is-link(href="https://www.npmjs.com/package/musubii")
-                span npm
-            .wysiwyg.is-sm
-              :markdown-it
-                ```cmd
-                npm install musubii
-                ```
-            h4.heading.is-lg
-              a.text.is-primary.is-link(href="https://cdn.jsdelivr.net/npm/musubii/")
-                span CDN
-            .wysiwyg.is-sm
-              :markdown-it
-                ```html
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css">
-                ```
-          h3.heading.is-xl Detail
-          .group.is-wrap
-            h4.heading.is-lg HTML
-            p.texts.is-sm
-              | 要素&nbsp;
-              code.code .(xxxx)
-              | &nbsp;1つに対して、装飾&nbsp;
-              code.code .is-(xxxx)
-              | &nbsp;を複数追加してスタイリングするのが基本です。
-              br
-              | すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
-              .group.is-wrap.is-example
-                .btns
-                  .btn.is-plain.is-primary ボタンの例 A
-                  .btn.is-plain.is-success ボタンの例 B
-                  .btn.is-plain.is-success.is-round ボタンの例 C
-                  .btn.is-plain.is-success.is-round.is-lg ボタンの例 D
+            .inner
+              h4.heading.is-lg Download
+              p.texts.is-sm
+                | CSSファイル&nbsp;
+                code.code musubii.min.css
+                | &nbsp;を&nbsp;
+                a.text.is-primary.is-link.is-solid(href="css/musubii.min.css" download="musubii.min.css")
+                  | ダウンロード
+                  i.fas.fa-cloud-download-alt(aria-hidden="true")
+                | &nbsp;後、読み込んでください。
               .wysiwyg.is-sm
                 :markdown-it
                   ```html
-                  <div class="btn is-plain is-primary">ボタンの例 A</div>
-                  <div class="btn is-plain is-success">ボタンの例 B</div>
-                  <div class="btn is-plain is-success is-round">ボタンの例 C</div>
-                  <div class="btn is-plain is-success is-round is-lg">ボタンの例 D</div>
+                  <link rel="stylesheet" href="css/musubii.min.css">
                   ```
+              h4.heading.is-lg
+                a.text.is-primary.is-link(href="https://www.npmjs.com/package/musubii")
+                  span npm
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```cmd
+                  npm install musubii
+                  ```
+              h4.heading.is-lg
+                a.text.is-primary.is-link(href="https://cdn.jsdelivr.net/npm/musubii/")
+                  span CDN
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```html
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css">
+                  ```
+          h3.heading.is-xl Detail
           .group.is-wrap
-            h4.heading.is-lg CSS
-            p.texts.is-sm
-              | CSSのレイヤーは主に4つに分類されています。
-            ul.list.is-circle.is-sm
-              li.item
-                span.text.is-strong Base
-                | &nbsp;… リセットCSSなどの下地
-              li.item
-                span.text.is-strong Layout
-                | &nbsp;… 余白・マージン・グリッドシステム
-              li.item
-                span.text.is-strong Module
-                | &nbsp;… ボタン・テキスト・リスト・見出しなど
-              li.item
-                span.text.is-strong Utility
-                | &nbsp;… 調整用モディファイア
+            .inner
+              h4.heading.is-lg HTML
+              p.texts.is-sm
+                | 要素&nbsp;
+                code.code .(xxxx)
+                | &nbsp;1つに対して、装飾&nbsp;
+                code.code .is-(xxxx)
+                | &nbsp;を複数追加してスタイリングするのが基本です。
+                br
+                | すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
+                .group.is-wrap.is-example
+                  .btns
+                    .btn.is-plain.is-primary ボタンの例 A
+                    .btn.is-plain.is-success ボタンの例 B
+                    .btn.is-plain.is-success.is-round ボタンの例 C
+                    .btn.is-plain.is-success.is-round.is-lg ボタンの例 D
+                .wysiwyg.is-sm
+                  :markdown-it
+                    ```html
+                    <div class="btn is-plain is-primary">ボタンの例 A</div>
+                    <div class="btn is-plain is-success">ボタンの例 B</div>
+                    <div class="btn is-plain is-success is-round">ボタンの例 C</div>
+                    <div class="btn is-plain is-success is-round is-lg">ボタンの例 D</div>
+                    ```
           .group.is-wrap
-            h4.heading.is-lg RWD
-            p.texts.is-sm
-              | 5つの画面サイズで可変するレスポンシブウェブデザインになっています。
-            ul.list.is-circle.is-sm
-              li.item
-                span.text.is-strong Mobile
-                | &nbsp;… ~ 575px
-              li.item
-                span.text.is-strong Fablet
-                | &nbsp;… 576px ~ 767px
-              li.item
-                span.text.is-strong Tablet
-                | &nbsp;… 768px ~ 991px
-              li.item
-                span.text.is-strong Desktop
-                | &nbsp;… 992px ~ 1199px
-              li.item
-                span.text.is-strong Wide
-                | &nbsp;… 1200px ~
+            .inner
+              h4.heading.is-lg CSS
+              p.texts.is-sm
+                | CSSのレイヤーは主に4つに分類されています。
+              ul.list.is-circle.is-sm
+                li.item
+                  span.text.is-strong Base
+                  | &nbsp;… リセットCSSなどの下地
+                li.item
+                  span.text.is-strong Layout
+                  | &nbsp;… 余白・マージン・グリッドシステム
+                li.item
+                  span.text.is-strong Module
+                  | &nbsp;… ボタン・テキスト・リスト・見出しなど
+                li.item
+                  span.text.is-strong Utility
+                  | &nbsp;… 調整用モディファイア
+          .group.is-wrap
+            .inner
+              h4.heading.is-lg RWD
+              p.texts.is-sm
+                | 5つの画面サイズで可変するレスポンシブウェブデザインになっています。
+              ul.list.is-circle.is-sm
+                li.item
+                  span.text.is-strong Mobile
+                  | &nbsp;… ~ 575px
+                li.item
+                  span.text.is-strong Fablet
+                  | &nbsp;… 576px ~ 767px
+                li.item
+                  span.text.is-strong Tablet
+                  | &nbsp;… 768px ~ 991px
+                li.item
+                  span.text.is-strong Desktop
+                  | &nbsp;… 992px ~ 1199px
+                li.item
+                  span.text.is-strong Wide
+                  | &nbsp;… 1200px ~
           h3.heading.is-xl Support
           h4.texts.is-sm 日本で多く使われているブラウザを基準にしています。
           .group.is-scroll-x
@@ -335,74 +339,75 @@ block contents
           p.texts.is-sm
             | 各種ライブラリとの併用が可能です。
           .group.is-wrap
-            h3.heading.is-lg
-              a.text.is-primary.is-link(href="https://qrac.github.io/yakuhanjp/")
-                span.text Yaku Han JP
-            p.texts.is-sm
-              | Yaku Han JPを読み込むとカッコや句読点を詰めて表示できます（Yaku Han JPsはカッコのみ）。MUSUBiiではクラス名&nbsp;
-              code.code .is-yakuhanjp
-              | &nbsp;
-              code.code .is-yakuhanjps
-              | &nbsp;で、それぞれ適応できます。
-            .wysiwyg.is-sm
-              :markdown-it
-                ```html
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css">
-                ```
-            h3.heading.is-lg
-              a.text.is-primary.is-link(href="https://fonts.google.com/")
-                span.text Google Fonts
-            p.texts.is-sm
-              | GoogleのCDN経由でWeb Fontが使えます。例えばこのデモサイトに適応されている丸ゴシックを使う場合は以下2種類のフォントを読み込みます。
-            .wysiwyg.is-sm
-              :markdown-it
-                ```html
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700,900">
-                <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css">
-                ```
-            h3.heading.is-lg
-              a.text.is-primary.is-link(href="http://fontawesome.com/")
-                span.text Font Awesome
-            p.texts.is-sm
-              | CDN経由でSVGもしくはWeb Fontを使ったアイコン表示が可能です。バージョン5からはグリフやclass名が多少変更になっており、JSを使ったインラインSVGアイコン表示にも対応しています。
-            .wysiwyg.is-sm
-              :markdown-it
-                ```html
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-                ```
-            h3.heading.is-lg
-              a.text.is-primary.is-link(href="https://material.io/icons/")
-                span.text Material Icons
-            p.texts.is-sm
-              | GoogleのCDN経由でMaterial Iconsが使えます。
-            .wysiwyg.is-sm
-              :markdown-it
-                ```html
-                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-                ```
-            h3.heading.is-lg
-              a.text.is-primary.is-link.is-solid(href="https://jquery.com/")
-                span.text jQuery
-            p.texts.is-sm
-              | 各バージョンのjQueryをCDN経由で使えます。本家よりもGoogleサーバーからの配信が比較的安定しています。
-            .wysiwyg.is-sm
-              :markdown-it
-                ```html
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-                ```
-            h3.heading.is-lg
-              a.text.is-primary.is-link.is-solid(href="https://jp.vuejs.org/")
-                span.text Vue.js
-            p.texts.is-sm
-              | データバインディングなどが得意でUI構築に特化したJSフレームワークを使えます。
-            .wysiwyg.is-sm
-              :markdown-it
-                ```html
-                <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-                ```
+            .inner
+              h3.heading.is-lg
+                a.text.is-primary.is-link(href="https://qrac.github.io/yakuhanjp/")
+                  span.text Yaku Han JP
+              p.texts.is-sm
+                | Yaku Han JPを読み込むとカッコや句読点を詰めて表示できます（Yaku Han JPsはカッコのみ）。MUSUBiiではクラス名&nbsp;
+                code.code .is-yakuhanjp
+                | &nbsp;
+                code.code .is-yakuhanjps
+                | &nbsp;で、それぞれ適応できます。
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```html
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css">
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css">
+                  ```
+              h3.heading.is-lg
+                a.text.is-primary.is-link(href="https://fonts.google.com/")
+                  span.text Google Fonts
+              p.texts.is-sm
+                | GoogleのCDN経由でWeb Fontが使えます。例えばこのデモサイトに適応されている丸ゴシックを使う場合は以下2種類のフォントを読み込みます。
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```html
+                  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700,900">
+                  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css">
+                  ```
+              h3.heading.is-lg
+                a.text.is-primary.is-link(href="http://fontawesome.com/")
+                  span.text Font Awesome
+              p.texts.is-sm
+                | CDN経由でSVGもしくはWeb Fontを使ったアイコン表示が可能です。バージョン5からはグリフやclass名が多少変更になっており、JSを使ったインラインSVGアイコン表示にも対応しています。
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```html
+                  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                  ```
+              h3.heading.is-lg
+                a.text.is-primary.is-link(href="https://material.io/icons/")
+                  span.text Material Icons
+              p.texts.is-sm
+                | GoogleのCDN経由でMaterial Iconsが使えます。
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```html
+                  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+                  ```
+              h3.heading.is-lg
+                a.text.is-primary.is-link.is-solid(href="https://jquery.com/")
+                  span.text jQuery
+              p.texts.is-sm
+                | 各バージョンのjQueryをCDN経由で使えます。本家よりもGoogleサーバーからの配信が比較的安定しています。
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```html
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                  ```
+              h3.heading.is-lg
+                a.text.is-primary.is-link.is-solid(href="https://jp.vuejs.org/")
+                  span.text Vue.js
+              p.texts.is-sm
+                | データバインディングなどが得意でUI構築に特化したJSフレームワークを使えます。
+              .wysiwyg.is-sm
+                :markdown-it
+                  ```html
+                  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+                  ```
 
   include common/_footer.pug
