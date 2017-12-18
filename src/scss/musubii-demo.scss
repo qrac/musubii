@@ -364,29 +364,27 @@ button {
   width: 15em;
 }
 
+.obj.is-badge {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875em;
+  padding: 0 0.25em;
+  margin: 0 0.25em 0.25em;
+  border-radius: 0.0875em;
+  &.is-new {
+    background-color: $light-green-a400;
+    color: $light;
+    font-weight: 700;
+  }
+  > .text {
+    font-size: 50%;
+  }
+}
+
 .obj.is-footer-logo {
   display: block;
   width: 8em;
-}
-
-.mark-demo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(1.5em + 1px);
-  .mark-demo-wrap {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 1em;
-    height: 1em;
-    background-color: $dark-6;
-    border-radius: 0.25em;
-  }
-  .mark-demo-japanese {
-    color: $light;
-    font-size: 0.675em;
-  }
 }
 
 //----------------------------------------------------

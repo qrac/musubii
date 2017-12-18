@@ -341,37 +341,31 @@ button {
   width: 15em;
 }
 
+.obj.is-badge {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875em;
+  padding: 0 0.25em;
+  margin: 0 0.25em 0.25em;
+  border-radius: 0.0875em;
+}
+
+.obj.is-badge.is-new {
+  background-color: #81e130;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.obj.is-badge > .text {
+  font-size: 50%;
+}
+
 .obj.is-footer-logo {
   display: block;
   width: 8em;
-}
-
-.mark-demo {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  height: calc(1.5em + 1px);
-}
-
-.mark-demo .mark-demo-wrap {
-  display: -webkit-inline-box;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  width: 1em;
-  height: 1em;
-  background-color: rgba(0, 0, 0, 0.26);
-  border-radius: 0.25em;
-}
-
-.mark-demo .mark-demo-japanese {
-  color: #ffffff;
-  font-size: 0.675em;
 }
 
 .tabs {
