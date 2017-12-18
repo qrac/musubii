@@ -232,17 +232,6 @@ button {
 // / Demo - Group
 //----------------------------------------------------
 
-.table {
-  .box.is-sticky-left {
-    position: sticky;
-    left: 0;
-  }
-}
-
-//----------------------------------------------------
-// / Demo - Group
-//----------------------------------------------------
-
 .group.is-home-point-textbox {
   max-width: 25.45em;
 }
@@ -273,6 +262,9 @@ button {
   &.is-active {
     display: block;
   }
+  .group.is-wrap {
+    font-family: $font-sans;
+  }
 }
 
 .group.is-wrap {
@@ -280,31 +272,16 @@ button {
   border: 1px solid $grey-300;
   border-radius: 2px;
   overflow: hidden;
-  &.is-preview {
-    font-family: $font-sans;
-  }
-  &.is-preview:before {
-    content: "Preview";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    border-right: 1px solid $grey-300;
-    border-bottom: 1px solid $grey-300;
-    border-radius: 0 0 2px 0;
-    color: $grey-400;
-    font-size: 0.675em;
-    padding: 0 0.5em;
-  }
   &.is-paint {
+    padding: 1em;
     background-color: $cyan-700;
     border: none;
-    padding: 1em;
   }
   &.is-example {
+    padding: 2em;
     background-color: $grey-100;
     border: none;
-    padding: 2em;
+    font-family: $font-sans;
   }
   > .inner {
     padding: 1.25em;
