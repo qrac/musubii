@@ -61,6 +61,48 @@ button {
   height: 30.125em;
 }
 
+.grid.is-gap-2x:not(.is-gap-none) {
+  margin-left: -1em;
+  margin-bottom: -1em;
+}
+
+.grid.is-gap-2x:not(.is-gap-none) > .col {
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+.grid.is-gap-2x:not(.is-gap-none) + .grid.is-gap-2x:not(.is-gap-none) {
+  margin-top: 1em;
+}
+
+.grid.is-gap-3x:not(.is-gap-none) {
+  margin-left: -1.5em;
+  margin-bottom: -1.5em;
+}
+
+.grid.is-gap-3x:not(.is-gap-none) > .col {
+  padding-left: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.grid.is-gap-3x:not(.is-gap-none) + .grid.is-gap-3x:not(.is-gap-none) {
+  margin-top: 1.5em;
+}
+
+.grid.is-gap-4x:not(.is-gap-none) {
+  margin-left: -2em;
+  margin-bottom: -2em;
+}
+
+.grid.is-gap-4x:not(.is-gap-none) > .col {
+  padding-left: 2em;
+  padding-bottom: 2em;
+}
+
+.grid.is-gap-4x:not(.is-gap-none) + .grid.is-gap-4x:not(.is-gap-none) {
+  margin-top: 2em;
+}
+
 .grid.is-gap-6x:not(.is-gap-none) {
   margin-left: -3em;
   margin-bottom: -3em;
@@ -185,6 +227,12 @@ button {
 .btns.js-demo-code-toggle + .wysiwyg {
   margin-top: 0;
   border-top: 1px solid #e0e0e0;
+}
+
+.table .box.is-sticky-left {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
 }
 
 .group.is-home-point-textbox {

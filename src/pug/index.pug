@@ -31,6 +31,7 @@ block contents
                   i.fas.fa-cloud-download-alt(aria-hidden="true")
                   span.text Download CSS
               p.texts.is-light.is-center.is-sm
+                i.fab.fa-github(aria-hidden="true")
                 span.text #{github.ver}
                 | ・
                 a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo+"/releases")
@@ -81,9 +82,9 @@ block contents
                   h3.texts.is-sm
                     span.text 命名規則は単純で、特定の要素に&nbsp;
                     code.code .is-(xxxx)
-                    span.text &nbsp;の装飾classを加えていくだけです。
+                    span.text &nbsp;の装飾クラスを加えていくだけです。
                     a.text.is-link.is-primary(href="https://bulma.io/") Bulma
-                    span.text と似ています。英小文字・数字・ハイフン1つで繋ぐルールなので覚えやすい。インブラウザデザイン中にスピーディなclass修正・追加を試すことができます。
+                    span.text と似ています。英小文字・数字・ハイフン1つで繋ぐルールなので覚えやすい。インブラウザデザイン中にスピーディな修正・追加を試すことができます。
       section.section.is-main-content.is-bg-grey
         .inner-vw
           .group
@@ -154,7 +155,7 @@ block contents
           h3.heading.is-xl Detail
           .group.is-wrap
             .inner
-              h4.heading.is-lg HTML
+              h4.heading.is-lg Markup
               p.texts.is-sm
                 | 要素&nbsp;
                 code.code .(xxxx)
@@ -179,9 +180,9 @@ block contents
                     ```
           .group.is-wrap
             .inner
-              h4.heading.is-lg CSS
+              h4.heading.is-lg Layers
               p.texts.is-sm
-                | CSSのレイヤーは主に4つに分類されています。
+                | CSSのレイヤーは大きく4つに分類されています。
               ul.list.is-circle.is-sm
                 li.item
                   span.text.is-strong Base
@@ -197,7 +198,7 @@ block contents
                   | &nbsp;… 調整用モディファイア
           .group.is-wrap
             .inner
-              h4.heading.is-lg RWD
+              h4.heading.is-lg Responsive
               p.texts.is-sm
                 | 5つの画面サイズで可変するレスポンシブウェブデザインになっています。
               ul.list.is-circle.is-sm
@@ -217,59 +218,62 @@ block contents
                   span.text.is-strong Wide
                   | &nbsp;… 1200px ~
           h3.heading.is-xl Support
-          h4.texts.is-sm 日本で多く使われているブラウザを基準にしています。
-          .group.is-scroll-x
-            table.table.is-sm.is-center.is-nowrap.is-middle.is-border
-              thead
-                tr.box.is-paint
-                  th
-                    i.fab.fa-chrome(aria-hidden="true")
-                    span.text Chrome
-                  th
-                    i.fab.fa-firefox(aria-hidden="true")
-                    span.text Firefox
-                  th
-                    i.fab.fa-internet-explorer(aria-hidden="true")
-                    span.text IE
-                  th
-                    i.fab.fa-edge(aria-hidden="true")
-                    span.text Ege
-                  th
-                    i.fab.fa-safari(aria-hidden="true")
-                    span.text Safari(Mac)
-              tbody
-                tr
-                  td
-                    span.text Newest
-                  td
-                    span.text Newest
-                  td
-                    span.text 11~
-                  td
-                    span.text Newest
-                  td
-                    span.text Newest
-          .group.is-scroll-x
-            table.table.is-sm.is-center.is-nowrap.is-middle.is-border
-              thead
-                tr.box.is-paint
-                  th
-                    i.fab.fa-safari(aria-hidden="true")
-                    span.text Safari(iOS)
-                  th
-                    i.fab.fa-chrome(aria-hidden="true")
-                    span.text Chrome(Android)
-                  th
-                    i.fas.fa-globe(aria-hidden="true")
-                    span.text Browser(Android)
-              tbody
-                tr
-                  td
-                    span.text Newest
-                  td
-                    span.text Newest
-                  td
-                    span.text 4.4~
+          .group.is-wrap
+            .inner
+              h4.heading.is-lg Browser
+              p.texts.is-sm 日本で多く使われているブラウザを基準にバグフィックスを行なっています。
+              .group.is-scroll-x
+                table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+                  thead
+                    tr.box.is-paint
+                      th
+                        i.fab.fa-chrome(aria-hidden="true")
+                        span.text Chrome
+                      th
+                        i.fab.fa-firefox(aria-hidden="true")
+                        span.text Firefox
+                      th
+                        i.fab.fa-internet-explorer(aria-hidden="true")
+                        span.text IE
+                      th
+                        i.fab.fa-edge(aria-hidden="true")
+                        span.text Ege
+                      th
+                        i.fab.fa-safari(aria-hidden="true")
+                        span.text Safari(Mac)
+                  tbody
+                    tr
+                      td
+                        span.text Newest
+                      td
+                        span.text Newest
+                      td
+                        span.text 11~
+                      td
+                        span.text Newest
+                      td
+                        span.text Newest
+              .group.is-scroll-x
+                table.table.is-sm.is-center.is-nowrap.is-middle.is-border
+                  thead
+                    tr.box.is-paint
+                      th
+                        i.fab.fa-safari(aria-hidden="true")
+                        span.text Safari(iOS)
+                      th
+                        i.fab.fa-chrome(aria-hidden="true")
+                        span.text Chrome(Android)
+                      th
+                        i.fas.fa-globe(aria-hidden="true")
+                        span.text Browser(Android)
+                  tbody
+                    tr
+                      td
+                        span.text Newest
+                      td
+                        span.text Newest
+                      td
+                        span.text 4.4~
 
     .tab-content.is-documentation.js-tab-content
       section.section.is-main-content

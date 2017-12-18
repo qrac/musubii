@@ -18,13 +18,14 @@
     | &nbsp;と&nbsp;
     code.code .col
     | &nbsp;には状態を表すクラスを付与します。
-  .group.is-wrap.is-preview.is-strong
-    .group
-      .grid
-        - for (var i = 1; i <= 3; i++)
-          .col.is-mobile-12.is-desktop-4
-            .group.is-demo-box-1.is-primary.is-center.is-round
-              | .col .is-mobile-12 .is-desktop-4
+  .group.is-wrap
+    .inner
+      .group
+        .grid
+          - for (var i = 1; i <= 3; i++)
+            .col.is-mobile-12.is-desktop-4
+              .group.is-demo-box-1.is-primary.is-center.is-round.is-strong
+                | .col .is-mobile-12 .is-desktop-4
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -56,13 +57,44 @@
     | &nbsp;（横中央寄せ）や&nbsp;
     code.code .is-between
     | &nbsp;（等間隔）などの対応したクラスを付与します。
-  .group.is-wrap.is-preview.is-strong
-    .group.is-demo-box-3.is-grey.is-round
-      .grid.is-demo-box-1.is-height-1.is-middle
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-middle
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-middle
+  .group.is-wrap
+    .inner
+      .group.is-demo-box-3.is-grey.is-round
+        .grid.is-demo-box-1.is-height-1.is-middle
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-middle
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-middle
+      .group.group.is-demo-box-3.is-grey.is-round
+        .grid.is-demo-box-1.is-height-1.is-bottom
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-bottom
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-bottom
+      .group.group.is-demo-box-3.is-grey.is-round
+        .grid.is-demo-box-1.is-center
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-center
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-center
+      .group.group.is-demo-box-3.is-grey.is-round
+        .grid.is-demo-box-1.is-right
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-right
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-right
+      .group.group.is-demo-box-3.is-grey.is-round
+        .grid.is-demo-box-1.is-between
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-between
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-between
+      .group.group.is-demo-box-3.is-grey.is-round
+        .grid.is-demo-box-1.is-around
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-around
+          .col
+            .group.is-demo-box-3.is-primary.is-round.is-strong .is-around
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -73,85 +105,35 @@
             <div class="col">...</div>
           </div>
         </div>
-        ```
-    .group.group.is-demo-box-3.is-grey.is-round
-      .grid.is-demo-box-1.is-height-1.is-bottom
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-bottom
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-bottom
-    include ../demo/_code-toggle.pug
-    .wysiwyg.is-sm
-      :markdown-it
-        ```html
+
         <div class="group">
           <div class="grid is-bottom">
             <div class="col">...</div>
             <div class="col">...</div>
           </div>
         </div>
-        ```
-    .group.group.is-demo-box-3.is-grey.is-round
-      .grid.is-demo-box-1.is-center
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-center
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-center
-    include ../demo/_code-toggle.pug
-    .wysiwyg.is-sm
-      :markdown-it
-        ```html
+
         <div class="group">
           <div class="grid is-center">
             <div class="col">...</div>
             <div class="col">...</div>
           </div>
         </div>
-        ```
-    .group.group.is-demo-box-3.is-grey.is-round
-      .grid.is-demo-box-1.is-right
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-right
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-right
-    include ../demo/_code-toggle.pug
-    .wysiwyg.is-sm
-      :markdown-it
-        ```html
+
         <div class="group">
           <div class="grid is-right">
             <div class="col">...</div>
             <div class="col">...</div>
           </div>
         </div>
-        ```
-    .group.group.is-demo-box-3.is-grey.is-round
-      .grid.is-demo-box-1.is-between
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-between
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-between
-    include ../demo/_code-toggle.pug
-    .wysiwyg.is-sm
-      :markdown-it
-        ```html
+
         <div class="group">
           <div class="grid is-between">
             <div class="col">...</div>
             <div class="col">...</div>
           </div>
         </div>
-        ```
-    .group.group.is-demo-box-3.is-grey.is-round
-      .grid.is-demo-box-1.is-around
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-around
-        .col
-          .group.is-demo-box-3.is-primary.is-round .is-around
-    include ../demo/_code-toggle.pug
-    .wysiwyg.is-sm
-      :markdown-it
-        ```html
+
         <div class="group">
           <div class="grid is-around">
             <div class="col">...</div>
@@ -165,134 +147,18 @@
   p.texts.is-sm
     | カラム幅の比率を変更するには、&nbsp;
     code.code .col
-    | &nbsp;にサイズを表すクラス名を付与します。サイズは、ディスプレイサイズごとにモバイルファーストな設定が可能です。
-  .group.is-scroll-x
-    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
-      thead
-        tr.box.is-paint
-          th(width="80")
-          th
-            p
-              i.fa.fa-mobile(aria-hidden="true")
-              span.text Mobile
-              br
-              span.text.is-sm all
-          th
-            p
-              i.fa.fa-mobile(aria-hidden="true")
-              span.text Fablet
-              br
-              span.text.is-sm 576px ~
-          th
-            p
-              i.fa.fa-tablet(aria-hidden="true")
-              span.text Tablet
-              br
-              span.text.is-sm 768px ~
-          th
-            p
-              i.fa.fa-laptop(aria-hidden="true")
-              span.text Desktop
-              br
-              span.text.is-sm 992px ~
-          th
-            p
-              i.fa.fa-desktop(aria-hidden="true")
-              span.text Wide
-              br
-              span.text.is-sm 1200px ~
-      tbody
-        tr
-          td
-            p.text.is-sm
-              | カラムの比率保持
-          td
-            p
-              span.text .is-mobile-1
-              br
-              span.text |
-              br
-              span.text .is-mobile-12
-          td
-            p
-              span.text .is-fablet-1
-              br
-              span.text |
-              br
-              span.text .is-fablet-12
-          td
-            p
-              span.text .is-tablet-1
-              br
-              span.text |
-              br
-              span.text .is-tablet-12
-          td
-            p
-              span.text .is-desktop-1
-              br
-              span.text |
-              br
-              span.text .is-desktop-12
-          td
-            p
-              span.text .is-wide-1
-              br
-              span.text |
-              br
-              span.text .is-wide-12
-        tr
-          td
-            p.text.is-sm
-              | 残っている余白
-              br
-              | いっぱいに広がり等分
-          td
-            p
-              span.text .is-mobile-0
-          td
-            p
-              span.text .is-fablet-0
-          td
-            p
-              span.text .is-tablet-0
-          td
-            p
-              span.text .is-desktop-0
-          td
-            p
-              span.text .is-wide-0
-        tr
-          td
-            p.text.is-sm
-              | 子要素の
-              br
-              | サイズに縮む
-          td
-            p
-              span.text .is-mobile-auto
-          td
-            p
-              span.text .is-fablet-auto
-          td
-            p
-              span.text .is-tablet-auto
-          td
-            p
-              span.text .is-desktop-auto
-          td
-            p
-              span.text .is-wide-auto
-  .group.is-wrap.is-preview.is-strong
-    .group
-      - for (var i = 1; i <= 12; i++)
-        .grid
-          .col.is-stretch(class="is-mobile-"+i)
-            .group.is-demo-box-1.is-primary.is-center.is-round
-              | #{i}
-          .col.is-stretch.is-mobile-0
-            .group.is-demo-box-1.is-grey.is-center.is-round
-              | 0
+    | &nbsp;にサイズを表すクラス名を付与します。サイズは、ディスプレイサイズごとにモバイルファーストな設定・特定のサイズを指定した設定が可能です。
+  .group.is-wrap
+    .inner
+      .group
+        - for (var i = 1; i <= 12; i++)
+          .grid
+            .col.is-stretch(class="is-mobile-"+i)
+              .group.is-demo-box-1.is-primary.is-center.is-round.is-strong
+                | #{i}
+            .col.is-stretch.is-mobile-0
+              .group.is-demo-box-1.is-grey.is-center.is-round.is-strong
+                | 0
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -348,6 +214,7 @@
           </div>
         </div>
         ```
+  include ../demo/_responsive-flex.pug
 
 .groups
   h4.heading.is-xl Grid - Stretch
@@ -357,27 +224,58 @@
     | &nbsp;に&nbsp;
     code.code .is-stretch
     | &nbsp;を付与します。
-  .group.is-wrap.is-preview.is-strong
-    .group
-      .grid.is-stretch
-        .col.is-mobile-0
-          .group.is-demo-box-1.is-grey.is-center.is-round
-            | .is-stretch
-            br
-            | ↓
-            br
-            | ↓
-            br
-            | ↓
-        .col.is-mobile-0
-          .group.is-demo-box-1.is-primary.is-center.is-round
-            | .is-stretch
+  .group.is-wrap
+    .inner
+      .group
+        .grid.is-stretch
+          .col.is-mobile-0
+            .group.is-demo-box-1.is-grey.is-center.is-round.is-strong
+              | .is-stretch
+              br
+              | ↓
+              br
+              | ↓
+              br
+              | ↓
+          .col.is-mobile-0
+            .group.is-demo-box-1.is-primary.is-center.is-round.is-strong
+              | .is-stretch
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
         <div class="group">
           <div class="grid is-stretch">
+            <div class="col">...</div>
+            <div class="col">...</div>
+          </div>
+        </div>
+        ```
+
+.groups
+  h4.heading.is-xl Grid - Reverse
+  p.texts.is-sm
+    | グリッド内のカラムが横並びになったときに通常とは逆に並べたい場合は、&nbsp;
+    code.code .grid
+    | &nbsp;に&nbsp;
+    code.code .is-reverse
+    | &nbsp;を付与します。
+  .group.is-wrap
+    .inner
+      .group
+        .grid.is-reverse
+          .col.is-mobile-0
+            .group.is-demo-box-1.is-grey.is-center.is-round.is-strong
+              | 1st column
+          .col.is-mobile-0
+            .group.is-demo-box-1.is-primary.is-center.is-round.is-strong
+              | 2nd column
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="group">
+          <div class="grid is-reverse">
             <div class="col">...</div>
             <div class="col">...</div>
           </div>
@@ -392,15 +290,16 @@
     | &nbsp;に&nbsp;
     code.code .is-gap-none
     | &nbsp;を付与します。
-  .group.is-wrap.is-preview.is-strong
-    .group
-      .grid.is-gap-none
-        .col.is-mobile-0
-          .group.is-demo-box-1.is-grey.is-center
-            | .is-gap-none
-        .col.is-mobile-0
-          .group.is-demo-box-1.is-primary.is-center
-            | .is-gap-none
+  .group.is-wrap
+    .inner
+      .group
+        .grid.is-gap-none
+          .col.is-mobile-0
+            .group.is-demo-box-1.is-grey.is-center.is-round.is-strong
+              | .is-gap-none
+          .col.is-mobile-0
+            .group.is-demo-box-1.is-primary.is-center.is-round.is-strong
+              | .is-gap-none
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it

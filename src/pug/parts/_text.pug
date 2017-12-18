@@ -10,26 +10,27 @@
     | &nbsp;、インライン要素のクラス名を&nbsp;
     code.code .text
     | &nbsp;にします。
-  .group.is-wrap.is-preview
-    p.texts.is-sm
-      span.text デフォルト
-      | ｜
-      strong.text.is-strong ストロング
-      | ｜
-      small.text.is-small スモール
-      | ｜
-      span.text.is-italic Italic
-      | ｜
-      del.text.is-delete 削除
-      | ｜
-      span.text
-        i.fas.fa-thumbs-up(aria-hidden="true")
-        span.text アイコン追加
-        i.material-icons face
-      | ｜
-      span.text
-        span.text 注釈入れ
-        sup ※1
+  .group.is-wrap
+    .inner
+      p.texts.is-sm
+        span.text デフォルト
+        | ｜
+        strong.text.is-strong ストロング
+        | ｜
+        small.text.is-small スモール
+        | ｜
+        span.text.is-italic Italic
+        | ｜
+        del.text.is-delete 削除
+        | ｜
+        span.text
+          i.fas.fa-thumbs-up(aria-hidden="true")
+          span.text アイコン追加
+          i.material-icons face
+        | ｜
+        span.text
+          span.text 注釈入れ
+          sup ※1
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -51,17 +52,19 @@
           </span>
         </p>
         ```
-    p.texts.is-sm
-      span.text.is-dark ダーク
-      - for (var i = 1; i <= 9; i++)
-        | &nbsp;
-        span.text(class="is-dark-"+i) ダーク #{i}
-    .group.is-wrap.is-paint
+  .group.is-wrap
+    .inner
       p.texts.is-sm
-        span.text.is-light ライト
+        span.text.is-dark ダーク
         - for (var i = 1; i <= 9; i++)
           | &nbsp;
-          span.text(class="is-light-"+i) ライト #{i}
+          span.text(class="is-dark-"+i) ダーク #{i}
+      .group.is-wrap.is-paint
+        p.texts.is-sm
+          span.text.is-light ライト
+          - for (var i = 1; i <= 9; i++)
+            | &nbsp;
+            span.text(class="is-light-"+i) ライト #{i}
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -92,30 +95,32 @@
           <span class="text is-light-9">ライト 9</span>
         </p>
         ```
-    p.texts.is-sm
-      a.text.is-link Link
-      | ｜
-      a.text.is-link.is-primary Primary
-      | ｜
-      a.text.is-link.is-info Info
-      | ｜
-      a.text.is-link.is-success Success
-      | ｜
-      a.text.is-link.is-warning Warning
-      | ｜
-      a.text.is-link.is-danger Danger
-    p.texts.is-sm
-      a.text.is-link-reverse Link reverse
-      | ｜
-      a.text.is-link-reverse.is-primary Primary
-      | ｜
-      a.text.is-link-reverse.is-info Info
-      | ｜
-      a.text.is-link-reverse.is-success Success
-      | ｜
-      a.text.is-link-reverse.is-warning Warning
-      | ｜
-      a.text.is-link-reverse.is-danger Danger
+  .group.is-wrap
+    .inner
+      p.texts.is-sm
+        a.text.is-link Link
+        | ｜
+        a.text.is-link.is-primary Primary
+        | ｜
+        a.text.is-link.is-info Info
+        | ｜
+        a.text.is-link.is-success Success
+        | ｜
+        a.text.is-link.is-warning Warning
+        | ｜
+        a.text.is-link.is-danger Danger
+      p.texts.is-sm
+        a.text.is-link-reverse Link reverse
+        | ｜
+        a.text.is-link-reverse.is-primary Primary
+        | ｜
+        a.text.is-link-reverse.is-info Info
+        | ｜
+        a.text.is-link-reverse.is-success Success
+        | ｜
+        a.text.is-link-reverse.is-warning Warning
+        | ｜
+        a.text.is-link-reverse.is-danger Danger
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -136,12 +141,14 @@
           <span class="text is-link-reverse is-danger">Danger</span>
         </p>
         ```
-    p.texts.is-sm
-      span.text.is-capitalize capitalize
-      | ｜
-      span.text.is-lowercase lowercase
-      | ｜
-      span.text.is-uppercase uppercase
+  .group.is-wrap
+    .inner
+      p.texts.is-sm
+        span.text.is-capitalize capitalize
+        | ｜
+        span.text.is-lowercase lowercase
+        | ｜
+        span.text.is-uppercase uppercase
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -159,15 +166,16 @@
     | サイズを表すクラス名&nbsp;
     code.code .is-(x)
     | &nbsp;を付与することでテキストの大きさを変化させられます。
-  .group.is-wrap.is-preview
-    p.texts
-      span.text.is-xxs 極小
-      span.text.is-xs 小さい
-      span.text.is-sm 小さめ
-      span.text.is-md 中くらい
-      span.text.is-lg 大きめ
-      span.text.is-xl 大きい
-      span.text.is-xxl 特大
+  .group.is-wrap
+    .inner
+      p.texts
+        span.text.is-xxs 極小
+        span.text.is-xs 小さい
+        span.text.is-sm 小さめ
+        span.text.is-md 中くらい
+        span.text.is-lg 大きめ
+        span.text.is-xl 大きい
+        span.text.is-xxl 特大
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -194,10 +202,11 @@
     | &nbsp;
     code.code .is-right
     | &nbsp;を付与することでテキストの寄せる方向を変化させられます。
-  .group.is-wrap.is-preview
-    p.texts.is-sm.is-left 左寄せのテキスト
-    p.texts.is-sm.is-center 中央寄せのテキスト
-    p.texts.is-sm.is-right 右寄せのテキスト
+  .group.is-wrap
+    .inner
+      p.texts.is-sm.is-left 左寄せのテキスト
+      p.texts.is-sm.is-center 中央寄せのテキスト
+      p.texts.is-sm.is-right 右寄せのテキスト
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -213,9 +222,10 @@
     | テキストを端で折り返さずに三点リーダーで省略する場合は、ブロック要素に&nbsp;
     code.code .is-ellipsis
     | &nbsp;を付与します。
-  .group.is-wrap.is-preview
-    p.texts.is-sm.is-ellipsis
-      | テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。
+  .group.is-wrap
+    .inner
+      p.texts.is-sm.is-ellipsis
+        | テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -229,9 +239,10 @@
     | 引用枠を表示させる場合は、&nbsp;
     code.code .blockquote
     | &nbsp;で囲います。
-  .group.is-wrap.is-preview
-    blockquote.blockquote
-      | 引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾。
+  .group.is-wrap
+    .inner
+      blockquote.blockquote
+        | 引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾。
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -250,21 +261,22 @@
     | &nbsp;の中に&nbsp;
     code.code .code
     | &nbsp;を書きます。
-  .group.is-wrap.is-preview
-    p.texts.is-sm
-      | テキストの途中に&nbsp;
-      code.code code
-      | &nbsp;を表示させる。
-    pre.pre
-      code.code.css.
-        html {
-          box-sizing: border-box;
-          font-family: sans-serif;
-          overflow-y: scroll;
-          -ms-text-size-adjust: 100%;
-          -webkit-text-size-adjust: 100%;
-          -webkit-tap-highlight-color: transparent;
-        }
+  .group.is-wrap
+    .inner
+      p.texts.is-sm
+        | テキストの途中に&nbsp;
+        code.code code
+        | &nbsp;を表示させる。
+      pre.pre
+        code.code.css.
+          html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            overflow-y: scroll;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+          }
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it

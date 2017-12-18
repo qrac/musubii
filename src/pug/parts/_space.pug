@@ -15,11 +15,12 @@
   p.texts.is-sm
     | 距離を開けたくない場合や、相互作用をリセットさせたい場合は、以下のようなクラス名で囲みます。
   .group.is-wrap.is-paint.is-light .contents .content .boxs .box
-  .group.is-wrap.is-preview
-    p.heading.is-xl 見出し
-    p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
-    p.heading.is-xl.is-demo-space-filter-1 見出し
-    p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
+  .group.is-wrap
+    .inner
+      p.heading.is-xl 見出し
+      p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
+      p.heading.is-xl.is-demo-space-filter-1 見出し
+      p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it

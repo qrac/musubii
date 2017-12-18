@@ -12,47 +12,48 @@
     | &nbsp;を用います。
     br
     | 幅の指定や連結は、HTMLタグへの記述で行います。
-  .group.is-wrap.is-preview
-    table.table.is-stripe.is-border.is-center.is-middle.is-sm
-      thead
-        tr.box.is-paint
-          th(width="20")
-          th 見出しセル
-          th 見出しセル
-          th(colspan="2") 見出しセル
-      tbody
-        tr
-          td.box.is-paint(rowspan="2") #1
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td データセル
-          td.box.is-spot スポット表示
-          td データセル
-          td データセル
-        tr
-          td.box.is-paint #2
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td.box.is-paint #3
-          td データセル
-          td データセル
-          td.box.is-danger エラー表示
-          td データセル
-        tr
-          td.box.is-paint #4
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-      tfoot
-        tr
-          th.box.is-right(colspan="5") テーブルフッター
+  .group.is-wrap
+    .inner
+      table.table.is-stripe.is-border.is-center.is-middle.is-sm
+        thead
+          tr.box.is-paint
+            th(width="20")
+            th 見出しセル
+            th 見出しセル
+            th(colspan="2") 見出しセル
+        tbody
+          tr
+            td.box.is-paint(rowspan="2") #1
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td データセル
+            td.box.is-spot スポット表示
+            td データセル
+            td データセル
+          tr
+            td.box.is-paint #2
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td.box.is-paint #3
+            td データセル
+            td データセル
+            td.box.is-danger エラー表示
+            td データセル
+          tr
+            td.box.is-paint #4
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+        tfoot
+          tr
+            th.box.is-right(colspan="5") テーブルフッター
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -122,70 +123,71 @@
     | &nbsp;または&nbsp;
     code.code .is-border
     | &nbsp;を付与ます。
-  .group.is-wrap.is-preview
-    table.table.is-line.is-sm
-      thead
-        tr
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-      tbody
-        tr
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-    table.table.is-outline.is-sm
-      thead
-        tr
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-      tbody
-        tr
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-    table.table.is-border.is-sm
-      thead
-        tr
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-      tbody
-        tr
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td データセル
-          td データセル
-          td データセル
-          td データセル
-          td データセル
+  .group.is-wrap
+    .inner
+      table.table.is-line.is-sm
+        thead
+          tr
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+        tbody
+          tr
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+      table.table.is-outline.is-sm
+        thead
+          tr
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+        tbody
+          tr
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+      table.table.is-border.is-sm
+        thead
+          tr
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+        tbody
+          tr
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td データセル
+            td データセル
+            td データセル
+            td データセル
+            td データセル
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -218,23 +220,24 @@
     | &nbsp;
     code.code .is-middle
     | &nbsp;を付与することでテキストの寄せる方向を変化させられます。
-  .group.is-wrap.is-preview
-    table.table.is-border.is-stripe.is-sm
-      thead
-        tr
-          th.box.is-left .box .is-left
-          th.box.is-center .box .is-center
-          th.box.is-right .box .is-right
-      tbody
-        tr
-          td.box.is-left
-            | .box .is-left
-            br
-            | .box .is-left
-            br
-            | .box .is-left
-          td.box.is-center .box .is-center
-          td.box.is-right.is-middle .box .is-right .is-middle
+  .group.is-wrap
+    .inner
+      table.table.is-border.is-stripe.is-sm
+        thead
+          tr
+            th.box.is-left .box .is-left
+            th.box.is-center .box .is-center
+            th.box.is-right .box .is-right
+        tbody
+          tr
+            td.box.is-left
+              | .box .is-left
+              br
+              | .box .is-left
+              br
+              | .box .is-left
+            td.box.is-center .box .is-center
+            td.box.is-right.is-middle .box .is-right .is-middle
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -272,45 +275,46 @@
     | &nbsp;に&nbsp;
     code.code .is-stripe
     | &nbsp;を設定した場合は、自動的に1行飛ばしで塗られます。
-  .group.is-wrap.is-preview
-    table.table.is-border.is-sm
-      tbody
-        tr
-          td.box.is-paint .box .is-paint
-          td.box.is-dark-6 default
-        tr
-          td.box.is-paint .box .is-paint
-          td.box.is-spot .box .is-spot
-        tr
-          td.box.is-paint .box .is-paint
-          td.box.is-danger .box .is-danger
-    table.table.is-stripe.is-border.is-sm
-      thead
-        tr
-          th 見出しセル
-          th 見出しセル
-          th 見出しセル
-      tbody
-        tr
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td データセル
-          td データセル
-          td データセル
-        tr
-          td データセル
-          td データセル
-          td データセル
+  .group.is-wrap
+    .inner
+      table.table.is-border.is-sm
+        tbody
+          tr
+            td.box.is-paint .box .is-paint
+            td.box.is-dark-6 default
+          tr
+            td.box.is-paint .box .is-paint
+            td.box.is-spot .box .is-spot
+          tr
+            td.box.is-paint .box .is-paint
+            td.box.is-danger .box .is-danger
+      table.table.is-stripe.is-border.is-sm
+        thead
+          tr
+            th 見出しセル
+            th 見出しセル
+            th 見出しセル
+        tbody
+          tr
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td データセル
+            td データセル
+            td データセル
+          tr
+            td データセル
+            td データセル
+            td データセル
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
@@ -347,51 +351,52 @@
     | &nbsp;をUtilityを付与した&nbsp;
     code.code .group .is-scroll-x
     | &nbsp;でラッピングし、横スクロール機能を持たせます。
-  .group.is-wrap.is-preview
-    .group.is-scroll-x
-      table.table.is-border.is-stripe.is-nowrap.is-sm
-        thead
-          tr.box.is-paint
-            th 見出しセル
-            th 見出しセル
-            th 見出しセル
-            th 見出しセル
-            th 見出しセル
-            th 見出しセル
-            th 見出しセル
-        tbody
-          tr
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-          tr
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-          tr
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-          tr
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
-            td データセル
+  .group.is-wrap
+    .inner
+      .group.is-scroll-x
+        table.table.is-border.is-stripe.is-nowrap.is-sm
+          thead
+            tr.box.is-paint
+              th 見出しセル
+              th 見出しセル
+              th 見出しセル
+              th 見出しセル
+              th 見出しセル
+              th 見出しセル
+              th 見出しセル
+          tbody
+            tr
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+            tr
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+            tr
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+            tr
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
+              td データセル
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it

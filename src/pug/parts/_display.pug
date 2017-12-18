@@ -6,11 +6,6 @@
   h3.heading.is-xl Display
   p.texts.is-sm
     | Displayのプロパティを変更するUtilityを、ほぼすべてのモジュールに対して使えます。
-    br
-    code.code display: none;
-    | &nbsp;に関しては、&nbsp;
-    code.code .is-(xxxx)-none
-    | &nbsp;と書き、任意のブレイクポイントを設定してコンテンツを非表示にできます。
   .group.is-scroll-x
     table.table.is-border.is-center.is-nowrap.is-sm
       tbody
@@ -26,99 +21,10 @@
           td display: inline;
           td display: inline-block;
           td display: none;
-  .group.is-scroll-x
-    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
-      tbody
-        tr.box.is-stripe
-          td.box.is-paint(width="150") Add Class
-          td .is-mobile-none
-          td .is-fablet-none
-          td .is-tablet-none
-          td .is-desktop-none
-          td .is-wide-none
-        tr
-          td.box.is-paint Function
-          td
-            | display: none;
-          td
-            | 576px ~
-            br
-            | display: none;
-          td
-            | 768px ~
-            br
-            | display: none;
-          td
-            | 992px ~
-            br
-            | display: none;
-          td
-            | 1200px ~
-            br
-            | display: none;
-  .group.is-scroll-x
-    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
-      tbody
-        tr.box.is-stripe
-          td.box.is-paint(width="150") Add Class
-          td .is-mobile-only-none
-          td .is-fablet-only-none
-          td .is-tablet-only-none
-          td .is-desktop-only-none
-        tr
-          td.box.is-paint Function
-          td
-            | ~ 575px
-            br
-            | display: none;
-          td
-            | 576px ~ 767px
-            br
-            | display: none;
-          td
-            | 768px ~ 991px
-            br
-            | display: none;
-          td
-            | 992px ~ 1199px
-            br
-            | display: none;
-  .group.is-scroll-x
-    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
-      tbody
-        tr.box.is-stripe
-          td.box.is-paint(width="150") Add Class
-          td .is-mobile-fablet-none
-          td .is-mobile-tablet-none
-          td .is-mobile-desktop-none
-        tr
-          td.box.is-paint Function
-          td
-            | ~ 767px
-            br
-            | display: none;
-          td
-            | ~ 991px
-            br
-            | display: none;
-          td
-            | ~ 1199px
-            br
-            | display: none;
-  .group.is-scroll-x
-    table.table.is-border.is-center.is-nowrap.is-middle.is-sm
-      tbody
-        tr.box.is-stripe
-          td.box.is-paint(width="150") Add Class
-          td .is-landscape-none
-          td .is-portrait-none
-        tr
-          td.box.is-paint Function
-          td
-            | landscape & ~ 991px
-            br
-            | display: none;
-          td
-            | portrait & ~ 991px
-            br
-            | display: none;
+
+.groups
+  h3.heading.is-xl Display - Responsive
+  p.texts.is-sm
+    code.code .is-(xxxx)-(yy)
+    | &nbsp;形式のクラスを加えることでレスポンシブにDisplayプロパティを変化させられます。
+  include ../demo/_responsive-display.pug

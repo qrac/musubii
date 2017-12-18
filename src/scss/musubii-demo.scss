@@ -98,15 +98,17 @@ button {
   }
 }
 
-.grid.is-gap-6x:not(.is-gap-none) {
-  margin-left: -3em;
-  margin-bottom: -3em;
-  > .col {
-    padding-left: 3em;
-    padding-bottom: 3em;
-  }
-  + .grid.is-gap-6x:not(.is-gap-none) {
-    margin-top: 3em;
+@each $gap-x in 2, 3, 4, 6 {
+  .grid.is-gap-#{$gap-x}x:not(.is-gap-none) {
+    margin-left: $gap-x / -2 + em;
+    margin-bottom: $gap-x / -2 + em;
+    > .col {
+      padding-left: $gap-x / 2 + em;
+      padding-bottom: $gap-x / 2 + em;
+    }
+    + .grid.is-gap-#{$gap-x}x:not(.is-gap-none) {
+      margin-top: $gap-x / 2 + em;
+    }
   }
 }
 
@@ -223,6 +225,17 @@ button {
   + .wysiwyg {
     margin-top: 0;
     border-top: 1px solid $grey-300;
+  }
+}
+
+//----------------------------------------------------
+// / Demo - Group
+//----------------------------------------------------
+
+.table {
+  .box.is-sticky-left {
+    position: sticky;
+    left: 0;
   }
 }
 
