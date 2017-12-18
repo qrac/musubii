@@ -2,6 +2,10 @@
 // Module: Button
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Set Modifier
+//----------------------------------------------------
+
 .btns {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +43,42 @@
     justify-content: space-around;
   }
 }
+
+//----------------------------------------------------
+// / Set Bar
+//----------------------------------------------------
+
+.btns.is-bar {
+  flex-wrap: nowrap;
+  > .btn {
+    border-radius: 0;
+    overflow: hidden;
+  }
+  > .btn:not(.is-round):first-child {
+    border-top-left-radius: 0.1875em;
+    border-bottom-left-radius: 0.1875em;
+  }
+  > .btn:not(.is-round):last-child {
+    border-top-right-radius: 0.1875em;
+    border-bottom-right-radius: 0.1875em;
+  }
+  > .btn.is-round:first-child {
+    border-top-left-radius: 999em;
+    border-bottom-left-radius: 999em;
+  }
+  > .btn.is-round:last-child {
+    border-top-right-radius: 999em;
+    border-bottom-right-radius: 999em;
+  }
+  > .btn:nth-child(2),
+  > .btn:nth-child(2) ~ .btn {
+    border-left: none;
+  }
+}
+
+//----------------------------------------------------
+// / Single Modifier
+//----------------------------------------------------
 
 .btn {
   cursor: pointer;
@@ -87,6 +127,10 @@
   }
 }
 
+//----------------------------------------------------
+// / Floating
+//----------------------------------------------------
+
 .btn.is-floating:not(.is-disable) {
   box-shadow: $shadow-btn-floating;
   &:hover {
@@ -94,33 +138,23 @@
   }
 }
 
+//----------------------------------------------------
+// / Plain
+//----------------------------------------------------
+
 .btn.is-plain {
-  background-color: $grey-2;
+  background-color: $grey-100;
   border: 1px solid transparent;
   &:hover {
-    background-color: darken($grey-2, 5%);
+    background-color: darken($grey-100, 5%);
   }
-  &.is-primary,
-  &.is-success,
-  &.is-danger {
-    color: $light;
-  }
-  &.is-primary {
-    background-color: $primary;
-    &:hover {
-      background-color: darken($primary, 5%);
-    }
-  }
-  &.is-success {
-    background-color: $success;
-    &:hover {
-      background-color: darken($success, 5%);
-    }
-  }
-  &.is-danger {
-    background-color: $danger;
-    &:hover {
-      background-color: darken($danger, 5%);
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      background-color: $value;
+      color: $light;
+      &:hover {
+        background-color: darken($value, 5%);
+      }
     }
   }
   &.is-disable,
@@ -128,9 +162,13 @@
   &[disabled],
   &[disabled]:hover {
     color: $dark-6;
-    background-color: $grey-4;
+    background-color: $grey-400;
   }
 }
+
+//----------------------------------------------------
+// / Melt
+//----------------------------------------------------
 
 .btn.is-melt {
   background-color: transparent;
@@ -138,14 +176,10 @@
   &:hover {
     background-color: $dark-9;
   }
-  &.is-primary {
-    color: $primary;
-  }
-  &.is-success {
-    color: $success;
-  }
-  &.is-danger {
-    color: $danger;
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      color: $value;
+    }
   }
   &.is-disable,
   &.is-disable:hover,
@@ -156,38 +190,26 @@
   }
 }
 
+//----------------------------------------------------
+// / Outline
+//----------------------------------------------------
+
 .btn.is-outline {
   background-color: $light;
   border: 1px solid $dark-7;
   &:hover {
     background-color: darken($light, 5%);
   }
-  &.is-primary {
-    color: $primary;
-    border-color: $primary;
-    &:hover {
-      background-color: $primary;
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      border-color: $value;
+      color: $value;
+      &:hover {
+        background-color: $value;
+        border-color: transparent;
+        color: $light;
+      }
     }
-  }
-  &.is-success {
-    color: $success;
-    border-color: $success;
-    &:hover {
-      background-color: $success;
-    }
-  }
-  &.is-danger {
-    color: $danger;
-    border-color: $danger;
-    &:hover {
-      background-color: $danger;
-    }
-  }
-  &.is-primary:hover,
-  &.is-success:hover,
-  &.is-danger:hover {
-    color: $light;
-    border-color: transparent;
   }
   &.is-disable,
   &.is-disable:hover,
@@ -198,6 +220,10 @@
   }
 }
 
+//----------------------------------------------------
+// / Ghost
+//----------------------------------------------------
+
 .btn.is-ghost {
   color: $light;
   background-color: transparent;
@@ -206,32 +232,16 @@
     color: $dark-1;
     background-color: $light;
   }
-  &.is-primary {
-    color: lighten($primary, 30%);
-    border-color: lighten($primary, 30%);
-    &:hover {
-      background-color: $primary;
+  @each $key, $value in $pattern-color-theme {
+    &.is-#{$key} {
+      border-color: lighten($value, 30%);
+      color: lighten($value, 30%);
+      &:hover {
+        background-color: $value;
+        border-color: transparent;
+        color: $light;
+      }
     }
-  }
-  &.is-success {
-    color: lighten($success, 30%);
-    border-color: lighten($success, 30%);
-    &:hover {
-      background-color: $success;
-    }
-  }
-  &.is-danger {
-    color: lighten($danger, 30%);
-    border-color: lighten($danger, 30%);
-    &:hover {
-      background-color: $danger;
-    }
-  }
-  &.is-primary:hover,
-  &.is-success:hover,
-  &.is-danger:hover {
-    color: $light;
-    border-color: transparent;
   }
   &.is-disable,
   &.is-disable:hover,
@@ -240,109 +250,5 @@
     color: $light-4;
     background-color: $light-8;
     border-color: $light-4;
-  }
-}
-
-.btns.is-bar {
-  flex-wrap: nowrap;
-  > .btn {
-    border-radius: 0;
-    overflow: hidden;
-  }
-  > .btn:not(.is-round):first-child {
-    border-top-left-radius: 0.1875em;
-    border-bottom-left-radius: 0.1875em;
-  }
-  > .btn:not(.is-round):last-child {
-    border-top-right-radius: 0.1875em;
-    border-bottom-right-radius: 0.1875em;
-  }
-  > .btn.is-round:first-child {
-    border-top-left-radius: 999em;
-    border-bottom-left-radius: 999em;
-  }
-  > .btn.is-round:last-child {
-    border-top-right-radius: 999em;
-    border-bottom-right-radius: 999em;
-  }
-  > .btn:nth-child(2),
-  > .btn:nth-child(2) ~ .btn {
-    border-left: none;
-  }
-}
-
-.btns > .btn.is-mobile-0 {
-  flex: 1 0 0%;
-  max-width: 100%;
-}
-
-.btns > .btn.is-mobile-full,
-.btns > .btn.is-full {
-  flex: 0 1 100%;
-  max-width: 100%;
-}
-
-.btns > .btn.is-mobile-auto {
-  flex: 0 1 auto;
-  max-width: 100%;
-}
-
-@include fablet {
-  .btns > .btn.is-fablet-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-fablet-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-fablet-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include tablet {
-  .btns > .btn.is-tablet-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-tablet-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-tablet-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include desktop {
-  .btns > .btn.is-desktop-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-desktop-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-desktop-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
-  }
-}
-
-@include wide {
-  .btns > .btn.is-wide-0 {
-    flex: 1 0 0%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-wide-full {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-  .btns > .btn.is-wide-auto {
-    flex: 0 1 auto;
-    max-width: 100%;
   }
 }

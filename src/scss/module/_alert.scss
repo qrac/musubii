@@ -2,9 +2,13 @@
 // Module: Alert
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Basic Modifier
+//----------------------------------------------------
+
 .alert {
-  background: $grey-1;
-  border: 1px solid $grey-3;
+  background: $grey-100;
+  border: 1px solid $grey-300;
   border-radius: 2px;
   padding: 0.675em 0.875em;
   &.is-primary {

@@ -1,0 +1,41 @@
+//----------------------------------------------------
+// Utility: Flex
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Dedicated Variable
+//----------------------------------------------------
+
+// Number of grid divisions
+$split-grid: 12;
+
+//----------------------------------------------------
+// / Responsive
+//----------------------------------------------------
+
+@each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
+  @include mediaquery-pattern($mediaquery) {
+    @for $i from 0 through $split-grid {
+      @if $i == 0 {
+        .is-#{$key}-#{$i} {
+          flex: 1 0 0%;
+          max-width: 100%;
+        }
+      }
+      @else {
+        .is-#{$key}-#{$i} {
+          flex: 0 0 100% / $split-grid * $i;
+          max-width: 100% / $split-grid * $i;
+        }
+      }
+    }
+    .is-#{$key}-full {
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+    .is-#{$key}-auto {
+      flex: 0 1 auto;
+      max-width: 100%;
+    }
+  }
+}

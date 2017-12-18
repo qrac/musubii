@@ -16,12 +16,12 @@ Webデザインの腹ごなしに、HTML/CSSフレームワーク「MUSUBii（�
 
 ## Detail
 
-### HTML
+### Markup
 
 要素 `.(xxxx)` 1つに対して、状態 `.is-(xxxx)` を複数追加してスタイリングするのが基本です。
 また、すべてのクラス名は英小文字・数字・ハイフン1つで構成されています。
 
-### CSS
+### Layers
 
 CSSのレイヤーは主に4つに分類されています。
 
@@ -59,10 +59,12 @@ npm install musubii
 ### [CDN][link-jsdelivr]
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@4.0.0/docs/css/musubii.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.0.0/docs/css/musubii.min.css">
 ```
 
 ## Support
+
+日本で多く使われているブラウザを基準にバグフィックスを行なっています。
 
 | Chrome | Firefox | IE | Ege | Safari(Mac) |
 |:------:|:------:|:------:|:------:|:------:|

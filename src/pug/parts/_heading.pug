@@ -8,18 +8,22 @@
     | 見出しを作るには、要素のクラス名を&nbsp;
     code.code .heading
     | &nbsp;にします。Utilityによってアレンジが可能です。
-  .group.is-wrap.is-preview
-    p.heading.is-xxl 1番目に大きな見出し
-    p.heading.is-xl 2番目に大きな見出し
-    p.heading.is-lg 3番目に大きな見出し
-    p.heading.is-md 4番目に大きな見出し
-    p.heading.is-sm 5番目に大きな見出し
-    p.heading.is-xs 6番目に大きな見出し
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;heading is-xxl&quot;&gt;1番目に大きな見出し&lt;/p&gt;
-        &lt;p class=&quot;heading is-xl&quot;&gt;2番目に大きな見出し&lt;/p&gt;
-        &lt;p class=&quot;heading is-lg&quot;&gt;3番目に大きな見出し&lt;/p&gt;
-        &lt;p class=&quot;heading is-md&quot;&gt;4番目に大きな見出し&lt;/p&gt;
-        &lt;p class=&quot;heading is-sm&quot;&gt;5番目に大きな見出し&lt;/p&gt;
-        &lt;p class=&quot;heading is-xs&quot;&gt;6番目に大きな見出し&lt;/p&gt;
+  .group.is-wrap
+    .inner
+      p.heading.is-xxl 1番目に大きな見出し
+      p.heading.is-xl 2番目に大きな見出し
+      p.heading.is-lg 3番目に大きな見出し
+      p.heading.is-md 4番目に大きな見出し
+      p.heading.is-sm 5番目に大きな見出し
+      p.heading.is-xs 6番目に大きな見出し
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="heading is-xxl">1番目に大きな見出し</p>
+        <p class="heading is-xl">2番目に大きな見出し</p>
+        <p class="heading is-lg">3番目に大きな見出し</p>
+        <p class="heading is-md">4番目に大きな見出し</p>
+        <p class="heading is-sm">5番目に大きな見出し</p>
+        <p class="heading is-xs">6番目に大きな見出し</p>
+        ```

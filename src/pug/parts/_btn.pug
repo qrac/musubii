@@ -16,50 +16,54 @@
     | &nbsp;に&nbsp;
     code.code .is-plain
     | &nbsp;を付与します。
-  .group.is-wrap.is-preview
-    .btns
-      a.btn.is-plain 戻る
-      a.btn.is-plain.is-primary 決定
-      a.btn.is-plain.is-success 登録
-      a.btn.is-plain.is-danger 削除
-      a.btn.is-plain.is-disable 不可
-      a.btn.is-plain.is-primary
-        i.fa.fa-flag(aria-hidden="true")
-        span.text FontAwesome
-      a.btn.is-plain.is-success
-        span.text FontAwesome
-        i.fa.fa-angle-right.is-fit(aria-hidden="true")
-      a.btn.is-plain.is-primary
-        i.material-icons face
-        span.text Material Icons
-      a.btn.is-plain.is-success
-        span.text Material Icons
-        i.material-icons keyboard_arrow_right
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;btns&quot;&gt;
-          &lt;a class=&quot;btn is-plain&quot;&gt;戻る&lt;/a&gt;
-          &lt;a class=&quot;btn is-plain is-primary&quot;&gt;決定&lt;/a&gt;
-          &lt;a class=&quot;btn is-plain is-success&quot;&gt;登録&lt;/a&gt;
-          &lt;a class=&quot;btn is-plain is-danger&quot;&gt;削除&lt;/a&gt;
-          &lt;a class=&quot;btn is-plain is-disable&quot;&gt;不可&lt;/a&gt;
-          &lt;a class=&quot;btn is-plain is-primary&quot;&gt;
-            &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-flag&quot;&gt;&lt;/i&gt;
-            &lt;span class=&quot;text&quot;&gt;FontAwesome&lt;/span&gt;
-          &lt;/a&gt;
-          &lt;a class=&quot;btn is-plain is-success&quot;&gt;
-            &lt;span class=&quot;text&quot;&gt;FontAwesome&lt;/span&gt;
-            &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;
-          &lt;/a&gt;
-          &lt;a class=&quot;btn is-plain is-primary&quot;&gt;
-            &lt;i class=&quot;material-icons&quot;&gt;face&lt;/i&gt;
-            &lt;span class=&quot;text&quot;&gt;Material Icons&lt;/span&gt;
-          &lt;/a&gt;
-          &lt;a class=&quot;btn is-plain is-success&quot;&gt;
-            &lt;span class=&quot;text&quot;&gt;Material Icons&lt;/span&gt;
-            &lt;i class=&quot;material-icons&quot;&gt;keyboard_arrow_right&lt;/i&gt;
-          &lt;/a&gt;
-        &lt;/div&gt;
+  .group.is-wrap
+    .inner
+      .btns
+        a.btn.is-plain 戻る
+        a.btn.is-plain.is-primary 決定
+        a.btn.is-plain.is-success 登録
+        a.btn.is-plain.is-danger 削除
+        a.btn.is-plain.is-disable 不可
+        a.btn.is-plain.is-primary
+          i.fas.fa-flag(aria-hidden="true")
+          span.text FontAwesome
+        a.btn.is-plain.is-success
+          span.text FontAwesome
+          i.fas.fa-angle-right.is-fit(aria-hidden="true")
+        a.btn.is-plain.is-primary
+          i.material-icons face
+          span.text Material Icons
+        a.btn.is-plain.is-success
+          span.text Material Icons
+          i.material-icons keyboard_arrow_right
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="btns">
+          <a class="btn is-plain">戻る</a>
+          <a class="btn is-plain is-primary">決定</a>
+          <a class="btn is-plain is-success">登録</a>
+          <a class="btn is-plain is-danger">削除</a>
+          <a class="btn is-plain is-disable">不可</a>
+          <a class="btn is-plain is-primary">
+            <i aria-hidden="true" class="fa fa-flag"></i>
+            <span class="text">FontAwesome</span>
+          </a>
+          <a class="btn is-plain is-success">
+            <span class="text">FontAwesome</span>
+            <i aria-hidden="true" class="fa fa-angle-right"></i>
+          </a>
+          <a class="btn is-plain is-primary">
+            <i class="material-icons">face</i>
+            <span class="text">Material Icons</span>
+          </a>
+          <a class="btn is-plain is-success">
+            <span class="text">Material Icons</span>
+            <i class="material-icons">keyboard_arrow_right</i>
+          </a>
+        </div>
+        ```
 
 .groups
   h4.heading.is-xl Button - Melt
@@ -69,28 +73,32 @@
     | &nbsp;に&nbsp;
     code.code .is-melt
     | &nbsp;を付与します。
-  .group.is-wrap.is-preview
-    .btns
-      a.btn.is-melt 戻る
-      a.btn.is-melt.is-primary 決定
-      a.btn.is-melt.is-success 登録
-      a.btn.is-melt.is-danger 削除
-      a.btn.is-melt.is-disable 不可
-      a.btn.is-melt.is-primary
-        i.fa.fa-flag(aria-hidden="true")
-        span.text FontAwesome
-      a.btn.is-melt.is-success
-        span.text FontAwesome
-        i.fa.fa-angle-right.is-fit(aria-hidden="true")
-      a.btn.is-melt.is-primary
-        i.material-icons face
-        span.text Material Icons
-      a.btn.is-melt.is-success
-        span.text Material Icons
-        i.material-icons keyboard_arrow_right
-    pre.pre.is-sm
-      code.code.html.
-        &lt;a class=&quot;btn is-melt&quot;&gt;...&lt;/a&gt;
+  .group.is-wrap
+    .inner
+      .btns
+        a.btn.is-melt 戻る
+        a.btn.is-melt.is-primary 決定
+        a.btn.is-melt.is-success 登録
+        a.btn.is-melt.is-danger 削除
+        a.btn.is-melt.is-disable 不可
+        a.btn.is-melt.is-primary
+          i.fas.fa-flag(aria-hidden="true")
+          span.text FontAwesome
+        a.btn.is-melt.is-success
+          span.text FontAwesome
+          i.fas.fa-angle-right.is-fit(aria-hidden="true")
+        a.btn.is-melt.is-primary
+          i.material-icons face
+          span.text Material Icons
+        a.btn.is-melt.is-success
+          span.text Material Icons
+          i.material-icons keyboard_arrow_right
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <a class="btn is-melt">...</a>
+        ```
 
 .groups
   h4.heading.is-xl Button - Outline
@@ -100,28 +108,32 @@
     | &nbsp;に&nbsp;
     code.code .is-outline
     | &nbsp;を付与します。
-  .group.is-wrap.is-preview
-    .btns
-      a.btn.is-outline 戻る
-      a.btn.is-outline.is-primary 決定
-      a.btn.is-outline.is-success 登録
-      a.btn.is-outline.is-danger 削除
-      a.btn.is-outline.is-disable 不可
-      a.btn.is-outline.is-primary
-        i.fa.fa-flag(aria-hidden="true")
-        span.text FontAwesome
-      a.btn.is-outline.is-success
-        span.text FontAwesome
-        i.fa.fa-angle-right.is-fit(aria-hidden="true")
-      a.btn.is-outline.is-primary
-        i.material-icons face
-        span.text Material Icons
-      a.btn.is-outline.is-success
-        span.text Material Icons
-        i.material-icons keyboard_arrow_right
-    pre.pre.is-sm
-      code.code.html.
-        &lt;a class=&quot;btn is-outline&quot;&gt;...&lt;/a&gt;
+  .group.is-wrap
+    .inner
+      .btns
+        a.btn.is-outline 戻る
+        a.btn.is-outline.is-primary 決定
+        a.btn.is-outline.is-success 登録
+        a.btn.is-outline.is-danger 削除
+        a.btn.is-outline.is-disable 不可
+        a.btn.is-outline.is-primary
+          i.fas.fa-flag(aria-hidden="true")
+          span.text FontAwesome
+        a.btn.is-outline.is-success
+          span.text FontAwesome
+          i.fas.fa-angle-right.is-fit(aria-hidden="true")
+        a.btn.is-outline.is-primary
+          i.material-icons face
+          span.text Material Icons
+        a.btn.is-outline.is-success
+          span.text Material Icons
+          i.material-icons keyboard_arrow_right
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <a class="btn is-outline">...</a>
+        ```
 
 .groups
   h4.heading.is-xl Button - Ghost
@@ -131,29 +143,33 @@
     | &nbsp;に&nbsp;
     code.code .is-ghost
     | &nbsp;を付与します。
-  .group.is-wrap.is-preview
-    .group.is-wrap.is-paint
-      .btns
-        a.btn.is-ghost 戻る
-        a.btn.is-ghost.is-primary 決定
-        a.btn.is-ghost.is-success 登録
-        a.btn.is-ghost.is-danger 削除
-        a.btn.is-ghost.is-disable 不可
-        a.btn.is-ghost.is-primary
-          i.fa.fa-flag(aria-hidden="true")
-          span.text FontAwesome
-        a.btn.is-ghost.is-success
-          span.text FontAwesome
-          i.fa.fa-angle-right.is-fit(aria-hidden="true")
-        a.btn.is-ghost.is-primary
-          i.material-icons face
-          span.text Material Icons
-        a.btn.is-ghost.is-success
-          span.text Material Icons
-          i.material-icons keyboard_arrow_right
-    pre.pre.is-sm
-      code.code.html.
-        &lt;a class=&quot;btn is-ghost&quot;&gt;...&lt;/a&gt;
+  .group.is-wrap
+    .inner
+      .group.is-wrap.is-paint
+        .btns
+          a.btn.is-ghost 戻る
+          a.btn.is-ghost.is-primary 決定
+          a.btn.is-ghost.is-success 登録
+          a.btn.is-ghost.is-danger 削除
+          a.btn.is-ghost.is-disable 不可
+          a.btn.is-ghost.is-primary
+            i.fas.fa-flag(aria-hidden="true")
+            span.text FontAwesome
+          a.btn.is-ghost.is-success
+            span.text FontAwesome
+            i.fas.fa-angle-right.is-fit(aria-hidden="true")
+          a.btn.is-ghost.is-primary
+            i.material-icons face
+            span.text Material Icons
+          a.btn.is-ghost.is-success
+            span.text Material Icons
+            i.material-icons keyboard_arrow_right
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <a class="btn is-ghost">...</a>
+        ```
 
 .groups
   h4.heading.is-xl Button - Size
@@ -161,26 +177,30 @@
     | サイズを表すクラス名&nbsp;
     code.code .is-(x)
     | &nbsp;を付与することでボタンの大きさを変化させられます。角丸のサイズは相対的に変化します。
-  .group.is-wrap.is-preview
-    .btns
-      a.btn.is-plain.is-xxs 極小
-      a.btn.is-plain.is-xs 小さい
-      a.btn.is-plain.is-sm 小さめ
-      a.btn.is-plain.is-md 中くらい
-      a.btn.is-plain.is-lg 大きめ
-      a.btn.is-plain.is-xl 大きい
-      a.btn.is-plain.is-xxl 特大
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;btns&quot;&gt;
-          &lt;a class=&quot;btn is-xxs&quot;&gt;極小&lt;/a&gt;
-          &lt;a class=&quot;btn is-xs&quot;&gt;小さい&lt;/a&gt;
-          &lt;a class=&quot;btn is-sm&quot;&gt;小さめ&lt;/a&gt;
-          &lt;a class=&quot;btn is-md&quot;&gt;中くらい&lt;/a&gt;
-          &lt;a class=&quot;btn is-lg&quot;&gt;大きめ&lt;/a&gt;
-          &lt;a class=&quot;btn is-xl&quot;&gt;大きい&lt;/a&gt;
-          &lt;a class=&quot;btn is-xxl&quot;&gt;特大&lt;/a&gt;
-        &lt;/div&gt;
+  .group.is-wrap
+    .inner
+      .btns
+        a.btn.is-plain.is-xxs 極小
+        a.btn.is-plain.is-xs 小さい
+        a.btn.is-plain.is-sm 小さめ
+        a.btn.is-plain.is-md 中くらい
+        a.btn.is-plain.is-lg 大きめ
+        a.btn.is-plain.is-xl 大きい
+        a.btn.is-plain.is-xxl 特大
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="btns">
+          <a class="btn is-xxs">極小</a>
+          <a class="btn is-xs">小さい</a>
+          <a class="btn is-sm">小さめ</a>
+          <a class="btn is-md">中くらい</a>
+          <a class="btn is-lg">大きめ</a>
+          <a class="btn is-xl">大きい</a>
+          <a class="btn is-xxl">特大</a>
+        </div>
+        ```
 
 .groups
   h4.heading.is-xl Button - Align
@@ -193,33 +213,37 @@
     | &nbsp;
     code.code .is-right
     | &nbsp;を付与することでボタンの寄せる方向を変化させられます。
-  .group.is-wrap.is-preview
-    .btns.is-left
-      a.btn.is-plain.is-primary
-        | .is-left
-      a.btn.is-plain.is-primary
-        | .is-left
-      a.btn.is-plain.is-primary
-        | .is-left
-    .btns.is-center
-      a.btn.is-plain.is-primary
-        | .is-center
-      a.btn.is-plain.is-primary
-        | .is-center
-      a.btn.is-plain.is-primary
-        | .is-center
-    .btns.is-right
-      a.btn.is-plain.is-primary
-        | .is-right
-      a.btn.is-plain.is-primary
-        | .is-right
-      a.btn.is-plain.is-primary
-        | .is-right
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;btns is-left&quot;&gt;...&lt;/div&gt;
-        &lt;div class=&quot;btns is-center&quot;&gt;...&lt;/div&gt;
-        &lt;div class=&quot;btns is-right&quot;&gt;...&lt;/div&gt;
+  .group.is-wrap
+    .inner
+      .btns.is-left
+        a.btn.is-plain.is-primary
+          | .is-left
+        a.btn.is-plain.is-primary
+          | .is-left
+        a.btn.is-plain.is-primary
+          | .is-left
+      .btns.is-center
+        a.btn.is-plain.is-primary
+          | .is-center
+        a.btn.is-plain.is-primary
+          | .is-center
+        a.btn.is-plain.is-primary
+          | .is-center
+      .btns.is-right
+        a.btn.is-plain.is-primary
+          | .is-right
+        a.btn.is-plain.is-primary
+          | .is-right
+        a.btn.is-plain.is-primary
+          | .is-right
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="btns is-left">...</div>
+        <div class="btns is-center">...</div>
+        <div class="btns is-right">...</div>
+        ```
 
 .groups
   h4.heading.is-xl Button - Floating
@@ -228,28 +252,32 @@
     | &nbsp;にクラス名&nbsp;
     code.code .is-floating
     | &nbsp;を付与することで、ドロップシャドウを付けられます。
-  .group.is-wrap.is-preview
-    .btns
-      a.btn.is-plain.is-floating 戻る
-      a.btn.is-plain.is-floating.is-primary 決定
-      a.btn.is-plain.is-floating.is-success 登録
-      a.btn.is-plain.is-floating.is-danger 削除
-      a.btn.is-plain.is-floating.is-disable 不可
-      a.btn.is-plain.is-floating.is-primary
-        i.fa.fa-flag(aria-hidden="true")
-        span.text FontAwesome
-      a.btn.is-plain.is-floating.is-success
-        span.text FontAwesome
-        i.fa.fa-angle-right.is-fit(aria-hidden="true")
-      a.btn.is-plain.is-floating.is-primary
-        i.material-icons face
-        span.text Material Icons
-      a.btn.is-plain.is-floating.is-success
-        span.text Material Icons
-        i.material-icons keyboard_arrow_right
-    pre.pre.is-sm
-      code.code.html.
-        &lt;a class=&quot;btn is-plain is-floating&quot;&gt;...&lt;/a&gt;
+  .group.is-wrap
+    .inner
+      .btns
+        a.btn.is-plain.is-floating 戻る
+        a.btn.is-plain.is-floating.is-primary 決定
+        a.btn.is-plain.is-floating.is-success 登録
+        a.btn.is-plain.is-floating.is-danger 削除
+        a.btn.is-plain.is-floating.is-disable 不可
+        a.btn.is-plain.is-floating.is-primary
+          i.fas.fa-flag(aria-hidden="true")
+          span.text FontAwesome
+        a.btn.is-plain.is-floating.is-success
+          span.text FontAwesome
+          i.fas.fa-angle-right.is-fit(aria-hidden="true")
+        a.btn.is-plain.is-floating.is-primary
+          i.material-icons face
+          span.text Material Icons
+        a.btn.is-plain.is-floating.is-success
+          span.text Material Icons
+          i.material-icons keyboard_arrow_right
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <a class="btn is-plain is-floating">...</a>
+        ```
 
 .groups
   h4.heading.is-xl Button - Round
@@ -258,47 +286,51 @@
     | &nbsp;にクラス名&nbsp;
     code.code .is-round
     | &nbsp;を付与することでボタンの角を丸められます。
-  .group.is-wrap.is-preview
-    .btns
-      a.btn.is-plain.is-round 戻る
-      a.btn.is-plain.is-round.is-primary 決定
-      a.btn.is-plain.is-round.is-success 登録
-      a.btn.is-plain.is-round.is-danger 削除
-      a.btn.is-plain.is-round.is-disable 不可
-      a.btn.is-plain.is-round.is-primary
-        i.fa.fa-flag(aria-hidden="true")
-        span.text FontAwesome
-      a.btn.is-plain.is-round.is-success
-        span.text FontAwesome
-        i.fa.fa-angle-right.is-fit(aria-hidden="true")
-      a.btn.is-plain.is-round.is-primary
-        i.material-icons face
-        span.text Material Icons
-      a.btn.is-plain.is-round.is-success
-        span.text Material Icons
-        i.material-icons keyboard_arrow_right
-    .group.is-wrap.is-paint
-      .btns.is-sm
-        a.btn.is-ghost.is-round 戻る
-        a.btn.is-ghost.is-round.is-primary 決定
-        a.btn.is-ghost.is-round.is-success 登録
-        a.btn.is-ghost.is-round.is-danger 削除
-        a.btn.is-ghost.is-round.is-disable 不可
-        a.btn.is-ghost.is-round.is-primary
-          i.fa.fa-flag(aria-hidden="true")
+  .group.is-wrap
+    .inner
+      .btns
+        a.btn.is-plain.is-round 戻る
+        a.btn.is-plain.is-round.is-primary 決定
+        a.btn.is-plain.is-round.is-success 登録
+        a.btn.is-plain.is-round.is-danger 削除
+        a.btn.is-plain.is-round.is-disable 不可
+        a.btn.is-plain.is-round.is-primary
+          i.fas.fa-flag(aria-hidden="true")
           span.text FontAwesome
-        a.btn.is-ghost.is-round.is-success
+        a.btn.is-plain.is-round.is-success
           span.text FontAwesome
-          i.fa.fa-angle-right.is-fit(aria-hidden="true")
-        a.btn.is-ghost.is-round.is-primary
+          i.fas.fa-angle-right.is-fit(aria-hidden="true")
+        a.btn.is-plain.is-round.is-primary
           i.material-icons face
           span.text Material Icons
-        a.btn.is-ghost.is-round.is-success
+        a.btn.is-plain.is-round.is-success
           span.text Material Icons
           i.material-icons keyboard_arrow_right
-    pre.pre.is-sm
-      code.code.html.
-        &lt;a class=&quot;btn is-plain is-round&quot;&gt;...&lt;/a&gt;
+      .group.is-wrap.is-paint
+        .btns.is-sm
+          a.btn.is-ghost.is-round 戻る
+          a.btn.is-ghost.is-round.is-primary 決定
+          a.btn.is-ghost.is-round.is-success 登録
+          a.btn.is-ghost.is-round.is-danger 削除
+          a.btn.is-ghost.is-round.is-disable 不可
+          a.btn.is-ghost.is-round.is-primary
+            i.fas.fa-flag(aria-hidden="true")
+            span.text FontAwesome
+          a.btn.is-ghost.is-round.is-success
+            span.text FontAwesome
+            i.fas.fa-angle-right.is-fit(aria-hidden="true")
+          a.btn.is-ghost.is-round.is-primary
+            i.material-icons face
+            span.text Material Icons
+          a.btn.is-ghost.is-round.is-success
+            span.text Material Icons
+            i.material-icons keyboard_arrow_right
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <a class="btn is-plain is-round">...</a>
+        ```
 
 .groups
   h4.heading.is-xl Button - Circle
@@ -307,172 +339,84 @@
     | &nbsp;にクラス名&nbsp;
     code.code .is-circle
     | &nbsp;を付与することでボタンの円形にできます。
-  .group.is-wrap.is-preview
-    .btns
-      a.btn.is-plain.is-circle
-        i.fa.fa-angle-left(aria-hidden="true")
-      a.btn.is-plain.is-circle.is-primary
-        i.fa.fa-twitter(aria-hidden="true")
-      a.btn.is-plain.is-circle.is-success
-        i.fa.fa-floppy-o(aria-hidden="true")
-      a.btn.is-plain.is-circle.is-danger
-        i.fa.fa-times(aria-hidden="true")
-      a.btn.is-plain.is-circle.is-disable
-        i.fa.fa-plus(aria-hidden="true")
-      a.btn.is-outline.is-circle
-        i.fa.fa-angle-left(aria-hidden="true")
-      a.btn.is-outline.is-circle.is-primary
-        i.fa.fa-twitter(aria-hidden="true")
-      a.btn.is-outline.is-circle.is-success
-        i.fa.fa-floppy-o(aria-hidden="true")
-      a.btn.is-outline.is-circle.is-danger
-        i.fa.fa-times(aria-hidden="true")
-      a.btn.is-outline.is-circle.is-disable
-        i.fa.fa-plus(aria-hidden="true")
-    .group.is-wrap.is-paint
+  .group.is-wrap
+    .inner
       .btns
-        a.btn.is-ghost.is-circle
-          i.fa.fa-angle-left(aria-hidden="true")
-        a.btn.is-ghost.is-circle.is-primary
-          i.fa.fa-twitter(aria-hidden="true")
-        a.btn.is-ghost.is-circle.is-success
-          i.fa.fa-floppy-o(aria-hidden="true")
-        a.btn.is-ghost.is-circle.is-danger
-          i.fa.fa-times(aria-hidden="true")
-        a.btn.is-ghost.is-circle.is-disable
-          i.fa.fa-plus(aria-hidden="true")
-    pre.pre.is-sm
-      code.code.html.
-        &lt;a class=&quot;btn is-plain is-circle&quot;&gt;...&lt;/a&gt;
+        a.btn.is-plain.is-circle
+          i.fas.fa-angle-left(aria-hidden="true")
+        a.btn.is-plain.is-circle.is-primary
+          i.fab.fa-twitter(aria-hidden="true")
+        a.btn.is-plain.is-circle.is-success
+          i.fas.fa-save(aria-hidden="true")
+        a.btn.is-plain.is-circle.is-danger
+          i.fas.fa-times(aria-hidden="true")
+        a.btn.is-plain.is-circle.is-disable
+          i.fas.fa-plus(aria-hidden="true")
+        a.btn.is-outline.is-circle
+          i.fas.fa-angle-left(aria-hidden="true")
+        a.btn.is-outline.is-circle.is-primary
+          i.fab.fa-twitter(aria-hidden="true")
+        a.btn.is-outline.is-circle.is-success
+          i.fas.fa-save(aria-hidden="true")
+        a.btn.is-outline.is-circle.is-danger
+          i.fas.fa-times(aria-hidden="true")
+        a.btn.is-outline.is-circle.is-disable
+          i.fas.fa-plus(aria-hidden="true")
+      .group.is-wrap.is-paint
+        .btns
+          a.btn.is-ghost.is-circle
+            i.fas.fa-angle-left(aria-hidden="true")
+          a.btn.is-ghost.is-circle.is-primary
+            i.fab.fa-twitter(aria-hidden="true")
+          a.btn.is-ghost.is-circle.is-success
+            i.fas.fa-save(aria-hidden="true")
+          a.btn.is-ghost.is-circle.is-danger
+            i.fas.fa-times(aria-hidden="true")
+          a.btn.is-ghost.is-circle.is-disable
+            i.fas.fa-plus(aria-hidden="true")
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <a class="btn is-plain is-circle">...</a>
+        ```
 
 .groups
   h4.heading.is-xl Button - Responsive
   p.texts.is-sm
     code.code .btns
-    | &nbsp;直下のボタンは各デバイスサイズごとに
+    | &nbsp;直下のボタンは
     br
-    code.code .is-(xxxx)-full
-    | &nbsp;で100%、&nbsp;
-    code.code .is-(xxxx)-0
-    | &nbsp;で等分、&nbsp;
-    code.code .is-(xxxx)-auto
-    | &nbsp;で本来のサイズに戻せます。
-  .group.is-scroll-x
-    table.table.is-sm.is-center.is-nowrap.is-middle.is-border
-      thead
-        tr.box.is-paint
-          th(width="80")
-          th
-            p
-              i.fa.fa-mobile(aria-hidden="true")
-              span.text Mobile
-              br
-              span.text.is-sm all
-          th
-            p
-              i.fa.fa-mobile(aria-hidden="true")
-              span.text Fablet
-              br
-              span.text.is-sm 576px ~
-          th
-            p
-              i.fa.fa-tablet(aria-hidden="true")
-              span.text Tablet
-              br
-              span.text.is-sm 768px ~
-          th
-            p
-              i.fa.fa-laptop(aria-hidden="true")
-              span.text Desktop
-              br
-              span.text.is-sm 992px ~
-          th
-            p
-              i.fa.fa-desktop(aria-hidden="true")
-              span.text Wide
-              br
-              span.text.is-sm 1200px ~
-      tbody
-        tr
-          td
-            p.text.is-sm
-              | 100%に広がる
-          td
-            p
-              span.text .is-mobile-full
-          td
-            p
-              span.text .is-fablet-full
-          td
-            p
-              span.text .is-tablet-full
-          td
-            p
-              span.text .is-desktop-full
-          td
-            p
-              span.text .is-wide-full
-        tr
-          td
-            p.text.is-sm
-              | 余白を等分しつつ広がる
-          td
-            p
-              span.text .is-mobile-0
-          td
-            p
-              span.text .is-fablet-0
-          td
-            p
-              span.text .is-tablet-0
-          td
-            p
-              span.text .is-desktop-0
-          td
-            p
-              span.text .is-wide-0
-        tr
-          td
-            p.text.is-sm
-              | 本来のサイズに戻る
-          td
-            p
-              span.text .is-mobile-auto
-          td
-            p
-              span.text .is-fablet-auto
-          td
-            p
-              span.text .is-tablet-auto
-          td
-            p
-              span.text .is-desktop-auto
-          td
-            p
-              span.text .is-wide-auto
-  .group.is-wrap.is-preview
-    .btns
-      a.btn.is-plain.is-mobile-full.is-tablet-0 戻る
-      a.btn.is-plain.is-mobile-full.is-tablet-0.is-primary 決定
-      a.btn.is-plain.is-mobile-full.is-tablet-0.is-success 登録
-      a.btn.is-plain.is-mobile-full.is-tablet-0.is-danger 削除
-      a.btn.is-plain.is-mobile-full.is-tablet-0.is-disable 不可
-    .btns
-      a.btn.is-outline.is-mobile-full.is-tablet-0 戻る
-      a.btn.is-outline.is-mobile-full.is-tablet-0.is-primary 決定
-      a.btn.is-outline.is-mobile-full.is-tablet-0.is-success 登録
-      a.btn.is-outline.is-mobile-full.is-tablet-0.is-danger 削除
-      a.btn.is-outline.is-mobile-full.is-tablet-0.is-disable 不可
-    .group.is-wrap.is-paint
+    code.code .is-(xxxx)-(yy)
+    | &nbsp;形式のクラスを加えることでレスポンシブにサイズを変化させられます。
+  .group.is-wrap
+    .inner
       .btns
-        a.btn.is-ghost.is-mobile-full.is-tablet-0 戻る
-        a.btn.is-ghost.is-mobile-full.is-tablet-0.is-primary 決定
-        a.btn.is-ghost.is-mobile-full.is-tablet-0.is-success 登録
-        a.btn.is-ghost.is-mobile-full.is-tablet-0.is-danger 削除
-        a.btn.is-ghost.is-mobile-full.is-tablet-0.is-disable 不可
-    pre.pre.is-sm
-      code.code.html.
-        &lt;a class=&quot;btn is-plain is-(xxxx)-(y)&quot;&gt;...&lt;/a&gt;
+        a.btn.is-plain.is-mobile-full.is-tablet-0 戻る
+        a.btn.is-plain.is-mobile-full.is-tablet-0.is-primary 決定
+        a.btn.is-plain.is-mobile-full.is-tablet-0.is-success 登録
+        a.btn.is-plain.is-mobile-full.is-tablet-0.is-danger 削除
+        a.btn.is-plain.is-mobile-full.is-tablet-0.is-disable 不可
+      .btns
+        a.btn.is-outline.is-mobile-full.is-tablet-0 戻る
+        a.btn.is-outline.is-mobile-full.is-tablet-0.is-primary 決定
+        a.btn.is-outline.is-mobile-full.is-tablet-0.is-success 登録
+        a.btn.is-outline.is-mobile-full.is-tablet-0.is-danger 削除
+        a.btn.is-outline.is-mobile-full.is-tablet-0.is-disable 不可
+      .group.is-wrap.is-paint
+        .btns
+          a.btn.is-ghost.is-mobile-full.is-tablet-0 戻る
+          a.btn.is-ghost.is-mobile-full.is-tablet-0.is-primary 決定
+          a.btn.is-ghost.is-mobile-full.is-tablet-0.is-success 登録
+          a.btn.is-ghost.is-mobile-full.is-tablet-0.is-danger 削除
+          a.btn.is-ghost.is-mobile-full.is-tablet-0.is-disable 不可
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <a class="btn is-plain is-(xxxx)-(y)">...</a>
+        ```
+  include ../demo/_responsive-flex.pug
 
 .groups
   h4.heading.is-xl Button - Bar
@@ -481,49 +425,53 @@
     | &nbsp;にクラス名&nbsp;
     code.code .is-bar
     | &nbsp;を付与することで子要素のボタンを連結させられます。
-  .group.is-wrap.is-preview
-    .btns.is-bar.is-sm
-      a.btn.is-plain
-        i.fa.fa-align-left(aria-hidden="true")
-        span.text 左寄せ
-      a.btn.is-plain
-        i.fa.fa-align-center(aria-hidden="true")
-        span.text 中央寄せ
-      a.btn.is-plain
-        i.fa.fa-align-right(aria-hidden="true")
-        span.text 右寄せ
-    .btns.is-bar.is-sm
-      a.btn.is-outline.is-mobile-0
-        i.fa.fa-align-left(aria-hidden="true")
-        span.text 左寄せ
-      a.btn.is-outline.is-mobile-0
-        i.fa.fa-align-center(aria-hidden="true")
-        span.text 中央寄せ
-      a.btn.is-outline.is-mobile-0
-        i.fa.fa-align-right(aria-hidden="true")
-        span.text 右寄せ
-    .btns.is-bar.is-sm
-      a.btn.is-outline.is-round.is-mobile-0 ラウンド
-      a.btn.is-outline.is-round.is-mobile-0 ラウンド
-      a.btn.is-outline.is-round.is-mobile-0 ラウンド
-    .group.is-wrap.is-paint
-      .btns
-        .btns.is-bar.is-sm
-          a.btn.is-ghost 松
-          a.btn.is-ghost 桜
-          a.btn.is-ghost 芒
-          a.btn.is-ghost 雨
-          a.btn.is-ghost 桐
-        .btns.is-bar.is-sm
-          a.btn.is-ghost 線と角丸
-          a.btn.is-ghost 自動調整
-        .btns.is-bar.is-sm
-          a.btn.is-ghost.is-round ラウンド
-          a.btn.is-ghost.is-round ラウンド
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;btns is-bar&quot;&gt;
-          &lt;a class=&quot;btn is-plain&quot;&gt;...&lt;/a&gt;
-          &lt;a class=&quot;btn is-plain&quot;&gt;...&lt;/a&gt;
-          &lt;a class=&quot;btn is-plain&quot;&gt;...&lt;/a&gt;
-        &lt;/div&gt;
+  .group.is-wrap
+    .inner
+      .btns.is-bar.is-sm
+        a.btn.is-plain
+          i.fas.fa-align-left(aria-hidden="true")
+          span.text 左寄せ
+        a.btn.is-plain
+          i.fas.fa-align-center(aria-hidden="true")
+          span.text 中央寄せ
+        a.btn.is-plain
+          i.fas.fa-align-right(aria-hidden="true")
+          span.text 右寄せ
+      .btns.is-bar.is-sm
+        a.btn.is-outline.is-mobile-0
+          i.fas.fa-align-left(aria-hidden="true")
+          span.text 左寄せ
+        a.btn.is-outline.is-mobile-0
+          i.fas.fa-align-center(aria-hidden="true")
+          span.text 中央寄せ
+        a.btn.is-outline.is-mobile-0
+          i.fas.fa-align-right(aria-hidden="true")
+          span.text 右寄せ
+      .btns.is-bar.is-sm
+        a.btn.is-outline.is-round.is-mobile-0 ラウンド
+        a.btn.is-outline.is-round.is-mobile-0 ラウンド
+        a.btn.is-outline.is-round.is-mobile-0 ラウンド
+      .group.is-wrap.is-paint
+        .btns
+          .btns.is-bar.is-sm
+            a.btn.is-ghost 松
+            a.btn.is-ghost 桜
+            a.btn.is-ghost 芒
+            a.btn.is-ghost 雨
+            a.btn.is-ghost 桐
+          .btns.is-bar.is-sm
+            a.btn.is-ghost 線と角丸
+            a.btn.is-ghost 自動調整
+          .btns.is-bar.is-sm
+            a.btn.is-ghost.is-round ラウンド
+            a.btn.is-ghost.is-round ラウンド
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="btns is-bar">
+          <a class="btn is-plain">...</a>
+          <a class="btn is-plain">...</a>
+          <a class="btn is-plain">...</a>
+        </div>
+        ```

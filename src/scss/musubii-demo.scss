@@ -2,242 +2,133 @@
 /*! MUSUBii Demo */
 //----------------------------------------------------
 
-@import "variable/_customize";
-@import "variable/_moftone";
-@import "variable/_mdtone";
-@import "variable/_iostone";
-@import "variable/_color";
-@import "variable/_breakpoint";
-@import "variable/_split";
-@import "variable/_font";
-@import "variable/_shadow";
-@import "mixin/_mediaquery";
-@import "mixin/_placeholder";
+//----------------------------------------------------
+// / Glob Import > Config SCSS
+//----------------------------------------------------
+
+@import "tone/**";
+@import "variable/**";
+@import "mixin/**";
 
 //----------------------------------------------------
-// Project CSS
+// / Demo - Global
 //----------------------------------------------------
+
+body {
+  font-family: Nunito, "Rounded Mplus 1c", $font-sans;
+}
+
+button {
+  color: $dark-2;
+  outline: none;
+}
 
 .musubii-demo {
   //background-color: $cyan-500;
 }
 
-.section {
-  &.is-header {
-    padding: 8px 0;
-    background-color: $cyan-500;
+//----------------------------------------------------
+// / Demo - Section
+//----------------------------------------------------
+
+.section.is-topcover {
+  background-color: $cyan-500;
+  background-image: url("../img/bg-topcover.svg");
+  background-position: center bottom;
+  background-size: cover;
+  @include ie {
+    background-image: url("../img/bg-topcover.png");
   }
-  &.is-header > .inner {
-    padding: 0 12px 0 10px;
+}
+
+.section.is-topcover-header {
+  @include mobile-fablet {
+    background-color: darken($cyan-500, 2%);
   }
-  &.is-topcover {
-    display: flex;
-    align-items: center;
-    height: 360px;
-    padding: 0 0 24px;
-    background-color: $cyan-500;
+}
+
+.section.is-topcover-content {
+  padding: 6em 0;
+  &:not(.is-active) {
+    display: none;
   }
-  &.is-tab {
-    position: sticky;
-    top: -1px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-    background-color: $cyan-500;
-    z-index: 20;
+  &.is-active {
+    display: block;
   }
-  &.is-main {
-    padding: 48px 0;
-    background-color: $light;
-  }
-  &.is-footer {
-    background-color: $blue-grey-800;
-    padding: 2em 0;
-  }
-  > .inner > .tabs {
-  margin: 0 -16px;
-    @include fablet {
-      margin: 0;
+}
+
+.section.is-main {
+}
+
+.section.is-main-content {
+  padding: 3em 0;
+}
+
+.section.is-bg-yellow {
+  background-color: $yellow-200;
+}
+
+.section.is-bg-grey {
+  background-color: $grey-50;
+  :not(.pre) {
+    > .code {
+      background-color: rgba(black, 0.0375);
     }
   }
 }
 
-.group.is-wrap {
-  position: relative;
-  border: 1px solid $grey-300;
-  border-radius: 2px;
-  padding: 20px;
-  &.is-preview:before {
-    content: "Preview";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    border-right: 1px solid $grey-300;
-    border-bottom: 1px solid $grey-300;
-    border-radius: 0 0 2px 0;
-    color: $grey-400;
-    font-size: 0.675em;
-    padding: 0 0.5em;
-  }
-  &.is-paint {
-    background-color: $cyan-700;
-    border: none;
-    padding: 16px;
-  }
-  &.is-example {
-    background-color: $grey-100;
-    border: none;
-    padding: 32px;
-  }
+.section.is-footer {
+  background-color: $blue-grey-800;
+  padding: 2em 0;
 }
 
-.group.is-home-about {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-.group.is-home-point {
-  max-width: 700px;
-  padding-bottom: 2em;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.group.is-about-graphic-1 {
-  font-size: 3.5em;
-}
-
-.group.is-about-graphic-2 {
-  font-size: 3em;
-}
-
-.group.is-documentation-nav {
-  border-top: 1px solid $grey-300;
-  border-bottom: 1px solid $grey-300;
-  padding: 20px 4px;
-}
-
-.group.is-demo-box-1,
-.group.is-demo-box-2,
-.group.is-demo-box-3 {
-  width: 100%;
-  &.is-primary {
-    background-color: $primary;
-    color: $light;
-  }
-  &.is-danger {
-    background-color: $red-50;
-    color: $danger;
-  }
-  &.is-grey {
-    background-color: $grey-3;
-    color: $light;
-  }
-  &.is-round {
-    border-radius: 2px;
-  }
-  &.is-height-1 {
-    height: 150px;
-  }
-  &.is-height-2 {
-    height: 300px;
-  }
-  &.is-height-3 {
-    height: 450px;
-  }
-}
-
-.group.is-demo-box-1 {
-  padding: 16px 0;
-}
-
-.group.is-demo-box-2 {
-  padding: 0 16px;
-}
-
-.group.is-demo-box-3 {
-  padding: 16px;
-}
-
-.group.is-section-anime-1 {
-  height: 150px;
-  overflow: hidden;
-  animation: demo-section-anime-1 5s linear infinite 0s;
-}
-
-@keyframes demo-section-anime-1 {
-  0% {
-    width: 100%;
-  }
-  22% {
-    width: 100%;
-  }
-  25% {
-    width: 82%;
-  }
-  47% {
-    width: 82%;
-  }
-  50% {
-    width: 64%;
-  }
-  72% {
-    width: 64%;
-  }
-  75% {
-    width: 48%;
-  }
-  97% {
-    width: 48%;
-  }
-  100% {
-    width: 100%;
-  }
-}
+//----------------------------------------------------
+// / Demo - Grid
+//----------------------------------------------------
 
 .grid.is-demo-box-1 {
   &.is-height-1 {
-    height: 182px;
+    height: 11.375em;
   }
   &.is-height-2 {
-    height: 332px;
+    height: 20.75em;
   }
   &.is-height-3 {
-    height: 482px;
+    height: 30.125em;
   }
 }
 
-.grid.is-gap-6x:not(.is-gap-none) {
-  margin-left: -3em;
-  margin-bottom: -3em;
-  > .col {
-    padding-left: 3em;
-    padding-bottom: 3em;
-  }
-  + .grid.is-gap-6x:not(.is-gap-none) {
-    margin-top: 3em;
+@each $gap-x in 2, 3, 4, 6 {
+  .grid.is-gap-#{$gap-x}x:not(.is-gap-none) {
+    margin-left: $gap-x / -2 + em;
+    margin-bottom: $gap-x / -2 + em;
+    > .col {
+      padding-left: $gap-x / 2 + em;
+      padding-bottom: $gap-x / 2 + em;
+    }
+    + .grid.is-gap-#{$gap-x}x:not(.is-gap-none) {
+      margin-top: $gap-x / 2 + em;
+    }
   }
 }
 
-.heading.is-demo-space-filter-1 {
-  position: relative;
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    display: block;
-    width: 100%;
+//----------------------------------------------------
+// / Demo - Text
+//----------------------------------------------------
+
+.text.is-topcover-1 {
+  font-size: 16.75vw;
+  line-height: 1.1;
+  @include tablet {
+    font-size: 4.375em;
   }
-  &:before {
-    top: -2em;
-    height: 2em;
-    background-color: rgba($orange-500, 0.3);
-  }
-  &:after {
-    top: 0;
-    height: 1.25em;
-    background-color: rgba($blue-500, 0.3);
+}
+
+.text.is-topcover-2 {
+  font-size: 11vw;
+  line-height: 1.1;
+  @include tablet {
+    font-size: 2.875em;
   }
 }
 
@@ -268,140 +159,87 @@
   position: relative;
   display: inline-block;
   border-right: 2px dashed $red-500;
-  > .fa {
+  > .fa,
+  > .fas {
     background-color: rgba($blue-500, 0.3);
   }
 }
 
-.btn.is-demo-code {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  outline: none;
-  z-index: 10;
-  + .pre {
-    transition: ease 0.2s;
-  }
-  &:not(.is-active) + .pre {
-    height: 0;
-    overflow: hidden;
-  }
-  &.is-active + .pre {
-    margin-top: 1em;
-  }
-}
+//----------------------------------------------------
+// / Demo - Heading
+//----------------------------------------------------
 
-.logo {
-  &.is-header {
-    display: block;
-    width: 130px;
-  }
-  &.is-title {
-    display: block;
-    width: 250px;
-    margin: 0 auto 6px;
-  }
-}
-
-.obj.is-footer-logo {
-  display: block;
-  width: 8em;
-}
-
-.mark-demo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(1.5em + 1px);
-  .mark-demo-wrap {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 1em;
-    height: 1em;
-    background-color: $dark-6;
-    border-radius: 0.25em;
-  }
-  .mark-demo-japanese {
-    color: $light;
-    font-size: 0.675em;
-  }
-}
-
-.induction.is-release {
+.heading.is-demo-space-filter-1 {
   position: relative;
-  top: -1px;
-  right: -5px;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+  &:before {
+    top: -2em;
+    height: 2em;
+    background-color: rgba($orange-500, 0.3);
+  }
+  &:after {
+    top: 0;
+    height: 1.25em;
+    background-color: rgba($blue-500, 0.3);
+  }
+}
+
+//----------------------------------------------------
+// / Demo - Button
+//----------------------------------------------------
+
+.btn.is-plain.is-cyan {
+  background-color: $light;
+  color: $cyan-500;
+  &:hover {
+    background-color: $cyan-50;
+  }
 }
 
 .btn.is-ghost.is-cyan:hover {
   color: $cyan-500;
 }
 
-.tabs {
-  display: flex;
-}
-
-.tabs.is-slide {
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.tabs.is-split {
-  > .tab {
-    flex: 1 0 0%;
+.btns.js-demo-code-toggle {
+  > .btn.is-plain {
+    border-radius: 0;
+    border-top: 1px solid $grey-300;
+    color: $indigo-500;
   }
-}
-
-.tab {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 4.5em;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  text-align: center;
-  line-height: 1;
-  white-space: nowrap;
-  padding: 0 1em;
-  &.is-active {
-    cursor: default;
-  }
-}
-
-.tab.is-ghost {
-  color: rgba( $white, 0.7 );
-  &:hover {
-    color: $white;
-  }
-  &.is-active {
-    color: $white;
-    border-bottom-color: rgba( $white, 0.7 );
-  }
-}
-
-.section.is-main {
-  &:not(.is-active) {
+  &:not(.is-active) .btn:nth-child(2) {
     display: none;
   }
-  &.is-active {
-    display: block;
+  &:not(.is-active) + .wysiwyg {
+    display: none;
+  }
+  &.is-active .btn:nth-child(1) {
+    display: none;
+  }
+  + .wysiwyg {
+    margin-top: 0;
+    border-top: 1px solid $grey-300;
   }
 }
 
-.section.is-topcover {
-  overflow: hidden;
-  transition: ease-out 0.12s;
-  &:not(.is-active) {
-    height: 0;
-    padding: 0;
-    opacity: 0;
-  }
-  &.is-active {
-    opacity: 1;
-  }
+//----------------------------------------------------
+// / Demo - Group
+//----------------------------------------------------
+
+.group.is-home-point-textbox {
+  max-width: 25.45em;
+}
+
+.group.is-documentation-nav {
+  border-top: 1px solid $grey-300;
+  border-bottom: 1px solid $grey-300;
+  padding: 1.25em 0.25em;
 }
 
 .group.is-documentation-nav .text.is-link-reverse {
@@ -418,6 +256,178 @@
 }
 
 .groups.is-documentation-contents > .content {
+  &:not(.is-active) {
+    display: none;
+  }
+  &.is-active {
+    display: block;
+  }
+  .group.is-wrap {
+    font-family: $font-sans;
+  }
+}
+
+.group.is-wrap {
+  position: relative;
+  border: 1px solid $grey-300;
+  border-radius: 2px;
+  overflow: hidden;
+  &.is-paint {
+    padding: 1em;
+    background-color: $cyan-700;
+    border: none;
+  }
+  &.is-example {
+    padding: 2em;
+    background-color: $grey-100;
+    border: none;
+    font-family: $font-sans;
+  }
+  > .inner {
+    padding: 1.25em;
+  }
+}
+
+.group.is-demo-box-1,
+.group.is-demo-box-2,
+.group.is-demo-box-3 {
+  width: 100%;
+  &.is-primary {
+    background-color: $primary;
+    color: $light;
+  }
+  &.is-danger {
+    background-color: $red-50;
+    color: $danger;
+  }
+  &.is-grey {
+    background-color: $grey-300;
+    color: $light;
+  }
+  &.is-round {
+    border-radius: 2px;
+  }
+  &.is-height-1 {
+    min-height: 9.375em;
+  }
+  &.is-height-2 {
+    min-height: 18.75em;
+  }
+  &.is-height-3 {
+    min-height: 28.125em;
+  }
+}
+
+.group.is-demo-box-1 {
+  padding: 1em 0;
+}
+
+.group.is-demo-box-2 {
+  padding: 0 1em;
+}
+
+.group.is-demo-box-3 {
+  padding: 1em;
+}
+
+//----------------------------------------------------
+// / Demo - Object
+//----------------------------------------------------
+
+.obj.is-logo-header-wrap {
+  padding: 0.875em 0;
+}
+
+.obj.is-logo-header {
+  display: block;
+  width: 8.25em;
+}
+
+.obj.is-topcover-illust {
+  width: 90vw;
+  @include tablet {
+    width: 23.5em;
+  }
+}
+
+.obj.is-home-point-illust {
+  width: 15em;
+}
+
+.obj.is-badge {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875em;
+  padding: 0 0.25em;
+  margin: 0 0.25em 0.25em;
+  border-radius: 0.0875em;
+  &.is-new {
+    background-color: $light-green-a400;
+    color: $light;
+    font-weight: 700;
+  }
+  > .text {
+    font-size: 50%;
+  }
+}
+
+.obj.is-footer-logo {
+  display: block;
+  width: 8em;
+}
+
+//----------------------------------------------------
+// / Demo - Tab
+//----------------------------------------------------
+
+.tabs {
+  display: flex;
+  max-width: 100vw;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  @include mobile-tablet {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+}
+
+.tab {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 4.5em;
+  padding: 0 1em;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  white-space: nowrap;
+  transition: ease-out 0.12s;
+  &.is-active {
+    cursor: default;
+  }
+}
+
+.tab.is-ghost {
+  color: $light-2;
+  &:not(.is-active):hover {
+    @include desktop {
+      background-color: $light-7;
+      color: $white;
+    }
+  }
+  &.is-active {
+    color: $white;
+    border-bottom-color: $light-2;
+  }
+}
+
+// JS Tab Content
+.tab-content.js-tab-content {
   &:not(.is-active) {
     display: none;
   }

@@ -10,6 +10,14 @@
     | 要素のタグは&nbsp;
     code.code .fa
     | &nbsp;
+    code.code .fas
+    | &nbsp;
+    code.code .far
+    | &nbsp;
+    code.code .fal
+    | &nbsp;
+    code.code .fab
+    | &nbsp;
     code.code .material-icons
     | &nbsp;
     code.code .im
@@ -20,27 +28,31 @@
     | HTMLソース上で各種アイコンと&nbsp;
     code.code .text
     | &nbsp;が隣り合うと、自動的にmargin-leftが付与され距離が保たれます。
-  .group.is-wrap.is-preview
-    p.texts.is-xl.is-danger
-      i.fa.fa-heart(aria-hidden="true")
-      span.text ハート
-      i.fa.fa-heart(aria-hidden="true")
-      span.text.is-demo-space-filter-2 ハート
-      i.fa.fa-heart(aria-hidden="true")
-      span.text ハート
-      span.icon.is-demo-space-filter-2
-        i.fa.fa-heart(aria-hidden="true")
-      span.text ハート
-      i.fa.fa-heart(aria-hidden="true")
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;
-          &lt;span class=&quot;text&quot;&gt;ハート&lt;/span&gt;
-          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;
-          &lt;span class=&quot;text&quot;&gt;ハート&lt;/span&gt;
+  .group.is-wrap
+    .inner
+      p.texts.is-xl.is-danger
+        i.fas.fa-heart(aria-hidden="true")
+        span.text ハート
+        i.fas.fa-heart(aria-hidden="true")
+        span.text.is-demo-space-filter-2 ハート
+        i.fas.fa-heart(aria-hidden="true")
+        span.text ハート
+        span.icon.is-demo-space-filter-2
+          i.fas.fa-heart(aria-hidden="true")
+        span.text ハート
+        i.fas.fa-heart(aria-hidden="true")
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts">
+          <i aria-hidden="true" class="fas fa-heart"></i>
+          <span class="text">ハート</span>
+          <i aria-hidden="true" class="fas fa-heart"></i>
+          <span class="text">ハート</span>
           ...
-        &lt;/p&gt;
+        </p>
+        ```
 
 .groups
   h4.heading.is-xl Icon - Fit
@@ -48,31 +60,35 @@
     | 各種アイコンのタグに&nbsp;
     code.code .is-fit
     | &nbsp;を付与することで、アイコンの領域を一定に統一できます。
-  .group.is-wrap.is-preview
-    .group
-      .grid
-        .col
-          p.texts.is-xxl
-            span.text.is-demo-space-filter-3
-              i.fa.fa-institution(aria-hidden="true")
-              br
-              i.fa.fa-angle-right(aria-hidden="true")
-        .col
-          p.texts.is-xxl.is-success
-            span.text.is-demo-space-filter-3
-              i.fa.fa-institution.is-fit(aria-hidden="true")
-              br
-              i.fa.fa-angle-right.is-fit(aria-hidden="true")
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-institution&quot;&gt;&lt;/i&gt;
-          &lt;br/&gt;
-          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;
-        &lt;/p&gt;
+  .group.is-wrap
+    .inner
+      .group
+        .grid
+          .col
+            p.texts.is-xxl
+              span.text.is-demo-space-filter-3
+                i.fas.fa-archive(aria-hidden="true")
+                br
+                i.fas.fa-angle-right(aria-hidden="true")
+          .col
+            p.texts.is-xxl.is-success
+              span.text.is-demo-space-filter-3
+                i.fas.fa-archive.is-fit(aria-hidden="true")
+                br
+                i.fas.fa-angle-right.is-fit(aria-hidden="true")
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="texts">
+          <i aria-hidden="true" class="fa fa-archive"></i>
+          <br/>
+          <i aria-hidden="true" class="fa fa-angle-right"></i>
+        </p>
 
-        &lt;p class=&quot;texts&quot;&gt;
-          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-institution is-fit&quot;&gt;&lt;/i&gt;
-          &lt;br/&gt;
-          &lt;i aria-hidden=&quot;true&quot; class=&quot;fa fa-angle-right is-fit&quot;&gt;&lt;/i&gt;
-        &lt;/p&gt;
+        <p class="texts">
+          <i aria-hidden="true" class="fa fa-archive is-fit"></i>
+          <br/>
+          <i aria-hidden="true" class="fa fa-angle-right is-fit"></i>
+        </p>
+        ```

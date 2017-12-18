@@ -8,7 +8,6 @@
     | ブロック要素を並べた場合に、その組み合わせに応じて後ろのコンテンツに&nbsp;
     code.code margin-top
     | &nbsp;が付与され、コンテンツ間の距離が保たれます。
-    br
     | 対応しているクラスは以下の通りです。中でも広く距離を取りたい場合は&nbsp;
     code.code .groups
     | &nbsp;で囲みます。
@@ -16,14 +15,18 @@
   p.texts.is-sm
     | 距離を開けたくない場合や、相互作用をリセットさせたい場合は、以下のようなクラス名で囲みます。
   .group.is-wrap.is-paint.is-light .contents .content .boxs .box
-  .group.is-wrap.is-preview
-    p.heading.is-xl 見出し
-    p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
-    p.heading.is-xl.is-demo-space-filter-1 見出し
-    p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
-    pre.pre.is-sm
-      code.code.html.
-        &lt;p class=&quot;heading&quot;&gt;見出し&lt;/p&gt;
-        &lt;p class=&quot;texts&quot;&gt;テキストテキストテキストテキストテキストテキスト&lt;/p&gt;
-        &lt;p class=&quot;heading&quot;&gt;見出し&lt;/p&gt;
-        &lt;p class=&quot;texts&quot;&gt;テキストテキストテキストテキストテキストテキスト&lt;/p&gt;
+  .group.is-wrap
+    .inner
+      p.heading.is-xl 見出し
+      p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
+      p.heading.is-xl.is-demo-space-filter-1 見出し
+      p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <p class="heading">見出し</p>
+        <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+        <p class="heading">見出し</p>
+        <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+        ```

@@ -1,38 +1,20 @@
 //----------------------------------------------------
-/*! MUSUBii v4.0.0 MIT by Qrac */
+/*! MUSUBii v5.0.0 MIT by Qrac */
 //----------------------------------------------------
 
-@import "variable/_customize";
-@import "variable/_moftone";
-@import "variable/_mdtone";
-@import "variable/_iostone";
-@import "variable/_color";
-@import "variable/_breakpoint";
-@import "variable/_split";
-@import "variable/_font";
-@import "variable/_shadow";
-@import "mixin/_mediaquery";
-@import "mixin/_placeholder";
-
 //----------------------------------------------------
-// Framework CSS
+// / Glob Import > Config SCSS
 //----------------------------------------------------
 
-@import "base/_shitaji";
-@import "base/_global";
-@import "layout/_section";
-@import "layout/_space";
-@import "layout/_grid";
-@import "module/_heading";
-@import "module/_text";
-@import "module/_button";
-@import "module/_list";
-@import "module/_table";
-@import "module/_form";
-@import "module/_icon";
-@import "module/_alert";
-@import "module/_wysiwyg";
-@import "utility/_size";
-@import "utility/_deco";
-@import "utility/_display";
-@import "utility/_clearfix";
+@import "tone/**";
+@import "variable/**";
+@import "mixin/**";
+
+//----------------------------------------------------
+// / Glob Import > Project SCSS
+//----------------------------------------------------
+
+@import "base/**";
+@import "layout/**";
+@import "module/**";
+@import "utility/**";

@@ -2,6 +2,10 @@
 // Layout: Section
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Inner Control
+//----------------------------------------------------
+
 .section > .inner {
   max-width: 100%;
   padding: 0 16px;
@@ -18,4 +22,19 @@
   @include wide {
     width: 1140px;
   }
+}
+
+.section > .inner-vw {
+  max-width: 100%;
+  padding: 0 1em;
+  margin: 0 auto;
+  @include fablet {
+    width: 90vw;
+  }
+}
+
+.section > .inner-soft {
+  max-width: 100%;
+  padding: 0 1em;
+  margin: 0 auto;
 }

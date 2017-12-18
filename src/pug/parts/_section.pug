@@ -12,20 +12,88 @@
     code.code .inner
     | &nbsp;には画面幅に応じてレスポンシブな固定幅が設定されます。
   .group.is-wrap
-    .group.is-demo-box-2.is-strong.is-primary.is-round.is-centering.is-break.is-section-anime-1
-      .grid
-        .col.is-mobile-2
-          .group.is-demo-box-1
-            | .section
-        .col.is-mobile-8
-          .group.is-demo-box-2.is-grey
-            .group.is-demo-box-1.is-height-1
-              | .inner
-        .col.is-mobile-2
-    pre.pre.is-sm
-      code.code.html.
-        &lt;div class=&quot;section&quot;&gt;
-          &lt;div class=&quot;inner&quot;&gt;
+    .inner
+      .group.is-demo-box-2.is-strong.is-primary.is-round
+        .group.is-demo-box-1
+          | .section
+          .grid.is-gap-none
+            .col.is-mobile-1
+            .col.is-mobile-10
+              .group.is-demo-box-2.is-grey.is-round
+                .group.is-demo-box-1.is-height-1
+                  | .inner {
+                  br
+                  | &nbsp;&nbsp;width: 540px, 720px, 960px, 1140px;
+                  br
+                  | &nbsp;&nbsp;padding: 0 16px;
+                  br
+                  | }
+            .col.is-mobile-1
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="section">
+          <div class="inner">
             ...
-          &lt;/div&gt;
-        &lt;/div&gt;
+          </div>
+        </div>
+        ```
+.groups
+  p.texts.is-sm
+    code.code .inner-soft
+    | &nbsp;を使うと固定幅が無くなります。
+  .group.is-wrap
+    .inner
+      .group.is-demo-box-2.is-strong.is-primary.is-round
+        .group.is-demo-box-1
+          | .section
+          .group.is-demo-box-2.is-grey.is-round
+            .group.is-demo-box-1.is-height-1
+              | .inner-soft {
+              br
+              | &nbsp;&nbsp;padding: 0 1em;
+              br
+              | }
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="section">
+          <div class="inner-soft">
+            ...
+          </div>
+        </div>
+        ```
+.groups
+  p.texts.is-sm
+    code.code .inner-view
+    | &nbsp;を使うとFablet以上のサイズで幅が割合算出されます。
+  .group.is-wrap
+    .inner
+      .group.is-demo-box-2.is-strong.is-primary.is-round
+        .group.is-demo-box-1
+          | .section
+          .grid.is-gap-none
+            .col.is-mobile-1
+            .col.is-mobile-10
+              .group.is-demo-box-2.is-grey.is-round
+                .group.is-demo-box-1.is-height-1
+                  | .inner-view {
+                  br
+                  | &nbsp;&nbsp;width: 90vw;
+                  br
+                  | &nbsp;&nbsp;padding: 0 1em;
+                  br
+                  | }
+            .col.is-mobile-1
+    include ../demo/_code-toggle.pug
+    .wysiwyg.is-sm
+      :markdown-it
+        ```html
+        <div class="section">
+          <div class="inner-view">
+            ...
+          </div>
+        </div>
+        ```

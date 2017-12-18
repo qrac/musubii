@@ -2,35 +2,37 @@
 // Layout: Space
 //----------------------------------------------------
 
-.groups,
-.group,
-.texts,
-.blockquote,
-.pre,
-.btns,
-.list,
-.table,
-.form,
-.fieldset,
-.alert,
-.wysiwyg {
+//----------------------------------------------------
+// / Dedicated Variable
+//----------------------------------------------------
+
+$space-class-basic-mostly:
+".groups, .group, .texts, .blockquote, .pre, .btns, .list, .table, .form, .fieldset, .alert, .wysiwyg";
+
+$space-class-basic-normal:
+".group, .texts, .blockquote, .pre, .btns, .list, .table, .form, .alert, .wysiwyg";
+
+$space-class-wysiwyg-heading:
+"h1, h2, h3, h4, h5, h6";
+
+$space-class-wysiwyg-normal:
+"img, p, blockquote, pre, ul, ol, table, hr";
+
+//----------------------------------------------------
+// / Combination Mostly
+//----------------------------------------------------
+
+#{$space-class-basic-mostly} {
   + .groups {
     margin-top: 3em;
   }
   + .heading {
     margin-top: 2em;
   }
-  + .group,
-  + .texts,
-  + .blockquote,
-  + .pre,
-  + .btns,
-  + .list,
-  + .table,
-  + .form,
-  + .alert,
-  + .wysiwyg {
-    margin-top: 1em;
+  + {
+    & #{$space-class-basic-normal} {
+      margin-top: 1em;
+    }
   }
   + .fieldset {
     margin-top: 1.5em;
@@ -40,6 +42,10 @@
   }
 }
 
+//----------------------------------------------------
+// / Combination Heading
+//----------------------------------------------------
+
 .heading {
   + .groups {
     margin-top: 3em;
@@ -47,23 +53,20 @@
   + .heading {
     margin-top: 1em;
   }
-  + .group,
-  + .texts,
-  + .blockquote,
-  + .pre,
-  + .btns,
-  + .list,
-  + .table,
-  + .form,
-  + .alert,
-  + .wysiwyg {
-    margin-top: 1em;
+  + {
+    & #{$space-class-basic-normal} {
+      margin-top: 1em;
+    }
   }
   + .fieldset,
   + .field {
     margin-top: 0.5em;
   }
 }
+
+//----------------------------------------------------
+// / Combination Field
+//----------------------------------------------------
 
 .field {
   + .groups {
@@ -72,74 +75,43 @@
   + .heading {
     margin-top: 0.5em;
   }
-  + .group,
-  + .texts,
-  + .blockquote,
-  + .pre,
-  + .btns,
-  + .list,
-  + .table,
-  + .form,
-  + .alert,
-  + .wysiwyg {
-    margin-top: 0.5em;
+  + {
+    & #{$space-class-basic-normal} {
+      margin-top: 0.5em;
+    }
   }
   + .field {
     margin-top: 0.5em;
   }
 }
 
+//----------------------------------------------------
+// / Combination in WYSIWYG
+//----------------------------------------------------
+
 .wysiwyg {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    + h1,
-    + h2,
-    + h3,
-    + h4,
-    + h5,
-    + h6 {
-      margin-top: 1em;
+  #{$space-class-wysiwyg-heading} {
+    + {
+      & #{$space-class-wysiwyg-heading} {
+        margin-top: 1em;
+      }
     }
-    + img,
-    + p,
-    + blockquote,
-    + pre,
-    + ul,
-    + ol,
-    + table,
-    + hr {
-      margin-top: 1em;
+    + {
+      & #{$space-class-wysiwyg-normal} {
+        margin-top: 1em;
+      }
     }
   }
-  img,
-  p,
-  blockquote,
-  pre,
-  ul,
-  ol,
-  table,
-  hr {
-    + h1,
-    + h2,
-    + h3,
-    + h4,
-    + h5,
-    + h6 {
-      margin-top: 2em;
+  #{$space-class-wysiwyg-normal} {
+    + {
+      & #{$space-class-wysiwyg-heading} {
+        margin-top: 2em;
+      }
     }
-    + img,
-    + p,
-    + blockquote,
-    + pre,
-    + ul,
-    + ol,
-    + table,
-    + hr {
-      margin-top: 1em;
+    + {
+      & #{$space-class-wysiwyg-normal} {
+        margin-top: 1em;
+      }
     }
   }
 }

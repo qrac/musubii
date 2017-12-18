@@ -2,149 +2,49 @@
 // Utility: Deco
 //----------------------------------------------------
 
-.is-dark {
-  color: $dark;
+//----------------------------------------------------
+// / Dark Text
+//----------------------------------------------------
+
+@each $key, $value in $pattern-color-dark {
+  .is-#{$key} {
+    color: $value;
+  }
 }
 
-.is-dark-1 {
-  color: $dark-1;
+//----------------------------------------------------
+// / Light Text
+//----------------------------------------------------
+
+@each $key, $value in $pattern-color-light {
+  .is-#{$key} {
+    color: $value;
+  }
 }
 
-.is-dark-2 {
-  color: $dark-2;
+//----------------------------------------------------
+// / Theme Color Text
+//----------------------------------------------------
+
+@each $key, $value in $pattern-color-theme {
+  .is-#{$key}:not(.btn) {
+    color: $value;
+  }
 }
 
-.is-dark-3 {
-  color: $dark-3;
+//----------------------------------------------------
+// / Text Weight
+//----------------------------------------------------
+
+@each $key, $value in $pattern-font-weight {
+  .is-#{$key} {
+    font-weight: $value;
+  }
 }
 
-.is-dark-4 {
-  color: $dark-4;
-}
-
-.is-dark-5 {
-  color: $dark-5;
-}
-
-.is-dark-6 {
-  color: $dark-6;
-}
-
-.is-dark-7 {
-  color: $dark-7;
-}
-
-.is-dark-8 {
-  color: $dark-8;
-}
-
-.is-dark-9 {
-  color: $dark-9;
-}
-
-.is-light {
-  color: $light;
-}
-
-.is-light-1 {
-  color: $light-1;
-}
-
-.is-light-2 {
-  color: $light-2;
-}
-
-.is-light-3 {
-  color: $light-3;
-}
-
-.is-light-4 {
-  color: $light-4;
-}
-
-.is-light-5 {
-  color: $light-5;
-}
-
-.is-light-6 {
-  color: $light-6;
-}
-
-.is-light-7 {
-  color: $light-7;
-}
-
-.is-light-8 {
-  color: $light-8;
-}
-
-.is-light-9 {
-  color: $light-9;
-}
-
-.is-primary:not(.btn) {
-  color: $primary;
-}
-
-.is-info:not(.btn) {
-  color: $info;
-}
-
-.is-success:not(.btn) {
-  color: $success;
-}
-
-.is-warning:not(.btn) {
-  color: $warning;
-}
-
-.is-danger:not(.btn) {
-  color: $danger;
-}
-
-.is-yakuhanjp {
-  font-family: $font-sans-yakuhanjp;
-}
-
-.is-yakuhanjps {
-  font-family: $font-sans-yakuhanjps;
-}
-
-.is-normal {
-  font-weight: 300;
-}
-
-.is-strong {
-  font-weight: 700;
-}
-
-.is-weight-100 {
-  font-weight: 100;
-}
-
-.is-weight-200 {
-  font-weight: 200;
-}
-
-.is-weight-300 {
-  font-weight: 300;
-}
-
-.is-weight-400 {
-  font-weight: 400;
-}
-
-.is-weight-500 {
-  font-weight: 500;
-}
-
-.is-weight-700 {
-  font-weight: 700;
-}
-
-.is-weight-900 {
-  font-weight: 900;
-}
+//----------------------------------------------------
+// / Text Style
+//----------------------------------------------------
 
 .is-italic {
   font-style: italic;
@@ -165,6 +65,10 @@
 .is-uppercase {
   text-transform: uppercase;
 }
+
+//----------------------------------------------------
+// / Text Align
+//----------------------------------------------------
 
 :not(.grid):not(.btns):not(.field) {
   &.is-left {
@@ -193,6 +97,10 @@
   }
 }
 
+//----------------------------------------------------
+// / Text Control
+//----------------------------------------------------
+
 .is-nowrap {
   white-space: nowrap;
 }
@@ -215,4 +123,16 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+//----------------------------------------------------
+// / Yaku Han JP
+//----------------------------------------------------
+
+.is-yakuhanjp {
+  font-family: YakuHanJP, $font-sans;
+}
+
+.is-yakuhanjps {
+  font-family: YakuHanJPs, $font-sans;
 }
