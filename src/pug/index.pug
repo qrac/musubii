@@ -34,11 +34,11 @@ block contents
                 i.fab.fa-github(aria-hidden="true")
                 span.text #{github.ver}
                 | ・
-                a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo+"/releases")
-                  span.text Releases
-                | ・
                 a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo)
                   span.text Repository
+                | ・
+                a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo+"/releases")
+                  span.text Releases
             .col
               img.obj.is-topcover-illust(src=path.img+"/"+"illust-topcover.svg" alt="MUSUBii")
 
