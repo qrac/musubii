@@ -2115,8 +2115,16 @@ textarea,
   font-weight: 500;
 }
 
+.is-weight-600 {
+  font-weight: 600;
+}
+
 .is-weight-700 {
   font-weight: 700;
+}
+
+.is-weight-800 {
+  font-weight: 800;
 }
 
 .is-weight-900 {
