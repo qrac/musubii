@@ -2,6 +2,7 @@
   "name": "musubii",
   "description": "Simple CSS Framework for JP",
   "version": "5.1.0",
+  "main": "docs/css/musubii.css",
   "style": "docs/css/musubii.css",
   "keywords": [
     "css",
@@ -13,7 +14,10 @@
   "bugs": {
     "url": "https://github.com/qrac/musubii/issues"
   },
-  "author": "Qrac (https://twitter.com/Qrac_JP)",
+  "author": {
+    "name": "Qrac",
+    "web": "https://twitter.com/Qrac_JP"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qrac/musubii.git"
@@ -22,24 +26,21 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^7.0.0",
-    "gulp-clean-css": "^3.9.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.3",
     "gulp-concat": "^2.6.1",
-    "gulp-group-css-media-queries": "^1.2.0",
-    "gulp-imagemin": "^4.0.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sass-glob": "^1.0.8",
     "gulp-uglify": "^3.0.0",
-    "imagemin-pngquant": "^5.0.1"
-  },
-  "dependencies": {
     "jstransformer-markdown-it": "^2.0.0"
   }
 }
