@@ -382,6 +382,10 @@ textarea,
   margin: 0 auto;
 }
 
+.is-space > *:not(:first-child) {
+  margin-top: 1em;
+}
+
 .alert {
   background: whitesmoke;
   border: 1px solid #e0e0e0;
@@ -1804,10 +1808,6 @@ textarea,
 .is-xxs,
 .is-mobile-xxs {
   font-size: 62.5%;
-}
-
-.is-space > *:not(:first-child) {
-  margin-top: 1em;
 }
 
 @media screen and (min-width: 576px) {
