@@ -1,25 +1,6 @@
 /*! MUSUBii v5.1.0 MIT by Qrac */
 
-body {
-  color: rgba(0, 0, 0, 0.7);
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
-  line-height: 1.5;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-img[src$=".svg"] {
-  width: 100%;
-}
-
-iframe {
-  max-width: 100%;
-}
-
-/*! Shitaji.CSS v4.3.0 CC0 by Qrac */
+/*! Shitaji.CSS v4.5.0 CC0 by Qrac */
 
 *,
 ::before,
@@ -101,8 +82,8 @@ abbr[title] {
 }
 
 mark {
-  background-color: #ffff00;
-  color: #000000;
+  background-color: #ff0;
+  color: #000;
 }
 
 sub,
@@ -159,6 +140,10 @@ svg:not(:root) {
 audio:not([controls]) {
   display: none;
   height: 0;
+}
+
+input {
+  border-radius: 0;
 }
 
 button,
@@ -311,6 +296,25 @@ textarea,
 
 [hidden][aria-hidden="false"]:focus {
   clip: auto;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[src$=".svg"] {
+  width: 100%;
+}
+
+iframe {
+  max-width: 100%;
 }
 
 .grid {
