@@ -371,9 +371,7 @@ button {
 }
 
 .obj.is-badge {
-  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-box-align: center;
   align-items: center;
   vertical-align: middle;
   height: 0.875em;
@@ -398,7 +396,6 @@ button {
 }
 
 .tabs {
-  display: -webkit-box;
   display: flex;
   max-width: 100vw;
   overflow: hidden;
@@ -409,9 +406,7 @@ button {
 .tab {
   cursor: pointer;
   position: relative;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   height: 4.5em;
   padding: 0 1em;
