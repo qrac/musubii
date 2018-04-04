@@ -1617,15 +1617,18 @@ textarea,
   text-transform: uppercase;
 }
 
-:not(.grid):not(.btns):not(.field).is-left {
+:not(.grid):not(.btns):not(.field).is-left,
+:not(.grid):not(.btns):not(.field).is-mobile-left {
   text-align: left;
 }
 
-:not(.grid):not(.btns):not(.field).is-center {
+:not(.grid):not(.btns):not(.field).is-center,
+:not(.grid):not(.btns):not(.field).is-mobile-center {
   text-align: center;
 }
 
-:not(.grid):not(.btns):not(.field).is-right {
+:not(.grid):not(.btns):not(.field).is-right,
+:not(.grid):not(.btns):not(.field).is-mobile-right {
   text-align: right;
 }
 
@@ -1816,6 +1819,18 @@ textarea,
     width: 90vw;
   }
 
+  :not(.grid):not(.btns):not(.field).is-fablet-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-fablet-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-fablet-right {
+    text-align: right;
+  }
+
   .is-fablet-block {
     display: block;
   }
@@ -1939,6 +1954,18 @@ textarea,
 @media screen and (min-width: 768px) {
   .section > .inner {
     width: 720px;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-tablet-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-tablet-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-tablet-right {
+    text-align: right;
   }
 
   .is-tablet-block {
@@ -2066,6 +2093,18 @@ textarea,
     width: 960px;
   }
 
+  :not(.grid):not(.btns):not(.field).is-desktop-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-desktop-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-desktop-right {
+    text-align: right;
+  }
+
   .is-desktop-block {
     display: block;
   }
@@ -2189,6 +2228,30 @@ textarea,
 @media screen and (min-width: 1200px) {
   .section > .inner {
     width: 1140px;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-wide-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-wide-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-wide-right {
+    text-align: right;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-wide-only-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-wide-only-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-wide-only-right {
+    text-align: right;
   }
 
   .is-wide-block {
@@ -2356,6 +2419,18 @@ textarea,
 }
 
 @media screen and (max-width: 1199px) {
+  :not(.grid):not(.btns):not(.field).is-mobile-desktop-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-mobile-desktop-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-mobile-desktop-right {
+    text-align: right;
+  }
+
   .is-mobile-desktop-block {
     display: block;
   }
@@ -2402,6 +2477,18 @@ textarea,
 }
 
 @media screen and (max-width: 991px) {
+  :not(.grid):not(.btns):not(.field).is-mobile-tablet-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-mobile-tablet-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-mobile-tablet-right {
+    text-align: right;
+  }
+
   .is-mobile-tablet-block {
     display: block;
   }
@@ -2448,6 +2535,18 @@ textarea,
 }
 
 @media all and (orientation: landscape) and (max-width: 991px) {
+  :not(.grid):not(.btns):not(.field).is-landscape-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-landscape-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-landscape-right {
+    text-align: right;
+  }
+
   .is-landscape-block {
     display: block;
   }
@@ -2494,6 +2593,18 @@ textarea,
 }
 
 @media all and (orientation: portrait) and (max-width: 991px) {
+  :not(.grid):not(.btns):not(.field).is-portrait-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-portrait-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-portrait-right {
+    text-align: right;
+  }
+
   .is-portrait-block {
     display: block;
   }
@@ -2540,6 +2651,18 @@ textarea,
 }
 
 @media screen and (max-width: 767px) {
+  :not(.grid):not(.btns):not(.field).is-mobile-fablet-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-mobile-fablet-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-mobile-fablet-right {
+    text-align: right;
+  }
+
   .is-mobile-fablet-block {
     display: block;
   }
@@ -2586,6 +2709,18 @@ textarea,
 }
 
 @media screen and (max-width: 575px) {
+  :not(.grid):not(.btns):not(.field).is-mobile-only-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-mobile-only-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-mobile-only-right {
+    text-align: right;
+  }
+
   .is-mobile-only-block {
     display: block;
   }
@@ -2632,6 +2767,18 @@ textarea,
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
+  :not(.grid):not(.btns):not(.field).is-fablet-only-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-fablet-only-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-fablet-only-right {
+    text-align: right;
+  }
+
   .is-fablet-only-block {
     display: block;
   }
@@ -2678,6 +2825,18 @@ textarea,
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  :not(.grid):not(.btns):not(.field).is-tablet-only-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-tablet-only-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-tablet-only-right {
+    text-align: right;
+  }
+
   .is-tablet-only-block {
     display: block;
   }
@@ -2724,6 +2883,18 @@ textarea,
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+  :not(.grid):not(.btns):not(.field).is-desktop-only-left {
+    text-align: left;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-desktop-only-center {
+    text-align: center;
+  }
+
+  :not(.grid):not(.btns):not(.field).is-desktop-only-right {
+    text-align: right;
+  }
+
   .is-desktop-only-block {
     display: block;
   }

@@ -71,14 +71,34 @@
 //----------------------------------------------------
 
 :not(.grid):not(.btns):not(.field) {
-  &.is-left {
-    text-align: left;
-  }
-  &.is-center {
-    text-align: center;
-  }
-  &.is-right {
-    text-align: right;
+  @each $key-breakpoint, $mediaquery in $pattern-breakpoint-mediaquery-all {
+    @include mediaquery-pattern($mediaquery) {
+      @if $key-breakpoint == "mobile" {
+        &.is-left,
+        &.is-#{$key-breakpoint}-left {
+          text-align: left;
+        }
+        &.is-center,
+        &.is-#{$key-breakpoint}-center {
+          text-align: center;
+        }
+        &.is-right,
+        &.is-#{$key-breakpoint}-right {
+          text-align: right;
+        }
+      }
+      @else {
+        &.is-#{$key-breakpoint}-left {
+          text-align: left;
+        }
+        &.is-#{$key-breakpoint}-center {
+          text-align: center;
+        }
+        &.is-#{$key-breakpoint}-right {
+          text-align: right;
+        }
+      }
+    }
   }
   &.is-justify {
     text-align: justify;
