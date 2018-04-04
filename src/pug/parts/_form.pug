@@ -2,7 +2,7 @@
 //- Parts: Form
 //----------------------------------------------------
 
-.groups
+.groups.is-space
   h3.heading.is-xl Form
   p.texts.is-sm
     | ブラウザデフォルトを拡張する設計ですので、クラスを当てなくても使用できます。
@@ -16,20 +16,20 @@
         .grid.is-center
           .col.is-mobile-12.is-tablet-4.is-desktop-3
             .group.is-demo-box-1
-              form.form
-                .group
+              form.form.is-space
+                .group.is-space
                   p.heading メールアドレス
                   .field
                     input.input.is-mobile-0(type="email" placeholder="example@gmail.com")
-                .group
+                .group.is-space
                   p.heading パスワード
                   .field
                     input.input.is-mobile-0(type="password")
-                .group
+                .group.is-space
                   label
                     input.input(type="checkbox" name="checkbox-default")
                     span.text.is-sm 次回から自動的にログイン
-                .group
+                .group.is-space
                   .btns
                     input.btn.is-plain.is-success.is-mobile-0(type="submit" value="ログイン")
     include ../demo/_code-toggle.pug
@@ -63,7 +63,7 @@
         </form>
         ```
 
-.groups
+.groups.is-space
   h4.heading.is-xl Form - Field
   p.texts.is-sm
     | フォームパーツを&nbsp;
@@ -74,13 +74,13 @@
     | &nbsp;形式のクラスを加えることでレスポンシブにサイズを変化させられます。
   .group.is-wrap
     .inner
-      form.form
-        .group
+      form.form.is-space
+        .group.is-space
           p.heading Desktopサイズまでは入力枠がフルサイズ↓
           .field
             input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
             input.input.is-mobile-full.is-desktop-auto(type="text" placeholder="Text")
-        .group
+        .group.is-space
           p.heading 誕生日：
           .field
             select.select
@@ -110,7 +110,7 @@
               option 8
               option 9
               option 10
-        .group
+        .group.is-space
           .field.is-middle
             p.heading 性別：
             select.select
@@ -161,13 +161,13 @@
         ```
   include ../demo/_responsive-flex.pug
 
-.groups
+.groups.is-space
   h4.heading.is-xl Form - Parts
   p.texts.is-sm
     | フォームの各パーツは、対応しているHTMLタグの属性と値が使用できます。
   .group.is-wrap
     .inner
-      form.form
+      form.form.is-space
         fieldset.fieldset
           legend.heading.is-sm TEXT
           .field

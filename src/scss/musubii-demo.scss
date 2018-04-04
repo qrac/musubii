@@ -169,7 +169,8 @@ button {
 // / Demo - Heading
 //----------------------------------------------------
 
-.heading.is-demo-space-filter-1 {
+.heading.is-demo-space-filter-1,
+.texts.is-demo-space-filter-1 {
   position: relative;
   &:before,
   &:after {
@@ -179,14 +180,14 @@ button {
     display: block;
     width: 100%;
   }
-  &:before {
-    top: -2em;
-    height: 2em;
+  &:not(:first-child):before {
+    top: -1em;
+    height: 1em;
     background-color: rgba($orange-500, 0.3);
   }
   &:after {
     top: 0;
-    height: 1.25em;
+    height: 100%;
     background-color: rgba($blue-500, 0.3);
   }
 }
