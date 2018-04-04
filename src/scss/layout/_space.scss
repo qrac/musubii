@@ -10,4 +10,10 @@
   > *:not(:first-child) {
     margin-top: 1em;
   }
+  > .groups:not(:first-child) {
+    margin-top: 3em;
+  }
+  > .field:not(:first-child) {
+    margin-top: 0.5em;
+  }
 }

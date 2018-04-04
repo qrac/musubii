@@ -386,6 +386,14 @@ textarea,
   margin-top: 1em;
 }
 
+.is-space > .groups:not(:first-child) {
+  margin-top: 3em;
+}
+
+.is-space > .field:not(:first-child) {
+  margin-top: 0.5em;
+}
+
 .alert {
   background: whitesmoke;
   border: 1px solid #e0e0e0;
