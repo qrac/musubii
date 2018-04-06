@@ -39,10 +39,11 @@
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1",
-    "gulp-sass-glob": "^1.0.8",
+    "gulp-sass-glob": "^1.0.9",
     "gulp-uglify": "^3.0.0",
     "jstransformer-markdown-it": "^2.0.0",
     "node-sass-package-importer": "^5.1.1",
+    "sass-dashi": "^0.2.0",
     "shitajicss": "^4.5.0"
   }
 }
