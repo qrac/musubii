@@ -168,12 +168,15 @@ button {
   background-color: rgba(75, 154, 216, 0.3);
 }
 
-.heading.is-demo-space-filter-1 {
+.heading.is-demo-space-filter-1,
+.texts.is-demo-space-filter-1 {
   position: relative;
 }
 
 .heading.is-demo-space-filter-1:before,
-.heading.is-demo-space-filter-1:after {
+.heading.is-demo-space-filter-1:after,
+.texts.is-demo-space-filter-1:before,
+.texts.is-demo-space-filter-1:after {
   content: "";
   position: absolute;
   left: 0;
@@ -181,15 +184,17 @@ button {
   width: 100%;
 }
 
-.heading.is-demo-space-filter-1:before {
-  top: -2em;
-  height: 2em;
+.heading.is-demo-space-filter-1:not(:first-child):before,
+.texts.is-demo-space-filter-1:not(:first-child):before {
+  top: -1em;
+  height: 1em;
   background-color: rgba(231, 154, 39, 0.3);
 }
 
-.heading.is-demo-space-filter-1:after {
+.heading.is-demo-space-filter-1:after,
+.texts.is-demo-space-filter-1:after {
   top: 0;
-  height: 1.25em;
+  height: 100%;
   background-color: rgba(75, 154, 216, 0.3);
 }
 
@@ -371,9 +376,7 @@ button {
 }
 
 .obj.is-badge {
-  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-box-align: center;
   align-items: center;
   vertical-align: middle;
   height: 0.875em;
@@ -398,7 +401,6 @@ button {
 }
 
 .tabs {
-  display: -webkit-box;
   display: flex;
   max-width: 100vw;
   overflow: hidden;
@@ -409,9 +411,7 @@ button {
 .tab {
   cursor: pointer;
   position: relative;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   height: 4.5em;
   padding: 0 1em;

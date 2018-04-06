@@ -1,117 +1,19 @@
 //----------------------------------------------------
-// Layout: Space
+// Utility: Space
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Dedicated Variable
+// / Default
 //----------------------------------------------------
 
-$space-class-basic-mostly:
-".groups, .group, .texts, .blockquote, .pre, .btns, .list, .table, .form, .fieldset, .alert, .wysiwyg";
-
-$space-class-basic-normal:
-".group, .texts, .blockquote, .pre, .btns, .list, .table, .form, .alert, .wysiwyg";
-
-$space-class-wysiwyg-heading:
-"h1, h2, h3, h4, h5, h6";
-
-$space-class-wysiwyg-normal:
-"img, p, blockquote, pre, ul, ol, table, hr";
-
-//----------------------------------------------------
-// / Combination Mostly
-//----------------------------------------------------
-
-#{$space-class-basic-mostly} {
-  + .groups {
-    margin-top: 3em;
-  }
-  + .heading {
-    margin-top: 2em;
-  }
-  + {
-    & #{$space-class-basic-normal} {
-      margin-top: 1em;
-    }
-  }
-  + .fieldset {
-    margin-top: 1.5em;
-  }
-  + .field {
-    margin-top: 0.5em;
-  }
-}
-
-//----------------------------------------------------
-// / Combination Heading
-//----------------------------------------------------
-
-.heading {
-  + .groups {
-    margin-top: 3em;
-  }
-  + .heading {
+.is-space {
+  > *:not(:first-child) {
     margin-top: 1em;
   }
-  + {
-    & #{$space-class-basic-normal} {
-      margin-top: 1em;
-    }
+  > .groups:not(:first-child) {
+    margin-top: 3em;
   }
-  + .fieldset,
-  + .field {
+  > .field:not(:first-child) {
     margin-top: 0.5em;
-  }
-}
-
-//----------------------------------------------------
-// / Combination Field
-//----------------------------------------------------
-
-.field {
-  + .groups {
-    margin-top: 0.5em;
-  }
-  + .heading {
-    margin-top: 0.5em;
-  }
-  + {
-    & #{$space-class-basic-normal} {
-      margin-top: 0.5em;
-    }
-  }
-  + .field {
-    margin-top: 0.5em;
-  }
-}
-
-//----------------------------------------------------
-// / Combination in WYSIWYG
-//----------------------------------------------------
-
-.wysiwyg {
-  #{$space-class-wysiwyg-heading} {
-    + {
-      & #{$space-class-wysiwyg-heading} {
-        margin-top: 1em;
-      }
-    }
-    + {
-      & #{$space-class-wysiwyg-normal} {
-        margin-top: 1em;
-      }
-    }
-  }
-  #{$space-class-wysiwyg-normal} {
-    + {
-      & #{$space-class-wysiwyg-heading} {
-        margin-top: 2em;
-      }
-    }
-    + {
-      & #{$space-class-wysiwyg-normal} {
-        margin-top: 1em;
-      }
-    }
   }
 }

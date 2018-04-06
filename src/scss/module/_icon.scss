@@ -30,13 +30,6 @@ $icon-class-basic:
   + .text {
     margin-left: 0.375em;
   }
-  + {
-    & #{$icon-class-basic} {
-      &:not(.is-fit) {
-        margin-left: 0.375em;
-      }
-    }
-  }
 }
 
 .text {

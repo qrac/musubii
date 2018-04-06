@@ -16,8 +16,8 @@ const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin')
-const pngquant = require('imagemin-pngquant')
+const imagemin = require('gulp-imagemin');
+const packageImporter = require('node-sass-package-importer');
 
 // Setting : Paths
 const paths = {
@@ -54,7 +54,11 @@ gulp.task('scss', () => {
   return gulp.src(paths.src_scss + '**/*.scss')
     .pipe(sassGlob())
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
-    .pipe(sass(sassOptions))
+    .pipe(sass({
+        importer: packageImporter({
+          extensions: ['.scss', '.css']
+        })
+      }))
     .pipe(autoprefixer(['> 3% in JP', 'ie 11', 'android 4.4', 'last 1 versions']))
     .pipe(gcmq())
     .pipe(gulp.dest(paths.out_css))
@@ -98,41 +102,31 @@ gulp.task('jsuglify', () => {
 // Image Optimize
 gulp.task('imagemin', () => {
   return gulp.src(paths.src_img + '*')
-    .pipe(imagemin([
-      pngquant({ quality: 100, speed: 3 }),
-      imagemin.jpegtran({ quality: 85, progressive: true}),
-      imagemin.svgo(),
-      imagemin.gifsicle()
-    ]))
     .pipe(imagemin())
     .pipe(gulp.dest(paths.out_img))
 })
 
 // Browser Sync
-gulp.task('browser-sync', () => {
-  browserSync({
+gulp.task('browser-sync', function (done) {
+  browserSync.init({
     server: {
       baseDir: paths.out_html
-    }
+    },
+    notify: false
   });
-  gulp.watch(paths.out_html + '**/*.html', ['reload']);
-  gulp.watch(paths.out_css + '**/*.min.css', ['reload']);
-  gulp.watch(paths.out_js + '**/*.min.js', ['reload']);
-  gulp.watch(paths.out_img + '*', ['reload']);
+  done();
 });
 
-gulp.task('reload', () => {
+gulp.task('reload', function (done) {
   browserSync.reload();
+  done();
 });
 
 // Watch
 gulp.task('watch', () => {
-  gulp.watch([paths.src_pug + '**/*.pug', '!' + paths.src_pug + '**/_*.pug'], ['pug']);
-  gulp.watch(paths.src_scss + '**/*.scss', ['scss']);
-  gulp.watch(paths.src_js + '**/*.js', ['jsconcat']);
-  gulp.watch(paths.src_img + '*', ['imagemin']);
-  gulp.watch([paths.out_css + '**/*.css', '!' + paths.out_css + '**/*.min.css'], ['cssmin']);
-  gulp.watch([paths.out_js + '**/*.js', '!' + paths.out_js + '**/*.min.js'], ['jsuglify']);
+  gulp.watch([paths.src_pug + '**/*.pug', '!' + paths.src_pug + '**/_*.pug'], gulp.series('pug', 'reload'));
+  gulp.watch(paths.src_scss + '**/*.scss', gulp.series('scss', 'cssmin', 'reload'));
+  gulp.watch(paths.src_img + '*', gulp.series('imagemin', 'reload'));
 });
 
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', gulp.parallel('browser-sync', 'watch'));

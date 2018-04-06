@@ -19,7 +19,7 @@ block contents
       .inner-soft
         .group
           .grid.is-middle.is-center.is-gap-6x
-            .col
+            .col.is-space
               h2.heading.is-light.is-weight-700
                 span.text.is-block.is-topcover-1 Simple CSS
                 span.text.is-block.is-topcover-2 Framework for JP
@@ -32,7 +32,8 @@ block contents
                   span.text Download CSS
               p.texts.is-light.is-center.is-sm
                 i.fab.fa-github(aria-hidden="true")
-                span.text #{github.ver}
+                span.text
+                | v#{github.ver}
                 | ・
                 a.text.is-link-reverse(href=github.url+"/"+github.id+"/"+github.repo)
                   span.text Repository
@@ -46,7 +47,7 @@ block contents
 
     .tab-content.is-home.is-active.js-tab-content
       section.section.is-main-content.is-home-about
-        .inner-vw
+        .inner-vw.is-space
           h2.heading.is-primary.is-strong.is-center.is-lg.is-fablet-xl.is-tablet-xxl 腹が減ってはコードが書けぬ！
           h3.texts.is-sm.is-center
             span.text.is-inline-block web制作の
@@ -66,7 +67,7 @@ block contents
               .col
                 img.obj.is-home-point-illust.is-desktop-lg.is-wide-xl(src=path.img+"/"+"illust-about-1.svg" alt="必要なものを表す画像")
               .col
-                .group.is-home-point-textbox
+                .group.is-home-point-textbox.is-space
                   h2.heading.is-xl 必要なものを食べておく
                   h3.texts.is-sm
                     span.text web制作は小技の積み重ねなので、毎回1から作っていたら辛いですよね。MUSUBiiにはリセットCSS・ボタン・グリッドなど利用頻度の高い汎用スタイルが詰まっています。まずはMUSUBiiをほおばってからweb制作を始めてみましょう。
@@ -77,7 +78,7 @@ block contents
               .col
                 img.obj.is-home-point-illust.is-desktop-lg.is-wide-xl(src=path.img+"/"+"illust-about-2.svg" alt="簡単を表す画像")
               .col
-                .group.is-home-point-textbox
+                .group.is-home-point-textbox.is-space
                   h2.heading.is-xl 簡単で分かりやすい記述
                   h3.texts.is-sm
                     span.text 命名規則は単純で、特定の要素に&nbsp;
@@ -92,7 +93,7 @@ block contents
               .col
                 img.obj.is-home-point-illust.is-desktop-lg.is-wide-xl(src=path.img+"/"+"illust-about-3.svg" alt="最適化を表す画像")
               .col
-                .group.is-home-point-textbox
+                .group.is-home-point-textbox.is-space
                   h2.heading.is-xl
                     span.text 柔軟なレスポンシブ
                     span.obj.is-badge.is-new
@@ -108,7 +109,7 @@ block contents
               .col
                 img.obj.is-home-point-illust.is-desktop-lg.is-wide-xl(src=path.img+"/"+"illust-about-4.svg" alt="最適化を表す画像")
               .col
-                .group.is-home-point-textbox
+                .group.is-home-point-textbox.is-space
                   h2.heading.is-xl 日本語サイト向けに最適化
                   h3.texts.is-sm
                     span.text MUSUBiiは開発者であるデザイナーの
@@ -117,11 +118,11 @@ block contents
 
     .tab-content.is-getting-started.js-tab-content
       section.section.is-main-content
-        .inner-vw
+        .inner-vw.is-space
           h2.heading.is-xxl Getting Started
           h3.heading.is-xl Use
           .group.is-wrap
-            .inner
+            .inner.is-space
               h4.heading.is-lg Download
               p.texts.is-sm
                 | CSSファイル&nbsp;
@@ -150,11 +151,11 @@ block contents
               .wysiwyg.is-sm
                 :markdown-it
                   ```html
-                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.1.0/docs/css/musubii.min.css">
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.2.0/docs/css/musubii.min.css">
                   ```
           h3.heading.is-xl Detail
           .group.is-wrap
-            .inner
+            .inner.is-space
               h4.heading.is-lg Markup
               p.texts.is-sm
                 | 要素&nbsp;
@@ -179,7 +180,7 @@ block contents
                     <div class="btn is-plain is-success is-round is-lg">ボタンの例 D</div>
                     ```
           .group.is-wrap
-            .inner
+            .inner.is-space
               h4.heading.is-lg Layers
               p.texts.is-sm
                 | CSSのレイヤーは大きく4つに分類されています。
@@ -197,7 +198,7 @@ block contents
                   span.text.is-strong Utility
                   | &nbsp;… 調整用モディファイア
           .group.is-wrap
-            .inner
+            .inner.is-space
               h4.heading.is-lg Responsive
               p.texts.is-sm
                 | 5つの画面サイズで可変するレスポンシブウェブデザインになっています。
@@ -219,7 +220,7 @@ block contents
                   | &nbsp;… 1200px ~
           h3.heading.is-xl Support
           .group.is-wrap
-            .inner
+            .inner.is-space
               h4.heading.is-lg Browser
               p.texts.is-sm 日本で多く使われているブラウザを基準にバグフィックスを行なっています。
               .group.is-scroll-x
@@ -277,9 +278,9 @@ block contents
 
     .tab-content.is-documentation.js-tab-content
       section.section.is-main-content
-        .inner-vw
+        .inner-vw.is-space
           h2.heading.is-xxl Documentation
-          nav.group.is-documentation-nav.js-doc-navs
+          nav.group.is-documentation-nav.is-space.js-doc-navs
             p.texts.is-sm
               span.text Layout >&nbsp;
               span.text.is-dark-5
@@ -319,47 +320,47 @@ block contents
                 | &nbsp;/&nbsp;
                 span.text.is-link-reverse.js-doc-nav Clearfix
           .groups.is-documentation-contents.js-doc-contents
-            .content.is-active.js-doc-content
+            .content.is-space.is-active.js-doc-content
               include parts/_section.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_space.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_grid
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_heading
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_text.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_btn.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_list.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_table.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_form.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_icon.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_alert.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_wysiwyg.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_size.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_deco.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_display.pug
-            .content.js-doc-content
+            .content.is-space.js-doc-content
               include parts/_clearfix.pug
 
     .tab-content.is-libraries.js-tab-content
       section.section.is-main-content
-        .inner-vw
+        .inner-vw.is-space
           h2.heading.is-xxl Libraries
           p.texts.is-sm
             | 各種ライブラリとの併用が可能です。
           .group.is-wrap
-            .inner
+            .inner.is-space
               h3.heading.is-lg
                 a.text.is-primary.is-link(href="https://qrac.github.io/yakuhanjp/")
                   span.text Yaku Han JP
@@ -368,8 +369,8 @@ block contents
               .wysiwyg.is-sm
                 :markdown-it
                   ```html
-                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css">
-                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp_s.min.css">
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanjp.min.css">
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanjp_s.min.css">
                   ```
               h3.heading.is-lg
                 a.text.is-primary.is-link(href="https://fonts.google.com/")
@@ -411,7 +412,7 @@ block contents
               .wysiwyg.is-sm
                 :markdown-it
                   ```html
-                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
                   ```

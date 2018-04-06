@@ -2,31 +2,26 @@
 //- Parts: Space
 //----------------------------------------------------
 
-.groups
+.groups.is-space
   h3.heading.is-xl Space
   p.texts.is-sm
-    | ブロック要素を並べた場合に、その組み合わせに応じて後ろのコンテンツに&nbsp;
-    code.code margin-top
-    | &nbsp;が付与され、コンテンツ間の距離が保たれます。
-    | 対応しているクラスは以下の通りです。中でも広く距離を取りたい場合は&nbsp;
-    code.code .groups
-    | &nbsp;で囲みます。
-  .group.is-wrap.is-paint.is-light .groups .group .heading .texts .blockquote .pre .btns .list .table .form .fieldset .field .wysiwyg
-  p.texts.is-sm
-    | 距離を開けたくない場合や、相互作用をリセットさせたい場合は、以下のようなクラス名で囲みます。
-  .group.is-wrap.is-paint.is-light .contents .content .boxs .box
+    code.code .is-space
+    | &nbsp;を付与した要素の子要素は自動的に間隔が開きます。
   .group.is-wrap
     .inner
-      p.heading.is-xl 見出し
-      p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
-      p.heading.is-xl.is-demo-space-filter-1 見出し
-      p.texts.is-ellipsis テキストテキストテキストテキストテキストテキスト
+      .group.is-space
+        p.heading.is-xl.is-demo-space-filter-1 見出し
+        p.texts.is-demo-space-filter-1 テキストテキストテキストテキストテキストテキスト
+        p.heading.is-xl.is-demo-space-filter-1 見出し
+        p.texts.is-demo-space-filter-1 テキストテキストテキストテキストテキストテキスト
     include ../demo/_code-toggle.pug
     .wysiwyg.is-sm
       :markdown-it
         ```html
-        <p class="heading">見出し</p>
-        <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
-        <p class="heading">見出し</p>
-        <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+        <div class="group is-space">
+          <p class="heading">見出し</p>
+          <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+          <p class="heading">見出し</p>
+          <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+        </div>
         ```
