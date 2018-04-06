@@ -6,9 +6,8 @@
 // / Glob Import > Config SCSS
 //----------------------------------------------------
 
-@import "tone/**";
-@import "variable/**";
-@import "mixin/**";
+@import "~moftone";
+@import "~sass-dashi";
 
 //----------------------------------------------------
 // / Demo - Global
