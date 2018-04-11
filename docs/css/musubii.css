@@ -1,4 +1,4 @@
-/*! MUSUBii v5.2.0 MIT by Qrac */
+/*! MUSUBii v5.3.0 MIT by Qrac */
 
 /*! Shitaji.CSS v4.5.0 CC0 by Qrac */
 
@@ -514,7 +514,9 @@ iframe {
 
 .btn {
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   align-self: flex-start;
   white-space: nowrap;
   padding: 0 1em;
