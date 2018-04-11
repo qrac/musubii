@@ -514,7 +514,9 @@ iframe {
 
 .btn {
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   align-self: flex-start;
   white-space: nowrap;
   padding: 0 1em;
