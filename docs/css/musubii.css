@@ -332,10 +332,6 @@ iframe {
   padding-bottom: 0.5em;
 }
 
-.grid:not(.is-gap-none) + .grid:not(.is-gap-none) {
-  margin-top: 0.5em;
-}
-
 .grid.is-middle {
   align-items: center;
 }

@@ -17,9 +17,6 @@
     padding-left: 0.5em;
     padding-bottom: 0.5em;
   }
-  &:not(.is-gap-none) + .grid:not(.is-gap-none) {
-    margin-top: 0.5em;
-  }
   &.is-middle {
     align-items: center;
   }
