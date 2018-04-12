@@ -1,4 +1,4 @@
-/*! MUSUBii v5.3.0 MIT by Qrac */
+/*! MUSUBii v5.3.1 MIT by Qrac */
 
 /*! Shitaji.CSS v4.5.0 CC0 by Qrac */
 
@@ -330,10 +330,6 @@ iframe {
 .grid:not(.is-gap-none) > .col {
   padding-left: 0.5em;
   padding-bottom: 0.5em;
-}
-
-.grid:not(.is-gap-none) + .grid:not(.is-gap-none) {
-  margin-top: 0.5em;
 }
 
 .grid.is-middle {
