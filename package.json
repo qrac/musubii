@@ -23,10 +23,14 @@
     "url": "git+https://github.com/qrac/musubii.git"
   },
   "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.23.7",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-babel": "^7.0.1",
@@ -41,10 +45,15 @@
     "gulp-sass": "^3.2.1",
     "gulp-sass-glob": "^1.0.9",
     "gulp-uglify": "^3.0.0",
-    "jstransformer-markdown-it": "^2.0.0",
+    "jstransformer-markdown-it": "^2.1.0",
     "moftone": "^6.0.0",
-    "node-sass-package-importer": "^5.1.1",
+    "node-sass": "^4.8.3",
+    "node-sass-package-importer": "^5.1.2",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
     "sass-dashi": "^0.2.0",
-    "shitajicss": "^4.5.0"
+    "sass-loader": "^7.0.1",
+    "shitajicss": "^4.5.0",
+    "vuepress": "^0.8.3"
   }
 }
