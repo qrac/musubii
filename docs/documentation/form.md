@@ -329,6 +329,22 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ## Field
 
+`.field` でラッピングした要素は横並びになり、後述する Flex が適応できるようになります。`.is-middle` 付与で天地を揃えるなどの微調整も可能です。
+
+<demo-form demo="field"/>
+
+```html
+<div class="field">
+  <input type="text" class="input" name="text" placeholder="Text">
+  <input type="text" class="input is-mobile-0" name="text" placeholder="Text">
+</div>
+
+<div class="field is-middle">
+  <span class="text">天地中央揃え</span>
+  <input type="text" class="input is-mobile-0" name="text" placeholder="Text">
+</div>
+```
+
 ## Flex
 
 ## Attribute

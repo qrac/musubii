@@ -176,6 +176,13 @@
       .btns
         button.btn.is-plain.is-success(type="submit") 送信
         button.btn.is-plain.is-success(type="submit" disabled) 送信
+    .group.is-space(v-else-if="demo === 'field'")
+      .field
+        input.input(type="text" name="text" placeholder="Text")
+        input.input.is-mobile-0(type="text" name="text" placeholder="Text")
+      .field.is-middle
+        span.text 天地中央揃え
+        input.input.is-mobile-0(type="text" name="text" placeholder="Text")
 </template>
 
 <script>
