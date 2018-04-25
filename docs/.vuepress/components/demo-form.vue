@@ -183,6 +183,10 @@
       .field.is-middle
         span.text 天地中央揃え
         input.input.is-mobile-0(type="text" name="text" placeholder="Text")
+    .group.is-space(v-else-if="demo === 'flex'")
+      .field
+        - for (var i = 1; i <= 4; i++)
+          input.input.is-mobile-full.is-tablet-0(type="text" name="text" placeholder="Text")
 </template>
 
 <script>

@@ -347,6 +347,21 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ## Flex
 
+`.field` 直下の要素は `.is-(xxxx)-(yy)` 形式の幅を表すクラス名付与で幅を変動させられます。設定してあるメディアクエリごとに指定が可能。
+
+<demo-form demo="flex"/>
+
+```html
+<div class="field">
+  <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
+  <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
+  <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
+  <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
+</div>
+```
+
+<table-flex/>
+
 ## Attribute
 
 ## Validation
