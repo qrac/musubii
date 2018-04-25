@@ -364,4 +364,35 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ## Attribute
 
+フォームの各要素は属性を付与することで簡単に機能や役割を持たせられます。フォームでよく利用する属性には以下のようなものがあります。
+
+| Tag            | Detail                                    |
+| -------------- | ----------------------------------------- |
+| `name`         | `value` とセットで送信される名前          |
+| `value`        | 送信用データの初期値                      |
+| `placeholder`  | 入力前のヒントや例                        |
+| `size`         | パーツの初期サイズ                        |
+| `max`          | 数値や日付の最大値                        |
+| `min`          | 数値や日付の最小値                        |
+| `maxlength`    | 入力文字数の最大値                        |
+| `minlength`    | 入力文字数の最小値                        |
+| `autofocus`    | 遷移時にフォーカスさせる                  |
+| `autocomplete` | 値の自動補完（デフォルトは ON）           |
+| `list`         | `datalist` の id を指定して受け渡す       |
+| `form`         | `<form>` の外にあるパーツを関連づけられる |
+| `disabled`     | 無効状態                                  |
+| `readonly`     | 読み取り専用                              |
+| `required`     | 必須項目                                  |
+
+※`autocomplete` を意図通りに動作させるため `name` には的確な名前を付けます（[参考](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill)）。
+
 ## Validation
+
+フォームにはバリデーション機能が備わっています。`type="email"` や `type="url"` が入力形式を判別するほか、必須項目を入れているか入れていないかなどもチェックされており、CSS では以下の擬似クラスを用いてスタイルを当てることができます。
+
+| Class       | Detail                           |
+| ----------- | -------------------------------- |
+| `:valid`    | バリデーションをクリアしている   |
+| `:invalid`  | バリデーションをクリアしていない |
+| `:optional` | 任意項目                         |
+| `:required` | 必須項目                         |
