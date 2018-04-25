@@ -94,7 +94,7 @@
 
 ## Size
 
-サイズを表すクラス名 `.is-(x)` を付与することでボタンの大きさを変化させられます。角丸のサイズは相対的に変化します。デフォルトは `.is-md` の 1em。サイズは設定してあるメディアクエリごとに指定可能です。
+サイズを表すクラス名 `.is-(x)` を付与することでボタンの大きさを変化させられます。角丸のサイズは相対的に変化します。デフォルトは `.is-md`。サイズは設定してあるメディアクエリごとに指定可能です。
 
 <demo-button demo="size"/>
 
@@ -107,6 +107,14 @@
   <button class="btn is-lg">大きめ</button>
   <button class="btn is-xl">大きい</button>
   <button class="btn is-xxl">特大</button>
+</div>
+
+<div class="btns is-xxs">
+  <button class="btn">まとめて極小</button>
+  <button class="btn">まとめて極小</button>
+  <button class="btn">まとめて極小</button>
+  <button class="btn">まとめて極小</button>
+  <button class="btn">まとめて極小</button>
 </div>
 ```
 

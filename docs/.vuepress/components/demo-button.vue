@@ -68,6 +68,9 @@
         button.btn.is-plain.is-lg 大きめ
         button.btn.is-plain.is-xl 大きい
         button.btn.is-plain.is-xxl 特大
+      .btns.is-xxs
+        - for (var i = 1; i <= 5; i++)
+          button.btn.is-plain.is-xxs まとめて極小
     .group.is-space(v-else-if="demo === 'flex'")
       .btns
         +btn-basic("is-plain is-mobile-full is-tablet-0")
