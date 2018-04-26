@@ -12,7 +12,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in display
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Function
             each val, index in display

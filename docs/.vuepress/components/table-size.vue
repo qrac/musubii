@@ -12,7 +12,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in size
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Change Size
             each val, index in size

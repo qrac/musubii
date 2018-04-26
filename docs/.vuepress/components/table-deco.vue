@@ -21,7 +21,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_dark
-              td(class="is-"+val)= val
+              td(class="is-"+val)= ".is-" + val
           tr
             td.box.is-paint Text Alpha
             each val, index in deco_dark
@@ -32,7 +32,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_light
-              td.box.is-paint(class="is-"+val)= val
+              td.box.is-paint(class="is-"+val)= ".is-" + val
           tr
             td.box.is-paint Text Alpha
             each val, index in deco_light
@@ -43,7 +43,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_color
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Text Color
             each val, index in deco_color
@@ -55,7 +55,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_weight1
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Text Weight
             each val, index in deco_weight1
@@ -66,7 +66,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_weight2
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Text Weight
             each val, index in deco_weight2
@@ -77,7 +77,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_style
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Text Style
             each val, index in deco_style
@@ -88,7 +88,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_position
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Text Position
             each val, index in deco_position
@@ -99,7 +99,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_function1
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Function
             each val, index in deco_function1
@@ -110,7 +110,7 @@
           tr.box.is-stripe
             td.box.is-paint(width="150") Add Class
             each val, index in deco_function2
-              td= val
+              td= ".is-" + val
           tr
             td.box.is-paint Function
             each val, index in deco_function2
