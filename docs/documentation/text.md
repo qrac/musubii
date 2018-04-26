@@ -124,7 +124,9 @@
 </p>
 ```
 
-<table-size/>
+<table-size table="basic"/>
+
+<table-size table="responsive"/>
 
 ## Align
 

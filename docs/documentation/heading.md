@@ -20,4 +20,6 @@
 <p class="heading is-strong is-xs">6番目に大きな見出し</p>
 ```
 
-<table-size/>
+<table-size table="basic"/>
+
+<table-size table="responsive"/>
