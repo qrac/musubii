@@ -6,48 +6,26 @@ const gulp = require('gulp');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
-const browserSync = require('browser-sync');
-const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
-const concat = require('gulp-concat');
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const packageImporter = require('node-sass-package-importer');
 
 // Setting : Paths
 const paths = {
-  'src_pug': './src/pug/',
   'src_scss': './src/scss/',
-  'src_js': './src/js/',
   'src_img': './src/img/',
-  'out_html': './docs/',
   'out_css': './docs/css/',
-  'out_js': './docs/js/',
-  'out_img': './docs/img/'
-}
-
-// Setting : Pug Options
-const pugOptions = {
-  pretty: true
+  'out_img': './docs/public/img/'
 }
 
 // Setting : Sass Options
 const sassOptions = {
   outputStyle: 'expanded'
 }
-
-// Pug > HTML
-gulp.task('pug', () => {
-  return gulp.src([paths.src_pug + '**/*.pug', '!' + paths.src_pug + '**/_*.pug'])
-    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
-    .pipe(pug(pugOptions))
-    .pipe(gulp.dest(paths.out_html));
-});
 
 // Sass > CSS
 gulp.task('scss', () => {
@@ -73,32 +51,6 @@ gulp.task('cssmin', () => {
     .pipe(gulp.dest(paths.out_css))
 });
 
-// JS Concat & Babel
-gulp.task('jsconcat', () => {
-  return gulp.src(paths.src_js + '**/*.js')
-    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
-    .pipe(concat('app.js'))
-    .pipe(babel({
-      'presets': [
-        ['env', {
-          'targets': {
-            'browsers': ['> 3% in JP', 'ie 11', 'android 4.4', 'last 1 versions']
-          }
-        }]
-      ]
-    }))
-    .pipe(gulp.dest(paths.out_js))
-});
-
-// JS Uglify
-gulp.task('jsuglify', () => {
-  return gulp.src([paths.out_js + '**/*.js', '!' + paths.out_js + '**/*.min.js'])
-    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
-    .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.out_js))
-});
-
 // Image Optimize
 gulp.task('imagemin', () => {
   return gulp.src(paths.src_img + '*')
@@ -106,27 +58,10 @@ gulp.task('imagemin', () => {
     .pipe(gulp.dest(paths.out_img))
 })
 
-// Browser Sync
-gulp.task('browser-sync', function (done) {
-  browserSync.init({
-    server: {
-      baseDir: paths.out_html
-    },
-    notify: false
-  });
-  done();
-});
-
-gulp.task('reload', function (done) {
-  browserSync.reload();
-  done();
-});
-
 // Watch
 gulp.task('watch', () => {
-  gulp.watch([paths.src_pug + '**/*.pug', '!' + paths.src_pug + '**/_*.pug'], gulp.series('pug', 'reload'));
-  gulp.watch(paths.src_scss + '**/*.scss', gulp.series('scss', 'cssmin', 'reload'));
-  gulp.watch(paths.src_img + '*', gulp.series('imagemin', 'reload'));
+  gulp.watch(paths.src_scss + '**/*.scss', gulp.series('scss', 'cssmin'));
+  gulp.watch(paths.src_img + '*', gulp.series('imagemin'));
 });
 
-gulp.task('default', gulp.parallel('browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('watch'));
