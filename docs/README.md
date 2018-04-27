@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /illust-topcover.svg
+heroImage: /img/illust-topcover.svg
 actionText: Get Started →
 actionLink: /getting-started/
 features:
