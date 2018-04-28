@@ -1,5 +1,5 @@
 module.exports = {
-  dest: 'vuepress',
+  dest: 'docs',
   base: '/musubii/',
   locales: {
     '/': {
@@ -27,7 +27,7 @@ module.exports = {
   themeConfig: {
     repo: 'qrac/musubii',
     editLinks: true,
-    docsDir: 'docs',
+    docsDir: 'src',
     nav: [
       {
         text: 'Getting Started',

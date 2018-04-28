@@ -24,8 +24,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
