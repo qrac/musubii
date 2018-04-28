@@ -4,7 +4,12 @@
   "version": "5.3.1",
   "main": "docs/css/musubii.css",
   "style": "docs/css/musubii.css",
-  "keywords": ["css", "framework", "musubii", "japanese"],
+  "keywords": [
+    "css",
+    "framework",
+    "musubii",
+    "japanese"
+  ],
   "homepage": "https://github.com/qrac/musubii",
   "bugs": {
     "url": "https://github.com/qrac/musubii/issues"

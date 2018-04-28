@@ -1,0 +1,112 @@
+//----------------------------------------------------
+// MUSUBii Demo
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Import > Config SCSS
+//----------------------------------------------------
+
+@import "~moftone/src/scss/tone/_moftone.scss";
+@import "~sass-dashi/src/scss/_dashi.scss";
+
+//----------------------------------------------------
+// / Demo - VuePress / Config (override)
+//----------------------------------------------------
+
+// Colors
+$accentColor: #1cb4c7;
+$textColor: #2c3e50;
+$borderColor: #eaecef;
+$codeBgColor: #282c34;
+$arrowBgColor: #ccc;
+
+// Layout
+$navbarHeight: 3.6rem;
+$sidebarWidth: 20rem;
+$contentWidth: 800px;
+
+// Responsive Breakpoints
+$MQNarrow: 991px;
+$MQMobile: 767px;
+$MQMobileNarrow: 575px;
+
+//----------------------------------------------------
+// / Demo - VuePress / Theme
+//----------------------------------------------------
+
+.page {
+  padding-left: $sidebarWidth;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbarHeight;
+  background-color: $light;
+  border-bottom: 1px solid $borderColor;
+  z-index: 20;
+}
+
+.sidebar-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+}
+
+.sidebar {
+  position: fixed;
+  top: $navbarHeight;
+  left: 0;
+  bottom: 0;
+  width: $sidebarWidth;
+  margin: 0;
+  background-color: $light;
+  border-right: 1px solid $borderColor;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.content:not(.custom) {
+  max-width: $contentWidth;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  > *:first-child {
+    margin-top: $navbarHeight;
+  }
+  p.demo {
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+}
+
+//----------------------------------------------------
+// / Demo - Global
+//----------------------------------------------------
+
+body {
+  font-family: Nunito, YakuHanRPs, "Rounded Mplus 1c", $font-sans;
+}
+
+button {
+  color: $dark-2;
+  outline: none;
+}
+
+.musubii-demo {
+  //background-color: $cyan-500;
+}
+
+//----------------------------------------------------
+// / Demo - Section
+//----------------------------------------------------
+
+.section.is-topcover {
+  background-color: $cyan-500;
+}
