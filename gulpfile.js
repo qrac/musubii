@@ -18,8 +18,9 @@ const packageImporter = require('node-sass-package-importer');
 const paths = {
   'src_scss': './src/scss/',
   'src_img': './src/img/',
-  'out_css': './docs/css/',
-  'out_img': './docs/public/img/'
+  'dist_css': './docs/css/',
+  'out_css': './docs/.vuepress/public/css/',
+  'out_img': './docs/.vuepress/public/img/'
 }
 
 // Setting : Sass Options
@@ -39,16 +40,22 @@ gulp.task('scss', () => {
       }))
     .pipe(autoprefixer(['> 3% in JP', 'ie 11', 'android 4.4', 'last 1 versions']))
     .pipe(gcmq())
-    .pipe(gulp.dest(paths.out_css))
+    .pipe(gulp.dest(paths.dist_css))
 });
 
 // CSS Minify
 gulp.task('cssmin', () => {
-  return gulp.src([paths.out_css + '**/*.css', '!' + paths.out_css + '**/*.min.css'])
+  return gulp.src([paths.dist_css + '**/*.css', '!' + paths.dist_css + '**/*.min.css'])
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.out_css))
+    .pipe(gulp.dest(paths.dist_css))
+});
+
+// CSS Copy
+gulp.task('csscopy', () => {
+  return gulp.src([paths.dist_css + '**/*.css'])
+    .pipe(gulp.dest(paths.out_css));
 });
 
 // Image Optimize
@@ -60,7 +67,7 @@ gulp.task('imagemin', () => {
 
 // Watch
 gulp.task('watch', () => {
-  gulp.watch(paths.src_scss + '**/*.scss', gulp.series('scss', 'cssmin'));
+  gulp.watch(paths.src_scss + '**/*.scss', gulp.series('scss', 'cssmin', 'csscopy'));
   gulp.watch(paths.src_img + '*', gulp.series('imagemin'));
 });
 
