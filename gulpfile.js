@@ -19,8 +19,8 @@ const paths = {
   'src_scss': './src/scss/',
   'src_img': './src/img/',
   'dist_css': './docs/css/',
-  'out_css': './docs/.vuepress/public/css/',
-  'out_img': './docs/.vuepress/public/img/'
+  'out_css': './docs/demo/.vuepress/public/css/',
+  'out_img': './docs/demo/.vuepress/public/img/'
 }
 
 // Setting : Sass Options

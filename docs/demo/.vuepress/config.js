@@ -27,7 +27,7 @@ module.exports = {
   themeConfig: {
     repo: 'qrac/musubii',
     editLinks: true,
-    docsDir: 'docs',
+    docsDir: 'docs/demo',
     nav: [
       {
         text: 'Getting Started',

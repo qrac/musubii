@@ -21,8 +21,8 @@
   "scripts": {
     "dev": "run-p dev:*",
     "dev:gulp": "gulp",
-    "dev:vuepress": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev:vuepress": "vuepress dev docs/demo",
+    "build": "vuepress build docs/demo"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
