@@ -19,74 +19,8 @@
 // / Theme
 //----------------------------------------------------
 
-.page {
-  padding-left: $sidebarWidth;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $navbarHeight;
-  background-color: $accentColor;
-  border-bottom: 1px solid $borderColor;
-  color: $light;
-  z-index: 20;
-  .search-box input {
-    padding-left: 1.875em;
-    border: none;
-    border-radius: 999em;
-  }
-  .nav-links a {
-    &:hover,
-    &.router-link-active {
-      border-color: lighten($accentColor, 20%);
-      color: $light;
-    }
-    .icon.outbound {
-      color: $light;
-      vertical-align: baseline;
-    }
-  }
-}
-
-.sidebar-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9;
-}
-
-.sidebar {
-  position: fixed;
-  top: $navbarHeight;
-  left: 0;
-  bottom: 0;
-  width: $sidebarWidth;
-  margin: 0;
-  background-color: $light;
-  border-right: 1px solid $borderColor;
-  overflow-y: auto;
-  z-index: 10;
-}
-
-.content:not(.custom) {
-  max-width: $contentWidth;
-  margin: 0 auto;
-  padding: 2rem 2.5rem;
-  > *:first-child {
-    margin-top: $navbarHeight;
-  }
-  p.demo {
-    padding: 1rem 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-}
+@import "./_main.scss";
+@import "./_mobile.scss";
 
 //----------------------------------------------------
 // / Demo - Global

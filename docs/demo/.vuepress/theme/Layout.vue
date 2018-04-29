@@ -178,4 +178,3 @@ function updateMetaTags(meta, current) {
 
 <style src="prismjs/themes/prism-okaidia.css"></style>
 <style src="./styles/theme.scss" lang="scss"></style>
-<style src="./styles/theme.styl" lang="stylus"></style>
