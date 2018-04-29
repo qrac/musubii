@@ -18,7 +18,7 @@ npm install musubii
 
 ## CDN
 
-CDN の [jsDelivr](https://cdn.jsdelivr.net/npm/musubii/) にソースコードを上げていますので、以下の HTML タグを `head` に貼るだけでも利用ができます。
+[jsDelivr](https://cdn.jsdelivr.net/npm/musubii/) にソースコードを上げていますので、以下の HTML タグを `head` に貼るだけでも利用ができます。
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@5.3.1/docs/css/musubii.min.css">

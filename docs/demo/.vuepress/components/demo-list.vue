@@ -4,19 +4,19 @@
   - var list_text_b = "リストを入れ子にした場合は、その分インデントを追加して構造を見せる"
   - var list_text_c = "自由にナンバリング付きの米印などを置ける注釈用のスタイル"
   mixin list-basic(style)
-    ul.list.is-sm(class=style)
+    ul.list(class=style)
       - for (var i = 1; i <= 3; i++)
         li.item= list_text_a
       li.item= list_text_a
-        ul.list.is-sm(class=style)
+        ul.list(class=style)
           - for (var i = 1; i <= 4; i++)
             li.item= list_text_b
   mixin list-num(style)
-    ol.list.is-sm(class=style)
+    ol.list(class=style)
       - for (var i = 1; i <= 3; i++)
         li.item= list_text_a
       li.item= list_text_a
-        ol.list.is-sm(class=style)
+        ol.list(class=style)
           - for (var i = 1; i <= 4; i++)
             li.item= list_text_b
   .inner
@@ -25,7 +25,7 @@
       +list-basic("is-circle")
       +list-num("is-decimal")
     .group(v-else-if="demo === 'note'")
-      ul.list.is-note.is-sm
+      ul.list.is-note
         li.item
           span.text ※1
           span.text= list_text_c

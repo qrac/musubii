@@ -30,36 +30,36 @@
     button.btn(class=style).is-disable
       i.fas.fa-plus(aria-hidden="true")
   .inner
-    .group(v-if="demo === 'plain'")
+    .group.is-space(v-if="demo === 'plain'")
       .btns
         +btn-basic("is-plain")
-    .group(v-else-if="demo === 'melt'")
+    .group.is-space(v-else-if="demo === 'melt'")
       .btns
         +btn-basic("is-melt")
-    .group(v-else-if="demo === 'outline'")
+    .group.is-space(v-else-if="demo === 'outline'")
       .btns
         +btn-basic("is-outline")
-    .group(v-else-if="demo === 'ghost'")
+    .group.is-space(v-else-if="demo === 'ghost'")
       .group.is-wrap.is-paint
         .btns
           +btn-basic("is-ghost")
-    .group(v-else-if="demo === 'floating'")
+    .group.is-space(v-else-if="demo === 'floating'")
       .btns
         +btn-basic("is-plain is-floating")
-    .group(v-else-if="demo === 'round'")
+    .group.is-space(v-else-if="demo === 'round'")
       .btns
         +btn-basic("is-plain is-round")
       .group.is-wrap.is-paint
         .btns
           +btn-basic("is-ghost is-round")
-    .group(v-else-if="demo === 'circle'")
+    .group.is-space(v-else-if="demo === 'circle'")
       .btns
         +btn-icon("is-plain is-circle")
         +btn-icon("is-outline is-circle")
       .group.is-wrap.is-paint
         .btns
           +btn-icon("is-ghost is-circle")
-    .group(v-else-if="demo === 'size'")
+    .group.is-space(v-else-if="demo === 'size'")
       .btns
         button.btn.is-plain.is-xxs 極小
         button.btn.is-plain.is-xs 小さい

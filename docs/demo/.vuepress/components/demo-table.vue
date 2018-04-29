@@ -44,7 +44,7 @@
         tfoot
           tr
             th.box.is-right(colspan="5") テーブルフッター
-    .group(v-else-if="demo === 'line'")
+    .group.is-space(v-else-if="demo === 'line'")
       each val in ["line", "outline", "border"]
         table.table.is-sm(class="is-"+val)
           thead

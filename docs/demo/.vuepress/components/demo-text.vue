@@ -2,7 +2,7 @@
 .group.is-wrap
   .inner
     .group(v-if="demo === 'basic'")
-      p.texts.is-sm
+      p.texts
         span.text デフォルト
         | ｜
         strong.text.is-strong ストロング
@@ -22,20 +22,20 @@
           span.text 注釈入れ
           sup ※1
     .group(v-else-if="demo === 'dark'")
-      p.texts.is-sm
+      p.texts
         span.text.is-dark ダーク
         - for (var i = 1; i <= 9; i++)
           | &nbsp;
           span.text(class="is-dark-"+i)= "ダーク" + i
     .group(v-else-if="demo === 'light'")
       .group.is-wrap.is-paint
-        p.texts.is-sm
+        p.texts
           span.text.is-light ライト
           - for (var i = 1; i <= 9; i++)
             | &nbsp;
             span.text(class="is-light-"+i)= "ライト" + i
     .group(v-else-if="demo === 'color'")
-      p.texts.is-sm
+      p.texts
         span.text Normal
         | ｜
         span.text.is-primary Primary
@@ -48,7 +48,7 @@
         | ｜
         span.text.is-danger Danger
     .group.is-space(v-else-if="demo === 'link'")
-      p.texts.is-sm
+      p.texts
         a.text.is-link(href="") Link
         | ｜
         a.text.is-link.is-primary(href="") Primary
@@ -60,7 +60,7 @@
         a.text.is-link.is-warning(href="") Warning
         | ｜
         a.text.is-link.is-danger(href="") Danger
-      p.texts.is-sm
+      p.texts
         a.text.is-link-reverse(href="") Link reverse
         | ｜
         a.text.is-link-reverse.is-primary(href="") Primary
@@ -82,11 +82,11 @@
         span.text.is-xl 大きい
         span.text.is-xxl 特大
     .group(v-else-if="demo === 'align'")
-      p.texts.is-sm.is-left 左寄せのテキスト
-      p.texts.is-sm.is-center 中央寄せのテキスト
-      p.texts.is-sm.is-right 右寄せのテキスト
+      p.texts.is-left 左寄せのテキスト
+      p.texts.is-center 中央寄せのテキスト
+      p.texts.is-right 右寄せのテキスト
     .group(v-else-if="demo === 'transform'")
-      p.texts.is-sm
+      p.texts
         span.text.is-capitalize capitalize
         | ｜
         span.text.is-lowercase lowercase
@@ -97,9 +97,9 @@
         | テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。テキストを端で折り返さずに、三点リーダーで省略するスタイリング。
     .group(v-else-if="demo === 'blockquote'")
       blockquote.blockquote
-        | 引用の「blockquote」を使う場合。border-leftとbackground-colorを用いた装飾。
+        | 引用の「blockquote」を使う場合。border-left と background-color を用いた装飾。
     .group.is-space(v-else-if="demo === 'code'")
-      p.texts.is-sm
+      p.texts
         | テキストの途中に&nbsp;
         code.code code
         | &nbsp;を表示させる。

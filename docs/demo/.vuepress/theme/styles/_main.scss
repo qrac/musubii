@@ -57,17 +57,103 @@
   z-index: 10;
 }
 
+.content {
+  > *:not(:first-child):not(svg) {
+    margin-top: 1em;
+  }
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    font-weight: 700;
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+  > h1 {
+    font-size: 2em;
+  }
+  > h2 {
+    font-size: 1.5em;
+  }
+  > h3 {
+    font-size: 1.25em;
+  }
+  > h4 {
+    font-size: 1em;
+  }
+  > h5 {
+    font-size: 0.875em;
+  }
+  > h6 {
+    font-size: 0.75em;
+  }
+  > p {
+    line-height: 1.8;
+  }
+  > p code {
+    color: $indigo-500;
+    font-family: $font-mono;
+  }
+  > pre code {
+    font-family: $font-mono;
+  }
+  > pre[class*="language-"] {
+    font-size: 87.5%;
+    border-radius: 2px;
+  }
+  > p code,
+  > table code {
+    padding: 0.2em 0.5em;
+    background-color: $grey-100;
+    border-radius: 0.1875em;
+    font-size: 0.875em;
+    word-break: break-all;
+  }
+  > ul,
+  > ol {
+    line-height: 1.8;
+    margin-left: 1.5em;
+    > li {
+      display: list-item;
+    }
+    > li li {
+      font-size: 100%;
+    }
+  }
+  > ul > li {
+    list-style: circle outside;
+  }
+  > ol > li {
+    list-style: decimal outside;
+  }
+  > table {
+    width: 100%;
+    background-color: $light;
+    border-radius: 2px;
+    thead {
+    }
+    th {
+      background-color: $cyan-500;
+      color: $light;
+      font-weight: 700;
+    }
+    th,
+    td {
+      padding: 6px 12px;
+      border: 1px solid $grey-300;
+    }
+  }
+}
+
 .content:not(.custom) {
   max-width: $contentWidth;
   margin: 0 auto;
   padding: 2rem 2.5rem;
   > *:first-child {
     margin-top: $navbarHeight;
-  }
-  p.demo {
-    padding: 1rem 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
   }
 }
 

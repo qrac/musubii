@@ -43,7 +43,7 @@ MUSUBii は各種ライブラリとの併用が可能です。依存関係はあ
 
 ## jQuery
 
-各バージョンの[jQuery](https://jquery.com/)を CDN 経由で使えます。本家よりも[Google Hosted Libraries](https://developers.google.com/speed/libraries/#jquery)からの配信が比較的安定しています。
+各バージョンの [jQuery](https://jquery.com/) を CDN 経由で使えます。本家よりも [Google Hosted Libraries](https://developers.google.com/speed/libraries/#jquery) からの配信が比較的安定しています。
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
