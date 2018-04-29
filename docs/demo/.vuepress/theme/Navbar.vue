@@ -65,7 +65,6 @@ export default {
     position: absolute;
     top: 0.7rem;
     right: 1.5rem;
-    font-size: 0.9rem;
   }
 }
 
