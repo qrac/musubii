@@ -1,37 +1,22 @@
 //----------------------------------------------------
-// MUSUBii Demo
+// MUSUBii Demo - VuePress Theme SCSS
 //----------------------------------------------------
 
 //----------------------------------------------------
 // / Import > Config SCSS
 //----------------------------------------------------
 
+@import "./_config.scss";
+
+//----------------------------------------------------
+// / Import > Config SCSS (Node Modules)
+//----------------------------------------------------
+
 @import "~moftone/src/scss/tone/_moftone.scss";
 @import "~sass-dashi/src/scss/_dashi.scss";
 
 //----------------------------------------------------
-// / Demo - VuePress / Config (override)
-//----------------------------------------------------
-
-// Colors
-$accentColor: #1cb4c7;
-$textColor: #2c3e50;
-$borderColor: #eaecef;
-$codeBgColor: #282c34;
-$arrowBgColor: #ccc;
-
-// Layout
-$navbarHeight: 3.6rem;
-$sidebarWidth: 20rem;
-$contentWidth: 800px;
-
-// Responsive Breakpoints
-$MQNarrow: 991px;
-$MQMobile: 767px;
-$MQMobileNarrow: 575px;
-
-//----------------------------------------------------
-// / Demo - VuePress / Theme
+// / Theme
 //----------------------------------------------------
 
 .page {
@@ -44,9 +29,13 @@ $MQMobileNarrow: 575px;
   left: 0;
   right: 0;
   height: $navbarHeight;
-  background-color: $light;
+  background-color: $accentColor;
   border-bottom: 1px solid $borderColor;
+  color: $light;
   z-index: 20;
+  .search-box input {
+    border: none;
+  }
 }
 
 .sidebar-mask {

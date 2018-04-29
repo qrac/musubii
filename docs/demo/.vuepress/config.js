@@ -1,6 +1,7 @@
 module.exports = {
   dest: 'vuepress',
   base: '/musubii/',
+  serviceWorker: true,
   locales: {
     '/': {
       lang: 'ja',
@@ -32,11 +33,11 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', href: '/img/apple-touch-icon.png' }],
     ['link', { rel: 'shortcut icon', href: '/img/favicon.png' }]
   ],
-  serviceWorker: true,
   themeConfig: {
     repo: 'qrac/musubii',
     editLinks: true,
     docsDir: 'docs/demo',
+    logo: '/img/logo-set-yoko-musubii.svg',
     nav: [
       {
         text: 'Getting Started',
