@@ -1,3 +1,4 @@
 docs/demo/
 src/img/
+.prettierignore
 gulpfile.js
