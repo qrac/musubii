@@ -1,25 +1,102 @@
 <template>
-  <div class="home">
-    <div class="hero">
-      <img v-if="data.heroImage" :src="$withBase(data.heroImage)" alt="hero">
-      <h1>{{ data.heroText || $title || 'Hello' }}</h1>
-      <p class="description">
-        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
-      </p>
-      <p class="action" v-if="data.actionText && data.actionLink">
-        <NavLink class="action-button" :item="actionLink"/>
-      </p>
-    </div>
-    <div class="features" v-if="data.features && data.features.length">
-      <div class="feature" v-for="feature in data.features">
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.details }}</p>
+  <div class="home is-wide-lg">
+
+    <section class="section is-hero">
+      <div class="inner-soft">
+        <div class="grid is-middle is-center is-gap-6x">
+          <div class="col is-space">
+            <p class="heading is-light is-weight-700" v-if="data.hero.heading1">
+              <span class="text is-block is-hero-1">{{ data.hero.heading1 }}</span>
+              <span class="text is-block is-hero-2" v-if="data.hero.heading2">{{ data.hero.heading2 }}</span>
+            </p>
+            <h1 class="texts is-light is-sm" v-if="data.hero.texts">
+              <span class="text is-fablet-block" v-for="text in data.hero.texts">{{ text }}</span>
+            </h1>
+            <div class="btns is-center is-lg" v-if="data.download.path">
+              <a class="btn is-plain is-round is-mobile-full is-weight-900 is-cyan" :href="data.download.path" :download="data.download.file">
+                <i class="fas fa-cloud-download-alt" aria-hidden="true"></i>
+                <span class="text">{{ data.download.text }}</span>
+              </a>
+            </div>
+            <p class="texts is-light is-center is-sm" v-if="repoLink">
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <span class="text" v-if="data.version">v{{ data.version }}・</span>
+              <a class="text is-link-reverse" :href="repoLink">
+                <span class="text">Repository</span>
+              </a>
+              <span class="text" v-if="repoRelease">・</span>
+              <a class="text is-link-reverse" v-if="repoRelease" :href="repoRelease">
+                <span class="text">Releases</span>
+              </a>
+            </p>
+          </div>
+          <div class="col" v-if="data.hero.image">
+            <img class="obj is-hero-illust" :src="$withBase(data.hero.image)" alt="hero">
+          </div>
+        </div>
       </div>
-    </div>
-    <Content custom/>
-    <div class="footer" v-if="data.footer">
-      {{ data.footer }}
-    </div>
+    </section>
+
+    <section class="section is-about" v-if="data.about.heading">
+      <div class="inner-vw is-space">
+        <h2 class="heading is-primary is-strong is-center is-lg is-fablet-xl is-tablet-xxl">{{ data.about.heading }}</h2>
+        <p class="texts is-sm is-center" v-if="data.about.texts1">
+          <span class="text is-inline-block" v-for="text in data.about.texts1">{{ text }}</span>
+          <br>
+          <span class="text is-inline-block" v-for="text in data.about.texts2">{{ text }}</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section is-feature" v-for="feature in data.features">
+      <div class="inner-vw">
+        <div class="grid is-middle is-center is-gap-3x">
+          <div class="col" v-if="feature.image">
+            <img class="obj is-home-point-illust is-desktop-lg is-wide-xl" :src="$withBase(feature.image)" alt="feature">
+          </div>
+          <div class="col">
+            <div class="group is-home-point-textbox is-space">
+              <h2 class="heading is-xl" v-if="feature.heading">
+                <span class="text">{{ feature.heading }}</span>
+                <span class="obj is-badge is-new" v-if="feature.new === true"><span class="text">NEW</span></span>
+              </h2>
+              <p class="texts is-sm" v-if="feature.text">{{ feature.text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section is-footer">
+      <div class="inner">
+        <div class="grid is-center is-gap-2x">
+          <div class="col" v-if="data.footer.license">
+            <p class="text is-sm is-light">
+              <span class="text">License:&nbsp;</span>
+              <i :class="data.footer.license.icon" aria-hidden="true" v-if="data.footer.license.icon"></i>
+              <span class="text">{{ data.footer.license.name }}</span>
+            </p>
+          </div>
+          <div class="col" v-if="data.footer.author">
+            <p class="text is-sm is-light">
+              <span class="text">Author:&nbsp;</span>
+              <i :class="data.footer.author.icon" aria-hidden="true" v-if="data.footer.author.icon"></i>
+              <a class="text is-link-reverse" :href="data.footer.author.link" v-if="data.footer.author.link">{{ data.footer.author.name }}</a>
+              <span class="text" v-else="data.footer.author.link">{{ data.footer.author.name }}</span>
+            </p>
+          </div>
+          <div class="col" v-if="data.footer.copylight">
+            <p class="text is-sm is-light">
+              <span class="text">©&nbsp;</span>
+              <a class="text is-link-reverse" :href="data.footer.copylight.link" v-if="data.footer.copylight.link">{{ data.footer.copylight.name }}</a>
+              <span class="text" v-else="data.footer.copylight.link">{{ data.footer.copylight.name }}</span>
+              <span class="text">&nbsp;2018</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </div>
 </template>
 
@@ -37,144 +114,21 @@ export default {
         link: this.data.actionLink,
         text: this.data.actionText
       };
+    },
+    repoLink() {
+      const { repo } = this.$site.themeConfig;
+      if (repo) {
+        return /^https?:/.test(repo) ? repo : `https://github.com/${repo}`;
+      }
+    },
+    repoRelease() {
+      const { repo } = this.$site.themeConfig;
+      if (repo) {
+        return /^https?:/.test(repo)
+          ? repo
+          : `https://github.com/${repo}/releases`;
+      }
     }
   }
 };
 </script>
-
-<style lang="stylus">
-@import './styles/config.styl';
-
-.home {
-  padding: $navbarHeight 2rem 0;
-  max-width: 960px;
-  margin: 0px auto;
-
-  .hero {
-    text-align: center;
-
-    img {
-      max-height: 280px;
-      display: block;
-      margin: 3rem auto 1.5rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
-
-    h1, .description, .action {
-      margin: 1.8rem auto;
-    }
-
-    .description {
-      max-width: 35rem;
-      font-size: 1.6rem;
-      line-height: 1.3;
-      color: lighten($textColor, 40%);
-    }
-
-    .action-button {
-      display: inline-block;
-      font-size: 1.2rem;
-      color: #fff;
-      background-color: $accentColor;
-      padding: 0.8rem 1.6rem;
-      border-radius: 4px;
-      transition: background-color 0.1s ease;
-      box-sizing: border-box;
-      border-bottom: 1px solid darken($accentColor, 10%);
-
-      &:hover {
-        background-color: lighten($accentColor, 10%);
-      }
-    }
-  }
-
-  .features {
-    border-top: 1px solid $borderColor;
-    padding: 1.2rem 0;
-    margin-top: 2.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: strech;
-    justify-content: space-between;
-  }
-
-  .feature {
-    flex-grow: 1;
-    flex-basis: 30%;
-    max-width: 30%;
-
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      border-bottom: none;
-      padding-bottom: 0;
-      color: lighten($textColor, 10%);
-    }
-
-    p {
-      color: lighten($textColor, 25%);
-    }
-  }
-
-  .footer {
-    padding: 2.5rem;
-    border-top: 1px solid $borderColor;
-    text-align: center;
-    color: lighten($textColor, 25%);
-  }
-}
-
-@media (max-width: $MQMobile) {
-  .home {
-    .features {
-      flex-direction: column;
-    }
-
-    .feature {
-      max-width: 100%;
-      padding: 0 2.5rem;
-    }
-  }
-}
-
-@media (max-width: $MQMobileNarrow) {
-  .home {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-
-    .hero {
-      img {
-        max-height: 210px;
-        margin: 2rem auto 1.2rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      h1, .description, .action {
-        margin: 1.2rem auto;
-      }
-
-      .description {
-        font-size: 1.2rem;
-      }
-
-      .action-button {
-        font-size: 1rem;
-        padding: 0.6rem 1.2rem;
-      }
-    }
-
-    .feature {
-      h2 {
-        font-size: 1.25rem;
-      }
-    }
-  }
-}
-</style>

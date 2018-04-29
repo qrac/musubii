@@ -43,13 +43,26 @@ button {
 // / Demo - Section
 //----------------------------------------------------
 
-.section.is-topcover {
-  padding: 6em 0;
+.section.is-hero {
+  padding: 9.5em 0 6em;
   background-color: $cyan-500;
+  a {
+    color: $light;
+  }
 }
 
-.section.is-main-content {
+.section.is-about {
   padding: 3em 0;
+}
+
+.section.is-feature {
+  padding: 3em 0;
+  &:nth-child(odd) {
+    background-color: $grey-50;
+  }
+  &:nth-child(even) .grid {
+    flex-direction: row-reverse;
+  }
 }
 
 .section.is-bg-yellow {
@@ -68,6 +81,9 @@ button {
 .section.is-footer {
   background-color: $blue-grey-800;
   padding: 2em 0;
+  a {
+    color: $light;
+  }
 }
 
 //----------------------------------------------------
@@ -104,7 +120,7 @@ button {
 // / Demo - Text
 //----------------------------------------------------
 
-.text.is-topcover-1 {
+.text.is-hero-1 {
   font-size: 16.75vw;
   line-height: 1.1;
   @include tablet {
@@ -112,7 +128,7 @@ button {
   }
 }
 
-.text.is-topcover-2 {
+.text.is-hero-2 {
   font-size: 11vw;
   line-height: 1.1;
   @include tablet {
@@ -302,7 +318,7 @@ button {
 // / Demo - Object
 //----------------------------------------------------
 
-.obj.is-topcover-illust {
+.obj.is-hero-illust {
   width: 90vw;
   @include tablet {
     width: 23.5em;
