@@ -24,117 +24,125 @@
 </template>
 
 <script>
-import OutboundLink from './OutboundLink.vue'
-import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
+import OutboundLink from "./OutboundLink.vue";
+import { resolvePage, normalize, outboundRE, endingSlashRE } from "./util";
 
 export default {
   components: { OutboundLink },
-  props: ['sidebarItems'],
+  props: ["sidebarItems"],
   computed: {
-    prev () {
-      const prev = this.$page.frontmatter.prev
+    prev() {
+      const prev = this.$page.frontmatter.prev;
       if (prev === false) {
-        return
+        return;
       } else if (prev) {
-        return resolvePage(this.$site.pages, prev, this.$route.path)
+        return resolvePage(this.$site.pages, prev, this.$route.path);
       } else {
-        return resolvePrev(this.$page, this.sidebarItems)
+        return resolvePrev(this.$page, this.sidebarItems);
       }
     },
-    next () {
-      const next = this.$page.frontmatter.next
+    next() {
+      const next = this.$page.frontmatter.next;
       if (next === false) {
-        return
+        return;
       } else if (next) {
-        return resolvePage(this.$site.pages, next, this.$route.path)
+        return resolvePage(this.$site.pages, next, this.$route.path);
       } else {
-        return resolveNext(this.$page, this.sidebarItems)
+        return resolveNext(this.$page, this.sidebarItems);
       }
     },
-    editLink () {
+    editLink() {
       const {
         repo,
         editLinks,
-        docsDir = '',
-        docsBranch = 'master',
+        docsDir = "",
+        docsBranch = "master",
         docsRepo = repo
-      } = this.$site.themeConfig
+      } = this.$site.themeConfig;
 
-      let path = normalize(this.$page.path)
+      let path = normalize(this.$page.path);
       if (endingSlashRE.test(path)) {
-        path += 'README.md'
+        path += "README.md";
       } else {
-        path += '.md'
+        path += ".md";
       }
 
       if (docsRepo && editLinks) {
         const base = outboundRE.test(docsRepo)
           ? docsRepo
-          : `https://github.com/${docsRepo}`
+          : `https://github.com/${docsRepo}`;
         return (
-          base.replace(endingSlashRE, '') +
+          base.replace(endingSlashRE, "") +
           `/edit/${docsBranch}/` +
-          docsDir.replace(endingSlashRE, '') +
+          docsDir.replace(endingSlashRE, "") +
           path
-        )
+        );
       }
     },
-    editLinkText () {
+    editLinkText() {
       return (
         this.$themeLocaleConfig.editLinkText ||
         this.$site.themeConfig.editLinkText ||
         `Edit this page`
-      )
+      );
     }
   }
+};
+
+function resolvePrev(page, items) {
+  return find(page, items, -1);
 }
 
-function resolvePrev (page, items) {
-  return find(page, items, -1)
+function resolveNext(page, items) {
+  return find(page, items, 1);
 }
 
-function resolveNext (page, items) {
-  return find(page, items, 1)
-}
-
-function find (page, items, offset) {
-  const res = []
+function find(page, items, offset) {
+  const res = [];
   items.forEach(item => {
-    if (item.type === 'group') {
-      res.push(...item.children || [])
+    if (item.type === "group") {
+      res.push(...(item.children || []));
     } else {
-      res.push(item)
+      res.push(item);
     }
-  })
+  });
   for (let i = 0; i < res.length; i++) {
-    const cur = res[i]
-    if (cur.type === 'page' && cur.path === page.path) {
-      return res[i + offset]
+    const cur = res[i];
+    if (cur.type === "page" && cur.path === page.path) {
+      return res[i + offset];
     }
   }
 }
 </script>
 
-<style lang="stylus">
-@import './styles/config.styl'
+<style lang="scss">
+@import "./styles/_config.scss";
+@import "~moftone/src/scss/tone/_moftone.scss";
+@import "~sass-dashi/src/scss/_dashi.scss";
 
-.page
-  padding-bottom 2rem
+.page {
+  padding-bottom: 2rem;
+}
 
-.edit-link.content
-  padding-top 0 !important
-  a
-    color lighten($textColor, 25%)
-    margin-right 0.25rem
+.edit-link.content {
+  padding-top: 0 !important;
+  a {
+    color: lighten($textColor, 25%);
+    margin-right: 0.25rem;
+  }
+}
 
-.page-nav.content
-  padding-top 1rem !important
-  padding-bottom 0 !important
-  .inner
-    min-height 2rem
-    margin-top 0 !important
-    border-top 1px solid $borderColor
-    padding-top 1rem
-  .next
-    float right
+.page-nav.content {
+  padding-top: 1rem !important;
+  padding-bottom: 0 !important;
+  .inner {
+    min-height: 2rem;
+    margin-top: 0 !important;
+    border-top: 1px solid $borderColor;
+    padding-top: 1rem;
+  }
+  .next {
+    float: right;
+  }
+}
 </style>
