@@ -18,7 +18,7 @@
   <div class="field">
     <input class="input is-mobile-full" type="password" name="password">
   </div>
-  <label>
+  <label class="label is-block">
     <input class="input" type="checkbox" name="checkbox">
     <span class="text is-middle is-sm">次回から自動的にログイン</span>
   </label>
