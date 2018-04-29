@@ -15,7 +15,7 @@
               p.heading パスワード
               .field
                 input.input.is-mobile-full(type="password" name="password")
-              label
+              label.label.is-block
                 input.input(type="checkbox" name="checkbox")
                 span.text.is-middle.is-sm 次回から自動的にログイン
               .btns
