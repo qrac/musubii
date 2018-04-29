@@ -90,7 +90,7 @@
               <span class="text">©&nbsp;</span>
               <a class="text is-link-reverse" :href="data.footer.copylight.link" v-if="data.footer.copylight.link">{{ data.footer.copylight.name }}</a>
               <span class="text" v-else="data.footer.copylight.link">{{ data.footer.copylight.name }}</span>
-              <span class="text">&nbsp;2018</span>
+              <span class="text">&nbsp;{{ copylightYear }}</span>
             </p>
           </div>
         </div>
@@ -128,6 +128,10 @@ export default {
           ? repo
           : `https://github.com/${repo}/releases`;
       }
+    },
+    copylightYear() {
+      const _now = new Date();
+      return _now.getFullYear();
     }
   }
 };
