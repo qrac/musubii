@@ -38,6 +38,17 @@
     border: none;
     border-radius: 999em;
   }
+  .nav-links a {
+    &:hover,
+    &.router-link-active {
+      border-color: lighten($accentColor, 20%);
+      color: $light;
+    }
+    .icon.outbound {
+      color: $light;
+      vertical-align: baseline;
+    }
+  }
 }
 
 .sidebar-mask {
