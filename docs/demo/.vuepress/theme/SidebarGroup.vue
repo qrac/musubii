@@ -17,47 +17,62 @@
 </template>
 
 <script>
-import SidebarLink from './SidebarLink.vue'
-import DropdownTransition from './DropdownTransition.vue'
+import SidebarLink from "./SidebarLink.vue";
+import DropdownTransition from "./DropdownTransition.vue";
 
 export default {
-  name: 'SidebarGroup',
-  props: ['item', 'first', 'open', 'collapsable'],
+  name: "SidebarGroup",
+  props: ["item", "first", "open", "collapsable"],
   components: { SidebarLink, DropdownTransition }
-}
+};
 </script>
 
-<style lang="stylus">
-.sidebar-group
-  &:not(.first)
-    margin-top 1em
-  .sidebar-group
-    padding-left 0.5em
-  &:not(.collapsable)
-    .sidebar-heading
-      cursor auto
-      color inherit
+<style lang="scss">
+@import "./styles/_config.scss";
+@import "~moftone/src/scss/tone/_moftone.scss";
+@import "~sass-dashi/src/scss/_dashi.scss";
 
-.sidebar-heading
-  color #999
-  transition color .15s ease
-  cursor pointer
-  font-size 1.1em
-  font-weight bold
+.sidebar-group {
+  &:not(.first) {
+    margin-top: 1em;
+  }
+  .sidebar-group {
+    padding-left: 0.5em;
+  }
+  &:not(.collapsable) {
+    .sidebar-heading {
+      cursor: auto;
+      color: inherit;
+    }
+  }
+}
+
+.sidebar-heading {
+  color: #999;
+  transition: color 0.15s ease;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
   // text-transform uppercase
-  padding-left 1.5rem
-  margin-top 0
-  margin-bottom 0.5rem
-  &.open, &:hover
-    color inherit
-  .arrow
-    position relative
-    top -0.12em
-    left 0.5em
-  &:.open .arrow
-    top -0.18em
+  padding-left: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  &.open,
+  &:hover {
+    color: inherit;
+  }
+  .arrow {
+    position: relative;
+    top: -0.12em;
+    left: 0.5em;
+  }
+  &.open .arrow {
+    top: -0.18em;
+  }
+}
 
-.sidebar-group-items
-  transition height .1s ease-out
-  overflow hidden
+.sidebar-group-items {
+  transition: height 0.1s ease-out;
+  overflow: hidden;
+}
 </style>

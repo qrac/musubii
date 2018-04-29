@@ -5,8 +5,9 @@
   </svg>
 </template>
 
-<style lang="stylus">
-.icon.outbound
-  color #aaa
-  display inline-block
+<style lang="scss">
+.icon.outbound {
+  color: #aaa;
+  display: inline-block;
+}
 </style>
