@@ -395,7 +395,7 @@ iframe {
 }
 
 .is-space > .field:not(:first-child) {
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
 .wysiwyg.is-space > h1:not(:first-child),

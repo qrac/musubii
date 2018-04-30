@@ -15,7 +15,7 @@
               p.heading パスワード
               .field
                 input.input.is-mobile-full(type="password" name="password")
-              label.label.is-block
+              label.label.is-checkbox.is-block
                 input.input(type="checkbox" name="checkbox")
                 span.text.is-middle.is-sm 次回から自動的にログイン
               .btns
@@ -143,7 +143,7 @@
         input.input#checkbox-demo-2-3(type="checkbox" name="checkbox-demo-2" disabled)
         label.label.is-checkbox(for="checkbox-demo-2-3")
           span.text.is-middle TypeScript
-    .group(v-else-if="demo === 'select'")
+    .group.is-space(v-else-if="demo === 'select'")
       .field
         - var select_num = ["A", "B", "C", "D", "E"]
         select.select
