@@ -51,7 +51,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass-dashi": "^0.2.0",
     "sass-loader": "^7.0.1",
-    "shitajicss": "^4.5.0",
+    "shitajicss": "^4.5.1",
     "vuepress": "^0.8.4"
   }
 }

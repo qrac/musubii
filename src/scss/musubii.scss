@@ -2,14 +2,14 @@
 /*! MUSUBii v5.3.1 MIT by Qrac */
 //----------------------------------------------------
 
-@import "~shitajicss";
+@import "~shitajicss/src/scss/_shitaji.scss";
 
 //----------------------------------------------------
 // / Import > Config SCSS
 //----------------------------------------------------
 
-@import "~moftone";
-@import "~sass-dashi";
+@import "~moftone/src/scss/tone/_moftone.scss";
+@import "~sass-dashi/src/scss/_dashi.scss";
 
 //----------------------------------------------------
 // / Glob Import > Project SCSS
