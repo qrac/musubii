@@ -137,9 +137,12 @@
 //----------------------------------------------------
 
 .input[type="file"] {
-  display: block;
+  cursor: pointer;
   max-width: 70vw;
   overflow: hidden;
+  &[disabled] {
+    cursor: default;
+  }
 }
 
 //----------------------------------------------------

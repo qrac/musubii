@@ -80,10 +80,10 @@
       .field
         label.btn.is-plain
           span.text ファイル選択
-          input.is-none(type="file" name="file")
-        label.btn.is-plain
+          input.input.is-none(type="file" name="file")
+        label.btn.is-plain.is-disable
           span.text ファイル選択
-          input.is-none(type="file" name="file" disabled)
+          input.input.is-none(type="file" name="file" disabled)
     .group.is-space(v-else-if="demo === 'color'")
       .field
         input.input(type="color" name="color" value="#1cb4c7")
