@@ -386,12 +386,25 @@ iframe {
   margin-top: 1em;
 }
 
+.is-space > .heading:not(:first-child) {
+  margin-top: 1.5em;
+}
+
 .is-space > .groups:not(:first-child) {
   margin-top: 3em;
 }
 
 .is-space > .field:not(:first-child) {
   margin-top: 1em;
+}
+
+.wysiwyg.is-space > h1:not(:first-child),
+.wysiwyg.is-space > h2:not(:first-child),
+.wysiwyg.is-space > h3:not(:first-child),
+.wysiwyg.is-space > h4:not(:first-child),
+.wysiwyg.is-space > h5:not(:first-child),
+.wysiwyg.is-space > h6:not(:first-child) {
+  margin-top: 1.5em;
 }
 
 .heading {
