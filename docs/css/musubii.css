@@ -394,7 +394,7 @@ iframe {
   margin-top: 3em;
 }
 
-.is-space > .field:not(:first-child) {
+.is-space .heading + .field {
   margin-top: 0.5em;
 }
 

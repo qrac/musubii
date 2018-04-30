@@ -23,7 +23,7 @@
   > .groups:not(:first-child) {
     margin-top: $space-margin-groups;
   }
-  > .field:not(:first-child) {
+  .heading + .field {
     margin-top: $space-margin-field;
   }
 }
