@@ -1184,18 +1184,27 @@ iframe {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.input[type="radio"],
-.input[type="checkbox"] {
-  margin-right: 0.25em;
+.label.is-radio > .input[type="radio"] + .text,
+.label.is-radio > .input[type="checkbox"] + .text,
+.label.is-checkbox > .input[type="radio"] + .text,
+.label.is-checkbox > .input[type="checkbox"] + .text {
+  margin-left: 0.5em;
+  margin-right: 1em;
 }
 
-.input[type="radio"] + .text,
-.input[type="checkbox"] + .text {
+.input[type="radio"] + .label.is-radio,
+.input[type="radio"] + .label.is-checkbox,
+.input[type="checkbox"] + .label.is-radio,
+.input[type="checkbox"] + .label.is-checkbox {
   margin-right: 1em;
 }
 
 .input[type="radio"][disabled] + .text,
-.input[type="checkbox"][disabled] + .text {
+.input[type="radio"][disabled] + .label.is-radio,
+.input[type="radio"][disabled] + .label.is-checkbox,
+.input[type="checkbox"][disabled] + .text,
+.input[type="checkbox"][disabled] + .label.is-radio,
+.input[type="checkbox"][disabled] + .label.is-checkbox {
   color: rgba(0, 0, 0, 0.4);
 }
 

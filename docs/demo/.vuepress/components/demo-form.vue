@@ -101,47 +101,47 @@
           option(value="3")
           option(value="4")
           option(value="5")
-    .group(v-else-if="demo === 'radio'")
+    .group.is-space(v-else-if="demo === 'radio'")
       .field
-        label
+        label.label.is-radio
           input.input(type="radio" name="radio-demo-1" checked)
           span.text.is-middle むすびー
-        label
+        label.label.is-radio
           input.input(type="radio" name="radio-demo-1")
           span.text.is-middle むすびい
-        label
+        label.label.is-radio
           input.input(type="radio" name="radio-demo-1" disabled)
           span.text.is-middle むすび
-      .field
+      .field.is-middle
         input.input#radio-demo-2-1(type="radio" name="radio-demo-2" checked)
-        label(for="radio-demo-2-1")
+        label.label.is-radio(for="radio-demo-2-1")
           span.text.is-middle ムスビー
         input.input#radio-demo-2-2(type="radio" name="radio-demo-2")
-        label(for="radio-demo-2-2")
+        label.label.is-radio(for="radio-demo-2-2")
           span.text.is-middle ムスビイ
         input.input#radio-demo-2-3(type="radio" name="radio-demo-2" disabled)
-        label(for="radio-demo-2-3")
+        label.label.is-radio(for="radio-demo-2-3")
           span.text.is-middle ムスビ
-    .group(v-else-if="demo === 'checkbox'")
+    .group.is-space(v-else-if="demo === 'checkbox'")
       .field
-        label
+        label.label.is-checkbox
           input.input(type="checkbox" name="checkbox-demo-1" checked)
           span.text.is-middle HTML
-        label
+        label.label.is-checkbox
           input.input(type="checkbox" name="checkbox-demo-1")
           span.text.is-middle CSS
-        label
+        label.label.is-checkbox
           input.input(type="checkbox" name="checkbox-demo-1" disabled)
           span.text.is-middle JavaScript
-      .field
+      .field.is-middle
         input.input#checkbox-demo-2-1(type="checkbox" name="checkbox-demo-2" checked)
-        label(for="checkbox-demo-2-1")
+        label.label.is-checkbox(for="checkbox-demo-2-1")
           span.text.is-middle Pug
         input.input#checkbox-demo-2-2(type="checkbox" name="checkbox-demo-2")
-        label(for="checkbox-demo-2-2")
+        label.label.is-checkbox(for="checkbox-demo-2-2")
           span.text.is-middle Stylus
         input.input#checkbox-demo-2-3(type="checkbox" name="checkbox-demo-2" disabled)
-        label(for="checkbox-demo-2-3")
+        label.label.is-checkbox(for="checkbox-demo-2-3")
           span.text.is-middle TypeScript
     .group(v-else-if="demo === 'select'")
       .field

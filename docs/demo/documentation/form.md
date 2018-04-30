@@ -217,31 +217,35 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 <demo-form demo="radio"/>
 
 ```html
-<label>
-  <input type="radio" name="radio-demo-1" checked>
-  <span class="text is-middle">むすびー</span>
-</label>
-<label>
-  <input type="radio" name="radio-demo-1">
-  <span class="text is-middle">むすびい</span>
-</label>
-<label>
-  <input type="radio" name="radio-demo-1" disabled>
-  <span class="text is-middle">むすび</span>
-</label>
+<div class="field">
+  <label class="label is-radio">
+    <input type="radio" name="radio-demo-1" checked>
+    <span class="text is-middle">むすびー</span>
+  </label>
+  <label class="label is-radio">
+    <input type="radio" name="radio-demo-1">
+    <span class="text is-middle">むすびい</span>
+  </label>
+  <label class="label is-radio">
+    <input type="radio" name="radio-demo-1" disabled>
+    <span class="text is-middle">むすび</span>
+  </label>
+</div>
 
-<input id="radio-demo-2-1" type="radio" name="radio-demo-2" checked>
-<label for="radio-demo-2-1">
-  <span class="text is-middle">ムスビー</span>
-</label>
-<input id="radio-demo-2-2" type="radio" name="radio-demo-2">
-<label for="radio-demo-2-2">
-  <span class="text is-middle">ムスビイ</span>
-</label>
-<input id="radio-demo-2-3" type="radio" name="radio-demo-2" disabled>
-<label for="radio-demo-2-3">
-  <span class="text is-middle">ムスビ</span>
-</label>
+<div class="field is-middle">
+  <input id="radio-demo-2-1" type="radio" name="radio-demo-2" checked>
+  <label class="label is-radio" for="radio-demo-2-1">
+    <span class="text is-middle">ムスビー</span>
+  </label>
+  <input id="radio-demo-2-2" type="radio" name="radio-demo-2">
+  <label class="label is-radio" for="radio-demo-2-2">
+    <span class="text is-middle">ムスビイ</span>
+  </label>
+  <input id="radio-demo-2-3" type="radio" name="radio-demo-2" disabled>
+  <label class="label is-radio" for="radio-demo-2-3">
+    <span class="text is-middle">ムスビ</span>
+  </label>
+</div>
 ```
 
 ## Checkbox
@@ -253,31 +257,35 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 <demo-form demo="checkbox"/>
 
 ```html
-<label>
-  <input type="checkbox" name="checkbox-demo-1" checked>
-  <span class="text is-middle">HTML</span>
-</label>
-<label>
-  <input type="checkbox" name="checkbox-demo-1">
-  <span class="text is-middle">CSS</span>
-</label>
-<label>
-  <input type="checkbox" name="checkbox-demo-1" disabled>
-  <span class="text is-middle">JavaScript</span>
-</label>
+<div class="field">
+  <label class="label is-checkbox">
+    <input type="checkbox" name="checkbox-demo-1" checked>
+    <span class="text is-middle">HTML</span>
+  </label>
+  <label class="label is-checkbox">
+    <input type="checkbox" name="checkbox-demo-1">
+    <span class="text is-middle">CSS</span>
+  </label>
+  <label class="label is-checkbox">
+    <input type="checkbox" name="checkbox-demo-1" disabled>
+    <span class="text is-middle">JavaScript</span>
+  </label>
+</div>
 
-<input id="checkbox-demo-2-1" type="checkbox" name="checkbox-demo-2" checked>
-<label for="checkbox-demo-2-1">
-  <span class="text is-middle">Pug</span>
-</label>
-<input id="checkbox-demo-2-2" type="checkbox" name="checkbox-demo-2">
-<label for="checkbox-demo-2-2">
-  <span class="text is-middle">Sass</span>
-</label>
-<input id="checkbox-demo-2-3" type="checkbox" name="checkbox-demo-2" disabled>
-<label for="checkbox-demo-2-3">
-  <span class="text is-middle">TypeScript</span>
-</label>
+<div class="field is-middle">
+  <input id="checkbox-demo-2-1" type="checkbox" name="checkbox-demo-2" checked>
+  <label class="label is-checkbox" for="checkbox-demo-2-1">
+    <span class="text is-middle">Pug</span>
+  </label>
+  <input id="checkbox-demo-2-2" type="checkbox" name="checkbox-demo-2">
+  <label class="label is-checkbox" for="checkbox-demo-2-2">
+    <span class="text is-middle">Sass</span>
+  </label>
+  <input id="checkbox-demo-2-3" type="checkbox" name="checkbox-demo-2" disabled>
+  <label class="label is-checkbox" for="checkbox-demo-2-3">
+    <span class="text is-middle">TypeScript</span>
+  </label>
+</div>
 ```
 
 ## Select

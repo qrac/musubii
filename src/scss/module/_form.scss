@@ -166,13 +166,30 @@
 // / Radio & Check Box
 //----------------------------------------------------
 
+.label.is-radio,
+.label.is-checkbox {
+  > .input[type="radio"],
+  > .input[type="checkbox"] {
+    + .text {
+      margin-left: $radio-gap-default;
+      margin-right: $radio-gap-after;
+    }
+  }
+}
+
 .input[type="radio"],
 .input[type="checkbox"] {
-  margin-right: 0.25em;
-  + .text {
-    margin-right: 1em;
+  + .label.is-radio,
+  + .label.is-checkbox {
+    margin-right: $radio-gap-after;
   }
-  &[disabled] + .text {
+}
+
+.input[type="radio"],
+.input[type="checkbox"] {
+  &[disabled] + .text,
+  &[disabled] + .label.is-radio,
+  &[disabled] + .label.is-checkbox {
     color: $dark-5;
   }
 }

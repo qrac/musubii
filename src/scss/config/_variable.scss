@@ -205,6 +205,10 @@ $input-placeholder-color: $dark-6 !default;
 // .textarea
 $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
 
+// .input[type="radio"]
+$radio-gap-default: 0.5em !default;
+$radio-gap-after: 1em !default;
+
 //----------------------------------------------------
 // / Module - Icon
 //----------------------------------------------------
