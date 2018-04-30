@@ -5,7 +5,7 @@
 <demo-form demo="basic"/>
 
 ```html
-<form action="..." method="post">
+<form class="form is-space" action="..." method="post">
   <p class="heading">ユーザーネーム</p>
   <div class="field">
     <input class="input is-mobile-full" type="text" name="username" value="demo">
