@@ -139,11 +139,11 @@
     th {
       background-color: $cyan-500;
       color: $light;
-      font-weight: 700;
+      //font-weight: 700;
     }
     th,
     td {
-      padding: 6px 12px;
+      padding: 0.75em 1em;
       border: 1px solid $grey-300;
     }
   }
