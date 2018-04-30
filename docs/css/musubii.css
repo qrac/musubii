@@ -570,11 +570,6 @@ iframe {
   cursor: default;
 }
 
-.btn.is-full {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
 .btn.is-round {
   border-radius: 999em;
 }
@@ -1559,6 +1554,7 @@ iframe {
 .is-mobile-full {
   flex: 0 1 100%;
   max-width: 100%;
+  width: 100%;
 }
 
 .is-mobile-auto {
@@ -1920,6 +1916,7 @@ iframe {
   .is-fablet-full {
     flex: 0 1 100%;
     max-width: 100%;
+    width: 100%;
   }
 
   .is-fablet-auto {
@@ -2057,6 +2054,7 @@ iframe {
   .is-tablet-full {
     flex: 0 1 100%;
     max-width: 100%;
+    width: 100%;
   }
 
   .is-tablet-auto {
@@ -2194,6 +2192,7 @@ iframe {
   .is-desktop-full {
     flex: 0 1 100%;
     max-width: 100%;
+    width: 100%;
   }
 
   .is-desktop-auto {
@@ -2359,6 +2358,7 @@ iframe {
   .is-wide-full {
     flex: 0 1 100%;
     max-width: 100%;
+    width: 100%;
   }
 
   .is-wide-auto {

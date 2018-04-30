@@ -24,6 +24,7 @@
     .is-#{$key}-full {
       flex: 0 1 100%;
       max-width: 100%;
+      width: 100%;
     }
     .is-#{$key}-auto {
       flex: 0 1 auto;
