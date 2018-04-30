@@ -135,6 +135,7 @@ function find(page, items, offset) {
 .page-nav.content {
   padding-top: 1rem !important;
   padding-bottom: 0 !important;
+  font-family: Nunito, $font-sans;
   .inner {
     min-height: 2rem;
     margin-top: 0 !important;

@@ -13,25 +13,25 @@
   h4,
   h5,
   h6 {
-    font-weight: 700;
+    font-weight: $wysiwyg-heading-font-weight;
   }
   h1 {
-    font-size: 2em;
+    font-size: $wysiwyg-h1-font-size;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: $wysiwyg-h2-font-size;
   }
   h3 {
-    font-size: 1.25em;
+    font-size: $wysiwyg-h3-font-size;
   }
   h4 {
-    font-size: 1em;
+    font-size: $wysiwyg-h4-font-size;
   }
   h5 {
-    font-size: 0.875em;
+    font-size: $wysiwyg-h5-font-size;
   }
   h6 {
-    font-size: 0.75em;
+    font-size: $wysiwyg-h6-font-size;
   }
 }
 
@@ -41,13 +41,13 @@
 
 .wysiwyg {
   p {
-    line-height: 1.8;
+    line-height: $texts-line-height;
   }
   small {
-    font-size: 80%;
+    font-size: $wysiwyg-small-font-size;
   }
   strong {
-    font-weight: 700;
+    font-weight: $wysiwyg-small-font-weight;
   }
   em {
     font-style: italic;
@@ -65,7 +65,8 @@
 .wysiwyg a {
   cursor: pointer;
   color: $primary;
-  border-bottom: 1px solid currentColor;
+  border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
+    currentColor;
   &:hover,
   &:active {
     border-bottom-color: transparent;
@@ -77,35 +78,33 @@
 //----------------------------------------------------
 
 .wysiwyg blockquote {
-  background-color: $grey-100;
-  border-left: 0.5em solid $dark-9;
-  border-radius: 0.125em;
-  padding: 1.5em;
+  background-color: $blockquote-background-color;
+  border-left: $blockquote-border-left-width solid $blockquote-border-left-color;
+  border-radius: $blockquote-border-radius;
+  padding: $blockquote-padding;
 }
 
 //----------------------------------------------------
 // / Code
 //----------------------------------------------------
 
-.wysiwyg code,
-.wysiwyg pre {
-  color: $indigo-500;
-  font-family: $font-mono;
-}
-
 .wysiwyg :not(pre) {
   > code {
-    padding: 0.2em 0.5em;
-    background-color: $grey-100;
-    border-radius: 0.1875em;
-    font-size: 0.875em;
+    padding: $code-padding;
+    background-color: $code-background-color;
+    border-radius: $code-border-radius;
+    color: $code-text-color;
+    font-size: $code-font-size;
+    font-family: $code-font-family;
     word-break: break-all;
   }
 }
 
 .wysiwyg pre {
-  background-color: $grey-100;
-  border-radius: 0.125em;
+  background-color: $pre-background-color;
+  border-radius: $pre-border-radius;
+  color: $pre-text-color;
+  font-family: $pre-font-family;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
@@ -113,7 +112,7 @@
   -webkit-overflow-scrolling: touch;
   > code {
     display: block;
-    padding: 1.25em 1.5em;
+    padding: $pre-code-padding;
   }
 }
 
@@ -123,8 +122,8 @@
 
 .wysiwyg ul,
 .wysiwyg ol {
-  line-height: 1.8;
-  margin-left: 1.5em;
+  line-height: $texts-line-height;
+  margin-left: $list-margin-left;
   > li {
     display: list-item;
   }
@@ -146,18 +145,16 @@
 //----------------------------------------------------
 
 .wysiwyg table {
-  background-color: $light;
-  border-radius: 2px;
-  thead {
-    background-color: $grey-100;
-  }
+  width: 100%;
+  background-color: $table-background-color;
   th {
-    color: $dark-4;
-    font-weight: 700;
+    background-color: $table-paint-background-color;
+    color: $table-paint-text-color;
+    font-weight: $wysiwyg-table-th-font-weight;
   }
   th,
   td {
-    padding: 6px 12px;
-    border: 1px solid $grey-300;
+    padding: $table-padding;
+    border: $table-border-width solid $table-border-color;
   }
 }

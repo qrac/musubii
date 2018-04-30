@@ -7,7 +7,7 @@
 //----------------------------------------------------
 
 body {
-  font-family: Nunito, YakuHanRPs, "Rounded Mplus 1c", $font-sans;
+  font-family: $font-sans;
 }
 
 button {
@@ -61,6 +61,7 @@ button {
 .section.is-footer {
   background-color: $blue-grey-800;
   padding: 2em 0;
+  font-family: Nunito, $font-sans;
   a {
     color: $light;
   }
@@ -102,6 +103,7 @@ button {
 
 .text.is-hero-1 {
   font-size: 16.75vw;
+  font-family: Nunito, $font-sans;
   line-height: 1.1;
   @include tablet {
     font-size: 4.375em;
@@ -110,6 +112,7 @@ button {
 
 .text.is-hero-2 {
   font-size: 11vw;
+  font-family: Nunito, $font-sans;
   line-height: 1.1;
   @include tablet {
     font-size: 2.875em;
@@ -325,4 +328,12 @@ button {
   > .text {
     font-size: 50%;
   }
+}
+
+//----------------------------------------------------
+// / Utility
+//----------------------------------------------------
+
+.is-font-nunito {
+  font-family: Nunito, $font-sans;
 }

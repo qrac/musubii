@@ -7,9 +7,9 @@
 //----------------------------------------------------
 
 body {
-  color: $dark-2;
-  font-family: $font-sans;
-  line-height: 1.5;
+  color: $body-text-color;
+  font-family: $body-font-family;
+  line-height: $body-line-height;
 }
 
 //----------------------------------------------------

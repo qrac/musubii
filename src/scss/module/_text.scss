@@ -7,7 +7,7 @@
 //----------------------------------------------------
 
 .texts {
-  line-height: 1.8;
+  line-height: $texts-line-height;
 }
 
 //----------------------------------------------------
@@ -16,7 +16,8 @@
 
 .text.is-link {
   cursor: pointer;
-  border-bottom: 1px solid currentColor;
+  border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
+    currentColor;
   &:hover {
     border-bottom-color: transparent;
   }
@@ -28,7 +29,8 @@
 
 .text.is-link-reverse {
   cursor: pointer;
-  border-bottom: 1px solid transparent;
+  border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
+    transparent;
   &:hover {
     border-color: currentColor;
   }
@@ -39,35 +41,33 @@
 //----------------------------------------------------
 
 .blockquote {
-  background-color: $grey-100;
-  border-left: 0.5em solid $dark-9;
-  border-radius: 0.125em;
-  padding: 1.5em;
+  background-color: $blockquote-background-color;
+  border-left: $blockquote-border-left-width solid $blockquote-border-left-color;
+  border-radius: $blockquote-border-radius;
+  padding: $blockquote-padding;
 }
 
 //----------------------------------------------------
 // / Code
 //----------------------------------------------------
 
-.pre,
-.code {
-  color: $indigo-500;
-  font-family: $font-mono;
-}
-
 :not(.pre) {
   > .code {
-    padding: 0.2em 0.5em;
-    background-color: $grey-100;
-    border-radius: 0.1875em;
-    font-size: 0.875em;
+    padding: $code-padding;
+    background-color: $code-background-color;
+    border-radius: $code-border-radius;
+    color: $code-text-color;
+    font-size: $code-font-size;
+    font-family: $code-font-family;
     word-break: break-all;
   }
 }
 
 .pre {
-  background-color: $grey-100;
-  border-radius: 0.125em;
+  background-color: $pre-background-color;
+  border-radius: $pre-border-radius;
+  color: $pre-text-color;
+  font-family: $pre-font-family;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
@@ -75,6 +75,6 @@
   -webkit-overflow-scrolling: touch;
   > .code {
     display: block;
-    padding: 1.25em 1.5em;
+    padding: $pre-code-padding;
   }
 }

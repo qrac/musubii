@@ -3,17 +3,10 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Dedicated Variable
-//----------------------------------------------------
-
-$icon-class-basic:
-".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons";
-
-//----------------------------------------------------
 // / Icon Setting
 //----------------------------------------------------
 
-#{$icon-class-basic} {
+#{$icon-class-default} {
   font-size: inherit;
   line-height: inherit;
 }
@@ -26,16 +19,16 @@ $icon-class-basic:
 // / Combination
 //----------------------------------------------------
 
-#{$icon-class-basic} {
+#{$icon-class-default} {
   + .text {
-    margin-left: 0.375em;
+    margin-left: $icon-margin-left;
   }
 }
 
 .text {
   + {
-    & #{$icon-class-basic} {
-      margin-left: 0.375em;
+    & #{$icon-class-default} {
+      margin-left: $icon-margin-left;
     }
   }
 }
@@ -44,9 +37,9 @@ $icon-class-basic:
 // / Single Modifier
 //----------------------------------------------------
 
-#{$icon-class-basic} {
+#{$icon-class-default} {
   &.is-fit {
-    width: 1em;
+    width: $icon-fit-width;
     text-align: center;
   }
 }

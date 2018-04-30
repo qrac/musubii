@@ -4,7 +4,7 @@
   - var table_text_b = "データセル"
   .inner
     .group(v-if="demo === 'basic'")
-      table.table.is-stripe.is-border.is-center.is-middle.is-sm
+      table.table.is-stripe.is-border.is-center.is-middle
         thead
           tr.box.is-paint
             th(width="20")
@@ -46,7 +46,7 @@
             th.box.is-right(colspan="5") テーブルフッター
     .group.is-space(v-else-if="demo === 'line'")
       each val in ["line", "outline", "border"]
-        table.table.is-sm(class="is-"+val)
+        table.table(class="is-"+val)
           thead
             tr
               - for (var i = 1; i <= 5; i++)
@@ -57,7 +57,7 @@
                 - for (var ib = 1; ib <= 5; ib++)
                   td= table_text_b
     .group(v-else-if="demo === 'align'")
-      table.table.is-border.is-stripe.is-sm
+      table.table.is-border.is-stripe
         thead
           tr
             th.box.is-left .box .is-left
@@ -74,7 +74,7 @@
             td.box.is-center .box .is-center
             td.box.is-right.is-middle .box .is-right .is-middle
     .group.is-space(v-else-if="demo === 'paint'")
-      table.table.is-border.is-sm
+      table.table.is-border
         tbody
           tr
             td.box.is-paint .box .is-paint
@@ -85,7 +85,7 @@
           tr
             td.box.is-paint .box .is-paint
             td.box.is-danger .box .is-danger
-      table.table.is-stripe.is-border.is-sm
+      table.table.is-stripe.is-border
         thead
           tr
             - for (var i = 1; i <= 3; i++)
@@ -97,7 +97,7 @@
                 td= table_text_b
     .group.is-space(v-else-if="demo === 'scroll'")
       .group.is-scroll-x
-        table.table.is-border.is-stripe.is-nowrap.is-sm
+        table.table.is-border.is-stripe.is-nowrap
           thead
             tr.box.is-paint
               - for (var i = 1; i <= 7; i++)

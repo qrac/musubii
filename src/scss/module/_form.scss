@@ -21,17 +21,14 @@
 .field {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -0.5em;
-  margin-bottom: -0.5em;
+  margin-left: (-1 * $field-gap-default);
+  margin-bottom: (-1 * $field-gap-default);
   > * {
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
+    margin-left: $field-gap-default;
+    margin-bottom: $field-gap-default;
   }
   > .field {
     display: inline-flex;
-  }
-  > .field + .field {
-    margin-top: 0;
   }
   &.is-middle {
     align-items: center;
@@ -70,20 +67,20 @@
 .input[type="time"],
 .input[type="number"] {
   max-width: 100%;
-  height: calc(2.5em + 2px);
-  padding: 0 0.75em;
-  background-color: $light;
-  border: 1px solid $dark-6;
-  border-radius: 2px;
-  color: $dark-2;
-  line-height: 2.5em;
+  height: calc(#{$input-height} + (#{$input-border-width} * 2));
+  padding: $input-padding;
+  background-color: $input-background-color;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  color: $body-text-color;
+  line-height: $input-height;
   &[disabled] {
-    background-color: $grey-300;
-    color: $dark-6;
+    background-color: $input-disable-background-color;
+    color: $input-disable-text-color;
   }
   &[readonly] {
-    background-color: $grey-200;
-    color: $dark-4;
+    background-color: $input-readonly-background-color;
+    color: $input-readonly-text-color;
   }
 }
 
@@ -93,9 +90,10 @@
 .input[type="email"],
 .input[type="tel"],
 .input[type="password"],
-.input[type="number"] {
+.input[type="number"],
+.textarea {
   @include placeholder {
-    color: $dark-6;
+    color: $input-placeholder-color;
   }
 }
 
@@ -110,8 +108,9 @@
 .input[type="month"],
 .input[type="week"],
 .input[type="time"],
-.input[type="number"] {
-  box-shadow: $shadow-input;
+.input[type="number"],
+.textarea {
+  box-shadow: $input-shadow;
   &[disabled] {
     box-shadow: none;
   }
@@ -148,16 +147,18 @@
 //----------------------------------------------------
 
 .textarea {
-  min-height: 150px;
-  background-color: $light;
-  border: 1px solid $dark-6;
-  border-radius: 2px;
-  box-shadow: $shadow-input;
-  padding: calc(0.5em - 1.5px) 0.5em;
+  background-color: $input-background-color;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  box-shadow: $input-shadow;
+  padding: $textarea-padding;
   &[disabled] {
-    background-color: $grey-300;
-    color: $dark-6;
-    box-shadow: none;
+    background-color: $input-disable-background-color;
+    color: $input-disable-text-color;
+  }
+  &[readonly] {
+    background-color: $input-readonly-background-color;
+    color: $input-readonly-text-color;
   }
 }
 
@@ -182,13 +183,13 @@
 
 .select {
   max-width: 100%;
-  height: calc(2.5em + 2px);
-  padding: 0 0.75em;
-  background-color: $light;
-  border: 1px solid $dark-6;
-  border-radius: 2px;
-  color: $dark-2;
-  line-height: 2.5em;
+  height: calc(#{$input-height} + (#{$input-border-width} * 2));
+  padding: $input-padding;
+  background-color: $input-background-color;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  color: $body-text-color;
+  line-height: $input-height;
   &[multiple] {
     height: auto;
     padding: 0.5em 0.75em;
@@ -197,10 +198,11 @@
     }
   }
   &[disabled] {
-    background-color: $grey-300;
-    color: $dark-6;
+    background-color: $input-disable-background-color;
+    color: $input-disable-text-color;
   }
   &[readonly] {
-    background-color: $grey-200;
+    background-color: $input-readonly-background-color;
+    color: $input-readonly-text-color;
   }
 }

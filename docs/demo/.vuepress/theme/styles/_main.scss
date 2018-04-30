@@ -67,6 +67,7 @@
   > h4,
   > h5,
   > h6 {
+    font-family: Nunito, $font-sans;
     font-weight: 700;
     &:not(:first-child) {
       margin-top: 1.5em;
@@ -91,7 +92,7 @@
     font-size: 0.75em;
   }
   > p {
-    line-height: 1.8;
+    line-height: 1.9;
   }
   > p code {
     color: $indigo-500;

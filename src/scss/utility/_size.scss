@@ -14,8 +14,7 @@
         .is-#{$key-breakpoint}-#{$key-size} {
           font-size: $value;
         }
-      }
-      @else {
+      } @else {
         .is-#{$key-breakpoint}-#{$key-size} {
           font-size: $value;
         }

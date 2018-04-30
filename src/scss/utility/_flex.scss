@@ -3,29 +3,21 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Dedicated Variable
-//----------------------------------------------------
-
-// Number of grid divisions
-$split-grid: 12;
-
-//----------------------------------------------------
 // / Responsive
 //----------------------------------------------------
 
 @each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
   @include mediaquery-pattern($mediaquery) {
-    @for $i from 0 through $split-grid {
+    @for $i from 0 through $grid-split {
       @if $i == 0 {
         .is-#{$key}-#{$i} {
           flex: 1 0 0%;
           max-width: 100%;
         }
-      }
-      @else {
+      } @else {
         .is-#{$key}-#{$i} {
-          flex: 0 0 100% / $split-grid * $i;
-          max-width: 100% / $split-grid * $i;
+          flex: 0 0 100% / $grid-split * $i;
+          max-width: 100% / $grid-split * $i;
         }
       }
     }

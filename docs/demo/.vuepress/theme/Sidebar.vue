@@ -75,6 +75,7 @@ function resolveOpenGroupIndex(route, items) {
 @import "~sass-dashi/src/scss/_dashi.scss";
 
 .sidebar {
+  font-family: Nunito, $font-sans;
   ul {
     padding: 0;
     margin: 0;

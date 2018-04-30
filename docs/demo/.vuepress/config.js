@@ -23,11 +23,9 @@ module.exports = {
     ['meta', { property: 'og:image', content: 'https://qrac.github.io/musubii/img/ogp.png' }],
     ['meta', { property: 'og:site_name', content: 'Qrac GitHub' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanrp_s.min.css' }],
     ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.1/css/all.css' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito:400,700,900' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css' }],
     ['link', { rel: 'stylesheet', href: '/css/musubii.min.css' }],
     ['link', { rel: 'apple-touch-icon', href: '/img/apple-touch-icon.png' }],
     ['link', { rel: 'shortcut icon', href: '/img/favicon.png' }]

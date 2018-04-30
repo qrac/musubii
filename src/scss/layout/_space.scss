@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Utility: Space
+// Layout: Space
 //----------------------------------------------------
 
 //----------------------------------------------------
@@ -8,12 +8,12 @@
 
 .is-space {
   > *:not(:first-child) {
-    margin-top: 1em;
+    margin-top: $space-margin-default;
   }
   > .groups:not(:first-child) {
-    margin-top: 3em;
+    margin-top: $space-margin-groups;
   }
   > .field:not(:first-child) {
-    margin-top: 0.5em;
+    margin-top: $space-margin-field;
   }
 }

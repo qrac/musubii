@@ -43,6 +43,7 @@
 
 <textarea class="textarea" name="textarea"></textarea>
 <textarea class="textarea" name="textarea" disabled></textarea>
+<textarea class="textarea" name="textarea" readonly>Readonly</textarea>
 ```
 
 ## Password

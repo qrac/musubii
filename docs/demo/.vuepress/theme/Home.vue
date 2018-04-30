@@ -13,12 +13,12 @@
               <span class="text is-fablet-block" v-for="text in data.hero.texts">{{ text }}</span>
             </h1>
             <div class="btns is-center is-lg" v-if="data.download.path">
-              <a class="btn is-plain is-round is-mobile-full is-weight-900 is-cyan" :href="data.download.path" :download="data.download.file">
+              <a class="btn is-plain is-round is-mobile-full is-weight-900 is-cyan is-font-nunito" :href="data.download.path" :download="data.download.file">
                 <i class="fas fa-cloud-download-alt" aria-hidden="true"></i>
                 <span class="text">{{ data.download.text }}</span>
               </a>
             </div>
-            <p class="texts is-light is-center is-sm" v-if="repoLink">
+            <p class="texts is-light is-center is-sm is-font-nunito" v-if="repoLink">
               <i class="fab fa-github" aria-hidden="true"></i>
               <span class="text" v-if="data.version">v{{ data.version }}・</span>
               <a class="text is-link-reverse" :href="repoLink">

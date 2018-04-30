@@ -43,6 +43,7 @@ export default {
 .navbar {
   position: relative;
   padding: 0.7rem 1.5rem;
+  font-family: Nunito, $font-sans;
   line-height: $navbarHeight - 1.4rem;
   a,
   span,
