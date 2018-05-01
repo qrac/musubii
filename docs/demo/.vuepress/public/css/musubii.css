@@ -1154,7 +1154,8 @@ iframe {
 .input[type="week"],
 .input[type="time"],
 .input[type="number"],
-.textarea {
+.textarea,
+.select > select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1213,6 +1214,10 @@ iframe {
 }
 
 .select {
+  position: relative;
+}
+
+.select > select {
   max-width: 100%;
   height: calc(2.5em + (1px * 2));
   padding: 0 0.75em;
@@ -1223,23 +1228,41 @@ iframe {
   line-height: 2.5em;
 }
 
-.select[multiple] {
-  height: auto;
-  padding: 0.5em 0.75em;
-}
-
-.select[multiple] > option {
-  min-height: 1.5em;
-}
-
-.select[disabled] {
+.select > select[disabled] {
   background-color: #e0e0e0;
   color: rgba(0, 0, 0, 0.26);
 }
 
-.select[readonly] {
+.select > select[readonly] {
   background-color: #eeeeee;
   color: rgba(0, 0, 0, 0.7);
+}
+
+.select:not(.is-multiple):after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  width: 0.5em;
+  height: 0.5em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(-70%) rotate(45deg);
+  transform: translateY(-70%) rotate(45deg);
+}
+
+.select:not(.is-multiple) > select {
+  padding-right: 2.5em;
+}
+
+.select.is-multiple > select {
+  height: auto;
+  padding: 0;
+}
+
+.select.is-multiple > select > option {
+  min-height: 1.5em;
+  padding: 0.5em 0.75em;
 }
 
 .icon,

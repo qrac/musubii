@@ -146,26 +146,32 @@
     .group.is-space(v-else-if="demo === 'select'")
       .field
         - var select_num = ["A", "B", "C", "D", "E"]
-        select.select
-          each val in select_num
-            option= "Select " + val
-        select.select(disabled)
-          each val in select_num
-            option= "Select " + val
+        .select
+          select
+            each val in select_num
+              option= "Select " + val
+        .select
+          select(disabled)
+            each val in select_num
+              option= "Select " + val
       .field
-        select.select(size="5")
-          each val in select_num
-            option= "Select " + val
-        select.select(size="5" disabled)
-          each val in select_num
-            option= "Select " + val
+        .select.is-multiple
+          select(size="5")
+            each val in select_num
+              option= "Select " + val
+        .select.is-multiple
+          select(size="5" disabled)
+            each val in select_num
+              option= "Select " + val
       .field
-        select.select(size="5" multiple)
-          each val in select_num
-            option= "Select " + val
-        select.select(size="5" multiple disabled)
-          each val in select_num
-            option= "Select " + val
+        .select.is-multiple
+          select(size="5" multiple)
+            each val in select_num
+              option= "Select " + val
+        .select.is-multiple
+          select(size="5" multiple disabled)
+            each val in select_num
+              option= "Select " + val
     .group.is-space(v-else-if="demo === 'button'")
       .btns
         button.btn.is-plain.is-primary(type="button") 汎用ボタン

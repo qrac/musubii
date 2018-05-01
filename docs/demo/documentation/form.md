@@ -295,26 +295,38 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 <demo-form demo="select"/>
 
 ```html
-<select class="select">
-  <option>Select A</option>...
-</select>
-<select class="select" disabled>
-  <option>Select A</option>...
-</select>
+<div class="select">
+  <select>
+    <option>Select A</option>...
+  </select>
+</div>
+<div class="select">
+  <select disabled>
+    <option>Select A</option>...
+  </select>
+</div>
 
-<select class="select" size="5">
-  <option>Select A</option>...
-</select>
-<select class="select" size="5" disabled>
-  <option>Select A</option>...
-</select>
+<div class="select is-multiple">
+  <select size="5">
+    <option>Select A</option>...
+  </select>
+</div>
+<div class="select is-multiple">
+  <select size="5" disabled>
+    <option>Select A</option>...
+  </select>
+</div>
 
-<select class="select" size="5" multiple>
-  <option>Select A</option>...
-</select>
-<select class="select" size="5" multiple disabled>
-  <option>Select A</option>...
-</select>
+<div class="select is-multiple">
+  <select size="5" multiple>
+    <option>Select A</option>...
+  </select>
+</div>
+<div class="select is-multiple">
+  <select size="5" multiple disabled>
+    <option>Select A</option>...
+  </select>
+</div>
 ```
 
 ## Button

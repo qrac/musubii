@@ -128,7 +128,8 @@
 .input[type="week"],
 .input[type="time"],
 .input[type="number"],
-.textarea {
+.textarea,
+.select > select {
   appearance: none;
 }
 
@@ -202,27 +203,48 @@
 //----------------------------------------------------
 
 .select {
-  max-width: 100%;
-  height: calc(#{$input-height} + (#{$input-border-width} * 2));
-  padding: $input-padding;
-  background-color: $input-background-color;
-  border: $input-border-width solid $input-border-color;
-  border-radius: $input-border-radius;
-  color: $body-text-color;
-  line-height: $input-height;
-  &[multiple] {
-    height: auto;
-    padding: 0.5em 0.75em;
-    > option {
-      min-height: 1.5em;
+  position: relative;
+  > select {
+    max-width: 100%;
+    height: calc(#{$input-height} + (#{$input-border-width} * 2));
+    padding: $input-padding;
+    background-color: $input-background-color;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    color: $body-text-color;
+    line-height: $input-height;
+    &[disabled] {
+      background-color: $input-disable-background-color;
+      color: $input-disable-text-color;
+    }
+    &[readonly] {
+      background-color: $input-readonly-background-color;
+      color: $input-readonly-text-color;
     }
   }
-  &[disabled] {
-    background-color: $input-disable-background-color;
-    color: $input-disable-text-color;
+  &:not(.is-multiple) {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: ($select-angle-size * 2);
+      width: $select-angle-size;
+      height: $select-angle-size;
+      border-bottom: $select-angle-border-width solid $select-angle-border-color;
+      border-right: $select-angle-border-width solid $select-angle-border-color;
+      transform: translateY(-70%) rotate(45deg);
+    }
+    > select {
+      padding-right: ($select-angle-size * 5);
+    }
   }
-  &[readonly] {
-    background-color: $input-readonly-background-color;
-    color: $input-readonly-text-color;
+}
+
+.select.is-multiple > select {
+  height: auto;
+  padding: 0;
+  > option {
+    min-height: 1.5em;
+    padding: 0.5em 0.75em;
   }
 }
