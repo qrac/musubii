@@ -162,12 +162,12 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 <label class="btn is-plain">
   <span class="text">ファイル選択</span>
-  <input type="file" name="file" class="input is-none">
+  <input type="file" name="file" class="input">
 </label>
 
 <label class="btn is-plain">
   <span class="text">ファイル選択</span>
-  <input type="file" name="file" class="input is-none" disabled>
+  <input type="file" name="file" class="input" disabled>
 </label>
 ```
 

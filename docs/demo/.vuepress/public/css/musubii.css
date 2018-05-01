@@ -1163,12 +1163,17 @@ iframe {
 
 .input[type="file"] {
   cursor: pointer;
+  display: block;
   max-width: 70vw;
   overflow: hidden;
 }
 
 .input[type="file"][disabled] {
   cursor: default;
+}
+
+.btn .input[type="file"] {
+  display: none;
 }
 
 .textarea {
