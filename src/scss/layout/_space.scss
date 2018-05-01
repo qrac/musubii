@@ -26,6 +26,9 @@
   .heading + .field {
     margin-top: $space-margin-field;
   }
+  .field + .texts {
+    margin-top: $space-margin-field;
+  }
 }
 
 .wysiwyg.is-space {

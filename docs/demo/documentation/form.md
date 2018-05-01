@@ -18,6 +18,7 @@
   <div class="field">
     <input class="input is-mobile-full" type="password" name="password">
   </div>
+  <p class="texts is-danger is-xs">※半角英数のみ</p>
   <label class="label is-checkbox is-block">
     <input class="input" type="checkbox" name="checkbox">
     <span class="text is-middle is-sm">次回から自動的にログイン</span>

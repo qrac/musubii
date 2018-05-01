@@ -398,6 +398,10 @@ iframe {
   margin-top: 0.5em;
 }
 
+.is-space .field + .texts {
+  margin-top: 0.5em;
+}
+
 .wysiwyg.is-space > h1:not(:first-child),
 .wysiwyg.is-space > h2:not(:first-child),
 .wysiwyg.is-space > h3:not(:first-child),

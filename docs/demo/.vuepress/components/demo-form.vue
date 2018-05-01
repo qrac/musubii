@@ -12,6 +12,7 @@
               p.heading メールアドレス
               .field
                 input.input.is-mobile-full(type="email" name="email" placeholder="example@gmail.com")
+              p.texts.is-xs.is-danger ※半角英数のみ
               p.heading パスワード
               .field
                 input.input.is-mobile-full(type="password" name="password")
