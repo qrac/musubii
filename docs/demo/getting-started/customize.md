@@ -115,3 +115,70 @@ $primary: #fb8c00;
 | `$success` | 決定色      | `$green-a700` |
 | `$warning` | 警告色      | `$orange-600` |
 | `$danger`  | 危険色      | `$red-500`    |
+
+## Size
+
+XXL〜XXS までのサイズ設定を変更できる変数。拡大率すべてに影響します。
+
+| Variable         | Description | Default |
+| ---------------- | ----------- | ------- |
+| `$font-size-xxl` | XXL         | `200%`  |
+| `$font-size-xl`  | XL          | `150%`  |
+| `$font-size-lg`  | Large       | `125%`  |
+| `$font-size-md`  | Medium      | `100%`  |
+| `$font-size-sm`  | Small       | `87.5%` |
+| `$font-size-xs`  | XS          | `75%`   |
+| `$font-size-xxs` | XXS         | `62.5%` |
+
+## Weight
+
+フォントの太さを変更できる変数。
+
+| Variable              | Description | Default |
+| --------------------- | ----------- | ------- |
+| `$font-weight-normal` | Normal      | `400`   |
+| `$font-weight-strong` | Strong      | `700`   |
+| `$font-weight-100`    | Weight 100  | `100`   |
+| `$font-weight-200`    | Weight 200  | `200`   |
+| `$font-weight-300`    | Weight 300  | `300`   |
+| `$font-weight-400`    | Weight 400  | `400`   |
+| `$font-weight-500`    | Weight 500  | `500`   |
+| `$font-weight-600`    | Weight 600  | `600`   |
+| `$font-weight-700`    | Weight 700  | `700`   |
+| `$font-weight-800`    | Weight 800  | `800`   |
+| `$font-weight-900`    | Weight 900  | `900`   |
+
+## Font Family
+
+フォントファミリーを変更できる変数。
+
+| Variable      | Description | Default                                                                                                      |
+| ------------- | ----------- | ------------------------------------------------------------------------------------------------------------ |
+| `$font-sans`  | ゴシック体  | `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif` |
+| `$font-serif` | 明朝体      | `"Hiragino Mincho ProN", "Noto Serif Japanese", "Yu Mincho", YuMincho, serif`                                |
+| `$font-mono`  | コード用    | `Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif`                        |
+
+## Global
+
+全体に影響する変数。
+
+| Variable            | Description              | Default      |
+| ------------------- | ------------------------ | ------------ |
+| `$body-text-color`  | 全体のテキストカラー     | `$dark-2`    |
+| `$body-font-family` | 全体のフォントファミリー | `$font-sans` |
+| `$body-line-height` | 全体の行間               | `1.5`        |
+
+## Section
+
+`.section` 直下の `.inner` 類を調整する変数。
+
+| Variable                        | Description                     | Default  |
+| ------------------------------- | ------------------------------- | -------- |
+| `section-inner-width-fablet`    | `.inner` サイズ：ファブレット時 | `540px`  |
+| `section-inner-width-tablet`    | `.inner` サイズ：タブレット時   | `720px`  |
+| `section-inner-width-desktop`   | `.inner` サイズ：デスクトップ時 | `960px`  |
+| `section-inner-width-wide`      | `.inner` サイズ：ワイド時       | `1140px` |
+| `section-inner-padding`         | `.inner` の `padding`           | `0 16px` |
+| `section-inner-vw-width-fablet` | `.inner-vw` のサイズ            | `90vw`   |
+| `section-inner-vw-padding`      | `.inner-vw` の `padding`        | `0 1em`  |
+| `section-inner-soft-padding`    | `.inner-soft` の `padding`      | `0 1em`  |
