@@ -28,7 +28,7 @@ const sassOptions = {
   outputStyle: 'expanded'
 }
 
-// Sass > CSS
+// SCSS > CSS
 gulp.task('scss', () => {
   return gulp.src(paths.src_scss + '**/*.scss')
     .pipe(sassGlob())

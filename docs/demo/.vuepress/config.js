@@ -58,6 +58,7 @@ module.exports = {
           children: [
             '',
             'use',
+            'customize',
             'support'
           ]
         },
