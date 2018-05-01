@@ -348,6 +348,22 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 <button type="submit" class="btn is-plain is-success" disabled>送信</button>
 ```
 
+## Round
+
+`.input` `.select` は class `.is-round` を付与することでボタンの角を丸められます。
+
+<demo-form demo="round"/>
+
+```html
+<input class="input is-round" type="text" name="text" placeholder="Text">
+
+<div class="select is-round">
+  <select>
+    <option>Select A</option>...
+  </select>
+</div>
+```
+
 ## Field
 
 `.field` でラッピングした要素は横並びになり、後述する Flex が適応できるようになります。`.is-middle` 付与で天地を揃えるなどの微調整も可能です。
@@ -368,7 +384,7 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ## Flex
 
-`.field` 直下の要素は `.is-(xxxx)-(yy)` 形式の幅を表すクラス名付与で幅を変動させられます。設定してあるメディアクエリごとに指定が可能。
+`.field` 直下の要素は `.is-(xxxx)-(yy)` 形式の幅を表す class 付与で幅を変動させられます。設定してあるメディアクエリごとに指定が可能。
 
 <demo-form demo="flex"/>
 
@@ -385,7 +401,7 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ## Bar
 
-`.field` にクラス名 `.is-bar` を付与することで子要素の `.input` `.select` `.btn` を連結させられます。
+`.field` に class `.is-bar` を付与することで子要素の `.input` `.select` `.btn` を連結させられます。
 
 <demo-form demo="bar"/>
 

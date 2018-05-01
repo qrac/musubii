@@ -182,6 +182,13 @@
       .btns
         button.btn.is-plain.is-success(type="submit") 送信
         button.btn.is-plain.is-success(type="submit" disabled) 送信
+    .group.is-space(v-else-if="demo === 'round'")
+      .field
+        input.input.is-round(type="text" name="text" placeholder="Text")
+        .select.is-round
+          select
+            each val in select_num
+              option= "Select " + val
     .group.is-space(v-else-if="demo === 'field'")
       .field
         input.input(type="text" name="text" placeholder="Text")
