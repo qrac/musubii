@@ -383,6 +383,26 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 <table-flex/>
 
+## Bar
+
+`.field` にクラス名 `.is-bar` を付与することで子要素の `.input` `.select` `.btn` を連結させられます。
+
+<demo-form demo="bar"/>
+
+```html
+<div class="field">
+  <div class="select">
+    <select>
+      <option>カテゴリー A</option>...
+    </select>
+  </div>
+  <input type="text" class="input" name="text" placeholder="キーワード">
+  <button type="submit" class="btn is-plain is-info">
+    <i class="fas fa-search" aria-hidden="true"></i>
+  </button>
+</div>
+```
+
 ## Attribute
 
 フォームの各要素は属性を付与することで簡単に機能や役割を持たせられます。フォームでよく利用する属性には以下のようなものがあります。

@@ -21,9 +21,11 @@
 .field {
   display: flex;
   flex-wrap: wrap;
-  margin-left: (-1 * $field-gap-default);
-  margin-bottom: (-1 * $field-gap-default);
-  > * {
+  &:not(.is-bar) {
+    margin-left: (-1 * $field-gap-default);
+    margin-bottom: (-1 * $field-gap-default);
+  }
+  &:not(.is-bar) > * {
     margin-left: $field-gap-default;
     margin-bottom: $field-gap-default;
   }
@@ -47,6 +49,45 @@
   }
   &.is-around {
     justify-content: space-around;
+  }
+}
+
+//----------------------------------------------------
+// / Set Bar
+//----------------------------------------------------
+
+.field.is-bar {
+  flex-wrap: nowrap;
+  > .input,
+  > .select > select {
+    border-radius: 0;
+    overflow: hidden;
+  }
+  > .input:not(.is-round):first-child,
+  > .select:not(.is-round):first-child > select {
+    border-top-left-radius: $input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
+  }
+  > .input:not(.is-round):last-child,
+  > .select:not(.is-round):last-child > select {
+    border-top-right-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+  }
+  > .input.is-round:first-child,
+  > .select.is-round:first-child > select {
+    border-top-left-radius: $input-round-border-radius;
+    border-bottom-left-radius: $input-round-border-radius;
+  }
+  > .input.is-round:last-child,
+  > .select.is-round:last-child > select {
+    border-top-right-radius: $input-round-border-radius;
+    border-bottom-right-radius: $input-round-border-radius;
+  }
+  > .input:nth-child(2),
+  > .input:nth-child(2) ~ .input,
+  > .select:nth-child(2) > select,
+  > .select:nth-child(2) ~ .input {
+    border-left: none;
   }
 }
 
@@ -81,6 +122,9 @@
   &[readonly] {
     background-color: $input-readonly-background-color;
     color: $input-readonly-text-color;
+  }
+  &.is-round {
+    border-radius: $input-round-border-radius;
   }
 }
 
@@ -226,6 +270,9 @@
       background-color: $input-readonly-background-color;
       color: $input-readonly-text-color;
     }
+  }
+  &.is-round:not(.is-multiple) > select {
+    border-radius: $input-round-border-radius;
   }
   &:not(.is-multiple) {
     &:after {

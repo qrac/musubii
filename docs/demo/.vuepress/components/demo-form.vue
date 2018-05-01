@@ -193,6 +193,15 @@
       .field
         - for (var i = 1; i <= 4; i++)
           input.input.is-mobile-full.is-tablet-0(type="text" name="text" placeholder="Text")
+    .group.is-space(v-else-if="demo === 'bar'")
+      .field.is-bar
+        .select
+          select
+            each val in select_num
+              option= "カテゴリー " + val
+        input.input(type="text" name="text" placeholder="キーワード")
+        button.btn.is-plain.is-info(type="submit")
+          i.fas.fa-search(aria-hidden="true")
 </template>
 
 <script>

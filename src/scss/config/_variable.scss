@@ -191,6 +191,9 @@ $input-border-color: $dark-6 !default;
 $input-border-radius: 2px !default;
 $input-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !default;
 
+// .input.is-round
+$input-round-border-radius: 999em !default;
+
 // .input[disable]
 $input-disable-background-color: $grey-300 !default;
 $input-disable-text-color: $dark-6 !default;

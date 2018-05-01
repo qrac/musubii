@@ -511,37 +511,45 @@ iframe {
   justify-content: space-around;
 }
 
-.btns.is-bar {
+.btns.is-bar,
+.field.is-bar {
   flex-wrap: nowrap;
 }
 
-.btns.is-bar > .btn {
+.btns.is-bar > .btn,
+.field.is-bar > .btn {
   border-radius: 0;
   overflow: hidden;
 }
 
-.btns.is-bar > .btn:not(.is-round):first-child {
+.btns.is-bar > .btn:not(.is-round):first-child,
+.field.is-bar > .btn:not(.is-round):first-child {
   border-top-left-radius: 0.1875em;
   border-bottom-left-radius: 0.1875em;
 }
 
-.btns.is-bar > .btn:not(.is-round):last-child {
+.btns.is-bar > .btn:not(.is-round):last-child,
+.field.is-bar > .btn:not(.is-round):last-child {
   border-top-right-radius: 0.1875em;
   border-bottom-right-radius: 0.1875em;
 }
 
-.btns.is-bar > .btn.is-round:first-child {
+.btns.is-bar > .btn.is-round:first-child,
+.field.is-bar > .btn.is-round:first-child {
   border-top-left-radius: 999em;
   border-bottom-left-radius: 999em;
 }
 
-.btns.is-bar > .btn.is-round:last-child {
+.btns.is-bar > .btn.is-round:last-child,
+.field.is-bar > .btn.is-round:last-child {
   border-top-right-radius: 999em;
   border-bottom-right-radius: 999em;
 }
 
 .btns.is-bar > .btn:nth-child(2),
-.btns.is-bar > .btn:nth-child(2) ~ .btn {
+.btns.is-bar > .btn:nth-child(2) ~ .btn,
+.field.is-bar > .btn:nth-child(2),
+.field.is-bar > .btn:nth-child(2) ~ .btn {
   border-left: none;
 }
 
@@ -962,11 +970,14 @@ iframe {
 .field {
   display: flex;
   flex-wrap: wrap;
+}
+
+.field:not(.is-bar) {
   margin-left: -0.5em;
   margin-bottom: -0.5em;
 }
 
-.field > * {
+.field:not(.is-bar) > * {
   margin-left: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -997,6 +1008,47 @@ iframe {
 
 .field.is-around {
   justify-content: space-around;
+}
+
+.field.is-bar {
+  flex-wrap: nowrap;
+}
+
+.field.is-bar > .input,
+.field.is-bar > .select > select {
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.field.is-bar > .input:not(.is-round):first-child,
+.field.is-bar > .select:not(.is-round):first-child > select {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.field.is-bar > .input:not(.is-round):last-child,
+.field.is-bar > .select:not(.is-round):last-child > select {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.field.is-bar > .input.is-round:first-child,
+.field.is-bar > .select.is-round:first-child > select {
+  border-top-left-radius: 999em;
+  border-bottom-left-radius: 999em;
+}
+
+.field.is-bar > .input.is-round:last-child,
+.field.is-bar > .select.is-round:last-child > select {
+  border-top-right-radius: 999em;
+  border-bottom-right-radius: 999em;
+}
+
+.field.is-bar > .input:nth-child(2),
+.field.is-bar > .input:nth-child(2) ~ .input,
+.field.is-bar > .select:nth-child(2) > select,
+.field.is-bar > .select:nth-child(2) ~ .input {
+  border-left: none;
 }
 
 .input[type="text"],
@@ -1051,6 +1103,21 @@ iframe {
 .input[type="number"][readonly] {
   background-color: #eeeeee;
   color: rgba(0, 0, 0, 0.7);
+}
+
+.input[type="text"].is-round,
+.input[type="search"].is-round,
+.input[type="url"].is-round,
+.input[type="email"].is-round,
+.input[type="tel"].is-round,
+.input[type="password"].is-round,
+.input[type="datetime-local"].is-round,
+.input[type="date"].is-round,
+.input[type="month"].is-round,
+.input[type="week"].is-round,
+.input[type="time"].is-round,
+.input[type="number"].is-round {
+  border-radius: 999em;
 }
 
 .input[type="text"]:placeholder-shown,
@@ -1241,6 +1308,10 @@ iframe {
 .select > select[readonly] {
   background-color: #eeeeee;
   color: rgba(0, 0, 0, 0.7);
+}
+
+.select.is-round:not(.is-multiple) > select {
+  border-radius: 999em;
 }
 
 .select:not(.is-multiple):after {

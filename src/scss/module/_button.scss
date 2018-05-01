@@ -45,7 +45,8 @@
 // / Set Bar
 //----------------------------------------------------
 
-.btns.is-bar {
+.btns.is-bar,
+.field.is-bar {
   flex-wrap: nowrap;
   > .btn {
     border-radius: 0;
