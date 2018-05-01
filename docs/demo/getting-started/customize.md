@@ -94,7 +94,7 @@ $primary: #fb8c00;
 
 ## Break Point
 
-ブレイクポイントの変更ができる変数。メディアクエリの mixin で用いている値も一括で変更することが可能。
+ブレイクポイントの変更ができる変数。メディアクエリの値を一括で変更することが可能。
 
 | Variable                | Description        | Default  |
 | ----------------------- | ------------------ | -------- |
@@ -106,12 +106,12 @@ $primary: #fb8c00;
 
 ## Theme Color
 
-テーマカラーの変更ができる変数。役割に応じたボタンやリンク色を一括で変更可能。
+テーマカラーの変更ができる変数。役割に応じたボタンやリンク色を一括で変更可能。`Default` で設定されている変数は、ライブラリを使った場合に [MOFTONE](https://qrac.github.io/moftone/) または [iOSTONE](https://qrac.github.io/iostone/)、使わなかった場合に [MDTONE](https://qrac.github.io/mdtone/) の色を参照します。
 
-| Variable   | Description              | Default       |
-| ---------- | ------------------------ | ------------- |
-| `$primary` | プライマリーカラー       | `$cyan-500`   |
-| `$info`    | インフォメーションカラー | `$blue-500`   |
-| `$success` | サクセスカラー           | `$green-a700` |
-| `$warning` | 警告色                   | `$orange-600` |
-| `$danger`  | 危険色                   | `$red-500`    |
+| Variable   | Description | Default       |
+| ---------- | ----------- | ------------- |
+| `$primary` | 基本色      | `$cyan-500`   |
+| `$info`    | 案内色      | `$blue-500`   |
+| `$success` | 決定色      | `$green-a700` |
+| `$warning` | 警告色      | `$orange-600` |
+| `$danger`  | 危険色      | `$red-500`    |
