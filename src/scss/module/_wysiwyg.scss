@@ -158,3 +158,15 @@
     border: $table-border-width solid $table-border-color;
   }
 }
+
+//----------------------------------------------------
+// / hr
+//----------------------------------------------------
+
+.wysiwyg hr {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid $dark-7;
+}
