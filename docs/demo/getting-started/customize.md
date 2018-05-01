@@ -96,22 +96,22 @@ $primary: #fb8c00;
 
 ブレイクポイントの変更ができる変数。メディアクエリの mixin で用いている値も一括で変更することが可能。
 
-| Variable                | Description        | Default |
-| ----------------------- | ------------------ | ------- |
-| `$screen-width-mobile`  | モバイルサイズ     | 0px     |
-| `$screen-width-fablet`  | ファブレットサイズ | 576px   |
-| `$screen-width-tablet`  | タブレットサイズ   | 768px   |
-| `$screen-width-desktop` | デスクトップサイズ | 992px   |
-| `$screen-width-wide`    | ワイドサイズ       | 1200px  |
+| Variable                | Description        | Default  |
+| ----------------------- | ------------------ | -------- |
+| `$screen-width-mobile`  | モバイルサイズ     | `0px`    |
+| `$screen-width-fablet`  | ファブレットサイズ | `576px`  |
+| `$screen-width-tablet`  | タブレットサイズ   | `768px`  |
+| `$screen-width-desktop` | デスクトップサイズ | `992px`  |
+| `$screen-width-wide`    | ワイドサイズ       | `1200px` |
 
 ## Theme Color
 
 テーマカラーの変更ができる変数。役割に応じたボタンやリンク色を一括で変更可能。
 
-| Variable   | Description              | Default     |
-| ---------- | ------------------------ | ----------- |
-| `$primary` | プライマリーカラー       | $cyan-500   |
-| `$info`    | インフォメーションカラー | $blue-500   |
-| `$success` | サクセスカラー           | $green-a700 |
-| `$warning` | 警告色                   | $orange-600 |
-| `$danger`  | 危険色                   | $red-500    |
+| Variable   | Description              | Default       |
+| ---------- | ------------------------ | ------------- |
+| `$primary` | プライマリーカラー       | `$cyan-500`   |
+| `$info`    | インフォメーションカラー | `$blue-500`   |
+| `$success` | サクセスカラー           | `$green-a700` |
+| `$warning` | 警告色                   | `$orange-600` |
+| `$danger`  | 危険色                   | `$red-500`    |
