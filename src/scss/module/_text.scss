@@ -68,7 +68,7 @@
   border-radius: $pre-border-radius;
   color: $pre-text-color;
   font-family: $pre-font-family;
-  white-space: pre;
+  white-space: $pre-white-space;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;

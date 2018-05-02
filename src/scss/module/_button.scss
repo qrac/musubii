@@ -104,10 +104,10 @@
   }
   &.is-circle {
     position: relative;
-    width: $btn-circle-size;
-    height: $btn-circle-size;
+    width: $btn-line-height;
+    height: $btn-line-height;
     padding: 0;
-    border-radius: ($btn-circle-size / 2);
+    border-radius: $btn-circle-border-radius;
     line-height: 1;
   }
 }

@@ -47,7 +47,7 @@
     font-size: $wysiwyg-small-font-size;
   }
   strong {
-    font-weight: $wysiwyg-small-font-weight;
+    font-weight: $wysiwyg-strong-font-weight;
   }
   em {
     font-style: italic;
@@ -105,7 +105,7 @@
   border-radius: $pre-border-radius;
   color: $pre-text-color;
   font-family: $pre-font-family;
-  white-space: pre;
+  white-space: $pre-white-space;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;

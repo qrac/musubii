@@ -43,6 +43,9 @@ $space-margin-field: 0.5em !default;
 // / Layout - Grid
 //----------------------------------------------------
 
+// Number of grid divisions
+$grid-split: 12 !default;
+
 // .grid > .col
 $grid-gap-default: 0.5em !default;
 
@@ -83,6 +86,7 @@ $pre-background-color: $grey-100 !default;
 $pre-border-radius: 0.125em !default;
 $pre-text-color: $indigo-500 !default;
 $pre-font-family: $font-mono !default;
+$pre-white-space: pre !default;
 
 // .pre > .code
 $pre-code-padding: 1.25em 1.5em !default;
@@ -105,7 +109,7 @@ $btn-transition: ease-out 0.12s !default;
 $btn-round-border-radius: 999em !default;
 
 // .btn.is-circle
-$btn-circle-size: 2.5em !default;
+$btn-circle-border-radius: 1.25em !default;
 
 // .btn.is-floating
 $btn-floating-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24) !default;
@@ -280,7 +284,7 @@ $wysiwyg-h6-font-size: 0.75em !default;
 $wysiwyg-small-font-size: 80% !default;
 
 // .wysiwyg strong
-$wysiwyg-small-font-weight: 700 !default;
+$wysiwyg-strong-font-weight: 700 !default;
 
 // .wysiwyg table th
 $wysiwyg-table-th-font-weight: 400 !default;
@@ -300,8 +304,7 @@ $wysiwyg-hr-border-color: $dark-7 !default;
 // / Utility - Flex
 //----------------------------------------------------
 
-// Number of grid divisions
-$grid-split: 12 !default;
+// none - (grid)
 
 //----------------------------------------------------
 // / Utility - Deco
