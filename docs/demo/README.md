@@ -1,6 +1,6 @@
 ---
 home: true
-version: 5.3.1
+version: 6.0.0
 download:
   text: Download CSS
   path: /css/musubii.min.css
