@@ -106,6 +106,8 @@
     border-radius: 2px;
   }
   > p code,
+  > ul code,
+  > ol code,
   > table code {
     padding: 0.2em 0.5em;
     background-color: $grey-100;
@@ -164,7 +166,7 @@
   > h4,
   > h5,
   > h6 {
-    margin-top: 0.5rem - $navbarHeight;
+    margin-top: 1.5rem - $navbarHeight;
     padding-top: ($navbarHeight + 1rem);
   }
 }

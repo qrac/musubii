@@ -8,7 +8,7 @@ module.exports = {
       lang: 'ja',
       title: 'MUSUBii',
       description: 'Simple CSS Framework for JP'
-    },
+    }
   },
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover' }],

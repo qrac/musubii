@@ -1,6 +1,6 @@
 # List
 
-リストの基本形は `.list > .item` です。デフォルトスタイルでリストを作る場合、黒丸は `.is-disc` 白丸は `.is-circle` ナンバリングは `.is-decimal` を `.list` に付与します。また、リストは入れ子にできます。
+リストの基本形は `.list > .item` です。デフォルトスタイルでリストを作る場合、黒丸は `.is-disc` 白丸は `.is-circle` ナンバリングは `.is-decimal` を `.list` に付与します。
 
 <demo-list demo="basic"/>
 

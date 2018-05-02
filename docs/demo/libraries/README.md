@@ -17,7 +17,7 @@ MUSUBii は各種ライブラリとの併用が可能です。依存関係はあ
 
 ## Google Fonts
 
-[Google Fonts](https://fonts.google.com/) は Google が配信している Web Font です。[日本語の早期アクセス版](https://googlefonts.github.io/japanese/)もあります。例えばこのデモサイトに適応されている丸ゴシックを使う場合は以下 2 種類のフォントを読み込みます。
+[Google Fonts](https://fonts.google.com/) は Google が配信している Web Font です。[日本語の早期アクセス版](https://googlefonts.github.io/japanese/)もあります。
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700,900">

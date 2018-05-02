@@ -6,6 +6,6 @@
 
 ## Responsive
 
-`.is-(xxxx)-(yy)` 形式のクラスを加えることでレスポンシブにサイズを変化させられます。
+`.is-(xxxx)-(yy)` 形式の class を加えることでレスポンシブにサイズを変化させられます。
 
 <table-size table="responsive"/>

@@ -6,6 +6,6 @@
 
 ## Responsive
 
-`.is-(xxxx)-(yy)` 形式のクラスを加えることでレスポンシブにプロパティを変化させられます。
+`.is-(xxxx)-(yy)` 形式の class を加えることでレスポンシブにプロパティを変化させられます。
 
 <table-deco table="responsive"/>

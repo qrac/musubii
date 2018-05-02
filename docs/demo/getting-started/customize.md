@@ -4,7 +4,7 @@ MUSUBii は、ほぼすべての項目を SCSS 変数でカスタマイズでき
 
 ## npm
 
-まずは npm で MUSUBii と必要なライブラリをインストール。すべて自作です。
+まずは npm で MUSUBii と必要なライブラリ（自作）をインストール。
 
 * [Sass Dashi](https://github.com/qrac/sass-dashi)：SCSS 変数と mixin のパック ※必須
 * [MOFTONE](https://qrac.github.io/moftone/)：[マテリアルデザインカラー](https://qrac.github.io/mdtone/)を淡い色合いに変える調整変数
@@ -96,13 +96,13 @@ $primary: #fb8c00;
 
 ブレイクポイントの変更ができる変数。メディアクエリの値を一括で変更することが可能。
 
-| Variable                | Description        | Default  |
-| ----------------------- | ------------------ | -------- |
-| `$screen-width-mobile`  | モバイルサイズ     | `0px`    |
-| `$screen-width-fablet`  | ファブレットサイズ | `576px`  |
-| `$screen-width-tablet`  | タブレットサイズ   | `768px`  |
-| `$screen-width-desktop` | デスクトップサイズ | `992px`  |
-| `$screen-width-wide`    | ワイドサイズ       | `1200px` |
+| Variable                | Description    | Default  |
+| ----------------------- | -------------- | -------- |
+| `$screen-width-mobile`  | Mobile サイズ  | `0px`    |
+| `$screen-width-fablet`  | Fablet サイズ  | `576px`  |
+| `$screen-width-tablet`  | Tablet サイズ  | `768px`  |
+| `$screen-width-desktop` | Desktop サイズ | `992px`  |
+| `$screen-width-wide`    | Wide サイズ    | `1200px` |
 
 ## Theme Color
 
@@ -172,16 +172,16 @@ XXL〜XXS までのサイズ設定を変更できる変数。拡大率すべて�
 
 `.section` 直下の `.inner` 類を調整する変数。
 
-| Variable                        | Description                     | Default  |
-| ------------------------------- | ------------------------------- | -------- |
-| `section-inner-width-fablet`    | `.inner` サイズ：ファブレット時 | `540px`  |
-| `section-inner-width-tablet`    | `.inner` サイズ：タブレット時   | `720px`  |
-| `section-inner-width-desktop`   | `.inner` サイズ：デスクトップ時 | `960px`  |
-| `section-inner-width-wide`      | `.inner` サイズ：ワイド時       | `1140px` |
-| `section-inner-padding`         | `.inner` の `padding`           | `0 16px` |
-| `section-inner-vw-width-fablet` | `.inner-vw` のサイズ            | `90vw`   |
-| `section-inner-vw-padding`      | `.inner-vw` の `padding`        | `0 1em`  |
-| `section-inner-soft-padding`    | `.inner-soft` の `padding`      | `0 1em`  |
+| Variable                        | Description                 | Default  |
+| ------------------------------- | --------------------------- | -------- |
+| `section-inner-width-fablet`    | `.inner` サイズ：Fablet 時  | `540px`  |
+| `section-inner-width-tablet`    | `.inner` サイズ：Tablet 時  | `720px`  |
+| `section-inner-width-desktop`   | `.inner` サイズ：Desktop 時 | `960px`  |
+| `section-inner-width-wide`      | `.inner` サイズ：Wide 時    | `1140px` |
+| `section-inner-padding`         | `.inner` の `padding`       | `0 16px` |
+| `section-inner-vw-width-fablet` | `.inner-vw` のサイズ        | `90vw`   |
+| `section-inner-vw-padding`      | `.inner-vw` の `padding`    | `0 1em`  |
+| `section-inner-soft-padding`    | `.inner-soft` の `padding`  | `0 1em`  |
 
 ## Space
 
@@ -283,15 +283,15 @@ XXL〜XXS までのサイズ設定を変更できる変数。拡大率すべて�
 
 | Variable                         | Description               | Default          |
 | -------------------------------- | ------------------------- | ---------------- |
-| `$table-padding`                 | マスの余白                | `0.75em 1em`     |
+| `$table-padding`                 | セルの余白                | `0.75em 1em`     |
 | `$table-background-color`        | 背景色                    | `$light`         |
 | `$table-border-width`            | 線の太さ                  | `1px`            |
 | `$table-border-color`            | 線の色                    | `$blue-grey-100` |
 | `$table-stripe-background-color` | ストライプ時の背景色      | `$grey-100`      |
-| `$table-paint-background-color`  | `.is-paint` マスの背景色  | `$cyan-500`      |
-| `$table-paint-text-color`        | `.is-paint` マスの文字色  | `$light`         |
-| `$table-spot-background-color`   | `.is-spot` マスの背景色   | `$yellow-200`    |
-| `$table-danger-background-color` | `.is-danger` マスの背景色 | `$red-100`       |
+| `$table-paint-background-color`  | `.is-paint` セルの背景色  | `$cyan-500`      |
+| `$table-paint-text-color`        | `.is-paint` セルの文字色  | `$light`         |
+| `$table-spot-background-color`   | `.is-spot` セルの背景色   | `$yellow-200`    |
+| `$table-danger-background-color` | `.is-danger` セルの背景色 | `$red-100`       |
 
 ## Form
 
