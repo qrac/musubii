@@ -29,7 +29,8 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito:400,700,900' }],
     ['link', { rel: 'stylesheet', href: '/css/musubii.min.css' }],
     ['link', { rel: 'apple-touch-icon', href: '/img/apple-touch-icon.png' }],
-    ['link', { rel: 'shortcut icon', href: '/img/favicon.png' }]
+    ['link', { rel: 'shortcut icon', href: '/img/favicon.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }]
   ],
   themeConfig: {
     repo: 'qrac/musubii',
