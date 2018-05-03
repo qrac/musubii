@@ -3,7 +3,7 @@ home: true
 version: 6.0.0
 download:
   text: Download CSS
-  path: /css/musubii.min.css
+  path: /musubii/css/musubii.min.css
   file: musubii.min.css
 hero:
   heading1: Simple CSS
