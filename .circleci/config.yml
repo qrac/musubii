@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:10.0.0
     branches:
       only:
-        - vuepress
+        - master
     steps:
       - checkout
       - restore_cache:
@@ -30,4 +30,4 @@ jobs:
             git init
             git add -A
             git commit -m "deploy [skip ci]"
-            git push -f git@github.com:qrac/musubii.git vuepress:gh-pages
+            git push -f git@github.com:qrac/musubii.git master:gh-pages
