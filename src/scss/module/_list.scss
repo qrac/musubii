@@ -8,15 +8,15 @@
 
 .list {
   > .item:not(:first-child) {
-    margin-top: 0.25em;
+    margin-top: $list-item-margin-top;
   }
   > .item > .list {
-    margin-top: 0.5em;
+    margin-top: ($list-item-margin-top * 2);
   }
   &.is-disc,
   &.is-circle,
   &.is-decimal {
-    margin-left: 1.5em;
+    margin-left: $list-margin-left;
     > .item {
       display: list-item;
     }
@@ -41,6 +41,6 @@
     display: flex;
   }
   > .item > *:not(:first-child) {
-    margin-left: 0.25em;
+    margin-left: $list-note-item-margin-left;
   }
 }

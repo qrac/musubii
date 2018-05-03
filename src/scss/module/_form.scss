@@ -21,17 +21,16 @@
 .field {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -0.5em;
-  margin-bottom: -0.5em;
-  > * {
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
+  &:not(.is-bar) {
+    margin-left: (-1 * $field-gap-default);
+    margin-bottom: (-1 * $field-gap-default);
+  }
+  &:not(.is-bar) > * {
+    margin-left: $field-gap-default;
+    margin-bottom: $field-gap-default;
   }
   > .field {
     display: inline-flex;
-  }
-  > .field + .field {
-    margin-top: 0;
   }
   &.is-middle {
     align-items: center;
@@ -54,6 +53,45 @@
 }
 
 //----------------------------------------------------
+// / Set Bar
+//----------------------------------------------------
+
+.field.is-bar {
+  flex-wrap: nowrap;
+  > .input,
+  > .select > select {
+    border-radius: 0;
+    overflow: hidden;
+  }
+  > .input:not(.is-round):first-child,
+  > .select:not(.is-round):first-child > select {
+    border-top-left-radius: $input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
+  }
+  > .input:not(.is-round):last-child,
+  > .select:not(.is-round):last-child > select {
+    border-top-right-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+  }
+  > .input.is-round:first-child,
+  > .select.is-round:first-child > select {
+    border-top-left-radius: $input-round-border-radius;
+    border-bottom-left-radius: $input-round-border-radius;
+  }
+  > .input.is-round:last-child,
+  > .select.is-round:last-child > select {
+    border-top-right-radius: $input-round-border-radius;
+    border-bottom-right-radius: $input-round-border-radius;
+  }
+  > .input:nth-child(2),
+  > .input:nth-child(2) ~ .input,
+  > .select:nth-child(2) > select,
+  > .select:nth-child(2) ~ .input {
+    border-left: none;
+  }
+}
+
+//----------------------------------------------------
 // / Text Input
 //----------------------------------------------------
 
@@ -70,20 +108,23 @@
 .input[type="time"],
 .input[type="number"] {
   max-width: 100%;
-  height: calc(2.5em + 2px);
-  padding: 0 0.75em;
-  background-color: $light;
-  border: 1px solid $dark-6;
-  border-radius: 2px;
-  color: $dark-2;
-  line-height: 2.5em;
+  height: calc(#{$input-height} + (#{$input-border-width} * 2));
+  padding: $input-padding;
+  background-color: $input-background-color;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  color: $body-text-color;
+  line-height: $input-height;
   &[disabled] {
-    background-color: $grey-300;
-    color: $dark-6;
+    background-color: $input-disable-background-color;
+    color: $input-disable-text-color;
   }
   &[readonly] {
-    background-color: $grey-200;
-    color: $dark-4;
+    background-color: $input-readonly-background-color;
+    color: $input-readonly-text-color;
+  }
+  &.is-round {
+    border-radius: $input-round-border-radius;
   }
 }
 
@@ -93,9 +134,10 @@
 .input[type="email"],
 .input[type="tel"],
 .input[type="password"],
-.input[type="number"] {
+.input[type="number"],
+.textarea {
   @include placeholder {
-    color: $dark-6;
+    color: $input-placeholder-color;
   }
 }
 
@@ -110,8 +152,9 @@
 .input[type="month"],
 .input[type="week"],
 .input[type="time"],
-.input[type="number"] {
-  box-shadow: $shadow-input;
+.input[type="number"],
+.textarea {
+  box-shadow: $input-shadow;
   &[disabled] {
     box-shadow: none;
   }
@@ -129,7 +172,8 @@
 .input[type="week"],
 .input[type="time"],
 .input[type="number"],
-.textarea {
+.textarea,
+.select > select {
   appearance: none;
 }
 
@@ -138,9 +182,17 @@
 //----------------------------------------------------
 
 .input[type="file"] {
+  cursor: pointer;
   display: block;
   max-width: 70vw;
   overflow: hidden;
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+.btn .input[type="file"] {
+  display: none;
 }
 
 //----------------------------------------------------
@@ -148,16 +200,18 @@
 //----------------------------------------------------
 
 .textarea {
-  min-height: 150px;
-  background-color: $light;
-  border: 1px solid $dark-6;
-  border-radius: 2px;
-  box-shadow: $shadow-input;
-  padding: calc(0.5em - 1.5px) 0.5em;
+  background-color: $input-background-color;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  box-shadow: $input-shadow;
+  padding: $textarea-padding;
   &[disabled] {
-    background-color: $grey-300;
-    color: $dark-6;
-    box-shadow: none;
+    background-color: $input-disable-background-color;
+    color: $input-disable-text-color;
+  }
+  &[readonly] {
+    background-color: $input-readonly-background-color;
+    color: $input-readonly-text-color;
   }
 }
 
@@ -165,13 +219,30 @@
 // / Radio & Check Box
 //----------------------------------------------------
 
+.label.is-radio,
+.label.is-checkbox {
+  > .input[type="radio"],
+  > .input[type="checkbox"] {
+    + .text {
+      margin-left: $radio-gap-default;
+      margin-right: $radio-gap-after;
+    }
+  }
+}
+
 .input[type="radio"],
 .input[type="checkbox"] {
-  margin-right: 0.25em;
-  + .text {
-    margin-right: 1em;
+  + .label.is-radio,
+  + .label.is-checkbox {
+    margin-right: $radio-gap-after;
   }
-  &[disabled] + .text {
+}
+
+.input[type="radio"],
+.input[type="checkbox"] {
+  &[disabled] + .text,
+  &[disabled] + .label.is-radio,
+  &[disabled] + .label.is-checkbox {
     color: $dark-5;
   }
 }
@@ -181,26 +252,51 @@
 //----------------------------------------------------
 
 .select {
-  max-width: 100%;
-  height: calc(2.5em + 2px);
-  padding: 0 0.75em;
-  background-color: $light;
-  border: 1px solid $dark-6;
-  border-radius: 2px;
-  color: $dark-2;
-  line-height: 2.5em;
-  &[multiple] {
-    height: auto;
-    padding: 0.5em 0.75em;
-    > option {
-      min-height: 1.5em;
+  position: relative;
+  > select {
+    max-width: 100%;
+    height: calc(#{$input-height} + (#{$input-border-width} * 2));
+    padding: $input-padding;
+    background-color: $input-background-color;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    color: $body-text-color;
+    line-height: $input-height;
+    &[disabled] {
+      background-color: $input-disable-background-color;
+      color: $input-disable-text-color;
+    }
+    &[readonly] {
+      background-color: $input-readonly-background-color;
+      color: $input-readonly-text-color;
     }
   }
-  &[disabled] {
-    background-color: $grey-300;
-    color: $dark-6;
+  &.is-round:not(.is-multiple) > select {
+    border-radius: $input-round-border-radius;
   }
-  &[readonly] {
-    background-color: $grey-200;
+  &:not(.is-multiple) {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: ($select-angle-size * 2);
+      width: $select-angle-size;
+      height: $select-angle-size;
+      border-bottom: $select-angle-border-width solid $select-angle-border-color;
+      border-right: $select-angle-border-width solid $select-angle-border-color;
+      transform: translateY(-70%) rotate(45deg);
+    }
+    > select {
+      padding-right: ($select-angle-size * 5);
+    }
+  }
+}
+
+.select.is-multiple > select {
+  height: auto;
+  padding: 0;
+  > option {
+    min-height: 1.5em;
+    padding: 0.5em 0.75em;
   }
 }

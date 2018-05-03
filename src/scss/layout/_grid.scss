@@ -10,12 +10,12 @@
   display: flex;
   flex-wrap: wrap;
   &:not(.is-gap-none) {
-    margin-left: -0.5em;
-    margin-bottom: -0.5em;
+    margin-left: (-1 * $grid-gap-default);
+    margin-bottom: (-1 * $grid-gap-default);
   }
   &:not(.is-gap-none) > .col {
-    padding-left: 0.5em;
-    padding-bottom: 0.5em;
+    padding-left: $grid-gap-default;
+    padding-bottom: $grid-gap-default;
   }
   &.is-middle {
     align-items: center;

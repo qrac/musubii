@@ -86,8 +86,7 @@
         &.is-#{$key-breakpoint}-right {
           text-align: right;
         }
-      }
-      @else {
+      } @else {
         &.is-#{$key-breakpoint}-left {
           text-align: left;
         }

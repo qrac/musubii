@@ -25,8 +25,7 @@
       .is-#{$key}-none {
         display: none;
       }
-    }
-    @else {
+    } @else {
       .is-#{$key}-block {
         display: block;
       }

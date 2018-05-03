@@ -1,0 +1,325 @@
+//----------------------------------------------------
+// Config: Variable
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Base - Global
+//----------------------------------------------------
+
+// body
+$body-text-color: $dark-2 !default;
+$body-font-family: $font-sans !default;
+$body-line-height: 1.5 !default;
+
+//----------------------------------------------------
+// / Layout - Section
+//----------------------------------------------------
+
+// .section > .inner
+$section-inner-width-fablet: 540px !default;
+$section-inner-width-tablet: 720px !default;
+$section-inner-width-desktop: 960px !default;
+$section-inner-width-wide: 1140px !default;
+$section-inner-padding: 0 16px !default;
+
+// .section > .inner-vw
+$section-inner-vw-width-fablet: 90vw !default;
+$section-inner-vw-padding: 0 1em !default;
+
+// .section > .inner-soft
+$section-inner-soft-padding: 0 1em !default;
+
+//----------------------------------------------------
+// / Layout - Space
+//----------------------------------------------------
+
+// .is-space > *:not(:first-child)
+$space-margin-default: 1em !default;
+$space-margin-heading: 1.5em !default;
+$space-margin-groups: 3em !default;
+$space-margin-field: 0.5em !default;
+
+//----------------------------------------------------
+// / Layout - Grid
+//----------------------------------------------------
+
+// Number of grid divisions
+$grid-split: 12 !default;
+
+// .grid > .col
+$grid-gap-default: 0.5em !default;
+
+//----------------------------------------------------
+// / Module - Heading
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Text
+//----------------------------------------------------
+
+// .texts
+$texts-line-height: 1.9 !default;
+
+// .text.is-link
+$text-link-border-bottom-width: 1px !default;
+$text-link-border-bottom-style: solid !default;
+
+// .blockquote
+$blockquote-background-color: $grey-100 !default;
+$blockquote-border-left-width: 0.5em !default;
+$blockquote-border-left-color: $dark-9 !default;
+$blockquote-border-radius: 0.125em !default;
+$blockquote-padding: 1.5em !default;
+
+// :not(.pre) >.code
+$code-padding: 0.2em 0.5em !default;
+$code-background-color: $grey-100 !default;
+$code-border-radius: 0.1875em !default;
+$code-text-color: $indigo-500 !default;
+$code-font-size: 0.875em !default;
+$code-font-family: $font-mono !default;
+
+// .pre
+$pre-background-color: $grey-100 !default;
+$pre-border-radius: 0.125em !default;
+$pre-text-color: $indigo-500 !default;
+$pre-font-family: $font-mono !default;
+$pre-white-space: pre !default;
+
+// .pre > .code
+$pre-code-padding: 1.25em 1.5em !default;
+
+//----------------------------------------------------
+// / Module - Button
+//----------------------------------------------------
+
+// .btns > .btn
+$btns-gap-default: 0.5em !default;
+
+// .btn
+$btn-padding: 0 1em !default;
+$btn-border-width: 1px !default;
+$btn-border-radius: 0.1875em !default;
+$btn-line-height: 2.5em !default;
+$btn-transition: ease-out 0.12s !default;
+
+// .btn.is-round
+$btn-round-border-radius: 999em !default;
+
+// .btn.is-circle
+$btn-circle-border-radius: 1.25em !default;
+
+// .btn.is-floating
+$btn-floating-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24) !default;
+$btn-floating-hover-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24) !default;
+
+// .btn.is-plain
+$btn-plain-default-background-color: $grey-100 !default;
+$btn-plain-default-hover-background-color: darken($grey-100, 5%) !default;
+
+// .btn.is-melt
+$btn-melt-default-hover-background-color: $dark-9 !default;
+
+// .btn.is-outline
+$btn-outline-default-background-color: $light !default;
+$btn-outline-default-hover-background-color: darken($light, 5%) !default;
+$btn-outline-default-border-color: $dark-7 !default;
+
+// .btn.is-ghost
+$btn-ghost-default-border-color: $light !default;
+$btn-ghost-default-text-color: $light !default;
+$btn-ghost-default-hover-background-color: $light !default;
+$btn-ghost-default-hover-text-color: $dark-2 !default;
+
+// .btn.is-disable
+$btn-disable-background-color: $grey-400 !default;
+$btn-disable-background-color-alpha: $dark-6 !default;
+$btn-disable-text-color: $dark-6 !default;
+
+// .btn.is-ghost.is-disable
+$btn-ghost-disable-background-color: $light-8 !default;
+$btn-ghost-disable-border-color: $light-4 !default;
+$btn-ghost-disable-text-color: $light-4 !default;
+
+//----------------------------------------------------
+// / Module - List
+//----------------------------------------------------
+
+// .list
+$list-margin-left: 1.5em !default;
+
+// .list > .item
+$list-item-margin-top: 0.25em !default;
+
+// list.is-note > .item
+$list-note-item-margin-left: 0.25em !default;
+
+//----------------------------------------------------
+// / Module - Table
+//----------------------------------------------------
+
+// .table
+$table-padding: 0.75em 1em !default;
+$table-background-color: $light !default;
+$table-border-width: 1px !default;
+$table-border-color: $blue-grey-100 !default;
+
+// .table.is-stripe
+$table-stripe-background-color: $grey-100 !default;
+
+// .table .is-paint
+$table-paint-background-color: $cyan-500 !default;
+$table-paint-text-color: $light !default;
+
+// .table .is-spot
+$table-spot-background-color: $yellow-200 !default;
+
+// .table .is-danger
+$table-danger-background-color: $red-100 !default;
+
+//----------------------------------------------------
+// / Module - Form
+//----------------------------------------------------
+
+// .field > *
+$field-gap-default: 0.5em !default;
+
+// .input
+$input-height: 2.5em !default;
+$input-padding: 0 0.75em !default;
+$input-background-color: $light !default;
+$input-border-width: 1px !default;
+$input-border-color: $dark-6 !default;
+$input-border-radius: 2px !default;
+$input-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !default;
+
+// .input.is-round
+$input-round-border-radius: 999em !default;
+
+// .input[disable]
+$input-disable-background-color: $grey-300 !default;
+$input-disable-text-color: $dark-6 !default;
+
+// .input[readonly]
+$input-readonly-background-color: $grey-200 !default;
+$input-readonly-text-color: $dark-2 !default;
+
+// .input placeholder
+$input-placeholder-color: $dark-6 !default;
+
+// .textarea
+$textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
+
+// .input[type="radio"]
+$radio-gap-default: 0.5em !default;
+$radio-gap-after: 1em !default;
+
+// select
+$select-angle-size: 0.5em !default;
+$select-angle-border-width: 2px !default;
+$select-angle-border-color: $dark-5 !default;
+
+//----------------------------------------------------
+// / Module - Icon
+//----------------------------------------------------
+
+// class
+$icon-class-default: ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons" !default;
+
+// .icon + .text
+$icon-margin-left: 0.375em !default;
+
+// .icon.is-fit
+$icon-fit-width: 1em !default;
+
+//----------------------------------------------------
+// / Module - Alert
+//----------------------------------------------------
+
+// .alert
+$alert-padding: 0.675em 0.875em !default;
+$alert-border-width: 1px !default;
+$alert-border-radius: 2px !default;
+
+// .alert default
+$alert-default-background-color: $grey-100 !default;
+$alert-default-border-color: $grey-300 !default;
+
+// .alert.is-primary
+$alert-primary-background-color: lighten($cyan-100, 8%) !default;
+$alert-primary-border-color: $cyan-200 !default;
+
+// .alert.is-info
+$alert-info-background-color: lighten($blue-100, 7%) !default;
+$alert-info-border-color: $blue-200 !default;
+
+// .alert.is-success
+$alert-success-background-color: lighten($green-a100, 7%) !default;
+$alert-success-border-color: lighten($green-a200, 3%) !default;
+
+// .alert.is-warning
+$alert-warning-background-color: lighten($orange-100, 5%) !default;
+$alert-warning-border-color: $orange-200 !default;
+
+// .alert.is-danger
+$alert-danger-background-color: lighten($red-100, 5%) !default;
+$alert-danger-border-color: lighten($red-a100, 5%) !default;
+
+//----------------------------------------------------
+// Module - WYSIWYG
+//----------------------------------------------------
+
+// .wysiwyg h1, h2, h3, h4, h5, h6
+$wysiwyg-heading-font-weight: 700 !default;
+$wysiwyg-h1-font-size: 2em !default;
+$wysiwyg-h2-font-size: 1.5em !default;
+$wysiwyg-h3-font-size: 1.25em !default;
+$wysiwyg-h4-font-size: 1em !default;
+$wysiwyg-h5-font-size: 0.875em !default;
+$wysiwyg-h6-font-size: 0.75em !default;
+
+// .wysiwyg small
+$wysiwyg-small-font-size: 80% !default;
+
+// .wysiwyg strong
+$wysiwyg-strong-font-weight: 700 !default;
+
+// .wysiwyg table th
+$wysiwyg-table-th-font-weight: 400 !default;
+
+// .wysiwyg hr
+$wysiwyg-hr-border-width: 1px !default;
+$wysiwyg-hr-border-style: solid !default;
+$wysiwyg-hr-border-color: $dark-7 !default;
+
+//----------------------------------------------------
+// / Utility - Size
+//----------------------------------------------------
+
+// none - (import > sass-dashi)
+
+//----------------------------------------------------
+// / Utility - Flex
+//----------------------------------------------------
+
+// none - (grid)
+
+//----------------------------------------------------
+// / Utility - Deco
+//----------------------------------------------------
+
+// none - (import > sass-dashi)
+
+//----------------------------------------------------
+// / Utility - Display
+//----------------------------------------------------
+
+// none - (import > sass-dashi)
+
+//----------------------------------------------------
+// / Utility - Clearfix
+//----------------------------------------------------
+
+// none

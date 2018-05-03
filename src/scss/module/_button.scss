@@ -10,19 +10,16 @@
   display: flex;
   flex-wrap: wrap;
   &:not(.is-bar) {
-    margin-left: -0.5em;
-    margin-bottom: -0.5em;
+    margin-left: (-1 * $btns-gap-default);
+    margin-bottom: (-1 * $btns-gap-default);
   }
   &:not(.is-bar) > .btns,
   &:not(.is-bar) > .btn {
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
+    margin-left: $btns-gap-default;
+    margin-bottom: $btns-gap-default;
   }
   > .btns {
     display: inline-flex;
-  }
-  > .btns + .btns {
-    margin-top: 0;
   }
   &.is-middle {
     align-items: center;
@@ -48,27 +45,28 @@
 // / Set Bar
 //----------------------------------------------------
 
-.btns.is-bar {
+.btns.is-bar,
+.field.is-bar {
   flex-wrap: nowrap;
   > .btn {
     border-radius: 0;
     overflow: hidden;
   }
   > .btn:not(.is-round):first-child {
-    border-top-left-radius: 0.1875em;
-    border-bottom-left-radius: 0.1875em;
+    border-top-left-radius: $btn-border-radius;
+    border-bottom-left-radius: $btn-border-radius;
   }
   > .btn:not(.is-round):last-child {
-    border-top-right-radius: 0.1875em;
-    border-bottom-right-radius: 0.1875em;
+    border-top-right-radius: $btn-border-radius;
+    border-bottom-right-radius: $btn-border-radius;
   }
   > .btn.is-round:first-child {
-    border-top-left-radius: 999em;
-    border-bottom-left-radius: 999em;
+    border-top-left-radius: $btn-round-border-radius;
+    border-bottom-left-radius: $btn-round-border-radius;
   }
   > .btn.is-round:last-child {
-    border-top-right-radius: 999em;
-    border-bottom-right-radius: 999em;
+    border-top-right-radius: $btn-round-border-radius;
+    border-bottom-right-radius: $btn-round-border-radius;
   }
   > .btn:nth-child(2),
   > .btn:nth-child(2) ~ .btn {
@@ -87,45 +85,30 @@
   align-items: center;
   align-self: flex-start;
   white-space: nowrap;
-  padding: 0 1em;
-  border-radius: 0.1875em;
-  line-height: 2.5em;
+  padding: $btn-padding;
+  border-radius: $btn-border-radius;
+  line-height: $btn-line-height;
   text-align: center;
-  transition: ease-out 0.12s;
+  transition: $btn-transition;
   &[type="button"],
   &[type="reset"],
   &[type="submit"] {
-    color: $dark-2;
+    color: $body-text-color;
   }
   &.is-disable,
   &[disabled] {
     cursor: default;
   }
-  &.is-full {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
   &.is-round {
-    border-radius: 999em;
+    border-radius: $btn-round-border-radius;
   }
   &.is-circle {
     position: relative;
-    width: 2.5em;
-    height: 2.5em;
+    width: $btn-line-height;
+    height: $btn-line-height;
     padding: 0;
-    border-radius: 1.25em;
-  }
-  &.is-circle > .icon,
-  &.is-circle > .im,
-  &.is-circle > .fa,
-  &.is-circle > .material-icons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  > .fa {
-    vertical-align: top;
+    border-radius: $btn-circle-border-radius;
+    line-height: 1;
   }
 }
 
@@ -134,9 +117,9 @@
 //----------------------------------------------------
 
 .btn.is-floating:not(.is-disable) {
-  box-shadow: $shadow-btn-floating;
+  box-shadow: $btn-floating-shadow;
   &:hover {
-    box-shadow: $shadow-btn-floating-hover;
+    box-shadow: $btn-floating-hover-shadow;
   }
 }
 
@@ -145,10 +128,10 @@
 //----------------------------------------------------
 
 .btn.is-plain {
-  background-color: $grey-100;
-  border: 1px solid transparent;
+  background-color: $btn-plain-default-background-color;
+  border: $btn-border-width solid transparent;
   &:hover {
-    background-color: darken($grey-100, 5%);
+    background-color: $btn-plain-default-hover-background-color;
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
@@ -163,8 +146,8 @@
   &.is-disable:hover,
   &[disabled],
   &[disabled]:hover {
-    color: $dark-6;
-    background-color: $grey-400;
+    background-color: $btn-disable-background-color;
+    color: $btn-disable-text-color;
   }
 }
 
@@ -174,9 +157,9 @@
 
 .btn.is-melt {
   background-color: transparent;
-  border: 1px solid transparent;
+  border: $btn-border-width solid transparent;
   &:hover {
-    background-color: $dark-9;
+    background-color: $btn-melt-default-hover-background-color;
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
@@ -187,7 +170,7 @@
   &.is-disable:hover,
   &[disabled],
   &[disabled]:hover {
-    color: $dark-6;
+    color: $btn-disable-text-color;
     background-color: transparent;
   }
 }
@@ -197,10 +180,10 @@
 //----------------------------------------------------
 
 .btn.is-outline {
-  background-color: $light;
-  border: 1px solid $dark-7;
+  background-color: $btn-outline-default-background-color;
+  border: $btn-border-width solid $btn-outline-default-border-color;
   &:hover {
-    background-color: darken($light, 5%);
+    background-color: $btn-outline-default-hover-background-color;
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
@@ -217,8 +200,8 @@
   &.is-disable:hover,
   &[disabled],
   &[disabled]:hover {
-    color: $dark-6;
-    background-color: $dark-6;
+    background-color: $btn-disable-background-color-alpha;
+    color: $btn-disable-text-color;
   }
 }
 
@@ -227,12 +210,12 @@
 //----------------------------------------------------
 
 .btn.is-ghost {
-  color: $light;
   background-color: transparent;
-  border: 1px solid $light;
+  border: $btn-border-width solid $btn-ghost-default-border-color;
+  color: $btn-ghost-default-text-color;
   &:hover {
-    color: $dark-1;
-    background-color: $light;
+    background-color: $btn-ghost-default-hover-background-color;
+    color: $btn-ghost-default-hover-text-color;
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
@@ -249,8 +232,8 @@
   &.is-disable:hover,
   &[disabled],
   &[disabled]:hover {
-    color: $light-4;
-    background-color: $light-8;
-    border-color: $light-4;
+    background-color: $btn-ghost-disable-background-color;
+    border-color: $btn-ghost-disable-border-color;
+    color: $btn-ghost-disable-text-color;
   }
 }

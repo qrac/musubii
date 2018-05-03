@@ -1,7 +1,5 @@
-docs/index.html
-docs/css/musubii-demo.css
-docs/css/musubii-demo.min.css
-docs/img/
-docs/js/
-src/
+docs/demo/
+src/img/
+.circleci/
+.prettierignore
 gulpfile.js

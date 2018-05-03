@@ -1,0 +1,241 @@
+//----------------------------------------------------
+// / Main
+//----------------------------------------------------
+
+.page {
+  padding-left: $sidebarWidth;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbarHeight;
+  background-color: $accentColor;
+  //border-bottom: 1px solid $borderColor;
+  color: $light;
+  z-index: 20;
+  .search-box input {
+    padding-left: 1.875em;
+    border: none;
+    border-radius: 999em;
+  }
+  .nav-links a {
+    &:hover,
+    &.router-link-active {
+      border-color: lighten($accentColor, 20%);
+      color: $light;
+    }
+    .icon.outbound {
+      color: $light;
+      vertical-align: baseline;
+    }
+  }
+}
+
+.sidebar-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+}
+
+.sidebar {
+  position: fixed;
+  top: $navbarHeight;
+  left: 0;
+  bottom: 0;
+  width: $sidebarWidth;
+  margin: 0;
+  background-color: $light;
+  border-right: 1px solid $borderColor;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.content {
+  > *:not(:first-child):not(svg) {
+    margin-top: 1em;
+  }
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    font-family: Nunito, $font-sans;
+    font-weight: 700;
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+  > h1 {
+    font-size: 2em;
+  }
+  > h2 {
+    font-size: 1.5em;
+  }
+  > h3 {
+    font-size: 1.25em;
+  }
+  > h4 {
+    font-size: 1em;
+  }
+  > h5 {
+    font-size: 0.875em;
+  }
+  > h6 {
+    font-size: 0.75em;
+  }
+  > p {
+    line-height: 1.9;
+  }
+  > p code {
+    color: $indigo-500;
+    font-family: $font-mono;
+  }
+  > pre code {
+    font-family: $font-mono;
+  }
+  > pre[class*="language-"] {
+    font-size: 87.5%;
+    border-radius: 2px;
+  }
+  > p code,
+  > ul code,
+  > ol code,
+  > table code {
+    padding: 0.2em 0.5em;
+    background-color: $grey-100;
+    border-radius: 0.1875em;
+    color: $indigo-500;
+    font-size: 0.875em;
+    word-break: break-all;
+  }
+  > ul,
+  > ol {
+    line-height: 1.8;
+    margin-left: 1.5em;
+    > li {
+      display: list-item;
+    }
+    > li li {
+      font-size: 100%;
+    }
+  }
+  > ul > li {
+    list-style: circle outside;
+  }
+  > ol > li {
+    list-style: decimal outside;
+  }
+  > table {
+    width: 100%;
+    background-color: $light;
+    border-radius: 2px;
+    font-size: 87.5%;
+    thead {
+    }
+    th {
+      background-color: $cyan-500;
+      color: $light;
+      //font-weight: 700;
+    }
+    th,
+    td {
+      padding: 0.75em 1em;
+      border: 1px solid $grey-300;
+    }
+  }
+}
+
+.content:not(.custom) {
+  max-width: $contentWidth;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  > *:first-child {
+    margin-top: -1.75rem;
+  }
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    margin-top: 1.5rem - $navbarHeight;
+    padding-top: ($navbarHeight + 1rem);
+  }
+}
+
+.content.custom {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $accentColor;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &:hover .header-anchor {
+    opacity: 1;
+  }
+}
+
+a.header-anchor {
+  font-size: 0.85em;
+  float: left;
+  margin-left: -0.87em;
+  padding-right: 0.23em;
+  margin-top: 0.125em;
+  opacity: 0;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.custom-layout {
+  padding-top: $navbarHeight;
+}
+
+.theme-container {
+  &.sidebar-open {
+    .sidebar-mask {
+      display: block;
+    }
+  }
+  &.no-navbar {
+    .content:not(.custom) {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 1.5rem;
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: (($MQMobile + 1px))) {
+  .theme-container.no-sidebar {
+    .sidebar {
+      display: none;
+    }
+    .page {
+      padding-left: 0;
+    }
+  }
+}

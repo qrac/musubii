@@ -1,0 +1,33 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.0.0
+    branches:
+      only:
+        - master
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Build docs
+          command: npm run build
+      - run:
+          name: Commit changes
+          command: |
+            cd docs/demo/.vuepress/dist
+            git config --global user.name "$GH_USER_NAME"
+            git config --global user.email "$GH_USER_EMAIL"
+            git init
+            git add -A
+            git commit -m "deploy [skip ci]"
+            git push -f git@github.com:qrac/musubii.git master:gh-pages
