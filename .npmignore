@@ -1,4 +1,5 @@
 docs/demo/
 src/img/
+.circleci/
 .prettierignore
 gulpfile.js

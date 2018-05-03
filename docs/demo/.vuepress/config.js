@@ -1,5 +1,4 @@
 module.exports = {
-  dest: 'vuepress',
   base: '/musubii/',
   serviceWorker: true,
   ga: 'UA-40305123-17',
