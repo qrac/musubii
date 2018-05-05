@@ -98,12 +98,16 @@
     color: $indigo-500;
     font-family: $font-mono;
   }
-  > pre code {
-    font-family: $font-mono;
-  }
   > pre[class*="language-"] {
     font-size: 87.5%;
     border-radius: 2px;
+    word-wrap: normal;
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  > pre code {
+    font-family: $font-mono;
   }
   > p code,
   > ul code,
