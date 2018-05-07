@@ -26,7 +26,7 @@ MUSUBii は各種ライブラリとの併用が可能です。依存関係はあ
 
 ## Font Awesome
 
-[Font Awesome](http://fontawesome.com/) は CDN で SVG もしくは Web Font を使ったアイコン表示が可能です。バージョン 5 からはグリフや class 名が多少変更になっており、JS を使ったインライン SVG アイコン表示にも対応しています。
+[Font Awesome](http://fontawesome.com/) は CDN で SVG もしくは Web Font を使ったアイコン表示が可能。バージョン 5 からはグリフや class 名が多少変更になっており、JS を使ったインライン SVG アイコン表示にも対応しています。
 
 ```html
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
@@ -41,6 +41,14 @@ MUSUBii は各種ライブラリとの併用が可能です。依存関係はあ
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 ```
 
+## Vue.js
+
+[Vue.js](https://jp.vuejs.org/) は、データバインディングなどが得意で UI 構築に特化している JS フレームワークです。
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+```
+
 ## jQuery
 
 各バージョンの [jQuery](https://jquery.com/) を CDN 経由で使えます。本家よりも [Google Hosted Libraries](https://developers.google.com/speed/libraries/#jquery) からの配信が比較的安定しています。
@@ -49,12 +57,4 @@ MUSUBii は各種ライブラリとの併用が可能です。依存関係はあ
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-```
-
-## Vue.js
-
-[Vue.js](https://jp.vuejs.org/) は、データバインディングなどが得意で UI 構築に特化している JS フレームワークです。
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 ```
