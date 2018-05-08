@@ -2,7 +2,7 @@
   <header class="navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
     <router-link :to="$localePath" class="home-link">
-      <img class="logo"
+      <img class="logo" alt="Site Logo"
         v-if="$site.themeConfig.logo"
         :src="$withBase($site.themeConfig.logo)">
     </router-link>
