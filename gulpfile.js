@@ -25,7 +25,10 @@ const paths = {
 
 // Setting : Sass Options
 const sassOptions = {
-  outputStyle: 'expanded'
+  outputStyle: 'expanded',
+  importer: packageImporter({
+    extensions: ['.scss', '.css']
+  })
 }
 
 // SCSS > CSS
@@ -33,11 +36,7 @@ gulp.task('scss', () => {
   return gulp.src(paths.src_scss + '**/*.scss')
     .pipe(sassGlob())
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
-    .pipe(sass({
-        importer: packageImporter({
-          extensions: ['.scss', '.css']
-        })
-      }))
+    .pipe(sass(sassOptions))
     .pipe(autoprefixer(['> 3% in JP', 'ie 11', 'android 4.4', 'last 1 versions']))
     .pipe(gcmq())
     .pipe(gulp.dest(paths.dist_css))

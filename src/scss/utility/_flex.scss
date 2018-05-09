@@ -6,7 +6,7 @@
 // / Responsive
 //----------------------------------------------------
 
-@each $key, $mediaquery in $pattern-breakpoint-mediaquery-mobile-first {
+@each $key, $mediaquery in $pattern-breakpoint-mediaquery-all {
   @include mediaquery-pattern($mediaquery) {
     @for $i from 0 through $grid-split {
       @if $i == 0 {

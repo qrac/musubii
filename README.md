@@ -52,7 +52,7 @@ CSS のレイヤーは主に 4 つに分類されています。
 ### [CDN][link-jsdelivr]
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.0.0/docs/css/musubii.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.1.0/docs/css/musubii.min.css">
 ```
 
 ### [npm][link-npm]
