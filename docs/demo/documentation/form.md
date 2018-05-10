@@ -1,6 +1,6 @@
 # Form
 
-フォームはブラウザのデフォルト機能を活かすことを推奨しています。`form` の中に `form` を入れることはできません。`form` タグは `action` に送信先プログラムを指定し、`method` にボディに収めて送信する `post` またはセパレータ `?` で URL に追加する `get` を指定します。
+フォームはブラウザのデフォルト機能を活かすことを推奨しています。`form` の中に `form` を入れることはできません。`form` タグは `action` に送信先プログラムを指定し、`method` にはボディに収めて送信する `post` またはセパレータ `?` で URL に追加する `get` を指定します。
 
 <demo-form demo="basic"/>
 
@@ -121,7 +121,7 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ## Date
 
-日付入力欄は `input[type="datetime-local"]` タグまたは `input[type="date"]` タグまたは `input[type="month"]` タグに class `.input` 付与で装飾し使用します。ブラウザのデフォルト機能でデイトピッカーやドラムロールを使った日付選択が可能です。
+日付入力欄は `input[type="datetime-local"]` `input[type="date"]` `input[type="month"]` タグに class `.input` 付与で装飾し使用します。ブラウザのデフォルト機能でデイトピッカーやドラムロールを使った日付選択が可能です。
 
 <demo-form demo="date"/>
 
@@ -213,7 +213,7 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ラジオボタンは `input[type="radio"]` タグです。`name` で選択肢をまとめます。
 
-`label` で `input` を子要素にすれば id 指定を省略できます。分離させる場合は `label` から `for` 属性で対象 `input` の id を指定。CSS でデザインを差し替える場合は主に後者を用います。
+`label` で `input` を子要素にすれば id を省略できます。分離させる場合は `label` から `for` 属性で対象 `input` の id を指定。
 
 <demo-form demo="radio"/>
 
@@ -253,7 +253,7 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ラジオボタンは `input[type="checkbox"]` タグです。`name` で選択肢をまとめます。
 
-`label` で `input` を子要素にすれば id 指定を省略できます。分離させる場合は `label` から `for` 属性で対象 `input` の id を指定。CSS でデザインを差し替える場合は主に後者を用います。
+`label` で `input` を子要素にすれば id を省略できます。分離させる場合は `label` から `for` 属性で対象 `input` の id を指定。
 
 <demo-form demo="checkbox"/>
 
@@ -332,7 +332,7 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ## Button
 
-汎用ボタンは `button[type="button"]` タグ、リセットボタンは `button[type="reset"]` タグ、サブミットボタンは `button[type="submit"]` タグにそれぞれ class `.btn` を付与します。
+汎用ボタンは `button[type="button"]` タグ。リセットボタンは `button[type="reset"]` タグ。サブミットボタンは `button[type="submit"]` タグにそれぞれ class `.btn` を付与します。
 
 `disabled` 属性を付与すると自動的にデザインも変わります。その他スタイリングの詳細はボタンページを参照ください。
 
@@ -446,7 +446,7 @@ TEL 入力欄は `input[type="tel"]` タグに class `.input` 付与で装飾し
 
 ## Validation
 
-フォームにはバリデーション機能が備わっています。`type="email"` や `type="url"` が入力形式を判別するほか、必須項目を入れているか入れていないかなどもチェックされており、CSS では以下の擬似クラスを用いてスタイルを当てることができます。
+フォームにはバリデーション機能が備わっています。`type="email"` や `type="url"` が入力形式を判別するほか、必須項目のチェックもされており、CSS では以下の擬似クラスを用いてスタイルを当てることができます。
 
 | Class       | Detail                           |
 | ----------- | -------------------------------- |

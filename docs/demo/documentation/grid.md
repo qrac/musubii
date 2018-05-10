@@ -79,7 +79,7 @@ Flexbox を用いた 12 分割+α のグリッドシステムです。付与す�
 
 ## Reverse
 
-グリッド内のカラムが横並びになったときに通常とは逆に並べたい場合は `.grid` に `.is-reverse` を付与します。
+グリッド内のカラムを通常とは逆に並べたい場合は `.grid` に `.is-reverse` を付与します。
 
 <demo-grid demo="reverse"/>
 

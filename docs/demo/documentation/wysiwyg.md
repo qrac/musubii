@@ -1,6 +1,8 @@
 # WYSIWYG
 
-WYSIWYG や Markdown で生成した HTML タグに装飾を施すスタイルセットです。利用シーンは主に静的サイトジェネレーターや WordPress。`.wysiwyg` で出力されるプレーンな HTML タグをラッピングします。要素の間隔を保つために `.is-space` も付与してください。
+WYSIWYG や Markdown で生成した HTML タグに装飾を施すスタイルセットです。利用シーンは主に静的サイトジェネレーターや WordPress。
+
+`.wysiwyg` で出力されるプレーンな HTML タグをラッピングします。要素の間隔を保つために `.is-space` も付与してください。
 
 <demo-wysiwyg demo="basic"/>
 
