@@ -98,7 +98,8 @@
     color: $indigo-500;
     font-family: $font-mono;
   }
-  > pre[class*="language-"] {
+  > pre[class*="language-"],
+  > div > pre[class*="language-"] {
     font-size: 87.5%;
     border-radius: 2px;
     word-wrap: normal;
@@ -106,7 +107,8 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  > pre code {
+  > pre code,
+  > div > pre code {
     font-family: $font-mono;
   }
   > p code,
