@@ -15,8 +15,7 @@
 </template>
 
 <script>
-import { isExternal, isMailto, ensureExt } from './util'
-
+import { isExternal, isMailto, isTel, ensureExt } from './util'
 export default {
   props: {
     item: {
@@ -24,13 +23,20 @@ export default {
     }
   },
   computed: {
-    link() {
+    link () {
       return ensureExt(this.item.link)
+    },
+    exact () {
+      if (this.$site.locales) {
+        return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
+      }
+      return this.link === '/'
     }
   },
   methods: {
     isExternal,
-    isMailto
+    isMailto,
+    isTel
   }
 }
 </script>

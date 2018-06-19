@@ -3,6 +3,7 @@
     <div class="content">
       <h1>404</h1>
       <blockquote>{{ getMsg() }}</blockquote>
+      <router-link to="/">Take me home.</router-link>
     </div>
   </div>
 </template>
@@ -14,7 +15,6 @@ const msgs = [
   `That's a Four-Oh-Four.`,
   `Looks like we've got some broken links.`
 ]
-
 export default {
   methods: {
     getMsg () {

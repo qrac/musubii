@@ -34,6 +34,7 @@ module.exports = {
   themeConfig: {
     repo: 'qrac/musubii',
     editLinks: true,
+    lastUpdated: 'Last Updated',
     docsDir: 'docs/demo',
     logo: '/img/logo-set-yoko-musubii.svg',
     nav: [

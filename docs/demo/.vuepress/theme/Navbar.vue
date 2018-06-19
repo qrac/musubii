@@ -15,24 +15,21 @@
 </template>
 
 <script>
-import SidebarButton from "./SidebarButton.vue";
-import AlgoliaSearchBox from "@AlgoliaSearchBox";
-import SearchBox from "./SearchBox.vue";
-import NavLinks from "./NavLinks.vue";
-
+import SidebarButton from './SidebarButton.vue'
+import AlgoliaSearchBox from '@AlgoliaSearchBox'
+import SearchBox from './SearchBox.vue'
+import NavLinks from './NavLinks.vue'
 export default {
   components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
   computed: {
-    algolia() {
-      return (
-        this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
-      );
+    algolia () {
+      return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
     },
-    isAlgoliaSearch() {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName;
+    isAlgoliaSearch () {
+      return this.algolia && this.algolia.apiKey && this.algolia.indexName
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
