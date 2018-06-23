@@ -1,6 +1,6 @@
 <template>
   <form id="search-form" class="algolia-search-wrapper search-box">
-    <input id="algolia-search-input" class="search-query">
+    <input id="algolia-search-input" class="search-query input" type="search">
   </form>
 </template>
 
@@ -26,7 +26,7 @@ export default {
   },
   watch: {
     options (newValue) {
-      this.$el.innerHTML = '<input id="algolia-search-input" class="search-query">'
+      this.$el.innerHTML = '<input id="algolia-search-input" class="search-query input" type="search">'
       this.initialize(newValue)
     }
   }
@@ -67,7 +67,7 @@ export default {
       }
     }
     .algolia-docsearch-suggestion--highlight {
-      color: #2c815b;
+      color: $accentColor;
     }
     .algolia-docsearch-suggestion {
       border-color: $borderColor;
@@ -75,7 +75,7 @@ export default {
       .algolia-docsearch-suggestion--category-header {
         padding: 5px 10px;
         margin-top: 0;
-        background: $accentColor;
+        background: darken($accentColor, 5%);
         color: #fff;
         font-weight: 600;
         .algolia-docsearch-suggestion--highlight {
