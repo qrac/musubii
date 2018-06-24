@@ -34,7 +34,7 @@
           .col.is-mobile-10
             .group.is-demo-box-2.is-grey.is-round
               .group.is-demo-box-1.is-height-1
-                | .inner-view {
+                | .inner-vw {
                 br
                 | &nbsp;&nbsp;width: 90vw;
                 br

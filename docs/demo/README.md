@@ -1,4 +1,5 @@
 ---
+layout: layout-home
 home: true
 version: 6.1.0
 download:
