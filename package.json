@@ -28,7 +28,6 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "dashibox": "^0.3.6",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
@@ -49,6 +48,7 @@
     "sass-dashi": "^0.3.0",
     "sass-loader": "^7.0.1",
     "shitajicss": "^4.5.1",
+    "stylus-dashi": "^0.1.0",
     "textlint": "^10.2.1",
     "textlint-rule-preset-ja-technical-writing": "^2.0.0",
     "vuepress": "0.10.2"
