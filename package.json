@@ -6,9 +6,11 @@
   "style": "docs/css/musubii.css",
   "keywords": [
     "css",
+    "sass",
+    "scss",
     "framework",
-    "musubii",
-    "japanese"
+    "japanese",
+    "musubii"
   ],
   "homepage": "https://github.com/qrac/musubii",
   "bugs": {
