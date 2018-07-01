@@ -8656,9 +8656,9 @@ shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
 
-shitajicss@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/shitajicss/-/shitajicss-4.5.1.tgz#ab1fbc89eff44808d5c31be539e8f1485124a3d3"
+shitajicss@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/shitajicss/-/shitajicss-4.6.0.tgz#529c001af1f0314a7e3b9731bda978cd466dd2e8"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"

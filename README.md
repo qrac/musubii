@@ -2,7 +2,7 @@
 
 ## Demo & Documentation
 
-* [Demo Page][link-demo]
+- [Demo Page][link-demo]
 
 ## About
 
@@ -10,9 +10,9 @@ _「腹が減ってはコードが書けぬ」_
 
 Web デザインの腹ごなしに、HTML/CSS フレームワーク「MUSUBii（むすびー）」をどうぞ。MUSUBii は、日本語サイトのデザイン・コーディングを元気づけます。
 
-* OOCSS を応用したラフな設計
-* 日本語フォントの利用を想定
-* Javascript 未使用
+- OOCSS を応用したラフな設計
+- 日本語フォントの利用を想定
+- Javascript 未使用
 
 ## Detail
 
@@ -24,20 +24,20 @@ Web デザインの腹ごなしに、HTML/CSS フレームワーク「MUSUBii（
 
 CSS のレイヤーは主に 4 つに分類されています。
 
-* _Base_ … リセット CSS などの下地
-* _Layout_ … 余白・マージン・グリッドシステム
-* _Module_ … ボタン・テキスト・リスト・見出しなど
-* _Utility_ … 調整用モディファイア
+- _Base_ … リセット CSS などの下地
+- _Layout_ … 余白・マージン・グリッドシステム
+- _Module_ … ボタン・テキスト・リスト・見出しなど
+- _Utility_ … 調整用モディファイア
 
 ### RWD
 
 5 つの画面サイズで可変できるレスポンシブウェブデザインになっています。
 
-* _Mobile_ … ~ 575px
-* _Fablet_ … 576px ~ 767px
-* _Tablet_ … 768px ~ 991px
-* _Desktop_ … 992px ~ 1199px
-* _Wide_ … 1200px ~
+- _Mobile_ … ~ 575px
+- _Fablet_ … 576px ~ 767px
+- _Tablet_ … 768px ~ 991px
+- _Desktop_ … 992px ~ 1199px
+- _Wide_ … 1200px ~
 
 ## Use
 
@@ -52,7 +52,7 @@ CSS のレイヤーは主に 4 つに分類されています。
 ### [CDN][link-jsdelivr]
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.1.0/docs/css/musubii.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.2.0/docs/css/musubii.min.css">
 ```
 
 ### [npm][link-npm]
@@ -75,9 +75,9 @@ npm install musubii
 
 ## License
 
-* MIT
-* Author: [Qrac][link-twitter]
-* Author Group: [QRANOKO][link-qranoko]
+- MIT
+- Author: [Qrac][link-twitter]
+- Author Group: [QRANOKO][link-qranoko]
 
 [link-demo]: https://qrac.github.io/musubii/
 [link-npm]: https://www.npmjs.com/package/musubii

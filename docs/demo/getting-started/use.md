@@ -13,7 +13,7 @@ CSS ファイル `musubii.min.css` をダウンロード後、読み込んでく
 [jsDelivr](https://cdn.jsdelivr.net/npm/musubii/) にソースコードを上げていますので、以下の HTML タグを `head` に貼るだけでも利用ができます。
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.1.0/docs/css/musubii.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.2.0/docs/css/musubii.min.css">
 ```
 
 ## npm
