@@ -86,7 +86,7 @@ module.exports = {
           ]
         },
         {
-          title: 'Mudule',
+          title: 'Module',
           collapsable: false,
           children: [
             'heading',

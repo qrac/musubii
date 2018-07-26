@@ -29,7 +29,7 @@ MUSUBii は各種ライブラリとの併用が可能です。依存関係はあ
 [Font Awesome](http://fontawesome.com/) は CDN で SVG もしくは Web Font を使ったアイコン表示が可能。バージョン 5 からはグリフや class 名が多少変更になっており、JS を使ったインライン SVG アイコン表示にも対応しています。
 
 ```html
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 ```
 

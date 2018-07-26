@@ -6,9 +6,9 @@ MUSUBii は、ほぼすべての項目を SCSS 変数でカスタマイズでき
 
 まずは npm で MUSUBii と必要なライブラリ（自作）をインストール。
 
-* [Sass Dashi](https://github.com/qrac/sass-dashi)：SCSS 変数と mixin のパック ※必須
-* [MOFTONE](https://qrac.github.io/moftone/)：[マテリアルデザインカラー](https://qrac.github.io/mdtone/)を淡い色合いに変える調整変数
-* [Shitaji.CSS](https://qrac.github.io/shitajicss/)：リセット CSS
+- [Sass Dashi](https://github.com/qrac/sass-dashi)：SCSS 変数と mixin のパック ※必須
+- [MOFTONE](https://qrac.github.io/moftone/)：[マテリアルデザインカラー](https://qrac.github.io/mdtone/)を淡い色合いに変える調整変数
+- [Shitaji.CSS](https://qrac.github.io/shitajicss/)：リセット CSS
 
 ```bash
 npm i -D musubii sass-dashi moftone shitajicss
@@ -18,7 +18,7 @@ npm i -D musubii sass-dashi moftone shitajicss
 
 gulp の場合は、さらにライブラリを追加。
 
-* [node-sass-package-importer](https://www.npmjs.com/package/node-sass-package-importer)
+- [node-sass-package-importer](https://www.npmjs.com/package/node-sass-package-importer)
 
 ```bash
 npm i -D node-sass-package-importer
@@ -27,7 +27,7 @@ npm i -D node-sass-package-importer
 `gulpfile.js` に追記。これによって、コンパイル時に簡単なパスで `node_modules` の SCSS を取り込めるようになります。
 
 ```js
-const packageImporter = require("node-sass-package-importer");
+const packageImporter = require("node-sass-package-importer")
 
 // SCSS > CSS
 gulp.task("scss", () => {
@@ -40,8 +40,8 @@ gulp.task("scss", () => {
         })
       })
     )
-    .pipe(gulp.dest(paths.dist_css));
-});
+    .pipe(gulp.dest(paths.dist_css))
+})
 ```
 
 ## Import
@@ -172,16 +172,16 @@ XXL〜XXS までのサイズ設定を変更できる変数。拡大率すべて�
 
 `.section` 直下の `.inner` 類を調整する変数。
 
-| Variable                        | Description                 | Default  |
-| ------------------------------- | --------------------------- | -------- |
-| `section-inner-width-fablet`    | `.inner` サイズ：Fablet 時  | `540px`  |
-| `section-inner-width-tablet`    | `.inner` サイズ：Tablet 時  | `720px`  |
-| `section-inner-width-desktop`   | `.inner` サイズ：Desktop 時 | `960px`  |
-| `section-inner-width-wide`      | `.inner` サイズ：Wide 時    | `1140px` |
-| `section-inner-padding`         | `.inner` の `padding`       | `0 16px` |
-| `section-inner-vw-width-fablet` | `.inner-vw` のサイズ        | `90vw`   |
-| `section-inner-vw-padding`      | `.inner-vw` の `padding`    | `0 1em`  |
-| `section-inner-soft-padding`    | `.inner-soft` の `padding`  | `0 1em`  |
+| Variable                         | Description                 | Default  |
+| -------------------------------- | --------------------------- | -------- |
+| `$section-inner-width-fablet`    | `.inner` サイズ：Fablet 時  | `540px`  |
+| `$section-inner-width-tablet`    | `.inner` サイズ：Tablet 時  | `720px`  |
+| `$section-inner-width-desktop`   | `.inner` サイズ：Desktop 時 | `960px`  |
+| `$section-inner-width-wide`      | `.inner` サイズ：Wide 時    | `1140px` |
+| `$section-inner-padding`         | `.inner` の `padding`       | `0 16px` |
+| `$section-inner-vw-width-fablet` | `.inner-vw` のサイズ        | `90vw`   |
+| `$section-inner-vw-padding`      | `.inner-vw` の `padding`    | `0 1em`  |
+| `$section-inner-soft-padding`    | `.inner-soft` の `padding`  | `0 1em`  |
 
 ## Space
 
