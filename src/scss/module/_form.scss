@@ -261,7 +261,7 @@
     border: $input-border-width solid $input-border-color;
     border-radius: $input-border-radius;
     color: $body-text-color;
-    line-height: $input-height;
+    line-height: $input-line-height;
     &[disabled] {
       background-color: $input-disable-background-color;
       color: $input-disable-text-color;

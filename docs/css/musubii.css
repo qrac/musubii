@@ -1283,7 +1283,7 @@ iframe {
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.7);
-  line-height: 2.5em;
+  line-height: 1.5;
 }
 
 .select > select[disabled] {
