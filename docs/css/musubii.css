@@ -1051,12 +1051,12 @@ iframe {
 .input[type="number"] {
   max-width: 100%;
   height: calc(2.5em + (1px * 2));
-  padding: 0 0.75em;
+  padding: 0.5em 0.75em;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.7);
-  line-height: 2.5em;
+  line-height: 1.5;
 }
 
 .input[type="text"][disabled],
@@ -1278,7 +1278,7 @@ iframe {
 .select > select {
   max-width: 100%;
   height: calc(2.5em + (1px * 2));
-  padding: 0 0.75em;
+  padding: 0.5em 0.75em;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
