@@ -546,9 +546,9 @@ iframe {
   align-items: center;
   align-self: flex-start;
   white-space: nowrap;
-  padding: 0 1em;
+  padding: 0.5em 1em;
   border-radius: 0.1875em;
-  line-height: 2.5em;
+  line-height: 1.5;
   text-align: center;
   transition: ease-out 0.12s;
 }
@@ -570,10 +570,10 @@ iframe {
 
 .btn.is-circle {
   position: relative;
-  width: 2.5em;
-  height: 2.5em;
+  width: calc(2.5em + 1px * 2);
+  height: calc(2.5em + 1px * 2);
   padding: 0;
-  border-radius: 1.25em;
+  border-radius: 999em;
   line-height: 1;
 }
 

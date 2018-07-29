@@ -99,17 +99,19 @@ $pre-code-padding: 1.25em 1.5em !default;
 $btns-gap-default: 0.5em !default;
 
 // .btn
-$btn-padding: 0 1em !default;
+$btn-padding: 0.5em 1em !default;
 $btn-border-width: 1px !default;
 $btn-border-radius: 0.1875em !default;
-$btn-line-height: 2.5em !default;
+$btn-line-height: 1.5 !default;
 $btn-transition: ease-out 0.12s !default;
 
 // .btn.is-round
 $btn-round-border-radius: 999em !default;
 
 // .btn.is-circle
-$btn-circle-border-radius: 1.25em !default;
+$btn-circle-width: calc(2.5em + 1px * 2) !default;
+$btn-circle-height: calc(2.5em + 1px * 2) !default;
+$btn-circle-border-radius: 999em !default;
 
 // .btn.is-floating
 $btn-floating-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24) !default;
