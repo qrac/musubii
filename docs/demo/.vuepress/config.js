@@ -40,6 +40,9 @@ module.exports = {
       apiKey: 'dbc9f9b21868cf3495822c37a89482b8',
       indexName: 'musubii'
     },
+    serviceWorker: {
+      updatePopup: true | {message: "ドキュメントの更新があります。", buttonText: "更新する"}
+    },
     logo: '/img/logo-set-yoko-musubii.svg',
     nav: [
       {

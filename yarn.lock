@@ -689,23 +689,27 @@
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.0.2.tgz#5386a15187798efb48eb71fa1cbf6ca2770b206a"
 
-"@textlint/ast-traverse@^2.0.8":
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/@textlint/ast-traverse/-/ast-traverse-2.0.8.tgz#c180fe23dc3b8a6aa68539be70efb4ff17c38a3a"
-  dependencies:
-    "@textlint/ast-node-types" "^4.0.2"
+"@textlint/ast-node-types@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.0.3.tgz#b51c87bb86022323f764fbdc976b173f19261cc5"
 
-"@textlint/feature-flag@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@textlint/feature-flag/-/feature-flag-3.0.4.tgz#4290a4bb53da28c1f5f1d5ce0f4ae6630ab939ea"
+"@textlint/ast-traverse@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-traverse/-/ast-traverse-2.0.9.tgz#4bf427cf01b7195013e75d27540a77ad68c363d9"
+  dependencies:
+    "@textlint/ast-node-types" "^4.0.3"
+
+"@textlint/feature-flag@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@textlint/feature-flag/-/feature-flag-3.0.5.tgz#3783e0f2661053d2a74fdad775993395a2d530b4"
   dependencies:
     map-like "^2.0.0"
 
-"@textlint/fixer-formatter@^3.0.7":
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/@textlint/fixer-formatter/-/fixer-formatter-3.0.7.tgz#4ef15d5e606e2d32b89257afd382ed9dbb218846"
+"@textlint/fixer-formatter@^3.0.8":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@textlint/fixer-formatter/-/fixer-formatter-3.0.8.tgz#90ef804c60b9e694c8c048a06febbf1f331abd49"
   dependencies:
-    "@textlint/kernel" "^2.0.9"
+    "@textlint/kernel" "^3.0.0"
     chalk "^1.1.3"
     debug "^2.1.0"
     diff "^2.2.2"
@@ -715,27 +719,28 @@
     text-table "^0.2.0"
     try-resolve "^1.0.1"
 
-"@textlint/kernel@^2.0.9":
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/@textlint/kernel/-/kernel-2.0.9.tgz#a4471b7969e192551230c35ea9fae32d80128ee0"
+"@textlint/kernel@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@textlint/kernel/-/kernel-3.0.0.tgz#ba10962acff64f17b9e5fce8089a40f1f8880dcd"
   dependencies:
-    "@textlint/ast-node-types" "^4.0.2"
-    "@textlint/ast-traverse" "^2.0.8"
-    "@textlint/feature-flag" "^3.0.4"
+    "@textlint/ast-node-types" "^4.0.3"
+    "@textlint/ast-traverse" "^2.0.9"
+    "@textlint/feature-flag" "^3.0.5"
     "@types/bluebird" "^3.5.18"
     bluebird "^3.5.1"
     debug "^2.6.6"
     deep-equal "^1.0.1"
+    map-like "^2.0.0"
     object-assign "^4.1.1"
     structured-source "^3.0.2"
 
-"@textlint/linter-formatter@^3.0.7":
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/@textlint/linter-formatter/-/linter-formatter-3.0.7.tgz#66716cac94c047d94627a7e6af427a0d199eda7c"
+"@textlint/linter-formatter@^3.0.8":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@textlint/linter-formatter/-/linter-formatter-3.0.8.tgz#030aa03ff3d85dda94ca9fa9e6bf824f9c1cb7ef"
   dependencies:
     "@azu/format-text" "^1.0.1"
     "@azu/style-format" "^1.0.0"
-    "@textlint/kernel" "^2.0.9"
+    "@textlint/kernel" "^3.0.0"
     chalk "^1.0.0"
     concat-stream "^1.5.1"
     js-yaml "^3.2.4"
@@ -749,11 +754,11 @@
     try-resolve "^1.0.1"
     xml-escape "^1.0.0"
 
-"@textlint/markdown-to-ast@^6.0.8":
-  version "6.0.8"
-  resolved "https://registry.yarnpkg.com/@textlint/markdown-to-ast/-/markdown-to-ast-6.0.8.tgz#baa509c42f842b4dba36ad91547a288c063396b8"
+"@textlint/markdown-to-ast@^6.0.9":
+  version "6.0.9"
+  resolved "https://registry.yarnpkg.com/@textlint/markdown-to-ast/-/markdown-to-ast-6.0.9.tgz#e7c89e5ad15d17dcd8e5a62758358936827658fa"
   dependencies:
-    "@textlint/ast-node-types" "^4.0.2"
+    "@textlint/ast-node-types" "^4.0.3"
     debug "^2.1.3"
     remark-frontmatter "^1.2.0"
     remark-parse "^5.0.0"
@@ -761,23 +766,23 @@
     traverse "^0.6.6"
     unified "^6.1.6"
 
-"@textlint/text-to-ast@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@textlint/text-to-ast/-/text-to-ast-3.0.8.tgz#6211977f369cec484447867f10dc155120f4c082"
+"@textlint/text-to-ast@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@textlint/text-to-ast/-/text-to-ast-3.0.9.tgz#dcb63f09cc79ea2096fc823c3b6cd07c79a060b5"
   dependencies:
-    "@textlint/ast-node-types" "^4.0.2"
+    "@textlint/ast-node-types" "^4.0.3"
 
-"@textlint/textlint-plugin-markdown@^4.0.10":
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-markdown/-/textlint-plugin-markdown-4.0.10.tgz#a99b4a308067597e89439a9e87bc1c4a7f4d076b"
+"@textlint/textlint-plugin-markdown@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-markdown/-/textlint-plugin-markdown-5.0.0.tgz#55c6457655fc98b037ac944bca730e4721401205"
   dependencies:
-    "@textlint/markdown-to-ast" "^6.0.8"
+    "@textlint/markdown-to-ast" "^6.0.9"
 
-"@textlint/textlint-plugin-text@^3.0.10":
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-text/-/textlint-plugin-text-3.0.10.tgz#619600bdc352d33a68e7a73d77d58b0c52b2a44f"
+"@textlint/textlint-plugin-text@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-text/-/textlint-plugin-text-4.0.0.tgz#025f5c9897ffd3ca91b71ae467b6d7cdfad5e6b2"
   dependencies:
-    "@textlint/text-to-ast" "^3.0.8"
+    "@textlint/text-to-ast" "^3.0.9"
 
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.4"
@@ -4697,9 +4702,13 @@ gulp-plumber@^1.2.0:
     plugin-error "^0.1.2"
     through2 "^2.0.3"
 
-gulp-rename@^1.2.0, gulp-rename@^1.2.3:
+gulp-rename@^1.2.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.3.0.tgz#2e789d8f563ab0c924eeb62967576f37ff4cb826"
+
+gulp-rename@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.4.0.tgz#de1c718e7c4095ae861f7296ef4f3248648240bd"
 
 gulp-sass-glob@^1.0.9:
   version "1.0.9"
@@ -8288,7 +8297,7 @@ regexpu-core@^4.1.3, regexpu-core@^4.1.4:
     unicode-match-property-ecmascript "^1.0.4"
     unicode-match-property-value-ecmascript "^1.0.2"
 
-register-service-worker@^1.2.0:
+register-service-worker@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/register-service-worker/-/register-service-worker-1.4.1.tgz#4b4c9b4200fc697942c6ae7d611349587b992b2f"
 
@@ -9616,18 +9625,18 @@ textlint-util-to-string@^2.1.1:
     object-assign "^4.0.1"
     structured-source "^3.0.2"
 
-textlint@^10.2.1:
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/textlint/-/textlint-10.2.1.tgz#ee22b7967d59cef7c74a04a5f4e8883134e5c79d"
+textlint@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/textlint/-/textlint-11.0.0.tgz#48de7e19a53aae9d18edbe029487e038d7643ff8"
   dependencies:
-    "@textlint/ast-node-types" "^4.0.2"
-    "@textlint/ast-traverse" "^2.0.8"
-    "@textlint/feature-flag" "^3.0.4"
-    "@textlint/fixer-formatter" "^3.0.7"
-    "@textlint/kernel" "^2.0.9"
-    "@textlint/linter-formatter" "^3.0.7"
-    "@textlint/textlint-plugin-markdown" "^4.0.10"
-    "@textlint/textlint-plugin-text" "^3.0.10"
+    "@textlint/ast-node-types" "^4.0.3"
+    "@textlint/ast-traverse" "^2.0.9"
+    "@textlint/feature-flag" "^3.0.5"
+    "@textlint/fixer-formatter" "^3.0.8"
+    "@textlint/kernel" "^3.0.0"
+    "@textlint/linter-formatter" "^3.0.8"
+    "@textlint/textlint-plugin-markdown" "^5.0.0"
+    "@textlint/textlint-plugin-text" "^4.0.0"
     "@types/bluebird" "^3.5.18"
     bluebird "^3.0.5"
     debug "^2.1.0"
@@ -10463,9 +10472,9 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-vuepress@0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-0.12.0.tgz#1a268c34622fa5869db3883da5e0f9ef8609d5a0"
+vuepress@0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-0.13.0.tgz#7959feeb8c4bbd1cd96238383566182419576d5d"
   dependencies:
     "@babel/core" "7.0.0-beta.47"
     "@vue/babel-preset-app" "3.0.0-beta.11"
@@ -10505,7 +10514,7 @@ vuepress@0.12.0:
     portfinder "^1.0.13"
     postcss-loader "^2.1.5"
     prismjs "^1.13.0"
-    register-service-worker "^1.2.0"
+    register-service-worker "^1.4.1"
     semver "^5.5.0"
     stylus "^0.54.5"
     stylus-loader "^3.0.2"
