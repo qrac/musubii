@@ -12,23 +12,21 @@
       @if $i == 0 {
         .is-#{$key}-#{$i} {
           flex: 1 0 0%;
-          max-width: 100%;
         }
       } @else {
         .is-#{$key}-#{$i} {
           flex: 0 0 100% / $grid-split * $i;
-          max-width: 100% / $grid-split * $i;
+          width: 100% / $grid-split * $i;
         }
       }
     }
     .is-#{$key}-full {
       flex: 0 1 100%;
-      max-width: 100%;
       width: 100%;
     }
     .is-#{$key}-auto {
       flex: 0 1 auto;
-      max-width: 100%;
+      width: auto;
     }
   }
 }
