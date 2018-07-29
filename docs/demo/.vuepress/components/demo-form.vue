@@ -62,18 +62,18 @@
         input.input(type="search" name="search" value="Search" readonly)
     .group.is-space(v-else-if="demo === 'date'")
       .field
-        input.input(type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00")
-        input.input(type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00" disabled)
+        input.input.is-mobile-full.is-desktop-auto(type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00")
+        input.input.is-mobile-full.is-desktop-auto(type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00" disabled)
       .field
-        input.input(type="date" name="date" value="2017-02-02")
-        input.input(type="date" name="date" value="2017-02-02" disabled)
+        input.input.is-mobile-full.is-desktop-auto(type="date" name="date" value="2017-02-02")
+        input.input.is-mobile-full.is-desktop-auto(type="date" name="date" value="2017-02-02" disabled)
       .field
-        input.input(type="month" name="month" value="2017-02")
-        input.input(type="month" name="month" value="2017-02" disabled)
+        input.input.is-mobile-full.is-desktop-auto(type="month" name="month" value="2017-02")
+        input.input.is-mobile-full.is-desktop-auto(type="month" name="month" value="2017-02" disabled)
     .group.is-space(v-else-if="demo === 'time'")
       .field
-        input.input(type="time" name="time" value="00:00:00")
-        input.input(type="time" name="time" value="00:00:00" disabled)
+        input.input.is-mobile-0.is-desktop-auto(type="time" name="time" value="00:00:00")
+        input.input.is-mobile-0.is-desktop-auto(type="time" name="time" value="00:00:00" disabled)
     .group.is-space(v-else-if="demo === 'file'")
       .field
         input.input(type="file" name="file")
