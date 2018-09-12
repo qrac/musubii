@@ -17,11 +17,11 @@ MUSUBii は各種ライブラリとの併用が可能です。依存関係はあ
 
 ## Google Fonts
 
-[Google Fonts](https://fonts.google.com/) は Google が配信している Web Font です。[日本語の早期アクセス版](https://googlefonts.github.io/japanese/)もあります。
+[Google Fonts](https://fonts.google.com/) は Google が配信している Web Font です。
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700,900">
-<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800,900&amp;subset=japanese">
 ```
 
 ## Font Awesome
@@ -29,7 +29,7 @@ MUSUBii は各種ライブラリとの併用が可能です。依存関係はあ
 [Font Awesome](http://fontawesome.com/) は CDN で SVG もしくは Web Font を使ったアイコン表示が可能。バージョン 5 からはグリフや class 名が多少変更になっており、JS を使ったインライン SVG アイコン表示にも対応しています。
 
 ```html
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 ```
 

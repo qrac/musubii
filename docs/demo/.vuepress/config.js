@@ -23,7 +23,7 @@ module.exports = {
     ['meta', { property: 'og:image', content: 'https://qrac.github.io/musubii/img/ogp.png' }],
     ['meta', { property: 'og:site_name', content: 'Qrac GitHub' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.1.0/css/all.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito:400,700,900' }],
     ['link', { rel: 'stylesheet', href: '/css/musubii.min.css' }],
