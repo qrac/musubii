@@ -312,8 +312,12 @@ XXL〜XXS までのサイズ設定を変更できる変数。拡大率すべて�
 | `$input-line-height`               | インプット要素：文字の高さ                 | `1.5`                                  |
 | `$input-round-border-radius`       | ラウンド：角丸の大きさ                     | `999em`                                |
 | `$input-disable-background-color`  | 非活性：背景色                             | `$grey-300`                            |
+| `$input-disable-border-color`      | 非活性：線の色                             | `$dark-6`                              |
+| `$input-disable-shadow`            | 非活性：内側の影                           | `none`                                 |
 | `$input-disable-text-color`        | 非活性：文字色                             | `$dark-6`                              |
-| `$input-readonly-background-color` | 読み取り専用：背景色                       | `$grey-200`                            |
+| `$input-readonly-background-color` | 読み取り専用：背景色                       | `$grey-100`                            |
+| `$input-readonly-border-color`     | 読み取り専用：線の色                       | `transparent`                          |
+| `$input-readonly-shadow`           | 読み取り専用：内側の影                     | `none`                                 |
 | `$input-readonly-text-color`       | 読み取り専用：文字色                       | `$dark-2`                              |
 | `$input-placeholder-color`         | プレースホルダーの色                       | `$dark-6`                              |
 | `$textarea-padding`                | テキストエリア：余白の大きさ               | `calc(0.5em - 1.5px) 0.5em`            |

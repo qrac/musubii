@@ -203,10 +203,14 @@ $input-round-border-radius: 999em !default;
 
 // .input[disable]
 $input-disable-background-color: $grey-300 !default;
+$input-disable-border-color: $dark-6 !default;
+$input-disable-shadow: none !default;
 $input-disable-text-color: $dark-6 !default;
 
 // .input[readonly]
-$input-readonly-background-color: $grey-200 !default;
+$input-readonly-background-color: $grey-100 !default;
+$input-readonly-border-color: transparent !default;
+$input-readonly-shadow: none !default;
 $input-readonly-text-color: $dark-2 !default;
 
 // .input placeholder

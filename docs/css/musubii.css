@@ -1072,6 +1072,7 @@ iframe {
 .input[type="time"][disabled],
 .input[type="number"][disabled] {
   background-color: #e0e0e0;
+  border-color: rgba(0, 0, 0, 0.26);
   color: rgba(0, 0, 0, 0.26);
 }
 
@@ -1087,7 +1088,8 @@ iframe {
 .input[type="week"][readonly],
 .input[type="time"][readonly],
 .input[type="number"][readonly] {
-  background-color: #eeeeee;
+  background-color: whitesmoke;
+  border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -1195,6 +1197,22 @@ iframe {
   box-shadow: none;
 }
 
+.input[type="text"][readonly],
+.input[type="search"][readonly],
+.input[type="url"][readonly],
+.input[type="email"][readonly],
+.input[type="tel"][readonly],
+.input[type="password"][readonly],
+.input[type="datetime-local"][readonly],
+.input[type="date"][readonly],
+.input[type="month"][readonly],
+.input[type="week"][readonly],
+.input[type="time"][readonly],
+.input[type="number"][readonly],
+.textarea[readonly] {
+  box-shadow: none;
+}
+
 .input[type="text"],
 .input[type="search"],
 .input[type="url"],
@@ -1233,17 +1251,18 @@ iframe {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   padding: calc(0.5em - 1.5px) 0.5em;
 }
 
 .textarea[disabled] {
   background-color: #e0e0e0;
+  border-color: rgba(0, 0, 0, 0.26);
   color: rgba(0, 0, 0, 0.26);
 }
 
 .textarea[readonly] {
-  background-color: #eeeeee;
+  background-color: whitesmoke;
+  border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -1292,7 +1311,7 @@ iframe {
 }
 
 .select > select[readonly] {
-  background-color: #eeeeee;
+  background-color: whitesmoke;
   color: rgba(0, 0, 0, 0.7);
 }
 

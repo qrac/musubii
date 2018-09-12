@@ -117,10 +117,12 @@
   line-height: $input-line-height;
   &[disabled] {
     background-color: $input-disable-background-color;
+    border-color: $input-disable-border-color;
     color: $input-disable-text-color;
   }
   &[readonly] {
     background-color: $input-readonly-background-color;
+    border-color: $input-readonly-border-color;
     color: $input-readonly-text-color;
   }
   &.is-round {
@@ -156,7 +158,10 @@
 .textarea {
   box-shadow: $input-shadow;
   &[disabled] {
-    box-shadow: none;
+    box-shadow: $input-disable-shadow;
+  }
+  &[readonly] {
+    box-shadow: $input-readonly-shadow;
   }
 }
 
@@ -203,14 +208,15 @@
   background-color: $input-background-color;
   border: $input-border-width solid $input-border-color;
   border-radius: $input-border-radius;
-  box-shadow: $input-shadow;
   padding: $textarea-padding;
   &[disabled] {
     background-color: $input-disable-background-color;
+    border-color: $input-disable-border-color;
     color: $input-disable-text-color;
   }
   &[readonly] {
     background-color: $input-readonly-background-color;
+    border-color: $input-readonly-border-color;
     color: $input-readonly-text-color;
   }
 }
