@@ -1,7 +1,7 @@
 ---
 layout: layout-home
 home: true
-version: 6.4.0
+version: 6.5.0
 download:
   text: Download CSS
   path: /musubii/css/musubii.min.css
