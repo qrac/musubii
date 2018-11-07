@@ -51,6 +51,6 @@
   "dependencies": {
     "moftone": "^6.2.0",
     "sass-dashi": "^0.3.0",
-    "shitajicss": "4.6.0"
+    "shitajicss": "5.0.0"
   }
 }
