@@ -1276,9 +1276,11 @@ iframe {
 
 .select {
   position: relative;
+  display: inline-flex;
 }
 
 .select > select {
+  flex: 1 0 0%;
   max-width: 100%;
   height: calc(2.5em + (1px * 2));
   padding: 0.5em 0.75em;

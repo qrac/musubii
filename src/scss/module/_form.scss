@@ -260,7 +260,9 @@
 
 .select {
   position: relative;
+  display: inline-flex;
   > select {
+    flex: 1 0 0%;
     max-width: 100%;
     height: calc(#{$input-height} + (#{$input-border-width} * 2));
     padding: $input-padding;
