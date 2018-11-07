@@ -37,7 +37,7 @@
     "autoprefixer": "^9.3.1",
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.9.4",
+    "gulp-clean-css": "^3.10.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-header": "^2.0.5",
     "gulp-if": "^2.0.2",
@@ -45,8 +45,8 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1",
-    "node-sass": "^4.9.2"
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.10.0"
   },
   "dependencies": {
     "moftone": "^6.2.0",
