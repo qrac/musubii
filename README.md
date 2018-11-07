@@ -1,8 +1,8 @@
 # MUSUBii
 
-## Demo & Documentation
+## Site
 
-- [Demo Page][link-demo]
+- https://musubii.qranoko.jp
 
 ## About
 
@@ -12,7 +12,7 @@ Web デザインの腹ごなしに、HTML/CSS フレームワーク「MUSUBii（
 
 - OOCSS を応用したラフな設計
 - 日本語フォントの利用を想定
-- Javascript 未使用
+- JavaScript 未使用
 
 ## Detail
 
@@ -52,7 +52,7 @@ CSS のレイヤーは主に 4 つに分類されています。
 ### [CDN][link-jsdelivr]
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.5.0/docs/css/musubii.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.6.0/docs/css/musubii.min.css">
 ```
 
 ### [npm][link-npm]
@@ -73,14 +73,17 @@ npm install musubii
 | :---------: | :-------------: | :--------------: |
 |   Newest    |     Newest      |       4.4~       |
 
+## Develop
+
+- MacBook Pro: 13-inch 2016 No-touchbar
+- OS: macOS High Sierra 10.13.6
+- Node.js: v10.9.0
+
 ## License
 
 - MIT
-- Author: [Qrac][link-twitter]
-- Author Group: [QRANOKO][link-qranoko]
 
-[link-demo]: https://qrac.github.io/musubii/
-[link-npm]: https://www.npmjs.com/package/musubii
-[link-jsdelivr]: https://cdn.jsdelivr.net/npm/musubii/
-[link-twitter]: https://twitter.com/Qrac_JP
-[link-qranoko]: https://qranoko.jp
+## Credit
+
+- Author: [Qrac](https://qrac.jp)
+- Organization: [QRANOKO](https://qranoko.jp)
