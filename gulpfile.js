@@ -114,7 +114,11 @@ gulp.task("reload", function(done) {
 
 // Watch
 gulp.task("watch", () => {
-  gulp.watch(paths.src_scss + "**/*.scss", gulp.series("scss", "cssmin"))
+  gulp.watch(paths.dist.html + "index.html", gulp.series("reload"))
+  gulp.watch(
+    paths.src.scss + "**/*.scss",
+    gulp.series("scss", "cssmin", "reload")
+  )
 })
 
 gulp.task("default", gulp.parallel("browser-sync", "watch"))
