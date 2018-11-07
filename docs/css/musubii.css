@@ -1,4 +1,4 @@
-/*! MUSUBii v6.5.0 MIT by Qrac */
+/*! MUSUBii v6.6.0 MIT by Qrac */
 
 /*! Shitaji.CSS v4.6.0 CC0 by Qrac */
 
@@ -240,12 +240,6 @@ select,
 textarea,
 [tabindex] {
   touch-action: manipulation;
-}
-
-::-moz-selection {
-  background-color: #b3d4fc;
-  color: #000;
-  text-shadow: none;
 }
 
 ::selection {

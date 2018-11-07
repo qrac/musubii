@@ -1,0 +1,8 @@
+{
+  "setting": {
+    "name": "MUSUBii",
+    "dist": "docs",
+    "src": "src",
+    "banner": true
+  }
+}

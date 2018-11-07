@@ -1,7 +1,7 @@
 {
   "name": "musubii",
   "description": "Simple CSS Framework for JP",
-  "version": "6.5.1",
+  "version": "6.6.0",
   "main": "docs/css/musubii.css",
   "license": "MIT",
   "homepage": "https://musubii.qranoko.jp",
@@ -34,19 +34,23 @@
     "last 1 versions"
   ],
   "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-header": "^2.0.5",
+    "gulp-if": "^2.0.2",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
-    "gulp-sass-glob": "^1.0.9",
+    "node-sass": "^4.9.2"
+  },
+  "dependencies": {
     "moftone": "^6.2.0",
-    "node-sass": "^4.9.2",
-    "node-sass-package-importer": "^5.2.0",
     "sass-dashi": "^0.3.0",
-    "shitajicss": "^4.6.0"
+    "shitajicss": "4.6.0"
   }
 }
