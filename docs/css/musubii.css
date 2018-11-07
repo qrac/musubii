@@ -1394,22 +1394,22 @@ iframe {
 }
 
 .alert.is-primary {
-  background-color: #edf8fa;
+  background-color: #f4fbfc;
   border-color: #9fdde4;
 }
 
 .alert.is-info {
-  background-color: #eef5fb;
+  background-color: #f2f8fc;
   border-color: #abd0ed;
 }
 
 .alert.is-success {
-  background-color: #eaf8ee;
+  background-color: #f1fbf4;
   border-color: #96e2bd;
 }
 
 .alert.is-warning {
-  background-color: #fbf0de;
+  background-color: #fdf6ec;
   border-color: #f4d09a;
 }
 

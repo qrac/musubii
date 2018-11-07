@@ -255,19 +255,19 @@ $alert-default-background-color: $grey-100 !default;
 $alert-default-border-color: $grey-300 !default;
 
 // .alert.is-primary
-$alert-primary-background-color: lighten($cyan-100, 8%) !default;
+$alert-primary-background-color: lighten($cyan-100, 10%) !default;
 $alert-primary-border-color: $cyan-200 !default;
 
 // .alert.is-info
-$alert-info-background-color: lighten($blue-100, 7%) !default;
+$alert-info-background-color: lighten($blue-100, 8%) !default;
 $alert-info-border-color: $blue-200 !default;
 
 // .alert.is-success
-$alert-success-background-color: lighten($green-a100, 7%) !default;
+$alert-success-background-color: lighten($green-a100, 9%) !default;
 $alert-success-border-color: lighten($green-a200, 3%) !default;
 
 // .alert.is-warning
-$alert-warning-background-color: lighten($orange-100, 5%) !default;
+$alert-warning-background-color: lighten($orange-100, 8%) !default;
 $alert-warning-border-color: $orange-200 !default;
 
 // .alert.is-danger
