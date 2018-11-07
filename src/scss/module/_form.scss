@@ -209,6 +209,7 @@
   border: $input-border-width solid $input-border-color;
   border-radius: $input-border-radius;
   padding: $textarea-padding;
+  color: $body-text-color;
   &[disabled] {
     background-color: $input-disable-background-color;
     border-color: $input-disable-border-color;

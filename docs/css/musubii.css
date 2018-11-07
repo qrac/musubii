@@ -1235,6 +1235,7 @@ iframe {
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   padding: calc(0.5em - 1.5px) 0.5em;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .textarea[disabled] {
