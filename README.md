@@ -49,13 +49,13 @@ CSS のレイヤーは主に 4 つに分類されています。
 <link rel="stylesheet" href="css/musubii.min.css">
 ```
 
-### [CDN][link-jsdelivr]
+### [CDN](https://www.jsdelivr.com/package/npm/musubii)
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.6.0/docs/css/musubii.min.css">
 ```
 
-### [npm][link-npm]
+### [npm](https://www.npmjs.com/package/musubii)
 
 ```
 npm install musubii
