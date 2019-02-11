@@ -93,7 +93,7 @@ const browserSyncOptions = {
 // Nunjucks > HTML (public)
 gulp.task("nunjucks_public", () => {
   return gulp
-    .src("./index.njk")
+    .src("index.njk")
     .pipe(
       data(function() {
         return { pkg: pkg }
@@ -145,17 +145,19 @@ gulp.task("cssmin", () => {
 })
 
 // Browser Sync
-gulp.task("browser-sync", () => {
+gulp.task("browser-sync", function(done) {
   browserSync.init(browserSyncOptions)
+  done()
 })
 
-gulp.task("reload", () => {
+gulp.task("reload", function(done) {
   browserSync.reload()
+  done()
 })
 
 // Watch
 gulp.task("watch", () => {
-  gulp.watch("./index.njk", gulp.series("nunjucks_public", "reload"))
+  gulp.watch("index.njk", gulp.series("nunjucks_public", "reload"))
   gulp.watch(paths.src.scss + "**/*.scss", gulp.series("scss_public", "reload"))
 })
 

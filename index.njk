@@ -11,16 +11,20 @@
     <link rel="stylesheet" href="./musubii.css"/>
     <style>
       .demo-h1 {
-        padding: 32px 16px 8px;
+        margin: 32px 16px 8px;
         font-size: 32px;
         font-weight: 700;
       }
+      .demo-version {
+        font-size: 16px;
+        font-weight: 400;
+      }
       .demo-h2 {
-        padding: 32px 16px 8px;
+        margin: 24px 16px 8px;
         font-size: 20px;
       }
       .demo-h3 {
-        padding: 12px 16px 8px;
+        margin: 12px 16px 8px;
         color: #828282;
         font-size: 12px;
       }
@@ -51,12 +55,19 @@
     </style>
   </head>
   <body>
-    <main class="demo">
-      <h1 class="demo-h1">MUSUBii v{{pkg.version}}</h1>
-      <h2 class="demo-h2">Section</h2>
-      <h3 class="demo-h3">Section Inner</h3>
-      <section class="section is-demo-bg-cyan">
-        <div class="inner is-demo-bg-grey is-demo-min-height-1"></div>
+    <header>
+      <h1 class="demo-h1">
+        <span>MUSUBii</span>
+        <span class="demo-version">v{{pkg.version}}</span>
+      </h1>
+    </header>
+    <main>
+      <section>
+        <h2 class="demo-h2">Section</h2>
+        <h3 class="demo-h3">Section Inner</h3>
+        <section class="section is-demo-bg-cyan">
+          <div class="inner is-demo-bg-grey is-demo-min-height-1"></div>
+        </section>
       </section>
     </main>
   </body>
