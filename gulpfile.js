@@ -9,6 +9,9 @@ const plumber = require("gulp-plumber")
 const rename = require("gulp-rename")
 const header = require("gulp-header")
 const gulpif = require("gulp-if")
+const nunjucks = require("gulp-nunjucks-render")
+const data = require("gulp-data")
+const htmlBeautify = require("gulp-html-beautify")
 const sass = require("gulp-sass")
 const postcss = require("gulp-postcss")
 const autoprefixer = require("autoprefixer")
@@ -36,15 +39,27 @@ const banner = {
 
 // Paths
 const paths = {
-  src: {
-    dir: pjt.setting.src + "/",
-    scss: pjt.setting.src + "/scss/"
-  },
   dist: {
     dir: pjt.setting.dist + "/",
     html: pjt.setting.dist + "/",
     css: pjt.setting.dist + "/css/"
+  },
+  public: {
+    dir: pjt.setting.public + "/",
+    html: pjt.setting.public + "/",
+    css: pjt.setting.public + "/"
+  },
+  src: {
+    dir: pjt.setting.src + "/",
+    scss: pjt.setting.src + "/scss/"
   }
+}
+
+const htmlBeautifyOptions = {
+  indent_size: 2,
+  max_preserve_newlines: 0,
+  indent_inner_html: true,
+  extra_liners: []
 }
 
 // Sass Options
@@ -64,7 +79,7 @@ const postcssOptions = [autoprefixer(autoprefixerOptions)]
 // BrowserSync Options
 const browserSyncOptions = {
   server: {
-    baseDir: paths.dist.html
+    baseDir: paths.public.html
   },
   startPath: "index.html",
   open: false,
@@ -74,6 +89,34 @@ const browserSyncOptions = {
 //----------------------------------------------------
 // gulp: Task
 //----------------------------------------------------
+
+// Nunjucks > HTML (public)
+gulp.task("nunjucks_public", () => {
+  return gulp
+    .src("./index.njk")
+    .pipe(
+      data(function() {
+        return { pkg: pkg }
+      })
+    )
+    .pipe(nunjucks())
+    .pipe(htmlBeautify(htmlBeautifyOptions))
+    .pipe(gulp.dest(paths.public.html))
+})
+
+// SCSS > CSS (public)
+gulp.task("scss_public", () => {
+  return gulp
+    .src(paths.src.scss + "**/*.scss")
+    .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
+    .pipe(sass(sassOptions))
+    .pipe(postcss(postcssOptions))
+    .pipe(gcmq())
+    .pipe(gulpif(banner.visible, header(banner.basic, { pkg, pjt })))
+    .pipe(gulp.dest(paths.public.css))
+})
 
 // SCSS > CSS
 gulp.task("scss", () => {
@@ -102,26 +145,40 @@ gulp.task("cssmin", () => {
 })
 
 // Browser Sync
-gulp.task("browser-sync", function(done) {
+gulp.task("browser-sync", () => {
   browserSync.init(browserSyncOptions)
-  done()
 })
 
-gulp.task("reload", function(done) {
+gulp.task("reload", () => {
   browserSync.reload()
-  done()
 })
 
 // Watch
 gulp.task("watch", () => {
-  gulp.watch(paths.dist.html + "index.html", gulp.series("reload"))
-  gulp.watch(
-    paths.src.scss + "**/*.scss",
-    gulp.series("scss", "cssmin", "reload")
-  )
+  gulp.watch("./index.njk", gulp.series("nunjucks_public", "reload"))
+  gulp.watch(paths.src.scss + "**/*.scss", gulp.series("scss_public", "reload"))
 })
 
-gulp.task("default", gulp.parallel("browser-sync", "watch"))
+//----------------------------------------------------
+// gulp: Default
+//----------------------------------------------------
+
+gulp.task(
+  "default",
+  gulp.series(
+    gulp.parallel("nunjucks_public", "scss_public"),
+    gulp.parallel("browser-sync", "watch")
+  )
+)
+
+//----------------------------------------------------
+// gulp: Public
+//----------------------------------------------------
+
+gulp.task(
+  "public",
+  gulp.series(gulp.parallel("nunjucks_public", "scss_public"))
+)
 
 //----------------------------------------------------
 // gulp: Build

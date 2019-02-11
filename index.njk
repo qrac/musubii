@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MUSUBii</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="./musubii.css"/>
+    <style>
+      .demo-h1 {
+        padding: 32px 16px 8px;
+        font-size: 32px;
+        font-weight: 700;
+      }
+      .demo-h2 {
+        padding: 32px 16px 8px;
+        font-size: 20px;
+      }
+      .demo-h3 {
+        padding: 12px 16px 8px;
+        color: #828282;
+        font-size: 12px;
+      }
+      .is-demo-bg-cyan {
+        background-color: #1cb4c7;
+      }
+      .is-demo-bg-grey {
+        background-color: #e0e0e0;
+      }
+      .is-demo-bg-grey-light {
+        background-color: #f1f1f1;
+      }
+      .is-demo-min-height-1 {
+        min-height: 160px;
+      }
+      .is-demo-padding-1 {
+        padding: 16px 0;
+      }
+    </style>
+    <style>
+      /* safari 12.1~ dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --body-background-color: #000;
+          --body-text-color: #fff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="demo">
+      <h1 class="demo-h1">MUSUBii v{{pkg.version}}</h1>
+      <h2 class="demo-h2">Section</h2>
+      <h3 class="demo-h3">Section Inner</h3>
+      <section class="section is-demo-bg-cyan">
+        <div class="inner is-demo-bg-grey is-demo-min-height-1"></div>
+      </section>
+    </main>
+  </body>
+</html>

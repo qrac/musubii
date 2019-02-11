@@ -25,6 +25,7 @@
   },
   "scripts": {
     "dev": "gulp",
+    "public": "gulp public",
     "build": "gulp build"
   },
   "browserslist": [
@@ -43,10 +44,13 @@
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
+    "gulp-data": "^1.3.1",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-header": "^2.0.7",
+    "gulp-html-beautify": "^1.0.1",
     "gulp-if": "^2.0.2",
     "gulp-notify": "^3.2.0",
+    "gulp-nunjucks-render": "^2.2.2",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
