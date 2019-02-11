@@ -33,24 +33,24 @@
     "android 4.4",
     "last 1 versions"
   ],
-  "devDependencies": {
-    "autoprefixer": "^9.3.1",
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-header": "^2.0.5",
-    "gulp-if": "^2.0.2",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.10.0"
-  },
   "dependencies": {
     "moftone": "^6.2.0",
     "sass-dashi": "^0.3.0",
     "shitajicss": "5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.7",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-header": "^2.0.7",
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
   }
 }
