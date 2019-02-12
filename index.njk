@@ -254,6 +254,9 @@
           {% for i in headings %}
             <p class="heading {{ i.class }}">{{ i.num }}番目に大きな見出し</p>
           {% endfor %}
+          {% for i in headings %}
+            <p class="heading is-strong {{ i.class }}">{{ i.num }}番目に大きな見出し</p>
+          {% endfor %}
         </div>
       </section>
 
