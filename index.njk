@@ -44,6 +44,16 @@
         font-weight: 700;
         text-align: center;
       }
+      .demo-line-box {
+        padding: 16px;
+        border: 1px solid #e0e0e0;
+        border-radius: 2px;
+      }
+      .demo-paint-box {
+        padding: 16px;
+        background-color: #1b2324;
+        border-radius: 2px;
+      }
       .is-demo-bg-cyan {
         background-color: #1cb4c7;
       }
@@ -81,183 +91,375 @@
 
       <section>
         <h2 class="demo-h2">Section</h2>
-        {% set sections = [
-          {
-            h3: "Inner",
-            class: "inner"
-          }, {
-            h3: "Inner Soft",
-            class: "inner-soft"
-          }, {
-            h3: "Inner VW",
-            class: "inner-vw"
-          }
-        ] %}
-        {% for i in sections %}
-          <h3 class="demo-h3">{{ i.h3 }}</h3>
+        <section>
+          <h3 class="demo-h3">Inner</h3>
           <section class="section is-demo-bg-cyan">
-            <div class="{{ i.class }} is-demo-bg-grey is-demo-min-height-1"></div>
+            <div class="inner is-demo-bg-grey is-demo-min-height-1"></div>
           </section>
-        {% endfor %}
+        </section>
+        <section>
+          <h3 class="demo-h3">Inner Soft</h3>
+          <section class="section is-demo-bg-cyan">
+            <div class="inner-soft is-demo-bg-grey is-demo-min-height-1"></div>
+          </section>
+        </section>
+        <section>
+          <h3 class="demo-h3">Inner VW</h3>
+          <section class="section is-demo-bg-cyan">
+            <div class="inner-vw is-demo-bg-grey is-demo-min-height-1"></div>
+          </section>
+        </section>
       </section>
 
       <section>
         <h2 class="demo-h2">Space</h2>
-        <div class="demo-area">
-          <div class="box is-space">
-            <p class="heading">見出し</p>
-            <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
-            <p class="heading">見出し</p>
-            <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+        <section>
+          <h3 class="demo-h3">Basic</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="box is-space">
+                <p class="heading">見出し</p>
+                <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+                <p class="heading">見出し</p>
+                <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
 
       <section>
         <h2 class="demo-h2">Grid</h2>
-        <div class="demo-area">
-          <div class="grid">
-            {% for i in range(1, 3 + 1) %}
-              <div class="col is-mobile-12 is-desktop-4">
-                <div class="demo-box is-demo-bg-cyan">
-                  .is-mobile-12 .is-desktop-4
-                </div>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-        <h3 class="demo-h3">Flex</h3>
-        {% for i in range(1, 12 + 1) %}
+        <section>
+          <h3 class="demo-h3">Basic</h3>
           <div class="demo-area">
             <div class="grid">
-              <div class="col is-mobile-{{ i }}">
-                <div class="demo-box is-demo-bg-cyan">
-                  {{ i }}
+              {% for i in range(1, 3 + 1) %}
+                <div class="col is-mobile-12 is-desktop-4">
+                  <div class="demo-box is-demo-bg-cyan">
+                    .is-mobile-12 .is-desktop-4
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Flex</h3>
+          {% for i in range(1, 12 + 1) %}
+            <div class="demo-area">
+              <div class="grid">
+                <div class="col is-mobile-{{ i }}">
+                  <div class="demo-box is-demo-bg-cyan">
+                    {{ i }}
+                  </div>
+                </div>
+                <div class="col is-mobile-0">
+                  <div class="demo-box is-demo-bg-grey">
+                    0
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </section>
+        <section>
+          <h3 class="demo-h3">Position</h3>
+          {% set positions = [
+            {
+              height: "160px",
+              class: "is-middle"
+            }, {
+              height: "160px",
+              class: "is-bottom"
+            }, {
+              height: "auto",
+              class: "is-center"
+            }, {
+              height: "auto",
+              class: "is-right"
+            }, {
+              height: "auto",
+              class: "is-between"
+            }, {
+              height: "auto",
+              class: "is-around"
+            }
+          ] %}
+          {% for i in positions %}
+            <div class="demo-area">
+              <div class="demo-box is-demo-bg-grey">
+                <div class="grid {{ i.class }}" style="height: {{ i.height }}">
+                  {% for n in range(1, 2 + 1) %}
+                    <div class="col">
+                      <div class="demo-box is-demo-bg-cyan">
+                        .{{ i.class }}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </section>
+        <section>
+          <h3 class="demo-h3">Stretch</h3>
+          <div class="demo-area">
+            <div class="grid is-stretch">
+              <div class="col is-mobile-0">
+                <div class="demo-box is-demo-bg-grey">
+                  .is-stretch<br/>↓<br/>↓<br/>↓
                 </div>
               </div>
               <div class="col is-mobile-0">
-                <div class="demo-box is-demo-bg-grey">
-                  0
+                <div class="demo-box is-demo-bg-cyan">
+                  .is-stretch
                 </div>
               </div>
             </div>
           </div>
-        {% endfor %}
-        <h3 class="demo-h3">Position</h3>
-        {% set positions = [
-          {
-            height: "160px",
-            class: "is-middle"
-          }, {
-            height: "160px",
-            class: "is-bottom"
-          }, {
-            height: "auto",
-            class: "is-center"
-          }, {
-            height: "auto",
-            class: "is-right"
-          }, {
-            height: "auto",
-            class: "is-between"
-          }, {
-            height: "auto",
-            class: "is-around"
-          }
-        ] %}
-        {% for i in positions %}
+        </section>
+        <section>
+          <h3 class="demo-h3">Reverse</h3>
           <div class="demo-area">
-            <div class="demo-box is-demo-bg-grey">
-              <div class="grid {{ i.class }}" style="height: {{ i.height }}">
-                {% for n in range(1, 2 + 1) %}
-                  <div class="col">
-                    <div class="demo-box is-demo-bg-cyan">
-                      .{{ i.class }}
-                    </div>
-                  </div>
-                {% endfor %}
+            <div class="grid is-reverse">
+              <div class="col is-mobile-0">
+                <div class="demo-box is-demo-bg-grey">
+                  1st column
+                </div>
+              </div>
+              <div class="col is-mobile-0">
+                <div class="demo-box is-demo-bg-cyan">
+                  2nd column
+                </div>
               </div>
             </div>
           </div>
-        {% endfor %}
-        <h3 class="demo-h3">Stretch</h3>
-        <div class="demo-area">
-          <div class="grid is-stretch">
-            <div class="col is-mobile-0">
-              <div class="demo-box is-demo-bg-grey">
-                .is-stretch<br/>↓<br/>↓<br/>↓
+        </section>
+        <section>
+          <h3 class="demo-h3">Gap</h3>
+          <div class="demo-area">
+            <div class="grid is-gap-none">
+              <div class="col is-mobile-0">
+                <div class="demo-box is-demo-bg-grey">
+                  .is-gap-none
+                </div>
               </div>
-            </div>
-            <div class="col is-mobile-0">
-              <div class="demo-box is-demo-bg-cyan">
-                .is-stretch
-              </div>
-            </div>
-          </div>
-        </div>
-        <h3 class="demo-h3">Reverse</h3>
-        <div class="demo-area">
-          <div class="grid is-reverse">
-            <div class="col is-mobile-0">
-              <div class="demo-box is-demo-bg-grey">
-                1st column
-              </div>
-            </div>
-            <div class="col is-mobile-0">
-              <div class="demo-box is-demo-bg-cyan">
-                2nd column
+              <div class="col is-mobile-0">
+                <div class="demo-box is-demo-bg-cyan">
+                  .is-gap-none
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <h3 class="demo-h3">Gap</h3>
-        <div class="demo-area">
-          <div class="grid is-gap-none">
-            <div class="col is-mobile-0">
-              <div class="demo-box is-demo-bg-grey">
-                .is-gap-none
-              </div>
-            </div>
-            <div class="col is-mobile-0">
-              <div class="demo-box is-demo-bg-cyan">
-                .is-gap-none
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </section>
 
       <section>
         <h2 class="demo-h2">Heading</h2>
-        <div class="demo-area">
-          {% set headings = [
-          {
-            num: "1",
-            class: "is-xxl"
-          }, {
-            num: "2",
-            class: "is-xl"
-          }, {
-            num: "3",
-            class: "is-lg"
-          }, {
-            num: "4",
-            class: "is-md"
-          }, {
-            num: "5",
-            class: "is-sm"
-          }, {
-            num: "6",
-            class: "is-xs"
-          }
-        ] %}
-          {% for i in headings %}
-            <p class="heading {{ i.class }}">{{ i.num }}番目に大きな見出し</p>
-          {% endfor %}
-          {% for i in headings %}
-            <p class="heading is-strong {{ i.class }}">{{ i.num }}番目に大きな見出し</p>
-          {% endfor %}
-        </div>
+        <section>
+          <h3 class="demo-h3">Basic</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {% set headings = [
+                {
+                  num: "1",
+                  class: "is-xxl"
+                }, {
+                  num: "2",
+                  class: "is-xl"
+                }, {
+                  num: "3",
+                  class: "is-lg"
+                }, {
+                  num: "4",
+                  class: "is-md"
+                }, {
+                  num: "5",
+                  class: "is-sm"
+                }, {
+                  num: "6",
+                  class: "is-xs"
+                }
+              ] %}
+              {% for i in headings %}
+                <p class="heading {{ i.class }}">{{ i.num }}番目に大きな見出し</p>
+              {% endfor %}
+              {% for i in headings %}
+                <p class="heading is-strong {{ i.class }}">{{ i.num }}番目に大きな見出し</p>
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2 class="demo-h2">Text</h2>
+        <section>
+          <h3 class="demo-h3">Basic</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts">
+                <span class="text">デフォルト</span>｜
+                <strong class="text is-strong">ストロング</strong>｜
+                <small class="text is-small">スモール</small>｜
+                <span class="text is-italic">Italic</span>｜
+                <del class="text is-delete">削除</del>｜
+                <span class="text">
+                  <i aria-hidden="true" class="fas fa-thumbs-up"></i>
+                  <span class="text">アイコン追加</span>
+                  <i class="material-icons">face</i>
+                </span>｜
+                <span class="text">
+                  <span class="text">注釈入れ</span>
+                  <sup>※1</sup>
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Dark</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts">
+                <span class="text is-dark">ダーク</span>
+                {% for i in range(1, 9 + 1) %}
+                  <span class="text is-dark-{{ i }}">ダーク{{ i }}</span>
+                {% endfor %}
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Light</h3>
+          <div class="demo-area">
+            <div class="demo-paint-box">
+              <p class="texts">
+                <span class="text is-light">ライト</span>
+                {% for i in range(1, 9 + 1) %}
+                  <span class="text is-light-{{ i }}">ライト{{ i }}</span>
+                {% endfor %}
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Color</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts">
+                <span class="text">Normal</span>｜
+                <span class="text is-primary">Primary</span>｜
+                <span class="text is-info">Info</span>｜
+                <span class="text is-success">Success</span>｜
+                <span class="text is-warning">Warning</span>｜
+                <span class="text is-danger">Danger</span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Link</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts">
+                <span class="text is-link">Link</span>｜
+                <span class="text is-link is-primary">Primary</span>｜
+                <span class="text is-link is-info">Info</span>｜
+                <span class="text is-link is-success">Success</span>｜
+                <span class="text is-link is-warning">Warning</span>｜
+                <span class="text is-link is-danger">Danger</span>
+              </p>
+              <p class="texts">
+                <span class="text is-link-reverse">Link Reverse</span>｜
+                <span class="text is-link-reverse is-primary">Primary</span>｜
+                <span class="text is-link-reverse is-info">Info</span>｜
+                <span class="text is-link-reverse is-success">Success</span>｜
+                <span class="text is-link-reverse is-warning">Warning</span>｜
+                <span class="text is-link-reverse is-danger">Danger</span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Size</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts">
+                <span class="text is-xxs">極小</span>
+                <span class="text is-xs">小さい</span>
+                <span class="text is-sm">小さめ</span>
+                <span class="text is-md">中くらい</span>
+                <span class="text is-lg">大きめ</span>
+                <span class="text is-xl">大きい</span>
+                <span class="text is-xxl">特大</span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Align</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts is-left">左寄せのテキスト</p>
+              <p class="texts is-center">中央寄せのテキスト</p>
+              <p class="texts is-right">右寄せのテキスト</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Transform</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts">
+                <span class="text is-capitalize">capitalize</span>｜
+                <span class="text is-lowercase">lowercase</span>｜
+                <span class="text is-uppercase">uppercase</span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Ellipsis</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts is-ellipsis">
+                {% for i in range(1, 9 + 1) %}
+                  テキストを端で折り返さずに、三点リーダーで省略するスタイリング。
+                {% endfor %}
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Blockquote</h3>
+          <div class="demo-area">
+            <blockquote class="blockquote">
+              引用の「blockquote」を使う場合。border-left と background-color を用いた装飾。
+            </blockquote>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Code</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <p class="texts">
+                テキストの途中に
+                <code class="code">code</code>
+                を表示させる。
+              </p>
+              <pre class="pre"><code class="code">html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow-y: scroll;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}</code></pre>
+            </div>
+          </div>
+        </section>
       </section>
 
     </main>
