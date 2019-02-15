@@ -2,7 +2,7 @@
   "setting": {
     "name": "MUSUBii",
     "dist": "docs",
-    "public": "public",
+    "test": "public",
     "src": "src",
     "banner": true
   }

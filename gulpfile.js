@@ -44,10 +44,10 @@ const paths = {
     html: pjt.setting.dist + "/",
     css: pjt.setting.dist + "/css/"
   },
-  public: {
-    dir: pjt.setting.public + "/",
-    html: pjt.setting.public + "/",
-    css: pjt.setting.public + "/"
+  test: {
+    dir: pjt.setting.test + "/",
+    html: pjt.setting.test + "/",
+    css: pjt.setting.test + "/"
   },
   src: {
     dir: pjt.setting.src + "/",
@@ -79,7 +79,7 @@ const postcssOptions = [autoprefixer(autoprefixerOptions)]
 // BrowserSync Options
 const browserSyncOptions = {
   server: {
-    baseDir: paths.public.html
+    baseDir: paths.test.html
   },
   startPath: "index.html",
   open: false,
@@ -90,22 +90,22 @@ const browserSyncOptions = {
 // gulp: Task
 //----------------------------------------------------
 
-// Nunjucks > HTML (public)
-gulp.task("nunjucks_public", () => {
+// Nunjucks > HTML (test)
+gulp.task("nunjucks_test", () => {
   return gulp
     .src("index.njk")
     .pipe(
       data(function() {
-        return { pkg: pkg }
+        return { pkg, pjt }
       })
     )
     .pipe(nunjucks())
     .pipe(htmlBeautify(htmlBeautifyOptions))
-    .pipe(gulp.dest(paths.public.html))
+    .pipe(gulp.dest(paths.test.html))
 })
 
-// SCSS > CSS (public)
-gulp.task("scss_public", () => {
+// SCSS > CSS (test)
+gulp.task("scss_test", () => {
   return gulp
     .src(paths.src.scss + "**/*.scss")
     .pipe(
@@ -115,7 +115,7 @@ gulp.task("scss_public", () => {
     .pipe(postcss(postcssOptions))
     .pipe(gcmq())
     .pipe(gulpif(banner.visible, header(banner.basic, { pkg, pjt })))
-    .pipe(gulp.dest(paths.public.css))
+    .pipe(gulp.dest(paths.test.css))
 })
 
 // SCSS > CSS
@@ -157,8 +157,8 @@ gulp.task("reload", function(done) {
 
 // Watch
 gulp.task("watch", () => {
-  gulp.watch("index.njk", gulp.series("nunjucks_public", "reload"))
-  gulp.watch(paths.src.scss + "**/*.scss", gulp.series("scss_public", "reload"))
+  gulp.watch("index.njk", gulp.series("nunjucks_test", "reload"))
+  gulp.watch(paths.src.scss + "**/*.scss", gulp.series("scss_test", "reload"))
 })
 
 //----------------------------------------------------
@@ -168,19 +168,16 @@ gulp.task("watch", () => {
 gulp.task(
   "default",
   gulp.series(
-    gulp.parallel("nunjucks_public", "scss_public"),
+    gulp.parallel("nunjucks_test", "scss_test"),
     gulp.parallel("browser-sync", "watch")
   )
 )
 
 //----------------------------------------------------
-// gulp: Public
+// gulp: Test
 //----------------------------------------------------
 
-gulp.task(
-  "public",
-  gulp.series(gulp.parallel("nunjucks_public", "scss_public"))
-)
+gulp.task("test", gulp.series(gulp.parallel("nunjucks_test", "scss_test")))
 
 //----------------------------------------------------
 // gulp: Build

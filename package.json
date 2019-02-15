@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dev": "gulp",
-    "public": "gulp public",
+    "test": "gulp test",
     "build": "gulp build"
   },
   "browserslist": [
