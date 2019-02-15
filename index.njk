@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ pjt.setting.name }}</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="./musubii.css"/>
     <style>
@@ -457,6 +457,262 @@
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }</code></pre>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2 class="demo-h2">Button</h2>
+        <section>
+          <h3 class="demo-h3">Plain</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {% macro btns(class) %}
+                <div class="btns">
+                  <button class="btn {{ class }}">戻る</button>
+                  <button class="btn {{ class }} is-primary">決定</button>
+                  <button class="btn {{ class }} is-success">登録</button>
+                  <button class="btn {{ class }} is-danger">削除</button>
+                  <button class="btn {{ class }} is-disable">不可</button>
+                  <button class="btn {{ class }} is-primary">
+                    <i class="fas fa-flag" aria-hidden="true"></i>
+                    <span class="text">FontAwesome</span>
+                  </button>
+                  <button class="btn {{ class }} is-success">
+                    <span class="text">FontAwesome</span>
+                    <i class="fas fa-angle-right is-fit" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn {{ class }} is-primary">
+                    <i class="material-icons">face</i>
+                    <span class="text">Material Icons</span>
+                  </button>
+                  <button class="btn {{ class }} is-success">
+                    <span class="text">Material Icons</span>
+                    <i class="material-icons">keyboard_arrow_right</i>
+                  </button>
+                </div>
+              {% endmacro %}
+              {{ btns(class="is-plain") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Melt</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ btns(class="is-melt") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Outline</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ btns(class="is-outline") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Ghost</h3>
+          <div class="demo-area">
+            <div class="demo-paint-box">
+              {{ btns(class="is-ghost") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Floating</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ btns(class="is-plain is-floating") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Round</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ btns(class="is-plain is-round") }}
+            </div>
+          </div>
+          <div class="demo-area">
+            <div class="demo-paint-box">
+              {{ btns(class="is-ghost is-round") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Circle</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="btns">
+                <button class="btn is-plain is-circle">
+                  <i aria-hidden="true" class="fas fa-angle-left"></i>
+                </button>
+                <button class="btn is-plain is-circle is-primary">
+                  <i aria-hidden="true" class="fab fa-twitter"></i>
+                </button>
+                <button class="btn is-plain is-circle is-success">
+                  <i aria-hidden="true" class="fas fa-save"></i>
+                </button>
+                <button class="btn is-plain is-circle is-danger">
+                  <i aria-hidden="true" class="fas fa-times"></i>
+                </button>
+                <button class="btn is-plain is-circle is-disable">
+                  <i aria-hidden="true" class="fas fa-plus"></i>
+                </button>
+                <button class="btn is-outline is-circle">
+                  <i aria-hidden="true" class="fas fa-angle-left"></i>
+                </button>
+                <button class="btn is-outline is-circle is-primary">
+                  <i aria-hidden="true" class="fab fa-twitter"></i>
+                </button>
+                <button class="btn is-outline is-circle is-success">
+                  <i aria-hidden="true" class="fas fa-save"></i>
+                </button>
+                <button class="btn is-outline is-circle is-danger">
+                  <i aria-hidden="true" class="fas fa-times"></i>
+                </button>
+                <button class="btn is-outline is-circle is-disable">
+                  <i aria-hidden="true" class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="demo-area">
+            <div class="demo-paint-box">
+              <div class="btns">
+                <button class="btn is-ghost is-circle">
+                  <i aria-hidden="true" class="fas fa-angle-left"></i>
+                </button>
+                <button class="btn is-ghost is-circle is-primary">
+                  <i aria-hidden="true" class="fab fa-twitter"></i>
+                </button>
+                <button class="btn is-ghost is-circle is-success">
+                  <i aria-hidden="true" class="fas fa-save"></i>
+                </button>
+                <button class="btn is-ghost is-circle is-danger">
+                  <i aria-hidden="true" class="fas fa-times"></i>
+                </button>
+                <button class="btn is-ghost is-circle is-disable">
+                  <i aria-hidden="true" class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Size</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="btns">
+                <button class="btn is-plain is-xxs">極小</button>
+                <button class="btn is-plain is-xs">小さい</button>
+                <button class="btn is-plain is-sm">小さめ</button>
+                <button class="btn is-plain is-md">中くらい</button>
+                <button class="btn is-plain is-lg">大きめ</button>
+                <button class="btn is-plain is-xl">大きい</button>
+                <button class="btn is-plain is-xxl">特大</button>
+              </div>
+              <div class="btns is-xxs">
+                <button class="btn is-plain">まとめて極小</button>
+                <button class="btn is-plain">まとめて極小</button>
+                <button class="btn is-plain">まとめて極小</button>
+                <button class="btn is-plain">まとめて極小</button>
+                <button class="btn is-plain">まとめて極小</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Flex</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ btns(class="is-plain is-mobile-0") }}
+              {{ btns(class="is-outline is-mobile-0") }}
+            </div>
+          </div>
+          <div class="demo-area">
+            <div class="demo-paint-box">
+              {{ btns(class="is-ghost is-mobile-0") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Position</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="btns">
+                <button class="btn is-plain">default</button>
+                <button class="btn is-plain">default</button>
+                <button class="btn is-plain">default</button>
+              </div>
+              <div class="btns is-center">
+                <button class="btn is-plain">.is-center</button>
+                <button class="btn is-plain">.is-center</button>
+                <button class="btn is-plain">.is-center</button>
+              </div>
+              <div class="btns is-right">
+                <button class="btn is-plain">.is-right</button>
+                <button class="btn is-plain">.is-right</button>
+                <button class="btn is-plain">.is-right</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Bar</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="btns is-bar">
+                <button class="btn is-plain">
+                  <i aria-hidden="true" class="fas fa-align-left"></i>
+                  <span class="text">左寄せ</span></button>
+                <button class="btn is-plain">
+                  <i aria-hidden="true" class="fas fa-align-center"></i>
+                  <span class="text">中央寄せ</span></button>
+                <button class="btn is-plain">
+                  <i aria-hidden="true" class="fas fa-align-right"></i>
+                  <span class="text">右寄せ</span></button>
+              </div>
+              <div class="btns is-bar">
+                <button class="btn is-outline is-mobile-0">
+                  <i aria-hidden="true" class="fas fa-align-left"></i>
+                  <span class="text">左寄せ</span></button>
+                <button class="btn is-outline is-mobile-0">
+                  <i aria-hidden="true" class="fas fa-align-center"></i>
+                  <span class="text">中央寄せ</span></button>
+                <button class="btn is-outline is-mobile-0">
+                  <i aria-hidden="true" class="fas fa-align-right"></i>
+                  <span class="text">右寄せ</span></button>
+              </div>
+              <div class="btns is-bar">
+                <button class="btn is-outline is-round is-mobile-0">ラウンド</button>
+                <button class="btn is-outline is-round is-mobile-0">ラウンド</button>
+                <button class="btn is-outline is-round is-mobile-0">ラウンド</button>
+              </div>
+            </div>
+          </div>
+          <div class="demo-area">
+            <div class="demo-paint-box">
+              <div class="btns">
+                <div class="btns is-bar">
+                  <button class="btn is-ghost">松</button>
+                  <button class="btn is-ghost">桜</button>
+                  <button class="btn is-ghost">芒</button>
+                  <button class="btn is-ghost">雨</button>
+                  <button class="btn is-ghost">桐</button>
+                </div>
+                <div class="btns is-bar">
+                  <button class="btn is-ghost">線と角丸</button>
+                  <button class="btn is-ghost">自動調整</button>
+                </div>
+                <div class="btns is-bar">
+                  <button class="btn is-ghost is-round">ラウンド</button>
+                  <button class="btn is-ghost is-round">ラウンド</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
