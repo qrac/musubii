@@ -3720,7 +3720,7 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass-dashi@^0.3.0:
+sass-dashi@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/sass-dashi/-/sass-dashi-0.3.1.tgz#b1b8366ac20b23e0c459286d71b5ada093a47d35"
   integrity sha512-ITrx+xv6gyT4w8VPRrNR01nFcer4JY7y2k9wAwNPWf9P0YAwweAyAK2OFW/vMfUFCEquE3yWemyyR5i4jRlTMw==

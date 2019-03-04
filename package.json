@@ -36,7 +36,7 @@
   ],
   "dependencies": {
     "moftone": "^6.2.0",
-    "sass-dashi": "^0.3.0",
+    "sass-dashi": "^0.3.1",
     "shitajicss": "5.0.0"
   },
   "devDependencies": {
