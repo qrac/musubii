@@ -46,13 +46,16 @@ CSS のレイヤーは主に 4 つに分類されています。
 ファイルをダウンロード後、CSS ファイル `musubii.min.css` を読み込んでお使いください。
 
 ```html
-<link rel="stylesheet" href="css/musubii.min.css">
+<link rel="stylesheet" href="css/musubii.min.css" />
 ```
 
 ### [CDN](https://www.jsdelivr.com/package/npm/musubii)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@6.6.0/docs/css/musubii.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/musubii@6.6.0/docs/css/musubii.min.css"
+/>
 ```
 
 ### [npm](https://www.npmjs.com/package/musubii)
@@ -72,12 +75,6 @@ npm install musubii
 | Safari(iOS) | Chrome(Android) | Browser(Android) |
 | :---------: | :-------------: | :--------------: |
 |   Newest    |     Newest      |       4.4~       |
-
-## Develop
-
-- MacBook Pro: 13-inch 2016 No-touchbar
-- OS: macOS High Sierra 10.13.6
-- Node.js: v10.9.0
 
 ## License
 
