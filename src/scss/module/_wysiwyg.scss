@@ -179,3 +179,15 @@
   border: 0;
   border-top: 1px solid $dark-7;
 }
+
+//----------------------------------------------------
+// / Figure
+//----------------------------------------------------
+
+.wysiwyg figure {
+  text-align: center;
+  > figcaption {
+    margin-top: 0.75em;
+    font-size: 87.5%;
+  }
+}
