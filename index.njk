@@ -794,6 +794,186 @@
         </section>
       </section>
 
+      <section>
+        <h2 class="demo-h2">Table</h2>
+        <section>
+          <h3 class="demo-h3">Example</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <table class="table is-stripe is-border is-center is-middle">
+                <thead>
+                  <tr class="is-paint">
+                    <th width="20"></th>
+                    <th>見出しセル</th>
+                    <th>見出しセル</th>
+                    <th colspan="2">見出しセル</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="is-paint" rowspan="2">#1</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                  </tr>
+                  <tr>
+                    <td>データセル</td>
+                    <td class="is-spot">スポット表示</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                  </tr>
+                  <tr>
+                    <td class="is-paint">#2</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                  </tr>
+                  <tr>
+                    <td class="is-paint">#3</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td class="is-danger">エラー表示</td>
+                    <td>データセル</td>
+                  </tr>
+                  <tr>
+                    <td class="is-paint">#4</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                    <td>データセル</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th class="is-right" colspan="5">テーブルフッター</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Line</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {% macro table(class) %}
+                <table class="table {{class}}">
+                  <thead>
+                    <tr>
+                      {% for i in range(1, 5 + 1) %}
+                        <th>見出しセル</th>
+                      {% endfor %}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for i in range(1, 5 + 1) %}
+                      <tr>
+                        {% for n in range(1, 5 + 1) %}
+                          <td>データセル</td>
+                        {% endfor %}
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              {% endmacro %}
+              {{ table(class="is-line") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Outline</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ table(class="is-outline") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Border</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ table(class="is-border") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Align</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <table class="table is-border is-stripe">
+                <thead>
+                  <tr>
+                    <th class="box is-left">.box .is-left</th>
+                    <th class="box is-center">.box .is-center</th>
+                    <th class="box is-right">.box .is-right</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="box is-left">.box .is-left<br>.box .is-left<br>.box .is-left</td>
+                    <td class="box is-center">.box .is-center</td>
+                    <td class="box is-right is-middle">.box .is-right .is-middle</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Paint</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <table class="table is-border">
+                <tbody>
+                  <tr>
+                    <td class="box is-paint">.box .is-paint</td>
+                    <td class="box is-dark-6">default</td>
+                  </tr>
+                  <tr>
+                    <td class="box is-paint">.box .is-paint</td>
+                    <td class="box is-spot">.box .is-spot</td>
+                  </tr>
+                  <tr>
+                    <td class="box is-paint">.box .is-paint</td>
+                    <td class="box is-danger">.box .is-danger</td>
+                  </tr>
+                </tbody>
+              </table>
+              {{ table(class="is-stripe is-border") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Scroll</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="box is-scroll-x">
+                <table class="table is-border is-stripe is-nowrap">
+                  <thead>
+                    <tr class="box is-paint">
+                      {% for i in range(1, 14 + 1) %}
+                        <th>見出しセル</th>
+                      {% endfor %}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for i in range(1, 5 + 1) %}
+                      <tr>
+                        {% for n in range(1, 14 + 1) %}
+                          <td>データセル</td>
+                        {% endfor %}
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
     </main>
   </body>
 </html>
