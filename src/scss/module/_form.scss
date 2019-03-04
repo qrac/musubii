@@ -116,9 +116,9 @@
   color: $body-text-color;
   line-height: $input-line-height;
   &[disabled] {
-    background-color: $input-disable-background-color;
-    border-color: $input-disable-border-color;
-    color: $input-disable-text-color;
+    background-color: $input-disabled-background-color;
+    border-color: $input-disabled-border-color;
+    color: $input-disabled-text-color;
   }
   &[readonly] {
     background-color: $input-readonly-background-color;
@@ -158,7 +158,8 @@
 .textarea {
   box-shadow: $input-shadow;
   &[disabled] {
-    box-shadow: $input-disable-shadow;
+    cursor: not-allowed;
+    box-shadow: $input-disabled-shadow;
   }
   &[readonly] {
     box-shadow: $input-readonly-shadow;
@@ -192,7 +193,7 @@
   max-width: 70vw;
   overflow: hidden;
   &[disabled] {
-    cursor: default;
+    cursor: not-allowed;
   }
 }
 
@@ -211,9 +212,9 @@
   padding: $textarea-padding;
   color: $body-text-color;
   &[disabled] {
-    background-color: $input-disable-background-color;
-    border-color: $input-disable-border-color;
-    color: $input-disable-text-color;
+    background-color: $input-disabled-background-color;
+    border-color: $input-disabled-border-color;
+    color: $input-disabled-text-color;
   }
   &[readonly] {
     background-color: $input-readonly-background-color;
@@ -272,8 +273,8 @@
     color: $body-text-color;
     line-height: $input-line-height;
     &[disabled] {
-      background-color: $input-disable-background-color;
-      color: $input-disable-text-color;
+      background-color: $input-disabled-background-color;
+      color: $input-disabled-text-color;
     }
     &[readonly] {
       background-color: $input-readonly-background-color;

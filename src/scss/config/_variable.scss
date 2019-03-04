@@ -135,15 +135,15 @@ $btn-ghost-default-text-color: $light !default;
 $btn-ghost-default-hover-background-color: $light !default;
 $btn-ghost-default-hover-text-color: $dark-2 !default;
 
-// .btn.is-disable
-$btn-disable-background-color: $grey-400 !default;
-$btn-disable-background-color-alpha: $dark-6 !default;
-$btn-disable-text-color: $dark-6 !default;
+// .btn.is-disabled
+$btn-disabled-background-color: $grey-400 !default;
+$btn-disabled-background-color-alpha: $dark-6 !default;
+$btn-disabled-text-color: $dark-6 !default;
 
-// .btn.is-ghost.is-disable
-$btn-ghost-disable-background-color: $light-8 !default;
-$btn-ghost-disable-border-color: $light-4 !default;
-$btn-ghost-disable-text-color: $light-4 !default;
+// .btn.is-ghost.is-disabled
+$btn-ghost-disabled-background-color: $light-8 !default;
+$btn-ghost-disabled-border-color: $light-4 !default;
+$btn-ghost-disabled-text-color: $light-4 !default;
 
 //----------------------------------------------------
 // / Module - List
@@ -201,11 +201,11 @@ $input-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !default;
 // .input.is-round
 $input-round-border-radius: 999em !default;
 
-// .input[disable]
-$input-disable-background-color: $grey-300 !default;
-$input-disable-border-color: $dark-6 !default;
-$input-disable-shadow: none !default;
-$input-disable-text-color: $dark-6 !default;
+// .input[disabled]
+$input-disabled-background-color: $grey-300 !default;
+$input-disabled-border-color: $dark-6 !default;
+$input-disabled-shadow: none !default;
+$input-disabled-text-color: $dark-6 !default;
 
 // .input[readonly]
 $input-readonly-background-color: $grey-100 !default;

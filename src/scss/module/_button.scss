@@ -95,9 +95,9 @@
   &[type="submit"] {
     color: $body-text-color;
   }
-  &.is-disable,
+  &.is-disabled,
   &[disabled] {
-    cursor: default;
+    cursor: not-allowed;
   }
   &.is-round {
     border-radius: $btn-round-border-radius;
@@ -116,7 +116,7 @@
 // / Floating
 //----------------------------------------------------
 
-.btn.is-floating:not(.is-disable) {
+.btn.is-floating:not(.is-disabled) {
   box-shadow: $btn-floating-shadow;
   &:hover {
     box-shadow: $btn-floating-hover-shadow;
@@ -142,12 +142,12 @@
       }
     }
   }
-  &.is-disable,
-  &.is-disable:hover,
+  &.is-disabled,
+  &.is-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    background-color: $btn-disable-background-color;
-    color: $btn-disable-text-color;
+    background-color: $btn-disabled-background-color;
+    color: $btn-disabled-text-color;
   }
 }
 
@@ -166,11 +166,11 @@
       color: $value;
     }
   }
-  &.is-disable,
-  &.is-disable:hover,
+  &.is-disabled,
+  &.is-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    color: $btn-disable-text-color;
+    color: $btn-disabled-text-color;
     background-color: transparent;
   }
 }
@@ -196,12 +196,12 @@
       }
     }
   }
-  &.is-disable,
-  &.is-disable:hover,
+  &.is-disabled,
+  &.is-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    background-color: $btn-disable-background-color-alpha;
-    color: $btn-disable-text-color;
+    background-color: $btn-disabled-background-color-alpha;
+    color: $btn-disabled-text-color;
   }
 }
 
@@ -228,12 +228,12 @@
       }
     }
   }
-  &.is-disable,
-  &.is-disable:hover,
+  &.is-disabled,
+  &.is-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    background-color: $btn-ghost-disable-background-color;
-    border-color: $btn-ghost-disable-border-color;
-    color: $btn-ghost-disable-text-color;
+    background-color: $btn-ghost-disabled-background-color;
+    border-color: $btn-ghost-disabled-border-color;
+    color: $btn-ghost-disabled-text-color;
   }
 }
