@@ -169,6 +169,45 @@
 }
 
 //----------------------------------------------------
+// / Definition List
+//----------------------------------------------------
+
+.wysiwyg {
+  dl {
+    width: 100%;
+    background-color: $table-background-color;
+    border: $table-border-width solid $table-border-color;
+    border-top: none;
+  }
+  dt {
+    width: 100%;
+    padding: $table-padding;
+    background-color: $table-paint-background-color;
+    border-top: $table-border-width solid $table-border-color;
+    color: $table-paint-text-color;
+    font-weight: $wysiwyg-table-th-font-weight;
+  }
+  dd {
+    width: 100%;
+    padding: $table-padding;
+    border-top: $table-border-width solid $table-border-color;
+  }
+  @include fablet {
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    dt {
+      width: 30%;
+    }
+    dd {
+      width: 70%;
+      border-left: $table-border-width solid $table-border-color;
+    }
+  }
+}
+
+//----------------------------------------------------
 // / hr
 //----------------------------------------------------
 
