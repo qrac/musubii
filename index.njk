@@ -476,7 +476,9 @@
                 <div class="btns">
                   <button class="btn {{ class }}">戻る</button>
                   <button class="btn {{ class }} is-primary">決定</button>
+                  <button class="btn {{ class }} is-info">情報</button>
                   <button class="btn {{ class }} is-success">登録</button>
+                  <button class="btn {{ class }} is-warning">注意</button>
                   <button class="btn {{ class }} is-danger">削除</button>
                   <button class="btn {{ class }} is-disable">不可</button>
                   <button class="btn {{ class }} is-primary">
@@ -550,59 +552,38 @@
           <h3 class="demo-h3">Circle</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="btns">
-                <button class="btn is-plain is-circle">
-                  <i aria-hidden="true" class="fas fa-angle-left"></i>
-                </button>
-                <button class="btn is-plain is-circle is-primary">
-                  <i aria-hidden="true" class="fab fa-twitter"></i>
-                </button>
-                <button class="btn is-plain is-circle is-success">
-                  <i aria-hidden="true" class="fas fa-save"></i>
-                </button>
-                <button class="btn is-plain is-circle is-danger">
-                  <i aria-hidden="true" class="fas fa-times"></i>
-                </button>
-                <button class="btn is-plain is-circle is-disable">
-                  <i aria-hidden="true" class="fas fa-plus"></i>
-                </button>
-                <button class="btn is-outline is-circle">
-                  <i aria-hidden="true" class="fas fa-angle-left"></i>
-                </button>
-                <button class="btn is-outline is-circle is-primary">
-                  <i aria-hidden="true" class="fab fa-twitter"></i>
-                </button>
-                <button class="btn is-outline is-circle is-success">
-                  <i aria-hidden="true" class="fas fa-save"></i>
-                </button>
-                <button class="btn is-outline is-circle is-danger">
-                  <i aria-hidden="true" class="fas fa-times"></i>
-                </button>
-                <button class="btn is-outline is-circle is-disable">
-                  <i aria-hidden="true" class="fas fa-plus"></i>
-                </button>
-              </div>
+              {% macro btnsCircle(class) %}
+                <div class="btns">
+                  <button class="btn {{class}} is-circle">
+                    <i aria-hidden="true" class="fas fa-angle-left"></i>
+                  </button>
+                  <button class="btn {{class}} is-circle is-primary">
+                    <i aria-hidden="true" class="fab fa-twitter"></i>
+                  </button>
+                  <button class="btn {{class}} is-circle is-info">
+                    <i aria-hidden="true" class="fas fa-info-circle"></i>
+                  </button>
+                  <button class="btn {{class}} is-circle is-success">
+                    <i aria-hidden="true" class="fas fa-save"></i>
+                  </button>
+                  <button class="btn {{class}} is-circle is-warning">
+                    <i aria-hidden="true" class="fas fa-exclamation-triangle"></i>
+                  </button>
+                  <button class="btn {{class}} is-circle is-danger">
+                    <i aria-hidden="true" class="fas fa-times"></i>
+                  </button>
+                  <button class="btn {{class}} is-circle is-disable">
+                    <i aria-hidden="true" class="fas fa-plus"></i>
+                  </button>
+                </div>
+              {% endmacro %}
+              {{ btnsCircle(class="is-plain") }}
+              {{ btnsCircle(class="is-outline") }}
             </div>
           </div>
           <div class="demo-area">
             <div class="demo-paint-box">
-              <div class="btns">
-                <button class="btn is-ghost is-circle">
-                  <i aria-hidden="true" class="fas fa-angle-left"></i>
-                </button>
-                <button class="btn is-ghost is-circle is-primary">
-                  <i aria-hidden="true" class="fab fa-twitter"></i>
-                </button>
-                <button class="btn is-ghost is-circle is-success">
-                  <i aria-hidden="true" class="fas fa-save"></i>
-                </button>
-                <button class="btn is-ghost is-circle is-danger">
-                  <i aria-hidden="true" class="fas fa-times"></i>
-                </button>
-                <button class="btn is-ghost is-circle is-disable">
-                  <i aria-hidden="true" class="fas fa-plus"></i>
-                </button>
-              </div>
+              {{ btnsCircle(class="is-ghost") }}
             </div>
           </div>
         </section>
