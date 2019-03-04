@@ -280,6 +280,9 @@
       background-color: $input-readonly-background-color;
       color: $input-readonly-text-color;
     }
+    &:not([disabled]) {
+      cursor: pointer;
+    }
   }
   &.is-round:not(.is-multiple) > select {
     border-radius: $input-round-border-radius;
@@ -287,6 +290,7 @@
   &:not(.is-multiple) {
     &:after {
       content: "";
+      pointer-events: none;
       position: absolute;
       top: 50%;
       right: ($select-angle-size * 2);
