@@ -2060,6 +2060,11 @@ invert-kv@^1.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
   integrity sha1-EEqOSqym09jNFXqO+L+rLXo//bY=
 
+iostone@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/iostone/-/iostone-4.0.0.tgz#4329617b3c58210ba07a95b553a874aaf7848539"
+  integrity sha512-1RHPMtyM900Pj4od5AR5ucymFwH73iYeiuwzJqati5DzGWMeFALXG5Tm2/vNo/qF4tpFbK8cweXa6zKHksn+hA==
+
 is-absolute@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-absolute/-/is-absolute-1.0.0.tgz#395e1ae84b11f26ad1795e73c17378e48a301576"
@@ -2623,6 +2628,11 @@ math-random@^1.0.1:
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.4.tgz#5dd6943c938548267016d4e34f057583080c514c"
   integrity sha512-rUxjysqif/BZQH2yhd5Aaq7vXMSx9NdEsQcyA07uEzIvxgI7zIr33gGsh+RU0/XjmQpCW7RsVof1vlkvQVCK5A==
 
+mdtone@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/mdtone/-/mdtone-4.0.0.tgz#83a35cec252b6e3798940c006a90b2f43f64b525"
+  integrity sha512-Mfx0GLNYOu1jIMDXMNQfKBW7/56JbOn2EkiZ+SiSORYFH2ANLgZZAUveVDHaJqcHoRmePHZQO8IDG7eprkhvUg==
+
 meow@^3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/meow/-/meow-3.7.0.tgz#72cb668b425228290abbfa856892587308a801fb"
@@ -2746,6 +2756,15 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
+mixtone@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mixtone/-/mixtone-1.0.1.tgz#234f6a9cc9e682f52dfc2958085d3f1702637583"
+  integrity sha512-jnPJMJ8Ov2O1EinzgEnuGZ3bIrg0eOThHdzhAXyY9NpmssCNrEknPoAa14LNZaMvEea+U9DNhUNpEW7bly4ftg==
+  dependencies:
+    iostone "^4.0.0"
+    mdtone "^4.0.0"
+    moftone "^7.0.0"
+
 "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
@@ -2753,10 +2772,10 @@ mixin-deep@^1.2.0:
   dependencies:
     minimist "0.0.8"
 
-moftone@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/moftone/-/moftone-6.2.0.tgz#bf14a973459e562bd4d081e92cf6d7b778d7f2b0"
-  integrity sha512-GBGqAo4voH7l/9/PNYudumbbZGwTGwXqELHOWsr4hxuL2ETSa+o3DqETYxF2uo6LVkPSGtAk84uyUz9YXyVfQA==
+moftone@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/moftone/-/moftone-7.0.0.tgz#22011495c33da76bb28fa4ab514c00c24a088c75"
+  integrity sha512-wGGnJX+kLfYLj9/cyfO5sOLRMWza0WNugBVx/+Z3Kc/ecAYTclz6DBXI/JD3D9L3RHg0Gtbl+CX6j7mIROZpaA==
 
 ms@2.0.0:
   version "2.0.0"
