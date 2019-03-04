@@ -62,14 +62,23 @@
 // / Link
 //----------------------------------------------------
 
-.wysiwyg a {
-  cursor: pointer;
-  color: $primary;
-  border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
-    currentColor;
-  &:hover,
-  &:active {
+.wysiwyg {
+  a {
+    cursor: pointer;
+    border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
+      currentColor;
+    color: $primary;
+    &:hover,
+    &:active {
+      border-bottom-color: transparent;
+    }
+  }
+  &.is-link-reverse a {
     border-bottom-color: transparent;
+    &:hover,
+    &:active {
+      border-bottom-color: currentColor;
+    }
   }
 }
 
