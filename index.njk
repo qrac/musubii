@@ -171,6 +171,11 @@
           <h3 class="demo-h3">Position</h3>
           {% set positions = [
             {
+              height: "auto",
+              class: "is-baseline",
+              secondSizeClass: "is-xxl"
+            },
+            {
               height: "160px",
               class: "is-middle"
             }, {
@@ -194,13 +199,16 @@
             <div class="demo-area">
               <div class="demo-box is-demo-bg-grey">
                 <div class="grid {{ i.class }}" style="height: {{ i.height }}">
-                  {% for n in range(1, 2 + 1) %}
-                    <div class="col">
-                      <div class="demo-box is-demo-bg-cyan">
-                        .{{ i.class }}
-                      </div>
+                  <div class="col">
+                    <div class="demo-box is-demo-bg-cyan">
+                      .{{ i.class }}
                     </div>
-                  {% endfor %}
+                  </div>
+                  <div class="col">
+                    <div class="demo-box is-demo-bg-cyan {{ i.secondSizeClass }}">
+                      .{{ i.class }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
