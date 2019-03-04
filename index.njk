@@ -974,6 +974,382 @@
         </section>
       </section>
 
-    </main>
-  </body>
-</html>
+      <section>
+        <h2 class="demo-h2">Form</h2>
+        <section>
+          <h3 class="demo-h3">Example</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="grid is-center">
+                <div class="col is-mobile-12 is-tablet-4 is-wide-3">
+                  <div class="group is-demo-box-1">
+                    <form action="" method="post" class="form is-space">
+                      <p class="heading">ユーザーネーム</p>
+                      <div class="field"><input type="text" name="username" value="demo" class="input is-mobile-full"></div>
+                      <p class="heading">メールアドレス</p>
+                      <div class="field"><input type="email" name="email" placeholder="example@gmail.com" class="input is-mobile-full"></div>
+                      <p class="texts is-xs is-danger">※半角英数のみ</p>
+                      <p class="heading">パスワード</p>
+                      <div class="field"><input type="password" name="password" class="input is-mobile-full"></div>
+                      <label class="label is-checkbox is-block"><input type="checkbox" name="checkbox" class="input">
+                        <span class="text is-middle is-sm">次回から自動的にログイン</span></label>
+                      <div class="btns">
+                        <button type="submit" class="btn is-plain is-success is-mobile-full">ログイン</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Text</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="text" name="text" placeholder="Text">
+                <input class="input" type="text" name="text" placeholder="Disabled" disabled="disabled">
+                <input class="input" type="text" name="text" value="Readonly" readonly="readonly">
+              </div>
+              <div class="field">
+                <textarea class="textarea" name="textarea"></textarea>
+                <textarea class="textarea" name="textarea" disabled="disabled"></textarea>
+                <textarea class="textarea" name="textarea" readonly="readonly">Readonly</textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Password</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="password" name="password">
+                <input class="input" type="password" name="password" disabled="disabled">
+                <input class="input" type="password" name="password" value="Readonly" readonly="readonly">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">URL</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="url" name="url" placeholder="example.com">
+                <input class="input" type="url" name="url" placeholder="example.com" disabled="disabled">
+                <input class="input" type="url" name="url" value="example.com" readonly="readonly">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Email</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="email" name="email" placeholder="example@gmail.com">
+                <input class="input" type="email" name="email" placeholder="example@gmail.com" disabled="disabled">
+                <input class="input" type="email" name="email" value="example@gmail.com" readonly="readonly">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">TEL</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000">
+                <input class="input" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000" disabled="disabled">
+                <input class="input" type="tel" name="tel" maxlength="13" value="000-0000-0000" readonly="readonly">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Number</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="number" name="number" maxlength="5" step="100" placeholder="10000">
+                <input class="input" type="number" name="number" maxlength="5" step="100" placeholder="10000" disabled="disabled">
+                <input class="input" type="number" name="number" maxlength="5" step="100" value="10000" readonly="readonly">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Search</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="search" name="search" placeholder="Search">
+                <input class="input" type="search" name="search" placeholder="Search" disabled="disabled">
+                <input class="input" type="search" name="search" value="Search" readonly="readonly">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Date</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00">
+                <input class="input" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00" disabled="disabled">
+              </div>
+              <div class="field">
+                <input class="input" type="date" name="date" value="2017-02-02">
+                <input class="input" type="date" name="date" value="2017-02-02" disabled="disabled">
+              </div>
+              <div class="field">
+                <input class="input" type="month" name="month" value="2017-02">
+                <input class="input" type="month" name="month" value="2017-02" disabled="disabled">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Time</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="time" name="time" value="00:00:00">
+                <input class="input" type="time" name="time" value="00:00:00" disabled="disabled">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">File</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input" type="file" name="file">
+                <input class="input" type="file" name="file" disabled="disabled">
+              </div>
+              <div class="field">
+                <label class="btn is-plain">
+                  <span class="text">ファイル選択</span>
+                  <input type="file" name="file" class="input">
+                </label>
+                <label class="btn is-plain is-disable">
+                  <span class="text">ファイル選択</span>
+                  <input type="file" name="file" class="input" disabled="disabled">
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Color</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input type="color" name="color" value="#1cb4c7">
+                <input type="color" name="color" value="#1cb4c7" disabled="disabled">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Range</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input type="range" name="range">
+                <input type="range" name="range" disabled="disabled">
+              </div>
+              <div class="field">
+                <input type="range" name="range" step="10">
+                <input type="range" name="range" min="1" max="5" value="3" list="range-five">
+                <datalist id="range-five">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                  <option value="4"></option>
+                  <option value="5"></option>
+                </datalist>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Radio</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <label class="label is-radio">
+                  <input type="radio" name="radio-demo-1" checked="checked">
+                  <span class="text is-middle">むすびー</span>
+                </label>
+                <label class="label is-radio">
+                  <input type="radio" name="radio-demo-1">
+                  <span class="text is-middle">むすびい</span>
+                </label>
+                <label class="label is-radio">
+                  <input type="radio" name="radio-demo-1" disabled="disabled">
+                  <span class="text is-middle">むすび</span>
+                </label>
+              </div>
+              <div class="field is-middle">
+                <input id="radio-demo-2-1" type="radio" name="radio-demo-2" checked="checked">
+                <label class="label is-radio" for="radio-demo-2-1">
+                  <span class="text is-middle">ムスビー</span>
+                </label>
+                <input id="radio-demo-2-2" type="radio" name="radio-demo-2">
+                <label class="label is-radio" for="radio-demo-2-2">
+                  <span class="text is-middle">ムスビイ</span>
+                </label>
+                <input id="radio-demo-2-3" type="radio" name="radio-demo-2" disabled="disabled">
+                <label class="label is-radio" for="radio-demo-2-3">
+                  <span class="text is-middle">ムスビ</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Checkbox</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <label class="label is-checkbox">
+                  <input type="checkbox" name="checkbox-demo-1" checked="checked">
+                  <span class="text is-middle">HTML</span>
+                </label>
+                <label class="label is-checkbox">
+                  <input type="checkbox" name="checkbox-demo-1">
+                  <span class="text is-middle">CSS</span>
+                </label>
+                <label class="label is-checkbox">
+                  <input type="checkbox" name="checkbox-demo-1" disabled="disabled">
+                  <span class="text is-middle">JavaScript</span>
+                </label>
+              </div>
+              <div class="field is-middle">
+                <input id="checkbox-demo-2-1" type="checkbox" name="checkbox-demo-2" checked="checked">
+                <label class="label is-checkbox" for="checkbox-demo-2-1">
+                  <span class="text is-middle">Nunjucks</span>
+                </label>
+                <input id="checkbox-demo-2-2" type="checkbox" name="checkbox-demo-2">
+                <label class="label is-checkbox" for="checkbox-demo-2-2">
+                  <span class="text is-middle">SCSS</span>
+                </label>
+                <input id="checkbox-demo-2-3" type="checkbox" name="checkbox-demo-2" disabled="disabled">
+                <label class="label is-checkbox" for="checkbox-demo-2-3">
+                  <span class="text is-middle">TypeScript</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Select</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                {% macro select(class, size, state) %}
+                  <div class="select {{class}}">
+                    <select size="{{size}}" {{state}}>
+                      {% for i in["A", "B", "C", "D", "E"] %}
+                        <option>
+                          Select
+                          {{i}}
+                        </option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                {% endmacro %}
+                {{ select(class="", size="", state="") }}
+                {{ select(class="", size="", state="disabled") }}
+              </div>
+              <div class="field">
+                {{ select(class="is-multiple", size="5", state="") }}
+                {{ select(class="is-multiple", size="5", state="disabled") }}
+              </div>
+              <div class="field">
+                {{ select(class="is-multiple", size="5", state="multiple") }}
+                {{ select(class="is-multiple", size="5", state="multiple disabled") }}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Button</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="btns">
+                <button type="button" class="btn is-plain is-primary">汎用ボタン</button>
+                <button type="button" class="btn is-plain is-primary" disabled="disabled">汎用ボタン</button>
+              </div>
+              <div class="btns">
+                <button type="reset" class="btn is-plain">リセット</button>
+                <button type="reset" class="btn is-plain" disabled="disabled">リセット</button>
+              </div>
+              <div class="btns">
+                <button type="submit" class="btn is-plain is-success">送信</button>
+                <button type="submit" class="btn is-plain is-success" disabled="disabled">送信</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Round</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input class="input is-round" type="text" name="text" placeholder="Text">
+                {{ select(class="is-round", size="", state="") }}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Field</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input type="text" class="input" name="text" placeholder="Text">
+                <input type="text" class="input is-mobile-0" name="text" placeholder="Text">
+              </div>
+              <div class="field is-middle">
+                <span class="text">天地中央揃え</span>
+                <input type="text" class="input is-mobile-0" name="text" placeholder="Text">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Flex</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field">
+                <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
+                <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
+                <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
+                <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Bar</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="field is-bar">
+                {{ select(class="", size="", state="") }}
+                <input type="text" class="input" name="text" placeholder="キーワード">
+                <button type="submit" class="btn is-plain is-info">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+        </section>
+
+      </main>
+    </body>
+  </html>
