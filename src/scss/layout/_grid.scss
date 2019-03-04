@@ -17,6 +17,9 @@
     padding-left: $grid-gap-default;
     padding-bottom: $grid-gap-default;
   }
+  &.is-baseline {
+    align-items: baseline;
+  }
   &.is-middle {
     align-items: center;
   }
