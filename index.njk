@@ -54,6 +54,10 @@
         background-color: #1b2324;
         border-radius: 2px;
       }
+      .demo-line-box > *:not(:first-child),
+      .demo-paint-box > *:not(:first-child) {
+        margin-top: 8px;
+      }
       .is-demo-bg-cyan {
         background-color: #1cb4c7;
       }
@@ -713,6 +717,78 @@
                   <button class="btn is-ghost is-round">ラウンド</button>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2 class="demo-h2">List</h2>
+        <section>
+          <h3 class="demo-h3">Disc</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {% macro list(class) %}
+                <ul class="list {{ class }}">
+                  <li class="item">リストのテキストは1行目以外をインデントして読みやすくする</li>
+                  <li class="item">リストのテキストは1行目以外をインデントして読みやすくする</li>
+                  <li class="item">リストのテキストは1行目以外をインデントして読みやすくする</li>
+                  <li class="item">リストのテキストは1行目以外をインデントして読みやすくする
+                    <ul class="list {{ class }}">
+                      <li class="item">リストを入れ子にした場合は、その分インデントを追加して構造を見せる</li>
+                      <li class="item">リストを入れ子にした場合は、その分インデントを追加して構造を見せる</li>
+                      <li class="item">リストを入れ子にした場合は、その分インデントを追加して構造を見せる</li>
+                      <li class="item">リストを入れ子にした場合は、その分インデントを追加して構造を見せる</li>
+                    </ul>
+                  </li>
+                </ul>
+              {% endmacro %}
+              {{ list(class="is-disc") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Circle</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ list(class="is-circle") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Decimal</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ list(class="is-decimal") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Note</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <ul class="list is-note">
+                <li class="item">
+                  <span class="text">※1</span>
+                  <span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span>
+                </li>
+                <li class="item">
+                  <span class="text">※2</span>
+                  <span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span>
+                </li>
+                <li class="item">
+                  <span class="text">※3</span>
+                  <span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span>
+                </li>
+                <li class="item">
+                  <span class="text">※</span>
+                  <span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span>
+                </li>
+                <li class="item">
+                  <span class="text">※100</span>
+                  <span class="text">自由にナンバリング付きの米印などを置ける注釈用のスタイル</span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
