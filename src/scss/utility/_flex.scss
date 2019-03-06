@@ -17,6 +17,7 @@
         .is-#{$key}-#{$i} {
           flex: 0 0 100% / $grid-split * $i;
           width: 100% / $grid-split * $i;
+          max-width: 100% / $grid-split * $i;
         }
       }
     }
