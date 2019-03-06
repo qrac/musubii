@@ -263,8 +263,8 @@
   position: relative;
   display: inline-flex;
   > select {
-    flex: 1 0 0%;
-    max-width: 100%;
+    flex: none;
+    width: 100%;
     height: calc(#{$input-height} + (#{$input-border-width} * 2));
     padding: $input-padding;
     background-color: $input-background-color;
@@ -282,6 +282,9 @@
     }
     &:not([disabled]) {
       cursor: pointer;
+    }
+    &::-ms-expand {
+      display: none;
     }
   }
   &.is-round:not(.is-multiple) > select {
