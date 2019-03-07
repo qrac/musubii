@@ -263,6 +263,7 @@
   position: relative;
   display: inline-flex;
   > select {
+    cursor: pointer;
     flex: none;
     width: 100%;
     height: calc(#{$input-height} + (#{$input-border-width} * 2));
@@ -273,15 +274,13 @@
     color: $body-text-color;
     line-height: $input-line-height;
     &[disabled] {
+      cursor: not-allowed;
       background-color: $input-disabled-background-color;
       color: $input-disabled-text-color;
     }
     &[readonly] {
       background-color: $input-readonly-background-color;
       color: $input-readonly-text-color;
-    }
-    &:not([disabled]) {
-      cursor: pointer;
     }
     &::-ms-expand {
       display: none;
