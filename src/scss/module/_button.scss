@@ -99,6 +99,10 @@
   &[disabled] {
     cursor: not-allowed;
   }
+  &:focus {
+    box-shadow: $button-focus-shadow;
+    outline: none;
+  }
   &.is-round {
     border-radius: $button-round-border-radius;
   }
@@ -118,6 +122,10 @@
 
 .button.is-floating:not(.is-disabled) {
   box-shadow: $button-floating-shadow;
+  &:focus,
+  &:hover:focus {
+    box-shadow: $button-floating-focus-shadow;
+  }
   &:hover {
     box-shadow: $button-floating-hover-shadow;
   }

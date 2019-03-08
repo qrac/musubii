@@ -104,6 +104,7 @@ $button-border-width: 1px !default;
 $button-border-radius: 0.1875em !default;
 $button-line-height: 1.5 !default;
 $button-transition: ease-out 0.12s !default;
+$button-focus-shadow: 0 0 0 0.2em rgba($blue-a400, 0.5) !default;
 
 // .button.is-round
 $button-round-border-radius: 999em !default;
@@ -114,8 +115,10 @@ $button-circle-height: calc(2.5em + 1px * 2) !default;
 $button-circle-border-radius: 999em !default;
 
 // .button.is-floating
-$button-floating-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24) !default;
-$button-floating-hover-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24) !default;
+$button-floating-shadow: 0 1px 3px 0 rgba($black, 0.24) !default;
+$button-floating-hover-shadow: 0 4px 12px 0 rgba($black, 0.24) !default;
+$button-floating-focus-shadow: 0 0 0 0.2em rgba($blue-a400, 0.5),
+  0 4px 12px 0 rgba($black, 0.24) !default;
 
 // .button.is-plain
 $button-plain-default-background-color: $grey-100 !default;
