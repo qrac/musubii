@@ -70,7 +70,7 @@
 // / Text Align
 //----------------------------------------------------
 
-:not(.grid):not(.btns):not(.field) {
+#{$text-align-class-default} {
   @each $key-breakpoint, $mediaquery in $pattern-breakpoint-mediaquery-all {
     @include mediaquery-pattern($mediaquery) {
       @if $key-breakpoint == "mobile" {
