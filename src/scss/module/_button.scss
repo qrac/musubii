@@ -6,19 +6,19 @@
 // / Set Modifier
 //----------------------------------------------------
 
-.btns {
+.buttons {
   display: flex;
   flex-wrap: wrap;
   &:not(.is-bar) {
-    margin-left: (-1 * $btns-gap-default);
-    margin-bottom: (-1 * $btns-gap-default);
+    margin-left: (-1 * $buttons-gap-default);
+    margin-bottom: (-1 * $buttons-gap-default);
   }
-  &:not(.is-bar) > .btns,
-  &:not(.is-bar) > .btn {
-    margin-left: $btns-gap-default;
-    margin-bottom: $btns-gap-default;
+  &:not(.is-bar) > .buttons,
+  &:not(.is-bar) > .button {
+    margin-left: $buttons-gap-default;
+    margin-bottom: $buttons-gap-default;
   }
-  > .btns {
+  > .buttons {
     display: inline-flex;
   }
   &.is-middle {
@@ -45,31 +45,31 @@
 // / Set Bar
 //----------------------------------------------------
 
-.btns.is-bar,
+.buttons.is-bar,
 .field.is-bar {
   flex-wrap: nowrap;
-  > .btn {
+  > .button {
     border-radius: 0;
     overflow: hidden;
   }
-  > .btn:not(.is-round):first-child {
-    border-top-left-radius: $btn-border-radius;
-    border-bottom-left-radius: $btn-border-radius;
+  > .button:not(.is-round):first-child {
+    border-top-left-radius: $button-border-radius;
+    border-bottom-left-radius: $button-border-radius;
   }
-  > .btn:not(.is-round):last-child {
-    border-top-right-radius: $btn-border-radius;
-    border-bottom-right-radius: $btn-border-radius;
+  > .button:not(.is-round):last-child {
+    border-top-right-radius: $button-border-radius;
+    border-bottom-right-radius: $button-border-radius;
   }
-  > .btn.is-round:first-child {
-    border-top-left-radius: $btn-round-border-radius;
-    border-bottom-left-radius: $btn-round-border-radius;
+  > .button.is-round:first-child {
+    border-top-left-radius: $button-round-border-radius;
+    border-bottom-left-radius: $button-round-border-radius;
   }
-  > .btn.is-round:last-child {
-    border-top-right-radius: $btn-round-border-radius;
-    border-bottom-right-radius: $btn-round-border-radius;
+  > .button.is-round:last-child {
+    border-top-right-radius: $button-round-border-radius;
+    border-bottom-right-radius: $button-round-border-radius;
   }
-  > .btn:nth-child(2),
-  > .btn:nth-child(2) ~ .btn {
+  > .button:nth-child(2),
+  > .button:nth-child(2) ~ .button {
     border-left: none;
   }
 }
@@ -78,18 +78,18 @@
 // / Single Modifier
 //----------------------------------------------------
 
-.btn {
+.button {
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   align-self: flex-start;
   white-space: nowrap;
-  padding: $btn-padding;
-  border-radius: $btn-border-radius;
-  line-height: $btn-line-height;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  line-height: $button-line-height;
   text-align: center;
-  transition: $btn-transition;
+  transition: $button-transition;
   &[type="button"],
   &[type="reset"],
   &[type="submit"] {
@@ -100,14 +100,14 @@
     cursor: not-allowed;
   }
   &.is-round {
-    border-radius: $btn-round-border-radius;
+    border-radius: $button-round-border-radius;
   }
   &.is-circle {
     position: relative;
-    width: $btn-circle-width;
-    height: $btn-circle-height;
+    width: $button-circle-width;
+    height: $button-circle-height;
     padding: 0;
-    border-radius: $btn-circle-border-radius;
+    border-radius: $button-circle-border-radius;
     line-height: 1;
   }
 }
@@ -116,10 +116,10 @@
 // / Floating
 //----------------------------------------------------
 
-.btn.is-floating:not(.is-disabled) {
-  box-shadow: $btn-floating-shadow;
+.button.is-floating:not(.is-disabled) {
+  box-shadow: $button-floating-shadow;
   &:hover {
-    box-shadow: $btn-floating-hover-shadow;
+    box-shadow: $button-floating-hover-shadow;
   }
 }
 
@@ -127,11 +127,11 @@
 // / Plain
 //----------------------------------------------------
 
-.btn.is-plain {
-  background-color: $btn-plain-default-background-color;
-  border: $btn-border-width solid transparent;
+.button.is-plain {
+  background-color: $button-plain-default-background-color;
+  border: $button-border-width solid transparent;
   &:hover {
-    background-color: $btn-plain-default-hover-background-color;
+    background-color: $button-plain-default-hover-background-color;
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
@@ -146,8 +146,8 @@
   &.is-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    background-color: $btn-disabled-background-color;
-    color: $btn-disabled-text-color;
+    background-color: $button-disabled-background-color;
+    color: $button-disabled-text-color;
   }
 }
 
@@ -155,11 +155,11 @@
 // / Melt
 //----------------------------------------------------
 
-.btn.is-melt {
+.button.is-melt {
   background-color: transparent;
-  border: $btn-border-width solid transparent;
+  border: $button-border-width solid transparent;
   &:hover {
-    background-color: $btn-melt-default-hover-background-color;
+    background-color: $button-melt-default-hover-background-color;
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
@@ -170,7 +170,7 @@
   &.is-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    color: $btn-disabled-text-color;
+    color: $button-disabled-text-color;
     background-color: transparent;
   }
 }
@@ -179,11 +179,11 @@
 // / Outline
 //----------------------------------------------------
 
-.btn.is-outline {
-  background-color: $btn-outline-default-background-color;
-  border: $btn-border-width solid $btn-outline-default-border-color;
+.button.is-outline {
+  background-color: $button-outline-default-background-color;
+  border: $button-border-width solid $button-outline-default-border-color;
   &:hover {
-    background-color: $btn-outline-default-hover-background-color;
+    background-color: $button-outline-default-hover-background-color;
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
@@ -200,8 +200,8 @@
   &.is-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    background-color: $btn-disabled-background-color-alpha;
-    color: $btn-disabled-text-color;
+    background-color: $button-disabled-background-color-alpha;
+    color: $button-disabled-text-color;
   }
 }
 
@@ -209,13 +209,13 @@
 // / Ghost
 //----------------------------------------------------
 
-.btn.is-ghost {
+.button.is-ghost {
   background-color: transparent;
-  border: $btn-border-width solid $btn-ghost-default-border-color;
-  color: $btn-ghost-default-text-color;
+  border: $button-border-width solid $button-ghost-default-border-color;
+  color: $button-ghost-default-text-color;
   &:hover {
-    background-color: $btn-ghost-default-hover-background-color;
-    color: $btn-ghost-default-hover-text-color;
+    background-color: $button-ghost-default-hover-background-color;
+    color: $button-ghost-default-hover-text-color;
   }
   @each $key, $value in $pattern-color-theme {
     &.is-#{$key} {
@@ -232,8 +232,8 @@
   &.is-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    background-color: $btn-ghost-disabled-background-color;
-    border-color: $btn-ghost-disabled-border-color;
-    color: $btn-ghost-disabled-text-color;
+    background-color: $button-ghost-disabled-background-color;
+    border-color: $button-ghost-disabled-border-color;
+    color: $button-ghost-disabled-text-color;
   }
 }

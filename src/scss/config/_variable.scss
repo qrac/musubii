@@ -95,55 +95,55 @@ $pre-code-padding: 1.25em 1.5em !default;
 // / Module - Button
 //----------------------------------------------------
 
-// .btns > .btn
-$btns-gap-default: 0.5em !default;
+// .buttons > .button
+$buttons-gap-default: 0.5em !default;
 
-// .btn
-$btn-padding: 0.5em 1em !default;
-$btn-border-width: 1px !default;
-$btn-border-radius: 0.1875em !default;
-$btn-line-height: 1.5 !default;
-$btn-transition: ease-out 0.12s !default;
+// .button
+$button-padding: 0.5em 1em !default;
+$button-border-width: 1px !default;
+$button-border-radius: 0.1875em !default;
+$button-line-height: 1.5 !default;
+$button-transition: ease-out 0.12s !default;
 
-// .btn.is-round
-$btn-round-border-radius: 999em !default;
+// .button.is-round
+$button-round-border-radius: 999em !default;
 
-// .btn.is-circle
-$btn-circle-width: calc(2.5em + 1px * 2) !default;
-$btn-circle-height: calc(2.5em + 1px * 2) !default;
-$btn-circle-border-radius: 999em !default;
+// .button.is-circle
+$button-circle-width: calc(2.5em + 1px * 2) !default;
+$button-circle-height: calc(2.5em + 1px * 2) !default;
+$button-circle-border-radius: 999em !default;
 
-// .btn.is-floating
-$btn-floating-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24) !default;
-$btn-floating-hover-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24) !default;
+// .button.is-floating
+$button-floating-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24) !default;
+$button-floating-hover-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24) !default;
 
-// .btn.is-plain
-$btn-plain-default-background-color: $grey-100 !default;
-$btn-plain-default-hover-background-color: darken($grey-100, 5%) !default;
+// .button.is-plain
+$button-plain-default-background-color: $grey-100 !default;
+$button-plain-default-hover-background-color: darken($grey-100, 5%) !default;
 
-// .btn.is-melt
-$btn-melt-default-hover-background-color: $dark-9 !default;
+// .button.is-melt
+$button-melt-default-hover-background-color: $dark-9 !default;
 
-// .btn.is-outline
-$btn-outline-default-background-color: $light !default;
-$btn-outline-default-hover-background-color: darken($light, 5%) !default;
-$btn-outline-default-border-color: $dark-7 !default;
+// .button.is-outline
+$button-outline-default-background-color: $light !default;
+$button-outline-default-hover-background-color: darken($light, 5%) !default;
+$button-outline-default-border-color: $dark-7 !default;
 
-// .btn.is-ghost
-$btn-ghost-default-border-color: $light !default;
-$btn-ghost-default-text-color: $light !default;
-$btn-ghost-default-hover-background-color: $light !default;
-$btn-ghost-default-hover-text-color: $dark-2 !default;
+// .button.is-ghost
+$button-ghost-default-border-color: $light !default;
+$button-ghost-default-text-color: $light !default;
+$button-ghost-default-hover-background-color: $light !default;
+$button-ghost-default-hover-text-color: $dark-2 !default;
 
-// .btn.is-disabled
-$btn-disabled-background-color: $grey-400 !default;
-$btn-disabled-background-color-alpha: $dark-6 !default;
-$btn-disabled-text-color: $dark-6 !default;
+// .button.is-disabled
+$button-disabled-background-color: $grey-400 !default;
+$button-disabled-background-color-alpha: $dark-6 !default;
+$button-disabled-text-color: $dark-6 !default;
 
-// .btn.is-ghost.is-disabled
-$btn-ghost-disabled-background-color: $light-8 !default;
-$btn-ghost-disabled-border-color: $light-4 !default;
-$btn-ghost-disabled-text-color: $light-4 !default;
+// .button.is-ghost.is-disabled
+$button-ghost-disabled-background-color: $light-8 !default;
+$button-ghost-disabled-border-color: $light-4 !default;
+$button-ghost-disabled-text-color: $light-4 !default;
 
 //----------------------------------------------------
 // / Module - List
