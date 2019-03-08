@@ -13,7 +13,7 @@
     margin-left: (-1 * $grid-gap-default);
     margin-bottom: (-1 * $grid-gap-default);
   }
-  &:not(.is-gap-none) > .col {
+  &:not(.is-gap-none) > .column {
     padding-left: $grid-gap-default;
     padding-bottom: $grid-gap-default;
   }
@@ -41,7 +41,7 @@
   &.is-around {
     justify-content: space-around;
   }
-  &.is-stretch > .col {
+  &.is-stretch > .column {
     display: flex;
   }
 }
