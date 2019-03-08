@@ -135,7 +135,7 @@
       <section>
         <h2 class="demo-h2">Grid</h2>
         <section>
-          <h3 class="demo-h3">Basic</h3>
+          <h3 class="demo-h3">Example</h3>
           <div class="demo-area">
             <div class="grid">
               {% for i in range(1, 3 + 1) %}
@@ -312,16 +312,16 @@
           <div class="demo-area">
             <div class="demo-line-box">
               <p class="texts">
-                <span class="text">デフォルト</span>｜
-                <strong class="text is-strong">ストロング</strong>｜
-                <small class="text is-small">スモール</small>｜
-                <span class="text is-italic">Italic</span>｜
-                <del class="text is-delete">削除</del>｜
+                <span class="text">デフォルト</span>
+                <strong class="text is-strong">ストロング</strong>
+                <small class="text is-small">スモール</small>
+                <span class="text is-italic">Italic</span>
+                <del class="text is-delete">削除</del>
                 <span class="text">
                   <i aria-hidden="true" class="fas fa-thumbs-up"></i>
                   <span class="text">アイコン追加</span>
                   <i class="material-icons">face</i>
-                </span>｜
+                </span>
                 <span class="text">
                   <span class="text">注釈入れ</span>
                   <sup>※1</sup>
@@ -361,11 +361,11 @@
           <div class="demo-area">
             <div class="demo-line-box">
               <p class="texts">
-                <span class="text">Normal</span>｜
-                <span class="text is-primary">Primary</span>｜
-                <span class="text is-info">Info</span>｜
-                <span class="text is-success">Success</span>｜
-                <span class="text is-warning">Warning</span>｜
+                <span class="text">Normal</span>
+                <span class="text is-primary">Primary</span>
+                <span class="text is-info">Info</span>
+                <span class="text is-success">Success</span>
+                <span class="text is-warning">Warning</span>
                 <span class="text is-danger">Danger</span>
               </p>
             </div>
@@ -376,19 +376,19 @@
           <div class="demo-area">
             <div class="demo-line-box">
               <p class="texts">
-                <span class="text is-link">Link</span>｜
-                <span class="text is-link is-primary">Primary</span>｜
-                <span class="text is-link is-info">Info</span>｜
-                <span class="text is-link is-success">Success</span>｜
-                <span class="text is-link is-warning">Warning</span>｜
+                <span class="text is-link">Link</span>
+                <span class="text is-link is-primary">Primary</span>
+                <span class="text is-link is-info">Info</span>
+                <span class="text is-link is-success">Success</span>
+                <span class="text is-link is-warning">Warning</span>
                 <span class="text is-link is-danger">Danger</span>
               </p>
               <p class="texts">
-                <span class="text is-link-reverse">Link Reverse</span>｜
-                <span class="text is-link-reverse is-primary">Primary</span>｜
-                <span class="text is-link-reverse is-info">Info</span>｜
-                <span class="text is-link-reverse is-success">Success</span>｜
-                <span class="text is-link-reverse is-warning">Warning</span>｜
+                <span class="text is-link-reverse">Link Reverse</span>
+                <span class="text is-link-reverse is-primary">Primary</span>
+                <span class="text is-link-reverse is-info">Info</span>
+                <span class="text is-link-reverse is-success">Success</span>
+                <span class="text is-link-reverse is-warning">Warning</span>
                 <span class="text is-link-reverse is-danger">Danger</span>
               </p>
             </div>
@@ -425,8 +425,8 @@
           <div class="demo-area">
             <div class="demo-line-box">
               <p class="texts">
-                <span class="text is-capitalize">capitalize</span>｜
-                <span class="text is-lowercase">lowercase</span>｜
+                <span class="text is-capitalize">capitalize</span>
+                <span class="text is-lowercase">lowercase</span>
                 <span class="text is-uppercase">uppercase</span>
               </p>
             </div>
@@ -1169,33 +1169,44 @@
           <h3 class="demo-h3">Radio</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
-                <label class="label is-radio">
-                  <input type="radio" name="radio-demo-1" checked="checked">
-                  <span class="text is-middle">むすびー</span>
-                </label>
-                <label class="label is-radio">
-                  <input type="radio" name="radio-demo-1">
-                  <span class="text is-middle">むすびい</span>
-                </label>
-                <label class="label is-radio">
-                  <input type="radio" name="radio-demo-1" disabled="disabled">
-                  <span class="text is-middle">むすび</span>
-                </label>
+              <div class="field is-middle">
+                <div class="box">
+                  <input class="input is-hidden" id="radio-demo-1-1" type="radio" name="radio-demo-1" checked="checked">
+                  <label class="label" for="radio-demo-1-1">
+                    <span class="radio"></span>
+                    <span class="text">むすびー</span>
+                  </label>
+                </div>
+                <div class="box">
+                  <input class="input is-hidden" id="radio-demo-1-2" type="radio" name="radio-demo-1">
+                  <label class="label" for="radio-demo-1-2">
+                    <span class="radio"></span>
+                    <span class="text">むすびい</span>
+                  </label>
+                </div>
+                <div class="box">
+                  <input class="input is-hidden" id="radio-demo-1-3" type="radio" name="radio-demo-1" disabled="disabled">
+                  <label class="label" for="radio-demo-1-3">
+                    <span class="radio"></span>
+                    <span class="text">むすび</span>
+                  </label>
+                </div>
               </div>
               <div class="field is-middle">
-                <input id="radio-demo-2-1" type="radio" name="radio-demo-2" checked="checked">
-                <label class="label is-radio" for="radio-demo-2-1">
-                  <span class="text is-middle">ムスビー</span>
-                </label>
-                <input id="radio-demo-2-2" type="radio" name="radio-demo-2">
-                <label class="label is-radio" for="radio-demo-2-2">
-                  <span class="text is-middle">ムスビイ</span>
-                </label>
-                <input id="radio-demo-2-3" type="radio" name="radio-demo-2" disabled="disabled">
-                <label class="label is-radio" for="radio-demo-2-3">
-                  <span class="text is-middle">ムスビ</span>
-                </label>
+                <div class="box">
+                  <input class="input is-hidden" id="radio-demo-2-1" type="radio" name="radio-demo-2" checked="checked">
+                  <label class="label" for="radio-demo-2-1">
+                    <span class="radio"></span>
+                    <span class="text">デフォルトは位置が<br/>テキスト1行目に揃う</span>
+                  </label>
+                </div>
+                <div class="box">
+                  <input class="input is-hidden" id="radio-demo-2-2" type="radio" name="radio-demo-2">
+                  <label class="label is-middle" for="radio-demo-2-2">
+                    <span class="radio"></span>
+                    <span class="text">位置は天地中央寄せに<br/>切り替えることができる</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -1204,32 +1215,50 @@
           <h3 class="demo-h3">Checkbox</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
-                <label class="label is-checkbox">
-                  <input type="checkbox" name="checkbox-demo-1" checked="checked">
-                  <span class="text is-middle">HTML</span>
-                </label>
-                <label class="label is-checkbox">
-                  <input type="checkbox" name="checkbox-demo-1">
-                  <span class="text is-middle">CSS</span>
-                </label>
-                <label class="label is-checkbox">
-                  <input type="checkbox" name="checkbox-demo-1" disabled="disabled">
-                  <span class="text is-middle">JavaScript</span>
-                </label>
+              <div class="field is-middle">
+                <div class="box">
+                  <input class="input is-hidden" id="checkbox-demo-1-1" type="checkbox" name="checkbox-demo-1" checked="checked">
+                  <label class="label" for="checkbox-demo-1-1">
+                    <span class="checkbox"></span>
+                    <span class="text">Nunjucks</span>
+                  </label>
+                </div>
+                <div class="box">
+                  <input class="input is-hidden" id="checkbox-demo-1-2" type="checkbox" name="checkbox-demo-1">
+                  <label class="label" for="checkbox-demo-1-2">
+                    <span class="checkbox"></span>
+                    <span class="text">SCSS</span>
+                  </label>
+                </div>
+                <div class="box">
+                  <input class="input is-hidden" id="checkbox-demo-1-3" type="checkbox" name="checkbox-demo-1" disabled="disabled">
+                  <label class="label" for="checkbox-demo-1-3">
+                    <span class="checkbox"></span>
+                    <span class="text">TypeScript</span>
+                  </label>
+                </div>
               </div>
               <div class="field is-middle">
-                <input id="checkbox-demo-2-1" type="checkbox" name="checkbox-demo-2" checked="checked">
-                <label class="label is-checkbox" for="checkbox-demo-2-1">
-                  <span class="text is-middle">Nunjucks</span>
-                </label>
-                <input id="checkbox-demo-2-2" type="checkbox" name="checkbox-demo-2">
-                <label class="label is-checkbox" for="checkbox-demo-2-2">
-                  <span class="text is-middle">SCSS</span>
-                </label>
-                <input id="checkbox-demo-2-3" type="checkbox" name="checkbox-demo-2" disabled="disabled">
-                <label class="label is-checkbox" for="checkbox-demo-2-3">
-                  <span class="text is-middle">TypeScript</span>
+                <div class="box">
+                  <input class="input is-hidden" id="checkbox-demo-2-1" type="checkbox" name="checkbox-demo-2" checked="checked">
+                  <label class="label" for="checkbox-demo-2-1">
+                    <span class="checkbox"></span>
+                    <span class="text">デフォルトは位置が<br/>テキスト1行目に揃う</span>
+                  </label>
+                </div>
+                <div class="box">
+                  <input class="input is-hidden" id="checkbox-demo-2-2" type="checkbox" name="checkbox-demo-2">
+                  <label class="label is-middle" for="checkbox-demo-2-2">
+                    <span class="checkbox"></span>
+                    <span class="text">位置は天地中央寄せに<br/>切り替えることができる</span>
+                  </label>
+                </div>
+              </div>
+              <div class="box">
+                <input class="input is-hidden" id="checkbox-demo-3-1" type="checkbox" name="checkbox-demo-3" checked="checked">
+                <label class="label is-center" for="checkbox-demo-3-1">
+                  <span class="checkbox"></span>
+                  <span class="text">中央寄せした場合は右のマージンを消去（同意するなど）</span>
                 </label>
               </div>
             </div>
