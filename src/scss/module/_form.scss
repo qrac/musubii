@@ -60,8 +60,12 @@
   flex-wrap: nowrap;
   > .input,
   > .select > select {
+    position: relative;
     border-radius: 0;
     overflow: hidden;
+    &:focus {
+      z-index: 2;
+    }
   }
   > .input:not(.is-round):first-child,
   > .select:not(.is-round):first-child > select {
@@ -157,12 +161,19 @@
 .input[type="number"],
 .textarea {
   box-shadow: $input-shadow;
+  transition: $input-transition;
   &[disabled] {
     cursor: not-allowed;
     box-shadow: $input-disabled-shadow;
   }
   &[readonly] {
     box-shadow: $input-readonly-shadow;
+  }
+  &:focus,
+  &[readonly]:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-shadow;
+    outline: none;
   }
 }
 
@@ -224,34 +235,129 @@
 }
 
 //----------------------------------------------------
-// / Radio & Check Box
+// / Radio & Checkbox
 //----------------------------------------------------
 
-.label.is-radio,
-.label.is-checkbox {
-  > .input[type="radio"],
-  > .input[type="checkbox"] {
-    + .text {
-      margin-left: $radio-gap-default;
-      margin-right: $radio-gap-after;
+.input[type="radio"],
+.input[type="checkbox"] {
+  &[disabled] {
+    + .label {
+      cursor: not-allowed;
+      color: $input-disabled-text-color;
     }
   }
 }
 
-.input[type="radio"],
+.input[type="radio"] {
+  &:focus {
+    + .label .radio {
+      box-shadow: $radio-focus-shadow;
+      outline: none;
+    }
+  }
+  &:checked {
+    + .label .radio {
+      border-color: $radio-checked-border-color;
+    }
+    + .label .radio:before {
+      opacity: 1;
+    }
+  }
+}
+
 .input[type="checkbox"] {
-  + .label.is-radio,
-  + .label.is-checkbox {
+  &:focus {
+    + .label .checkbox {
+      border-color: $checkbox-focus-border-color;
+      box-shadow: $checkbox-focus-shadow;
+      outline: none;
+    }
+  }
+  &:checked {
+    + .label .checkbox {
+      background-color: $checkbox-checked-background-color;
+      border-color: $checkbox-checked-border-color;
+    }
+    + .label .checkbox:before {
+      opacity: 1;
+    }
+  }
+}
+
+.label {
+  cursor: pointer;
+  display: flex;
+  &:not(.is-middle) {
+    .radio {
+      top: $radio-width * 0.25;
+    }
+    .checkbox {
+      top: $checkbox-width * 0.25;
+    }
+  }
+  &.is-middle {
+    align-items: center;
+  }
+  &.is-center {
+    justify-content: center;
+    .text:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  transition: $input-transition;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+  }
+}
+
+.radio {
+  width: $radio-width;
+  height: $radio-width;
+  background-color: $light;
+  border: $radio-border-width solid $input-border-color;
+  border-radius: $radio-width * 0.5;
+  &:before {
+    width: $radio-width * 0.5;
+    height: $radio-width * 0.5;
+    background-color: $radio-checked-background-color;
+    border-radius: $radio-width * 0.5 * 0.5;
+    transform: translate(-50%, -50%);
+    transition: $input-transition;
+  }
+  + .text {
+    margin-left: $radio-gap-default;
     margin-right: $radio-gap-after;
   }
 }
 
-.input[type="radio"],
-.input[type="checkbox"] {
-  &[disabled] + .text,
-  &[disabled] + .label.is-radio,
-  &[disabled] + .label.is-checkbox {
-    color: $dark-5;
+.checkbox {
+  width: $checkbox-width;
+  height: $checkbox-width;
+  background-color: $light;
+  border: $checkbox-border-width solid $input-border-color;
+  border-radius: $checkbox-border-radius;
+  &:before {
+    width: $checkbox-width * 0.75;
+    height: $checkbox-width * 0.375;
+    border-left: $checkbox-width * 0.125 solid $light;
+    border-bottom: $checkbox-width * 0.125 solid $light;
+    transform: translate(-50%, -70%) rotate(-45deg);
+    transition: $input-transition;
+  }
+  + .text {
+    margin-left: $checkbox-gap-default;
+    margin-right: $checkbox-gap-after;
   }
 }
 
@@ -273,6 +379,7 @@
     border-radius: $input-border-radius;
     color: $body-text-color;
     line-height: $input-line-height;
+    transition: $input-transition;
     &[disabled] {
       cursor: not-allowed;
       background-color: $input-disabled-background-color;
@@ -281,6 +388,12 @@
     &[readonly] {
       background-color: $input-readonly-background-color;
       color: $input-readonly-text-color;
+    }
+    &:focus,
+    &[readonly]:focus {
+      border-color: $input-focus-border-color;
+      box-shadow: $select-focus-shadow;
+      outline: none;
     }
     &::-ms-expand {
       display: none;

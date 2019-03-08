@@ -25,6 +25,11 @@
       .is-#{$key}-none {
         display: none;
       }
+      .is-hidden {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
     } @else {
       .is-#{$key}-block {
         display: block;

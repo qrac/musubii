@@ -196,7 +196,13 @@ $input-border-width: 1px !default;
 $input-border-color: $dark-6 !default;
 $input-border-radius: 2px !default;
 $input-line-height: 1.5 !default;
-$input-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !default;
+$input-shadow: inset 0 1px 1px rgba($black, 0.075) !default;
+$input-transition: ease-out 0.12s !default;
+
+// .input:focus
+$input-focus-border-color: $blue-500 !default;
+$input-focus-shadow: inset 0 1px 1px rgba($black, 0.075),
+  0 0 0 0.2em rgba($blue-a400, 0.36) !default;
 
 // .input.is-round
 $input-round-border-radius: 999em !default;
@@ -220,13 +226,30 @@ $input-placeholder-color: $dark-6 !default;
 $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
 
 // .input[type="radio"]
+$radio-width: 1em !default;
+$radio-border-width: 2px !default;
 $radio-gap-default: 0.5em !default;
 $radio-gap-after: 1em !default;
+$radio-focus-shadow: 0 0 0 0.2em rgba($blue-a400, 0.36) !default;
+$radio-checked-background-color: $cyan-500 !default;
+$radio-checked-border-color: $cyan-500 !default;
+
+// .input[type="checkbox"]
+$checkbox-width: 1em !default;
+$checkbox-border-width: 2px !default;
+$checkbox-border-radius: 2px !default;
+$checkbox-gap-default: 0.5em !default;
+$checkbox-gap-after: 1em !default;
+$checkbox-focus-border-color: $blue-500 !default;
+$checkbox-focus-shadow: 0 0 0 0.2em rgba($blue-a400, 0.36) !default;
+$checkbox-checked-background-color: $cyan-500 !default;
+$checkbox-checked-border-color: $cyan-500 !default;
 
 // select
 $select-angle-size: 0.5em !default;
 $select-angle-border-width: 2px !default;
 $select-angle-border-color: $dark-5 !default;
+$select-focus-shadow: 0 0 0 0.2em rgba($blue-a400, 0.36) !default;
 
 //----------------------------------------------------
 // / Module - Icon
