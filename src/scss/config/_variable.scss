@@ -43,10 +43,13 @@ $space-margin-field: 0.5em !default;
 // / Layout - Grid
 //----------------------------------------------------
 
+// class
+$column-class: ".column" !default;
+
 // Number of grid divisions
 $grid-split: 12 !default;
 
-// .grid > .col
+// .grid > .column
 $grid-gap-default: 0.5em !default;
 
 //----------------------------------------------------

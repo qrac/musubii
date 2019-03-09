@@ -12,10 +12,12 @@
   &:not(.is-gap-none) {
     margin-left: (-1 * $grid-gap-default);
     margin-bottom: (-1 * $grid-gap-default);
-  }
-  &:not(.is-gap-none) > .column {
-    padding-left: $grid-gap-default;
-    padding-bottom: $grid-gap-default;
+    > {
+      #{$column-class} {
+        padding-left: $grid-gap-default;
+        padding-bottom: $grid-gap-default;
+      }
+    }
   }
   &.is-baseline {
     align-items: baseline;
@@ -41,7 +43,11 @@
   &.is-around {
     justify-content: space-around;
   }
-  &.is-stretch > .column {
-    display: flex;
+  &.is-stretch {
+    > {
+      #{$column-class} {
+        display: flex;
+      }
+    }
   }
 }
