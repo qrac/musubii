@@ -70,7 +70,7 @@
 // / Text Align
 //----------------------------------------------------
 
-#{$text-align-class-default} {
+#{$text-align-class} {
   @each $key-breakpoint, $mediaquery in $pattern-breakpoint-mediaquery-all {
     @include mediaquery-pattern($mediaquery) {
       @if $key-breakpoint == "mobile" {
