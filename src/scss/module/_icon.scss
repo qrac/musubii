@@ -6,7 +6,7 @@
 // / Icon Setting
 //----------------------------------------------------
 
-#{$icon-class-default} {
+#{$icon-class} {
   font-size: inherit;
   line-height: inherit;
 }
@@ -19,7 +19,7 @@
 // / Combination
 //----------------------------------------------------
 
-#{$icon-class-default} {
+#{$icon-class} {
   + .text {
     margin-left: $icon-margin-left;
   }
@@ -27,7 +27,7 @@
 
 .text {
   + {
-    & #{$icon-class-default} {
+    & #{$icon-class} {
       margin-left: $icon-margin-left;
     }
   }
@@ -37,7 +37,7 @@
 // / Single Modifier
 //----------------------------------------------------
 
-#{$icon-class-default} {
+#{$icon-class} {
   &.is-fit {
     width: $icon-fit-width;
     text-align: center;

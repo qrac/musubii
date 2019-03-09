@@ -268,6 +268,7 @@ $select-focus-shadow: 0 0 0 0.2em rgba($blue-a400, 0.36) !default;
 
 // class
 $icon-class-default: ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons" !default;
+$icon-class: $icon-class-default !default; // Backward compatibility of icon name variables
 
 // .icon + .text
 $icon-margin-left: 0.375em !default;
