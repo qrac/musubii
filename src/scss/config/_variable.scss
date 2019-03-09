@@ -12,6 +12,28 @@ $body-font-family: $font-sans !default;
 $body-line-height: 1.5 !default;
 
 //----------------------------------------------------
+// / Theme
+//----------------------------------------------------
+
+$primary: $cyan-500 !default;
+$info: $blue-500 !default;
+$success: $green-a700 !default;
+$warning: $orange-600 !default;
+$danger: $red-500 !default;
+
+//----------------------------------------------------
+// / Theme - Pattern
+//----------------------------------------------------
+
+$pattern-color-theme: (
+  primary: $primary,
+  info: $info,
+  success: $success,
+  warning: $warning,
+  danger: $danger
+) !default;
+
+//----------------------------------------------------
 // / Layout - Section
 //----------------------------------------------------
 
