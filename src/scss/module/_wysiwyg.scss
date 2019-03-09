@@ -216,7 +216,8 @@
   margin: 0;
   padding: 0;
   border: 0;
-  border-top: 1px solid $dark-7;
+  border-top: $wysiwyg-hr-border-width $wysiwyg-hr-border-style
+    $wysiwyg-hr-border-color;
 }
 
 //----------------------------------------------------
@@ -224,9 +225,9 @@
 //----------------------------------------------------
 
 .wysiwyg figure {
-  text-align: center;
+  text-align: $wysiwyg-figure-text-align;
   > figcaption {
-    margin-top: 0.75em;
-    font-size: 87.5%;
+    margin-top: $wysiwyg-figcaption-margin-top;
+    font-size: $wysiwyg-figcaption-font-size;
   }
 }
