@@ -95,6 +95,11 @@ $pre-code-padding: 1.25em 1.5em !default;
 // / Module - Button
 //----------------------------------------------------
 
+// class
+$buttons-class: ".buttons" !default;
+$buttons-bar-class: ".buttons, .field" !default;
+$button-class: ".button" !default;
+
 // .buttons > .button
 $buttons-gap-default: 0.5em !default;
 

@@ -6,20 +6,24 @@
 // / Set Modifier
 //----------------------------------------------------
 
-.buttons {
+#{$buttons-class} {
   display: flex;
   flex-wrap: wrap;
   &:not(.is-bar) {
     margin-left: (-1 * $buttons-gap-default);
     margin-bottom: (-1 * $buttons-gap-default);
+    > {
+      #{$buttons-class},
+      #{$button-class} {
+        margin-left: $buttons-gap-default;
+        margin-bottom: $buttons-gap-default;
+      }
+    }
   }
-  &:not(.is-bar) > .buttons,
-  &:not(.is-bar) > .button {
-    margin-left: $buttons-gap-default;
-    margin-bottom: $buttons-gap-default;
-  }
-  > .buttons {
-    display: inline-flex;
+  > {
+    #{$buttons-class} {
+      display: inline-flex;
+    }
   }
   &.is-middle {
     align-items: center;
@@ -45,32 +49,39 @@
 // / Set Bar
 //----------------------------------------------------
 
-.buttons.is-bar,
-.field.is-bar {
-  flex-wrap: nowrap;
-  > .button {
-    border-radius: 0;
-    overflow: hidden;
-  }
-  > .button:not(.is-round):first-child {
-    border-top-left-radius: $button-border-radius;
-    border-bottom-left-radius: $button-border-radius;
-  }
-  > .button:not(.is-round):last-child {
-    border-top-right-radius: $button-border-radius;
-    border-bottom-right-radius: $button-border-radius;
-  }
-  > .button.is-round:first-child {
-    border-top-left-radius: $button-round-border-radius;
-    border-bottom-left-radius: $button-round-border-radius;
-  }
-  > .button.is-round:last-child {
-    border-top-right-radius: $button-round-border-radius;
-    border-bottom-right-radius: $button-round-border-radius;
-  }
-  > .button:nth-child(2),
-  > .button:nth-child(2) ~ .button {
-    border-left: none;
+#{$buttons-bar-class} {
+  &.is-bar {
+    flex-wrap: nowrap;
+    > {
+      #{$button-class} {
+        border-radius: 0;
+        overflow: hidden;
+        &:not(.is-round):first-child {
+          border-top-left-radius: $button-border-radius;
+          border-bottom-left-radius: $button-border-radius;
+        }
+        &:not(.is-round):last-child {
+          border-top-right-radius: $button-border-radius;
+          border-bottom-right-radius: $button-border-radius;
+        }
+        &.is-round:first-child {
+          border-top-left-radius: $button-round-border-radius;
+          border-bottom-left-radius: $button-round-border-radius;
+        }
+        &.is-round:last-child {
+          border-top-right-radius: $button-round-border-radius;
+          border-bottom-right-radius: $button-round-border-radius;
+        }
+        &:nth-child(2) {
+          border-left: none;
+          ~ {
+            #{$button-class} {
+              border-left: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -78,7 +89,7 @@
 // / Single Modifier
 //----------------------------------------------------
 
-.button {
+#{$button-class} {
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -120,14 +131,16 @@
 // / Floating
 //----------------------------------------------------
 
-.button.is-floating:not(.is-disabled) {
-  box-shadow: $button-floating-shadow;
-  &:focus,
-  &:hover:focus {
-    box-shadow: $button-floating-focus-shadow;
-  }
-  &:hover {
-    box-shadow: $button-floating-hover-shadow;
+#{$button-class} {
+  &.is-floating:not(.is-disabled) {
+    box-shadow: $button-floating-shadow;
+    &:focus,
+    &:hover:focus {
+      box-shadow: $button-floating-focus-shadow;
+    }
+    &:hover {
+      box-shadow: $button-floating-hover-shadow;
+    }
   }
 }
 
@@ -135,27 +148,29 @@
 // / Plain
 //----------------------------------------------------
 
-.button.is-plain {
-  background-color: $button-plain-default-background-color;
-  border: $button-border-width solid transparent;
-  &:hover {
-    background-color: $button-plain-default-hover-background-color;
-  }
-  @each $key, $value in $pattern-color-theme {
-    &.is-#{$key} {
-      background-color: $value;
-      color: $light;
-      &:hover {
-        background-color: darken($value, 5%);
+#{$button-class} {
+  &.is-plain {
+    background-color: $button-plain-default-background-color;
+    border: $button-border-width solid transparent;
+    &:hover {
+      background-color: $button-plain-default-hover-background-color;
+    }
+    @each $key, $value in $pattern-color-theme {
+      &.is-#{$key} {
+        background-color: $value;
+        color: $light;
+        &:hover {
+          background-color: darken($value, 5%);
+        }
       }
     }
-  }
-  &.is-disabled,
-  &.is-disabled:hover,
-  &[disabled],
-  &[disabled]:hover {
-    background-color: $button-disabled-background-color;
-    color: $button-disabled-text-color;
+    &.is-disabled,
+    &.is-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      background-color: $button-disabled-background-color;
+      color: $button-disabled-text-color;
+    }
   }
 }
 
@@ -163,23 +178,25 @@
 // / Melt
 //----------------------------------------------------
 
-.button.is-melt {
-  background-color: transparent;
-  border: $button-border-width solid transparent;
-  &:hover {
-    background-color: $button-melt-default-hover-background-color;
-  }
-  @each $key, $value in $pattern-color-theme {
-    &.is-#{$key} {
-      color: $value;
-    }
-  }
-  &.is-disabled,
-  &.is-disabled:hover,
-  &[disabled],
-  &[disabled]:hover {
-    color: $button-disabled-text-color;
+#{$button-class} {
+  &.is-melt {
     background-color: transparent;
+    border: $button-border-width solid transparent;
+    &:hover {
+      background-color: $button-melt-default-hover-background-color;
+    }
+    @each $key, $value in $pattern-color-theme {
+      &.is-#{$key} {
+        color: $value;
+      }
+    }
+    &.is-disabled,
+    &.is-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      color: $button-disabled-text-color;
+      background-color: transparent;
+    }
   }
 }
 
@@ -187,29 +204,31 @@
 // / Outline
 //----------------------------------------------------
 
-.button.is-outline {
-  background-color: $button-outline-default-background-color;
-  border: $button-border-width solid $button-outline-default-border-color;
-  &:hover {
-    background-color: $button-outline-default-hover-background-color;
-  }
-  @each $key, $value in $pattern-color-theme {
-    &.is-#{$key} {
-      border-color: $value;
-      color: $value;
-      &:hover {
-        background-color: $value;
-        border-color: transparent;
-        color: $light;
+#{$button-class} {
+  &.is-outline {
+    background-color: $button-outline-default-background-color;
+    border: $button-border-width solid $button-outline-default-border-color;
+    &:hover {
+      background-color: $button-outline-default-hover-background-color;
+    }
+    @each $key, $value in $pattern-color-theme {
+      &.is-#{$key} {
+        border-color: $value;
+        color: $value;
+        &:hover {
+          background-color: $value;
+          border-color: transparent;
+          color: $light;
+        }
       }
     }
-  }
-  &.is-disabled,
-  &.is-disabled:hover,
-  &[disabled],
-  &[disabled]:hover {
-    background-color: $button-disabled-background-color-alpha;
-    color: $button-disabled-text-color;
+    &.is-disabled,
+    &.is-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      background-color: $button-disabled-background-color-alpha;
+      color: $button-disabled-text-color;
+    }
   }
 }
 
@@ -217,31 +236,33 @@
 // / Ghost
 //----------------------------------------------------
 
-.button.is-ghost {
-  background-color: transparent;
-  border: $button-border-width solid $button-ghost-default-border-color;
-  color: $button-ghost-default-text-color;
-  &:hover {
-    background-color: $button-ghost-default-hover-background-color;
-    color: $button-ghost-default-hover-text-color;
-  }
-  @each $key, $value in $pattern-color-theme {
-    &.is-#{$key} {
-      border-color: lighten($value, 30%);
-      color: lighten($value, 30%);
-      &:hover {
-        background-color: $value;
-        border-color: transparent;
-        color: $light;
+#{$button-class} {
+  &.is-ghost {
+    background-color: transparent;
+    border: $button-border-width solid $button-ghost-default-border-color;
+    color: $button-ghost-default-text-color;
+    &:hover {
+      background-color: $button-ghost-default-hover-background-color;
+      color: $button-ghost-default-hover-text-color;
+    }
+    @each $key, $value in $pattern-color-theme {
+      &.is-#{$key} {
+        border-color: lighten($value, 30%);
+        color: lighten($value, 30%);
+        &:hover {
+          background-color: $value;
+          border-color: transparent;
+          color: $light;
+        }
       }
     }
-  }
-  &.is-disabled,
-  &.is-disabled:hover,
-  &[disabled],
-  &[disabled]:hover {
-    background-color: $button-ghost-disabled-background-color;
-    border-color: $button-ghost-disabled-border-color;
-    color: $button-ghost-disabled-text-color;
+    &.is-disabled,
+    &.is-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      background-color: $button-ghost-disabled-background-color;
+      border-color: $button-ghost-disabled-border-color;
+      color: $button-ghost-disabled-text-color;
+    }
   }
 }
