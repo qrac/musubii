@@ -3,32 +3,40 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Dark Text
+// / Text Dark
 //----------------------------------------------------
 
-@each $key, $value in $pattern-color-dark {
-  .is-#{$key} {
-    color: $value;
+#{$deco-class} {
+  @each $key, $value in $pattern-color-dark {
+    &.is-#{$key} {
+      color: $value;
+    }
   }
 }
 
 //----------------------------------------------------
-// / Light Text
+// / Text Light
 //----------------------------------------------------
 
-@each $key, $value in $pattern-color-light {
-  .is-#{$key} {
-    color: $value;
+#{$deco-class} {
+  @each $key, $value in $pattern-color-light {
+    &.is-#{$key} {
+      color: $value;
+    }
   }
 }
 
 //----------------------------------------------------
-// / Theme Color Text
+// / Text Color
 //----------------------------------------------------
 
-@each $key, $value in $pattern-color-theme {
-  .is-#{$key}:not(.btn) {
-    color: $value;
+#{$deco-class} {
+  @each $key, $value in $pattern-color-text {
+    &.is-#{$key}:not(.btn) {
+      :not(.btn) {
+        color: $value;
+      }
+    }
   }
 }
 
@@ -36,9 +44,11 @@
 // / Text Weight
 //----------------------------------------------------
 
-@each $key, $value in $pattern-font-weight {
-  .is-#{$key} {
-    font-weight: $value;
+#{$deco-class} {
+  @each $key, $value in $pattern-font-weight {
+    &.is-#{$key} {
+      font-weight: $value;
+    }
   }
 }
 
@@ -46,31 +56,29 @@
 // / Text Style
 //----------------------------------------------------
 
-.is-italic {
-  font-style: italic;
-}
-
-.is-delete {
-  text-decoration: line-through;
-}
-
-.is-capitalize {
-  text-transform: capitalize;
-}
-
-.is-lowercase {
-  text-transform: lowercase;
-}
-
-.is-uppercase {
-  text-transform: uppercase;
+#{$deco-class} {
+  &.is-italic {
+    font-style: italic;
+  }
+  &.is-delete {
+    text-decoration: line-through;
+  }
+  &.is-capitalize {
+    text-transform: capitalize;
+  }
+  &.is-lowercase {
+    text-transform: lowercase;
+  }
+  &.is-uppercase {
+    text-transform: uppercase;
+  }
 }
 
 //----------------------------------------------------
 // / Text Align
 //----------------------------------------------------
 
-#{$text-align-class} {
+#{$deco-class} {
   @each $key-breakpoint, $mediaquery in $pattern-breakpoint-mediaquery-all {
     @include mediaquery-pattern($mediaquery) {
       @if $key-breakpoint == "mobile" {

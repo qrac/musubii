@@ -379,8 +379,17 @@ $wysiwyg-figcaption-font-size: 87.5% !default;
 // / Utility - Deco
 //----------------------------------------------------
 
-// Text Align
-$text-align-class: ".heading, .texts, .text" !default;
+// class
+$deco-class: ".heading, .texts, .text" !default;
+
+// pattern color - text
+$pattern-color-text: (
+  primary: $common-primary,
+  info: $common-info,
+  success: $common-success,
+  warning: $common-warning,
+  danger: $common-danger
+) !default;
 
 //----------------------------------------------------
 // / Utility - Display
