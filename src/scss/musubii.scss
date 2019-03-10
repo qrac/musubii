@@ -13,6 +13,8 @@
 // / Import > Config
 //----------------------------------------------------
 
+@import "config/_theme-default.scss";
+@import "config/_variable-next.scss";
 @import "config/_variable.scss";
 
 //----------------------------------------------------
@@ -22,7 +24,7 @@
 @import "shitajicss/src/scss/_shitaji.scss";
 
 //----------------------------------------------------
-// / Glob Import > Project
+// / Import > Project
 //----------------------------------------------------
 
 @import "base/_global.scss";

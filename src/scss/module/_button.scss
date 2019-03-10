@@ -155,12 +155,12 @@
     &:hover {
       background-color: $button-plain-default-hover-background-color;
     }
-    @each $key, $value in $pattern-color-theme {
+    @each $key, $value in $pattern-color-button-plain {
       &.is-#{$key} {
-        background-color: $value;
+        background-color: map-get($value, background-color);
         color: $light;
         &:hover {
-          background-color: darken($value, 5%);
+          background-color: map-get($value, hover-background-color);
         }
       }
     }
@@ -185,9 +185,9 @@
     &:hover {
       background-color: $button-melt-default-hover-background-color;
     }
-    @each $key, $value in $pattern-color-theme {
+    @each $key, $value in $pattern-color-button-melt {
       &.is-#{$key} {
-        color: $value;
+        color: map-get($value, text-color);
       }
     }
     &.is-disabled,
@@ -211,12 +211,12 @@
     &:hover {
       background-color: $button-outline-default-hover-background-color;
     }
-    @each $key, $value in $pattern-color-theme {
+    @each $key, $value in $pattern-color-button-outline {
       &.is-#{$key} {
-        border-color: $value;
-        color: $value;
+        border-color: map-get($value, border-color);
+        color: map-get($value, text-color);
         &:hover {
-          background-color: $value;
+          background-color: map-get($value, hover-background-color);
           border-color: transparent;
           color: $light;
         }
@@ -245,12 +245,12 @@
       background-color: $button-ghost-default-hover-background-color;
       color: $button-ghost-default-hover-text-color;
     }
-    @each $key, $value in $pattern-color-theme {
+    @each $key, $value in $pattern-color-button-ghost {
       &.is-#{$key} {
-        border-color: lighten($value, 30%);
-        color: lighten($value, 30%);
+        border-color: map-get($value, border-color);
+        color: map-get($value, text-color);
         &:hover {
-          background-color: $value;
+          background-color: map-get($value, hover-background-color);
           border-color: transparent;
           color: $light;
         }

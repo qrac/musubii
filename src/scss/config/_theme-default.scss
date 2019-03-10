@@ -1,0 +1,95 @@
+//----------------------------------------------------
+// Config: Theme - Default
+//----------------------------------------------------
+
+$theme-primary: $cyan-500 !default;
+$theme-info: $blue-500 !default;
+$theme-success: $green-a700 !default;
+$theme-warning: $orange-600 !default;
+$theme-danger: $red-500 !default;
+
+$theme-primary-darken: darken($cyan-500, 5%) !default;
+$theme-info-darken: darken($blue-500, 5%) !default;
+$theme-success-darken: darken($green-a700, 5%) !default;
+$theme-warning-darken: darken($orange-600, 5%) !default;
+$theme-danger-darken: darken($red-500, 5%) !default;
+
+$theme-primary-lighten: lighten($cyan-500, 30%) !default;
+$theme-info-lighten: lighten($blue-500, 30%) !default;
+$theme-success-lighten: lighten($green-a700, 30%) !default;
+$theme-warning-lighten: lighten($orange-600, 30%) !default;
+$theme-danger-lighten: lighten($red-500, 30%) !default;
+
+$theme-body-background-color: $light !default;
+$theme-body-text-color: $dark-2 !default;
+$theme-body-font-family: $font-sans !default;
+
+$theme-blockquote-background-color: $grey-100 !default;
+$theme-blockquote-border-left-color: $dark-9 !default;
+$theme-code-background-color: $grey-100 !default;
+$theme-code-text-color: $indigo-500 !default;
+$theme-code-font-family: $font-mono !default;
+$theme-pre-background-color: $grey-100 !default;
+$theme-pre-text-color: $indigo-500 !default;
+$theme-pre-font-family: $font-mono !default;
+
+$theme-button-focus-shadow-color: rgba($blue-a400, 0.5) !default;
+$theme-button-floating-shadow-color: rgba($black, 0.24) !default;
+$theme-button-plain-default-background-color: $grey-100 !default;
+$theme-button-plain-default-hover-background-color: $grey-200 !default;
+$theme-button-melt-default-hover-background-color: $dark-9 !default;
+$theme-button-outline-default-background-color: $light !default;
+$theme-button-outline-default-border-color: $dark-7 !default;
+$theme-button-outline-default-hover-background-color: $grey-100 !default;
+$theme-button-ghost-default-border-color: $light !default;
+$theme-button-ghost-default-text-color: $light !default;
+$theme-button-ghost-default-hover-background-color: $light !default;
+$theme-button-ghost-default-hover-text-color: $dark-2 !default;
+$theme-button-disabled-background-color: $grey-400 !default;
+$theme-button-disabled-background-color-alpha: $dark-6 !default;
+$theme-button-disabled-text-color: $dark-6 !default;
+$theme-button-ghost-disabled-background-color: $light-8 !default;
+$theme-button-ghost-disabled-border-color: $light-4 !default;
+$theme-button-ghost-disabled-text-color: $light-4 !default;
+
+$theme-table-background-color: $light !default;
+$theme-table-border-color: $blue-grey-100 !default;
+$theme-table-stripe-background-color: $grey-100 !default;
+$theme-table-paint-background-color: $cyan-500 !default;
+$theme-table-paint-text-color: $light !default;
+$theme-table-spot-background-color: $yellow-200 !default;
+$theme-table-danger-background-color: $red-100 !default;
+
+$theme-input-background-color: $light !default;
+$theme-input-border-color: $dark-6 !default;
+$theme-input-shadow-color: rgba($black, 0.075) !default;
+$theme-input-focus-border-color: $blue-500 !default;
+$theme-input-focus-shadow-color: rgba($blue-a400, 0.36) !default;
+$theme-input-disabled-background-color: $grey-300 !default;
+$theme-input-disabled-border-color: $dark-6 !default;
+$theme-input-disabled-text-color: $dark-6 !default;
+$theme-input-readonly-background-color: $grey-100 !default;
+$theme-input-readonly-text-color: $dark-2 !default;
+$theme-input-placeholder-color: $dark-6 !default;
+$theme-radio-checked-background-color: $cyan-500 !default;
+$theme-radio-checked-border-color: $cyan-500 !default;
+$theme-checkbox-focus-border-color: $blue-500 !default;
+$theme-checkbox-checked-background-color: $cyan-500 !default;
+$theme-checkbox-checked-border-color: $cyan-500 !default;
+$theme-select-angle-border-color: $dark-5 !default;
+
+$theme-alert-default-background-color: $grey-100 !default;
+$theme-alert-default-border-color: $grey-300 !default;
+$theme-alert-primary-background-color: $cyan-50 !default;
+$theme-alert-primary-border-color: $cyan-200 !default;
+$theme-alert-info-background-color: $blue-50 !default;
+$theme-alert-info-border-color: $blue-200 !default;
+$theme-alert-success-background-color: $green-50 !default;
+$theme-alert-success-border-color: $green-200 !default;
+$theme-alert-warning-background-color: $orange-50 !default;
+$theme-alert-warning-border-color: $orange-200 !default;
+$theme-alert-danger-background-color: $red-50 !default;
+$theme-alert-danger-border-color: $red-200 !default;
+
+$theme-wysiwyg-link-text-color: $cyan-500 !default;
+$theme-wysiwyg-hr-border-color: $dark-7 !default;

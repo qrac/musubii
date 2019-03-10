@@ -11,24 +11,10 @@
   background-color: $alert-default-background-color;
   border: $alert-border-width solid $alert-default-border-color;
   border-radius: $alert-border-radius;
-  &.is-primary {
-    background-color: $alert-primary-background-color;
-    border-color: $alert-primary-border-color;
-  }
-  &.is-info {
-    background-color: $alert-info-background-color;
-    border-color: $alert-info-border-color;
-  }
-  &.is-success {
-    background-color: $alert-success-background-color;
-    border-color: $alert-success-border-color;
-  }
-  &.is-warning {
-    background-color: $alert-warning-background-color;
-    border-color: $alert-warning-border-color;
-  }
-  &.is-danger {
-    background-color: $alert-danger-background-color;
-    border-color: $alert-danger-border-color;
+  @each $key, $value in $pattern-color-alert {
+    &.is-#{$key} {
+      background-color: map-get($value, background-color);
+      border-color: map-get($value, border-color);
+    }
   }
 }

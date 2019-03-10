@@ -67,7 +67,7 @@
     cursor: pointer;
     border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
       currentColor;
-    color: $primary;
+    color: $wysiwyg-link-text-color;
     &:hover,
     &:active {
       border-bottom-color: transparent;

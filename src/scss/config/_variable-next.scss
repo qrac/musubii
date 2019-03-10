@@ -1,0 +1,297 @@
+//----------------------------------------------------
+// Config: Variable - Next
+//----------------------------------------------------
+
+:root {
+  --theme-primary: #{$theme-primary};
+  --theme-info: #{$theme-info};
+  --theme-success: #{$theme-success};
+  --theme-warning: #{$theme-warning};
+  --theme-danger: #{$theme-danger};
+  --theme-primary-darken: #{$theme-primary-darken};
+  --theme-info-darken: #{$theme-info-darken};
+  --theme-success-darken: #{$theme-success-darken};
+  --theme-warning-darken: #{$theme-warning-darken};
+  --theme-danger-darken: #{$theme-danger-darken};
+  --theme-primary-lighten: #{$theme-primary-lighten};
+  --theme-info-lighten: #{$theme-info-lighten};
+  --theme-success-lighten: #{$theme-success-lighten};
+  --theme-warning-lighten: #{$theme-warning-lighten};
+  --theme-danger-lighten: #{$theme-danger-lighten};
+}
+
+:root {
+  --theme-body-background-color: #{$theme-body-background-color};
+  --theme-body-text-color: #{$theme-body-text-color};
+  --theme-body-font-family: #{$theme-body-font-family};
+}
+
+:root {
+  --theme-blockquote-background-color: #{$theme-blockquote-background-color};
+  --theme-blockquote-border-left-color: #{$theme-blockquote-border-left-color};
+  --theme-code-background-color: #{$theme-code-background-color};
+  --theme-code-text-color: #{$theme-code-text-color};
+  --theme-code-font-family: #{$theme-code-font-family};
+  --theme-pre-background-color: #{$theme-pre-background-color};
+  --theme-pre-text-color: #{$theme-pre-text-color};
+  --theme-pre-font-family: #{$theme-pre-font-family};
+}
+
+:root {
+  --theme-button-focus-shadow-color: #{$theme-button-focus-shadow-color};
+  --theme-button-floating-shadow-color: #{$theme-button-floating-shadow-color};
+  --theme-button-plain-default-background-color: #{$theme-button-plain-default-background-color};
+  --theme-button-plain-default-hover-background-color: #{$theme-button-plain-default-hover-background-color};
+  --theme-button-melt-default-hover-background-color: #{$theme-button-melt-default-hover-background-color};
+  --theme-button-outline-default-background-color: #{$theme-button-outline-default-background-color};
+  --theme-button-outline-default-border-color: #{$theme-button-outline-default-border-color};
+  --theme-button-outline-default-hover-background-color: #{$theme-button-outline-default-hover-background-color};
+  --theme-button-ghost-default-border-color: #{$theme-button-ghost-default-border-color};
+  --theme-button-ghost-default-text-color: #{$theme-button-ghost-default-text-color};
+  --theme-button-ghost-default-hover-background-color: #{$theme-button-ghost-default-hover-background-color};
+  --theme-button-ghost-default-hover-text-color: #{$theme-button-ghost-default-hover-text-color};
+  --theme-button-disabled-background-color: #{$theme-button-disabled-background-color};
+  --theme-button-disabled-background-color-alpha: #{$theme-button-disabled-background-color-alpha};
+  --theme-button-disabled-text-color: #{$theme-button-disabled-text-color};
+  --theme-button-ghost-disabled-background-color: #{$theme-button-ghost-disabled-background-color};
+  --theme-button-ghost-disabled-border-color: #{$theme-button-ghost-disabled-border-color};
+  --theme-button-ghost-disabled-text-color: #{$theme-button-ghost-disabled-text-color};
+}
+
+:root {
+  --theme-table-background-color: #{$theme-table-background-color};
+  --theme-table-border-color: #{$theme-table-border-color};
+  --theme-table-stripe-background-color: #{$theme-table-stripe-background-color};
+  --theme-table-paint-background-color: #{$theme-table-paint-background-color};
+  --theme-table-paint-text-color: #{$theme-table-paint-text-color};
+  --theme-table-spot-background-color: #{$theme-table-spot-background-color};
+  --theme-table-danger-background-color: #{$theme-table-danger-background-color};
+}
+
+:root {
+  --theme-input-background-color: #{$theme-input-background-color};
+  --theme-input-border-color: #{$theme-input-border-color};
+  --theme-input-shadow-color: #{$theme-input-shadow-color};
+  --theme-input-focus-border-color: #{$theme-input-focus-border-color};
+  --theme-input-focus-shadow-color: #{$theme-input-focus-shadow-color};
+  --theme-input-disabled-background-color: #{$theme-input-disabled-background-color};
+  --theme-input-disabled-border-color: #{$theme-input-disabled-border-color};
+  --theme-input-disabled-text-color: #{$theme-input-disabled-text-color};
+  --theme-input-readonly-background-color: #{$theme-input-readonly-background-color};
+  --theme-input-readonly-text-color: #{$theme-input-readonly-text-color};
+  --theme-input-placeholder-color: #{$theme-input-placeholder-color};
+  --theme-radio-checked-background-color: #{$theme-radio-checked-background-color};
+  --theme-radio-checked-border-color: #{$theme-radio-checked-border-color};
+  --theme-checkbox-focus-border-color: #{$theme-checkbox-focus-border-color};
+  --theme-checkbox-checked-background-color: #{$theme-checkbox-checked-background-color};
+  --theme-checkbox-checked-border-color: #{$theme-checkbox-checked-border-color};
+  --theme-select-angle-border-color: #{$theme-select-angle-border-color};
+}
+
+:root {
+  --theme-alert-default-background-color: #{$theme-alert-default-background-color};
+  --theme-alert-default-border-color: #{$theme-alert-default-border-color};
+  --theme-alert-primary-background-color: #{$theme-alert-primary-background-color};
+  --theme-alert-primary-border-color: #{$theme-alert-primary-border-color};
+  --theme-alert-info-background-color: #{$theme-alert-info-background-color};
+  --theme-alert-info-border-color: #{$theme-alert-info-border-color};
+  --theme-alert-success-background-color: #{$theme-alert-success-background-color};
+  --theme-alert-success-border-color: #{$theme-alert-success-border-color};
+  --theme-alert-warning-background-color: #{$theme-alert-warning-background-color};
+  --theme-alert-warning-border-color: #{$theme-alert-warning-border-color};
+  --theme-alert-danger-background-color: #{$theme-alert-danger-background-color};
+  --theme-alert-danger-border-color: #{$theme-alert-danger-border-color};
+}
+
+:root {
+  --theme-wysiwyg-link-text-color: #{$theme-wysiwyg-link-text-color};
+  --theme-wysiwyg-hr-border-color: #{$theme-wysiwyg-hr-border-color};
+}
+
+$common-primary: var(--theme-primary) !default;
+$common-info: var(--theme-info) !default;
+$common-success: var(--theme-success) !default;
+$common-warning: var(--theme-warning) !default;
+$common-danger: var(--theme-danger) !default;
+
+$common-primary-darken: var(--theme-primary-darken) !default;
+$common-info-darken: var(--theme-info-darken) !default;
+$common-success-darken: var(--theme-success-darken) !default;
+$common-warning-darken: var(--theme-warning-darken) !default;
+$common-danger-darken: var(--theme-danger-darken) !default;
+
+$common-primary-lighten: var(--theme-primary-lighten) !default;
+$common-info-lighten: var(--theme-info-lighten) !default;
+$common-success-lighten: var(--theme-success-lighten) !default;
+$common-warning-lighten: var(--theme-warning-lighten) !default;
+$common-danger-lighten: var(--theme-danger-lighten) !default;
+
+$common-body-background-color: var(--theme-body-background-color) !default;
+$common-body-text-color: var(--theme-body-text-color) !default;
+$common-body-font-family: var(--theme-body-font-family) !default;
+
+$common-blockquote-background-color: var(
+  --theme-blockquote-background-color
+) !default;
+$common-blockquote-border-left-color: var(
+  --theme-blockquote-border-left-color
+) !default;
+$common-code-background-color: var(--theme-code-background-color) !default;
+$common-code-text-color: var(--theme-code-text-color) !default;
+$common-code-font-family: var(--theme-code-font-family) !default;
+$common-pre-background-color: var(--theme-pre-background-color) !default;
+$common-pre-text-color: var(--theme-pre-text-color) !default;
+$common-pre-font-family: var(--theme-pre-font-family) !default;
+
+$common-button-focus-shadow-color: var(
+  --theme-button-focus-shadow-color
+) !default;
+$common-button-floating-shadow-color: var(
+  --theme-button-floating-shadow-color
+) !default;
+$common-button-plain-default-background-color: var(
+  --theme-button-plain-default-background-color
+) !default;
+$common-button-plain-default-hover-background-color: var(
+  --theme-button-plain-default-hover-background-color
+) !default;
+$common-button-melt-default-hover-background-color: var(
+  --theme-button-melt-default-hover-background-color
+) !default;
+$common-button-outline-default-background-color: var(
+  --theme-button-outline-default-background-color
+) !default;
+$common-button-outline-default-border-color: var(
+  --theme-button-outline-default-border-color
+) !default;
+$common-button-outline-default-hover-background-color: var(
+  --theme-button-outline-default-hover-background-color
+) !default;
+$common-button-ghost-default-border-color: var(
+  --theme-button-ghost-default-border-color
+) !default;
+$common-button-ghost-default-text-color: var(
+  --theme-button-ghost-default-text-color
+) !default;
+$common-button-ghost-default-hover-background-color: var(
+  --theme-button-ghost-default-hover-background-color
+) !default;
+$common-button-ghost-default-hover-text-color: var(
+  --theme-button-ghost-default-hover-text-color
+) !default;
+$common-button-disabled-background-color: var(
+  --theme-button-disabled-background-color
+) !default;
+$common-button-disabled-background-color-alpha: var(
+  --theme-button-disabled-background-color-alpha
+) !default;
+$common-button-disabled-text-color: var(
+  --theme-button-disabled-text-color
+) !default;
+$common-button-ghost-disabled-background-color: var(
+  --theme-button-ghost-disabled-background-color
+) !default;
+$common-button-ghost-disabled-border-color: var(
+  --theme-button-ghost-disabled-border-color
+) !default;
+$common-button-ghost-disabled-text-color: var(
+  --theme-button-ghost-disabled-text-color
+) !default;
+
+$common-table-background-color: var(--theme-table-background-color) !default;
+$common-table-border-color: var(--theme-table-border-color) !default;
+$common-table-stripe-background-color: var(
+  --theme-table-stripe-background-color
+) !default;
+$common-table-paint-background-color: var(
+  --theme-table-paint-background-color
+) !default;
+$common-table-paint-text-color: var(--theme-table-paint-text-color) !default;
+$common-table-spot-background-color: var(
+  --theme-table-spot-background-color
+) !default;
+$common-table-danger-background-color: var(
+  --theme-table-danger-background-color
+) !default;
+
+$common-input-background-color: var(--theme-input-background-color) !default;
+$common-input-border-color: var(--theme-input-border-color) !default;
+$common-input-shadow-color: var(--theme-input-shadow-color) !default;
+$common-input-focus-border-color: var(
+  --theme-input-focus-border-color
+) !default;
+$common-input-focus-shadow-color: var(
+  --theme-input-focus-shadow-color
+) !default;
+$common-input-disabled-background-color: var(
+  --theme-input-disabled-background-color
+) !default;
+$common-input-disabled-border-color: var(
+  --theme-input-disabled-border-color
+) !default;
+$common-input-disabled-text-color: var(
+  --theme-input-disabled-text-color
+) !default;
+$common-input-readonly-background-color: var(
+  --theme-input-readonly-background-color
+) !default;
+$common-input-readonly-text-color: var(
+  --theme-input-readonly-text-color
+) !default;
+$common-input-placeholder-color: var(--theme-input-placeholder-color) !default;
+$common-radio-checked-background-color: var(
+  --theme-radio-checked-background-color
+) !default;
+$common-radio-checked-border-color: var(
+  --theme-radio-checked-border-color
+) !default;
+$common-checkbox-focus-border-color: var(
+  --theme-checkbox-focus-border-color
+) !default;
+$common-checkbox-checked-background-color: var(
+  --theme-checkbox-checked-background-color
+) !default;
+$common-checkbox-checked-border-color: var(
+  --theme-checkbox-checked-border-color
+) !default;
+$common-select-angle-border-color: var(
+  --theme-select-angle-border-color
+) !default;
+
+$common-alert-default-background-color: var(
+  --theme-alert-default-background-color
+) !default;
+$common-alert-default-border-color: var(
+  --theme-alert-default-border-color
+) !default;
+$common-alert-primary-background-color: var(
+  --theme-alert-primary-background-color
+) !default;
+$common-alert-primary-border-color: var(
+  --theme-alert-primary-border-color
+) !default;
+$common-alert-info-background-color: var(
+  --theme-alert-info-background-color
+) !default;
+$common-alert-info-border-color: var(--theme-alert-info-border-color) !default;
+$common-alert-success-background-color: var(
+  --theme-alert-success-background-color
+) !default;
+$common-alert-success-border-color: var(
+  --theme-alert-success-border-color
+) !default;
+$common-alert-warning-background-color: var(
+  --theme-alert-warning-background-color
+) !default;
+$common-alert-warning-border-color: var(
+  --theme-alert-warning-border-color
+) !default;
+$common-alert-danger-background-color: var(
+  --theme-alert-danger-background-color
+) !default;
+$common-alert-danger-border-color: var(
+  --theme-alert-danger-border-color
+) !default;
+
+$common-wysiwyg-link-text-color: var(--theme-wysiwyg-link-text-color) !default;
+$common-wysiwyg-hr-border-color: var(--theme-wysiwyg-hr-border-color) !default;
