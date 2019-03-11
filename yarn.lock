@@ -3739,10 +3739,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass-dashi@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/sass-dashi/-/sass-dashi-0.4.0.tgz#6ad60953062ecceab0612c55355c26d79e9bf552"
-  integrity sha512-Ecsz+VfmuA0gjldLG+nJDPh+hCUhSNPUOzn5g2snKFe0szBCY9hYe40PWx02OWztQefybmWyQ5W1OJPbp62hiQ==
+sass-dashi@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/sass-dashi/-/sass-dashi-0.5.0.tgz#0678675a4ac17e8020e3bf83bb8de6ab79e6c421"
+  integrity sha512-qcZ4NjDZpdjb3b4Qqlvr72LYXxlmPq0NqBCcpgQlZHI3M0WWVIPNalm7R1Fj1OT52ForJ4bF8JP0axRpAxRwyg==
 
 sass-graph@^2.2.4:
   version "2.2.4"

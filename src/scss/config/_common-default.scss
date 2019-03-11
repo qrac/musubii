@@ -1,0 +1,95 @@
+//----------------------------------------------------
+// Config: Common - Default
+//----------------------------------------------------
+
+$common-primary: $theme-light-primary !default;
+$common-info: $theme-light-info !default;
+$common-success: $theme-light-success !default;
+$common-warning: $theme-light-warning !default;
+$common-danger: $theme-light-danger !default;
+
+$common-primary-darken: $theme-light-primary-darken !default;
+$common-info-darken: $theme-light-info-darken !default;
+$common-success-darken: $theme-light-success-darken !default;
+$common-warning-darken: $theme-light-warning-darken !default;
+$common-danger-darken: $theme-light-danger-darken !default;
+
+$common-primary-lighten: $theme-light-primary-lighten !default;
+$common-info-lighten: $theme-light-info-lighten !default;
+$common-success-lighten: $theme-light-success-lighten !default;
+$common-warning-lighten: $theme-light-warning-lighten !default;
+$common-danger-lighten: $theme-light-danger-lighten !default;
+
+$common-body-background-color: $theme-light-body-background-color !default;
+$common-body-text-color: $theme-light-body-text-color !default;
+$common-body-font-family: $theme-light-body-font-family !default;
+
+$common-blockquote-background-color: $theme-light-blockquote-background-color !default;
+$common-blockquote-border-left-color: $theme-light-blockquote-border-left-color !default;
+$common-code-background-color: $theme-light-code-background-color !default;
+$common-code-text-color: $theme-light-code-text-color !default;
+$common-code-font-family: $theme-light-code-font-family !default;
+$common-pre-background-color: $theme-light-pre-background-color !default;
+$common-pre-text-color: $theme-light-pre-text-color !default;
+$common-pre-font-family: $theme-light-pre-font-family !default;
+
+$common-button-focus-shadow-color: $theme-light-button-focus-shadow-color !default;
+$common-button-floating-shadow-color: $theme-light-button-floating-shadow-color !default;
+$common-button-plain-default-background-color: $theme-light-button-plain-default-background-color !default;
+$common-button-plain-default-hover-background-color: $theme-light-button-plain-default-hover-background-color !default;
+$common-button-melt-default-hover-background-color: $theme-light-button-melt-default-hover-background-color !default;
+$common-button-outline-default-background-color: $theme-light-button-outline-default-background-color !default;
+$common-button-outline-default-border-color: $theme-light-button-outline-default-border-color !default;
+$common-button-outline-default-hover-background-color: $theme-light-button-outline-default-hover-background-color !default;
+$common-button-ghost-default-border-color: $theme-light-button-ghost-default-border-color !default;
+$common-button-ghost-default-text-color: $theme-light-button-ghost-default-text-color !default;
+$common-button-ghost-default-hover-background-color: $theme-light-button-ghost-default-hover-background-color !default;
+$common-button-ghost-default-hover-text-color: $theme-light-button-ghost-default-hover-text-color !default;
+$common-button-disabled-background-color: $theme-light-button-disabled-background-color !default;
+$common-button-disabled-background-color-alpha: $theme-light-button-disabled-background-color-alpha !default;
+$common-button-disabled-text-color: $theme-light-button-disabled-text-color !default;
+$common-button-ghost-disabled-background-color: $theme-light-button-ghost-disabled-background-color !default;
+$common-button-ghost-disabled-border-color: $theme-light-button-ghost-disabled-border-color !default;
+$common-button-ghost-disabled-text-color: $theme-light-button-ghost-disabled-text-color !default;
+
+$common-table-background-color: $theme-light-table-background-color !default;
+$common-table-border-color: $theme-light-table-border-color !default;
+$common-table-stripe-background-color: $theme-light-table-stripe-background-color !default;
+$common-table-paint-background-color: $theme-light-table-paint-background-color !default;
+$common-table-paint-text-color: $theme-light-table-paint-text-color !default;
+$common-table-spot-background-color: $theme-light-table-spot-background-color !default;
+$common-table-danger-background-color: $theme-light-table-danger-background-color !default;
+
+$common-input-background-color: $theme-light-input-background-color !default;
+$common-input-border-color: $theme-light-input-border-color !default;
+$common-input-shadow-color: $theme-light-input-shadow-color !default;
+$common-input-focus-border-color: $theme-light-input-focus-border-color !default;
+$common-input-focus-shadow-color: $theme-light-input-focus-shadow-color !default;
+$common-input-disabled-background-color: $theme-light-input-disabled-background-color !default;
+$common-input-disabled-border-color: $theme-light-input-disabled-border-color !default;
+$common-input-disabled-text-color: $theme-light-input-disabled-text-color !default;
+$common-input-readonly-background-color: $theme-light-input-readonly-background-color !default;
+$common-input-readonly-text-color: $theme-light-input-readonly-text-color !default;
+$common-input-placeholder-color: $theme-light-input-placeholder-color !default;
+$common-radio-checked-background-color: $theme-light-radio-checked-background-color !default;
+$common-radio-checked-border-color: $theme-light-radio-checked-border-color !default;
+$common-checkbox-focus-border-color: $theme-light-checkbox-focus-border-color !default;
+$common-checkbox-checked-background-color: $theme-light-checkbox-checked-background-color !default;
+$common-checkbox-checked-border-color: $theme-light-checkbox-checked-border-color !default;
+$common-select-angle-border-color: $theme-light-select-angle-border-color !default;
+
+$common-alert-default-background-color: $theme-light-alert-default-background-color !default;
+$common-alert-default-border-color: $theme-light-alert-default-border-color !default;
+$common-alert-primary-background-color: $theme-light-alert-primary-background-color !default;
+$common-alert-primary-border-color: $theme-light-alert-primary-border-color !default;
+$common-alert-info-background-color: $theme-light-alert-info-background-color !default;
+$common-alert-info-border-color: $theme-light-alert-info-border-color !default;
+$common-alert-success-background-color: $theme-light-alert-success-background-color !default;
+$common-alert-success-border-color: $theme-light-alert-success-border-color !default;
+$common-alert-warning-background-color: $theme-light-alert-warning-background-color !default;
+$common-alert-warning-border-color: $theme-light-alert-warning-border-color !default;
+$common-alert-danger-background-color: $theme-light-alert-danger-background-color !default;
+$common-alert-danger-border-color: $theme-light-alert-danger-border-color !default;
+
+$common-wysiwyg-link-text-color: $theme-light-wysiwyg-link-text-color !default;
+$common-wysiwyg-hr-border-color: $theme-light-wysiwyg-hr-border-color !default;

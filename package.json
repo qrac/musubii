@@ -1,7 +1,7 @@
 {
   "name": "musubii",
   "description": "Simple CSS Framework for JP",
-  "version": "7.0.0-alpha.2",
+  "version": "7.0.0-alpha.3",
   "main": "docs/css/musubii.css",
   "license": "MIT",
   "homepage": "https://musubii.qranoko.jp",
@@ -36,7 +36,7 @@
   ],
   "dependencies": {
     "mixtone": "^1.0.1",
-    "sass-dashi": "^0.4.0",
+    "sass-dashi": "^0.5.0",
     "shitajicss": "5.0.0"
   },
   "devDependencies": {
