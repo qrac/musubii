@@ -4,8 +4,10 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ pjt.setting.name }}</title>
+    <title>{{ pjt.setting.name }}
+      - Debug</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="./musubii.css"/>
@@ -18,6 +20,9 @@
         --demo-background-color-cyan: #37B0BE;
         --demo-background-color-grey: #e0e0e0;
         --demo-background-color-grey-light: #f1f1f1;
+      }
+      body {
+        transition: 1s;
       }
       body > *:last-child {
         margin-bottom: 160px;
@@ -73,51 +78,30 @@
       .is-demo-background-color-grey {
         background-color: var(--demo-background-color-grey);
       }
-      .is-demo-background-color-grey-light {
-        background-color: var(--demo-background-color-grey-light);
-      }
       .is-demo-min-height-1 {
         min-height: 160px;
       }
       .is-demo-padding-1 {
         padding: 16px 0;
       }
+      .demo-nav {
+        display: inline-block;
+      }
+      .demo-nav.is-posithion-fixed-top-right {
+        position: fixed;
+        top: 16px;
+        right: 0;
+        z-index: 10;
+      }
     </style>
     <style>
-      /* safari 12.1~ dark mode */
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --demo-h3-text-color: #828282;
-          --demo-box-text-color: #D6D6D7;
-          --demo-line-box-border-color: #666769;
-          --demo-paint-box-background-color: #2A2A2B;
-          --demo-background-color-cyan: #206972;
-          --demo-background-color-grey: #393939;
-          --demo-background-color-grey-light: #f1f1f1;
-        }
-        :root {
-          --theme-primary: #277c86;
-          --theme-info: #246da4;
-          --theme-success: #238223;
-          --theme-warning: #be750f;
-          --theme-danger: #d43535;
-        }
-        :root {
-          --theme-body-background-color: #1A1A1A;
-          --theme-body-text-color: #D6D6D7;
-        }
-        :root {
-          --theme-blockquote-background-color: #2A2A2B;
-          --theme-code-background-color: #2A2A2B;
-          --theme-code-text-color: #8BAADA;
-          --theme-pre-background-color: #2A2A2B;
-          --theme-pre-text-color: #8BAADA;
-        }
-        :root {
-          --theme-button-plain-default-background-color: #3E3E3E;
-          --theme-button-outline-default-background-color: #3E3E3E;
-          --theme-button-outline-default-border-color: #666769;
-        }
+      :root [data-theme="dark"] {
+        --demo-h3-text-color: #828282;
+        --demo-box-text-color: #D6D6D7;
+        --demo-line-box-border-color: #616161;
+        --demo-paint-box-background-color: #2A2A2B;
+        --demo-background-color-cyan: #1F636B;
+        --demo-background-color-grey: #2e2e2e;
       }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@1"></script>
@@ -127,8 +111,18 @@
         //onlyLegacy: false
       });
     </script>
+    <script>
+      function changeThemeLight() {
+        var body = document.body
+        body.dataset.theme = "light"
+      }
+      function changeThemeDark() {
+        var body = document.body
+        body.dataset.theme = "dark"
+      }
+    </script>
   </head>
-  <body>
+  <body data-theme="light">
     <header>
       <h1 class="demo-h1">
         <span>{{ pjt.setting.name }}</span>
@@ -136,6 +130,25 @@
       </h1>
     </header>
     <main>
+
+      <nav class="demo-nav is-posithion-fixed-top-right">
+        <div class="field">
+          <div class="box">
+            <input class="input is-hidden" id="data-theme-light" type="radio" name="data-theme" checked="checked" onclick="changeThemeLight();">
+            <label class="label" for="data-theme-light">
+              <span class="radio"></span>
+              <span class="text">Light</span>
+            </label>
+          </div>
+          <div class="box">
+            <input class="input is-hidden" id="data-theme-dark" type="radio" name="data-theme" onclick="changeThemeDark();">
+            <label class="label" for="data-theme-dark">
+              <span class="radio"></span>
+              <span class="text">Dark</span>
+            </label>
+          </div>
+        </div>
+      </nav>
 
       <section>
         <h2 class="demo-h2">Section</h2>
@@ -168,7 +181,7 @@
               <div class="box is-space">
                 <p class="heading">見出し</p>
                 <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
-                <p class="heading">見出し</p>
+                <p class="heading">見出しの上は広め</p>
                 <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
               </div>
             </div>
@@ -526,26 +539,26 @@
             <div class="demo-line-box">
               {% macro buttons(class) %}
                 <div class="buttons">
-                  <button class="button {{ class }}">戻る</button>
-                  <button class="button {{ class }} is-primary">決定</button>
-                  <button class="button {{ class }} is-info">情報</button>
-                  <button class="button {{ class }} is-success">登録</button>
-                  <button class="button {{ class }} is-warning">注意</button>
-                  <button class="button {{ class }} is-danger">削除</button>
-                  <button class="button {{ class }} is-disabled">不可</button>
-                  <button class="button {{ class }} is-primary">
+                  <button class="button {{ class }}" type="button">戻る</button>
+                  <button class="button {{ class }} is-primary" type="button">決定</button>
+                  <button class="button {{ class }} is-info" type="button">情報</button>
+                  <button class="button {{ class }} is-success" type="button">登録</button>
+                  <button class="button {{ class }} is-warning" type="button">注意</button>
+                  <button class="button {{ class }} is-danger" type="button">削除</button>
+                  <button class="button {{ class }} is-disabled" type="button">不可</button>
+                  <button class="button {{ class }} is-primary" type="button">
                     <i class="fas fa-flag" aria-hidden="true"></i>
                     <span class="text">FontAwesome</span>
                   </button>
-                  <button class="button {{ class }} is-success">
+                  <button class="button {{ class }} is-success" type="button">
                     <span class="text">FontAwesome</span>
                     <i class="fas fa-angle-right is-fit" aria-hidden="true"></i>
                   </button>
-                  <button class="button {{ class }} is-primary">
+                  <button class="button {{ class }} is-primary" type="button">
                     <i class="material-icons">face</i>
                     <span class="text">Material Icons</span>
                   </button>
-                  <button class="button {{ class }} is-success">
+                  <button class="button {{ class }} is-success" type="button">
                     <span class="text">Material Icons</span>
                     <i class="material-icons">keyboard_arrow_right</i>
                   </button>
@@ -606,25 +619,25 @@
             <div class="demo-line-box">
               {% macro buttonsCircle(class) %}
                 <div class="buttons">
-                  <button class="button {{class}} is-circle">
+                  <button class="button {{class}} is-circle" type="button">
                     <i aria-hidden="true" class="fas fa-angle-left"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-primary">
+                  <button class="button {{class}} is-circle is-primary" type="button">
                     <i aria-hidden="true" class="fab fa-twitter"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-info">
+                  <button class="button {{class}} is-circle is-info" type="button">
                     <i aria-hidden="true" class="fas fa-info-circle"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-success">
+                  <button class="button {{class}} is-circle is-success" type="button">
                     <i aria-hidden="true" class="fas fa-save"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-warning">
+                  <button class="button {{class}} is-circle is-warning" type="button">
                     <i aria-hidden="true" class="fas fa-exclamation-triangle"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-danger">
+                  <button class="button {{class}} is-circle is-danger" type="button">
                     <i aria-hidden="true" class="fas fa-times"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-disabled">
+                  <button class="button {{class}} is-circle is-disabled" type="button">
                     <i aria-hidden="true" class="fas fa-plus"></i>
                   </button>
                 </div>
@@ -644,20 +657,20 @@
           <div class="demo-area">
             <div class="demo-line-box">
               <div class="buttons">
-                <button class="button is-plain is-xxs">極小</button>
-                <button class="button is-plain is-xs">小さい</button>
-                <button class="button is-plain is-sm">小さめ</button>
-                <button class="button is-plain is-md">中くらい</button>
-                <button class="button is-plain is-lg">大きめ</button>
-                <button class="button is-plain is-xl">大きい</button>
-                <button class="button is-plain is-xxl">特大</button>
+                <button class="button is-plain is-xxs" type="button">極小</button>
+                <button class="button is-plain is-xs" type="button">小さい</button>
+                <button class="button is-plain is-sm" type="button">小さめ</button>
+                <button class="button is-plain is-md" type="button">中くらい</button>
+                <button class="button is-plain is-lg" type="button">大きめ</button>
+                <button class="button is-plain is-xl" type="button">大きい</button>
+                <button class="button is-plain is-xxl" type="button">特大</button>
               </div>
               <div class="buttons is-xxs">
-                <button class="button is-plain">まとめて極小</button>
-                <button class="button is-plain">まとめて極小</button>
-                <button class="button is-plain">まとめて極小</button>
-                <button class="button is-plain">まとめて極小</button>
-                <button class="button is-plain">まとめて極小</button>
+                <button class="button is-plain" type="button">まとめて極小</button>
+                <button class="button is-plain" type="button">まとめて極小</button>
+                <button class="button is-plain" type="button">まとめて極小</button>
+                <button class="button is-plain" type="button">まとめて極小</button>
+                <button class="button is-plain" type="button">まとめて極小</button>
               </div>
             </div>
           </div>
@@ -681,19 +694,19 @@
           <div class="demo-area">
             <div class="demo-line-box">
               <div class="buttons">
-                <button class="button is-plain">default</button>
-                <button class="button is-plain">default</button>
-                <button class="button is-plain">default</button>
+                <button class="button is-plain" type="button">default</button>
+                <button class="button is-plain" type="button">default</button>
+                <button class="button is-plain" type="button">default</button>
               </div>
               <div class="buttons is-center">
-                <button class="button is-plain">.is-center</button>
-                <button class="button is-plain">.is-center</button>
-                <button class="button is-plain">.is-center</button>
+                <button class="button is-plain" type="button">.is-center</button>
+                <button class="button is-plain" type="button">.is-center</button>
+                <button class="button is-plain" type="button">.is-center</button>
               </div>
               <div class="buttons is-right">
-                <button class="button is-plain">.is-right</button>
-                <button class="button is-plain">.is-right</button>
-                <button class="button is-plain">.is-right</button>
+                <button class="button is-plain" type="button">.is-right</button>
+                <button class="button is-plain" type="button">.is-right</button>
+                <button class="button is-plain" type="button">.is-right</button>
               </div>
             </div>
           </div>
@@ -703,31 +716,31 @@
           <div class="demo-area">
             <div class="demo-line-box">
               <div class="buttons is-bar">
-                <button class="button is-plain">
+                <button class="button is-plain" type="button">
                   <i aria-hidden="true" class="fas fa-align-left"></i>
                   <span class="text">左寄せ</span></button>
-                <button class="button is-plain">
+                <button class="button is-plain" type="button">
                   <i aria-hidden="true" class="fas fa-align-center"></i>
                   <span class="text">中央寄せ</span></button>
-                <button class="button is-plain">
+                <button class="button is-plain" type="button">
                   <i aria-hidden="true" class="fas fa-align-right"></i>
                   <span class="text">右寄せ</span></button>
               </div>
               <div class="buttons is-bar">
-                <button class="button is-outline is-mobile-0">
+                <button class="button is-outline is-mobile-0" type="button">
                   <i aria-hidden="true" class="fas fa-align-left"></i>
                   <span class="text">左寄せ</span></button>
-                <button class="button is-outline is-mobile-0">
+                <button class="button is-outline is-mobile-0" type="button">
                   <i aria-hidden="true" class="fas fa-align-center"></i>
                   <span class="text">中央寄せ</span></button>
-                <button class="button is-outline is-mobile-0">
+                <button class="button is-outline is-mobile-0" type="button">
                   <i aria-hidden="true" class="fas fa-align-right"></i>
                   <span class="text">右寄せ</span></button>
               </div>
               <div class="buttons is-bar">
-                <button class="button is-outline is-round is-mobile-0">ラウンド</button>
-                <button class="button is-outline is-round is-mobile-0">ラウンド</button>
-                <button class="button is-outline is-round is-mobile-0">ラウンド</button>
+                <button class="button is-outline is-round is-mobile-0" type="button">ラウンド</button>
+                <button class="button is-outline is-round is-mobile-0" type="button">ラウンド</button>
+                <button class="button is-outline is-round is-mobile-0" type="button">ラウンド</button>
               </div>
             </div>
           </div>
@@ -735,19 +748,19 @@
             <div class="demo-paint-box">
               <div class="buttons">
                 <div class="buttons is-bar">
-                  <button class="button is-ghost">松</button>
-                  <button class="button is-ghost">桜</button>
-                  <button class="button is-ghost">芒</button>
-                  <button class="button is-ghost">雨</button>
-                  <button class="button is-ghost">桐</button>
+                  <button class="button is-ghost" type="button">松</button>
+                  <button class="button is-ghost" type="button">桜</button>
+                  <button class="button is-ghost" type="button">芒</button>
+                  <button class="button is-ghost" type="button">雨</button>
+                  <button class="button is-ghost" type="button">桐</button>
                 </div>
                 <div class="buttons is-bar">
-                  <button class="button is-ghost">線と角丸</button>
-                  <button class="button is-ghost">自動調整</button>
+                  <button class="button is-ghost" type="button">線と角丸</button>
+                  <button class="button is-ghost" type="button">自動調整</button>
                 </div>
                 <div class="buttons is-bar">
-                  <button class="button is-ghost is-round">ラウンド</button>
-                  <button class="button is-ghost is-round">ラウンド</button>
+                  <button class="button is-ghost is-round" type="button">ラウンド</button>
+                  <button class="button is-ghost is-round" type="button">ラウンド</button>
                 </div>
               </div>
             </div>
