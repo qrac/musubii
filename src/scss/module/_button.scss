@@ -20,11 +20,6 @@
       }
     }
   }
-  > {
-    #{$buttons-class} {
-      display: inline-flex;
-    }
-  }
   &.is-middle {
     align-items: center;
   }
@@ -54,6 +49,7 @@
     flex-wrap: nowrap;
     > {
       #{$button-class} {
+        position: relative;
         border-radius: 0;
         overflow: hidden;
         &:not(.is-round):first-child {
@@ -79,6 +75,9 @@
               border-left: none;
             }
           }
+        }
+        &:focus {
+          z-index: 2;
         }
       }
     }
