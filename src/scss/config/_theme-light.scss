@@ -28,33 +28,69 @@ $theme-light-yinyang-light-7: rgba($white, 0.15) !default;
 $theme-light-yinyang-light-8: rgba($white, 0.12) !default;
 $theme-light-yinyang-light-9: rgba($white, 0.05) !default;
 
-$theme-light-primary: $cyan-500 !default;
-$theme-light-info: $blue-500 !default;
-$theme-light-success: $green-a700 !default;
-$theme-light-warning: $orange-600 !default;
-$theme-light-danger: $red-500 !default;
+//----------------------------------------------------
+// / Role
+//----------------------------------------------------
 
-$theme-light-primary-strong: $cyan-500 !default;
-$theme-light-info-strong: $blue-500 !default;
-$theme-light-success-strong: $green-a700 !default;
-$theme-light-warning-strong: $orange-600 !default;
-$theme-light-danger-strong: $red-500 !default;
+$theme-light-role-primary: $cyan-500 !default;
+$theme-light-role-info: $blue-500 !default;
+$theme-light-role-success: $green-a700 !default;
+$theme-light-role-warning: $orange-600 !default;
+$theme-light-role-danger: $red-500 !default;
 
-$theme-light-primary-darken: darken($cyan-500, 5%) !default;
-$theme-light-info-darken: darken($blue-500, 5%) !default;
-$theme-light-success-darken: darken($green-a700, 5%) !default;
-$theme-light-warning-darken: darken($orange-600, 5%) !default;
-$theme-light-danger-darken: darken($red-500, 5%) !default;
+$theme-light-role-primary-strong: $cyan-500 !default;
+$theme-light-role-info-strong: $blue-500 !default;
+$theme-light-role-success-strong: $green-a700 !default;
+$theme-light-role-warning-strong: $orange-600 !default;
+$theme-light-role-danger-strong: $red-500 !default;
 
-$theme-light-primary-lighten: lighten($cyan-500, 30%) !default;
-$theme-light-info-lighten: lighten($blue-500, 30%) !default;
-$theme-light-success-lighten: lighten($green-a700, 30%) !default;
-$theme-light-warning-lighten: lighten($orange-600, 30%) !default;
-$theme-light-danger-lighten: lighten($red-500, 30%) !default;
+$theme-light-role-primary-darken: darken($cyan-500, 5%) !default;
+$theme-light-role-info-darken: darken($blue-500, 5%) !default;
+$theme-light-role-success-darken: darken($green-a700, 5%) !default;
+$theme-light-role-warning-darken: darken($orange-600, 5%) !default;
+$theme-light-role-danger-darken: darken($red-500, 5%) !default;
+
+$theme-light-role-primary-lighten: lighten($cyan-500, 30%) !default;
+$theme-light-role-info-lighten: lighten($blue-500, 30%) !default;
+$theme-light-role-success-lighten: lighten($green-a700, 30%) !default;
+$theme-light-role-warning-lighten: lighten($orange-600, 30%) !default;
+$theme-light-role-danger-lighten: lighten($red-500, 30%) !default;
+
+//----------------------------------------------------
+// / Base - Global
+//----------------------------------------------------
 
 $theme-light-body-background-color: $light !default;
 $theme-light-body-text-color: $dark-2 !default;
 $theme-light-body-font-family: $font-sans !default;
+
+//----------------------------------------------------
+// / Layout - Section
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Space
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Grid
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Heading
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Text
+//----------------------------------------------------
 
 $theme-light-blockquote-background-color: $grey-100 !default;
 $theme-light-blockquote-border-left-color: $dark-9 !default;
@@ -64,6 +100,10 @@ $theme-light-code-font-family: $font-mono !default;
 $theme-light-pre-background-color: $grey-100 !default;
 $theme-light-pre-text-color: $indigo-500 !default;
 $theme-light-pre-font-family: $font-mono !default;
+
+//----------------------------------------------------
+// / Module - Button
+//----------------------------------------------------
 
 $theme-light-button-paint-text-color: $light !default;
 $theme-light-button-focus-shadow-color: rgba($blue-a400, 0.5) !default;
@@ -85,6 +125,16 @@ $theme-light-button-ghost-disabled-background-color: $light-8 !default;
 $theme-light-button-ghost-disabled-border-color: $light-4 !default;
 $theme-light-button-ghost-disabled-text-color: $light-4 !default;
 
+//----------------------------------------------------
+// / Module - List
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Table
+//----------------------------------------------------
+
 $theme-light-table-background-color: $light !default;
 $theme-light-table-border-color: $blue-grey-100 !default;
 $theme-light-table-stripe-background-color: $grey-100 !default;
@@ -92,6 +142,10 @@ $theme-light-table-paint-background-color: $cyan-500 !default;
 $theme-light-table-paint-text-color: $light !default;
 $theme-light-table-spot-background-color: $yellow-200 !default;
 $theme-light-table-danger-background-color: $red-100 !default;
+
+//----------------------------------------------------
+// / Module - Form
+//----------------------------------------------------
 
 $theme-light-input-background-color: $light !default;
 $theme-light-input-border-color: $dark-6 !default;
@@ -114,6 +168,16 @@ $theme-light-checkbox-checked-background-color: $cyan-500 !default;
 $theme-light-checkbox-checked-border-color: $cyan-500 !default;
 $theme-light-select-angle-border-color: $dark-5 !default;
 
+//----------------------------------------------------
+// / Module - Icon
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Alert
+//----------------------------------------------------
+
 $theme-light-alert-default-background-color: $grey-100 !default;
 $theme-light-alert-default-border-color: $grey-300 !default;
 $theme-light-alert-primary-background-color: $cyan-50 !default;
@@ -127,5 +191,39 @@ $theme-light-alert-warning-border-color: $orange-200 !default;
 $theme-light-alert-danger-background-color: $red-50 !default;
 $theme-light-alert-danger-border-color: $red-200 !default;
 
+//----------------------------------------------------
+// Module - WYSIWYG
+//----------------------------------------------------
+
 $theme-light-wysiwyg-link-text-color: $cyan-500 !default;
 $theme-light-wysiwyg-hr-border-color: $dark-7 !default;
+
+//----------------------------------------------------
+// / Utility - Size
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Flex
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Deco
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Display
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Clearfix
+//----------------------------------------------------
+
+// none

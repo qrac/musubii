@@ -31,30 +31,38 @@
   }
 }
 
+//----------------------------------------------------
+// / Role
+//----------------------------------------------------
+
 :root {
   @include data-theme-dark {
-    --root-primary: #{$theme-dark-primary};
-    --root-info: #{$theme-dark-info};
-    --root-success: #{$theme-dark-success};
-    --root-warning: #{$theme-dark-warning};
-    --root-danger: #{$theme-dark-danger};
-    --root-primary-strong: #{$theme-dark-primary-strong};
-    --root-info-strong: #{$theme-dark-info-strong};
-    --root-success-strong: #{$theme-dark-success-strong};
-    --root-warning-strong: #{$theme-dark-warning-strong};
-    --root-danger-strong: #{$theme-dark-danger-strong};
-    --root-primary-darken: #{$theme-dark-primary-darken};
-    --root-info-darken: #{$theme-dark-info-darken};
-    --root-success-darken: #{$theme-dark-success-darken};
-    --root-warning-darken: #{$theme-dark-warning-darken};
-    --root-danger-darken: #{$theme-dark-danger-darken};
-    //--root-primary-lighten: #{$theme-dark-primary-lighten};
-    //--root-info-lighten: #{$theme-dark-info-lighten};
-    //--root-success-lighten: #{$theme-dark-success-lighten};
-    //--root-warning-lighten: #{$theme-dark-warning-lighten};
-    //--root-danger-lighten: #{$theme-dark-danger-lighten};
+    --root-role-primary: #{$theme-dark-role-primary};
+    --root-role-info: #{$theme-dark-role-info};
+    --root-role-success: #{$theme-dark-role-success};
+    --root-role-warning: #{$theme-dark-role-warning};
+    --root-role-danger: #{$theme-dark-role-danger};
+    --root-role-primary-strong: #{$theme-dark-role-primary-strong};
+    --root-role-info-strong: #{$theme-dark-role-info-strong};
+    --root-role-success-strong: #{$theme-dark-role-success-strong};
+    --root-role-warning-strong: #{$theme-dark-role-warning-strong};
+    --root-role-danger-strong: #{$theme-dark-role-danger-strong};
+    --root-role-primary-darken: #{$theme-dark-role-primary-darken};
+    --root-role-info-darken: #{$theme-dark-role-info-darken};
+    --root-role-success-darken: #{$theme-dark-role-success-darken};
+    --root-role-warning-darken: #{$theme-dark-role-warning-darken};
+    --root-role-danger-darken: #{$theme-dark-role-danger-darken};
+    //--root-role-primary-lighten: #{$theme-dark-role-primary-lighten};
+    //--root-role-info-lighten: #{$theme-dark-role-info-lighten};
+    //--root-role-success-lighten: #{$theme-dark-role-success-lighten};
+    //--root-role-warning-lighten: #{$theme-dark-role-warning-lighten};
+    //--root-role-danger-lighten: #{$theme-dark-role-danger-lighten};
   }
 }
+
+//----------------------------------------------------
+// / Base - Global
+//----------------------------------------------------
 
 :root {
   @include data-theme-dark {
@@ -63,6 +71,34 @@
     //--root-body-font-family: #{$theme-dark-body-font-family};
   }
 }
+
+//----------------------------------------------------
+// / Layout - Section
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Space
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Grid
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Heading
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Text
+//----------------------------------------------------
 
 :root {
   @include data-theme-dark {
@@ -76,6 +112,10 @@
     //--root-pre-font-family: #{$theme-dark-pre-font-family};
   }
 }
+
+//----------------------------------------------------
+// / Module - Button
+//----------------------------------------------------
 
 :root {
   @include data-theme-dark {
@@ -101,6 +141,16 @@
   }
 }
 
+//----------------------------------------------------
+// / Module - List
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Table
+//----------------------------------------------------
+
 :root {
   @include data-theme-dark {
     --root-table-background-color: #{$theme-dark-table-background-color};
@@ -112,6 +162,10 @@
     --root-table-danger-background-color: #{$theme-dark-table-danger-background-color};
   }
 }
+
+//----------------------------------------------------
+// / Module - Form
+//----------------------------------------------------
 
 :root {
   @include data-theme-dark {
@@ -138,6 +192,16 @@
   }
 }
 
+//----------------------------------------------------
+// / Module - Icon
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Alert
+//----------------------------------------------------
+
 :root {
   @include data-theme-dark {
     --root-alert-default-background-color: #{$theme-dark-alert-default-background-color};
@@ -155,9 +219,43 @@
   }
 }
 
+//----------------------------------------------------
+// Module - WYSIWYG
+//----------------------------------------------------
+
 :root {
   @include data-theme-dark {
     --root-wysiwyg-link-text-color: #{$theme-dark-wysiwyg-link-text-color};
     --root-wysiwyg-hr-border-color: #{$theme-dark-wysiwyg-hr-border-color};
   }
 }
+
+//----------------------------------------------------
+// / Utility - Size
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Flex
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Deco
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Display
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Clearfix
+//----------------------------------------------------
+
+// none

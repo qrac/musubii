@@ -28,33 +28,69 @@ $common-yinyang-light-7: $theme-light-yinyang-light-7 !default;
 $common-yinyang-light-8: $theme-light-yinyang-light-8 !default;
 $common-yinyang-light-9: $theme-light-yinyang-light-9 !default;
 
-$common-primary: $theme-light-primary !default;
-$common-info: $theme-light-info !default;
-$common-success: $theme-light-success !default;
-$common-warning: $theme-light-warning !default;
-$common-danger: $theme-light-danger !default;
+//----------------------------------------------------
+// / Role
+//----------------------------------------------------
 
-$common-primary-strong: $theme-light-primary-strong !default;
-$common-info-strong: $theme-light-info-strong !default;
-$common-success-strong: $theme-light-success-strong !default;
-$common-warning-strong: $theme-light-warning-strong !default;
-$common-danger-strong: $theme-light-danger-strong !default;
+$common-role-primary: $theme-light-role-primary !default;
+$common-role-info: $theme-light-role-info !default;
+$common-role-success: $theme-light-role-success !default;
+$common-role-warning: $theme-light-role-warning !default;
+$common-role-danger: $theme-light-role-danger !default;
 
-$common-primary-darken: $theme-light-primary-darken !default;
-$common-info-darken: $theme-light-info-darken !default;
-$common-success-darken: $theme-light-success-darken !default;
-$common-warning-darken: $theme-light-warning-darken !default;
-$common-danger-darken: $theme-light-danger-darken !default;
+$common-role-primary-strong: $theme-light-role-primary-strong !default;
+$common-role-info-strong: $theme-light-role-info-strong !default;
+$common-role-success-strong: $theme-light-role-success-strong !default;
+$common-role-warning-strong: $theme-light-role-warning-strong !default;
+$common-role-danger-strong: $theme-light-role-danger-strong !default;
 
-$common-primary-lighten: $theme-light-primary-lighten !default;
-$common-info-lighten: $theme-light-info-lighten !default;
-$common-success-lighten: $theme-light-success-lighten !default;
-$common-warning-lighten: $theme-light-warning-lighten !default;
-$common-danger-lighten: $theme-light-danger-lighten !default;
+$common-role-primary-darken: $theme-light-role-primary-darken !default;
+$common-role-info-darken: $theme-light-role-info-darken !default;
+$common-role-success-darken: $theme-light-role-success-darken !default;
+$common-role-warning-darken: $theme-light-role-warning-darken !default;
+$common-role-danger-darken: $theme-light-role-danger-darken !default;
+
+$common-role-primary-lighten: $theme-light-role-primary-lighten !default;
+$common-role-info-lighten: $theme-light-role-info-lighten !default;
+$common-role-success-lighten: $theme-light-role-success-lighten !default;
+$common-role-warning-lighten: $theme-light-role-warning-lighten !default;
+$common-role-danger-lighten: $theme-light-role-danger-lighten !default;
+
+//----------------------------------------------------
+// / Base - Global
+//----------------------------------------------------
 
 $common-body-background-color: $theme-light-body-background-color !default;
 $common-body-text-color: $theme-light-body-text-color !default;
 $common-body-font-family: $theme-light-body-font-family !default;
+
+//----------------------------------------------------
+// / Layout - Section
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Space
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Grid
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Heading
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Text
+//----------------------------------------------------
 
 $common-blockquote-background-color: $theme-light-blockquote-background-color !default;
 $common-blockquote-border-left-color: $theme-light-blockquote-border-left-color !default;
@@ -64,6 +100,10 @@ $common-code-font-family: $theme-light-code-font-family !default;
 $common-pre-background-color: $theme-light-pre-background-color !default;
 $common-pre-text-color: $theme-light-pre-text-color !default;
 $common-pre-font-family: $theme-light-pre-font-family !default;
+
+//----------------------------------------------------
+// / Module - Button
+//----------------------------------------------------
 
 $common-button-paint-text-color: $theme-light-button-paint-text-color !default;
 $common-button-focus-shadow-color: $theme-light-button-focus-shadow-color !default;
@@ -85,6 +125,16 @@ $common-button-ghost-disabled-background-color: $theme-light-button-ghost-disabl
 $common-button-ghost-disabled-border-color: $theme-light-button-ghost-disabled-border-color !default;
 $common-button-ghost-disabled-text-color: $theme-light-button-ghost-disabled-text-color !default;
 
+//----------------------------------------------------
+// / Module - List
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Table
+//----------------------------------------------------
+
 $common-table-background-color: $theme-light-table-background-color !default;
 $common-table-border-color: $theme-light-table-border-color !default;
 $common-table-stripe-background-color: $theme-light-table-stripe-background-color !default;
@@ -92,6 +142,10 @@ $common-table-paint-background-color: $theme-light-table-paint-background-color 
 $common-table-paint-text-color: $theme-light-table-paint-text-color !default;
 $common-table-spot-background-color: $theme-light-table-spot-background-color !default;
 $common-table-danger-background-color: $theme-light-table-danger-background-color !default;
+
+//----------------------------------------------------
+// / Module - Form
+//----------------------------------------------------
 
 $common-input-background-color: $theme-light-input-background-color !default;
 $common-input-border-color: $theme-light-input-border-color !default;
@@ -114,6 +168,16 @@ $common-checkbox-checked-background-color: $theme-light-checkbox-checked-backgro
 $common-checkbox-checked-border-color: $theme-light-checkbox-checked-border-color !default;
 $common-select-angle-border-color: $theme-light-select-angle-border-color !default;
 
+//----------------------------------------------------
+// / Module - Icon
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Alert
+//----------------------------------------------------
+
 $common-alert-default-background-color: $theme-light-alert-default-background-color !default;
 $common-alert-default-border-color: $theme-light-alert-default-border-color !default;
 $common-alert-primary-background-color: $theme-light-alert-primary-background-color !default;
@@ -127,5 +191,39 @@ $common-alert-warning-border-color: $theme-light-alert-warning-border-color !def
 $common-alert-danger-background-color: $theme-light-alert-danger-background-color !default;
 $common-alert-danger-border-color: $theme-light-alert-danger-border-color !default;
 
+//----------------------------------------------------
+// Module - WYSIWYG
+//----------------------------------------------------
+
 $common-wysiwyg-link-text-color: $theme-light-wysiwyg-link-text-color !default;
 $common-wysiwyg-hr-border-color: $theme-light-wysiwyg-hr-border-color !default;
+
+//----------------------------------------------------
+// / Utility - Size
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Flex
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Deco
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Display
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Clearfix
+//----------------------------------------------------
+
+// none

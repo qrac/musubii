@@ -133,16 +133,16 @@ $button-floating-focus-shadow: 0 0 0 0.2em $common-button-focus-shadow-color,
 // .button.is-plain
 $button-plain-default-background-color: $common-button-plain-default-background-color !default;
 $button-plain-default-hover-background-color: $common-button-plain-default-hover-background-color !default;
-$button-plain-primary-background-color: $common-primary !default;
-$button-plain-primary-hover-background-color: $common-primary-darken !default;
-$button-plain-info-background-color: $common-info !default;
-$button-plain-info-hover-background-color: $common-info-darken !default;
-$button-plain-success-background-color: $common-success !default;
-$button-plain-success-hover-background-color: $common-success-darken !default;
-$button-plain-warning-background-color: $common-warning !default;
-$button-plain-warning-hover-background-color: $common-warning-darken !default;
-$button-plain-danger-background-color: $common-danger !default;
-$button-plain-danger-hover-background-color: $common-danger-darken !default;
+$button-plain-primary-background-color: $common-role-primary !default;
+$button-plain-primary-hover-background-color: $common-role-primary-darken !default;
+$button-plain-info-background-color: $common-role-info !default;
+$button-plain-info-hover-background-color: $common-role-info-darken !default;
+$button-plain-success-background-color: $common-role-success !default;
+$button-plain-success-hover-background-color: $common-role-success-darken !default;
+$button-plain-warning-background-color: $common-role-warning !default;
+$button-plain-warning-hover-background-color: $common-role-warning-darken !default;
+$button-plain-danger-background-color: $common-role-danger !default;
+$button-plain-danger-hover-background-color: $common-role-danger-darken !default;
 
 // pattern color - .button.is-plain
 $pattern-button-plain: (
@@ -170,11 +170,11 @@ $pattern-button-plain: (
 
 // .button.is-melt
 $button-melt-default-hover-background-color: $common-button-melt-default-hover-background-color !default;
-$button-melt-primary-text-color: $common-primary-strong !default;
-$button-melt-info-text-color: $common-info-strong !default;
-$button-melt-success-text-color: $common-success-strong !default;
-$button-melt-warning-text-color: $common-warning-strong !default;
-$button-melt-danger-text-color: $common-danger-strong !default;
+$button-melt-primary-text-color: $common-role-primary-strong !default;
+$button-melt-info-text-color: $common-role-info-strong !default;
+$button-melt-success-text-color: $common-role-success-strong !default;
+$button-melt-warning-text-color: $common-role-warning-strong !default;
+$button-melt-danger-text-color: $common-role-danger-strong !default;
 
 // pattern color - .button.is-melt
 $pattern-button-melt: (
@@ -199,21 +199,21 @@ $pattern-button-melt: (
 $button-outline-default-background-color: $common-button-outline-default-background-color !default;
 $button-outline-default-border-color: $common-button-outline-default-border-color !default;
 $button-outline-default-hover-background-color: $common-button-outline-default-hover-background-color !default;
-$button-outline-primary-border-color: $common-primary !default;
-$button-outline-primary-text-color: $common-primary-strong !default;
-$button-outline-primary-hover-background-color: $common-primary !default;
-$button-outline-info-border-color: $common-info !default;
-$button-outline-info-text-color: $common-info-strong !default;
-$button-outline-info-hover-background-color: $common-info !default;
-$button-outline-success-border-color: $common-success !default;
-$button-outline-success-text-color: $common-success-strong !default;
-$button-outline-success-hover-background-color: $common-success !default;
-$button-outline-warning-border-color: $common-warning !default;
-$button-outline-warning-text-color: $common-warning-strong !default;
-$button-outline-warning-hover-background-color: $common-warning !default;
-$button-outline-danger-border-color: $common-danger !default;
-$button-outline-danger-text-color: $common-danger-strong !default;
-$button-outline-danger-hover-background-color: $common-danger !default;
+$button-outline-primary-border-color: $common-role-primary !default;
+$button-outline-primary-text-color: $common-role-primary-strong !default;
+$button-outline-primary-hover-background-color: $common-role-primary !default;
+$button-outline-info-border-color: $common-role-info !default;
+$button-outline-info-text-color: $common-role-info-strong !default;
+$button-outline-info-hover-background-color: $common-role-info !default;
+$button-outline-success-border-color: $common-role-success !default;
+$button-outline-success-text-color: $common-role-success-strong !default;
+$button-outline-success-hover-background-color: $common-role-success !default;
+$button-outline-warning-border-color: $common-role-warning !default;
+$button-outline-warning-text-color: $common-role-warning-strong !default;
+$button-outline-warning-hover-background-color: $common-role-warning !default;
+$button-outline-danger-border-color: $common-role-danger !default;
+$button-outline-danger-text-color: $common-role-danger-strong !default;
+$button-outline-danger-hover-background-color: $common-role-danger !default;
 
 // pattern color - .button.is-outline
 $pattern-button-outline: (
@@ -249,21 +249,21 @@ $button-ghost-default-border-color: $common-button-ghost-default-border-color !d
 $button-ghost-default-text-color: $common-button-ghost-default-text-color !default;
 $button-ghost-default-hover-background-color: $common-button-ghost-default-hover-background-color !default;
 $button-ghost-default-hover-text-color: $common-button-ghost-default-hover-text-color !default;
-$button-ghost-primary-border-color: $common-primary-lighten !default;
-$button-ghost-primary-text-color: $common-primary-lighten !default;
-$button-ghost-primary-hover-background-color: $common-primary !default;
-$button-ghost-info-border-color: $common-info-lighten !default;
-$button-ghost-info-text-color: $common-info-lighten !default;
-$button-ghost-info-hover-background-color: $common-info !default;
-$button-ghost-success-border-color: $common-success-lighten !default;
-$button-ghost-success-text-color: $common-success-lighten !default;
-$button-ghost-success-hover-background-color: $common-success !default;
-$button-ghost-warning-border-color: $common-warning-lighten !default;
-$button-ghost-warning-text-color: $common-warning-lighten !default;
-$button-ghost-warning-hover-background-color: $common-warning !default;
-$button-ghost-danger-border-color: $common-danger-lighten !default;
-$button-ghost-danger-text-color: $common-danger-lighten !default;
-$button-ghost-danger-hover-background-color: $common-danger !default;
+$button-ghost-primary-border-color: $common-role-primary-lighten !default;
+$button-ghost-primary-text-color: $common-role-primary-lighten !default;
+$button-ghost-primary-hover-background-color: $common-role-primary !default;
+$button-ghost-info-border-color: $common-role-info-lighten !default;
+$button-ghost-info-text-color: $common-role-info-lighten !default;
+$button-ghost-info-hover-background-color: $common-role-info !default;
+$button-ghost-success-border-color: $common-role-success-lighten !default;
+$button-ghost-success-text-color: $common-role-success-lighten !default;
+$button-ghost-success-hover-background-color: $common-role-success !default;
+$button-ghost-warning-border-color: $common-role-warning-lighten !default;
+$button-ghost-warning-text-color: $common-role-warning-lighten !default;
+$button-ghost-warning-hover-background-color: $common-role-warning !default;
+$button-ghost-danger-border-color: $common-role-danger-lighten !default;
+$button-ghost-danger-text-color: $common-role-danger-lighten !default;
+$button-ghost-danger-hover-background-color: $common-role-danger !default;
 
 // pattern color - .button.is-ghost
 $pattern-button-ghost: (
@@ -556,11 +556,11 @@ $pattern-text-light: (
 
 // pattern text - color
 $pattern-text-color: (
-  primary: $common-primary-strong,
-  info: $common-info-strong,
-  success: $common-success-strong,
-  warning: $common-warning-strong,
-  danger: $common-danger-strong
+  primary: $common-role-primary-strong,
+  info: $common-role-info-strong,
+  success: $common-role-success-strong,
+  warning: $common-role-warning-strong,
+  danger: $common-role-danger-strong
 ) !default;
 
 //----------------------------------------------------

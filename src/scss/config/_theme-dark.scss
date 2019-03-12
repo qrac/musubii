@@ -28,33 +28,69 @@ $theme-dark-yinyang-light-7: rgba($white, 0.15) !default;
 $theme-dark-yinyang-light-8: rgba($white, 0.12) !default;
 $theme-dark-yinyang-light-9: rgba($white, 0.05) !default;
 
-$theme-dark-primary: $cyan-700 !default;
-$theme-dark-info: $blue-700 !default;
-$theme-dark-success: $green-700 !default;
-$theme-dark-warning: $orange-900 !default;
-$theme-dark-danger: $red-700 !default;
+//----------------------------------------------------
+// / Role
+//----------------------------------------------------
 
-$theme-dark-primary-strong: $cyan-500 !default;
-$theme-dark-info-strong: $blue-500 !default;
-$theme-dark-success-strong: $green-500 !default;
-$theme-dark-warning-strong: $orange-600 !default;
-$theme-dark-danger-strong: $red-500 !default;
+$theme-dark-role-primary: $cyan-700 !default;
+$theme-dark-role-info: $blue-700 !default;
+$theme-dark-role-success: $green-700 !default;
+$theme-dark-role-warning: $orange-900 !default;
+$theme-dark-role-danger: $red-700 !default;
 
-$theme-dark-primary-darken: darken($cyan-700, 5%) !default;
-$theme-dark-info-darken: darken($blue-700, 5%) !default;
-$theme-dark-success-darken: darken($green-700, 5%) !default;
-$theme-dark-warning-darken: darken($orange-900, 5%) !default;
-$theme-dark-danger-darken: darken($red-700, 5%) !default;
+$theme-dark-role-primary-strong: $cyan-500 !default;
+$theme-dark-role-info-strong: $blue-500 !default;
+$theme-dark-role-success-strong: $green-500 !default;
+$theme-dark-role-warning-strong: $orange-600 !default;
+$theme-dark-role-danger-strong: $red-500 !default;
 
-//$theme-dark-primary-lighten: lighten($cyan-500, 30%) !default;
-//$theme-dark-info-lighten: lighten($blue-500, 30%) !default;
-//$theme-dark-success-lighten: lighten($green-a700, 30%) !default;
-//$theme-dark-warning-lighten: lighten($orange-600, 30%) !default;
-//$theme-dark-danger-lighten: lighten($red-500, 30%) !default;
+$theme-dark-role-primary-darken: darken($cyan-700, 5%) !default;
+$theme-dark-role-info-darken: darken($blue-700, 5%) !default;
+$theme-dark-role-success-darken: darken($green-700, 5%) !default;
+$theme-dark-role-warning-darken: darken($orange-900, 5%) !default;
+$theme-dark-role-danger-darken: darken($red-700, 5%) !default;
+
+//$theme-dark-role-primary-lighten: lighten($cyan-500, 30%) !default;
+//$theme-dark-role-info-lighten: lighten($blue-500, 30%) !default;
+//$theme-dark-role-success-lighten: lighten($green-a700, 30%) !default;
+//$theme-dark-role-warning-lighten: lighten($orange-600, 30%) !default;
+//$theme-dark-role-danger-lighten: lighten($red-500, 30%) !default;
+
+//----------------------------------------------------
+// / Base - Global
+//----------------------------------------------------
 
 $theme-dark-body-background-color: $grey-900 !default;
 $theme-dark-body-text-color: $light-1 !default;
 //$theme-dark-body-font-family: $font-sans !default;
+
+//----------------------------------------------------
+// / Layout - Section
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Space
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Grid
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Heading
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Text
+//----------------------------------------------------
 
 $theme-dark-blockquote-background-color: darken($grey-800, 8%) !default;
 $theme-dark-blockquote-border-left-color: $light-9 !default;
@@ -64,6 +100,10 @@ $theme-dark-code-text-color: $blue-300 !default;
 $theme-dark-pre-background-color: darken($grey-800, 8%) !default;
 $theme-dark-pre-text-color: $blue-300 !default;
 //$theme-dark-pre-font-family: $font-mono !default;
+
+//----------------------------------------------------
+// / Module - Button
+//----------------------------------------------------
 
 $theme-dark-button-paint-text-color: $light-1 !default;
 //$theme-dark-button-focus-shadow-color: rgba($blue-a400, 0.5) !default;
@@ -88,6 +128,16 @@ $theme-dark-button-disabled-text-color: $light-5 !default;
 //$theme-dark-button-ghost-disabled-border-color: $light-4 !default;
 //$theme-dark-button-ghost-disabled-text-color: $light-4 !default;
 
+//----------------------------------------------------
+// / Module - List
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Table
+//----------------------------------------------------
+
 $theme-dark-table-background-color: $grey-900 !default;
 $theme-dark-table-border-color: $grey-700 !default;
 $theme-dark-table-stripe-background-color: $light-9 !default;
@@ -95,6 +145,10 @@ $theme-dark-table-paint-background-color: rgba($cyan-700, 0.4) !default;
 $theme-dark-table-paint-text-color: $light-1 !default;
 $theme-dark-table-spot-background-color: rgba($yellow-700, 0.4) !default;
 $theme-dark-table-danger-background-color: rgba($red-700, 0.4) !default;
+
+//----------------------------------------------------
+// / Module - Form
+//----------------------------------------------------
 
 $theme-dark-input-background-color: darken($grey-800, 8%) !default;
 $theme-dark-input-border-color: $grey-700 !default;
@@ -117,6 +171,16 @@ $theme-dark-checkbox-checked-background-color: $cyan-700 !default;
 $theme-dark-checkbox-checked-border-color: $cyan-700 !default;
 $theme-dark-select-angle-border-color: $light-5 !default;
 
+//----------------------------------------------------
+// / Module - Icon
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Alert
+//----------------------------------------------------
+
 $theme-dark-alert-default-background-color: darken($grey-800, 8%) !default;
 $theme-dark-alert-default-border-color: $grey-700 !default;
 $theme-dark-alert-primary-background-color: rgba($cyan-700, 0.075) !default;
@@ -130,31 +194,39 @@ $theme-dark-alert-warning-border-color: $orange-800 !default;
 $theme-dark-alert-danger-background-color: rgba($red-700, 0.075) !default;
 $theme-dark-alert-danger-border-color: $red-700 !default;
 
+//----------------------------------------------------
+// Module - WYSIWYG
+//----------------------------------------------------
+
 $theme-dark-wysiwyg-link-text-color: $cyan-500 !default;
 $theme-dark-wysiwyg-hr-border-color: $grey-700 !default;
 
-/*
-:root {
-  --theme-primary: #277c86;
-  --theme-info: #246da4;
-  --theme-success: #238223;
-  --theme-warning: #be750f;
-  --theme-danger: #d43535;
-}
-:root {
-  --theme-body-background-color: #1A1A1A;
-  --theme-body-text-color: #D6D6D7;
-}
-:root {
-  --theme-blockquote-background-color: #2A2A2B;
-  --theme-code-background-color: #2A2A2B;
-  --theme-code-text-color: #8BAADA;
-  --theme-pre-background-color: #2A2A2B;
-  --theme-pre-text-color: #8BAADA;
-}
-:root {
-  --theme-button-plain-default-background-color: #3E3E3E;
-  --theme-button-outline-default-background-color: #3E3E3E;
-  --theme-button-outline-default-border-color: #666769;
-}
-*/
+//----------------------------------------------------
+// / Utility - Size
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Flex
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Deco
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Display
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Clearfix
+//----------------------------------------------------
+
+// none

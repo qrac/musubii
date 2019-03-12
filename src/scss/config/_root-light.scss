@@ -29,34 +29,70 @@
   --root-yinyang-light-9: #{$theme-light-yinyang-light-9};
 }
 
+//----------------------------------------------------
+// / Role
+//----------------------------------------------------
+
 :root {
-  --root-primary: #{$theme-light-primary};
-  --root-info: #{$theme-light-info};
-  --root-success: #{$theme-light-success};
-  --root-warning: #{$theme-light-warning};
-  --root-danger: #{$theme-light-danger};
-  --root-primary-strong: #{$theme-light-primary-strong};
-  --root-info-strong: #{$theme-light-info-strong};
-  --root-success-strong: #{$theme-light-success-strong};
-  --root-warning-strong: #{$theme-light-warning-strong};
-  --root-danger-strong: #{$theme-light-danger-strong};
-  --root-primary-darken: #{$theme-light-primary-darken};
-  --root-info-darken: #{$theme-light-info-darken};
-  --root-success-darken: #{$theme-light-success-darken};
-  --root-warning-darken: #{$theme-light-warning-darken};
-  --root-danger-darken: #{$theme-light-danger-darken};
-  --root-primary-lighten: #{$theme-light-primary-lighten};
-  --root-info-lighten: #{$theme-light-info-lighten};
-  --root-success-lighten: #{$theme-light-success-lighten};
-  --root-warning-lighten: #{$theme-light-warning-lighten};
-  --root-danger-lighten: #{$theme-light-danger-lighten};
+  --root-role-primary: #{$theme-light-role-primary};
+  --root-role-info: #{$theme-light-role-info};
+  --root-role-success: #{$theme-light-role-success};
+  --root-role-warning: #{$theme-light-role-warning};
+  --root-role-danger: #{$theme-light-role-danger};
+  --root-role-primary-strong: #{$theme-light-role-primary-strong};
+  --root-role-info-strong: #{$theme-light-role-info-strong};
+  --root-role-success-strong: #{$theme-light-role-success-strong};
+  --root-role-warning-strong: #{$theme-light-role-warning-strong};
+  --root-role-danger-strong: #{$theme-light-role-danger-strong};
+  --root-role-primary-darken: #{$theme-light-role-primary-darken};
+  --root-role-info-darken: #{$theme-light-role-info-darken};
+  --root-role-success-darken: #{$theme-light-role-success-darken};
+  --root-role-warning-darken: #{$theme-light-role-warning-darken};
+  --root-role-danger-darken: #{$theme-light-role-danger-darken};
+  --root-role-primary-lighten: #{$theme-light-role-primary-lighten};
+  --root-role-info-lighten: #{$theme-light-role-info-lighten};
+  --root-role-success-lighten: #{$theme-light-role-success-lighten};
+  --root-role-warning-lighten: #{$theme-light-role-warning-lighten};
+  --root-role-danger-lighten: #{$theme-light-role-danger-lighten};
 }
+
+//----------------------------------------------------
+// / Base - Global
+//----------------------------------------------------
 
 :root {
   --root-body-background-color: #{$theme-light-body-background-color};
   --root-body-text-color: #{$theme-light-body-text-color};
   --root-body-font-family: #{$theme-light-body-font-family};
 }
+
+//----------------------------------------------------
+// / Layout - Section
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Space
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Grid
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Heading
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Text
+//----------------------------------------------------
 
 :root {
   --root-blockquote-background-color: #{$theme-light-blockquote-background-color};
@@ -68,6 +104,10 @@
   --root-pre-text-color: #{$theme-light-pre-text-color};
   --root-pre-font-family: #{$theme-light-pre-font-family};
 }
+
+//----------------------------------------------------
+// / Module - Button
+//----------------------------------------------------
 
 :root {
   --root-button-paint-text-color: #{$theme-light-button-paint-text-color};
@@ -91,6 +131,16 @@
   --root-button-ghost-disabled-text-color: #{$theme-light-button-ghost-disabled-text-color};
 }
 
+//----------------------------------------------------
+// / Module - List
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Table
+//----------------------------------------------------
+
 :root {
   --root-table-background-color: #{$theme-light-table-background-color};
   --root-table-border-color: #{$theme-light-table-border-color};
@@ -100,6 +150,10 @@
   --root-table-spot-background-color: #{$theme-light-table-spot-background-color};
   --root-table-danger-background-color: #{$theme-light-table-danger-background-color};
 }
+
+//----------------------------------------------------
+// / Module - Form
+//----------------------------------------------------
 
 :root {
   --root-input-background-color: #{$theme-light-input-background-color};
@@ -124,6 +178,16 @@
   --root-select-angle-border-color: #{$theme-light-select-angle-border-color};
 }
 
+//----------------------------------------------------
+// / Module - Icon
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Module - Alert
+//----------------------------------------------------
+
 :root {
   --root-alert-default-background-color: #{$theme-light-alert-default-background-color};
   --root-alert-default-border-color: #{$theme-light-alert-default-border-color};
@@ -139,7 +203,41 @@
   --root-alert-danger-border-color: #{$theme-light-alert-danger-border-color};
 }
 
+//----------------------------------------------------
+// Module - WYSIWYG
+//----------------------------------------------------
+
 :root {
   --root-wysiwyg-link-text-color: #{$theme-light-wysiwyg-link-text-color};
   --root-wysiwyg-hr-border-color: #{$theme-light-wysiwyg-hr-border-color};
 }
+
+//----------------------------------------------------
+// / Utility - Size
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Flex
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Deco
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Display
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Clearfix
+//----------------------------------------------------
+
+// none
