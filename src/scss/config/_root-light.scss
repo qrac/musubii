@@ -80,9 +80,12 @@
   --theme-input-readonly-background-color: #{$theme-light-input-readonly-background-color};
   --theme-input-readonly-text-color: #{$theme-light-input-readonly-text-color};
   --theme-input-placeholder-color: #{$theme-light-input-placeholder-color};
-  --theme-radio-checked-background-color: #{$theme-light-radio-checked-background-color};
+  --theme-radio-background-color: #{$theme-light-radio-background-color};
+  --theme-radio-before-checked-background-color: #{$theme-light-radio-before-checked-background-color};
   --theme-radio-checked-border-color: #{$theme-light-radio-checked-border-color};
+  --theme-checkbox-background-color: #{$theme-light-checkbox-background-color};
   --theme-checkbox-focus-border-color: #{$theme-light-checkbox-focus-border-color};
+  --theme-checkbox-before-border-color: #{$theme-light-checkbox-before-border-color};
   --theme-checkbox-checked-background-color: #{$theme-light-checkbox-checked-background-color};
   --theme-checkbox-checked-border-color: #{$theme-light-checkbox-checked-border-color};
   --theme-select-angle-border-color: #{$theme-light-select-angle-border-color};

@@ -388,8 +388,9 @@ $radio-width: 1em !default;
 $radio-border-width: 2px !default;
 $radio-gap-default: 0.5em !default;
 $radio-gap-after: 1em !default;
+$radio-background-color: $common-radio-background-color !default;
 $radio-focus-shadow: 0 0 0 0.2em $common-input-focus-shadow-color !default;
-$radio-checked-background-color: $common-radio-checked-background-color !default;
+$radio-before-checked-background-color: $common-radio-before-checked-background-color !default;
 $radio-checked-border-color: $common-radio-checked-border-color !default;
 
 // .input[type="checkbox"]
@@ -398,8 +399,10 @@ $checkbox-border-width: 2px !default;
 $checkbox-border-radius: 2px !default;
 $checkbox-gap-default: 0.5em !default;
 $checkbox-gap-after: 1em !default;
+$checkbox-background-color: $common-checkbox-background-color !default;
 $checkbox-focus-border-color: $common-checkbox-focus-border-color !default;
 $checkbox-focus-shadow: 0 0 0 0.2em $common-input-focus-shadow-color !default;
+$checkbox-before-border-color: $common-checkbox-before-border-color !default;
 $checkbox-checked-background-color: $common-checkbox-checked-background-color !default;
 $checkbox-checked-border-color: $common-checkbox-checked-border-color !default;
 

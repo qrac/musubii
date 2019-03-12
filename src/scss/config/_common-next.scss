@@ -133,14 +133,19 @@ $common-input-readonly-text-color: var(
   --theme-input-readonly-text-color
 ) !default;
 $common-input-placeholder-color: var(--theme-input-placeholder-color) !default;
-$common-radio-checked-background-color: var(
-  --theme-radio-checked-background-color
+$common-radio-background-color: var(--theme-radio-background-color) !default;
+$common-radio-before-checked-background-color: var(
+  --theme-radio-before-checked-background-color
 ) !default;
 $common-radio-checked-border-color: var(
   --theme-radio-checked-border-color
 ) !default;
+$common-checkbox-background-color: var(--theme-radio-background-color) !default;
 $common-checkbox-focus-border-color: var(
   --theme-checkbox-focus-border-color
+) !default;
+$common-checkbox-before-border-color: var(
+  --theme-checkbox-before-border-color
 ) !default;
 $common-checkbox-checked-background-color: var(
   --theme-checkbox-checked-background-color
