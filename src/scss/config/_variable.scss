@@ -145,7 +145,7 @@ $button-plain-danger-background-color: $common-danger !default;
 $button-plain-danger-hover-background-color: $common-danger-darken !default;
 
 // pattern color - .button.is-plain
-$pattern-color-button-plain: (
+$pattern-button-plain: (
   primary: (
     background-color: $button-plain-primary-background-color,
     hover-background-color: $button-plain-primary-hover-background-color
@@ -177,7 +177,7 @@ $button-melt-warning-text-color: $common-warning-strong !default;
 $button-melt-danger-text-color: $common-danger-strong !default;
 
 // pattern color - .button.is-melt
-$pattern-color-button-melt: (
+$pattern-button-melt: (
   primary: (
     text-color: $button-melt-primary-text-color
   ),
@@ -216,7 +216,7 @@ $button-outline-danger-text-color: $common-danger-strong !default;
 $button-outline-danger-hover-background-color: $common-danger !default;
 
 // pattern color - .button.is-outline
-$pattern-color-button-outline: (
+$pattern-button-outline: (
   primary: (
     border-color: $button-outline-primary-border-color,
     text-color: $button-outline-primary-text-color,
@@ -266,7 +266,7 @@ $button-ghost-danger-text-color: $common-danger-lighten !default;
 $button-ghost-danger-hover-background-color: $common-danger !default;
 
 // pattern color - .button.is-ghost
-$pattern-color-button-ghost: (
+$pattern-button-ghost: (
   primary: (
     border-color: $button-ghost-primary-border-color,
     text-color: $button-ghost-primary-text-color,
@@ -449,7 +449,7 @@ $alert-danger-background-color: $common-alert-danger-background-color !default;
 $alert-danger-border-color: $common-alert-danger-border-color !default;
 
 // pattern color - .alert
-$pattern-color-alert: (
+$pattern-alert: (
   primary: (
     background-color: $alert-primary-background-color,
     border-color: $alert-primary-border-color
@@ -526,8 +526,36 @@ $wysiwyg-figcaption-font-size: 87.5% !default;
 // class
 $deco-class: ".heading, .texts, .text" !default;
 
-// pattern color - text
-$pattern-color-text: (
+// pattern text - dark
+$pattern-text-dark: (
+  dark: $common-yinyang-dark,
+  dark-1: $common-yinyang-dark-1,
+  dark-2: $common-yinyang-dark-2,
+  dark-3: $common-yinyang-dark-3,
+  dark-4: $common-yinyang-dark-4,
+  dark-5: $common-yinyang-dark-5,
+  dark-6: $common-yinyang-dark-6,
+  dark-7: $common-yinyang-dark-7,
+  dark-8: $common-yinyang-dark-8,
+  dark-9: $common-yinyang-dark-9
+) !default;
+
+// pattern text - light
+$pattern-text-light: (
+  light: $common-yinyang-light,
+  light-1: $common-yinyang-light-1,
+  light-2: $common-yinyang-light-2,
+  light-3: $common-yinyang-light-3,
+  light-4: $common-yinyang-light-4,
+  light-5: $common-yinyang-light-5,
+  light-6: $common-yinyang-light-6,
+  light-7: $common-yinyang-light-7,
+  light-8: $common-yinyang-light-8,
+  light-9: $common-yinyang-light-9
+) !default;
+
+// pattern text - color
+$pattern-text-color: (
   primary: $common-primary-strong,
   info: $common-info-strong,
   success: $common-success-strong,

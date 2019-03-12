@@ -11,7 +11,7 @@
   background-color: $alert-default-background-color;
   border: $alert-border-width solid $alert-default-border-color;
   border-radius: $alert-border-radius;
-  @each $key, $value in $pattern-color-alert {
+  @each $key, $value in $pattern-alert {
     &.is-#{$key} {
       background-color: map-get($value, background-color);
       border-color: map-get($value, border-color);

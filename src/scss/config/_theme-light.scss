@@ -2,6 +2,32 @@
 // Config: Theme - Light
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Yin and Yang
+//----------------------------------------------------
+
+$theme-light-yinyang-dark: $black !default;
+$theme-light-yinyang-dark-1: rgba($black, 0.87) !default;
+$theme-light-yinyang-dark-2: rgba($black, 0.7) !default;
+$theme-light-yinyang-dark-3: rgba($black, 0.6) !default;
+$theme-light-yinyang-dark-4: rgba($black, 0.5) !default;
+$theme-light-yinyang-dark-5: rgba($black, 0.4) !default;
+$theme-light-yinyang-dark-6: rgba($black, 0.26) !default;
+$theme-light-yinyang-dark-7: rgba($black, 0.15) !default;
+$theme-light-yinyang-dark-8: rgba($black, 0.12) !default;
+$theme-light-yinyang-dark-9: rgba($black, 0.05) !default;
+
+$theme-light-yinyang-light: $white !default;
+$theme-light-yinyang-light-1: rgba($white, 0.87) !default;
+$theme-light-yinyang-light-2: rgba($white, 0.7) !default;
+$theme-light-yinyang-light-3: rgba($white, 0.6) !default;
+$theme-light-yinyang-light-4: rgba($white, 0.5) !default;
+$theme-light-yinyang-light-5: rgba($white, 0.4) !default;
+$theme-light-yinyang-light-6: rgba($white, 0.26) !default;
+$theme-light-yinyang-light-7: rgba($white, 0.15) !default;
+$theme-light-yinyang-light-8: rgba($white, 0.12) !default;
+$theme-light-yinyang-light-9: rgba($white, 0.05) !default;
+
 $theme-light-primary: $cyan-500 !default;
 $theme-light-info: $blue-500 !default;
 $theme-light-success: $green-a700 !default;
