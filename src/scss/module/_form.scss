@@ -281,6 +281,7 @@
   background-color: $radio-background-color;
   border: $radio-border-width solid $input-border-color;
   border-radius: $radio-width * 0.5;
+
   &:before {
     width: $radio-width * 0.5;
     height: $radio-width * 0.5;
@@ -321,6 +322,10 @@
     + .label {
       cursor: not-allowed;
       color: $input-disabled-text-color;
+      .radio,
+      .checkbox {
+        border-color: $input-disabled-border-color;
+      }
     }
   }
 }
@@ -383,6 +388,7 @@
     &[disabled] {
       cursor: not-allowed;
       background-color: $input-disabled-background-color;
+      border-color: $input-disabled-border-color;
       color: $input-disabled-text-color;
     }
     &[readonly] {
