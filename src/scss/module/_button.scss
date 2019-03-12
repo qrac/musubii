@@ -153,7 +153,7 @@
     @each $key, $value in $pattern-color-button-plain {
       &.is-#{$key} {
         background-color: map-get($value, background-color);
-        color: $light;
+        color: $button-paint-text-color;
         &:hover {
           background-color: map-get($value, hover-background-color);
         }
@@ -213,7 +213,7 @@
         &:hover {
           background-color: map-get($value, hover-background-color);
           border-color: transparent;
-          color: $light;
+          color: $button-paint-text-color;
         }
       }
     }
@@ -247,7 +247,7 @@
         &:hover {
           background-color: map-get($value, hover-background-color);
           border-color: transparent;
-          color: $light;
+          color: $button-paint-text-color;
         }
       }
     }

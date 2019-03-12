@@ -111,6 +111,7 @@ $buttons-gap-default: 0.5em !default;
 $button-padding: 0.5em 1em !default;
 $button-border-width: 1px !default;
 $button-border-radius: 0.1875em !default;
+$button-paint-text-color: $common-button-paint-text-color !default;
 $button-line-height: 1.5 !default;
 $button-transition: ease-out 0.12s !default;
 $button-focus-shadow: 0 0 0 0.2em $common-button-focus-shadow-color !default;
@@ -169,11 +170,11 @@ $pattern-color-button-plain: (
 
 // .button.is-melt
 $button-melt-default-hover-background-color: $common-button-melt-default-hover-background-color !default;
-$button-melt-primary-text-color: $common-primary !default;
-$button-melt-info-text-color: $common-info !default;
-$button-melt-success-text-color: $common-success !default;
-$button-melt-warning-text-color: $common-warning !default;
-$button-melt-danger-text-color: $common-danger !default;
+$button-melt-primary-text-color: $common-primary-strong !default;
+$button-melt-info-text-color: $common-info-strong !default;
+$button-melt-success-text-color: $common-success-strong !default;
+$button-melt-warning-text-color: $common-warning-strong !default;
+$button-melt-danger-text-color: $common-danger-strong !default;
 
 // pattern color - .button.is-melt
 $pattern-color-button-melt: (
@@ -199,19 +200,19 @@ $button-outline-default-background-color: $common-button-outline-default-backgro
 $button-outline-default-border-color: $common-button-outline-default-border-color !default;
 $button-outline-default-hover-background-color: $common-button-outline-default-hover-background-color !default;
 $button-outline-primary-border-color: $common-primary !default;
-$button-outline-primary-text-color: $common-primary !default;
+$button-outline-primary-text-color: $common-primary-strong !default;
 $button-outline-primary-hover-background-color: $common-primary !default;
 $button-outline-info-border-color: $common-info !default;
-$button-outline-info-text-color: $common-info !default;
+$button-outline-info-text-color: $common-info-strong !default;
 $button-outline-info-hover-background-color: $common-info !default;
 $button-outline-success-border-color: $common-success !default;
-$button-outline-success-text-color: $common-success !default;
+$button-outline-success-text-color: $common-success-strong !default;
 $button-outline-success-hover-background-color: $common-success !default;
 $button-outline-warning-border-color: $common-warning !default;
-$button-outline-warning-text-color: $common-warning !default;
+$button-outline-warning-text-color: $common-warning-strong !default;
 $button-outline-warning-hover-background-color: $common-warning !default;
 $button-outline-danger-border-color: $common-danger !default;
-$button-outline-danger-text-color: $common-danger !default;
+$button-outline-danger-text-color: $common-danger-strong !default;
 $button-outline-danger-hover-background-color: $common-danger !default;
 
 // pattern color - .button.is-outline
@@ -527,11 +528,11 @@ $deco-class: ".heading, .texts, .text" !default;
 
 // pattern color - text
 $pattern-color-text: (
-  primary: $common-primary,
-  info: $common-info,
-  success: $common-success,
-  warning: $common-warning,
-  danger: $common-danger
+  primary: $common-primary-strong,
+  info: $common-info-strong,
+  success: $common-success-strong,
+  warning: $common-warning-strong,
+  danger: $common-danger-strong
 ) !default;
 
 //----------------------------------------------------

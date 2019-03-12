@@ -8,6 +8,12 @@ $theme-light-success: $green-a700 !default;
 $theme-light-warning: $orange-600 !default;
 $theme-light-danger: $red-500 !default;
 
+$theme-light-primary-strong: $cyan-500 !default;
+$theme-light-info-strong: $blue-500 !default;
+$theme-light-success-strong: $green-a700 !default;
+$theme-light-warning-strong: $orange-600 !default;
+$theme-light-danger-strong: $red-500 !default;
+
 $theme-light-primary-darken: darken($cyan-500, 5%) !default;
 $theme-light-info-darken: darken($blue-500, 5%) !default;
 $theme-light-success-darken: darken($green-a700, 5%) !default;
@@ -33,6 +39,7 @@ $theme-light-pre-background-color: $grey-100 !default;
 $theme-light-pre-text-color: $indigo-500 !default;
 $theme-light-pre-font-family: $font-mono !default;
 
+$theme-light-button-paint-text-color: $light !default;
 $theme-light-button-focus-shadow-color: rgba($blue-a400, 0.5) !default;
 $theme-light-button-floating-shadow-color: rgba($black, 0.24) !default;
 $theme-light-button-plain-default-background-color: $grey-100 !default;

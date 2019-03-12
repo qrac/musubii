@@ -8,6 +8,12 @@ $theme-dark-success: $green-700 !default;
 $theme-dark-warning: $orange-900 !default;
 $theme-dark-danger: $red-700 !default;
 
+$theme-dark-primary-strong: $cyan-500 !default;
+$theme-dark-info-strong: $blue-500 !default;
+$theme-dark-success-strong: $green-500 !default;
+$theme-dark-warning-strong: $orange-600 !default;
+$theme-dark-danger-strong: $red-500 !default;
+
 $theme-dark-primary-darken: darken($cyan-700, 5%) !default;
 $theme-dark-info-darken: darken($blue-700, 5%) !default;
 $theme-dark-success-darken: darken($green-700, 5%) !default;
@@ -33,16 +39,17 @@ $theme-dark-pre-background-color: darken($grey-800, 8%) !default;
 $theme-dark-pre-text-color: $blue-300 !default;
 //$theme-dark-pre-font-family: $font-mono !default;
 
+$theme-dark-button-paint-text-color: $light-1 !default;
 //$theme-dark-button-focus-shadow-color: rgba($blue-a400, 0.5) !default;
-$theme-dark-button-floating-shadow-color: rgba($cyan-a200, 0.7) !default;
+$theme-dark-button-floating-shadow-color: rgba($indigo-a400, 0.7) !default;
 $theme-dark-button-plain-default-background-color: darken(
   $grey-800,
   8%
 ) !default;
 $theme-dark-button-plain-default-hover-background-color: $grey-800 !default;
-$theme-dark-button-melt-default-hover-background-color: $light-8 !default;
+$theme-dark-button-melt-default-hover-background-color: $light-9 !default;
 $theme-dark-button-outline-default-background-color: $grey-900 !default;
-$theme-dark-button-outline-default-border-color: $light-7 !default;
+$theme-dark-button-outline-default-border-color: $light-5 !default;
 $theme-dark-button-outline-default-hover-background-color: $grey-800 !default;
 $theme-dark-button-ghost-default-border-color: $grey-200 !default;
 $theme-dark-button-ghost-default-text-color: $grey-50 !default;
@@ -58,10 +65,10 @@ $theme-dark-button-disabled-text-color: $light-5 !default;
 $theme-dark-table-background-color: $grey-900 !default;
 $theme-dark-table-border-color: $grey-700 !default;
 $theme-dark-table-stripe-background-color: $light-9 !default;
-$theme-dark-table-paint-background-color: $cyan-900 !default;
+$theme-dark-table-paint-background-color: rgba($cyan-700, 0.4) !default;
 $theme-dark-table-paint-text-color: $light-1 !default;
-$theme-dark-table-spot-background-color: $lime-900 !default;
-$theme-dark-table-danger-background-color: $red-800 !default;
+$theme-dark-table-spot-background-color: rgba($yellow-700, 0.4) !default;
+$theme-dark-table-danger-background-color: rgba($red-700, 0.4) !default;
 
 $theme-dark-input-background-color: darken($grey-800, 8%) !default;
 $theme-dark-input-border-color: $grey-700 !default;
@@ -86,18 +93,18 @@ $theme-dark-select-angle-border-color: $light-5 !default;
 
 $theme-dark-alert-default-background-color: darken($grey-800, 8%) !default;
 $theme-dark-alert-default-border-color: $grey-700 !default;
-$theme-dark-alert-primary-background-color: rgba($cyan-700, 0.1) !default;
+$theme-dark-alert-primary-background-color: rgba($cyan-700, 0.075) !default;
 $theme-dark-alert-primary-border-color: $cyan-700 !default;
-$theme-dark-alert-info-background-color: rgba($blue-700, 0.1) !default;
+$theme-dark-alert-info-background-color: rgba($blue-700, 0.075) !default;
 $theme-dark-alert-info-border-color: $blue-700 !default;
-$theme-dark-alert-success-background-color: rgba($green-700, 0.1) !default;
+$theme-dark-alert-success-background-color: rgba($green-700, 0.075) !default;
 $theme-dark-alert-success-border-color: $green-700 !default;
-$theme-dark-alert-warning-background-color: rgba($orange-800, 0.1) !default;
+$theme-dark-alert-warning-background-color: rgba($orange-800, 0.075) !default;
 $theme-dark-alert-warning-border-color: $orange-800 !default;
-$theme-dark-alert-danger-background-color: rgba($red-700, 0.1) !default;
+$theme-dark-alert-danger-background-color: rgba($red-700, 0.075) !default;
 $theme-dark-alert-danger-border-color: $red-700 !default;
 
-$theme-dark-wysiwyg-link-text-color: $cyan-700 !default;
+$theme-dark-wysiwyg-link-text-color: $cyan-500 !default;
 $theme-dark-wysiwyg-hr-border-color: $grey-700 !default;
 
 /*

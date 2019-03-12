@@ -8,6 +8,12 @@ $common-success: var(--theme-success) !default;
 $common-warning: var(--theme-warning) !default;
 $common-danger: var(--theme-danger) !default;
 
+$common-primary-strong: var(--theme-primary-strong) !default;
+$common-info-strong: var(--theme-info-strong) !default;
+$common-success-strong: var(--theme-success-strong) !default;
+$common-warning-strong: var(--theme-warning-strong) !default;
+$common-danger-strong: var(--theme-danger-strong) !default;
+
 $common-primary-darken: var(--theme-primary-darken) !default;
 $common-info-darken: var(--theme-info-darken) !default;
 $common-success-darken: var(--theme-success-darken) !default;
@@ -37,6 +43,7 @@ $common-pre-background-color: var(--theme-pre-background-color) !default;
 $common-pre-text-color: var(--theme-pre-text-color) !default;
 $common-pre-font-family: var(--theme-pre-font-family) !default;
 
+$common-button-paint-text-color: var(--theme-button-paint-text-color) !default;
 $common-button-focus-shadow-color: var(
   --theme-button-focus-shadow-color
 ) !default;

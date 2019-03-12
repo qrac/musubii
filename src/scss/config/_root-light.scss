@@ -8,6 +8,11 @@
   --theme-success: #{$theme-light-success};
   --theme-warning: #{$theme-light-warning};
   --theme-danger: #{$theme-light-danger};
+  --theme-primary-strong: #{$theme-light-primary-strong};
+  --theme-info-strong: #{$theme-light-info-strong};
+  --theme-success-strong: #{$theme-light-success-strong};
+  --theme-warning-strong: #{$theme-light-warning-strong};
+  --theme-danger-strong: #{$theme-light-danger-strong};
   --theme-primary-darken: #{$theme-light-primary-darken};
   --theme-info-darken: #{$theme-light-info-darken};
   --theme-success-darken: #{$theme-light-success-darken};
@@ -38,6 +43,7 @@
 }
 
 :root {
+  --theme-button-paint-text-color: #{$theme-light-button-paint-text-color};
   --theme-button-focus-shadow-color: #{$theme-light-button-focus-shadow-color};
   --theme-button-floating-shadow-color: #{$theme-light-button-floating-shadow-color};
   --theme-button-plain-default-background-color: #{$theme-light-button-plain-default-background-color};

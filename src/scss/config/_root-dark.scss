@@ -9,6 +9,11 @@
     --theme-success: #{$theme-dark-success};
     --theme-warning: #{$theme-dark-warning};
     --theme-danger: #{$theme-dark-danger};
+    --theme-primary-strong: #{$theme-dark-primary-strong};
+    --theme-info-strong: #{$theme-dark-info-strong};
+    --theme-success-strong: #{$theme-dark-success-strong};
+    --theme-warning-strong: #{$theme-dark-warning-strong};
+    --theme-danger-strong: #{$theme-dark-danger-strong};
     --theme-primary-darken: #{$theme-dark-primary-darken};
     --theme-info-darken: #{$theme-dark-info-darken};
     --theme-success-darken: #{$theme-dark-success-darken};
@@ -45,6 +50,7 @@
 
 :root {
   @include data-theme-dark {
+    --theme-button-paint-text-color: #{$theme-dark-button-paint-text-color};
     //--theme-button-focus-shadow-color: #{$theme-dark-button-focus-shadow-color};
     --theme-button-floating-shadow-color: #{$theme-dark-button-floating-shadow-color};
     --theme-button-plain-default-background-color: #{$theme-dark-button-plain-default-background-color};
