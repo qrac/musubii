@@ -183,7 +183,6 @@
   > {
     .select {
       position: relative;
-      overflow: hidden;
       &:not(:last-child) > select {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
