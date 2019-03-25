@@ -36,7 +36,7 @@
   ],
   "dependencies": {
     "mixtone": "^1.0.1",
-    "sass-dashi": "^0.6.0",
+    "sass-dashi": "^0.7.0",
     "shitajicss": "5.0.0"
   },
   "devDependencies": {

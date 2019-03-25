@@ -21,24 +21,24 @@ $section-inner-width-fablet: 540px !default;
 $section-inner-width-tablet: 720px !default;
 $section-inner-width-desktop: 960px !default;
 $section-inner-width-wide: 1140px !default;
-$section-inner-padding: 0 16px !default;
+$section-inner-padding: 0 $space-md !default;
 
 // .section > .inner-vw
 $section-inner-vw-width-fablet: 90vw !default;
-$section-inner-vw-padding: 0 1em !default;
+$section-inner-vw-padding: 0 $space-md !default;
 
 // .section > .inner-soft
-$section-inner-soft-padding: 0 1em !default;
+$section-inner-soft-padding: 0 $space-md !default;
 
 //----------------------------------------------------
 // / Layout - Space
 //----------------------------------------------------
 
 // .is-space > *:not(:first-child)
-$space-margin-default: 1em !default;
-$space-margin-heading: 1.5em !default;
-$space-margin-groups: 3em !default;
-$space-margin-field: 0.5em !default;
+$space-margin-default: $space-md !default;
+$space-margin-heading: $space-lg !default;
+$space-margin-groups: $space-xxl !default;
+$space-margin-field: $space-xs !default;
 
 //----------------------------------------------------
 // / Layout - Grid
@@ -51,7 +51,7 @@ $column-class: ".column" !default;
 $grid-split: 12 !default;
 
 // .grid > .column
-$grid-gap-default: 0.5em !default;
+$grid-gap-default: $space-xs !default;
 
 //----------------------------------------------------
 // / Module - Heading
@@ -74,20 +74,20 @@ $text-link-border-bottom-style: solid !default;
 $blockquote-background-color: $common-blockquote-background-color !default;
 $blockquote-border-left-width: 0.5em !default;
 $blockquote-border-left-color: $common-blockquote-border-left-color !default;
-$blockquote-border-radius: 0.125em !default;
+$blockquote-border-radius: $radius-xs !default;
 $blockquote-padding: 1.5em !default;
 
 // :not(.pre) >.code
 $code-padding: 0.2em 0.5em !default;
 $code-background-color: $common-code-background-color !default;
-$code-border-radius: 0.1875em !default;
+$code-border-radius: $radius-xs !default;
 $code-text-color: $common-code-text-color !default;
 $code-font-size: 0.875em !default;
 $code-font-family: $common-code-font-family !default;
 
 // .pre
 $pre-background-color: $common-pre-background-color !default;
-$pre-border-radius: 0.125em !default;
+$pre-border-radius: $radius-xs !default;
 $pre-text-color: $common-pre-text-color !default;
 $pre-font-family: $common-pre-font-family !default;
 $pre-white-space: pre !default;
@@ -104,29 +104,30 @@ $buttons-class: ".buttons" !default;
 $button-class: ".button" !default;
 
 // .buttons > .button
-$buttons-gap-default: 0.5em !default;
+$buttons-gap-default: $space-xs !default;
 
 // .button
 $button-padding: 0.5em 1em !default;
 $button-border-width: 1px !default;
-$button-border-radius: 0.1875em !default;
+$button-border-radius: $radius-sm !default;
 $button-paint-text-color: $common-button-paint-text-color !default;
 $button-line-height: 1.5 !default;
 $button-transition: ease-out 0.12s !default;
-$button-focus-shadow: 0 0 0 0.2em $common-button-focus-shadow-color !default;
+$button-focus-shadow: 0 0 0 $space-xxs $common-button-focus-shadow-color !default;
 
 // .button.is-round
-$button-round-border-radius: 999em !default;
+$button-round-border-radius: $radius-full !default;
 
 // .button.is-circle
 $button-circle-width: calc(2.5em + 1px * 2) !default;
 $button-circle-height: calc(2.5em + 1px * 2) !default;
-$button-circle-border-radius: 999em !default;
+$button-circle-border-radius: $radius-full !default;
 
 // .button.is-floating
 $button-floating-shadow: 0 1px 3px 0 $common-button-floating-shadow-color !default;
 $button-floating-hover-shadow: 0 4px 12px 0 $common-button-floating-shadow-color !default;
-$button-floating-focus-shadow: 0 0 0 0.2em $common-button-focus-shadow-color,
+$button-floating-focus-shadow: 0 0 0 $space-xxs
+    $common-button-focus-shadow-color,
   0 4px 12px 0 $common-button-floating-shadow-color !default;
 
 // .button.is-plain
@@ -344,7 +345,7 @@ $table-danger-background-color: $common-table-danger-background-color !default;
 //----------------------------------------------------
 
 // .field > *
-$field-gap-default: 0.5em !default;
+$field-gap-default: $space-xs !default;
 
 // .input
 $input-height: 2.5em !default;
@@ -352,7 +353,7 @@ $input-padding: 0.5em 0.75em !default;
 $input-background-color: $common-input-background-color !default;
 $input-border-width: 1px !default;
 $input-border-color: $common-input-border-color !default;
-$input-border-radius: 2px !default;
+$input-border-radius: $radius-xs !default;
 $input-line-height: 1.5 !default;
 $input-shadow: inset 0 1px 1px $common-input-shadow-color !default;
 $input-transition: ease-out 0.12s !default;
@@ -360,10 +361,10 @@ $input-transition: ease-out 0.12s !default;
 // .input:focus
 $input-focus-border-color: $common-input-focus-border-color !default;
 $input-focus-shadow: inset 0 1px 1px $common-input-shadow-color,
-  0 0 0 0.2em $common-input-focus-shadow-color !default;
+  0 0 0 $space-xxs $common-input-focus-shadow-color !default;
 
 // .input.is-round
-$input-round-border-radius: 999em !default;
+$input-round-border-radius: $radius-full !default;
 
 // .input[disabled]
 $input-disabled-background-color: $common-input-disabled-background-color !default;
@@ -386,10 +387,10 @@ $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
 // .input[type="radio"]
 $radio-width: 1em !default;
 $radio-border-width: 2px !default;
-$radio-gap-default: 0.5em !default;
-$radio-gap-after: 1em !default;
+$radio-gap-default: $space-xs !default;
+$radio-gap-after: $space-md !default;
 $radio-background-color: $common-radio-background-color !default;
-$radio-focus-shadow: 0 0 0 0.2em $common-input-focus-shadow-color !default;
+$radio-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default;
 $radio-before-checked-background-color: $common-radio-before-checked-background-color !default;
 $radio-checked-border-color: $common-radio-checked-border-color !default;
 
@@ -397,11 +398,11 @@ $radio-checked-border-color: $common-radio-checked-border-color !default;
 $checkbox-width: 1em !default;
 $checkbox-border-width: 2px !default;
 $checkbox-border-radius: 2px !default;
-$checkbox-gap-default: 0.5em !default;
-$checkbox-gap-after: 1em !default;
+$checkbox-gap-default: $space-xs !default;
+$checkbox-gap-after: $space-md !default;
 $checkbox-background-color: $common-checkbox-background-color !default;
 $checkbox-focus-border-color: $common-checkbox-focus-border-color !default;
-$checkbox-focus-shadow: 0 0 0 0.2em $common-input-focus-shadow-color !default;
+$checkbox-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default;
 $checkbox-before-border-color: $common-checkbox-before-border-color !default;
 $checkbox-checked-background-color: $common-checkbox-checked-background-color !default;
 $checkbox-checked-border-color: $common-checkbox-checked-border-color !default;
@@ -410,7 +411,7 @@ $checkbox-checked-border-color: $common-checkbox-checked-border-color !default;
 $select-angle-size: 0.5em !default;
 $select-angle-border-width: 2px !default;
 $select-angle-border-color: $common-select-angle-border-color !default;
-$select-focus-shadow: 0 0 0 0.2em $common-input-focus-shadow-color !default;
+$select-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default;
 
 //----------------------------------------------------
 // / Module - Icon
@@ -421,7 +422,7 @@ $icon-class-default: ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons" 
 $icon-class: $icon-class-default !default; // Backward compatibility of icon name variables
 
 // .icon + .text
-$icon-margin-left: 0.375em !default;
+$icon-margin-left: $space-xxs !default;
 
 // .icon.is-fit
 $icon-fit-width: 1em !default;
@@ -503,7 +504,7 @@ $wysiwyg-hr-border-color: $common-wysiwyg-hr-border-color !default;
 
 // .wysiwyg figure
 $wysiwyg-figure-text-align: center !default;
-$wysiwyg-figcaption-margin-top: 0.75em !default;
+$wysiwyg-figcaption-margin-top: $space-sm !default;
 $wysiwyg-figcaption-font-size: 87.5% !default;
 
 //----------------------------------------------------

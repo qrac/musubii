@@ -3,9 +3,10 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Import > Config (node_modules)
+// / Import > (node_modules)
 //----------------------------------------------------
 
+@import "shitajicss/src/scss/_shitaji.scss";
 @import "moftone/src/scss/tone/_moftone.scss";
 //@import "mdtone/src/scss/tone/_mdtone.scss";
 //@import "iostone/src/scss/tone/_iostone.scss";
@@ -16,18 +17,8 @@
 //----------------------------------------------------
 
 @import "config/_theme-light.scss";
-//@import "config/_theme-dark.scss";
-//@import "config/_root-light.scss";
-//@import "config/_root-dark.scss";
-//@import "config/_common-next.scss";
 @import "config/_common-default.scss";
 @import "config/_variable.scss";
-
-//----------------------------------------------------
-// / Import > Reset CSS (node_modules)
-//----------------------------------------------------
-
-@import "shitajicss/src/scss/_shitaji.scss";
 
 //----------------------------------------------------
 // / Import > Project
