@@ -11,38 +11,3 @@
     margin-top: $space-margin-default;
   }
 }
-
-//----------------------------------------------------
-// / Adjustment
-//----------------------------------------------------
-
-.is-space {
-  > .heading:not(:first-child) {
-    margin-top: $space-margin-heading;
-  }
-  > .groups:not(:first-child) {
-    margin-top: $space-margin-groups;
-  }
-  .heading + .field {
-    margin-top: $space-margin-field;
-  }
-  .field + .texts {
-    margin-top: $space-margin-field;
-  }
-  .field + .alert {
-    margin-top: $space-margin-field;
-  }
-}
-
-.wysiwyg.is-space {
-  > h1,
-  > h2,
-  > h3,
-  > h4,
-  > h5,
-  > h6 {
-    &:not(:first-child) {
-      margin-top: $space-margin-heading;
-    }
-  }
-}
