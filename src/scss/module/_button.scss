@@ -41,50 +41,6 @@
 }
 
 //----------------------------------------------------
-// / Set Bar
-//----------------------------------------------------
-
-#{$buttons-bar-class} {
-  &.is-bar {
-    flex-wrap: nowrap;
-    > {
-      #{$button-class} {
-        position: relative;
-        border-radius: 0;
-        overflow: hidden;
-        &:not(.is-round):first-child {
-          border-top-left-radius: $button-border-radius;
-          border-bottom-left-radius: $button-border-radius;
-        }
-        &:not(.is-round):last-child {
-          border-top-right-radius: $button-border-radius;
-          border-bottom-right-radius: $button-border-radius;
-        }
-        &.is-round:first-child {
-          border-top-left-radius: $button-round-border-radius;
-          border-bottom-left-radius: $button-round-border-radius;
-        }
-        &.is-round:last-child {
-          border-top-right-radius: $button-round-border-radius;
-          border-bottom-right-radius: $button-round-border-radius;
-        }
-        &:nth-child(2) {
-          border-left: none;
-          ~ {
-            #{$button-class} {
-              border-left: none;
-            }
-          }
-        }
-        &:focus {
-          z-index: 2;
-        }
-      }
-    }
-  }
-}
-
-//----------------------------------------------------
 // / Single Modifier
 //----------------------------------------------------
 

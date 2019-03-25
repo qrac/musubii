@@ -53,49 +53,6 @@
 }
 
 //----------------------------------------------------
-// / Set Bar
-//----------------------------------------------------
-
-.field.is-bar {
-  flex-wrap: nowrap;
-  > .input,
-  > .select > select {
-    position: relative;
-    border-radius: 0;
-    overflow: hidden;
-    &:focus {
-      z-index: 2;
-    }
-  }
-  > .input:not(.is-round):first-child,
-  > .select:not(.is-round):first-child > select {
-    border-top-left-radius: $input-border-radius;
-    border-bottom-left-radius: $input-border-radius;
-  }
-  > .input:not(.is-round):last-child,
-  > .select:not(.is-round):last-child > select {
-    border-top-right-radius: $input-border-radius;
-    border-bottom-right-radius: $input-border-radius;
-  }
-  > .input.is-round:first-child,
-  > .select.is-round:first-child > select {
-    border-top-left-radius: $input-round-border-radius;
-    border-bottom-left-radius: $input-round-border-radius;
-  }
-  > .input.is-round:last-child,
-  > .select.is-round:last-child > select {
-    border-top-right-radius: $input-round-border-radius;
-    border-bottom-right-radius: $input-round-border-radius;
-  }
-  > .input:nth-child(2),
-  > .input:nth-child(2) ~ .input,
-  > .select:nth-child(2) > select,
-  > .select:nth-child(2) ~ .input {
-    border-left: none;
-  }
-}
-
-//----------------------------------------------------
 // / Text Input
 //----------------------------------------------------
 

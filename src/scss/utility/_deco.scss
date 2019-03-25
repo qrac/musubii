@@ -149,3 +149,66 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+//----------------------------------------------------
+// / Bar Control
+//----------------------------------------------------
+
+.is-bar {
+  flex-wrap: nowrap;
+  > {
+    #{$button-class},
+    .input {
+      position: relative;
+      overflow: hidden;
+      &:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      &:nth-child(2) {
+        border-left: none;
+        ~ {
+          #{$button-class},
+          .input {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+  > {
+    .select {
+      position: relative;
+      overflow: hidden;
+      &:not(:last-child) > select {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:not(:first-child) > select {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      &:nth-child(2) {
+        border-left: none;
+        ~ {
+          .select > select {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+  > {
+    #{$button-class},
+    .input,
+    .select > select {
+      &:focus {
+        z-index: 2;
+      }
+    }
+  }
+}
