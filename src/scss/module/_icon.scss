@@ -11,6 +11,13 @@
   line-height: inherit;
 }
 
+svg.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-bottom;
+}
+
 .material-icons {
   vertical-align: bottom;
 }
