@@ -9,16 +9,6 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  &:not(.is-gap-none) {
-    margin-left: (-1 * $grid-gap-default);
-    margin-bottom: (-1 * $grid-gap-default);
-    > {
-      #{$column-class} {
-        padding-left: $grid-gap-default;
-        padding-bottom: $grid-gap-default;
-      }
-    }
-  }
   &.is-baseline {
     align-items: baseline;
   }
@@ -47,6 +37,83 @@
     > {
       #{$column-class} {
         display: flex;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Gap
+//----------------------------------------------------
+
+.grid {
+  @each $key, $value in $pattern-grid-gap {
+    @if $key == "md" {
+      &.is-gap,
+      &.is-gap-#{$key} {
+        margin-left: -$value;
+        margin-bottom: -$value;
+        > {
+          #{$column-class} {
+            padding-left: $value;
+            padding-bottom: $value;
+          }
+        }
+      }
+    } @else {
+      &.is-gap-#{$key} {
+        margin-left: -$value;
+        margin-bottom: -$value;
+        > {
+          #{$column-class} {
+            padding-left: $value;
+            padding-bottom: $value;
+          }
+        }
+      }
+    }
+  }
+  @each $key, $value in $pattern-grid-gap {
+    @if $key == "md" {
+      &.is-gap-row,
+      &.is-gap-row-#{$key} {
+        margin-bottom: -$value;
+        > {
+          #{$column-class} {
+            padding-bottom: $value;
+          }
+        }
+      }
+    } @else {
+      &.is-gap-row-#{$key} {
+        margin-bottom: -$value;
+        > {
+          #{$column-class} {
+            padding-bottom: $value;
+          }
+        }
+      }
+    }
+  }
+  @each $key, $value in $pattern-grid-gap {
+    @if $key == "md" {
+      &.is-gap-column,
+      &.is-gap-column-#{$key} {
+        margin-left: -$value;
+        > {
+          #{$column-class} {
+            padding-left: $value;
+          }
+        }
+      }
+    } @else {
+      &.is-gap-column-#{$key} {
+        margin-left: -$value;
+        > {
+          #{$column-class} {
+            padding-left: $value;
+          }
+        }
       }
     }
   }

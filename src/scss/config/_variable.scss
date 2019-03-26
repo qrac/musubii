@@ -47,8 +47,24 @@ $column-class: ".column" !default;
 // Number of grid divisions
 $grid-split: 12 !default;
 
-// .grid > .column
-$grid-gap-default: $space-xs !default;
+// Gap
+$grid-gap-xxl: $space-xxl !default;
+$grid-gap-xl: $space-xl !default;
+$grid-gap-lg: $space-lg !default;
+$grid-gap-md: $space-md !default;
+$grid-gap-sm: $space-sm !default;
+$grid-gap-xs: $space-xs !default;
+$grid-gap-xxs: $space-xxs !default;
+
+$pattern-grid-gap: (
+  xxl: $grid-gap-xxl,
+  xl: $grid-gap-xl,
+  lg: $grid-gap-lg,
+  md: $grid-gap-md,
+  sm: $grid-gap-sm,
+  xs: $grid-gap-xs,
+  xxs: $grid-gap-xxs
+) !default;
 
 //----------------------------------------------------
 // / Module - Heading

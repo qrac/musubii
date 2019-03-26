@@ -194,7 +194,7 @@
         <section>
           <h3 class="demo-h3">Example</h3>
           <div class="demo-area">
-            <div class="grid">
+            <div class="grid is-gap-xs">
               {% for i in range(1, 3 + 1) %}
                 <div class="column is-mobile-12 is-desktop-4">
                   <div class="demo-box is-demo-background-color-cyan">
@@ -209,7 +209,7 @@
           <h3 class="demo-h3">Flex</h3>
           {% for i in range(1, 12 + 1) %}
             <div class="demo-area">
-              <div class="grid">
+              <div class="grid is-gap-xs">
                 <div class="column is-mobile-{{ i }}">
                   <div class="demo-box is-demo-background-color-cyan">
                     {{ i }}
@@ -255,7 +255,7 @@
           {% for i in positions %}
             <div class="demo-area">
               <div class="demo-box is-demo-background-color-grey">
-                <div class="grid {{ i.class }}" style="height: {{ i.height }}">
+                <div class="grid is-gap-xs {{ i.class }}" style="height: {{ i.height }}">
                   <div class="column">
                     <div class="demo-box is-demo-background-color-cyan">
                       .{{ i.class }}
@@ -274,7 +274,7 @@
         <section>
           <h3 class="demo-h3">Stretch</h3>
           <div class="demo-area">
-            <div class="grid is-stretch">
+            <div class="grid is-gap-xs is-stretch">
               <div class="column is-mobile-0">
                 <div class="demo-box is-demo-background-color-grey">
                   .is-stretch<br/>↓<br/>↓<br/>↓
@@ -291,7 +291,7 @@
         <section>
           <h3 class="demo-h3">Reverse</h3>
           <div class="demo-area">
-            <div class="grid is-reverse">
+            <div class="grid is-gap-xs is-reverse">
               <div class="column is-mobile-0">
                 <div class="demo-box is-demo-background-color-grey">
                   1st column
@@ -308,19 +308,95 @@
         <section>
           <h3 class="demo-h3">Gap</h3>
           <div class="demo-area">
-            <div class="grid is-gap-none">
-              <div class="column is-mobile-0">
-                <div class="demo-box is-demo-background-color-grey">
-                  .is-gap-none
-                </div>
-              </div>
-              <div class="column is-mobile-0">
-                <div class="demo-box is-demo-background-color-cyan">
-                  .is-gap-none
-                </div>
+            <div class="demo-box is-demo-background-color-grey">
+              <div class="grid">
+                {% for i in range(1, 4 + 1) %}
+                  <div class="column is-mobile-6">
+                    <div class="demo-box is-demo-background-color-cyan">
+                      .grid > .column
+                    </div>
+                  </div>
+                {% endfor %}
               </div>
             </div>
           </div>
+          <div class="demo-area">
+            <div class="demo-box is-demo-background-color-grey">
+              <div class="grid is-gap">
+                {% for i in range(1, 4 + 1) %}
+                  <div class="column is-mobile-6">
+                    <div class="demo-box is-demo-background-color-cyan">
+                      .grid.is-gap > .column
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% for val in[
+            "xxl",
+            "xl",
+            "lg",
+            "md",
+            "sm",
+            "xs",
+            "xxs"
+          ] %}
+            <div class="demo-area">
+              <div class="demo-box is-demo-background-color-grey">
+                <div class="grid is-gap-{{ val }}">
+                  {% for i in range(1, 4 + 1) %}
+                    <div class="column is-mobile-6">
+                      <div class="demo-box is-demo-background-color-cyan">
+                        .grid.is-gap-{{ val }}
+                        > .column
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          {% for val2 in["row", "column"] %}
+            <div class="demo-area">
+              <div class="demo-box is-demo-background-color-grey">
+                <div class="grid is-gap-{{ val2 }}">
+                  {% for i in range(1, 4 + 1) %}
+                    <div class="column is-mobile-6">
+                      <div class="demo-box is-demo-background-color-cyan">
+                        .grid.is-gap-{{ val2 }}
+                        > .column
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            {% for val in[
+              "xxl",
+              "xl",
+              "lg",
+              "md",
+              "sm",
+              "xs",
+              "xxs"
+            ] %}
+              <div class="demo-area">
+                <div class="demo-box is-demo-background-color-grey">
+                  <div class="grid is-gap-{{ val2 }}-{{ val }}">
+                    {% for i in range(1, 4 + 1) %}
+                      <div class="column is-mobile-6">
+                        <div class="demo-box is-demo-background-color-cyan">
+                          .grid.is-gap-{{ val2 }}-{{ val }}
+                          > .column
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endfor %}
         </section>
       </section>
 
@@ -1026,7 +1102,7 @@
           <h3 class="demo-h3">Example</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="grid is-center">
+              <div class="grid is-gap-xs is-center">
                 <div class="column is-mobile-12 is-tablet-4 is-wide-3">
                   <div class="group is-demo-box-1">
                     <form action="" method="post" class="form is-space">
@@ -1417,7 +1493,7 @@
           <h3 class="demo-h3">Fit</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="grid">
+              <div class="grid is-gap-xs">
                 <div class="column">
                   <p class="texts is-xxl">
                     <span class="text">
