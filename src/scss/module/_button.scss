@@ -9,7 +9,7 @@
 #{$buttons-class} {
   display: flex;
   flex-wrap: wrap;
-  &:not(.is-bar) {
+  &:not(#{$group-class}) {
     margin-left: (-1 * $buttons-gap-default);
     margin-bottom: (-1 * $buttons-gap-default);
     > {

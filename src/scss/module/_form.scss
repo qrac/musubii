@@ -21,11 +21,11 @@
 .field {
   display: flex;
   flex-wrap: wrap;
-  &:not(.is-bar) {
+  &:not(#{$group-class}) {
     margin-left: (-1 * $field-gap-default);
     margin-bottom: (-1 * $field-gap-default);
   }
-  &:not(.is-bar) > * {
+  &:not(#{$group-class}) > * {
     margin-left: $field-gap-default;
     margin-bottom: $field-gap-default;
   }
