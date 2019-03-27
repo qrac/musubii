@@ -159,33 +159,10 @@
           </section>
         </section>
         <section>
-          <h3 class="demo-h3">Inner Soft</h3>
-          <section class="section is-demo-background-color-cyan">
-            <div class="inner-soft is-demo-background-color-grey is-demo-min-height-1"></div>
-          </section>
-        </section>
-        <section>
           <h3 class="demo-h3">Inner VW</h3>
           <section class="section is-demo-background-color-cyan">
             <div class="inner-vw is-demo-background-color-grey is-demo-min-height-1"></div>
           </section>
-        </section>
-      </section>
-
-      <section>
-        <h2 class="demo-h2">Space</h2>
-        <section>
-          <h3 class="demo-h3">Basic</h3>
-          <div class="demo-area">
-            <div class="demo-line-box">
-              <div class="box is-space">
-                <p class="heading">見出し</p>
-                <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
-                <p class="heading">見出し</p>
-                <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-          </div>
         </section>
       </section>
 
@@ -397,6 +374,23 @@
               </div>
             {% endfor %}
           {% endfor %}
+        </section>
+      </section>
+
+      <section>
+        <h2 class="demo-h2">Space</h2>
+        <section>
+          <h3 class="demo-h3">Basic</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="box is-space">
+                <p class="heading">見出し</p>
+                <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+                <p class="heading">見出し</p>
+                <p class="texts">テキストテキストテキストテキストテキストテキスト</p>
+              </div>
+            </div>
+          </div>
         </section>
       </section>
 
@@ -1106,15 +1100,32 @@
                 <div class="column is-mobile-12 is-tablet-4 is-wide-3">
                   <div class="group is-demo-box-1">
                     <form action="" method="post" class="form is-space">
-                      <p class="heading">ユーザーネーム</p>
-                      <div class="field"><input type="text" name="username" value="demo" class="input is-mobile-full"></div>
-                      <p class="heading">メールアドレス</p>
-                      <div class="field"><input type="email" name="email" placeholder="example@gmail.com" class="input is-mobile-full"></div>
-                      <p class="texts is-xs is-danger">※半角英数のみ</p>
-                      <p class="heading">パスワード</p>
-                      <div class="field"><input type="password" name="password" class="input is-mobile-full"></div>
-                      <label class="label is-checkbox is-block"><input type="checkbox" name="checkbox" class="input">
-                        <span class="text is-middle is-sm">次回から自動的にログイン</span></label>
+                      <fieldset class="fieldset is-space-sm">
+                        <legend class="heading">ユーザーネーム</legend>
+                        <div class="field">
+                          <input type="text" name="username" value="demo" class="input is-mobile-full">
+                        </div>
+                      </fieldset>
+                      <fieldset class="fieldset is-space-sm">
+                        <legend class="heading">メールアドレス</legend>
+                        <div class="field">
+                          <input type="email" name="email" placeholder="example@gmail.com" class="input is-mobile-full">
+                        </div>
+                        <p class="texts is-xs is-danger">※半角英数のみ</p>
+                      </fieldset>
+                      <fieldset class="fieldset is-space-sm">
+                        <legend class="heading">パスワード</legend>
+                        <div class="field">
+                          <input type="password" name="password" class="input is-mobile-full">
+                        </div>
+                        <div class="box">
+                          <input class="input is-hidden" id="checkbox-demo-0-1" type="checkbox" name="checkbox-demo-0">
+                          <label class="label is-middle" for="checkbox-demo-0-1">
+                            <span class="checkbox"></span>
+                            <span class="text is-sm">次回から自動的にログイン</span>
+                          </label>
+                        </div>
+                      </fieldset>
                       <div class="buttons">
                         <button type="submit" class="button is-plain is-success is-mobile-full">ログイン</button>
                       </div>

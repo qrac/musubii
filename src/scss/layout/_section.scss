@@ -8,7 +8,6 @@
 
 .section > .inner {
   max-width: 100%;
-  padding: $section-inner-padding;
   margin: 0 auto;
   @include fablet {
     width: $section-inner-width-fablet;
@@ -26,15 +25,8 @@
 
 .section > .inner-vw {
   max-width: 100%;
-  padding: $section-inner-vw-padding;
   margin: 0 auto;
   @include fablet {
     width: $section-inner-vw-width-fablet;
   }
-}
-
-.section > .inner-soft {
-  max-width: 100%;
-  padding: $section-inner-soft-padding;
-  margin: 0 auto;
 }

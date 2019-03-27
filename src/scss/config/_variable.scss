@@ -21,21 +21,9 @@ $section-inner-width-fablet: 540px !default;
 $section-inner-width-tablet: 720px !default;
 $section-inner-width-desktop: 960px !default;
 $section-inner-width-wide: 1140px !default;
-$section-inner-padding: 0 $space-md !default;
 
 // .section > .inner-vw
 $section-inner-vw-width-fablet: 90vw !default;
-$section-inner-vw-padding: 0 $space-md !default;
-
-// .section > .inner-soft
-$section-inner-soft-padding: 0 $space-md !default;
-
-//----------------------------------------------------
-// / Layout - Space
-//----------------------------------------------------
-
-// .is-space > *:not(:first-child)
-$space-margin-default: $space-md !default;
 
 //----------------------------------------------------
 // / Layout - Grid
@@ -65,6 +53,40 @@ $pattern-grid-gap: (
   xs: $grid-gap-xs,
   xxs: $grid-gap-xxs
 ) !default;
+
+//----------------------------------------------------
+// / Layout - Space
+//----------------------------------------------------
+
+// .is-space > *:not(:first-child)
+$space-margin-default: $space-md !default;
+
+//----------------------------------------------------
+// / Layout - Padding
+//----------------------------------------------------
+
+// Padding Size
+$padding-size-xxl: $space-xxl !default;
+$padding-size-xl: $space-xl !default;
+$padding-size-lg: $space-lg !default;
+$padding-size-md: $space-md !default;
+$padding-size-sm: $space-sm !default;
+$padding-size-xs: $space-xs !default;
+$padding-size-xxs: $space-xxs !default;
+
+// Pattern - Padding Size
+$pattern-padding-size: (
+  xxl: $padding-size-xxl,
+  xl: $padding-size-xl,
+  lg: $padding-size-lg,
+  md: $padding-size-md,
+  sm: $padding-size-sm,
+  xs: $padding-size-xs,
+  xxs: $padding-size-xxs
+) !default;
+
+// Pattern - Padding Way
+$pattern-padding-way: all, top, right, bottom, left !default;
 
 //----------------------------------------------------
 // / Module - Heading
