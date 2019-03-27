@@ -46,72 +46,76 @@
 // / Gap
 //----------------------------------------------------
 
-.grid {
-  @each $key, $value in $pattern-grid-gap {
-    @if $key == "md" {
-      &.is-gap,
-      &.is-gap-#{$key} {
-        margin-left: -$value;
-        margin-bottom: -$value;
-        > {
-          #{$column-class} {
-            padding-left: $value;
-            padding-bottom: $value;
+@each $way in $pattern-gap-way {
+  @if $way == "all" {
+    @each $key, $value in $pattern-gap-size {
+      @if $key == "md" {
+        .grid.is-gap,
+        .grid.is-gap-#{$key} {
+          margin-left: -$value;
+          margin-bottom: -$value;
+          > {
+            #{$column-class} {
+              padding-left: $value;
+              padding-bottom: $value;
+            }
           }
         }
-      }
-    } @else {
-      &.is-gap-#{$key} {
-        margin-left: -$value;
-        margin-bottom: -$value;
-        > {
-          #{$column-class} {
-            padding-left: $value;
-            padding-bottom: $value;
-          }
-        }
-      }
-    }
-  }
-  @each $key, $value in $pattern-grid-gap {
-    @if $key == "md" {
-      &.is-gap-row,
-      &.is-gap-row-#{$key} {
-        margin-bottom: -$value;
-        > {
-          #{$column-class} {
-            padding-bottom: $value;
-          }
-        }
-      }
-    } @else {
-      &.is-gap-row-#{$key} {
-        margin-bottom: -$value;
-        > {
-          #{$column-class} {
-            padding-bottom: $value;
+      } @else {
+        .grid.is-gap-#{$key} {
+          margin-left: -$value;
+          margin-bottom: -$value;
+          > {
+            #{$column-class} {
+              padding-left: $value;
+              padding-bottom: $value;
+            }
           }
         }
       }
     }
-  }
-  @each $key, $value in $pattern-grid-gap {
-    @if $key == "md" {
-      &.is-gap-column,
-      &.is-gap-column-#{$key} {
-        margin-left: -$value;
-        > {
-          #{$column-class} {
-            padding-left: $value;
+  } @else if $way == "row" {
+    @each $key, $value in $pattern-gap-size {
+      @if $key == "md" {
+        &.is-gap-row,
+        &.is-gap-row-#{$key} {
+          margin-bottom: -$value;
+          > {
+            #{$column-class} {
+              padding-bottom: $value;
+            }
+          }
+        }
+      } @else {
+        &.is-gap-row-#{$key} {
+          margin-bottom: -$value;
+          > {
+            #{$column-class} {
+              padding-bottom: $value;
+            }
           }
         }
       }
-    } @else {
-      &.is-gap-column-#{$key} {
-        margin-left: -$value;
-        > {
-          #{$column-class} {
-            padding-left: $value;
+    }
+  } @else if $way == "column" {
+    @each $key, $value in $pattern-gap-size {
+      @if $key == "md" {
+        &.is-gap-column,
+        &.is-gap-column-#{$key} {
+          margin-left: -$value;
+          > {
+            #{$column-class} {
+              padding-left: $value;
+            }
+          }
+        }
+      } @else {
+        &.is-gap-column-#{$key} {
+          margin-left: -$value;
+          > {
+            #{$column-class} {
+              padding-left: $value;
+            }
           }
         }
       }

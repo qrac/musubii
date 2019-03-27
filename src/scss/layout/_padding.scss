@@ -7,7 +7,7 @@
 //----------------------------------------------------
 
 @each $way in $pattern-padding-way {
-  @if $way == all {
+  @if $way == "all" {
     @each $key, $value in $pattern-padding-size {
       @if $key == "md" {
         &.is-padding,

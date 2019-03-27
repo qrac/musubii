@@ -35,24 +35,28 @@ $column-class: ".column" !default;
 // Number of grid divisions
 $grid-split: 12 !default;
 
-// Gap
-$grid-gap-xxl: $space-xxl !default;
-$grid-gap-xl: $space-xl !default;
-$grid-gap-lg: $space-lg !default;
-$grid-gap-md: $space-md !default;
-$grid-gap-sm: $space-sm !default;
-$grid-gap-xs: $space-xs !default;
-$grid-gap-xxs: $space-xxs !default;
+// Gap Size
+$gap-size-xxl: $space-xxl !default;
+$gap-size-xl: $space-xl !default;
+$gap-size-lg: $space-lg !default;
+$gap-size-md: $space-md !default;
+$gap-size-sm: $space-sm !default;
+$gap-size-xs: $space-xs !default;
+$gap-size-xxs: $space-xxs !default;
 
-$pattern-grid-gap: (
-  xxl: $grid-gap-xxl,
-  xl: $grid-gap-xl,
-  lg: $grid-gap-lg,
-  md: $grid-gap-md,
-  sm: $grid-gap-sm,
-  xs: $grid-gap-xs,
-  xxs: $grid-gap-xxs
+// Pattern - Gap Size
+$pattern-gap-size: (
+  xxl: $gap-size-xxl,
+  xl: $gap-size-xl,
+  lg: $gap-size-lg,
+  md: $gap-size-md,
+  sm: $gap-size-sm,
+  xs: $gap-size-xs,
+  xxs: $gap-size-xxs
 ) !default;
+
+// Pattern - Gap Way
+$pattern-gap-way: all, row, column !default;
 
 //----------------------------------------------------
 // / Layout - Space
