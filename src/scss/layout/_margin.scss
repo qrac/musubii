@@ -1,0 +1,37 @@
+//----------------------------------------------------
+// Layout: Margin
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Add Margin
+//----------------------------------------------------
+
+@each $way in $pattern-margin-way {
+  @if $way == "all" {
+    @each $key, $value in $pattern-margin-size {
+      @if $key == "md" {
+        &.is-margin,
+        &.is-margin-#{$key} {
+          margin: $value;
+        }
+      } @else {
+        &.is-margin-#{$key} {
+          margin: $value;
+        }
+      }
+    }
+  } @else {
+    @each $key, $value in $pattern-margin-size {
+      @if $key == "md" {
+        &.is-margin-#{$way},
+        &.is-margin-#{$way}-#{$key} {
+          margin-#{$way}: $value;
+        }
+      } @else {
+        &.is-margin-#{$way}-#{$key} {
+          margin-#{$way}: $value;
+        }
+      }
+    }
+  }
+}
