@@ -3,11 +3,64 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Default
+// / Add Space
 //----------------------------------------------------
 
-.is-space {
-  > *:not(:first-child) {
-    margin-top: $space-margin-default;
+@each $way in $pattern-space-way {
+  @if $way == "default" {
+    @each $key, $value in $pattern-space-size {
+      @if $key == "md" {
+        .is-space,
+        .is-space-#{$key} {
+          > *:not(:first-child) {
+            margin-top: $value;
+          }
+        }
+      } @else {
+        .is-space-#{$key} {
+          > *:not(:first-child) {
+            margin-top: $value;
+          }
+        }
+      }
+    }
+  } @else if $way == "row" {
+    @each $key, $value in $pattern-space-size {
+      @if $key == "md" {
+        .is-space-row,
+        .is-space-row-#{$key} {
+          margin-bottom: -$value;
+          > * {
+            margin-bottom: $value;
+          }
+        }
+      } @else {
+        .is-space-row-#{$key} {
+          margin-bottom: -$value;
+          > * {
+            margin-bottom: $value;
+          }
+        }
+      }
+    }
+  } @else if $way == "column" {
+    @each $key, $value in $pattern-space-size {
+      @if $key == "md" {
+        .is-space-column,
+        .is-space-column-#{$key} {
+          margin-left: -$value;
+          > * {
+            margin-left: $value;
+          }
+        }
+      } @else {
+        .is-space-column-#{$key} {
+          margin-left: -$value;
+          > * {
+            margin-left: $value;
+          }
+        }
+      }
+    }
   }
 }

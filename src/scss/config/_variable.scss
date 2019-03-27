@@ -29,11 +29,11 @@ $section-inner-vw-width-fablet: 90vw !default;
 // / Layout - Grid
 //----------------------------------------------------
 
-// class
-$column-class: ".column" !default;
-
-// Number of grid divisions
+// Grid Split
 $grid-split: 12 !default;
+
+// Column Class
+$column-class: ".column" !default;
 
 // Gap Size
 $gap-size-xxl: $space-xxl !default;
@@ -62,8 +62,28 @@ $pattern-gap-way: all, row, column !default;
 // / Layout - Space
 //----------------------------------------------------
 
-// .is-space > *:not(:first-child)
-$space-margin-default: $space-md !default;
+// Space Size
+$space-size-xxl: $space-xxl !default;
+$space-size-xl: $space-xl !default;
+$space-size-lg: $space-lg !default;
+$space-size-md: $space-md !default;
+$space-size-sm: $space-sm !default;
+$space-size-xs: $space-xs !default;
+$space-size-xxs: $space-xxs !default;
+
+// Pattern - Space Size
+$pattern-space-size: (
+  xxl: $space-size-xxl,
+  xl: $space-size-xl,
+  lg: $space-size-lg,
+  md: $space-size-md,
+  sm: $space-size-sm,
+  xs: $space-size-xs,
+  xxs: $space-size-xxs
+) !default;
+
+// Pattern - Space Way
+$pattern-space-way: default, row, column !default;
 
 //----------------------------------------------------
 // / Layout - Padding
@@ -139,7 +159,6 @@ $pre-code-padding: 1.25em 1.5em !default;
 //----------------------------------------------------
 
 // class
-$buttons-class: ".buttons" !default;
 $button-class: ".button" !default;
 
 // .buttons > .button

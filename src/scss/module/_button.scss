@@ -3,44 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Set Modifier
-//----------------------------------------------------
-
-#{$buttons-class} {
-  display: flex;
-  flex-wrap: wrap;
-  &:not(#{$group-class}) {
-    margin-left: (-1 * $buttons-gap-default);
-    margin-bottom: (-1 * $buttons-gap-default);
-    > {
-      #{$buttons-class},
-      #{$button-class} {
-        margin-left: $buttons-gap-default;
-        margin-bottom: $buttons-gap-default;
-      }
-    }
-  }
-  &.is-middle {
-    align-items: center;
-  }
-  &.is-bottom {
-    align-items: flex-end;
-  }
-  &.is-center {
-    justify-content: center;
-  }
-  &.is-right {
-    justify-content: flex-end;
-  }
-  &.is-between {
-    justify-content: space-between;
-  }
-  &.is-around {
-    justify-content: space-around;
-  }
-}
-
-//----------------------------------------------------
 // / Single Modifier
 //----------------------------------------------------
 

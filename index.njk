@@ -90,7 +90,7 @@
       .demo-nav.is-posithion-fixed-top-right {
         position: fixed;
         top: 16px;
-        right: 0;
+        right: 16px;
         z-index: 10;
       }
     </style>
@@ -132,17 +132,17 @@
     <main>
 
       <nav class="demo-nav is-posithion-fixed-top-right">
-        <div class="field">
+        <div class="box is-flex is-space-column-md">
           <div class="box">
             <input class="input is-hidden" id="data-theme-light" type="radio" name="data-theme" checked="checked" onclick="changeThemeLight();">
-            <label class="label" for="data-theme-light">
+            <label class="label is-space-column-xs" for="data-theme-light">
               <span class="radio"></span>
               <span class="text">Light</span>
             </label>
           </div>
           <div class="box">
             <input class="input is-hidden" id="data-theme-dark" type="radio" name="data-theme" onclick="changeThemeDark();">
-            <label class="label" for="data-theme-dark">
+            <label class="label is-space-column-xs" for="data-theme-dark">
               <span class="radio"></span>
               <span class="text">Dark</span>
             </label>
@@ -608,7 +608,7 @@
           <div class="demo-area">
             <div class="demo-line-box">
               {% macro buttons(class) %}
-                <div class="buttons">
+                <div class="box is-flex is-space-row-xs is-space-column-xs">
                   <button class="button {{ class }}" type="button">戻る</button>
                   <button class="button {{ class }} is-primary" type="button">決定</button>
                   <button class="button {{ class }} is-info" type="button">情報</button>
@@ -688,7 +688,7 @@
           <div class="demo-area">
             <div class="demo-line-box">
               {% macro buttonsCircle(class) %}
-                <div class="buttons">
+                <div class="box is-flex is-space-row-xs is-space-column-xs">
                   <button class="button {{class}} is-circle" type="button">
                     <i aria-hidden="true" class="fas fa-angle-left"></i>
                   </button>
@@ -726,7 +726,7 @@
           <h3 class="demo-h3">Size</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="buttons">
+              <div class="box is-flex is-space-row-xs is-space-column-xs">
                 <button class="button is-plain is-xxs" type="button">極小</button>
                 <button class="button is-plain is-xs" type="button">小さい</button>
                 <button class="button is-plain is-sm" type="button">小さめ</button>
@@ -735,7 +735,7 @@
                 <button class="button is-plain is-xl" type="button">大きい</button>
                 <button class="button is-plain is-xxl" type="button">特大</button>
               </div>
-              <div class="buttons is-xxs">
+              <div class="box is-flex is-space-row-xs is-space-column-xs is-xxs">
                 <button class="button is-plain" type="button">まとめて極小</button>
                 <button class="button is-plain" type="button">まとめて極小</button>
                 <button class="button is-plain" type="button">まとめて極小</button>
@@ -763,17 +763,17 @@
           <h3 class="demo-h3">Position</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="buttons">
+              <div class="box is-flex is-space-row-xs is-space-column-xs">
                 <button class="button is-plain" type="button">default</button>
                 <button class="button is-plain" type="button">default</button>
                 <button class="button is-plain" type="button">default</button>
               </div>
-              <div class="buttons is-center">
+              <div class="box is-flex is-space-row-xs is-space-column-xs is-center">
                 <button class="button is-plain" type="button">.is-center</button>
                 <button class="button is-plain" type="button">.is-center</button>
                 <button class="button is-plain" type="button">.is-center</button>
               </div>
-              <div class="buttons is-right">
+              <div class="box is-flex is-space-row-xs is-space-column-xs is-right">
                 <button class="button is-plain" type="button">.is-right</button>
                 <button class="button is-plain" type="button">.is-right</button>
                 <button class="button is-plain" type="button">.is-right</button>
@@ -785,7 +785,7 @@
           <h3 class="demo-h3">Bar</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="buttons is-group">
+              <div class="box is-flex is-group">
                 <button class="button is-plain" type="button">
                   <i aria-hidden="true" class="fas fa-align-left"></i>
                   <span class="text">左寄せ</span></button>
@@ -796,7 +796,7 @@
                   <i aria-hidden="true" class="fas fa-align-right"></i>
                   <span class="text">右寄せ</span></button>
               </div>
-              <div class="buttons is-group">
+              <div class="box is-flex is-group">
                 <button class="button is-outline is-mobile-0" type="button">
                   <i aria-hidden="true" class="fas fa-align-left"></i>
                   <span class="text">左寄せ</span></button>
@@ -807,7 +807,7 @@
                   <i aria-hidden="true" class="fas fa-align-right"></i>
                   <span class="text">右寄せ</span></button>
               </div>
-              <div class="buttons is-group">
+              <div class="box is-flex is-group">
                 <button class="button is-outline is-round is-mobile-0" type="button">ラウンド</button>
                 <button class="button is-outline is-round is-mobile-0" type="button">ラウンド</button>
                 <button class="button is-outline is-round is-mobile-0" type="button">ラウンド</button>
@@ -816,19 +816,19 @@
           </div>
           <div class="demo-area">
             <div class="demo-paint-box">
-              <div class="buttons">
-                <div class="buttons is-group">
+              <div class="box is-flex is-space-column-xs">
+                <div class="box is-inline-flex is-group">
                   <button class="button is-ghost" type="button">松</button>
                   <button class="button is-ghost" type="button">桜</button>
                   <button class="button is-ghost" type="button">芒</button>
                   <button class="button is-ghost" type="button">雨</button>
                   <button class="button is-ghost" type="button">桐</button>
                 </div>
-                <div class="buttons is-group">
+                <div class="box is-inline-flex is-group">
                   <button class="button is-ghost" type="button">線と角丸</button>
                   <button class="button is-ghost" type="button">自動調整</button>
                 </div>
-                <div class="buttons is-group">
+                <div class="box is-inline-flex is-group">
                   <button class="button is-ghost is-round" type="button">ラウンド</button>
                   <button class="button is-ghost is-round" type="button">ラウンド</button>
                 </div>
@@ -1098,35 +1098,37 @@
             <div class="demo-line-box">
               <div class="grid is-gap-xs is-center">
                 <div class="column is-mobile-12 is-tablet-4 is-wide-3">
-                  <div class="group is-demo-box-1">
-                    <form action="" method="post" class="form is-space">
+                  <div class="box is-demo-box-1">
+                    <form action="" method="post" class="form is-space-xl">
                       <fieldset class="fieldset is-space-sm">
                         <legend class="heading">ユーザーネーム</legend>
-                        <div class="field">
+                        <div class="box is-flex">
                           <input type="text" name="username" value="demo" class="input is-mobile-full">
                         </div>
                       </fieldset>
                       <fieldset class="fieldset is-space-sm">
                         <legend class="heading">メールアドレス</legend>
-                        <div class="field">
-                          <input type="email" name="email" placeholder="example@gmail.com" class="input is-mobile-full">
+                        <div class="box is-space-xxs">
+                          <div class="box is-flex">
+                            <input type="email" name="email" placeholder="example@gmail.com" class="input is-mobile-full">
+                          </div>
+                          <p class="texts is-xs is-danger">※半角英数のみ</p>
                         </div>
-                        <p class="texts is-xs is-danger">※半角英数のみ</p>
                       </fieldset>
                       <fieldset class="fieldset is-space-sm">
                         <legend class="heading">パスワード</legend>
-                        <div class="field">
+                        <div class="box is-flex">
                           <input type="password" name="password" class="input is-mobile-full">
                         </div>
                         <div class="box">
                           <input class="input is-hidden" id="checkbox-demo-0-1" type="checkbox" name="checkbox-demo-0">
-                          <label class="label is-middle" for="checkbox-demo-0-1">
+                          <label class="label is-space-column-xs is-middle" for="checkbox-demo-0-1">
                             <span class="checkbox"></span>
                             <span class="text is-sm">次回から自動的にログイン</span>
                           </label>
                         </div>
                       </fieldset>
-                      <div class="buttons">
+                      <div class="box is-flex">
                         <button type="submit" class="button is-plain is-success is-mobile-full">ログイン</button>
                       </div>
                     </form>
@@ -1140,12 +1142,12 @@
           <h3 class="demo-h3">Text</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="text" name="text" placeholder="Text">
                 <input class="input" type="text" name="text" placeholder="Disabled" disabled="disabled">
                 <input class="input" type="text" name="text" value="Readonly" readonly="readonly">
               </div>
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <textarea class="textarea" name="textarea"></textarea>
                 <textarea class="textarea" name="textarea" disabled="disabled"></textarea>
                 <textarea class="textarea" name="textarea" readonly="readonly">Readonly</textarea>
@@ -1157,7 +1159,7 @@
           <h3 class="demo-h3">Password</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="password" name="password">
                 <input class="input" type="password" name="password" disabled="disabled">
                 <input class="input" type="password" name="password" value="Readonly" readonly="readonly">
@@ -1169,7 +1171,7 @@
           <h3 class="demo-h3">URL</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="url" name="url" placeholder="example.com">
                 <input class="input" type="url" name="url" placeholder="example.com" disabled="disabled">
                 <input class="input" type="url" name="url" value="example.com" readonly="readonly">
@@ -1181,7 +1183,7 @@
           <h3 class="demo-h3">Email</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="email" name="email" placeholder="example@gmail.com">
                 <input class="input" type="email" name="email" placeholder="example@gmail.com" disabled="disabled">
                 <input class="input" type="email" name="email" value="example@gmail.com" readonly="readonly">
@@ -1193,7 +1195,7 @@
           <h3 class="demo-h3">TEL</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000">
                 <input class="input" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000" disabled="disabled">
                 <input class="input" type="tel" name="tel" maxlength="13" value="000-0000-0000" readonly="readonly">
@@ -1205,7 +1207,7 @@
           <h3 class="demo-h3">Number</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="number" name="number" maxlength="5" step="100" placeholder="10000">
                 <input class="input" type="number" name="number" maxlength="5" step="100" placeholder="10000" disabled="disabled">
                 <input class="input" type="number" name="number" maxlength="5" step="100" value="10000" readonly="readonly">
@@ -1217,7 +1219,7 @@
           <h3 class="demo-h3">Search</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="search" name="search" placeholder="Search">
                 <input class="input" type="search" name="search" placeholder="Search" disabled="disabled">
                 <input class="input" type="search" name="search" value="Search" readonly="readonly">
@@ -1229,15 +1231,15 @@
           <h3 class="demo-h3">Date</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00">
                 <input class="input" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00" disabled="disabled">
               </div>
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="date" name="date" value="2017-02-02">
                 <input class="input" type="date" name="date" value="2017-02-02" disabled="disabled">
               </div>
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="month" name="month" value="2017-02">
                 <input class="input" type="month" name="month" value="2017-02" disabled="disabled">
               </div>
@@ -1248,7 +1250,7 @@
           <h3 class="demo-h3">Time</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input" type="time" name="time" value="00:00:00">
                 <input class="input" type="time" name="time" value="00:00:00" disabled="disabled">
               </div>
@@ -1260,7 +1262,7 @@
           <div class="demo-area">
             <div class="demo-line-box">
               <!-- <div class="field"> <input class="input" type="file" name="file"> <input class="input" type="file" name="file" disabled="disabled"> </div> -->
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <label class="button is-plain">
                   <span class="text">ファイル選択</span>
                   <input type="file" name="file" class="input">
@@ -1278,40 +1280,40 @@
           <h3 class="demo-h3">Radio</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field is-middle">
+              <div class="box is-flex is-space-column-md is-middle">
                 <div class="box">
                   <input class="input is-hidden" id="radio-demo-1-1" type="radio" name="radio-demo-1" checked="checked">
-                  <label class="label" for="radio-demo-1-1">
+                  <label class="label is-space-column-xs" for="radio-demo-1-1">
                     <span class="radio"></span>
                     <span class="text">むすびー</span>
                   </label>
                 </div>
                 <div class="box">
                   <input class="input is-hidden" id="radio-demo-1-2" type="radio" name="radio-demo-1">
-                  <label class="label" for="radio-demo-1-2">
+                  <label class="label is-space-column-xs" for="radio-demo-1-2">
                     <span class="radio"></span>
                     <span class="text">むすびい</span>
                   </label>
                 </div>
                 <div class="box">
                   <input class="input is-hidden" id="radio-demo-1-3" type="radio" name="radio-demo-1" disabled="disabled">
-                  <label class="label" for="radio-demo-1-3">
+                  <label class="label is-space-column-xs" for="radio-demo-1-3">
                     <span class="radio"></span>
                     <span class="text">むすび</span>
                   </label>
                 </div>
               </div>
-              <div class="field is-middle">
+              <div class="box is-flex is-space-column-md is-middle">
                 <div class="box">
                   <input class="input is-hidden" id="radio-demo-2-1" type="radio" name="radio-demo-2" checked="checked">
-                  <label class="label" for="radio-demo-2-1">
+                  <label class="label is-space-column-xs" for="radio-demo-2-1">
                     <span class="radio"></span>
                     <span class="text">デフォルトは位置が<br/>テキスト1行目に揃う</span>
                   </label>
                 </div>
                 <div class="box">
                   <input class="input is-hidden" id="radio-demo-2-2" type="radio" name="radio-demo-2">
-                  <label class="label is-middle" for="radio-demo-2-2">
+                  <label class="label is-space-column-xs is-middle" for="radio-demo-2-2">
                     <span class="radio"></span>
                     <span class="text">位置は天地中央寄せに<br/>切り替えることができる</span>
                   </label>
@@ -1324,40 +1326,40 @@
           <h3 class="demo-h3">Checkbox</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field is-middle">
+              <div class="box is-flex is-space-column-md is-middle">
                 <div class="box">
                   <input class="input is-hidden" id="checkbox-demo-1-1" type="checkbox" name="checkbox-demo-1" checked="checked">
-                  <label class="label" for="checkbox-demo-1-1">
+                  <label class="label is-space-column-xs" for="checkbox-demo-1-1">
                     <span class="checkbox"></span>
                     <span class="text">Nunjucks</span>
                   </label>
                 </div>
                 <div class="box">
                   <input class="input is-hidden" id="checkbox-demo-1-2" type="checkbox" name="checkbox-demo-1">
-                  <label class="label" for="checkbox-demo-1-2">
+                  <label class="label is-space-column-xs" for="checkbox-demo-1-2">
                     <span class="checkbox"></span>
                     <span class="text">SCSS</span>
                   </label>
                 </div>
                 <div class="box">
                   <input class="input is-hidden" id="checkbox-demo-1-3" type="checkbox" name="checkbox-demo-1" disabled="disabled">
-                  <label class="label" for="checkbox-demo-1-3">
+                  <label class="label is-space-column-xs" for="checkbox-demo-1-3">
                     <span class="checkbox"></span>
                     <span class="text">TypeScript</span>
                   </label>
                 </div>
               </div>
-              <div class="field is-middle">
+              <div class="box is-flex is-space-column-md is-middle">
                 <div class="box">
                   <input class="input is-hidden" id="checkbox-demo-2-1" type="checkbox" name="checkbox-demo-2" checked="checked">
-                  <label class="label" for="checkbox-demo-2-1">
+                  <label class="label is-space-column-xs" for="checkbox-demo-2-1">
                     <span class="checkbox"></span>
                     <span class="text">デフォルトは位置が<br/>テキスト1行目に揃う</span>
                   </label>
                 </div>
                 <div class="box">
                   <input class="input is-hidden" id="checkbox-demo-2-2" type="checkbox" name="checkbox-demo-2">
-                  <label class="label is-middle" for="checkbox-demo-2-2">
+                  <label class="label is-space-column-xs is-middle" for="checkbox-demo-2-2">
                     <span class="checkbox"></span>
                     <span class="text">位置は天地中央寄せに<br/>切り替えることができる</span>
                   </label>
@@ -1365,9 +1367,9 @@
               </div>
               <div class="box">
                 <input class="input is-hidden" id="checkbox-demo-3-1" type="checkbox" name="checkbox-demo-3" checked="checked">
-                <label class="label is-center" for="checkbox-demo-3-1">
+                <label class="label is-space-column-xs is-center" for="checkbox-demo-3-1">
                   <span class="checkbox"></span>
-                  <span class="text">中央寄せした場合は右のマージンを消去（同意するなど）</span>
+                  <span class="text">中央寄せした場合（同意するなど）</span>
                 </label>
               </div>
             </div>
@@ -1377,7 +1379,7 @@
           <h3 class="demo-h3">Select</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 {% macro select(class, size, state) %}
                   <div class="select {{class}}">
                     <select size="{{size}}" {{state}}>
@@ -1393,11 +1395,11 @@
                 {{ select(class="", size="", state="") }}
                 {{ select(class="", size="", state="disabled") }}
               </div>
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 {{ select(class="is-multiple", size="5", state="") }}
                 {{ select(class="is-multiple", size="5", state="disabled") }}
               </div>
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 {{ select(class="is-multiple", size="5", state="multiple") }}
                 {{ select(class="is-multiple", size="5", state="multiple disabled") }}
               </div>
@@ -1408,15 +1410,15 @@
           <h3 class="demo-h3">Button</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="buttons">
+              <div class="box is-flex is-space-column-xs">
                 <button type="button" class="button is-plain is-primary">汎用ボタン</button>
                 <button type="button" class="button is-plain is-primary" disabled="disabled">汎用ボタン</button>
               </div>
-              <div class="buttons">
+              <div class="box is-flex is-space-column-xs">
                 <button type="reset" class="button is-plain">リセット</button>
                 <button type="reset" class="button is-plain" disabled="disabled">リセット</button>
               </div>
-              <div class="buttons">
+              <div class="box is-flex is-space-column-xs">
                 <button type="submit" class="button is-plain is-success">送信</button>
                 <button type="submit" class="button is-plain is-success" disabled="disabled">送信</button>
               </div>
@@ -1427,24 +1429,9 @@
           <h3 class="demo-h3">Round</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs">
                 <input class="input is-round" type="text" name="text" placeholder="Text">
                 {{ select(class="is-round", size="", state="") }}
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h3 class="demo-h3">Field</h3>
-          <div class="demo-area">
-            <div class="demo-line-box">
-              <div class="field">
-                <input type="text" class="input" name="text" placeholder="Text">
-                <input type="text" class="input is-mobile-0" name="text" placeholder="Text">
-              </div>
-              <div class="field is-middle">
-                <span class="text">天地中央揃え</span>
-                <input type="text" class="input is-mobile-0" name="text" placeholder="Text">
               </div>
             </div>
           </div>
@@ -1453,7 +1440,11 @@
           <h3 class="demo-h3">Flex</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field">
+              <div class="box is-flex is-space-column-xs is-middle">
+                <span class="text">天地中央揃え</span>
+                <input type="text" class="input is-mobile-0" name="text" placeholder="Text">
+              </div>
+              <div class="box is-flex is-space-column-xs">
                 <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
                 <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
                 <input type="text" class="input is-mobile-full is-tablet-0" name="text" placeholder="Text">
@@ -1466,14 +1457,14 @@
           <h3 class="demo-h3">Bar</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="field is-group">
+              <div class="box is-flex is-group">
                 {{ select(class="", size="", state="") }}
                 <input type="text" class="input" name="text" placeholder="キーワード">
                 <button type="submit" class="button is-plain is-info">
                   <i class="fas fa-search" aria-hidden="true"></i>
                 </button>
               </div>
-              <div class="field is-group">
+              <div class="box is-flex is-group">
                 {{ select(class="is-round", size="", state="") }}
                 <input type="text" class="input is-round" name="text" placeholder="キーワード">
                 <button type="submit" class="button is-plain is-round is-info">
