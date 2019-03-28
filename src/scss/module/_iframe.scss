@@ -1,0 +1,33 @@
+//----------------------------------------------------
+// Module: iframe
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Basic
+//----------------------------------------------------
+
+.iframe-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  &:before {
+    content: "";
+    display: block;
+  }
+  @each $key, $value in $pattern-iframe-aspect {
+    &.is-aspect-#{$key}:before {
+      padding-top: $value;
+    }
+  }
+  > .iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.iframe {
+  display: block;
+}

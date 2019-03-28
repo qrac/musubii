@@ -504,6 +504,18 @@ $select-angle-border-color: $common-select-angle-border-color !default;
 $select-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default;
 
 //----------------------------------------------------
+// / Module - iframe
+//----------------------------------------------------
+
+// iframe Aspect Ratio
+$iframe-aspect-16x9: 9 / 16 * 100% !default;
+
+// Pattern - iframe Aspect Ratio
+$pattern-iframe-aspect: (
+  16x9: $iframe-aspect-16x9
+) !default;
+
+//----------------------------------------------------
 // / Module - Icon
 //----------------------------------------------------
 
