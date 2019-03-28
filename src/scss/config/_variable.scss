@@ -6,7 +6,7 @@
 // / Base - Global
 //----------------------------------------------------
 
-// body
+// Body
 $body-background-color: $common-body-background-color !default;
 $body-text-color: $common-body-text-color !default;
 $body-font-family: $common-body-font-family !default;
@@ -16,13 +16,13 @@ $body-line-height: 1.5 !default;
 // / Layout - Section
 //----------------------------------------------------
 
-// .section > .inner
+// Section Inner
 $section-inner-width-fablet: 540px !default;
 $section-inner-width-tablet: 720px !default;
 $section-inner-width-desktop: 960px !default;
 $section-inner-width-wide: 1140px !default;
 
-// .section > .inner-vw
+// Section Inner VW
 $section-inner-vw-width-fablet: 90vw !default;
 
 //----------------------------------------------------
@@ -57,6 +57,19 @@ $pattern-gap-size: (
 
 // Pattern - Gap Way
 $pattern-gap-way: all, row, column !default;
+
+//----------------------------------------------------
+// / Layout - Flex
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Group
+//----------------------------------------------------
+
+// Group Class
+$group-class: ".is-group" !default;
 
 //----------------------------------------------------
 // / Layout - Space
@@ -149,21 +162,21 @@ $pattern-padding-way: all, top, right, bottom, left !default;
 // / Module - Text
 //----------------------------------------------------
 
-// .texts
+// Texts
 $texts-line-height: 1.9 !default;
 
-// .text.is-link
+// Text Link
 $text-link-border-bottom-width: 1px !default;
 $text-link-border-bottom-style: solid !default;
 
-// .blockquote
+// Blockquote
 $blockquote-background-color: $common-blockquote-background-color !default;
 $blockquote-border-left-width: 0.5em !default;
 $blockquote-border-left-color: $common-blockquote-border-left-color !default;
 $blockquote-border-radius: $radius-xs !default;
 $blockquote-padding: 1.5em !default;
 
-// :not(.pre) >.code
+// Code
 $code-padding: 0.2em 0.5em !default;
 $code-background-color: $common-code-background-color !default;
 $code-border-radius: $radius-xs !default;
@@ -171,27 +184,22 @@ $code-text-color: $common-code-text-color !default;
 $code-font-size: 0.875em !default;
 $code-font-family: $common-code-font-family !default;
 
-// .pre
+// Pre
 $pre-background-color: $common-pre-background-color !default;
 $pre-border-radius: $radius-xs !default;
 $pre-text-color: $common-pre-text-color !default;
 $pre-font-family: $common-pre-font-family !default;
 $pre-white-space: pre !default;
-
-// .pre > .code
 $pre-code-padding: 1.25em 1.5em !default;
 
 //----------------------------------------------------
 // / Module - Button
 //----------------------------------------------------
 
-// class
+// Button Class
 $button-class: ".button" !default;
 
-// .buttons > .button
-$buttons-gap-default: $space-xs !default;
-
-// .button
+// Button
 $button-padding: 0.5em 1em !default;
 $button-border-width: 1px !default;
 $button-border-radius: $radius-sm !default;
@@ -200,22 +208,22 @@ $button-line-height: 1.5 !default;
 $button-transition: ease-out 0.12s !default;
 $button-focus-shadow: 0 0 0 $space-xxs $common-button-focus-shadow-color !default;
 
-// .button.is-round
+// Button Round
 $button-round-border-radius: $radius-full !default;
 
-// .button.is-circle
+// Button Circle
 $button-circle-width: calc(2.5em + 1px * 2) !default;
 $button-circle-height: calc(2.5em + 1px * 2) !default;
 $button-circle-border-radius: $radius-full !default;
 
-// .button.is-floating
+// Button Floating
 $button-floating-shadow: 0 1px 3px 0 $common-button-floating-shadow-color !default;
 $button-floating-hover-shadow: 0 4px 12px 0 $common-button-floating-shadow-color !default;
 $button-floating-focus-shadow: 0 0 0 $space-xxs
     $common-button-focus-shadow-color,
   0 4px 12px 0 $common-button-floating-shadow-color !default;
 
-// .button.is-plain
+// Button Plain
 $button-plain-default-background-color: $common-button-plain-default-background-color !default;
 $button-plain-default-hover-background-color: $common-button-plain-default-hover-background-color !default;
 $button-plain-primary-background-color: $common-role-primary !default;
@@ -229,7 +237,7 @@ $button-plain-warning-hover-background-color: $common-role-warning-darken !defau
 $button-plain-danger-background-color: $common-role-danger !default;
 $button-plain-danger-hover-background-color: $common-role-danger-darken !default;
 
-// pattern color - .button.is-plain
+// Pattern - Button Plain
 $pattern-button-plain: (
   primary: (
     background-color: $button-plain-primary-background-color,
@@ -253,7 +261,7 @@ $pattern-button-plain: (
   )
 ) !default;
 
-// .button.is-melt
+// Button Melt
 $button-melt-default-hover-background-color: $common-button-melt-default-hover-background-color !default;
 $button-melt-primary-text-color: $common-role-primary-strong !default;
 $button-melt-info-text-color: $common-role-info-strong !default;
@@ -261,7 +269,7 @@ $button-melt-success-text-color: $common-role-success-strong !default;
 $button-melt-warning-text-color: $common-role-warning-strong !default;
 $button-melt-danger-text-color: $common-role-danger-strong !default;
 
-// pattern color - .button.is-melt
+// Pattern - Button Melt
 $pattern-button-melt: (
   primary: (
     text-color: $button-melt-primary-text-color
@@ -280,7 +288,7 @@ $pattern-button-melt: (
   )
 ) !default;
 
-// .button.is-outline
+// Button Outline
 $button-outline-default-background-color: $common-button-outline-default-background-color !default;
 $button-outline-default-border-color: $common-button-outline-default-border-color !default;
 $button-outline-default-hover-background-color: $common-button-outline-default-hover-background-color !default;
@@ -300,7 +308,7 @@ $button-outline-danger-border-color: $common-role-danger !default;
 $button-outline-danger-text-color: $common-role-danger-strong !default;
 $button-outline-danger-hover-background-color: $common-role-danger !default;
 
-// pattern color - .button.is-outline
+// Pattern - Button Outline
 $pattern-button-outline: (
   primary: (
     border-color: $button-outline-primary-border-color,
@@ -329,7 +337,7 @@ $pattern-button-outline: (
   )
 ) !default;
 
-// .button.is-ghost
+// Button Ghost
 $button-ghost-default-border-color: $common-button-ghost-default-border-color !default;
 $button-ghost-default-text-color: $common-button-ghost-default-text-color !default;
 $button-ghost-default-hover-background-color: $common-button-ghost-default-hover-background-color !default;
@@ -350,7 +358,7 @@ $button-ghost-danger-border-color: $common-role-danger-lighten !default;
 $button-ghost-danger-text-color: $common-role-danger-lighten !default;
 $button-ghost-danger-hover-background-color: $common-role-danger !default;
 
-// pattern color - .button.is-ghost
+// Pattern - Button Ghost
 $pattern-button-ghost: (
   primary: (
     border-color: $button-ghost-primary-border-color,
@@ -379,12 +387,12 @@ $pattern-button-ghost: (
   )
 ) !default;
 
-// .button.is-disabled
+// Button Disabled
 $button-disabled-background-color: $common-button-disabled-background-color !default;
 $button-disabled-background-color-alpha: $common-button-disabled-background-color-alpha !default;
 $button-disabled-text-color: $common-button-disabled-text-color !default;
 
-// .button.is-ghost.is-disabled
+// Button Ghost Disabled
 $button-ghost-disabled-background-color: $common-button-ghost-disabled-background-color !default;
 $button-ghost-disabled-border-color: $common-button-ghost-disabled-border-color !default;
 $button-ghost-disabled-text-color: $common-button-ghost-disabled-text-color !default;
@@ -393,46 +401,43 @@ $button-ghost-disabled-text-color: $common-button-ghost-disabled-text-color !def
 // / Module - List
 //----------------------------------------------------
 
-// .list
+// List
 $list-margin-left: 1.5em !default;
 
-// .list > .item
+// List Item
 $list-item-margin-top: 0.25em !default;
 
-// list.is-note > .item
+// List Note
 $list-note-item-margin-left: 0.25em !default;
 
 //----------------------------------------------------
 // / Module - Table
 //----------------------------------------------------
 
-// .table
+// Table
 $table-padding: 0.75em 1em !default;
 $table-background-color: $common-table-background-color !default;
 $table-border-width: 1px !default;
 $table-border-color: $common-table-border-color !default;
 
-// .table.is-stripe
+// Table Stripe
 $table-stripe-background-color: $common-table-stripe-background-color !default;
 
-// .table .is-paint
+// Table Paint
 $table-paint-background-color: $common-table-paint-background-color !default;
 $table-paint-text-color: $common-table-paint-text-color !default;
 
-// .table .is-spot
+// Table Spot
 $table-spot-background-color: $common-table-spot-background-color !default;
 
-// .table .is-danger
+// Table Danger
 $table-danger-background-color: $common-table-danger-background-color !default;
 
 //----------------------------------------------------
 // / Module - Form
 //----------------------------------------------------
 
-// .field > *
-$field-gap-default: $space-xs !default;
-
-// .input
+// Input
 $input-height: 2.5em !default;
 $input-padding: 0.5em 0.75em !default;
 $input-background-color: $common-input-background-color !default;
@@ -443,33 +448,33 @@ $input-line-height: 1.5 !default;
 $input-shadow: inset 0 1px 1px $common-input-shadow-color !default;
 $input-transition: ease-out 0.12s !default;
 
-// .input:focus
+// Input Focus
 $input-focus-border-color: $common-input-focus-border-color !default;
 $input-focus-shadow: inset 0 1px 1px $common-input-shadow-color,
   0 0 0 $space-xxs $common-input-focus-shadow-color !default;
 
-// .input.is-round
+// Input Round
 $input-round-border-radius: $radius-full !default;
 
-// .input[disabled]
+// Input Disabled
 $input-disabled-background-color: $common-input-disabled-background-color !default;
 $input-disabled-border-color: $common-input-disabled-border-color !default;
 $input-disabled-shadow: none !default;
 $input-disabled-text-color: $common-input-disabled-text-color !default;
 
-// .input[readonly]
+// Input Readonly
 $input-readonly-background-color: $common-input-readonly-background-color !default;
 $input-readonly-border-color: transparent !default;
 $input-readonly-shadow: none !default;
 $input-readonly-text-color: $common-input-readonly-text-color !default;
 
-// .input placeholder
+// Input Placeholder
 $input-placeholder-color: $common-input-placeholder-color !default;
 
-// .textarea
+// Textarea
 $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
 
-// .input[type="radio"]
+// Radio
 $radio-width: 1em !default;
 $radio-border-width: 2px !default;
 $radio-gap-default: $space-xs !default;
@@ -479,7 +484,7 @@ $radio-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default;
 $radio-before-checked-background-color: $common-radio-before-checked-background-color !default;
 $radio-checked-border-color: $common-radio-checked-border-color !default;
 
-// .input[type="checkbox"]
+// Checkbox
 $checkbox-width: 1em !default;
 $checkbox-border-width: 2px !default;
 $checkbox-border-radius: 2px !default;
@@ -492,7 +497,7 @@ $checkbox-before-border-color: $common-checkbox-before-border-color !default;
 $checkbox-checked-background-color: $common-checkbox-checked-background-color !default;
 $checkbox-checked-border-color: $common-checkbox-checked-border-color !default;
 
-// select
+// Select
 $select-angle-size: 0.5em !default;
 $select-angle-border-width: 2px !default;
 $select-angle-border-color: $common-select-angle-border-color !default;
@@ -502,21 +507,18 @@ $select-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default
 // / Module - Icon
 //----------------------------------------------------
 
-// class
+// Icon Class
 $icon-class-default: ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons" !default;
-$icon-class: $icon-class-default !default; // Backward compatibility of icon name variables
+$icon-class: $icon-class-default !default;
 
-// .icon + .text
-$icon-margin-left: $space-xxs !default;
-
-// .icon.is-fit
+// Icon Fit
 $icon-fit-width: 1em !default;
 
 //----------------------------------------------------
 // / Module - Alert
 //----------------------------------------------------
 
-// .alert
+// Alert
 $alert-padding: 0.675em 0.875em !default;
 $alert-border-width: 1px !default;
 $alert-border-radius: 2px !default;
@@ -533,7 +535,7 @@ $alert-warning-border-color: $common-alert-warning-border-color !default;
 $alert-danger-background-color: $common-alert-danger-background-color !default;
 $alert-danger-border-color: $common-alert-danger-border-color !default;
 
-// pattern color - .alert
+// Pattern - Alert
 $pattern-alert: (
   primary: (
     background-color: $alert-primary-background-color,
@@ -561,7 +563,7 @@ $pattern-alert: (
 // Module - WYSIWYG
 //----------------------------------------------------
 
-// .wysiwyg h1, h2, h3, h4, h5, h6
+// WYSIWYG Heading
 $wysiwyg-heading-font-weight: 700 !default;
 $wysiwyg-h1-font-size: 2em !default;
 $wysiwyg-h2-font-size: 1.5em !default;
@@ -570,27 +572,33 @@ $wysiwyg-h4-font-size: 1em !default;
 $wysiwyg-h5-font-size: 0.875em !default;
 $wysiwyg-h6-font-size: 0.75em !default;
 
-// .wysiwyg small
+// WYSIWYG Small
 $wysiwyg-small-font-size: 80% !default;
 
-// .wysiwyg strong
+// WYSIWYG Strong
 $wysiwyg-strong-font-weight: 700 !default;
 
-// .wysiwyg a
+// WYSIWYG Link
 $wysiwyg-link-text-color: $common-wysiwyg-link-text-color !default;
 
-// .wysiwyg table th
+// WYSIWYG Table
 $wysiwyg-table-th-font-weight: 400 !default;
 
-// .wysiwyg hr
+// WYSIWYG HR
 $wysiwyg-hr-border-width: 1px !default;
 $wysiwyg-hr-border-style: solid !default;
 $wysiwyg-hr-border-color: $common-wysiwyg-hr-border-color !default;
 
-// .wysiwyg figure
+// WYSIWYG Figure
 $wysiwyg-figure-text-align: center !default;
 $wysiwyg-figcaption-margin-top: $space-sm !default;
 $wysiwyg-figcaption-font-size: 87.5% !default;
+
+//----------------------------------------------------
+// / Utility - Display
+//----------------------------------------------------
+
+// none
 
 //----------------------------------------------------
 // / Utility - Size
@@ -599,19 +607,13 @@ $wysiwyg-figcaption-font-size: 87.5% !default;
 // none
 
 //----------------------------------------------------
-// / Utility - Flex
-//----------------------------------------------------
-
-// none
-
-//----------------------------------------------------
 // / Utility - Deco
 //----------------------------------------------------
 
-// class
+// Deco Text Class
 $deco-text-class: ".heading, .texts, .text" !default;
 
-// pattern text - dark
+// Pattern - Text Dark
 $pattern-text-dark: (
   dark: $common-yinyang-dark,
   dark-1: $common-yinyang-dark-1,
@@ -625,7 +627,7 @@ $pattern-text-dark: (
   dark-9: $common-yinyang-dark-9
 ) !default;
 
-// pattern text - light
+// Pattern - Text Light
 $pattern-text-light: (
   light: $common-yinyang-light,
   light-1: $common-yinyang-light-1,
@@ -639,7 +641,7 @@ $pattern-text-light: (
   light-9: $common-yinyang-light-9
 ) !default;
 
-// pattern text - color
+// Pattern - Text Color
 $pattern-text-color: (
   primary: $common-role-primary-strong,
   info: $common-role-info-strong,
@@ -647,19 +649,6 @@ $pattern-text-color: (
   warning: $common-role-warning-strong,
   danger: $common-role-danger-strong
 ) !default;
-
-//----------------------------------------------------
-// / Utility - Group
-//----------------------------------------------------
-
-// class
-$group-class: ".is-group" !default;
-
-//----------------------------------------------------
-// / Utility - Display
-//----------------------------------------------------
-
-// none
 
 //----------------------------------------------------
 // / Utility - Clearfix

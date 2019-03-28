@@ -27,6 +27,8 @@
 @import "base/_global.scss";
 @import "layout/_section.scss";
 @import "layout/_grid.scss";
+@import "layout/_flex.scss";
+@import "layout/_group.scss";
 @import "layout/_space.scss";
 @import "layout/_margin.scss";
 @import "layout/_padding.scss";
@@ -39,9 +41,7 @@
 @import "module/_icon.scss";
 @import "module/_alert.scss";
 @import "module/_wysiwyg.scss";
-@import "utility/_size.scss";
-@import "utility/_flex.scss";
-@import "utility/_deco.scss";
-@import "utility/_group.scss";
 @import "utility/_display.scss";
+@import "utility/_size.scss";
+@import "utility/_deco.scss";
 @import "utility/_clearfix.scss";
