@@ -134,14 +134,18 @@
   word-break: break-all;
 }
 
-.is-scroll-x {
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 .is-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+//----------------------------------------------------
+// / Scroll
+//----------------------------------------------------
+
+.is-scroll-x {
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
