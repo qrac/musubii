@@ -6,10 +6,6 @@
 // / Export Setting
 //----------------------------------------------------
 
-$use-default-theme-dark: false !default;
-$use-media-theme-dark: false !default;
-$use-data-theme-dark: true !default;
-
 @mixin export-theme-dark {
   @if $use-default-theme-dark == true {
     @content;

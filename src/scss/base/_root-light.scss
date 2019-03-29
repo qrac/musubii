@@ -6,10 +6,6 @@
 // / Export Setting
 //----------------------------------------------------
 
-$use-default-theme-light: true !default;
-$use-media-theme-light: false !default;
-$use-data-theme-light: false !default;
-
 @mixin export-theme-light {
   @if $use-default-theme-light == true {
     @content;
