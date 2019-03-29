@@ -82,9 +82,8 @@ $data-theme-dark: true !default;
 
 :root {
   @include export-theme-dark {
-    --root-body-background-color: #{$theme-dark-body-background-color};
-    --root-body-text-color: #{$theme-dark-body-text-color};
-    //--root-body-font-family: #{$theme-dark-body-font-family};
+    --root-global-background-color: #{$theme-dark-global-background-color};
+    --root-global-text-color: #{$theme-dark-global-text-color};
   }
 }
 
@@ -158,10 +157,8 @@ $data-theme-dark: true !default;
     --root-blockquote-border-left-color: #{$theme-dark-blockquote-border-left-color};
     --root-code-background-color: #{$theme-dark-code-background-color};
     --root-code-text-color: #{$theme-dark-code-text-color};
-    //--root-code-font-family: #{$theme-dark-code-font-family};
     --root-pre-background-color: #{$theme-dark-pre-background-color};
     --root-pre-text-color: #{$theme-dark-pre-text-color};
-    //--root-pre-font-family: #{$theme-dark-pre-font-family};
   }
 }
 

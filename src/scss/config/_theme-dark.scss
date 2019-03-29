@@ -52,9 +52,8 @@ $theme-dark-global-danger-darken: darken($red-700, 5%) !default;
 //$theme-dark-global-warning-lighten: lighten($orange-600, 30%) !default;
 //$theme-dark-global-danger-lighten: lighten($red-500, 30%) !default;
 
-$theme-dark-body-background-color: $grey-900 !default;
-$theme-dark-body-text-color: $light-1 !default;
-//$theme-dark-body-font-family: $font-sans !default;
+$theme-dark-global-background-color: $grey-900 !default;
+$theme-dark-global-text-color: $light-1 !default;
 
 //----------------------------------------------------
 // / Layout - Section
@@ -124,10 +123,8 @@ $theme-dark-blockquote-background-color: darken($grey-800, 8%) !default;
 $theme-dark-blockquote-border-left-color: $light-9 !default;
 $theme-dark-code-background-color: darken($grey-800, 8%) !default;
 $theme-dark-code-text-color: $blue-300 !default;
-//$theme-dark-code-font-family: $font-mono !default;
 $theme-dark-pre-background-color: darken($grey-800, 8%) !default;
 $theme-dark-pre-text-color: $blue-300 !default;
-//$theme-dark-pre-font-family: $font-mono !default;
 
 //----------------------------------------------------
 // / Module - Button

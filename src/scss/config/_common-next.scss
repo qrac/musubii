@@ -52,9 +52,8 @@ $common-global-success-lighten: var(--root-global-success-lighten) !default;
 $common-global-warning-lighten: var(--root-global-warning-lighten) !default;
 $common-global-danger-lighten: var(--root-global-danger-lighten) !default;
 
-$common-body-background-color: var(--root-body-background-color) !default;
-$common-body-text-color: var(--root-body-text-color) !default;
-$common-body-font-family: var(--root-body-font-family) !default;
+$common-global-background-color: var(--root-global-background-color) !default;
+$common-global-text-color: var(--root-global-text-color) !default;
 
 //----------------------------------------------------
 // / Layout - Section
@@ -128,10 +127,8 @@ $common-blockquote-border-left-color: var(
 ) !default;
 $common-code-background-color: var(--root-code-background-color) !default;
 $common-code-text-color: var(--root-code-text-color) !default;
-$common-code-font-family: var(--root-code-font-family) !default;
 $common-pre-background-color: var(--root-pre-background-color) !default;
 $common-pre-text-color: var(--root-pre-text-color) !default;
-$common-pre-font-family: var(--root-pre-font-family) !default;
 
 //----------------------------------------------------
 // / Module - Button

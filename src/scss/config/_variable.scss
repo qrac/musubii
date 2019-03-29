@@ -7,9 +7,9 @@
 //----------------------------------------------------
 
 // Body
-$body-background-color: $common-body-background-color !default;
-$body-text-color: $common-body-text-color !default;
-$body-font-family: $common-body-font-family !default;
+$body-background-color: $common-global-background-color !default;
+$body-text-color: $common-global-text-color !default;
+$body-font-family: $font-sans !default;
 $body-line-height: 1.5 !default;
 
 //----------------------------------------------------
@@ -194,13 +194,13 @@ $code-background-color: $common-code-background-color !default;
 $code-border-radius: $radius-xs !default;
 $code-text-color: $common-code-text-color !default;
 $code-font-size: 0.875em !default;
-$code-font-family: $common-code-font-family !default;
+$code-font-family: $font-mono !default;
 
 // Pre
 $pre-background-color: $common-pre-background-color !default;
 $pre-border-radius: $radius-xs !default;
 $pre-text-color: $common-pre-text-color !default;
-$pre-font-family: $common-pre-font-family !default;
+$pre-font-family: $font-mono !default;
 $pre-white-space: pre !default;
 $pre-code-padding: 1.25em 1.5em !default;
 

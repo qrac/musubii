@@ -82,9 +82,8 @@ $data-theme-light: false !default;
 
 :root {
   @include export-theme-light {
-    --root-body-background-color: #{$theme-light-body-background-color};
-    --root-body-text-color: #{$theme-light-body-text-color};
-    --root-body-font-family: #{$theme-light-body-font-family};
+    --root-global-background-color: #{$theme-light-global-background-color};
+    --root-global-text-color: #{$theme-light-global-text-color};
   }
 }
 
@@ -158,10 +157,8 @@ $data-theme-light: false !default;
     --root-blockquote-border-left-color: #{$theme-light-blockquote-border-left-color};
     --root-code-background-color: #{$theme-light-code-background-color};
     --root-code-text-color: #{$theme-light-code-text-color};
-    --root-code-font-family: #{$theme-light-code-font-family};
     --root-pre-background-color: #{$theme-light-pre-background-color};
     --root-pre-text-color: #{$theme-light-pre-text-color};
-    --root-pre-font-family: #{$theme-light-pre-font-family};
   }
 }
 

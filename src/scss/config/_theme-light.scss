@@ -52,9 +52,8 @@ $theme-light-global-success-lighten: lighten($green-a700, 30%) !default;
 $theme-light-global-warning-lighten: lighten($orange-600, 30%) !default;
 $theme-light-global-danger-lighten: lighten($red-500, 30%) !default;
 
-$theme-light-body-background-color: $light !default;
-$theme-light-body-text-color: $dark-2 !default;
-$theme-light-body-font-family: $font-sans !default;
+$theme-light-global-background-color: $light !default;
+$theme-light-global-text-color: $dark-2 !default;
 
 //----------------------------------------------------
 // / Layout - Section
@@ -124,10 +123,8 @@ $theme-light-blockquote-background-color: $grey-100 !default;
 $theme-light-blockquote-border-left-color: $dark-9 !default;
 $theme-light-code-background-color: $grey-100 !default;
 $theme-light-code-text-color: $indigo-500 !default;
-$theme-light-code-font-family: $font-mono !default;
 $theme-light-pre-background-color: $grey-100 !default;
 $theme-light-pre-text-color: $indigo-500 !default;
-$theme-light-pre-font-family: $font-mono !default;
 
 //----------------------------------------------------
 // / Module - Button

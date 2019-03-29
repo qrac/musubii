@@ -52,9 +52,8 @@ $common-global-success-lighten: $theme-light-global-success-lighten !default;
 $common-global-warning-lighten: $theme-light-global-warning-lighten !default;
 $common-global-danger-lighten: $theme-light-global-danger-lighten !default;
 
-$common-body-background-color: $theme-light-body-background-color !default;
-$common-body-text-color: $theme-light-body-text-color !default;
-$common-body-font-family: $theme-light-body-font-family !default;
+$common-global-background-color: $theme-light-global-background-color !default;
+$common-global-text-color: $theme-light-global-text-color !default;
 
 //----------------------------------------------------
 // / Layout - Section
@@ -124,10 +123,8 @@ $common-blockquote-background-color: $theme-light-blockquote-background-color !d
 $common-blockquote-border-left-color: $theme-light-blockquote-border-left-color !default;
 $common-code-background-color: $theme-light-code-background-color !default;
 $common-code-text-color: $theme-light-code-text-color !default;
-$common-code-font-family: $theme-light-code-font-family !default;
 $common-pre-background-color: $theme-light-pre-background-color !default;
 $common-pre-text-color: $theme-light-pre-text-color !default;
-$common-pre-font-family: $theme-light-pre-font-family !default;
 
 //----------------------------------------------------
 // / Module - Button
