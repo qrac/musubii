@@ -6,20 +6,20 @@
 // / Export Setting
 //----------------------------------------------------
 
-$default-theme-light: true !default;
-$media-theme-light: false !default;
-$data-theme-light: false !default;
+$use-default-theme-light: true !default;
+$use-media-theme-light: false !default;
+$use-data-theme-light: false !default;
 
 @mixin export-theme-light {
-  @if $default-theme-light == true {
+  @if $use-default-theme-light == true {
     @content;
   }
-  @if $media-theme-light == true {
+  @if $use-css-variables == true and $use-media-theme-light == true {
     @include media-theme-light {
       @content;
     }
   }
-  @if $data-theme-light == true {
+  @if $use-css-variables == true and $use-data-theme-light == true {
     @include data-theme-light {
       @content;
     }

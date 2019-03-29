@@ -6,20 +6,20 @@
 // / Export Setting
 //----------------------------------------------------
 
-$default-theme-dark: false !default;
-$media-theme-dark: false !default;
-$data-theme-dark: true !default;
+$use-default-theme-dark: false !default;
+$use-media-theme-dark: false !default;
+$use-data-theme-dark: true !default;
 
 @mixin export-theme-dark {
-  @if $default-theme-dark == true {
+  @if $use-default-theme-dark == true {
     @content;
   }
-  @if $css-variables == true and $media-theme-dark == true {
+  @if $use-css-variables == true and $use-media-theme-dark == true {
     @include media-theme-dark {
       @content;
     }
   }
-  @if $css-variables == true and $data-theme-dark == true {
+  @if $use-css-variables == true and $use-data-theme-dark == true {
     @include data-theme-dark {
       @content;
     }

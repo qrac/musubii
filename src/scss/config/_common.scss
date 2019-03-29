@@ -7,116 +7,116 @@
 //----------------------------------------------------
 
 $common-global-primary: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-primary),
   $theme-light-global-primary
 ) !default;
 $common-global-info: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-info),
   $theme-light-global-info
 ) !default;
 $common-global-success: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-success),
   $theme-light-global-success
 ) !default;
 $common-global-warning: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-warning),
   $theme-light-global-warning
 ) !default;
 $common-global-danger: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-danger),
   $theme-light-global-danger
 ) !default;
 
 $common-global-primary-strong: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-primary-strong),
   $theme-light-global-primary-strong
 ) !default;
 $common-global-info-strong: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-info-strong),
   $theme-light-global-info-strong
 ) !default;
 $common-global-success-strong: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-success-strong),
   $theme-light-global-success-strong
 ) !default;
 $common-global-warning-strong: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-warning-strong),
   $theme-light-global-warning-strong
 ) !default;
 $common-global-danger-strong: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-danger-strong),
   $theme-light-global-danger-strong
 ) !default;
 
 $common-global-primary-darken: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-primary-darken),
   $theme-light-global-primary-darken
 ) !default;
 $common-global-info-darken: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-info-darken),
   $theme-light-global-info-darken
 ) !default;
 $common-global-success-darken: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-success-darken),
   $theme-light-global-success-darken
 ) !default;
 $common-global-warning-darken: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-warning-darken),
   $theme-light-global-warning-darken
 ) !default;
 $common-global-danger-darken: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-danger-darken),
   $theme-light-global-danger-darken
 ) !default;
 
 $common-global-primary-lighten: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-primary-lighten),
   $theme-light-global-primary-lighten
 ) !default;
 $common-global-info-lighten: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-info-lighten),
   $theme-light-global-info-lighten
 ) !default;
 $common-global-success-lighten: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-success-lighten),
   $theme-light-global-success-lighten
 ) !default;
 $common-global-warning-lighten: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-warning-lighten),
   $theme-light-global-warning-lighten
 ) !default;
 $common-global-danger-lighten: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-danger-lighten),
   $theme-light-global-danger-lighten
 ) !default;
 
 $common-global-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-background-color),
   $theme-light-global-background-color
 ) !default;
 $common-global-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-global-text-color),
   $theme-light-global-text-color
 ) !default;
@@ -186,32 +186,32 @@ $common-global-text-color: if(
 //----------------------------------------------------
 
 $common-blockquote-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-blockquote-background-color),
   $theme-light-blockquote-background-color
 ) !default;
 $common-blockquote-border-left-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-blockquote-border-left-color),
   $theme-light-blockquote-border-left-color
 ) !default;
 $common-code-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-code-background-color),
   $theme-light-code-background-color
 ) !default;
 $common-code-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-code-text-color),
   $theme-light-code-text-color
 ) !default;
 $common-pre-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-pre-background-color),
   $theme-light-pre-background-color
 ) !default;
 $common-pre-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-pre-text-color),
   $theme-light-pre-text-color
 ) !default;
@@ -221,97 +221,97 @@ $common-pre-text-color: if(
 //----------------------------------------------------
 
 $common-button-paint-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-paint-text-color),
   $theme-light-button-paint-text-color
 ) !default;
 $common-button-focus-shadow-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-focus-shadow-color),
   $theme-light-button-focus-shadow-color
 ) !default;
 $common-button-floating-shadow-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-floating-shadow-color),
   $theme-light-button-floating-shadow-color
 ) !default;
 $common-button-plain-default-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-plain-default-background-color),
   $theme-light-button-plain-default-background-color
 ) !default;
 $common-button-plain-default-hover-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-plain-default-hover-background-color),
   $theme-light-button-plain-default-hover-background-color
 ) !default;
 $common-button-melt-default-hover-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-melt-default-hover-background-color),
   $theme-light-button-melt-default-hover-background-color
 ) !default;
 $common-button-outline-default-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-outline-default-background-color),
   $theme-light-button-outline-default-background-color
 ) !default;
 $common-button-outline-default-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-outline-default-border-color),
   $theme-light-button-outline-default-border-color
 ) !default;
 $common-button-outline-default-hover-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-outline-default-hover-background-color),
   $theme-light-button-outline-default-hover-background-color
 ) !default;
 $common-button-ghost-default-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-ghost-default-border-color),
   $theme-light-button-ghost-default-border-color
 ) !default;
 $common-button-ghost-default-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-ghost-default-text-color),
   $theme-light-button-ghost-default-text-color
 ) !default;
 $common-button-ghost-default-hover-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-ghost-default-hover-background-color),
   $theme-light-button-ghost-default-hover-background-color
 ) !default;
 $common-button-ghost-default-hover-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-ghost-default-hover-text-color),
   $theme-light-button-ghost-default-hover-text-color
 ) !default;
 $common-button-disabled-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-disabled-background-color),
   $theme-light-button-disabled-background-color
 ) !default;
 $common-button-disabled-background-color-alpha: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-disabled-background-color-alpha),
   $theme-light-button-disabled-background-color-alpha
 ) !default;
 $common-button-disabled-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-disabled-text-color),
   $theme-light-button-disabled-text-color
 ) !default;
 $common-button-ghost-disabled-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-ghost-disabled-background-color),
   $theme-light-button-ghost-disabled-background-color
 ) !default;
 $common-button-ghost-disabled-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-ghost-disabled-border-color),
   $theme-light-button-ghost-disabled-border-color
 ) !default;
 $common-button-ghost-disabled-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-button-ghost-disabled-text-color),
   $theme-light-button-ghost-disabled-text-color
 ) !default;
@@ -333,37 +333,37 @@ $common-button-ghost-disabled-text-color: if(
 //----------------------------------------------------
 
 $common-table-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-table-background-color),
   $theme-light-table-background-color
 ) !default;
 $common-table-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-table-border-color),
   $theme-light-table-border-color
 ) !default;
 $common-table-stripe-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-table-stripe-background-color),
   $theme-light-table-stripe-background-color
 ) !default;
 $common-table-paint-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-table-paint-background-color),
   $theme-light-table-paint-background-color
 ) !default;
 $common-table-paint-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-table-paint-text-color),
   $theme-light-table-paint-text-color
 ) !default;
 $common-table-spot-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-table-spot-background-color),
   $theme-light-table-spot-background-color
 ) !default;
 $common-table-danger-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-table-danger-background-color),
   $theme-light-table-danger-background-color
 ) !default;
@@ -373,102 +373,102 @@ $common-table-danger-background-color: if(
 //----------------------------------------------------
 
 $common-input-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-background-color),
   $theme-light-input-background-color
 ) !default;
 $common-input-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-border-color),
   $theme-light-input-border-color
 ) !default;
 $common-input-shadow-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-shadow-color),
   $theme-light-input-shadow-color
 ) !default;
 $common-input-focus-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-focus-border-color),
   $theme-light-input-focus-border-color
 ) !default;
 $common-input-focus-shadow-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-focus-shadow-color),
   $theme-light-input-focus-shadow-color
 ) !default;
 $common-input-disabled-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-disabled-background-color),
   $theme-light-input-disabled-background-color
 ) !default;
 $common-input-disabled-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-disabled-border-color),
   $theme-light-input-disabled-border-color
 ) !default;
 $common-input-disabled-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-disabled-text-color),
   $theme-light-input-disabled-text-color
 ) !default;
 $common-input-readonly-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-readonly-background-color),
   $theme-light-input-readonly-background-color
 ) !default;
 $common-input-readonly-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-readonly-text-color),
   $theme-light-input-readonly-text-color
 ) !default;
 $common-input-placeholder-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-input-placeholder-color),
   $theme-light-input-placeholder-color
 ) !default;
 $common-radio-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-radio-background-color),
   $theme-light-radio-background-color
 ) !default;
 $common-radio-before-checked-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-radio-before-checked-background-color),
   $theme-light-radio-before-checked-background-color
 ) !default;
 $common-radio-checked-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-radio-checked-border-color),
   $theme-light-radio-checked-border-color
 ) !default;
 $common-checkbox-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-radio-background-color),
   $theme-light-radio-background-color
 ) !default;
 $common-checkbox-focus-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-checkbox-focus-border-color),
   $theme-light-checkbox-focus-border-color
 ) !default;
 $common-checkbox-before-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-checkbox-before-border-color),
   $theme-light-checkbox-before-border-color
 ) !default;
 $common-checkbox-checked-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-checkbox-checked-background-color),
   $theme-light-checkbox-checked-background-color
 ) !default;
 $common-checkbox-checked-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-checkbox-checked-border-color),
   $theme-light-checkbox-checked-border-color
 ) !default;
 $common-select-angle-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-select-angle-border-color),
   $theme-light-select-angle-border-color
 ) !default;
@@ -484,62 +484,62 @@ $common-select-angle-border-color: if(
 //----------------------------------------------------
 
 $common-alert-default-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-default-background-color),
   $theme-light-alert-default-background-color
 ) !default;
 $common-alert-default-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-default-border-color),
   $theme-light-alert-default-border-color
 ) !default;
 $common-alert-primary-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-primary-background-color),
   $theme-light-alert-primary-background-color
 ) !default;
 $common-alert-primary-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-primary-border-color),
   $theme-light-alert-primary-border-color
 ) !default;
 $common-alert-info-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-info-background-color),
   $theme-light-alert-info-background-color
 ) !default;
 $common-alert-info-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-info-border-color),
   $theme-light-alert-info-border-color
 ) !default;
 $common-alert-success-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-success-background-color),
   $theme-light-alert-success-background-color
 ) !default;
 $common-alert-success-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-success-border-color),
   $theme-light-alert-success-border-color
 ) !default;
 $common-alert-warning-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-warning-background-color),
   $theme-light-alert-warning-background-color
 ) !default;
 $common-alert-warning-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-warning-border-color),
   $theme-light-alert-warning-border-color
 ) !default;
 $common-alert-danger-background-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-danger-background-color),
   $theme-light-alert-danger-background-color
 ) !default;
 $common-alert-danger-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-alert-danger-border-color),
   $theme-light-alert-danger-border-color
 ) !default;
@@ -549,12 +549,12 @@ $common-alert-danger-border-color: if(
 //----------------------------------------------------
 
 $common-wysiwyg-link-text-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-wysiwyg-link-text-color),
   $theme-light-wysiwyg-link-text-color
 ) !default;
 $common-wysiwyg-hr-border-color: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-wysiwyg-hr-border-color),
   $theme-light-wysiwyg-hr-border-color
 ) !default;
@@ -576,103 +576,103 @@ $common-wysiwyg-hr-border-color: if(
 //----------------------------------------------------
 
 $common-deco-text-dark: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark),
   $theme-light-deco-text-dark
 ) !default;
 $common-deco-text-dark-1: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-1),
   $theme-light-deco-text-dark-1
 ) !default;
 $common-deco-text-dark-2: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-2),
   $theme-light-deco-text-dark-2
 ) !default;
 $common-deco-text-dark-3: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-3),
   $theme-light-deco-text-dark-3
 ) !default;
 $common-deco-text-dark-4: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-4),
   $theme-light-deco-text-dark-4
 ) !default;
 $common-deco-text-dark-5: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-5),
   $theme-light-deco-text-dark-5
 ) !default;
 $common-deco-text-dark-6: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-6),
   $theme-light-deco-text-dark-6
 ) !default;
 $common-deco-text-dark-7: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-7),
   $theme-light-deco-text-dark-7
 ) !default;
 $common-deco-text-dark-8: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-8),
   $theme-light-deco-text-dark-8
 ) !default;
 $common-deco-text-dark-9: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-dark-9),
   $theme-light-deco-text-dark-9
 ) !default;
 
 $common-deco-text-light: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light),
   $theme-light-deco-text-light
 ) !default;
 $common-deco-text-light-1: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-1),
   $theme-light-deco-text-light-1
 ) !default;
 $common-deco-text-light-2: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-2),
   $theme-light-deco-text-light-2
 ) !default;
 $common-deco-text-light-3: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-3),
   $theme-light-deco-text-light-3
 ) !default;
 $common-deco-text-light-4: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-4),
   $theme-light-deco-text-light-4
 ) !default;
 $common-deco-text-light-5: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-5),
   $theme-light-deco-text-light-5
 ) !default;
 $common-deco-text-light-6: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-6),
   $theme-light-deco-text-light-6
 ) !default;
 $common-deco-text-light-7: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-7),
   $theme-light-deco-text-light-7
 ) !default;
 $common-deco-text-light-8: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-8),
   $theme-light-deco-text-light-8
 ) !default;
 $common-deco-text-light-9: if(
-  $css-variables == true,
+  $use-css-variables == true,
   var(--root-deco-text-light-9),
   $theme-light-deco-text-light-9
 ) !default;

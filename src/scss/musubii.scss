@@ -16,7 +16,7 @@
 // / Import > Config
 //----------------------------------------------------
 
-$css-variables: false !default;
+$use-css-variables: true !default;
 
 @import "config/_theme-initial.scss";
 @import "config/_theme-light.scss";
