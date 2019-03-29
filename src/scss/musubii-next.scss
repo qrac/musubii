@@ -16,12 +16,13 @@
 // / Import > Config
 //----------------------------------------------------
 
+$css-variables: true !default;
+
 @import "config/_theme-initial.scss";
 @import "config/_theme-light.scss";
 @import "config/_theme-dark.scss";
 @import "config/_root-light.scss";
 @import "config/_root-dark.scss";
-@import "config/_common-next.scss";
 @import "config/_common.scss";
 @import "config/_variable.scss";
 

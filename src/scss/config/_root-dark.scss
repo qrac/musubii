@@ -14,12 +14,12 @@ $data-theme-dark: true !default;
   @if $default-theme-dark == true {
     @content;
   }
-  @if $media-theme-dark == true {
+  @if $css-variables == true and $media-theme-dark == true {
     @include media-theme-dark {
       @content;
     }
   }
-  @if $data-theme-dark == true {
+  @if $css-variables == true and $data-theme-dark == true {
     @include data-theme-dark {
       @content;
     }
