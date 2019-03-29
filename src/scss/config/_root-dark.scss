@@ -32,31 +32,6 @@ $data-theme-dark: true !default;
 
 :root {
   @include export-theme-dark {
-    --root-global-dark: #{$theme-dark-global-dark};
-    --root-global-dark-1: #{$theme-dark-global-dark-1};
-    --root-global-dark-2: #{$theme-dark-global-dark-2};
-    --root-global-dark-3: #{$theme-dark-global-dark-3};
-    --root-global-dark-4: #{$theme-dark-global-dark-4};
-    --root-global-dark-5: #{$theme-dark-global-dark-5};
-    --root-global-dark-6: #{$theme-dark-global-dark-6};
-    --root-global-dark-7: #{$theme-dark-global-dark-7};
-    --root-global-dark-8: #{$theme-dark-global-dark-8};
-    --root-global-dark-9: #{$theme-dark-global-dark-9};
-    //--root-global-light: #{$theme-dark-global-light};
-    //--root-global-light-1: #{$theme-dark-global-light-1};
-    //--root-global-light-2: #{$theme-dark-global-light-2};
-    //--root-global-light-3: #{$theme-dark-global-light-3};
-    //--root-global-light-4: #{$theme-dark-global-light-4};
-    //--root-global-light-5: #{$theme-dark-global-light-5};
-    //--root-global-light-6: #{$theme-dark-global-light-6};
-    //--root-global-light-7: #{$theme-dark-global-light-7};
-    //--root-global-light-8: #{$theme-dark-global-light-8};
-    //--root-global-light-9: #{$theme-dark-global-light-9};
-  }
-}
-
-:root {
-  @include export-theme-dark {
     --root-global-primary: #{$theme-dark-global-primary};
     --root-global-info: #{$theme-dark-global-info};
     --root-global-success: #{$theme-dark-global-success};
@@ -301,7 +276,30 @@ $data-theme-dark: true !default;
 // / Utility - Deco
 //----------------------------------------------------
 
-// none
+:root {
+  @include export-theme-dark {
+    --root-deco-text-dark: #{$theme-dark-deco-text-dark};
+    --root-deco-text-dark-1: #{$theme-dark-deco-text-dark-1};
+    --root-deco-text-dark-2: #{$theme-dark-deco-text-dark-2};
+    --root-deco-text-dark-3: #{$theme-dark-deco-text-dark-3};
+    --root-deco-text-dark-4: #{$theme-dark-deco-text-dark-4};
+    --root-deco-text-dark-5: #{$theme-dark-deco-text-dark-5};
+    --root-deco-text-dark-6: #{$theme-dark-deco-text-dark-6};
+    --root-deco-text-dark-7: #{$theme-dark-deco-text-dark-7};
+    --root-deco-text-dark-8: #{$theme-dark-deco-text-dark-8};
+    --root-deco-text-dark-9: #{$theme-dark-deco-text-dark-9};
+    //--root-deco-text-light: #{$theme-dark-deco-text-light};
+    //--root-deco-text-light-1: #{$theme-dark-deco-text-light-1};
+    //--root-deco-text-light-2: #{$theme-dark-deco-text-light-2};
+    //--root-deco-text-light-3: #{$theme-dark-deco-text-light-3};
+    //--root-deco-text-light-4: #{$theme-dark-deco-text-light-4};
+    //--root-deco-text-light-5: #{$theme-dark-deco-text-light-5};
+    //--root-deco-text-light-6: #{$theme-dark-deco-text-light-6};
+    //--root-deco-text-light-7: #{$theme-dark-deco-text-light-7};
+    //--root-deco-text-light-8: #{$theme-dark-deco-text-light-8};
+    //--root-deco-text-light-9: #{$theme-dark-deco-text-light-9};
+  }
+}
 
 //----------------------------------------------------
 // / Utility - Clearfix

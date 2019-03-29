@@ -6,28 +6,6 @@
 // / Base - Global
 //----------------------------------------------------
 
-$theme-light-global-dark: $black !default;
-$theme-light-global-dark-1: rgba($black, 0.87) !default;
-$theme-light-global-dark-2: rgba($black, 0.7) !default;
-$theme-light-global-dark-3: rgba($black, 0.6) !default;
-$theme-light-global-dark-4: rgba($black, 0.5) !default;
-$theme-light-global-dark-5: rgba($black, 0.4) !default;
-$theme-light-global-dark-6: rgba($black, 0.26) !default;
-$theme-light-global-dark-7: rgba($black, 0.15) !default;
-$theme-light-global-dark-8: rgba($black, 0.12) !default;
-$theme-light-global-dark-9: rgba($black, 0.05) !default;
-
-$theme-light-global-light: $white !default;
-$theme-light-global-light-1: rgba($white, 0.87) !default;
-$theme-light-global-light-2: rgba($white, 0.7) !default;
-$theme-light-global-light-3: rgba($white, 0.6) !default;
-$theme-light-global-light-4: rgba($white, 0.5) !default;
-$theme-light-global-light-5: rgba($white, 0.4) !default;
-$theme-light-global-light-6: rgba($white, 0.26) !default;
-$theme-light-global-light-7: rgba($white, 0.15) !default;
-$theme-light-global-light-8: rgba($white, 0.12) !default;
-$theme-light-global-light-9: rgba($white, 0.05) !default;
-
 $theme-light-global-primary: $cyan-500 !default;
 $theme-light-global-info: $blue-500 !default;
 $theme-light-global-success: $green-a700 !default;
@@ -245,7 +223,27 @@ $theme-light-wysiwyg-hr-border-color: $dark-7 !default;
 // / Utility - Deco
 //----------------------------------------------------
 
-// none
+$theme-light-deco-text-dark: $black !default;
+$theme-light-deco-text-dark-1: rgba($black, 0.87) !default;
+$theme-light-deco-text-dark-2: rgba($black, 0.7) !default;
+$theme-light-deco-text-dark-3: rgba($black, 0.6) !default;
+$theme-light-deco-text-dark-4: rgba($black, 0.5) !default;
+$theme-light-deco-text-dark-5: rgba($black, 0.4) !default;
+$theme-light-deco-text-dark-6: rgba($black, 0.26) !default;
+$theme-light-deco-text-dark-7: rgba($black, 0.15) !default;
+$theme-light-deco-text-dark-8: rgba($black, 0.12) !default;
+$theme-light-deco-text-dark-9: rgba($black, 0.05) !default;
+
+$theme-light-deco-text-light: $white !default;
+$theme-light-deco-text-light-1: rgba($white, 0.87) !default;
+$theme-light-deco-text-light-2: rgba($white, 0.7) !default;
+$theme-light-deco-text-light-3: rgba($white, 0.6) !default;
+$theme-light-deco-text-light-4: rgba($white, 0.5) !default;
+$theme-light-deco-text-light-5: rgba($white, 0.4) !default;
+$theme-light-deco-text-light-6: rgba($white, 0.26) !default;
+$theme-light-deco-text-light-7: rgba($white, 0.15) !default;
+$theme-light-deco-text-light-8: rgba($white, 0.12) !default;
+$theme-light-deco-text-light-9: rgba($white, 0.05) !default;
 
 //----------------------------------------------------
 // / Utility - Clearfix

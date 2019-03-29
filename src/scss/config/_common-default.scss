@@ -6,28 +6,6 @@
 // / Base - Global
 //----------------------------------------------------
 
-$common-global-dark: $theme-light-global-dark !default;
-$common-global-dark-1: $theme-light-global-dark-1 !default;
-$common-global-dark-2: $theme-light-global-dark-2 !default;
-$common-global-dark-3: $theme-light-global-dark-3 !default;
-$common-global-dark-4: $theme-light-global-dark-4 !default;
-$common-global-dark-5: $theme-light-global-dark-5 !default;
-$common-global-dark-6: $theme-light-global-dark-6 !default;
-$common-global-dark-7: $theme-light-global-dark-7 !default;
-$common-global-dark-8: $theme-light-global-dark-8 !default;
-$common-global-dark-9: $theme-light-global-dark-9 !default;
-
-$common-global-light: $theme-light-global-light !default;
-$common-global-light-1: $theme-light-global-light-1 !default;
-$common-global-light-2: $theme-light-global-light-2 !default;
-$common-global-light-3: $theme-light-global-light-3 !default;
-$common-global-light-4: $theme-light-global-light-4 !default;
-$common-global-light-5: $theme-light-global-light-5 !default;
-$common-global-light-6: $theme-light-global-light-6 !default;
-$common-global-light-7: $theme-light-global-light-7 !default;
-$common-global-light-8: $theme-light-global-light-8 !default;
-$common-global-light-9: $theme-light-global-light-9 !default;
-
 $common-global-primary: $theme-light-global-primary !default;
 $common-global-info: $theme-light-global-info !default;
 $common-global-success: $theme-light-global-success !default;
@@ -245,7 +223,27 @@ $common-wysiwyg-hr-border-color: $theme-light-wysiwyg-hr-border-color !default;
 // / Utility - Deco
 //----------------------------------------------------
 
-// none
+$common-deco-text-dark: $theme-light-deco-text-dark !default;
+$common-deco-text-dark-1: $theme-light-deco-text-dark-1 !default;
+$common-deco-text-dark-2: $theme-light-deco-text-dark-2 !default;
+$common-deco-text-dark-3: $theme-light-deco-text-dark-3 !default;
+$common-deco-text-dark-4: $theme-light-deco-text-dark-4 !default;
+$common-deco-text-dark-5: $theme-light-deco-text-dark-5 !default;
+$common-deco-text-dark-6: $theme-light-deco-text-dark-6 !default;
+$common-deco-text-dark-7: $theme-light-deco-text-dark-7 !default;
+$common-deco-text-dark-8: $theme-light-deco-text-dark-8 !default;
+$common-deco-text-dark-9: $theme-light-deco-text-dark-9 !default;
+
+$common-deco-text-light: $theme-light-deco-text-light !default;
+$common-deco-text-light-1: $theme-light-deco-text-light-1 !default;
+$common-deco-text-light-2: $theme-light-deco-text-light-2 !default;
+$common-deco-text-light-3: $theme-light-deco-text-light-3 !default;
+$common-deco-text-light-4: $theme-light-deco-text-light-4 !default;
+$common-deco-text-light-5: $theme-light-deco-text-light-5 !default;
+$common-deco-text-light-6: $theme-light-deco-text-light-6 !default;
+$common-deco-text-light-7: $theme-light-deco-text-light-7 !default;
+$common-deco-text-light-8: $theme-light-deco-text-light-8 !default;
+$common-deco-text-light-9: $theme-light-deco-text-light-9 !default;
 
 //----------------------------------------------------
 // / Utility - Clearfix

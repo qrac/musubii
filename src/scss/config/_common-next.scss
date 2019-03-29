@@ -6,28 +6,6 @@
 // / Base - Global
 //----------------------------------------------------
 
-$common-global-dark: var(--root-global-dark) !default;
-$common-global-dark-1: var(--root-global-dark-1) !default;
-$common-global-dark-2: var(--root-global-dark-2) !default;
-$common-global-dark-3: var(--root-global-dark-3) !default;
-$common-global-dark-4: var(--root-global-dark-4) !default;
-$common-global-dark-5: var(--root-global-dark-5) !default;
-$common-global-dark-6: var(--root-global-dark-6) !default;
-$common-global-dark-7: var(--root-global-dark-7) !default;
-$common-global-dark-8: var(--root-global-dark-8) !default;
-$common-global-dark-9: var(--root-global-dark-9) !default;
-
-$common-global-light: var(--root-global-light) !default;
-$common-global-light-1: var(--root-global-light-1) !default;
-$common-global-light-2: var(--root-global-light-2) !default;
-$common-global-light-3: var(--root-global-light-3) !default;
-$common-global-light-4: var(--root-global-light-4) !default;
-$common-global-light-5: var(--root-global-light-5) !default;
-$common-global-light-6: var(--root-global-light-6) !default;
-$common-global-light-7: var(--root-global-light-7) !default;
-$common-global-light-8: var(--root-global-light-8) !default;
-$common-global-light-9: var(--root-global-light-9) !default;
-
 $common-global-primary: var(--root-global-primary) !default;
 $common-global-info: var(--root-global-info) !default;
 $common-global-success: var(--root-global-success) !default;
@@ -339,7 +317,27 @@ $common-wysiwyg-hr-border-color: var(--root-wysiwyg-hr-border-color) !default;
 // / Utility - Deco
 //----------------------------------------------------
 
-// none
+$common-deco-text-dark: var(--root-deco-text-dark) !default;
+$common-deco-text-dark-1: var(--root-deco-text-dark-1) !default;
+$common-deco-text-dark-2: var(--root-deco-text-dark-2) !default;
+$common-deco-text-dark-3: var(--root-deco-text-dark-3) !default;
+$common-deco-text-dark-4: var(--root-deco-text-dark-4) !default;
+$common-deco-text-dark-5: var(--root-deco-text-dark-5) !default;
+$common-deco-text-dark-6: var(--root-deco-text-dark-6) !default;
+$common-deco-text-dark-7: var(--root-deco-text-dark-7) !default;
+$common-deco-text-dark-8: var(--root-deco-text-dark-8) !default;
+$common-deco-text-dark-9: var(--root-deco-text-dark-9) !default;
+
+$common-deco-text-light: var(--root-deco-text-light) !default;
+$common-deco-text-light-1: var(--root-deco-text-light-1) !default;
+$common-deco-text-light-2: var(--root-deco-text-light-2) !default;
+$common-deco-text-light-3: var(--root-deco-text-light-3) !default;
+$common-deco-text-light-4: var(--root-deco-text-light-4) !default;
+$common-deco-text-light-5: var(--root-deco-text-light-5) !default;
+$common-deco-text-light-6: var(--root-deco-text-light-6) !default;
+$common-deco-text-light-7: var(--root-deco-text-light-7) !default;
+$common-deco-text-light-8: var(--root-deco-text-light-8) !default;
+$common-deco-text-light-9: var(--root-deco-text-light-9) !default;
 
 //----------------------------------------------------
 // / Utility - Clearfix

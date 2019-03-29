@@ -643,36 +643,36 @@ $wysiwyg-figcaption-font-size: 87.5% !default;
 // Deco Text Class
 $deco-text-class: ".heading, .texts, .text" !default;
 
-// Pattern - Text Dark
-$pattern-text-dark: (
-  dark: $common-global-dark,
-  dark-1: $common-global-dark-1,
-  dark-2: $common-global-dark-2,
-  dark-3: $common-global-dark-3,
-  dark-4: $common-global-dark-4,
-  dark-5: $common-global-dark-5,
-  dark-6: $common-global-dark-6,
-  dark-7: $common-global-dark-7,
-  dark-8: $common-global-dark-8,
-  dark-9: $common-global-dark-9
+// Pattern - Deco Text Dark
+$pattern-deco-text-dark: (
+  dark: $common-deco-text-dark,
+  dark-1: $common-deco-text-dark-1,
+  dark-2: $common-deco-text-dark-2,
+  dark-3: $common-deco-text-dark-3,
+  dark-4: $common-deco-text-dark-4,
+  dark-5: $common-deco-text-dark-5,
+  dark-6: $common-deco-text-dark-6,
+  dark-7: $common-deco-text-dark-7,
+  dark-8: $common-deco-text-dark-8,
+  dark-9: $common-deco-text-dark-9
 ) !default;
 
-// Pattern - Text Light
-$pattern-text-light: (
-  light: $common-global-light,
-  light-1: $common-global-light-1,
-  light-2: $common-global-light-2,
-  light-3: $common-global-light-3,
-  light-4: $common-global-light-4,
-  light-5: $common-global-light-5,
-  light-6: $common-global-light-6,
-  light-7: $common-global-light-7,
-  light-8: $common-global-light-8,
-  light-9: $common-global-light-9
+// Pattern - Deco Text Light
+$pattern-deco-text-light: (
+  light: $common-deco-text-light,
+  light-1: $common-deco-text-light-1,
+  light-2: $common-deco-text-light-2,
+  light-3: $common-deco-text-light-3,
+  light-4: $common-deco-text-light-4,
+  light-5: $common-deco-text-light-5,
+  light-6: $common-deco-text-light-6,
+  light-7: $common-deco-text-light-7,
+  light-8: $common-deco-text-light-8,
+  light-9: $common-deco-text-light-9
 ) !default;
 
-// Pattern - Text Color
-$pattern-text-color: (
+// Pattern - Deco Text Color
+$pattern-deco-text-color: (
   primary: $common-global-primary-strong,
   info: $common-global-info-strong,
   success: $common-global-success-strong,

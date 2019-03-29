@@ -7,7 +7,7 @@
 //----------------------------------------------------
 
 #{$deco-text-class} {
-  @each $key, $value in $pattern-text-dark {
+  @each $key, $value in $pattern-deco-text-dark {
     &.is-#{$key} {
       color: $value;
     }
@@ -19,7 +19,7 @@
 //----------------------------------------------------
 
 #{$deco-text-class} {
-  @each $key, $value in $pattern-text-light {
+  @each $key, $value in $pattern-deco-text-light {
     &.is-#{$key} {
       color: $value;
     }
@@ -31,7 +31,7 @@
 //----------------------------------------------------
 
 #{$deco-text-class} {
-  @each $key, $value in $pattern-text-color {
+  @each $key, $value in $pattern-deco-text-color {
     &.is-#{$key} {
       color: $value;
     }
