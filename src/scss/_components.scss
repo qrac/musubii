@@ -5,6 +5,7 @@
 @import "base/_root-light.scss";
 @import "base/_root-dark.scss";
 @import "base/_global.scss";
+
 @import "layout/_section.scss";
 @import "layout/_grid.scss";
 @import "layout/_box.scss";
@@ -14,6 +15,7 @@
 @import "layout/_space.scss";
 @import "layout/_margin.scss";
 @import "layout/_padding.scss";
+
 @import "module/_heading.scss";
 @import "module/_text.scss";
 @import "module/_button.scss";
@@ -25,6 +27,7 @@
 @import "module/_icon.scss";
 @import "module/_alert.scss";
 @import "module/_wysiwyg.scss";
+
 @import "utility/_display.scss";
 @import "utility/_size.scss";
 @import "utility/_deco.scss";
