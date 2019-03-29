@@ -6,59 +6,62 @@
 // / Base - Global
 //----------------------------------------------------
 
-$theme-light-global-primary: $theme-default-global-primary !default;
-$theme-light-global-info: $theme-default-global-info !default;
-$theme-light-global-success: $theme-default-global-success !default;
-$theme-light-global-warning: $theme-default-global-warning !default;
-$theme-light-global-danger: $theme-default-global-danger !default;
+$theme-light-global-primary: $theme-initial-global-primary !default;
+$theme-light-global-info: $theme-initial-global-info !default;
+$theme-light-global-success: $theme-initial-global-success !default;
+$theme-light-global-warning: $theme-initial-global-warning !default;
+$theme-light-global-danger: $theme-initial-global-danger !default;
 
-$theme-light-global-primary-strong: $theme-light-global-primary !default;
-$theme-light-global-info-strong: $theme-light-global-info !default;
-$theme-light-global-success-strong: $theme-light-global-success !default;
-$theme-light-global-warning-strong: $theme-light-global-warning !default;
-$theme-light-global-danger-strong: $theme-light-global-danger !default;
+$theme-light-global-primary-strong: $theme-initial-global-primary !default;
+$theme-light-global-info-strong: $theme-initial-global-info !default;
+$theme-light-global-success-strong: $theme-initial-global-success !default;
+$theme-light-global-warning-strong: $theme-initial-global-warning !default;
+$theme-light-global-danger-strong: $theme-initial-global-danger !default;
 
 $theme-light-global-primary-darken: darken(
-  $theme-light-global-primary,
+  $theme-initial-global-primary,
   5%
 ) !default;
-$theme-light-global-info-darken: darken($theme-light-global-info, 5%) !default;
+$theme-light-global-info-darken: darken(
+  $theme-initial-global-info,
+  5%
+) !default;
 $theme-light-global-success-darken: darken(
-  $theme-light-global-success,
+  $theme-initial-global-success,
   5%
 ) !default;
 $theme-light-global-warning-darken: darken(
-  $theme-light-global-warning,
+  $theme-initial-global-warning,
   5%
 ) !default;
 $theme-light-global-danger-darken: darken(
-  $theme-light-global-danger,
+  $theme-initial-global-danger,
   5%
 ) !default;
 
 $theme-light-global-primary-lighten: lighten(
-  $theme-light-global-primary,
+  $theme-initial-global-primary,
   30%
 ) !default;
 $theme-light-global-info-lighten: lighten(
-  $theme-light-global-info,
+  $theme-initial-global-info,
   30%
 ) !default;
 $theme-light-global-success-lighten: lighten(
-  $theme-light-global-success,
+  $theme-initial-global-success,
   30%
 ) !default;
 $theme-light-global-warning-lighten: lighten(
-  $theme-light-global-warning,
+  $theme-initial-global-warning,
   30%
 ) !default;
 $theme-light-global-danger-lighten: lighten(
-  $theme-light-global-danger,
+  $theme-initial-global-danger,
   30%
 ) !default;
 
-$theme-light-global-background-color: $light !default;
-$theme-light-global-text-color: $dark-2 !default;
+$theme-light-global-background-color: $theme-initial-global-background-color !default;
+$theme-light-global-text-color: $theme-initial-global-text-color !default;
 
 //----------------------------------------------------
 // / Layout - Section
