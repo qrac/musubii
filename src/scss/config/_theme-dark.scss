@@ -6,29 +6,44 @@
 // / Base - Global
 //----------------------------------------------------
 
-$theme-dark-global-primary: $cyan-700 !default;
-$theme-dark-global-info: $blue-700 !default;
-$theme-dark-global-success: $green-700 !default;
-$theme-dark-global-warning: $orange-900 !default;
-$theme-dark-global-danger: $red-700 !default;
+$theme-dark-global-primary: darken($theme-default-global-primary, 12%) !default;
+$theme-dark-global-info: darken($theme-default-global-info, 12%) !default;
+$theme-dark-global-success: darken($theme-default-global-success, 12%) !default;
+$theme-dark-global-warning: darken($theme-default-global-warning, 12%) !default;
+$theme-dark-global-danger: darken($theme-default-global-danger, 12%) !default;
 
-$theme-dark-global-primary-strong: $cyan-500 !default;
-$theme-dark-global-info-strong: $blue-500 !default;
-$theme-dark-global-success-strong: $green-500 !default;
-$theme-dark-global-warning-strong: $orange-600 !default;
-$theme-dark-global-danger-strong: $red-500 !default;
+$theme-dark-global-primary-strong: $theme-default-global-primary !default;
+$theme-dark-global-info-strong: $theme-default-global-info !default;
+$theme-dark-global-success-strong: $theme-default-global-success !default;
+$theme-dark-global-warning-strong: $theme-default-global-warning !default;
+$theme-dark-global-danger-strong: $theme-default-global-danger !default;
 
-$theme-dark-global-primary-darken: darken($cyan-700, 5%) !default;
-$theme-dark-global-info-darken: darken($blue-700, 5%) !default;
-$theme-dark-global-success-darken: darken($green-700, 5%) !default;
-$theme-dark-global-warning-darken: darken($orange-900, 5%) !default;
-$theme-dark-global-danger-darken: darken($red-700, 5%) !default;
+$theme-dark-global-primary-darken: darken(
+  $theme-default-global-primary,
+  17%
+) !default;
+$theme-dark-global-info-darken: darken(
+  $theme-default-global-info,
+  17%
+) !default;
+$theme-dark-global-success-darken: darken(
+  $theme-default-global-success,
+  17%
+) !default;
+$theme-dark-global-warning-darken: darken(
+  $theme-default-global-warning,
+  17%
+) !default;
+$theme-dark-global-danger-darken: darken(
+  $theme-default-global-danger,
+  17%
+) !default;
 
-//$theme-dark-global-primary-lighten: lighten($cyan-500, 30%) !default;
-//$theme-dark-global-info-lighten: lighten($blue-500, 30%) !default;
-//$theme-dark-global-success-lighten: lighten($green-a700, 30%) !default;
-//$theme-dark-global-warning-lighten: lighten($orange-600, 30%) !default;
-//$theme-dark-global-danger-lighten: lighten($red-500, 30%) !default;
+//$theme-dark-global-primary-lighten: lighten($theme-default-global-primary, 30%) !default;
+//$theme-dark-global-info-lighten: lighten($theme-default-global-info, 30%) !default;
+//$theme-dark-global-success-lighten: lighten($theme-default-global-success, 30%) !default;
+//$theme-dark-global-warning-lighten: lighten($theme-default-global-warning, 30%) !default;
+//$theme-dark-global-danger-lighten: lighten($theme-default-global-danger, 30%) !default;
 
 $theme-dark-global-background-color: $grey-900 !default;
 $theme-dark-global-text-color: $light-1 !default;

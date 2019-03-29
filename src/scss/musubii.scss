@@ -16,8 +16,9 @@
 // / Import > Config
 //----------------------------------------------------
 
+@import "config/_theme-default.scss";
 @import "config/_theme-light.scss";
-@import "config/_common-default.scss";
+@import "config/_common.scss";
 @import "config/_variable.scss";
 
 //----------------------------------------------------
