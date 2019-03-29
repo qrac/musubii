@@ -3,11 +3,35 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+$default-theme-dark: false !default;
+$media-theme-dark: false !default;
+$data-theme-dark: true !default;
+
+@mixin export-theme-dark {
+  @if $default-theme-dark == true {
+    @content;
+  }
+  @if $media-theme-dark == true {
+    @include media-theme-dark {
+      @content;
+    }
+  }
+  @if $data-theme-dark == true {
+    @include data-theme-dark {
+      @content;
+    }
+  }
+}
+
+//----------------------------------------------------
 // / Yin and Yang
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-yinyang-dark: #{$theme-dark-yinyang-dark};
     --root-yinyang-dark-1: #{$theme-dark-yinyang-dark-1};
     --root-yinyang-dark-2: #{$theme-dark-yinyang-dark-2};
@@ -36,7 +60,7 @@
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-role-primary: #{$theme-dark-role-primary};
     --root-role-info: #{$theme-dark-role-info};
     --root-role-success: #{$theme-dark-role-success};
@@ -65,7 +89,7 @@
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-body-background-color: #{$theme-dark-body-background-color};
     --root-body-text-color: #{$theme-dark-body-text-color};
     //--root-body-font-family: #{$theme-dark-body-font-family};
@@ -80,6 +104,18 @@
 
 //----------------------------------------------------
 // / Layout - Grid
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Box
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Card
 //----------------------------------------------------
 
 // none
@@ -125,7 +161,7 @@
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-blockquote-background-color: #{$theme-dark-blockquote-background-color};
     --root-blockquote-border-left-color: #{$theme-dark-blockquote-border-left-color};
     --root-code-background-color: #{$theme-dark-code-background-color};
@@ -142,7 +178,7 @@
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-button-paint-text-color: #{$theme-dark-button-paint-text-color};
     //--root-button-focus-shadow-color: #{$theme-dark-button-focus-shadow-color};
     --root-button-floating-shadow-color: #{$theme-dark-button-floating-shadow-color};
@@ -166,6 +202,12 @@
 }
 
 //----------------------------------------------------
+// / Module - Badge
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
 // / Module - List
 //----------------------------------------------------
 
@@ -176,7 +218,7 @@
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-table-background-color: #{$theme-dark-table-background-color};
     --root-table-border-color: #{$theme-dark-table-border-color};
     --root-table-stripe-background-color: #{$theme-dark-table-stripe-background-color};
@@ -192,7 +234,7 @@
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-input-background-color: #{$theme-dark-input-background-color};
     --root-input-border-color: #{$theme-dark-input-border-color};
     --root-input-shadow-color: #{$theme-dark-input-shadow-color};
@@ -227,7 +269,7 @@
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-alert-default-background-color: #{$theme-dark-alert-default-background-color};
     --root-alert-default-border-color: #{$theme-dark-alert-default-border-color};
     --root-alert-primary-background-color: #{$theme-dark-alert-primary-background-color};
@@ -248,7 +290,7 @@
 //----------------------------------------------------
 
 :root {
-  @include data-theme-dark {
+  @include export-theme-dark {
     --root-wysiwyg-link-text-color: #{$theme-dark-wysiwyg-link-text-color};
     --root-wysiwyg-hr-border-color: #{$theme-dark-wysiwyg-hr-border-color};
   }

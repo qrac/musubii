@@ -3,30 +3,56 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+$default-theme-light: true !default;
+$media-theme-light: false !default;
+$data-theme-light: false !default;
+
+@mixin export-theme-light {
+  @if $default-theme-light == true {
+    @content;
+  }
+  @if $media-theme-light == true {
+    @include media-theme-light {
+      @content;
+    }
+  }
+  @if $data-theme-light == true {
+    @include data-theme-light {
+      @content;
+    }
+  }
+}
+
+//----------------------------------------------------
 // / Yin and Yang
 //----------------------------------------------------
 
 :root {
-  --root-yinyang-dark: #{$theme-light-yinyang-dark};
-  --root-yinyang-dark-1: #{$theme-light-yinyang-dark-1};
-  --root-yinyang-dark-2: #{$theme-light-yinyang-dark-2};
-  --root-yinyang-dark-3: #{$theme-light-yinyang-dark-3};
-  --root-yinyang-dark-4: #{$theme-light-yinyang-dark-4};
-  --root-yinyang-dark-5: #{$theme-light-yinyang-dark-5};
-  --root-yinyang-dark-6: #{$theme-light-yinyang-dark-6};
-  --root-yinyang-dark-7: #{$theme-light-yinyang-dark-7};
-  --root-yinyang-dark-8: #{$theme-light-yinyang-dark-8};
-  --root-yinyang-dark-9: #{$theme-light-yinyang-dark-9};
-  --root-yinyang-light: #{$theme-light-yinyang-light};
-  --root-yinyang-light-1: #{$theme-light-yinyang-light-1};
-  --root-yinyang-light-2: #{$theme-light-yinyang-light-2};
-  --root-yinyang-light-3: #{$theme-light-yinyang-light-3};
-  --root-yinyang-light-4: #{$theme-light-yinyang-light-4};
-  --root-yinyang-light-5: #{$theme-light-yinyang-light-5};
-  --root-yinyang-light-6: #{$theme-light-yinyang-light-6};
-  --root-yinyang-light-7: #{$theme-light-yinyang-light-7};
-  --root-yinyang-light-8: #{$theme-light-yinyang-light-8};
-  --root-yinyang-light-9: #{$theme-light-yinyang-light-9};
+  @include export-theme-light {
+    --root-yinyang-dark: #{$theme-light-yinyang-dark};
+    --root-yinyang-dark-1: #{$theme-light-yinyang-dark-1};
+    --root-yinyang-dark-2: #{$theme-light-yinyang-dark-2};
+    --root-yinyang-dark-3: #{$theme-light-yinyang-dark-3};
+    --root-yinyang-dark-4: #{$theme-light-yinyang-dark-4};
+    --root-yinyang-dark-5: #{$theme-light-yinyang-dark-5};
+    --root-yinyang-dark-6: #{$theme-light-yinyang-dark-6};
+    --root-yinyang-dark-7: #{$theme-light-yinyang-dark-7};
+    --root-yinyang-dark-8: #{$theme-light-yinyang-dark-8};
+    --root-yinyang-dark-9: #{$theme-light-yinyang-dark-9};
+    --root-yinyang-light: #{$theme-light-yinyang-light};
+    --root-yinyang-light-1: #{$theme-light-yinyang-light-1};
+    --root-yinyang-light-2: #{$theme-light-yinyang-light-2};
+    --root-yinyang-light-3: #{$theme-light-yinyang-light-3};
+    --root-yinyang-light-4: #{$theme-light-yinyang-light-4};
+    --root-yinyang-light-5: #{$theme-light-yinyang-light-5};
+    --root-yinyang-light-6: #{$theme-light-yinyang-light-6};
+    --root-yinyang-light-7: #{$theme-light-yinyang-light-7};
+    --root-yinyang-light-8: #{$theme-light-yinyang-light-8};
+    --root-yinyang-light-9: #{$theme-light-yinyang-light-9};
+  }
 }
 
 //----------------------------------------------------
@@ -34,26 +60,28 @@
 //----------------------------------------------------
 
 :root {
-  --root-role-primary: #{$theme-light-role-primary};
-  --root-role-info: #{$theme-light-role-info};
-  --root-role-success: #{$theme-light-role-success};
-  --root-role-warning: #{$theme-light-role-warning};
-  --root-role-danger: #{$theme-light-role-danger};
-  --root-role-primary-strong: #{$theme-light-role-primary-strong};
-  --root-role-info-strong: #{$theme-light-role-info-strong};
-  --root-role-success-strong: #{$theme-light-role-success-strong};
-  --root-role-warning-strong: #{$theme-light-role-warning-strong};
-  --root-role-danger-strong: #{$theme-light-role-danger-strong};
-  --root-role-primary-darken: #{$theme-light-role-primary-darken};
-  --root-role-info-darken: #{$theme-light-role-info-darken};
-  --root-role-success-darken: #{$theme-light-role-success-darken};
-  --root-role-warning-darken: #{$theme-light-role-warning-darken};
-  --root-role-danger-darken: #{$theme-light-role-danger-darken};
-  --root-role-primary-lighten: #{$theme-light-role-primary-lighten};
-  --root-role-info-lighten: #{$theme-light-role-info-lighten};
-  --root-role-success-lighten: #{$theme-light-role-success-lighten};
-  --root-role-warning-lighten: #{$theme-light-role-warning-lighten};
-  --root-role-danger-lighten: #{$theme-light-role-danger-lighten};
+  @include export-theme-light {
+    --root-role-primary: #{$theme-light-role-primary};
+    --root-role-info: #{$theme-light-role-info};
+    --root-role-success: #{$theme-light-role-success};
+    --root-role-warning: #{$theme-light-role-warning};
+    --root-role-danger: #{$theme-light-role-danger};
+    --root-role-primary-strong: #{$theme-light-role-primary-strong};
+    --root-role-info-strong: #{$theme-light-role-info-strong};
+    --root-role-success-strong: #{$theme-light-role-success-strong};
+    --root-role-warning-strong: #{$theme-light-role-warning-strong};
+    --root-role-danger-strong: #{$theme-light-role-danger-strong};
+    --root-role-primary-darken: #{$theme-light-role-primary-darken};
+    --root-role-info-darken: #{$theme-light-role-info-darken};
+    --root-role-success-darken: #{$theme-light-role-success-darken};
+    --root-role-warning-darken: #{$theme-light-role-warning-darken};
+    --root-role-danger-darken: #{$theme-light-role-danger-darken};
+    --root-role-primary-lighten: #{$theme-light-role-primary-lighten};
+    --root-role-info-lighten: #{$theme-light-role-info-lighten};
+    --root-role-success-lighten: #{$theme-light-role-success-lighten};
+    --root-role-warning-lighten: #{$theme-light-role-warning-lighten};
+    --root-role-danger-lighten: #{$theme-light-role-danger-lighten};
+  }
 }
 
 //----------------------------------------------------
@@ -61,9 +89,11 @@
 //----------------------------------------------------
 
 :root {
-  --root-body-background-color: #{$theme-light-body-background-color};
-  --root-body-text-color: #{$theme-light-body-text-color};
-  --root-body-font-family: #{$theme-light-body-font-family};
+  @include export-theme-light {
+    --root-body-background-color: #{$theme-light-body-background-color};
+    --root-body-text-color: #{$theme-light-body-text-color};
+    --root-body-font-family: #{$theme-light-body-font-family};
+  }
 }
 
 //----------------------------------------------------
@@ -74,6 +104,18 @@
 
 //----------------------------------------------------
 // / Layout - Grid
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Box
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Layout - Card
 //----------------------------------------------------
 
 // none
@@ -119,14 +161,16 @@
 //----------------------------------------------------
 
 :root {
-  --root-blockquote-background-color: #{$theme-light-blockquote-background-color};
-  --root-blockquote-border-left-color: #{$theme-light-blockquote-border-left-color};
-  --root-code-background-color: #{$theme-light-code-background-color};
-  --root-code-text-color: #{$theme-light-code-text-color};
-  --root-code-font-family: #{$theme-light-code-font-family};
-  --root-pre-background-color: #{$theme-light-pre-background-color};
-  --root-pre-text-color: #{$theme-light-pre-text-color};
-  --root-pre-font-family: #{$theme-light-pre-font-family};
+  @include export-theme-light {
+    --root-blockquote-background-color: #{$theme-light-blockquote-background-color};
+    --root-blockquote-border-left-color: #{$theme-light-blockquote-border-left-color};
+    --root-code-background-color: #{$theme-light-code-background-color};
+    --root-code-text-color: #{$theme-light-code-text-color};
+    --root-code-font-family: #{$theme-light-code-font-family};
+    --root-pre-background-color: #{$theme-light-pre-background-color};
+    --root-pre-text-color: #{$theme-light-pre-text-color};
+    --root-pre-font-family: #{$theme-light-pre-font-family};
+  }
 }
 
 //----------------------------------------------------
@@ -134,26 +178,34 @@
 //----------------------------------------------------
 
 :root {
-  --root-button-paint-text-color: #{$theme-light-button-paint-text-color};
-  --root-button-focus-shadow-color: #{$theme-light-button-focus-shadow-color};
-  --root-button-floating-shadow-color: #{$theme-light-button-floating-shadow-color};
-  --root-button-plain-default-background-color: #{$theme-light-button-plain-default-background-color};
-  --root-button-plain-default-hover-background-color: #{$theme-light-button-plain-default-hover-background-color};
-  --root-button-melt-default-hover-background-color: #{$theme-light-button-melt-default-hover-background-color};
-  --root-button-outline-default-background-color: #{$theme-light-button-outline-default-background-color};
-  --root-button-outline-default-border-color: #{$theme-light-button-outline-default-border-color};
-  --root-button-outline-default-hover-background-color: #{$theme-light-button-outline-default-hover-background-color};
-  --root-button-ghost-default-border-color: #{$theme-light-button-ghost-default-border-color};
-  --root-button-ghost-default-text-color: #{$theme-light-button-ghost-default-text-color};
-  --root-button-ghost-default-hover-background-color: #{$theme-light-button-ghost-default-hover-background-color};
-  --root-button-ghost-default-hover-text-color: #{$theme-light-button-ghost-default-hover-text-color};
-  --root-button-disabled-background-color: #{$theme-light-button-disabled-background-color};
-  --root-button-disabled-background-color-alpha: #{$theme-light-button-disabled-background-color-alpha};
-  --root-button-disabled-text-color: #{$theme-light-button-disabled-text-color};
-  --root-button-ghost-disabled-background-color: #{$theme-light-button-ghost-disabled-background-color};
-  --root-button-ghost-disabled-border-color: #{$theme-light-button-ghost-disabled-border-color};
-  --root-button-ghost-disabled-text-color: #{$theme-light-button-ghost-disabled-text-color};
+  @include export-theme-light {
+    --root-button-paint-text-color: #{$theme-light-button-paint-text-color};
+    --root-button-focus-shadow-color: #{$theme-light-button-focus-shadow-color};
+    --root-button-floating-shadow-color: #{$theme-light-button-floating-shadow-color};
+    --root-button-plain-default-background-color: #{$theme-light-button-plain-default-background-color};
+    --root-button-plain-default-hover-background-color: #{$theme-light-button-plain-default-hover-background-color};
+    --root-button-melt-default-hover-background-color: #{$theme-light-button-melt-default-hover-background-color};
+    --root-button-outline-default-background-color: #{$theme-light-button-outline-default-background-color};
+    --root-button-outline-default-border-color: #{$theme-light-button-outline-default-border-color};
+    --root-button-outline-default-hover-background-color: #{$theme-light-button-outline-default-hover-background-color};
+    --root-button-ghost-default-border-color: #{$theme-light-button-ghost-default-border-color};
+    --root-button-ghost-default-text-color: #{$theme-light-button-ghost-default-text-color};
+    --root-button-ghost-default-hover-background-color: #{$theme-light-button-ghost-default-hover-background-color};
+    --root-button-ghost-default-hover-text-color: #{$theme-light-button-ghost-default-hover-text-color};
+    --root-button-disabled-background-color: #{$theme-light-button-disabled-background-color};
+    --root-button-disabled-background-color-alpha: #{$theme-light-button-disabled-background-color-alpha};
+    --root-button-disabled-text-color: #{$theme-light-button-disabled-text-color};
+    --root-button-ghost-disabled-background-color: #{$theme-light-button-ghost-disabled-background-color};
+    --root-button-ghost-disabled-border-color: #{$theme-light-button-ghost-disabled-border-color};
+    --root-button-ghost-disabled-text-color: #{$theme-light-button-ghost-disabled-text-color};
+  }
 }
+
+//----------------------------------------------------
+// / Module - Badge
+//----------------------------------------------------
+
+// none
 
 //----------------------------------------------------
 // / Module - List
@@ -166,13 +218,15 @@
 //----------------------------------------------------
 
 :root {
-  --root-table-background-color: #{$theme-light-table-background-color};
-  --root-table-border-color: #{$theme-light-table-border-color};
-  --root-table-stripe-background-color: #{$theme-light-table-stripe-background-color};
-  --root-table-paint-background-color: #{$theme-light-table-paint-background-color};
-  --root-table-paint-text-color: #{$theme-light-table-paint-text-color};
-  --root-table-spot-background-color: #{$theme-light-table-spot-background-color};
-  --root-table-danger-background-color: #{$theme-light-table-danger-background-color};
+  @include export-theme-light {
+    --root-table-background-color: #{$theme-light-table-background-color};
+    --root-table-border-color: #{$theme-light-table-border-color};
+    --root-table-stripe-background-color: #{$theme-light-table-stripe-background-color};
+    --root-table-paint-background-color: #{$theme-light-table-paint-background-color};
+    --root-table-paint-text-color: #{$theme-light-table-paint-text-color};
+    --root-table-spot-background-color: #{$theme-light-table-spot-background-color};
+    --root-table-danger-background-color: #{$theme-light-table-danger-background-color};
+  }
 }
 
 //----------------------------------------------------
@@ -180,26 +234,28 @@
 //----------------------------------------------------
 
 :root {
-  --root-input-background-color: #{$theme-light-input-background-color};
-  --root-input-border-color: #{$theme-light-input-border-color};
-  --root-input-shadow-color: #{$theme-light-input-shadow-color};
-  --root-input-focus-border-color: #{$theme-light-input-focus-border-color};
-  --root-input-focus-shadow-color: #{$theme-light-input-focus-shadow-color};
-  --root-input-disabled-background-color: #{$theme-light-input-disabled-background-color};
-  --root-input-disabled-border-color: #{$theme-light-input-disabled-border-color};
-  --root-input-disabled-text-color: #{$theme-light-input-disabled-text-color};
-  --root-input-readonly-background-color: #{$theme-light-input-readonly-background-color};
-  --root-input-readonly-text-color: #{$theme-light-input-readonly-text-color};
-  --root-input-placeholder-color: #{$theme-light-input-placeholder-color};
-  --root-radio-background-color: #{$theme-light-radio-background-color};
-  --root-radio-before-checked-background-color: #{$theme-light-radio-before-checked-background-color};
-  --root-radio-checked-border-color: #{$theme-light-radio-checked-border-color};
-  --root-checkbox-background-color: #{$theme-light-checkbox-background-color};
-  --root-checkbox-focus-border-color: #{$theme-light-checkbox-focus-border-color};
-  --root-checkbox-before-border-color: #{$theme-light-checkbox-before-border-color};
-  --root-checkbox-checked-background-color: #{$theme-light-checkbox-checked-background-color};
-  --root-checkbox-checked-border-color: #{$theme-light-checkbox-checked-border-color};
-  --root-select-angle-border-color: #{$theme-light-select-angle-border-color};
+  @include export-theme-light {
+    --root-input-background-color: #{$theme-light-input-background-color};
+    --root-input-border-color: #{$theme-light-input-border-color};
+    --root-input-shadow-color: #{$theme-light-input-shadow-color};
+    --root-input-focus-border-color: #{$theme-light-input-focus-border-color};
+    --root-input-focus-shadow-color: #{$theme-light-input-focus-shadow-color};
+    --root-input-disabled-background-color: #{$theme-light-input-disabled-background-color};
+    --root-input-disabled-border-color: #{$theme-light-input-disabled-border-color};
+    --root-input-disabled-text-color: #{$theme-light-input-disabled-text-color};
+    --root-input-readonly-background-color: #{$theme-light-input-readonly-background-color};
+    --root-input-readonly-text-color: #{$theme-light-input-readonly-text-color};
+    --root-input-placeholder-color: #{$theme-light-input-placeholder-color};
+    --root-radio-background-color: #{$theme-light-radio-background-color};
+    --root-radio-before-checked-background-color: #{$theme-light-radio-before-checked-background-color};
+    --root-radio-checked-border-color: #{$theme-light-radio-checked-border-color};
+    --root-checkbox-background-color: #{$theme-light-checkbox-background-color};
+    --root-checkbox-focus-border-color: #{$theme-light-checkbox-focus-border-color};
+    --root-checkbox-before-border-color: #{$theme-light-checkbox-before-border-color};
+    --root-checkbox-checked-background-color: #{$theme-light-checkbox-checked-background-color};
+    --root-checkbox-checked-border-color: #{$theme-light-checkbox-checked-border-color};
+    --root-select-angle-border-color: #{$theme-light-select-angle-border-color};
+  }
 }
 
 //----------------------------------------------------
@@ -213,18 +269,20 @@
 //----------------------------------------------------
 
 :root {
-  --root-alert-default-background-color: #{$theme-light-alert-default-background-color};
-  --root-alert-default-border-color: #{$theme-light-alert-default-border-color};
-  --root-alert-primary-background-color: #{$theme-light-alert-primary-background-color};
-  --root-alert-primary-border-color: #{$theme-light-alert-primary-border-color};
-  --root-alert-info-background-color: #{$theme-light-alert-info-background-color};
-  --root-alert-info-border-color: #{$theme-light-alert-info-border-color};
-  --root-alert-success-background-color: #{$theme-light-alert-success-background-color};
-  --root-alert-success-border-color: #{$theme-light-alert-success-border-color};
-  --root-alert-warning-background-color: #{$theme-light-alert-warning-background-color};
-  --root-alert-warning-border-color: #{$theme-light-alert-warning-border-color};
-  --root-alert-danger-background-color: #{$theme-light-alert-danger-background-color};
-  --root-alert-danger-border-color: #{$theme-light-alert-danger-border-color};
+  @include export-theme-light {
+    --root-alert-default-background-color: #{$theme-light-alert-default-background-color};
+    --root-alert-default-border-color: #{$theme-light-alert-default-border-color};
+    --root-alert-primary-background-color: #{$theme-light-alert-primary-background-color};
+    --root-alert-primary-border-color: #{$theme-light-alert-primary-border-color};
+    --root-alert-info-background-color: #{$theme-light-alert-info-background-color};
+    --root-alert-info-border-color: #{$theme-light-alert-info-border-color};
+    --root-alert-success-background-color: #{$theme-light-alert-success-background-color};
+    --root-alert-success-border-color: #{$theme-light-alert-success-border-color};
+    --root-alert-warning-background-color: #{$theme-light-alert-warning-background-color};
+    --root-alert-warning-border-color: #{$theme-light-alert-warning-border-color};
+    --root-alert-danger-background-color: #{$theme-light-alert-danger-background-color};
+    --root-alert-danger-border-color: #{$theme-light-alert-danger-border-color};
+  }
 }
 
 //----------------------------------------------------
@@ -232,8 +290,10 @@
 //----------------------------------------------------
 
 :root {
-  --root-wysiwyg-link-text-color: #{$theme-light-wysiwyg-link-text-color};
-  --root-wysiwyg-hr-border-color: #{$theme-light-wysiwyg-hr-border-color};
+  @include export-theme-light {
+    --root-wysiwyg-link-text-color: #{$theme-light-wysiwyg-link-text-color};
+    --root-wysiwyg-hr-border-color: #{$theme-light-wysiwyg-hr-border-color};
+  }
 }
 
 //----------------------------------------------------
