@@ -27,66 +27,58 @@ $data-theme-dark: true !default;
 }
 
 //----------------------------------------------------
-// / Yin and Yang
-//----------------------------------------------------
-
-:root {
-  @include export-theme-dark {
-    --root-yinyang-dark: #{$theme-dark-yinyang-dark};
-    --root-yinyang-dark-1: #{$theme-dark-yinyang-dark-1};
-    --root-yinyang-dark-2: #{$theme-dark-yinyang-dark-2};
-    --root-yinyang-dark-3: #{$theme-dark-yinyang-dark-3};
-    --root-yinyang-dark-4: #{$theme-dark-yinyang-dark-4};
-    --root-yinyang-dark-5: #{$theme-dark-yinyang-dark-5};
-    --root-yinyang-dark-6: #{$theme-dark-yinyang-dark-6};
-    --root-yinyang-dark-7: #{$theme-dark-yinyang-dark-7};
-    --root-yinyang-dark-8: #{$theme-dark-yinyang-dark-8};
-    --root-yinyang-dark-9: #{$theme-dark-yinyang-dark-9};
-    //--root-yinyang-light: #{$theme-dark-yinyang-light};
-    //--root-yinyang-light-1: #{$theme-dark-yinyang-light-1};
-    //--root-yinyang-light-2: #{$theme-dark-yinyang-light-2};
-    //--root-yinyang-light-3: #{$theme-dark-yinyang-light-3};
-    //--root-yinyang-light-4: #{$theme-dark-yinyang-light-4};
-    //--root-yinyang-light-5: #{$theme-dark-yinyang-light-5};
-    //--root-yinyang-light-6: #{$theme-dark-yinyang-light-6};
-    //--root-yinyang-light-7: #{$theme-dark-yinyang-light-7};
-    //--root-yinyang-light-8: #{$theme-dark-yinyang-light-8};
-    //--root-yinyang-light-9: #{$theme-dark-yinyang-light-9};
-  }
-}
-
-//----------------------------------------------------
-// / Role
-//----------------------------------------------------
-
-:root {
-  @include export-theme-dark {
-    --root-role-primary: #{$theme-dark-role-primary};
-    --root-role-info: #{$theme-dark-role-info};
-    --root-role-success: #{$theme-dark-role-success};
-    --root-role-warning: #{$theme-dark-role-warning};
-    --root-role-danger: #{$theme-dark-role-danger};
-    --root-role-primary-strong: #{$theme-dark-role-primary-strong};
-    --root-role-info-strong: #{$theme-dark-role-info-strong};
-    --root-role-success-strong: #{$theme-dark-role-success-strong};
-    --root-role-warning-strong: #{$theme-dark-role-warning-strong};
-    --root-role-danger-strong: #{$theme-dark-role-danger-strong};
-    --root-role-primary-darken: #{$theme-dark-role-primary-darken};
-    --root-role-info-darken: #{$theme-dark-role-info-darken};
-    --root-role-success-darken: #{$theme-dark-role-success-darken};
-    --root-role-warning-darken: #{$theme-dark-role-warning-darken};
-    --root-role-danger-darken: #{$theme-dark-role-danger-darken};
-    //--root-role-primary-lighten: #{$theme-dark-role-primary-lighten};
-    //--root-role-info-lighten: #{$theme-dark-role-info-lighten};
-    //--root-role-success-lighten: #{$theme-dark-role-success-lighten};
-    //--root-role-warning-lighten: #{$theme-dark-role-warning-lighten};
-    //--root-role-danger-lighten: #{$theme-dark-role-danger-lighten};
-  }
-}
-
-//----------------------------------------------------
 // / Base - Global
 //----------------------------------------------------
+
+:root {
+  @include export-theme-dark {
+    --root-global-dark: #{$theme-dark-global-dark};
+    --root-global-dark-1: #{$theme-dark-global-dark-1};
+    --root-global-dark-2: #{$theme-dark-global-dark-2};
+    --root-global-dark-3: #{$theme-dark-global-dark-3};
+    --root-global-dark-4: #{$theme-dark-global-dark-4};
+    --root-global-dark-5: #{$theme-dark-global-dark-5};
+    --root-global-dark-6: #{$theme-dark-global-dark-6};
+    --root-global-dark-7: #{$theme-dark-global-dark-7};
+    --root-global-dark-8: #{$theme-dark-global-dark-8};
+    --root-global-dark-9: #{$theme-dark-global-dark-9};
+    //--root-global-light: #{$theme-dark-global-light};
+    //--root-global-light-1: #{$theme-dark-global-light-1};
+    //--root-global-light-2: #{$theme-dark-global-light-2};
+    //--root-global-light-3: #{$theme-dark-global-light-3};
+    //--root-global-light-4: #{$theme-dark-global-light-4};
+    //--root-global-light-5: #{$theme-dark-global-light-5};
+    //--root-global-light-6: #{$theme-dark-global-light-6};
+    //--root-global-light-7: #{$theme-dark-global-light-7};
+    //--root-global-light-8: #{$theme-dark-global-light-8};
+    //--root-global-light-9: #{$theme-dark-global-light-9};
+  }
+}
+
+:root {
+  @include export-theme-dark {
+    --root-global-primary: #{$theme-dark-global-primary};
+    --root-global-info: #{$theme-dark-global-info};
+    --root-global-success: #{$theme-dark-global-success};
+    --root-global-warning: #{$theme-dark-global-warning};
+    --root-global-danger: #{$theme-dark-global-danger};
+    --root-global-primary-strong: #{$theme-dark-global-primary-strong};
+    --root-global-info-strong: #{$theme-dark-global-info-strong};
+    --root-global-success-strong: #{$theme-dark-global-success-strong};
+    --root-global-warning-strong: #{$theme-dark-global-warning-strong};
+    --root-global-danger-strong: #{$theme-dark-global-danger-strong};
+    --root-global-primary-darken: #{$theme-dark-global-primary-darken};
+    --root-global-info-darken: #{$theme-dark-global-info-darken};
+    --root-global-success-darken: #{$theme-dark-global-success-darken};
+    --root-global-warning-darken: #{$theme-dark-global-warning-darken};
+    --root-global-danger-darken: #{$theme-dark-global-danger-darken};
+    //--root-global-primary-lighten: #{$theme-dark-global-primary-lighten};
+    //--root-global-info-lighten: #{$theme-dark-global-info-lighten};
+    //--root-global-success-lighten: #{$theme-dark-global-success-lighten};
+    //--root-global-warning-lighten: #{$theme-dark-global-warning-lighten};
+    //--root-global-danger-lighten: #{$theme-dark-global-danger-lighten};
+  }
+}
 
 :root {
   @include export-theme-dark {

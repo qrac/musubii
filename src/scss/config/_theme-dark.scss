@@ -3,62 +3,54 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Yin and Yang
-//----------------------------------------------------
-
-$theme-dark-yinyang-dark: $white !default;
-$theme-dark-yinyang-dark-1: rgba($white, 0.87) !default;
-$theme-dark-yinyang-dark-2: rgba($white, 0.7) !default;
-$theme-dark-yinyang-dark-3: rgba($white, 0.6) !default;
-$theme-dark-yinyang-dark-4: rgba($white, 0.5) !default;
-$theme-dark-yinyang-dark-5: rgba($white, 0.4) !default;
-$theme-dark-yinyang-dark-6: rgba($white, 0.26) !default;
-$theme-dark-yinyang-dark-7: rgba($white, 0.15) !default;
-$theme-dark-yinyang-dark-8: rgba($white, 0.12) !default;
-$theme-dark-yinyang-dark-9: rgba($white, 0.05) !default;
-
-$theme-dark-yinyang-light: $white !default;
-$theme-dark-yinyang-light-1: rgba($white, 0.87) !default;
-$theme-dark-yinyang-light-2: rgba($white, 0.7) !default;
-$theme-dark-yinyang-light-3: rgba($white, 0.6) !default;
-$theme-dark-yinyang-light-4: rgba($white, 0.5) !default;
-$theme-dark-yinyang-light-5: rgba($white, 0.4) !default;
-$theme-dark-yinyang-light-6: rgba($white, 0.26) !default;
-$theme-dark-yinyang-light-7: rgba($white, 0.15) !default;
-$theme-dark-yinyang-light-8: rgba($white, 0.12) !default;
-$theme-dark-yinyang-light-9: rgba($white, 0.05) !default;
-
-//----------------------------------------------------
-// / Role
-//----------------------------------------------------
-
-$theme-dark-role-primary: $cyan-700 !default;
-$theme-dark-role-info: $blue-700 !default;
-$theme-dark-role-success: $green-700 !default;
-$theme-dark-role-warning: $orange-900 !default;
-$theme-dark-role-danger: $red-700 !default;
-
-$theme-dark-role-primary-strong: $cyan-500 !default;
-$theme-dark-role-info-strong: $blue-500 !default;
-$theme-dark-role-success-strong: $green-500 !default;
-$theme-dark-role-warning-strong: $orange-600 !default;
-$theme-dark-role-danger-strong: $red-500 !default;
-
-$theme-dark-role-primary-darken: darken($cyan-700, 5%) !default;
-$theme-dark-role-info-darken: darken($blue-700, 5%) !default;
-$theme-dark-role-success-darken: darken($green-700, 5%) !default;
-$theme-dark-role-warning-darken: darken($orange-900, 5%) !default;
-$theme-dark-role-danger-darken: darken($red-700, 5%) !default;
-
-//$theme-dark-role-primary-lighten: lighten($cyan-500, 30%) !default;
-//$theme-dark-role-info-lighten: lighten($blue-500, 30%) !default;
-//$theme-dark-role-success-lighten: lighten($green-a700, 30%) !default;
-//$theme-dark-role-warning-lighten: lighten($orange-600, 30%) !default;
-//$theme-dark-role-danger-lighten: lighten($red-500, 30%) !default;
-
-//----------------------------------------------------
 // / Base - Global
 //----------------------------------------------------
+
+$theme-dark-global-dark: $white !default;
+$theme-dark-global-dark-1: rgba($white, 0.87) !default;
+$theme-dark-global-dark-2: rgba($white, 0.7) !default;
+$theme-dark-global-dark-3: rgba($white, 0.6) !default;
+$theme-dark-global-dark-4: rgba($white, 0.5) !default;
+$theme-dark-global-dark-5: rgba($white, 0.4) !default;
+$theme-dark-global-dark-6: rgba($white, 0.26) !default;
+$theme-dark-global-dark-7: rgba($white, 0.15) !default;
+$theme-dark-global-dark-8: rgba($white, 0.12) !default;
+$theme-dark-global-dark-9: rgba($white, 0.05) !default;
+
+$theme-dark-global-light: $white !default;
+$theme-dark-global-light-1: rgba($white, 0.87) !default;
+$theme-dark-global-light-2: rgba($white, 0.7) !default;
+$theme-dark-global-light-3: rgba($white, 0.6) !default;
+$theme-dark-global-light-4: rgba($white, 0.5) !default;
+$theme-dark-global-light-5: rgba($white, 0.4) !default;
+$theme-dark-global-light-6: rgba($white, 0.26) !default;
+$theme-dark-global-light-7: rgba($white, 0.15) !default;
+$theme-dark-global-light-8: rgba($white, 0.12) !default;
+$theme-dark-global-light-9: rgba($white, 0.05) !default;
+
+$theme-dark-global-primary: $cyan-700 !default;
+$theme-dark-global-info: $blue-700 !default;
+$theme-dark-global-success: $green-700 !default;
+$theme-dark-global-warning: $orange-900 !default;
+$theme-dark-global-danger: $red-700 !default;
+
+$theme-dark-global-primary-strong: $cyan-500 !default;
+$theme-dark-global-info-strong: $blue-500 !default;
+$theme-dark-global-success-strong: $green-500 !default;
+$theme-dark-global-warning-strong: $orange-600 !default;
+$theme-dark-global-danger-strong: $red-500 !default;
+
+$theme-dark-global-primary-darken: darken($cyan-700, 5%) !default;
+$theme-dark-global-info-darken: darken($blue-700, 5%) !default;
+$theme-dark-global-success-darken: darken($green-700, 5%) !default;
+$theme-dark-global-warning-darken: darken($orange-900, 5%) !default;
+$theme-dark-global-danger-darken: darken($red-700, 5%) !default;
+
+//$theme-dark-global-primary-lighten: lighten($cyan-500, 30%) !default;
+//$theme-dark-global-info-lighten: lighten($blue-500, 30%) !default;
+//$theme-dark-global-success-lighten: lighten($green-a700, 30%) !default;
+//$theme-dark-global-warning-lighten: lighten($orange-600, 30%) !default;
+//$theme-dark-global-danger-lighten: lighten($red-500, 30%) !default;
 
 $theme-dark-body-background-color: $grey-900 !default;
 $theme-dark-body-text-color: $light-1 !default;

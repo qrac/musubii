@@ -3,62 +3,54 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Yin and Yang
-//----------------------------------------------------
-
-$common-yinyang-dark: var(--root-yinyang-dark) !default;
-$common-yinyang-dark-1: var(--root-yinyang-dark-1) !default;
-$common-yinyang-dark-2: var(--root-yinyang-dark-2) !default;
-$common-yinyang-dark-3: var(--root-yinyang-dark-3) !default;
-$common-yinyang-dark-4: var(--root-yinyang-dark-4) !default;
-$common-yinyang-dark-5: var(--root-yinyang-dark-5) !default;
-$common-yinyang-dark-6: var(--root-yinyang-dark-6) !default;
-$common-yinyang-dark-7: var(--root-yinyang-dark-7) !default;
-$common-yinyang-dark-8: var(--root-yinyang-dark-8) !default;
-$common-yinyang-dark-9: var(--root-yinyang-dark-9) !default;
-
-$common-yinyang-light: var(--root-yinyang-light) !default;
-$common-yinyang-light-1: var(--root-yinyang-light-1) !default;
-$common-yinyang-light-2: var(--root-yinyang-light-2) !default;
-$common-yinyang-light-3: var(--root-yinyang-light-3) !default;
-$common-yinyang-light-4: var(--root-yinyang-light-4) !default;
-$common-yinyang-light-5: var(--root-yinyang-light-5) !default;
-$common-yinyang-light-6: var(--root-yinyang-light-6) !default;
-$common-yinyang-light-7: var(--root-yinyang-light-7) !default;
-$common-yinyang-light-8: var(--root-yinyang-light-8) !default;
-$common-yinyang-light-9: var(--root-yinyang-light-9) !default;
-
-//----------------------------------------------------
-// / Role
-//----------------------------------------------------
-
-$common-role-primary: var(--root-role-primary) !default;
-$common-role-info: var(--root-role-info) !default;
-$common-role-success: var(--root-role-success) !default;
-$common-role-warning: var(--root-role-warning) !default;
-$common-role-danger: var(--root-role-danger) !default;
-
-$common-role-primary-strong: var(--root-role-primary-strong) !default;
-$common-role-info-strong: var(--root-role-info-strong) !default;
-$common-role-success-strong: var(--root-role-success-strong) !default;
-$common-role-warning-strong: var(--root-role-warning-strong) !default;
-$common-role-danger-strong: var(--root-role-danger-strong) !default;
-
-$common-role-primary-darken: var(--root-role-primary-darken) !default;
-$common-role-info-darken: var(--root-role-info-darken) !default;
-$common-role-success-darken: var(--root-role-success-darken) !default;
-$common-role-warning-darken: var(--root-role-warning-darken) !default;
-$common-role-danger-darken: var(--root-role-danger-darken) !default;
-
-$common-role-primary-lighten: var(--root-role-primary-lighten) !default;
-$common-role-info-lighten: var(--root-role-info-lighten) !default;
-$common-role-success-lighten: var(--root-role-success-lighten) !default;
-$common-role-warning-lighten: var(--root-role-warning-lighten) !default;
-$common-role-danger-lighten: var(--root-role-danger-lighten) !default;
-
-//----------------------------------------------------
 // / Base - Global
 //----------------------------------------------------
+
+$common-global-dark: var(--root-global-dark) !default;
+$common-global-dark-1: var(--root-global-dark-1) !default;
+$common-global-dark-2: var(--root-global-dark-2) !default;
+$common-global-dark-3: var(--root-global-dark-3) !default;
+$common-global-dark-4: var(--root-global-dark-4) !default;
+$common-global-dark-5: var(--root-global-dark-5) !default;
+$common-global-dark-6: var(--root-global-dark-6) !default;
+$common-global-dark-7: var(--root-global-dark-7) !default;
+$common-global-dark-8: var(--root-global-dark-8) !default;
+$common-global-dark-9: var(--root-global-dark-9) !default;
+
+$common-global-light: var(--root-global-light) !default;
+$common-global-light-1: var(--root-global-light-1) !default;
+$common-global-light-2: var(--root-global-light-2) !default;
+$common-global-light-3: var(--root-global-light-3) !default;
+$common-global-light-4: var(--root-global-light-4) !default;
+$common-global-light-5: var(--root-global-light-5) !default;
+$common-global-light-6: var(--root-global-light-6) !default;
+$common-global-light-7: var(--root-global-light-7) !default;
+$common-global-light-8: var(--root-global-light-8) !default;
+$common-global-light-9: var(--root-global-light-9) !default;
+
+$common-global-primary: var(--root-global-primary) !default;
+$common-global-info: var(--root-global-info) !default;
+$common-global-success: var(--root-global-success) !default;
+$common-global-warning: var(--root-global-warning) !default;
+$common-global-danger: var(--root-global-danger) !default;
+
+$common-global-primary-strong: var(--root-global-primary-strong) !default;
+$common-global-info-strong: var(--root-global-info-strong) !default;
+$common-global-success-strong: var(--root-global-success-strong) !default;
+$common-global-warning-strong: var(--root-global-warning-strong) !default;
+$common-global-danger-strong: var(--root-global-danger-strong) !default;
+
+$common-global-primary-darken: var(--root-global-primary-darken) !default;
+$common-global-info-darken: var(--root-global-info-darken) !default;
+$common-global-success-darken: var(--root-global-success-darken) !default;
+$common-global-warning-darken: var(--root-global-warning-darken) !default;
+$common-global-danger-darken: var(--root-global-danger-darken) !default;
+
+$common-global-primary-lighten: var(--root-global-primary-lighten) !default;
+$common-global-info-lighten: var(--root-global-info-lighten) !default;
+$common-global-success-lighten: var(--root-global-success-lighten) !default;
+$common-global-warning-lighten: var(--root-global-warning-lighten) !default;
+$common-global-danger-lighten: var(--root-global-danger-lighten) !default;
 
 $common-body-background-color: var(--root-body-background-color) !default;
 $common-body-text-color: var(--root-body-text-color) !default;

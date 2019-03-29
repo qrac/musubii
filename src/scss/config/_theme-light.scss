@@ -3,62 +3,54 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Yin and Yang
-//----------------------------------------------------
-
-$theme-light-yinyang-dark: $black !default;
-$theme-light-yinyang-dark-1: rgba($black, 0.87) !default;
-$theme-light-yinyang-dark-2: rgba($black, 0.7) !default;
-$theme-light-yinyang-dark-3: rgba($black, 0.6) !default;
-$theme-light-yinyang-dark-4: rgba($black, 0.5) !default;
-$theme-light-yinyang-dark-5: rgba($black, 0.4) !default;
-$theme-light-yinyang-dark-6: rgba($black, 0.26) !default;
-$theme-light-yinyang-dark-7: rgba($black, 0.15) !default;
-$theme-light-yinyang-dark-8: rgba($black, 0.12) !default;
-$theme-light-yinyang-dark-9: rgba($black, 0.05) !default;
-
-$theme-light-yinyang-light: $white !default;
-$theme-light-yinyang-light-1: rgba($white, 0.87) !default;
-$theme-light-yinyang-light-2: rgba($white, 0.7) !default;
-$theme-light-yinyang-light-3: rgba($white, 0.6) !default;
-$theme-light-yinyang-light-4: rgba($white, 0.5) !default;
-$theme-light-yinyang-light-5: rgba($white, 0.4) !default;
-$theme-light-yinyang-light-6: rgba($white, 0.26) !default;
-$theme-light-yinyang-light-7: rgba($white, 0.15) !default;
-$theme-light-yinyang-light-8: rgba($white, 0.12) !default;
-$theme-light-yinyang-light-9: rgba($white, 0.05) !default;
-
-//----------------------------------------------------
-// / Role
-//----------------------------------------------------
-
-$theme-light-role-primary: $cyan-500 !default;
-$theme-light-role-info: $blue-500 !default;
-$theme-light-role-success: $green-a700 !default;
-$theme-light-role-warning: $orange-600 !default;
-$theme-light-role-danger: $red-500 !default;
-
-$theme-light-role-primary-strong: $cyan-500 !default;
-$theme-light-role-info-strong: $blue-500 !default;
-$theme-light-role-success-strong: $green-a700 !default;
-$theme-light-role-warning-strong: $orange-600 !default;
-$theme-light-role-danger-strong: $red-500 !default;
-
-$theme-light-role-primary-darken: darken($cyan-500, 5%) !default;
-$theme-light-role-info-darken: darken($blue-500, 5%) !default;
-$theme-light-role-success-darken: darken($green-a700, 5%) !default;
-$theme-light-role-warning-darken: darken($orange-600, 5%) !default;
-$theme-light-role-danger-darken: darken($red-500, 5%) !default;
-
-$theme-light-role-primary-lighten: lighten($cyan-500, 30%) !default;
-$theme-light-role-info-lighten: lighten($blue-500, 30%) !default;
-$theme-light-role-success-lighten: lighten($green-a700, 30%) !default;
-$theme-light-role-warning-lighten: lighten($orange-600, 30%) !default;
-$theme-light-role-danger-lighten: lighten($red-500, 30%) !default;
-
-//----------------------------------------------------
 // / Base - Global
 //----------------------------------------------------
+
+$theme-light-global-dark: $black !default;
+$theme-light-global-dark-1: rgba($black, 0.87) !default;
+$theme-light-global-dark-2: rgba($black, 0.7) !default;
+$theme-light-global-dark-3: rgba($black, 0.6) !default;
+$theme-light-global-dark-4: rgba($black, 0.5) !default;
+$theme-light-global-dark-5: rgba($black, 0.4) !default;
+$theme-light-global-dark-6: rgba($black, 0.26) !default;
+$theme-light-global-dark-7: rgba($black, 0.15) !default;
+$theme-light-global-dark-8: rgba($black, 0.12) !default;
+$theme-light-global-dark-9: rgba($black, 0.05) !default;
+
+$theme-light-global-light: $white !default;
+$theme-light-global-light-1: rgba($white, 0.87) !default;
+$theme-light-global-light-2: rgba($white, 0.7) !default;
+$theme-light-global-light-3: rgba($white, 0.6) !default;
+$theme-light-global-light-4: rgba($white, 0.5) !default;
+$theme-light-global-light-5: rgba($white, 0.4) !default;
+$theme-light-global-light-6: rgba($white, 0.26) !default;
+$theme-light-global-light-7: rgba($white, 0.15) !default;
+$theme-light-global-light-8: rgba($white, 0.12) !default;
+$theme-light-global-light-9: rgba($white, 0.05) !default;
+
+$theme-light-global-primary: $cyan-500 !default;
+$theme-light-global-info: $blue-500 !default;
+$theme-light-global-success: $green-a700 !default;
+$theme-light-global-warning: $orange-600 !default;
+$theme-light-global-danger: $red-500 !default;
+
+$theme-light-global-primary-strong: $cyan-500 !default;
+$theme-light-global-info-strong: $blue-500 !default;
+$theme-light-global-success-strong: $green-a700 !default;
+$theme-light-global-warning-strong: $orange-600 !default;
+$theme-light-global-danger-strong: $red-500 !default;
+
+$theme-light-global-primary-darken: darken($cyan-500, 5%) !default;
+$theme-light-global-info-darken: darken($blue-500, 5%) !default;
+$theme-light-global-success-darken: darken($green-a700, 5%) !default;
+$theme-light-global-warning-darken: darken($orange-600, 5%) !default;
+$theme-light-global-danger-darken: darken($red-500, 5%) !default;
+
+$theme-light-global-primary-lighten: lighten($cyan-500, 30%) !default;
+$theme-light-global-info-lighten: lighten($blue-500, 30%) !default;
+$theme-light-global-success-lighten: lighten($green-a700, 30%) !default;
+$theme-light-global-warning-lighten: lighten($orange-600, 30%) !default;
+$theme-light-global-danger-lighten: lighten($red-500, 30%) !default;
 
 $theme-light-body-background-color: $light !default;
 $theme-light-body-text-color: $dark-2 !default;
