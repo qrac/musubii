@@ -7,8 +7,8 @@
 //----------------------------------------------------
 
 // Body
-$body-background-color: $common-global-background-color !default;
-$body-text-color: $common-global-text-color !default;
+$body-background-color: $c-bg-cl !default;
+$body-text-color: $c-tx-cl !default;
 $body-font-family: $font-sans !default;
 $body-line-height: 1.5 !default;
 
@@ -182,24 +182,24 @@ $text-link-border-bottom-width: 1px !default;
 $text-link-border-bottom-style: solid !default;
 
 // Blockquote
-$blockquote-background-color: $common-blockquote-background-color !default;
+$blockquote-background-color: $c-bq-bg-cl !default;
 $blockquote-border-left-width: 0.5em !default;
-$blockquote-border-left-color: $common-blockquote-border-left-color !default;
+$blockquote-border-left-color: $c-bq-bd-lf-cl !default;
 $blockquote-border-radius: $radius-xs !default;
 $blockquote-padding: 1.5em !default;
 
 // Code
 $code-padding: 0.2em 0.5em !default;
-$code-background-color: $common-code-background-color !default;
+$code-background-color: $c-cd-bg-cl !default;
 $code-border-radius: $radius-xs !default;
-$code-text-color: $common-code-text-color !default;
+$code-text-color: $c-cd-tx-cl !default;
 $code-font-size: 0.875em !default;
 $code-font-family: $font-mono !default;
 
 // Pre
-$pre-background-color: $common-pre-background-color !default;
+$pre-background-color: $c-pr-bg-cl !default;
 $pre-border-radius: $radius-xs !default;
-$pre-text-color: $common-pre-text-color !default;
+$pre-text-color: $c-pr-tx-cl !default;
 $pre-font-family: $font-mono !default;
 $pre-white-space: pre !default;
 $pre-code-padding: 1.25em 1.5em !default;
@@ -215,10 +215,10 @@ $button-class: ".button" !default;
 $button-padding: 0.5em 1em !default;
 $button-border-width: 1px !default;
 $button-border-radius: $radius-sm !default;
-$button-paint-text-color: $common-button-paint-text-color !default;
+$button-paint-text-color: $c-btn-pa-tx-cl !default;
 $button-line-height: 1.5 !default;
 $button-transition: ease-out 0.12s !default;
-$button-focus-shadow: 0 0 0 $space-xxs $common-button-focus-shadow-color !default;
+$button-focus-shadow: 0 0 0 $space-xxs $c-btn-fc-sd-cl !default;
 
 // Button Round
 $button-round-border-radius: $radius-full !default;
@@ -229,25 +229,24 @@ $button-circle-height: calc(2.5em + 1px * 2) !default;
 $button-circle-border-radius: $radius-full !default;
 
 // Button Floating
-$button-floating-shadow: 0 1px 3px 0 $common-button-floating-shadow-color !default;
-$button-floating-hover-shadow: 0 4px 12px 0 $common-button-floating-shadow-color !default;
-$button-floating-focus-shadow: 0 0 0 $space-xxs
-    $common-button-focus-shadow-color,
-  0 4px 12px 0 $common-button-floating-shadow-color !default;
+$button-floating-shadow: 0 1px 3px 0 $c-btn-fl-sd-cl !default;
+$button-floating-hover-shadow: 0 4px 12px 0 $c-btn-fl-sd-cl !default;
+$button-floating-focus-shadow: 0 0 0 $space-xxs $c-btn-fc-sd-cl,
+  0 4px 12px 0 $c-btn-fl-sd-cl !default;
 
 // Button Plain
-$button-plain-default-background-color: $common-button-plain-default-background-color !default;
-$button-plain-default-hover-background-color: $common-button-plain-default-hover-background-color !default;
-$button-plain-primary-background-color: $common-global-primary !default;
-$button-plain-primary-hover-background-color: $common-global-primary-darken !default;
-$button-plain-info-background-color: $common-global-info !default;
-$button-plain-info-hover-background-color: $common-global-info-darken !default;
-$button-plain-success-background-color: $common-global-success !default;
-$button-plain-success-hover-background-color: $common-global-success-darken !default;
-$button-plain-warning-background-color: $common-global-warning !default;
-$button-plain-warning-hover-background-color: $common-global-warning-darken !default;
-$button-plain-danger-background-color: $common-global-danger !default;
-$button-plain-danger-hover-background-color: $common-global-danger-darken !default;
+$button-plain-default-background-color: $c-btn-pl-df-bg-cl !default;
+$button-plain-default-hover-background-color: $c-btn-pl-df-hv-bg-cl !default;
+$button-plain-primary-background-color: $c-vpr !default;
+$button-plain-primary-hover-background-color: $c-vpr-dkn !default;
+$button-plain-info-background-color: $c-vin !default;
+$button-plain-info-hover-background-color: $c-vin-dkn !default;
+$button-plain-success-background-color: $c-vsu !default;
+$button-plain-success-hover-background-color: $c-vsu-dkn !default;
+$button-plain-warning-background-color: $c-vwa !default;
+$button-plain-warning-hover-background-color: $c-vwa-dkn !default;
+$button-plain-danger-background-color: $c-vda !default;
+$button-plain-danger-hover-background-color: $c-vda-dkn !default;
 
 // Pattern - Button Plain
 $pattern-button-plain: (
@@ -274,12 +273,12 @@ $pattern-button-plain: (
 ) !default;
 
 // Button Melt
-$button-melt-default-hover-background-color: $common-button-melt-default-hover-background-color !default;
-$button-melt-primary-text-color: $common-global-primary-strong !default;
-$button-melt-info-text-color: $common-global-info-strong !default;
-$button-melt-success-text-color: $common-global-success-strong !default;
-$button-melt-warning-text-color: $common-global-warning-strong !default;
-$button-melt-danger-text-color: $common-global-danger-strong !default;
+$button-melt-default-hover-background-color: $c-btn-me-df-hv-bg-cl !default;
+$button-melt-primary-text-color: $c-vpr-str !default;
+$button-melt-info-text-color: $c-vin-str !default;
+$button-melt-success-text-color: $c-vsu-str !default;
+$button-melt-warning-text-color: $c-vwa-str !default;
+$button-melt-danger-text-color: $c-vda-str !default;
 
 // Pattern - Button Melt
 $pattern-button-melt: (
@@ -301,24 +300,24 @@ $pattern-button-melt: (
 ) !default;
 
 // Button Outline
-$button-outline-default-background-color: $common-button-outline-default-background-color !default;
-$button-outline-default-border-color: $common-button-outline-default-border-color !default;
-$button-outline-default-hover-background-color: $common-button-outline-default-hover-background-color !default;
-$button-outline-primary-border-color: $common-global-primary !default;
-$button-outline-primary-text-color: $common-global-primary-strong !default;
-$button-outline-primary-hover-background-color: $common-global-primary !default;
-$button-outline-info-border-color: $common-global-info !default;
-$button-outline-info-text-color: $common-global-info-strong !default;
-$button-outline-info-hover-background-color: $common-global-info !default;
-$button-outline-success-border-color: $common-global-success !default;
-$button-outline-success-text-color: $common-global-success-strong !default;
-$button-outline-success-hover-background-color: $common-global-success !default;
-$button-outline-warning-border-color: $common-global-warning !default;
-$button-outline-warning-text-color: $common-global-warning-strong !default;
-$button-outline-warning-hover-background-color: $common-global-warning !default;
-$button-outline-danger-border-color: $common-global-danger !default;
-$button-outline-danger-text-color: $common-global-danger-strong !default;
-$button-outline-danger-hover-background-color: $common-global-danger !default;
+$button-outline-default-background-color: $c-btn-ot-df-bg-cl !default;
+$button-outline-default-border-color: $c-btn-ot-df-bd-cl !default;
+$button-outline-default-hover-background-color: $c-btn-ot-df-hv-bg-cl !default;
+$button-outline-primary-border-color: $c-vpr !default;
+$button-outline-primary-text-color: $c-vpr-str !default;
+$button-outline-primary-hover-background-color: $c-vpr !default;
+$button-outline-info-border-color: $c-vin !default;
+$button-outline-info-text-color: $c-vin-str !default;
+$button-outline-info-hover-background-color: $c-vin !default;
+$button-outline-success-border-color: $c-vsu !default;
+$button-outline-success-text-color: $c-vsu-str !default;
+$button-outline-success-hover-background-color: $c-vsu !default;
+$button-outline-warning-border-color: $c-vwa !default;
+$button-outline-warning-text-color: $c-vwa-str !default;
+$button-outline-warning-hover-background-color: $c-vwa !default;
+$button-outline-danger-border-color: $c-vda !default;
+$button-outline-danger-text-color: $c-vda-str !default;
+$button-outline-danger-hover-background-color: $c-vda !default;
 
 // Pattern - Button Outline
 $pattern-button-outline: (
@@ -350,25 +349,25 @@ $pattern-button-outline: (
 ) !default;
 
 // Button Ghost
-$button-ghost-default-border-color: $common-button-ghost-default-border-color !default;
-$button-ghost-default-text-color: $common-button-ghost-default-text-color !default;
-$button-ghost-default-hover-background-color: $common-button-ghost-default-hover-background-color !default;
-$button-ghost-default-hover-text-color: $common-button-ghost-default-hover-text-color !default;
-$button-ghost-primary-border-color: $common-global-primary-lighten !default;
-$button-ghost-primary-text-color: $common-global-primary-lighten !default;
-$button-ghost-primary-hover-background-color: $common-global-primary !default;
-$button-ghost-info-border-color: $common-global-info-lighten !default;
-$button-ghost-info-text-color: $common-global-info-lighten !default;
-$button-ghost-info-hover-background-color: $common-global-info !default;
-$button-ghost-success-border-color: $common-global-success-lighten !default;
-$button-ghost-success-text-color: $common-global-success-lighten !default;
-$button-ghost-success-hover-background-color: $common-global-success !default;
-$button-ghost-warning-border-color: $common-global-warning-lighten !default;
-$button-ghost-warning-text-color: $common-global-warning-lighten !default;
-$button-ghost-warning-hover-background-color: $common-global-warning !default;
-$button-ghost-danger-border-color: $common-global-danger-lighten !default;
-$button-ghost-danger-text-color: $common-global-danger-lighten !default;
-$button-ghost-danger-hover-background-color: $common-global-danger !default;
+$button-ghost-default-border-color: $c-btn-gh-df-bd-cl !default;
+$button-ghost-default-text-color: $c-btn-gh-df-tx-cl !default;
+$button-ghost-default-hover-background-color: $c-btn-gh-df-hv-bg-cl !default;
+$button-ghost-default-hover-text-color: $c-btn-gh-df-hv-tx-cl !default;
+$button-ghost-primary-border-color: $c-vpr-ltn !default;
+$button-ghost-primary-text-color: $c-vpr-ltn !default;
+$button-ghost-primary-hover-background-color: $c-vpr !default;
+$button-ghost-info-border-color: $c-vin-ltn !default;
+$button-ghost-info-text-color: $c-vin-ltn !default;
+$button-ghost-info-hover-background-color: $c-vin !default;
+$button-ghost-success-border-color: $c-vsu-ltn !default;
+$button-ghost-success-text-color: $c-vsu-ltn !default;
+$button-ghost-success-hover-background-color: $c-vsu !default;
+$button-ghost-warning-border-color: $c-vwa-ltn !default;
+$button-ghost-warning-text-color: $c-vwa-ltn !default;
+$button-ghost-warning-hover-background-color: $c-vwa !default;
+$button-ghost-danger-border-color: $c-vda-ltn !default;
+$button-ghost-danger-text-color: $c-vda-ltn !default;
+$button-ghost-danger-hover-background-color: $c-vda !default;
 
 // Pattern - Button Ghost
 $pattern-button-ghost: (
@@ -400,14 +399,14 @@ $pattern-button-ghost: (
 ) !default;
 
 // Button Disabled
-$button-disabled-background-color: $common-button-disabled-background-color !default;
-$button-disabled-background-color-alpha: $common-button-disabled-background-color-alpha !default;
-$button-disabled-text-color: $common-button-disabled-text-color !default;
+$button-disabled-background-color: $c-btn-ds-bg-cl !default;
+$button-disabled-background-color-alpha: $c-btn-ds-bg-cl-ah !default;
+$button-disabled-text-color: $c-btn-ds-tx-cl !default;
 
 // Button Ghost Disabled
-$button-ghost-disabled-background-color: $common-button-ghost-disabled-background-color !default;
-$button-ghost-disabled-border-color: $common-button-ghost-disabled-border-color !default;
-$button-ghost-disabled-text-color: $common-button-ghost-disabled-text-color !default;
+$button-ghost-disabled-background-color: $c-btn-gh-ds-bg-cl !default;
+$button-ghost-disabled-border-color: $c-btn-gh-ds-bd-cl !default;
+$button-ghost-disabled-text-color: $c-btn-gh-ds-tx-cl !default;
 
 //----------------------------------------------------
 // / Module - Badge
@@ -434,22 +433,22 @@ $list-note-item-margin-left: 0.25em !default;
 
 // Table
 $table-padding: 0.75em 1em !default;
-$table-background-color: $common-table-background-color !default;
+$table-background-color: $c-tbl-bg-cl !default;
 $table-border-width: 1px !default;
-$table-border-color: $common-table-border-color !default;
+$table-border-color: $c-tbl-bd-cl !default;
 
 // Table Stripe
-$table-stripe-background-color: $common-table-stripe-background-color !default;
+$table-stripe-background-color: $c-tbl-st-bg-cl !default;
 
 // Table Paint
-$table-paint-background-color: $common-table-paint-background-color !default;
-$table-paint-text-color: $common-table-paint-text-color !default;
+$table-paint-background-color: $c-tbl-pa-bg-cl !default;
+$table-paint-text-color: $c-tbl-pa-tx-cl !default;
 
 // Table Spot
-$table-spot-background-color: $common-table-spot-background-color !default;
+$table-spot-background-color: $c-tbl-sp-bg-cl !default;
 
 // Table Danger
-$table-danger-background-color: $common-table-danger-background-color !default;
+$table-danger-background-color: $c-tbl-vda-bg-cl !default;
 
 //----------------------------------------------------
 // / Module - Form
@@ -458,36 +457,36 @@ $table-danger-background-color: $common-table-danger-background-color !default;
 // Input
 $input-height: 2.5em !default;
 $input-padding: 0.5em 0.75em !default;
-$input-background-color: $common-input-background-color !default;
+$input-background-color: $c-ipt-bg-cl !default;
 $input-border-width: 1px !default;
-$input-border-color: $common-input-border-color !default;
+$input-border-color: $c-ipt-bd-cl !default;
 $input-border-radius: $radius-xs !default;
 $input-line-height: 1.5 !default;
-$input-shadow: inset 0 1px 1px $common-input-shadow-color !default;
+$input-shadow: inset 0 1px 1px $c-ipt-sd-cl !default;
 $input-transition: ease-out 0.12s !default;
 
 // Input Focus
-$input-focus-border-color: $common-input-focus-border-color !default;
-$input-focus-shadow: inset 0 1px 1px $common-input-shadow-color,
-  0 0 0 $space-xxs $common-input-focus-shadow-color !default;
+$input-focus-border-color: $c-ipt-fc-bd-cl !default;
+$input-focus-shadow: inset 0 1px 1px $c-ipt-sd-cl,
+  0 0 0 $space-xxs $c-ipt-fc-sd-cl !default;
 
 // Input Round
 $input-round-border-radius: $radius-full !default;
 
 // Input Disabled
-$input-disabled-background-color: $common-input-disabled-background-color !default;
-$input-disabled-border-color: $common-input-disabled-border-color !default;
+$input-disabled-background-color: $c-ipt-ds-bg-cl !default;
+$input-disabled-border-color: $c-ipt-ds-bd-cl !default;
 $input-disabled-shadow: none !default;
-$input-disabled-text-color: $common-input-disabled-text-color !default;
+$input-disabled-text-color: $c-ipt-ds-tx-cl !default;
 
 // Input Readonly
-$input-readonly-background-color: $common-input-readonly-background-color !default;
+$input-readonly-background-color: $c-ipt-rd-bg-cl !default;
 $input-readonly-border-color: transparent !default;
 $input-readonly-shadow: none !default;
-$input-readonly-text-color: $common-input-readonly-text-color !default;
+$input-readonly-text-color: $c-ipt-rd-tx-cl !default;
 
 // Input Placeholder
-$input-placeholder-color: $common-input-placeholder-color !default;
+$input-placeholder-color: $c-ipt-ph-cl !default;
 
 // Textarea
 $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
@@ -497,10 +496,10 @@ $radio-width: 1em !default;
 $radio-border-width: 2px !default;
 $radio-gap-default: $space-xs !default;
 $radio-gap-after: $space-md !default;
-$radio-background-color: $common-radio-background-color !default;
-$radio-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default;
-$radio-before-checked-background-color: $common-radio-before-checked-background-color !default;
-$radio-checked-border-color: $common-radio-checked-border-color !default;
+$radio-background-color: $c-rdo-bg-cl !default;
+$radio-focus-shadow: 0 0 0 $space-xxs $c-ipt-fc-sd-cl !default;
+$radio-before-checked-background-color: $c-rdo-bf-ch-bg-cl !default;
+$radio-checked-border-color: $c-rdo-ch-bd-cl !default;
 
 // Checkbox
 $checkbox-width: 1em !default;
@@ -508,18 +507,18 @@ $checkbox-border-width: 2px !default;
 $checkbox-border-radius: 2px !default;
 $checkbox-gap-default: $space-xs !default;
 $checkbox-gap-after: $space-md !default;
-$checkbox-background-color: $common-checkbox-background-color !default;
-$checkbox-focus-border-color: $common-checkbox-focus-border-color !default;
-$checkbox-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default;
-$checkbox-before-border-color: $common-checkbox-before-border-color !default;
-$checkbox-checked-background-color: $common-checkbox-checked-background-color !default;
-$checkbox-checked-border-color: $common-checkbox-checked-border-color !default;
+$checkbox-background-color: $c-chx-bg-cl !default;
+$checkbox-focus-border-color: $c-chx-fc-bd-cl !default;
+$checkbox-focus-shadow: 0 0 0 $space-xxs $c-ipt-fc-sd-cl !default;
+$checkbox-before-border-color: $c-chx-bf-bd-cl !default;
+$checkbox-checked-background-color: $c-chx-ch-bg-cl !default;
+$checkbox-checked-border-color: $c-chx-ch-bd-cl !default;
 
 // Select
 $select-angle-size: 0.5em !default;
 $select-angle-border-width: 2px !default;
-$select-angle-border-color: $common-select-angle-border-color !default;
-$select-focus-shadow: 0 0 0 $space-xxs $common-input-focus-shadow-color !default;
+$select-angle-border-color: $c-slt-ag-bd-cl !default;
+$select-focus-shadow: 0 0 0 $space-xxs $c-ipt-fc-sd-cl !default;
 
 //----------------------------------------------------
 // / Module - iframe
@@ -552,18 +551,18 @@ $icon-fit-width: 1em !default;
 $alert-padding: 0.675em 0.875em !default;
 $alert-border-width: 1px !default;
 $alert-border-radius: 2px !default;
-$alert-default-background-color: $common-alert-default-background-color !default;
-$alert-default-border-color: $common-alert-default-border-color !default;
-$alert-primary-background-color: $common-alert-primary-background-color !default;
-$alert-primary-border-color: $common-alert-primary-border-color !default;
-$alert-info-background-color: $common-alert-info-background-color !default;
-$alert-info-border-color: $common-alert-info-border-color !default;
-$alert-success-background-color: $common-alert-success-background-color !default;
-$alert-success-border-color: $common-alert-success-border-color !default;
-$alert-warning-background-color: $common-alert-warning-background-color !default;
-$alert-warning-border-color: $common-alert-warning-border-color !default;
-$alert-danger-background-color: $common-alert-danger-background-color !default;
-$alert-danger-border-color: $common-alert-danger-border-color !default;
+$alert-default-background-color: $c-alr-df-bg-cl !default;
+$alert-default-border-color: $c-alr-df-bd-cl !default;
+$alert-primary-background-color: $c-alr-vpr-bg-cl !default;
+$alert-primary-border-color: $c-alr-vpr-bd-cl !default;
+$alert-info-background-color: $c-alr-vin-bg-cl !default;
+$alert-info-border-color: $c-alr-vin-bd-cl !default;
+$alert-success-background-color: $c-alr-vsu-bg-cl !default;
+$alert-success-border-color: $c-alr-vsu-bd-cl !default;
+$alert-warning-background-color: $c-alr-vwa-bg-cl !default;
+$alert-warning-border-color: $c-alr-vwa-bd-cl !default;
+$alert-danger-background-color: $c-alr-vda-bg-cl !default;
+$alert-danger-border-color: $c-alr-vda-bd-cl !default;
 
 // Pattern - Alert
 $pattern-alert: (
@@ -609,7 +608,7 @@ $wysiwyg-small-font-size: 80% !default;
 $wysiwyg-strong-font-weight: 700 !default;
 
 // WYSIWYG Link
-$wysiwyg-link-text-color: $common-wysiwyg-link-text-color !default;
+$wysiwyg-link-text-color: $c-wys-lk-tx-cl !default;
 
 // WYSIWYG Table
 $wysiwyg-table-th-font-weight: 400 !default;
@@ -617,7 +616,7 @@ $wysiwyg-table-th-font-weight: 400 !default;
 // WYSIWYG HR
 $wysiwyg-hr-border-width: 1px !default;
 $wysiwyg-hr-border-style: solid !default;
-$wysiwyg-hr-border-color: $common-wysiwyg-hr-border-color !default;
+$wysiwyg-hr-border-color: $c-wys-hr-bd-cl !default;
 
 // WYSIWYG Figure
 $wysiwyg-figure-text-align: center !default;
@@ -645,39 +644,39 @@ $deco-text-class: ".heading, .texts, .text" !default;
 
 // Pattern - Deco Text Dark
 $pattern-deco-text-dark: (
-  dark: $common-deco-text-dark,
-  dark-1: $common-deco-text-dark-1,
-  dark-2: $common-deco-text-dark-2,
-  dark-3: $common-deco-text-dark-3,
-  dark-4: $common-deco-text-dark-4,
-  dark-5: $common-deco-text-dark-5,
-  dark-6: $common-deco-text-dark-6,
-  dark-7: $common-deco-text-dark-7,
-  dark-8: $common-deco-text-dark-8,
-  dark-9: $common-deco-text-dark-9
+  dark: $c-dco-tx-d,
+  dark-1: $c-dco-tx-d-1,
+  dark-2: $c-dco-tx-d-2,
+  dark-3: $c-dco-tx-d-3,
+  dark-4: $c-dco-tx-d-4,
+  dark-5: $c-dco-tx-d-5,
+  dark-6: $c-dco-tx-d-6,
+  dark-7: $c-dco-tx-d-7,
+  dark-8: $c-dco-tx-d-8,
+  dark-9: $c-dco-tx-d-9
 ) !default;
 
 // Pattern - Deco Text Light
 $pattern-deco-text-light: (
-  light: $common-deco-text-light,
-  light-1: $common-deco-text-light-1,
-  light-2: $common-deco-text-light-2,
-  light-3: $common-deco-text-light-3,
-  light-4: $common-deco-text-light-4,
-  light-5: $common-deco-text-light-5,
-  light-6: $common-deco-text-light-6,
-  light-7: $common-deco-text-light-7,
-  light-8: $common-deco-text-light-8,
-  light-9: $common-deco-text-light-9
+  light: $c-dco-tx-l,
+  light-1: $c-dco-tx-l-1,
+  light-2: $c-dco-tx-l-2,
+  light-3: $c-dco-tx-l-3,
+  light-4: $c-dco-tx-l-4,
+  light-5: $c-dco-tx-l-5,
+  light-6: $c-dco-tx-l-6,
+  light-7: $c-dco-tx-l-7,
+  light-8: $c-dco-tx-l-8,
+  light-9: $c-dco-tx-l-9
 ) !default;
 
 // Pattern - Deco Text Color
 $pattern-deco-text-color: (
-  primary: $common-global-primary-strong,
-  info: $common-global-info-strong,
-  success: $common-global-success-strong,
-  warning: $common-global-warning-strong,
-  danger: $common-global-danger-strong
+  primary: $c-vpr-str,
+  info: $c-vin-str,
+  success: $c-vsu-str,
+  warning: $c-vwa-str,
+  danger: $c-vda-str
 ) !default;
 
 //----------------------------------------------------
