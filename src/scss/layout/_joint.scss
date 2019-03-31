@@ -11,7 +11,18 @@
   flex-wrap: nowrap;
   > {
     #{$button-class},
-    .input {
+    .input[type="text"],
+    .input[type="search"],
+    .input[type="url"],
+    .input[type="email"],
+    .input[type="tel"],
+    .input[type="password"],
+    .input[type="datetime-local"],
+    .input[type="date"],
+    .input[type="month"],
+    .input[type="week"],
+    .input[type="time"],
+    .input[type="number"] {
       position: relative;
       overflow: hidden;
       &:not(:last-child) {
@@ -34,7 +45,7 @@
     }
   }
   > {
-    .select {
+    .select:not(.is-multiple) {
       position: relative;
       &:not(:last-child) > select {
         border-top-right-radius: 0;
@@ -56,8 +67,19 @@
   }
   > {
     #{$button-class},
-    .input,
-    .select > select {
+    .input[type="text"],
+    .input[type="search"],
+    .input[type="url"],
+    .input[type="email"],
+    .input[type="tel"],
+    .input[type="password"],
+    .input[type="datetime-local"],
+    .input[type="date"],
+    .input[type="month"],
+    .input[type="week"],
+    .input[type="time"],
+    .input[type="number"],
+    .select:not(.is-multiple) > select {
       &:focus {
         z-index: 2;
       }
