@@ -33,15 +33,9 @@ $theme-light-danger-lighten: lighten($t-vda, 30%) !default;
 $theme-light-background-color: $light !default;
 $theme-light-text-color: $dark-2 !default;
 
-$theme-light-blockquote-background-color: darken(
-  $theme-light-background-color,
-  4%
-) !default;
+$theme-light-blockquote-background-color: darken($theme-light-background-color, 4%) !default;
 $theme-light-blockquote-border-left-color: $dark-9 !default;
-$theme-light-code-background-color: darken(
-  $theme-light-background-color,
-  4%
-) !default;
+$theme-light-code-background-color: darken($theme-light-background-color, 4%) !default;
 $theme-light-code-text-color: $indigo-500 !default;
 $theme-light-pre-background-color: $theme-light-code-background-color !default;
 $theme-light-pre-text-color: $theme-light-code-text-color !default;
@@ -49,29 +43,17 @@ $theme-light-pre-text-color: $theme-light-code-text-color !default;
 $theme-light-button-paint-text-color: $theme-light-background-color !default;
 $theme-light-button-focus-shadow-color: rgba($t-fc-sd-cl, 0.5) !default;
 $theme-light-button-floating-shadow-color: rgba($black, 0.24) !default;
-$theme-light-button-plain-default-background-color: darken(
-  $theme-light-background-color,
-  4%
-) !default;
-$theme-light-button-plain-default-hover-background-color: darken(
-  $theme-light-background-color,
-  7%
-) !default;
+$theme-light-button-plain-default-background-color: darken($theme-light-background-color, 4%) !default;
+$theme-light-button-plain-default-hover-background-color: darken($theme-light-background-color, 7%) !default;
 $theme-light-button-melt-default-hover-background-color: $dark-9 !default;
 $theme-light-button-outline-default-background-color: $theme-light-background-color !default;
 $theme-light-button-outline-default-border-color: $dark-7 !default;
-$theme-light-button-outline-default-hover-background-color: darken(
-  $theme-light-background-color,
-  4%
-) !default;
+$theme-light-button-outline-default-hover-background-color: darken($theme-light-background-color, 4%) !default;
 $theme-light-button-ghost-default-border-color: $grey-50 !default;
 $theme-light-button-ghost-default-text-color: $grey-50 !default;
 $theme-light-button-ghost-default-hover-background-color: $grey-50 !default;
 $theme-light-button-ghost-default-hover-text-color: $theme-light-text-color !default;
-$theme-light-button-disabled-background-color: darken(
-  $theme-light-background-color,
-  26%
-) !default;
+$theme-light-button-disabled-background-color: darken($theme-light-background-color, 26%) !default;
 $theme-light-button-disabled-background-color-alpha: $dark-6 !default;
 $theme-light-button-disabled-text-color: $dark-6 !default;
 $theme-light-button-ghost-disabled-background-color: $light-8 !default;
@@ -80,33 +62,21 @@ $theme-light-button-ghost-disabled-text-color: $light-4 !default;
 
 $theme-light-table-background-color: $theme-light-background-color !default;
 $theme-light-table-border-color: $blue-grey-100 !default;
-$theme-light-table-stripe-background-color: darken(
-  $theme-light-background-color,
-  4%
-) !default;
+$theme-light-table-stripe-background-color: darken($theme-light-background-color, 4%) !default;
 $theme-light-table-paint-background-color: $theme-light-primary !default;
 $theme-light-table-paint-text-color: $light !default;
 $theme-light-table-spot-background-color: $yellow-200 !default;
-$theme-light-table-danger-background-color: lighten(
-  $theme-light-danger,
-  29%
-) !default;
+$theme-light-table-danger-background-color: lighten($theme-light-danger, 29%) !default;
 
 $theme-light-input-background-color: $theme-light-background-color !default;
 $theme-light-input-border-color: $dark-6 !default;
 $theme-light-input-shadow-color: rgba($black, 0.075) !default;
 $theme-light-input-focus-border-color: $t-fc-bd-cl !default;
 $theme-light-input-focus-shadow-color: rgba($t-fc-sd-cl, 0.36) !default;
-$theme-light-input-disabled-background-color: darken(
-  $theme-light-background-color,
-  12%
-) !default;
+$theme-light-input-disabled-background-color: darken($theme-light-background-color, 12%) !default;
 $theme-light-input-disabled-border-color: $dark-7 !default;
 $theme-light-input-disabled-text-color: $dark-6 !default;
-$theme-light-input-readonly-background-color: darken(
-  $theme-light-background-color,
-  4%
-) !default;
+$theme-light-input-readonly-background-color: darken($theme-light-background-color, 4%) !default;
 $theme-light-input-readonly-text-color: $theme-light-text-color !default;
 $theme-light-input-placeholder-color: $dark-6 !default;
 $theme-light-radio-background-color: $theme-light-background-color !default;
@@ -119,51 +89,18 @@ $theme-light-checkbox-checked-background-color: $theme-light-primary !default;
 $theme-light-checkbox-checked-border-color: $theme-light-primary !default;
 $theme-light-select-angle-border-color: $dark-5 !default;
 
-$theme-light-alert-default-background-color: darken(
-  $theme-light-background-color,
-  4%
-) !default;
-$theme-light-alert-default-border-color: darken(
-  $theme-light-background-color,
-  12%
-) !default;
-$theme-light-alert-primary-background-color: lighten(
-  $theme-light-primary,
-  44%
-) !default;
-$theme-light-alert-primary-border-color: lighten(
-  $theme-light-primary,
-  27%
-) !default;
-$theme-light-alert-info-background-color: lighten(
-  $theme-light-info,
-  35%
-) !default;
+$theme-light-alert-default-background-color: darken($theme-light-background-color, 4%) !default;
+$theme-light-alert-default-border-color: darken($theme-light-background-color, 12%) !default;
+$theme-light-alert-primary-background-color: lighten($theme-light-primary, 44%) !default;
+$theme-light-alert-primary-border-color: lighten($theme-light-primary, 27%) !default;
+$theme-light-alert-info-background-color: lighten($theme-light-info, 35%) !default;
 $theme-light-alert-info-border-color: lighten($theme-light-info, 21%) !default;
-$theme-light-alert-success-background-color: lighten(
-  $theme-light-success,
-  50%
-) !default;
-$theme-light-alert-success-border-color: lighten(
-  $theme-light-success,
-  27%
-) !default;
-$theme-light-alert-warning-background-color: lighten(
-  $theme-light-warning,
-  43%
-) !default;
-$theme-light-alert-warning-border-color: lighten(
-  $theme-light-warning,
-  27%
-) !default;
-$theme-light-alert-danger-background-color: lighten(
-  $theme-light-danger,
-  35%
-) !default;
-$theme-light-alert-danger-border-color: lighten(
-  $theme-light-danger,
-  21%
-) !default;
+$theme-light-alert-success-background-color: lighten($theme-light-success, 50%) !default;
+$theme-light-alert-success-border-color: lighten($theme-light-success, 27%) !default;
+$theme-light-alert-warning-background-color: lighten($theme-light-warning, 43%) !default;
+$theme-light-alert-warning-border-color: lighten($theme-light-warning, 27%) !default;
+$theme-light-alert-danger-background-color: lighten($theme-light-danger, 35%) !default;
+$theme-light-alert-danger-border-color: lighten($theme-light-danger, 21%) !default;
 
 $theme-light-wysiwyg-link-text-color: $theme-light-primary !default;
 $theme-light-wysiwyg-hr-border-color: $dark-7 !default;
@@ -180,42 +117,15 @@ $theme-light-deco-text-dark-8: rgba($theme-light-deco-text-dark, 0.12) !default;
 $theme-light-deco-text-dark-9: rgba($theme-light-deco-text-dark, 0.05) !default;
 
 $theme-light-deco-text-light: $white !default;
-$theme-light-deco-text-light-1: rgba(
-  $theme-light-deco-text-light,
-  0.87
-) !default;
-$theme-light-deco-text-light-2: rgba(
-  $theme-light-deco-text-light,
-  0.7
-) !default;
-$theme-light-deco-text-light-3: rgba(
-  $theme-light-deco-text-light,
-  0.6
-) !default;
-$theme-light-deco-text-light-4: rgba(
-  $theme-light-deco-text-light,
-  0.5
-) !default;
-$theme-light-deco-text-light-5: rgba(
-  $theme-light-deco-text-light,
-  0.4
-) !default;
-$theme-light-deco-text-light-6: rgba(
-  $theme-light-deco-text-light,
-  0.26
-) !default;
-$theme-light-deco-text-light-7: rgba(
-  $theme-light-deco-text-light,
-  0.15
-) !default;
-$theme-light-deco-text-light-8: rgba(
-  $theme-light-deco-text-light,
-  0.12
-) !default;
-$theme-light-deco-text-light-9: rgba(
-  $theme-light-deco-text-light,
-  0.05
-) !default;
+$theme-light-deco-text-light-1: rgba($theme-light-deco-text-light, 0.87) !default;
+$theme-light-deco-text-light-2: rgba($theme-light-deco-text-light, 0.7) !default;
+$theme-light-deco-text-light-3: rgba($theme-light-deco-text-light, 0.6) !default;
+$theme-light-deco-text-light-4: rgba($theme-light-deco-text-light, 0.5) !default;
+$theme-light-deco-text-light-5: rgba($theme-light-deco-text-light, 0.4) !default;
+$theme-light-deco-text-light-6: rgba($theme-light-deco-text-light, 0.26) !default;
+$theme-light-deco-text-light-7: rgba($theme-light-deco-text-light, 0.15) !default;
+$theme-light-deco-text-light-8: rgba($theme-light-deco-text-light, 0.12) !default;
+$theme-light-deco-text-light-9: rgba($theme-light-deco-text-light, 0.05) !default;
 
 //----------------------------------------------------
 // / Shortcut
