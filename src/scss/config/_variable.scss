@@ -59,93 +59,6 @@ $pattern-gap-size: (
 $pattern-gap-way: all, row, column !default;
 
 //----------------------------------------------------
-// / Layout - Flex
-//----------------------------------------------------
-
-// none
-
-//----------------------------------------------------
-// / Layout - Space
-//----------------------------------------------------
-
-// Space Size
-$space-size-xxl: $space-xxl !default;
-$space-size-xl: $space-xl !default;
-$space-size-lg: $space-lg !default;
-$space-size-md: $space-md !default;
-$space-size-sm: $space-sm !default;
-$space-size-xs: $space-xs !default;
-$space-size-xxs: $space-xxs !default;
-
-// Pattern - Space Size
-$pattern-space-size: (
-  xxl: $space-size-xxl,
-  xl: $space-size-xl,
-  lg: $space-size-lg,
-  md: $space-size-md,
-  sm: $space-size-sm,
-  xs: $space-size-xs,
-  xxs: $space-size-xxs
-) !default;
-
-// Pattern - Space Way
-$pattern-space-way: default, row, column !default;
-
-//----------------------------------------------------
-// / Layout - Margin
-//----------------------------------------------------
-
-// Margin Size
-$margin-size-xxl: $space-xxl !default;
-$margin-size-xl: $space-xl !default;
-$margin-size-lg: $space-lg !default;
-$margin-size-md: $space-md !default;
-$margin-size-sm: $space-sm !default;
-$margin-size-xs: $space-xs !default;
-$margin-size-xxs: $space-xxs !default;
-
-// Pattern - Margin Size
-$pattern-margin-size: (
-  xxl: $margin-size-xxl,
-  xl: $margin-size-xl,
-  lg: $margin-size-lg,
-  md: $margin-size-md,
-  sm: $margin-size-sm,
-  xs: $margin-size-xs,
-  xxs: $margin-size-xxs
-) !default;
-
-// Pattern - Margin Way
-$pattern-margin-way: all, top, right, bottom, left !default;
-
-//----------------------------------------------------
-// / Layout - Padding
-//----------------------------------------------------
-
-// Padding Size
-$padding-size-xxl: $space-xxl !default;
-$padding-size-xl: $space-xl !default;
-$padding-size-lg: $space-lg !default;
-$padding-size-md: $space-md !default;
-$padding-size-sm: $space-sm !default;
-$padding-size-xs: $space-xs !default;
-$padding-size-xxs: $space-xxs !default;
-
-// Pattern - Padding Size
-$pattern-padding-size: (
-  xxl: $padding-size-xxl,
-  xl: $padding-size-xl,
-  lg: $padding-size-lg,
-  md: $padding-size-md,
-  sm: $padding-size-sm,
-  xs: $padding-size-xs,
-  xxs: $padding-size-xxs
-) !default;
-
-// Pattern - Padding Way
-$pattern-padding-way: all, top, right, bottom, left !default;
-
-//----------------------------------------------------
 // / Layout - Box
 //----------------------------------------------------
 
@@ -678,6 +591,93 @@ $pattern-deco-text-color: (
   warning: $c-vwa-str,
   danger: $c-vda-str
 ) !default;
+
+//----------------------------------------------------
+// / Utility - Flex
+//----------------------------------------------------
+
+// none
+
+//----------------------------------------------------
+// / Utility - Space
+//----------------------------------------------------
+
+// Space Size
+$space-size-xxl: $space-xxl !default;
+$space-size-xl: $space-xl !default;
+$space-size-lg: $space-lg !default;
+$space-size-md: $space-md !default;
+$space-size-sm: $space-sm !default;
+$space-size-xs: $space-xs !default;
+$space-size-xxs: $space-xxs !default;
+
+// Pattern - Space Size
+$pattern-space-size: (
+  xxl: $space-size-xxl,
+  xl: $space-size-xl,
+  lg: $space-size-lg,
+  md: $space-size-md,
+  sm: $space-size-sm,
+  xs: $space-size-xs,
+  xxs: $space-size-xxs
+) !default;
+
+// Pattern - Space Way
+$pattern-space-way: default, row, column !default;
+
+//----------------------------------------------------
+// / Utility - Margin
+//----------------------------------------------------
+
+// Margin Size
+$margin-size-xxl: $space-xxl !default;
+$margin-size-xl: $space-xl !default;
+$margin-size-lg: $space-lg !default;
+$margin-size-md: $space-md !default;
+$margin-size-sm: $space-sm !default;
+$margin-size-xs: $space-xs !default;
+$margin-size-xxs: $space-xxs !default;
+
+// Pattern - Margin Size
+$pattern-margin-size: (
+  xxl: $margin-size-xxl,
+  xl: $margin-size-xl,
+  lg: $margin-size-lg,
+  md: $margin-size-md,
+  sm: $margin-size-sm,
+  xs: $margin-size-xs,
+  xxs: $margin-size-xxs
+) !default;
+
+// Pattern - Margin Way
+$pattern-margin-way: all, top, right, bottom, left !default;
+
+//----------------------------------------------------
+// / Utility - Padding
+//----------------------------------------------------
+
+// Padding Size
+$padding-size-xxl: $space-xxl !default;
+$padding-size-xl: $space-xl !default;
+$padding-size-lg: $space-lg !default;
+$padding-size-md: $space-md !default;
+$padding-size-sm: $space-sm !default;
+$padding-size-xs: $space-xs !default;
+$padding-size-xxs: $space-xxs !default;
+
+// Pattern - Padding Size
+$pattern-padding-size: (
+  xxl: $padding-size-xxl,
+  xl: $padding-size-xl,
+  lg: $padding-size-lg,
+  md: $padding-size-md,
+  sm: $padding-size-sm,
+  xs: $padding-size-xs,
+  xxs: $padding-size-xxs
+) !default;
+
+// Pattern - Padding Way
+$pattern-padding-way: all, top, right, bottom, left !default;
 
 //----------------------------------------------------
 // / Utility - Clearfix

@@ -1,41 +1,6 @@
 //----------------------------------------------------
-// Layout: Flex
+// Utility: Flex
 //----------------------------------------------------
-
-//----------------------------------------------------
-// / Basic
-//----------------------------------------------------
-
-.is-flex {
-  display: flex;
-}
-
-.is-inline-flex {
-  display: inline-flex;
-}
-
-.is-flex,
-.is-inline-flex {
-  flex-wrap: wrap;
-  &.is-middle {
-    align-items: center;
-  }
-  &.is-bottom {
-    align-items: flex-end;
-  }
-  &.is-center {
-    justify-content: center;
-  }
-  &.is-right {
-    justify-content: flex-end;
-  }
-  &.is-between {
-    justify-content: space-between;
-  }
-  &.is-around {
-    justify-content: space-around;
-  }
-}
 
 //----------------------------------------------------
 // / Responsive Flex
