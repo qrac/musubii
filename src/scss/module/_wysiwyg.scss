@@ -41,7 +41,7 @@
 
 .wysiwyg {
   p {
-    line-height: $texts-line-height;
+    line-height: $wysiwyg-text-line-height;
   }
   small {
     font-size: $wysiwyg-small-font-size;
@@ -131,7 +131,7 @@
 
 .wysiwyg ul,
 .wysiwyg ol {
-  line-height: $texts-line-height;
+  line-height: $wysiwyg-text-line-height;
   margin-left: $list-margin-left;
   > li {
     display: list-item;

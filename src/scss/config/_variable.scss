@@ -87,9 +87,6 @@ $joint-class: ".joint" !default;
 // / Module - Text
 //----------------------------------------------------
 
-// Texts
-$texts-line-height: 1.9 !default;
-
 // Text Link
 $text-link-border-bottom-width: 1px !default;
 $text-link-border-bottom-style: solid !default;
@@ -513,6 +510,9 @@ $wysiwyg-h3-font-size: 1.25em !default;
 $wysiwyg-h4-font-size: 1em !default;
 $wysiwyg-h5-font-size: 0.875em !default;
 $wysiwyg-h6-font-size: 0.75em !default;
+
+// WYSIWYG Text
+$wysiwyg-text-line-height: 1.9 !default;
 
 // WYSIWYG Small
 $wysiwyg-small-font-size: 80% !default;
