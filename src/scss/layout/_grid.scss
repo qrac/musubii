@@ -27,15 +27,15 @@
   &.is-between {
     justify-content: space-between;
   }
-  &.is-reverse {
-    flex-direction: row-reverse;
-  }
   &.is-around {
     justify-content: space-around;
   }
+  &.is-reverse {
+    flex-direction: row-reverse;
+  }
   &.is-stretch {
     > {
-      #{$column-class} {
+      * {
         display: flex;
       }
     }

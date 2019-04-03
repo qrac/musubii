@@ -13,9 +13,12 @@
   &.is-inline-flex {
     display: inline-flex;
   }
-  .is-flex,
-  .is-inline-flex {
+  &.is-flex,
+  &.is-inline-flex {
     flex-wrap: wrap;
+    &.is-baseline {
+      align-items: baseline;
+    }
     &.is-middle {
       align-items: center;
     }
@@ -33,6 +36,9 @@
     }
     &.is-around {
       justify-content: space-around;
+    }
+    &.is-reverse {
+      flex-direction: row-reverse;
     }
   }
 }
