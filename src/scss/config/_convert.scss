@@ -29,6 +29,28 @@ $c-vda-ltn: if($u-css-v == true, var(--danger-lighten), $t-l-vda-ltn) !default;
 $c-bg-cl: if($u-css-v == true, var(--background-color), $t-l-bg-cl) !default;
 $c-tx-cl: if($u-css-v == true, var(--text-color), $t-l-tx-cl) !default;
 
+$c-tx-d: if($u-css-v == true, var(--text-dark), $t-l-tx-d) !default;
+$c-tx-d-1: if($u-css-v == true, var(--text-dark-1), $t-l-tx-d-1) !default;
+$c-tx-d-2: if($u-css-v == true, var(--text-dark-2), $t-l-tx-d-2) !default;
+$c-tx-d-3: if($u-css-v == true, var(--text-dark-3), $t-l-tx-d-3) !default;
+$c-tx-d-4: if($u-css-v == true, var(--text-dark-4), $t-l-tx-d-4) !default;
+$c-tx-d-5: if($u-css-v == true, var(--text-dark-5), $t-l-tx-d-5) !default;
+$c-tx-d-6: if($u-css-v == true, var(--text-dark-6), $t-l-tx-d-6) !default;
+$c-tx-d-7: if($u-css-v == true, var(--text-dark-7), $t-l-tx-d-7) !default;
+$c-tx-d-8: if($u-css-v == true, var(--text-dark-8), $t-l-tx-d-8) !default;
+$c-tx-d-9: if($u-css-v == true, var(--text-dark-9), $t-l-tx-d-9) !default;
+
+$c-tx-l: if($u-css-v == true, var(--text-light), $t-l-tx-l) !default;
+$c-tx-l-1: if($u-css-v == true, var(--text-light-1), $t-l-tx-l-1) !default;
+$c-tx-l-2: if($u-css-v == true, var(--text-light-2), $t-l-tx-l-2) !default;
+$c-tx-l-3: if($u-css-v == true, var(--text-light-3), $t-l-tx-l-3) !default;
+$c-tx-l-4: if($u-css-v == true, var(--text-light-4), $t-l-tx-l-4) !default;
+$c-tx-l-5: if($u-css-v == true, var(--text-light-5), $t-l-tx-l-5) !default;
+$c-tx-l-6: if($u-css-v == true, var(--text-light-6), $t-l-tx-l-6) !default;
+$c-tx-l-7: if($u-css-v == true, var(--text-light-7), $t-l-tx-l-7) !default;
+$c-tx-l-8: if($u-css-v == true, var(--text-light-8), $t-l-tx-l-8) !default;
+$c-tx-l-9: if($u-css-v == true, var(--text-light-9), $t-l-tx-l-9) !default;
+
 $c-bq-bg-cl: if($u-css-v == true, var(--blockquote-background-color), $t-l-bq-bg-cl) !default;
 $c-bq-bd-lf-cl: if($u-css-v == true, var(--blockquote-border-left-color), $t-l-bq-bd-lf-cl) !default;
 $c-cd-bg-cl: if($u-css-v == true, var(--code-background-color), $t-l-cd-bg-cl) !default;
@@ -100,25 +122,3 @@ $c-alr-vda-bd-cl: if($u-css-v == true, var(--alert-danger-border-color), $t-l-al
 
 $c-wys-lk-tx-cl: if($u-css-v == true, var(--wysiwyg-link-text-color), $t-l-wys-lk-tx-cl) !default;
 $c-wys-hr-bd-cl: if($u-css-v == true, var(--wysiwyg-hr-border-color), $t-l-wys-hr-bd-cl) !default;
-
-$c-dco-tx-d: if($u-css-v == true, var(--deco-text-dark), $t-l-dco-tx-d) !default;
-$c-dco-tx-d-1: if($u-css-v == true, var(--deco-text-dark-1), $t-l-dco-tx-d-1) !default;
-$c-dco-tx-d-2: if($u-css-v == true, var(--deco-text-dark-2), $t-l-dco-tx-d-2) !default;
-$c-dco-tx-d-3: if($u-css-v == true, var(--deco-text-dark-3), $t-l-dco-tx-d-3) !default;
-$c-dco-tx-d-4: if($u-css-v == true, var(--deco-text-dark-4), $t-l-dco-tx-d-4) !default;
-$c-dco-tx-d-5: if($u-css-v == true, var(--deco-text-dark-5), $t-l-dco-tx-d-5) !default;
-$c-dco-tx-d-6: if($u-css-v == true, var(--deco-text-dark-6), $t-l-dco-tx-d-6) !default;
-$c-dco-tx-d-7: if($u-css-v == true, var(--deco-text-dark-7), $t-l-dco-tx-d-7) !default;
-$c-dco-tx-d-8: if($u-css-v == true, var(--deco-text-dark-8), $t-l-dco-tx-d-8) !default;
-$c-dco-tx-d-9: if($u-css-v == true, var(--deco-text-dark-9), $t-l-dco-tx-d-9) !default;
-
-$c-dco-tx-l: if($u-css-v == true, var(--deco-text-light), $t-l-dco-tx-l) !default;
-$c-dco-tx-l-1: if($u-css-v == true, var(--deco-text-light-1), $t-l-dco-tx-l-1) !default;
-$c-dco-tx-l-2: if($u-css-v == true, var(--deco-text-light-2), $t-l-dco-tx-l-2) !default;
-$c-dco-tx-l-3: if($u-css-v == true, var(--deco-text-light-3), $t-l-dco-tx-l-3) !default;
-$c-dco-tx-l-4: if($u-css-v == true, var(--deco-text-light-4), $t-l-dco-tx-l-4) !default;
-$c-dco-tx-l-5: if($u-css-v == true, var(--deco-text-light-5), $t-l-dco-tx-l-5) !default;
-$c-dco-tx-l-6: if($u-css-v == true, var(--deco-text-light-6), $t-l-dco-tx-l-6) !default;
-$c-dco-tx-l-7: if($u-css-v == true, var(--deco-text-light-7), $t-l-dco-tx-l-7) !default;
-$c-dco-tx-l-8: if($u-css-v == true, var(--deco-text-light-8), $t-l-dco-tx-l-8) !default;
-$c-dco-tx-l-9: if($u-css-v == true, var(--deco-text-light-9), $t-l-dco-tx-l-9) !default;

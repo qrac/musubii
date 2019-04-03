@@ -60,6 +60,31 @@
 
 :root {
   @include export-theme-dark {
+    --text-dark: #{$t-d-tx-d};
+    --text-dark-1: #{$t-d-tx-d-1};
+    --text-dark-2: #{$t-d-tx-d-2};
+    --text-dark-3: #{$t-d-tx-d-3};
+    --text-dark-4: #{$t-d-tx-d-4};
+    --text-dark-5: #{$t-d-tx-d-5};
+    --text-dark-6: #{$t-d-tx-d-6};
+    --text-dark-7: #{$t-d-tx-d-7};
+    --text-dark-8: #{$t-d-tx-d-8};
+    --text-dark-9: #{$t-d-tx-d-9};
+    --text-light: #{$t-d-tx-l};
+    --text-light-1: #{$t-d-tx-l-1};
+    --text-light-2: #{$t-d-tx-l-2};
+    --text-light-3: #{$t-d-tx-l-3};
+    --text-light-4: #{$t-d-tx-l-4};
+    --text-light-5: #{$t-d-tx-l-5};
+    --text-light-6: #{$t-d-tx-l-6};
+    --text-light-7: #{$t-d-tx-l-7};
+    --text-light-8: #{$t-d-tx-l-8};
+    --text-light-9: #{$t-d-tx-l-9};
+  }
+}
+
+:root {
+  @include export-theme-dark {
     --blockquote-background-color: #{$t-d-bq-bg-cl};
     --blockquote-border-left-color: #{$t-d-bq-bd-lf-cl};
     --code-background-color: #{$t-d-cd-bg-cl};
@@ -151,30 +176,5 @@
   @include export-theme-dark {
     --wysiwyg-link-text-color: #{$t-d-wys-lk-tx-cl};
     --wysiwyg-hr-border-color: #{$t-d-wys-hr-bd-cl};
-  }
-}
-
-:root {
-  @include export-theme-dark {
-    --deco-text-dark: #{$t-d-dco-tx-d};
-    --deco-text-dark-1: #{$t-d-dco-tx-d-1};
-    --deco-text-dark-2: #{$t-d-dco-tx-d-2};
-    --deco-text-dark-3: #{$t-d-dco-tx-d-3};
-    --deco-text-dark-4: #{$t-d-dco-tx-d-4};
-    --deco-text-dark-5: #{$t-d-dco-tx-d-5};
-    --deco-text-dark-6: #{$t-d-dco-tx-d-6};
-    --deco-text-dark-7: #{$t-d-dco-tx-d-7};
-    --deco-text-dark-8: #{$t-d-dco-tx-d-8};
-    --deco-text-dark-9: #{$t-d-dco-tx-d-9};
-    --deco-text-light: #{$t-d-dco-tx-l};
-    --deco-text-light-1: #{$t-d-dco-tx-l-1};
-    --deco-text-light-2: #{$t-d-dco-tx-l-2};
-    --deco-text-light-3: #{$t-d-dco-tx-l-3};
-    --deco-text-light-4: #{$t-d-dco-tx-l-4};
-    --deco-text-light-5: #{$t-d-dco-tx-l-5};
-    --deco-text-light-6: #{$t-d-dco-tx-l-6};
-    --deco-text-light-7: #{$t-d-dco-tx-l-7};
-    --deco-text-light-8: #{$t-d-dco-tx-l-8};
-    --deco-text-light-9: #{$t-d-dco-tx-l-9};
   }
 }

@@ -33,6 +33,28 @@ $theme-dark-danger-lighten: lighten($t-vda, 30%) !default;
 $theme-dark-background-color: $grey-900 !default;
 $theme-dark-text-color: $light-1 !default;
 
+$theme-dark-text-dark: $white !default;
+$theme-dark-text-dark-1: rgba($theme-dark-text-dark, 0.87) !default;
+$theme-dark-text-dark-2: rgba($theme-dark-text-dark, 0.7) !default;
+$theme-dark-text-dark-3: rgba($theme-dark-text-dark, 0.6) !default;
+$theme-dark-text-dark-4: rgba($theme-dark-text-dark, 0.5) !default;
+$theme-dark-text-dark-5: rgba($theme-dark-text-dark, 0.4) !default;
+$theme-dark-text-dark-6: rgba($theme-dark-text-dark, 0.26) !default;
+$theme-dark-text-dark-7: rgba($theme-dark-text-dark, 0.15) !default;
+$theme-dark-text-dark-8: rgba($theme-dark-text-dark, 0.12) !default;
+$theme-dark-text-dark-9: rgba($theme-dark-text-dark, 0.05) !default;
+
+$theme-dark-text-light: $white !default;
+$theme-dark-text-light-1: rgba($theme-dark-text-light, 0.87) !default;
+$theme-dark-text-light-2: rgba($theme-dark-text-light, 0.7) !default;
+$theme-dark-text-light-3: rgba($theme-dark-text-light, 0.6) !default;
+$theme-dark-text-light-4: rgba($theme-dark-text-light, 0.5) !default;
+$theme-dark-text-light-5: rgba($theme-dark-text-light, 0.4) !default;
+$theme-dark-text-light-6: rgba($theme-dark-text-light, 0.26) !default;
+$theme-dark-text-light-7: rgba($theme-dark-text-light, 0.15) !default;
+$theme-dark-text-light-8: rgba($theme-dark-text-light, 0.12) !default;
+$theme-dark-text-light-9: rgba($theme-dark-text-light, 0.05) !default;
+
 $theme-dark-blockquote-background-color: lighten($theme-dark-background-color, 5%) !default;
 $theme-dark-blockquote-border-left-color: $light-9 !default;
 $theme-dark-code-background-color: lighten($theme-dark-background-color, 5%) !default;
@@ -102,30 +124,8 @@ $theme-dark-alert-warning-border-color: $theme-dark-warning !default;
 $theme-dark-alert-danger-background-color: rgba($theme-dark-danger, 0.075) !default;
 $theme-dark-alert-danger-border-color: $theme-dark-danger !default;
 
-$theme-dark-wysiwyg-link-text-color: $cyan-500 !default;
+$theme-dark-wysiwyg-link-text-color: $theme-dark-primary-strong !default;
 $theme-dark-wysiwyg-hr-border-color: $grey-700 !default;
-
-$theme-dark-deco-text-dark: $white !default;
-$theme-dark-deco-text-dark-1: rgba($theme-dark-deco-text-dark, 0.87) !default;
-$theme-dark-deco-text-dark-2: rgba($theme-dark-deco-text-dark, 0.7) !default;
-$theme-dark-deco-text-dark-3: rgba($theme-dark-deco-text-dark, 0.6) !default;
-$theme-dark-deco-text-dark-4: rgba($theme-dark-deco-text-dark, 0.5) !default;
-$theme-dark-deco-text-dark-5: rgba($theme-dark-deco-text-dark, 0.4) !default;
-$theme-dark-deco-text-dark-6: rgba($theme-dark-deco-text-dark, 0.26) !default;
-$theme-dark-deco-text-dark-7: rgba($theme-dark-deco-text-dark, 0.15) !default;
-$theme-dark-deco-text-dark-8: rgba($theme-dark-deco-text-dark, 0.12) !default;
-$theme-dark-deco-text-dark-9: rgba($theme-dark-deco-text-dark, 0.05) !default;
-
-$theme-dark-deco-text-light: $white !default;
-$theme-dark-deco-text-light-1: rgba($theme-dark-deco-text-light, 0.87) !default;
-$theme-dark-deco-text-light-2: rgba($theme-dark-deco-text-light, 0.7) !default;
-$theme-dark-deco-text-light-3: rgba($theme-dark-deco-text-light, 0.6) !default;
-$theme-dark-deco-text-light-4: rgba($theme-dark-deco-text-light, 0.5) !default;
-$theme-dark-deco-text-light-5: rgba($theme-dark-deco-text-light, 0.4) !default;
-$theme-dark-deco-text-light-6: rgba($theme-dark-deco-text-light, 0.26) !default;
-$theme-dark-deco-text-light-7: rgba($theme-dark-deco-text-light, 0.15) !default;
-$theme-dark-deco-text-light-8: rgba($theme-dark-deco-text-light, 0.12) !default;
-$theme-dark-deco-text-light-9: rgba($theme-dark-deco-text-light, 0.05) !default;
 
 //----------------------------------------------------
 // / Shortcut
@@ -157,6 +157,28 @@ $t-d-vda-ltn: $theme-dark-danger-lighten !default;
 
 $t-d-bg-cl: $theme-dark-background-color !default;
 $t-d-tx-cl: $theme-dark-text-color !default;
+
+$t-d-tx-d: $theme-dark-text-dark !default;
+$t-d-tx-d-1: $theme-dark-text-dark-1 !default;
+$t-d-tx-d-2: $theme-dark-text-dark-2 !default;
+$t-d-tx-d-3: $theme-dark-text-dark-3 !default;
+$t-d-tx-d-4: $theme-dark-text-dark-4 !default;
+$t-d-tx-d-5: $theme-dark-text-dark-5 !default;
+$t-d-tx-d-6: $theme-dark-text-dark-6 !default;
+$t-d-tx-d-7: $theme-dark-text-dark-7 !default;
+$t-d-tx-d-8: $theme-dark-text-dark-8 !default;
+$t-d-tx-d-9: $theme-dark-text-dark-9 !default;
+
+$t-d-tx-l: $theme-dark-text-light !default;
+$t-d-tx-l-1: $theme-dark-text-light-1 !default;
+$t-d-tx-l-2: $theme-dark-text-light-2 !default;
+$t-d-tx-l-3: $theme-dark-text-light-3 !default;
+$t-d-tx-l-4: $theme-dark-text-light-4 !default;
+$t-d-tx-l-5: $theme-dark-text-light-5 !default;
+$t-d-tx-l-6: $theme-dark-text-light-6 !default;
+$t-d-tx-l-7: $theme-dark-text-light-7 !default;
+$t-d-tx-l-8: $theme-dark-text-light-8 !default;
+$t-d-tx-l-9: $theme-dark-text-light-9 !default;
 
 $t-d-bq-bg-cl: $theme-dark-blockquote-background-color !default;
 $t-d-bq-bd-lf-cl: $theme-dark-blockquote-border-left-color !default;
@@ -229,25 +251,3 @@ $t-d-alr-vda-bd-cl: $theme-dark-alert-danger-border-color !default;
 
 $t-d-wys-lk-tx-cl: $theme-dark-wysiwyg-link-text-color !default;
 $t-d-wys-hr-bd-cl: $theme-dark-wysiwyg-hr-border-color !default;
-
-$t-d-dco-tx-d: $theme-dark-deco-text-dark !default;
-$t-d-dco-tx-d-1: $theme-dark-deco-text-dark-1 !default;
-$t-d-dco-tx-d-2: $theme-dark-deco-text-dark-2 !default;
-$t-d-dco-tx-d-3: $theme-dark-deco-text-dark-3 !default;
-$t-d-dco-tx-d-4: $theme-dark-deco-text-dark-4 !default;
-$t-d-dco-tx-d-5: $theme-dark-deco-text-dark-5 !default;
-$t-d-dco-tx-d-6: $theme-dark-deco-text-dark-6 !default;
-$t-d-dco-tx-d-7: $theme-dark-deco-text-dark-7 !default;
-$t-d-dco-tx-d-8: $theme-dark-deco-text-dark-8 !default;
-$t-d-dco-tx-d-9: $theme-dark-deco-text-dark-9 !default;
-
-$t-d-dco-tx-l: $theme-dark-deco-text-light !default;
-$t-d-dco-tx-l-1: $theme-dark-deco-text-light-1 !default;
-$t-d-dco-tx-l-2: $theme-dark-deco-text-light-2 !default;
-$t-d-dco-tx-l-3: $theme-dark-deco-text-light-3 !default;
-$t-d-dco-tx-l-4: $theme-dark-deco-text-light-4 !default;
-$t-d-dco-tx-l-5: $theme-dark-deco-text-light-5 !default;
-$t-d-dco-tx-l-6: $theme-dark-deco-text-light-6 !default;
-$t-d-dco-tx-l-7: $theme-dark-deco-text-light-7 !default;
-$t-d-dco-tx-l-8: $theme-dark-deco-text-light-8 !default;
-$t-d-dco-tx-l-9: $theme-dark-deco-text-light-9 !default;

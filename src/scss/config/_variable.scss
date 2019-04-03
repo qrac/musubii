@@ -87,6 +87,46 @@ $joint-class: ".joint" !default;
 // / Module - Text
 //----------------------------------------------------
 
+// Text Class
+$text-class: ".text" !default;
+
+// Pattern - Text Dark
+$pattern-text-dark: (
+  dark: $c-tx-d,
+  dark-1: $c-tx-d-1,
+  dark-2: $c-tx-d-2,
+  dark-3: $c-tx-d-3,
+  dark-4: $c-tx-d-4,
+  dark-5: $c-tx-d-5,
+  dark-6: $c-tx-d-6,
+  dark-7: $c-tx-d-7,
+  dark-8: $c-tx-d-8,
+  dark-9: $c-tx-d-9
+) !default;
+
+// Pattern - Text Light
+$pattern-text-light: (
+  light: $c-tx-l,
+  light-1: $c-tx-l-1,
+  light-2: $c-tx-l-2,
+  light-3: $c-tx-l-3,
+  light-4: $c-tx-l-4,
+  light-5: $c-tx-l-5,
+  light-6: $c-tx-l-6,
+  light-7: $c-tx-l-7,
+  light-8: $c-tx-l-8,
+  light-9: $c-tx-l-9
+) !default;
+
+// Pattern - Text Color
+$pattern-text-color: (
+  primary: $c-vpr-str,
+  info: $c-vin-str,
+  success: $c-vsu-str,
+  warning: $c-vwa-str,
+  danger: $c-vda-str
+) !default;
+
 // Text Link
 $text-link-border-bottom-width: 1px !default;
 $text-link-border-bottom-style: solid !default;
@@ -547,50 +587,6 @@ $wysiwyg-figcaption-font-size: 87.5% !default;
 //----------------------------------------------------
 
 // none
-
-//----------------------------------------------------
-// / Utility - Deco
-//----------------------------------------------------
-
-// Deco Text Class
-$deco-text-class: ".heading, .texts, .text" !default;
-
-// Pattern - Deco Text Dark
-$pattern-deco-text-dark: (
-  dark: $c-dco-tx-d,
-  dark-1: $c-dco-tx-d-1,
-  dark-2: $c-dco-tx-d-2,
-  dark-3: $c-dco-tx-d-3,
-  dark-4: $c-dco-tx-d-4,
-  dark-5: $c-dco-tx-d-5,
-  dark-6: $c-dco-tx-d-6,
-  dark-7: $c-dco-tx-d-7,
-  dark-8: $c-dco-tx-d-8,
-  dark-9: $c-dco-tx-d-9
-) !default;
-
-// Pattern - Deco Text Light
-$pattern-deco-text-light: (
-  light: $c-dco-tx-l,
-  light-1: $c-dco-tx-l-1,
-  light-2: $c-dco-tx-l-2,
-  light-3: $c-dco-tx-l-3,
-  light-4: $c-dco-tx-l-4,
-  light-5: $c-dco-tx-l-5,
-  light-6: $c-dco-tx-l-6,
-  light-7: $c-dco-tx-l-7,
-  light-8: $c-dco-tx-l-8,
-  light-9: $c-dco-tx-l-9
-) !default;
-
-// Pattern - Deco Text Color
-$pattern-deco-text-color: (
-  primary: $c-vpr-str,
-  info: $c-vin-str,
-  success: $c-vsu-str,
-  warning: $c-vwa-str,
-  danger: $c-vda-str
-) !default;
 
 //----------------------------------------------------
 // / Utility - Flex

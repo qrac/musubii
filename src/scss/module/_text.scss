@@ -3,6 +3,151 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Dark
+//----------------------------------------------------
+
+#{$text-class} {
+  @each $key, $value in $pattern-text-dark {
+    &.is-#{$key} {
+      color: $value;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Light
+//----------------------------------------------------
+
+#{$text-class} {
+  @each $key, $value in $pattern-text-light {
+    &.is-#{$key} {
+      color: $value;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Color
+//----------------------------------------------------
+
+#{$text-class} {
+  @each $key, $value in $pattern-text-color {
+    &.is-#{$key} {
+      color: $value;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Weight
+//----------------------------------------------------
+
+#{$text-class} {
+  @each $key, $value in $pattern-font-weight {
+    &.is-#{$key} {
+      font-weight: $value;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Line Height
+//----------------------------------------------------
+
+#{$text-class} {
+  @each $key, $value in $pattern-line-height {
+    &.is-line-height-#{$key} {
+      font-weight: $value;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style
+//----------------------------------------------------
+
+#{$text-class} {
+  &.is-italic {
+    font-style: italic;
+  }
+  &.is-delete {
+    text-decoration: line-through;
+  }
+  &.is-capitalize {
+    text-transform: capitalize;
+  }
+  &.is-lowercase {
+    text-transform: lowercase;
+  }
+  &.is-uppercase {
+    text-transform: uppercase;
+  }
+}
+
+//----------------------------------------------------
+// / Align
+//----------------------------------------------------
+
+#{$text-class} {
+  @each $key-breakpoint, $mediaquery in $pattern-breakpoint-mediaquery-all {
+    @include mediaquery-pattern($mediaquery) {
+      @if $key-breakpoint == "mobile" {
+        &.is-left,
+        &.is-#{$key-breakpoint}-left {
+          text-align: left;
+        }
+        &.is-center,
+        &.is-#{$key-breakpoint}-center {
+          text-align: center;
+        }
+        &.is-right,
+        &.is-#{$key-breakpoint}-right {
+          text-align: right;
+        }
+      } @else {
+        &.is-#{$key-breakpoint}-left {
+          text-align: left;
+        }
+        &.is-#{$key-breakpoint}-center {
+          text-align: center;
+        }
+        &.is-#{$key-breakpoint}-right {
+          text-align: right;
+        }
+      }
+    }
+  }
+  &.is-justify {
+    text-align: justify;
+  }
+  &.is-baseline {
+    vertical-align: baseline;
+  }
+  &.is-top {
+    vertical-align: top;
+  }
+  &.is-middle {
+    vertical-align: middle;
+  }
+  &.is-bottom {
+    vertical-align: bottom;
+  }
+}
+
+//----------------------------------------------------
+// / Control
+//----------------------------------------------------
+
+#{$text-class} {
+  .is-nowrap {
+    white-space: nowrap;
+  }
+  .is-break {
+    word-break: break-all;
+  }
+}
+
+//----------------------------------------------------
 // / Link
 //----------------------------------------------------
 
