@@ -3,85 +3,97 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-joint {
+  @if $use-component-joint == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
 
-#{$joint-class} {
-  display: flex;
-  flex-wrap: nowrap;
-  > {
-    #{$button-class},
-    .input[type="text"],
-    .input[type="search"],
-    .input[type="url"],
-    .input[type="email"],
-    .input[type="tel"],
-    .input[type="password"],
-    .input[type="datetime-local"],
-    .input[type="date"],
-    .input[type="month"],
-    .input[type="week"],
-    .input[type="time"],
-    .input[type="number"] {
-      position: relative;
-      overflow: hidden;
-      &:not(:last-child) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      &:not(:first-child) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-      &:nth-child(2) {
-        border-left: none;
-        ~ {
-          #{$button-class},
-          .input {
-            border-left: none;
+@include export-joint {
+  #{$joint-class} {
+    display: flex;
+    flex-wrap: nowrap;
+    > {
+      #{$button-class},
+      .input[type="text"],
+      .input[type="search"],
+      .input[type="url"],
+      .input[type="email"],
+      .input[type="tel"],
+      .input[type="password"],
+      .input[type="datetime-local"],
+      .input[type="date"],
+      .input[type="month"],
+      .input[type="week"],
+      .input[type="time"],
+      .input[type="number"] {
+        position: relative;
+        overflow: hidden;
+        &:not(:last-child) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        &:not(:first-child) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        &:nth-child(2) {
+          border-left: none;
+          ~ {
+            #{$button-class},
+            .input {
+              border-left: none;
+            }
           }
         }
       }
     }
-  }
-  > {
-    .select:not(.is-multiple) {
-      position: relative;
-      &:not(:last-child) > select {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      &:not(:first-child) > select {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-      &:nth-child(2) {
-        border-left: none;
-        ~ {
-          .select > select {
-            border-left: none;
+    > {
+      .select:not(.is-multiple) {
+        position: relative;
+        &:not(:last-child) > select {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        &:not(:first-child) > select {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        &:nth-child(2) {
+          border-left: none;
+          ~ {
+            .select > select {
+              border-left: none;
+            }
           }
         }
       }
     }
-  }
-  > {
-    #{$button-class},
-    .input[type="text"],
-    .input[type="search"],
-    .input[type="url"],
-    .input[type="email"],
-    .input[type="tel"],
-    .input[type="password"],
-    .input[type="datetime-local"],
-    .input[type="date"],
-    .input[type="month"],
-    .input[type="week"],
-    .input[type="time"],
-    .input[type="number"],
-    .select:not(.is-multiple) > select {
-      &:focus {
-        z-index: 2;
+    > {
+      #{$button-class},
+      .input[type="text"],
+      .input[type="search"],
+      .input[type="url"],
+      .input[type="email"],
+      .input[type="tel"],
+      .input[type="password"],
+      .input[type="datetime-local"],
+      .input[type="date"],
+      .input[type="month"],
+      .input[type="week"],
+      .input[type="time"],
+      .input[type="number"],
+      .select:not(.is-multiple) > select {
+        &:focus {
+          z-index: 2;
+        }
       }
     }
   }

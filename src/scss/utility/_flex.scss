@@ -3,31 +3,43 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-flex {
+  @if $use-component-flex == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Responsive Flex
 //----------------------------------------------------
 
-@each $key, $mediaquery in $pattern-breakpoint-mediaquery-all {
-  @include mediaquery-pattern($mediaquery) {
-    @for $i from 0 through $grid-split {
-      @if $i == 0 {
-        .is-#{$key}-#{$i} {
-          flex: 1 0 0%;
-        }
-      } @else {
-        .is-#{$key}-#{$i} {
-          flex: 0 0 100% / $grid-split * $i;
-          width: 100% / $grid-split * $i;
-          max-width: 100% / $grid-split * $i;
+@include export-flex {
+  @each $mediaquery in $pattern-flex-mediaquery {
+    @include mediaquery-pattern-select($mediaquery) {
+      @for $i from 0 through $grid-split {
+        @if $i == 0 {
+          .is-#{$mediaquery}-#{$i} {
+            flex: 1 0 0%;
+          }
+        } @else {
+          .is-#{$mediaquery}-#{$i} {
+            flex: 0 0 100% / $grid-split * $i;
+            width: 100% / $grid-split * $i;
+            max-width: 100% / $grid-split * $i;
+          }
         }
       }
-    }
-    .is-#{$key}-full {
-      flex: 0 1 100%;
-      width: 100%;
-    }
-    .is-#{$key}-auto {
-      flex: 0 1 auto;
-      width: auto;
+      .is-#{$mediaquery}-full {
+        flex: 0 1 100%;
+        width: 100%;
+      }
+      .is-#{$mediaquery}-auto {
+        flex: 0 1 auto;
+        width: auto;
+      }
     }
   }
 }

@@ -3,179 +3,194 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-button {
+  @if $use-component-button == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
 
-#{$button-class} {
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  align-self: flex-start;
-  white-space: nowrap;
-  padding: $button-padding;
-  border-radius: $button-border-radius;
-  color: $body-text-color;
-  line-height: $button-line-height;
-  text-align: center;
-  transition: $button-transition;
-  &.is-disabled,
-  &[disabled] {
-    cursor: not-allowed;
-  }
-  &:focus {
-    box-shadow: $button-focus-shadow;
-    outline: none;
-  }
-  &.is-round {
-    border-radius: $button-round-border-radius;
-  }
-  &.is-circle {
-    position: relative;
-    width: $button-circle-width;
-    height: $button-circle-height;
-    padding: 0;
-    border-radius: $button-circle-border-radius;
-    line-height: 1;
-  }
-}
-
-//----------------------------------------------------
-// / Floating
-//----------------------------------------------------
-
-#{$button-class} {
-  &.is-floating:not(.is-disabled) {
-    box-shadow: $button-floating-shadow;
-    &:focus,
-    &:hover:focus {
-      box-shadow: $button-floating-focus-shadow;
+@include export-button {
+  #{$button-class} {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    white-space: nowrap;
+    padding: $button-padding;
+    border-radius: $button-border-radius;
+    color: $body-text-color;
+    line-height: $button-line-height;
+    text-align: center;
+    transition: $button-transition;
+    &.is-disabled,
+    &[disabled] {
+      cursor: not-allowed;
     }
-    &:hover {
-      box-shadow: $button-floating-hover-shadow;
+    &:focus {
+      box-shadow: $button-focus-shadow;
+      outline: none;
     }
   }
 }
 
 //----------------------------------------------------
-// / Plain
+// / Custom
 //----------------------------------------------------
 
-#{$button-class} {
-  &.is-plain {
-    background-color: $button-plain-default-background-color;
-    border: $button-border-width solid transparent;
-    &:hover {
-      background-color: $button-plain-default-hover-background-color;
-    }
-    @each $key, $value in $pattern-button-plain {
-      &.is-#{$key} {
-        background-color: map-get($value, background-color);
-        color: $button-paint-text-color;
-        &:hover {
-          background-color: map-get($value, hover-background-color);
+@include export-button {
+  #{$button-class} {
+    @each $custom in $pattern-button-custom {
+      @if $custom == "round" {
+        &.is-round {
+          border-radius: $button-round-border-radius;
+        }
+      }
+      @if $custom == "circle" {
+        &.is-circle {
+          position: relative;
+          width: $button-circle-width;
+          height: $button-circle-height;
+          padding: 0;
+          border-radius: $button-circle-border-radius;
+          line-height: 1;
+        }
+      }
+      @if $custom == "floating" {
+        &.is-floating:not(.is-disabled) {
+          box-shadow: $button-floating-shadow;
+          &:focus,
+          &:hover:focus {
+            box-shadow: $button-floating-focus-shadow;
+          }
+          &:hover {
+            box-shadow: $button-floating-hover-shadow;
+          }
         }
       }
     }
-    &.is-disabled,
-    &.is-disabled:hover,
-    &[disabled],
-    &[disabled]:hover {
-      background-color: $button-disabled-background-color;
-      color: $button-disabled-text-color;
-    }
   }
 }
 
 //----------------------------------------------------
-// / Melt
+// / Style
 //----------------------------------------------------
 
-#{$button-class} {
-  &.is-melt {
-    background-color: transparent;
-    border: $button-border-width solid transparent;
-    &:hover {
-      background-color: $button-melt-default-hover-background-color;
-    }
-    @each $key, $value in $pattern-button-melt {
-      &.is-#{$key} {
-        color: map-get($value, text-color);
-      }
-    }
-    &.is-disabled,
-    &.is-disabled:hover,
-    &[disabled],
-    &[disabled]:hover {
-      color: $button-disabled-text-color;
-      background-color: transparent;
-    }
-  }
-}
-
-//----------------------------------------------------
-// / Outline
-//----------------------------------------------------
-
-#{$button-class} {
-  &.is-outline {
-    background-color: $button-outline-default-background-color;
-    border: $button-border-width solid $button-outline-default-border-color;
-    &:hover {
-      background-color: $button-outline-default-hover-background-color;
-    }
-    @each $key, $value in $pattern-button-outline {
-      &.is-#{$key} {
-        border-color: map-get($value, border-color);
-        color: map-get($value, text-color);
-        &:hover {
-          background-color: map-get($value, hover-background-color);
-          border-color: transparent;
-          color: $button-paint-text-color;
+@include export-button {
+  #{$button-class} {
+    @each $style in $pattern-button-style {
+      @if $style == "plain" {
+        &.is-plain {
+          background-color: $button-plain-default-background-color;
+          border: $button-border-width solid transparent;
+          &:hover {
+            background-color: $button-plain-default-hover-background-color;
+          }
+          @each $key, $value in $pattern-button-plain {
+            &.is-#{$key} {
+              background-color: map-get($value, background-color);
+              color: $button-paint-text-color;
+              &:hover {
+                background-color: map-get($value, hover-background-color);
+              }
+            }
+          }
+          &.is-disabled,
+          &.is-disabled:hover,
+          &[disabled],
+          &[disabled]:hover {
+            background-color: $button-disabled-background-color;
+            color: $button-disabled-text-color;
+          }
         }
       }
-    }
-    &.is-disabled,
-    &.is-disabled:hover,
-    &[disabled],
-    &[disabled]:hover {
-      background-color: $button-disabled-background-color-alpha;
-      color: $button-disabled-text-color;
-    }
-  }
-}
-
-//----------------------------------------------------
-// / Ghost
-//----------------------------------------------------
-
-#{$button-class} {
-  &.is-ghost {
-    background-color: transparent;
-    border: $button-border-width solid $button-ghost-default-border-color;
-    color: $button-ghost-default-text-color;
-    &:hover {
-      background-color: $button-ghost-default-hover-background-color;
-      color: $button-ghost-default-hover-text-color;
-    }
-    @each $key, $value in $pattern-button-ghost {
-      &.is-#{$key} {
-        border-color: map-get($value, border-color);
-        color: map-get($value, text-color);
-        &:hover {
-          background-color: map-get($value, hover-background-color);
-          border-color: transparent;
-          color: $button-paint-text-color;
+      @if $style == "melt" {
+        &.is-melt {
+          background-color: transparent;
+          border: $button-border-width solid transparent;
+          &:hover {
+            background-color: $button-melt-default-hover-background-color;
+          }
+          @each $key, $value in $pattern-button-melt {
+            &.is-#{$key} {
+              color: map-get($value, text-color);
+            }
+          }
+          &.is-disabled,
+          &.is-disabled:hover,
+          &[disabled],
+          &[disabled]:hover {
+            color: $button-disabled-text-color;
+            background-color: transparent;
+          }
         }
       }
-    }
-    &.is-disabled,
-    &.is-disabled:hover,
-    &[disabled],
-    &[disabled]:hover {
-      background-color: $button-ghost-disabled-background-color;
-      border-color: $button-ghost-disabled-border-color;
-      color: $button-ghost-disabled-text-color;
+      @if $style == "outline" {
+        &.is-outline {
+          background-color: $button-outline-default-background-color;
+          border: $button-border-width
+            solid
+            $button-outline-default-border-color;
+          &:hover {
+            background-color: $button-outline-default-hover-background-color;
+          }
+          @each $key, $value in $pattern-button-outline {
+            &.is-#{$key} {
+              border-color: map-get($value, border-color);
+              color: map-get($value, text-color);
+              &:hover {
+                background-color: map-get($value, hover-background-color);
+                border-color: transparent;
+                color: $button-paint-text-color;
+              }
+            }
+          }
+          &.is-disabled,
+          &.is-disabled:hover,
+          &[disabled],
+          &[disabled]:hover {
+            background-color: $button-disabled-background-color-alpha;
+            color: $button-disabled-text-color;
+          }
+        }
+      }
+      @if $style == "ghost" {
+        &.is-ghost {
+          background-color: transparent;
+          border: $button-border-width solid $button-ghost-default-border-color;
+          color: $button-ghost-default-text-color;
+          &:hover {
+            background-color: $button-ghost-default-hover-background-color;
+            color: $button-ghost-default-hover-text-color;
+          }
+          @each $key, $value in $pattern-button-ghost {
+            &.is-#{$key} {
+              border-color: map-get($value, border-color);
+              color: map-get($value, text-color);
+              &:hover {
+                background-color: map-get($value, hover-background-color);
+                border-color: transparent;
+                color: $button-paint-text-color;
+              }
+            }
+          }
+          &.is-disabled,
+          &.is-disabled:hover,
+          &[disabled],
+          &[disabled]:hover {
+            background-color: $button-ghost-disabled-background-color;
+            border-color: $button-ghost-disabled-border-color;
+            color: $button-ghost-disabled-text-color;
+          }
+        }
+      }
     }
   }
 }

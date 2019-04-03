@@ -3,20 +3,32 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-size {
+  @if $use-component-size == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Responsive Size
 //----------------------------------------------------
 
-@each $key-breakpoint, $mediaquery in $pattern-breakpoint-mediaquery-all {
-  @include mediaquery-pattern($mediaquery) {
-    @each $key-size, $value in $pattern-font-size {
-      @if $key-breakpoint == "mobile" {
-        .is-#{$key-size},
-        .is-#{$key-breakpoint}-#{$key-size} {
-          font-size: $value;
-        }
-      } @else {
-        .is-#{$key-breakpoint}-#{$key-size} {
-          font-size: $value;
+@include export-size {
+  @each $mediaquery in $pattern-size-mediaquery {
+    @include mediaquery-pattern-select($mediaquery) {
+      @each $key-size, $value in $pattern-font-size {
+        @if $mediaquery == "mobile" {
+          .is-#{$key-size},
+          .is-#{$mediaquery}-#{$key-size} {
+            font-size: $value;
+          }
+        } @else {
+          .is-#{$mediaquery}-#{$key-size} {
+            font-size: $value;
+          }
         }
       }
     }

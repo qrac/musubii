@@ -3,35 +3,47 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-wysiwyg {
+  @if $use-component-wysiwyg == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Heading
 //----------------------------------------------------
 
-.wysiwyg {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: $wysiwyg-heading-font-weight;
-  }
-  h1 {
-    font-size: $wysiwyg-h1-font-size;
-  }
-  h2 {
-    font-size: $wysiwyg-h2-font-size;
-  }
-  h3 {
-    font-size: $wysiwyg-h3-font-size;
-  }
-  h4 {
-    font-size: $wysiwyg-h4-font-size;
-  }
-  h5 {
-    font-size: $wysiwyg-h5-font-size;
-  }
-  h6 {
-    font-size: $wysiwyg-h6-font-size;
+@include export-wysiwyg {
+  .wysiwyg {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: $wysiwyg-heading-font-weight;
+    }
+    h1 {
+      font-size: $wysiwyg-h1-font-size;
+    }
+    h2 {
+      font-size: $wysiwyg-h2-font-size;
+    }
+    h3 {
+      font-size: $wysiwyg-h3-font-size;
+    }
+    h4 {
+      font-size: $wysiwyg-h4-font-size;
+    }
+    h5 {
+      font-size: $wysiwyg-h5-font-size;
+    }
+    h6 {
+      font-size: $wysiwyg-h6-font-size;
+    }
   }
 }
 
@@ -39,22 +51,24 @@
 // / Text
 //----------------------------------------------------
 
-.wysiwyg {
-  p {
-    line-height: $wysiwyg-text-line-height;
-  }
-  small {
-    font-size: $wysiwyg-small-font-size;
-  }
-  strong {
-    font-weight: $wysiwyg-strong-font-weight;
-  }
-  em {
-    font-style: italic;
-  }
-  del,
-  s {
-    text-decoration: line-through;
+@include export-wysiwyg {
+  .wysiwyg {
+    p {
+      line-height: $wysiwyg-text-line-height;
+    }
+    small {
+      font-size: $wysiwyg-small-font-size;
+    }
+    strong {
+      font-weight: $wysiwyg-strong-font-weight;
+    }
+    em {
+      font-style: italic;
+    }
+    del,
+    s {
+      text-decoration: line-through;
+    }
   }
 }
 
@@ -62,22 +76,24 @@
 // / Link
 //----------------------------------------------------
 
-.wysiwyg {
-  a {
-    cursor: pointer;
-    border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
-      currentColor;
-    color: $wysiwyg-link-text-color;
-    &:hover,
-    &:active {
-      border-bottom-color: transparent;
+@include export-wysiwyg {
+  .wysiwyg {
+    a {
+      cursor: pointer;
+      border-bottom: $text-link-border-bottom-width
+        $text-link-border-bottom-style currentColor;
+      color: $wysiwyg-link-text-color;
+      &:hover,
+      &:active {
+        border-bottom-color: transparent;
+      }
     }
-  }
-  &.is-link-reverse a {
-    border-bottom-color: transparent;
-    &:hover,
-    &:active {
-      border-bottom-color: currentColor;
+    &.is-link-reverse a {
+      border-bottom-color: transparent;
+      &:hover,
+      &:active {
+        border-bottom-color: currentColor;
+      }
     }
   }
 }
@@ -86,42 +102,49 @@
 // / Blockquote
 //----------------------------------------------------
 
-.wysiwyg blockquote {
-  background-color: $blockquote-background-color;
-  border-left: $blockquote-border-left-width solid $blockquote-border-left-color;
-  border-radius: $blockquote-border-radius;
-  padding: $blockquote-padding;
+@include export-wysiwyg {
+  .wysiwyg blockquote {
+    background-color: $blockquote-background-color;
+    border-left: $blockquote-border-left-width solid
+      $blockquote-border-left-color;
+    border-radius: $blockquote-border-radius;
+    padding: $blockquote-padding;
+  }
 }
 
 //----------------------------------------------------
 // / Code
 //----------------------------------------------------
 
-.wysiwyg :not(pre) {
-  > code {
-    padding: $code-padding;
-    background-color: $code-background-color;
-    border-radius: $code-border-radius;
-    color: $code-text-color;
-    font-size: $code-font-size;
-    font-family: $code-font-family;
-    word-break: break-all;
+@include export-wysiwyg {
+  .wysiwyg :not(pre) {
+    > code {
+      padding: $code-padding;
+      background-color: $code-background-color;
+      border-radius: $code-border-radius;
+      color: $code-text-color;
+      font-size: $code-font-size;
+      font-family: $code-font-family;
+      word-break: break-all;
+    }
   }
 }
 
-.wysiwyg pre {
-  background-color: $pre-background-color;
-  border-radius: $pre-border-radius;
-  color: $pre-text-color;
-  font-family: $pre-font-family;
-  white-space: $pre-white-space;
-  word-wrap: normal;
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  > code {
-    display: block;
-    padding: $pre-code-padding;
+@include export-wysiwyg {
+  .wysiwyg pre {
+    background-color: $pre-background-color;
+    border-radius: $pre-border-radius;
+    color: $pre-text-color;
+    font-family: $pre-font-family;
+    white-space: $pre-white-space;
+    word-wrap: normal;
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    > code {
+      display: block;
+      padding: $pre-code-padding;
+    }
   }
 }
 
@@ -129,42 +152,50 @@
 // / List
 //----------------------------------------------------
 
-.wysiwyg ul,
-.wysiwyg ol {
-  line-height: $wysiwyg-text-line-height;
-  margin-left: $list-margin-left;
-  > li {
-    display: list-item;
-  }
-  > li li {
-    font-size: 100%;
+@include export-wysiwyg {
+  .wysiwyg ul,
+  .wysiwyg ol {
+    line-height: $wysiwyg-text-line-height;
+    margin-left: $list-margin-left;
+    > li {
+      display: list-item;
+    }
+    > li li {
+      font-size: 100%;
+    }
   }
 }
 
-.wysiwyg ul > li {
-  list-style: circle outside;
+@include export-wysiwyg {
+  .wysiwyg ul > li {
+    list-style: circle outside;
+  }
 }
 
-.wysiwyg ol > li {
-  list-style: decimal outside;
+@include export-wysiwyg {
+  .wysiwyg ol > li {
+    list-style: decimal outside;
+  }
 }
 
 //----------------------------------------------------
 // / Table
 //----------------------------------------------------
 
-.wysiwyg table {
-  width: 100%;
-  background-color: $table-background-color;
-  th {
-    background-color: $table-paint-background-color;
-    color: $table-paint-text-color;
-    font-weight: $wysiwyg-table-th-font-weight;
-  }
-  th,
-  td {
-    padding: $table-padding;
-    border: $table-border-width solid $table-border-color;
+@include export-wysiwyg {
+  .wysiwyg table {
+    width: 100%;
+    background-color: $table-background-color;
+    th {
+      background-color: $table-paint-background-color;
+      color: $table-paint-text-color;
+      font-weight: $wysiwyg-table-th-font-weight;
+    }
+    th,
+    td {
+      padding: $table-padding;
+      border: $table-border-width solid $table-border-color;
+    }
   }
 }
 
@@ -172,37 +203,39 @@
 // / Definition List
 //----------------------------------------------------
 
-.wysiwyg {
-  dl {
-    width: 100%;
-    background-color: $table-background-color;
-    border: $table-border-width solid $table-border-color;
-    border-top: none;
-  }
-  dt {
-    width: 100%;
-    padding: $table-padding;
-    background-color: $table-paint-background-color;
-    border-top: $table-border-width solid $table-border-color;
-    color: $table-paint-text-color;
-    font-weight: $wysiwyg-table-th-font-weight;
-  }
-  dd {
-    width: 100%;
-    padding: $table-padding;
-    border-top: $table-border-width solid $table-border-color;
-  }
-  @include fablet {
+@include export-wysiwyg {
+  .wysiwyg {
     dl {
-      display: flex;
-      flex-wrap: wrap;
+      width: 100%;
+      background-color: $table-background-color;
+      border: $table-border-width solid $table-border-color;
+      border-top: none;
     }
     dt {
-      width: 30%;
+      width: 100%;
+      padding: $table-padding;
+      background-color: $table-paint-background-color;
+      border-top: $table-border-width solid $table-border-color;
+      color: $table-paint-text-color;
+      font-weight: $wysiwyg-table-th-font-weight;
     }
     dd {
-      width: 70%;
-      border-left: $table-border-width solid $table-border-color;
+      width: 100%;
+      padding: $table-padding;
+      border-top: $table-border-width solid $table-border-color;
+    }
+    @include fablet {
+      dl {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      dt {
+        width: 30%;
+      }
+      dd {
+        width: 70%;
+        border-left: $table-border-width solid $table-border-color;
+      }
     }
   }
 }
@@ -211,23 +244,27 @@
 // / HR
 //----------------------------------------------------
 
-.wysiwyg hr {
-  height: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-top: $wysiwyg-hr-border-width $wysiwyg-hr-border-style
-    $wysiwyg-hr-border-color;
+@include export-wysiwyg {
+  .wysiwyg hr {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: $wysiwyg-hr-border-width $wysiwyg-hr-border-style
+      $wysiwyg-hr-border-color;
+  }
 }
 
 //----------------------------------------------------
 // / Figure
 //----------------------------------------------------
 
-.wysiwyg figure {
-  text-align: $wysiwyg-figure-text-align;
-  > figcaption {
-    margin-top: $wysiwyg-figcaption-margin-top;
-    font-size: $wysiwyg-figcaption-font-size;
+@include export-wysiwyg {
+  .wysiwyg figure {
+    text-align: $wysiwyg-figure-text-align;
+    > figcaption {
+      margin-top: $wysiwyg-figcaption-margin-top;
+      font-size: $wysiwyg-figcaption-font-size;
+    }
   }
 }

@@ -3,13 +3,25 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-text {
+  @if $use-component-text == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Dark
 //----------------------------------------------------
 
-#{$text-class} {
-  @each $key, $value in $pattern-text-dark {
-    &.is-#{$key} {
-      color: $value;
+@include export-text {
+  #{$text-class} {
+    @each $key, $value in $pattern-text-dark {
+      &.is-#{$key} {
+        color: $value;
+      }
     }
   }
 }
@@ -18,10 +30,12 @@
 // / Light
 //----------------------------------------------------
 
-#{$text-class} {
-  @each $key, $value in $pattern-text-light {
-    &.is-#{$key} {
-      color: $value;
+@include export-text {
+  #{$text-class} {
+    @each $key, $value in $pattern-text-light {
+      &.is-#{$key} {
+        color: $value;
+      }
     }
   }
 }
@@ -30,10 +44,12 @@
 // / Color
 //----------------------------------------------------
 
-#{$text-class} {
-  @each $key, $value in $pattern-text-color {
-    &.is-#{$key} {
-      color: $value;
+@include export-text {
+  #{$text-class} {
+    @each $key, $value in $pattern-text-color {
+      &.is-#{$key} {
+        color: $value;
+      }
     }
   }
 }
@@ -42,10 +58,12 @@
 // / Weight
 //----------------------------------------------------
 
-#{$text-class} {
-  @each $key, $value in $pattern-font-weight {
-    &.is-#{$key} {
-      font-weight: $value;
+@include export-text {
+  #{$text-class} {
+    @each $key, $value in $pattern-font-weight {
+      &.is-#{$key} {
+        font-weight: $value;
+      }
     }
   }
 }
@@ -54,10 +72,12 @@
 // / Line Height
 //----------------------------------------------------
 
-#{$text-class} {
-  @each $key, $value in $pattern-line-height {
-    &.is-line-height-#{$key} {
-      font-weight: $value;
+@include export-text {
+  #{$text-class} {
+    @each $key, $value in $pattern-line-height {
+      &.is-line-height-#{$key} {
+        font-weight: $value;
+      }
     }
   }
 }
@@ -66,21 +86,23 @@
 // / Style
 //----------------------------------------------------
 
-#{$text-class} {
-  &.is-italic {
-    font-style: italic;
-  }
-  &.is-delete {
-    text-decoration: line-through;
-  }
-  &.is-capitalize {
-    text-transform: capitalize;
-  }
-  &.is-lowercase {
-    text-transform: lowercase;
-  }
-  &.is-uppercase {
-    text-transform: uppercase;
+@include export-text {
+  #{$text-class} {
+    &.is-italic {
+      font-style: italic;
+    }
+    &.is-delete {
+      text-decoration: line-through;
+    }
+    &.is-capitalize {
+      text-transform: capitalize;
+    }
+    &.is-lowercase {
+      text-transform: lowercase;
+    }
+    &.is-uppercase {
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -88,49 +110,41 @@
 // / Align
 //----------------------------------------------------
 
-#{$text-class} {
-  @each $key-breakpoint, $mediaquery in $pattern-breakpoint-mediaquery-all {
-    @include mediaquery-pattern($mediaquery) {
-      @if $key-breakpoint == "mobile" {
-        &.is-left,
-        &.is-#{$key-breakpoint}-left {
-          text-align: left;
-        }
-        &.is-center,
-        &.is-#{$key-breakpoint}-center {
-          text-align: center;
-        }
-        &.is-right,
-        &.is-#{$key-breakpoint}-right {
-          text-align: right;
-        }
-      } @else {
-        &.is-#{$key-breakpoint}-left {
-          text-align: left;
-        }
-        &.is-#{$key-breakpoint}-center {
-          text-align: center;
-        }
-        &.is-#{$key-breakpoint}-right {
-          text-align: right;
+@include export-text {
+  #{$text-class} {
+    @each $mediaquery in $pattern-text-align-mediaquery {
+      @include mediaquery-pattern-select($mediaquery) {
+        @if $mediaquery == "mobile" {
+          @each $value in $pattern-text-align-way {
+            &.is-#{$value},
+            &.is-#{$mediaquery}-#{$value} {
+              text-align: $value;
+            }
+          }
+        } @else {
+          @each $value in $pattern-text-align-way {
+            &.is-#{$mediaquery}-#{$value} {
+              text-align: $value;
+            }
+          }
         }
       }
     }
-  }
-  &.is-justify {
-    text-align: justify;
-  }
-  &.is-baseline {
-    vertical-align: baseline;
-  }
-  &.is-top {
-    vertical-align: top;
-  }
-  &.is-middle {
-    vertical-align: middle;
-  }
-  &.is-bottom {
-    vertical-align: bottom;
+    &.is-justify {
+      text-align: justify;
+    }
+    &.is-baseline {
+      vertical-align: baseline;
+    }
+    &.is-top {
+      vertical-align: top;
+    }
+    &.is-middle {
+      vertical-align: middle;
+    }
+    &.is-bottom {
+      vertical-align: bottom;
+    }
   }
 }
 
@@ -138,12 +152,14 @@
 // / Control
 //----------------------------------------------------
 
-#{$text-class} {
-  .is-nowrap {
-    white-space: nowrap;
-  }
-  .is-break {
-    word-break: break-all;
+@include export-text {
+  #{$text-class} {
+    .is-nowrap {
+      white-space: nowrap;
+    }
+    .is-break {
+      word-break: break-all;
+    }
   }
 }
 
@@ -151,12 +167,14 @@
 // / Link
 //----------------------------------------------------
 
-.text.is-link {
-  cursor: pointer;
-  border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
-    currentColor;
-  &:hover {
-    border-bottom-color: transparent;
+@include export-text {
+  .text.is-link {
+    cursor: pointer;
+    border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
+      currentColor;
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
 }
 
@@ -164,12 +182,14 @@
 // / Link Reverse
 //----------------------------------------------------
 
-.text.is-link-reverse {
-  cursor: pointer;
-  border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
-    transparent;
-  &:hover {
-    border-color: currentColor;
+@include export-text {
+  .text.is-link-reverse {
+    cursor: pointer;
+    border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
+      transparent;
+    &:hover {
+      border-color: currentColor;
+    }
   }
 }
 
@@ -177,26 +197,31 @@
 // / Blockquote
 //----------------------------------------------------
 
-.blockquote {
-  background-color: $blockquote-background-color;
-  border-left: $blockquote-border-left-width solid $blockquote-border-left-color;
-  border-radius: $blockquote-border-radius;
-  padding: $blockquote-padding;
+@include export-text {
+  .blockquote {
+    background-color: $blockquote-background-color;
+    border-left: $blockquote-border-left-width solid
+      $blockquote-border-left-color;
+    border-radius: $blockquote-border-radius;
+    padding: $blockquote-padding;
+  }
 }
 
 //----------------------------------------------------
 // / Code
 //----------------------------------------------------
 
-:not(.pre) {
-  > .code {
-    padding: $code-padding;
-    background-color: $code-background-color;
-    border-radius: $code-border-radius;
-    color: $code-text-color;
-    font-size: $code-font-size;
-    font-family: $code-font-family;
-    word-break: break-all;
+@include export-text {
+  :not(.pre) {
+    > .code {
+      padding: $code-padding;
+      background-color: $code-background-color;
+      border-radius: $code-border-radius;
+      color: $code-text-color;
+      font-size: $code-font-size;
+      font-family: $code-font-family;
+      word-break: break-all;
+    }
   }
 }
 
@@ -204,18 +229,20 @@
 // / Pre
 //----------------------------------------------------
 
-.pre {
-  background-color: $pre-background-color;
-  border-radius: $pre-border-radius;
-  color: $pre-text-color;
-  font-family: $pre-font-family;
-  white-space: $pre-white-space;
-  word-wrap: normal;
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  > .code {
-    display: block;
-    padding: $pre-code-padding;
+@include export-text {
+  .pre {
+    background-color: $pre-background-color;
+    border-radius: $pre-border-radius;
+    color: $pre-text-color;
+    font-family: $pre-font-family;
+    white-space: $pre-white-space;
+    word-wrap: normal;
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    > .code {
+      display: block;
+      padding: $pre-code-padding;
+    }
   }
 }

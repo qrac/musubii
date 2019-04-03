@@ -3,33 +3,45 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-padding {
+  @if $use-component-padding == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Add Padding
 //----------------------------------------------------
 
-@each $way in $pattern-padding-way {
-  @if $way == "all" {
-    @each $key, $value in $pattern-padding-size {
-      @if $key == "md" {
-        &.is-padding,
-        &.is-padding-#{$key} {
-          padding: $value;
-        }
-      } @else {
-        &.is-padding-#{$key} {
-          padding: $value;
+@include export-padding {
+  @each $way in $pattern-padding-way {
+    @if $way == "all" {
+      @each $key, $value in $pattern-padding-size {
+        @if $key == "md" {
+          &.is-padding,
+          &.is-padding-#{$key} {
+            padding: $value;
+          }
+        } @else {
+          &.is-padding-#{$key} {
+            padding: $value;
+          }
         }
       }
-    }
-  } @else {
-    @each $key, $value in $pattern-padding-size {
-      @if $key == "md" {
-        &.is-padding-#{$way},
-        &.is-padding-#{$way}-#{$key} {
-          padding-#{$way}: $value;
-        }
-      } @else {
-        &.is-padding-#{$way}-#{$key} {
-          padding-#{$way}: $value;
+    } @else {
+      @each $key, $value in $pattern-padding-size {
+        @if $key == "md" {
+          &.is-padding-#{$way},
+          &.is-padding-#{$way}-#{$key} {
+            padding-#{$way}: $value;
+          }
+        } @else {
+          &.is-padding-#{$way}-#{$key} {
+            padding-#{$way}: $value;
+          }
         }
       }
     }

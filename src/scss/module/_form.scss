@@ -3,149 +3,177 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-form {
+  @if $use-component-form == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
 
-.form {
-}
-
-.fieldset {
-  padding: 0;
-  border: none;
-}
-
-.input[type="text"],
-.input[type="search"],
-.input[type="url"],
-.input[type="email"],
-.input[type="tel"],
-.input[type="password"],
-.input[type="datetime-local"],
-.input[type="date"],
-.input[type="month"],
-.input[type="week"],
-.input[type="time"],
-.input[type="number"] {
-  max-width: 100%;
-  height: calc(#{$input-height} + (#{$input-border-width} * 2));
-  padding: $input-padding;
-  background-color: $input-background-color;
-  border: $input-border-width solid $input-border-color;
-  border-radius: $input-border-radius;
-  color: $body-text-color;
-  line-height: $input-line-height;
-  &[disabled] {
-    background-color: $input-disabled-background-color;
-    border-color: $input-disabled-border-color;
-    color: $input-disabled-text-color;
-  }
-  &[readonly] {
-    background-color: $input-readonly-background-color;
-    border-color: $input-readonly-border-color;
-    color: $input-readonly-text-color;
-  }
-  &.is-round {
-    border-radius: $input-round-border-radius;
+@include export-form {
+  .form {
   }
 }
 
-.input[type="text"],
-.input[type="search"],
-.input[type="url"],
-.input[type="email"],
-.input[type="tel"],
-.input[type="password"],
-.input[type="number"],
-.textarea {
-  @include placeholder {
-    color: $input-placeholder-color;
+@include export-form {
+  .fieldset {
+    padding: 0;
+    border: none;
   }
 }
 
-.input[type="text"],
-.input[type="search"],
-.input[type="url"],
-.input[type="email"],
-.input[type="tel"],
-.input[type="password"],
-.input[type="datetime-local"],
-.input[type="date"],
-.input[type="month"],
-.input[type="week"],
-.input[type="time"],
-.input[type="number"],
-.textarea {
-  box-shadow: $input-shadow;
-  transition: $input-transition;
-  &[disabled] {
-    cursor: not-allowed;
-    box-shadow: $input-disabled-shadow;
-  }
-  &[readonly] {
-    box-shadow: $input-readonly-shadow;
-  }
-  &:focus,
-  &[readonly]:focus {
-    border-color: $input-focus-border-color;
-    box-shadow: $input-focus-shadow;
-    outline: none;
+@include export-form {
+  .input[type="text"],
+  .input[type="search"],
+  .input[type="url"],
+  .input[type="email"],
+  .input[type="tel"],
+  .input[type="password"],
+  .input[type="datetime-local"],
+  .input[type="date"],
+  .input[type="month"],
+  .input[type="week"],
+  .input[type="time"],
+  .input[type="number"] {
+    max-width: 100%;
+    height: calc(#{$input-height} + (#{$input-border-width} * 2));
+    padding: $input-padding;
+    background-color: $input-background-color;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    color: $body-text-color;
+    line-height: $input-line-height;
+    &[disabled] {
+      background-color: $input-disabled-background-color;
+      border-color: $input-disabled-border-color;
+      color: $input-disabled-text-color;
+    }
+    &[readonly] {
+      background-color: $input-readonly-background-color;
+      border-color: $input-readonly-border-color;
+      color: $input-readonly-text-color;
+    }
+    &.is-round {
+      border-radius: $input-round-border-radius;
+    }
   }
 }
 
-.input[type="text"],
-.input[type="search"],
-.input[type="url"],
-.input[type="email"],
-.input[type="tel"],
-.input[type="password"],
-.input[type="datetime-local"],
-.input[type="date"],
-.input[type="month"],
-.input[type="week"],
-.input[type="time"],
-.input[type="number"],
-.textarea,
-.select > select {
-  appearance: none;
+@include export-form {
+  .input[type="text"],
+  .input[type="search"],
+  .input[type="url"],
+  .input[type="email"],
+  .input[type="tel"],
+  .input[type="password"],
+  .input[type="number"],
+  .textarea {
+    @include placeholder {
+      color: $input-placeholder-color;
+    }
+  }
+}
+
+@include export-form {
+  .input[type="text"],
+  .input[type="search"],
+  .input[type="url"],
+  .input[type="email"],
+  .input[type="tel"],
+  .input[type="password"],
+  .input[type="datetime-local"],
+  .input[type="date"],
+  .input[type="month"],
+  .input[type="week"],
+  .input[type="time"],
+  .input[type="number"],
+  .textarea {
+    box-shadow: $input-shadow;
+    transition: $input-transition;
+    &[disabled] {
+      cursor: not-allowed;
+      box-shadow: $input-disabled-shadow;
+    }
+    &[readonly] {
+      box-shadow: $input-readonly-shadow;
+    }
+    &:focus,
+    &[readonly]:focus {
+      border-color: $input-focus-border-color;
+      box-shadow: $input-focus-shadow;
+      outline: none;
+    }
+  }
+}
+
+@include export-form {
+  .input[type="text"],
+  .input[type="search"],
+  .input[type="url"],
+  .input[type="email"],
+  .input[type="tel"],
+  .input[type="password"],
+  .input[type="datetime-local"],
+  .input[type="date"],
+  .input[type="month"],
+  .input[type="week"],
+  .input[type="time"],
+  .input[type="number"],
+  .textarea,
+  .select > select {
+    appearance: none;
+  }
 }
 
 //----------------------------------------------------
 // / File
 //----------------------------------------------------
 
-.input[type="file"] {
-  cursor: pointer;
-  display: block;
-  max-width: 70vw;
-  overflow: hidden;
-  &[disabled] {
-    cursor: not-allowed;
+@include export-form {
+  .input[type="file"] {
+    cursor: pointer;
+    display: block;
+    max-width: 70vw;
+    overflow: hidden;
+    &[disabled] {
+      cursor: not-allowed;
+    }
   }
 }
 
-.button .input[type="file"] {
-  display: none;
+@include export-form {
+  .button .input[type="file"] {
+    display: none;
+  }
 }
 
 //----------------------------------------------------
 // / Textarea
 //----------------------------------------------------
 
-.textarea {
-  background-color: $input-background-color;
-  border: $input-border-width solid $input-border-color;
-  border-radius: $input-border-radius;
-  padding: $textarea-padding;
-  color: $body-text-color;
-  &[disabled] {
-    background-color: $input-disabled-background-color;
-    border-color: $input-disabled-border-color;
-    color: $input-disabled-text-color;
-  }
-  &[readonly] {
-    background-color: $input-readonly-background-color;
-    border-color: $input-readonly-border-color;
-    color: $input-readonly-text-color;
+@include export-form {
+  .textarea {
+    background-color: $input-background-color;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    padding: $textarea-padding;
+    color: $body-text-color;
+    &[disabled] {
+      background-color: $input-disabled-background-color;
+      border-color: $input-disabled-border-color;
+      color: $input-disabled-text-color;
+    }
+    &[readonly] {
+      background-color: $input-readonly-background-color;
+      border-color: $input-readonly-border-color;
+      color: $input-readonly-text-color;
+    }
   }
 }
 
@@ -153,121 +181,135 @@
 // / Radio & Checkbox
 //----------------------------------------------------
 
-.label {
-  cursor: pointer;
-  display: flex;
-  &:not(.is-middle) {
-    .radio {
-      top: $radio-width * 0.25;
-    }
-    .checkbox {
-      top: $checkbox-width * 0.25;
-    }
-  }
-  &.is-middle {
-    align-items: center;
-  }
-  &.is-center {
-    justify-content: center;
-    .text:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.radio,
-.checkbox {
-  position: relative;
-  display: inline-block;
-  flex: none;
-  transition: $input-transition;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-  }
-}
-
-.radio {
-  width: $radio-width;
-  height: $radio-width;
-  background-color: $radio-background-color;
-  border: $radio-border-width solid $input-border-color;
-  border-radius: $radio-width * 0.5;
-  &:before {
-    width: $radio-width * 0.5;
-    height: $radio-width * 0.5;
-    background-color: $radio-before-checked-background-color;
-    border-radius: $radio-width * 0.5 * 0.5;
-    transform: translate(-50%, -50%);
-    transition: $input-transition;
-  }
-}
-
-.checkbox {
-  width: $checkbox-width;
-  height: $checkbox-width;
-  background-color: $checkbox-background-color;
-  border: $checkbox-border-width solid $input-border-color;
-  border-radius: $checkbox-border-radius;
-  &:before {
-    width: $checkbox-width * 0.75;
-    height: $checkbox-width * 0.375;
-    border-left: $checkbox-width * 0.125 solid $checkbox-before-border-color;
-    border-bottom: $checkbox-width * 0.125 solid $checkbox-before-border-color;
-    transform: translate(-50%, -70%) rotate(-45deg);
-    transition: $input-transition;
-  }
-}
-
-.input[type="radio"],
-.input[type="checkbox"] {
-  &[disabled] {
-    + .label {
-      cursor: not-allowed;
-      color: $input-disabled-text-color;
-      .radio,
+@include export-form {
+  .label {
+    cursor: pointer;
+    display: flex;
+    &:not(.is-middle) {
+      .radio {
+        top: $radio-width * 0.25;
+      }
       .checkbox {
-        border-color: $input-disabled-border-color;
+        top: $checkbox-width * 0.25;
+      }
+    }
+    &.is-middle {
+      align-items: center;
+    }
+    &.is-center {
+      justify-content: center;
+      .text:last-child {
+        margin-right: 0;
       }
     }
   }
 }
 
-.input[type="radio"] {
-  &:focus {
-    + .label .radio {
-      box-shadow: $radio-focus-shadow;
-      outline: none;
-    }
-  }
-  &:checked {
-    + .label .radio {
-      border-color: $radio-checked-border-color;
-    }
-    + .label .radio:before {
-      opacity: 1;
+@include export-form {
+  .radio,
+  .checkbox {
+    position: relative;
+    display: inline-block;
+    flex: none;
+    transition: $input-transition;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
     }
   }
 }
 
-.input[type="checkbox"] {
-  &:focus {
-    + .label .checkbox {
-      border-color: $checkbox-focus-border-color;
-      box-shadow: $checkbox-focus-shadow;
-      outline: none;
+@include export-form {
+  .radio {
+    width: $radio-width;
+    height: $radio-width;
+    background-color: $radio-background-color;
+    border: $radio-border-width solid $input-border-color;
+    border-radius: $radio-width * 0.5;
+    &:before {
+      width: $radio-width * 0.5;
+      height: $radio-width * 0.5;
+      background-color: $radio-before-checked-background-color;
+      border-radius: $radio-width * 0.5 * 0.5;
+      transform: translate(-50%, -50%);
+      transition: $input-transition;
     }
   }
-  &:checked {
-    + .label .checkbox {
-      background-color: $checkbox-checked-background-color;
-      border-color: $checkbox-checked-border-color;
+}
+
+@include export-form {
+  .checkbox {
+    width: $checkbox-width;
+    height: $checkbox-width;
+    background-color: $checkbox-background-color;
+    border: $checkbox-border-width solid $input-border-color;
+    border-radius: $checkbox-border-radius;
+    &:before {
+      width: $checkbox-width * 0.75;
+      height: $checkbox-width * 0.375;
+      border-left: $checkbox-width * 0.125 solid $checkbox-before-border-color;
+      border-bottom: $checkbox-width * 0.125 solid $checkbox-before-border-color;
+      transform: translate(-50%, -70%) rotate(-45deg);
+      transition: $input-transition;
     }
-    + .label .checkbox:before {
-      opacity: 1;
+  }
+}
+
+@include export-form {
+  .input[type="radio"],
+  .input[type="checkbox"] {
+    &[disabled] {
+      + .label {
+        cursor: not-allowed;
+        color: $input-disabled-text-color;
+        .radio,
+        .checkbox {
+          border-color: $input-disabled-border-color;
+        }
+      }
+    }
+  }
+}
+
+@include export-form {
+  .input[type="radio"] {
+    &:focus {
+      + .label .radio {
+        box-shadow: $radio-focus-shadow;
+        outline: none;
+      }
+    }
+    &:checked {
+      + .label .radio {
+        border-color: $radio-checked-border-color;
+      }
+      + .label .radio:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include export-form {
+  .input[type="checkbox"] {
+    &:focus {
+      + .label .checkbox {
+        border-color: $checkbox-focus-border-color;
+        box-shadow: $checkbox-focus-shadow;
+        outline: none;
+      }
+    }
+    &:checked {
+      + .label .checkbox {
+        background-color: $checkbox-checked-background-color;
+        border-color: $checkbox-checked-border-color;
+      }
+      + .label .checkbox:before {
+        opacity: 1;
+      }
     }
   }
 }
@@ -276,68 +318,74 @@
 // / Select
 //----------------------------------------------------
 
-.select {
-  position: relative;
-  display: inline-flex;
-  > select {
-    cursor: pointer;
-    flex: none;
-    width: 100%;
-    height: calc(#{$input-height} + (#{$input-border-width} * 2));
-    padding: $input-padding;
-    background-color: $input-background-color;
-    border: $input-border-width solid $input-border-color;
-    border-radius: $input-border-radius;
-    color: $body-text-color;
-    line-height: $input-line-height;
-    transition: $input-transition;
-    &[disabled] {
-      cursor: not-allowed;
-      background-color: $input-disabled-background-color;
-      border-color: $input-disabled-border-color;
-      color: $input-disabled-text-color;
-    }
-    &[readonly] {
-      background-color: $input-readonly-background-color;
-      color: $input-readonly-text-color;
-    }
-    &:focus,
-    &[readonly]:focus {
-      border-color: $input-focus-border-color;
-      box-shadow: $select-focus-shadow;
-      outline: none;
-    }
-    &::-ms-expand {
-      display: none;
-    }
-  }
-  &.is-round:not(.is-multiple) > select {
-    border-radius: $input-round-border-radius;
-  }
-  &:not(.is-multiple) {
-    &:after {
-      content: "";
-      pointer-events: none;
-      position: absolute;
-      top: 50%;
-      right: ($select-angle-size * 2);
-      width: $select-angle-size;
-      height: $select-angle-size;
-      border-bottom: $select-angle-border-width solid $select-angle-border-color;
-      border-right: $select-angle-border-width solid $select-angle-border-color;
-      transform: translateY(-70%) rotate(45deg);
-    }
+@include export-form {
+  .select {
+    position: relative;
+    display: inline-flex;
     > select {
-      padding-right: ($select-angle-size * 5);
+      cursor: pointer;
+      flex: none;
+      width: 100%;
+      height: calc(#{$input-height} + (#{$input-border-width} * 2));
+      padding: $input-padding;
+      background-color: $input-background-color;
+      border: $input-border-width solid $input-border-color;
+      border-radius: $input-border-radius;
+      color: $body-text-color;
+      line-height: $input-line-height;
+      transition: $input-transition;
+      &[disabled] {
+        cursor: not-allowed;
+        background-color: $input-disabled-background-color;
+        border-color: $input-disabled-border-color;
+        color: $input-disabled-text-color;
+      }
+      &[readonly] {
+        background-color: $input-readonly-background-color;
+        color: $input-readonly-text-color;
+      }
+      &:focus,
+      &[readonly]:focus {
+        border-color: $input-focus-border-color;
+        box-shadow: $select-focus-shadow;
+        outline: none;
+      }
+      &::-ms-expand {
+        display: none;
+      }
+    }
+    &.is-round:not(.is-multiple) > select {
+      border-radius: $input-round-border-radius;
+    }
+    &:not(.is-multiple) {
+      &:after {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        right: ($select-angle-size * 2);
+        width: $select-angle-size;
+        height: $select-angle-size;
+        border-bottom: $select-angle-border-width solid
+          $select-angle-border-color;
+        border-right: $select-angle-border-width solid
+          $select-angle-border-color;
+        transform: translateY(-70%) rotate(45deg);
+      }
+      > select {
+        padding-right: ($select-angle-size * 5);
+      }
     }
   }
 }
 
-.select.is-multiple > select {
-  height: auto;
-  padding: 0;
-  > option {
-    min-height: 1.5em;
-    padding: 0.5em 0.75em;
+@include export-form {
+  .select.is-multiple > select {
+    height: auto;
+    padding: 0;
+    > option {
+      min-height: 1.5em;
+      padding: 0.5em 0.75em;
+    }
   }
 }

@@ -3,70 +3,81 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-table {
+  @if $use-component-table == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
 
-.table {
-  width: 100%;
-  background-color: $table-background-color;
-  border-collapse: collapse;
-  border-spacing: 0;
-  th,
-  td {
-    padding: $table-padding;
-    vertical-align: top;
-  }
-  &.is-middle th,
-  &.is-middle td {
-    vertical-align: middle;
-  }
-  > thead > tr:last-child > th {
-    border-bottom: ($table-border-width * 2) solid $table-border-color;
-  }
-}
-
-//----------------------------------------------------
-// / Line
-//----------------------------------------------------
-
-.table.is-line {
-  border-top: $table-border-width solid $table-border-color;
-  border-bottom: $table-border-width solid $table-border-color;
-  > tbody > tr:not(:first-child) {
-    border-top: $table-border-width solid $table-border-color;
+@include export-table {
+  .table {
+    width: 100%;
+    background-color: $table-background-color;
+    border-collapse: collapse;
+    border-spacing: 0;
+    th,
+    td {
+      padding: $table-padding;
+      vertical-align: top;
+    }
+    &.is-middle th,
+    &.is-middle td {
+      vertical-align: middle;
+    }
+    > thead > tr:last-child > th {
+      border-bottom: ($table-border-width * 2) solid $table-border-color;
+    }
   }
 }
 
 //----------------------------------------------------
-// / Outline
+// / Style
 //----------------------------------------------------
 
-.table.is-outline {
-  border: $table-border-width solid $table-border-color;
-}
-
-//----------------------------------------------------
-// / Border
-//----------------------------------------------------
-
-.table.is-border {
-  border: $table-border-width solid $table-border-color;
-  th,
-  td {
-    border: $table-border-width solid $table-border-color;
-  }
-}
-
-//----------------------------------------------------
-// / Stripe
-//----------------------------------------------------
-
-.table.is-stripe {
-  thead {
-    background-color: $table-stripe-background-color;
-  }
-  tbody tr:nth-child(even) {
-    background-color: $table-stripe-background-color;
+@include export-table {
+  .table {
+    @each $style in $pattern-table-style {
+      @if $style == "line" {
+        &.is-line {
+          border-top: $table-border-width solid $table-border-color;
+          border-bottom: $table-border-width solid $table-border-color;
+          > tbody > tr:not(:first-child) {
+            border-top: $table-border-width solid $table-border-color;
+          }
+        }
+      }
+      @if $style == "outline" {
+        &.is-outline {
+          border: $table-border-width solid $table-border-color;
+        }
+      }
+      @if $style == "border" {
+        &.is-border {
+          border: $table-border-width solid $table-border-color;
+          th,
+          td {
+            border: $table-border-width solid $table-border-color;
+          }
+        }
+      }
+      @if $style == "stripe" {
+        &.is-stripe {
+          thead {
+            background-color: $table-stripe-background-color;
+          }
+          tbody tr:nth-child(even) {
+            background-color: $table-stripe-background-color;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -74,20 +85,22 @@
 // / Background
 //----------------------------------------------------
 
-.table tr,
-.table th,
-.table td {
-  &.is-paint {
-    background-color: $table-paint-background-color;
-    color: $table-paint-text-color;
-  }
-  &.is-stripe {
-    background-color: $table-stripe-background-color;
-  }
-  &.is-spot {
-    background-color: $table-spot-background-color;
-  }
-  &.is-danger {
-    background-color: $table-danger-background-color;
+@include export-table {
+  .table tr,
+  .table th,
+  .table td {
+    &.is-paint {
+      background-color: $table-paint-background-color;
+      color: $table-paint-text-color;
+    }
+    &.is-stripe {
+      background-color: $table-stripe-background-color;
+    }
+    &.is-spot {
+      background-color: $table-spot-background-color;
+    }
+    &.is-danger {
+      background-color: $table-danger-background-color;
+    }
   }
 }

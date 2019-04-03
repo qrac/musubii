@@ -65,12 +65,6 @@ $pattern-gap-way: all, row, column !default;
 // none
 
 //----------------------------------------------------
-// / Layout - Card
-//----------------------------------------------------
-
-// none
-
-//----------------------------------------------------
 // / Layout - Joint
 //----------------------------------------------------
 
@@ -120,6 +114,12 @@ $pattern-text-color: (
   warning: $c-vwa-str,
   danger: $c-vda-str
 ) !default;
+
+// Pattern - Text Align Way
+$pattern-text-align-way: left, center, right !default;
+
+// Pattern - Text Align Media Query
+$pattern-text-align-mediaquery: mobile, fablet, tablet, desktop, wide !default;
 
 // Text Link
 $text-link-border-bottom-width: 1px !default;
@@ -177,6 +177,9 @@ $button-floating-shadow: 0 1px 3px 0 $c-btn-fl-sd-cl !default;
 $button-floating-hover-shadow: 0 4px 12px 0 $c-btn-fl-sd-cl !default;
 $button-floating-focus-shadow: 0 0 0 $space-xxs $c-btn-fc-sd-cl,
   0 4px 12px 0 $c-btn-fl-sd-cl !default;
+
+// Pattern - Button Custom
+$pattern-button-custom: round, circle, floating !default;
 
 // Button Plain
 $button-plain-default-background-color: $c-btn-pl-df-bg-cl !default;
@@ -342,6 +345,9 @@ $pattern-button-ghost: (
   )
 ) !default;
 
+// Pattern - Button Style
+$pattern-button-style: plain, melt, outline, ghost !default;
+
 // Button Disabled
 $button-disabled-background-color: $c-btn-ds-bg-cl !default;
 $button-disabled-background-color-alpha: $c-btn-ds-bg-cl-ah !default;
@@ -371,6 +377,9 @@ $list-item-margin-top: 0.25em !default;
 // List Note
 $list-note-item-margin-left: 0.25em !default;
 
+// Pattern - List Style
+$pattern-list-style: disc, circle, decimal, note !default;
+
 //----------------------------------------------------
 // / Module - Table
 //----------------------------------------------------
@@ -393,6 +402,9 @@ $table-spot-background-color: $c-tbl-sp-bg-cl !default;
 
 // Table Danger
 $table-danger-background-color: $c-tbl-vda-bg-cl !default;
+
+// Pattern - Table Style
+$pattern-table-style: line, outline, border, stripe !default;
 
 //----------------------------------------------------
 // / Module - Form
@@ -574,19 +586,22 @@ $wysiwyg-figcaption-font-size: 87.5% !default;
 // / Utility - Display
 //----------------------------------------------------
 
-// none
+// Pattern - Display Media Query
+$pattern-display-mediaquery: mobile, fablet, tablet, desktop, wide !default;
 
 //----------------------------------------------------
 // / Utility - Size
 //----------------------------------------------------
 
-// none
+// Pattern - Size Media Query
+$pattern-size-mediaquery: mobile, fablet, tablet, desktop, wide !default;
 
 //----------------------------------------------------
 // / Utility - Flex
 //----------------------------------------------------
 
-// none
+// Pattern - Flex Media Query
+$pattern-flex-mediaquery: mobile, fablet, tablet, desktop, wide !default;
 
 //----------------------------------------------------
 // / Utility - Space

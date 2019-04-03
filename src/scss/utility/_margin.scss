@@ -3,33 +3,45 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-margin {
+  @if $use-component-margin == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Add Margin
 //----------------------------------------------------
 
-@each $way in $pattern-margin-way {
-  @if $way == "all" {
-    @each $key, $value in $pattern-margin-size {
-      @if $key == "md" {
-        &.is-margin,
-        &.is-margin-#{$key} {
-          margin: $value;
-        }
-      } @else {
-        &.is-margin-#{$key} {
-          margin: $value;
+@include export-margin {
+  @each $way in $pattern-margin-way {
+    @if $way == "all" {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-margin,
+          &.is-margin-#{$key} {
+            margin: $value;
+          }
+        } @else {
+          &.is-margin-#{$key} {
+            margin: $value;
+          }
         }
       }
-    }
-  } @else {
-    @each $key, $value in $pattern-margin-size {
-      @if $key == "md" {
-        &.is-margin-#{$way},
-        &.is-margin-#{$way}-#{$key} {
-          margin-#{$way}: $value;
-        }
-      } @else {
-        &.is-margin-#{$way}-#{$key} {
-          margin-#{$way}: $value;
+    } @else {
+      @each $key, $value in $pattern-margin-size {
+        @if $key == "md" {
+          &.is-margin-#{$way},
+          &.is-margin-#{$way}-#{$key} {
+            margin-#{$way}: $value;
+          }
+        } @else {
+          &.is-margin-#{$way}-#{$key} {
+            margin-#{$way}: $value;
+          }
         }
       }
     }
@@ -37,17 +49,17 @@
 }
 
 //----------------------------------------------------
-// / Centering
+// / Auto
 //----------------------------------------------------
 
-.is-centering {
-  margin: 0 auto;
-}
-
-.is-margin-right-auto {
-  margin-right: auto;
-}
-
-.is-margin-left-auto {
-  margin-left: auto;
+@include export-margin {
+  .is-centering {
+    margin: 0 auto;
+  }
+  .is-margin-right-auto {
+    margin-right: auto;
+  }
+  .is-margin-left-auto {
+    margin-left: auto;
+  }
 }

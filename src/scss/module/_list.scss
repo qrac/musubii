@@ -3,44 +3,74 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Basic
+// / Export Setting
 //----------------------------------------------------
 
-.list {
-  > .item:not(:first-child) {
-    margin-top: $list-item-margin-top;
-  }
-  > .item > .list {
-    margin-top: ($list-item-margin-top * 2);
-  }
-  &.is-disc,
-  &.is-circle,
-  &.is-decimal {
-    margin-left: $list-margin-left;
-    > .item {
-      display: list-item;
-    }
-  }
-  &.is-disc > .item {
-    list-style: disc outside;
-  }
-  &.is-circle > .item {
-    list-style: circle outside;
-  }
-  &.is-decimal > .item {
-    list-style: decimal outside;
+@mixin export-list {
+  @if $use-component-list == true {
+    @content;
   }
 }
 
 //----------------------------------------------------
-// / Note
+// / Basic
 //----------------------------------------------------
 
-.list.is-note {
-  > .item {
-    display: flex;
+@include export-text {
+  .list {
+    > .item:not(:first-child) {
+      margin-top: $list-item-margin-top;
+    }
+    > .item > .list {
+      margin-top: ($list-item-margin-top * 2);
+    }
   }
-  > .item > *:not(:first-child) {
-    margin-left: $list-note-item-margin-left;
+}
+
+//----------------------------------------------------
+// / Style
+//----------------------------------------------------
+
+@include export-text {
+  .list {
+    @each $style in $pattern-list-style {
+      @if $style == "disc" {
+        &.is-disc {
+          margin-left: $list-margin-left;
+          > .item {
+            display: list-item;
+            list-style: disc outside;
+          }
+        }
+      }
+      @if $style == "circle" {
+        &.is-circle {
+          margin-left: $list-margin-left;
+          > .item {
+            display: list-item;
+            list-style: circle outside;
+          }
+        }
+      }
+      @if $style == "decimal" {
+        &.is-decimal {
+          margin-left: $list-margin-left;
+          > .item {
+            display: list-item;
+            list-style: decimal outside;
+          }
+        }
+      }
+      @if $style == "note" {
+        &.is-note {
+          > .item {
+            display: flex;
+          }
+          > .item > *:not(:first-child) {
+            margin-left: $list-note-item-margin-left;
+          }
+        }
+      }
+    }
   }
 }

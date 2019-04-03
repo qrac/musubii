@@ -3,25 +3,39 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-global {
+  @if $use-component-global == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Body
 //----------------------------------------------------
 
-body {
-  background-color: $body-background-color;
-  color: $body-text-color;
-  font-family: $body-font-family;
-  line-height: $body-line-height;
+@include export-global {
+  body {
+    background-color: $body-background-color;
+    color: $body-text-color;
+    font-family: $body-font-family;
+    line-height: $body-line-height;
+  }
 }
 
 //----------------------------------------------------
 // / Image
 //----------------------------------------------------
 
-img {
-  max-width: 100%;
-  height: auto;
-  &[src$=".svg"] {
-    width: 100%;
+@include export-global {
+  img {
+    max-width: 100%;
+    height: auto;
+    &[src$=".svg"] {
+      width: 100%;
+    }
   }
 }
 
@@ -29,6 +43,8 @@ img {
 // / iframe
 //----------------------------------------------------
 
-iframe {
-  max-width: 100%;
+@include export-global {
+  iframe {
+    max-width: 100%;
+  }
 }

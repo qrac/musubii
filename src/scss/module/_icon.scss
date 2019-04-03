@@ -3,32 +3,50 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-icon {
+  @if $use-component-icon == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
 
-#{$icon-class} {
-  font-size: inherit;
-  line-height: inherit;
+@include export-icon {
+  #{$icon-class} {
+    font-size: inherit;
+    line-height: inherit;
+  }
 }
 
-svg.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: text-bottom;
+@include export-icon {
+  svg.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+  }
 }
 
-.material-icons {
-  vertical-align: bottom;
+@include export-icon {
+  .material-icons {
+    vertical-align: bottom;
+  }
 }
 
 //----------------------------------------------------
 // / Fit
 //----------------------------------------------------
 
-#{$icon-class} {
-  &.is-fit {
-    width: $icon-fit-width;
-    text-align: center;
+@include export-icon {
+  #{$icon-class} {
+    &.is-fit {
+      width: $icon-fit-width;
+      text-align: center;
+    }
   }
 }

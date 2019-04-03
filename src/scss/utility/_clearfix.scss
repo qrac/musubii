@@ -3,11 +3,23 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-clearfix {
+  @if $use-component-clearfix == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
 
-.is-clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
+@include export-clearfix {
+  .is-clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }

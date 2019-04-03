@@ -3,45 +3,57 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-display {
+  @if $use-component-display == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Responsive Display
 //----------------------------------------------------
 
-@each $key, $mediaquery in $pattern-breakpoint-mediaquery-all {
-  @include mediaquery-pattern($mediaquery) {
-    @if $key == "mobile" {
-      .is-block,
-      .is-#{$key}-block {
-        display: block;
-      }
-      .is-inline,
-      .is-#{$key}-inline {
-        display: inline;
-      }
-      .is-inline-block,
-      .is-#{$key}-inline-block {
-        display: inline-block;
-      }
-      .is-none,
-      .is-#{$key}-none {
-        display: none;
-      }
-      .is-hidden {
-        position: absolute;
-        opacity: 0;
-        z-index: -1;
-      }
-    } @else {
-      .is-#{$key}-block {
-        display: block;
-      }
-      .is-#{$key}-inline {
-        display: inline;
-      }
-      .is-#{$key}-inline-block {
-        display: inline-block;
-      }
-      .is-#{$key}-none {
-        display: none;
+@include export-display {
+  @each $mediaquery in $pattern-display-mediaquery {
+    @include mediaquery-pattern-select($mediaquery) {
+      @if $mediaquery == "mobile" {
+        .is-block,
+        .is-#{$mediaquery}-block {
+          display: block;
+        }
+        .is-inline,
+        .is-#{$mediaquery}-inline {
+          display: inline;
+        }
+        .is-inline-block,
+        .is-#{$mediaquery}-inline-block {
+          display: inline-block;
+        }
+        .is-none,
+        .is-#{$mediaquery}-none {
+          display: none;
+        }
+        .is-hidden {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+        }
+      } @else {
+        .is-#{$mediaquery}-block {
+          display: block;
+        }
+        .is-#{$mediaquery}-inline {
+          display: inline;
+        }
+        .is-#{$mediaquery}-inline-block {
+          display: inline-block;
+        }
+        .is-#{$mediaquery}-none {
+          display: none;
+        }
       }
     }
   }

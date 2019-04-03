@@ -3,18 +3,30 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-alert {
+  @if $use-component-alert == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
 
-.alert {
-  padding: $alert-padding;
-  background-color: $alert-default-background-color;
-  border: $alert-border-width solid $alert-default-border-color;
-  border-radius: $alert-border-radius;
-  @each $key, $value in $pattern-alert {
-    &.is-#{$key} {
-      background-color: map-get($value, background-color);
-      border-color: map-get($value, border-color);
+@include export-alert {
+  .alert {
+    padding: $alert-padding;
+    background-color: $alert-default-background-color;
+    border: $alert-border-width solid $alert-default-border-color;
+    border-radius: $alert-border-radius;
+    @each $key, $value in $pattern-alert {
+      &.is-#{$key} {
+        background-color: map-get($value, background-color);
+        border-color: map-get($value, border-color);
+      }
     }
   }
 }

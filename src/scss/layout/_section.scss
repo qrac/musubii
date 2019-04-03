@@ -3,23 +3,35 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-section {
+  @if $use-component-section == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Inner
 //----------------------------------------------------
 
-.section > .inner {
-  max-width: 100%;
-  margin: 0 auto;
-  @include fablet {
-    width: $section-inner-width-fablet;
-  }
-  @include tablet {
-    width: $section-inner-width-tablet;
-  }
-  @include desktop {
-    width: $section-inner-width-desktop;
-  }
-  @include wide {
-    width: $section-inner-width-wide;
+@include export-section {
+  .section > .inner {
+    max-width: 100%;
+    margin: 0 auto;
+    @include fablet {
+      width: $section-inner-width-fablet;
+    }
+    @include tablet {
+      width: $section-inner-width-tablet;
+    }
+    @include desktop {
+      width: $section-inner-width-desktop;
+    }
+    @include wide {
+      width: $section-inner-width-wide;
+    }
   }
 }
 
@@ -27,10 +39,12 @@
 // / Inner VW
 //----------------------------------------------------
 
-.section > .inner-vw {
-  max-width: 100%;
-  margin: 0 auto;
-  @include fablet {
-    width: $section-inner-vw-width-fablet;
+@include export-section {
+  .section > .inner-vw {
+    max-width: 100%;
+    margin: 0 auto;
+    @include fablet {
+      width: $section-inner-vw-width-fablet;
+    }
   }
 }

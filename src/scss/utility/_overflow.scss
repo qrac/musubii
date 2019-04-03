@@ -3,21 +3,35 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-overflow {
+  @if $use-component-overflow == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Scroll
 //----------------------------------------------------
 
-.is-scroll-x {
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+@include export-overflow {
+  .is-scroll-x {
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 //----------------------------------------------------
 // / Ellipsis
 //----------------------------------------------------
 
-.is-ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+@include export-overflow {
+  .is-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

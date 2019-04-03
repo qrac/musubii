@@ -378,109 +378,6 @@
       </section>
 
       <section>
-        <h2 class="demo-h2">Space</h2>
-        <section>
-          <h3 class="demo-h3">Basic</h3>
-          <div class="demo-area">
-            <div class="demo-line-box">
-              <div class="grid is-gap-sm">
-                <div class="column is-mobile-1">
-                  <div class="box is-space">
-                    <p class="text">default</p>
-                    <p class="text">default</p>
-                    <p class="text">default</p>
-                    <p class="text">default</p>
-                  </div>
-                </div>
-                {% for val in[
-                  "xxl",
-                  "xl",
-                  "lg",
-                  "md",
-                  "sm",
-                  "xs",
-                  "xxs"
-                ] %}
-                  <div class="column is-mobile-1">
-                    <div class="box is-space-{{ val }}">
-                      <p class="text">{{ val }}</p>
-                      <p class="text">{{ val }}</p>
-                      <p class="text">{{ val }}</p>
-                      <p class="text">{{ val }}</p>
-                    </div>
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h3 class="demo-h3">Row</h3>
-          <div class="demo-area">
-            <div class="demo-line-box">
-              <div class="grid is-gap-sm">
-                <div class="column is-mobile-1">
-                  <div class="box is-space-row">
-                    <p class="text">row</p>
-                    <p class="text">row</p>
-                    <p class="text">row</p>
-                    <p class="text">row</p>
-                  </div>
-                </div>
-                {% for val in[
-                  "xxl",
-                  "xl",
-                  "lg",
-                  "md",
-                  "sm",
-                  "xs",
-                  "xxs"
-                ] %}
-                  <div class="column is-mobile-1">
-                    <div class="box is-space-row-{{ val }}">
-                      <p class="text">{{ val }}</p>
-                      <p class="text">{{ val }}</p>
-                      <p class="text">{{ val }}</p>
-                      <p class="text">{{ val }}</p>
-                    </div>
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h3 class="demo-h3">Column</h3>
-          <div class="demo-area">
-            <div class="demo-line-box">
-              <div class="box is-space-column">
-                <span class="text">column</span>
-                <span class="text">column</span>
-                <span class="text">column</span>
-                <span class="text">column</span>
-              </div>
-              {% for val in[
-                "xxl",
-                "xl",
-                "lg",
-                "md",
-                "sm",
-                "xs",
-                "xxs"
-              ] %}
-                <div class="box is-space-column-{{ val }}">
-                  <span class="text">{{ val }}</span>
-                  <span class="text">{{ val }}</span>
-                  <span class="text">{{ val }}</span>
-                  <span class="text">{{ val }}</span>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <section>
         <h2 class="demo-h2">Text</h2>
         <section>
           <h3 class="demo-h3">Basic</h3>
@@ -1753,6 +1650,109 @@
                 <p>WYSIWYG内リンクの下線を<a href="">このように</a>カーソルホバーで出す（逆にする）場合は、<code>.wysiwyg.is-link-reverse</code>
                   を設定します。</p>
               </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2 class="demo-h2">Space</h2>
+        <section>
+          <h3 class="demo-h3">Basic</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="grid is-gap-sm">
+                <div class="column is-mobile-1">
+                  <div class="box is-space">
+                    <p class="text">default</p>
+                    <p class="text">default</p>
+                    <p class="text">default</p>
+                    <p class="text">default</p>
+                  </div>
+                </div>
+                {% for val in[
+                  "xxl",
+                  "xl",
+                  "lg",
+                  "md",
+                  "sm",
+                  "xs",
+                  "xxs"
+                ] %}
+                  <div class="column is-mobile-1">
+                    <div class="box is-space-{{ val }}">
+                      <p class="text">{{ val }}</p>
+                      <p class="text">{{ val }}</p>
+                      <p class="text">{{ val }}</p>
+                      <p class="text">{{ val }}</p>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Row</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="grid is-gap-sm">
+                <div class="column is-mobile-1">
+                  <div class="box is-space-row">
+                    <p class="text">row</p>
+                    <p class="text">row</p>
+                    <p class="text">row</p>
+                    <p class="text">row</p>
+                  </div>
+                </div>
+                {% for val in[
+                  "xxl",
+                  "xl",
+                  "lg",
+                  "md",
+                  "sm",
+                  "xs",
+                  "xxs"
+                ] %}
+                  <div class="column is-mobile-1">
+                    <div class="box is-space-row-{{ val }}">
+                      <p class="text">{{ val }}</p>
+                      <p class="text">{{ val }}</p>
+                      <p class="text">{{ val }}</p>
+                      <p class="text">{{ val }}</p>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Column</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="box is-space-column">
+                <span class="text">column</span>
+                <span class="text">column</span>
+                <span class="text">column</span>
+                <span class="text">column</span>
+              </div>
+              {% for val in[
+                "xxl",
+                "xl",
+                "lg",
+                "md",
+                "sm",
+                "xs",
+                "xxs"
+              ] %}
+                <div class="box is-space-column-{{ val }}">
+                  <span class="text">{{ val }}</span>
+                  <span class="text">{{ val }}</span>
+                  <span class="text">{{ val }}</span>
+                  <span class="text">{{ val }}</span>
+                </div>
+              {% endfor %}
             </div>
           </div>
         </section>
