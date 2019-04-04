@@ -80,10 +80,10 @@ $convert-button-ghost-disabled-text-color: if($use-css-variables == true, var(--
 
 $convert-table-background-color: if($use-css-variables == true, var(--table-background-color), $theme-light-table-background-color) !default;
 $convert-table-border-color: if($use-css-variables == true, var(--table-border-color), $theme-light-table-border-color) !default;
-$convert-table-st-background-color: if($use-css-variables == true, var(--table-stripe-background-color), $theme-light-table-st-background-color) !default;
+$convert-table-stripe-background-color: if($use-css-variables == true, var(--table-stripe-background-color), $theme-light-table-stripe-background-color) !default;
 $convert-table-paint-background-color: if($use-css-variables == true, var(--table-paint-background-color), $theme-light-table-paint-background-color) !default;
 $convert-table-paint-text-color: if($use-css-variables == true, var(--table-paint-text-color), $theme-light-table-paint-text-color) !default;
-$convert-table-sp-background-color: if($use-css-variables == true, var(--table-spot-background-color), $theme-light-table-sp-background-color) !default;
+$convert-table-spot-background-color: if($use-css-variables == true, var(--table-spot-background-color), $theme-light-table-spot-background-color) !default;
 $convert-table-danger-background-color: if($use-css-variables == true, var(--table-danger-background-color), $theme-light-table-danger-background-color) !default;
 
 $convert-input-background-color: if($use-css-variables == true, var(--input-background-color), $theme-light-input-background-color) !default;
