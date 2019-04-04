@@ -6,29 +6,29 @@
 // / Setting
 //----------------------------------------------------
 
-$theme-light-primary: $t-vpr !default;
-$theme-light-info: $t-vin !default;
-$theme-light-success: $t-vsu !default;
-$theme-light-warning: $t-vwa !default;
-$theme-light-danger: $t-vda !default;
+$theme-light-primary: $theme-primary !default;
+$theme-light-info: $theme-info !default;
+$theme-light-success: $theme-success !default;
+$theme-light-warning: $theme-warning !default;
+$theme-light-danger: $theme-danger !default;
 
-$theme-light-primary-strong: $t-vpr !default;
-$theme-light-info-strong: $t-vin !default;
-$theme-light-success-strong: $t-vsu !default;
-$theme-light-warning-strong: $t-vwa !default;
-$theme-light-danger-strong: $t-vda !default;
+$theme-light-primary-strong: $theme-primary !default;
+$theme-light-info-strong: $theme-info !default;
+$theme-light-success-strong: $theme-success !default;
+$theme-light-warning-strong: $theme-warning !default;
+$theme-light-danger-strong: $theme-danger !default;
 
-$theme-light-primary-darken: darken($t-vpr, 5%) !default;
-$theme-light-info-darken: darken($t-vin, 5%) !default;
-$theme-light-success-darken: darken($t-vsu, 5%) !default;
-$theme-light-warning-darken: darken($t-vwa, 5%) !default;
-$theme-light-danger-darken: darken($t-vda, 5%) !default;
+$theme-light-primary-darken: darken($theme-primary, 5%) !default;
+$theme-light-info-darken: darken($theme-info, 5%) !default;
+$theme-light-success-darken: darken($theme-success, 5%) !default;
+$theme-light-warning-darken: darken($theme-warning, 5%) !default;
+$theme-light-danger-darken: darken($theme-danger, 5%) !default;
 
-$theme-light-primary-lighten: lighten($t-vpr, 30%) !default;
-$theme-light-info-lighten: lighten($t-vin, 30%) !default;
-$theme-light-success-lighten: lighten($t-vsu, 30%) !default;
-$theme-light-warning-lighten: lighten($t-vwa, 30%) !default;
-$theme-light-danger-lighten: lighten($t-vda, 30%) !default;
+$theme-light-primary-lighten: lighten($theme-primary, 30%) !default;
+$theme-light-info-lighten: lighten($theme-info, 30%) !default;
+$theme-light-success-lighten: lighten($theme-success, 30%) !default;
+$theme-light-warning-lighten: lighten($theme-warning, 30%) !default;
+$theme-light-danger-lighten: lighten($theme-danger, 30%) !default;
 
 $theme-light-background-color: $light !default;
 $theme-light-text-color: $dark-2 !default;
@@ -63,7 +63,7 @@ $theme-light-pre-background-color: $theme-light-code-background-color !default;
 $theme-light-pre-text-color: $theme-light-code-text-color !default;
 
 $theme-light-button-paint-text-color: $theme-light-background-color !default;
-$theme-light-button-focus-shadow-color: rgba($t-fc-sd-cl, 0.5) !default;
+$theme-light-button-focus-shadow-color: rgba($theme-focus-shadow-color, 0.5) !default;
 $theme-light-button-floating-shadow-color: rgba($black, 0.24) !default;
 $theme-light-button-plain-default-background-color: darken($theme-light-background-color, 4%) !default;
 $theme-light-button-plain-default-hover-background-color: darken($theme-light-background-color, 7%) !default;
@@ -93,8 +93,8 @@ $theme-light-table-danger-background-color: lighten($theme-light-danger, 29%) !d
 $theme-light-input-background-color: $theme-light-background-color !default;
 $theme-light-input-border-color: $dark-6 !default;
 $theme-light-input-shadow-color: rgba($black, 0.075) !default;
-$theme-light-input-focus-border-color: $t-fc-bd-cl !default;
-$theme-light-input-focus-shadow-color: rgba($t-fc-sd-cl, 0.36) !default;
+$theme-light-input-focus-border-color: $theme-focus-border-color !default;
+$theme-light-input-focus-shadow-color: rgba($theme-focus-shadow-color, 0.36) !default;
 $theme-light-input-disabled-background-color: darken($theme-light-background-color, 12%) !default;
 $theme-light-input-disabled-border-color: $dark-7 !default;
 $theme-light-input-disabled-text-color: $dark-6 !default;
@@ -105,7 +105,7 @@ $theme-light-radio-background-color: $theme-light-background-color !default;
 $theme-light-radio-before-checked-background-color: $theme-light-primary !default;
 $theme-light-radio-checked-border-color: $theme-light-primary !default;
 $theme-light-checkbox-background-color: $theme-light-background-color !default;
-$theme-light-checkbox-focus-border-color: $t-fc-bd-cl !default;
+$theme-light-checkbox-focus-border-color: $theme-focus-border-color !default;
 $theme-light-checkbox-before-border-color: $light !default;
 $theme-light-checkbox-checked-background-color: $theme-light-primary !default;
 $theme-light-checkbox-checked-border-color: $theme-light-primary !default;
@@ -126,128 +126,3 @@ $theme-light-alert-danger-border-color: lighten($theme-light-danger, 21%) !defau
 
 $theme-light-wysiwyg-link-text-color: $theme-light-primary !default;
 $theme-light-wysiwyg-hr-border-color: $dark-7 !default;
-
-//----------------------------------------------------
-// / Shortcut
-//----------------------------------------------------
-
-$t-l-vpr: $theme-light-primary !default;
-$t-l-vin: $theme-light-info !default;
-$t-l-vsu: $theme-light-success !default;
-$t-l-vwa: $theme-light-warning !default;
-$t-l-vda: $theme-light-danger !default;
-
-$t-l-vpr-str: $theme-light-primary-strong !default;
-$t-l-vin-str: $theme-light-info-strong !default;
-$t-l-vsu-str: $theme-light-success-strong !default;
-$t-l-vwa-str: $theme-light-warning-strong !default;
-$t-l-vda-str: $theme-light-danger-strong !default;
-
-$t-l-vpr-dkn: $theme-light-primary-darken !default;
-$t-l-vin-dkn: $theme-light-info-darken !default;
-$t-l-vsu-dkn: $theme-light-success-darken !default;
-$t-l-vwa-dkn: $theme-light-warning-darken !default;
-$t-l-vda-dkn: $theme-light-danger-darken !default;
-
-$t-l-vpr-ltn: $theme-light-primary-lighten !default;
-$t-l-vin-ltn: $theme-light-info-lighten !default;
-$t-l-vsu-ltn: $theme-light-success-lighten !default;
-$t-l-vwa-ltn: $theme-light-warning-lighten !default;
-$t-l-vda-ltn: $theme-light-danger-lighten !default;
-
-$t-l-bg-cl: $theme-light-background-color !default;
-$t-l-tx-cl: $theme-light-text-color !default;
-
-$t-l-tx-d: $theme-light-text-dark !default;
-$t-l-tx-d-1: $theme-light-text-dark-1 !default;
-$t-l-tx-d-2: $theme-light-text-dark-2 !default;
-$t-l-tx-d-3: $theme-light-text-dark-3 !default;
-$t-l-tx-d-4: $theme-light-text-dark-4 !default;
-$t-l-tx-d-5: $theme-light-text-dark-5 !default;
-$t-l-tx-d-6: $theme-light-text-dark-6 !default;
-$t-l-tx-d-7: $theme-light-text-dark-7 !default;
-$t-l-tx-d-8: $theme-light-text-dark-8 !default;
-$t-l-tx-d-9: $theme-light-text-dark-9 !default;
-
-$t-l-tx-l: $theme-light-text-light !default;
-$t-l-tx-l-1: $theme-light-text-light-1 !default;
-$t-l-tx-l-2: $theme-light-text-light-2 !default;
-$t-l-tx-l-3: $theme-light-text-light-3 !default;
-$t-l-tx-l-4: $theme-light-text-light-4 !default;
-$t-l-tx-l-5: $theme-light-text-light-5 !default;
-$t-l-tx-l-6: $theme-light-text-light-6 !default;
-$t-l-tx-l-7: $theme-light-text-light-7 !default;
-$t-l-tx-l-8: $theme-light-text-light-8 !default;
-$t-l-tx-l-9: $theme-light-text-light-9 !default;
-
-$t-l-bq-bg-cl: $theme-light-blockquote-background-color !default;
-$t-l-bq-bd-lf-cl: $theme-light-blockquote-border-left-color !default;
-$t-l-cd-bg-cl: $theme-light-code-background-color !default;
-$t-l-cd-tx-cl: $theme-light-code-text-color !default;
-$t-l-pr-bg-cl: $theme-light-pre-background-color !default;
-$t-l-pr-tx-cl: $theme-light-pre-text-color !default;
-
-$t-l-btn-pa-tx-cl: $theme-light-button-paint-text-color !default;
-$t-l-btn-fc-sd-cl: $theme-light-button-focus-shadow-color !default;
-$t-l-btn-fl-sd-cl: $theme-light-button-floating-shadow-color !default;
-$t-l-btn-pl-df-bg-cl: $theme-light-button-plain-default-background-color !default;
-$t-l-btn-pl-df-hv-bg-cl: $theme-light-button-plain-default-hover-background-color !default;
-$t-l-btn-me-df-hv-bg-cl: $theme-light-button-melt-default-hover-background-color !default;
-$t-l-btn-ot-df-bg-cl: $theme-light-button-outline-default-background-color !default;
-$t-l-btn-ot-df-bd-cl: $theme-light-button-outline-default-border-color !default;
-$t-l-btn-ot-df-hv-bg-cl: $theme-light-button-outline-default-hover-background-color !default;
-$t-l-btn-gh-df-bd-cl: $theme-light-button-ghost-default-border-color !default;
-$t-l-btn-gh-df-tx-cl: $theme-light-button-ghost-default-text-color !default;
-$t-l-btn-gh-df-hv-bg-cl: $theme-light-button-ghost-default-hover-background-color !default;
-$t-l-btn-gh-df-hv-tx-cl: $theme-light-button-ghost-default-hover-text-color !default;
-$t-l-btn-ds-bg-cl: $theme-light-button-disabled-background-color !default;
-$t-l-btn-ds-bg-cl-ah: $theme-light-button-disabled-background-color-alpha !default;
-$t-l-btn-ds-tx-cl: $theme-light-button-disabled-text-color !default;
-$t-l-btn-gh-ds-bg-cl: $theme-light-button-ghost-disabled-background-color !default;
-$t-l-btn-gh-ds-bd-cl: $theme-light-button-ghost-disabled-border-color !default;
-$t-l-btn-gh-ds-tx-cl: $theme-light-button-ghost-disabled-text-color !default;
-
-$t-l-tbl-bg-cl: $theme-light-table-background-color !default;
-$t-l-tbl-bd-cl: $theme-light-table-border-color !default;
-$t-l-tbl-st-bg-cl: $theme-light-table-stripe-background-color !default;
-$t-l-tbl-pa-bg-cl: $theme-light-table-paint-background-color !default;
-$t-l-tbl-pa-tx-cl: $theme-light-table-paint-text-color !default;
-$t-l-tbl-sp-bg-cl: $theme-light-table-spot-background-color !default;
-$t-l-tbl-vda-bg-cl: $theme-light-table-danger-background-color !default;
-
-$t-l-ipt-bg-cl: $theme-light-input-background-color !default;
-$t-l-ipt-bd-cl: $theme-light-input-border-color !default;
-$t-l-ipt-sd-cl: $theme-light-input-shadow-color !default;
-$t-l-ipt-fc-bd-cl: $theme-light-input-focus-border-color !default;
-$t-l-ipt-fc-sd-cl: $theme-light-input-focus-shadow-color !default;
-$t-l-ipt-ds-bg-cl: $theme-light-input-disabled-background-color !default;
-$t-l-ipt-ds-bd-cl: $theme-light-input-disabled-border-color !default;
-$t-l-ipt-ds-tx-cl: $theme-light-input-disabled-text-color !default;
-$t-l-ipt-rd-bg-cl: $theme-light-input-readonly-background-color !default;
-$t-l-ipt-rd-tx-cl: $theme-light-input-readonly-text-color !default;
-$t-l-ipt-ph-cl: $theme-light-input-placeholder-color !default;
-$t-l-rdo-bg-cl: $theme-light-radio-background-color !default;
-$t-l-rdo-bf-ch-bg-cl: $theme-light-radio-before-checked-background-color !default;
-$t-l-rdo-ch-bd-cl: $theme-light-radio-checked-border-color !default;
-$t-l-chx-bg-cl: $theme-light-checkbox-background-color !default;
-$t-l-chx-fc-bd-cl: $theme-light-checkbox-focus-border-color !default;
-$t-l-chx-bf-bd-cl: $theme-light-checkbox-before-border-color !default;
-$t-l-chx-ch-bg-cl: $theme-light-checkbox-checked-background-color !default;
-$t-l-chx-ch-bd-cl: $theme-light-checkbox-checked-border-color !default;
-$t-l-slt-ag-bd-cl: $theme-light-select-angle-border-color !default;
-
-$t-l-alr-df-bg-cl: $theme-light-alert-default-background-color !default;
-$t-l-alr-df-bd-cl: $theme-light-alert-default-border-color !default;
-$t-l-alr-vpr-bg-cl: $theme-light-alert-primary-background-color !default;
-$t-l-alr-vpr-bd-cl: $theme-light-alert-primary-border-color !default;
-$t-l-alr-vin-bg-cl: $theme-light-alert-info-background-color !default;
-$t-l-alr-vin-bd-cl: $theme-light-alert-info-border-color !default;
-$t-l-alr-vsu-bg-cl: $theme-light-alert-success-background-color !default;
-$t-l-alr-vsu-bd-cl: $theme-light-alert-success-border-color !default;
-$t-l-alr-vwa-bg-cl: $theme-light-alert-warning-background-color !default;
-$t-l-alr-vwa-bd-cl: $theme-light-alert-warning-border-color !default;
-$t-l-alr-vda-bg-cl: $theme-light-alert-danger-background-color !default;
-$t-l-alr-vda-bd-cl: $theme-light-alert-danger-border-color !default;
-
-$t-l-wys-lk-tx-cl: $theme-light-wysiwyg-link-text-color !default;
-$t-l-wys-hr-bd-cl: $theme-light-wysiwyg-hr-border-color !default;

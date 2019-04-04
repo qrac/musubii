@@ -28,153 +28,153 @@
 
 :root {
   @include export-theme-light {
-    --primary: #{$t-l-vpr};
-    --info: #{$t-l-vin};
-    --success: #{$t-l-vsu};
-    --warning: #{$t-l-vwa};
-    --danger: #{$t-l-vda};
-    --primary-strong: #{$t-l-vpr-str};
-    --info-strong: #{$t-l-vin-str};
-    --success-strong: #{$t-l-vsu-str};
-    --warning-strong: #{$t-l-vwa-str};
-    --danger-strong: #{$t-l-vda-str};
-    --primary-darken: #{$t-l-vpr-dkn};
-    --info-darken: #{$t-l-vin-dkn};
-    --success-darken: #{$t-l-vsu-dkn};
-    --warning-darken: #{$t-l-vwa-dkn};
-    --danger-darken: #{$t-l-vda-dkn};
-    --primary-lighten: #{$t-l-vpr-ltn};
-    --info-lighten: #{$t-l-vin-ltn};
-    --success-lighten: #{$t-l-vsu-ltn};
-    --warning-lighten: #{$t-l-vwa-ltn};
-    --danger-lighten: #{$t-l-vda-ltn};
+    --primary: #{$theme-light-primary};
+    --info: #{$theme-light-info};
+    --success: #{$theme-light-success};
+    --warning: #{$theme-light-warning};
+    --danger: #{$theme-light-danger};
+    --primary-strong: #{$theme-light-primary-strong};
+    --info-strong: #{$theme-light-info-strong};
+    --success-strong: #{$theme-light-success-strong};
+    --warning-strong: #{$theme-light-warning-strong};
+    --danger-strong: #{$theme-light-danger-strong};
+    --primary-darken: #{$theme-light-primary-darken};
+    --info-darken: #{$theme-light-info-darken};
+    --success-darken: #{$theme-light-success-darken};
+    --warning-darken: #{$theme-light-warning-darken};
+    --danger-darken: #{$theme-light-danger-darken};
+    --primary-lighten: #{$theme-light-primary-lighten};
+    --info-lighten: #{$theme-light-info-lighten};
+    --success-lighten: #{$theme-light-success-lighten};
+    --warning-lighten: #{$theme-light-warning-lighten};
+    --danger-lighten: #{$theme-light-danger-lighten};
   }
 }
 
 :root {
   @include export-theme-light {
-    --background-color: #{$t-l-bg-cl};
-    --text-color: #{$t-l-tx-cl};
+    --background-color: #{$theme-light-background-color};
+    --text-color: #{$theme-light-text-color};
   }
 }
 
 :root {
   @include export-theme-light {
-    --text-dark: #{$t-l-tx-d};
-    --text-dark-1: #{$t-l-tx-d-1};
-    --text-dark-2: #{$t-l-tx-d-2};
-    --text-dark-3: #{$t-l-tx-d-3};
-    --text-dark-4: #{$t-l-tx-d-4};
-    --text-dark-5: #{$t-l-tx-d-5};
-    --text-dark-6: #{$t-l-tx-d-6};
-    --text-dark-7: #{$t-l-tx-d-7};
-    --text-dark-8: #{$t-l-tx-d-8};
-    --text-dark-9: #{$t-l-tx-d-9};
-    --text-light: #{$t-l-tx-l};
-    --text-light-1: #{$t-l-tx-l-1};
-    --text-light-2: #{$t-l-tx-l-2};
-    --text-light-3: #{$t-l-tx-l-3};
-    --text-light-4: #{$t-l-tx-l-4};
-    --text-light-5: #{$t-l-tx-l-5};
-    --text-light-6: #{$t-l-tx-l-6};
-    --text-light-7: #{$t-l-tx-l-7};
-    --text-light-8: #{$t-l-tx-l-8};
-    --text-light-9: #{$t-l-tx-l-9};
+    --text-dark: #{$theme-light-text-dark};
+    --text-dark-1: #{$theme-light-text-dark-1};
+    --text-dark-2: #{$theme-light-text-dark-2};
+    --text-dark-3: #{$theme-light-text-dark-3};
+    --text-dark-4: #{$theme-light-text-dark-4};
+    --text-dark-5: #{$theme-light-text-dark-5};
+    --text-dark-6: #{$theme-light-text-dark-6};
+    --text-dark-7: #{$theme-light-text-dark-7};
+    --text-dark-8: #{$theme-light-text-dark-8};
+    --text-dark-9: #{$theme-light-text-dark-9};
+    --text-light: #{$theme-light-text-light};
+    --text-light-1: #{$theme-light-text-light-1};
+    --text-light-2: #{$theme-light-text-light-2};
+    --text-light-3: #{$theme-light-text-light-3};
+    --text-light-4: #{$theme-light-text-light-4};
+    --text-light-5: #{$theme-light-text-light-5};
+    --text-light-6: #{$theme-light-text-light-6};
+    --text-light-7: #{$theme-light-text-light-7};
+    --text-light-8: #{$theme-light-text-light-8};
+    --text-light-9: #{$theme-light-text-light-9};
   }
 }
 
 :root {
   @include export-theme-light {
-    --blockquote-background-color: #{$t-l-bq-bg-cl};
-    --blockquote-border-left-color: #{$t-l-bq-bd-lf-cl};
-    --code-background-color: #{$t-l-cd-bg-cl};
-    --code-text-color: #{$t-l-cd-tx-cl};
-    --pre-background-color: #{$t-l-pr-bg-cl};
-    --pre-text-color: #{$t-l-pr-tx-cl};
+    --blockquote-background-color: #{$theme-light-blockquote-background-color};
+    --blockquote-border-left-color: #{$theme-light-blockquote-border-left-color};
+    --code-background-color: #{$theme-light-code-background-color};
+    --code-text-color: #{$theme-light-code-text-color};
+    --pre-background-color: #{$theme-light-pre-background-color};
+    --pre-text-color: #{$theme-light-pre-text-color};
   }
 }
 
 :root {
   @include export-theme-light {
-    --button-paint-text-color: #{$t-l-btn-pa-tx-cl};
-    --button-focus-shadow-color: #{$t-l-btn-fc-sd-cl};
-    --button-floating-shadow-color: #{$t-l-btn-fl-sd-cl};
-    --button-plain-default-background-color: #{$t-l-btn-pl-df-bg-cl};
-    --button-plain-default-hover-background-color: #{$t-l-btn-pl-df-hv-bg-cl};
-    --button-melt-default-hover-background-color: #{$t-l-btn-me-df-hv-bg-cl};
-    --button-outline-default-background-color: #{$t-l-btn-ot-df-bg-cl};
-    --button-outline-default-border-color: #{$t-l-btn-ot-df-bd-cl};
-    --button-outline-default-hover-background-color: #{$t-l-btn-ot-df-hv-bg-cl};
-    --button-ghost-default-border-color: #{$t-l-btn-gh-df-bd-cl};
-    --button-ghost-default-text-color: #{$t-l-btn-gh-df-tx-cl};
-    --button-ghost-default-hover-background-color: #{$t-l-btn-gh-df-hv-bg-cl};
-    --button-ghost-default-hover-text-color: #{$t-l-btn-gh-df-hv-tx-cl};
-    --button-disabled-background-color: #{$t-l-btn-ds-bg-cl};
-    --button-disabled-background-color-alpha: #{$t-l-btn-ds-bg-cl-ah};
-    --button-disabled-text-color: #{$t-l-btn-ds-tx-cl};
-    --button-ghost-disabled-background-color: #{$t-l-btn-gh-ds-bg-cl};
-    --button-ghost-disabled-border-color: #{$t-l-btn-gh-ds-bd-cl};
-    --button-ghost-disabled-text-color: #{$t-l-btn-gh-ds-tx-cl};
+    --button-paint-text-color: #{$theme-light-button-paint-text-color};
+    --button-focus-shadow-color: #{$theme-light-button-focus-shadow-color};
+    --button-floating-shadow-color: #{$theme-light-button-floating-shadow-color};
+    --button-plain-default-background-color: #{$theme-light-button-plain-default-background-color};
+    --button-plain-default-hover-background-color: #{$theme-light-button-plain-default-hover-background-color};
+    --button-melt-default-hover-background-color: #{$theme-light-button-melt-default-hover-background-color};
+    --button-outline-default-background-color: #{$theme-light-button-outline-default-background-color};
+    --button-outline-default-border-color: #{$theme-light-button-outline-default-border-color};
+    --button-outline-default-hover-background-color: #{$theme-light-button-outline-default-hover-background-color};
+    --button-ghost-default-border-color: #{$theme-light-button-ghost-default-border-color};
+    --button-ghost-default-text-color: #{$theme-light-button-ghost-default-text-color};
+    --button-ghost-default-hover-background-color: #{$theme-light-button-ghost-default-hover-background-color};
+    --button-ghost-default-hover-text-color: #{$theme-light-button-ghost-default-hover-text-color};
+    --button-disabled-background-color: #{$theme-light-button-disabled-background-color};
+    --button-disabled-background-color-alpha: #{$theme-light-button-disabled-background-color-alpha};
+    --button-disabled-text-color: #{$theme-light-button-disabled-text-color};
+    --button-ghost-disabled-background-color: #{$theme-light-button-ghost-disabled-background-color};
+    --button-ghost-disabled-border-color: #{$theme-light-button-ghost-disabled-border-color};
+    --button-ghost-disabled-text-color: #{$theme-light-button-ghost-disabled-text-color};
   }
 }
 
 :root {
   @include export-theme-light {
-    --table-background-color: #{$t-l-tbl-bg-cl};
-    --table-border-color: #{$t-l-tbl-bd-cl};
-    --table-stripe-background-color: #{$t-l-tbl-st-bg-cl};
-    --table-paint-background-color: #{$t-l-tbl-pa-bg-cl};
-    --table-paint-text-color: #{$t-l-tbl-pa-tx-cl};
-    --table-spot-background-color: #{$t-l-tbl-sp-bg-cl};
-    --table-danger-background-color: #{$t-l-tbl-vda-bg-cl};
+    --table-background-color: #{$theme-light-table-background-color};
+    --table-border-color: #{$theme-light-table-border-color};
+    --table-stripe-background-color: #{$theme-light-table-stripe-background-color};
+    --table-paint-background-color: #{$theme-light-table-paint-background-color};
+    --table-paint-text-color: #{$theme-light-table-paint-text-color};
+    --table-spot-background-color: #{$theme-light-table-spot-background-color};
+    --table-danger-background-color: #{$theme-light-table-danger-background-color};
   }
 }
 
 :root {
   @include export-theme-light {
-    --input-background-color: #{$t-l-ipt-bg-cl};
-    --input-border-color: #{$t-l-ipt-bd-cl};
-    --input-shadow-color: #{$t-l-ipt-sd-cl};
-    --input-focus-border-color: #{$t-l-ipt-fc-bd-cl};
-    --input-focus-shadow-color: #{$t-l-ipt-fc-sd-cl};
-    --input-disabled-background-color: #{$t-l-ipt-ds-bg-cl};
-    --input-disabled-border-color: #{$t-l-ipt-ds-bg-cl};
-    --input-disabled-text-color: #{$t-l-ipt-ds-tx-cl};
-    --input-readonly-background-color: #{$t-l-ipt-rd-bg-cl};
-    --input-readonly-text-color: #{$t-l-ipt-rd-tx-cl};
-    --input-placeholder-color: #{$t-l-ipt-ph-cl};
-    --radio-background-color: #{$t-l-rdo-bg-cl};
-    --radio-before-checked-background-color: #{$t-l-rdo-bf-ch-bg-cl};
-    --radio-checked-border-color: #{$t-l-rdo-ch-bd-cl};
-    --checkbox-background-color: #{$t-l-chx-bg-cl};
-    --checkbox-focus-border-color: #{$t-l-chx-fc-bd-cl};
-    --checkbox-before-border-color: #{$t-l-chx-bf-bd-cl};
-    --checkbox-checked-background-color: #{$t-l-chx-ch-bg-cl};
-    --checkbox-checked-border-color: #{$t-l-chx-ch-bd-cl};
-    --select-angle-border-color: #{$t-l-slt-ag-bd-cl};
+    --input-background-color: #{$theme-light-input-background-color};
+    --input-border-color: #{$theme-light-input-border-color};
+    --input-shadow-color: #{$theme-light-input-shadow-color};
+    --input-focus-border-color: #{$theme-light-input-focus-border-color};
+    --input-focus-shadow-color: #{$theme-light-input-focus-shadow-color};
+    --input-disabled-background-color: #{$theme-light-input-disabled-background-color};
+    --input-disabled-border-color: #{$theme-light-input-disabled-background-color};
+    --input-disabled-text-color: #{$theme-light-input-disabled-text-color};
+    --input-readonly-background-color: #{$theme-light-input-readonly-background-color};
+    --input-readonly-text-color: #{$theme-light-input-readonly-text-color};
+    --input-placeholder-color: #{$theme-light-input-placeholder-color};
+    --radio-background-color: #{$theme-light-radio-background-color};
+    --radio-before-checked-background-color: #{$theme-light-radio-before-checked-background-color};
+    --radio-checked-border-color: #{$theme-light-radio-checked-border-color};
+    --checkbox-background-color: #{$theme-light-checkbox-background-color};
+    --checkbox-focus-border-color: #{$theme-light-checkbox-focus-border-color};
+    --checkbox-before-border-color: #{$theme-light-checkbox-before-border-color};
+    --checkbox-checked-background-color: #{$theme-light-checkbox-checked-background-color};
+    --checkbox-checked-border-color: #{$theme-light-checkbox-checked-border-color};
+    --select-angle-border-color: #{$theme-light-select-angle-border-color};
   }
 }
 
 :root {
   @include export-theme-light {
-    --alert-default-background-color: #{$t-l-alr-df-bg-cl};
-    --alert-default-border-color: #{$t-l-alr-df-bd-cl};
-    --alert-primary-background-color: #{$t-l-alr-vpr-bg-cl};
-    --alert-primary-border-color: #{$t-l-alr-vpr-bd-cl};
-    --alert-info-background-color: #{$t-l-alr-vin-bg-cl};
-    --alert-info-border-color: #{$t-l-alr-vin-bd-cl};
-    --alert-success-background-color: #{$t-l-alr-vsu-bg-cl};
-    --alert-success-border-color: #{$t-l-alr-vsu-bd-cl};
-    --alert-warning-background-color: #{$t-l-alr-vwa-bg-cl};
-    --alert-warning-border-color: #{$t-l-alr-vwa-bd-cl};
-    --alert-danger-background-color: #{$t-l-alr-vda-bg-cl};
-    --alert-danger-border-color: #{$t-l-alr-vda-bd-cl};
+    --alert-default-background-color: #{$theme-light-alert-default-background-color};
+    --alert-default-border-color: #{$theme-light-alert-default-border-color};
+    --alert-primary-background-color: #{$theme-light-alert-primary-background-color};
+    --alert-primary-border-color: #{$theme-light-alert-primary-border-color};
+    --alert-info-background-color: #{$theme-light-alert-info-background-color};
+    --alert-info-border-color: #{$theme-light-alert-info-border-color};
+    --alert-success-background-color: #{$theme-light-alert-success-background-color};
+    --alert-success-border-color: #{$theme-light-alert-success-border-color};
+    --alert-warning-background-color: #{$theme-light-alert-warning-background-color};
+    --alert-warning-border-color: #{$theme-light-alert-warning-border-color};
+    --alert-danger-background-color: #{$theme-light-alert-danger-background-color};
+    --alert-danger-border-color: #{$theme-light-alert-danger-border-color};
   }
 }
 
 :root {
   @include export-theme-light {
-    --wysiwyg-link-text-color: #{$t-l-wys-lk-tx-cl};
-    --wysiwyg-hr-border-color: #{$t-l-wys-hr-bd-cl};
+    --wysiwyg-link-text-color: #{$theme-light-wysiwyg-link-text-color};
+    --wysiwyg-hr-border-color: #{$theme-light-wysiwyg-hr-border-color};
   }
 }
