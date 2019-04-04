@@ -39,17 +39,3 @@ $use-component-margin: true !default;
 $use-component-padding: true !default;
 $use-component-overflow: true !default;
 $use-component-clearfix: true !default;
-
-//----------------------------------------------------
-// / Shortcut
-//----------------------------------------------------
-
-$u-css-v: $use-css-variables !default;
-
-$u-df-t-l: $use-default-theme-light !default;
-$u-me-t-l: $use-media-theme-light !default;
-$u-dt-t-l: $use-data-theme-light !default;
-
-$u-df-t-d: $use-default-theme-dark !default;
-$u-me-t-d: $use-media-theme-dark !default;
-$u-dt-t-d: $use-data-theme-dark !default;
