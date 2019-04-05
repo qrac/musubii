@@ -30,6 +30,9 @@ $theme-light-success-lighten: lighten($theme-success, 30%) !default;
 $theme-light-warning-lighten: lighten($theme-warning, 30%) !default;
 $theme-light-danger-lighten: lighten($theme-danger, 30%) !default;
 
+$theme-light-focus: $theme-focus !default;
+$theme-light-focus-darken: darken($theme-focus, 10%) !default;
+
 $theme-light-background-color: $light !default;
 $theme-light-text-color: $dark-2 !default;
 
@@ -41,7 +44,7 @@ $theme-light-box-angle-border-color: $dark-5 !default;
 $theme-light-card-default-background-color: $light !default;
 $theme-light-card-default-border-color: $dark-7 !default;
 $theme-light-card-link-hover-background-color: $grey-100 !default;
-$theme-light-card-focus-shadow-color: rgba($theme-focus-shadow-color, 0.5) !default;
+$theme-light-card-focus-shadow-color: rgba($theme-light-focus, 0.5) !default;
 $theme-light-card-floating-shadow-color: rgba($black, 0.24) !default;
 
 $theme-light-text-dark: $black !default;
@@ -74,7 +77,7 @@ $theme-light-pre-background-color: $theme-light-code-background-color !default;
 $theme-light-pre-text-color: $theme-light-code-text-color !default;
 
 $theme-light-button-paint-text-color: $light !default;
-$theme-light-button-focus-shadow-color: rgba($theme-focus-shadow-color, 0.5) !default;
+$theme-light-button-focus-shadow-color: rgba($theme-light-focus, 0.5) !default;
 $theme-light-button-floating-shadow-color: rgba($black, 0.24) !default;
 $theme-light-button-plain-default-background-color: $grey-100 !default;
 $theme-light-button-plain-default-hover-background-color: $grey-200 !default;
@@ -104,8 +107,8 @@ $theme-light-table-danger-background-color: lighten($theme-light-danger, 29%) !d
 $theme-light-input-background-color: $light !default;
 $theme-light-input-border-color: $dark-6 !default;
 $theme-light-input-shadow-color: rgba($black, 0.075) !default;
-$theme-light-input-focus-border-color: $theme-focus-border-color !default;
-$theme-light-input-focus-shadow-color: rgba($theme-focus-shadow-color, 0.36) !default;
+$theme-light-input-focus-border-color: $theme-light-focus-darken !default;
+$theme-light-input-focus-shadow-color: rgba($theme-light-focus, 0.36) !default;
 $theme-light-input-disabled-background-color: $grey-300 !default;
 $theme-light-input-disabled-border-color: $dark-7 !default;
 $theme-light-input-disabled-text-color: $dark-6 !default;
@@ -116,7 +119,7 @@ $theme-light-radio-background-color: $light !default;
 $theme-light-radio-before-checked-background-color: $theme-light-primary !default;
 $theme-light-radio-checked-border-color: $theme-light-primary !default;
 $theme-light-checkbox-background-color: $light !default;
-$theme-light-checkbox-focus-border-color: $theme-focus-border-color !default;
+$theme-light-checkbox-focus-border-color: $theme-light-focus-darken !default;
 $theme-light-checkbox-before-border-color: $light !default;
 $theme-light-checkbox-checked-background-color: $theme-light-primary !default;
 $theme-light-checkbox-checked-border-color: $theme-light-primary !default;
