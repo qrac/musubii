@@ -29,6 +29,17 @@ $convert-danger-lighten: if($use-css-variables == true, var(--danger-lighten), $
 $convert-background-color: if($use-css-variables == true, var(--background-color), $theme-light-background-color) !default;
 $convert-text-color: if($use-css-variables == true, var(--text-color), $theme-light-text-color) !default;
 
+$convert-box-default-background-color: if($use-css-variables == true, var(--box-default-background-color), $theme-light-box-default-background-color) !default;
+$convert-box-default-border-color: if($use-css-variables == true, var(--box-default-border-color), $theme-light-box-default-border-color) !default;
+$convert-box-link-hover-background-color: if($use-css-variables == true, var(--box-link-hover-background-color), $theme-light-box-link-hover-background-color) !default;
+$convert-box-angle-border-color: if($use-css-variables == true, var(--box-angle-border-color), $theme-light-box-angle-border-color) !default;
+
+$convert-card-default-background-color: if($use-css-variables == true, var(--card-default-background-color), $theme-light-card-default-background-color) !default;
+$convert-card-default-border-color: if($use-css-variables == true, var(--card-default-border-color), $theme-light-card-default-border-color) !default;
+$convert-card-link-hover-background-color: if($use-css-variables == true, var(--card-link-hover-background-color), $theme-light-card-link-hover-background-color) !default;
+$convert-card-focus-shadow-color: if($use-css-variables == true, var(--card-focus-shadow-color), $theme-light-card-focus-shadow-color) !default;
+$convert-card-floating-shadow-color: if($use-css-variables == true, var(--card-floating-shadow-color), $theme-light-card-floating-shadow-color) !default;
+
 $convert-text-dark: if($use-css-variables == true, var(--text-dark), $theme-light-text-dark) !default;
 $convert-text-dark-1: if($use-css-variables == true, var(--text-dark-1), $theme-light-text-dark-1) !default;
 $convert-text-dark-2: if($use-css-variables == true, var(--text-dark-2), $theme-light-text-dark-2) !default;

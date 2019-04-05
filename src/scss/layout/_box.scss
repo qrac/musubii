@@ -13,43 +13,143 @@
 }
 
 //----------------------------------------------------
-// / Flexbox
+// / Basic
 //----------------------------------------------------
 
 @include export-box {
   .box {
-    &.is-flex {
-      display: flex;
-    }
-    &.is-inline-flex {
-      display: inline-flex;
-    }
-    &.is-flex,
-    &.is-inline-flex {
-      flex-wrap: wrap;
-      &.is-baseline {
-        align-items: baseline;
+    position: relative;
+    display: block;
+  }
+}
+
+//----------------------------------------------------
+// / Custom
+//----------------------------------------------------
+
+@include export-box {
+  .box {
+    @each $custom in $pattern-box-custom {
+      @if $custom == "flexbox" {
+        &.is-flex {
+          display: flex;
+        }
+        &.is-inline-flex {
+          display: inline-flex;
+        }
+        &.is-flex,
+        &.is-inline-flex {
+          flex-wrap: wrap;
+          &.is-baseline {
+            align-items: baseline;
+          }
+          &.is-middle {
+            align-items: center;
+          }
+          &.is-bottom {
+            align-items: flex-end;
+          }
+          &.is-center {
+            justify-content: center;
+          }
+          &.is-right {
+            justify-content: flex-end;
+          }
+          &.is-between {
+            justify-content: space-between;
+          }
+          &.is-around {
+            justify-content: space-around;
+          }
+          &.is-reverse {
+            flex-direction: row-reverse;
+          }
+        }
       }
-      &.is-middle {
-        align-items: center;
+      @if $custom == "background" {
+        &.is-bg,
+        &.is-bg-light {
+          background-color: $box-default-background-color;
+        }
+        &.is-bg-cover,
+        &.is-bg-contain {
+          background-position: center center;
+        }
+        &.is-bg-cover {
+          background-size: cover;
+        }
+        &.is-bg-contain {
+          background-size: contain;
+        }
       }
-      &.is-bottom {
-        align-items: flex-end;
+      @if $custom == "outline" {
+        &.is-outline {
+          border: $box-default-border-width solid $box-default-border-color;
+        }
+        &.is-outline-top {
+          border-top: $box-default-border-width solid $box-default-border-color;
+        }
+        &.is-outline-right {
+          border-right: $box-default-border-width
+            solid
+            $box-default-border-color;
+        }
+        &.is-outline-bottom {
+          border-bottom: $box-default-border-width
+            solid
+            $box-default-border-color;
+        }
+        &.is-outline-left {
+          border-left: $box-default-border-width
+            solid
+            $box-default-border-color;
+        }
       }
-      &.is-center {
-        justify-content: center;
+      @if $custom == "separate" {
+        &.is-separate > *:not(:first-child) {
+          border-top: $box-default-border-width solid $box-default-border-color;
+        }
+        &.is-separate-parent > *:not(:first-child) .is-separate-child {
+          border-top: $box-default-border-width solid $box-default-border-color;
+        }
       }
-      &.is-right {
-        justify-content: flex-end;
+      @if $custom == "link" {
+        &.is-link {
+          cursor: pointer;
+          transition: $box-link-transition;
+          &:hover {
+            background-color: $box-link-hover-background-color;
+          }
+        }
       }
-      &.is-between {
-        justify-content: space-between;
-      }
-      &.is-around {
-        justify-content: space-around;
-      }
-      &.is-reverse {
-        flex-direction: row-reverse;
+      @if $custom == "angle" {
+        &.is-angle-right,
+        &.is-angle-left {
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 0.5em;
+            height: 0.5em;
+            border-top: $box-angle-border-width solid $box-angle-border-color;
+            border-right: $box-angle-border-width solid $box-angle-border-color;
+            z-index: 2;
+          }
+        }
+        &.is-angle-right {
+          padding-right: 1.25em;
+          &:after {
+            right: 0.75em;
+            transform: translateY(-50%) rotate(45deg);
+          }
+        }
+        &.is-angle-left {
+          padding-left: 1.25em;
+          &:after {
+            left: 0.75em;
+            transform: translateY(-50%) rotate(-135deg);
+          }
+        }
       }
     }
   }

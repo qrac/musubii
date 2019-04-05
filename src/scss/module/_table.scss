@@ -27,12 +27,35 @@
       padding: $table-padding;
       vertical-align: top;
     }
+    > thead > tr:last-child > th {
+      border-bottom: ($table-border-width * 2) solid $table-border-color;
+    }
+    tr.box {
+      display: table-row;
+    }
+    th.box,
+    td.box {
+      display: table-cell;
+    }
     &.is-middle th,
     &.is-middle td {
       vertical-align: middle;
     }
-    > thead > tr:last-child > th {
-      border-bottom: ($table-border-width * 2) solid $table-border-color;
+    tr,
+    th,
+    td {
+      &.is-left {
+        text-align: left;
+      }
+      &.is-center {
+        text-align: center;
+      }
+      &.is-right {
+        text-align: right;
+      }
+      &.is-middle {
+        vertical-align: middle;
+      }
     }
   }
 }

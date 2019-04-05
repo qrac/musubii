@@ -33,6 +33,17 @@ $theme-dark-danger-lighten: lighten($theme-danger, 30%) !default;
 $theme-dark-background-color: $grey-900 !default;
 $theme-dark-text-color: $light-1 !default;
 
+$theme-dark-box-default-background-color: lighten($theme-dark-background-color, 5%) !default;
+$theme-dark-box-default-border-color: $grey-700 !default;
+$theme-dark-box-link-hover-background-color: lighten($theme-dark-background-color, 13%) !default;
+$theme-dark-box-angle-border-color: $light-5 !default;
+
+$theme-dark-card-default-background-color: lighten($theme-dark-background-color, 5%) !default;
+$theme-dark-card-default-border-color: $grey-700 !default;
+$theme-dark-card-link-hover-background-color: lighten($theme-dark-background-color, 13%) !default;
+$theme-dark-card-focus-shadow-color: rgba($theme-focus-shadow-color, 0.5) !default;
+$theme-dark-card-floating-shadow-color: rgba($indigo-a400, 0.7) !default;
+
 $theme-dark-text-dark: $white !default;
 $theme-dark-text-dark-1: rgba($theme-dark-text-dark, 0.87) !default;
 $theme-dark-text-dark-2: rgba($theme-dark-text-dark, 0.7) !default;

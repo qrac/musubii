@@ -60,6 +60,25 @@
 
 :root {
   @include export-theme-light {
+    --box-default-background-color: #{$theme-light-box-default-background-color};
+    --box-default-border-color: #{$theme-light-box-default-border-color};
+    --box-link-hover-background-color: #{$theme-light-box-link-hover-background-color};
+    --box-angle-border-color: #{$theme-light-box-angle-border-color};
+  }
+}
+
+:root {
+  @include export-theme-light {
+    --card-default-background-color: #{$theme-light-card-default-background-color};
+    --card-default-border-color: #{$theme-light-card-default-border-color};
+    --card-link-hover-background-color: #{$theme-light-card-link-hover-background-color};
+    --card-focus-shadow-color: #{$theme-light-card-focus-shadow-color};
+    --card-floating-shadow-color: #{$theme-light-card-floating-shadow-color};
+  }
+}
+
+:root {
+  @include export-theme-light {
     --text-dark: #{$theme-light-text-dark};
     --text-dark-1: #{$theme-light-text-dark-1};
     --text-dark-2: #{$theme-light-text-dark-2};

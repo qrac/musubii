@@ -3,5 +3,96 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-card {
+  @if $use-component-card == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
+
+@include export-card {
+  .card {
+    position: relative;
+    display: block;
+  }
+}
+
+//----------------------------------------------------
+// / Custom
+//----------------------------------------------------
+
+@include export-card {
+  .card {
+    @each $custom in $pattern-card-custom {
+      @if $custom == "background" {
+        &.is-bg,
+        &.is-bg-light {
+          background-color: $card-default-background-color;
+        }
+      }
+      @if $custom == "outline" {
+        &.is-outline {
+          border: $card-default-border-width solid $card-default-border-color;
+        }
+      }
+      @if $custom == "radius" {
+        @each $key, $value in $pattern-card-radius {
+          @if $key == "md" {
+            &.is-radius,
+            &.is-radius-#{$key} {
+              border-radius: $value;
+            }
+          } @else {
+            &.is-radius-#{$key} {
+              border-radius: $value;
+            }
+          }
+        }
+      }
+      @if $custom == "floating" {
+        &.is-floating {
+          box-shadow: $card-floating-shadow;
+          &.is-link,
+          &.is-zoom {
+            &:focus {
+              box-shadow: $card-floating-focus-shadow;
+              outline: none;
+            }
+          }
+        }
+      }
+      @if $custom == "link" {
+        &.is-link {
+          cursor: pointer;
+          transition: $card-link-transition;
+          &:hover {
+            background-color: $card-link-hover-background-color;
+          }
+          &:focus {
+            box-shadow: $card-focus-shadow;
+            outline: none;
+          }
+        }
+      }
+      @if $custom == "zoom" {
+        &.is-zoom {
+          cursor: pointer;
+          transition: $card-zoom-transition;
+          &:hover {
+            transform: $card-zoom-transform;
+          }
+          &:focus {
+            box-shadow: $card-focus-shadow;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

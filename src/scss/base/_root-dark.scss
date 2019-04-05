@@ -60,6 +60,25 @@
 
 :root {
   @include export-theme-dark {
+    --box-default-background-color: #{$theme-dark-box-default-background-color};
+    --box-default-border-color: #{$theme-dark-box-default-border-color};
+    --box-link-hover-background-color: #{$theme-dark-box-link-hover-background-color};
+    --box-angle-border-color: #{$theme-dark-box-angle-border-color};
+  }
+}
+
+:root {
+  @include export-theme-dark {
+    --card-default-background-color: #{$theme-dark-card-default-background-color};
+    --card-default-border-color: #{$theme-dark-card-default-border-color};
+    --card-link-hover-background-color: #{$theme-dark-card-link-hover-background-color};
+    --card-focus-shadow-color: #{$theme-dark-card-focus-shadow-color};
+    --card-floating-shadow-color: #{$theme-dark-card-floating-shadow-color};
+  }
+}
+
+:root {
+  @include export-theme-dark {
     --text-dark: #{$theme-dark-text-dark};
     --text-dark-1: #{$theme-dark-text-dark-1};
     --text-dark-2: #{$theme-dark-text-dark-2};

@@ -6,6 +6,9 @@
 // / Base - Global
 //----------------------------------------------------
 
+// Global
+$global-transition: ease-out 0.12s !default;
+
 // Body
 $body-background-color: $convert-background-color !default;
 $body-text-color: $convert-text-color !default;
@@ -62,7 +65,69 @@ $pattern-gap-way: all, row, column !default;
 // / Layout - Box
 //----------------------------------------------------
 
-// none
+// Box
+$box-default-background-color: $convert-box-default-background-color !default;
+$box-default-border-width: 1px !default;
+$box-default-border-color: $convert-box-default-border-color !default;
+
+// Box Link
+$box-link-hover-background-color: $convert-box-link-hover-background-color !default;
+$box-link-transition: $global-transition !default;
+
+// Box Angle
+$box-angle-size: 0.5em !default;
+$box-angle-border-width: 2px !default;
+$box-angle-border-color: $convert-box-angle-border-color !default;
+
+// Pattern - Box Custom
+$pattern-box-custom: flexbox, background, outline, separate, link, angle !default;
+
+//----------------------------------------------------
+// / Layout - Card
+//----------------------------------------------------
+
+// Card
+$card-default-background-color: $convert-card-default-background-color !default;
+$card-default-border-width: 1px !default;
+$card-default-border-color: $convert-card-default-border-color !default;
+$card-focus-shadow: 0 0 0 $space-xxs $convert-card-focus-shadow-color !default;
+
+// Card Radius
+$card-radius-xxl: $radius-xxl !default;
+$card-radius-xl: $radius-xl !default;
+$card-radius-lg: $radius-lg !default;
+$card-radius-md: $radius-md !default;
+$card-radius-sm: $radius-sm !default;
+$card-radius-xs: $radius-xs !default;
+$card-radius-xxs: $radius-xxs !default;
+
+// Pattern - Card Radius
+$pattern-card-radius: (
+  xxl: $card-radius-xxl,
+  xl: $card-radius-xl,
+  lg: $card-radius-lg,
+  md: $card-radius-md,
+  sm: $card-radius-sm,
+  xs: $card-radius-xs,
+  xxs: $card-radius-xxs
+) !default;
+
+// Card Floating
+$card-floating-shadow: 0 1px 3px 0 $convert-card-floating-shadow-color !default;
+$card-floating-hover-shadow: 0 4px 12px 0 $convert-card-floating-shadow-color !default;
+$card-floating-focus-shadow: 0 0 0 $space-xxs $convert-card-focus-shadow-color,
+  0 4px 12px 0 $convert-card-floating-shadow-color !default;
+
+// Card Link
+$card-link-hover-background-color: $convert-card-link-hover-background-color !default;
+$card-link-transition: $global-transition !default;
+
+// Card Zoom
+$card-zoom-transform: scale(1.025) !default;
+$card-zoom-transition: $global-transition !default;
+
+// Pattern - Card Custom
+$pattern-card-custom: background, outline, radius, floating, link, zoom !default;
 
 //----------------------------------------------------
 // / Layout - Joint
@@ -161,7 +226,7 @@ $button-border-width: 1px !default;
 $button-border-radius: $radius-sm !default;
 $button-paint-text-color: $convert-button-paint-text-color !default;
 $button-line-height: 1.5 !default;
-$button-transition: ease-out 0.12s !default;
+$button-transition: $global-transition !default;
 $button-focus-shadow: 0 0 0 $space-xxs $convert-button-focus-shadow-color !default;
 
 // Button Round
@@ -421,7 +486,7 @@ $input-border-color: $convert-input-border-color !default;
 $input-border-radius: $radius-xs !default;
 $input-line-height: 1.5 !default;
 $input-shadow: inset 0 1px 1px $convert-input-shadow-color !default;
-$input-transition: ease-out 0.12s !default;
+$input-transition: $global-transition !default;
 
 // Input Focus
 $input-focus-border-color: $convert-input-focus-border-color !default;
