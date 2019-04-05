@@ -46,7 +46,7 @@
     }
     &.is-stretch {
       > {
-        * {
+        #{$column-class} {
           display: flex;
         }
       }
