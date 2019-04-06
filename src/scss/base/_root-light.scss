@@ -33,21 +33,45 @@
     --success: #{$theme-light-success};
     --warning: #{$theme-light-warning};
     --danger: #{$theme-light-danger};
+  }
+}
+
+:root {
+  @include export-theme-light {
     --primary-strong: #{$theme-light-primary-strong};
     --info-strong: #{$theme-light-info-strong};
     --success-strong: #{$theme-light-success-strong};
     --warning-strong: #{$theme-light-warning-strong};
     --danger-strong: #{$theme-light-danger-strong};
+  }
+}
+
+:root {
+  @include export-theme-light {
     --primary-darken: #{$theme-light-primary-darken};
     --info-darken: #{$theme-light-info-darken};
     --success-darken: #{$theme-light-success-darken};
     --warning-darken: #{$theme-light-warning-darken};
     --danger-darken: #{$theme-light-danger-darken};
+  }
+}
+
+:root {
+  @include export-theme-light {
     --primary-lighten: #{$theme-light-primary-lighten};
     --info-lighten: #{$theme-light-info-lighten};
     --success-lighten: #{$theme-light-success-lighten};
     --warning-lighten: #{$theme-light-warning-lighten};
     --danger-lighten: #{$theme-light-danger-lighten};
+  }
+}
+
+:root {
+  @include export-theme-light {
+    --focus: #{$theme-light-focus};
+    --focus-darken: #{$theme-light-focus-darken};
+    --focus-alpha: #{$theme-light-focus-alpha};
+    --focus-alpha-thin: #{$theme-light-focus-alpha-thin};
   }
 }
 
@@ -72,7 +96,7 @@
     --card-default-background-color: #{$theme-light-card-default-background-color};
     --card-default-border-color: #{$theme-light-card-default-border-color};
     --card-link-hover-background-color: #{$theme-light-card-link-hover-background-color};
-    --card-focus-shadow-color: #{$theme-light-card-focus-shadow-color};
+    //--card-focus-shadow-color: #{$theme-light-card-focus-shadow-color};
     --card-floating-shadow-color: #{$theme-light-card-floating-shadow-color};
   }
 }
@@ -116,7 +140,7 @@
 :root {
   @include export-theme-light {
     --button-paint-text-color: #{$theme-light-button-paint-text-color};
-    --button-focus-shadow-color: #{$theme-light-button-focus-shadow-color};
+    //--button-focus-shadow-color: #{$theme-light-button-focus-shadow-color};
     --button-floating-shadow-color: #{$theme-light-button-floating-shadow-color};
     --button-plain-default-background-color: #{$theme-light-button-plain-default-background-color};
     --button-plain-default-hover-background-color: #{$theme-light-button-plain-default-hover-background-color};
@@ -124,16 +148,9 @@
     --button-outline-default-background-color: #{$theme-light-button-outline-default-background-color};
     --button-outline-default-border-color: #{$theme-light-button-outline-default-border-color};
     --button-outline-default-hover-background-color: #{$theme-light-button-outline-default-hover-background-color};
-    --button-ghost-default-border-color: #{$theme-light-button-ghost-default-border-color};
-    --button-ghost-default-text-color: #{$theme-light-button-ghost-default-text-color};
-    --button-ghost-default-hover-background-color: #{$theme-light-button-ghost-default-hover-background-color};
-    --button-ghost-default-hover-text-color: #{$theme-light-button-ghost-default-hover-text-color};
     --button-disabled-background-color: #{$theme-light-button-disabled-background-color};
     --button-disabled-background-color-alpha: #{$theme-light-button-disabled-background-color-alpha};
     --button-disabled-text-color: #{$theme-light-button-disabled-text-color};
-    --button-ghost-disabled-background-color: #{$theme-light-button-ghost-disabled-background-color};
-    --button-ghost-disabled-border-color: #{$theme-light-button-ghost-disabled-border-color};
-    --button-ghost-disabled-text-color: #{$theme-light-button-ghost-disabled-text-color};
   }
 }
 
@@ -154,8 +171,8 @@
     --input-background-color: #{$theme-light-input-background-color};
     --input-border-color: #{$theme-light-input-border-color};
     --input-shadow-color: #{$theme-light-input-shadow-color};
-    --input-focus-border-color: #{$theme-light-input-focus-border-color};
-    --input-focus-shadow-color: #{$theme-light-input-focus-shadow-color};
+    //--input-focus-border-color: #{$theme-light-input-focus-border-color};
+    //--input-focus-shadow-color: #{$theme-light-input-focus-shadow-color};
     --input-disabled-background-color: #{$theme-light-input-disabled-background-color};
     --input-disabled-border-color: #{$theme-light-input-disabled-background-color};
     --input-disabled-text-color: #{$theme-light-input-disabled-text-color};
@@ -163,13 +180,13 @@
     --input-readonly-text-color: #{$theme-light-input-readonly-text-color};
     --input-placeholder-color: #{$theme-light-input-placeholder-color};
     --radio-background-color: #{$theme-light-radio-background-color};
-    --radio-before-checked-background-color: #{$theme-light-radio-before-checked-background-color};
-    --radio-checked-border-color: #{$theme-light-radio-checked-border-color};
+    //--radio-before-checked-background-color: #{$theme-light-radio-before-checked-background-color};
+    //--radio-checked-border-color: #{$theme-light-radio-checked-border-color};
     --checkbox-background-color: #{$theme-light-checkbox-background-color};
-    --checkbox-focus-border-color: #{$theme-light-checkbox-focus-border-color};
+    //--checkbox-focus-border-color: #{$theme-light-checkbox-focus-border-color};
     --checkbox-before-border-color: #{$theme-light-checkbox-before-border-color};
-    --checkbox-checked-background-color: #{$theme-light-checkbox-checked-background-color};
-    --checkbox-checked-border-color: #{$theme-light-checkbox-checked-border-color};
+    //--checkbox-checked-background-color: #{$theme-light-checkbox-checked-background-color};
+    //--checkbox-checked-border-color: #{$theme-light-checkbox-checked-border-color};
     --select-angle-border-color: #{$theme-light-select-angle-border-color};
   }
 }
@@ -193,7 +210,7 @@
 
 :root {
   @include export-theme-light {
-    --wysiwyg-link-text-color: #{$theme-light-wysiwyg-link-text-color};
+    //--wysiwyg-link-text-color: #{$theme-light-wysiwyg-link-text-color};
     --wysiwyg-hr-border-color: #{$theme-light-wysiwyg-hr-border-color};
   }
 }

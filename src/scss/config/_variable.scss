@@ -90,7 +90,7 @@ $pattern-box-custom: flexbox, background, outline, separate, link, angle !defaul
 $card-default-background-color: $convert-card-default-background-color !default;
 $card-default-border-width: 1px !default;
 $card-default-border-color: $convert-card-default-border-color !default;
-$card-focus-shadow: 0 0 0 $space-xxs $convert-card-focus-shadow-color !default;
+$card-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
 // Card Radius
 $card-radius-xxl: $radius-xxl !default;
@@ -115,7 +115,7 @@ $pattern-card-radius: (
 // Card Floating
 $card-floating-shadow: 0 1px 3px 0 $convert-card-floating-shadow-color !default;
 $card-floating-hover-shadow: 0 4px 12px 0 $convert-card-floating-shadow-color !default;
-$card-floating-focus-shadow: 0 0 0 $space-xxs $convert-card-focus-shadow-color,
+$card-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
   0 4px 12px 0 $convert-card-floating-shadow-color !default;
 
 // Card Link
@@ -227,7 +227,7 @@ $button-border-radius: $radius-sm !default;
 $button-paint-text-color: $convert-button-paint-text-color !default;
 $button-line-height: 1.5 !default;
 $button-transition: $global-transition !default;
-$button-focus-shadow: 0 0 0 $space-xxs $convert-button-focus-shadow-color !default;
+$button-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
 // Button Round
 $button-round-border-radius: $radius-full !default;
@@ -241,8 +241,7 @@ $button-circle-border-radius: $radius-full !default;
 $button-floating-shadow: 0 1px 3px 0 $convert-button-floating-shadow-color !default;
 $button-floating-hover-shadow: 0 4px 12px 0
   $convert-button-floating-shadow-color !default;
-$button-floating-focus-shadow: 0 0 0 $space-xxs
-    $convert-button-focus-shadow-color,
+$button-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
   0 4px 12px 0 $convert-button-floating-shadow-color !default;
 
 // Pattern - Button Custom
@@ -362,68 +361,13 @@ $pattern-button-outline: (
   )
 ) !default;
 
-// Button Ghost
-$button-ghost-default-border-color: $convert-button-ghost-default-border-color !default;
-$button-ghost-default-text-color: $convert-button-ghost-default-text-color !default;
-$button-ghost-default-hover-background-color: $convert-button-ghost-default-hover-background-color !default;
-$button-ghost-default-hover-text-color: $convert-button-ghost-default-hover-text-color !default;
-$button-ghost-primary-border-color: $convert-primary-lighten !default;
-$button-ghost-primary-text-color: $convert-primary-lighten !default;
-$button-ghost-primary-hover-background-color: $convert-primary !default;
-$button-ghost-info-border-color: $convert-info-lighten !default;
-$button-ghost-info-text-color: $convert-info-lighten !default;
-$button-ghost-info-hover-background-color: $convert-info !default;
-$button-ghost-success-border-color: $convert-success-lighten !default;
-$button-ghost-success-text-color: $convert-success-lighten !default;
-$button-ghost-success-hover-background-color: $convert-success !default;
-$button-ghost-warning-border-color: $convert-warning-lighten !default;
-$button-ghost-warning-text-color: $convert-warning-lighten !default;
-$button-ghost-warning-hover-background-color: $convert-warning !default;
-$button-ghost-danger-border-color: $convert-danger-lighten !default;
-$button-ghost-danger-text-color: $convert-danger-lighten !default;
-$button-ghost-danger-hover-background-color: $convert-danger !default;
-
-// Pattern - Button Ghost
-$pattern-button-ghost: (
-  primary: (
-    border-color: $button-ghost-primary-border-color,
-    text-color: $button-ghost-primary-text-color,
-    hover-background-color: $button-ghost-primary-hover-background-color
-  ),
-  info: (
-    border-color: $button-ghost-info-border-color,
-    text-color: $button-ghost-info-text-color,
-    hover-background-color: $button-ghost-info-hover-background-color
-  ),
-  success: (
-    border-color: $button-ghost-success-border-color,
-    text-color: $button-ghost-success-text-color,
-    hover-background-color: $button-ghost-success-hover-background-color
-  ),
-  warning: (
-    border-color: $button-ghost-warning-border-color,
-    text-color: $button-ghost-warning-text-color,
-    hover-background-color: $button-ghost-warning-hover-background-color
-  ),
-  danger: (
-    border-color: $button-ghost-danger-border-color,
-    text-color: $button-ghost-danger-text-color,
-    hover-background-color: $button-ghost-danger-hover-background-color
-  )
-) !default;
-
 // Pattern - Button Style
-$pattern-button-style: plain, melt, outline, ghost !default;
+$pattern-button-style: plain, melt, outline !default;
 
 // Button Disabled
 $button-disabled-background-color: $convert-button-disabled-background-color !default;
 $button-disabled-background-color-alpha: $convert-button-disabled-background-color-alpha !default;
 $button-disabled-text-color: $convert-button-disabled-text-color !default;
-
-// Button Ghost Disabled
-$button-ghost-disabled-background-color: $convert-button-ghost-disabled-background-color !default;
-$button-ghost-disabled-border-color: $convert-button-ghost-disabled-border-color !default;
-$button-ghost-disabled-text-color: $convert-button-ghost-disabled-text-color !default;
 
 //----------------------------------------------------
 // / Module - Badge
@@ -489,9 +433,9 @@ $input-shadow: inset 0 1px 1px $convert-input-shadow-color !default;
 $input-transition: $global-transition !default;
 
 // Input Focus
-$input-focus-border-color: $convert-input-focus-border-color !default;
+$input-focus-border-color: $convert-focus-darken !default;
 $input-focus-shadow: inset 0 1px 1px $convert-input-shadow-color,
-  0 0 0 $space-xxs $convert-input-focus-shadow-color !default;
+  0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 
 // Input Round
 $input-round-border-radius: $radius-full !default;
@@ -520,9 +464,9 @@ $radio-border-width: 2px !default;
 $radio-gap-default: $space-xs !default;
 $radio-gap-after: $space-md !default;
 $radio-background-color: $convert-radio-background-color !default;
-$radio-focus-shadow: 0 0 0 $space-xxs $convert-input-focus-shadow-color !default;
-$radio-before-checked-background-color: $convert-radio-before-checked-background-color !default;
-$radio-checked-border-color: $convert-radio-checked-border-color !default;
+$radio-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
+$radio-before-checked-background-color: $convert-primary-strong !default;
+$radio-checked-border-color: $convert-primary-strong !default;
 
 // Checkbox
 $checkbox-width: 1em !default;
@@ -531,17 +475,17 @@ $checkbox-border-radius: 2px !default;
 $checkbox-gap-default: $space-xs !default;
 $checkbox-gap-after: $space-md !default;
 $checkbox-background-color: $convert-checkbox-background-color !default;
-$checkbox-focus-border-color: $convert-checkbox-focus-border-color !default;
-$checkbox-focus-shadow: 0 0 0 $space-xxs $convert-input-focus-shadow-color !default;
+$checkbox-focus-border-color: $convert-focus-darken !default;
+$checkbox-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 $checkbox-before-border-color: $convert-checkbox-before-border-color !default;
-$checkbox-checked-background-color: $convert-checkbox-checked-background-color !default;
-$checkbox-checked-border-color: $convert-checkbox-checked-border-color !default;
+$checkbox-checked-background-color: $convert-primary !default;
+$checkbox-checked-border-color: $convert-primary !default;
 
 // Select
 $select-angle-size: 0.5em !default;
 $select-angle-border-width: 2px !default;
 $select-angle-border-color: $convert-select-angle-border-color !default;
-$select-focus-shadow: 0 0 0 $space-xxs $convert-input-focus-shadow-color !default;
+$select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 
 //----------------------------------------------------
 // / Module - iframe
@@ -634,7 +578,7 @@ $wysiwyg-small-font-size: 80% !default;
 $wysiwyg-strong-font-weight: 700 !default;
 
 // WYSIWYG Link
-$wysiwyg-link-text-color: $convert-wysiwyg-link-text-color !default;
+$wysiwyg-link-text-color: $convert-primary-strong !default;
 
 // WYSIWYG Table
 $wysiwyg-table-th-font-weight: 400 !default;

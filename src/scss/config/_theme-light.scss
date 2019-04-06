@@ -32,6 +32,8 @@ $theme-light-danger-lighten: lighten($theme-danger, 30%) !default;
 
 $theme-light-focus: $theme-focus !default;
 $theme-light-focus-darken: darken($theme-focus, 10%) !default;
+$theme-light-focus-alpha: rgba($theme-light-focus, 0.5) !default;
+$theme-light-focus-alpha-thin: rgba($theme-light-focus, 0.36) !default;
 
 $theme-light-background-color: $light !default;
 $theme-light-text-color: $dark-2 !default;
@@ -44,7 +46,7 @@ $theme-light-box-angle-border-color: $dark-5 !default;
 $theme-light-card-default-background-color: $light !default;
 $theme-light-card-default-border-color: $dark-7 !default;
 $theme-light-card-link-hover-background-color: $grey-100 !default;
-$theme-light-card-focus-shadow-color: rgba($theme-light-focus, 0.5) !default;
+//$theme-light-card-focus-shadow-color: $theme-light-focus-alpha !default;
 $theme-light-card-floating-shadow-color: rgba($black, 0.24) !default;
 
 $theme-light-text-dark: $black !default;
@@ -77,7 +79,7 @@ $theme-light-pre-background-color: $theme-light-code-background-color !default;
 $theme-light-pre-text-color: $theme-light-code-text-color !default;
 
 $theme-light-button-paint-text-color: $light !default;
-$theme-light-button-focus-shadow-color: rgba($theme-light-focus, 0.5) !default;
+//$theme-light-button-focus-shadow-color: $theme-light-focus-alpha !default;
 $theme-light-button-floating-shadow-color: rgba($black, 0.24) !default;
 $theme-light-button-plain-default-background-color: $grey-100 !default;
 $theme-light-button-plain-default-hover-background-color: $grey-200 !default;
@@ -85,16 +87,9 @@ $theme-light-button-melt-default-hover-background-color: $dark-9 !default;
 $theme-light-button-outline-default-background-color: $light !default;
 $theme-light-button-outline-default-border-color: $dark-7 !default;
 $theme-light-button-outline-default-hover-background-color: $grey-100 !default;
-$theme-light-button-ghost-default-border-color: $grey-50 !default;
-$theme-light-button-ghost-default-text-color: $grey-50 !default;
-$theme-light-button-ghost-default-hover-background-color: $grey-50 !default;
-$theme-light-button-ghost-default-hover-text-color: $dark-2 !default;
 $theme-light-button-disabled-background-color: $grey-400 !default;
 $theme-light-button-disabled-background-color-alpha: $dark-6 !default;
 $theme-light-button-disabled-text-color: $dark-6 !default;
-$theme-light-button-ghost-disabled-background-color: $light-8 !default;
-$theme-light-button-ghost-disabled-border-color: $light-4 !default;
-$theme-light-button-ghost-disabled-text-color: $light-4 !default;
 
 $theme-light-table-background-color: $light !default;
 $theme-light-table-border-color: $blue-grey-100 !default;
@@ -107,8 +102,8 @@ $theme-light-table-danger-background-color: lighten($theme-light-danger, 29%) !d
 $theme-light-input-background-color: $light !default;
 $theme-light-input-border-color: $dark-6 !default;
 $theme-light-input-shadow-color: rgba($black, 0.075) !default;
-$theme-light-input-focus-border-color: $theme-light-focus-darken !default;
-$theme-light-input-focus-shadow-color: rgba($theme-light-focus, 0.36) !default;
+//$theme-light-input-focus-border-color: $theme-light-focus-darken !default;
+//$theme-light-input-focus-shadow-color: $theme-light-focus-alpha-thin !default;
 $theme-light-input-disabled-background-color: $grey-300 !default;
 $theme-light-input-disabled-border-color: $dark-7 !default;
 $theme-light-input-disabled-text-color: $dark-6 !default;
@@ -116,13 +111,13 @@ $theme-light-input-readonly-background-color: $grey-100 !default;
 $theme-light-input-readonly-text-color: $dark-2 !default;
 $theme-light-input-placeholder-color: $dark-6 !default;
 $theme-light-radio-background-color: $light !default;
-$theme-light-radio-before-checked-background-color: $theme-light-primary !default;
-$theme-light-radio-checked-border-color: $theme-light-primary !default;
+//$theme-light-radio-before-checked-background-color: $theme-light-primary !default;
+//$theme-light-radio-checked-border-color: $theme-light-primary !default;
 $theme-light-checkbox-background-color: $light !default;
-$theme-light-checkbox-focus-border-color: $theme-light-focus-darken !default;
+//$theme-light-checkbox-focus-border-color: $theme-light-focus-darken !default;
 $theme-light-checkbox-before-border-color: $light !default;
-$theme-light-checkbox-checked-background-color: $theme-light-primary !default;
-$theme-light-checkbox-checked-border-color: $theme-light-primary !default;
+//$theme-light-checkbox-checked-background-color: $theme-light-primary !default;
+//$theme-light-checkbox-checked-border-color: $theme-light-primary !default;
 $theme-light-select-angle-border-color: $dark-5 !default;
 
 $theme-light-alert-default-background-color: $grey-100 !default;
@@ -138,5 +133,5 @@ $theme-light-alert-warning-border-color: lighten($theme-light-warning, 27%) !def
 $theme-light-alert-danger-background-color: lighten($theme-light-danger, 35%) !default;
 $theme-light-alert-danger-border-color: lighten($theme-light-danger, 21%) !default;
 
-$theme-light-wysiwyg-link-text-color: $theme-light-primary !default;
+//$theme-light-wysiwyg-link-text-color: $theme-light-primary !default;
 $theme-light-wysiwyg-hr-border-color: $dark-7 !default;

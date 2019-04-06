@@ -161,36 +161,6 @@
           }
         }
       }
-      @if $style == "ghost" {
-        &.is-ghost {
-          background-color: transparent;
-          border: $button-border-width solid $button-ghost-default-border-color;
-          color: $button-ghost-default-text-color;
-          &:hover {
-            background-color: $button-ghost-default-hover-background-color;
-            color: $button-ghost-default-hover-text-color;
-          }
-          @each $key, $value in $pattern-button-ghost {
-            &.is-#{$key} {
-              border-color: map-get($value, border-color);
-              color: map-get($value, text-color);
-              &:hover {
-                background-color: map-get($value, hover-background-color);
-                border-color: transparent;
-                color: $button-paint-text-color;
-              }
-            }
-          }
-          &.is-disabled,
-          &.is-disabled:hover,
-          &[disabled],
-          &[disabled]:hover {
-            background-color: $button-ghost-disabled-background-color;
-            border-color: $button-ghost-disabled-border-color;
-            color: $button-ghost-disabled-text-color;
-          }
-        }
-      }
     }
   }
 }
