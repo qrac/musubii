@@ -156,7 +156,7 @@
           &.is-disabled:hover,
           &[disabled],
           &[disabled]:hover {
-            background-color: $button-disabled-background-color-alpha;
+            background-color: $button-disabled-background-color;
             color: $button-disabled-text-color;
           }
         }

@@ -25,10 +25,12 @@ $convert-focus-darken: if($use-css-variables == true, var(--focus-darken), $them
 $convert-focus-alpha: if($use-css-variables == true, var(--focus-alpha), $theme-light-focus-alpha) !default;
 $convert-focus-alpha-thin: if($use-css-variables == true, var(--focus-alpha-thin), $theme-light-focus-alpha-thin) !default;
 
-$convert-background-color: if($use-css-variables == true, var(--background-color), $theme-light-background-color) !default;
-$convert-text-color: if($use-css-variables == true, var(--text-color), $theme-light-text-color) !default;
+$convert-body-background-color: if($use-css-variables == true, var(--body-background-color), $theme-light-body-background-color) !default;
+$convert-body-text-color: if($use-css-variables == true, var(--body-text-color), $theme-light-body-text-color) !default;
 
-$convert-angle-border-color: if($use-css-variables == true, var(--angle-border-color), $theme-light-angle-border-color) !default;
+$convert-disabled-background-color: if($use-css-variables == true, var(--disabled-background-color), $theme-light-disabled-background-color) !default;
+$convert-disabled-border-color: if($use-css-variables == true, var(--disabled-border-color), $theme-light-disabled-border-color) !default;
+$convert-disabled-text-color: if($use-css-variables == true, var(--disabled-text-color), $theme-light-disabled-text-color) !default;
 
 $convert-box-default-background-color: if($use-css-variables == true, var(--box-default-background-color), $theme-light-box-default-background-color) !default;
 $convert-box-default-border-color: if($use-css-variables == true, var(--box-default-border-color), $theme-light-box-default-border-color) !default;
@@ -38,7 +40,6 @@ $convert-box-angle-border-color: if($use-css-variables == true, var(--box-angle-
 $convert-card-default-background-color: if($use-css-variables == true, var(--card-default-background-color), $theme-light-card-default-background-color) !default;
 $convert-card-default-border-color: if($use-css-variables == true, var(--card-default-border-color), $theme-light-card-default-border-color) !default;
 $convert-card-link-hover-background-color: if($use-css-variables == true, var(--card-link-hover-background-color), $theme-light-card-link-hover-background-color) !default;
-//$convert-card-focus-shadow-color: if($use-css-variables == true, var(--card-focus-shadow-color), $theme-light-card-focus-shadow-color) !default;
 $convert-card-floating-shadow-color: if($use-css-variables == true, var(--card-floating-shadow-color), $theme-light-card-floating-shadow-color) !default;
 
 $convert-text-dark: if($use-css-variables == true, var(--text-dark), $theme-light-text-dark) !default;
@@ -71,7 +72,6 @@ $convert-pre-background-color: if($use-css-variables == true, var(--pre-backgrou
 $convert-pre-text-color: if($use-css-variables == true, var(--pre-text-color), $theme-light-pre-text-color) !default;
 
 $convert-button-paint-text-color: if($use-css-variables == true, var(--button-paint-text-color), $theme-light-button-paint-text-color) !default;
-//$convert-button-focus-shadow-color: if($use-css-variables == true, var(--button-focus-shadow-color), $theme-light-button-focus-shadow-color) !default;
 $convert-button-floating-shadow-color: if($use-css-variables == true, var(--button-floating-shadow-color), $theme-light-button-floating-shadow-color) !default;
 $convert-button-plain-default-background-color: if($use-css-variables == true, var(--button-plain-default-background-color), $theme-light-button-plain-default-background-color) !default;
 $convert-button-plain-default-hover-background-color: if($use-css-variables == true, var(--button-plain-default-hover-background-color), $theme-light-button-plain-default-hover-background-color) !default;
@@ -79,9 +79,6 @@ $convert-button-melt-default-hover-background-color: if($use-css-variables == tr
 $convert-button-outline-default-background-color: if($use-css-variables == true, var(--button-outline-default-background-color), $theme-light-button-outline-default-background-color) !default;
 $convert-button-outline-default-border-color: if($use-css-variables == true, var(--button-outline-default-border-color), $theme-light-button-outline-default-border-color) !default;
 $convert-button-outline-default-hover-background-color: if($use-css-variables == true, var(--button-outline-default-hover-background-color), $theme-light-button-outline-default-hover-background-color) !default;
-$convert-button-disabled-background-color: if($use-css-variables == true, var(--button-disabled-background-color), $theme-light-button-disabled-background-color) !default;
-$convert-button-disabled-background-color-alpha: if($use-css-variables == true, var(--button-disabled-background-color-alpha), $theme-light-button-disabled-background-color-alpha) !default;
-$convert-button-disabled-text-color: if($use-css-variables == true, var(--button-disabled-text-color), $theme-light-button-disabled-text-color) !default;
 
 $convert-table-background-color: if($use-css-variables == true, var(--table-background-color), $theme-light-table-background-color) !default;
 $convert-table-border-color: if($use-css-variables == true, var(--table-border-color), $theme-light-table-border-color) !default;
@@ -94,22 +91,12 @@ $convert-table-danger-background-color: if($use-css-variables == true, var(--tab
 $convert-input-background-color: if($use-css-variables == true, var(--input-background-color), $theme-light-input-background-color) !default;
 $convert-input-border-color: if($use-css-variables == true, var(--input-border-color), $theme-light-input-border-color) !default;
 $convert-input-shadow-color: if($use-css-variables == true, var(--input-shadow-color), $theme-light-input-shadow-color) !default;
-//$convert-input-focus-border-color: if($use-css-variables == true, var(--input-focus-border-color), $theme-light-input-focus-border-color) !default;
-//$convert-input-focus-shadow-color: if($use-css-variables == true, var(--input-focus-shadow-color), $theme-light-input-focus-shadow-color) !default;
-$convert-input-disabled-background-color: if($use-css-variables == true, var(--input-disabled-background-color), $theme-light-input-disabled-background-color) !default;
-$convert-input-disabled-border-color: if($use-css-variables == true, var(--input-disabled-border-color), $theme-light-input-disabled-border-color) !default;
-$convert-input-disabled-text-color: if($use-css-variables == true, var(--input-disabled-text-color), $theme-light-input-disabled-text-color) !default;
 $convert-input-readonly-background-color: if($use-css-variables == true, var(--input-readonly-background-color), $theme-light-input-readonly-background-color) !default;
 $convert-input-readonly-text-color: if($use-css-variables == true, var(--input-readonly-text-color), $theme-light-input-readonly-text-color) !default;
 $convert-input-placeholder-color: if($use-css-variables == true, var(--input-placeholder-color), $theme-light-input-placeholder-color) !default;
 $convert-radio-background-color: if($use-css-variables == true, var(--radio-background-color), $theme-light-radio-background-color) !default;
-//$convert-radio-before-checked-background-color: if($use-css-variables == true, var(--radio-before-checked-background-color), $theme-light-radio-before-checked-background-color) !default;
-//$convert-radio-checked-border-color: if($use-css-variables == true, var(--radio-checked-border-color), $theme-light-radio-checked-border-color) !default;
 $convert-checkbox-background-color: if($use-css-variables == true, var(--checkbox-background-color), $theme-light-checkbox-background-color) !default;
-//$convert-checkbox-focus-border-color: if($use-css-variables == true, var(--checkbox-focus-border-color), $theme-light-checkbox-focus-border-color) !default;
 $convert-checkbox-before-border-color: if($use-css-variables == true, var(--checkbox-before-border-color), $theme-light-checkbox-before-border-color) !default;
-//$convert-checkbox-checked-background-color: if($use-css-variables == true, var(--checkbox-checked-background-color), $theme-light-checkbox-checked-background-color) !default;
-//$convert-checkbox-checked-border-color: if($use-css-variables == true, var(--checkbox-checked-border-color), $theme-light-checkbox-checked-border-color) !default;
 $convert-select-angle-border-color: if($use-css-variables == true, var(--select-angle-border-color), $theme-light-select-angle-border-color) !default;
 
 $convert-alert-default-background-color: if($use-css-variables == true, var(--alert-default-background-color), $theme-light-alert-default-background-color) !default;
@@ -125,5 +112,4 @@ $convert-alert-warning-border-color: if($use-css-variables == true, var(--alert-
 $convert-alert-danger-background-color: if($use-css-variables == true, var(--alert-danger-background-color), $theme-light-alert-danger-background-color) !default;
 $convert-alert-danger-border-color: if($use-css-variables == true, var(--alert-danger-border-color), $theme-light-alert-danger-border-color) !default;
 
-//$convert-wysiwyg-link-text-color: if($use-css-variables == true, var(--wysiwyg-link-text-color), $theme-light-wysiwyg-link-text-color) !default;
 $convert-wysiwyg-hr-border-color: if($use-css-variables == true, var(--wysiwyg-hr-border-color), $theme-light-wysiwyg-hr-border-color) !default;

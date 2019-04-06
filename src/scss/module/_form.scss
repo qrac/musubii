@@ -51,7 +51,6 @@
     line-height: $input-line-height;
     &[disabled] {
       background-color: $input-disabled-background-color;
-      border-color: $input-disabled-border-color;
       color: $input-disabled-text-color;
     }
     &[readonly] {
@@ -166,7 +165,6 @@
     color: $body-text-color;
     &[disabled] {
       background-color: $input-disabled-background-color;
-      border-color: $input-disabled-border-color;
       color: $input-disabled-text-color;
     }
     &[readonly] {
@@ -337,8 +335,10 @@
       &[disabled] {
         cursor: not-allowed;
         background-color: $input-disabled-background-color;
-        border-color: $input-disabled-border-color;
         color: $input-disabled-text-color;
+        > option {
+          color: $input-disabled-text-color;
+        }
       }
       &[readonly] {
         background-color: $input-readonly-background-color;

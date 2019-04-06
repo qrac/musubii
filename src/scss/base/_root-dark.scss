@@ -67,8 +67,11 @@
 
 :root {
   @include export-theme-dark {
-    --background-color: #{$theme-dark-background-color};
-    --text-color: #{$theme-dark-text-color};
+    --body-background-color: #{$theme-dark-body-background-color};
+    --body-text-color: #{$theme-dark-body-text-color};
+    --disabled-background-color: #{$theme-dark-disabled-background-color};
+    --disabled-border-color: #{$theme-dark-disabled-border-color};
+    --disabled-text-color: #{$theme-dark-disabled-text-color};
   }
 }
 
@@ -86,7 +89,6 @@
     --card-default-background-color: #{$theme-dark-card-default-background-color};
     --card-default-border-color: #{$theme-dark-card-default-border-color};
     --card-link-hover-background-color: #{$theme-dark-card-link-hover-background-color};
-    //--card-focus-shadow-color: #{$theme-dark-card-focus-shadow-color};
     --card-floating-shadow-color: #{$theme-dark-card-floating-shadow-color};
   }
 }
@@ -130,7 +132,6 @@
 :root {
   @include export-theme-dark {
     --button-paint-text-color: #{$theme-dark-button-paint-text-color};
-    //--button-focus-shadow-color: #{$theme-dark-button-focus-shadow-color};
     --button-floating-shadow-color: #{$theme-dark-button-floating-shadow-color};
     --button-plain-default-background-color: #{$theme-dark-button-plain-default-background-color};
     --button-plain-default-hover-background-color: #{$theme-dark-button-plain-default-hover-background-color};
@@ -138,9 +139,6 @@
     --button-outline-default-background-color: #{$theme-dark-button-outline-default-background-color};
     --button-outline-default-border-color: #{$theme-dark-button-outline-default-border-color};
     --button-outline-default-hover-background-color: #{$theme-dark-button-outline-default-hover-background-color};
-    --button-disabled-background-color: #{$theme-dark-button-disabled-background-color};
-    --button-disabled-background-color-alpha: #{$theme-dark-button-disabled-background-color-alpha};
-    --button-disabled-text-color: #{$theme-dark-button-disabled-text-color};
   }
 }
 
@@ -161,22 +159,12 @@
     --input-background-color: #{$theme-dark-input-background-color};
     --input-border-color: #{$theme-dark-input-border-color};
     --input-shadow-color: #{$theme-dark-input-shadow-color};
-    //--input-focus-border-color: #{$theme-dark-input-focus-border-color};
-    //--input-focus-shadow-color: #{$theme-dark-input-focus-shadow-color};
-    --input-disabled-background-color: #{$theme-dark-input-disabled-background-color};
-    --input-disabled-border-color: #{$theme-dark-input-disabled-background-color};
-    --input-disabled-text-color: #{$theme-dark-input-disabled-text-color};
     --input-readonly-background-color: #{$theme-dark-input-readonly-background-color};
     --input-readonly-text-color: #{$theme-dark-input-readonly-text-color};
     --input-placeholder-color: #{$theme-dark-input-placeholder-color};
     --radio-background-color: #{$theme-dark-radio-background-color};
-    //--radio-before-checked-background-color: #{$theme-dark-radio-before-checked-background-color};
-    //--radio-checked-border-color: #{$theme-dark-radio-checked-border-color};
     --checkbox-background-color: #{$theme-dark-checkbox-background-color};
-    //--checkbox-focus-border-color: #{$theme-dark-checkbox-focus-border-color};
     --checkbox-before-border-color: #{$theme-dark-checkbox-before-border-color};
-    //--checkbox-checked-background-color: #{$theme-dark-checkbox-checked-background-color};
-    //--checkbox-checked-border-color: #{$theme-dark-checkbox-checked-border-color};
     --select-angle-border-color: #{$theme-dark-select-angle-border-color};
   }
 }
@@ -200,7 +188,6 @@
 
 :root {
   @include export-theme-dark {
-    //--wysiwyg-link-text-color: #{$theme-dark-wysiwyg-link-text-color};
     --wysiwyg-hr-border-color: #{$theme-dark-wysiwyg-hr-border-color};
   }
 }

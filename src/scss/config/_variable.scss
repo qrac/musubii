@@ -10,8 +10,8 @@
 $global-transition: ease-out 0.12s !default;
 
 // Body
-$body-background-color: $convert-background-color !default;
-$body-text-color: $convert-text-color !default;
+$body-background-color: $convert-body-background-color !default;
+$body-text-color: $convert-body-text-color !default;
 $body-font-family: $font-sans !default;
 $body-line-height: 1.5 !default;
 
@@ -365,9 +365,8 @@ $pattern-button-outline: (
 $pattern-button-style: plain, melt, outline !default;
 
 // Button Disabled
-$button-disabled-background-color: $convert-button-disabled-background-color !default;
-$button-disabled-background-color-alpha: $convert-button-disabled-background-color-alpha !default;
-$button-disabled-text-color: $convert-button-disabled-text-color !default;
+$button-disabled-background-color: $convert-disabled-background-color !default;
+$button-disabled-text-color: $convert-disabled-text-color !default;
 
 //----------------------------------------------------
 // / Module - Badge
@@ -441,10 +440,10 @@ $input-focus-shadow: inset 0 1px 1px $convert-input-shadow-color,
 $input-round-border-radius: $radius-full !default;
 
 // Input Disabled
-$input-disabled-background-color: $convert-input-disabled-background-color !default;
-$input-disabled-border-color: $convert-input-disabled-border-color !default;
+$input-disabled-background-color: $convert-disabled-background-color !default;
+$input-disabled-border-color: $convert-disabled-border-color !default;
 $input-disabled-shadow: none !default;
-$input-disabled-text-color: $convert-input-disabled-text-color !default;
+$input-disabled-text-color: $convert-disabled-text-color !default;
 
 // Input Readonly
 $input-readonly-background-color: $convert-input-readonly-background-color !default;
