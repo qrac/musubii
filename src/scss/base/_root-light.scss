@@ -58,16 +58,6 @@
 
 :root {
   @include export-theme-light {
-    --primary-lighten: #{$theme-light-primary-lighten};
-    --info-lighten: #{$theme-light-info-lighten};
-    --success-lighten: #{$theme-light-success-lighten};
-    --warning-lighten: #{$theme-light-warning-lighten};
-    --danger-lighten: #{$theme-light-danger-lighten};
-  }
-}
-
-:root {
-  @include export-theme-light {
     --focus: #{$theme-light-focus};
     --focus-darken: #{$theme-light-focus-darken};
     --focus-alpha: #{$theme-light-focus-alpha};

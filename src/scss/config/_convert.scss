@@ -20,12 +20,6 @@ $convert-success-darken: if($use-css-variables == true, var(--success-darken), $
 $convert-warning-darken: if($use-css-variables == true, var(--warning-darken), $theme-light-warning-darken) !default;
 $convert-danger-darken: if($use-css-variables == true, var(--danger-darken), $theme-light-danger-darken) !default;
 
-$convert-primary-lighten: if($use-css-variables == true, var(--primary-lighten), $theme-light-primary-lighten) !default;
-$convert-info-lighten: if($use-css-variables == true, var(--info-lighten), $theme-light-info-lighten) !default;
-$convert-success-lighten: if($use-css-variables == true, var(--success-lighten), $theme-light-success-lighten) !default;
-$convert-warning-lighten: if($use-css-variables == true, var(--warning-lighten), $theme-light-warning-lighten) !default;
-$convert-danger-lighten: if($use-css-variables == true, var(--danger-lighten), $theme-light-danger-lighten) !default;
-
 $convert-focus: if($use-css-variables == true, var(--focus), $theme-light-focus) !default;
 $convert-focus-darken: if($use-css-variables == true, var(--focus-darken), $theme-light-focus-darken) !default;
 $convert-focus-alpha: if($use-css-variables == true, var(--focus-alpha), $theme-light-focus-alpha) !default;

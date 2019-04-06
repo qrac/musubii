@@ -24,12 +24,6 @@ $theme-light-success-darken: darken($theme-success, 5%) !default;
 $theme-light-warning-darken: darken($theme-warning, 5%) !default;
 $theme-light-danger-darken: darken($theme-danger, 5%) !default;
 
-$theme-light-primary-lighten: lighten($theme-primary, 30%) !default;
-$theme-light-info-lighten: lighten($theme-info, 30%) !default;
-$theme-light-success-lighten: lighten($theme-success, 30%) !default;
-$theme-light-warning-lighten: lighten($theme-warning, 30%) !default;
-$theme-light-danger-lighten: lighten($theme-danger, 30%) !default;
-
 $theme-light-focus: $theme-focus !default;
 $theme-light-focus-darken: darken($theme-focus, 10%) !default;
 $theme-light-focus-alpha: rgba($theme-light-focus, 0.5) !default;
