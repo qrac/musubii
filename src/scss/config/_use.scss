@@ -3,7 +3,7 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Setting
+// / CSS Variables
 //----------------------------------------------------
 
 $use-css-variables: true !default;
@@ -15,6 +15,10 @@ $use-data-theme-light: false !default;
 $use-default-theme-dark: false !default;
 $use-media-theme-dark: false !default;
 $use-data-theme-dark: true !default;
+
+//----------------------------------------------------
+// / Components
+//----------------------------------------------------
 
 $use-component-global: true !default;
 $use-component-section: true !default;

@@ -29,63 +29,20 @@
 :root {
   @include export-theme-dark {
     --primary: #{$theme-dark-primary};
-    --info: #{$theme-dark-info};
-    --success: #{$theme-dark-success};
-    --warning: #{$theme-dark-warning};
-    --danger: #{$theme-dark-danger};
-  }
-}
-
-:root {
-  @include export-theme-dark {
     --primary-strong: #{$theme-dark-primary-strong};
-    --info-strong: #{$theme-dark-info-strong};
-    --success-strong: #{$theme-dark-success-strong};
-    --warning-strong: #{$theme-dark-warning-strong};
-    --danger-strong: #{$theme-dark-danger-strong};
-  }
-}
-
-:root {
-  @include export-theme-dark {
     --primary-darken: #{$theme-dark-primary-darken};
+    --info: #{$theme-dark-info};
+    --info-strong: #{$theme-dark-info-strong};
     --info-darken: #{$theme-dark-info-darken};
+    --success: #{$theme-dark-success};
+    --success-strong: #{$theme-dark-success-strong};
     --success-darken: #{$theme-dark-success-darken};
+    --warning: #{$theme-dark-warning};
+    --warning-strong: #{$theme-dark-warning-strong};
     --warning-darken: #{$theme-dark-warning-darken};
+    --danger: #{$theme-dark-danger};
+    --danger-strong: #{$theme-dark-danger-strong};
     --danger-darken: #{$theme-dark-danger-darken};
-  }
-}
-
-:root {
-  @include export-theme-dark {
-    --focus-darken: #{$theme-dark-focus-darken};
-    --focus-alpha: #{$theme-dark-focus-alpha};
-    --focus-alpha-thin: #{$theme-dark-focus-alpha-thin};
-  }
-}
-
-:root {
-  @include export-theme-dark {
-    --shadow-alpha: #{$theme-dark-shadow-alpha};
-    --shadow-alpha-thin: #{$theme-dark-shadow-alpha-thin};
-    --background: #{$theme-dark-background};
-    --background-1: #{$theme-dark-background-1};
-    --background-2: #{$theme-dark-background-2};
-    --background-3: #{$theme-dark-background-3};
-    --background-4: #{$theme-dark-background-4};
-    --background-alpha: #{$theme-dark-background-alpha};
-    --border: #{$theme-dark-border};
-    --border-1: #{$theme-dark-border-1};
-  }
-}
-
-:root {
-  @include export-theme-dark {
-    --body-background-color: #{$theme-dark-body-background-color};
-    --body-text-color: #{$theme-dark-body-text-color};
-    --disabled-background-color: #{$theme-dark-disabled-background-color};
-    --disabled-border-color: #{$theme-dark-disabled-border-color};
-    --disabled-text-color: #{$theme-dark-disabled-text-color};
   }
 }
 
@@ -116,39 +73,43 @@
 
 :root {
   @include export-theme-dark {
+    --background: #{$theme-dark-background};
+    --background-1: #{$theme-dark-background-1};
+    --background-2: #{$theme-dark-background-2};
+    --background-3: #{$theme-dark-background-3};
+    --background-4: #{$theme-dark-background-4};
+    --background-alpha: #{$theme-dark-background-alpha};
+    --border: #{$theme-dark-border};
+    --border-1: #{$theme-dark-border-1};
+    --shadow-alpha: #{$theme-dark-shadow-alpha};
+    --shadow-alpha-thin: #{$theme-dark-shadow-alpha-thin};
+    --focus-darken: #{$theme-dark-focus-darken};
+    --focus-alpha: #{$theme-dark-focus-alpha};
+    --focus-alpha-thin: #{$theme-dark-focus-alpha-thin};
+  }
+}
+
+:root {
+  @include export-theme-dark {
+    --disabled-background-color: #{$theme-dark-disabled-background-color};
+    --disabled-border-color: #{$theme-dark-disabled-border-color};
+    --disabled-text-color: #{$theme-dark-disabled-text-color};
+  }
+}
+
+:root {
+  @include export-theme-dark {
+    --body-background-color: #{$theme-dark-body-background-color};
+    --body-text-color: #{$theme-dark-body-text-color};
     --code-text-color: #{$theme-dark-code-text-color};
-  }
-}
-
-:root {
-  @include export-theme-dark {
     --button-paint-text-color: #{$theme-dark-button-paint-text-color};
-  }
-}
-
-:root {
-  @include export-theme-dark {
-    --table-stripe-background-color: #{$theme-dark-table-stripe-background-color};
     --table-paint-background-color: #{$theme-dark-table-paint-background-color};
     --table-paint-text-color: #{$theme-dark-table-paint-text-color};
     --table-spot-background-color: #{$theme-dark-table-spot-background-color};
     --table-danger-background-color: #{$theme-dark-table-danger-background-color};
-  }
-}
-
-:root {
-  @include export-theme-dark {
     --input-readonly-background-color: #{$theme-dark-input-readonly-background-color};
-    --input-readonly-text-color: #{$theme-dark-input-readonly-text-color};
     --input-placeholder-color: #{$theme-dark-input-placeholder-color};
     --checkbox-before-border-color: #{$theme-dark-checkbox-before-border-color};
-  }
-}
-
-:root {
-  @include export-theme-dark {
-    --alert-default-background-color: #{$theme-dark-alert-default-background-color};
-    --alert-default-border-color: #{$theme-dark-alert-default-border-color};
     --alert-primary-background-color: #{$theme-dark-alert-primary-background-color};
     --alert-primary-border-color: #{$theme-dark-alert-primary-border-color};
     --alert-info-background-color: #{$theme-dark-alert-info-background-color};

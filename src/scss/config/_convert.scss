@@ -3,46 +3,20 @@
 //----------------------------------------------------
 
 $convert-primary: if($use-css-variables == true, var(--primary), $theme-light-primary) !default;
-$convert-info: if($use-css-variables == true, var(--info), $theme-light-info) !default;
-$convert-success: if($use-css-variables == true, var(--success), $theme-light-success) !default;
-$convert-warning: if($use-css-variables == true, var(--warning), $theme-light-warning) !default;
-$convert-danger: if($use-css-variables == true, var(--danger), $theme-light-danger) !default;
-
 $convert-primary-strong: if($use-css-variables == true, var(--primary-strong), $theme-light-primary-strong) !default;
-$convert-info-strong: if($use-css-variables == true, var(--info-strong), $theme-light-info-strong) !default;
-$convert-success-strong: if($use-css-variables == true, var(--success-strong), $theme-light-success-strong) !default;
-$convert-warning-strong: if($use-css-variables == true, var(--warning-strong), $theme-light-warning-strong) !default;
-$convert-danger-strong: if($use-css-variables == true, var(--danger-strong), $theme-light-danger-strong) !default;
-
 $convert-primary-darken: if($use-css-variables == true, var(--primary-darken), $theme-light-primary-darken) !default;
+$convert-info: if($use-css-variables == true, var(--info), $theme-light-info) !default;
+$convert-info-strong: if($use-css-variables == true, var(--info-strong), $theme-light-info-strong) !default;
 $convert-info-darken: if($use-css-variables == true, var(--info-darken), $theme-light-info-darken) !default;
+$convert-success: if($use-css-variables == true, var(--success), $theme-light-success) !default;
+$convert-success-strong: if($use-css-variables == true, var(--success-strong), $theme-light-success-strong) !default;
 $convert-success-darken: if($use-css-variables == true, var(--success-darken), $theme-light-success-darken) !default;
+$convert-warning: if($use-css-variables == true, var(--warning), $theme-light-warning) !default;
+$convert-warning-strong: if($use-css-variables == true, var(--warning-strong), $theme-light-warning-strong) !default;
 $convert-warning-darken: if($use-css-variables == true, var(--warning-darken), $theme-light-warning-darken) !default;
+$convert-danger: if($use-css-variables == true, var(--danger), $theme-light-danger) !default;
+$convert-danger-strong: if($use-css-variables == true, var(--danger-strong), $theme-light-danger-strong) !default;
 $convert-danger-darken: if($use-css-variables == true, var(--danger-darken), $theme-light-danger-darken) !default;
-
-$convert-focus-darken: if($use-css-variables == true, var(--focus-darken), $theme-light-focus-darken) !default;
-$convert-focus-alpha: if($use-css-variables == true, var(--focus-alpha), $theme-light-focus-alpha) !default;
-$convert-focus-alpha-thin: if($use-css-variables == true, var(--focus-alpha-thin), $theme-light-focus-alpha-thin) !default;
-
-$convert-shadow-alpha: if($use-css-variables == true, var(--shadow-alpha), $theme-light-shadow-alpha) !default;
-$convert-shadow-alpha-thin: if($use-css-variables == true, var(--shadow-alpha-thin), $theme-light-shadow-alpha-thin) !default;
-
-$convert-background: if($use-css-variables == true, var(--background), $theme-light-background) !default;
-$convert-background-1: if($use-css-variables == true, var(--background-1), $theme-light-background-1) !default;
-$convert-background-2: if($use-css-variables == true, var(--background-2), $theme-light-background-2) !default;
-$convert-background-3: if($use-css-variables == true, var(--background-3), $theme-light-background-3) !default;
-$convert-background-4: if($use-css-variables == true, var(--background-4), $theme-light-background-4) !default;
-$convert-background-alpha: if($use-css-variables == true, var(--background-alpha), $theme-light-background-alpha) !default;
-
-$convert-border: if($use-css-variables == true, var(--border), $theme-light-border) !default;
-$convert-border-1: if($use-css-variables == true, var(--border-1), $theme-light-border-1) !default;
-
-$convert-body-background-color: if($use-css-variables == true, var(--body-background-color), $theme-light-body-background-color) !default;
-$convert-body-text-color: if($use-css-variables == true, var(--body-text-color), $theme-light-body-text-color) !default;
-
-$convert-disabled-background-color: if($use-css-variables == true, var(--disabled-background-color), $theme-light-disabled-background-color) !default;
-$convert-disabled-border-color: if($use-css-variables == true, var(--disabled-border-color), $theme-light-disabled-border-color) !default;
-$convert-disabled-text-color: if($use-css-variables == true, var(--disabled-text-color), $theme-light-disabled-text-color) !default;
 
 $convert-text-dark: if($use-css-variables == true, var(--text-dark), $theme-light-text-dark) !default;
 $convert-text-dark-1: if($use-css-variables == true, var(--text-dark-1), $theme-light-text-dark-1) !default;
@@ -66,23 +40,43 @@ $convert-text-light-7: if($use-css-variables == true, var(--text-light-7), $them
 $convert-text-light-8: if($use-css-variables == true, var(--text-light-8), $theme-light-text-light-8) !default;
 $convert-text-light-9: if($use-css-variables == true, var(--text-light-9), $theme-light-text-light-9) !default;
 
+$convert-background: if($use-css-variables == true, var(--background), $theme-light-background) !default;
+$convert-background-1: if($use-css-variables == true, var(--background-1), $theme-light-background-1) !default;
+$convert-background-2: if($use-css-variables == true, var(--background-2), $theme-light-background-2) !default;
+$convert-background-3: if($use-css-variables == true, var(--background-3), $theme-light-background-3) !default;
+$convert-background-4: if($use-css-variables == true, var(--background-4), $theme-light-background-4) !default;
+$convert-background-alpha: if($use-css-variables == true, var(--background-alpha), $theme-light-background-alpha) !default;
+
+$convert-border: if($use-css-variables == true, var(--border), $theme-light-border) !default;
+$convert-border-1: if($use-css-variables == true, var(--border-1), $theme-light-border-1) !default;
+
+$convert-shadow-alpha: if($use-css-variables == true, var(--shadow-alpha), $theme-light-shadow-alpha) !default;
+$convert-shadow-alpha-thin: if($use-css-variables == true, var(--shadow-alpha-thin), $theme-light-shadow-alpha-thin) !default;
+
+$convert-focus-darken: if($use-css-variables == true, var(--focus-darken), $theme-light-focus-darken) !default;
+$convert-focus-alpha: if($use-css-variables == true, var(--focus-alpha), $theme-light-focus-alpha) !default;
+$convert-focus-alpha-thin: if($use-css-variables == true, var(--focus-alpha-thin), $theme-light-focus-alpha-thin) !default;
+
+$convert-disabled-background-color: if($use-css-variables == true, var(--disabled-background-color), $theme-light-disabled-background-color) !default;
+$convert-disabled-border-color: if($use-css-variables == true, var(--disabled-border-color), $theme-light-disabled-border-color) !default;
+$convert-disabled-text-color: if($use-css-variables == true, var(--disabled-text-color), $theme-light-disabled-text-color) !default;
+
+$convert-body-background-color: if($use-css-variables == true, var(--body-background-color), $theme-light-body-background-color) !default;
+$convert-body-text-color: if($use-css-variables == true, var(--body-text-color), $theme-light-body-text-color) !default;
+
 $convert-code-text-color: if($use-css-variables == true, var(--code-text-color), $theme-light-code-text-color) !default;
 
 $convert-button-paint-text-color: if($use-css-variables == true, var(--button-paint-text-color), $theme-light-button-paint-text-color) !default;
 
-$convert-table-stripe-background-color: if($use-css-variables == true, var(--table-stripe-background-color), $theme-light-table-stripe-background-color) !default;
 $convert-table-paint-background-color: if($use-css-variables == true, var(--table-paint-background-color), $theme-light-table-paint-background-color) !default;
 $convert-table-paint-text-color: if($use-css-variables == true, var(--table-paint-text-color), $theme-light-table-paint-text-color) !default;
 $convert-table-spot-background-color: if($use-css-variables == true, var(--table-spot-background-color), $theme-light-table-spot-background-color) !default;
 $convert-table-danger-background-color: if($use-css-variables == true, var(--table-danger-background-color), $theme-light-table-danger-background-color) !default;
 
 $convert-input-readonly-background-color: if($use-css-variables == true, var(--input-readonly-background-color), $theme-light-input-readonly-background-color) !default;
-$convert-input-readonly-text-color: if($use-css-variables == true, var(--input-readonly-text-color), $theme-light-input-readonly-text-color) !default;
 $convert-input-placeholder-color: if($use-css-variables == true, var(--input-placeholder-color), $theme-light-input-placeholder-color) !default;
 $convert-checkbox-before-border-color: if($use-css-variables == true, var(--checkbox-before-border-color), $theme-light-checkbox-before-border-color) !default;
 
-$convert-alert-default-background-color: if($use-css-variables == true, var(--alert-default-background-color), $theme-light-alert-default-background-color) !default;
-$convert-alert-default-border-color: if($use-css-variables == true, var(--alert-default-border-color), $theme-light-alert-default-border-color) !default;
 $convert-alert-primary-background-color: if($use-css-variables == true, var(--alert-primary-background-color), $theme-light-alert-primary-background-color) !default;
 $convert-alert-primary-border-color: if($use-css-variables == true, var(--alert-primary-border-color), $theme-light-alert-primary-border-color) !default;
 $convert-alert-info-background-color: if($use-css-variables == true, var(--alert-info-background-color), $theme-light-alert-info-background-color) !default;

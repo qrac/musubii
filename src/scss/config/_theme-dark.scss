@@ -2,53 +2,21 @@
 // Config: Theme - Dark
 //----------------------------------------------------
 
-//----------------------------------------------------
-// / Setting
-//----------------------------------------------------
-
 $theme-dark-primary: darken($theme-primary, 12%) !default;
-$theme-dark-info: darken($theme-info, 12%) !default;
-$theme-dark-success: darken($theme-success, 12%) !default;
-$theme-dark-warning: darken($theme-warning, 12%) !default;
-$theme-dark-danger: darken($theme-danger, 12%) !default;
-
 $theme-dark-primary-strong: $theme-primary !default;
-$theme-dark-info-strong: $theme-info !default;
-$theme-dark-success-strong: $theme-success !default;
-$theme-dark-warning-strong: $theme-warning !default;
-$theme-dark-danger-strong: $theme-danger !default;
-
 $theme-dark-primary-darken: darken($theme-primary, 17%) !default;
+$theme-dark-info: darken($theme-info, 12%) !default;
+$theme-dark-info-strong: $theme-info !default;
 $theme-dark-info-darken: darken($theme-info, 17%) !default;
+$theme-dark-success: darken($theme-success, 12%) !default;
+$theme-dark-success-strong: $theme-success !default;
 $theme-dark-success-darken: darken($theme-success, 17%) !default;
+$theme-dark-warning: darken($theme-warning, 12%) !default;
+$theme-dark-warning-strong: $theme-warning !default;
 $theme-dark-warning-darken: darken($theme-warning, 17%) !default;
+$theme-dark-danger: darken($theme-danger, 12%) !default;
+$theme-dark-danger-strong: $theme-danger !default;
 $theme-dark-danger-darken: darken($theme-danger, 17%) !default;
-
-$theme-dark-focus: $theme-focus !default;
-$theme-dark-focus-darken: darken($theme-focus, 10%) !default;
-$theme-dark-focus-alpha: rgba($theme-focus, 0.5) !default;
-$theme-dark-focus-alpha-thin: rgba($theme-focus, 0.36) !default;
-
-$theme-dark-shadow: $indigo-a400 !default;
-$theme-dark-shadow-alpha: rgba($theme-dark-shadow, 0.7) !default;
-$theme-dark-shadow-alpha-thin: rgba($theme-dark-shadow, 0.075) !default;
-
-$theme-dark-background: $grey-900 !default;
-$theme-dark-background-1: lighten($grey-900, 5%) !default;
-$theme-dark-background-2: lighten($grey-900, 5%) !default;
-$theme-dark-background-3: $grey-800 !default;
-$theme-dark-background-4: $grey-800 !default;
-$theme-dark-background-alpha: $light-9 !default;
-
-$theme-dark-border: $grey-700 !default;
-$theme-dark-border-1: $grey-600 !default;
-
-$theme-dark-body-background-color: $grey-900 !default;
-$theme-dark-body-text-color: $light-2 !default;
-
-$theme-dark-disabled-background-color: $grey-800 !default;
-$theme-dark-disabled-border-color: $light-8 !default;
-$theme-dark-disabled-text-color: $light-6 !default;
 
 $theme-dark-text-dark: $white !default;
 $theme-dark-text-dark-1: rgba($theme-dark-text-dark, 0.87) !default;
@@ -72,23 +40,45 @@ $theme-dark-text-light-7: rgba($theme-dark-text-light, 0.15) !default;
 $theme-dark-text-light-8: rgba($theme-dark-text-light, 0.12) !default;
 $theme-dark-text-light-9: rgba($theme-dark-text-light, 0.05) !default;
 
+$theme-dark-background: $grey-900 !default;
+$theme-dark-background-1: lighten($grey-900, 5%) !default;
+$theme-dark-background-2: lighten($grey-900, 5%) !default;
+$theme-dark-background-3: $grey-800 !default;
+$theme-dark-background-4: $grey-800 !default;
+$theme-dark-background-alpha: $light-9 !default;
+
+$theme-dark-border: $grey-700 !default;
+$theme-dark-border-1: $grey-600 !default;
+
+$theme-dark-shadow: $indigo-a400 !default;
+$theme-dark-shadow-alpha: rgba($theme-dark-shadow, 0.7) !default;
+$theme-dark-shadow-alpha-thin: rgba($theme-dark-shadow, 0.075) !default;
+
+$theme-dark-focus: $theme-focus !default;
+$theme-dark-focus-darken: darken($theme-focus, 10%) !default;
+$theme-dark-focus-alpha: rgba($theme-focus, 0.5) !default;
+$theme-dark-focus-alpha-thin: rgba($theme-focus, 0.36) !default;
+
+$theme-dark-disabled-background-color: $grey-800 !default;
+$theme-dark-disabled-border-color: $light-8 !default;
+$theme-dark-disabled-text-color: $light-6 !default;
+
+$theme-dark-body-background-color: $grey-900 !default;
+$theme-dark-body-text-color: $light-2 !default;
+
 $theme-dark-code-text-color: $blue-300 !default;
 
 $theme-dark-button-paint-text-color: $theme-dark-body-text-color !default;
 
-$theme-dark-table-stripe-background-color: lighten($grey-900, 5%) !default;
 $theme-dark-table-paint-background-color: rgba($theme-dark-primary, 0.4) !default;
 $theme-dark-table-paint-text-color: $theme-dark-body-text-color !default;
 $theme-dark-table-spot-background-color: rgba($yellow-700, 0.4) !default;
 $theme-dark-table-danger-background-color: rgba($theme-dark-danger, 0.4) !default;
 
 $theme-dark-input-readonly-background-color: transparent !default;
-$theme-dark-input-readonly-text-color: $theme-dark-body-text-color !default;
 $theme-dark-input-placeholder-color: $light-6 !default;
 $theme-dark-checkbox-before-border-color: $light-1 !default;
 
-$theme-dark-alert-default-background-color: lighten($grey-900, 5%) !default;
-$theme-dark-alert-default-border-color: $grey-700 !default;
 $theme-dark-alert-primary-background-color: rgba($theme-dark-primary, 0.075) !default;
 $theme-dark-alert-primary-border-color: $theme-dark-primary !default;
 $theme-dark-alert-info-background-color: rgba($theme-dark-info, 0.075) !default;
