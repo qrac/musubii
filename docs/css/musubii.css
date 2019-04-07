@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.16 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.17 MIT by Qrac */
 
 *,
 ::before,
@@ -312,7 +312,7 @@ textarea,
   --background-4: #ededed;
   --background-alpha: rgba(0, 0, 0, 0.05);
   --border: #d1d8dc;
-  --border-1: #b1bdc3;
+  --border-1: rgba(0, 0, 0, 0.26);
   --shadow-alpha: rgba(0, 0, 0, 0.24);
   --shadow-alpha-thin: rgba(0, 0, 0, 0.075);
   --focus-darken: #0f7dd2;
@@ -322,7 +322,7 @@ textarea,
 
 :root {
   --disabled-background-color: #bdbdbd;
-  --disabled-border-color: rgba(0, 0, 0, 0.15);
+  --disabled-border-color: #eef0f2;
   --disabled-text-color: rgba(0, 0, 0, 0.26);
 }
 
@@ -399,7 +399,7 @@ textarea,
   --background-4: #424242;
   --background-alpha: rgba(255, 255, 255, 0.05);
   --border: #616161;
-  --border-1: #757575;
+  --border-1: rgba(255, 255, 255, 0.26);
   --shadow-alpha: rgba(81, 102, 205, 0.7);
   --shadow-alpha-thin: rgba(81, 102, 205, 0.075);
   --focus-darken: #0f7dd2;
@@ -409,7 +409,7 @@ textarea,
 
 :root [data-theme="dark"] {
   --disabled-background-color: #424242;
-  --disabled-border-color: rgba(255, 255, 255, 0.12);
+  --disabled-border-color: #757575;
   --disabled-text-color: rgba(255, 255, 255, 0.26);
 }
 
@@ -822,7 +822,7 @@ iframe {
 }
 
 .box.is-angle-right {
-  padding-right: 1.25em;
+  padding-right: 2em;
 }
 
 .box.is-angle-right:after {
@@ -832,7 +832,7 @@ iframe {
 }
 
 .box.is-angle-left {
-  padding-left: 1.25em;
+  padding-left: 2em;
 }
 
 .box.is-angle-left:after {
@@ -1357,6 +1357,7 @@ iframe {
 
 .button {
   cursor: pointer;
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1380,12 +1381,53 @@ iframe {
   outline: none;
 }
 
+.button.is-angle-right:after,
+.button.is-angle-left:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border-top: 2px solid var(--border-1);
+  border-right: 2px solid var(--border-1);
+  z-index: 2;
+}
+
+.button.is-angle-right:after {
+  right: 0.75em;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.button.is-angle-left:after {
+  left: 0.75em;
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.button.is-plain.is-primary[class*="is-angle-"]:after,
+.button.is-plain.is-info[class*="is-angle-"]:after,
+.button.is-plain.is-success[class*="is-angle-"]:after,
+.button.is-plain.is-warning[class*="is-angle-"]:after,
+.button.is-plain.is-danger[class*="is-angle-"]:after,
+.button.is-outline.is-primary[class*="is-angle-"]:after,
+.button.is-outline.is-info[class*="is-angle-"]:after,
+.button.is-outline.is-success[class*="is-angle-"]:after,
+.button.is-outline.is-warning[class*="is-angle-"]:after,
+.button.is-outline.is-danger[class*="is-angle-"]:after,
+.button.is-melt.is-primary[class*="is-angle-"]:after,
+.button.is-melt.is-info[class*="is-angle-"]:after,
+.button.is-melt.is-success[class*="is-angle-"]:after,
+.button.is-melt.is-warning[class*="is-angle-"]:after,
+.button.is-melt.is-danger[class*="is-angle-"]:after {
+  border-color: currentColor;
+}
+
 .button.is-round {
   border-radius: 999em;
 }
 
 .button.is-circle {
-  position: relative;
   width: calc(2.5em + 1px * 2);
   height: calc(2.5em + 1px * 2);
   padding: 0;
@@ -1468,43 +1510,6 @@ iframe {
   color: var(--disabled-text-color);
 }
 
-.button.is-melt {
-  background-color: transparent;
-  border: 1px solid transparent;
-}
-
-.button.is-melt:hover {
-  background-color: var(--background-alpha);
-}
-
-.button.is-melt.is-primary {
-  color: var(--primary-strong);
-}
-
-.button.is-melt.is-info {
-  color: var(--info-strong);
-}
-
-.button.is-melt.is-success {
-  color: var(--success-strong);
-}
-
-.button.is-melt.is-warning {
-  color: var(--warning-strong);
-}
-
-.button.is-melt.is-danger {
-  color: var(--danger-strong);
-}
-
-.button.is-melt.is-disabled,
-.button.is-melt.is-disabled:hover,
-.button.is-melt[disabled],
-.button.is-melt[disabled]:hover {
-  color: var(--disabled-text-color);
-  background-color: transparent;
-}
-
 .button.is-outline {
   background-color: var(--background);
   border: 1px solid var(--border);
@@ -1575,6 +1580,43 @@ iframe {
 .button.is-outline[disabled]:hover {
   background-color: var(--disabled-background-color);
   color: var(--disabled-text-color);
+}
+
+.button.is-melt {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.button.is-melt:hover {
+  background-color: var(--background-alpha);
+}
+
+.button.is-melt.is-primary {
+  color: var(--primary-strong);
+}
+
+.button.is-melt.is-info {
+  color: var(--info-strong);
+}
+
+.button.is-melt.is-success {
+  color: var(--success-strong);
+}
+
+.button.is-melt.is-warning {
+  color: var(--warning-strong);
+}
+
+.button.is-melt.is-danger {
+  color: var(--danger-strong);
+}
+
+.button.is-melt.is-disabled,
+.button.is-melt.is-disabled:hover,
+.button.is-melt[disabled],
+.button.is-melt[disabled]:hover {
+  color: var(--disabled-text-color);
+  background-color: transparent;
 }
 
 .list > .item:not(:first-child) {
