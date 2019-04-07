@@ -66,18 +66,18 @@ $pattern-gap-way: all, row, column !default;
 //----------------------------------------------------
 
 // Box
-$box-default-background-color: $convert-box-default-background-color !default;
+$box-default-background-color: $convert-background-1 !default;
 $box-default-border-width: 1px !default;
-$box-default-border-color: $convert-box-default-border-color !default;
+$box-default-border-color: $convert-border !default;
 
 // Box Link
-$box-link-hover-background-color: $convert-box-link-hover-background-color !default;
+$box-link-hover-background-color: $convert-background-3 !default;
 $box-link-transition: $global-transition !default;
 
 // Box Angle
 $box-angle-size: 0.5em !default;
 $box-angle-border-width: 2px !default;
-$box-angle-border-color: $convert-box-angle-border-color !default;
+$box-angle-border-color: $convert-border-1 !default;
 
 // Pattern - Box Custom
 $pattern-box-custom: flexbox, background, outline, separate, link, angle !default;
@@ -87,9 +87,9 @@ $pattern-box-custom: flexbox, background, outline, separate, link, angle !defaul
 //----------------------------------------------------
 
 // Card
-$card-default-background-color: $convert-card-default-background-color !default;
+$card-default-background-color: $convert-background-1 !default;
 $card-default-border-width: 1px !default;
-$card-default-border-color: $convert-card-default-border-color !default;
+$card-default-border-color: $convert-border !default;
 $card-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
 // Card Radius
@@ -113,13 +113,13 @@ $pattern-card-radius: (
 ) !default;
 
 // Card Floating
-$card-floating-shadow: 0 1px 3px 0 $convert-card-floating-shadow-color !default;
-$card-floating-hover-shadow: 0 4px 12px 0 $convert-card-floating-shadow-color !default;
+$card-floating-shadow: 0 1px 3px 0 $convert-shadow-alpha !default;
+$card-floating-hover-shadow: 0 4px 12px 0 $convert-shadow-alpha !default;
 $card-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
-  0 4px 12px 0 $convert-card-floating-shadow-color !default;
+  0 4px 12px 0 $convert-shadow-alpha !default;
 
 // Card Link
-$card-link-hover-background-color: $convert-card-link-hover-background-color !default;
+$card-link-hover-background-color: $convert-background-3 !default;
 $card-link-transition: $global-transition !default;
 
 // Card Zoom
@@ -191,24 +191,24 @@ $text-link-border-bottom-width: 1px !default;
 $text-link-border-bottom-style: solid !default;
 
 // Blockquote
-$blockquote-background-color: $convert-blockquote-background-color !default;
+$blockquote-background-color: $convert-background-2 !default;
 $blockquote-border-left-width: 0.5em !default;
-$blockquote-border-left-color: $convert-blockquote-border-left-color !default;
+$blockquote-border-left-color: $convert-background-alpha !default;
 $blockquote-border-radius: $radius-xs !default;
 $blockquote-padding: 1.5em !default;
 
 // Code
 $code-padding: 0.2em 0.5em !default;
-$code-background-color: $convert-code-background-color !default;
+$code-background-color: $convert-background-2 !default;
 $code-border-radius: $radius-xs !default;
 $code-text-color: $convert-code-text-color !default;
 $code-font-size: 0.875em !default;
 $code-font-family: $font-mono !default;
 
 // Pre
-$pre-background-color: $convert-pre-background-color !default;
+$pre-background-color: $convert-background-2 !default;
 $pre-border-radius: $radius-xs !default;
-$pre-text-color: $convert-pre-text-color !default;
+$pre-text-color: $convert-code-text-color !default;
 $pre-font-family: $font-mono !default;
 $pre-white-space: pre !default;
 $pre-code-padding: 1.25em 1.5em !default;
@@ -238,18 +238,17 @@ $button-circle-height: calc(2.5em + 1px * 2) !default;
 $button-circle-border-radius: $radius-full !default;
 
 // Button Floating
-$button-floating-shadow: 0 1px 3px 0 $convert-button-floating-shadow-color !default;
-$button-floating-hover-shadow: 0 4px 12px 0
-  $convert-button-floating-shadow-color !default;
+$button-floating-shadow: 0 1px 3px 0 $convert-shadow-alpha !default;
+$button-floating-hover-shadow: 0 4px 12px 0 $convert-shadow-alpha !default;
 $button-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
-  0 4px 12px 0 $convert-button-floating-shadow-color !default;
+  0 4px 12px 0 $convert-shadow-alpha !default;
 
 // Pattern - Button Custom
 $pattern-button-custom: round, circle, floating !default;
 
 // Button Plain
-$button-plain-default-background-color: $convert-button-plain-default-background-color !default;
-$button-plain-default-hover-background-color: $convert-button-plain-default-hover-background-color !default;
+$button-plain-default-background-color: $convert-background-2 !default;
+$button-plain-default-hover-background-color: $convert-background-4 !default;
 $button-plain-primary-background-color: $convert-primary !default;
 $button-plain-primary-hover-background-color: $convert-primary-darken !default;
 $button-plain-info-background-color: $convert-info !default;
@@ -286,7 +285,7 @@ $pattern-button-plain: (
 ) !default;
 
 // Button Melt
-$button-melt-default-hover-background-color: $convert-button-melt-default-hover-background-color !default;
+$button-melt-default-hover-background-color: $convert-background-alpha !default;
 $button-melt-primary-text-color: $convert-primary-strong !default;
 $button-melt-info-text-color: $convert-info-strong !default;
 $button-melt-success-text-color: $convert-success-strong !default;
@@ -313,9 +312,9 @@ $pattern-button-melt: (
 ) !default;
 
 // Button Outline
-$button-outline-default-background-color: $convert-button-outline-default-background-color !default;
-$button-outline-default-border-color: $convert-button-outline-default-border-color !default;
-$button-outline-default-hover-background-color: $convert-button-outline-default-hover-background-color !default;
+$button-outline-default-background-color: $convert-background !default;
+$button-outline-default-border-color: $convert-border !default;
+$button-outline-default-hover-background-color: $convert-background-2 !default;
 $button-outline-primary-border-color: $convert-primary !default;
 $button-outline-primary-text-color: $convert-primary-strong !default;
 $button-outline-primary-hover-background-color: $convert-primary !default;
@@ -396,12 +395,12 @@ $pattern-list-style: disc, circle, decimal, note !default;
 
 // Table
 $table-padding: 0.75em 1em !default;
-$table-background-color: $convert-table-background-color !default;
+$table-background-color: $convert-background !default;
 $table-border-width: 1px !default;
-$table-border-color: $convert-table-border-color !default;
+$table-border-color: $convert-border !default;
 
 // Table Stripe
-$table-stripe-background-color: $convert-table-stripe-background-color !default;
+$table-stripe-background-color: $convert-background-2 !default;
 
 // Table Paint
 $table-paint-background-color: $convert-table-paint-background-color !default;
@@ -423,17 +422,17 @@ $pattern-table-style: line, outline, border, stripe !default;
 // Input
 $input-height: 2.5em !default;
 $input-padding: 0.5em 0.75em !default;
-$input-background-color: $convert-input-background-color !default;
+$input-background-color: $convert-background-1 !default;
 $input-border-width: 1px !default;
-$input-border-color: $convert-input-border-color !default;
+$input-border-color: $convert-border !default;
 $input-border-radius: $radius-xs !default;
 $input-line-height: 1.5 !default;
-$input-shadow: inset 0 1px 1px $convert-input-shadow-color !default;
+$input-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
 $input-transition: $global-transition !default;
 
 // Input Focus
 $input-focus-border-color: $convert-focus-darken !default;
-$input-focus-shadow: inset 0 1px 1px $convert-input-shadow-color,
+$input-focus-shadow: inset 0 1px 1px $convert-shadow-alpha-thin,
   0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 
 // Input Round
@@ -462,7 +461,7 @@ $radio-width: 1em !default;
 $radio-border-width: 2px !default;
 $radio-gap-default: $space-xs !default;
 $radio-gap-after: $space-md !default;
-$radio-background-color: $convert-radio-background-color !default;
+$radio-background-color: $convert-background !default;
 $radio-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 $radio-before-checked-background-color: $convert-primary-strong !default;
 $radio-checked-border-color: $convert-primary-strong !default;
@@ -473,7 +472,7 @@ $checkbox-border-width: 2px !default;
 $checkbox-border-radius: 2px !default;
 $checkbox-gap-default: $space-xs !default;
 $checkbox-gap-after: $space-md !default;
-$checkbox-background-color: $convert-checkbox-background-color !default;
+$checkbox-background-color: $convert-background !default;
 $checkbox-focus-border-color: $convert-focus-darken !default;
 $checkbox-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 $checkbox-before-border-color: $convert-checkbox-before-border-color !default;
@@ -483,7 +482,7 @@ $checkbox-checked-border-color: $convert-primary !default;
 // Select
 $select-angle-size: 0.5em !default;
 $select-angle-border-width: 2px !default;
-$select-angle-border-color: $convert-select-angle-border-color !default;
+$select-angle-border-color: $convert-border-1 !default;
 $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 
 //----------------------------------------------------
@@ -585,7 +584,7 @@ $wysiwyg-table-th-font-weight: 400 !default;
 // WYSIWYG HR
 $wysiwyg-hr-border-width: 1px !default;
 $wysiwyg-hr-border-style: solid !default;
-$wysiwyg-hr-border-color: $convert-wysiwyg-hr-border-color !default;
+$wysiwyg-hr-border-color: $convert-border !default;
 
 // WYSIWYG Figure
 $wysiwyg-figure-text-align: center !default;

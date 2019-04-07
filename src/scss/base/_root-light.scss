@@ -58,10 +58,24 @@
 
 :root {
   @include export-theme-light {
-    --focus: #{$theme-light-focus};
     --focus-darken: #{$theme-light-focus-darken};
     --focus-alpha: #{$theme-light-focus-alpha};
     --focus-alpha-thin: #{$theme-light-focus-alpha-thin};
+  }
+}
+
+:root {
+  @include export-theme-light {
+    --shadow-alpha: #{$theme-light-shadow-alpha};
+    --shadow-alpha-thin: #{$theme-light-shadow-alpha-thin};
+    --background: #{$theme-light-background};
+    --background-1: #{$theme-light-background-1};
+    --background-2: #{$theme-light-background-2};
+    --background-3: #{$theme-light-background-3};
+    --background-4: #{$theme-light-background-4};
+    --background-alpha: #{$theme-light-background-alpha};
+    --border: #{$theme-light-border};
+    --border-1: #{$theme-light-border-1};
   }
 }
 
@@ -72,24 +86,6 @@
     --disabled-background-color: #{$theme-light-disabled-background-color};
     --disabled-border-color: #{$theme-light-disabled-border-color};
     --disabled-text-color: #{$theme-light-disabled-text-color};
-  }
-}
-
-:root {
-  @include export-theme-light {
-    --box-default-background-color: #{$theme-light-box-default-background-color};
-    --box-default-border-color: #{$theme-light-box-default-border-color};
-    --box-link-hover-background-color: #{$theme-light-box-link-hover-background-color};
-    --box-angle-border-color: #{$theme-light-box-angle-border-color};
-  }
-}
-
-:root {
-  @include export-theme-light {
-    --card-default-background-color: #{$theme-light-card-default-background-color};
-    --card-default-border-color: #{$theme-light-card-default-border-color};
-    --card-link-hover-background-color: #{$theme-light-card-link-hover-background-color};
-    --card-floating-shadow-color: #{$theme-light-card-floating-shadow-color};
   }
 }
 
@@ -120,32 +116,18 @@
 
 :root {
   @include export-theme-light {
-    --blockquote-background-color: #{$theme-light-blockquote-background-color};
-    --blockquote-border-left-color: #{$theme-light-blockquote-border-left-color};
-    --code-background-color: #{$theme-light-code-background-color};
     --code-text-color: #{$theme-light-code-text-color};
-    --pre-background-color: #{$theme-light-pre-background-color};
-    --pre-text-color: #{$theme-light-pre-text-color};
   }
 }
 
 :root {
   @include export-theme-light {
     --button-paint-text-color: #{$theme-light-button-paint-text-color};
-    --button-floating-shadow-color: #{$theme-light-button-floating-shadow-color};
-    --button-plain-default-background-color: #{$theme-light-button-plain-default-background-color};
-    --button-plain-default-hover-background-color: #{$theme-light-button-plain-default-hover-background-color};
-    --button-melt-default-hover-background-color: #{$theme-light-button-melt-default-hover-background-color};
-    --button-outline-default-background-color: #{$theme-light-button-outline-default-background-color};
-    --button-outline-default-border-color: #{$theme-light-button-outline-default-border-color};
-    --button-outline-default-hover-background-color: #{$theme-light-button-outline-default-hover-background-color};
   }
 }
 
 :root {
   @include export-theme-light {
-    --table-background-color: #{$theme-light-table-background-color};
-    --table-border-color: #{$theme-light-table-border-color};
     --table-stripe-background-color: #{$theme-light-table-stripe-background-color};
     --table-paint-background-color: #{$theme-light-table-paint-background-color};
     --table-paint-text-color: #{$theme-light-table-paint-text-color};
@@ -156,16 +138,10 @@
 
 :root {
   @include export-theme-light {
-    --input-background-color: #{$theme-light-input-background-color};
-    --input-border-color: #{$theme-light-input-border-color};
-    --input-shadow-color: #{$theme-light-input-shadow-color};
     --input-readonly-background-color: #{$theme-light-input-readonly-background-color};
     --input-readonly-text-color: #{$theme-light-input-readonly-text-color};
     --input-placeholder-color: #{$theme-light-input-placeholder-color};
-    --radio-background-color: #{$theme-light-radio-background-color};
-    --checkbox-background-color: #{$theme-light-checkbox-background-color};
     --checkbox-before-border-color: #{$theme-light-checkbox-before-border-color};
-    --select-angle-border-color: #{$theme-light-select-angle-border-color};
   }
 }
 
@@ -183,11 +159,5 @@
     --alert-warning-border-color: #{$theme-light-alert-warning-border-color};
     --alert-danger-background-color: #{$theme-light-alert-danger-background-color};
     --alert-danger-border-color: #{$theme-light-alert-danger-border-color};
-  }
-}
-
-:root {
-  @include export-theme-light {
-    --wysiwyg-hr-border-color: #{$theme-light-wysiwyg-hr-border-color};
   }
 }
