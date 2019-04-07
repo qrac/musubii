@@ -185,10 +185,10 @@
     display: flex;
     &:not(.is-middle) {
       .radio {
-        top: $radio-width * 0.25;
+        top: $radio-size * 0.25;
       }
       .checkbox {
-        top: $checkbox-width * 0.25;
+        top: $checkbox-size * 0.25;
       }
     }
     &.is-middle {
@@ -222,16 +222,16 @@
 
 @include export-form {
   .radio {
-    width: $radio-width;
-    height: $radio-width;
+    width: $radio-size;
+    height: $radio-size;
     background-color: $radio-background-color;
     border: $radio-border-width solid $input-border-color;
-    border-radius: $radio-width * 0.5;
+    border-radius: $radio-size * 0.5;
     &:before {
-      width: $radio-width * 0.5;
-      height: $radio-width * 0.5;
+      width: $radio-size * 0.5;
+      height: $radio-size * 0.5;
       background-color: $radio-before-checked-background-color;
-      border-radius: $radio-width * 0.5 * 0.5;
+      border-radius: $radio-size * 0.5 * 0.5;
       transform: translate(-50%, -50%);
       transition: $input-transition;
     }
@@ -240,16 +240,16 @@
 
 @include export-form {
   .checkbox {
-    width: $checkbox-width;
-    height: $checkbox-width;
+    width: $checkbox-size;
+    height: $checkbox-size;
     background-color: $checkbox-background-color;
     border: $checkbox-border-width solid $input-border-color;
     border-radius: $checkbox-border-radius;
     &:before {
-      width: $checkbox-width * 0.75;
-      height: $checkbox-width * 0.375;
-      border-left: $checkbox-width * 0.125 solid $checkbox-before-border-color;
-      border-bottom: $checkbox-width * 0.125 solid $checkbox-before-border-color;
+      width: $checkbox-size * 0.75;
+      height: $checkbox-size * 0.375;
+      border-left: $checkbox-size * 0.125 solid $checkbox-before-border-color;
+      border-bottom: $checkbox-size * 0.125 solid $checkbox-before-border-color;
       transform: translate(-50%, -70%) rotate(-45deg);
       transition: $input-transition;
     }

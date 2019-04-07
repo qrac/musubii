@@ -457,7 +457,7 @@ $input-placeholder-color: $convert-input-placeholder-color !default;
 $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
 
 // Radio
-$radio-width: 1em !default;
+$radio-size: 1em !default;
 $radio-border-width: 2px !default;
 $radio-gap-default: $space-xs !default;
 $radio-gap-after: $space-md !default;
@@ -467,7 +467,7 @@ $radio-before-checked-background-color: $convert-primary-strong !default;
 $radio-checked-border-color: $convert-primary-strong !default;
 
 // Checkbox
-$checkbox-width: 1em !default;
+$checkbox-size: 1em !default;
 $checkbox-border-width: 2px !default;
 $checkbox-border-radius: 2px !default;
 $checkbox-gap-default: $space-xs !default;
@@ -515,7 +515,7 @@ $icon-fit-width: 1em !default;
 // Alert
 $alert-padding: 0.675em 0.875em !default;
 $alert-border-width: 1px !default;
-$alert-border-radius: 2px !default;
+$alert-border-radius: $radius-xs !default;
 $alert-default-background-color: $convert-background-2 !default;
 $alert-default-border-color: $convert-border !default;
 $alert-primary-background-color: $convert-alert-primary-background-color !default;

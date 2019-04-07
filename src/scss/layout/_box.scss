@@ -129,24 +129,24 @@
             content: "";
             position: absolute;
             top: 50%;
-            width: 0.5em;
-            height: 0.5em;
+            width: $box-angle-size;
+            height: $box-angle-size;
             border-top: $box-angle-border-width solid $box-angle-border-color;
             border-right: $box-angle-border-width solid $box-angle-border-color;
             z-index: 2;
           }
         }
         &.is-angle-right {
-          padding-right: 2em;
+          padding-right: $box-angle-size * 4;
           &:after {
-            right: 0.75em;
+            right: $box-angle-size * 1.5;
             transform: translateY(-50%) rotate(45deg);
           }
         }
         &.is-angle-left {
-          padding-left: 2em;
+          padding-left: $box-angle-size * 4;
           &:after {
-            left: 0.75em;
+            left: $box-angle-size * 1.5;
             transform: translateY(-50%) rotate(-135deg);
           }
         }
