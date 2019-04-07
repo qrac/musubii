@@ -229,6 +229,11 @@ $button-line-height: 1.5 !default;
 $button-transition: $global-transition !default;
 $button-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
+// Button Angle
+$button-angle-size: 0.5em !default;
+$button-angle-border-width: 2px !default;
+$button-angle-border-color: $convert-border-1 !default;
+
 // Button Round
 $button-round-border-radius: $radius-full !default;
 
@@ -244,7 +249,7 @@ $button-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
   0 4px 12px 0 $convert-shadow-alpha !default;
 
 // Pattern - Button Custom
-$pattern-button-custom: round, circle, floating !default;
+$pattern-button-custom: angle, round, circle, floating !default;
 
 // Button Plain
 $button-plain-default-background-color: $convert-background-2 !default;
@@ -281,33 +286,6 @@ $pattern-button-plain: (
   danger: (
     background-color: $button-plain-danger-background-color,
     hover-background-color: $button-plain-danger-hover-background-color
-  )
-) !default;
-
-// Button Melt
-$button-melt-default-hover-background-color: $convert-background-alpha !default;
-$button-melt-primary-text-color: $convert-primary-strong !default;
-$button-melt-info-text-color: $convert-info-strong !default;
-$button-melt-success-text-color: $convert-success-strong !default;
-$button-melt-warning-text-color: $convert-warning-strong !default;
-$button-melt-danger-text-color: $convert-danger-strong !default;
-
-// Pattern - Button Melt
-$pattern-button-melt: (
-  primary: (
-    text-color: $button-melt-primary-text-color
-  ),
-  info: (
-    text-color: $button-melt-info-text-color
-  ),
-  success: (
-    text-color: $button-melt-success-text-color
-  ),
-  warning: (
-    text-color: $button-melt-warning-text-color
-  ),
-  danger: (
-    text-color: $button-melt-danger-text-color
   )
 ) !default;
 
@@ -360,8 +338,35 @@ $pattern-button-outline: (
   )
 ) !default;
 
+// Button Melt
+$button-melt-default-hover-background-color: $convert-background-alpha !default;
+$button-melt-primary-text-color: $convert-primary-strong !default;
+$button-melt-info-text-color: $convert-info-strong !default;
+$button-melt-success-text-color: $convert-success-strong !default;
+$button-melt-warning-text-color: $convert-warning-strong !default;
+$button-melt-danger-text-color: $convert-danger-strong !default;
+
+// Pattern - Button Melt
+$pattern-button-melt: (
+  primary: (
+    text-color: $button-melt-primary-text-color
+  ),
+  info: (
+    text-color: $button-melt-info-text-color
+  ),
+  success: (
+    text-color: $button-melt-success-text-color
+  ),
+  warning: (
+    text-color: $button-melt-warning-text-color
+  ),
+  danger: (
+    text-color: $button-melt-danger-text-color
+  )
+) !default;
+
 // Pattern - Button Style
-$pattern-button-style: plain, melt, outline !default;
+$pattern-button-style: plain, outline, melt !default;
 
 // Button Disabled
 $button-disabled-background-color: $convert-disabled-background-color !default;

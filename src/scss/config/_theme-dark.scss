@@ -48,7 +48,7 @@ $theme-dark-background-4: $grey-800 !default;
 $theme-dark-background-alpha: $light-9 !default;
 
 $theme-dark-border: $grey-700 !default;
-$theme-dark-border-1: $grey-600 !default;
+$theme-dark-border-1: $light-6 !default;
 
 $theme-dark-shadow: $indigo-a400 !default;
 $theme-dark-shadow-alpha: rgba($theme-dark-shadow, 0.7) !default;
@@ -60,7 +60,7 @@ $theme-dark-focus-alpha: rgba($theme-focus, 0.5) !default;
 $theme-dark-focus-alpha-thin: rgba($theme-focus, 0.36) !default;
 
 $theme-dark-disabled-background-color: $grey-800 !default;
-$theme-dark-disabled-border-color: $light-8 !default;
+$theme-dark-disabled-border-color: $grey-600 !default;
 $theme-dark-disabled-text-color: $light-6 !default;
 
 $theme-dark-body-background-color: $grey-900 !default;

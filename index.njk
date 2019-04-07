@@ -696,14 +696,6 @@
           </div>
         </section>
         <section>
-          <h3 class="demo-h3">Melt</h3>
-          <div class="demo-area">
-            <div class="demo-line-box">
-              {{ buttons(class="is-melt") }}
-            </div>
-          </div>
-        </section>
-        <section>
           <h3 class="demo-h3">Outline</h3>
           <div class="demo-area">
             <div class="demo-line-box">
@@ -712,10 +704,34 @@
           </div>
         </section>
         <section>
-          <h3 class="demo-h3">Floating</h3>
+          <h3 class="demo-h3">Melt</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              {{ buttons(class="is-plain is-floating") }}
+              {{ buttons(class="is-melt") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Angle</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {% macro buttonsAngle(class) %}
+                <div class="box is-flex is-space-row-xs is-space-column-xs">
+                  <button class="button {{ class }} is-mobile-12 is-tablet-0" type="button">戻る</button>
+                  <button class="button {{ class }} is-mobile-12 is-tablet-0 is-primary" type="button">決定</button>
+                  <button class="button {{ class }} is-mobile-12 is-tablet-0 is-info" type="button">情報</button>
+                  <button class="button {{ class }} is-mobile-12 is-tablet-0 is-success" type="button">登録</button>
+                  <button class="button {{ class }} is-mobile-12 is-tablet-0 is-warning" type="button">注意</button>
+                  <button class="button {{ class }} is-mobile-12 is-tablet-0 is-danger" type="button">削除</button>
+                  <button class="button {{ class }} is-mobile-12 is-tablet-0 is-disabled" type="button">不可</button>
+                </div>
+              {% endmacro %}
+              {{ buttonsAngle(class="is-plain is-angle-right") }}
+              {{ buttonsAngle(class="is-outline is-angle-right") }}
+              {{ buttonsAngle(class="is-melt is-angle-right") }}
+              {{ buttonsAngle(class="is-plain is-angle-left") }}
+              {{ buttonsAngle(class="is-outline is-angle-left") }}
+              {{ buttonsAngle(class="is-melt is-angle-left") }}
             </div>
           </div>
         </section>
@@ -725,6 +741,7 @@
             <div class="demo-line-box">
               {{ buttons(class="is-plain is-round") }}
               {{ buttons(class="is-outline is-round") }}
+              {{ buttons(class="is-melt is-round") }}
             </div>
           </div>
         </section>
@@ -759,6 +776,15 @@
               {% endmacro %}
               {{ buttonsCircle(class="is-plain") }}
               {{ buttonsCircle(class="is-outline") }}
+              {{ buttonsCircle(class="is-melt") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Floating</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ buttons(class="is-plain is-floating") }}
             </div>
           </div>
         </section>

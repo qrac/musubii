@@ -19,6 +19,7 @@
 @include export-button {
   #{$button-class} {
     cursor: pointer;
+    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +49,71 @@
 @include export-button {
   #{$button-class} {
     @each $custom in $pattern-button-custom {
+      @if $custom == "angle" {
+        &.is-angle-right,
+        &.is-angle-left {
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: $button-angle-size;
+            height: $button-angle-size;
+            border-top: $button-angle-border-width
+              solid
+              $button-angle-border-color;
+            border-right: $button-angle-border-width
+              solid
+              $button-angle-border-color;
+            z-index: 2;
+          }
+        }
+        &.is-angle-right {
+          &:after {
+            right: $button-angle-size * 1.5;
+            transform: translateY(-50%) rotate(45deg);
+          }
+        }
+        &.is-angle-left {
+          &:after {
+            left: $button-angle-size * 1.5;
+            transform: translateY(-50%) rotate(-135deg);
+          }
+        }
+        &[class*="is-angle-"] {
+          @each $style in $pattern-button-style {
+            @if $style == "plain" {
+              &.is-plain {
+                @each $key, $value in $pattern-button-plain {
+                  &.is-#{$key}:after {
+                    @extend %angle-border-current-color;
+                  }
+                }
+              }
+            }
+            @if $style == "outline" {
+              &.is-outline {
+                @each $key, $value in $pattern-button-outline {
+                  &.is-#{$key}:after {
+                    @extend %angle-border-current-color;
+                  }
+                }
+              }
+            }
+            @if $style == "melt" {
+              &.is-melt {
+                @each $key, $value in $pattern-button-melt {
+                  &.is-#{$key}:after {
+                    @extend %angle-border-current-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &%angle-border-current-color {
+          border-color: currentColor;
+        }
+      }
       @if $custom == "round" {
         &.is-round {
           border-radius: $button-round-border-radius;
@@ -55,7 +121,6 @@
       }
       @if $custom == "circle" {
         &.is-circle {
-          position: relative;
           width: $button-circle-width;
           height: $button-circle-height;
           padding: 0;
