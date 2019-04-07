@@ -60,6 +60,9 @@
           box-shadow: $card-floating-shadow;
           &.is-link,
           &.is-zoom {
+            &:hover {
+              box-shadow: $card-floating-hover-shadow;
+            }
             &:focus {
               box-shadow: $card-floating-focus-shadow;
               outline: none;
