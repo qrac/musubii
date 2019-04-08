@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.18 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.19 MIT by Qrac */
 
 *,
 ::before,
@@ -947,7 +947,6 @@ iframe {
 .joint > .input[type="week"],
 .joint > .input[type="time"],
 .joint > .input[type="number"] {
-  position: relative;
   overflow: hidden;
 }
 
@@ -1631,6 +1630,7 @@ iframe {
 }
 
 .badge {
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1893,6 +1893,7 @@ iframe {
 .input[type="week"],
 .input[type="time"],
 .input[type="number"] {
+  position: relative;
   max-width: 100%;
   height: calc(2.5em + (1px * 2));
   padding: 0.5em 0.75em;
@@ -2124,6 +2125,7 @@ iframe {
 }
 
 .textarea {
+  position: relative;
   background-color: var(--background-1);
   border: 1px solid var(--border);
   border-radius: 2px;
@@ -2401,6 +2403,7 @@ svg.icon {
 }
 
 .alert {
+  position: relative;
   padding: 0.675em 0.875em;
   background-color: var(--background-2);
   border: 1px solid var(--border);
@@ -2430,6 +2433,56 @@ svg.icon {
 .alert.is-danger {
   background-color: var(--alert-danger-background-color);
   border-color: var(--alert-danger-border-color);
+}
+
+.alert[class*="is-tail-"]:before,
+.alert[class*="is-tail-"]:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.alert.is-tail-top-left:before,
+.alert.is-tail-top-left:after {
+  left: 10%;
+}
+
+.alert.is-tail-top-center:before,
+.alert.is-tail-top-center:after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.alert.is-tail-top-right:before,
+.alert.is-tail-top-right:after {
+  right: 10%;
+}
+
+.alert[class*="is-tail-top-"]:before,
+.alert[class*="is-tail-top-"]:after {
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+}
+
+.alert[class*="is-tail-top-"]:before {
+  top: -0.5em;
+  border-bottom: 0.5em solid var(--border);
+}
+
+.alert[class*="is-tail-top-"]:after {
+  top: calc(-0.5em + 1px);
+  border-bottom: 0.5em solid var(--background-2);
+}
+
+.alert.is-danger[class*="is-tail-top-"]:before {
+  border-bottom: 0.5em solid var(--alert-danger-border-color);
+}
+
+.alert.is-danger[class*="is-tail-top-"]:after {
+  border-bottom: 0.5em solid var(--alert-danger-background-color);
 }
 
 .wysiwyg h1,
