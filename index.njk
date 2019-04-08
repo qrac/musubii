@@ -879,6 +879,91 @@
       </section>
 
       <section>
+        <h2 class="demo-h2">Badge</h2>
+        <section>
+          <h3 class="demo-h3">Plain</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {% macro badges(class) %}
+                <div class="box is-flex is-space-row-xs is-space-column-xs">
+                  <span class="badge {{ class }}">任意</span>
+                  <span class="badge {{ class }} is-primary">推奨</span>
+                  <span class="badge {{ class }} is-info">情報</span>
+                  <span class="badge {{ class }} is-success">重要</span>
+                  <span class="badge {{ class }} is-warning">注意</span>
+                  <span class="badge {{ class }} is-danger">必須</span>
+                </div>
+              {% endmacro %}
+              {{ badges(class="is-plain") }}
+              {{ badges(class="is-plain is-strong") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Outline</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ badges(class="is-outline") }}
+              {{ badges(class="is-outline is-strong") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Round</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ badges(class="is-plain is-round") }}
+              {{ badges(class="is-plain is-round is-strong") }}
+              {{ badges(class="is-outline is-round") }}
+              {{ badges(class="is-outline is-round is-strong") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Circle</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {% macro badgesCircle(class) %}
+                <div class="box is-flex is-space-row-xs is-space-column-xs">
+                  <span class="badge {{class}} is-circle">
+                    <i aria-hidden="true" class="fas fa-tag"></i>
+                  </span>
+                  <span class="badge {{class}} is-circle is-primary">
+                    <i aria-hidden="true" class="fas fa-check"></i>
+                  </span>
+                  <span class="badge {{class}} is-circle is-info">
+                    <i aria-hidden="true" class="fas fa-info"></i>
+                  </span>
+                  <span class="badge {{class}} is-circle is-success">
+                    <i aria-hidden="true" class="fas fa-check"></i>
+                  </span>
+                  <span class="badge {{class}} is-circle is-warning">
+                    <i aria-hidden="true" class="fas fa-exclamation"></i>
+                  </span>
+                  <span class="badge {{class}} is-circle is-danger">
+                    <i aria-hidden="true" class="fas fa-minus"></i>
+                  </span>
+                </div>
+              {% endmacro %}
+              {{ badgesCircle(class="is-plain") }}
+              {{ badgesCircle(class="is-outline") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Joint</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              <div class="joint">
+                <span class="badge is-plain">任意</span>
+                <span class="badge is-plain is-primary">推奨</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section>
         <h2 class="demo-h2">List</h2>
         <section>
           <h3 class="demo-h3">Disc</h3>

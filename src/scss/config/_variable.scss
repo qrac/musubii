@@ -13,7 +13,7 @@ $global-transition: ease-out 0.12s !default;
 $body-background-color: $convert-body-background-color !default;
 $body-text-color: $convert-body-text-color !default;
 $body-font-family: $font-sans !default;
-$body-line-height: 1.5 !default;
+$body-line-height: $line-height-md !default;
 
 //----------------------------------------------------
 // / Layout - Section
@@ -225,7 +225,7 @@ $button-padding: 0.5em 1em !default;
 $button-border-width: 1px !default;
 $button-border-radius: $radius-sm !default;
 $button-paint-text-color: $convert-button-paint-text-color !default;
-$button-line-height: 1.5 !default;
+$button-line-height: $line-height-md !default;
 $button-transition: $global-transition !default;
 $button-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
@@ -376,7 +376,93 @@ $button-disabled-text-color: $convert-disabled-text-color !default;
 // / Module - Badge
 //----------------------------------------------------
 
-// none
+// Badge
+$badge-padding: 0.25em 0.375em !default;
+$badge-border-width: 1px !default;
+$badge-border-radius: $radius-sm !default;
+$badge-paint-text-color: $convert-button-paint-text-color !default;
+$badge-line-height: $line-height-xs !default;
+$badge-transition: $global-transition !default;
+$badge-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
+
+// Badge Round
+$badge-round-border-radius: $radius-full !default;
+
+// Badge Circle
+$badge-circle-width: calc(1.75em + 1px * 2) !default;
+$badge-circle-height: calc(1.75em + 1px * 2) !default;
+$badge-circle-border-radius: $radius-full !default;
+
+// Pattern - Badge Custom
+$pattern-badge-custom: round, circle !default;
+
+// Badge Plain
+$badge-plain-default-background-color: $convert-background-2 !default;
+$badge-plain-primary-background-color: $convert-primary !default;
+$badge-plain-info-background-color: $convert-info !default;
+$badge-plain-success-background-color: $convert-success !default;
+$badge-plain-warning-background-color: $convert-warning !default;
+$badge-plain-danger-background-color: $convert-danger !default;
+
+// Pattern - Badge Plain
+$pattern-badge-plain: (
+  primary: (
+    background-color: $badge-plain-primary-background-color
+  ),
+  info: (
+    background-color: $badge-plain-info-background-color
+  ),
+  success: (
+    background-color: $badge-plain-success-background-color
+  ),
+  warning: (
+    background-color: $badge-plain-warning-background-color
+  ),
+  danger: (
+    background-color: $badge-plain-danger-background-color
+  )
+) !default;
+
+// Badge Outline
+$badge-outline-default-background-color: $convert-background !default;
+$badge-outline-default-border-color: $convert-border !default;
+$badge-outline-primary-border-color: $convert-primary !default;
+$badge-outline-primary-text-color: $convert-primary-strong !default;
+$badge-outline-info-border-color: $convert-info !default;
+$badge-outline-info-text-color: $convert-info-strong !default;
+$badge-outline-success-border-color: $convert-success !default;
+$badge-outline-success-text-color: $convert-success-strong !default;
+$badge-outline-warning-border-color: $convert-warning !default;
+$badge-outline-warning-text-color: $convert-warning-strong !default;
+$badge-outline-danger-border-color: $convert-danger !default;
+$badge-outline-danger-text-color: $convert-danger-strong !default;
+
+// Pattern - Badge Outline
+$pattern-badge-outline: (
+  primary: (
+    border-color: $badge-outline-primary-border-color,
+    text-color: $badge-outline-primary-text-color
+  ),
+  info: (
+    border-color: $badge-outline-info-border-color,
+    text-color: $badge-outline-info-text-color
+  ),
+  success: (
+    border-color: $badge-outline-success-border-color,
+    text-color: $badge-outline-success-text-color
+  ),
+  warning: (
+    border-color: $badge-outline-warning-border-color,
+    text-color: $badge-outline-warning-text-color
+  ),
+  danger: (
+    border-color: $badge-outline-danger-border-color,
+    text-color: $badge-outline-danger-text-color
+  )
+) !default;
+
+// Pattern - Badge Style
+$pattern-badge-style: plain, outline !default;
 
 //----------------------------------------------------
 // / Module - List
@@ -431,7 +517,7 @@ $input-background-color: $convert-background-1 !default;
 $input-border-width: 1px !default;
 $input-border-color: $convert-border !default;
 $input-border-radius: $radius-xs !default;
-$input-line-height: 1.5 !default;
+$input-line-height: $line-height-md !default;
 $input-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
 $input-transition: $global-transition !default;
 
@@ -572,7 +658,7 @@ $wysiwyg-h5-font-size: 0.875em !default;
 $wysiwyg-h6-font-size: 0.75em !default;
 
 // WYSIWYG Text
-$wysiwyg-text-line-height: 1.9 !default;
+$wysiwyg-text-line-height: $line-height-xl !default;
 
 // WYSIWYG Small
 $wysiwyg-small-font-size: 80% !default;

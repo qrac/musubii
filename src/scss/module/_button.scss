@@ -31,6 +31,9 @@
     line-height: $button-line-height;
     text-align: center;
     transition: $button-transition;
+    &.is-strong {
+      font-weight: 700;
+    }
     &.is-disabled,
     &[disabled] {
       cursor: not-allowed;
@@ -176,27 +179,6 @@
           }
         }
       }
-      @if $style == "melt" {
-        &.is-melt {
-          background-color: transparent;
-          border: $button-border-width solid transparent;
-          &:hover {
-            background-color: $button-melt-default-hover-background-color;
-          }
-          @each $key, $value in $pattern-button-melt {
-            &.is-#{$key} {
-              color: map-get($value, text-color);
-            }
-          }
-          &.is-disabled,
-          &.is-disabled:hover,
-          &[disabled],
-          &[disabled]:hover {
-            color: $button-disabled-text-color;
-            background-color: transparent;
-          }
-        }
-      }
       @if $style == "outline" {
         &.is-outline {
           background-color: $button-outline-default-background-color;
@@ -223,6 +205,27 @@
           &[disabled]:hover {
             background-color: $button-disabled-background-color;
             color: $button-disabled-text-color;
+          }
+        }
+      }
+      @if $style == "melt" {
+        &.is-melt {
+          background-color: transparent;
+          border: $button-border-width solid transparent;
+          &:hover {
+            background-color: $button-melt-default-hover-background-color;
+          }
+          @each $key, $value in $pattern-button-melt {
+            &.is-#{$key} {
+              color: map-get($value, text-color);
+            }
+          }
+          &.is-disabled,
+          &.is-disabled:hover,
+          &[disabled],
+          &[disabled]:hover {
+            color: $button-disabled-text-color;
+            background-color: transparent;
           }
         }
       }

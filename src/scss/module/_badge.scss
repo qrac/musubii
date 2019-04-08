@@ -3,5 +3,96 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Export Setting
+//----------------------------------------------------
+
+@mixin export-badge {
+  @if $use-component-badge == true {
+    @content;
+  }
+}
+
+//----------------------------------------------------
 // / Basic
 //----------------------------------------------------
+
+@include export-badge {
+  .badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    white-space: nowrap;
+    padding: $badge-padding;
+    border-radius: $badge-border-radius;
+    color: $body-text-color;
+    text-align: center;
+    line-height: $badge-line-height;
+    &.is-strong {
+      font-weight: 700;
+    }
+    &.is-plain {
+      border: 1px solid transparent;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Custom
+//----------------------------------------------------
+
+@include export-badge {
+  .badge {
+    @each $custom in $pattern-badge-custom {
+      @if $custom == "round" {
+        &.is-round {
+          border-radius: $badge-round-border-radius;
+        }
+      }
+      @if $custom == "circle" {
+        &.is-circle {
+          width: $badge-circle-width;
+          height: $badge-circle-height;
+          padding: 0;
+          border-radius: $badge-circle-border-radius;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style
+//----------------------------------------------------
+
+@include export-badge {
+  .badge {
+    @each $style in $pattern-badge-style {
+      @if $style == "plain" {
+        &.is-plain {
+          background-color: $badge-plain-default-background-color;
+          border: $badge-border-width solid transparent;
+          @each $key, $value in $pattern-badge-plain {
+            &.is-#{$key} {
+              background-color: map-get($value, background-color);
+              color: $badge-paint-text-color;
+            }
+          }
+        }
+      }
+      @if $style == "outline" {
+        &.is-outline {
+          background-color: $badge-outline-default-background-color;
+          border: $badge-border-width solid $badge-outline-default-border-color;
+          @each $key, $value in $pattern-badge-outline {
+            &.is-#{$key} {
+              border-color: map-get($value, border-color);
+              color: map-get($value, text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

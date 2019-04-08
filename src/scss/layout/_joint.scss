@@ -22,6 +22,7 @@
     flex-wrap: nowrap;
     > {
       #{$button-class},
+      .badge,
       .input[type="text"],
       .input[type="search"],
       .input[type="url"],
@@ -78,6 +79,7 @@
     }
     > {
       #{$button-class},
+      .badge,
       .input[type="text"],
       .input[type="search"],
       .input[type="url"],
