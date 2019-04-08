@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.17 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.18 MIT by Qrac */
 
 *,
 ::before,
@@ -934,6 +934,7 @@ iframe {
 }
 
 .joint > .button,
+.joint > .badge,
 .joint > .input[type="text"],
 .joint > .input[type="search"],
 .joint > .input[type="url"],
@@ -951,6 +952,7 @@ iframe {
 }
 
 .joint > .button:not(:last-child),
+.joint > .badge:not(:last-child),
 .joint > .input[type="text"]:not(:last-child),
 .joint > .input[type="search"]:not(:last-child),
 .joint > .input[type="url"]:not(:last-child),
@@ -968,6 +970,7 @@ iframe {
 }
 
 .joint > .button:not(:first-child),
+.joint > .badge:not(:first-child),
 .joint > .input[type="text"]:not(:first-child),
 .joint > .input[type="search"]:not(:first-child),
 .joint > .input[type="url"]:not(:first-child),
@@ -985,6 +988,7 @@ iframe {
 }
 
 .joint > .button:nth-child(2),
+.joint > .badge:nth-child(2),
 .joint > .input[type="text"]:nth-child(2),
 .joint > .input[type="search"]:nth-child(2),
 .joint > .input[type="url"]:nth-child(2),
@@ -1002,6 +1006,8 @@ iframe {
 
 .joint > .button:nth-child(2) ~ .button,
 .joint > .button:nth-child(2) ~ .input,
+.joint > .badge:nth-child(2) ~ .button,
+.joint > .badge:nth-child(2) ~ .input,
 .joint > .input[type="text"]:nth-child(2) ~ .button,
 .joint > .input[type="text"]:nth-child(2) ~ .input,
 .joint > .input[type="search"]:nth-child(2) ~ .button,
@@ -1052,6 +1058,7 @@ iframe {
 }
 
 .joint > .button:focus,
+.joint > .badge:focus,
 .joint > .input[type="text"]:focus,
 .joint > .input[type="search"]:focus,
 .joint > .input[type="url"]:focus,
@@ -1371,6 +1378,10 @@ iframe {
   transition: ease-out 0.12s;
 }
 
+.button.is-strong {
+  font-weight: 700;
+}
+
 .button.is-disabled,
 .button[disabled] {
   cursor: not-allowed;
@@ -1617,6 +1628,99 @@ iframe {
 .button.is-melt[disabled]:hover {
   color: var(--disabled-text-color);
   background-color: transparent;
+}
+
+.badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  white-space: nowrap;
+  padding: 0.25em 0.375em;
+  border-radius: 3px;
+  color: var(--body-text-color);
+  text-align: center;
+  line-height: 1.25;
+}
+
+.badge.is-strong {
+  font-weight: 700;
+}
+
+.badge.is-plain {
+  border: 1px solid transparent;
+}
+
+.badge.is-round {
+  border-radius: 999em;
+}
+
+.badge.is-circle {
+  width: calc(1.75em + 1px * 2);
+  height: calc(1.75em + 1px * 2);
+  padding: 0;
+  border-radius: 999em;
+  line-height: 1;
+}
+
+.badge.is-plain {
+  background-color: var(--background-2);
+  border: 1px solid transparent;
+}
+
+.badge.is-plain.is-primary {
+  background-color: var(--primary);
+  color: var(--button-paint-text-color);
+}
+
+.badge.is-plain.is-info {
+  background-color: var(--info);
+  color: var(--button-paint-text-color);
+}
+
+.badge.is-plain.is-success {
+  background-color: var(--success);
+  color: var(--button-paint-text-color);
+}
+
+.badge.is-plain.is-warning {
+  background-color: var(--warning);
+  color: var(--button-paint-text-color);
+}
+
+.badge.is-plain.is-danger {
+  background-color: var(--danger);
+  color: var(--button-paint-text-color);
+}
+
+.badge.is-outline {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+}
+
+.badge.is-outline.is-primary {
+  border-color: var(--primary);
+  color: var(--primary-strong);
+}
+
+.badge.is-outline.is-info {
+  border-color: var(--info);
+  color: var(--info-strong);
+}
+
+.badge.is-outline.is-success {
+  border-color: var(--success);
+  color: var(--success-strong);
+}
+
+.badge.is-outline.is-warning {
+  border-color: var(--warning);
+  color: var(--warning-strong);
+}
+
+.badge.is-outline.is-danger {
+  border-color: var(--danger);
+  color: var(--danger-strong);
 }
 
 .list > .item:not(:first-child) {
