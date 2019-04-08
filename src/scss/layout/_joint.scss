@@ -35,7 +35,6 @@
       .input[type="week"],
       .input[type="time"],
       .input[type="number"] {
-        position: relative;
         overflow: hidden;
         &:not(:last-child) {
           border-top-right-radius: 0;

@@ -18,6 +18,7 @@
 
 @include export-alert {
   .alert {
+    position: relative;
     padding: $alert-padding;
     background-color: $alert-default-background-color;
     border: $alert-border-width solid $alert-default-border-color;
@@ -26,6 +27,227 @@
       &.is-#{$key} {
         background-color: map-get($value, background-color);
         border-color: map-get($value, border-color);
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Tail
+//----------------------------------------------------
+
+@include export-alert {
+  .alert {
+    &[class*="is-tail-"] {
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+      }
+    }
+    @each $way in $pattern-alert-tail-way {
+      @if $way == "top" {
+        &.is-tail-top-left {
+          &:before,
+          &:after {
+            left: 10%;
+          }
+        }
+        &.is-tail-top-center {
+          &:before,
+          &:after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        &.is-tail-top-right {
+          &:before,
+          &:after {
+            right: 10%;
+          }
+        }
+        &[class*="is-tail-top-"] {
+          &:before,
+          &:after {
+            border-left: $alert-tail-size solid transparent;
+            border-right: $alert-tail-size solid transparent;
+          }
+          &:before {
+            top: -$alert-tail-size;
+            border-bottom: $alert-tail-size solid $alert-default-border-color;
+          }
+          &:after {
+            top: calc(-#{$alert-tail-size} + #{$alert-border-width});
+            border-bottom: $alert-tail-size
+              solid
+              $alert-default-background-color;
+          }
+        }
+        @each $key, $value in $pattern-alert-tail {
+          &.is-#{$key}[class*="is-tail-top-"] {
+            &:before {
+              border-bottom: $alert-tail-size
+                solid
+                map-get($value, border-color);
+            }
+            &:after {
+              border-bottom: $alert-tail-size
+                solid
+                map-get($value, background-color);
+            }
+          }
+        }
+      }
+      @if $way == "right" {
+        &.is-tail-right-top {
+          &:before,
+          &:after {
+            top: 10%;
+          }
+        }
+        &.is-tail-right-center {
+          &:before,
+          &:after {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        &.is-tail-right-bottom {
+          &:before,
+          &:after {
+            bottom: 10%;
+          }
+        }
+        &[class*="is-tail-right-"] {
+          &:before,
+          &:after {
+            border-top: $alert-tail-size solid transparent;
+            border-bottom: $alert-tail-size solid transparent;
+          }
+          &:before {
+            right: -$alert-tail-size;
+            border-left: $alert-tail-size solid $alert-default-border-color;
+          }
+          &:after {
+            right: calc(-#{$alert-tail-size} + #{$alert-border-width});
+            border-left: $alert-tail-size solid $alert-default-background-color;
+          }
+        }
+        @each $key, $value in $pattern-alert-tail {
+          &.is-#{$key}[class*="is-tail-right-"] {
+            &:before {
+              border-left: $alert-tail-size solid map-get($value, border-color);
+            }
+            &:after {
+              border-left: $alert-tail-size
+                solid
+                map-get($value, background-color);
+            }
+          }
+        }
+      }
+      @if $way == "bottom" {
+        &.is-tail-bottom-left {
+          &:before,
+          &:after {
+            left: 10%;
+          }
+        }
+        &.is-tail-bottom-center {
+          &:before,
+          &:after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        &.is-tail-bottom-right {
+          &:before,
+          &:after {
+            right: 10%;
+          }
+        }
+        &[class*="is-tail-bottom-"] {
+          &:before,
+          &:after {
+            border-left: $alert-tail-size solid transparent;
+            border-right: $alert-tail-size solid transparent;
+          }
+          &:before {
+            bottom: -$alert-tail-size;
+            border-top: $alert-tail-size solid $alert-default-border-color;
+          }
+          &:after {
+            bottom: calc(-#{$alert-tail-size} + #{$alert-border-width});
+            border-top: $alert-tail-size solid $alert-default-background-color;
+          }
+        }
+        @each $key, $value in $pattern-alert-tail {
+          &.is-#{$key}[class*="is-tail-bottom-"] {
+            &:before {
+              border-top: $alert-tail-size solid map-get($value, border-color);
+            }
+            &:after {
+              border-top: $alert-tail-size
+                solid
+                map-get($value, background-color);
+            }
+          }
+        }
+      }
+      @if $way == "left" {
+        &.is-tail-left-top {
+          &:before,
+          &:after {
+            top: 10%;
+          }
+        }
+        &.is-tail-left-center {
+          &:before,
+          &:after {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        &.is-tail-left-bottom {
+          &:before,
+          &:after {
+            bottom: 10%;
+          }
+        }
+        &[class*="is-tail-left-"] {
+          &:before,
+          &:after {
+            border-top: $alert-tail-size solid transparent;
+            border-bottom: $alert-tail-size solid transparent;
+          }
+          &:before {
+            left: -$alert-tail-size;
+            border-right: $alert-tail-size solid $alert-default-border-color;
+          }
+          &:after {
+            left: calc(-#{$alert-tail-size} + #{$alert-border-width});
+            border-right: $alert-tail-size
+              solid
+              $alert-default-background-color;
+          }
+        }
+        @each $key, $value in $pattern-alert-tail {
+          &.is-#{$key}[class*="is-tail-left-"] {
+            &:before {
+              border-right: $alert-tail-size
+                solid
+                map-get($value, border-color);
+            }
+            &:after {
+              border-right: $alert-tail-size
+                solid
+                map-get($value, background-color);
+            }
+          }
+        }
       }
     }
   }

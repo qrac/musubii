@@ -644,6 +644,20 @@ $pattern-alert: (
   )
 ) !default;
 
+// Alert Tail
+$alert-tail-size: 0.5em !default;
+
+// Pattern - Alert Tail
+$pattern-alert-tail: (
+  danger: (
+    background-color: $alert-danger-background-color,
+    border-color: $alert-danger-border-color
+  )
+) !default;
+
+// Pattern - Alert Tail Way
+$pattern-alert-tail-way: top !default;
+
 //----------------------------------------------------
 // Module - WYSIWYG
 //----------------------------------------------------

@@ -88,7 +88,7 @@
               &.is-plain {
                 @each $key, $value in $pattern-button-plain {
                   &.is-#{$key}:after {
-                    @extend %angle-border-current-color;
+                    @extend %button-angle-border-current-color;
                   }
                 }
               }
@@ -97,7 +97,7 @@
               &.is-outline {
                 @each $key, $value in $pattern-button-outline {
                   &.is-#{$key}:after {
-                    @extend %angle-border-current-color;
+                    @extend %button-angle-border-current-color;
                   }
                 }
               }
@@ -106,14 +106,14 @@
               &.is-melt {
                 @each $key, $value in $pattern-button-melt {
                   &.is-#{$key}:after {
-                    @extend %angle-border-current-color;
+                    @extend %button-angle-border-current-color;
                   }
                 }
               }
             }
           }
         }
-        &%angle-border-current-color {
+        &%button-angle-border-current-color {
           border-color: currentColor;
         }
       }
