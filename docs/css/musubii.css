@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.20 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.21 MIT by Qrac */
 
 *,
 ::before,
@@ -335,8 +335,11 @@ textarea,
   --table-paint-text-color: white;
   --table-spot-background-color: #f8f1a5;
   --table-danger-background-color: #f5d1d1;
-  --input-readonly-background-color: transparent;
   --input-placeholder-color: rgba(0, 0, 0, 0.26);
+  --input-success-background-color: #dbf5db;
+  --input-success-border-color: #7edd7e;
+  --input-danger-background-color: #fbeaea;
+  --input-danger-border-color: #eeafaf;
   --checkbox-before-border-color: white;
   --alert-primary-background-color: #dff4f6;
   --alert-primary-border-color: #9cdbe2;
@@ -422,8 +425,11 @@ textarea,
   --table-paint-text-color: rgba(255, 255, 255, 0.7);
   --table-spot-background-color: rgba(236, 189, 19, 0.4);
   --table-danger-background-color: rgba(202, 43, 43, 0.4);
-  --input-readonly-background-color: transparent;
   --input-placeholder-color: rgba(255, 255, 255, 0.26);
+  --input-success-background-color: rgba(31, 117, 31, 0.25);
+  --input-success-border-color: #1f751f;
+  --input-danger-background-color: rgba(202, 43, 43, 0.25);
+  --input-danger-border-color: #ca2b2b;
   --checkbox-before-border-color: rgba(255, 255, 255, 0.87);
   --alert-primary-background-color: rgba(41, 132, 142, 0.075);
   --alert-primary-border-color: #29848e;
@@ -2103,7 +2109,7 @@ iframe {
 .input[type="time"].is-success,
 .input[type="number"].is-success,
 .textarea.is-success {
-  border-color: var(--alert-success-border-color);
+  border-color: var(--input-success-border-color);
 }
 
 .input[type="text"].is-danger,
@@ -2119,8 +2125,8 @@ iframe {
 .input[type="time"].is-danger,
 .input[type="number"].is-danger,
 .textarea.is-danger {
-  background-color: var(--alert-danger-background-color);
-  border-color: var(--alert-danger-border-color);
+  background-color: var(--input-danger-background-color);
+  border-color: var(--input-danger-border-color);
 }
 
 .input[type="text"].is-plain,
@@ -2200,7 +2206,7 @@ iframe {
 .input[type="time"].is-plain.is-success,
 .input[type="number"].is-plain.is-success,
 .textarea.is-plain.is-success {
-  background-color: var(--alert-success-background-color);
+  background-color: var(--input-success-background-color);
 }
 
 .input[type="text"].is-plain.is-danger,
@@ -2216,7 +2222,7 @@ iframe {
 .input[type="time"].is-plain.is-danger,
 .input[type="number"].is-plain.is-danger,
 .textarea.is-plain.is-danger {
-  background-color: var(--alert-danger-background-color);
+  background-color: var(--input-danger-background-color);
 }
 
 .input[type="text"].is-underline,
@@ -2313,7 +2319,7 @@ iframe {
 .input[type="time"].is-underline.is-success,
 .input[type="number"].is-underline.is-success,
 .textarea.is-underline.is-success {
-  border-bottom-color: var(--alert-success-border-color);
+  border-bottom-color: var(--input-success-border-color);
 }
 
 .input[type="text"].is-underline.is-danger,
@@ -2329,7 +2335,7 @@ iframe {
 .input[type="time"].is-underline.is-danger,
 .input[type="number"].is-underline.is-danger,
 .textarea.is-underline.is-danger {
-  border-bottom-color: var(--alert-danger-border-color);
+  border-bottom-color: var(--input-danger-border-color);
 }
 
 .input[type="text"].is-inside,
@@ -2425,7 +2431,7 @@ iframe {
 .input[type="time"].is-inside.is-success,
 .input[type="number"].is-inside.is-success,
 .textarea.is-inside.is-success {
-  background-color: var(--alert-success-background-color);
+  background-color: var(--input-success-background-color);
 }
 
 .input[type="text"].is-inside.is-danger,
@@ -2441,7 +2447,7 @@ iframe {
 .input[type="time"].is-inside.is-danger,
 .input[type="number"].is-inside.is-danger,
 .textarea.is-inside.is-danger {
-  background-color: var(--alert-danger-background-color);
+  background-color: var(--input-danger-background-color);
 }
 
 .input[type="text"],
@@ -2681,12 +2687,12 @@ iframe {
 }
 
 .select.is-success > select {
-  border-color: var(--alert-success-border-color);
+  border-color: var(--input-success-border-color);
 }
 
 .select.is-danger > select {
-  background-color: var(--alert-danger-background-color);
-  border-color: var(--alert-danger-border-color);
+  background-color: var(--input-danger-background-color);
+  border-color: var(--input-danger-border-color);
 }
 
 .select.is-round:not(.is-multiple) > select {
@@ -2708,11 +2714,11 @@ iframe {
 }
 
 .select.is-plain.is-success > select {
-  background-color: var(--alert-success-background-color);
+  background-color: var(--input-success-background-color);
 }
 
 .select.is-plain.is-danger > select {
-  background-color: var(--alert-danger-background-color);
+  background-color: var(--input-danger-background-color);
 }
 
 .select.is-underline > select {
@@ -2736,11 +2742,11 @@ iframe {
 }
 
 .select.is-underline.is-success > select {
-  border-bottom-color: var(--alert-success-border-color);
+  border-bottom-color: var(--input-success-border-color);
 }
 
 .select.is-underline.is-danger > select {
-  border-bottom-color: var(--alert-danger-border-color);
+  border-bottom-color: var(--input-danger-border-color);
 }
 
 .select.is-inside > select {
@@ -2768,11 +2774,11 @@ iframe {
 }
 
 .select.is-inside.is-success > select {
-  background-color: var(--alert-success-background-color);
+  background-color: var(--input-success-background-color);
 }
 
 .select.is-inside.is-danger > select {
-  background-color: var(--alert-danger-background-color);
+  background-color: var(--input-danger-background-color);
 }
 
 .select.is-multiple > select {
