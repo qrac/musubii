@@ -1267,16 +1267,28 @@
           <h3 class="demo-h3">Text</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="text" name="text" placeholder="Text">
-                <input class="input" type="text" name="text" placeholder="Disabled" disabled="disabled">
-                <input class="input" type="text" name="text" value="Readonly" readonly="readonly">
-              </div>
-              <div class="box is-flex is-space-column-xs">
-                <textarea class="textarea" name="textarea"></textarea>
-                <textarea class="textarea" name="textarea" disabled="disabled"></textarea>
-                <textarea class="textarea" name="textarea" readonly="readonly">Readonly</textarea>
-              </div>
+              {% macro inputText(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="text" name="text" placeholder="Text">
+                  <input class="input {{ class }}" type="text" name="text" placeholder="Disabled" disabled="disabled">
+                  <input class="input {{ class }}" type="text" name="text" value="Readonly" readonly="readonly">
+                </div>
+              {% endmacro %}
+              {{ inputText(class="") }}
+              {{ inputText(class="is-plain") }}
+              {{ inputText(class="is-underline") }}
+              {{ inputText(class="is-inside") }}
+              {% macro inputTextarea(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <textarea class="textarea {{ class }}" name="textarea"></textarea>
+                  <textarea class="textarea {{ class }}" name="textarea" disabled="disabled"></textarea>
+                  <textarea class="textarea {{ class }}" name="textarea" readonly="readonly">Readonly</textarea>
+                </div>
+              {% endmacro %}
+              {{ inputTextarea(class="") }}
+              {{ inputTextarea(class="is-plain") }}
+              {{ inputTextarea(class="is-underline") }}
+              {{ inputTextarea(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1284,11 +1296,17 @@
           <h3 class="demo-h3">Password</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="password" name="password">
-                <input class="input" type="password" name="password" disabled="disabled">
-                <input class="input" type="password" name="password" value="Readonly" readonly="readonly">
-              </div>
+              {% macro inputPassword(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="password" name="password">
+                  <input class="input {{ class }}" type="password" name="password" disabled="disabled">
+                  <input class="input {{ class }}" type="password" name="password" value="Readonly" readonly="readonly">
+                </div>
+              {% endmacro %}
+              {{ inputPassword(class="") }}
+              {{ inputPassword(class="is-plain") }}
+              {{ inputPassword(class="is-underline") }}
+              {{ inputPassword(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1296,11 +1314,17 @@
           <h3 class="demo-h3">URL</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="url" name="url" placeholder="example.com">
-                <input class="input" type="url" name="url" placeholder="example.com" disabled="disabled">
-                <input class="input" type="url" name="url" value="example.com" readonly="readonly">
-              </div>
+              {% macro inputUrl(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="url" name="url" placeholder="example.com">
+                  <input class="input {{ class }}" type="url" name="url" placeholder="example.com" disabled="disabled">
+                  <input class="input {{ class }}" type="url" name="url" value="example.com" readonly="readonly">
+                </div>
+              {% endmacro %}
+              {{ inputUrl(class="") }}
+              {{ inputUrl(class="is-plain") }}
+              {{ inputUrl(class="is-underline") }}
+              {{ inputUrl(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1308,11 +1332,17 @@
           <h3 class="demo-h3">Email</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="email" name="email" placeholder="example@gmail.com">
-                <input class="input" type="email" name="email" placeholder="example@gmail.com" disabled="disabled">
-                <input class="input" type="email" name="email" value="example@gmail.com" readonly="readonly">
-              </div>
+              {% macro inputEmail(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="input {{ class }}" type="email" name="email" placeholder="example@gmail.com" disabled="disabled">
+                  <input class="input {{ class }}" type="email" name="email" value="example@gmail.com" readonly="readonly">
+                </div>
+              {% endmacro %}
+              {{ inputEmail(class="") }}
+              {{ inputEmail(class="is-plain") }}
+              {{ inputEmail(class="is-underline") }}
+              {{ inputEmail(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1320,11 +1350,17 @@
           <h3 class="demo-h3">TEL</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000">
-                <input class="input" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000" disabled="disabled">
-                <input class="input" type="tel" name="tel" maxlength="13" value="000-0000-0000" readonly="readonly">
-              </div>
+              {% macro inputTel(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000">
+                  <input class="input {{ class }}" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000" disabled="disabled">
+                  <input class="input {{ class }}" type="tel" name="tel" maxlength="13" value="000-0000-0000" readonly="readonly">
+                </div>
+              {% endmacro %}
+              {{ inputTel(class="") }}
+              {{ inputTel(class="is-plain") }}
+              {{ inputTel(class="is-underline") }}
+              {{ inputTel(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1332,11 +1368,17 @@
           <h3 class="demo-h3">Number</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="number" name="number" maxlength="5" step="100" placeholder="10000">
-                <input class="input" type="number" name="number" maxlength="5" step="100" placeholder="10000" disabled="disabled">
-                <input class="input" type="number" name="number" maxlength="5" step="100" value="10000" readonly="readonly">
-              </div>
+              {% macro inputNumber(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="number" name="number" maxlength="5" step="100" placeholder="10000">
+                  <input class="input {{ class }}" type="number" name="number" maxlength="5" step="100" placeholder="10000" disabled="disabled">
+                  <input class="input {{ class }}" type="number" name="number" maxlength="5" step="100" value="10000" readonly="readonly">
+                </div>
+              {% endmacro %}
+              {{ inputNumber(class="") }}
+              {{ inputNumber(class="is-plain") }}
+              {{ inputNumber(class="is-underline") }}
+              {{ inputNumber(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1344,11 +1386,17 @@
           <h3 class="demo-h3">Search</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="search" name="search" placeholder="Search">
-                <input class="input" type="search" name="search" placeholder="Search" disabled="disabled">
-                <input class="input" type="search" name="search" value="Search" readonly="readonly">
-              </div>
+              {% macro inputSearch(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="search" name="search" placeholder="Search">
+                  <input class="input {{ class }}" type="search" name="search" placeholder="Search" disabled="disabled">
+                  <input class="input {{ class }}" type="search" name="search" value="Search" readonly="readonly">
+                </div>
+              {% endmacro %}
+              {{ inputSearch(class="") }}
+              {{ inputSearch(class="is-plain") }}
+              {{ inputSearch(class="is-underline") }}
+              {{ inputSearch(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1356,18 +1404,36 @@
           <h3 class="demo-h3">Date</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00">
-                <input class="input" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00" disabled="disabled">
-              </div>
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="date" name="date" value="2017-02-02">
-                <input class="input" type="date" name="date" value="2017-02-02" disabled="disabled">
-              </div>
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="month" name="month" value="2017-02">
-                <input class="input" type="month" name="month" value="2017-02" disabled="disabled">
-              </div>
+              {% macro inputDatetimeLocal(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00">
+                  <input class="input {{ class }}" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00" disabled="disabled">
+                </div>
+              {% endmacro %}
+              {{ inputDatetimeLocal(class="") }}
+              {{ inputDatetimeLocal(class="is-plain") }}
+              {{ inputDatetimeLocal(class="is-underline") }}
+              {{ inputDatetimeLocal(class="is-inside") }}
+              {% macro inputDate(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="date" name="date" value="2017-02-02">
+                  <input class="input {{ class }}" type="date" name="date" value="2017-02-02" disabled="disabled">
+                </div>
+              {% endmacro %}
+              {{ inputDate(class="") }}
+              {{ inputDate(class="is-plain") }}
+              {{ inputDate(class="is-underline") }}
+              {{ inputDate(class="is-inside") }}
+              {% macro inputMonth(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="month" name="month" value="2017-02">
+                  <input class="input {{ class }}" type="month" name="month" value="2017-02" disabled="disabled">
+                </div>
+              {% endmacro %}
+              {{ inputMonth(class="") }}
+              {{ inputMonth(class="is-plain") }}
+              {{ inputMonth(class="is-underline") }}
+              {{ inputMonth(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1375,10 +1441,16 @@
           <h3 class="demo-h3">Time</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              <div class="box is-flex is-space-column-xs">
-                <input class="input" type="time" name="time" value="00:00:00">
-                <input class="input" type="time" name="time" value="00:00:00" disabled="disabled">
-              </div>
+              {% macro inputTime(class) %}
+                <div class="box is-flex is-space-column-xs">
+                  <input class="input {{ class }}" type="time" name="time" value="00:00:00">
+                  <input class="input {{ class }}" type="time" name="time" value="00:00:00" disabled="disabled">
+                </div>
+              {% endmacro %}
+              {{ inputTime(class="") }}
+              {{ inputTime(class="is-plain") }}
+              {{ inputTime(class="is-underline") }}
+              {{ inputTime(class="is-inside") }}
             </div>
           </div>
         </section>
@@ -1519,14 +1591,28 @@
                 {% endmacro %}
                 {{ select(class="", size="", state="") }}
                 {{ select(class="", size="", state="disabled") }}
+                {{ select(class="is-plain", size="", state="") }}
+                {{ select(class="is-plain", size="", state="disabled") }}
+                {{ select(class="is-underline", size="", state="") }}
+                {{ select(class="is-underline", size="", state="disabled") }}
+                {{ select(class="is-inside", size="", state="") }}
+                {{ select(class="is-inside", size="", state="disabled") }}
               </div>
               <div class="box is-flex is-space-column-xs">
                 {{ select(class="is-multiple", size="5", state="") }}
                 {{ select(class="is-multiple", size="5", state="disabled") }}
+                {{ select(class="is-multiple is-plain", size="5", state="") }}
+                {{ select(class="is-multiple is-plain", size="5", state="disabled") }}
+                {{ select(class="is-multiple is-inside", size="5", state="") }}
+                {{ select(class="is-multiple is-inside", size="5", state="disabled") }}
               </div>
               <div class="box is-flex is-space-column-xs">
                 {{ select(class="is-multiple", size="5", state="multiple") }}
                 {{ select(class="is-multiple", size="5", state="multiple disabled") }}
+                {{ select(class="is-multiple is-plain", size="5", state="multiple") }}
+                {{ select(class="is-multiple is-plain", size="5", state="multiple disabled") }}
+                {{ select(class="is-multiple is-inside", size="5", state="multiple") }}
+                {{ select(class="is-multiple is-inside", size="5", state="multiple disabled") }}
               </div>
             </div>
           </div>
