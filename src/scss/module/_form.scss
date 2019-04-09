@@ -129,6 +129,13 @@
       box-shadow: $input-focus-shadow;
       outline: none;
     }
+    &.is-success {
+      border-color: $input-success-border-color;
+    }
+    &.is-danger {
+      background-color: $input-danger-background-color;
+      border-color: $input-danger-border-color;
+    }
   }
 }
 
@@ -160,6 +167,12 @@
             border-color: $input-focus-border-color;
             box-shadow: $input-plain-focus-shadow;
           }
+          &.is-success {
+            background-color: $input-success-background-color;
+          }
+          &.is-danger {
+            background-color: $input-danger-background-color;
+          }
         }
       }
       @if $style == "underline" {
@@ -182,6 +195,12 @@
             border-color: $input-focus-border-color;
             box-shadow: none;
           }
+          &.is-success {
+            border-bottom-color: $input-success-border-color;
+          }
+          &.is-danger {
+            border-bottom-color: $input-danger-border-color;
+          }
         }
       }
       @if $style == "inside" {
@@ -200,6 +219,12 @@
           &[readonly]:focus {
             border-color: transparent;
             box-shadow: none;
+          }
+          &.is-success {
+            background-color: $input-success-background-color;
+          }
+          &.is-danger {
+            background-color: $input-danger-background-color;
           }
         }
       }
@@ -475,10 +500,28 @@
 
 @include export-form {
   .select {
+    &.is-success {
+      > select {
+        border-color: $input-success-border-color;
+      }
+    }
+    &.is-danger {
+      > select {
+        background-color: $input-danger-background-color;
+        border-color: $input-danger-border-color;
+      }
+    }
+  }
+}
+
+@include export-form {
+  .select {
     @each $custom in $pattern-input-custom {
       @if $custom == "round" {
-        &.is-round:not(.is-multiple) > select {
-          border-radius: $input-round-border-radius;
+        &.is-round:not(.is-multiple) {
+          > select {
+            border-radius: $input-round-border-radius;
+          }
         }
       }
     }
@@ -499,6 +542,16 @@
             &:focus,
             &[readonly]:focus {
               border-color: $input-focus-border-color;
+            }
+          }
+          &.is-success {
+            > select {
+              background-color: $input-success-background-color;
+            }
+          }
+          &.is-danger {
+            > select {
+              background-color: $input-danger-background-color;
             }
           }
         }
@@ -522,6 +575,16 @@
             &[readonly]:focus {
               border-color: $input-focus-border-color;
               box-shadow: none;
+            }
+          }
+          &.is-success {
+            > select {
+              border-bottom-color: $input-success-border-color;
+            }
+          }
+          &.is-danger {
+            > select {
+              border-bottom-color: $input-danger-border-color;
             }
           }
         }
@@ -548,6 +611,16 @@
           &:not(.is-multiple) {
             > select {
               padding-right: ($select-angle-size * 5);
+            }
+          }
+          &.is-success {
+            > select {
+              background-color: $input-success-background-color;
+            }
+          }
+          &.is-danger {
+            > select {
+              background-color: $input-danger-background-color;
             }
           }
         }

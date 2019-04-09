@@ -521,11 +521,10 @@ $input-border-radius: $radius-xs !default;
 $input-line-height: $line-height-md !default;
 $input-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
 $input-transition: $global-transition !default;
-
-// Input Focus
-$input-focus-border-color: $convert-focus-darken !default;
-$input-focus-shadow: inset 0 1px 1px $convert-shadow-alpha-thin,
-  0 0 0 $space-xxs $convert-focus-alpha-thin !default;
+$input-success-background-color: $convert-alert-success-background-color !default;
+$input-success-border-color: $convert-alert-success-border-color !default;
+$input-danger-background-color: $convert-alert-danger-background-color !default;
+$input-danger-border-color: $convert-alert-danger-border-color !default;
 
 // Input Disabled
 $input-disabled-background-color: $convert-disabled-background-color !default;
@@ -538,6 +537,11 @@ $input-readonly-background-color: $convert-background-2 !default;
 $input-readonly-border-color: $convert-border !default;
 $input-readonly-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
 $input-readonly-text-color: $convert-body-text-color !default;
+
+// Input Focus
+$input-focus-border-color: $convert-focus-darken !default;
+$input-focus-shadow: inset 0 1px 1px $convert-shadow-alpha-thin,
+  0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 
 // Input Placeholder
 $input-placeholder-color: $convert-input-placeholder-color !default;

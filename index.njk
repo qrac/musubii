@@ -1270,6 +1270,8 @@
               {% macro inputText(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="text" name="text" placeholder="Text">
+                  <input class="input {{ class }} is-success" type="text" name="text" placeholder="Text">
+                  <input class="input {{ class }} is-danger" type="text" name="text" placeholder="Text">
                   <input class="input {{ class }}" type="text" name="text" placeholder="Disabled" disabled="disabled">
                   <input class="input {{ class }}" type="text" name="text" value="Readonly" readonly="readonly">
                 </div>
@@ -1281,6 +1283,8 @@
               {% macro inputTextarea(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <textarea class="textarea {{ class }}" name="textarea"></textarea>
+                  <textarea class="textarea {{ class }} is-success" name="textarea"></textarea>
+                  <textarea class="textarea {{ class }} is-danger" name="textarea"></textarea>
                   <textarea class="textarea {{ class }}" name="textarea" disabled="disabled"></textarea>
                   <textarea class="textarea {{ class }}" name="textarea" readonly="readonly">Readonly</textarea>
                 </div>
@@ -1299,6 +1303,8 @@
               {% macro inputPassword(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="password" name="password">
+                  <input class="input {{ class }} is-success" type="password" name="password">
+                  <input class="input {{ class }} is-danger" type="password" name="password">
                   <input class="input {{ class }}" type="password" name="password" disabled="disabled">
                   <input class="input {{ class }}" type="password" name="password" value="Readonly" readonly="readonly">
                 </div>
@@ -1317,6 +1323,8 @@
               {% macro inputUrl(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="url" name="url" placeholder="example.com">
+                  <input class="input {{ class }} is-success" type="url" name="url" placeholder="example.com">
+                  <input class="input {{ class }} is-danger" type="url" name="url" placeholder="example.com">
                   <input class="input {{ class }}" type="url" name="url" placeholder="example.com" disabled="disabled">
                   <input class="input {{ class }}" type="url" name="url" value="example.com" readonly="readonly">
                 </div>
@@ -1335,6 +1343,8 @@
               {% macro inputEmail(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="input {{ class }} is-success" type="email" name="email" placeholder="example@gmail.com">
+                  <input class="input {{ class }} is-danger" type="email" name="email" placeholder="example@gmail.com">
                   <input class="input {{ class }}" type="email" name="email" placeholder="example@gmail.com" disabled="disabled">
                   <input class="input {{ class }}" type="email" name="email" value="example@gmail.com" readonly="readonly">
                 </div>
@@ -1353,6 +1363,8 @@
               {% macro inputTel(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000">
+                  <input class="input {{ class }} is-success" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000">
+                  <input class="input {{ class }} is-danger" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000">
                   <input class="input {{ class }}" type="tel" name="tel" maxlength="13" placeholder="000-0000-0000" disabled="disabled">
                   <input class="input {{ class }}" type="tel" name="tel" maxlength="13" value="000-0000-0000" readonly="readonly">
                 </div>
@@ -1371,6 +1383,8 @@
               {% macro inputNumber(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="number" name="number" maxlength="5" step="100" placeholder="10000">
+                  <input class="input {{ class }} is-success" type="number" name="number" maxlength="5" step="100" placeholder="10000">
+                  <input class="input {{ class }} is-danger" type="number" name="number" maxlength="5" step="100" placeholder="10000">
                   <input class="input {{ class }}" type="number" name="number" maxlength="5" step="100" placeholder="10000" disabled="disabled">
                   <input class="input {{ class }}" type="number" name="number" maxlength="5" step="100" value="10000" readonly="readonly">
                 </div>
@@ -1389,6 +1403,8 @@
               {% macro inputSearch(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="search" name="search" placeholder="Search">
+                  <input class="input {{ class }} is-success" type="search" name="search" placeholder="Search">
+                  <input class="input {{ class }} is-danger" type="search" name="search" placeholder="Search">
                   <input class="input {{ class }}" type="search" name="search" placeholder="Search" disabled="disabled">
                   <input class="input {{ class }}" type="search" name="search" value="Search" readonly="readonly">
                 </div>
@@ -1407,6 +1423,8 @@
               {% macro inputDatetimeLocal(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00">
+                  <input class="input {{ class }} is-success" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00">
+                  <input class="input {{ class }} is-danger" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00">
                   <input class="input {{ class }}" type="datetime-local" name="datetime-local" value="2017-02-02T00:00:00" disabled="disabled">
                 </div>
               {% endmacro %}
@@ -1417,6 +1435,8 @@
               {% macro inputDate(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="date" name="date" value="2017-02-02">
+                  <input class="input {{ class }} is-success" type="date" name="date" value="2017-02-02">
+                  <input class="input {{ class }} is-danger" type="date" name="date" value="2017-02-02">
                   <input class="input {{ class }}" type="date" name="date" value="2017-02-02" disabled="disabled">
                 </div>
               {% endmacro %}
@@ -1427,6 +1447,8 @@
               {% macro inputMonth(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="month" name="month" value="2017-02">
+                  <input class="input {{ class }} is-success" type="month" name="month" value="2017-02">
+                  <input class="input {{ class }} is-danger" type="month" name="month" value="2017-02">
                   <input class="input {{ class }}" type="month" name="month" value="2017-02" disabled="disabled">
                 </div>
               {% endmacro %}
@@ -1444,6 +1466,8 @@
               {% macro inputTime(class) %}
                 <div class="box is-flex is-space-column-xs">
                   <input class="input {{ class }}" type="time" name="time" value="00:00:00">
+                  <input class="input {{ class }} is-success" type="time" name="time" value="00:00:00">
+                  <input class="input {{ class }} is-danger" type="time" name="time" value="00:00:00">
                   <input class="input {{ class }}" type="time" name="time" value="00:00:00" disabled="disabled">
                 </div>
               {% endmacro %}
@@ -1590,12 +1614,26 @@
                   </div>
                 {% endmacro %}
                 {{ select(class="", size="", state="") }}
+                {{ select(class="is-success", size="", state="") }}
+                {{ select(class="is-danger", size="", state="") }}
                 {{ select(class="", size="", state="disabled") }}
+              </div>
+              <div class="box is-flex is-space-column-xs">
                 {{ select(class="is-plain", size="", state="") }}
+                {{ select(class="is-plain is-success", size="", state="") }}
+                {{ select(class="is-plain is-danger", size="", state="") }}
                 {{ select(class="is-plain", size="", state="disabled") }}
+              </div>
+              <div class="box is-flex is-space-column-xs">
                 {{ select(class="is-underline", size="", state="") }}
+                {{ select(class="is-underline is-success", size="", state="") }}
+                {{ select(class="is-underline is-danger", size="", state="") }}
                 {{ select(class="is-underline", size="", state="disabled") }}
+              </div>
+              <div class="box is-flex is-space-column-xs">
                 {{ select(class="is-inside", size="", state="") }}
+                {{ select(class="is-inside is-success", size="", state="") }}
+                {{ select(class="is-inside is-danger", size="", state="") }}
                 {{ select(class="is-inside", size="", state="disabled") }}
               </div>
               {#<div class="box is-flex is-space-column-xs">
