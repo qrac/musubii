@@ -7,6 +7,7 @@
 //----------------------------------------------------
 
 // Global
+$global-border-width: 1px !default;
 $global-transition: ease-out 0.12s !default;
 
 // Body
@@ -67,7 +68,7 @@ $pattern-gap-way: all, row, column !default;
 
 // Box
 $box-background-color: $convert-background-1 !default;
-$box-border-width: 1px !default;
+$box-border-width: $global-border-width !default;
 $box-border-color: $convert-border !default;
 
 // Box Link
@@ -76,7 +77,7 @@ $box-link-transition: $global-transition !default;
 
 // Box Angle
 $box-angle-size: 0.5em !default;
-$box-angle-border-width: 2px !default;
+$box-angle-border-width: $global-border-width * 2 !default;
 $box-angle-border-color: $convert-border-1 !default;
 
 // Pattern - Box Custom
@@ -88,7 +89,7 @@ $pattern-box-custom: flexbox, background, outline, separate, link, angle !defaul
 
 // Card
 $card-background-color: $convert-background-1 !default;
-$card-border-width: 1px !default;
+$card-border-width: $global-border-width !default;
 $card-border-color: $convert-border !default;
 $card-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
@@ -187,7 +188,7 @@ $pattern-text-align-way: left, center, right !default;
 $pattern-text-align-mediaquery: mobile, fablet, tablet, desktop, wide !default;
 
 // Text Link
-$text-link-border-bottom-width: 1px !default;
+$text-link-border-bottom-width: $global-border-width !default;
 $text-link-border-bottom-style: solid !default;
 
 // Blockquote
@@ -202,7 +203,7 @@ $code-padding: 0.2em 0.5em !default;
 $code-background-color: $convert-background-2 !default;
 $code-border-radius: $radius-xs !default;
 $code-text-color: $convert-code-text-color !default;
-$code-font-size: 0.875em !default;
+$code-font-size: $font-size-sm !default;
 $code-font-family: $font-mono !default;
 
 // Pre
@@ -222,7 +223,7 @@ $button-class: ".button" !default;
 
 // Button
 $button-padding: 0.5em 1em !default;
-$button-border-width: 1px !default;
+$button-border-width: $global-border-width !default;
 $button-border-radius: $radius-sm !default;
 $button-paint-text-color: $convert-button-paint-text-color !default;
 $button-line-height: $line-height-md !default;
@@ -231,15 +232,15 @@ $button-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
 // Button Angle
 $button-angle-size: 0.5em !default;
-$button-angle-border-width: 2px !default;
+$button-angle-border-width: $global-border-width * 2 !default;
 $button-angle-border-color: $convert-border-1 !default;
 
 // Button Round
 $button-round-border-radius: $radius-full !default;
 
 // Button Circle
-$button-circle-width: calc(2.5em + 1px * 2) !default;
-$button-circle-height: calc(2.5em + 1px * 2) !default;
+$button-circle-width: calc(2.5em + $global-border-width * 2) !default;
+$button-circle-height: calc(2.5em + $global-border-width * 2) !default;
 $button-circle-border-radius: $radius-full !default;
 
 // Button Floating
@@ -378,7 +379,7 @@ $button-disabled-text-color: $convert-disabled-text-color !default;
 
 // Badge
 $badge-padding: 0.25em 0.375em !default;
-$badge-border-width: 1px !default;
+$badge-border-width: $global-border-width !default;
 $badge-border-radius: $radius-sm !default;
 $badge-paint-text-color: $convert-button-paint-text-color !default;
 $badge-line-height: $line-height-xs !default;
@@ -389,8 +390,8 @@ $badge-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 $badge-round-border-radius: $radius-full !default;
 
 // Badge Circle
-$badge-circle-width: calc(1.75em + 1px * 2) !default;
-$badge-circle-height: calc(1.75em + 1px * 2) !default;
+$badge-circle-width: calc(1.75em + $global-border-width * 2) !default;
+$badge-circle-height: calc(1.75em + $global-border-width * 2) !default;
 $badge-circle-border-radius: $radius-full !default;
 
 // Pattern - Badge Custom
@@ -487,7 +488,7 @@ $pattern-list-style: disc, circle, decimal, note !default;
 // Table
 $table-padding: 0.75em 1em !default;
 $table-background-color: $convert-background !default;
-$table-border-width: 1px !default;
+$table-border-width: $global-border-width !default;
 $table-border-color: $convert-border !default;
 
 // Table Stripe
@@ -514,7 +515,7 @@ $pattern-table-style: line, outline, border, stripe !default;
 $input-height: 2.5em !default;
 $input-padding: 0.5em 0.75em !default;
 $input-background-color: $convert-background-1 !default;
-$input-border-width: 1px !default;
+$input-border-width: $global-border-width !default;
 $input-border-color: $convert-border !default;
 $input-border-radius: $radius-xs !default;
 $input-line-height: $line-height-md !default;
@@ -532,13 +533,13 @@ $input-round-border-radius: $radius-full !default;
 // Input Disabled
 $input-disabled-background-color: $convert-disabled-background-color !default;
 $input-disabled-border-color: $convert-disabled-border-color !default;
-$input-disabled-shadow: none !default;
+$input-disabled-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
 $input-disabled-text-color: $convert-disabled-text-color !default;
 
 // Input Readonly
-$input-readonly-background-color: $convert-input-readonly-background-color !default;
-$input-readonly-border-color: transparent !default;
-$input-readonly-shadow: none !default;
+$input-readonly-background-color: $convert-background-2 !default;
+$input-readonly-border-color: $convert-border !default;
+$input-readonly-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
 $input-readonly-text-color: $convert-body-text-color !default;
 
 // Input Placeholder
@@ -549,8 +550,7 @@ $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
 
 // Radio
 $radio-size: 1em !default;
-$radio-border-width: 2px !default;
-$radio-gap-after: $space-md !default;
+$radio-border-width: $global-border-width * 2 !default;
 $radio-background-color: $convert-background !default;
 $radio-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 $radio-before-checked-background-color: $convert-primary-strong !default;
@@ -558,9 +558,8 @@ $radio-checked-border-color: $convert-primary-strong !default;
 
 // Checkbox
 $checkbox-size: 1em !default;
-$checkbox-border-width: 2px !default;
-$checkbox-border-radius: 2px !default;
-$checkbox-gap-after: $space-md !default;
+$checkbox-border-width: $global-border-width * 2 !default;
+$checkbox-border-radius: $radius-xs !default;
 $checkbox-background-color: $convert-background !default;
 $checkbox-focus-border-color: $convert-focus-darken !default;
 $checkbox-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
@@ -570,7 +569,7 @@ $checkbox-checked-border-color: $convert-primary !default;
 
 // Select
 $select-angle-size: 0.5em !default;
-$select-angle-border-width: 2px !default;
+$select-angle-border-width: $global-border-width * 2 !default;
 $select-angle-border-color: $convert-border-1 !default;
 $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 
@@ -602,10 +601,10 @@ $icon-fit-width: 1em !default;
 
 // Alert
 $alert-padding: 0.675em 0.875em !default;
-$alert-border-width: 1px !default;
-$alert-border-radius: $radius-xs !default;
 $alert-background-color: $convert-background-2 !default;
+$alert-border-width: $global-border-width !default;
 $alert-border-color: $convert-border !default;
+$alert-border-radius: $radius-xs !default;
 $alert-primary-background-color: $convert-alert-primary-background-color !default;
 $alert-primary-border-color: $convert-alert-primary-border-color !default;
 $alert-info-background-color: $convert-alert-info-background-color !default;
@@ -660,38 +659,38 @@ $pattern-alert-tail-way: top !default;
 //----------------------------------------------------
 
 // WYSIWYG Heading
-$wysiwyg-heading-font-weight: 700 !default;
-$wysiwyg-h1-font-size: 2em !default;
-$wysiwyg-h2-font-size: 1.5em !default;
-$wysiwyg-h3-font-size: 1.25em !default;
-$wysiwyg-h4-font-size: 1em !default;
-$wysiwyg-h5-font-size: 0.875em !default;
-$wysiwyg-h6-font-size: 0.75em !default;
+$wysiwyg-heading-font-weight: $font-weight-strong !default;
+$wysiwyg-h1-font-size: $font-size-xxl !default;
+$wysiwyg-h2-font-size: $font-size-xl !default;
+$wysiwyg-h3-font-size: $font-size-lg !default;
+$wysiwyg-h4-font-size: $font-size-md !default;
+$wysiwyg-h5-font-size: $font-size-sm !default;
+$wysiwyg-h6-font-size: $font-size-xs !default;
 
 // WYSIWYG Text
 $wysiwyg-text-line-height: $line-height-xl !default;
 
 // WYSIWYG Small
-$wysiwyg-small-font-size: 80% !default;
+$wysiwyg-small-font-size: $font-size-sm !default;
 
 // WYSIWYG Strong
-$wysiwyg-strong-font-weight: 700 !default;
+$wysiwyg-strong-font-weight: $font-weight-strong !default;
 
 // WYSIWYG Link
 $wysiwyg-link-text-color: $convert-primary-strong !default;
 
 // WYSIWYG Table
-$wysiwyg-table-th-font-weight: 400 !default;
+$wysiwyg-table-th-font-weight: $font-weight-normal !default;
 
 // WYSIWYG HR
-$wysiwyg-hr-border-width: 1px !default;
+$wysiwyg-hr-border-width: $global-border-width !default;
 $wysiwyg-hr-border-style: solid !default;
 $wysiwyg-hr-border-color: $convert-border !default;
 
 // WYSIWYG Figure
 $wysiwyg-figure-text-align: center !default;
 $wysiwyg-figcaption-margin-top: $space-sm !default;
-$wysiwyg-figcaption-font-size: 87.5% !default;
+$wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 //----------------------------------------------------
 // / Utility - Display
