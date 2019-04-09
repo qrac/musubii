@@ -74,6 +74,10 @@ $convert-table-spot-background-color: if($use-css-variables == true, var(--table
 $convert-table-danger-background-color: if($use-css-variables == true, var(--table-danger-background-color), $theme-light-table-danger-background-color) !default;
 
 $convert-input-placeholder-color: if($use-css-variables == true, var(--input-placeholder-color), $theme-light-input-placeholder-color) !default;
+$convert-input-success-background-color: if($use-css-variables == true, var(--input-success-background-color), $theme-light-input-success-background-color) !default;
+$convert-input-success-border-color: if($use-css-variables == true, var(--input-success-border-color), $theme-light-input-success-border-color) !default;
+$convert-input-danger-background-color: if($use-css-variables == true, var(--input-danger-background-color), $theme-light-input-danger-background-color) !default;
+$convert-input-danger-border-color: if($use-css-variables == true, var(--input-danger-border-color), $theme-light-input-danger-border-color) !default;
 $convert-checkbox-before-border-color: if($use-css-variables == true, var(--checkbox-before-border-color), $theme-light-checkbox-before-border-color) !default;
 
 $convert-alert-primary-background-color: if($use-css-variables == true, var(--alert-primary-background-color), $theme-light-alert-primary-background-color) !default;

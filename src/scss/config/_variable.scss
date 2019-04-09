@@ -230,6 +230,10 @@ $button-line-height: $line-height-md !default;
 $button-transition: $global-transition !default;
 $button-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
+// Button Disabled
+$button-disabled-background-color: $convert-disabled-background-color !default;
+$button-disabled-text-color: $convert-disabled-text-color !default;
+
 // Button Angle
 $button-angle-size: 0.5em !default;
 $button-angle-border-width: $global-border-width * 2 !default;
@@ -368,10 +372,6 @@ $pattern-button-melt: (
 
 // Pattern - Button Style
 $pattern-button-style: plain, outline, melt !default;
-
-// Button Disabled
-$button-disabled-background-color: $convert-disabled-background-color !default;
-$button-disabled-text-color: $convert-disabled-text-color !default;
 
 //----------------------------------------------------
 // / Module - Badge
@@ -521,10 +521,9 @@ $input-border-radius: $radius-xs !default;
 $input-line-height: $line-height-md !default;
 $input-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
 $input-transition: $global-transition !default;
-$input-success-background-color: $convert-alert-success-background-color !default;
-$input-success-border-color: $convert-alert-success-border-color !default;
-$input-danger-background-color: $convert-alert-danger-background-color !default;
-$input-danger-border-color: $convert-alert-danger-border-color !default;
+
+// Input Placeholder
+$input-placeholder-color: $convert-input-placeholder-color !default;
 
 // Input Disabled
 $input-disabled-background-color: $convert-disabled-background-color !default;
@@ -542,9 +541,6 @@ $input-readonly-text-color: $convert-body-text-color !default;
 $input-focus-border-color: $convert-focus-darken !default;
 $input-focus-shadow: inset 0 1px 1px $convert-shadow-alpha-thin,
   0 0 0 $space-xxs $convert-focus-alpha-thin !default;
-
-// Input Placeholder
-$input-placeholder-color: $convert-input-placeholder-color !default;
 
 // Input Round
 $input-round-border-radius: $radius-full !default;
@@ -568,6 +564,14 @@ $input-inside-padding: 0.5em 0.75em !default;
 
 // Pattern - Input Style
 $pattern-input-style: plain, underline, inside !default;
+
+// Input Success
+$input-success-background-color: $convert-input-success-background-color !default;
+$input-success-border-color: $convert-input-success-border-color !default;
+
+// Input Danger
+$input-danger-background-color: $convert-input-danger-background-color !default;
+$input-danger-border-color: $convert-input-danger-border-color !default;
 
 // Textarea
 $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;

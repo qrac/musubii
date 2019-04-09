@@ -76,6 +76,10 @@ $theme-light-table-spot-background-color: $yellow-200 !default;
 $theme-light-table-danger-background-color: lighten($theme-light-danger, 29%) !default;
 
 $theme-light-input-placeholder-color: $dark-6 !default;
+$theme-light-input-success-background-color: lighten($theme-light-success, 50%) !default;
+$theme-light-input-success-border-color: lighten($theme-light-success, 27%) !default;
+$theme-light-input-danger-background-color: lighten($theme-light-danger, 35%) !default;
+$theme-light-input-danger-border-color: lighten($theme-light-danger, 21%) !default;
 $theme-light-checkbox-before-border-color: $light !default;
 
 $theme-light-alert-primary-background-color: lighten($theme-light-primary, 44%) !default;
