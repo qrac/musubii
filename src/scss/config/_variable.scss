@@ -553,6 +553,12 @@ $input-plain-background-color: $convert-background-2 !default;
 $input-plain-border-color: transparent !default;
 $input-plain-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 
+// Input Underline
+$input-underline-padding-left: 0 !default;
+$input-underline-padding-right: 0 !default;
+$input-underline-border-width: $global-border-width !default;
+$input-underline-border-color: $convert-border !default;
+
 // Pattern - Input Style
 $pattern-input-style: plain, underline, inside !default;
 

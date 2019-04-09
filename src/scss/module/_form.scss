@@ -162,6 +162,28 @@
           }
         }
       }
+      @if $style == "underline" {
+        &.is-underline {
+          padding-left: $input-underline-padding-left;
+          padding-right: $input-underline-padding-right;
+          background-color: transparent;
+          border: none;
+          border-bottom: $input-underline-border-width
+            solid
+            $input-underline-border-color;
+          border-radius: 0;
+          box-shadow: none;
+          &[disabled],
+          &[readonly] {
+            background-color: transparent;
+          }
+          &:focus,
+          &[readonly]:focus {
+            border-color: $input-focus-border-color;
+            box-shadow: none;
+          }
+        }
+      }
     }
   }
 }
@@ -458,6 +480,29 @@
             &:focus,
             &[readonly]:focus {
               border-color: $input-focus-border-color;
+            }
+          }
+        }
+      }
+      @if $style == "underline" {
+        &.is-underline {
+          > select {
+            padding-left: $input-underline-padding-left;
+            background-color: transparent;
+            border: none;
+            border-bottom: $input-underline-border-width
+              solid
+              $input-underline-border-color;
+            border-radius: 0;
+            box-shadow: none;
+            &[disabled],
+            &[readonly] {
+              background-color: transparent;
+            }
+            &:focus,
+            &[readonly]:focus {
+              border-color: $input-focus-border-color;
+              box-shadow: none;
             }
           }
         }
