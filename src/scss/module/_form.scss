@@ -184,6 +184,25 @@
           }
         }
       }
+      @if $style == "inside" {
+        &.is-inside {
+          padding: $input-inside-padding;
+          background-color: transparent;
+          border-color: transparent;
+          border-radius: 0;
+          box-shadow: none;
+          &[disabled],
+          &[readonly] {
+            background-color: transparent;
+            border-color: transparent;
+          }
+          &:focus,
+          &[readonly]:focus {
+            border-color: transparent;
+            box-shadow: none;
+          }
+        }
+      }
     }
   }
 }
@@ -503,6 +522,32 @@
             &[readonly]:focus {
               border-color: $input-focus-border-color;
               box-shadow: none;
+            }
+          }
+        }
+      }
+      @if $style == "inside" {
+        &.is-inside {
+          > select {
+            padding: $input-inside-padding;
+            background-color: transparent;
+            border-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            &[disabled],
+            &[readonly] {
+              background-color: transparent;
+              border-color: transparent;
+            }
+            &:focus,
+            &[readonly]:focus {
+              border-color: transparent;
+              box-shadow: none;
+            }
+          }
+          &:not(.is-multiple) {
+            > select {
+              padding-right: ($select-angle-size * 5);
             }
           }
         }

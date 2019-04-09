@@ -559,6 +559,9 @@ $input-underline-padding-right: 0 !default;
 $input-underline-border-width: $global-border-width !default;
 $input-underline-border-color: $convert-border !default;
 
+// Input Inside
+$input-inside-padding: 0.5em 0.75em !default;
+
 // Pattern - Input Style
 $pattern-input-style: plain, underline, inside !default;
 
