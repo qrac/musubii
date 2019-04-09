@@ -73,7 +73,6 @@ $convert-table-paint-text-color: if($use-css-variables == true, var(--table-pain
 $convert-table-spot-background-color: if($use-css-variables == true, var(--table-spot-background-color), $theme-light-table-spot-background-color) !default;
 $convert-table-danger-background-color: if($use-css-variables == true, var(--table-danger-background-color), $theme-light-table-danger-background-color) !default;
 
-$convert-input-readonly-background-color: if($use-css-variables == true, var(--input-readonly-background-color), $theme-light-input-readonly-background-color) !default;
 $convert-input-placeholder-color: if($use-css-variables == true, var(--input-placeholder-color), $theme-light-input-placeholder-color) !default;
 $convert-checkbox-before-border-color: if($use-css-variables == true, var(--checkbox-before-border-color), $theme-light-checkbox-before-border-color) !default;
 
