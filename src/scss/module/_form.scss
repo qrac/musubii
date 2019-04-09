@@ -150,7 +150,7 @@
       @if $style == "plain" {
         &.is-plain {
           background-color: $input-plain-background-color;
-          border: $input-border-width solid transparent;
+          border: $input-border-width solid $input-plain-border-color;
           box-shadow: none;
           &[disabled] {
             background-color: $input-disabled-background-color;
