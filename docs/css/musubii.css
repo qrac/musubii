@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.19 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.20 MIT by Qrac */
 
 *,
 ::before,
@@ -1339,7 +1339,7 @@ iframe {
   background-color: var(--background-2);
   border-radius: 2px;
   color: var(--code-text-color);
-  font-size: 0.875em;
+  font-size: 87.5%;
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
   word-break: break-all;
 }
@@ -1438,8 +1438,8 @@ iframe {
 }
 
 .button.is-circle {
-  width: calc(2.5em + 1px * 2);
-  height: calc(2.5em + 1px * 2);
+  width: calc(2.5em + $global-border-width * 2);
+  height: calc(2.5em + $global-border-width * 2);
   padding: 0;
   border-radius: 999em;
   line-height: 1;
@@ -1656,8 +1656,8 @@ iframe {
 }
 
 .badge.is-circle {
-  width: calc(1.75em + 1px * 2);
-  height: calc(1.75em + 1px * 2);
+  width: calc(1.75em + $global-border-width * 2);
+  height: calc(1.75em + $global-border-width * 2);
   padding: 0;
   border-radius: 999em;
   line-height: 1;
@@ -1932,8 +1932,8 @@ iframe {
 .input[type="week"][readonly],
 .input[type="time"][readonly],
 .input[type="number"][readonly] {
-  background-color: var(--input-readonly-background-color);
-  border-color: transparent;
+  background-color: var(--background-2);
+  border-color: var(--border);
   color: var(--body-text-color);
 }
 
@@ -2040,7 +2040,7 @@ iframe {
 .input[type="number"][disabled],
 .textarea[disabled] {
   cursor: not-allowed;
-  box-shadow: none;
+  box-shadow: inset 0 1px 1px var(--shadow-alpha-thin);
 }
 
 .input[type="text"][readonly],
@@ -2056,7 +2056,7 @@ iframe {
 .input[type="time"][readonly],
 .input[type="number"][readonly],
 .textarea[readonly] {
-  box-shadow: none;
+  box-shadow: inset 0 1px 1px var(--shadow-alpha-thin);
 }
 
 .input[type="text"]:focus,
@@ -2090,6 +2090,360 @@ iframe {
   outline: none;
 }
 
+.input[type="text"].is-success,
+.input[type="search"].is-success,
+.input[type="url"].is-success,
+.input[type="email"].is-success,
+.input[type="tel"].is-success,
+.input[type="password"].is-success,
+.input[type="datetime-local"].is-success,
+.input[type="date"].is-success,
+.input[type="month"].is-success,
+.input[type="week"].is-success,
+.input[type="time"].is-success,
+.input[type="number"].is-success,
+.textarea.is-success {
+  border-color: var(--alert-success-border-color);
+}
+
+.input[type="text"].is-danger,
+.input[type="search"].is-danger,
+.input[type="url"].is-danger,
+.input[type="email"].is-danger,
+.input[type="tel"].is-danger,
+.input[type="password"].is-danger,
+.input[type="datetime-local"].is-danger,
+.input[type="date"].is-danger,
+.input[type="month"].is-danger,
+.input[type="week"].is-danger,
+.input[type="time"].is-danger,
+.input[type="number"].is-danger,
+.textarea.is-danger {
+  background-color: var(--alert-danger-background-color);
+  border-color: var(--alert-danger-border-color);
+}
+
+.input[type="text"].is-plain,
+.input[type="search"].is-plain,
+.input[type="url"].is-plain,
+.input[type="email"].is-plain,
+.input[type="tel"].is-plain,
+.input[type="password"].is-plain,
+.input[type="datetime-local"].is-plain,
+.input[type="date"].is-plain,
+.input[type="month"].is-plain,
+.input[type="week"].is-plain,
+.input[type="time"].is-plain,
+.input[type="number"].is-plain,
+.textarea.is-plain {
+  background-color: var(--background-2);
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.input[type="text"].is-plain[disabled],
+.input[type="search"].is-plain[disabled],
+.input[type="url"].is-plain[disabled],
+.input[type="email"].is-plain[disabled],
+.input[type="tel"].is-plain[disabled],
+.input[type="password"].is-plain[disabled],
+.input[type="datetime-local"].is-plain[disabled],
+.input[type="date"].is-plain[disabled],
+.input[type="month"].is-plain[disabled],
+.input[type="week"].is-plain[disabled],
+.input[type="time"].is-plain[disabled],
+.input[type="number"].is-plain[disabled],
+.textarea.is-plain[disabled] {
+  background-color: var(--disabled-background-color);
+}
+
+.input[type="text"].is-plain:focus,
+.input[type="text"].is-plain[readonly]:focus,
+.input[type="search"].is-plain:focus,
+.input[type="search"].is-plain[readonly]:focus,
+.input[type="url"].is-plain:focus,
+.input[type="url"].is-plain[readonly]:focus,
+.input[type="email"].is-plain:focus,
+.input[type="email"].is-plain[readonly]:focus,
+.input[type="tel"].is-plain:focus,
+.input[type="tel"].is-plain[readonly]:focus,
+.input[type="password"].is-plain:focus,
+.input[type="password"].is-plain[readonly]:focus,
+.input[type="datetime-local"].is-plain:focus,
+.input[type="datetime-local"].is-plain[readonly]:focus,
+.input[type="date"].is-plain:focus,
+.input[type="date"].is-plain[readonly]:focus,
+.input[type="month"].is-plain:focus,
+.input[type="month"].is-plain[readonly]:focus,
+.input[type="week"].is-plain:focus,
+.input[type="week"].is-plain[readonly]:focus,
+.input[type="time"].is-plain:focus,
+.input[type="time"].is-plain[readonly]:focus,
+.input[type="number"].is-plain:focus,
+.input[type="number"].is-plain[readonly]:focus,
+.textarea.is-plain:focus,
+.textarea.is-plain[readonly]:focus {
+  border-color: var(--focus-darken);
+  box-shadow: 0 0 0 4px var(--focus-alpha-thin);
+}
+
+.input[type="text"].is-plain.is-success,
+.input[type="search"].is-plain.is-success,
+.input[type="url"].is-plain.is-success,
+.input[type="email"].is-plain.is-success,
+.input[type="tel"].is-plain.is-success,
+.input[type="password"].is-plain.is-success,
+.input[type="datetime-local"].is-plain.is-success,
+.input[type="date"].is-plain.is-success,
+.input[type="month"].is-plain.is-success,
+.input[type="week"].is-plain.is-success,
+.input[type="time"].is-plain.is-success,
+.input[type="number"].is-plain.is-success,
+.textarea.is-plain.is-success {
+  background-color: var(--alert-success-background-color);
+}
+
+.input[type="text"].is-plain.is-danger,
+.input[type="search"].is-plain.is-danger,
+.input[type="url"].is-plain.is-danger,
+.input[type="email"].is-plain.is-danger,
+.input[type="tel"].is-plain.is-danger,
+.input[type="password"].is-plain.is-danger,
+.input[type="datetime-local"].is-plain.is-danger,
+.input[type="date"].is-plain.is-danger,
+.input[type="month"].is-plain.is-danger,
+.input[type="week"].is-plain.is-danger,
+.input[type="time"].is-plain.is-danger,
+.input[type="number"].is-plain.is-danger,
+.textarea.is-plain.is-danger {
+  background-color: var(--alert-danger-background-color);
+}
+
+.input[type="text"].is-underline,
+.input[type="search"].is-underline,
+.input[type="url"].is-underline,
+.input[type="email"].is-underline,
+.input[type="tel"].is-underline,
+.input[type="password"].is-underline,
+.input[type="datetime-local"].is-underline,
+.input[type="date"].is-underline,
+.input[type="month"].is-underline,
+.input[type="week"].is-underline,
+.input[type="time"].is-underline,
+.input[type="number"].is-underline,
+.textarea.is-underline {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.input[type="text"].is-underline[disabled],
+.input[type="text"].is-underline[readonly],
+.input[type="search"].is-underline[disabled],
+.input[type="search"].is-underline[readonly],
+.input[type="url"].is-underline[disabled],
+.input[type="url"].is-underline[readonly],
+.input[type="email"].is-underline[disabled],
+.input[type="email"].is-underline[readonly],
+.input[type="tel"].is-underline[disabled],
+.input[type="tel"].is-underline[readonly],
+.input[type="password"].is-underline[disabled],
+.input[type="password"].is-underline[readonly],
+.input[type="datetime-local"].is-underline[disabled],
+.input[type="datetime-local"].is-underline[readonly],
+.input[type="date"].is-underline[disabled],
+.input[type="date"].is-underline[readonly],
+.input[type="month"].is-underline[disabled],
+.input[type="month"].is-underline[readonly],
+.input[type="week"].is-underline[disabled],
+.input[type="week"].is-underline[readonly],
+.input[type="time"].is-underline[disabled],
+.input[type="time"].is-underline[readonly],
+.input[type="number"].is-underline[disabled],
+.input[type="number"].is-underline[readonly],
+.textarea.is-underline[disabled],
+.textarea.is-underline[readonly] {
+  background-color: transparent;
+}
+
+.input[type="text"].is-underline:focus,
+.input[type="text"].is-underline[readonly]:focus,
+.input[type="search"].is-underline:focus,
+.input[type="search"].is-underline[readonly]:focus,
+.input[type="url"].is-underline:focus,
+.input[type="url"].is-underline[readonly]:focus,
+.input[type="email"].is-underline:focus,
+.input[type="email"].is-underline[readonly]:focus,
+.input[type="tel"].is-underline:focus,
+.input[type="tel"].is-underline[readonly]:focus,
+.input[type="password"].is-underline:focus,
+.input[type="password"].is-underline[readonly]:focus,
+.input[type="datetime-local"].is-underline:focus,
+.input[type="datetime-local"].is-underline[readonly]:focus,
+.input[type="date"].is-underline:focus,
+.input[type="date"].is-underline[readonly]:focus,
+.input[type="month"].is-underline:focus,
+.input[type="month"].is-underline[readonly]:focus,
+.input[type="week"].is-underline:focus,
+.input[type="week"].is-underline[readonly]:focus,
+.input[type="time"].is-underline:focus,
+.input[type="time"].is-underline[readonly]:focus,
+.input[type="number"].is-underline:focus,
+.input[type="number"].is-underline[readonly]:focus,
+.textarea.is-underline:focus,
+.textarea.is-underline[readonly]:focus {
+  border-color: var(--focus-darken);
+  box-shadow: none;
+}
+
+.input[type="text"].is-underline.is-success,
+.input[type="search"].is-underline.is-success,
+.input[type="url"].is-underline.is-success,
+.input[type="email"].is-underline.is-success,
+.input[type="tel"].is-underline.is-success,
+.input[type="password"].is-underline.is-success,
+.input[type="datetime-local"].is-underline.is-success,
+.input[type="date"].is-underline.is-success,
+.input[type="month"].is-underline.is-success,
+.input[type="week"].is-underline.is-success,
+.input[type="time"].is-underline.is-success,
+.input[type="number"].is-underline.is-success,
+.textarea.is-underline.is-success {
+  border-bottom-color: var(--alert-success-border-color);
+}
+
+.input[type="text"].is-underline.is-danger,
+.input[type="search"].is-underline.is-danger,
+.input[type="url"].is-underline.is-danger,
+.input[type="email"].is-underline.is-danger,
+.input[type="tel"].is-underline.is-danger,
+.input[type="password"].is-underline.is-danger,
+.input[type="datetime-local"].is-underline.is-danger,
+.input[type="date"].is-underline.is-danger,
+.input[type="month"].is-underline.is-danger,
+.input[type="week"].is-underline.is-danger,
+.input[type="time"].is-underline.is-danger,
+.input[type="number"].is-underline.is-danger,
+.textarea.is-underline.is-danger {
+  border-bottom-color: var(--alert-danger-border-color);
+}
+
+.input[type="text"].is-inside,
+.input[type="search"].is-inside,
+.input[type="url"].is-inside,
+.input[type="email"].is-inside,
+.input[type="tel"].is-inside,
+.input[type="password"].is-inside,
+.input[type="datetime-local"].is-inside,
+.input[type="date"].is-inside,
+.input[type="month"].is-inside,
+.input[type="week"].is-inside,
+.input[type="time"].is-inside,
+.input[type="number"].is-inside,
+.textarea.is-inside {
+  padding: 0.5em 0.75em;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.input[type="text"].is-inside[disabled],
+.input[type="text"].is-inside[readonly],
+.input[type="search"].is-inside[disabled],
+.input[type="search"].is-inside[readonly],
+.input[type="url"].is-inside[disabled],
+.input[type="url"].is-inside[readonly],
+.input[type="email"].is-inside[disabled],
+.input[type="email"].is-inside[readonly],
+.input[type="tel"].is-inside[disabled],
+.input[type="tel"].is-inside[readonly],
+.input[type="password"].is-inside[disabled],
+.input[type="password"].is-inside[readonly],
+.input[type="datetime-local"].is-inside[disabled],
+.input[type="datetime-local"].is-inside[readonly],
+.input[type="date"].is-inside[disabled],
+.input[type="date"].is-inside[readonly],
+.input[type="month"].is-inside[disabled],
+.input[type="month"].is-inside[readonly],
+.input[type="week"].is-inside[disabled],
+.input[type="week"].is-inside[readonly],
+.input[type="time"].is-inside[disabled],
+.input[type="time"].is-inside[readonly],
+.input[type="number"].is-inside[disabled],
+.input[type="number"].is-inside[readonly],
+.textarea.is-inside[disabled],
+.textarea.is-inside[readonly] {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.input[type="text"].is-inside:focus,
+.input[type="text"].is-inside[readonly]:focus,
+.input[type="search"].is-inside:focus,
+.input[type="search"].is-inside[readonly]:focus,
+.input[type="url"].is-inside:focus,
+.input[type="url"].is-inside[readonly]:focus,
+.input[type="email"].is-inside:focus,
+.input[type="email"].is-inside[readonly]:focus,
+.input[type="tel"].is-inside:focus,
+.input[type="tel"].is-inside[readonly]:focus,
+.input[type="password"].is-inside:focus,
+.input[type="password"].is-inside[readonly]:focus,
+.input[type="datetime-local"].is-inside:focus,
+.input[type="datetime-local"].is-inside[readonly]:focus,
+.input[type="date"].is-inside:focus,
+.input[type="date"].is-inside[readonly]:focus,
+.input[type="month"].is-inside:focus,
+.input[type="month"].is-inside[readonly]:focus,
+.input[type="week"].is-inside:focus,
+.input[type="week"].is-inside[readonly]:focus,
+.input[type="time"].is-inside:focus,
+.input[type="time"].is-inside[readonly]:focus,
+.input[type="number"].is-inside:focus,
+.input[type="number"].is-inside[readonly]:focus,
+.textarea.is-inside:focus,
+.textarea.is-inside[readonly]:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.input[type="text"].is-inside.is-success,
+.input[type="search"].is-inside.is-success,
+.input[type="url"].is-inside.is-success,
+.input[type="email"].is-inside.is-success,
+.input[type="tel"].is-inside.is-success,
+.input[type="password"].is-inside.is-success,
+.input[type="datetime-local"].is-inside.is-success,
+.input[type="date"].is-inside.is-success,
+.input[type="month"].is-inside.is-success,
+.input[type="week"].is-inside.is-success,
+.input[type="time"].is-inside.is-success,
+.input[type="number"].is-inside.is-success,
+.textarea.is-inside.is-success {
+  background-color: var(--alert-success-background-color);
+}
+
+.input[type="text"].is-inside.is-danger,
+.input[type="search"].is-inside.is-danger,
+.input[type="url"].is-inside.is-danger,
+.input[type="email"].is-inside.is-danger,
+.input[type="tel"].is-inside.is-danger,
+.input[type="password"].is-inside.is-danger,
+.input[type="datetime-local"].is-inside.is-danger,
+.input[type="date"].is-inside.is-danger,
+.input[type="month"].is-inside.is-danger,
+.input[type="week"].is-inside.is-danger,
+.input[type="time"].is-inside.is-danger,
+.input[type="number"].is-inside.is-danger,
+.textarea.is-inside.is-danger {
+  background-color: var(--alert-danger-background-color);
+}
+
 .input[type="text"],
 .input[type="search"],
 .input[type="url"],
@@ -2109,21 +2463,6 @@ iframe {
   appearance: none;
 }
 
-.input[type="file"] {
-  cursor: pointer;
-  display: block;
-  max-width: 70vw;
-  overflow: hidden;
-}
-
-.input[type="file"][disabled] {
-  cursor: not-allowed;
-}
-
-.button .input[type="file"] {
-  display: none;
-}
-
 .textarea {
   position: relative;
   background-color: var(--background-1);
@@ -2139,9 +2478,24 @@ iframe {
 }
 
 .textarea[readonly] {
-  background-color: var(--input-readonly-background-color);
-  border-color: transparent;
+  background-color: var(--background-2);
+  border-color: var(--border);
   color: var(--body-text-color);
+}
+
+.input[type="file"] {
+  cursor: pointer;
+  display: block;
+  max-width: 70vw;
+  overflow: hidden;
+}
+
+.input[type="file"][disabled] {
+  cursor: not-allowed;
+}
+
+.button .input[type="file"] {
+  display: none;
 }
 
 .label {
@@ -2293,7 +2647,7 @@ iframe {
 }
 
 .select > select[readonly] {
-  background-color: var(--input-readonly-background-color);
+  background-color: var(--background-2);
   color: var(--body-text-color);
 }
 
@@ -2306,10 +2660,6 @@ iframe {
 
 .select > select::-ms-expand {
   display: none;
-}
-
-.select.is-round:not(.is-multiple) > select {
-  border-radius: 999em;
 }
 
 .select:not(.is-multiple):after {
@@ -2328,6 +2678,101 @@ iframe {
 
 .select:not(.is-multiple) > select {
   padding-right: 2.5em;
+}
+
+.select.is-success > select {
+  border-color: var(--alert-success-border-color);
+}
+
+.select.is-danger > select {
+  background-color: var(--alert-danger-background-color);
+  border-color: var(--alert-danger-border-color);
+}
+
+.select.is-round:not(.is-multiple) > select {
+  border-radius: 999em;
+}
+
+.select.is-plain > select {
+  background-color: var(--background-2);
+  border: 1px solid transparent;
+}
+
+.select.is-plain > select[disabled] {
+  background-color: var(--disabled-background-color);
+}
+
+.select.is-plain > select:focus,
+.select.is-plain > select[readonly]:focus {
+  border-color: var(--focus-darken);
+}
+
+.select.is-plain.is-success > select {
+  background-color: var(--alert-success-background-color);
+}
+
+.select.is-plain.is-danger > select {
+  background-color: var(--alert-danger-background-color);
+}
+
+.select.is-underline > select {
+  padding-left: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.select.is-underline > select[disabled],
+.select.is-underline > select[readonly] {
+  background-color: transparent;
+}
+
+.select.is-underline > select:focus,
+.select.is-underline > select[readonly]:focus {
+  border-color: var(--focus-darken);
+  box-shadow: none;
+}
+
+.select.is-underline.is-success > select {
+  border-bottom-color: var(--alert-success-border-color);
+}
+
+.select.is-underline.is-danger > select {
+  border-bottom-color: var(--alert-danger-border-color);
+}
+
+.select.is-inside > select {
+  padding: 0.5em 0.75em;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.select.is-inside > select[disabled],
+.select.is-inside > select[readonly] {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.select.is-inside > select:focus,
+.select.is-inside > select[readonly]:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.select.is-inside:not(.is-multiple) > select {
+  padding-right: 2.5em;
+}
+
+.select.is-inside.is-success > select {
+  background-color: var(--alert-success-background-color);
+}
+
+.select.is-inside.is-danger > select {
+  background-color: var(--alert-danger-background-color);
 }
 
 .select.is-multiple > select {
@@ -2495,27 +2940,27 @@ svg.icon {
 }
 
 .wysiwyg h1 {
-  font-size: 2em;
+  font-size: 200%;
 }
 
 .wysiwyg h2 {
-  font-size: 1.5em;
+  font-size: 150%;
 }
 
 .wysiwyg h3 {
-  font-size: 1.25em;
+  font-size: 125%;
 }
 
 .wysiwyg h4 {
-  font-size: 1em;
+  font-size: 100%;
 }
 
 .wysiwyg h5 {
-  font-size: 0.875em;
+  font-size: 87.5%;
 }
 
 .wysiwyg h6 {
-  font-size: 0.75em;
+  font-size: 75%;
 }
 
 .wysiwyg p {
@@ -2523,7 +2968,7 @@ svg.icon {
 }
 
 .wysiwyg small {
-  font-size: 80%;
+  font-size: 87.5%;
 }
 
 .wysiwyg strong {
@@ -2571,7 +3016,7 @@ svg.icon {
   background-color: var(--background-2);
   border-radius: 2px;
   color: var(--code-text-color);
-  font-size: 0.875em;
+  font-size: 87.5%;
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
   word-break: break-all;
 }
