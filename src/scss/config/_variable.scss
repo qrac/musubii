@@ -66,9 +66,9 @@ $pattern-gap-way: all, row, column !default;
 //----------------------------------------------------
 
 // Box
-$box-default-background-color: $convert-background-1 !default;
-$box-default-border-width: 1px !default;
-$box-default-border-color: $convert-border !default;
+$box-background-color: $convert-background-1 !default;
+$box-border-width: 1px !default;
+$box-border-color: $convert-border !default;
 
 // Box Link
 $box-link-hover-background-color: $convert-background-3 !default;
@@ -87,9 +87,9 @@ $pattern-box-custom: flexbox, background, outline, separate, link, angle !defaul
 //----------------------------------------------------
 
 // Card
-$card-default-background-color: $convert-background-1 !default;
-$card-default-border-width: 1px !default;
-$card-default-border-color: $convert-border !default;
+$card-background-color: $convert-background-1 !default;
+$card-border-width: 1px !default;
+$card-border-color: $convert-border !default;
 $card-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
 // Card Radius
@@ -252,8 +252,8 @@ $button-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
 $pattern-button-custom: angle, round, circle, floating !default;
 
 // Button Plain
-$button-plain-default-background-color: $convert-background-2 !default;
-$button-plain-default-hover-background-color: $convert-background-4 !default;
+$button-plain-background-color: $convert-background-2 !default;
+$button-plain-hover-background-color: $convert-background-4 !default;
 $button-plain-primary-background-color: $convert-primary !default;
 $button-plain-primary-hover-background-color: $convert-primary-darken !default;
 $button-plain-info-background-color: $convert-info !default;
@@ -290,9 +290,9 @@ $pattern-button-plain: (
 ) !default;
 
 // Button Outline
-$button-outline-default-background-color: $convert-background !default;
-$button-outline-default-border-color: $convert-border !default;
-$button-outline-default-hover-background-color: $convert-background-2 !default;
+$button-outline-background-color: $convert-background !default;
+$button-outline-border-color: $convert-border !default;
+$button-outline-hover-background-color: $convert-background-2 !default;
 $button-outline-primary-border-color: $convert-primary !default;
 $button-outline-primary-text-color: $convert-primary-strong !default;
 $button-outline-primary-hover-background-color: $convert-primary !default;
@@ -339,7 +339,7 @@ $pattern-button-outline: (
 ) !default;
 
 // Button Melt
-$button-melt-default-hover-background-color: $convert-background-alpha !default;
+$button-melt-hover-background-color: $convert-background-alpha !default;
 $button-melt-primary-text-color: $convert-primary-strong !default;
 $button-melt-info-text-color: $convert-info-strong !default;
 $button-melt-success-text-color: $convert-success-strong !default;
@@ -397,7 +397,7 @@ $badge-circle-border-radius: $radius-full !default;
 $pattern-badge-custom: round, circle !default;
 
 // Badge Plain
-$badge-plain-default-background-color: $convert-background-2 !default;
+$badge-plain-background-color: $convert-background-2 !default;
 $badge-plain-primary-background-color: $convert-primary !default;
 $badge-plain-info-background-color: $convert-info !default;
 $badge-plain-success-background-color: $convert-success !default;
@@ -424,8 +424,8 @@ $pattern-badge-plain: (
 ) !default;
 
 // Badge Outline
-$badge-outline-default-background-color: $convert-background !default;
-$badge-outline-default-border-color: $convert-border !default;
+$badge-outline-background-color: $convert-background !default;
+$badge-outline-border-color: $convert-border !default;
 $badge-outline-primary-border-color: $convert-primary !default;
 $badge-outline-primary-text-color: $convert-primary-strong !default;
 $badge-outline-info-border-color: $convert-info !default;
@@ -550,7 +550,6 @@ $textarea-padding: calc(0.5em - 1.5px) 0.5em !default;
 // Radio
 $radio-size: 1em !default;
 $radio-border-width: 2px !default;
-$radio-gap-default: $space-xs !default;
 $radio-gap-after: $space-md !default;
 $radio-background-color: $convert-background !default;
 $radio-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
@@ -561,7 +560,6 @@ $radio-checked-border-color: $convert-primary-strong !default;
 $checkbox-size: 1em !default;
 $checkbox-border-width: 2px !default;
 $checkbox-border-radius: 2px !default;
-$checkbox-gap-default: $space-xs !default;
 $checkbox-gap-after: $space-md !default;
 $checkbox-background-color: $convert-background !default;
 $checkbox-focus-border-color: $convert-focus-darken !default;
@@ -593,8 +591,7 @@ $pattern-iframe-aspect: (
 //----------------------------------------------------
 
 // Icon Class
-$icon-class-default: ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons" !default;
-$icon-class: $icon-class-default !default;
+$icon-class: ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons" !default;
 
 // Icon Fit
 $icon-fit-width: 1em !default;
@@ -607,8 +604,8 @@ $icon-fit-width: 1em !default;
 $alert-padding: 0.675em 0.875em !default;
 $alert-border-width: 1px !default;
 $alert-border-radius: $radius-xs !default;
-$alert-default-background-color: $convert-background-2 !default;
-$alert-default-border-color: $convert-border !default;
+$alert-background-color: $convert-background-2 !default;
+$alert-border-color: $convert-border !default;
 $alert-primary-background-color: $convert-alert-primary-background-color !default;
 $alert-primary-border-color: $convert-alert-primary-border-color !default;
 $alert-info-background-color: $convert-alert-info-background-color !default;

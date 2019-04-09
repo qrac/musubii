@@ -156,10 +156,10 @@
     @each $style in $pattern-button-style {
       @if $style == "plain" {
         &.is-plain {
-          background-color: $button-plain-default-background-color;
+          background-color: $button-plain-background-color;
           border: $button-border-width solid transparent;
           &:hover {
-            background-color: $button-plain-default-hover-background-color;
+            background-color: $button-plain-hover-background-color;
           }
           @each $key, $value in $pattern-button-plain {
             &.is-#{$key} {
@@ -181,12 +181,10 @@
       }
       @if $style == "outline" {
         &.is-outline {
-          background-color: $button-outline-default-background-color;
-          border: $button-border-width
-            solid
-            $button-outline-default-border-color;
+          background-color: $button-outline-background-color;
+          border: $button-border-width solid $button-outline-border-color;
           &:hover {
-            background-color: $button-outline-default-hover-background-color;
+            background-color: $button-outline-hover-background-color;
           }
           @each $key, $value in $pattern-button-outline {
             &.is-#{$key} {
@@ -213,7 +211,7 @@
           background-color: transparent;
           border: $button-border-width solid transparent;
           &:hover {
-            background-color: $button-melt-default-hover-background-color;
+            background-color: $button-melt-hover-background-color;
           }
           @each $key, $value in $pattern-button-melt {
             &.is-#{$key} {

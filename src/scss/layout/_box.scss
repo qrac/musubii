@@ -69,7 +69,7 @@
       @if $custom == "background" {
         &.is-bg,
         &.is-bg-light {
-          background-color: $box-default-background-color;
+          background-color: $box-background-color;
         }
         &.is-bg-cover,
         &.is-bg-contain {
@@ -84,33 +84,27 @@
       }
       @if $custom == "outline" {
         &.is-outline {
-          border: $box-default-border-width solid $box-default-border-color;
+          border: $box-border-width solid $box-border-color;
         }
         &.is-outline-top {
-          border-top: $box-default-border-width solid $box-default-border-color;
+          border-top: $box-border-width solid $box-border-color;
         }
         &.is-outline-right {
-          border-right: $box-default-border-width
-            solid
-            $box-default-border-color;
+          border-right: $box-border-width solid $box-border-color;
         }
         &.is-outline-bottom {
-          border-bottom: $box-default-border-width
-            solid
-            $box-default-border-color;
+          border-bottom: $box-border-width solid $box-border-color;
         }
         &.is-outline-left {
-          border-left: $box-default-border-width
-            solid
-            $box-default-border-color;
+          border-left: $box-border-width solid $box-border-color;
         }
       }
       @if $custom == "separate" {
         &.is-separate > *:not(:first-child) {
-          border-top: $box-default-border-width solid $box-default-border-color;
+          border-top: $box-border-width solid $box-border-color;
         }
         &.is-separate-parent > *:not(:first-child) .is-separate-child {
-          border-top: $box-default-border-width solid $box-default-border-color;
+          border-top: $box-border-width solid $box-border-color;
         }
       }
       @if $custom == "link" {

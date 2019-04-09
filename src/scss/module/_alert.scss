@@ -20,8 +20,8 @@
   .alert {
     position: relative;
     padding: $alert-padding;
-    background-color: $alert-default-background-color;
-    border: $alert-border-width solid $alert-default-border-color;
+    background-color: $alert-background-color;
+    border: $alert-border-width solid $alert-border-color;
     border-radius: $alert-border-radius;
     @each $key, $value in $pattern-alert {
       &.is-#{$key} {
@@ -77,13 +77,11 @@
           }
           &:before {
             top: -$alert-tail-size;
-            border-bottom: $alert-tail-size solid $alert-default-border-color;
+            border-bottom: $alert-tail-size solid $alert-border-color;
           }
           &:after {
             top: calc(-#{$alert-tail-size} + #{$alert-border-width});
-            border-bottom: $alert-tail-size
-              solid
-              $alert-default-background-color;
+            border-bottom: $alert-tail-size solid $alert-background-color;
           }
         }
         @each $key, $value in $pattern-alert-tail {
@@ -129,11 +127,11 @@
           }
           &:before {
             right: -$alert-tail-size;
-            border-left: $alert-tail-size solid $alert-default-border-color;
+            border-left: $alert-tail-size solid $alert-border-color;
           }
           &:after {
             right: calc(-#{$alert-tail-size} + #{$alert-border-width});
-            border-left: $alert-tail-size solid $alert-default-background-color;
+            border-left: $alert-tail-size solid $alert-background-color;
           }
         }
         @each $key, $value in $pattern-alert-tail {
@@ -177,11 +175,11 @@
           }
           &:before {
             bottom: -$alert-tail-size;
-            border-top: $alert-tail-size solid $alert-default-border-color;
+            border-top: $alert-tail-size solid $alert-border-color;
           }
           &:after {
             bottom: calc(-#{$alert-tail-size} + #{$alert-border-width});
-            border-top: $alert-tail-size solid $alert-default-background-color;
+            border-top: $alert-tail-size solid $alert-background-color;
           }
         }
         @each $key, $value in $pattern-alert-tail {
@@ -225,13 +223,11 @@
           }
           &:before {
             left: -$alert-tail-size;
-            border-right: $alert-tail-size solid $alert-default-border-color;
+            border-right: $alert-tail-size solid $alert-border-color;
           }
           &:after {
             left: calc(-#{$alert-tail-size} + #{$alert-border-width});
-            border-right: $alert-tail-size
-              solid
-              $alert-default-background-color;
+            border-right: $alert-tail-size solid $alert-background-color;
           }
         }
         @each $key, $value in $pattern-alert-tail {

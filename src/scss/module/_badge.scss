@@ -72,7 +72,7 @@
     @each $style in $pattern-badge-style {
       @if $style == "plain" {
         &.is-plain {
-          background-color: $badge-plain-default-background-color;
+          background-color: $badge-plain-background-color;
           border: $badge-border-width solid transparent;
           @each $key, $value in $pattern-badge-plain {
             &.is-#{$key} {
@@ -84,8 +84,8 @@
       }
       @if $style == "outline" {
         &.is-outline {
-          background-color: $badge-outline-default-background-color;
-          border: $badge-border-width solid $badge-outline-default-border-color;
+          background-color: $badge-outline-background-color;
+          border: $badge-border-width solid $badge-outline-border-color;
           @each $key, $value in $pattern-badge-outline {
             &.is-#{$key} {
               border-color: map-get($value, border-color);
