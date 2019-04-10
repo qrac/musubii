@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.22 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.23 MIT by Qrac */
 
 *,
 ::before,
@@ -1225,31 +1225,31 @@ iframe {
 }
 
 .text.is-line-height-xxl {
-  font-weight: 2;
+  line-height: 2;
 }
 
 .text.is-line-height-xl {
-  font-weight: 1.9;
+  line-height: 1.9;
 }
 
 .text.is-line-height-lg {
-  font-weight: 1.75;
+  line-height: 1.75;
 }
 
 .text.is-line-height-md {
-  font-weight: 1.5;
+  line-height: 1.5;
 }
 
 .text.is-line-height-sm {
-  font-weight: 1.375;
+  line-height: 1.375;
 }
 
 .text.is-line-height-xs {
-  font-weight: 1.25;
+  line-height: 1.25;
 }
 
 .text.is-line-height-xxs {
-  font-weight: 1;
+  line-height: 1;
 }
 
 .text.is-italic {
