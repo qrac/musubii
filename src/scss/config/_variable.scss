@@ -243,8 +243,8 @@ $button-angle-border-color: $convert-border-1 !default;
 $button-round-border-radius: $radius-full !default;
 
 // Button Circle
-$button-circle-width: calc(2.5em + $global-border-width * 2) !default;
-$button-circle-height: calc(2.5em + $global-border-width * 2) !default;
+$button-circle-width: calc(2.5em + #{$global-border-width} * 2) !default;
+$button-circle-height: calc(2.5em + #{$global-border-width} * 2) !default;
 $button-circle-border-radius: $radius-full !default;
 
 // Button Floating
@@ -390,8 +390,8 @@ $badge-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 $badge-round-border-radius: $radius-full !default;
 
 // Badge Circle
-$badge-circle-width: calc(1.75em + $global-border-width * 2) !default;
-$badge-circle-height: calc(1.75em + $global-border-width * 2) !default;
+$badge-circle-width: calc(1.75em + #{$global-border-width} * 2) !default;
+$badge-circle-height: calc(1.75em + #{$global-border-width} * 2) !default;
 $badge-circle-border-radius: $radius-full !default;
 
 // Pattern - Badge Custom
