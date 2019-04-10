@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.21 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.22 MIT by Qrac */
 
 *,
 ::before,
@@ -1444,8 +1444,8 @@ iframe {
 }
 
 .button.is-circle {
-  width: calc(2.5em + $global-border-width * 2);
-  height: calc(2.5em + $global-border-width * 2);
+  width: calc(2.5em + 1px * 2);
+  height: calc(2.5em + 1px * 2);
   padding: 0;
   border-radius: 999em;
   line-height: 1;
@@ -1662,8 +1662,8 @@ iframe {
 }
 
 .badge.is-circle {
-  width: calc(1.75em + $global-border-width * 2);
-  height: calc(1.75em + $global-border-width * 2);
+  width: calc(1.75em + 1px * 2);
+  height: calc(1.75em + 1px * 2);
   padding: 0;
   border-radius: 999em;
   line-height: 1;
