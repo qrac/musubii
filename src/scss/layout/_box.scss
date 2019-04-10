@@ -100,11 +100,11 @@
         }
       }
       @if $custom == "separate" {
-        &.is-separate > *:not(:first-child) {
-          border-top: $box-border-width solid $box-border-color;
+        &.is-separate > *:not(:last-child) {
+          border-bottom: $box-border-width solid $box-border-color;
         }
-        &.is-separate-parent > *:not(:first-child) .is-separate-child {
-          border-top: $box-border-width solid $box-border-color;
+        &.is-separate-parent > *:not(:last-child) .is-separate-child {
+          border-bottom: $box-border-width solid $box-border-color;
         }
       }
       @if $custom == "link" {
