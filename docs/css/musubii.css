@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.23 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.24 MIT by Qrac */
 
 *,
 ::before,
@@ -798,12 +798,12 @@ iframe {
   border-left: 1px solid var(--border);
 }
 
-.box.is-separate > *:not(:first-child) {
-  border-top: 1px solid var(--border);
+.box.is-separate > *:not(:last-child) {
+  border-bottom: 1px solid var(--border);
 }
 
-.box.is-separate-parent > *:not(:first-child) .is-separate-child {
-  border-top: 1px solid var(--border);
+.box.is-separate-parent > *:not(:last-child) .is-separate-child {
+  border-bottom: 1px solid var(--border);
 }
 
 .box.is-link {
