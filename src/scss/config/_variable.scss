@@ -394,13 +394,18 @@ $badge-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 // Badge Round
 $badge-round-border-radius: $radius-full !default;
 
+// Badge Square
+$badge-square-width: calc(1.75em + #{$global-border-width} * 2) !default;
+$badge-square-height: calc(1.75em + #{$global-border-width} * 2) !default;
+$badge-square-border-radius: $radius-sm !default;
+
 // Badge Circle
 $badge-circle-width: calc(1.75em + #{$global-border-width} * 2) !default;
 $badge-circle-height: calc(1.75em + #{$global-border-width} * 2) !default;
 $badge-circle-border-radius: $radius-full !default;
 
 // Pattern - Badge Custom
-$pattern-badge-custom: round, circle !default;
+$pattern-badge-custom: round, square, circle !default;
 
 // Badge Plain
 $badge-plain-background-color: $convert-background-2 !default;

@@ -930,33 +930,42 @@
           </div>
         </section>
         <section>
-          <h3 class="demo-h3">Circle</h3>
+          <h3 class="demo-h3">Square</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              {% macro badgesCircle(class) %}
+              {% macro badgesIconOnly(class) %}
                 <div class="box is-flex is-space-row-xs is-space-column-xs">
-                  <span class="badge {{class}} is-circle">
+                  <span class="badge {{class}}">
                     <i aria-hidden="true" class="fas fa-tag"></i>
                   </span>
-                  <span class="badge {{class}} is-circle is-primary">
+                  <span class="badge {{class}} is-primary">
                     <i aria-hidden="true" class="fas fa-check"></i>
                   </span>
-                  <span class="badge {{class}} is-circle is-info">
+                  <span class="badge {{class}} is-info">
                     <i aria-hidden="true" class="fas fa-info"></i>
                   </span>
-                  <span class="badge {{class}} is-circle is-success">
+                  <span class="badge {{class}} is-success">
                     <i aria-hidden="true" class="fas fa-check"></i>
                   </span>
-                  <span class="badge {{class}} is-circle is-warning">
+                  <span class="badge {{class}} is-warning">
                     <i aria-hidden="true" class="fas fa-exclamation"></i>
                   </span>
-                  <span class="badge {{class}} is-circle is-danger">
+                  <span class="badge {{class}} is-danger">
                     <i aria-hidden="true" class="fas fa-minus"></i>
                   </span>
                 </div>
               {% endmacro %}
-              {{ badgesCircle(class="is-plain") }}
-              {{ badgesCircle(class="is-outline") }}
+              {{ badgesIconOnly(class="is-square is-plain") }}
+              {{ badgesIconOnly(class="is-square is-outline") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Circle</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ badgesIconOnly(class="is-circle is-plain") }}
+              {{ badgesIconOnly(class="is-circle is-outline") }}
             </div>
           </div>
         </section>

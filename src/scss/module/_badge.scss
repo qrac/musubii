@@ -49,6 +49,15 @@
           border-radius: $badge-round-border-radius;
         }
       }
+      @if $custom == "square" {
+        &.is-square {
+          width: $badge-square-width;
+          height: $badge-square-height;
+          padding: 0;
+          border-radius: $badge-square-border-radius;
+          line-height: 1;
+        }
+      }
       @if $custom == "circle" {
         &.is-circle {
           width: $badge-circle-width;
