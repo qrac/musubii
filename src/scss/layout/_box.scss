@@ -39,7 +39,9 @@
         }
         &.is-flex,
         &.is-inline-flex {
-          flex-wrap: wrap;
+          &:not(.is-nowrap) {
+            flex-wrap: wrap;
+          }
           &.is-baseline {
             align-items: baseline;
           }
