@@ -121,6 +121,15 @@
           border-radius: $button-round-border-radius;
         }
       }
+      @if $custom == "square" {
+        &.is-square {
+          width: $button-square-width;
+          height: $button-square-height;
+          padding: 0;
+          border-radius: $button-square-border-radius;
+          line-height: 1;
+        }
+      }
       @if $custom == "circle" {
         &.is-circle {
           width: $button-circle-width;

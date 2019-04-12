@@ -746,37 +746,47 @@
           </div>
         </section>
         <section>
-          <h3 class="demo-h3">Circle</h3>
+          <h3 class="demo-h3">Square</h3>
           <div class="demo-area">
             <div class="demo-line-box">
-              {% macro buttonsCircle(class) %}
+              {% macro buttonsIconOnly(class) %}
                 <div class="box is-flex is-space-row-xs is-space-column-xs">
-                  <button class="button {{class}} is-circle" type="button">
+                  <button class="button {{class}}" type="button">
                     <i aria-hidden="true" class="fas fa-angle-left"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-primary" type="button">
+                  <button class="button {{class}} is-primary" type="button">
                     <i aria-hidden="true" class="fab fa-twitter"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-info" type="button">
+                  <button class="button {{class}} is-info" type="button">
                     <i aria-hidden="true" class="fas fa-info-circle"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-success" type="button">
+                  <button class="button {{class}} is-success" type="button">
                     <i aria-hidden="true" class="fas fa-save"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-warning" type="button">
+                  <button class="button {{class}} is-warning" type="button">
                     <i aria-hidden="true" class="fas fa-exclamation-triangle"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-danger" type="button">
+                  <button class="button {{class}} is-danger" type="button">
                     <i aria-hidden="true" class="fas fa-times"></i>
                   </button>
-                  <button class="button {{class}} is-circle is-disabled" type="button">
+                  <button class="button {{class}} is-disabled" type="button">
                     <i aria-hidden="true" class="fas fa-plus"></i>
                   </button>
                 </div>
               {% endmacro %}
-              {{ buttonsCircle(class="is-plain") }}
-              {{ buttonsCircle(class="is-outline") }}
-              {{ buttonsCircle(class="is-melt") }}
+              {{ buttonsIconOnly(class="is-square is-plain") }}
+              {{ buttonsIconOnly(class="is-square is-outline") }}
+              {{ buttonsIconOnly(class="is-square is-melt") }}
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 class="demo-h3">Circle</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {{ buttonsIconOnly(class="is-circle is-plain") }}
+              {{ buttonsIconOnly(class="is-circle is-outline") }}
+              {{ buttonsIconOnly(class="is-circle is-melt") }}
             </div>
           </div>
         </section>
