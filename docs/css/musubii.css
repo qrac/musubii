@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.24 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.25 MIT by Qrac */
 
 *,
 ::before,
@@ -715,8 +715,8 @@ iframe {
   display: inline-flex;
 }
 
-.box.is-flex,
-.box.is-inline-flex {
+.box.is-flex:not(.is-nowrap),
+.box.is-inline-flex:not(.is-nowrap) {
   flex-wrap: wrap;
 }
 
