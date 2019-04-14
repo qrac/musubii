@@ -355,7 +355,7 @@
       background-color: $radio-before-checked-background-color;
       border-radius: $radio-size * 0.5 * 0.5;
       transform: translate(-50%, -50%);
-      transition: $input-transition;
+      transition: $radio-transition;
     }
   }
 }
@@ -373,7 +373,7 @@
       border-left: $checkbox-size * 0.125 solid $checkbox-before-border-color;
       border-bottom: $checkbox-size * 0.125 solid $checkbox-before-border-color;
       transform: translate(-50%, -70%) rotate(-45deg);
-      transition: $input-transition;
+      transition: $checkbox-transition;
     }
   }
 }
@@ -453,7 +453,7 @@
       border-radius: $input-border-radius;
       color: $body-text-color;
       line-height: $input-line-height;
-      transition: $input-transition;
+      transition: $select-transition;
       &[disabled] {
         cursor: not-allowed;
         background-color: $input-disabled-background-color;
