@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.28 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.29 MIT by Qrac */
 
 *,
 ::before,
@@ -828,7 +828,7 @@ iframe {
 }
 
 .box.is-angle-right {
-  padding-right: 2em;
+  padding-right: 1.75em;
 }
 
 .box.is-angle-right:after {
@@ -838,7 +838,7 @@ iframe {
 }
 
 .box.is-angle-left {
-  padding-left: 2em;
+  padding-left: 1.75em;
 }
 
 .box.is-angle-left:after {
