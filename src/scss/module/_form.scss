@@ -331,7 +331,6 @@
     position: relative;
     display: inline-block;
     flex: none;
-    transition: $input-transition;
     &:before {
       content: "";
       position: absolute;
@@ -349,6 +348,7 @@
     background-color: $radio-background-color;
     border: $radio-border-width solid $input-border-color;
     border-radius: $radio-size * 0.5;
+    transition: $radio-transition;
     &:before {
       width: $radio-size * 0.5;
       height: $radio-size * 0.5;
@@ -367,6 +367,7 @@
     background-color: $checkbox-background-color;
     border: $checkbox-border-width solid $input-border-color;
     border-radius: $checkbox-border-radius;
+    transition: $checkbox-transition;
     &:before {
       width: $checkbox-size * 0.75;
       height: $checkbox-size * 0.375;
