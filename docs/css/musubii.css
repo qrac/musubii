@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.27 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.28 MIT by Qrac */
 
 *,
 ::before,
@@ -2548,7 +2548,6 @@ iframe {
   position: relative;
   display: inline-block;
   flex: none;
-  transition: ease-out 0.12s;
 }
 
 .radio:before,
@@ -2566,6 +2565,7 @@ iframe {
   background-color: var(--background);
   border: 2px solid var(--border);
   border-radius: 0.5em;
+  transition: ease-out 0.12s;
 }
 
 .radio:before {
@@ -2584,6 +2584,7 @@ iframe {
   background-color: var(--background);
   border: 2px solid var(--border);
   border-radius: 2px;
+  transition: ease-out 0.12s;
 }
 
 .checkbox:before {
