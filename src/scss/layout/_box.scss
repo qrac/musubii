@@ -140,7 +140,7 @@
           }
         }
         &.is-angle-left {
-          padding-left: $box-angle-size * 4;
+          padding-left: $box-angle-size * 3.5;
           &:after {
             left: $box-angle-size * 1.5;
             transform: translateY(-50%) rotate(-135deg);
