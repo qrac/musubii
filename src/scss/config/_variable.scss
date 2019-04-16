@@ -835,6 +835,9 @@ $pattern-padding-size: (
 // Pattern - Padding Way
 $pattern-padding-way: all, top, right, bottom, left !default;
 
+// Pattern - Safe Area Padding Way
+$pattern-safe-area-padding-way: top, right, bottom, left !default;
+
 //----------------------------------------------------
 // / Utility - Clearfix
 //----------------------------------------------------

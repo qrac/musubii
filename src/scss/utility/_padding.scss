@@ -47,3 +47,15 @@
     }
   }
 }
+
+//----------------------------------------------------
+// / Add Safe Area Padding
+//----------------------------------------------------
+
+@include export-padding {
+  @each $way in $pattern-safe-area-padding-way {
+    &.is-padding-#{$way}-safe {
+      @include safe-area-padding($way);
+    }
+  }
+}
