@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.29 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.30 MIT by Qrac */
 
 *,
 ::before,
@@ -3731,6 +3731,26 @@ svg.icon {
 
 .is-padding-left-xxs {
   padding-left: 4px;
+}
+
+.is-padding-top-safe {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+.is-padding-right-safe {
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+}
+
+.is-padding-bottom-safe {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.is-padding-left-safe {
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
 }
 
 .is-overflow-hidden {
