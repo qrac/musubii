@@ -154,10 +154,10 @@
 
 @include export-text {
   #{$text-class} {
-    .is-nowrap {
+    &.is-nowrap {
       white-space: nowrap;
     }
-    .is-break {
+    &.is-break {
       word-break: break-all;
     }
   }
