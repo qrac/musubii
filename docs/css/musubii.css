@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.30 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.31 MIT by Qrac */
 
 *,
 ::before,
@@ -1307,11 +1307,11 @@ iframe {
   vertical-align: bottom;
 }
 
-.text .is-nowrap {
+.text.is-nowrap {
   white-space: nowrap;
 }
 
-.text .is-break {
+.text.is-break {
   word-break: break-all;
 }
 
