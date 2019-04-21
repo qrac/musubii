@@ -712,6 +712,43 @@
           </div>
         </section>
         <section>
+          <h3 class="demo-h3">Disabled</h3>
+          <div class="demo-area">
+            <div class="demo-line-box">
+              {% macro buttonsDisabled(class) %}
+                <div class="box is-flex is-space-row-xs is-space-column-xs">
+                  <button class="button {{ class }}" type="button" disabled="disabled">戻る</button>
+                  <button class="button {{ class }} is-primary" type="button" disabled="disabled">決定</button>
+                  <button class="button {{ class }} is-info" type="button" disabled="disabled">情報</button>
+                  <button class="button {{ class }} is-success" type="button" disabled="disabled">登録</button>
+                  <button class="button {{ class }} is-warning" type="button" disabled="disabled">注意</button>
+                  <button class="button {{ class }} is-danger" type="button" disabled="disabled">削除</button>
+                  <button class="button {{ class }} is-disabled" type="button" disabled="disabled">不可</button>
+                  <button class="button {{ class }} is-primary" type="button" disabled="disabled">
+                    <i class="fas fa-flag is-margin-right-xs" aria-hidden="true"></i>
+                    <span class="text">FontAwesome</span>
+                  </button>
+                  <button class="button {{ class }} is-success" type="button" disabled="disabled">
+                    <span class="text">FontAwesome</span>
+                    <i class="fas fa-angle-right is-fit is-margin-left-xs" aria-hidden="true"></i>
+                  </button>
+                  <button class="button {{ class }} is-primary" type="button" disabled="disabled">
+                    <i class="material-icons is-margin-right-xs">face</i>
+                    <span class="text">Material Icons</span>
+                  </button>
+                  <button class="button {{ class }} is-success" type="button" disabled="disabled">
+                    <span class="text">Material Icons</span>
+                    <i class="material-icons is-margin-left-xs">keyboard_arrow_right</i>
+                  </button>
+                </div>
+              {% endmacro %}
+              {{ buttonsDisabled(class="is-plain") }}
+              {{ buttonsDisabled(class="is-outline") }}
+              {{ buttonsDisabled(class="is-melt") }}
+            </div>
+          </div>
+        </section>
+        <section>
           <h3 class="demo-h3">Angle</h3>
           <div class="demo-area">
             <div class="demo-line-box">

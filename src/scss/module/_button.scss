@@ -211,6 +211,7 @@
           &[disabled]:hover {
             background-color: $button-disabled-background-color;
             color: $button-disabled-text-color;
+            border-color: $button-outline-border-color;
           }
         }
       }
