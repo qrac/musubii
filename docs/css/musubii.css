@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.32 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.33 MIT by Qrac */
 
 *,
 ::before,
@@ -1603,6 +1603,7 @@ iframe {
 .button.is-outline[disabled]:hover {
   background-color: var(--disabled-background-color);
   color: var(--disabled-text-color);
+  border-color: var(--border);
 }
 
 .button.is-melt {
