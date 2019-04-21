@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.34 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.35 MIT by Qrac */
 
 *,
 ::before,
@@ -2848,6 +2848,7 @@ iframe {
 
 svg.icon {
   display: inline-block;
+  flex: none;
   width: 1em;
   height: 1em;
   vertical-align: text-bottom;
