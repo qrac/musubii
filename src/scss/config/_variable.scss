@@ -501,6 +501,9 @@ $table-background-color: $convert-background !default;
 $table-border-width: $global-border-width !default;
 $table-border-color: $convert-border !default;
 
+// Table th
+$table-th-border-bottom-width: $global-border-width * 2 !default;
+
 // Table Stripe
 $table-stripe-background-color: $convert-background-2 !default;
 

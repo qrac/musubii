@@ -28,7 +28,7 @@
       vertical-align: top;
     }
     > thead > tr:last-child > th {
-      border-bottom: ($table-border-width * 2) solid $table-border-color;
+      border-bottom: $table-th-border-bottom-width solid $table-border-color;
     }
     tr.box {
       display: table-row;
