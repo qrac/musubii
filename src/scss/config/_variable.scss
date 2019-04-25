@@ -391,6 +391,10 @@ $badge-line-height: $line-height-xs !default;
 $badge-transition: $global-transition !default;
 $badge-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
+// Badge Disabled
+$badge-disabled-background-color: $convert-disabled-background-color !default;
+$badge-disabled-text-color: $convert-disabled-text-color !default;
+
 // Badge Round
 $badge-round-border-radius: $radius-full !default;
 

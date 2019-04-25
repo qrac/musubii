@@ -939,6 +939,7 @@
                   <span class="badge {{ class }} is-success">重要</span>
                   <span class="badge {{ class }} is-warning">注意</span>
                   <span class="badge {{ class }} is-danger">必須</span>
+                  <span class="badge {{ class }} is-disabled">不可</span>
                 </div>
               {% endmacro %}
               {{ badges(class="is-plain") }}
@@ -988,6 +989,9 @@
                     <i aria-hidden="true" class="fas fa-exclamation"></i>
                   </span>
                   <span class="badge {{class}} is-danger">
+                    <i aria-hidden="true" class="fas fa-minus"></i>
+                  </span>
+                  <span class="badge {{class}} is-disabled">
                     <i aria-hidden="true" class="fas fa-minus"></i>
                   </span>
                 </div>

@@ -88,6 +88,10 @@
               color: $badge-paint-text-color;
             }
           }
+          &.is-disabled {
+            background-color: $badge-disabled-background-color;
+            color: $badge-disabled-text-color;
+          }
         }
       }
       @if $style == "outline" {
@@ -100,6 +104,11 @@
               color: map-get($value, text-color);
             }
           }
+        }
+        &.is-disabled {
+          background-color: $badge-disabled-background-color;
+          color: $badge-disabled-text-color;
+          border-color: $badge-outline-border-color;
         }
       }
     }
