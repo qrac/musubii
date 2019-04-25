@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.35 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.36 MIT by Qrac */
 
 *,
 ::before,
@@ -1714,6 +1714,11 @@ iframe {
   color: var(--button-paint-text-color);
 }
 
+.badge.is-plain.is-disabled {
+  background-color: var(--disabled-background-color);
+  color: var(--disabled-text-color);
+}
+
 .badge.is-outline {
   background-color: var(--background);
   border: 1px solid var(--border);
@@ -1742,6 +1747,12 @@ iframe {
 .badge.is-outline.is-danger {
   border-color: var(--danger);
   color: var(--danger-strong);
+}
+
+.badge.is-disabled {
+  background-color: var(--disabled-background-color);
+  color: var(--disabled-text-color);
+  border-color: var(--border);
 }
 
 .list > .item:not(:first-child) {
