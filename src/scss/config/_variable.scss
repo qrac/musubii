@@ -128,7 +128,7 @@ $card-zoom-transform: scale(1.025) !default;
 $card-zoom-transition: $global-transition !default;
 
 // Pattern - Card Custom
-$pattern-card-custom: background, outline, radius, floating, link, zoom !default;
+$pattern-card-custom: flexbox, background, outline, radius, floating, link, zoom !default;
 
 //----------------------------------------------------
 // / Layout - Joint

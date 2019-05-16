@@ -30,6 +30,44 @@
 @include export-card {
   .card {
     @each $custom in $pattern-card-custom {
+      @if $custom == "flexbox" {
+        &.is-flex {
+          display: flex;
+        }
+        &.is-inline-flex {
+          display: inline-flex;
+        }
+        &.is-flex,
+        &.is-inline-flex {
+          &:not(.is-nowrap) {
+            flex-wrap: wrap;
+          }
+          &.is-baseline {
+            align-items: baseline;
+          }
+          &.is-middle {
+            align-items: center;
+          }
+          &.is-bottom {
+            align-items: flex-end;
+          }
+          &.is-center {
+            justify-content: center;
+          }
+          &.is-right {
+            justify-content: flex-end;
+          }
+          &.is-between {
+            justify-content: space-between;
+          }
+          &.is-around {
+            justify-content: space-around;
+          }
+          &.is-reverse {
+            flex-direction: row-reverse;
+          }
+        }
+      }
       @if $custom == "background" {
         &.is-bg,
         &.is-bg-light {
