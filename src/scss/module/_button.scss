@@ -81,6 +81,19 @@
             transform: translateY(-50%) rotate(-135deg);
           }
         }
+        &.is-angle-left,
+        &.is-angle-right {
+          &.is-angle-up {
+            &:after {
+              transform: translateY(-30%) rotate(-45deg);
+            }
+          }
+          &.is-angle-down {
+            &:after {
+              transform: translateY(-70%) rotate(135deg);
+            }
+          }
+        }
         &[class*="is-angle-"] {
           @each $style in $pattern-button-style {
             @if $style == "plain" {
