@@ -113,8 +113,13 @@
         &.is-link {
           cursor: pointer;
           transition: $box-link-transition;
-          &:hover {
+          &:not(.is-disabled):not([disabled]):hover {
             background-color: $box-link-hover-background-color;
+          }
+          &.is-disabled,
+          &[disabled] {
+            cursor: not-allowed;
+            pointer-events: none;
           }
         }
       }
