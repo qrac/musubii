@@ -36,6 +36,7 @@
     &.is-disabled,
     &[disabled] {
       cursor: not-allowed;
+      pointer-events: none;
     }
     &:focus {
       box-shadow: $button-focus-shadow;
