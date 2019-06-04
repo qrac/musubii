@@ -112,12 +112,17 @@
         &.is-link {
           cursor: pointer;
           transition: $card-link-transition;
-          &:hover {
+          &:not(.is-disabled):not([disabled]):hover {
             background-color: $card-link-hover-background-color;
           }
           &:focus {
             box-shadow: $card-focus-shadow;
             outline: none;
+          }
+          &.is-disabled,
+          &[disabled] {
+            cursor: not-allowed;
+            pointer-events: none;
           }
         }
       }
@@ -125,12 +130,17 @@
         &.is-zoom {
           cursor: pointer;
           transition: $card-zoom-transition;
-          &:hover {
+          &:not(.is-disabled):not([disabled]):hover {
             transform: $card-zoom-transform;
           }
           &:focus {
             box-shadow: $card-focus-shadow;
             outline: none;
+          }
+          &.is-disabled,
+          &[disabled] {
+            cursor: not-allowed;
+            pointer-events: none;
           }
         }
       }
