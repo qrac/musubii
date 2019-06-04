@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.38 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.39 MIT by Qrac */
 
 *,
 ::before,
@@ -817,8 +817,14 @@ iframe {
   transition: ease-out 0.12s;
 }
 
-.box.is-link:hover {
+.box.is-link:not(.is-disabled):not([disabled]):hover {
   background-color: var(--background-3);
+}
+
+.box.is-link.is-disabled,
+.box.is-link[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .box.is-angle-right:after,
@@ -981,7 +987,7 @@ iframe {
   transition: ease-out 0.12s;
 }
 
-.card.is-link:hover {
+.card.is-link:not(.is-disabled):not([disabled]):hover {
   background-color: var(--background-3);
 }
 
@@ -990,12 +996,18 @@ iframe {
   outline: none;
 }
 
+.card.is-link.is-disabled,
+.card.is-link[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .card.is-zoom {
   cursor: pointer;
   transition: ease-out 0.12s;
 }
 
-.card.is-zoom:hover {
+.card.is-zoom:not(.is-disabled):not([disabled]):hover {
   -webkit-transform: scale(1.025);
   transform: scale(1.025);
 }
@@ -1003,6 +1015,12 @@ iframe {
 .card.is-zoom:focus {
   box-shadow: 0 0 0 4px var(--focus-alpha);
   outline: none;
+}
+
+.card.is-zoom.is-disabled,
+.card.is-zoom[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .joint {
@@ -1460,6 +1478,7 @@ iframe {
 .button.is-disabled,
 .button[disabled] {
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .button:focus {
