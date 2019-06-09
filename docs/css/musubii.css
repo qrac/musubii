@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.40 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.41 MIT by Qrac */
 
 *,
 ::before,
@@ -3122,8 +3122,8 @@ svg.icon {
 
 .wysiwyg a {
   cursor: pointer;
-  border-bottom: 1px solid currentColor;
   color: var(--primary-strong);
+  border-bottom: 1px solid currentColor;
 }
 
 .wysiwyg a:hover,
