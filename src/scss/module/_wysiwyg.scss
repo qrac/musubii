@@ -80,19 +80,34 @@
   .wysiwyg {
     a {
       cursor: pointer;
-      border-bottom: $text-link-border-bottom-width
-        $text-link-border-bottom-style currentColor;
       color: $wysiwyg-link-text-color;
-      &:hover,
-      &:active {
-        border-bottom-color: transparent;
+      @if $text-link-border-change-underline == true {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      } @else {
+        border-bottom: $text-link-border-bottom-width
+          $text-link-border-bottom-style
+          currentColor;
+        &:hover,
+        &:active {
+          border-bottom-color: transparent;
+        }
       }
     }
     &.is-link-reverse a {
-      border-bottom-color: transparent;
-      &:hover,
-      &:active {
-        border-bottom-color: currentColor;
+      @if $text-link-border-change-underline == true {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      } @else {
+        border-bottom-color: transparent;
+        &:hover,
+        &:active {
+          border-bottom-color: currentColor;
+        }
       }
     }
   }
