@@ -188,6 +188,7 @@ $pattern-text-align-way: left, center, right !default;
 $pattern-text-align-mediaquery: mobile, fablet, tablet, desktop, wide !default;
 
 // Text Link
+$text-link-border-change-underline: false !default;
 $text-link-border-bottom-width: $global-border-width !default;
 $text-link-border-bottom-style: solid !default;
 

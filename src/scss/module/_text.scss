@@ -170,10 +170,18 @@
 @include export-text {
   .text.is-link {
     cursor: pointer;
-    border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
-      currentColor;
-    &:hover {
-      border-bottom-color: transparent;
+    @if $text-link-border-change-underline == true {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    } @else {
+      border-bottom: $text-link-border-bottom-width
+        $text-link-border-bottom-style
+        currentColor;
+      &:hover {
+        border-bottom-color: transparent;
+      }
     }
   }
 }
@@ -185,10 +193,17 @@
 @include export-text {
   .text.is-link-reverse {
     cursor: pointer;
-    border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
-      transparent;
-    &:hover {
-      border-color: currentColor;
+    @if $text-link-border-change-underline == true {
+      &:hover {
+        text-decoration: underline;
+      }
+    } @else {
+      border-bottom: $text-link-border-bottom-width
+        $text-link-border-bottom-style
+        transparent;
+      &:hover {
+        border-color: currentColor;
+      }
     }
   }
 }
