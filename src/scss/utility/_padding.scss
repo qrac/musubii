@@ -31,6 +31,36 @@
           }
         }
       }
+    } @else if $way == "vertical" {
+      @each $key, $value in $pattern-padding-size {
+        @if $key == "md" {
+          &.is-padding-top-bottom,
+          &.is-padding-top-bottom-#{$key} {
+            padding-top: $value;
+            padding-bottom: $value;
+          }
+        } @else {
+          &.is-padding-top-bottom-#{$key} {
+            padding-top: $value;
+            padding-bottom: $value;
+          }
+        }
+      }
+    } @else if $way == "horizontal" {
+      @each $key, $value in $pattern-padding-size {
+        @if $key == "md" {
+          &.is-padding-right-left,
+          &.is-padding-right-left-#{$key} {
+            padding-right: $value;
+            padding-left: $value;
+          }
+        } @else {
+          &.is-padding-right-left-#{$key} {
+            padding-right: $value;
+            padding-left: $value;
+          }
+        }
+      }
     } @else {
       @each $key, $value in $pattern-padding-size {
         @if $key == "md" {

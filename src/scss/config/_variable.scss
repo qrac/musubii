@@ -841,7 +841,7 @@ $pattern-padding-size: (
 ) !default;
 
 // Pattern - Padding Way
-$pattern-padding-way: all, top, right, bottom, left !default;
+$pattern-padding-way: all, vertical, horizontal, top, right, bottom, left !default;
 
 // Pattern - Safe Area Padding Way
 $pattern-safe-area-padding-way: top, right, bottom, left !default;
