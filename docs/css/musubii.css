@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.0-alpha.41 MIT by Qrac */
+/*! MUSUBii v7.0.0-alpha.42 MIT by Qrac */
 
 *,
 ::before,
@@ -3730,6 +3730,78 @@ svg.icon {
 
 .is-padding-xxs {
   padding: 4px;
+}
+
+.is-padding-top-bottom-xxl {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.is-padding-top-bottom-xl {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.is-padding-top-bottom-lg {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.is-padding-top-bottom,
+.is-padding-top-bottom-md {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.is-padding-top-bottom-sm {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.is-padding-top-bottom-xs {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.is-padding-top-bottom-xxs {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.is-padding-right-left-xxl {
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+.is-padding-right-left-xl {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.is-padding-right-left-lg {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.is-padding-right-left,
+.is-padding-right-left-md {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.is-padding-right-left-sm {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.is-padding-right-left-xs {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.is-padding-right-left-xxs {
+  padding-right: 4px;
+  padding-left: 4px;
 }
 
 .is-padding-top-xxl {
