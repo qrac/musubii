@@ -6,11 +6,11 @@ import {
 import _escape from "lodash/escape"
 
 export default {
-  title: "Modules",
+  title: "Modules|Button",
   decorators: [withKnobs]
 }
 
-export const modulesButton = () => {
+export const buttonBasic = () => {
   const inlineRadio = { display: "inline-radio" }
   const styles = {
     Plain: " is-plain",
@@ -41,4 +41,4 @@ export const modulesButton = () => {
   )}</code></pre></div>`
   return container
 }
-modulesButton.story = { name: "Button" }
+buttonBasic.story = { name: "Basic" }
