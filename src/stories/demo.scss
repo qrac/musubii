@@ -29,6 +29,13 @@ body {
   }
 }
 
+.pre.is-demo {
+  background-color: #283136;
+  .code {
+    color: #ccc;
+  }
+}
+
 .demo-h1 {
   margin: 160px 16px 32px;
   font-size: 32px;

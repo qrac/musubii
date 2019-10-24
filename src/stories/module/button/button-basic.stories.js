@@ -3,7 +3,9 @@ import {
   boolean,
   optionsKnob as options
 } from "@storybook/addon-knobs"
-import _escape from "lodash/escape"
+//import _escape from "lodash/escape"
+import Prism from "prismjs"
+import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard"
 
 export default {
   title: "Modules|Button",
@@ -29,16 +31,19 @@ export const buttonBasic = () => {
     { role: " is-warning", text: "注意" },
     { role: " is-danger", text: "削除" }
   ]
-  const buttons = items
+  const contents = items
     .map(
       item =>
         `<button class="button${style}${item.role}${round}${floating}" type="button"${disabled}>${item.text}</button>`
     )
     .join("\n")
-  const wrapper = `<div class="box is-flex is-space-row-xs is-space-column-xs">${buttons}</div>`
-  const container = `<div class="box is-space-xs">${wrapper}<pre class="pre"><code class="code">${_escape(
-    buttons
-  )}</code></pre></div>`
+  const contentsHighlight = Prism.highlight(
+    contents,
+    Prism.languages.html,
+    "html"
+  )
+  const wrapper = `<div class="box is-flex is-space-row-xs is-space-column-xs">${contents}</div>`
+  const container = `<div class="box is-space-xs">${wrapper}<pre class="pre is-demo"><code class="code">${contentsHighlight}</code></pre></div>`
   return container
 }
 buttonBasic.story = { name: "Basic" }
