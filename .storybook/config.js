@@ -1,7 +1,13 @@
-import { configure } from "@storybook/html"
+import { addParameters, configure } from "@storybook/html"
+
 import "../src/scss/musubii.scss"
 import "../src/stories/demo.scss"
 import "highlight.js/styles/monokai-sublime.css"
 
-// automatically import all files ending in *.stories.js
+addParameters({
+  options: {
+    panelPosition: "right" // or "bottom"
+  }
+})
+
 configure(require.context("../src/stories", true, /\.stories\.js$/), module)

@@ -1,7 +1,8 @@
 import {
   withKnobs,
   boolean,
-  optionsKnob as options
+  radios
+  //optionsKnob as options
 } from "@storybook/addon-knobs"
 
 import copyCodeBlock from "@pickra/copy-code-block"
@@ -14,13 +15,13 @@ export default {
 }
 
 export const buttonBasic = () => {
-  const inlineRadio = { display: "inline-radio" }
+  //const inlineRadio = { display: "inline-radio" }
   const styles = {
     Plain: " is-plain",
     Outline: " is-outline",
     Melt: " is-melt"
   }
-  const style = options("Style", styles, " is-plain", inlineRadio)
+  const style = radios("Style", styles, " is-plain")
   const round = boolean("Round", false) ? " is-round" : ""
   const floating = boolean("Floating", false) ? " is-floating" : ""
   const disabled = boolean("Disabled", false) ? " disabled" : ""
@@ -40,7 +41,7 @@ export const buttonBasic = () => {
     .join("\n")
   const highlight = copyCodeBlock(contents, { lang: "html" })
   const wrapper = `<div class="box is-flex is-space-row-xs is-space-column-xs">${contents}</div>`
-  const container = `<div class="box is-space-xs">${wrapper}${highlight}</div>`
+  const container = `<div class="box is-space-sm">${wrapper}${highlight}</div>`
   return container
 }
 buttonBasic.story = { name: "Basic" }
