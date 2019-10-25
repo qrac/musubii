@@ -29,10 +29,59 @@ body {
   }
 }
 
-.pre.is-demo {
+div.container_2Cs1XD {
+  position: relative;
+  display: block;
+  margin-bottom: 0;
+  padding: 0;
   background-color: #283136;
-  .code {
-    color: #ccc;
+  border: none;
+  border-radius: 2px;
+  overflow: hidden;
+  &:focus {
+    outline: none;
+  }
+  .displayCode_2Cs1XD {
+    flex-basis: 0;
+    max-width: 100%;
+    padding: 0;
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .hljs {
+    padding: 1.25em 1.5em;
+    background-color: #283136;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+      Meiryo, monospace, serif;
+  }
+}
+
+button.copyButton_2Cs1XD {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  flex-basis: 0;
+  max-width: 100%;
+  margin-left: 0;
+  padding: 4px 8px;
+  background-color: #283136;
+  outline: none;
+  border-top: 1px solid rgba(#fff, 0.3);
+  border-left: 1px solid rgba(#fff, 0.3);
+  border-radius: 3px 0 0 0;
+  color: rgba(#fff, 0.8);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
+    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  line-height: 16px;
+  white-space: nowrap;
+  transition: 0.12s ease-out;
+  &:hover {
+    background-color: lighten(#283136, 2%);
+    color: rgba(#fff, 0.8);
   }
 }
 

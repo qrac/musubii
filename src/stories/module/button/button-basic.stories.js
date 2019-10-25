@@ -3,9 +3,10 @@ import {
   boolean,
   optionsKnob as options
 } from "@storybook/addon-knobs"
-//import _escape from "lodash/escape"
-import Prism from "prismjs"
-import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard"
+
+import copyCodeBlock from "@pickra/copy-code-block"
+import hljs from "highlight.js/lib/highlight"
+hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
   title: "Modules|Button",
@@ -37,13 +38,9 @@ export const buttonBasic = () => {
         `<button class="button${style}${item.role}${round}${floating}" type="button"${disabled}>${item.text}</button>`
     )
     .join("\n")
-  const contentsHighlight = Prism.highlight(
-    contents,
-    Prism.languages.html,
-    "html"
-  )
+  const highlight = copyCodeBlock(contents, { lang: "html" })
   const wrapper = `<div class="box is-flex is-space-row-xs is-space-column-xs">${contents}</div>`
-  const container = `<div class="box is-space-xs">${wrapper}<pre class="pre is-demo"><code class="code">${contentsHighlight}</code></pre></div>`
+  const container = `<div class="box is-space-xs">${wrapper}${highlight}</div>`
   return container
 }
 buttonBasic.story = { name: "Basic" }
