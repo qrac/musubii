@@ -852,7 +852,7 @@
     prop-types "^15.7.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@5.2.5":
+"@storybook/addons@5.2.5", "@storybook/addons@>=5.0.0":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.2.5.tgz#e3e23d5ea6eb221df31e1a5d125be47454e9a0e8"
   integrity sha512-CvMj7Bs3go9tv5rZuAvFwuwe8p/16LDCHS7+5nVFosvcL8nuN339V3rzakw8nLy/S6XKeZ1ACu4t3vYkreRE3w==
@@ -934,7 +934,7 @@
   dependencies:
     core-js "^3.0.1"
 
-"@storybook/components@5.2.5":
+"@storybook/components@5.2.5", "@storybook/components@>=5.0.0":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-5.2.5.tgz#40190dafbee34f083182255d26c19a0ea50789c8"
   integrity sha512-6NVaBJm5wY53e9k+2ZiL2ABsHghE1ssQciLTG3jJPahnM6rfkM8ue66rhxhP88jE9isT48JgOZOJepEyxDz/fg==
@@ -959,7 +959,7 @@
     react-textarea-autosize "^7.1.0"
     simplebar-react "^1.0.0-alpha.6"
 
-"@storybook/core-events@5.2.5":
+"@storybook/core-events@5.2.5", "@storybook/core-events@>=5.0.0":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.2.5.tgz#62881164a4a01aa99ff0691e70eaed2dd58e229e"
   integrity sha512-O5GM8XEBbYNbM6Z7a4H1bbnbO2cxQrXMhEwansC7a7YinQdkTPiuGxke3NiyK+7pLDh778kpQyjoCjXq6UfAoQ==
@@ -1078,7 +1078,7 @@
     memoizerific "^1.11.3"
     qs "^6.6.0"
 
-"@storybook/theming@5.2.5":
+"@storybook/theming@5.2.5", "@storybook/theming@>=5.0.0":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.5.tgz#9579e7944f61ded637d1d79be5fb859a617620f5"
   integrity sha512-PGZNYrRgAhXFJKnktFpyyKlaDXEhtTi5XPq5ASVJrsPW6l963Mk2EMKSm4TCTxIJhs0Kx4cv2MnNZFDqHf47eg==
@@ -7233,6 +7233,16 @@ store2@^2.7.1:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.10.0.tgz#46b82bb91878daf1b0d56dec2f1d41e54d5103cf"
   integrity sha512-tWEpK0snS2RPUq1i3R6OahfJNjWCQYNxq0+by1amCSuw0mXtymJpzmZIeYpA1UAa+7B0grCpNYIbDcd7AgTbFg==
+
+storybook-addon-root-attribute@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/storybook-addon-root-attribute/-/storybook-addon-root-attribute-0.2.2.tgz#b9097d45dfcf6e0c738ff5c0d8b68d90571558ea"
+  integrity sha512-fcHn0yqS3wG7wLhDrRuvXS/k7YLCSHo2yAnAIzTKwJ2EhAxpQUNKA9g9VZDb15j6AlqmZPG4qjFtW0lmDi/wkw==
+  dependencies:
+    "@storybook/addons" ">=5.0.0"
+    "@storybook/components" ">=5.0.0"
+    "@storybook/core-events" ">=5.0.0"
+    "@storybook/theming" ">=5.0.0"
 
 stream-browserify@^2.0.1:
   version "2.0.2"
