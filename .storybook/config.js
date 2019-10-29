@@ -1,6 +1,8 @@
 import { configure, addDecorator, addParameters } from "@storybook/html"
 import { withRootAttribute } from "storybook-addon-root-attribute"
 
+import theme from "./theme"
+
 import "../src/scss/musubii.scss"
 import "../src/stories/demo.scss"
 import "highlight.js/styles/monokai-sublime.css"
@@ -9,6 +11,7 @@ addDecorator(withRootAttribute)
 
 addParameters({
   options: {
+    theme: theme,
     panelPosition: "right" // or "bottom"
   },
   rootAttribute: {

@@ -24,8 +24,8 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "dev": "start-storybook -p 6006",
-    "generate": "build-storybook",
+    "dev": "start-storybook -p 6006 -s static",
+    "generate": "build-storybook -s static",
     "build": ""
   },
   "browserslist": [
@@ -48,6 +48,7 @@
     "autoprefixer": "^9.6.5",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "storybook-addon-root-attribute": "^0.2.2",

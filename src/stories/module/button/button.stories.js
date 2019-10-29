@@ -5,7 +5,7 @@ import hljs from "highlight.js/lib/highlight"
 hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
-  title: "Modules|Button",
+  title: "Modules | Button",
   decorators: [withKnobs]
 }
 
@@ -24,7 +24,7 @@ const items = [
   { role: " is-danger", text: "削除", icon: "times" }
 ]
 
-export const buttonBasic = () => {
+export const basic = () => {
   const style = radios("Style", styles, " is-plain")
   const strong = boolean("Strong", false) ? " is-strong" : ""
   const round = boolean("Round", false) ? " is-round" : ""
@@ -41,9 +41,9 @@ export const buttonBasic = () => {
   const container = `<div class="box is-space-sm">${wrapper}${highlight}</div>`
   return container
 }
-buttonBasic.story = { name: "Basic" }
+basic.story = { name: "Basic" }
 
-export const buttonSquare = () => {
+export const square = () => {
   const style = radios("Style", styles, " is-plain")
   const floating = boolean("Floating", false) ? " is-floating" : ""
   const disabled = boolean("Disabled", false) ? " disabled" : ""
@@ -58,9 +58,9 @@ export const buttonSquare = () => {
   const container = `<div class="box is-space-sm">${wrapper}${highlight}</div>`
   return container
 }
-buttonSquare.story = { name: "Square" }
+square.story = { name: "Square" }
 
-export const buttonCircle = () => {
+export const circle = () => {
   const style = radios("Style", styles, " is-plain")
   const floating = boolean("Floating", false) ? " is-floating" : ""
   const disabled = boolean("Disabled", false) ? " disabled" : ""
@@ -75,4 +75,4 @@ export const buttonCircle = () => {
   const container = `<div class="box is-space-sm">${wrapper}${highlight}</div>`
   return container
 }
-buttonCircle.story = { name: "Circle" }
+circle.story = { name: "Circle" }
