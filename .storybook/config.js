@@ -4,8 +4,7 @@ import { withRootAttribute } from "storybook-addon-root-attribute"
 import theme from "./theme"
 
 import "../src/scss/musubii.scss"
-import "../src/stories/demo.scss"
-import "highlight.js/styles/monokai-sublime.css"
+import "./demo.scss"
 
 addDecorator(withRootAttribute)
 

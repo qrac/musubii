@@ -7252,6 +7252,14 @@ storybook-addon-root-attribute@^0.2.2:
     "@storybook/core-events" ">=5.0.0"
     "@storybook/theming" ">=5.0.0"
 
+storybook-dark-mode@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/storybook-dark-mode/-/storybook-dark-mode-0.1.9.tgz#11d9329143c341d2ee8672cb868e81ed5509b6c5"
+  integrity sha512-P4/4gC7/JkDpmYT2BCP//dAUSdVVLVMBeoe8Lgd/oiDZNAEvaX63Gc8uLEyeU5NCYTC0JuqlTL+jYY9Hmv6ZIA==
+  dependencies:
+    fast-deep-equal "^2.0.1"
+    memoizerific "^1.11.3"
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.2.tgz#87521d38a44aa7ee91ce1cd2a47df0cb49dd660b"
