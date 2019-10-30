@@ -1,18 +1,5 @@
 //----------------------------------------------------
-// Demo
-//----------------------------------------------------
-
-//----------------------------------------------------
-// / Global
-//----------------------------------------------------
-
-body {
-  padding: 16px;
-  //transition: background-color 0.4s;
-}
-
-//----------------------------------------------------
-// / Highlight.js
+// / Highlight
 //----------------------------------------------------
 
 // GitHub Gist Theme - https://github.com/highlightjs/highlight.js/blob/9.16.0/src/styles/github-gist.css
@@ -163,6 +150,7 @@ body {
   }
 }
 
+// @pickra/copy-code-block
 div.container_2Cs1XD {
   position: relative;
   display: block;
@@ -184,7 +172,7 @@ div.container_2Cs1XD {
     -webkit-overflow-scrolling: touch;
   }
   .hljs {
-    padding: 1.25em 1.5em 2em;
+    padding: 20px 24px 32px;
     background: var(--hljs-background-color);
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
       Meiryo, monospace, serif;

@@ -1,32 +1,17 @@
-import { configure, addDecorator, addParameters } from "@storybook/html"
-import { withRootAttribute } from "storybook-addon-root-attribute"
+import { configure, addParameters, addDecorator } from "@storybook/html"
 
 import theme from "./theme"
 
 import "../src/scss/musubii.scss"
-import "./demo.scss"
+import "./style/demo.scss"
 
-addDecorator(withRootAttribute)
+configure(require.context("./stories", true, /\.stories\.js$/), module)
 
 addParameters({
   options: {
-    theme: theme,
-    panelPosition: "right" // or "bottom"
-  },
-  rootAttribute: {
-    root: "body",
-    attribute: "data-theme",
-    defaultState: {
-      name: "Light",
-      value: "light"
-    },
-    states: [
-      {
-        name: "Dark",
-        value: "dark"
-      }
-    ]
+    theme: theme
+    //panelPosition: "bottom" // or "right"
   }
 })
 
-configure(require.context("../src/stories", true, /\.stories\.js$/), module)
+//addDecorator(withRootAttribute)
