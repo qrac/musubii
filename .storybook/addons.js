@@ -6,4 +6,5 @@ import "@storybook/addon-viewport/register"
 import "storybook-dark-mode/register"
 
 // Local Addons
+import "./addon/storybook-dark-mode-attribute"
 import "./addon/storybook-title-fix"

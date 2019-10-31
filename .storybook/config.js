@@ -1,4 +1,5 @@
 import { configure, addParameters, addDecorator } from "@storybook/html"
+import { withTheme } from "./addon/storybook-dark-mode-attribute"
 
 import theme from "./theme"
 
@@ -14,4 +15,4 @@ addParameters({
   }
 })
 
-//addDecorator(withRootAttribute)
+addDecorator(withTheme)
