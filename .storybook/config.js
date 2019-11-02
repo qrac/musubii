@@ -1,18 +1,13 @@
 import { configure, addParameters, addDecorator } from "@storybook/html"
-import { withTheme } from "./addon/storybook-dark-mode-attribute"
+import { withDarkModeAttribute } from "./addon/storybook-dark-mode-attribute"
 
-import theme from "./theme"
+import * as themes from "./themes"
 
 import "../src/scss/musubii.scss"
 import "./style/demo.scss"
 
 configure(require.context("./stories", true, /\.stories\.js$/), module)
 
-addParameters({
-  options: {
-    theme: theme
-    //panelPosition: "bottom" // or "right"
-  }
-})
+addParameters({ darkMode: themes })
 
-addDecorator(withTheme)
+addDecorator(withDarkModeAttribute)
