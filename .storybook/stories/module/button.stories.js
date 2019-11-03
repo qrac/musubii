@@ -34,7 +34,7 @@ const items = [
 ]
 
 const beautifyHtmlOptions = {
-  inline: "span",
+  inline: ["span", "i"],
   indent_size: 2
 }
 
@@ -122,12 +122,10 @@ export const square = () => {
     .map(
       item =>
         `<button
-            class="button ${style} is-square ${item.role} ${floating}"
-            type="button"
-            ${disabled}
-          >
-            <i aria-hidden="true" class="fas fa-${item.icon}"></i>
-          </button>`
+          class="button ${style} is-square ${item.role} ${floating}"
+          type="button"
+          ${disabled}
+        ><i aria-hidden="true" class="fas fa-${item.icon}"></i></button>`
     )
     .join("")
     .replace(/\s+/g, " ")
@@ -176,12 +174,10 @@ export const circle = () => {
     .map(
       item =>
         `<button
-            class="button ${style} is-circle ${item.role} ${floating}"
-            type="button"
-            ${disabled}
-          >
-            <i aria-hidden="true" class="fas fa-${item.icon}"></i>
-          </button>`
+          class="button ${style} is-circle ${item.role} ${floating}"
+          type="button"
+          ${disabled}
+        ><i aria-hidden="true" class="fas fa-${item.icon}"></i></button>`
     )
     .join("")
     .replace(/\s+/g, " ")
