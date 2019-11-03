@@ -1,9 +1,10 @@
 import { create } from "@storybook/theming"
+import pkg from "../package.json"
 import pjt from "../project.json"
 
 const common = {
-  brandTitle: pjt.setting.name
-  //brandUrl: "https://example.com",
+  brandTitle: pjt.setting.name + " v" + pkg.version
+  //brandUrl: "https://musubii.qranoko.jp/storybook",
   //brandImage: "/favicon.png"
 }
 
