@@ -1,4 +1,4 @@
-import { configure, addParameters, addDecorator } from "@storybook/html"
+import { configure, addParameters, addDecorator } from "@storybook/react"
 import { withDarkModeAttribute } from "./addon/storybook-dark-mode-attribute"
 
 import * as themes from "./themes"

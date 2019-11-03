@@ -9,7 +9,6 @@ export const light = create({
   ...common,
   base: "light"
 })
-
 export const dark = create({
   ...common,
   base: "dark"
