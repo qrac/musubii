@@ -3,6 +3,8 @@ import pjt from "../project.json"
 
 const common = {
   brandTitle: pjt.setting.name
+  //brandUrl: "https://example.com",
+  //brandImage: "/favicon.png"
 }
 
 export const light = create({
