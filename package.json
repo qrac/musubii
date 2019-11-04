@@ -24,9 +24,10 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "dev": "start-storybook -p 6006 -s static",
-    "generate": "build-storybook -s static -o public/docs",
-    "build": ""
+    "dev": "start-storybook -p 6006 -s ./static",
+    "generate": "build-storybook -s ./static -o ./public",
+    "build": "",
+    "clean": "rmtrash ./public"
   },
   "browserslist": [
     "> 3% in JP",
