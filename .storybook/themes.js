@@ -4,7 +4,7 @@ import pjt from "../project.json"
 
 const common = {
   brandTitle: pjt.setting.name + " v" + pkg.version,
-  brandUrl: "https://musubii.qranoko.jp"
+  brandUrl: "https://musubii.qranoko.jp/"
   //brandImage: "/favicon.png"
 }
 
