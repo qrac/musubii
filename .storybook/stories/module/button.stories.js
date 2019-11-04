@@ -14,7 +14,7 @@ import hljs from "highlight.js/lib/highlight"
 hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
-  title: "Modules | Button",
+  title: "Components | Modules / Button",
   decorators: [withKnobs]
 }
 
