@@ -14,14 +14,8 @@ import hljs from "highlight.js/lib/highlight"
 hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
-  title: "Components | Modules / Button",
+  title: "Styles | Components / Button",
   decorators: [withKnobs]
-}
-
-const styles = {
-  Plain: "is-plain",
-  Outline: "is-outline",
-  Melt: "is-melt"
 }
 
 const items = [
@@ -32,6 +26,24 @@ const items = [
   { id: 4, role: "is-warning", text: "注意", icon: "exclamation-triangle" },
   { id: 5, role: "is-danger", text: "削除", icon: "times" }
 ]
+
+const styles = {
+  Plain: "is-plain",
+  Outline: "is-outline",
+  Melt: "is-melt"
+}
+
+const angles = {
+  None: "",
+  Right: "is-angle-right",
+  Left: "is-angle-left"
+}
+
+const angleVs = {
+  Default: "",
+  Up: "is-angle-up",
+  Down: "is-angle-down"
+}
 
 const beautifyHtmlOptions = {
   inline: ["span", "i"],
@@ -44,28 +56,17 @@ const beautifyHtmlOptions = {
 
 export const basic = () => {
   const style = radios("Style", styles, "is-plain")
+  const angleH = radios("Angle", angles, "")
+  const anglesV = radios("Angle+", angleVs, "")
   const strong = boolean("Strong", false) ? "is-strong" : ""
   const round = boolean("Round", false) ? "is-round" : ""
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
-  const contentsView = items.map(item => (
-    <button
-      key={item.id}
-      className={["button", style, item.role, strong, round, floating]
-        .join(" ")
-        .replace(/\s+/g, " ")
-        .replace(/^\s+|\s+$/g, "")}
-      type="button"
-      disabled={disabled}
-    >
-      {item.text}
-    </button>
-  ))
-  const contentsCode = items
+  const contents = items
     .map(
       item =>
         `<button
-          class="button ${style} ${item.role} ${strong} ${round} ${floating}"
+          class="button ${style} ${item.role} ${angleH} ${anglesV} ${strong} ${round} ${floating}"
           type="button"
           ${disabled}
         >${item.text}</button>`
@@ -78,16 +79,17 @@ export const basic = () => {
     plugins: [parserHtml],
     htmlWhitespaceSensitivity: "ignore"
   })*/
-  const formattedCode = beautify.html(contentsCode, beautifyHtmlOptions)
-  const highlightCode = copyCodeBlock(formattedCode, { lang: "html" })
+  const formatted = beautify.html(contents, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="box is-space-sm">
-      <div className="box is-flex is-space-row-xs is-space-column-xs">
-        {contentsView}
-      </div>
+      <div
+        className="box is-flex is-space-row-xs is-space-column-xs"
+        dangerouslySetInnerHTML={{ __html: formatted }}
+      ></div>
       <div
         className="box"
-        dangerouslySetInnerHTML={{ __html: highlightCode }}
+        dangerouslySetInnerHTML={{ __html: highlighted }}
       ></div>
     </div>
   )
@@ -102,23 +104,7 @@ export const square = () => {
   const style = radios("Style", styles, "is-plain")
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
-  const contentsView = items.map(item => (
-    <button
-      key={item.id}
-      className={["button", style, "is-square", item.role, floating]
-        .join(" ")
-        .replace(/\s+/g, " ")
-        .replace(/^\s+|\s+$/g, "")}
-      type="button"
-      disabled={disabled}
-    >
-      <i
-        aria-hidden="true"
-        className={["fas", "fa-" + item.icon].join(" ")}
-      ></i>
-    </button>
-  ))
-  const contentsCode = items
+  const contents = items
     .map(
       item =>
         `<button
@@ -130,16 +116,17 @@ export const square = () => {
     .join("")
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
-  const formattedCode = beautify.html(contentsCode, beautifyHtmlOptions)
-  const highlightCode = copyCodeBlock(formattedCode, { lang: "html" })
+  const formatted = beautify.html(contents, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="box is-space-sm">
-      <div className="box is-flex is-space-row-xs is-space-column-xs">
-        {contentsView}
-      </div>
+      <div
+        className="box is-flex is-space-row-xs is-space-column-xs"
+        dangerouslySetInnerHTML={{ __html: formatted }}
+      ></div>
       <div
         className="box"
-        dangerouslySetInnerHTML={{ __html: highlightCode }}
+        dangerouslySetInnerHTML={{ __html: highlighted }}
       ></div>
     </div>
   )
@@ -154,23 +141,7 @@ export const circle = () => {
   const style = radios("Style", styles, "is-plain")
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
-  const contentsView = items.map(item => (
-    <button
-      key={item.id}
-      className={["button", style, "is-circle", item.role, floating]
-        .join(" ")
-        .replace(/\s+/g, " ")
-        .replace(/^\s+|\s+$/g, "")}
-      type="button"
-      disabled={disabled}
-    >
-      <i
-        aria-hidden="true"
-        className={["fas", "fa-" + item.icon].join(" ")}
-      ></i>
-    </button>
-  ))
-  const contentsCode = items
+  const contents = items
     .map(
       item =>
         `<button
@@ -182,16 +153,17 @@ export const circle = () => {
     .join("")
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
-  const formattedCode = beautify.html(contentsCode, beautifyHtmlOptions)
-  const highlightCode = copyCodeBlock(formattedCode, { lang: "html" })
+  const formatted = beautify.html(contents, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="box is-space-sm">
-      <div className="box is-flex is-space-row-xs is-space-column-xs">
-        {contentsView}
-      </div>
+      <div
+        className="box is-flex is-space-row-xs is-space-column-xs"
+        dangerouslySetInnerHTML={{ __html: formatted }}
+      ></div>
       <div
         className="box"
-        dangerouslySetInnerHTML={{ __html: highlightCode }}
+        dangerouslySetInnerHTML={{ __html: highlighted }}
       ></div>
     </div>
   )
