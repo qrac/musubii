@@ -28,21 +28,24 @@ const items = [
 ]
 
 const styles = {
-  Plain: "is-plain",
-  Outline: "is-outline",
-  Melt: "is-melt"
+  plain: "is-plain",
+  outline: "is-outline",
+  melt: "is-melt"
 }
 
 const angles = {
-  None: "",
-  Right: "is-angle-right",
-  Left: "is-angle-left"
+  none: "",
+  right: "is-angle-right",
+  left: "is-angle-left",
+  "right up": "is-angle-right is-angle-up",
+  "right down": "is-angle-right is-angle-down",
+  "left up": "is-angle-left is-angle-up",
+  "left down": "is-angle-left is-angle-down"
 }
 
-const angleVs = {
-  Default: "",
-  Up: "is-angle-up",
-  Down: "is-angle-down"
+const tags = {
+  button: "button",
+  anchor: "a"
 }
 
 const beautifyHtmlOptions = {
@@ -56,20 +59,22 @@ const beautifyHtmlOptions = {
 
 export const basic = () => {
   const style = radios("Style", styles, "is-plain")
-  const angleH = radios("Angle", angles, "")
-  const anglesV = radios("Angle+", angleVs, "")
   const strong = boolean("Strong", false) ? "is-strong" : ""
   const round = boolean("Round", false) ? "is-round" : ""
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
+  const angle = radios("Angle", angles, "")
+  const tag = radios("Tag", tags, "button")
+  const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
+  const externalLink =
+    boolean("External Link", false) && tag === "a"
+      ? 'target="_blank" rel="noopener noreferrer"'
+      : ""
   const contents = items
     .map(
       item =>
-        `<button
-          class="button ${style} ${item.role} ${angleH} ${anglesV} ${strong} ${round} ${floating}"
-          type="button"
-          ${disabled}
-        >${item.text}</button>`
+        `<${tag} class="button ${style} ${item.role} ${strong} ${round} ${floating} ${angle}"
+          ${tagAttr} ${externalLink} ${disabled}>${item.text}</${tag}>`
     )
     .join("")
     .replace(/\s+/g, " ")
@@ -104,14 +109,18 @@ export const square = () => {
   const style = radios("Style", styles, "is-plain")
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
+  const tag = radios("Tag", tags, "button")
+  const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
+  const externalLink =
+    boolean("External Link", false) && tag === "a"
+      ? 'target="_blank" rel="noopener noreferrer"'
+      : ""
   const contents = items
     .map(
       item =>
-        `<button
-          class="button ${style} is-square ${item.role} ${floating}"
-          type="button"
-          ${disabled}
-        ><i aria-hidden="true" class="fas fa-${item.icon}"></i></button>`
+        `<${tag} class="button ${style} is-square ${item.role} ${floating}"
+          ${tagAttr} ${externalLink} ${disabled}
+          ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
     )
     .join("")
     .replace(/\s+/g, " ")
@@ -141,14 +150,18 @@ export const circle = () => {
   const style = radios("Style", styles, "is-plain")
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
+  const tag = radios("Tag", tags, "button")
+  const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
+  const externalLink =
+    boolean("External Link", false) && tag === "a"
+      ? 'target="_blank" rel="noopener noreferrer"'
+      : ""
   const contents = items
     .map(
       item =>
-        `<button
-          class="button ${style} is-circle ${item.role} ${floating}"
-          type="button"
-          ${disabled}
-        ><i aria-hidden="true" class="fas fa-${item.icon}"></i></button>`
+        `<${tag} class="button ${style} is-circle ${item.role} ${floating}"
+          ${tagAttr} ${externalLink} ${disabled}
+          ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
     )
     .join("")
     .replace(/\s+/g, " ")
