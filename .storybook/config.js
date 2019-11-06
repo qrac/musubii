@@ -6,7 +6,9 @@ import * as themes from "./themes"
 import "../src/scss/musubii.scss"
 import "./style/demo.scss"
 
-addParameters({ darkMode: themes })
+addParameters({
+  darkMode: themes
+})
 
 addDecorator(withDarkModeAttribute)
 

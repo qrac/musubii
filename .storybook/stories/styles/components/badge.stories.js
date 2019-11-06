@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Button
+// Badge
 //----------------------------------------------------
 
 import React from "react"
@@ -7,49 +7,36 @@ import { withKnobs, boolean, radios } from "@storybook/addon-knobs"
 
 import copyCodeBlock from "@pickra/copy-code-block"
 
-//import prettier from "prettier/standalone"
-//import parserHtml from "prettier/parser-html"
 import beautify from "js-beautify"
 import hljs from "highlight.js/lib/highlight"
 hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
-  title: "Styles | Components / Button",
+  title: "Styles | Components / Badge",
   decorators: [withKnobs]
 }
 
 const items = [
-  { id: 0, role: "", text: "戻る", icon: "angle-left" },
-  { id: 1, role: "is-primary", text: "決定", icon: "check" },
-  { id: 2, role: "is-info", text: "情報", icon: "info-circle" },
-  { id: 3, role: "is-success", text: "登録", icon: "save" },
-  { id: 4, role: "is-warning", text: "注意", icon: "exclamation-triangle" },
-  { id: 5, role: "is-danger", text: "削除", icon: "times" }
+  { id: 0, role: "", text: "任意", icon: "tag" },
+  { id: 1, role: "is-primary", text: "推奨", icon: "check" },
+  { id: 2, role: "is-info", text: "情報", icon: "info" },
+  { id: 3, role: "is-success", text: "重要", icon: "check" },
+  { id: 4, role: "is-warning", text: "注意", icon: "info" },
+  { id: 5, role: "is-danger", text: "必須", icon: "minus" }
 ]
 
 const styles = {
   plain: "is-plain",
-  outline: "is-outline",
-  melt: "is-melt"
-}
-
-const angles = {
-  none: "",
-  right: "is-angle-right",
-  left: "is-angle-left",
-  "right up": "is-angle-right is-angle-up",
-  "right down": "is-angle-right is-angle-down",
-  "left up": "is-angle-left is-angle-up",
-  "left down": "is-angle-left is-angle-down"
+  outline: "is-outline"
 }
 
 const tags = {
-  button: "button",
-  anchor: "a"
+  span: "span",
+  div: "div"
 }
 
 const beautifyHtmlOptions = {
-  inline: ["span", "i"],
+  inline: ["i"],
   indent_size: 2
 }
 
@@ -61,29 +48,17 @@ export const basic = () => {
   const style = radios("Style", styles, "is-plain")
   const strong = boolean("Strong", false) ? "is-strong" : ""
   const round = boolean("Round", false) ? "is-round" : ""
-  const floating = boolean("Floating", false) ? "is-floating" : ""
-  const disabled = boolean("Disabled", false) ? "disabled" : ""
-  const angle = radios("Angle", angles, "")
-  const tag = radios("Tag", tags, "button")
-  const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
-  const externalLink =
-    boolean("External Link", false) && tag === "a"
-      ? 'target="_blank" rel="noopener noreferrer"'
-      : ""
+  const disabled = boolean("Disabled", false) ? "is-disabled" : ""
+  const tag = radios("Tag", tags, "span")
   const contents = items
     .map(
       item =>
-        `<${tag} class="button ${style} ${item.role} ${strong} ${round} ${floating} ${angle}"
-          ${tagAttr} ${externalLink} ${disabled}>${item.text}</${tag}>`
+        `<${tag} class="badge ${style} ${item.role} ${strong} ${round} ${disabled}"
+        >${item.text}</${tag}>`
     )
     .join("")
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
-  /*const formattedCode = prettier.format(contentsCode, {
-    parser: "html",
-    plugins: [parserHtml],
-    htmlWhitespaceSensitivity: "ignore"
-  })*/
   const formatted = beautify.html(contents, beautifyHtmlOptions)
   const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
@@ -107,20 +82,13 @@ basic.story = { name: "Basic" }
 
 export const square = () => {
   const style = radios("Style", styles, "is-plain")
-  const floating = boolean("Floating", false) ? "is-floating" : ""
-  const disabled = boolean("Disabled", false) ? "disabled" : ""
-  const tag = radios("Tag", tags, "button")
-  const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
-  const externalLink =
-    boolean("External Link", false) && tag === "a"
-      ? 'target="_blank" rel="noopener noreferrer"'
-      : ""
+  const disabled = boolean("Disabled", false) ? "is-disabled" : ""
+  const tag = radios("Tag", tags, "span")
   const contents = items
     .map(
       item =>
-        `<${tag} class="button ${style} is-square ${item.role} ${floating}"
-          ${tagAttr} ${externalLink} ${disabled}
-          ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
+        `<${tag} class="badge ${style} is-square ${item.role} ${disabled}"
+        ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
     )
     .join("")
     .replace(/\s+/g, " ")
@@ -148,20 +116,13 @@ square.story = { name: "Square" }
 
 export const circle = () => {
   const style = radios("Style", styles, "is-plain")
-  const floating = boolean("Floating", false) ? "is-floating" : ""
-  const disabled = boolean("Disabled", false) ? "disabled" : ""
-  const tag = radios("Tag", tags, "button")
-  const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
-  const externalLink =
-    boolean("External Link", false) && tag === "a"
-      ? 'target="_blank" rel="noopener noreferrer"'
-      : ""
+  const disabled = boolean("Disabled", false) ? "is-disabled" : ""
+  const tag = radios("Tag", tags, "span")
   const contents = items
     .map(
       item =>
-        `<${tag} class="button ${style} is-circle ${item.role} ${floating}"
-          ${tagAttr} ${externalLink} ${disabled}
-          ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
+        `<${tag} class="badge ${style} is-circle ${item.role} ${disabled}"
+        ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
     )
     .join("")
     .replace(/\s+/g, " ")
