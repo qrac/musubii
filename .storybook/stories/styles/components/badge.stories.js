@@ -62,11 +62,15 @@ export const basic = () => {
   const formatted = beautify.html(contents, beautifyHtmlOptions)
   const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
-    <div className="box is-space-sm">
-      <div
-        className="box is-flex is-space-row-xs is-space-column-xs"
-        dangerouslySetInnerHTML={{ __html: formatted }}
-      ></div>
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Badge</h1>
+      <h2 className="demo-h2">Basic</h2>
+      <div className="demo-line-box">
+        <div
+          className="box is-flex is-space-row-xs is-space-column-xs"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
       <div
         className="box"
         dangerouslySetInnerHTML={{ __html: highlighted }}
@@ -96,11 +100,15 @@ export const square = () => {
   const formatted = beautify.html(contents, beautifyHtmlOptions)
   const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
-    <div className="box is-space-sm">
-      <div
-        className="box is-flex is-space-row-xs is-space-column-xs"
-        dangerouslySetInnerHTML={{ __html: formatted }}
-      ></div>
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Badge</h1>
+      <h2 className="demo-h2">Square</h2>
+      <div className="demo-line-box">
+        <div
+          className="box is-flex is-space-row-xs is-space-column-xs"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
       <div
         className="box"
         dangerouslySetInnerHTML={{ __html: highlighted }}
@@ -130,11 +138,15 @@ export const circle = () => {
   const formatted = beautify.html(contents, beautifyHtmlOptions)
   const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
-    <div className="box is-space-sm">
-      <div
-        className="box is-flex is-space-row-xs is-space-column-xs"
-        dangerouslySetInnerHTML={{ __html: formatted }}
-      ></div>
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Badge</h1>
+      <h2 className="demo-h2">Circle</h2>
+      <div className="demo-line-box">
+        <div
+          className="box is-flex is-space-row-xs is-space-column-xs"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
       <div
         className="box"
         dangerouslySetInnerHTML={{ __html: highlighted }}

@@ -1,0 +1,15 @@
+//----------------------------------------------------
+// / Box
+//----------------------------------------------------
+
+.demo-space-box {
+  > *:not(:first-child) {
+    margin-top: 12px;
+  }
+}
+
+.demo-line-box {
+  padding: 16px;
+  border: 1px solid var(--demo-line-box-border-color);
+  border-radius: 2px;
+}
