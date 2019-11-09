@@ -44,8 +44,8 @@ const angles = {
 }
 
 const tags = {
-  anchor: "a",
-  button: "button"
+  button: "button",
+  anchor: "a"
 }
 
 const beautifyHtmlOptions = {
@@ -64,7 +64,7 @@ export const basic = () => {
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false)
   const angle = radios("Angle", angles, "")
-  const tag = radios("Tag", tags, "a")
+  const tag = radios("Tag", tags, "button")
   const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
   const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
   const disabledAttr = disabled && tag === "button" ? "disabled" : ""
@@ -115,7 +115,7 @@ export const square = () => {
   const style = radios("Style", styles, "is-plain")
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false)
-  const tag = radios("Tag", tags, "a")
+  const tag = radios("Tag", tags, "button")
   const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
   const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
   const disabledAttr = disabled && tag === "button" ? "disabled" : ""
@@ -162,7 +162,7 @@ export const circle = () => {
   const style = radios("Style", styles, "is-plain")
   const floating = boolean("Floating", false) ? "is-floating" : ""
   const disabled = boolean("Disabled", false)
-  const tag = radios("Tag", tags, "a")
+  const tag = radios("Tag", tags, "button")
   const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
   const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
   const disabledAttr = disabled && tag === "button" ? "disabled" : ""
