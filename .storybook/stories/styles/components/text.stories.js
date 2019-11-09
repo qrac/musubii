@@ -6,7 +6,6 @@ import React from "react"
 import { withKnobs, boolean, radios } from "@storybook/addon-knobs"
 
 import copyCodeBlock from "@pickra/copy-code-block"
-
 import beautify from "js-beautify"
 import hljs from "highlight.js/lib/highlight"
 hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
@@ -88,4 +87,5 @@ export const basic = () => {
     </div>
   )
 }
+
 basic.story = { name: "Basic" }

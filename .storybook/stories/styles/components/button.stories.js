@@ -6,7 +6,6 @@ import React from "react"
 import { withKnobs, boolean, radios } from "@storybook/addon-knobs"
 
 import copyCodeBlock from "@pickra/copy-code-block"
-
 //import prettier from "prettier/standalone"
 //import parserHtml from "prettier/parser-html"
 import beautify from "js-beautify"
@@ -51,6 +50,10 @@ const tags = {
 const beautifyHtmlOptions = {
   inline: ["i"],
   indent_size: 2
+}
+
+const md = mdContent => {
+  return mdContent
 }
 
 //----------------------------------------------------
@@ -105,7 +108,17 @@ export const basic = () => {
     </div>
   )
 }
-basic.story = { name: "Basic" }
+
+const noteBasic = md`
+ここに変数リストを Markdown のテーブルで書く。
+`
+
+basic.story = {
+  name: "Basic",
+  parameters: {
+    notes: { markdown: noteBasic }
+  }
+}
 
 //----------------------------------------------------
 // / Square
@@ -152,6 +165,7 @@ export const square = () => {
     </div>
   )
 }
+
 square.story = { name: "Square" }
 
 //----------------------------------------------------
@@ -199,4 +213,5 @@ export const circle = () => {
     </div>
   )
 }
+
 circle.story = { name: "Circle" }
