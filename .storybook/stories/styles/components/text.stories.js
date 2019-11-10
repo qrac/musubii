@@ -221,3 +221,75 @@ export const blockquote = () => {
 }
 
 blockquote.story = { name: "Blockquote" }
+
+//----------------------------------------------------
+// / Code
+//----------------------------------------------------
+
+export const code = () => {
+  const strong = boolean("Strong", false) ? "is-strong" : ""
+  const tagBefore = `<p class="text">`
+  const tagAfter = `</p>`
+  const contents = `テキストの途中に<code class="code ${strong}">code</code>を表示させる。`
+  const contentsWrap = (tagBefore + contents + tagAfter)
+    .replace(/\s+/g, " ")
+    .replace(/\s\"/g, '"')
+  const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
+  return (
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Text</h1>
+      <h2 className="demo-h2">Code</h2>
+      <div className="demo-line-box">
+        <div
+          className="box"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
+      <div
+        className="box"
+        dangerouslySetInnerHTML={{ __html: highlighted }}
+      ></div>
+    </div>
+  )
+}
+
+code.story = { name: "Code" }
+
+//----------------------------------------------------
+// / Pre
+//----------------------------------------------------
+
+export const pre = () => {
+  const tagBefore = `<pre class="pre">`
+  const tagAfter = `</pre>`
+  const contents = `<code class="code">.my-css {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow-y: scroll;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}</code>`
+  const contentsWrap = tagBefore + contents + tagAfter
+  const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
+  return (
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Text</h1>
+      <h2 className="demo-h2">Pre</h2>
+      <div className="demo-line-box">
+        <div
+          className="box"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
+      <div
+        className="box"
+        dangerouslySetInnerHTML={{ __html: highlighted }}
+      ></div>
+    </div>
+  )
+}
+
+pre.story = { name: "Pre" }
