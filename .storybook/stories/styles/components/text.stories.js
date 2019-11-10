@@ -186,3 +186,38 @@ export const ellipsis = () => {
 }
 
 ellipsis.story = { name: "Ellipsis" }
+
+//----------------------------------------------------
+// / Blockquote
+//----------------------------------------------------
+
+export const blockquote = () => {
+  const strong = boolean("Strong", false) ? "is-strong" : ""
+  const align = radios("Align", alignStyles, "")
+  const tagBefore = `<blockquote class="blockquote ${strong} ${align}">`
+  const tagAfter = `</blockquote>`
+  const contents = `引用の「blockquote」を使う場合。border-left と background-color を用いた装飾。`
+  const contentsWrap = (tagBefore + contents + tagAfter)
+    .replace(/\s+/g, " ")
+    .replace(/\s\"/g, '"')
+  const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
+  return (
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Text</h1>
+      <h2 className="demo-h2">Blockquote</h2>
+      <div className="demo-line-box">
+        <div
+          className="box"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
+      <div
+        className="box"
+        dangerouslySetInnerHTML={{ __html: highlighted }}
+      ></div>
+    </div>
+  )
+}
+
+blockquote.story = { name: "Blockquote" }
