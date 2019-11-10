@@ -148,3 +148,41 @@ export const monotone = () => {
 }
 
 monotone.story = { name: "Monotone" }
+
+//----------------------------------------------------
+// / Ellipsis
+//----------------------------------------------------
+
+export const ellipsis = () => {
+  const strong = boolean("Strong", false) ? "is-strong" : ""
+  const tagBefore = `<p class="text is-ellipsis ${strong}">`
+  const tagAfter = `</p>`
+  const contents = [...Array(5)]
+    .map(
+      () => `テキストを端で折り返さずに、三点リーダーで省略するスタイリング。`
+    )
+    .join("")
+  const contentsWrap = (tagBefore + contents + tagAfter)
+    .replace(/\s+/g, " ")
+    .replace(/\s\"/g, '"')
+  const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
+  return (
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Text</h1>
+      <h2 className="demo-h2">Ellipsis</h2>
+      <div className="demo-line-box">
+        <div
+          className="box"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
+      <div
+        className="box"
+        dangerouslySetInnerHTML={{ __html: highlighted }}
+      ></div>
+    </div>
+  )
+}
+
+ellipsis.story = { name: "Ellipsis" }
