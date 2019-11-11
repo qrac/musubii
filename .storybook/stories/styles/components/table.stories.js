@@ -21,6 +21,13 @@ const tableStyles = {
   outline: "is-outline"
 }
 
+const alignStyles = {
+  none: "",
+  left: "is-left",
+  center: "is-center",
+  right: "is-right"
+}
+
 const beautifyHtmlOptions = {
   inline: ["i", "span"],
   indent_size: 2
@@ -31,32 +38,31 @@ const beautifyHtmlOptions = {
 //----------------------------------------------------
 
 export const basic = () => {
-  const column = number("Column", 4)
-  const row = number("Row", 4)
+  const column = number("Column", 4, { min: 1 })
+  const row = number("Row", 4, { min: 1 })
   const style = radios("Style", tableStyles, "is-border")
-  const paint = boolean("Paint", false) ? 'class="is-paint"' : ""
-  const tableTagBefore = `<table class="table ${style}">`
+  const paint = boolean("Paint", false) ? "is-paint" : ""
+  const stripe = boolean("Stripe", false) ? "is-stripe" : ""
+  const align = radios("Align", alignStyles, "")
+  const thAddClass = paint || align != "" ? `class="${paint} ${align}"` : ""
+  const tdAddClass = paint || align != "" ? `class="${align}"` : ""
+  const tableTagBefore = `<table class="table ${style} ${stripe}">`
   const tableTagAfter = `</table>`
-  const theadTagBefore = `<thead>`
-  const theadTagAfter = `</thead>`
-  const tbodyTagBefore = `<tbody>`
-  const tbodyTagAfter = `</tbody>`
-  const trTagBefore = `<tr>`
-  const trTagAfter = `</tr>`
   const theadTrContents = [...Array(column)]
-    .map(() => `<th ${paint}>見出しセル</th>`)
+    .map(() => `<th ${thAddClass}>見出しセル</th>`)
     .join("")
-  const theadTr = trTagBefore + theadTrContents + trTagAfter
-  const thead = theadTagBefore + theadTr + theadTagAfter
+  const theadTr = `<tr>${theadTrContents}</tr>`
+  const thead = `<thead>${theadTr}</thead>`
   const tbodyTrContents = [...Array(column)]
-    .map(() => `<td>データセル</td>`)
+    .map(() => `<td ${tdAddClass}>データセル</td>`)
     .join("")
   const tbodyTr = [...Array(row)]
-    .map(() => `${trTagBefore}${tbodyTrContents}${trTagAfter}`)
+    .map(() => `<tr>${tbodyTrContents}</tr>`)
     .join("")
-  const tbody = tbodyTagBefore + tbodyTr + tbodyTagAfter
+  const tbody = `<tbody>${tbodyTr}</tbody>`
   const contentsWrap = (tableTagBefore + thead + tbody + tableTagAfter)
     .replace(/\s+/g, " ")
+    .replace(/\"\s/g, '"')
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
   const highlighted = copyCodeBlock(formatted, { lang: "html" })
