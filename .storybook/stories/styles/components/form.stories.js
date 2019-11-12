@@ -71,11 +71,12 @@ const md = mdContent => {
 export const text = () => {
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const readonly = boolean("Readonly", false) ? "readonly" : ""
   const valueAttr = readonly ? "value" : "placeholder"
   const content = `<input
-    class="input ${style} ${verification}" type="text" name="text"
+    class="input ${style} ${verification} ${round}" type="text" name="text"
     ${valueAttr}="Text" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
@@ -143,11 +144,12 @@ textarea.story = { name: "Textarea" }
 export const password = () => {
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const readonly = boolean("Readonly", false) ? "readonly" : ""
   const valueAttr = readonly ? 'value="xAck6mb2"' : ""
   const content = `<input
-    class="input ${style} ${verification}" type="password" name="password"
+    class="input ${style} ${verification} ${round}" type="password" name="password"
     ${valueAttr} ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
@@ -179,11 +181,12 @@ password.story = { name: "Password" }
 export const url = () => {
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const readonly = boolean("Readonly", false) ? "readonly" : ""
   const valueAttr = readonly ? "value" : "placeholder"
   const content = `<input
-    class="input ${style} ${verification}" type="url" name="url"
+    class="input ${style} ${verification} ${round}" type="url" name="url"
     ${valueAttr}="https://example.com" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
@@ -215,11 +218,12 @@ url.story = { name: "URL" }
 export const email = () => {
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const readonly = boolean("Readonly", false) ? "readonly" : ""
   const valueAttr = readonly ? "value" : "placeholder"
   const content = `<input
-    class="input ${style} ${verification}" type="email" name="email"
+    class="input ${style} ${verification} ${round}" type="email" name="email"
     ${valueAttr}="example@gmail.com" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
@@ -251,11 +255,12 @@ email.story = { name: "Email" }
 export const tel = () => {
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const readonly = boolean("Readonly", false) ? "readonly" : ""
   const valueAttr = readonly ? "value" : "placeholder"
   const content = `<input
-    class="input ${style} ${verification}" type="tel" name="tel"
+    class="input ${style} ${verification} ${round}" type="tel" name="tel"
     ${valueAttr}="000-0000-0000" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
@@ -288,11 +293,12 @@ export const num = () => {
   const step = number("Step", 100)
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const readonly = boolean("Readonly", false) ? "readonly" : ""
   const valueAttr = readonly ? "value" : "placeholder"
   const content = `<input
-    class="input ${style} ${verification}" type="number" name="number"
+    class="input ${style} ${verification} ${round}" type="number" name="number"
     ${step != null ? 'step="' + step + '"' : ""}
     ${valueAttr}="10000" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
@@ -325,10 +331,11 @@ num.story = { name: "Number" }
 export const date = () => {
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const readonly = boolean("Readonly", false) ? "readonly" : ""
   const content = `<input
-    class="input ${style} ${verification}" type="date" name="date"
+    class="input ${style} ${verification} ${round}" type="date" name="date"
     value="2019-11-12" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
@@ -360,10 +367,11 @@ date.story = { name: "Date" }
 export const time = () => {
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const readonly = boolean("Readonly", false) ? "readonly" : ""
   const content = `<input
-    class="input ${style} ${verification}" type="time" name="time"
+    class="input ${style} ${verification} ${round}" type="time" name="time"
     value="09:30:00" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
@@ -395,11 +403,12 @@ time.story = { name: "Time" }
 export const file = () => {
   const style = radios("Style", buttonStyles, "is-plain")
   const role = radios("Role", buttonRoles, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false)
   const disabledClass = disabled ? "is-disabled" : ""
   const disabledAttr = disabled ? "disabled" : ""
   const content = `<label
-      class="button ${style} ${role} ${disabledClass}">
+      class="button ${style} ${role} ${round} ${disabledClass}">
       <span class="text">ファイル選択</span>
       <input type="file" name="file" class="input" ${disabledAttr}>
     </label>`
@@ -533,9 +542,10 @@ checkbox.story = { name: "Checkbox" }
 export const select = () => {
   const style = radios("Style", styles, "")
   const verification = radios("Verification", verifications, "")
+  const round = boolean("Round", false) ? "is-round" : ""
   const disabled = boolean("Disabled", false) ? "disabled" : ""
   const content = `<div
-    class="select ${style} ${verification}">
+    class="select ${style} ${verification} ${round}">
       <select ${disabled}>
         <option>Select A</option>
         <option>Select B</option>
