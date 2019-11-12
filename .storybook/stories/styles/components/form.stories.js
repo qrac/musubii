@@ -15,6 +15,22 @@ export default {
   decorators: [withKnobs]
 }
 
+const buttonItems = [
+  { id: 0, role: "", text: "ボタン", type: "button" },
+  { id: 1, role: "is-primary", text: "ボタン", type: "button" }
+]
+
+const resetItems = [
+  { id: 0, role: "", text: "リセット", type: "reset" },
+  { id: 1, role: "is-warning", text: "リセット", type: "reset" },
+  { id: 2, role: "is-danger", text: "リセット", type: "reset" }
+]
+
+const submitItems = [
+  { id: 0, role: "is-primary", text: "送信", type: "submit" },
+  { id: 1, role: "is-success", text: "送信", type: "submit" }
+]
+
 const styles = {
   none: "",
   plain: "is-plain",
@@ -550,3 +566,126 @@ export const select = () => {
 }
 
 select.story = { name: "Select" }
+
+//----------------------------------------------------
+// / Button
+//----------------------------------------------------
+
+export const button = () => {
+  const style = radios("Style", buttonStyles, "is-plain")
+  const strong = boolean("Strong", false) ? "is-strong" : ""
+  const round = boolean("Round", false) ? "is-round" : ""
+  const floating = boolean("Floating", false) ? "is-floating" : ""
+  const disabled = boolean("Disabled", false) ? "disabled" : ""
+  const contents = buttonItems
+    .map(
+      item =>
+        `<button class="button ${style} ${item.role} ${strong} ${round} ${floating}"
+          type="${item.type}" ${disabled}>${item.text}</button>`
+    )
+    .join("")
+    .replace(/\s+/g, " ")
+    .replace(/\s\"/g, '"')
+  const formatted = beautify.html(contents, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
+  return (
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Form</h1>
+      <h2 className="demo-h2">Button</h2>
+      <div className="demo-line-box">
+        <div
+          className="box is-flex is-space-row-xs is-space-column-xs"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
+      <div
+        className="box"
+        dangerouslySetInnerHTML={{ __html: highlighted }}
+      ></div>
+    </div>
+  )
+}
+
+button.story = { name: "Button" }
+
+//----------------------------------------------------
+// / Reset
+//----------------------------------------------------
+
+export const reset = () => {
+  const style = radios("Style", buttonStyles, "is-plain")
+  const strong = boolean("Strong", false) ? "is-strong" : ""
+  const round = boolean("Round", false) ? "is-round" : ""
+  const floating = boolean("Floating", false) ? "is-floating" : ""
+  const disabled = boolean("Disabled", false) ? "disabled" : ""
+  const contents = resetItems
+    .map(
+      item =>
+        `<button class="button ${style} ${item.role} ${strong} ${round} ${floating}"
+          type="${item.type}" ${disabled}>${item.text}</button>`
+    )
+    .join("")
+    .replace(/\s+/g, " ")
+    .replace(/\s\"/g, '"')
+  const formatted = beautify.html(contents, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
+  return (
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Form</h1>
+      <h2 className="demo-h2">Reset</h2>
+      <div className="demo-line-box">
+        <div
+          className="box is-flex is-space-row-xs is-space-column-xs"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
+      <div
+        className="box"
+        dangerouslySetInnerHTML={{ __html: highlighted }}
+      ></div>
+    </div>
+  )
+}
+
+reset.story = { name: "Reset" }
+
+//----------------------------------------------------
+// / Submit
+//----------------------------------------------------
+
+export const submit = () => {
+  const style = radios("Style", buttonStyles, "is-plain")
+  const strong = boolean("Strong", false) ? "is-strong" : ""
+  const round = boolean("Round", false) ? "is-round" : ""
+  const floating = boolean("Floating", false) ? "is-floating" : ""
+  const disabled = boolean("Disabled", false) ? "disabled" : ""
+  const contents = submitItems
+    .map(
+      item =>
+        `<button class="button ${style} ${item.role} ${strong} ${round} ${floating}"
+          type="${item.type}" ${disabled}>${item.text}</button>`
+    )
+    .join("")
+    .replace(/\s+/g, " ")
+    .replace(/\s\"/g, '"')
+  const formatted = beautify.html(contents, beautifyHtmlOptions)
+  const highlighted = copyCodeBlock(formatted, { lang: "html" })
+  return (
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Form</h1>
+      <h2 className="demo-h2">Submit</h2>
+      <div className="demo-line-box">
+        <div
+          className="box is-flex is-space-row-xs is-space-column-xs"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        ></div>
+      </div>
+      <div
+        className="box"
+        dangerouslySetInnerHTML={{ __html: highlighted }}
+      ></div>
+    </div>
+  )
+}
+
+submit.story = { name: "Submit" }
