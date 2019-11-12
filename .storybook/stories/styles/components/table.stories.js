@@ -33,6 +33,10 @@ const beautifyHtmlOptions = {
   indent_size: 2
 }
 
+const md = mdContent => {
+  return mdContent
+}
+
 //----------------------------------------------------
 // / Basic
 //----------------------------------------------------
