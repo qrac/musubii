@@ -15,7 +15,7 @@ export default {
   decorators: [withKnobs]
 }
 
-const tableStyles = {
+const styles = {
   border: "is-border",
   line: "is-line",
   outline: "is-outline"
@@ -44,7 +44,7 @@ const md = mdContent => {
 export const basic = () => {
   const column = number("Column", 4, { min: 1 })
   const row = number("Row", 4, { min: 1 })
-  const style = radios("Style", tableStyles, "is-border")
+  const style = radios("Style", styles, "is-border")
   const paint = boolean("Paint", false) ? "is-paint" : ""
   const stripe = boolean("Stripe", false) ? "is-stripe" : ""
   const align = radios("Align", alignStyles, "")

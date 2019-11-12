@@ -15,7 +15,7 @@ export default {
   decorators: [withKnobs]
 }
 
-const listStyles = {
+const styles = {
   disc: "is-disc",
   circle: "is-circle",
   decimal: "is-decimal"
@@ -35,7 +35,7 @@ const md = mdContent => {
 //----------------------------------------------------
 
 export const basic = () => {
-  const style = radios("Style", listStyles, "is-disc")
+  const style = radios("Style", styles, "is-disc")
   const nest = boolean("Nest", false)
   const tagBefore = `<ul class="list ${style}">`
   const tagAfter = `</ul>`
