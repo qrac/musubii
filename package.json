@@ -24,9 +24,10 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "dev": "gulp",
-    "test": "gulp test",
-    "build": "gulp build"
+    "dev": "start-storybook -p 6006 -s ./static",
+    "generate": "build-storybook -s ./static -o ./public",
+    "build": "",
+    "clean": "rmtrash ./public"
   },
   "browserslist": [
     "> 3% in JP",
@@ -40,21 +41,20 @@
     "shitajicss": "5.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-data": "^1.3.1",
-    "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-header": "^2.0.9",
-    "gulp-html-beautify": "^1.0.1",
-    "gulp-if": "^3.0.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-nunjucks-render": "^2.2.3",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.12.0"
+    "@babel/core": "^7.7.2",
+    "@pickra/copy-code-block": "^1.1.7",
+    "@storybook/addon-knobs": "^5.2.6",
+    "@storybook/addon-notes": "^5.2.6",
+    "@storybook/addon-viewport": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "autoprefixer": "^9.7.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "js-beautify": "^1.10.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "storybook-dark-mode": "^0.1.9",
+    "style-loader": "^1.0.0"
   }
 }
