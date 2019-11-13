@@ -1,8 +1,8 @@
 {
   "name": "musubii",
   "description": "Simple CSS Framework for JP",
-  "version": "7.0.0-alpha.42",
-  "main": "docs/css/musubii.css",
+  "version": "7.0.0",
+  "main": "dist/musubii.css",
   "license": "MIT",
   "homepage": "https://musubii.qranoko.jp",
   "repository": "https://github.com/qrac/musubii",
@@ -26,7 +26,10 @@
   "scripts": {
     "dev": "start-storybook -p 6006 -s ./static",
     "generate": "build-storybook -s ./static -o ./public",
-    "build": "",
+    "build": "yarn build:sass && yarn build:postcss && yarn build:cleancss",
+    "build:sass": "node-sass ./src/scss -o ./dist --include-path ./node_modules --output-style expanded",
+    "build:postcss": "postcss ./dist/musubii.css -d ./dist --no-map",
+    "build:cleancss": "cleancss -o ./dist/musubii.min.css ./dist/musubii.css",
     "clean": "rmtrash ./public"
   },
   "browserslist": [
@@ -49,10 +52,13 @@
     "@storybook/react": "^5.2.6",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.0.6",
+    "clean-css-cli": "^4.3.0",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "js-beautify": "^1.10.2",
     "node-sass": "^4.13.0",
+    "postcss-cli": "^6.1.3",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "storybook-dark-mode": "^0.1.9",
     "style-loader": "^1.0.0"
