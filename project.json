@@ -1,9 +1,3 @@
 {
-  "setting": {
-    "name": "MUSUBii",
-    "dist": "docs",
-    "test": "public",
-    "src": "src",
-    "banner": true
-  }
+  "name": "MUSUBii"
 }

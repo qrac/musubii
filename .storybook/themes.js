@@ -3,7 +3,7 @@ import pkg from "../package.json"
 import pjt from "../project.json"
 
 const common = {
-  brandTitle: pjt.setting.name + " v" + pkg.version
+  brandTitle: pjt.name + " v" + pkg.version
   //brandUrl: pkg.homepage
   //brandImage: "/favicon.png"
 }
