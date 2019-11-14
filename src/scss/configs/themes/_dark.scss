@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Config: Theme - Dark
+// Themes: Dark
 //----------------------------------------------------
 
 $theme-dark-primary: darken($theme-primary, 12%) !default;
@@ -70,25 +70,49 @@ $theme-dark-code-text-color: $blue-300 !default;
 
 $theme-dark-button-paint-text-color: $theme-dark-body-text-color !default;
 
-$theme-dark-table-paint-background-color: rgba($theme-dark-primary, 0.4) !default;
+$theme-dark-table-paint-background-color: rgba(
+  $theme-dark-primary,
+  0.4
+) !default;
 $theme-dark-table-paint-text-color: $theme-dark-body-text-color !default;
 $theme-dark-table-spot-background-color: rgba($yellow-700, 0.4) !default;
-$theme-dark-table-danger-background-color: rgba($theme-dark-danger, 0.4) !default;
+$theme-dark-table-danger-background-color: rgba(
+  $theme-dark-danger,
+  0.4
+) !default;
 
 $theme-dark-input-placeholder-color: $light-6 !default;
-$theme-dark-input-success-background-color: rgba($theme-dark-success, 0.25) !default;
+$theme-dark-input-success-background-color: rgba(
+  $theme-dark-success,
+  0.25
+) !default;
 $theme-dark-input-success-border-color: $theme-dark-success !default;
-$theme-dark-input-danger-background-color: rgba($theme-dark-danger, 0.25) !default;
+$theme-dark-input-danger-background-color: rgba(
+  $theme-dark-danger,
+  0.25
+) !default;
 $theme-dark-input-danger-border-color: $theme-dark-danger !default;
 $theme-dark-checkbox-before-border-color: $light-1 !default;
 
-$theme-dark-alert-primary-background-color: rgba($theme-dark-primary, 0.075) !default;
+$theme-dark-alert-primary-background-color: rgba(
+  $theme-dark-primary,
+  0.075
+) !default;
 $theme-dark-alert-primary-border-color: $theme-dark-primary !default;
 $theme-dark-alert-info-background-color: rgba($theme-dark-info, 0.075) !default;
 $theme-dark-alert-info-border-color: $theme-dark-info !default;
-$theme-dark-alert-success-background-color: rgba($theme-dark-success, 0.075) !default;
+$theme-dark-alert-success-background-color: rgba(
+  $theme-dark-success,
+  0.075
+) !default;
 $theme-dark-alert-success-border-color: $theme-dark-success !default;
-$theme-dark-alert-warning-background-color: rgba($theme-dark-warning, 0.075) !default;
+$theme-dark-alert-warning-background-color: rgba(
+  $theme-dark-warning,
+  0.075
+) !default;
 $theme-dark-alert-warning-border-color: $theme-dark-warning !default;
-$theme-dark-alert-danger-background-color: rgba($theme-dark-danger, 0.075) !default;
+$theme-dark-alert-danger-background-color: rgba(
+  $theme-dark-danger,
+  0.075
+) !default;
 $theme-dark-alert-danger-border-color: $theme-dark-danger !default;

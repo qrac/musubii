@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Config: Convert
+// Themes: Convert
 //----------------------------------------------------
 
 $convert-primary: if($use-css-variables == true, var(--primary), $theme-light-primary) !default;

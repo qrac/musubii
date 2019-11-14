@@ -1,6 +1,8 @@
 //----------------------------------------------------
-// MUSUBii - Import Configs
+// Configs: Import
 //----------------------------------------------------
+
+@import "_use.scss";
 
 @import "variables/_breakpoint.scss";
 @import "variables/_color.scss";
@@ -13,10 +15,9 @@
 @import "mixins/_placeholder.scss";
 @import "mixins/_safearea.scss";
 
-@import "_theme.scss";
-@import "_theme-light.scss";
-@import "_theme-dark.scss";
+@import "themes/_common.scss";
+@import "themes/_light.scss";
+@import "themes/_dark.scss";
+@import "themes/_convert.scss";
 
-@import "_use.scss";
-@import "_convert.scss";
 @import "_variable.scss";
