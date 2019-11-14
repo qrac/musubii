@@ -2,24 +2,5 @@
 // MUSUBii
 //----------------------------------------------------
 
-//----------------------------------------------------
-// / Import - External components
-//----------------------------------------------------
-
-@import "shitajicss/src/scss/_shitaji.scss";
-
-//----------------------------------------------------
-// / Import - External Configs
-//----------------------------------------------------
-
-@import "moftone/src/scss/tone/_moftone.scss";
-//@import "mdtone/src/scss/tone/_mdtone.scss";
-//@import "iostone/src/scss/tone/_iostone.scss";
-@import "sass-dashi/src/scss/_dashi.scss";
-
-//----------------------------------------------------
-// / Import - Configs & Components
-//----------------------------------------------------
-
-@import "_configs.scss";
-@import "_components.scss";
+@import "configs/_imports.scss";
+@import "styles/_imports.scss";

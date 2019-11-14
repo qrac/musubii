@@ -1,0 +1,292 @@
+//----------------------------------------------------
+// Mixins: Media Query
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Mobile First
+//----------------------------------------------------
+
+// Fablet size or more
+@mixin fablet {
+  @media screen and (min-width: $screen-width-fablet) {
+    @content;
+  }
+}
+
+// Tablet size or more
+@mixin tablet {
+  @media screen and (min-width: $screen-width-tablet) {
+    @content;
+  }
+}
+
+// Desktop size or more
+@mixin desktop {
+  @media screen and (min-width: $screen-width-desktop) {
+    @content;
+  }
+}
+
+// Wide size or more
+@mixin wide {
+  @media screen and (min-width: $screen-width-wide) {
+    @content;
+  }
+}
+
+//----------------------------------------------------
+// / Size Only
+//----------------------------------------------------
+
+// iphone 5 size only
+@mixin iphone5-only {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+// Mobile size only
+@mixin mobile-only {
+  @media screen and (max-width: $screen-width-fablet - 1px) {
+    @content;
+  }
+}
+
+// Fablet size only
+@mixin fablet-only {
+  @media screen and (min-width: $screen-width-fablet) and (max-width: $screen-width-tablet - 1px) {
+    @content;
+  }
+}
+
+// Tablet size only
+@mixin tablet-only {
+  @media screen and (min-width: $screen-width-tablet) and (max-width: $screen-width-desktop - 1px) {
+    @content;
+  }
+}
+
+// Desktop size only
+@mixin desktop-only {
+  @media screen and (min-width: $screen-width-desktop) and (max-width: $screen-width-wide - 1px) {
+    @content;
+  }
+}
+
+// Wide size only
+@mixin wide-only {
+  @media screen and (min-width: $screen-width-wide) {
+    @content;
+  }
+}
+
+//----------------------------------------------------
+// / Combination
+//----------------------------------------------------
+
+// Mobile size ~ Fablet size
+@mixin mobile-fablet {
+  @media screen and (max-width: $screen-width-tablet - 1px) {
+    @content;
+  }
+}
+
+// Mobile size ~ Tablet size
+@mixin mobile-tablet {
+  @media screen and (max-width: $screen-width-desktop - 1px) {
+    @content;
+  }
+}
+
+// Mobile size ~ Desktop size
+@mixin mobile-desktop {
+  @media screen and (max-width: $screen-width-wide - 1px) {
+    @content;
+  }
+}
+
+//----------------------------------------------------
+// / Landscape or Portrait
+//----------------------------------------------------
+
+// Landscape(tablet size or less)
+@mixin landscape {
+  @media all and (orientation: landscape) and (max-width: $screen-width-desktop - 1px) {
+    @content;
+  }
+}
+
+// Portrait(tablet size or less)
+@mixin portrait {
+  @media all and (orientation: portrait) and (max-width: $screen-width-desktop - 1px) {
+    @content;
+  }
+}
+
+//----------------------------------------------------
+// / Browser
+//----------------------------------------------------
+
+// Chrome and Opera
+@mixin chrome {
+  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    @content;
+  }
+}
+
+// Firefox Only
+@mixin firefox {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+// Edge Only
+@mixin edge {
+  @media all and (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+// IE Only
+@mixin ie {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+//----------------------------------------------------
+// / Theme
+//----------------------------------------------------
+
+@mixin media-theme-light {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin media-theme-dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+@mixin data-theme-light {
+  [data-theme="light"] {
+    @content;
+  }
+}
+
+@mixin data-theme-dark {
+  [data-theme="dark"] {
+    @content;
+  }
+}
+
+//----------------------------------------------------
+// / Media Query - Pattern
+//----------------------------------------------------
+
+@mixin mediaquery-pattern($mediaquery) {
+  @if $mediaquery == $screen-width-mobile {
+    @content;
+  } @else {
+    @media #{$mediaquery} {
+      @content;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Media Query - Pattern Select
+//----------------------------------------------------
+
+@mixin mediaquery-pattern-select($mediaquery) {
+  @if $mediaquery == "mobile" {
+    @content;
+  } @else if $mediaquery == "fablet" {
+    @include fablet {
+      @content;
+    }
+  } @else if $mediaquery == "tablet" {
+    @include tablet {
+      @content;
+    }
+  } @else if $mediaquery == "desktop" {
+    @include desktop {
+      @content;
+    }
+  } @else if $mediaquery == "wide" {
+    @include wide {
+      @content;
+    }
+  } @else if $mediaquery == "iphone5-only" {
+    @include iphone5-only {
+      @content;
+    }
+  } @else if $mediaquery == "mobile-only" {
+    @include mobile-only {
+      @content;
+    }
+  } @else if $mediaquery == "fablet-only" {
+    @include fablet-only {
+      @content;
+    }
+  } @else if $mediaquery == "tablet-only" {
+    @include tablet-only {
+      @content;
+    }
+  } @else if $mediaquery == "desktop-only" {
+    @include desktop-only {
+      @content;
+    }
+  } @else if $mediaquery == "wide-only" {
+    @include wide-only {
+      @content;
+    }
+  } @else if $mediaquery == "mobile-fablet" {
+    @include mobile-fablet {
+      @content;
+    }
+  } @else if $mediaquery == "mobile-tablet" {
+    @include mobile-tablet {
+      @content;
+    }
+  } @else if $mediaquery == "mobile-desktop" {
+    @include mobile-desktop {
+      @content;
+    }
+  } @else if $mediaquery == "landscape" {
+    @include landscape {
+      @content;
+    }
+  } @else if $mediaquery == "portrait" {
+    @include portrait {
+      @content;
+    }
+  } @else if $mediaquery == "chrome" {
+    @include chrome {
+      @content;
+    }
+  } @else if $mediaquery == "firefox" {
+    @include firefox {
+      @content;
+    }
+  } @else if $mediaquery == "edge" {
+    @include edge {
+      @content;
+    }
+  } @else if $mediaquery == "ie" {
+    @include ie {
+      @content;
+    }
+  } @else if $mediaquery == "media-theme-light" {
+    @include media-theme-light {
+      @content;
+    }
+  } @else if $mediaquery == "media-theme-dark" {
+    @include media-theme-dark {
+      @content;
+    }
+  }
+}
