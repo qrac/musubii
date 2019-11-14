@@ -38,11 +38,6 @@
     "android 4.4",
     "last 1 versions"
   ],
-  "dependencies": {
-    "mixtone": "^1.0.1",
-    "sass-dashi": "^0.11.0",
-    "shitajicss": "5.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@pickra/copy-code-block": "^1.1.7",

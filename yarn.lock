@@ -4920,11 +4920,6 @@ invert-kv@^2.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
 
-iostone@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/iostone/-/iostone-4.0.0.tgz#4329617b3c58210ba07a95b553a874aaf7848539"
-  integrity sha512-1RHPMtyM900Pj4od5AR5ucymFwH73iYeiuwzJqati5DzGWMeFALXG5Tm2/vNo/qF4tpFbK8cweXa6zKHksn+hA==
-
 ip@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
@@ -5590,11 +5585,6 @@ mdn-data@2.0.4:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.4.tgz#699b3c38ac6f1d728091a64650b65d388502fd5b"
   integrity sha512-iV3XNKw06j5Q7mi6h+9vbx23Tv7JkjEVgKHW4pimwyDGWm0OIQntJJ+u1C6mg6mK1EaTv42XQ7w76yuzH7M2cA==
 
-mdtone@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/mdtone/-/mdtone-4.0.0.tgz#83a35cec252b6e3798940c006a90b2f43f64b525"
-  integrity sha512-Mfx0GLNYOu1jIMDXMNQfKBW7/56JbOn2EkiZ+SiSORYFH2ANLgZZAUveVDHaJqcHoRmePHZQO8IDG7eprkhvUg==
-
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -5832,26 +5822,12 @@ mixin-object@^2.0.1:
     for-in "^0.1.3"
     is-extendable "^0.1.1"
 
-mixtone@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mixtone/-/mixtone-1.0.1.tgz#234f6a9cc9e682f52dfc2958085d3f1702637583"
-  integrity sha512-jnPJMJ8Ov2O1EinzgEnuGZ3bIrg0eOThHdzhAXyY9NpmssCNrEknPoAa14LNZaMvEea+U9DNhUNpEW7bly4ftg==
-  dependencies:
-    iostone "^4.0.0"
-    mdtone "^4.0.0"
-    moftone "^7.0.0"
-
 "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
-
-moftone@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/moftone/-/moftone-7.0.0.tgz#22011495c33da76bb28fa4ab514c00c24a088c75"
-  integrity sha512-wGGnJX+kLfYLj9/cyfO5sOLRMWza0WNugBVx/+Z3Kc/ecAYTclz6DBXI/JD3D9L3RHg0Gtbl+CX6j7mIROZpaA==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -7553,11 +7529,6 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass-dashi@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/sass-dashi/-/sass-dashi-0.11.0.tgz#089877bad4f56fd26f55f7312c851eb5782fd8f5"
-  integrity sha512-CwFGm7WcbVnL3QrydJPBJHLqwWY434WvKIie/LLTGKxNU+DSgqPI55FAUwFpfCZFyrmfVm3RCXNWXP/GZW9mIA==
-
 sass-graph@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/sass-graph/-/sass-graph-2.2.4.tgz#13fbd63cd1caf0908b9fd93476ad43a51d1e0b49"
@@ -7767,11 +7738,6 @@ shelljs@^0.8.3:
     glob "^7.0.0"
     interpret "^1.0.0"
     rechoir "^0.6.2"
-
-shitajicss@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/shitajicss/-/shitajicss-5.0.0.tgz#e1eaef18ed74bb71f3e7df66faf1bc559e50abf7"
-  integrity sha512-dEvBPP6ZuFzHXJFVcgiejE8M2+qGgBTi8JzOHZdxTdFXEaz/sC2dkA2dj4UGojW/PUDtmhH7O81+8AUKDtnMlQ==
 
 sigmund@^1.0.1:
   version "1.0.1"
