@@ -6,7 +6,7 @@
 // / Browser - Pattern
 //----------------------------------------------------
 
-@mixin placeholder {
+@mixin placeholder() {
   &:placeholder-shown {
     @content;
   }

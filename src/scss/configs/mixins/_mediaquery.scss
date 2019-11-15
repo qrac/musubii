@@ -7,28 +7,28 @@
 //----------------------------------------------------
 
 // Fablet size or more
-@mixin fablet {
+@mixin fablet() {
   @media screen and (min-width: $screen-width-fablet) {
     @content;
   }
 }
 
 // Tablet size or more
-@mixin tablet {
+@mixin tablet() {
   @media screen and (min-width: $screen-width-tablet) {
     @content;
   }
 }
 
 // Desktop size or more
-@mixin desktop {
+@mixin desktop() {
   @media screen and (min-width: $screen-width-desktop) {
     @content;
   }
 }
 
 // Wide size or more
-@mixin wide {
+@mixin wide() {
   @media screen and (min-width: $screen-width-wide) {
     @content;
   }
@@ -39,42 +39,42 @@
 //----------------------------------------------------
 
 // iphone 5 size only
-@mixin iphone5-only {
+@mixin iphone5-only() {
   @media screen and (max-width: 320px) {
     @content;
   }
 }
 
 // Mobile size only
-@mixin mobile-only {
+@mixin mobile-only() {
   @media screen and (max-width: $screen-width-fablet - 1px) {
     @content;
   }
 }
 
 // Fablet size only
-@mixin fablet-only {
+@mixin fablet-only() {
   @media screen and (min-width: $screen-width-fablet) and (max-width: $screen-width-tablet - 1px) {
     @content;
   }
 }
 
 // Tablet size only
-@mixin tablet-only {
+@mixin tablet-only() {
   @media screen and (min-width: $screen-width-tablet) and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
 
 // Desktop size only
-@mixin desktop-only {
+@mixin desktop-only() {
   @media screen and (min-width: $screen-width-desktop) and (max-width: $screen-width-wide - 1px) {
     @content;
   }
 }
 
 // Wide size only
-@mixin wide-only {
+@mixin wide-only() {
   @media screen and (min-width: $screen-width-wide) {
     @content;
   }
@@ -85,21 +85,21 @@
 //----------------------------------------------------
 
 // Mobile size ~ Fablet size
-@mixin mobile-fablet {
+@mixin mobile-fablet() {
   @media screen and (max-width: $screen-width-tablet - 1px) {
     @content;
   }
 }
 
 // Mobile size ~ Tablet size
-@mixin mobile-tablet {
+@mixin mobile-tablet() {
   @media screen and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
 
 // Mobile size ~ Desktop size
-@mixin mobile-desktop {
+@mixin mobile-desktop() {
   @media screen and (max-width: $screen-width-wide - 1px) {
     @content;
   }
@@ -110,14 +110,14 @@
 //----------------------------------------------------
 
 // Landscape(tablet size or less)
-@mixin landscape {
+@mixin landscape() {
   @media all and (orientation: landscape) and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
 
 // Portrait(tablet size or less)
-@mixin portrait {
+@mixin portrait() {
   @media all and (orientation: portrait) and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
@@ -128,28 +128,28 @@
 //----------------------------------------------------
 
 // Chrome and Opera
-@mixin chrome {
+@mixin chrome() {
   @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
     @content;
   }
 }
 
 // Firefox Only
-@mixin firefox {
+@mixin firefox() {
   @-moz-document url-prefix() {
     @content;
   }
 }
 
 // Edge Only
-@mixin edge {
+@mixin edge() {
   @media all and (-ms-ime-align: auto) {
     @content;
   }
 }
 
 // IE Only
-@mixin ie {
+@mixin ie() {
   @media all and (-ms-high-contrast: none) {
     @content;
   }
@@ -159,25 +159,25 @@
 // / Theme
 //----------------------------------------------------
 
-@mixin media-theme-light {
+@mixin media-theme-light() {
   @media (prefers-color-scheme: light) {
     @content;
   }
 }
 
-@mixin media-theme-dark {
+@mixin media-theme-dark() {
   @media (prefers-color-scheme: dark) {
     @content;
   }
 }
 
-@mixin data-theme-light {
+@mixin data-theme-light() {
   [data-theme="light"] {
     @content;
   }
 }
 
-@mixin data-theme-dark {
+@mixin data-theme-dark() {
   [data-theme="dark"] {
     @content;
   }

@@ -3,54 +3,80 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
+// Use Style
 $use-style-global: true !default;
 
+// Fallback
+$convert-body-background-color: #fff !default;
+$convert-body-text-color: rgba(0, 0, 0, 0.7) !default;
+$font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese",
+  Meiryo, "Yu Gothic Medium", sans-serif !default;
+$line-height-md: 1.5 !default;
+
+// Body
+$body-background-color: $convert-body-background-color !default;
+$body-text-color: $convert-body-text-color !default;
+$body-font-family: $font-sans !default;
+$body-line-height: $line-height-md !default;
+
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Export Style)
 //----------------------------------------------------
 
-@mixin export-global {
+@mixin export-style-global() {
   @if $use-style-global == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Body
+// / Style - Body
 //----------------------------------------------------
 
-@include export-global {
+@mixin style-global-body() {
+  background-color: $body-background-color;
+  color: $body-text-color;
+  font-family: $body-font-family;
+  line-height: $body-line-height;
+}
+
+@include export-style-global() {
   body {
-    background-color: $body-background-color;
-    color: $body-text-color;
-    font-family: $body-font-family;
-    line-height: $body-line-height;
+    @include style-global-body();
   }
 }
 
 //----------------------------------------------------
-// / Image
+// / Style - Image
 //----------------------------------------------------
 
-@include export-global {
+@mixin style-global-image() {
+  max-width: 100%;
+  height: auto;
+  &[src$=".svg"] {
+    width: 100%;
+  }
+}
+
+@include export-style-global() {
   img {
-    max-width: 100%;
-    height: auto;
-    &[src$=".svg"] {
-      width: 100%;
-    }
+    @include style-global-image();
   }
 }
 
 //----------------------------------------------------
-// / iframe
+// / Style - iframe
 //----------------------------------------------------
 
-@include export-global {
+@mixin style-global-iframe() {
+  max-width: 100%;
+}
+
+@include export-style-global() {
   iframe {
-    max-width: 100%;
+    @include style-global-iframe();
   }
 }

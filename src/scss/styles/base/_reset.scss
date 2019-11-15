@@ -3,27 +3,27 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
 // Use Style
 $use-style-reset: true !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Export Style)
 //----------------------------------------------------
 
-@mixin export-reset {
+@mixin export-style-reset() {
   @if $use-style-reset == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Reset All
+// / Style - Reset All
 //----------------------------------------------------
 
-@mixin style-reset-all {
+@mixin style-reset-all() {
   *,
   ::before,
   ::after {
@@ -248,6 +248,6 @@ $use-style-reset: true !default;
   }
 }
 
-@include export-reset {
-  @include style-reset-all;
+@include export-style-reset() {
+  @include style-reset-all();
 }
