@@ -29,7 +29,7 @@
     "build": "yarn build:sass && yarn build:postcss && yarn build:cleancss",
     "build:sass": "node-sass ./src/scss -o ./dist --include-path ./node_modules --output-style expanded",
     "build:postcss": "postcss ./dist/musubii.css -d ./dist --no-map",
-    "build:cleancss": "cleancss -o ./dist/musubii.min.css ./dist/musubii.css",
+    "build:cleancss": "cleancss -o ./dist/musubii.min.css ./dist/musubii.css -d",
     "clean": "rmtrash ./public"
   },
   "browserslist": [
