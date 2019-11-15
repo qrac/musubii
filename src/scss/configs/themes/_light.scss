@@ -73,64 +73,22 @@ $theme-light-button-paint-text-color: $light !default;
 $theme-light-table-paint-background-color: $theme-light-primary !default;
 $theme-light-table-paint-text-color: $light !default;
 $theme-light-table-spot-background-color: $yellow-200 !default;
-$theme-light-table-danger-background-color: lighten(
-  $theme-light-danger,
-  29%
-) !default;
+$theme-light-table-danger-background-color: lighten($theme-light-danger, 29%) !default;
 
 $theme-light-input-placeholder-color: $dark-6 !default;
-$theme-light-input-success-background-color: lighten(
-  $theme-light-success,
-  50%
-) !default;
-$theme-light-input-success-border-color: lighten(
-  $theme-light-success,
-  27%
-) !default;
-$theme-light-input-danger-background-color: lighten(
-  $theme-light-danger,
-  35%
-) !default;
-$theme-light-input-danger-border-color: lighten(
-  $theme-light-danger,
-  21%
-) !default;
+$theme-light-input-success-background-color: lighten($theme-light-success, 50%) !default;
+$theme-light-input-success-border-color: lighten($theme-light-success, 27%) !default;
+$theme-light-input-danger-background-color: lighten($theme-light-danger, 35%) !default;
+$theme-light-input-danger-border-color: lighten($theme-light-danger, 21%) !default;
 $theme-light-checkbox-before-border-color: $light !default;
 
-$theme-light-alert-primary-background-color: lighten(
-  $theme-light-primary,
-  44%
-) !default;
-$theme-light-alert-primary-border-color: lighten(
-  $theme-light-primary,
-  27%
-) !default;
-$theme-light-alert-info-background-color: lighten(
-  $theme-light-info,
-  35%
-) !default;
+$theme-light-alert-primary-background-color: lighten($theme-light-primary, 44%) !default;
+$theme-light-alert-primary-border-color: lighten($theme-light-primary, 27%) !default;
+$theme-light-alert-info-background-color: lighten($theme-light-info, 35%) !default;
 $theme-light-alert-info-border-color: lighten($theme-light-info, 21%) !default;
-$theme-light-alert-success-background-color: lighten(
-  $theme-light-success,
-  50%
-) !default;
-$theme-light-alert-success-border-color: lighten(
-  $theme-light-success,
-  27%
-) !default;
-$theme-light-alert-warning-background-color: lighten(
-  $theme-light-warning,
-  43%
-) !default;
-$theme-light-alert-warning-border-color: lighten(
-  $theme-light-warning,
-  27%
-) !default;
-$theme-light-alert-danger-background-color: lighten(
-  $theme-light-danger,
-  35%
-) !default;
-$theme-light-alert-danger-border-color: lighten(
-  $theme-light-danger,
-  21%
-) !default;
+$theme-light-alert-success-background-color: lighten($theme-light-success, 50%) !default;
+$theme-light-alert-success-border-color: lighten($theme-light-success, 27%) !default;
+$theme-light-alert-warning-background-color: lighten($theme-light-warning, 43%) !default;
+$theme-light-alert-warning-border-color: lighten($theme-light-warning, 27%) !default;
+$theme-light-alert-danger-background-color: lighten($theme-light-danger, 35%) !default;
+$theme-light-alert-danger-border-color: lighten($theme-light-danger, 21%) !default;
