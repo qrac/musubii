@@ -3,54 +3,72 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
+// Use Style
 $use-style-section: true !default;
 
+// Inner
+$section-inner-width-fablet: 540px !default;
+$section-inner-width-tablet: 720px !default;
+$section-inner-width-desktop: 960px !default;
+$section-inner-width-wide: 1140px !default;
+
+// Inner VW
+$section-inner-vw-width-fablet: 90vw !default;
+
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Export Style)
 //----------------------------------------------------
 
-@mixin export-section {
+@mixin export-style-section() {
   @if $use-style-section == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Inner
+// / Style - Inner
 //----------------------------------------------------
 
-@include export-section {
+@mixin style-section-inner() {
+  max-width: 100%;
+  margin: 0 auto;
+  @include fablet() {
+    width: $section-inner-width-fablet;
+  }
+  @include tablet() {
+    width: $section-inner-width-tablet;
+  }
+  @include desktop() {
+    width: $section-inner-width-desktop;
+  }
+  @include wide() {
+    width: $section-inner-width-wide;
+  }
+}
+
+@include export-style-section() {
   .section > .inner {
-    max-width: 100%;
-    margin: 0 auto;
-    @include fablet {
-      width: $section-inner-width-fablet;
-    }
-    @include tablet {
-      width: $section-inner-width-tablet;
-    }
-    @include desktop {
-      width: $section-inner-width-desktop;
-    }
-    @include wide {
-      width: $section-inner-width-wide;
-    }
+    @include style-section-inner();
   }
 }
 
 //----------------------------------------------------
-// / Inner VW
+// / Style - Inner VW
 //----------------------------------------------------
 
-@include export-section {
+@mixin style-section-inner-vw() {
+  max-width: 100%;
+  margin: 0 auto;
+  @include fablet() {
+    width: $section-inner-vw-width-fablet;
+  }
+}
+
+@include export-style-section() {
   .section > .inner-vw {
-    max-width: 100%;
-    margin: 0 auto;
-    @include fablet {
-      width: $section-inner-vw-width-fablet;
-    }
+    @include style-section-inner-vw();
   }
 }
