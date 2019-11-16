@@ -12,6 +12,9 @@ $use-default-theme-dark: false !default;
 $use-media-theme-dark: false !default;
 $use-data-theme-dark: true !default;
 
+// Selectors
+$selector-root: ":root" !default;
+
 //----------------------------------------------------
 // / Mixins (Export Style)
 //----------------------------------------------------
@@ -36,7 +39,7 @@ $use-data-theme-dark: true !default;
 // / Style - Root Dark
 //----------------------------------------------------
 
-:root {
+#{$selector-root} {
   @include export-style-root-dark() {
     --primary: #{$theme-dark-primary};
     --primary-strong: #{$theme-dark-primary-strong};
@@ -56,7 +59,7 @@ $use-data-theme-dark: true !default;
   }
 }
 
-:root {
+#{$selector-root} {
   @include export-style-root-dark() {
     --text-dark: #{$theme-dark-text-dark};
     --text-dark-1: #{$theme-dark-text-dark-1};
@@ -81,7 +84,7 @@ $use-data-theme-dark: true !default;
   }
 }
 
-:root {
+#{$selector-root} {
   @include export-style-root-dark() {
     --background: #{$theme-dark-background};
     --background-1: #{$theme-dark-background-1};
@@ -99,7 +102,7 @@ $use-data-theme-dark: true !default;
   }
 }
 
-:root {
+#{$selector-root} {
   @include export-style-root-dark() {
     --disabled-background-color: #{$theme-dark-disabled-background-color};
     --disabled-border-color: #{$theme-dark-disabled-border-color};
@@ -107,7 +110,7 @@ $use-data-theme-dark: true !default;
   }
 }
 
-:root {
+#{$selector-root} {
   @include export-style-root-dark() {
     --body-background-color: #{$theme-dark-body-background-color};
     --body-text-color: #{$theme-dark-body-text-color};

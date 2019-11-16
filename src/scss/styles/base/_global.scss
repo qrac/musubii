@@ -9,6 +9,12 @@
 // Use Style
 $use-style-global: true !default;
 
+// Selectors
+$selector-global-body: "body" !default;
+$selector-global-image: "img" !default;
+$selector-global-image-svg: 'img[src$=".svg"]' !default;
+$selector-global-iframe: "iframe" !default;
+
 // Body
 $body-background-color: $convert-body-background-color !default;
 $body-text-color: $convert-body-text-color !default;
@@ -37,7 +43,7 @@ $body-line-height: $line-height-md !default;
 }
 
 @include export-style-global() {
-  body {
+  #{$selector-global-body} {
     @include style-global-body();
   }
 }
@@ -52,7 +58,7 @@ $body-line-height: $line-height-md !default;
 }
 
 @include export-style-global() {
-  img {
+  #{$selector-global-image} {
     @include style-global-image();
   }
 }
@@ -64,7 +70,7 @@ $body-line-height: $line-height-md !default;
 }
 
 @include export-style-global() {
-  img[src$=".svg"] {
+  #{$selector-global-image-svg} {
     @include style-global-image-svg();
   }
 }
@@ -78,7 +84,7 @@ $body-line-height: $line-height-md !default;
 }
 
 @include export-style-global() {
-  iframe {
+  #{$selector-global-iframe} {
     @include style-global-iframe();
   }
 }
