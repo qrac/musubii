@@ -16,7 +16,7 @@ $use-data-theme-dark: true !default;
 // / Mixins (Export Style)
 //----------------------------------------------------
 
-@mixin export-style-theme-dark() {
+@mixin export-style-root-dark() {
   @if $use-css-variables == true and $use-default-theme-dark == true {
     @content;
   }
@@ -33,11 +33,11 @@ $use-data-theme-dark: true !default;
 }
 
 //----------------------------------------------------
-// / Style - Root
+// / Style - Root Dark
 //----------------------------------------------------
 
 :root {
-  @include export-style-theme-dark() {
+  @include export-style-root-dark() {
     --primary: #{$theme-dark-primary};
     --primary-strong: #{$theme-dark-primary-strong};
     --primary-darken: #{$theme-dark-primary-darken};
@@ -57,7 +57,7 @@ $use-data-theme-dark: true !default;
 }
 
 :root {
-  @include export-style-theme-dark() {
+  @include export-style-root-dark() {
     --text-dark: #{$theme-dark-text-dark};
     --text-dark-1: #{$theme-dark-text-dark-1};
     --text-dark-2: #{$theme-dark-text-dark-2};
@@ -82,7 +82,7 @@ $use-data-theme-dark: true !default;
 }
 
 :root {
-  @include export-style-theme-dark() {
+  @include export-style-root-dark() {
     --background: #{$theme-dark-background};
     --background-1: #{$theme-dark-background-1};
     --background-2: #{$theme-dark-background-2};
@@ -100,7 +100,7 @@ $use-data-theme-dark: true !default;
 }
 
 :root {
-  @include export-style-theme-dark() {
+  @include export-style-root-dark() {
     --disabled-background-color: #{$theme-dark-disabled-background-color};
     --disabled-border-color: #{$theme-dark-disabled-border-color};
     --disabled-text-color: #{$theme-dark-disabled-text-color};
@@ -108,7 +108,7 @@ $use-data-theme-dark: true !default;
 }
 
 :root {
-  @include export-style-theme-dark() {
+  @include export-style-root-dark() {
     --body-background-color: #{$theme-dark-body-background-color};
     --body-text-color: #{$theme-dark-body-text-color};
     --code-text-color: #{$theme-dark-code-text-color};

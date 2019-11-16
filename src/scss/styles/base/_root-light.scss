@@ -16,7 +16,7 @@ $use-data-theme-light: false !default;
 // / Mixins (Export Style)
 //----------------------------------------------------
 
-@mixin export-style-theme-light() {
+@mixin export-style-root-light() {
   @if $use-css-variables == true and $use-default-theme-light == true {
     @content;
   }
@@ -33,11 +33,11 @@ $use-data-theme-light: false !default;
 }
 
 //----------------------------------------------------
-// / Style - Root
+// / Style - Root Light
 //----------------------------------------------------
 
 :root {
-  @include export-style-theme-light() {
+  @include export-style-root-light() {
     --primary: #{$theme-light-primary};
     --primary-strong: #{$theme-light-primary-strong};
     --primary-darken: #{$theme-light-primary-darken};
@@ -57,7 +57,7 @@ $use-data-theme-light: false !default;
 }
 
 :root {
-  @include export-style-theme-light() {
+  @include export-style-root-light() {
     --text-dark: #{$theme-light-text-dark};
     --text-dark-1: #{$theme-light-text-dark-1};
     --text-dark-2: #{$theme-light-text-dark-2};
@@ -82,7 +82,7 @@ $use-data-theme-light: false !default;
 }
 
 :root {
-  @include export-style-theme-light() {
+  @include export-style-root-light() {
     --background: #{$theme-light-background};
     --background-1: #{$theme-light-background-1};
     --background-2: #{$theme-light-background-2};
@@ -100,7 +100,7 @@ $use-data-theme-light: false !default;
 }
 
 :root {
-  @include export-style-theme-light() {
+  @include export-style-root-light() {
     --disabled-background-color: #{$theme-light-disabled-background-color};
     --disabled-border-color: #{$theme-light-disabled-border-color};
     --disabled-text-color: #{$theme-light-disabled-text-color};
@@ -108,7 +108,7 @@ $use-data-theme-light: false !default;
 }
 
 :root {
-  @include export-style-theme-light() {
+  @include export-style-root-light() {
     --body-background-color: #{$theme-light-body-background-color};
     --body-text-color: #{$theme-light-body-text-color};
     --code-text-color: #{$theme-light-code-text-color};

@@ -9,13 +9,6 @@
 // Use Style
 $use-style-global: true !default;
 
-// Fallback
-$convert-body-background-color: #fff !default;
-$convert-body-text-color: rgba(0, 0, 0, 0.7) !default;
-$font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese",
-  Meiryo, "Yu Gothic Medium", sans-serif !default;
-$line-height-md: 1.5 !default;
-
 // Body
 $body-background-color: $convert-body-background-color !default;
 $body-text-color: $convert-body-text-color !default;
@@ -33,7 +26,7 @@ $body-line-height: $line-height-md !default;
 }
 
 //----------------------------------------------------
-// / Style - Body
+// / Style - Global Body
 //----------------------------------------------------
 
 @mixin style-global-body() {
@@ -50,15 +43,12 @@ $body-line-height: $line-height-md !default;
 }
 
 //----------------------------------------------------
-// / Style - Image
+// / Style - Global Image
 //----------------------------------------------------
 
 @mixin style-global-image() {
   max-width: 100%;
   height: auto;
-  &[src$=".svg"] {
-    width: 100%;
-  }
 }
 
 @include export-style-global() {
@@ -68,7 +58,19 @@ $body-line-height: $line-height-md !default;
 }
 
 //----------------------------------------------------
-// / Style - iframe
+
+@mixin style-global-image-svg() {
+  width: 100%;
+}
+
+@include export-style-global() {
+  img[src$=".svg"] {
+    @include style-global-image-svg();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Global iframe
 //----------------------------------------------------
 
 @mixin style-global-iframe() {
