@@ -9,6 +9,11 @@
 // Use Style
 $use-style-section: true !default;
 
+// Selectors
+$selector-section: ".section" !default;
+$selector-inner: ".inner" !default;
+$selector-inner-vw: ".inner-vw" !default;
+
 // Inner
 $section-inner-width-fablet: 540px !default;
 $section-inner-width-tablet: 720px !default;
@@ -50,8 +55,12 @@ $section-inner-vw-width-fablet: 90vw !default;
 }
 
 @include export-style-section() {
-  .section > .inner {
-    @include style-section-inner();
+  #{$selector-section} {
+    > {
+      #{$selector-inner} {
+        @include style-section-inner();
+      }
+    }
   }
 }
 
@@ -68,7 +77,7 @@ $section-inner-vw-width-fablet: 90vw !default;
 }
 
 @include export-style-section() {
-  .section > .inner-vw {
+  #{$selector-section} > #{$selector-inner-vw} {
     @include style-section-inner-vw();
   }
 }
