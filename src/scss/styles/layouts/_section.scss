@@ -77,7 +77,11 @@ $section-inner-vw-width-fablet: 90vw !default;
 }
 
 @include export-style-section() {
-  #{$selector-section} > #{$selector-inner-vw} {
-    @include style-section-inner-vw();
+  #{$selector-section} {
+    > {
+      #{$selector-inner-vw} {
+        @include style-section-inner-vw();
+      }
+    }
   }
 }
