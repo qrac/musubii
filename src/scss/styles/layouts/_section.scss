@@ -6,7 +6,8 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use Style
+// Use
+$use-mixin-mode: false !default;
 $use-style-section: true !default;
 
 // Selectors
@@ -28,7 +29,7 @@ $section-inner-vw-width-fablet: 90vw !default;
 //----------------------------------------------------
 
 @mixin export-style-section() {
-  @if $use-style-section == true {
+  @if $use-mixin-mode == false and $use-style-section == true {
     @content;
   }
 }

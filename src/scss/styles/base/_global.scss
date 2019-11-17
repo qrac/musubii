@@ -6,7 +6,8 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use Style
+// Use
+$use-mixin-mode: false !default;
 $use-style-global: true !default;
 
 // Selectors
@@ -26,7 +27,7 @@ $body-line-height: $line-height-md !default;
 //----------------------------------------------------
 
 @mixin export-style-global() {
-  @if $use-style-global == true {
+  @if $use-mixin-mode == false and $use-style-global == true {
     @content;
   }
 }

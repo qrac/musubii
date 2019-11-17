@@ -6,7 +6,8 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use CSS Variables
+// Use
+$use-mixin-mode: false !default;
 $use-css-variables: true !default;
 $use-default-theme-light: true !default;
 $use-media-theme-light: false !default;
@@ -20,17 +21,19 @@ $selector-root: ":root" !default;
 //----------------------------------------------------
 
 @mixin export-style-root-light() {
-  @if $use-css-variables == true and $use-default-theme-light == true {
-    @content;
-  }
-  @if $use-css-variables == true and $use-media-theme-light == true {
-    @include media-theme-light() {
+  @if $use-mixin-mode == false {
+    @if $use-css-variables == true and $use-default-theme-light == true {
       @content;
     }
-  }
-  @if $use-css-variables == true and $use-data-theme-light == true {
-    @include data-theme-light() {
-      @content;
+    @if $use-css-variables == true and $use-media-theme-light == true {
+      @include media-theme-light() {
+        @content;
+      }
+    }
+    @if $use-css-variables == true and $use-data-theme-light == true {
+      @include data-theme-light() {
+        @content;
+      }
     }
   }
 }

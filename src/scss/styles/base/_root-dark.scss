@@ -6,7 +6,8 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use CSS Variables
+// Use
+$use-mixin-mode: false !default;
 $use-css-variables: true !default;
 $use-default-theme-dark: false !default;
 $use-media-theme-dark: false !default;
@@ -20,17 +21,19 @@ $selector-root: ":root" !default;
 //----------------------------------------------------
 
 @mixin export-style-root-dark() {
-  @if $use-css-variables == true and $use-default-theme-dark == true {
-    @content;
-  }
-  @if $use-css-variables == true and $use-media-theme-dark == true {
-    @include media-theme-dark() {
+  @if $use-mixin-mode == false {
+    @if $use-css-variables == true and $use-default-theme-dark == true {
       @content;
     }
-  }
-  @if $use-css-variables == true and $use-data-theme-dark == true {
-    @include data-theme-dark() {
-      @content;
+    @if $use-css-variables == true and $use-media-theme-dark == true {
+      @include media-theme-dark() {
+        @content;
+      }
+    }
+    @if $use-css-variables == true and $use-data-theme-dark == true {
+      @include data-theme-dark() {
+        @content;
+      }
     }
   }
 }

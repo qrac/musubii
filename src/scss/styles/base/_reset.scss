@@ -6,7 +6,8 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use Style
+// Use
+$use-mixin-mode: false !default;
 $use-style-reset: true !default;
 
 //----------------------------------------------------
@@ -14,7 +15,7 @@ $use-style-reset: true !default;
 //----------------------------------------------------
 
 @mixin export-style-reset() {
-  @if $use-style-reset == true {
+  @if $use-mixin-mode == false and $use-style-reset == true {
     @content;
   }
 }
