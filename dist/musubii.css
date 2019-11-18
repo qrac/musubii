@@ -497,17 +497,6 @@ iframe {
   }
 }
 
-.section > .inner-vw {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 576px) {
-  .section > .inner-vw {
-    width: 90vw;
-  }
-}
-
 .grid {
   display: flex;
   flex-wrap: wrap;
