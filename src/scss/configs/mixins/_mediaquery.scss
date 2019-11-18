@@ -6,28 +6,28 @@
 // / Mobile First
 //----------------------------------------------------
 
-// Fablet size or more
+// Fablet size ~
 @mixin fablet() {
   @media screen and (min-width: $screen-width-fablet) {
     @content;
   }
 }
 
-// Tablet size or more
+// Tablet size ~
 @mixin tablet() {
   @media screen and (min-width: $screen-width-tablet) {
     @content;
   }
 }
 
-// Desktop size or more
+// Desktop size ~
 @mixin desktop() {
   @media screen and (min-width: $screen-width-desktop) {
     @content;
   }
 }
 
-// Wide size or more
+// Wide size ~
 @mixin wide() {
   @media screen and (min-width: $screen-width-wide) {
     @content;

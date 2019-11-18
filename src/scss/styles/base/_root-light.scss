@@ -30,12 +30,12 @@ $root-attr-light: "light" !default;
       @content;
     }
     @if $option-css-variables == true and $option-theme-media-light == true {
-      @include theme-media(light) {
+      @media (prefers-color-scheme: light) {
         @content;
       }
     }
     @if $option-css-variables == true and $option-theme-attr-light == true {
-      @include theme-attr($selector-root-attr, $root-attr-dark) {
+      [#{$selector-root-attr}="#{$root-attr-light}"] {
         @content;
       }
     }

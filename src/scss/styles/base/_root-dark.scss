@@ -30,12 +30,12 @@ $root-attr-dark: "dark" !default;
       @content;
     }
     @if $option-css-variables == true and $option-theme-media-dark == true {
-      @include theme-media(dark) {
+      @media (prefers-color-scheme: dark) {
         @content;
       }
     }
     @if $option-css-variables == true and $option-theme-attr-dark == true {
-      @include theme-attr($selector-root-attr, $root-attr-dark) {
+      [#{$selector-root-attr}="#{$root-attr-dark}"] {
         @content;
       }
     }
