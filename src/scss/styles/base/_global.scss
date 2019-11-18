@@ -6,9 +6,9 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use
-$use-mixin-mode: false !default;
-$use-style-global: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-global: true !default;
 
 // Selectors
 $selector-global-body: "body" !default;
@@ -27,7 +27,7 @@ $body-line-height: $line-height-md !default;
 //----------------------------------------------------
 
 @mixin export-style-global() {
-  @if $use-mixin-mode == false and $use-style-global == true {
+  @if $option-mixin-mode == false and $option-style-global == true {
     @content;
   }
 }
@@ -36,7 +36,7 @@ $body-line-height: $line-height-md !default;
 // / Style - Global Body
 //----------------------------------------------------
 
-@mixin style-global-body() {
+@mixin musubii-style-global-body() {
   background-color: $body-background-color;
   color: $body-text-color;
   font-family: $body-font-family;
@@ -45,7 +45,7 @@ $body-line-height: $line-height-md !default;
 
 @include export-style-global() {
   #{$selector-global-body} {
-    @include style-global-body();
+    @include musubii-style-global-body();
   }
 }
 
@@ -53,26 +53,26 @@ $body-line-height: $line-height-md !default;
 // / Style - Global Image
 //----------------------------------------------------
 
-@mixin style-global-image() {
+@mixin musubii-style-global-image() {
   max-width: 100%;
   height: auto;
 }
 
 @include export-style-global() {
   #{$selector-global-image} {
-    @include style-global-image();
+    @include musubii-style-global-image();
   }
 }
 
 //----------------------------------------------------
 
-@mixin style-global-image-svg() {
+@mixin musubii-style-global-image-svg() {
   width: 100%;
 }
 
 @include export-style-global() {
   #{$selector-global-image-svg} {
-    @include style-global-image-svg();
+    @include musubii-style-global-image-svg();
   }
 }
 
@@ -80,12 +80,12 @@ $body-line-height: $line-height-md !default;
 // / Style - Global iframe
 //----------------------------------------------------
 
-@mixin style-global-iframe() {
+@mixin musubii-style-global-iframe() {
   max-width: 100%;
 }
 
 @include export-style-global() {
   #{$selector-global-iframe} {
-    @include style-global-iframe();
+    @include musubii-style-global-iframe();
   }
 }

@@ -6,16 +6,16 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use
-$use-mixin-mode: false !default;
-$use-style-reset: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-reset: true !default;
 
 //----------------------------------------------------
 // / Mixins (Export Style)
 //----------------------------------------------------
 
 @mixin export-style-reset() {
-  @if $use-mixin-mode == false and $use-style-reset == true {
+  @if $option-mixin-mode == false and $option-style-reset == true {
     @content;
   }
 }
@@ -24,7 +24,7 @@ $use-style-reset: true !default;
 // / Style - Reset All
 //----------------------------------------------------
 
-@mixin style-reset-all() {
+@mixin musubii-style-reset-all() {
   *,
   ::before,
   ::after {
@@ -250,5 +250,5 @@ $use-style-reset: true !default;
 }
 
 @include export-style-reset() {
-  @include style-reset-all();
+  @include musubii-style-reset-all();
 }

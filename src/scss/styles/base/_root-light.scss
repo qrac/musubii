@@ -6,12 +6,12 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use
-$use-mixin-mode: false !default;
-$use-css-variables: true !default;
-$use-theme-default-light: true !default;
-$use-theme-media-light: false !default;
-$use-theme-attr-light: false !default;
+// Option
+$option-mixin-mode: false !default;
+$option-css-variables: true !default;
+$option-theme-default-light: true !default;
+$option-theme-media-light: false !default;
+$option-theme-attr-light: false !default;
 
 // Selectors
 $selector-root: ":root" !default;
@@ -25,16 +25,16 @@ $root-attr-light: "light" !default;
 //----------------------------------------------------
 
 @mixin export-style-root-light() {
-  @if $use-mixin-mode == false {
-    @if $use-css-variables == true and $use-theme-default-light == true {
+  @if $option-mixin-mode == false {
+    @if $option-css-variables == true and $option-theme-default-light == true {
       @content;
     }
-    @if $use-css-variables == true and $use-theme-media-light == true {
+    @if $option-css-variables == true and $option-theme-media-light == true {
       @include theme-media(light) {
         @content;
       }
     }
-    @if $use-css-variables == true and $use-theme-attr-light == true {
+    @if $option-css-variables == true and $option-theme-attr-light == true {
       @include theme-attr($selector-root-attr, $root-attr-dark) {
         @content;
       }

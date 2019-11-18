@@ -6,15 +6,15 @@
 // / Variables (Default)
 //----------------------------------------------------
 
-// Use
-$use-mixin-mode: false !default;
-$use-style-section: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-section: true !default;
 
 // Selectors
 $selector-section: ".section" !default;
 $selector-inner: ".inner" !default;
 
-// Inner
+// Section Inner
 $section-inner-width-fablet: 540px !default;
 $section-inner-width-tablet: 720px !default;
 $section-inner-width-desktop: 960px !default;
@@ -25,7 +25,7 @@ $section-inner-width-wide: 1140px !default;
 //----------------------------------------------------
 
 @mixin export-style-section() {
-  @if $use-mixin-mode == false and $use-style-section == true {
+  @if $option-mixin-mode == false and $option-style-section == true {
     @content;
   }
 }
@@ -34,7 +34,7 @@ $section-inner-width-wide: 1140px !default;
 // / Style - Section Inner
 //----------------------------------------------------
 
-@mixin style-section-inner() {
+@mixin musubii-style-section-inner() {
   max-width: 100%;
   margin: 0 auto;
   @include fablet() {
@@ -55,7 +55,7 @@ $section-inner-width-wide: 1140px !default;
   #{$selector-section} {
     > {
       #{$selector-inner} {
-        @include style-section-inner();
+        @include musubii-style-section-inner();
       }
     }
   }
