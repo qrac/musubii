@@ -9,12 +9,16 @@
 // Use
 $use-mixin-mode: false !default;
 $use-css-variables: true !default;
-$use-default-theme-dark: false !default;
-$use-media-theme-dark: false !default;
-$use-data-theme-dark: true !default;
+$use-theme-default-dark: false !default;
+$use-theme-media-dark: false !default;
+$use-theme-attr-dark: true !default;
 
 // Selectors
 $selector-root: ":root" !default;
+$selector-root-attr: "data-theme" !default;
+
+// Root
+$root-attr-dark: "dark" !default;
 
 //----------------------------------------------------
 // / Mixins (Export Style)
@@ -22,16 +26,16 @@ $selector-root: ":root" !default;
 
 @mixin export-style-root-dark() {
   @if $use-mixin-mode == false {
-    @if $use-css-variables == true and $use-default-theme-dark == true {
+    @if $use-css-variables == true and $use-theme-default-dark == true {
       @content;
     }
-    @if $use-css-variables == true and $use-media-theme-dark == true {
-      @include media-theme-dark() {
+    @if $use-css-variables == true and $use-theme-media-dark == true {
+      @include theme-media(dark) {
         @content;
       }
     }
-    @if $use-css-variables == true and $use-data-theme-dark == true {
-      @include data-theme-dark() {
+    @if $use-css-variables == true and $use-theme-attr-dark == true {
+      @include theme-attr($selector-root-attr, $root-attr-dark) {
         @content;
       }
     }

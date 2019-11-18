@@ -109,16 +109,30 @@
 // / Landscape or Portrait
 //----------------------------------------------------
 
-// Landscape(tablet size or less)
+// Landscape ( ~ Tablet size)
 @mixin landscape() {
   @media all and (orientation: landscape) and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
 
-// Portrait(tablet size or less)
+// Landscape (All)
+@mixin landscape-all() {
+  @media all and (orientation: landscape) {
+    @content;
+  }
+}
+
+// Portrait ( ~ Tablet size)
 @mixin portrait() {
   @media all and (orientation: portrait) and (max-width: $screen-width-desktop - 1px) {
+    @content;
+  }
+}
+
+// Portrait (All)
+@mixin portrait-all() {
+  @media all and (orientation: portrait) {
     @content;
   }
 }
@@ -159,26 +173,16 @@
 // / Theme
 //----------------------------------------------------
 
-@mixin media-theme-light() {
-  @media (prefers-color-scheme: light) {
+// Theme - OS (light or dark)
+@mixin theme-media($theme) {
+  @media (prefers-color-scheme: #{$theme}) {
     @content;
   }
 }
 
-@mixin media-theme-dark() {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-
-@mixin data-theme-light() {
-  [data-theme="light"] {
-    @content;
-  }
-}
-
-@mixin data-theme-dark() {
-  [data-theme="dark"] {
+// Theme - Custom Attributes (ex: data-theme, dark)
+@mixin theme-attr($attr, $theme) {
+  [#{$attr}="#{$theme}"] {
     @content;
   }
 }
