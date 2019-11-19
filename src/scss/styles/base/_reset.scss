@@ -11,9 +11,10 @@ $option-mixin-mode: false !default;
 $option-style-reset: true !default;
 
 //----------------------------------------------------
-// / Mixins (Export Style)
+// / Mixins (Default)
 //----------------------------------------------------
 
+// Export Style
 @mixin export-style-reset() {
   @if $option-mixin-mode == false and $option-style-reset == true {
     @content;

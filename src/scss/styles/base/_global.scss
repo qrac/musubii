@@ -29,9 +29,10 @@ $body-font-family: $font-sans !default;
 $body-line-height: $line-height-md !default;
 
 //----------------------------------------------------
-// / Mixins (Export Style)
+// / Mixins (Default)
 //----------------------------------------------------
 
+// Export Style
 @mixin export-style-global() {
   @if $option-mixin-mode == false and $option-style-global == true {
     @content;

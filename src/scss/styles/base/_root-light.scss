@@ -21,21 +21,36 @@ $selector-root-attr: "data-theme" !default;
 $root-attr-light: "light" !default;
 
 //----------------------------------------------------
-// / Mixins (Export Style)
+// / Mixins (Default)
 //----------------------------------------------------
 
+// Theme - OS (light or dark)
+@mixin theme-media($theme) {
+  @media (prefers-color-scheme: #{$theme}) {
+    @content;
+  }
+}
+
+// Theme - Custom Attributes (ex: data-theme, dark)
+@mixin theme-attr($attr, $theme) {
+  [#{$attr}="#{$theme}"] {
+    @content;
+  }
+}
+
+// Export Style
 @mixin export-style-root-light() {
   @if $option-mixin-mode == false {
     @if $option-css-variables == true and $option-theme-default-light == true {
       @content;
     }
     @if $option-css-variables == true and $option-theme-media-light == true {
-      @media (prefers-color-scheme: light) {
+      @include theme-media(light) {
         @content;
       }
     }
     @if $option-css-variables == true and $option-theme-attr-light == true {
-      [#{$selector-root-attr}="#{$root-attr-light}"] {
+      @include theme-attr($selector-root-attr, $root-attr-light) {
         @content;
       }
     }

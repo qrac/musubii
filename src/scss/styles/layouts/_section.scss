@@ -10,15 +10,15 @@
 $option-mixin-mode: false !default;
 $option-style-section: true !default;
 
+// Selectors
+$selector-section: ".section" !default;
+$selector-inner: ".inner" !default;
+
 // Fallback
 $screen-width-fablet: 576px !default;
 $screen-width-tablet: 768px !default;
 $screen-width-desktop: 992px !default;
 $screen-width-wide: 1200px !default;
-
-// Selectors
-$selector-section: ".section" !default;
-$selector-inner: ".inner" !default;
 
 // Section Inner
 $section-inner-width-fablet: 540px !default;
@@ -27,11 +27,19 @@ $section-inner-width-desktop: 960px !default;
 $section-inner-width-wide: 1140px !default;
 
 //----------------------------------------------------
-// / Mixins (Export Style)
+// / Mixins (Default)
 //----------------------------------------------------
 
+// Export Style
 @mixin export-style-section() {
   @if $option-mixin-mode == false and $option-style-section == true {
+    @content;
+  }
+}
+
+// min-width ~
+@mixin mobile-first($min-width) {
+  @media screen and (min-width: $min-width) {
     @content;
   }
 }
@@ -43,20 +51,16 @@ $section-inner-width-wide: 1140px !default;
 @mixin musubii-style-section-inner() {
   max-width: 100%;
   margin: 0 auto;
-  // Fablet ~
-  @media screen and (min-width: $screen-width-fablet) {
+  @include mobile-first($screen-width-fablet) {
     width: $section-inner-width-fablet;
   }
-  // Tablet ~
-  @media screen and (min-width: $screen-width-tablet) {
+  @include mobile-first($screen-width-tablet) {
     width: $section-inner-width-tablet;
   }
-  // Desktop ~
-  @media screen and (min-width: $screen-width-desktop) {
+  @include mobile-first($screen-width-desktop) {
     width: $section-inner-width-desktop;
   }
-  // Wide ~
-  @media screen and (min-width: $screen-width-wide) {
+  @include mobile-first($screen-width-wide) {
     width: $section-inner-width-wide;
   }
 }

@@ -6,6 +6,13 @@
 // / Mobile First
 //----------------------------------------------------
 
+// min-width ~
+@mixin mobile-first($min-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
 // Fablet size ~
 @mixin fablet() {
   @media screen and (min-width: $screen-width-fablet) {
