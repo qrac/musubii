@@ -6,35 +6,35 @@
 // / Mobile First
 //----------------------------------------------------
 
-// min-width ~
+// Min Width ~
 @mixin mobile-first($min-width) {
   @media screen and (min-width: $min-width) {
     @content;
   }
 }
 
-// Fablet size ~
+// Fablet Size ~
 @mixin fablet() {
   @media screen and (min-width: $screen-width-fablet) {
     @content;
   }
 }
 
-// Tablet size ~
+// Tablet Size ~
 @mixin tablet() {
   @media screen and (min-width: $screen-width-tablet) {
     @content;
   }
 }
 
-// Desktop size ~
+// Desktop Size ~
 @mixin desktop() {
   @media screen and (min-width: $screen-width-desktop) {
     @content;
   }
 }
 
-// Wide size ~
+// Wide Size ~
 @mixin wide() {
   @media screen and (min-width: $screen-width-wide) {
     @content;
@@ -45,42 +45,42 @@
 // / Size Only
 //----------------------------------------------------
 
-// iphone 5 size only
+// iPhone 5 Size Only
 @mixin iphone5-only() {
   @media screen and (max-width: 320px) {
     @content;
   }
 }
 
-// Mobile size only
+// Mobile Size Only
 @mixin mobile-only() {
   @media screen and (max-width: $screen-width-fablet - 1px) {
     @content;
   }
 }
 
-// Fablet size only
+// Fablet Size Only
 @mixin fablet-only() {
   @media screen and (min-width: $screen-width-fablet) and (max-width: $screen-width-tablet - 1px) {
     @content;
   }
 }
 
-// Tablet size only
+// Tablet Size Only
 @mixin tablet-only() {
   @media screen and (min-width: $screen-width-tablet) and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
 
-// Desktop size only
+// Desktop Size Only
 @mixin desktop-only() {
   @media screen and (min-width: $screen-width-desktop) and (max-width: $screen-width-wide - 1px) {
     @content;
   }
 }
 
-// Wide size only
+// Wide Size Only
 @mixin wide-only() {
   @media screen and (min-width: $screen-width-wide) {
     @content;
@@ -91,21 +91,21 @@
 // / Combination
 //----------------------------------------------------
 
-// Mobile size ~ Fablet size
+// Mobile Size ~ Fablet Size
 @mixin mobile-fablet() {
   @media screen and (max-width: $screen-width-tablet - 1px) {
     @content;
   }
 }
 
-// Mobile size ~ Tablet size
+// Mobile Size ~ Tablet Size
 @mixin mobile-tablet() {
   @media screen and (max-width: $screen-width-desktop - 1px) {
     @content;
   }
 }
 
-// Mobile size ~ Desktop size
+// Mobile Size ~ Desktop Size
 @mixin mobile-desktop() {
   @media screen and (max-width: $screen-width-wide - 1px) {
     @content;
@@ -116,7 +116,7 @@
 // / Landscape or Portrait
 //----------------------------------------------------
 
-// Landscape ( ~ Tablet size)
+// Landscape ( ~ Tablet Size)
 @mixin landscape() {
   @media all and (orientation: landscape) and (max-width: $screen-width-desktop - 1px) {
     @content;
@@ -130,7 +130,7 @@
   }
 }
 
-// Portrait ( ~ Tablet size)
+// Portrait ( ~ Tablet Size)
 @mixin portrait() {
   @media all and (orientation: portrait) and (max-width: $screen-width-desktop - 1px) {
     @content;

@@ -37,7 +37,7 @@ $section-inner-width-wide: 1140px !default;
   }
 }
 
-// min-width ~
+// Min Width ~
 @mixin mobile-first($min-width) {
   @media screen and (min-width: $min-width) {
     @content;
