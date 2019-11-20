@@ -30,16 +30,16 @@ $section-inner-width-wide: 1140px !default;
 // / Mixins (Default)
 //----------------------------------------------------
 
-// Export Style
-@mixin export-style-section() {
-  @if $option-mixin-mode == false and $option-style-section == true {
+// Min Width ~
+@mixin mobile-first($min-width) {
+  @media screen and (min-width: $min-width) {
     @content;
   }
 }
 
-// Min Width ~
-@mixin mobile-first($min-width) {
-  @media screen and (min-width: $min-width) {
+// Export Style
+@mixin export-style-section() {
+  @if $option-mixin-mode == false and $option-style-section == true {
     @content;
   }
 }

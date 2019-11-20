@@ -11,39 +11,6 @@ $global-border-width: 1px !default;
 $global-transition: ease-out 0.12s !default;
 
 //----------------------------------------------------
-// / Layout - Grid
-//----------------------------------------------------
-
-// Grid Split
-$grid-split: 12 !default;
-
-// Column Class
-$column-class: ".column" !default;
-
-// Gap Size
-$gap-size-xxl: $space-xxl !default;
-$gap-size-xl: $space-xl !default;
-$gap-size-lg: $space-lg !default;
-$gap-size-md: $space-md !default;
-$gap-size-sm: $space-sm !default;
-$gap-size-xs: $space-xs !default;
-$gap-size-xxs: $space-xxs !default;
-
-// Pattern - Gap Size
-$pattern-gap-size: (
-  xxl: $gap-size-xxl,
-  xl: $gap-size-xl,
-  lg: $gap-size-lg,
-  md: $gap-size-md,
-  sm: $gap-size-sm,
-  xs: $gap-size-xs,
-  xxs: $gap-size-xxs
-) !default;
-
-// Pattern - Gap Way
-$pattern-gap-way: all, row, column !default;
-
-//----------------------------------------------------
 // / Layout - Box
 //----------------------------------------------------
 
