@@ -3,174 +3,292 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-box: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-box: true !default;
+
+// Selectors
+$selector-box: ".box" !default;
+
+// Fallback
+$global-border-width: 1px !default;
+$global-transition: ease-out 0.12s !default;
+$convert-background-1: #fff !default;
+$convert-background-3: hsl(0, 0%, 96%) !default;
+$convert-border: hsl(200, 13%, 84%) !default;
+$convert-border-1: rgba(0, 0, 0, 0.26) !default;
+
+// Box
+$box-background-color: $convert-background-1 !default;
+$box-border-width: $global-border-width !default;
+$box-border-color: $convert-border !default;
+
+// Box Link
+$box-link-hover-background-color: $convert-background-3 !default;
+$box-link-transition: $global-transition !default;
+
+// Box Angle
+$box-angle-size: 0.5em !default;
+$box-angle-border-width: $global-border-width * 2 !default;
+$box-angle-border-color: $convert-border-1 !default;
+
+// Pattern - Box Custom
+$pattern-box-custom: flexbox, background, outline, separate, link, angle !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-box {
-  @if $use-style-box == true {
+// Export Style
+@mixin export-style-box {
+  @if $option-mixin-mode == false and $option-style-box == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Box Basic
 //----------------------------------------------------
 
-@include export-box {
-  .box {
-    position: relative;
-    display: block;
+@mixin musubii-style-box() {
+  position: relative;
+  display: block;
+}
+
+@include export-style-box {
+  #{$selector-box} {
+    @include musubii-style-box();
   }
 }
 
 //----------------------------------------------------
-// / Custom
+// / Style - Box Flex
 //----------------------------------------------------
 
-@include export-box {
-  .box {
-    @each $custom in $pattern-box-custom {
-      @if $custom == "flexbox" {
-        &.is-flex {
-          display: flex;
-        }
-        &.is-inline-flex {
-          display: inline-flex;
-        }
-        &.is-flex,
-        &.is-inline-flex {
-          &:not(.is-nowrap) {
-            flex-wrap: wrap;
-          }
-          &.is-baseline {
-            align-items: baseline;
-          }
-          &.is-middle {
-            align-items: center;
-          }
-          &.is-bottom {
-            align-items: flex-end;
-          }
-          &.is-center {
-            justify-content: center;
-          }
-          &.is-right {
-            justify-content: flex-end;
-          }
-          &.is-between {
-            justify-content: space-between;
-          }
-          &.is-around {
-            justify-content: space-around;
-          }
-          &.is-reverse {
-            flex-direction: row-reverse;
-          }
-        }
-      }
-      @if $custom == "background" {
-        &.is-bg,
-        &.is-bg-light {
-          background-color: $box-background-color;
-        }
-        &.is-bg-cover,
-        &.is-bg-contain {
-          background-position: center center;
-        }
-        &.is-bg-cover {
-          background-size: cover;
-        }
-        &.is-bg-contain {
-          background-size: contain;
-        }
-      }
-      @if $custom == "outline" {
-        &.is-outline {
-          border: $box-border-width solid $box-border-color;
-        }
-        &.is-outline-top {
-          border-top: $box-border-width solid $box-border-color;
-        }
-        &.is-outline-right {
-          border-right: $box-border-width solid $box-border-color;
-        }
-        &.is-outline-bottom {
-          border-bottom: $box-border-width solid $box-border-color;
-        }
-        &.is-outline-left {
-          border-left: $box-border-width solid $box-border-color;
-        }
-      }
-      @if $custom == "separate" {
-        &.is-separate > *:not(:last-child) {
-          border-bottom: $box-border-width solid $box-border-color;
-        }
-        &.is-separate-parent > *:not(:last-child) .is-separate-child {
-          border-bottom: $box-border-width solid $box-border-color;
-        }
-      }
-      @if $custom == "link" {
-        &.is-link {
-          cursor: pointer;
-          transition: $box-link-transition;
-          &:not(.is-disabled):not([disabled]):hover {
-            background-color: $box-link-hover-background-color;
-          }
-          &.is-disabled,
-          &[disabled] {
-            cursor: not-allowed;
-            pointer-events: none;
-          }
-        }
-      }
-      @if $custom == "angle" {
-        &.is-angle-right,
-        &.is-angle-left {
-          &:after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            width: $box-angle-size;
-            height: $box-angle-size;
-            border-top: $box-angle-border-width solid $box-angle-border-color;
-            border-right: $box-angle-border-width solid $box-angle-border-color;
-            z-index: 2;
-          }
-        }
-        &.is-angle-right {
-          padding-right: $box-angle-size * 3.5;
-          &:after {
-            right: $box-angle-size * 1.5;
-            transform: translateY(-50%) rotate(45deg);
-          }
-        }
-        &.is-angle-left {
-          padding-left: $box-angle-size * 3.5;
-          &:after {
-            left: $box-angle-size * 1.5;
-            transform: translateY(-50%) rotate(-135deg);
-          }
-        }
-        &.is-angle-left,
-        &.is-angle-right {
-          &.is-angle-up {
-            &:after {
-              transform: translateY(-30%) rotate(-45deg);
-            }
-          }
-          &.is-angle-down {
-            &:after {
-              transform: translateY(-70%) rotate(135deg);
-            }
-          }
-        }
+@mixin _is-flex() {
+  &.is-flex {
+    display: flex;
+  }
+  &.is-inline-flex {
+    display: inline-flex;
+  }
+  &.is-flex,
+  &.is-inline-flex {
+    &:not(.is-nowrap) {
+      flex-wrap: wrap;
+    }
+    &.is-baseline {
+      align-items: baseline;
+    }
+    &.is-middle {
+      align-items: center;
+    }
+    &.is-bottom {
+      align-items: flex-end;
+    }
+    &.is-center {
+      justify-content: center;
+    }
+    &.is-right {
+      justify-content: flex-end;
+    }
+    &.is-between {
+      justify-content: space-between;
+    }
+    &.is-around {
+      justify-content: space-around;
+    }
+    &.is-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@mixin musubii-style-box-flex() {
+  @include _is-flex();
+}
+
+@include export-style-box() {
+  #{$selector-box} {
+    @include musubii-style-box-flex();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Box Background
+//----------------------------------------------------
+
+@mixin _is-bg($default-bg-color) {
+  &.is-bg,
+  &.is-bg-light {
+    background-color: $default-bg-color;
+  }
+  &.is-bg-cover,
+  &.is-bg-contain {
+    background-position: center center;
+  }
+  &.is-bg-cover {
+    background-size: cover;
+  }
+  &.is-bg-contain {
+    background-size: contain;
+  }
+}
+
+@mixin musubii-style-box-bg() {
+  @include _is-bg($box-background-color);
+}
+
+@include export-style-box() {
+  #{$selector-box} {
+    @include musubii-style-box-bg();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Box Outline
+//----------------------------------------------------
+
+@mixin _is-outline($border-width, $border-style, $border-color) {
+  &.is-outline {
+    border: $border-width $border-style $border-color;
+  }
+  &.is-outline-top {
+    border-top: $border-width $border-style $border-color;
+  }
+  &.is-outline-right {
+    border-right: $border-width $border-style $border-color;
+  }
+  &.is-outline-bottom {
+    border-bottom: $border-width $border-style $border-color;
+  }
+  &.is-outline-left {
+    border-left: $border-width $border-style $border-color;
+  }
+}
+
+@mixin musubii-style-box-outline() {
+  @include _is-outline($box-border-width, solid, $box-border-color);
+}
+
+@include export-style-box() {
+  #{$selector-box} {
+    @include musubii-style-box-outline();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Box Separate
+//----------------------------------------------------
+
+@mixin _is-separate($border-width, $border-style, $border-color) {
+  &.is-separate > *:not(:last-child) {
+    border-bottom: $border-width $border-style $border-color;
+  }
+  &.is-separate-parent > *:not(:last-child) .is-separate-child {
+    border-bottom: $border-width $border-style $border-color;
+  }
+}
+
+@mixin musubii-style-box-separate() {
+  @include _is-separate($box-border-width, solid, $box-border-color);
+}
+
+@include export-style-box() {
+  #{$selector-box} {
+    @include musubii-style-box-separate();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Box Link
+//----------------------------------------------------
+
+@mixin _is-link($transition, $hover-background-color) {
+  &.is-link {
+    cursor: pointer;
+    transition: $transition;
+    &:not(.is-disabled):not([disabled]):hover {
+      background-color: $hover-background-color;
+    }
+    &.is-disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+
+@mixin musubii-style-box-link() {
+  @include _is-link($box-link-transition, $box-link-hover-background-color);
+}
+
+@include export-style-box() {
+  #{$selector-box} {
+    @include musubii-style-box-link();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Box Angle
+//----------------------------------------------------
+
+@mixin _is-angle($angle-size, $angle-border-width, $angle-border-color) {
+  &.is-angle-right,
+  &.is-angle-left {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: $angle-size;
+      height: $angle-size;
+      border-top: $angle-border-width solid $angle-border-color;
+      border-right: $angle-border-width solid $angle-border-color;
+      z-index: 2;
+    }
+  }
+  &.is-angle-right {
+    padding-right: $angle-size * 3.5;
+    &:after {
+      right: $angle-size * 1.5;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+  &.is-angle-left {
+    padding-left: $angle-size * 3.5;
+    &:after {
+      left: $angle-size * 1.5;
+      transform: translateY(-50%) rotate(-135deg);
+    }
+  }
+  &.is-angle-left,
+  &.is-angle-right {
+    &.is-angle-up {
+      &:after {
+        transform: translateY(-30%) rotate(-45deg);
       }
     }
+    &.is-angle-down {
+      &:after {
+        transform: translateY(-70%) rotate(135deg);
+      }
+    }
+  }
+}
+
+@mixin musubii-style-box-angle() {
+  @include _is-angle(
+    $box-angle-size,
+    $box-angle-border-width,
+    $box-angle-border-color
+  );
+}
+
+@include export-style-box() {
+  #{$selector-box} {
+    @include musubii-style-box-angle();
   }
 }

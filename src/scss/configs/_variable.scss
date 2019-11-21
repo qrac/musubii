@@ -11,27 +11,6 @@ $global-border-width: 1px !default;
 $global-transition: ease-out 0.12s !default;
 
 //----------------------------------------------------
-// / Layout - Box
-//----------------------------------------------------
-
-// Box
-$box-background-color: $convert-background-1 !default;
-$box-border-width: $global-border-width !default;
-$box-border-color: $convert-border !default;
-
-// Box Link
-$box-link-hover-background-color: $convert-background-3 !default;
-$box-link-transition: $global-transition !default;
-
-// Box Angle
-$box-angle-size: 0.5em !default;
-$box-angle-border-width: $global-border-width * 2 !default;
-$box-angle-border-color: $convert-border-1 !default;
-
-// Pattern - Box Custom
-$pattern-box-custom: flexbox, background, outline, separate, link, angle !default;
-
-//----------------------------------------------------
 // / Layout - Card
 //----------------------------------------------------
 
