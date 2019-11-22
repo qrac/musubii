@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Layout: Box
+// Layouts: Box
 //----------------------------------------------------
 
 //----------------------------------------------------
@@ -118,25 +118,14 @@ $box-angle-border-color: $convert-border-1 !default;
 // / Style - Box Background
 //----------------------------------------------------
 
-@mixin _is-bg($default-bg-color) {
-  &.is-bg,
-  &.is-bg-light {
-    background-color: $default-bg-color;
-  }
-  &.is-bg-cover,
-  &.is-bg-contain {
-    background-position: center center;
-  }
-  &.is-bg-cover {
-    background-size: cover;
-  }
-  &.is-bg-contain {
-    background-size: contain;
+@mixin _is-bg($bg-name, $bg-color) {
+  &.is-bg-#{$bg-name} {
+    background-color: $bg-color;
   }
 }
 
 @mixin musubii-style-box-bg() {
-  @include _is-bg($box-background-color);
+  @include _is-bg(light, $box-background-color);
 }
 
 @include export-style-box() {
@@ -153,6 +142,9 @@ $box-angle-border-color: $convert-border-1 !default;
   &.is-outline {
     border: $border-width $border-style $border-color;
   }
+}
+
+@mixin _is-outline-single($border-width, $border-style, $border-color) {
   &.is-outline-top {
     border-top: $border-width $border-style $border-color;
   }
@@ -169,6 +161,7 @@ $box-angle-border-color: $convert-border-1 !default;
 
 @mixin musubii-style-box-outline() {
   @include _is-outline($box-border-width, solid, $box-border-color);
+  @include _is-outline-single($box-border-width, solid, $box-border-color);
 }
 
 @include export-style-box() {

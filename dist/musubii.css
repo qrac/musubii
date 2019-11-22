@@ -769,20 +769,8 @@ iframe {
   flex-direction: row-reverse;
 }
 
-.box.is-bg, .box.is-bg-light {
+.box.is-bg-light {
   background-color: var(--background-1);
-}
-
-.box.is-bg-cover, .box.is-bg-contain {
-  background-position: center center;
-}
-
-.box.is-bg-cover {
-  background-size: cover;
-}
-
-.box.is-bg-contain {
-  background-size: contain;
 }
 
 .box.is-outline {
@@ -871,53 +859,10 @@ iframe {
 .card {
   position: relative;
   display: block;
+  overflow: hidden;
 }
 
-.card.is-flex {
-  display: flex;
-}
-
-.card.is-inline-flex {
-  display: inline-flex;
-}
-
-.card.is-flex:not(.is-nowrap), .card.is-inline-flex:not(.is-nowrap) {
-  flex-wrap: wrap;
-}
-
-.card.is-flex.is-baseline, .card.is-inline-flex.is-baseline {
-  align-items: baseline;
-}
-
-.card.is-flex.is-middle, .card.is-inline-flex.is-middle {
-  align-items: center;
-}
-
-.card.is-flex.is-bottom, .card.is-inline-flex.is-bottom {
-  align-items: flex-end;
-}
-
-.card.is-flex.is-center, .card.is-inline-flex.is-center {
-  justify-content: center;
-}
-
-.card.is-flex.is-right, .card.is-inline-flex.is-right {
-  justify-content: flex-end;
-}
-
-.card.is-flex.is-between, .card.is-inline-flex.is-between {
-  justify-content: space-between;
-}
-
-.card.is-flex.is-around, .card.is-inline-flex.is-around {
-  justify-content: space-around;
-}
-
-.card.is-flex.is-reverse, .card.is-inline-flex.is-reverse {
-  flex-direction: row-reverse;
-}
-
-.card.is-bg, .card.is-bg-light {
+.card.is-bg-light {
   background-color: var(--background-1);
 }
 
@@ -937,7 +882,7 @@ iframe {
   border-radius: 8px;
 }
 
-.card.is-radius, .card.is-radius-md {
+.card.is-radius-md {
   border-radius: 4px;
 }
 

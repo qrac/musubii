@@ -1,31 +1,155 @@
 //----------------------------------------------------
-// Layout: Card
+// Layouts: Card
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-card: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-card: true !default;
+
+// Selectors
+$selector-card: ".card" !default;
+
+// Fallback
+$radius-xxl: 16px !default;
+$radius-xl: 12px !default;
+$radius-lg: 8px !default;
+$radius-md: 4px !default;
+$radius-sm: 3px !default;
+$radius-xs: 2px !default;
+$radius-xxs: 1px !default;
+$space-xxs: 4px !default;
+$global-border-width: 1px !default;
+$global-transition: ease-out 0.12s !default;
+$convert-background-1: #fff !default;
+$convert-background-3: hsl(0, 0%, 96%) !default;
+$convert-border: hsl(200, 13%, 84%) !default;
+$convert-border-1: rgba(0, 0, 0, 0.26) !default;
+$convert-shadow-alpha: rgba(0, 0, 0, 0.24) !default;
+$convert-focus-alpha: rgba(hsl(206, 87%, 54%), 0.5) !default;
+
+// Card
+$card-background-color: $convert-background-1 !default;
+$card-border-width: $global-border-width !default;
+$card-border-color: $convert-border !default;
+$card-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
+
+// Card Radius
+$card-radius-xxl: $radius-xxl !default;
+$card-radius-xl: $radius-xl !default;
+$card-radius-lg: $radius-lg !default;
+$card-radius-md: $radius-md !default;
+$card-radius-sm: $radius-sm !default;
+$card-radius-xs: $radius-xs !default;
+$card-radius-xxs: $radius-xxs !default;
+
+// Card Floating
+$card-floating-shadow: 0 1px 3px 0 $convert-shadow-alpha !default;
+$card-floating-hover-shadow: 0 4px 12px 0 $convert-shadow-alpha !default;
+$card-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
+  0 4px 12px 0 $convert-shadow-alpha !default;
+
+// Card Link
+$card-link-hover-background-color: $convert-background-3 !default;
+$card-link-transition: $global-transition !default;
+
+// Card Zoom
+$card-zoom-transform: scale(1.025) !default;
+$card-zoom-transition: $global-transition !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-card {
-  @if $use-style-card == true {
+// Export Style
+@mixin export-style-card {
+  @if $option-mixin-mode == false and $option-style-card == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Card Basic
 //----------------------------------------------------
 
-@include export-card {
-  .card {
-    position: relative;
-    display: block;
+@mixin musubii-style-card() {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+@include export-style-card {
+  #{$selector-card} {
+    @include musubii-style-card();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Card Background
+//----------------------------------------------------
+
+@mixin _is-bg($bg-name, $bg-color) {
+  &.is-bg-#{$bg-name} {
+    background-color: $bg-color;
+  }
+}
+
+@mixin musubii-style-card-bg() {
+  @include _is-bg(light, $card-background-color);
+}
+
+@include export-style-card() {
+  #{$selector-card} {
+    @include musubii-style-card-bg();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Card Outline
+//----------------------------------------------------
+
+@mixin _is-outline($border-width, $border-style, $border-color) {
+  &.is-outline {
+    border: $border-width $border-style $border-color;
+  }
+}
+
+@mixin musubii-style-card-outline() {
+  @include _is-outline($card-border-width, solid, $card-border-color);
+}
+
+@include export-style-card() {
+  #{$selector-card} {
+    @include musubii-style-card-outline();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Card Radius
+//----------------------------------------------------
+
+@mixin _is-radius-all($size, $value) {
+  &.is-radius-#{$size} {
+    border-radius: $value;
+  }
+}
+
+@mixin musubii-style-card-radius-all() {
+  @include _is-radius-all(xxl, $card-radius-xxl);
+  @include _is-radius-all(xl, $card-radius-xl);
+  @include _is-radius-all(lg, $card-radius-lg);
+  @include _is-radius-all(md, $card-radius-md);
+  @include _is-radius-all(sm, $card-radius-sm);
+  @include _is-radius-all(xs, $card-radius-xs);
+  @include _is-radius-all(xxs, $card-radius-xxs);
+}
+
+@include export-style-card() {
+  #{$selector-card} {
+    @include musubii-style-card-radius-all();
   }
 }
 
@@ -33,122 +157,51 @@ $use-style-card: true !default;
 // / Custom
 //----------------------------------------------------
 
-@include export-card {
+@include export-style-card {
   .card {
-    @each $custom in $pattern-card-custom {
-      @if $custom == "flexbox" {
-        &.is-flex {
-          display: flex;
+    &.is-floating {
+      box-shadow: $card-floating-shadow;
+      &.is-link,
+      &.is-zoom {
+        &:hover {
+          box-shadow: $card-floating-hover-shadow;
         }
-        &.is-inline-flex {
-          display: inline-flex;
-        }
-        &.is-flex,
-        &.is-inline-flex {
-          &:not(.is-nowrap) {
-            flex-wrap: wrap;
-          }
-          &.is-baseline {
-            align-items: baseline;
-          }
-          &.is-middle {
-            align-items: center;
-          }
-          &.is-bottom {
-            align-items: flex-end;
-          }
-          &.is-center {
-            justify-content: center;
-          }
-          &.is-right {
-            justify-content: flex-end;
-          }
-          &.is-between {
-            justify-content: space-between;
-          }
-          &.is-around {
-            justify-content: space-around;
-          }
-          &.is-reverse {
-            flex-direction: row-reverse;
-          }
+        &:focus {
+          box-shadow: $card-floating-focus-shadow;
+          outline: none;
         }
       }
-      @if $custom == "background" {
-        &.is-bg,
-        &.is-bg-light {
-          background-color: $card-background-color;
-        }
+    }
+    &.is-link {
+      cursor: pointer;
+      transition: $card-link-transition;
+      &:not(.is-disabled):not([disabled]):hover {
+        background-color: $card-link-hover-background-color;
       }
-      @if $custom == "outline" {
-        &.is-outline {
-          border: $card-border-width solid $card-border-color;
-        }
+      &:focus {
+        box-shadow: $card-focus-shadow;
+        outline: none;
       }
-      @if $custom == "radius" {
-        @each $key, $value in $pattern-card-radius {
-          @if $key == "md" {
-            &.is-radius,
-            &.is-radius-#{$key} {
-              border-radius: $value;
-            }
-          } @else {
-            &.is-radius-#{$key} {
-              border-radius: $value;
-            }
-          }
-        }
+      &.is-disabled,
+      &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none;
       }
-      @if $custom == "floating" {
-        &.is-floating {
-          box-shadow: $card-floating-shadow;
-          &.is-link,
-          &.is-zoom {
-            &:hover {
-              box-shadow: $card-floating-hover-shadow;
-            }
-            &:focus {
-              box-shadow: $card-floating-focus-shadow;
-              outline: none;
-            }
-          }
-        }
+    }
+    &.is-zoom {
+      cursor: pointer;
+      transition: $card-zoom-transition;
+      &:not(.is-disabled):not([disabled]):hover {
+        transform: $card-zoom-transform;
       }
-      @if $custom == "link" {
-        &.is-link {
-          cursor: pointer;
-          transition: $card-link-transition;
-          &:not(.is-disabled):not([disabled]):hover {
-            background-color: $card-link-hover-background-color;
-          }
-          &:focus {
-            box-shadow: $card-focus-shadow;
-            outline: none;
-          }
-          &.is-disabled,
-          &[disabled] {
-            cursor: not-allowed;
-            pointer-events: none;
-          }
-        }
+      &:focus {
+        box-shadow: $card-focus-shadow;
+        outline: none;
       }
-      @if $custom == "zoom" {
-        &.is-zoom {
-          cursor: pointer;
-          transition: $card-zoom-transition;
-          &:not(.is-disabled):not([disabled]):hover {
-            transform: $card-zoom-transform;
-          }
-          &:focus {
-            box-shadow: $card-focus-shadow;
-            outline: none;
-          }
-          &.is-disabled,
-          &[disabled] {
-            cursor: not-allowed;
-            pointer-events: none;
-          }
-        }
+      &.is-disabled,
+      &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none;
       }
     }
   }
