@@ -91,14 +91,14 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Background
 //----------------------------------------------------
 
-@mixin _is-bg($bg-name, $bg-color) {
+@mixin --is-bg($bg-name, $bg-color) {
   &.is-bg-#{$bg-name} {
     background-color: $bg-color;
   }
 }
 
 @mixin musubii-style-card-bg() {
-  @include _is-bg(light, $card-background-color);
+  @include --is-bg(light, $card-background-color);
 }
 
 @include export-style-card() {
@@ -111,14 +111,14 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Outline
 //----------------------------------------------------
 
-@mixin _is-outline($border-width, $border-style, $border-color) {
+@mixin --is-outline($border-width, $border-style, $border-color) {
   &.is-outline {
     border: $border-width $border-style $border-color;
   }
 }
 
 @mixin musubii-style-card-outline() {
-  @include _is-outline($card-border-width, solid, $card-border-color);
+  @include --is-outline($card-border-width, solid, $card-border-color);
 }
 
 @include export-style-card() {
@@ -131,20 +131,20 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Radius
 //----------------------------------------------------
 
-@mixin _is-radius-all($size, $value) {
+@mixin --is-radius-all($size, $value) {
   &.is-radius-#{$size} {
     border-radius: $value;
   }
 }
 
 @mixin musubii-style-card-radius-all() {
-  @include _is-radius-all(xxl, $card-radius-xxl);
-  @include _is-radius-all(xl, $card-radius-xl);
-  @include _is-radius-all(lg, $card-radius-lg);
-  @include _is-radius-all(md, $card-radius-md);
-  @include _is-radius-all(sm, $card-radius-sm);
-  @include _is-radius-all(xs, $card-radius-xs);
-  @include _is-radius-all(xxs, $card-radius-xxs);
+  @include --is-radius-all(xxl, $card-radius-xxl);
+  @include --is-radius-all(xl, $card-radius-xl);
+  @include --is-radius-all(lg, $card-radius-lg);
+  @include --is-radius-all(md, $card-radius-md);
+  @include --is-radius-all(sm, $card-radius-sm);
+  @include --is-radius-all(xs, $card-radius-xs);
+  @include --is-radius-all(xxs, $card-radius-xxs);
 }
 
 @include export-style-card() {
