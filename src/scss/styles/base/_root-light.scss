@@ -24,20 +24,6 @@ $root-attr-light: "light" !default;
 // / Mixins (Default)
 //----------------------------------------------------
 
-// Theme - OS (light or dark)
-@mixin theme-media($theme) {
-  @media (prefers-color-scheme: #{$theme}) {
-    @content;
-  }
-}
-
-// Theme - Custom Attributes (ex: data-theme, dark)
-@mixin theme-attr($attr, $theme) {
-  [#{$attr}="#{$theme}"] {
-    @content;
-  }
-}
-
 // Export Style
 @mixin export-style-root-light() {
   @if $option-mixin-mode == false {

@@ -16,12 +16,6 @@ $selector-global-image: "img" !default;
 $selector-global-image-svg: 'img[src$=".svg"]' !default;
 $selector-global-iframe: "iframe" !default;
 
-// Fallback
-$convert-body-background-color: #fff !default;
-$convert-body-text-color: rgba(0, 0, 0, 0.7) !default;
-$font-sans: sans-serif !default;
-$line-height-md: 1.5 !default;
-
 // Body
 $body-background-color: $convert-body-background-color !default;
 $body-text-color: $convert-body-text-color !default;

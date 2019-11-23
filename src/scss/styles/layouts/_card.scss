@@ -13,23 +13,9 @@ $option-style-card: true !default;
 // Selectors
 $selector-card: ".card" !default;
 
-// Fallback
-$radius-xxl: 16px !default;
-$radius-xl: 12px !default;
-$radius-lg: 8px !default;
-$radius-md: 4px !default;
-$radius-sm: 3px !default;
-$radius-xs: 2px !default;
-$radius-xxs: 1px !default;
-$space-xxs: 4px !default;
+// Global
 $global-border-width: 1px !default;
 $global-transition: ease-out 0.12s !default;
-$convert-background-1: #fff !default;
-$convert-background-3: hsl(0, 0%, 96%) !default;
-$convert-border: hsl(200, 13%, 84%) !default;
-$convert-border-1: rgba(0, 0, 0, 0.26) !default;
-$convert-shadow-alpha: rgba(0, 0, 0, 0.24) !default;
-$convert-focus-alpha: rgba(hsl(206, 87%, 54%), 0.5) !default;
 
 // Card
 $card-background-color: $convert-background-1 !default;
@@ -91,12 +77,6 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Background
 //----------------------------------------------------
 
-@mixin --is-bg($bg-name, $bg-color) {
-  &.is-bg-#{$bg-name} {
-    background-color: $bg-color;
-  }
-}
-
 @mixin musubii-style-card-bg() {
   @include --is-bg(light, $card-background-color);
 }
@@ -111,12 +91,6 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Outline
 //----------------------------------------------------
 
-@mixin --is-outline($border-width, $border-style, $border-color) {
-  &.is-outline {
-    border: $border-width $border-style $border-color;
-  }
-}
-
 @mixin musubii-style-card-outline() {
   @include --is-outline($card-border-width, solid, $card-border-color);
 }
@@ -130,12 +104,6 @@ $card-zoom-transition: $global-transition !default;
 //----------------------------------------------------
 // / Style - Card Radius
 //----------------------------------------------------
-
-@mixin --is-radius-all($size, $value) {
-  &.is-radius-#{$size} {
-    border-radius: $value;
-  }
-}
 
 @mixin musubii-style-card-radius-all() {
   @include --is-radius-all(xxl, $card-radius-xxl);

@@ -14,15 +14,6 @@ $option-style-grid: true !default;
 $selector-grid: ".grid" !default;
 $selector-column: ".column" !default;
 
-// Fallback
-$space-xxl: 28px !default;
-$space-xl: 24px !default;
-$space-lg: 20px !default;
-$space-md: 16px !default;
-$space-sm: 12px !default;
-$space-xs: 8px !default;
-$space-xxs: 4px !default;
-
 // Gap Size
 $gap-size-xxl: $space-xxl !default;
 $gap-size-xl: $space-xl !default;
@@ -93,19 +84,6 @@ $gap-size-xxs: $space-xxs !default;
 // / Style - Grid Gap
 //----------------------------------------------------
 
-@mixin --is-gap-all($size, $value, $child-selector) {
-  &.is-gap-#{$size} {
-    margin-left: -$value;
-    margin-bottom: -$value;
-    > {
-      #{$child-selector} {
-        padding-left: $value;
-        padding-bottom: $value;
-      }
-    }
-  }
-}
-
 @mixin musubii-style-grid-gap-all() {
   @include --is-gap-all(xxl, $gap-size-xxl, $selector-column);
   @include --is-gap-all(xl, $gap-size-xl, $selector-column);
@@ -124,17 +102,6 @@ $gap-size-xxs: $space-xxs !default;
 
 //----------------------------------------------------
 
-@mixin --is-gap-row($size, $value, $child-selector) {
-  &.is-gap-row-#{$size} {
-    margin-bottom: -$value;
-    > {
-      #{$child-selector} {
-        padding-bottom: $value;
-      }
-    }
-  }
-}
-
 @mixin musubii-style-grid-gap-row() {
   @include --is-gap-row(xxl, $gap-size-xxl, $selector-column);
   @include --is-gap-row(xl, $gap-size-xl, $selector-column);
@@ -152,17 +119,6 @@ $gap-size-xxs: $space-xxs !default;
 }
 
 //----------------------------------------------------
-
-@mixin --is-gap-column($size, $value, $child-selector) {
-  &.is-gap-column-#{$size} {
-    margin-bottom: -$value;
-    > {
-      #{$child-selector} {
-        padding-bottom: $value;
-      }
-    }
-  }
-}
 
 @mixin musubii-style-grid-gap-column() {
   @include --is-gap-column(xxl, $gap-size-xxl, $selector-column);

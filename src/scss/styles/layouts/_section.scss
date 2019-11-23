@@ -14,12 +14,6 @@ $option-style-section: true !default;
 $selector-section: ".section" !default;
 $selector-inner: ".inner" !default;
 
-// Fallback
-$screen-width-fablet: 576px !default;
-$screen-width-tablet: 768px !default;
-$screen-width-desktop: 992px !default;
-$screen-width-wide: 1200px !default;
-
 // Section Inner
 $section-inner-width-fablet: 540px !default;
 $section-inner-width-tablet: 720px !default;
@@ -29,13 +23,6 @@ $section-inner-width-wide: 1140px !default;
 //----------------------------------------------------
 // / Mixins (Default)
 //----------------------------------------------------
-
-// Min Width ~
-@mixin mobile-first($min-width) {
-  @media screen and (min-width: $min-width) {
-    @content;
-  }
-}
 
 // Export Style
 @mixin export-style-section() {
@@ -51,16 +38,16 @@ $section-inner-width-wide: 1140px !default;
 @mixin musubii-style-section-inner() {
   max-width: 100%;
   margin: 0 auto;
-  @include mobile-first($screen-width-fablet) {
+  @include fablet() {
     width: $section-inner-width-fablet;
   }
-  @include mobile-first($screen-width-tablet) {
+  @include tablet() {
     width: $section-inner-width-tablet;
   }
-  @include mobile-first($screen-width-desktop) {
+  @include desktop() {
     width: $section-inner-width-desktop;
   }
-  @include mobile-first($screen-width-wide) {
+  @include wide() {
     width: $section-inner-width-wide;
   }
 }
