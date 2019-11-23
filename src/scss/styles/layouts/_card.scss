@@ -13,10 +13,6 @@ $option-style-card: true !default;
 // Selectors
 $selector-card: ".card" !default;
 
-// Global
-$global-border-width: 1px !default;
-$global-transition: ease-out 0.12s !default;
-
 // Card
 $card-background-color: $convert-background-1 !default;
 $card-border-width: $global-border-width !default;

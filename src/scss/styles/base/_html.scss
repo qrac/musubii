@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Base: Global
+// Base: HTML
 //----------------------------------------------------
 
 //----------------------------------------------------
@@ -8,13 +8,13 @@
 
 // Option
 $option-mixin-mode: false !default;
-$option-style-global: true !default;
+$option-style-html: true !default;
 
 // Selectors
-$selector-global-body: "body" !default;
-$selector-global-image: "img" !default;
-$selector-global-image-svg: 'img[src$=".svg"]' !default;
-$selector-global-iframe: "iframe" !default;
+$selector-html-body: "body" !default;
+$selector-html-image: "img" !default;
+$selector-html-image-svg: 'img[src$=".svg"]' !default;
+$selector-html-iframe: "iframe" !default;
 
 // Body
 $body-background-color: $convert-body-background-color !default;
@@ -27,66 +27,66 @@ $body-line-height: $line-height-md !default;
 //----------------------------------------------------
 
 // Export Style
-@mixin export-style-global() {
-  @if $option-mixin-mode == false and $option-style-global == true {
+@mixin export-style-html() {
+  @if $option-mixin-mode == false and $option-style-html == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Style - Global Body
+// / Style - html Body
 //----------------------------------------------------
 
-@mixin musubii-style-global-body() {
+@mixin musubii-style-html-body() {
   background-color: $body-background-color;
   color: $body-text-color;
   font-family: $body-font-family;
   line-height: $body-line-height;
 }
 
-@include export-style-global() {
-  #{$selector-global-body} {
-    @include musubii-style-global-body();
+@include export-style-html() {
+  #{$selector-html-body} {
+    @include musubii-style-html-body();
   }
 }
 
 //----------------------------------------------------
-// / Style - Global Image
+// / Style - html Image
 //----------------------------------------------------
 
-@mixin musubii-style-global-image() {
+@mixin musubii-style-html-image() {
   max-width: 100%;
   height: auto;
 }
 
-@include export-style-global() {
-  #{$selector-global-image} {
-    @include musubii-style-global-image();
+@include export-style-html() {
+  #{$selector-html-image} {
+    @include musubii-style-html-image();
   }
 }
 
 //----------------------------------------------------
 
-@mixin musubii-style-global-image-svg() {
+@mixin musubii-style-html-image-svg() {
   width: 100%;
 }
 
-@include export-style-global() {
-  #{$selector-global-image-svg} {
-    @include musubii-style-global-image-svg();
+@include export-style-html() {
+  #{$selector-html-image-svg} {
+    @include musubii-style-html-image-svg();
   }
 }
 
 //----------------------------------------------------
-// / Style - Global iframe
+// / Style - html iframe
 //----------------------------------------------------
 
-@mixin musubii-style-global-iframe() {
+@mixin musubii-style-html-iframe() {
   max-width: 100%;
 }
 
-@include export-style-global() {
-  #{$selector-global-iframe} {
-    @include musubii-style-global-iframe();
+@include export-style-html() {
+  #{$selector-html-iframe} {
+    @include musubii-style-html-iframe();
   }
 }
