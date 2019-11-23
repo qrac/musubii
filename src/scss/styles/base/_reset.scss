@@ -22,10 +22,10 @@ $option-style-reset: true !default;
 }
 
 //----------------------------------------------------
-// / Style - Reset All
+// / Style - Reset
 //----------------------------------------------------
 
-@mixin musubii-style-reset-all() {
+@mixin musubii-style-reset() {
   *,
   ::before,
   ::after {
@@ -251,5 +251,5 @@ $option-style-reset: true !default;
 }
 
 @include export-style-reset() {
-  @include musubii-style-reset-all();
+  @include musubii-style-reset();
 }
