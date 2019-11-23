@@ -73,6 +73,12 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Background
 //----------------------------------------------------
 
+@mixin --is-bg($bg-name, $bg-color) {
+  &.is-bg-#{$bg-name} {
+    background-color: $bg-color;
+  }
+}
+
 @mixin musubii-style-card-bg() {
   @include --is-bg(light, $card-background-color);
 }
@@ -87,6 +93,12 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Outline
 //----------------------------------------------------
 
+@mixin --is-outline($border-width, $border-style, $border-color) {
+  &.is-outline {
+    border: $border-width $border-style $border-color;
+  }
+}
+
 @mixin musubii-style-card-outline() {
   @include --is-outline($card-border-width, solid, $card-border-color);
 }
@@ -100,6 +112,12 @@ $card-zoom-transition: $global-transition !default;
 //----------------------------------------------------
 // / Style - Card Radius
 //----------------------------------------------------
+
+@mixin --is-radius-all($size, $value) {
+  &.is-radius-#{$size} {
+    border-radius: $value;
+  }
+}
 
 @mixin musubii-style-card-radius-all() {
   @include --is-radius-all(xxl, $card-radius-xxl);
