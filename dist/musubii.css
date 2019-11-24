@@ -955,144 +955,32 @@ iframe {
   flex-wrap: nowrap;
 }
 
-.joint > .button,
-.joint > .badge,
-.joint > .input[type="text"],
-.joint > .input[type="search"],
-.joint > .input[type="url"],
-.joint > .input[type="email"],
-.joint > .input[type="tel"],
-.joint > .input[type="password"],
-.joint > .input[type="datetime-local"],
-.joint > .input[type="date"],
-.joint > .input[type="month"],
-.joint > .input[type="week"],
-.joint > .input[type="time"],
-.joint > .input[type="number"] {
+.joint > :not(.is-joint-none) {
   overflow: hidden;
 }
 
-.joint > .button:not(:last-child),
-.joint > .badge:not(:last-child),
-.joint > .input[type="text"]:not(:last-child),
-.joint > .input[type="search"]:not(:last-child),
-.joint > .input[type="url"]:not(:last-child),
-.joint > .input[type="email"]:not(:last-child),
-.joint > .input[type="tel"]:not(:last-child),
-.joint > .input[type="password"]:not(:last-child),
-.joint > .input[type="datetime-local"]:not(:last-child),
-.joint > .input[type="date"]:not(:last-child),
-.joint > .input[type="month"]:not(:last-child),
-.joint > .input[type="week"]:not(:last-child),
-.joint > .input[type="time"]:not(:last-child),
-.joint > .input[type="number"]:not(:last-child) {
+.joint > :not(.is-joint-none):not(:last-child),
+.joint > :not(.is-joint-none):not(:last-child) > select {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.joint > .button:not(:first-child),
-.joint > .badge:not(:first-child),
-.joint > .input[type="text"]:not(:first-child),
-.joint > .input[type="search"]:not(:first-child),
-.joint > .input[type="url"]:not(:first-child),
-.joint > .input[type="email"]:not(:first-child),
-.joint > .input[type="tel"]:not(:first-child),
-.joint > .input[type="password"]:not(:first-child),
-.joint > .input[type="datetime-local"]:not(:first-child),
-.joint > .input[type="date"]:not(:first-child),
-.joint > .input[type="month"]:not(:first-child),
-.joint > .input[type="week"]:not(:first-child),
-.joint > .input[type="time"]:not(:first-child),
-.joint > .input[type="number"]:not(:first-child) {
+.joint > :not(.is-joint-none):not(:first-child),
+.joint > :not(.is-joint-none):not(:first-child) > select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.joint > .button:nth-child(2),
-.joint > .badge:nth-child(2),
-.joint > .input[type="text"]:nth-child(2),
-.joint > .input[type="search"]:nth-child(2),
-.joint > .input[type="url"]:nth-child(2),
-.joint > .input[type="email"]:nth-child(2),
-.joint > .input[type="tel"]:nth-child(2),
-.joint > .input[type="password"]:nth-child(2),
-.joint > .input[type="datetime-local"]:nth-child(2),
-.joint > .input[type="date"]:nth-child(2),
-.joint > .input[type="month"]:nth-child(2),
-.joint > .input[type="week"]:nth-child(2),
-.joint > .input[type="time"]:nth-child(2),
-.joint > .input[type="number"]:nth-child(2) {
+.joint > :not(.is-joint-none):nth-child(2) {
   border-left: none;
 }
 
-.joint > .button:nth-child(2) ~ .button,
-.joint > .button:nth-child(2) ~ .input,
-.joint > .badge:nth-child(2) ~ .button,
-.joint > .badge:nth-child(2) ~ .input,
-.joint > .input[type="text"]:nth-child(2) ~ .button,
-.joint > .input[type="text"]:nth-child(2) ~ .input,
-.joint > .input[type="search"]:nth-child(2) ~ .button,
-.joint > .input[type="search"]:nth-child(2) ~ .input,
-.joint > .input[type="url"]:nth-child(2) ~ .button,
-.joint > .input[type="url"]:nth-child(2) ~ .input,
-.joint > .input[type="email"]:nth-child(2) ~ .button,
-.joint > .input[type="email"]:nth-child(2) ~ .input,
-.joint > .input[type="tel"]:nth-child(2) ~ .button,
-.joint > .input[type="tel"]:nth-child(2) ~ .input,
-.joint > .input[type="password"]:nth-child(2) ~ .button,
-.joint > .input[type="password"]:nth-child(2) ~ .input,
-.joint > .input[type="datetime-local"]:nth-child(2) ~ .button,
-.joint > .input[type="datetime-local"]:nth-child(2) ~ .input,
-.joint > .input[type="date"]:nth-child(2) ~ .button,
-.joint > .input[type="date"]:nth-child(2) ~ .input,
-.joint > .input[type="month"]:nth-child(2) ~ .button,
-.joint > .input[type="month"]:nth-child(2) ~ .input,
-.joint > .input[type="week"]:nth-child(2) ~ .button,
-.joint > .input[type="week"]:nth-child(2) ~ .input,
-.joint > .input[type="time"]:nth-child(2) ~ .button,
-.joint > .input[type="time"]:nth-child(2) ~ .input,
-.joint > .input[type="number"]:nth-child(2) ~ .button,
-.joint > .input[type="number"]:nth-child(2) ~ .input {
+.joint > :not(.is-joint-none):nth-child(2) ~ :not(.is-joint-none),
+.joint > :not(.is-joint-none):nth-child(2) ~ :not(.is-joint-none) > select {
   border-left: none;
 }
 
-.joint > .select:not(.is-multiple) {
-  position: relative;
-}
-
-.joint > .select:not(.is-multiple):not(:last-child) > select {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.joint > .select:not(.is-multiple):not(:first-child) > select {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.joint > .select:not(.is-multiple):nth-child(2) {
-  border-left: none;
-}
-
-.joint > .select:not(.is-multiple):nth-child(2) ~ .select > select {
-  border-left: none;
-}
-
-.joint > .button:focus,
-.joint > .badge:focus,
-.joint > .input[type="text"]:focus,
-.joint > .input[type="search"]:focus,
-.joint > .input[type="url"]:focus,
-.joint > .input[type="email"]:focus,
-.joint > .input[type="tel"]:focus,
-.joint > .input[type="password"]:focus,
-.joint > .input[type="datetime-local"]:focus,
-.joint > .input[type="date"]:focus,
-.joint > .input[type="month"]:focus,
-.joint > .input[type="week"]:focus,
-.joint > .input[type="time"]:focus,
-.joint > .input[type="number"]:focus,
-.joint > .select:not(.is-multiple) > select:focus {
+.joint > :not(.is-joint-none):focus {
   z-index: 2;
 }
 

@@ -3,105 +3,66 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-joint: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-joint: true !default;
+
+// Selectors
+$selector-joint: ".joint" !default;
+$selector-joint-none: ".is-joint-none" !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-joint {
-  @if $use-style-joint == true {
+// Export Style
+@mixin export-style-joint {
+  @if $option-mixin-mode == false and $option-style-joint == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Joint Basic
 //----------------------------------------------------
 
-@include export-joint {
-  #{$joint-class} {
-    display: flex;
-    flex-wrap: nowrap;
-    > {
-      #{$button-class},
-      .badge,
-      .input[type="text"],
-      .input[type="search"],
-      .input[type="url"],
-      .input[type="email"],
-      .input[type="tel"],
-      .input[type="password"],
-      .input[type="datetime-local"],
-      .input[type="date"],
-      .input[type="month"],
-      .input[type="week"],
-      .input[type="time"],
-      .input[type="number"] {
-        overflow: hidden;
-        &:not(:last-child) {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-        }
-        &:not(:first-child) {
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-        &:nth-child(2) {
-          border-left: none;
-          ~ {
-            #{$button-class},
-            .input {
-              border-left: none;
-            }
+@mixin musubii-style-joint {
+  display: flex;
+  flex-wrap: nowrap;
+  > {
+    :not(#{$selector-joint-none}) {
+      overflow: hidden;
+      &:not(:last-child),
+      &:not(:last-child) > select {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:not(:first-child),
+      &:not(:first-child) > select {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      &:nth-child(2) {
+        border-left: none;
+        ~ {
+          :not(#{$selector-joint-none}),
+          :not(#{$selector-joint-none}) > select {
+            border-left: none;
           }
         }
       }
-    }
-    > {
-      .select:not(.is-multiple) {
-        position: relative;
-        &:not(:last-child) > select {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-        }
-        &:not(:first-child) > select {
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-        &:nth-child(2) {
-          border-left: none;
-          ~ {
-            .select > select {
-              border-left: none;
-            }
-          }
-        }
+      &:focus {
+        z-index: 2;
       }
     }
-    > {
-      #{$button-class},
-      .badge,
-      .input[type="text"],
-      .input[type="search"],
-      .input[type="url"],
-      .input[type="email"],
-      .input[type="tel"],
-      .input[type="password"],
-      .input[type="datetime-local"],
-      .input[type="date"],
-      .input[type="month"],
-      .input[type="week"],
-      .input[type="time"],
-      .input[type="number"],
-      .select:not(.is-multiple) > select {
-        &:focus {
-          z-index: 2;
-        }
-      }
-    }
+  }
+}
+
+@include export-style-joint {
+  #{$selector-joint} {
+    @include musubii-style-joint();
   }
 }
