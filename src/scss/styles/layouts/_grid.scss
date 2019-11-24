@@ -84,27 +84,41 @@ $gap-size-xxs: $space-xxs !default;
 // / Style - Grid Gap
 //----------------------------------------------------
 
-@mixin --is-gap-all($size, $value, $child-selector) {
-  &.is-gap-#{$size} {
-    margin-left: -$value;
-    margin-bottom: -$value;
-    > {
-      #{$child-selector} {
-        padding-left: $value;
-        padding-bottom: $value;
+@mixin --is-gap-all($size, $value, $child-selector, $omit) {
+  @if $omit == true {
+    &.is-gap,
+    &.is-gap-#{$size} {
+      margin-left: -$value;
+      margin-bottom: -$value;
+      > {
+        #{$child-selector} {
+          padding-left: $value;
+          padding-bottom: $value;
+        }
+      }
+    }
+  } @else {
+    &.is-gap-#{$size} {
+      margin-left: -$value;
+      margin-bottom: -$value;
+      > {
+        #{$child-selector} {
+          padding-left: $value;
+          padding-bottom: $value;
+        }
       }
     }
   }
 }
 
 @mixin musubii-style-grid-gap-all() {
-  @include --is-gap-all(xxl, $gap-size-xxl, $selector-column);
-  @include --is-gap-all(xl, $gap-size-xl, $selector-column);
-  @include --is-gap-all(lg, $gap-size-lg, $selector-column);
-  @include --is-gap-all(md, $gap-size-md, $selector-column);
-  @include --is-gap-all(sm, $gap-size-sm, $selector-column);
-  @include --is-gap-all(xs, $gap-size-xs, $selector-column);
-  @include --is-gap-all(xxs, $gap-size-xxs, $selector-column);
+  @include --is-gap-all(xxl, $gap-size-xxl, $selector-column, false);
+  @include --is-gap-all(xl, $gap-size-xl, $selector-column, false);
+  @include --is-gap-all(lg, $gap-size-lg, $selector-column, false);
+  @include --is-gap-all(md, $gap-size-md, $selector-column, true);
+  @include --is-gap-all(sm, $gap-size-sm, $selector-column, false);
+  @include --is-gap-all(xs, $gap-size-xs, $selector-column, false);
+  @include --is-gap-all(xxs, $gap-size-xxs, $selector-column, false);
 }
 
 @include export-style-grid() {
@@ -115,25 +129,37 @@ $gap-size-xxs: $space-xxs !default;
 
 //----------------------------------------------------
 
-@mixin --is-gap-row($size, $value, $child-selector) {
-  &.is-gap-row-#{$size} {
-    margin-bottom: -$value;
-    > {
-      #{$child-selector} {
-        padding-bottom: $value;
+@mixin --is-gap-row($size, $value, $child-selector, $omit) {
+  @if $omit == true {
+    &.is-gap-row,
+    &.is-gap-row-#{$size} {
+      margin-bottom: -$value;
+      > {
+        #{$child-selector} {
+          padding-bottom: $value;
+        }
+      }
+    }
+  } @else {
+    &.is-gap-row-#{$size} {
+      margin-bottom: -$value;
+      > {
+        #{$child-selector} {
+          padding-bottom: $value;
+        }
       }
     }
   }
 }
 
 @mixin musubii-style-grid-gap-row() {
-  @include --is-gap-row(xxl, $gap-size-xxl, $selector-column);
-  @include --is-gap-row(xl, $gap-size-xl, $selector-column);
-  @include --is-gap-row(lg, $gap-size-lg, $selector-column);
-  @include --is-gap-row(md, $gap-size-md, $selector-column);
-  @include --is-gap-row(sm, $gap-size-sm, $selector-column);
-  @include --is-gap-row(xs, $gap-size-xs, $selector-column);
-  @include --is-gap-row(xxs, $gap-size-xxs, $selector-column);
+  @include --is-gap-row(xxl, $gap-size-xxl, $selector-column, false);
+  @include --is-gap-row(xl, $gap-size-xl, $selector-column, false);
+  @include --is-gap-row(lg, $gap-size-lg, $selector-column, false);
+  @include --is-gap-row(md, $gap-size-md, $selector-column, true);
+  @include --is-gap-row(sm, $gap-size-sm, $selector-column, false);
+  @include --is-gap-row(xs, $gap-size-xs, $selector-column, false);
+  @include --is-gap-row(xxs, $gap-size-xxs, $selector-column, false);
 }
 
 @include export-style-grid() {
@@ -144,25 +170,37 @@ $gap-size-xxs: $space-xxs !default;
 
 //----------------------------------------------------
 
-@mixin --is-gap-column($size, $value, $child-selector) {
-  &.is-gap-column-#{$size} {
-    margin-bottom: -$value;
-    > {
-      #{$child-selector} {
-        padding-bottom: $value;
+@mixin --is-gap-column($size, $value, $child-selector, $omit) {
+  @if $omit == true {
+    &.is-gap-column,
+    &.is-gap-column-#{$size} {
+      margin-left: -$value;
+      > {
+        #{$child-selector} {
+          padding-left: $value;
+        }
+      }
+    }
+  } @else {
+    &.is-gap-column-#{$size} {
+      margin-left: -$value;
+      > {
+        #{$child-selector} {
+          padding-left: $value;
+        }
       }
     }
   }
 }
 
 @mixin musubii-style-grid-gap-column() {
-  @include --is-gap-column(xxl, $gap-size-xxl, $selector-column);
-  @include --is-gap-column(xl, $gap-size-xl, $selector-column);
-  @include --is-gap-column(lg, $gap-size-lg, $selector-column);
-  @include --is-gap-column(md, $gap-size-md, $selector-column);
-  @include --is-gap-column(sm, $gap-size-sm, $selector-column);
-  @include --is-gap-column(xs, $gap-size-xs, $selector-column);
-  @include --is-gap-column(xxs, $gap-size-xxs, $selector-column);
+  @include --is-gap-column(xxl, $gap-size-xxl, $selector-column, false);
+  @include --is-gap-column(xl, $gap-size-xl, $selector-column, false);
+  @include --is-gap-column(lg, $gap-size-lg, $selector-column, false);
+  @include --is-gap-column(md, $gap-size-md, $selector-column, true);
+  @include --is-gap-column(sm, $gap-size-sm, $selector-column, false);
+  @include --is-gap-column(xs, $gap-size-xs, $selector-column, false);
+  @include --is-gap-column(xxs, $gap-size-xxs, $selector-column, false);
 }
 
 @include export-style-grid() {

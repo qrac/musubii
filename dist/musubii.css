@@ -568,12 +568,12 @@ iframe {
   padding-bottom: 20px;
 }
 
-.grid.is-gap-md {
+.grid.is-gap, .grid.is-gap-md {
   margin-left: -16px;
   margin-bottom: -16px;
 }
 
-.grid.is-gap-md > .column {
+.grid.is-gap > .column, .grid.is-gap-md > .column {
   padding-left: 16px;
   padding-bottom: 16px;
 }
@@ -632,11 +632,11 @@ iframe {
   padding-bottom: 20px;
 }
 
-.grid.is-gap-row-md {
+.grid.is-gap-row, .grid.is-gap-row-md {
   margin-bottom: -16px;
 }
 
-.grid.is-gap-row-md > .column {
+.grid.is-gap-row > .column, .grid.is-gap-row-md > .column {
   padding-bottom: 16px;
 }
 
@@ -665,59 +665,59 @@ iframe {
 }
 
 .grid.is-gap-column-xxl {
-  margin-bottom: -28px;
+  margin-left: -28px;
 }
 
 .grid.is-gap-column-xxl > .column {
-  padding-bottom: 28px;
+  padding-left: 28px;
 }
 
 .grid.is-gap-column-xl {
-  margin-bottom: -24px;
+  margin-left: -24px;
 }
 
 .grid.is-gap-column-xl > .column {
-  padding-bottom: 24px;
+  padding-left: 24px;
 }
 
 .grid.is-gap-column-lg {
-  margin-bottom: -20px;
+  margin-left: -20px;
 }
 
 .grid.is-gap-column-lg > .column {
-  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
-.grid.is-gap-column-md {
-  margin-bottom: -16px;
+.grid.is-gap-column, .grid.is-gap-column-md {
+  margin-left: -16px;
 }
 
-.grid.is-gap-column-md > .column {
-  padding-bottom: 16px;
+.grid.is-gap-column > .column, .grid.is-gap-column-md > .column {
+  padding-left: 16px;
 }
 
 .grid.is-gap-column-sm {
-  margin-bottom: -12px;
+  margin-left: -12px;
 }
 
 .grid.is-gap-column-sm > .column {
-  padding-bottom: 12px;
+  padding-left: 12px;
 }
 
 .grid.is-gap-column-xs {
-  margin-bottom: -8px;
+  margin-left: -8px;
 }
 
 .grid.is-gap-column-xs > .column {
-  padding-bottom: 8px;
+  padding-left: 8px;
 }
 
 .grid.is-gap-column-xxs {
-  margin-bottom: -4px;
+  margin-left: -4px;
 }
 
 .grid.is-gap-column-xxs > .column {
-  padding-bottom: 4px;
+  padding-left: 4px;
 }
 
 .box {
@@ -769,7 +769,7 @@ iframe {
   flex-direction: row-reverse;
 }
 
-.box.is-bg-light {
+.box.is-bg, .box.is-bg-light {
   background-color: var(--background-1);
 }
 
@@ -862,7 +862,7 @@ iframe {
   overflow: hidden;
 }
 
-.card.is-bg-light {
+.card.is-bg, .card.is-bg-light {
   background-color: var(--background-1);
 }
 
@@ -882,7 +882,7 @@ iframe {
   border-radius: 8px;
 }
 
-.card.is-radius-md {
+.card.is-radius, .card.is-radius-md {
   border-radius: 4px;
 }
 

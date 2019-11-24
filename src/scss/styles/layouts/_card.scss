@@ -73,14 +73,21 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Background
 //----------------------------------------------------
 
-@mixin --is-bg($bg-name, $bg-color) {
-  &.is-bg-#{$bg-name} {
-    background-color: $bg-color;
+@mixin --is-bg($bg-name, $bg-color, $omit) {
+  @if $omit == true {
+    &.is-bg,
+    &.is-bg-#{$bg-name} {
+      background-color: $bg-color;
+    }
+  } @else {
+    &.is-bg-#{$bg-name} {
+      background-color: $bg-color;
+    }
   }
 }
 
 @mixin musubii-style-card-bg() {
-  @include --is-bg(light, $card-background-color);
+  @include --is-bg(light, $card-background-color, true);
 }
 
 @include export-style-card() {
@@ -93,14 +100,10 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Outline
 //----------------------------------------------------
 
-@mixin --is-outline($border-width, $border-style, $border-color) {
-  &.is-outline {
-    border: $border-width $border-style $border-color;
-  }
-}
-
 @mixin musubii-style-card-outline() {
-  @include --is-outline($card-border-width, solid, $card-border-color);
+  &.is-outline {
+    border: $card-border-width solid $card-border-color;
+  }
 }
 
 @include export-style-card() {
@@ -113,20 +116,27 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Radius
 //----------------------------------------------------
 
-@mixin --is-radius-all($size, $value) {
-  &.is-radius-#{$size} {
-    border-radius: $value;
+@mixin --is-radius-all($size, $value, $omit) {
+  @if $omit == true {
+    &.is-radius,
+    &.is-radius-#{$size} {
+      border-radius: $value;
+    }
+  } @else {
+    &.is-radius-#{$size} {
+      border-radius: $value;
+    }
   }
 }
 
 @mixin musubii-style-card-radius-all() {
-  @include --is-radius-all(xxl, $card-radius-xxl);
-  @include --is-radius-all(xl, $card-radius-xl);
-  @include --is-radius-all(lg, $card-radius-lg);
-  @include --is-radius-all(md, $card-radius-md);
-  @include --is-radius-all(sm, $card-radius-sm);
-  @include --is-radius-all(xs, $card-radius-xs);
-  @include --is-radius-all(xxs, $card-radius-xxs);
+  @include --is-radius-all(xxl, $card-radius-xxl, false);
+  @include --is-radius-all(xl, $card-radius-xl, false);
+  @include --is-radius-all(lg, $card-radius-lg, false);
+  @include --is-radius-all(md, $card-radius-md, true);
+  @include --is-radius-all(sm, $card-radius-sm, false);
+  @include --is-radius-all(xs, $card-radius-xs, false);
+  @include --is-radius-all(xxs, $card-radius-xxs, false);
 }
 
 @include export-style-card() {
@@ -136,55 +146,85 @@ $card-zoom-transition: $global-transition !default;
 }
 
 //----------------------------------------------------
-// / Custom
+// / Style - Card Floating
 //----------------------------------------------------
 
-@include export-style-card {
-  .card {
-    &.is-floating {
-      box-shadow: $card-floating-shadow;
-      &.is-link,
-      &.is-zoom {
-        &:hover {
-          box-shadow: $card-floating-hover-shadow;
-        }
-        &:focus {
-          box-shadow: $card-floating-focus-shadow;
-          outline: none;
-        }
-      }
-    }
-    &.is-link {
-      cursor: pointer;
-      transition: $card-link-transition;
-      &:not(.is-disabled):not([disabled]):hover {
-        background-color: $card-link-hover-background-color;
-      }
-      &:focus {
-        box-shadow: $card-focus-shadow;
-        outline: none;
-      }
-      &.is-disabled,
-      &[disabled] {
-        cursor: not-allowed;
-        pointer-events: none;
-      }
-    }
+@mixin musubii-style-card-floating() {
+  &.is-floating {
+    box-shadow: $card-floating-shadow;
+    &.is-link,
     &.is-zoom {
-      cursor: pointer;
-      transition: $card-zoom-transition;
-      &:not(.is-disabled):not([disabled]):hover {
-        transform: $card-zoom-transform;
+      &:hover {
+        box-shadow: $card-floating-hover-shadow;
       }
       &:focus {
-        box-shadow: $card-focus-shadow;
+        box-shadow: $card-floating-focus-shadow;
         outline: none;
       }
-      &.is-disabled,
-      &[disabled] {
-        cursor: not-allowed;
-        pointer-events: none;
-      }
     }
+  }
+}
+
+@include export-style-card() {
+  #{$selector-card} {
+    @include musubii-style-card-floating();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Card Link
+//----------------------------------------------------
+
+@mixin musubii-style-card-link() {
+  &.is-link {
+    cursor: pointer;
+    transition: $card-link-transition;
+    &:not(.is-disabled):not([disabled]):hover {
+      background-color: $card-link-hover-background-color;
+    }
+    &:focus {
+      box-shadow: $card-focus-shadow;
+      outline: none;
+    }
+    &.is-disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+
+@include export-style-card() {
+  #{$selector-card} {
+    @include musubii-style-card-link();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Card Zoom
+//----------------------------------------------------
+
+@mixin musubii-style-card-zoom() {
+  &.is-zoom {
+    cursor: pointer;
+    transition: $card-zoom-transition;
+    &:not(.is-disabled):not([disabled]):hover {
+      transform: $card-zoom-transform;
+    }
+    &:focus {
+      box-shadow: $card-focus-shadow;
+      outline: none;
+    }
+    &.is-disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+
+@include export-style-card() {
+  #{$selector-card} {
+    @include musubii-style-card-zoom();
   }
 }

@@ -57,7 +57,7 @@ $box-angle-border-color: $convert-border-1 !default;
 // / Style - Box Flex
 //----------------------------------------------------
 
-@mixin --is-flex() {
+@mixin musubii-style-box-flex() {
   &.is-flex {
     display: flex;
   }
@@ -96,10 +96,6 @@ $box-angle-border-color: $convert-border-1 !default;
   }
 }
 
-@mixin musubii-style-box-flex() {
-  @include --is-flex();
-}
-
 @include export-style-box() {
   #{$selector-box} {
     @include musubii-style-box-flex();
@@ -110,14 +106,21 @@ $box-angle-border-color: $convert-border-1 !default;
 // / Style - Box Background
 //----------------------------------------------------
 
-@mixin --is-bg($bg-name, $bg-color) {
-  &.is-bg-#{$bg-name} {
-    background-color: $bg-color;
+@mixin --is-bg($bg-name, $bg-color, $omit) {
+  @if $omit == true {
+    &.is-bg,
+    &.is-bg-#{$bg-name} {
+      background-color: $bg-color;
+    }
+  } @else {
+    &.is-bg-#{$bg-name} {
+      background-color: $bg-color;
+    }
   }
 }
 
 @mixin musubii-style-box-bg() {
-  @include --is-bg(light, $box-background-color);
+  @include --is-bg(light, $box-background-color, true);
 }
 
 @include export-style-box() {
@@ -130,30 +133,22 @@ $box-angle-border-color: $convert-border-1 !default;
 // / Style - Box Outline
 //----------------------------------------------------
 
-@mixin --is-outline($border-width, $border-style, $border-color) {
+@mixin musubii-style-box-outline() {
   &.is-outline {
-    border: $border-width $border-style $border-color;
+    border: $box-border-width solid $box-border-color;
   }
-}
-
-@mixin --is-outline-4way($border-width, $border-style, $border-color) {
   &.is-outline-top {
-    border-top: $border-width $border-style $border-color;
+    border-top: $box-border-width solid $box-border-color;
   }
   &.is-outline-right {
-    border-right: $border-width $border-style $border-color;
+    border-right: $box-border-width solid $box-border-color;
   }
   &.is-outline-bottom {
-    border-bottom: $border-width $border-style $border-color;
+    border-bottom: $box-border-width solid $box-border-color;
   }
   &.is-outline-left {
-    border-left: $border-width $border-style $border-color;
+    border-left: $box-border-width solid $box-border-color;
   }
-}
-
-@mixin musubii-style-box-outline() {
-  @include --is-outline($box-border-width, solid, $box-border-color);
-  @include --is-outline-4way($box-border-width, solid, $box-border-color);
 }
 
 @include export-style-box() {
@@ -166,17 +161,13 @@ $box-angle-border-color: $convert-border-1 !default;
 // / Style - Box Separate
 //----------------------------------------------------
 
-@mixin --is-separate($border-width, $border-style, $border-color) {
+@mixin musubii-style-box-separate() {
   &.is-separate > *:not(:last-child) {
-    border-bottom: $border-width $border-style $border-color;
+    border-bottom: $box-border-width solid $box-border-color;
   }
   &.is-separate-parent > *:not(:last-child) .is-separate-child {
-    border-bottom: $border-width $border-style $border-color;
+    border-bottom: $box-border-width solid $box-border-color;
   }
-}
-
-@mixin musubii-style-box-separate() {
-  @include --is-separate($box-border-width, solid, $box-border-color);
 }
 
 @include export-style-box() {
@@ -189,12 +180,12 @@ $box-angle-border-color: $convert-border-1 !default;
 // / Style - Box Link
 //----------------------------------------------------
 
-@mixin --is-link($transition, $hover-background-color) {
+@mixin musubii-style-box-link() {
   &.is-link {
     cursor: pointer;
-    transition: $transition;
+    transition: $box-link-transition;
     &:not(.is-disabled):not([disabled]):hover {
-      background-color: $hover-background-color;
+      background-color: $box-link-hover-background-color;
     }
     &.is-disabled,
     &[disabled] {
@@ -202,10 +193,6 @@ $box-angle-border-color: $convert-border-1 !default;
       pointer-events: none;
     }
   }
-}
-
-@mixin musubii-style-box-link() {
-  @include --is-link($box-link-transition, $box-link-hover-background-color);
 }
 
 @include export-style-box() {
@@ -218,31 +205,31 @@ $box-angle-border-color: $convert-border-1 !default;
 // / Style - Box Angle
 //----------------------------------------------------
 
-@mixin --is-angle($angle-size, $angle-border-width, $angle-border-color) {
+@mixin musubii-style-box-angle() {
   &.is-angle-right,
   &.is-angle-left {
     &:after {
       content: "";
       position: absolute;
       top: 50%;
-      width: $angle-size;
-      height: $angle-size;
-      border-top: $angle-border-width solid $angle-border-color;
-      border-right: $angle-border-width solid $angle-border-color;
+      width: $box-angle-size;
+      height: $box-angle-size;
+      border-top: $box-angle-border-width solid $box-angle-border-color;
+      border-right: $box-angle-border-width solid $box-angle-border-color;
       z-index: 2;
     }
   }
   &.is-angle-right {
-    padding-right: $angle-size * 3.5;
+    padding-right: $box-angle-size * 3.5;
     &:after {
-      right: $angle-size * 1.5;
+      right: $box-angle-size * 1.5;
       transform: translateY(-50%) rotate(45deg);
     }
   }
   &.is-angle-left {
-    padding-left: $angle-size * 3.5;
+    padding-left: $box-angle-size * 3.5;
     &:after {
-      left: $angle-size * 1.5;
+      left: $box-angle-size * 1.5;
       transform: translateY(-50%) rotate(-135deg);
     }
   }
@@ -259,14 +246,6 @@ $box-angle-border-color: $convert-border-1 !default;
       }
     }
   }
-}
-
-@mixin musubii-style-box-angle() {
-  @include --is-angle(
-    $box-angle-size,
-    $box-angle-border-width,
-    $box-angle-border-color
-  );
 }
 
 @include export-style-box() {
