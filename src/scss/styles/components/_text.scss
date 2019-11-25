@@ -48,7 +48,7 @@ $pre-code-padding: 1.25em 1.5em !default;
 // / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-style-text {
+@mixin export-style-text() {
   @if $option-mixin-mode == false and $option-style-text == true {
     @content;
   }
@@ -77,7 +77,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   @include --is-color(dark-9, $convert-text-dark-9);
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-dark();
   }
@@ -98,7 +98,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   @include --is-color(light-9, $convert-text-light-9);
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-light();
   }
@@ -114,7 +114,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   @include --is-color(danger, $convert-danger-strong);
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-role();
   }
@@ -144,7 +144,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   @include --is-weight(weight-900, $font-weight-900);
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-weight();
   }
@@ -170,7 +170,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   @include --is-line-height(xxs, $line-height-xxs);
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-line-height();
   }
@@ -198,7 +198,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   }
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-transform();
   }
@@ -256,7 +256,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   }
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-align();
   }
@@ -275,7 +275,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   }
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-wrap();
   }
@@ -304,7 +304,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   }
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-link();
   }
@@ -332,7 +332,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   }
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-text} {
     @include musubii-style-text-link-reverse();
   }
@@ -349,7 +349,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   padding: $blockquote-padding;
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-blockquote} {
     @include musubii-style-text-blockquote();
   }
@@ -369,7 +369,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   word-break: break-all;
 }
 
-@include export-style-text {
+@include export-style-text() {
   :not(#{$selector-pre}) {
     > {
       #{$selector-code} {
@@ -401,7 +401,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   }
 }
 
-@include export-style-text {
+@include export-style-text() {
   #{$selector-pre} {
     @include musubii-style-text-pre();
   }

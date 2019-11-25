@@ -1380,6 +1380,10 @@ iframe {
   z-index: 2;
 }
 
+.button.is-angle-right.is-plain:after, .button.is-angle-right.is-outline:after, .button.is-angle-right.is-melt:after, .button.is-angle-left.is-plain:after, .button.is-angle-left.is-outline:after, .button.is-angle-left.is-melt:after {
+  border-color: currentColor;
+}
+
 .button.is-angle-right:after {
   right: 0.75em;
   -webkit-transform: translateY(-50%) rotate(45deg);
@@ -1402,10 +1406,6 @@ iframe {
           transform: translateY(-70%) rotate(135deg);
 }
 
-.button.is-plain.is-primary[class*="is-angle-"]:after, .button.is-plain.is-info[class*="is-angle-"]:after, .button.is-plain.is-success[class*="is-angle-"]:after, .button.is-plain.is-warning[class*="is-angle-"]:after, .button.is-plain.is-danger[class*="is-angle-"]:after, .button.is-outline.is-primary[class*="is-angle-"]:after, .button.is-outline.is-info[class*="is-angle-"]:after, .button.is-outline.is-success[class*="is-angle-"]:after, .button.is-outline.is-warning[class*="is-angle-"]:after, .button.is-outline.is-danger[class*="is-angle-"]:after, .button.is-melt.is-primary[class*="is-angle-"]:after, .button.is-melt.is-info[class*="is-angle-"]:after, .button.is-melt.is-success[class*="is-angle-"]:after, .button.is-melt.is-warning[class*="is-angle-"]:after, .button.is-melt.is-danger[class*="is-angle-"]:after {
-  border-color: currentColor;
-}
-
 .button.is-round {
   border-radius: 999em;
 }
@@ -1426,15 +1426,15 @@ iframe {
   line-height: 1;
 }
 
-.button.is-floating:not(.is-disabled) {
+.button.is-floating:not(.is-disabled), .button.is-floating:not([disabled]) {
   box-shadow: 0 1px 3px 0 var(--shadow-alpha);
 }
 
-.button.is-floating:not(.is-disabled):focus, .button.is-floating:not(.is-disabled):hover:focus {
+.button.is-floating:not(.is-disabled):focus, .button.is-floating:not(.is-disabled):hover:focus, .button.is-floating:not([disabled]):focus, .button.is-floating:not([disabled]):hover:focus {
   box-shadow: 0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-alpha);
 }
 
-.button.is-floating:not(.is-disabled):hover {
+.button.is-floating:not(.is-disabled):hover, .button.is-floating:not([disabled]):hover {
   box-shadow: 0 4px 12px 0 var(--shadow-alpha);
 }
 
@@ -1443,122 +1443,63 @@ iframe {
   border: 1px solid transparent;
 }
 
-.button.is-plain:hover {
-  background-color: var(--background-4);
-}
-
-.button.is-plain.is-primary {
-  background-color: var(--primary);
-  color: var(--button-paint-text-color);
-}
-
-.button.is-plain.is-primary:hover {
-  background-color: var(--primary-darken);
-}
-
-.button.is-plain.is-info {
-  background-color: var(--info);
-  color: var(--button-paint-text-color);
-}
-
-.button.is-plain.is-info:hover {
-  background-color: var(--info-darken);
-}
-
-.button.is-plain.is-success {
-  background-color: var(--success);
-  color: var(--button-paint-text-color);
-}
-
-.button.is-plain.is-success:hover {
-  background-color: var(--success-darken);
-}
-
-.button.is-plain.is-warning {
-  background-color: var(--warning);
-  color: var(--button-paint-text-color);
-}
-
-.button.is-plain.is-warning:hover {
-  background-color: var(--warning-darken);
-}
-
-.button.is-plain.is-danger {
-  background-color: var(--danger);
-  color: var(--button-paint-text-color);
-}
-
-.button.is-plain.is-danger:hover {
-  background-color: var(--danger-darken);
-}
-
 .button.is-plain.is-disabled, .button.is-plain.is-disabled:hover, .button.is-plain[disabled], .button.is-plain[disabled]:hover {
   background-color: var(--disabled-background-color);
   color: var(--disabled-text-color);
 }
 
+.button.is-plain:not(.is-disabled):hover, .button.is-plain:not([disabled]):hover {
+  background-color: var(--background-4);
+}
+
+.button.is-plain:not(.is-disabled).is-primary, .button.is-plain:not([disabled]).is-primary {
+  background-color: var(--primary);
+  color: var(--button-paint-text-color);
+}
+
+.button.is-plain:not(.is-disabled).is-primary:hover, .button.is-plain:not([disabled]).is-primary:hover {
+  background-color: var(--primary-darken);
+}
+
+.button.is-plain:not(.is-disabled).is-info, .button.is-plain:not([disabled]).is-info {
+  background-color: var(--info);
+  color: var(--button-paint-text-color);
+}
+
+.button.is-plain:not(.is-disabled).is-info:hover, .button.is-plain:not([disabled]).is-info:hover {
+  background-color: var(--info-darken);
+}
+
+.button.is-plain:not(.is-disabled).is-success, .button.is-plain:not([disabled]).is-success {
+  background-color: var(--success);
+  color: var(--button-paint-text-color);
+}
+
+.button.is-plain:not(.is-disabled).is-success:hover, .button.is-plain:not([disabled]).is-success:hover {
+  background-color: var(--success-darken);
+}
+
+.button.is-plain:not(.is-disabled).is-warning, .button.is-plain:not([disabled]).is-warning {
+  background-color: var(--warning);
+  color: var(--button-paint-text-color);
+}
+
+.button.is-plain:not(.is-disabled).is-warning:hover, .button.is-plain:not([disabled]).is-warning:hover {
+  background-color: var(--warning-darken);
+}
+
+.button.is-plain:not(.is-disabled).is-danger, .button.is-plain:not([disabled]).is-danger {
+  background-color: var(--danger);
+  color: var(--button-paint-text-color);
+}
+
+.button.is-plain:not(.is-disabled).is-danger:hover, .button.is-plain:not([disabled]).is-danger:hover {
+  background-color: var(--danger-darken);
+}
+
 .button.is-outline {
   background-color: var(--background);
   border: 1px solid var(--border);
-}
-
-.button.is-outline:hover {
-  background-color: var(--background-2);
-}
-
-.button.is-outline.is-primary {
-  border-color: var(--primary);
-  color: var(--primary-strong);
-}
-
-.button.is-outline.is-primary:hover {
-  background-color: var(--primary);
-  border-color: transparent;
-  color: var(--button-paint-text-color);
-}
-
-.button.is-outline.is-info {
-  border-color: var(--info);
-  color: var(--info-strong);
-}
-
-.button.is-outline.is-info:hover {
-  background-color: var(--info);
-  border-color: transparent;
-  color: var(--button-paint-text-color);
-}
-
-.button.is-outline.is-success {
-  border-color: var(--success);
-  color: var(--success-strong);
-}
-
-.button.is-outline.is-success:hover {
-  background-color: var(--success);
-  border-color: transparent;
-  color: var(--button-paint-text-color);
-}
-
-.button.is-outline.is-warning {
-  border-color: var(--warning);
-  color: var(--warning-strong);
-}
-
-.button.is-outline.is-warning:hover {
-  background-color: var(--warning);
-  border-color: transparent;
-  color: var(--button-paint-text-color);
-}
-
-.button.is-outline.is-danger {
-  border-color: var(--danger);
-  color: var(--danger-strong);
-}
-
-.button.is-outline.is-danger:hover {
-  background-color: var(--danger);
-  border-color: transparent;
-  color: var(--button-paint-text-color);
 }
 
 .button.is-outline.is-disabled, .button.is-outline.is-disabled:hover, .button.is-outline[disabled], .button.is-outline[disabled]:hover {
@@ -1567,38 +1508,97 @@ iframe {
   border-color: var(--border);
 }
 
+.button.is-outline:not(.is-disabled):hover, .button.is-outline:not([disabled]):hover {
+  background-color: var(--background-2);
+}
+
+.button.is-outline:not(.is-disabled).is-primary, .button.is-outline:not([disabled]).is-primary {
+  border-color: var(--primary);
+  color: var(--primary-strong);
+}
+
+.button.is-outline:not(.is-disabled).is-primary:hover, .button.is-outline:not([disabled]).is-primary:hover {
+  background-color: var(--primary);
+  border-color: transparent;
+  color: var(--button-paint-text-color);
+}
+
+.button.is-outline:not(.is-disabled).is-info, .button.is-outline:not([disabled]).is-info {
+  border-color: var(--info);
+  color: var(--info-strong);
+}
+
+.button.is-outline:not(.is-disabled).is-info:hover, .button.is-outline:not([disabled]).is-info:hover {
+  background-color: var(--info);
+  border-color: transparent;
+  color: var(--button-paint-text-color);
+}
+
+.button.is-outline:not(.is-disabled).is-success, .button.is-outline:not([disabled]).is-success {
+  border-color: var(--success);
+  color: var(--success-strong);
+}
+
+.button.is-outline:not(.is-disabled).is-success:hover, .button.is-outline:not([disabled]).is-success:hover {
+  background-color: var(--success);
+  border-color: transparent;
+  color: var(--button-paint-text-color);
+}
+
+.button.is-outline:not(.is-disabled).is-warning, .button.is-outline:not([disabled]).is-warning {
+  border-color: var(--warning);
+  color: var(--warning-strong);
+}
+
+.button.is-outline:not(.is-disabled).is-warning:hover, .button.is-outline:not([disabled]).is-warning:hover {
+  background-color: var(--warning);
+  border-color: transparent;
+  color: var(--button-paint-text-color);
+}
+
+.button.is-outline:not(.is-disabled).is-danger, .button.is-outline:not([disabled]).is-danger {
+  border-color: var(--danger);
+  color: var(--danger-strong);
+}
+
+.button.is-outline:not(.is-disabled).is-danger:hover, .button.is-outline:not([disabled]).is-danger:hover {
+  background-color: var(--danger);
+  border-color: transparent;
+  color: var(--button-paint-text-color);
+}
+
 .button.is-melt {
   background-color: transparent;
   border: 1px solid transparent;
 }
 
-.button.is-melt:hover {
-  background-color: var(--background-alpha);
-}
-
-.button.is-melt.is-primary {
-  color: var(--primary-strong);
-}
-
-.button.is-melt.is-info {
-  color: var(--info-strong);
-}
-
-.button.is-melt.is-success {
-  color: var(--success-strong);
-}
-
-.button.is-melt.is-warning {
-  color: var(--warning-strong);
-}
-
-.button.is-melt.is-danger {
-  color: var(--danger-strong);
-}
-
 .button.is-melt.is-disabled, .button.is-melt.is-disabled:hover, .button.is-melt[disabled], .button.is-melt[disabled]:hover {
   color: var(--disabled-text-color);
   background-color: transparent;
+}
+
+.button.is-melt:not(.is-disabled):hover, .button.is-melt:not([disabled]):hover {
+  background-color: var(--background-alpha);
+}
+
+.button.is-melt:not(.is-disabled).is-primary, .button.is-melt:not([disabled]).is-primary {
+  color: var(--primary-strong);
+}
+
+.button.is-melt:not(.is-disabled).is-info, .button.is-melt:not([disabled]).is-info {
+  color: var(--info-strong);
+}
+
+.button.is-melt:not(.is-disabled).is-success, .button.is-melt:not([disabled]).is-success {
+  color: var(--success-strong);
+}
+
+.button.is-melt:not(.is-disabled).is-warning, .button.is-melt:not([disabled]).is-warning {
+  color: var(--warning-strong);
+}
+
+.button.is-melt:not(.is-disabled).is-danger, .button.is-melt:not([disabled]).is-danger {
+  color: var(--danger-strong);
 }
 
 .badge {

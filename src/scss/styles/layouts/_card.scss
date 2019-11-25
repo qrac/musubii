@@ -47,7 +47,7 @@ $card-zoom-transition: $global-transition !default;
 //----------------------------------------------------
 
 // Export Style
-@mixin export-style-card {
+@mixin export-style-card() {
   @if $option-mixin-mode == false and $option-style-card == true {
     @content;
   }
@@ -63,7 +63,7 @@ $card-zoom-transition: $global-transition !default;
   overflow: hidden;
 }
 
-@include export-style-card {
+@include export-style-card() {
   #{$selector-card} {
     @include musubii-style-card();
   }

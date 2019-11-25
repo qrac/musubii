@@ -1,261 +1,462 @@
 //----------------------------------------------------
-// Module: Button
+// Components: Button
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-button: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-button: true !default;
+
+// Selectors
+$selector-button: ".button" !default;
+
+// Button
+$button-padding: 0.5em 1em !default;
+$button-border-width: $global-border-width !default;
+$button-border-radius: $radius-sm !default;
+$button-paint-text-color: $convert-button-paint-text-color !default;
+$button-line-height: $line-height-md !default;
+$button-transition: $global-transition !default;
+$button-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
+
+// Button Disabled
+$button-disabled-background-color: $convert-disabled-background-color !default;
+$button-disabled-text-color: $convert-disabled-text-color !default;
+
+// Button Angle
+$button-angle-size: 0.5em !default;
+$button-angle-border-width: $global-border-width * 2 !default;
+$button-angle-border-color: $convert-border-1 !default;
+
+// Button Round
+$button-round-border-radius: $radius-full !default;
+
+// Button Square
+$button-square-width: calc(2.5em + #{$global-border-width} * 2) !default;
+$button-square-height: calc(2.5em + #{$global-border-width} * 2) !default;
+$button-square-border-radius: $radius-sm !default;
+
+// Button Circle
+$button-circle-width: calc(2.5em + #{$global-border-width} * 2) !default;
+$button-circle-height: calc(2.5em + #{$global-border-width} * 2) !default;
+$button-circle-border-radius: $radius-full !default;
+
+// Button Floating
+$button-floating-shadow: 0 1px 3px 0 $convert-shadow-alpha !default;
+$button-floating-hover-shadow: 0 4px 12px 0 $convert-shadow-alpha !default;
+$button-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
+  0 4px 12px 0 $convert-shadow-alpha !default;
+
+// Button Plain
+$button-plain-background-color: $convert-background-2 !default;
+$button-plain-hover-background-color: $convert-background-4 !default;
+$button-plain-primary-background-color: $convert-primary !default;
+$button-plain-primary-hover-background-color: $convert-primary-darken !default;
+$button-plain-info-background-color: $convert-info !default;
+$button-plain-info-hover-background-color: $convert-info-darken !default;
+$button-plain-success-background-color: $convert-success !default;
+$button-plain-success-hover-background-color: $convert-success-darken !default;
+$button-plain-warning-background-color: $convert-warning !default;
+$button-plain-warning-hover-background-color: $convert-warning-darken !default;
+$button-plain-danger-background-color: $convert-danger !default;
+$button-plain-danger-hover-background-color: $convert-danger-darken !default;
+
+// Button Outline
+$button-outline-background-color: $convert-background !default;
+$button-outline-border-color: $convert-border !default;
+$button-outline-hover-background-color: $convert-background-2 !default;
+$button-outline-primary-border-color: $convert-primary !default;
+$button-outline-primary-text-color: $convert-primary-strong !default;
+$button-outline-primary-hover-background-color: $convert-primary !default;
+$button-outline-info-border-color: $convert-info !default;
+$button-outline-info-text-color: $convert-info-strong !default;
+$button-outline-info-hover-background-color: $convert-info !default;
+$button-outline-success-border-color: $convert-success !default;
+$button-outline-success-text-color: $convert-success-strong !default;
+$button-outline-success-hover-background-color: $convert-success !default;
+$button-outline-warning-border-color: $convert-warning !default;
+$button-outline-warning-text-color: $convert-warning-strong !default;
+$button-outline-warning-hover-background-color: $convert-warning !default;
+$button-outline-danger-border-color: $convert-danger !default;
+$button-outline-danger-text-color: $convert-danger-strong !default;
+$button-outline-danger-hover-background-color: $convert-danger !default;
+
+// Button Melt
+$button-melt-hover-background-color: $convert-background-alpha !default;
+$button-melt-primary-text-color: $convert-primary-strong !default;
+$button-melt-info-text-color: $convert-info-strong !default;
+$button-melt-success-text-color: $convert-success-strong !default;
+$button-melt-warning-text-color: $convert-warning-strong !default;
+$button-melt-danger-text-color: $convert-danger-strong !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-button {
-  @if $use-style-button == true {
+@mixin export-style-button() {
+  @if $option-mixin-mode == false and $option-style-button == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Button Basic
 //----------------------------------------------------
 
-@include export-button {
-  #{$button-class} {
-    cursor: pointer;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    padding: $button-padding;
-    border-radius: $button-border-radius;
-    color: $body-text-color;
-    line-height: $button-line-height;
-    text-align: center;
-    transition: $button-transition;
-    &.is-strong {
-      font-weight: 700;
+@mixin musubii-style-button() {
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  color: $body-text-color;
+  line-height: $button-line-height;
+  text-align: center;
+  transition: $button-transition;
+  &.is-strong {
+    font-weight: 700;
+  }
+  &.is-disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  &:focus {
+    box-shadow: $button-focus-shadow;
+    outline: none;
+  }
+}
+
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Button Angle
+//----------------------------------------------------
+
+@mixin musubii-style-button-angle() {
+  &.is-angle-right,
+  &.is-angle-left {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: $button-angle-size;
+      height: $button-angle-size;
+      border-top: $button-angle-border-width solid $button-angle-border-color;
+      border-right: $button-angle-border-width solid $button-angle-border-color;
+      z-index: 2;
     }
+    &.is-plain,
+    &.is-outline,
+    &.is-melt {
+      &:after {
+        border-color: currentColor;
+      }
+    }
+  }
+  &.is-angle-right {
+    &:after {
+      right: $button-angle-size * 1.5;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+  &.is-angle-left {
+    &:after {
+      left: $button-angle-size * 1.5;
+      transform: translateY(-50%) rotate(-135deg);
+    }
+  }
+  &.is-angle-left,
+  &.is-angle-right {
+    &.is-angle-up {
+      &:after {
+        transform: translateY(-30%) rotate(-45deg);
+      }
+    }
+    &.is-angle-down {
+      &:after {
+        transform: translateY(-70%) rotate(135deg);
+      }
+    }
+  }
+}
+
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button-angle();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Button Round
+//----------------------------------------------------
+
+@mixin musubii-style-button-round() {
+  &.is-round {
+    border-radius: $button-round-border-radius;
+  }
+}
+
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button-round();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Button Square
+//----------------------------------------------------
+
+@mixin musubii-style-button-square() {
+  &.is-square {
+    width: $button-square-width;
+    height: $button-square-height;
+    padding: 0;
+    border-radius: $button-square-border-radius;
+    line-height: 1;
+  }
+}
+
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button-square();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Button Circle
+//----------------------------------------------------
+
+@mixin musubii-style-button-circle() {
+  &.is-circle {
+    width: $button-circle-width;
+    height: $button-circle-height;
+    padding: 0;
+    border-radius: $button-circle-border-radius;
+    line-height: 1;
+  }
+}
+
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button-circle();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Button Floating
+//----------------------------------------------------
+
+@mixin musubii-style-button-floating() {
+  &.is-floating:not(.is-disabled),
+  &.is-floating:not([disabled]) {
+    box-shadow: $button-floating-shadow;
+    &:focus,
+    &:hover:focus {
+      box-shadow: $button-floating-focus-shadow;
+    }
+    &:hover {
+      box-shadow: $button-floating-hover-shadow;
+    }
+  }
+}
+
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button-floating();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Button Plain
+//----------------------------------------------------
+
+@mixin --is-plain-button-role($name, $bg-color, $color, $hover-bg-color) {
+  &.is-#{$name} {
+    background-color: $bg-color;
+    color: $color;
+    &:hover {
+      background-color: $hover-bg-color;
+    }
+  }
+}
+
+@mixin musubii-style-button-plain() {
+  &.is-plain {
+    background-color: $button-plain-background-color;
+    border: $button-border-width solid transparent;
     &.is-disabled,
-    &[disabled] {
-      cursor: not-allowed;
-      pointer-events: none;
+    &.is-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      background-color: $button-disabled-background-color;
+      color: $button-disabled-text-color;
     }
-    &:focus {
-      box-shadow: $button-focus-shadow;
-      outline: none;
-    }
-  }
-}
-
-//----------------------------------------------------
-// / Custom
-//----------------------------------------------------
-
-@include export-button {
-  #{$button-class} {
-    @each $custom in $pattern-button-custom {
-      @if $custom == "angle" {
-        &.is-angle-right,
-        &.is-angle-left {
-          &:after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            width: $button-angle-size;
-            height: $button-angle-size;
-            border-top: $button-angle-border-width
-              solid
-              $button-angle-border-color;
-            border-right: $button-angle-border-width
-              solid
-              $button-angle-border-color;
-            z-index: 2;
-          }
-        }
-        &.is-angle-right {
-          &:after {
-            right: $button-angle-size * 1.5;
-            transform: translateY(-50%) rotate(45deg);
-          }
-        }
-        &.is-angle-left {
-          &:after {
-            left: $button-angle-size * 1.5;
-            transform: translateY(-50%) rotate(-135deg);
-          }
-        }
-        &.is-angle-left,
-        &.is-angle-right {
-          &.is-angle-up {
-            &:after {
-              transform: translateY(-30%) rotate(-45deg);
-            }
-          }
-          &.is-angle-down {
-            &:after {
-              transform: translateY(-70%) rotate(135deg);
-            }
-          }
-        }
-        &[class*="is-angle-"] {
-          @each $style in $pattern-button-style {
-            @if $style == "plain" {
-              &.is-plain {
-                @each $key, $value in $pattern-button-plain {
-                  &.is-#{$key}:after {
-                    @extend %button-angle-border-current-color;
-                  }
-                }
-              }
-            }
-            @if $style == "outline" {
-              &.is-outline {
-                @each $key, $value in $pattern-button-outline {
-                  &.is-#{$key}:after {
-                    @extend %button-angle-border-current-color;
-                  }
-                }
-              }
-            }
-            @if $style == "melt" {
-              &.is-melt {
-                @each $key, $value in $pattern-button-melt {
-                  &.is-#{$key}:after {
-                    @extend %button-angle-border-current-color;
-                  }
-                }
-              }
-            }
-          }
-        }
-        &%button-angle-border-current-color {
-          border-color: currentColor;
-        }
+    &:not(.is-disabled),
+    &:not([disabled]) {
+      &:hover {
+        background-color: $button-plain-hover-background-color;
       }
-      @if $custom == "round" {
-        &.is-round {
-          border-radius: $button-round-border-radius;
-        }
-      }
-      @if $custom == "square" {
-        &.is-square {
-          width: $button-square-width;
-          height: $button-square-height;
-          padding: 0;
-          border-radius: $button-square-border-radius;
-          line-height: 1;
-        }
-      }
-      @if $custom == "circle" {
-        &.is-circle {
-          width: $button-circle-width;
-          height: $button-circle-height;
-          padding: 0;
-          border-radius: $button-circle-border-radius;
-          line-height: 1;
-        }
-      }
-      @if $custom == "floating" {
-        &.is-floating:not(.is-disabled) {
-          box-shadow: $button-floating-shadow;
-          &:focus,
-          &:hover:focus {
-            box-shadow: $button-floating-focus-shadow;
-          }
-          &:hover {
-            box-shadow: $button-floating-hover-shadow;
-          }
-        }
-      }
+      @include --is-plain-button-role(
+        primary,
+        $button-plain-primary-background-color,
+        $button-paint-text-color,
+        $button-plain-primary-hover-background-color
+      );
+      @include --is-plain-button-role(
+        info,
+        $button-plain-info-background-color,
+        $button-paint-text-color,
+        $button-plain-info-hover-background-color
+      );
+      @include --is-plain-button-role(
+        success,
+        $button-plain-success-background-color,
+        $button-paint-text-color,
+        $button-plain-success-hover-background-color
+      );
+      @include --is-plain-button-role(
+        warning,
+        $button-plain-warning-background-color,
+        $button-paint-text-color,
+        $button-plain-warning-hover-background-color
+      );
+      @include --is-plain-button-role(
+        danger,
+        $button-plain-danger-background-color,
+        $button-paint-text-color,
+        $button-plain-danger-hover-background-color
+      );
     }
   }
 }
 
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button-plain();
+  }
+}
+
 //----------------------------------------------------
-// / Style
+// / Style - Button Outline
 //----------------------------------------------------
 
-@include export-button {
-  #{$button-class} {
-    @each $style in $pattern-button-style {
-      @if $style == "plain" {
-        &.is-plain {
-          background-color: $button-plain-background-color;
-          border: $button-border-width solid transparent;
-          &:hover {
-            background-color: $button-plain-hover-background-color;
-          }
-          @each $key, $value in $pattern-button-plain {
-            &.is-#{$key} {
-              background-color: map-get($value, background-color);
-              color: $button-paint-text-color;
-              &:hover {
-                background-color: map-get($value, hover-background-color);
-              }
-            }
-          }
-          &.is-disabled,
-          &.is-disabled:hover,
-          &[disabled],
-          &[disabled]:hover {
-            background-color: $button-disabled-background-color;
-            color: $button-disabled-text-color;
-          }
-        }
-      }
-      @if $style == "outline" {
-        &.is-outline {
-          background-color: $button-outline-background-color;
-          border: $button-border-width solid $button-outline-border-color;
-          &:hover {
-            background-color: $button-outline-hover-background-color;
-          }
-          @each $key, $value in $pattern-button-outline {
-            &.is-#{$key} {
-              border-color: map-get($value, border-color);
-              color: map-get($value, text-color);
-              &:hover {
-                background-color: map-get($value, hover-background-color);
-                border-color: transparent;
-                color: $button-paint-text-color;
-              }
-            }
-          }
-          &.is-disabled,
-          &.is-disabled:hover,
-          &[disabled],
-          &[disabled]:hover {
-            background-color: $button-disabled-background-color;
-            color: $button-disabled-text-color;
-            border-color: $button-outline-border-color;
-          }
-        }
-      }
-      @if $style == "melt" {
-        &.is-melt {
-          background-color: transparent;
-          border: $button-border-width solid transparent;
-          &:hover {
-            background-color: $button-melt-hover-background-color;
-          }
-          @each $key, $value in $pattern-button-melt {
-            &.is-#{$key} {
-              color: map-get($value, text-color);
-            }
-          }
-          &.is-disabled,
-          &.is-disabled:hover,
-          &[disabled],
-          &[disabled]:hover {
-            color: $button-disabled-text-color;
-            background-color: transparent;
-          }
-        }
-      }
+@mixin --is-outline-button-role($name, $border-color, $color, $hover-bg-color) {
+  &.is-#{$name} {
+    border-color: $border-color;
+    color: $color;
+    &:hover {
+      background-color: $hover-bg-color;
+      border-color: transparent;
+      color: $button-paint-text-color;
     }
+  }
+}
+
+@mixin musubii-style-button-outline() {
+  &.is-outline {
+    background-color: $button-outline-background-color;
+    border: $button-border-width solid $button-outline-border-color;
+    &.is-disabled,
+    &.is-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      background-color: $button-disabled-background-color;
+      color: $button-disabled-text-color;
+      border-color: $button-outline-border-color;
+    }
+    &:not(.is-disabled),
+    &:not([disabled]) {
+      &:hover {
+        background-color: $button-outline-hover-background-color;
+      }
+      @include --is-outline-button-role(
+        primary,
+        $button-outline-primary-border-color,
+        $button-outline-primary-text-color,
+        $button-outline-primary-hover-background-color
+      );
+      @include --is-outline-button-role(
+        info,
+        $button-outline-info-border-color,
+        $button-outline-info-text-color,
+        $button-outline-info-hover-background-color
+      );
+      @include --is-outline-button-role(
+        success,
+        $button-outline-success-border-color,
+        $button-outline-success-text-color,
+        $button-outline-success-hover-background-color
+      );
+      @include --is-outline-button-role(
+        warning,
+        $button-outline-warning-border-color,
+        $button-outline-warning-text-color,
+        $button-outline-warning-hover-background-color
+      );
+      @include --is-outline-button-role(
+        danger,
+        $button-outline-danger-border-color,
+        $button-outline-danger-text-color,
+        $button-outline-danger-hover-background-color
+      );
+    }
+  }
+}
+
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button-outline();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Button Melt
+//----------------------------------------------------
+
+@mixin --is-melt-button-role($name, $color) {
+  &.is-#{$name} {
+    color: $color;
+  }
+}
+
+@mixin musubii-style-button-melt() {
+  &.is-melt {
+    background-color: transparent;
+    border: $button-border-width solid transparent;
+    &.is-disabled,
+    &.is-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      color: $button-disabled-text-color;
+      background-color: transparent;
+    }
+    &:not(.is-disabled),
+    &:not([disabled]) {
+      &:hover {
+        background-color: $button-melt-hover-background-color;
+      }
+      @include --is-melt-button-role(primary, $button-melt-primary-text-color);
+      @include --is-melt-button-role(info, $button-melt-info-text-color);
+      @include --is-melt-button-role(success, $button-melt-success-text-color);
+      @include --is-melt-button-role(warning, $button-melt-warning-text-color);
+      @include --is-melt-button-role(danger, $button-melt-danger-text-color);
+    }
+  }
+}
+
+@include export-style-button() {
+  #{$selector-button} {
+    @include musubii-style-button-melt();
   }
 }

@@ -19,7 +19,7 @@ $selector-joint-none: ".is-joint-none" !default;
 //----------------------------------------------------
 
 // Export Style
-@mixin export-style-joint {
+@mixin export-style-joint() {
   @if $option-mixin-mode == false and $option-style-joint == true {
     @content;
   }
@@ -29,7 +29,7 @@ $selector-joint-none: ".is-joint-none" !default;
 // / Style - Joint Basic
 //----------------------------------------------------
 
-@mixin musubii-style-joint {
+@mixin musubii-style-joint() {
   display: flex;
   flex-wrap: nowrap;
   > {
@@ -61,7 +61,7 @@ $selector-joint-none: ".is-joint-none" !default;
   }
 }
 
-@include export-style-joint {
+@include export-style-joint() {
   #{$selector-joint} {
     @include musubii-style-joint();
   }

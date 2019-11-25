@@ -32,7 +32,7 @@ $box-angle-border-color: $convert-border-1 !default;
 //----------------------------------------------------
 
 // Export Style
-@mixin export-style-box {
+@mixin export-style-box() {
   @if $option-mixin-mode == false and $option-style-box == true {
     @content;
   }
@@ -47,7 +47,7 @@ $box-angle-border-color: $convert-border-1 !default;
   display: block;
 }
 
-@include export-style-box {
+@include export-style-box() {
   #{$selector-box} {
     @include musubii-style-box();
   }
