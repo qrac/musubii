@@ -1,135 +1,205 @@
 //----------------------------------------------------
-// Module: Table
+// Components: Table
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-table: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-table: true !default;
+
+// Selectors
+$selector-table: ".table" !default;
+
+// Table
+$table-padding: 0.75em 1em !default;
+$table-background-color: $convert-background !default;
+$table-border-width: $global-border-width !default;
+$table-border-color: $convert-border !default;
+
+// Table th
+$table-th-border-bottom-width: $global-border-width * 2 !default;
+
+// Table Stripe
+$table-stripe-background-color: $convert-background-2 !default;
+
+// Table Paint
+$table-paint-background-color: $convert-table-paint-background-color !default;
+$table-paint-text-color: $convert-table-paint-text-color !default;
+
+// Table Spot
+$table-spot-background-color: $convert-table-spot-background-color !default;
+
+// Table Danger
+$table-danger-background-color: $convert-table-danger-background-color !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-table {
-  @if $use-style-table == true {
+@mixin export-style-table() {
+  @if $option-mixin-mode == false and $option-style-table == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Table Basic
 //----------------------------------------------------
 
-@include export-table {
-  .table {
-    width: 100%;
-    background-color: $table-background-color;
-    border-collapse: collapse;
-    border-spacing: 0;
-    th,
-    td {
-      padding: $table-padding;
-      vertical-align: top;
+@mixin musubii-style-table() {
+  width: 100%;
+  background-color: $table-background-color;
+  border-collapse: collapse;
+  border-spacing: 0;
+  th,
+  td {
+    padding: $table-padding;
+    vertical-align: top;
+  }
+  > thead > tr:last-child > th {
+    border-bottom: $table-th-border-bottom-width solid $table-border-color;
+  }
+  tr.box {
+    display: table-row;
+  }
+  th.box,
+  td.box {
+    display: table-cell;
+  }
+  &.is-middle th,
+  &.is-middle td {
+    vertical-align: middle;
+  }
+  tr,
+  th,
+  td {
+    &.is-left {
+      text-align: left;
     }
-    > thead > tr:last-child > th {
-      border-bottom: $table-th-border-bottom-width solid $table-border-color;
+    &.is-center {
+      text-align: center;
     }
-    tr.box {
-      display: table-row;
+    &.is-right {
+      text-align: right;
     }
-    th.box,
-    td.box {
-      display: table-cell;
-    }
-    &.is-middle th,
-    &.is-middle td {
+    &.is-middle {
       vertical-align: middle;
     }
+  }
+}
+
+@include export-style-table() {
+  #{$selector-table} {
+    @include musubii-style-table();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Table Line
+//----------------------------------------------------
+
+@mixin musubii-style-table-line() {
+  &.is-line {
+    border-top: $table-border-width solid $table-border-color;
+    border-bottom: $table-border-width solid $table-border-color;
+    > tbody > tr:not(:first-child) {
+      border-top: $table-border-width solid $table-border-color;
+    }
+  }
+}
+
+@include export-style-table() {
+  #{$selector-table} {
+    @include musubii-style-table-line();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Table Outline
+//----------------------------------------------------
+
+@mixin musubii-style-table-outline() {
+  &.is-outline {
+    border: $table-border-width solid $table-border-color;
+  }
+}
+
+@include export-style-table() {
+  #{$selector-table} {
+    @include musubii-style-table-outline();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Table Border
+//----------------------------------------------------
+
+@mixin musubii-style-table-border() {
+  &.is-border {
+    border: $table-border-width solid $table-border-color;
+    th,
+    td {
+      border: $table-border-width solid $table-border-color;
+    }
+  }
+}
+
+@include export-style-table() {
+  #{$selector-table} {
+    @include musubii-style-table-border();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Table Stripe
+//----------------------------------------------------
+
+@mixin musubii-style-table-stripe() {
+  &.is-stripe {
+    thead {
+      background-color: $table-stripe-background-color;
+    }
+    tbody tr:nth-child(even) {
+      background-color: $table-stripe-background-color;
+    }
+  }
+}
+
+@include export-style-table() {
+  #{$selector-table} {
+    @include musubii-style-table-stripe();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Table Background
+//----------------------------------------------------
+
+@mixin musubii-style-table-bg() {
+  #{$selector-table} {
     tr,
     th,
     td {
-      &.is-left {
-        text-align: left;
+      &.is-paint {
+        background-color: $table-paint-background-color;
+        color: $table-paint-text-color;
       }
-      &.is-center {
-        text-align: center;
+      &.is-stripe {
+        background-color: $table-stripe-background-color;
       }
-      &.is-right {
-        text-align: right;
+      &.is-spot {
+        background-color: $table-spot-background-color;
       }
-      &.is-middle {
-        vertical-align: middle;
-      }
-    }
-  }
-}
-
-//----------------------------------------------------
-// / Style
-//----------------------------------------------------
-
-@include export-table {
-  .table {
-    @each $style in $pattern-table-style {
-      @if $style == "line" {
-        &.is-line {
-          border-top: $table-border-width solid $table-border-color;
-          border-bottom: $table-border-width solid $table-border-color;
-          > tbody > tr:not(:first-child) {
-            border-top: $table-border-width solid $table-border-color;
-          }
-        }
-      }
-      @if $style == "outline" {
-        &.is-outline {
-          border: $table-border-width solid $table-border-color;
-        }
-      }
-      @if $style == "border" {
-        &.is-border {
-          border: $table-border-width solid $table-border-color;
-          th,
-          td {
-            border: $table-border-width solid $table-border-color;
-          }
-        }
-      }
-      @if $style == "stripe" {
-        &.is-stripe {
-          thead {
-            background-color: $table-stripe-background-color;
-          }
-          tbody tr:nth-child(even) {
-            background-color: $table-stripe-background-color;
-          }
-        }
+      &.is-danger {
+        background-color: $table-danger-background-color;
       }
     }
   }
 }
 
-//----------------------------------------------------
-// / Background
-//----------------------------------------------------
-
-@include export-table {
-  .table tr,
-  .table th,
-  .table td {
-    &.is-paint {
-      background-color: $table-paint-background-color;
-      color: $table-paint-text-color;
-    }
-    &.is-stripe {
-      background-color: $table-stripe-background-color;
-    }
-    &.is-spot {
-      background-color: $table-spot-background-color;
-    }
-    &.is-danger {
-      background-color: $table-danger-background-color;
-    }
-  }
+@include export-style-table() {
+  @include musubii-style-table-bg();
 }

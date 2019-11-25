@@ -3,35 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Module - Table
-//----------------------------------------------------
-
-// Table
-$table-padding: 0.75em 1em !default;
-$table-background-color: $convert-background !default;
-$table-border-width: $global-border-width !default;
-$table-border-color: $convert-border !default;
-
-// Table th
-$table-th-border-bottom-width: $global-border-width * 2 !default;
-
-// Table Stripe
-$table-stripe-background-color: $convert-background-2 !default;
-
-// Table Paint
-$table-paint-background-color: $convert-table-paint-background-color !default;
-$table-paint-text-color: $convert-table-paint-text-color !default;
-
-// Table Spot
-$table-spot-background-color: $convert-table-spot-background-color !default;
-
-// Table Danger
-$table-danger-background-color: $convert-table-danger-background-color !default;
-
-// Pattern - Table Style
-$pattern-table-style: line, outline, border, stripe !default;
-
-//----------------------------------------------------
 // / Module - Form
 //----------------------------------------------------
 
