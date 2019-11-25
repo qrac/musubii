@@ -1618,10 +1618,6 @@ iframe {
   font-weight: 700;
 }
 
-.badge.is-plain {
-  border: 1px solid transparent;
-}
-
 .badge.is-round {
   border-radius: 999em;
 }
@@ -1647,34 +1643,34 @@ iframe {
   border: 1px solid transparent;
 }
 
-.badge.is-plain.is-primary {
+.badge.is-plain.is-disabled {
+  background-color: var(--disabled-background-color);
+  color: var(--disabled-text-color);
+}
+
+.badge.is-plain:not(.is-disabled).is-primary {
   background-color: var(--primary);
   color: var(--button-paint-text-color);
 }
 
-.badge.is-plain.is-info {
+.badge.is-plain:not(.is-disabled).is-info {
   background-color: var(--info);
   color: var(--button-paint-text-color);
 }
 
-.badge.is-plain.is-success {
+.badge.is-plain:not(.is-disabled).is-success {
   background-color: var(--success);
   color: var(--button-paint-text-color);
 }
 
-.badge.is-plain.is-warning {
+.badge.is-plain:not(.is-disabled).is-warning {
   background-color: var(--warning);
   color: var(--button-paint-text-color);
 }
 
-.badge.is-plain.is-danger {
+.badge.is-plain:not(.is-disabled).is-danger {
   background-color: var(--danger);
   color: var(--button-paint-text-color);
-}
-
-.badge.is-plain.is-disabled {
-  background-color: var(--disabled-background-color);
-  color: var(--disabled-text-color);
 }
 
 .badge.is-outline {
@@ -1682,35 +1678,35 @@ iframe {
   border: 1px solid var(--border);
 }
 
-.badge.is-outline.is-primary {
+.badge.is-outline.is-disabled {
+  background-color: var(--disabled-background-color);
+  color: var(--disabled-text-color);
+  border-color: var(--border);
+}
+
+.badge.is-outline:not(.is-disabled).is-primary {
   border-color: var(--primary);
   color: var(--primary-strong);
 }
 
-.badge.is-outline.is-info {
+.badge.is-outline:not(.is-disabled).is-info {
   border-color: var(--info);
   color: var(--info-strong);
 }
 
-.badge.is-outline.is-success {
+.badge.is-outline:not(.is-disabled).is-success {
   border-color: var(--success);
   color: var(--success-strong);
 }
 
-.badge.is-outline.is-warning {
+.badge.is-outline:not(.is-disabled).is-warning {
   border-color: var(--warning);
   color: var(--warning-strong);
 }
 
-.badge.is-outline.is-danger {
+.badge.is-outline:not(.is-disabled).is-danger {
   border-color: var(--danger);
   color: var(--danger-strong);
-}
-
-.badge.is-disabled {
-  background-color: var(--disabled-background-color);
-  color: var(--disabled-text-color);
-  border-color: var(--border);
 }
 
 .list > .item:not(:first-child) {

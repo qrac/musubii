@@ -1,122 +1,257 @@
 //----------------------------------------------------
-// Module: Badge
+// Components: Badge
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-badge: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-badge: true !default;
+
+// Selectors
+$selector-badge: ".badge" !default;
+
+// Badge
+$badge-padding: 0.25em 0.375em !default;
+$badge-border-width: $global-border-width !default;
+$badge-border-radius: $radius-sm !default;
+$badge-paint-text-color: $convert-button-paint-text-color !default;
+$badge-line-height: $line-height-xs !default;
+$badge-transition: $global-transition !default;
+$badge-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
+
+// Badge Disabled
+$badge-disabled-background-color: $convert-disabled-background-color !default;
+$badge-disabled-text-color: $convert-disabled-text-color !default;
+
+// Badge Round
+$badge-round-border-radius: $radius-full !default;
+
+// Badge Square
+$badge-square-width: calc(1.75em + #{$global-border-width} * 2) !default;
+$badge-square-height: calc(1.75em + #{$global-border-width} * 2) !default;
+$badge-square-border-radius: $radius-sm !default;
+
+// Badge Circle
+$badge-circle-width: calc(1.75em + #{$global-border-width} * 2) !default;
+$badge-circle-height: calc(1.75em + #{$global-border-width} * 2) !default;
+$badge-circle-border-radius: $radius-full !default;
+
+// Badge Plain
+$badge-plain-background-color: $convert-background-2 !default;
+$badge-plain-primary-background-color: $convert-primary !default;
+$badge-plain-info-background-color: $convert-info !default;
+$badge-plain-success-background-color: $convert-success !default;
+$badge-plain-warning-background-color: $convert-warning !default;
+$badge-plain-danger-background-color: $convert-danger !default;
+
+// Badge Outline
+$badge-outline-background-color: $convert-background !default;
+$badge-outline-border-color: $convert-border !default;
+$badge-outline-primary-border-color: $convert-primary !default;
+$badge-outline-primary-text-color: $convert-primary-strong !default;
+$badge-outline-info-border-color: $convert-info !default;
+$badge-outline-info-text-color: $convert-info-strong !default;
+$badge-outline-success-border-color: $convert-success !default;
+$badge-outline-success-text-color: $convert-success-strong !default;
+$badge-outline-warning-border-color: $convert-warning !default;
+$badge-outline-warning-text-color: $convert-warning-strong !default;
+$badge-outline-danger-border-color: $convert-danger !default;
+$badge-outline-danger-text-color: $convert-danger-strong !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-badge {
-  @if $use-style-badge == true {
+@mixin export-style-badge() {
+  @if $option-mixin-mode == false and $option-style-badge == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Badge Basic
 //----------------------------------------------------
 
-@include export-badge {
-  .badge {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    padding: $badge-padding;
-    border-radius: $badge-border-radius;
-    color: $body-text-color;
-    text-align: center;
-    line-height: $badge-line-height;
-    &.is-strong {
-      font-weight: 700;
-    }
-    &.is-plain {
-      border: 1px solid transparent;
-    }
+@mixin musubii-style-badge() {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: $badge-padding;
+  border-radius: $badge-border-radius;
+  color: $body-text-color;
+  text-align: center;
+  line-height: $badge-line-height;
+  &.is-strong {
+    font-weight: 700;
+  }
+}
+
+@include export-style-badge() {
+  #{$selector-badge} {
+    @include musubii-style-badge();
   }
 }
 
 //----------------------------------------------------
-// / Custom
+// / Style - Badge Round
 //----------------------------------------------------
 
-@include export-badge {
-  .badge {
-    @each $custom in $pattern-badge-custom {
-      @if $custom == "round" {
-        &.is-round {
-          border-radius: $badge-round-border-radius;
-        }
-      }
-      @if $custom == "square" {
-        &.is-square {
-          width: $badge-square-width;
-          height: $badge-square-height;
-          padding: 0;
-          border-radius: $badge-square-border-radius;
-          line-height: 1;
-        }
-      }
-      @if $custom == "circle" {
-        &.is-circle {
-          width: $badge-circle-width;
-          height: $badge-circle-height;
-          padding: 0;
-          border-radius: $badge-circle-border-radius;
-          line-height: 1;
-        }
-      }
-    }
+@mixin musubii-style-badge-round() {
+  &.is-round {
+    border-radius: $badge-round-border-radius;
+  }
+}
+
+@include export-style-badge() {
+  #{$selector-badge} {
+    @include musubii-style-badge-round();
   }
 }
 
 //----------------------------------------------------
-// / Style
+// / Style - Badge Square
 //----------------------------------------------------
 
-@include export-badge {
-  .badge {
-    @each $style in $pattern-badge-style {
-      @if $style == "plain" {
-        &.is-plain {
-          background-color: $badge-plain-background-color;
-          border: $badge-border-width solid transparent;
-          @each $key, $value in $pattern-badge-plain {
-            &.is-#{$key} {
-              background-color: map-get($value, background-color);
-              color: $badge-paint-text-color;
-            }
-          }
-          &.is-disabled {
-            background-color: $badge-disabled-background-color;
-            color: $badge-disabled-text-color;
-          }
-        }
-      }
-      @if $style == "outline" {
-        &.is-outline {
-          background-color: $badge-outline-background-color;
-          border: $badge-border-width solid $badge-outline-border-color;
-          @each $key, $value in $pattern-badge-outline {
-            &.is-#{$key} {
-              border-color: map-get($value, border-color);
-              color: map-get($value, text-color);
-            }
-          }
-        }
-        &.is-disabled {
-          background-color: $badge-disabled-background-color;
-          color: $badge-disabled-text-color;
-          border-color: $badge-outline-border-color;
-        }
-      }
+@mixin musubii-style-badge-square() {
+  &.is-square {
+    width: $badge-square-width;
+    height: $badge-square-height;
+    padding: 0;
+    border-radius: $badge-square-border-radius;
+    line-height: 1;
+  }
+}
+
+@include export-style-badge() {
+  #{$selector-badge} {
+    @include musubii-style-badge-square();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Badge Circle
+//----------------------------------------------------
+
+@mixin musubii-style-badge-circle() {
+  &.is-circle {
+    width: $badge-circle-width;
+    height: $badge-circle-height;
+    padding: 0;
+    border-radius: $badge-circle-border-radius;
+    line-height: 1;
+  }
+}
+
+@include export-style-badge() {
+  #{$selector-badge} {
+    @include musubii-style-badge-circle();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Badge Plain
+//----------------------------------------------------
+
+@mixin --is-plain-badge-role($name, $bg-color) {
+  &.is-#{$name} {
+    background-color: $bg-color;
+    color: $badge-paint-text-color;
+  }
+}
+
+@mixin musubii-style-badge-plain() {
+  &.is-plain {
+    background-color: $badge-plain-background-color;
+    border: $badge-border-width solid transparent;
+    &.is-disabled {
+      background-color: $badge-disabled-background-color;
+      color: $badge-disabled-text-color;
     }
+    &:not(.is-disabled) {
+      @include --is-plain-badge-role(
+        primary,
+        $badge-plain-primary-background-color
+      );
+      @include --is-plain-badge-role(info, $badge-plain-info-background-color);
+      @include --is-plain-badge-role(
+        success,
+        $badge-plain-success-background-color
+      );
+      @include --is-plain-badge-role(
+        warning,
+        $badge-plain-warning-background-color
+      );
+      @include --is-plain-badge-role(
+        danger,
+        $badge-plain-danger-background-color
+      );
+    }
+  }
+}
+
+@include export-style-badge() {
+  #{$selector-badge} {
+    @include musubii-style-badge-plain();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Badge Outline
+//----------------------------------------------------
+
+@mixin --is-outline-badge-role($name, $border-color, $color) {
+  &.is-#{$name} {
+    border-color: $border-color;
+    color: $color;
+  }
+}
+
+@mixin musubii-style-badge-outline() {
+  &.is-outline {
+    background-color: $badge-outline-background-color;
+    border: $badge-border-width solid $badge-outline-border-color;
+    &.is-disabled {
+      background-color: $badge-disabled-background-color;
+      color: $badge-disabled-text-color;
+      border-color: $badge-outline-border-color;
+    }
+    &:not(.is-disabled) {
+      @include --is-outline-badge-role(
+        primary,
+        $badge-outline-primary-border-color,
+        $badge-outline-primary-text-color
+      );
+      @include --is-outline-badge-role(
+        info,
+        $badge-outline-info-border-color,
+        $badge-outline-info-text-color
+      );
+      @include --is-outline-badge-role(
+        success,
+        $badge-outline-success-border-color,
+        $badge-outline-success-text-color
+      );
+      @include --is-outline-badge-role(
+        warning,
+        $badge-outline-warning-border-color,
+        $badge-outline-warning-text-color
+      );
+      @include --is-outline-badge-role(
+        danger,
+        $badge-outline-danger-border-color,
+        $badge-outline-danger-text-color
+      );
+    }
+  }
+}
+
+@include export-style-badge() {
+  #{$selector-badge} {
+    @include musubii-style-badge-outline();
   }
 }
