@@ -22,7 +22,7 @@ $use-style-list: true !default;
 // / Basic
 //----------------------------------------------------
 
-@include export-text {
+@include export-list {
   .list {
     > .item:not(:first-child) {
       margin-top: $list-item-margin-top;
@@ -37,7 +37,7 @@ $use-style-list: true !default;
 // / Style
 //----------------------------------------------------
 
-@include export-text {
+@include export-list {
   .list {
     @each $style in $pattern-list-style {
       @if $style == "disc" {

@@ -1180,23 +1180,9 @@ iframe {
   text-align: left;
 }
 
-.text.is-center, .text.is-mobile-center {
-  text-align: center;
-}
-
-.text.is-right, .text.is-mobile-right {
-  text-align: right;
-}
-
 @media screen and (min-width: 576px) {
   .text.is-fablet-left {
     text-align: left;
-  }
-  .text.is-fablet-center {
-    text-align: center;
-  }
-  .text.is-fablet-right {
-    text-align: right;
   }
 }
 
@@ -1204,23 +1190,11 @@ iframe {
   .text.is-tablet-left {
     text-align: left;
   }
-  .text.is-tablet-center {
-    text-align: center;
-  }
-  .text.is-tablet-right {
-    text-align: right;
-  }
 }
 
 @media screen and (min-width: 992px) {
   .text.is-desktop-left {
     text-align: left;
-  }
-  .text.is-desktop-center {
-    text-align: center;
-  }
-  .text.is-desktop-right {
-    text-align: right;
   }
 }
 
@@ -1228,9 +1202,59 @@ iframe {
   .text.is-wide-left {
     text-align: left;
   }
+}
+
+.text.is-center, .text.is-mobile-center {
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .text.is-fablet-center {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text.is-tablet-center {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .text.is-desktop-center {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .text.is-wide-center {
     text-align: center;
   }
+}
+
+.text.is-right, .text.is-mobile-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 576px) {
+  .text.is-fablet-right {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text.is-tablet-right {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .text.is-desktop-right {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .text.is-wide-right {
     text-align: right;
   }

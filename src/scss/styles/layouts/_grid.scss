@@ -84,10 +84,10 @@ $gap-size-xxs: $space-xxs !default;
 // / Style - Grid Gap
 //----------------------------------------------------
 
-@mixin --is-gap-all($size, $value, $child-selector, $omit) {
+@mixin --is-gap-all($name, $value, $child-selector, $omit) {
   @if $omit == true {
     &.is-gap,
-    &.is-gap-#{$size} {
+    &.is-gap-#{$name} {
       margin-left: -$value;
       margin-bottom: -$value;
       > {
@@ -98,7 +98,7 @@ $gap-size-xxs: $space-xxs !default;
       }
     }
   } @else {
-    &.is-gap-#{$size} {
+    &.is-gap-#{$name} {
       margin-left: -$value;
       margin-bottom: -$value;
       > {
@@ -129,10 +129,10 @@ $gap-size-xxs: $space-xxs !default;
 
 //----------------------------------------------------
 
-@mixin --is-gap-row($size, $value, $child-selector, $omit) {
+@mixin --is-gap-row($name, $value, $child-selector, $omit) {
   @if $omit == true {
     &.is-gap-row,
-    &.is-gap-row-#{$size} {
+    &.is-gap-row-#{$name} {
       margin-bottom: -$value;
       > {
         #{$child-selector} {
@@ -141,7 +141,7 @@ $gap-size-xxs: $space-xxs !default;
       }
     }
   } @else {
-    &.is-gap-row-#{$size} {
+    &.is-gap-row-#{$name} {
       margin-bottom: -$value;
       > {
         #{$child-selector} {
@@ -170,10 +170,10 @@ $gap-size-xxs: $space-xxs !default;
 
 //----------------------------------------------------
 
-@mixin --is-gap-column($size, $value, $child-selector, $omit) {
+@mixin --is-gap-column($name, $value, $child-selector, $omit) {
   @if $omit == true {
     &.is-gap-column,
-    &.is-gap-column-#{$size} {
+    &.is-gap-column-#{$name} {
       margin-left: -$value;
       > {
         #{$child-selector} {
@@ -182,7 +182,7 @@ $gap-size-xxs: $space-xxs !default;
       }
     }
   } @else {
-    &.is-gap-column-#{$size} {
+    &.is-gap-column-#{$name} {
       margin-left: -$value;
       > {
         #{$child-selector} {

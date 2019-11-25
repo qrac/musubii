@@ -53,20 +53,6 @@ $font-weight-700: 700 !default;
 $font-weight-800: 800 !default;
 $font-weight-900: 900 !default;
 
-$pattern-font-weight: (
-  normal: $font-weight-normal,
-  strong: $font-weight-strong,
-  weight-100: $font-weight-100,
-  weight-200: $font-weight-200,
-  weight-300: $font-weight-300,
-  weight-400: $font-weight-400,
-  weight-500: $font-weight-500,
-  weight-600: $font-weight-600,
-  weight-700: $font-weight-700,
-  weight-800: $font-weight-800,
-  weight-900: $font-weight-900
-) !default;
-
 //----------------------------------------------------
 // / Line Height
 //----------------------------------------------------
@@ -78,13 +64,3 @@ $line-height-md: 1.5 !default;
 $line-height-sm: 1.375 !default;
 $line-height-xs: 1.25 !default;
 $line-height-xxs: 1 !default;
-
-$pattern-line-height: (
-  xxl: $line-height-xxl,
-  xl: $line-height-xl,
-  lg: $line-height-lg,
-  md: $line-height-md,
-  sm: $line-height-sm,
-  xs: $line-height-xs,
-  xxs: $line-height-xxs
-) !default;

@@ -106,21 +106,21 @@ $box-angle-border-color: $convert-border-1 !default;
 // / Style - Box Background
 //----------------------------------------------------
 
-@mixin --is-bg($bg-name, $bg-color, $omit) {
+@mixin --is-bg-color($name, $value, $omit) {
   @if $omit == true {
     &.is-bg,
-    &.is-bg-#{$bg-name} {
-      background-color: $bg-color;
+    &.is-bg-#{$name} {
+      background-color: $value;
     }
   } @else {
-    &.is-bg-#{$bg-name} {
-      background-color: $bg-color;
+    &.is-bg-#{$name} {
+      background-color: $value;
     }
   }
 }
 
 @mixin musubii-style-box-bg() {
-  @include --is-bg(light, $box-background-color, true);
+  @include --is-bg-color(light, $box-background-color, true);
 }
 
 @include export-style-box() {

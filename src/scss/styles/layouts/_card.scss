@@ -73,21 +73,21 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Background
 //----------------------------------------------------
 
-@mixin --is-bg($bg-name, $bg-color, $omit) {
+@mixin --is-bg-color($name, $value, $omit) {
   @if $omit == true {
     &.is-bg,
-    &.is-bg-#{$bg-name} {
-      background-color: $bg-color;
+    &.is-bg-#{$name} {
+      background-color: $value;
     }
   } @else {
-    &.is-bg-#{$bg-name} {
-      background-color: $bg-color;
+    &.is-bg-#{$name} {
+      background-color: $value;
     }
   }
 }
 
 @mixin musubii-style-card-bg() {
-  @include --is-bg(light, $card-background-color, true);
+  @include --is-bg-color(light, $card-background-color, true);
 }
 
 @include export-style-card() {
@@ -116,14 +116,14 @@ $card-zoom-transition: $global-transition !default;
 // / Style - Card Radius
 //----------------------------------------------------
 
-@mixin --is-radius-all($size, $value, $omit) {
+@mixin --is-radius-all($name, $value, $omit) {
   @if $omit == true {
     &.is-radius,
-    &.is-radius-#{$size} {
+    &.is-radius-#{$name} {
       border-radius: $value;
     }
   } @else {
-    &.is-radius-#{$size} {
+    &.is-radius-#{$name} {
       border-radius: $value;
     }
   }
