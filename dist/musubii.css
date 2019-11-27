@@ -2487,6 +2487,10 @@ iframe {
   padding: 0.5em 0.75em;
 }
 
+.iframe {
+  display: block;
+}
+
 .iframe-wrap {
   position: relative;
   display: block;
@@ -2508,10 +2512,6 @@ iframe {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.iframe {
-  display: block;
 }
 
 .icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons {
