@@ -14,6 +14,15 @@ $option-style-form: true !default;
 $selector-fieldset: ".fieldset" !default;
 $selector-input: ".input" !default;
 $selector-textarea: ".textarea" !default;
+$selector-radio: ".radio" !default;
+$selector-checkbox: ".checkbox" !default;
+$selector-label: ".label" !default;
+
+// Modifiers
+$modifier-radio-active: ".is-active" !default;
+$modifier-checkbox-active: ".is-active" !default;
+$modifier-radio-disabled: ".is-disabled" !default;
+$modifier-checkbox-disabled: ".is-disabled" !default;
 
 // Input
 $input-height: 2.5em !default;
@@ -402,138 +411,297 @@ $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 }
 
 //----------------------------------------------------
-// / Radio & Checkbox
+// / Style - Form Label
 //----------------------------------------------------
 
-@include export-style-form() {
-  .label {
-    cursor: pointer;
-    display: flex;
-    &:not(.is-middle) {
-      .radio {
-        top: $radio-size * 0.25;
-      }
-      .checkbox {
-        top: $checkbox-size * 0.25;
-      }
+@mixin musubii-style-form-label() {
+  cursor: pointer;
+  display: flex;
+  &:not(.is-middle) {
+    #{$selector-radio} {
+      top: $radio-size * 0.25;
     }
-    &.is-middle {
-      align-items: center;
+    #{$selector-checkbox} {
+      top: $checkbox-size * 0.25;
     }
-    &.is-center {
-      justify-content: center;
-      .text:last-child {
-        margin-right: 0;
-      }
-    }
+  }
+  &.is-middle {
+    align-items: center;
+  }
+  &.is-center {
+    justify-content: center;
   }
 }
 
 @include export-style-form() {
-  .radio,
-  .checkbox {
-    position: relative;
-    display: inline-block;
-    flex: none;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      opacity: 0;
-    }
+  #{$selector-label} {
+    @include musubii-style-form-label();
   }
 }
 
-@include export-style-form() {
-  .radio {
-    width: $radio-size;
-    height: $radio-size;
-    background-color: $radio-background-color;
-    border: $radio-border-width solid $input-border-color;
-    border-radius: $radio-size * 0.5;
+//----------------------------------------------------
+// / Style - Form Radio
+//----------------------------------------------------
+
+@mixin musubii-style-form-radio() {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: $radio-size;
+  height: $radio-size;
+  background-color: $radio-background-color;
+  border: $radio-border-width solid $input-border-color;
+  border-radius: $radio-size * 0.5;
+  transition: $radio-transition;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $radio-size * 0.5;
+    height: $radio-size * 0.5;
+    background-color: $radio-before-checked-background-color;
+    border-radius: $radio-size * 0.5 * 0.5;
+    transform: translate(-50%, -50%);
     transition: $radio-transition;
-    &:before {
-      width: $radio-size * 0.5;
-      height: $radio-size * 0.5;
-      background-color: $radio-before-checked-background-color;
-      border-radius: $radio-size * 0.5 * 0.5;
-      transform: translate(-50%, -50%);
-      transition: $radio-transition;
-    }
+    opacity: 0;
   }
 }
 
 @include export-style-form() {
-  .checkbox {
-    width: $checkbox-size;
-    height: $checkbox-size;
-    background-color: $checkbox-background-color;
-    border: $checkbox-border-width solid $input-border-color;
-    border-radius: $checkbox-border-radius;
-    transition: $checkbox-transition;
-    &:before {
-      width: $checkbox-size * 0.75;
-      height: $checkbox-size * 0.375;
-      border-left: $checkbox-size * 0.125 solid $checkbox-before-border-color;
-      border-bottom: $checkbox-size * 0.125 solid $checkbox-before-border-color;
-      transform: translate(-50%, -70%) rotate(-45deg);
-      transition: $checkbox-transition;
-    }
+  #{$selector-radio} {
+    @include musubii-style-form-radio();
   }
 }
 
+//----------------------------------------------------
+// / Style - Form Radio Focus
+//----------------------------------------------------
+
+@mixin musubii-style-form-radio-focus() {
+  box-shadow: $radio-focus-shadow;
+  outline: none;
+}
+
 @include export-style-form() {
-  .input[type="radio"],
-  .input[type="checkbox"] {
-    &[disabled] {
-      + .label {
-        cursor: not-allowed;
-        color: $input-disabled-text-color;
-        .radio,
-        .checkbox {
-          border-color: $input-disabled-border-color;
+  #{$selector-radio} {
+    &:focus {
+      @include musubii-style-form-radio-focus();
+    }
+  }
+  #{$selector-input} {
+    &[type="radio"] {
+      &:focus {
+        + {
+          #{$selector-label} {
+            #{$selector-radio} {
+              @include musubii-style-form-radio-focus();
+            }
+          }
         }
       }
     }
   }
 }
 
+//----------------------------------------------------
+// / Style - Form Radio Active
+//----------------------------------------------------
+
+@mixin musubii-style-form-radio-active() {
+  border-color: $radio-checked-border-color;
+  &:before {
+    opacity: 1;
+  }
+}
+
 @include export-style-form() {
-  .input[type="radio"] {
-    &:focus {
-      + .label .radio {
-        box-shadow: $radio-focus-shadow;
-        outline: none;
-      }
+  #{$selector-radio} {
+    &#{$modifier-radio-active} {
+      @include musubii-style-form-radio-active();
     }
-    &:checked {
-      + .label .radio {
-        border-color: $radio-checked-border-color;
-      }
-      + .label .radio:before {
-        opacity: 1;
+  }
+  #{$selector-input} {
+    &[type="radio"] {
+      &:checked {
+        + {
+          #{$selector-label} {
+            #{$selector-radio} {
+              @include musubii-style-form-radio-active();
+            }
+          }
+        }
       }
     }
   }
 }
 
+//----------------------------------------------------
+// / Style - Form Radio Disabled
+//----------------------------------------------------
+
+@mixin musubii-style-form-radio-disabled() {
+  cursor: not-allowed;
+  border-color: $input-disabled-border-color;
+}
+
+@mixin musubii-style-form-radio-label-disabled() {
+  cursor: not-allowed;
+  color: $input-disabled-text-color;
+}
+
 @include export-style-form() {
-  .input[type="checkbox"] {
-    &:focus {
-      + .label .checkbox {
-        border-color: $checkbox-focus-border-color;
-        box-shadow: $checkbox-focus-shadow;
-        outline: none;
+  #{$selector-radio} {
+    &#{$modifier-radio-disabled} {
+      @include musubii-style-form-radio-disabled();
+    }
+  }
+  #{$selector-input} {
+    &[type="radio"] {
+      &[disabled] {
+        + {
+          #{$selector-label} {
+            @include musubii-style-form-radio-label-disabled();
+            #{$selector-radio} {
+              @include musubii-style-form-radio-disabled();
+            }
+          }
+        }
       }
     }
-    &:checked {
-      + .label .checkbox {
-        background-color: $checkbox-checked-background-color;
-        border-color: $checkbox-checked-border-color;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Checkbox
+//----------------------------------------------------
+
+@mixin musubii-style-form-checkbox() {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  background-color: $checkbox-background-color;
+  border: $checkbox-border-width solid $input-border-color;
+  border-radius: $checkbox-border-radius;
+  transition: $checkbox-transition;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $checkbox-size * 0.75;
+    height: $checkbox-size * 0.375;
+    border-left: $checkbox-size * 0.125 solid $checkbox-before-border-color;
+    border-bottom: $checkbox-size * 0.125 solid $checkbox-before-border-color;
+    transform: translate(-50%, -70%) rotate(-45deg);
+    transition: $checkbox-transition;
+    opacity: 0;
+  }
+}
+
+@include export-style-form() {
+  #{$selector-checkbox} {
+    @include musubii-style-form-checkbox();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Checkbox Focus
+//----------------------------------------------------
+
+@mixin musubii-style-form-checkbox-focus() {
+  border-color: $checkbox-focus-border-color;
+  box-shadow: $checkbox-focus-shadow;
+  outline: none;
+}
+
+@include export-style-form() {
+  #{$selector-checkbox} {
+    &:focus {
+      @include musubii-style-form-checkbox-focus();
+    }
+  }
+  #{$selector-input} {
+    &[type="checkbox"] {
+      &:focus {
+        + {
+          #{$selector-label} {
+            #{$selector-checkbox} {
+              @include musubii-style-form-checkbox-focus();
+            }
+          }
+        }
       }
-      + .label .checkbox:before {
-        opacity: 1;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Checkbox Active
+//----------------------------------------------------
+
+@mixin musubii-style-form-checkbox-active() {
+  background-color: $checkbox-checked-background-color;
+  border-color: $checkbox-checked-border-color;
+  &:before {
+    opacity: 1;
+  }
+}
+
+@include export-style-form() {
+  #{$selector-checkbox} {
+    &#{$modifier-checkbox-active} {
+      @include musubii-style-form-checkbox-active();
+    }
+  }
+  #{$selector-input} {
+    &[type="checkbox"] {
+      &:checked {
+        + {
+          #{$selector-label} {
+            #{$selector-checkbox} {
+              @include musubii-style-form-checkbox-active();
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Checkbox Disabled
+//----------------------------------------------------
+
+@mixin musubii-style-form-checkbox-disabled() {
+  cursor: not-allowed;
+  border-color: $input-disabled-border-color;
+}
+
+@mixin musubii-style-form-checkbox-label-disabled() {
+  cursor: not-allowed;
+  color: $input-disabled-text-color;
+}
+
+@include export-style-form() {
+  #{$selector-checkbox} {
+    &#{$modifier-checkbox-disabled} {
+      @include musubii-style-form-checkbox-disabled();
+    }
+  }
+  #{$selector-input} {
+    &[type="checkbox"] {
+      &[disabled] {
+        + {
+          #{$selector-label} {
+            @include musubii-style-form-checkbox-label-disabled();
+            #{$selector-checkbox} {
+              @include musubii-style-form-checkbox-disabled();
+            }
+          }
+        }
       }
     }
   }

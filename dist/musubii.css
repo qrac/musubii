@@ -2184,27 +2184,10 @@ iframe {
   justify-content: center;
 }
 
-.label.is-center .text:last-child {
-  margin-right: 0;
-}
-
-.radio,
-.checkbox {
+.radio {
   position: relative;
   display: inline-block;
   flex: none;
-}
-
-.radio:before,
-.checkbox:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-}
-
-.radio {
   width: 1em;
   height: 1em;
   background-color: var(--background);
@@ -2214,6 +2197,10 @@ iframe {
 }
 
 .radio:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 0.5em;
   height: 0.5em;
   background-color: var(--primary-strong);
@@ -2221,43 +2208,25 @@ iframe {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   transition: ease-out 0.12s;
+  opacity: 0;
 }
 
-.checkbox {
-  width: 1em;
-  height: 1em;
-  background-color: var(--background);
-  border: 2px solid var(--border);
-  border-radius: 2px;
-  transition: ease-out 0.12s;
-}
-
-.checkbox:before {
-  width: 0.75em;
-  height: 0.375em;
-  border-left: 0.125em solid var(--checkbox-before-border-color);
-  border-bottom: 0.125em solid var(--checkbox-before-border-color);
-  -webkit-transform: translate(-50%, -70%) rotate(-45deg);
-          transform: translate(-50%, -70%) rotate(-45deg);
-  transition: ease-out 0.12s;
-}
-
-.input[type="radio"][disabled] + .label,
-.input[type="checkbox"][disabled] + .label {
-  cursor: not-allowed;
-  color: var(--disabled-text-color);
-}
-
-.input[type="radio"][disabled] + .label .radio,
-.input[type="radio"][disabled] + .label .checkbox,
-.input[type="checkbox"][disabled] + .label .radio,
-.input[type="checkbox"][disabled] + .label .checkbox {
-  border-color: var(--disabled-border-color);
+.radio:focus {
+  box-shadow: 0 0 0 4px var(--focus-alpha-thin);
+  outline: none;
 }
 
 .input[type="radio"]:focus + .label .radio {
   box-shadow: 0 0 0 4px var(--focus-alpha-thin);
   outline: none;
+}
+
+.radio.is-active {
+  border-color: var(--primary-strong);
+}
+
+.radio.is-active:before {
+  opacity: 1;
 }
 
 .input[type="radio"]:checked + .label .radio {
@@ -2268,10 +2237,67 @@ iframe {
   opacity: 1;
 }
 
+.radio.is-disabled {
+  cursor: not-allowed;
+  border-color: var(--disabled-border-color);
+}
+
+.input[type="radio"][disabled] + .label {
+  cursor: not-allowed;
+  color: var(--disabled-text-color);
+}
+
+.input[type="radio"][disabled] + .label .radio {
+  cursor: not-allowed;
+  border-color: var(--disabled-border-color);
+}
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: 1em;
+  height: 1em;
+  background-color: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 2px;
+  transition: ease-out 0.12s;
+}
+
+.checkbox:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.75em;
+  height: 0.375em;
+  border-left: 0.125em solid var(--checkbox-before-border-color);
+  border-bottom: 0.125em solid var(--checkbox-before-border-color);
+  -webkit-transform: translate(-50%, -70%) rotate(-45deg);
+          transform: translate(-50%, -70%) rotate(-45deg);
+  transition: ease-out 0.12s;
+  opacity: 0;
+}
+
+.checkbox:focus {
+  border-color: var(--focus-darken);
+  box-shadow: 0 0 0 4px var(--focus-alpha-thin);
+  outline: none;
+}
+
 .input[type="checkbox"]:focus + .label .checkbox {
   border-color: var(--focus-darken);
   box-shadow: 0 0 0 4px var(--focus-alpha-thin);
   outline: none;
+}
+
+.checkbox.is-active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.checkbox.is-active:before {
+  opacity: 1;
 }
 
 .input[type="checkbox"]:checked + .label .checkbox {
@@ -2281,6 +2307,21 @@ iframe {
 
 .input[type="checkbox"]:checked + .label .checkbox:before {
   opacity: 1;
+}
+
+.checkbox.is-disabled {
+  cursor: not-allowed;
+  border-color: var(--disabled-border-color);
+}
+
+.input[type="checkbox"][disabled] + .label {
+  cursor: not-allowed;
+  color: var(--disabled-text-color);
+}
+
+.input[type="checkbox"][disabled] + .label .checkbox {
+  cursor: not-allowed;
+  border-color: var(--disabled-border-color);
 }
 
 .select {
