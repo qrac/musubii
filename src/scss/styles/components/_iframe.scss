@@ -1,53 +1,71 @@
 //----------------------------------------------------
-// Module: iframe
+// Components: iframe
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-iframe: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-iframe: true !default;
+
+// Selectors
+$selector-iframe-wrap: ".iframe-wrap" !default;
+$selector-iframe: ".iframe" !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-iframe {
-  @if $use-style-iframe == true {
+@mixin export-style-iframe() {
+  @if $option-mixin-mode == false and $option-style-iframe == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - iframe
 //----------------------------------------------------
 
-@include export-iframe {
-  .iframe-wrap {
-    position: relative;
-    display: block;
-    width: 100%;
-    &:before {
-      content: "";
-      display: block;
-    }
-    @each $key, $value in $pattern-iframe-aspect {
-      &.is-aspect-#{$key}:before {
-        padding-top: $value;
-      }
-    }
-    > .iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+@mixin musubii-style-iframe() {
+  display: block;
+}
+
+@include export-style-iframe() {
+  #{$selector-iframe} {
+    @include musubii-style-iframe();
   }
 }
 
-@include export-iframe {
-  .iframe {
+//----------------------------------------------------
+// / Style - iframe Wrap
+//----------------------------------------------------
+
+@mixin musubii-style-iframe-wrap() {
+  position: relative;
+  display: block;
+  width: 100%;
+  &:before {
+    content: "";
     display: block;
+  }
+  &.is-aspect-16x9 {
+    &:before {
+      padding-top: 9 / 16 * 100%;
+    }
+  }
+  > #{$selector-iframe} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@include export-style-iframe() {
+  #{$selector-iframe-wrap} {
+    @include musubii-style-iframe-wrap();
   }
 }
