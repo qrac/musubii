@@ -146,17 +146,58 @@ $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 // / Style - Form Input
 //----------------------------------------------------
 
-@mixin musubii-style-form-input($padding) {
+@mixin musubii-style-form-input() {
   position: relative;
   max-width: 100%;
   height: calc(#{$input-height} + (#{$input-border-width} * 2));
-  padding: $padding;
+  padding: $input-padding;
   background-color: $input-background-color;
   border: $input-border-width solid $input-border-color;
   border-radius: $input-border-radius;
   box-shadow: $input-shadow;
   color: $body-text-color;
   line-height: $input-line-height;
+  appearance: none;
+  transition: $input-transition;
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: $input-disabled-background-color;
+    box-shadow: $input-disabled-shadow;
+    color: $input-disabled-text-color;
+  }
+  &[readonly] {
+    background-color: $input-readonly-background-color;
+    border-color: $input-readonly-border-color;
+    box-shadow: $input-readonly-shadow;
+    color: $input-readonly-text-color;
+  }
+  &:focus,
+  &[readonly]:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-shadow;
+    outline: none;
+  }
+  &.is-success {
+    border-color: $input-success-border-color;
+  }
+  &.is-danger {
+    background-color: $input-danger-background-color;
+    border-color: $input-danger-border-color;
+  }
+  @include placeholder {
+    color: $input-placeholder-color;
+  }
+}
+
+@mixin musubii-style-form-textarea() {
+  position: relative;
+  max-width: 100%;
+  padding: $textarea-padding;
+  background-color: $input-background-color;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  box-shadow: $input-shadow;
+  color: $body-text-color;
   appearance: none;
   transition: $input-transition;
   &[disabled] {
@@ -203,11 +244,11 @@ $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
     &[type="week"],
     &[type="time"],
     &[type="number"] {
-      @include musubii-style-form-input($input-padding);
+      @include musubii-style-form-input();
     }
   }
   #{$selector-textarea} {
-    @include musubii-style-form-input($textarea-padding);
+    @include musubii-style-form-textarea();
   }
 }
 
