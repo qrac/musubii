@@ -1,59 +1,93 @@
 //----------------------------------------------------
-// Module: Icon
+// Components: Icon
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-icon: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-icon: true !default;
+
+// Selectors
+$selector-icon: ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons" !default;
+$selector-icon-svg: "svg.icon" !default;
+$selector-icon-material: ".material-icons" !default;
+
+// Icon Fit
+$icon-fit-width: 1em !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-icon {
-  @if $use-style-icon == true {
+@mixin export-style-icon() {
+  @if $option-mixin-mode == false and $option-style-icon == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Icon
 //----------------------------------------------------
 
-@include export-icon {
-  #{$icon-class} {
-    font-size: inherit;
-    line-height: inherit;
-  }
+@mixin musubii-style-icon() {
+  font-size: inherit;
+  line-height: inherit;
 }
 
-@include export-icon {
-  svg.icon {
-    display: inline-block;
-    flex: none;
-    width: 1em;
-    height: 1em;
-    vertical-align: text-bottom;
-  }
-}
-
-@include export-icon {
-  .material-icons {
-    vertical-align: bottom;
+@include export-style-icon() {
+  #{$selector-icon} {
+    @include musubii-style-icon();
   }
 }
 
 //----------------------------------------------------
-// / Fit
+// / Style - Icon SVG
 //----------------------------------------------------
 
-@include export-icon {
-  #{$icon-class} {
-    &.is-fit {
-      width: $icon-fit-width;
-      text-align: center;
-    }
+@mixin musubii-style-icon-svg() {
+  display: inline-block;
+  flex: none;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-bottom;
+}
+
+@include export-style-icon() {
+  #{$selector-icon-svg} {
+    @include musubii-style-icon-svg();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Icon Material
+//----------------------------------------------------
+
+@mixin musubii-style-icon-material() {
+  vertical-align: bottom;
+}
+
+@include export-style-icon() {
+  #{$selector-icon-material} {
+    @include musubii-style-icon-material();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Icon Fit
+//----------------------------------------------------
+
+@mixin musubii-style-icon-fit() {
+  &.is-fit {
+    width: $icon-fit-width;
+    text-align: center;
+  }
+}
+
+@include export-style-icon() {
+  #{$selector-icon} {
+    @include musubii-style-icon-fit();
   }
 }
