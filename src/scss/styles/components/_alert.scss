@@ -1,256 +1,453 @@
 //----------------------------------------------------
-// Module: Alert
+// Components: Alert
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-alert: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-alert: true !default;
+
+// Selectors
+$selector-alert: ".alert" !default;
+
+// Alert
+$alert-padding: 0.675em 0.875em !default;
+$alert-background-color: $convert-background-2 !default;
+$alert-border-width: $global-border-width !default;
+$alert-border-color: $convert-border !default;
+$alert-border-radius: $radius-xs !default;
+$alert-primary-background-color: $convert-alert-primary-background-color !default;
+$alert-primary-border-color: $convert-alert-primary-border-color !default;
+$alert-info-background-color: $convert-alert-info-background-color !default;
+$alert-info-border-color: $convert-alert-info-border-color !default;
+$alert-success-background-color: $convert-alert-success-background-color !default;
+$alert-success-border-color: $convert-alert-success-border-color !default;
+$alert-warning-background-color: $convert-alert-warning-background-color !default;
+$alert-warning-border-color: $convert-alert-warning-border-color !default;
+$alert-danger-background-color: $convert-alert-danger-background-color !default;
+$alert-danger-border-color: $convert-alert-danger-border-color !default;
+
+// Alert Tail
+$alert-tail-size: 0.5em !default;
+$alert-tail-position-end: 10% !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-alert {
-  @if $use-style-alert == true {
+@mixin export-style-alert() {
+  @if $option-mixin-mode == false and $option-style-alert == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Alert
 //----------------------------------------------------
 
-@include export-alert {
-  .alert {
-    position: relative;
-    padding: $alert-padding;
-    background-color: $alert-background-color;
-    border: $alert-border-width solid $alert-border-color;
-    border-radius: $alert-border-radius;
-    @each $key, $value in $pattern-alert {
-      &.is-#{$key} {
-        background-color: map-get($value, background-color);
-        border-color: map-get($value, border-color);
-      }
-    }
+@mixin musubii-style-alert() {
+  position: relative;
+  padding: $alert-padding;
+  background-color: $alert-background-color;
+  border: $alert-border-width solid $alert-border-color;
+  border-radius: $alert-border-radius;
+}
+
+@include export-style-alert() {
+  #{$selector-alert} {
+    @include musubii-style-alert();
   }
 }
 
 //----------------------------------------------------
-// / Tail
+// / Style - Alert Role
 //----------------------------------------------------
 
-@include export-alert {
-  .alert {
-    &[class*="is-tail-"] {
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-      }
+@mixin --is-alert-role($name, $bg-color, $border-color) {
+  &.is-#{$name} {
+    background-color: $bg-color;
+    border-color: $border-color;
+  }
+}
+
+@mixin musubii-style-alert-role() {
+  @include --is-alert-role(
+    primary,
+    $alert-primary-background-color,
+    $alert-primary-border-color
+  );
+  @include --is-alert-role(
+    info,
+    $alert-info-background-color,
+    $alert-info-border-color
+  );
+  @include --is-alert-role(
+    success,
+    $alert-success-background-color,
+    $alert-success-border-color
+  );
+  @include --is-alert-role(
+    warning,
+    $alert-warning-background-color,
+    $alert-warning-border-color
+  );
+  @include --is-alert-role(
+    danger,
+    $alert-danger-background-color,
+    $alert-danger-border-color
+  );
+}
+
+@include export-style-alert() {
+  #{$selector-alert} {
+    @include musubii-style-alert-role();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Alert Tail
+//----------------------------------------------------
+
+@mixin musubii-style-alert-tail() {
+  &[class*="is-tail-"] {
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
     }
-    @each $way in $pattern-alert-tail-way {
-      @if $way == "top" {
-        &.is-tail-top-left {
-          &:before,
-          &:after {
-            left: 10%;
-          }
-        }
-        &.is-tail-top-center {
-          &:before,
-          &:after {
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-        &.is-tail-top-right {
-          &:before,
-          &:after {
-            right: 10%;
-          }
-        }
-        &[class*="is-tail-top-"] {
-          &:before,
-          &:after {
-            border-left: $alert-tail-size solid transparent;
-            border-right: $alert-tail-size solid transparent;
-          }
-          &:before {
-            top: -$alert-tail-size;
-            border-bottom: $alert-tail-size solid $alert-border-color;
-          }
-          &:after {
-            top: calc(-#{$alert-tail-size} + #{$alert-border-width});
-            border-bottom: $alert-tail-size solid $alert-background-color;
-          }
-        }
-        @each $key, $value in $pattern-alert-tail {
-          &.is-#{$key}[class*="is-tail-top-"] {
-            &:before {
-              border-bottom: $alert-tail-size
-                solid
-                map-get($value, border-color);
-            }
-            &:after {
-              border-bottom: $alert-tail-size
-                solid
-                map-get($value, background-color);
-            }
-          }
-        }
-      }
-      @if $way == "right" {
-        &.is-tail-right-top {
-          &:before,
-          &:after {
-            top: 10%;
-          }
-        }
-        &.is-tail-right-middle {
-          &:before,
-          &:after {
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
-        &.is-tail-right-bottom {
-          &:before,
-          &:after {
-            bottom: 10%;
-          }
-        }
-        &[class*="is-tail-right-"] {
-          &:before,
-          &:after {
-            border-top: $alert-tail-size solid transparent;
-            border-bottom: $alert-tail-size solid transparent;
-          }
-          &:before {
-            right: -$alert-tail-size;
-            border-left: $alert-tail-size solid $alert-border-color;
-          }
-          &:after {
-            right: calc(-#{$alert-tail-size} + #{$alert-border-width});
-            border-left: $alert-tail-size solid $alert-background-color;
-          }
-        }
-        @each $key, $value in $pattern-alert-tail {
-          &.is-#{$key}[class*="is-tail-right-"] {
-            &:before {
-              border-left: $alert-tail-size solid map-get($value, border-color);
-            }
-            &:after {
-              border-left: $alert-tail-size
-                solid
-                map-get($value, background-color);
-            }
-          }
-        }
-      }
-      @if $way == "bottom" {
-        &.is-tail-bottom-left {
-          &:before,
-          &:after {
-            left: 10%;
-          }
-        }
-        &.is-tail-bottom-center {
-          &:before,
-          &:after {
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-        &.is-tail-bottom-right {
-          &:before,
-          &:after {
-            right: 10%;
-          }
-        }
-        &[class*="is-tail-bottom-"] {
-          &:before,
-          &:after {
-            border-left: $alert-tail-size solid transparent;
-            border-right: $alert-tail-size solid transparent;
-          }
-          &:before {
-            bottom: -$alert-tail-size;
-            border-top: $alert-tail-size solid $alert-border-color;
-          }
-          &:after {
-            bottom: calc(-#{$alert-tail-size} + #{$alert-border-width});
-            border-top: $alert-tail-size solid $alert-background-color;
-          }
-        }
-        @each $key, $value in $pattern-alert-tail {
-          &.is-#{$key}[class*="is-tail-bottom-"] {
-            &:before {
-              border-top: $alert-tail-size solid map-get($value, border-color);
-            }
-            &:after {
-              border-top: $alert-tail-size
-                solid
-                map-get($value, background-color);
-            }
-          }
-        }
-      }
-      @if $way == "left" {
-        &.is-tail-left-top {
-          &:before,
-          &:after {
-            top: 10%;
-          }
-        }
-        &.is-tail-left-middle {
-          &:before,
-          &:after {
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
-        &.is-tail-left-bottom {
-          &:before,
-          &:after {
-            bottom: 10%;
-          }
-        }
-        &[class*="is-tail-left-"] {
-          &:before,
-          &:after {
-            border-top: $alert-tail-size solid transparent;
-            border-bottom: $alert-tail-size solid transparent;
-          }
-          &:before {
-            left: -$alert-tail-size;
-            border-right: $alert-tail-size solid $alert-border-color;
-          }
-          &:after {
-            left: calc(-#{$alert-tail-size} + #{$alert-border-width});
-            border-right: $alert-tail-size solid $alert-background-color;
-          }
-        }
-        @each $key, $value in $pattern-alert-tail {
-          &.is-#{$key}[class*="is-tail-left-"] {
-            &:before {
-              border-right: $alert-tail-size
-                solid
-                map-get($value, border-color);
-            }
-            &:after {
-              border-right: $alert-tail-size
-                solid
-                map-get($value, background-color);
-            }
-          }
-        }
-      }
+  }
+}
+
+@include export-style-alert() {
+  #{$selector-alert} {
+    @include musubii-style-alert-tail();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Alert Tail Way
+//----------------------------------------------------
+
+@mixin musubii-style-alert-tail-top() {
+  &.is-tail-top-left {
+    &:before,
+    &:after {
+      left: $alert-tail-position-end;
     }
+  }
+  &.is-tail-top-center {
+    &:before,
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &.is-tail-top-right {
+    &:before,
+    &:after {
+      right: $alert-tail-position-end;
+    }
+  }
+  &[class*="is-tail-top-"] {
+    &:before,
+    &:after {
+      border-left: $alert-tail-size solid transparent;
+      border-right: $alert-tail-size solid transparent;
+    }
+    &:before {
+      top: -$alert-tail-size;
+      border-bottom: $alert-tail-size solid $alert-border-color;
+    }
+    &:after {
+      top: calc(-#{$alert-tail-size} + #{$alert-border-width});
+      border-bottom: $alert-tail-size solid $alert-background-color;
+    }
+  }
+}
+
+@mixin musubii-style-alert-tail-right() {
+  &.is-tail-right-top {
+    &:before,
+    &:after {
+      top: $alert-tail-position-end;
+    }
+  }
+  &.is-tail-right-middle {
+    &:before,
+    &:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &.is-tail-right-bottom {
+    &:before,
+    &:after {
+      bottom: $alert-tail-position-end;
+    }
+  }
+  &[class*="is-tail-right-"] {
+    &:before,
+    &:after {
+      border-top: $alert-tail-size solid transparent;
+      border-bottom: $alert-tail-size solid transparent;
+    }
+    &:before {
+      right: -$alert-tail-size;
+      border-left: $alert-tail-size solid $alert-border-color;
+    }
+    &:after {
+      right: calc(-#{$alert-tail-size} + #{$alert-border-width});
+      border-left: $alert-tail-size solid $alert-background-color;
+    }
+  }
+}
+
+@mixin musubii-style-alert-tail-bottom() {
+  &.is-tail-bottom-left {
+    &:before,
+    &:after {
+      left: $alert-tail-position-end;
+    }
+  }
+  &.is-tail-bottom-center {
+    &:before,
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &.is-tail-bottom-right {
+    &:before,
+    &:after {
+      right: $alert-tail-position-end;
+    }
+  }
+  &[class*="is-tail-bottom-"] {
+    &:before,
+    &:after {
+      border-left: $alert-tail-size solid transparent;
+      border-right: $alert-tail-size solid transparent;
+    }
+    &:before {
+      bottom: -$alert-tail-size;
+      border-top: $alert-tail-size solid $alert-border-color;
+    }
+    &:after {
+      bottom: calc(-#{$alert-tail-size} + #{$alert-border-width});
+      border-top: $alert-tail-size solid $alert-background-color;
+    }
+  }
+}
+
+@mixin musubii-style-alert-tail-left() {
+  &.is-tail-left-top {
+    &:before,
+    &:after {
+      top: $alert-tail-position-end;
+    }
+  }
+  &.is-tail-left-middle {
+    &:before,
+    &:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &.is-tail-left-bottom {
+    &:before,
+    &:after {
+      bottom: $alert-tail-position-end;
+    }
+  }
+  &[class*="is-tail-left-"] {
+    &:before,
+    &:after {
+      border-top: $alert-tail-size solid transparent;
+      border-bottom: $alert-tail-size solid transparent;
+    }
+    &:before {
+      left: -$alert-tail-size;
+      border-right: $alert-tail-size solid $alert-border-color;
+    }
+    &:after {
+      left: calc(-#{$alert-tail-size} + #{$alert-border-width});
+      border-right: $alert-tail-size solid $alert-background-color;
+    }
+  }
+}
+
+@mixin musubii-style-alert-tail-way() {
+  @include musubii-style-alert-tail-top();
+  @include musubii-style-alert-tail-right();
+  @include musubii-style-alert-tail-bottom();
+  @include musubii-style-alert-tail-left();
+}
+
+@include export-style-alert() {
+  #{$selector-alert} {
+    @include musubii-style-alert-tail-way();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Alert Tail Way Role
+//----------------------------------------------------
+
+@mixin --is-tail-top-alert-role($name, $bg-color, $border-color) {
+  &.is-#{$name}[class*="is-tail-top-"] {
+    &:before {
+      border-bottom-color: $border-color;
+    }
+    &:after {
+      border-bottom-color: $bg-color;
+    }
+  }
+}
+
+@mixin --is-tail-right-alert-role($name, $bg-color, $border-color) {
+  &.is-#{$name}[class*="is-tail-right-"] {
+    &:before {
+      border-left-color: $border-color;
+    }
+    &:after {
+      border-left-color: $bg-color;
+    }
+  }
+}
+
+@mixin --is-tail-bottom-alert-role($name, $bg-color, $border-color) {
+  &.is-#{$name}[class*="is-tail-bottom-"] {
+    &:before {
+      border-top-color: $border-color;
+    }
+    &:after {
+      border-top-color: $bg-color;
+    }
+  }
+}
+
+@mixin --is-tail-left-alert-role($name, $bg-color, $border-color) {
+  &.is-#{$name}[class*="is-tail-bottom-"] {
+    &:before {
+      border-right-color: $border-color;
+    }
+    &:after {
+      border-right-color: $bg-color;
+    }
+  }
+}
+
+@mixin musubii-style-alert-tail-way-role() {
+  @include --is-tail-top-alert-role(
+    primary,
+    $alert-primary-background-color,
+    $alert-primary-border-color
+  );
+  @include --is-tail-right-alert-role(
+    primary,
+    $alert-primary-background-color,
+    $alert-primary-border-color
+  );
+  @include --is-tail-bottom-alert-role(
+    primary,
+    $alert-primary-background-color,
+    $alert-primary-border-color
+  );
+  @include --is-tail-left-alert-role(
+    primary,
+    $alert-primary-background-color,
+    $alert-primary-border-color
+  );
+  @include --is-tail-top-alert-role(
+    info,
+    $alert-info-background-color,
+    $alert-info-border-color
+  );
+  @include --is-tail-right-alert-role(
+    info,
+    $alert-info-background-color,
+    $alert-info-border-color
+  );
+  @include --is-tail-bottom-alert-role(
+    info,
+    $alert-info-background-color,
+    $alert-info-border-color
+  );
+  @include --is-tail-left-alert-role(
+    info,
+    $alert-info-background-color,
+    $alert-info-border-color
+  );
+  @include --is-tail-top-alert-role(
+    success,
+    $alert-success-background-color,
+    $alert-success-border-color
+  );
+  @include --is-tail-right-alert-role(
+    success,
+    $alert-success-background-color,
+    $alert-success-border-color
+  );
+  @include --is-tail-bottom-alert-role(
+    success,
+    $alert-success-background-color,
+    $alert-success-border-color
+  );
+  @include --is-tail-left-alert-role(
+    success,
+    $alert-success-background-color,
+    $alert-success-border-color
+  );
+  @include --is-tail-top-alert-role(
+    warning,
+    $alert-warning-background-color,
+    $alert-warning-border-color
+  );
+  @include --is-tail-right-alert-role(
+    warning,
+    $alert-warning-background-color,
+    $alert-warning-border-color
+  );
+  @include --is-tail-bottom-alert-role(
+    warning,
+    $alert-warning-background-color,
+    $alert-warning-border-color
+  );
+  @include --is-tail-left-alert-role(
+    warning,
+    $alert-warning-background-color,
+    $alert-warning-border-color
+  );
+  @include --is-tail-top-alert-role(
+    danger,
+    $alert-danger-background-color,
+    $alert-danger-border-color
+  );
+  @include --is-tail-right-alert-role(
+    danger,
+    $alert-danger-background-color,
+    $alert-danger-border-color
+  );
+  @include --is-tail-bottom-alert-role(
+    danger,
+    $alert-danger-background-color,
+    $alert-danger-border-color
+  );
+  @include --is-tail-left-alert-role(
+    danger,
+    $alert-danger-background-color,
+    $alert-danger-border-color
+  );
+}
+
+@include export-style-alert() {
+  #{$selector-alert} {
+    @include musubii-style-alert-tail-way-role();
   }
 }
