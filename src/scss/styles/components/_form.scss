@@ -17,6 +17,8 @@ $selector-textarea: ".textarea" !default;
 $selector-radio: ".radio" !default;
 $selector-checkbox: ".checkbox" !default;
 $selector-label: ".label" !default;
+$selector-select-wrap: ".select" !default;
+$selector-select: "select" !default;
 
 // Modifiers
 $modifier-radio-active: ".is-active" !default;
@@ -749,14 +751,14 @@ $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 }
 
 //----------------------------------------------------
-// / Select
+// / Style - Form Select
 //----------------------------------------------------
 
-@include export-style-form() {
-  .select {
-    position: relative;
-    display: inline-flex;
-    > select {
+@mixin musubii-style-form-select() {
+  position: relative;
+  display: inline-flex;
+  > {
+    #{$selector-select} {
       cursor: pointer;
       flex: none;
       width: 100%;
@@ -791,37 +793,36 @@ $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
         display: none;
       }
     }
-    &:not(.is-multiple) {
-      &:after {
-        content: "";
-        pointer-events: none;
-        position: absolute;
-        top: 50%;
-        right: ($select-angle-size * 2);
-        width: $select-angle-size;
-        height: $select-angle-size;
-        border-bottom: $select-angle-border-width solid
-          $select-angle-border-color;
-        border-right: $select-angle-border-width solid
-          $select-angle-border-color;
-        transform: translateY(-70%) rotate(45deg);
-      }
-      > select {
+  }
+  &:not(.is-multiple) {
+    &:after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      right: ($select-angle-size * 2);
+      width: $select-angle-size;
+      height: $select-angle-size;
+      border-bottom: $select-angle-border-width solid $select-angle-border-color;
+      border-right: $select-angle-border-width solid $select-angle-border-color;
+      transform: translateY(-70%) rotate(45deg);
+    }
+    > {
+      #{$selector-select} {
         padding-right: ($select-angle-size * 5);
       }
     }
   }
-}
-
-@include export-style-form() {
-  .select {
-    &.is-success {
-      > select {
+  &.is-success {
+    > {
+      #{$selector-select} {
         border-color: $input-success-border-color;
       }
     }
-    &.is-danger {
-      > select {
+  }
+  &.is-danger {
+    > {
+      #{$selector-select} {
         background-color: $input-danger-background-color;
         border-color: $input-danger-border-color;
       }
@@ -830,13 +831,61 @@ $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 }
 
 @include export-style-form() {
-  .select {
-    @each $custom in $pattern-input-custom {
-      @if $custom == "round" {
-        &.is-round:not(.is-multiple) {
-          > select {
-            border-radius: $input-round-border-radius;
-          }
+  #{$selector-select-wrap} {
+    @include musubii-style-form-select();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Select Round
+//----------------------------------------------------
+
+@mixin musubii-style-form-select-round() {
+  &.is-round:not(.is-multiple) {
+    > {
+      #{$selector-select} {
+        border-radius: $input-round-border-radius;
+      }
+    }
+  }
+}
+
+@include export-style-form() {
+  #{$selector-select-wrap} {
+    @include musubii-style-form-select-round();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Select Plain
+//----------------------------------------------------
+
+@mixin musubii-style-form-select-plain() {
+  &.is-plain {
+    > {
+      #{$selector-select} {
+        background-color: $input-plain-background-color;
+        border: $input-border-width solid transparent;
+        &[disabled] {
+          background-color: $input-disabled-background-color;
+        }
+        &:focus,
+        &[readonly]:focus {
+          border-color: $input-focus-border-color;
+        }
+      }
+    }
+    &.is-success {
+      > {
+        #{$selector-select} {
+          background-color: $input-success-background-color;
+        }
+      }
+    }
+    &.is-danger {
+      > {
+        #{$selector-select} {
+          background-color: $input-danger-background-color;
         }
       }
     }
@@ -844,100 +893,48 @@ $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 }
 
 @include export-style-form() {
-  .select {
-    @each $style in $pattern-input-style {
-      @if $style == "plain" {
-        &.is-plain {
-          > select {
-            background-color: $input-plain-background-color;
-            border: $input-border-width solid transparent;
-            &[disabled] {
-              background-color: $input-disabled-background-color;
-            }
-            &:focus,
-            &[readonly]:focus {
-              border-color: $input-focus-border-color;
-            }
-          }
-          &.is-success {
-            > select {
-              background-color: $input-success-background-color;
-            }
-          }
-          &.is-danger {
-            > select {
-              background-color: $input-danger-background-color;
-            }
-          }
+  #{$selector-select-wrap} {
+    @include musubii-style-form-select-plain();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Select Underline
+//----------------------------------------------------
+
+@mixin musubii-style-form-select-underline() {
+  &.is-underline {
+    > {
+      #{$selector-select} {
+        padding-left: $input-underline-padding-left;
+        background-color: transparent;
+        border: none;
+        border-bottom: $input-underline-border-width solid
+          $input-underline-border-color;
+        border-radius: 0;
+        box-shadow: none;
+        &[disabled],
+        &[readonly] {
+          background-color: transparent;
+        }
+        &:focus,
+        &[readonly]:focus {
+          border-color: $input-focus-border-color;
+          box-shadow: none;
         }
       }
-      @if $style == "underline" {
-        &.is-underline {
-          > select {
-            padding-left: $input-underline-padding-left;
-            background-color: transparent;
-            border: none;
-            border-bottom: $input-underline-border-width
-              solid
-              $input-underline-border-color;
-            border-radius: 0;
-            box-shadow: none;
-            &[disabled],
-            &[readonly] {
-              background-color: transparent;
-            }
-            &:focus,
-            &[readonly]:focus {
-              border-color: $input-focus-border-color;
-              box-shadow: none;
-            }
-          }
-          &.is-success {
-            > select {
-              border-bottom-color: $input-success-border-color;
-            }
-          }
-          &.is-danger {
-            > select {
-              border-bottom-color: $input-danger-border-color;
-            }
-          }
+    }
+    &.is-success {
+      > {
+        #{$selector-select} {
+          border-bottom-color: $input-success-border-color;
         }
       }
-      @if $style == "inside" {
-        &.is-inside {
-          > select {
-            padding: $input-inside-padding;
-            background-color: transparent;
-            border-color: transparent;
-            border-radius: 0;
-            box-shadow: none;
-            &[disabled],
-            &[readonly] {
-              background-color: transparent;
-              border-color: transparent;
-            }
-            &:focus,
-            &[readonly]:focus {
-              border-color: transparent;
-              box-shadow: none;
-            }
-          }
-          &:not(.is-multiple) {
-            > select {
-              padding-right: ($select-angle-size * 5);
-            }
-          }
-          &.is-success {
-            > select {
-              background-color: $input-success-background-color;
-            }
-          }
-          &.is-danger {
-            > select {
-              background-color: $input-danger-background-color;
-            }
-          }
+    }
+    &.is-danger {
+      > {
+        #{$selector-select} {
+          border-bottom-color: $input-danger-border-color;
         }
       }
     }
@@ -945,12 +942,87 @@ $select-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha-thin !default;
 }
 
 @include export-style-form() {
-  .select.is-multiple > select {
-    height: auto;
-    padding: 0;
-    > option {
-      min-height: 1.5em;
-      padding: 0.5em 0.75em;
+  #{$selector-select-wrap} {
+    @include musubii-style-form-select-underline();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Select Inside
+//----------------------------------------------------
+
+@mixin musubii-style-form-select-inside() {
+  &.is-inside {
+    > {
+      #{$selector-select} {
+        padding: $input-inside-padding;
+        background-color: transparent;
+        border-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        &[disabled],
+        &[readonly] {
+          background-color: transparent;
+          border-color: transparent;
+        }
+        &:focus,
+        &[readonly]:focus {
+          border-color: transparent;
+          box-shadow: none;
+        }
+      }
     }
+    &:not(.is-multiple) {
+      > {
+        #{$selector-select} {
+          padding-right: ($select-angle-size * 5);
+        }
+      }
+    }
+    &.is-success {
+      > {
+        #{$selector-select} {
+          background-color: $input-success-background-color;
+        }
+      }
+    }
+    &.is-danger {
+      > {
+        #{$selector-select} {
+          background-color: $input-danger-background-color;
+        }
+      }
+    }
+  }
+}
+
+@include export-style-form() {
+  #{$selector-select-wrap} {
+    @include musubii-style-form-select-inside();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Form Select Multiple
+//----------------------------------------------------
+
+@mixin musubii-style-form-select-multiple() {
+  &.is-multiple {
+    > {
+      #{$selector-select} {
+        height: auto;
+        padding: 0;
+        > option {
+          min-height: 1.5em;
+          padding: 0.5em 0.75em;
+        }
+      }
+    }
+  }
+}
+
+@include export-style-form() {
+  #{$selector-select-wrap} {
+    @include musubii-style-form-select-multiple();
   }
 }
