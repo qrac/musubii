@@ -3058,39 +3058,9 @@ svg.icon {
   display: block;
 }
 
-.is-inline,
-.is-mobile-inline {
-  display: inline;
-}
-
-.is-inline-block,
-.is-mobile-inline-block {
-  display: inline-block;
-}
-
-.is-none,
-.is-mobile-none {
-  display: none;
-}
-
-.is-hidden {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-
 @media screen and (min-width: 576px) {
   .is-fablet-block {
     display: block;
-  }
-  .is-fablet-inline {
-    display: inline;
-  }
-  .is-fablet-inline-block {
-    display: inline-block;
-  }
-  .is-fablet-none {
-    display: none;
   }
 }
 
@@ -3098,29 +3068,11 @@ svg.icon {
   .is-tablet-block {
     display: block;
   }
-  .is-tablet-inline {
-    display: inline;
-  }
-  .is-tablet-inline-block {
-    display: inline-block;
-  }
-  .is-tablet-none {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 992px) {
   .is-desktop-block {
     display: block;
-  }
-  .is-desktop-inline {
-    display: inline;
-  }
-  .is-desktop-inline-block {
-    display: inline-block;
-  }
-  .is-desktop-none {
-    display: none;
   }
 }
 
@@ -3128,15 +3080,100 @@ svg.icon {
   .is-wide-block {
     display: block;
   }
+}
+
+.is-inline,
+.is-mobile-inline {
+  display: inline;
+}
+
+@media screen and (min-width: 576px) {
+  .is-fablet-inline {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .is-tablet-inline {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .is-desktop-inline {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-inline {
     display: inline;
   }
+}
+
+.is-inline-block,
+.is-mobile-inline-block {
+  display: inline-block;
+}
+
+@media screen and (min-width: 576px) {
+  .is-fablet-inline-block {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .is-tablet-inline-block {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .is-desktop-inline-block {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-inline-block {
     display: inline-block;
   }
+}
+
+.is-none,
+.is-mobile-none {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .is-fablet-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .is-tablet-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .is-desktop-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-none {
     display: none;
   }
+}
+
+.is-hidden,
+.is-mobile-hidden {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
 .is-xxl,

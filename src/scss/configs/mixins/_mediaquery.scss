@@ -291,13 +291,5 @@
     @include ie {
       @content;
     }
-  } @else if $mediaquery == "media-theme-light" {
-    @include media-theme-light {
-      @content;
-    }
-  } @else if $mediaquery == "media-theme-dark" {
-    @include media-theme-dark {
-      @content;
-    }
   }
 }
