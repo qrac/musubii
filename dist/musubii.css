@@ -3959,6 +3959,10 @@ svg.icon {
   margin: 4px;
 }
 
+.is-margin-auto {
+  margin: auto;
+}
+
 .is-margin-top-xxl {
   margin-top: 28px;
 }
@@ -3986,6 +3990,10 @@ svg.icon {
 
 .is-margin-top-xxs {
   margin-top: 4px;
+}
+
+.is-margin-top-auto {
+  margin-top: auto;
 }
 
 .is-margin-right-xxl {
@@ -4017,6 +4025,10 @@ svg.icon {
   margin-right: 4px;
 }
 
+.is-margin-right-auto {
+  margin-right: auto;
+}
+
 .is-margin-bottom-xxl {
   margin-bottom: 28px;
 }
@@ -4044,6 +4056,10 @@ svg.icon {
 
 .is-margin-bottom-xxs {
   margin-bottom: 4px;
+}
+
+.is-margin-bottom-auto {
+  margin-bottom: auto;
 }
 
 .is-margin-left-xxl {
@@ -4075,16 +4091,94 @@ svg.icon {
   margin-left: 4px;
 }
 
-.is-centering {
-  margin: 0 auto;
-}
-
-.is-margin-right-auto {
-  margin-right: auto;
-}
-
 .is-margin-left-auto {
   margin-left: auto;
+}
+
+.is-margin-top-bottom-xxl {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.is-margin-top-bottom-xl {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.is-margin-top-bottom-lg {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.is-margin-top-bottom,
+.is-margin-top-bottom-md {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.is-margin-top-bottom-sm {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.is-margin-top-bottom-xs {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.is-margin-top-bottom-xxs {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.is-margin-top-bottom-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.is-margin-right-left-xxl {
+  margin-right: 28px;
+  margin-left: 28px;
+}
+
+.is-margin-right-left-xl {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.is-margin-right-left-lg {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.is-margin-right-left,
+.is-margin-right-left-md {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.is-margin-right-left-sm {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.is-margin-right-left-xs {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.is-margin-right-left-xxs {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.is-margin-right-left-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.is-centering {
+  margin: 0 auto;
 }
 
 .is-padding-xxl {

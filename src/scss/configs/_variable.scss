@@ -1,34 +1,6 @@
 //----------------------------------------------------
 // Config: Variable
 //----------------------------------------------------
-
-//----------------------------------------------------
-// / Utility - Margin
-//----------------------------------------------------
-
-// Margin Size
-$margin-size-xxl: $space-xxl !default;
-$margin-size-xl: $space-xl !default;
-$margin-size-lg: $space-lg !default;
-$margin-size-md: $space-md !default;
-$margin-size-sm: $space-sm !default;
-$margin-size-xs: $space-xs !default;
-$margin-size-xxs: $space-xxs !default;
-
-// Pattern - Margin Size
-$pattern-margin-size: (
-  xxl: $margin-size-xxl,
-  xl: $margin-size-xl,
-  lg: $margin-size-lg,
-  md: $margin-size-md,
-  sm: $margin-size-sm,
-  xs: $margin-size-xs,
-  xxs: $margin-size-xxs
-) !default;
-
-// Pattern - Margin Way
-$pattern-margin-way: all, top, right, bottom, left !default;
-
 //----------------------------------------------------
 // / Utility - Padding
 //----------------------------------------------------

@@ -1,71 +1,200 @@
 //----------------------------------------------------
-// Utility: Margin
+// Utilities: Margin
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-margin: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-margin: true !default;
+
+// Margin Size
+$margin-size-xxl: $space-xxl !default;
+$margin-size-xl: $space-xl !default;
+$margin-size-lg: $space-lg !default;
+$margin-size-md: $space-md !default;
+$margin-size-sm: $space-sm !default;
+$margin-size-xs: $space-xs !default;
+$margin-size-xxs: $space-xxs !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-margin {
-  @if $use-style-margin == true {
+@mixin export-style-margin() {
+  @if $option-mixin-mode == false and $option-style-margin == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Add Margin
+// / Style - Margin
 //----------------------------------------------------
 
-@include export-margin {
-  @each $way in $pattern-margin-way {
-    @if $way == "all" {
-      @each $key, $value in $pattern-margin-size {
-        @if $key == "md" {
-          &.is-margin,
-          &.is-margin-#{$key} {
-            margin: $value;
-          }
-        } @else {
-          &.is-margin-#{$key} {
-            margin: $value;
-          }
-        }
-      }
-    } @else {
-      @each $key, $value in $pattern-margin-size {
-        @if $key == "md" {
-          &.is-margin-#{$way},
-          &.is-margin-#{$way}-#{$key} {
-            margin-#{$way}: $value;
-          }
-        } @else {
-          &.is-margin-#{$way}-#{$key} {
-            margin-#{$way}: $value;
-          }
-        }
-      }
+@mixin --is-margin($name, $value, $omit) {
+  @if $omit == true {
+    &.is-margin,
+    &.is-margin-#{$name} {
+      margin: $value;
+    }
+  } @else {
+    &.is-margin-#{$name} {
+      margin: $value;
     }
   }
 }
 
+@mixin musubii-style-margin() {
+  @include --is-margin(xxl, $margin-size-xxl, false);
+  @include --is-margin(xl, $margin-size-xl, false);
+  @include --is-margin(lg, $margin-size-lg, false);
+  @include --is-margin(md, $margin-size-md, true);
+  @include --is-margin(sm, $margin-size-sm, false);
+  @include --is-margin(xs, $margin-size-xs, false);
+  @include --is-margin(xxs, $margin-size-xxs, false);
+  @include --is-margin(auto, auto, false);
+}
+
+@include export-style-margin() {
+  @include musubii-style-margin();
+}
+
 //----------------------------------------------------
-// / Auto
+// / Style - Margin Way
 //----------------------------------------------------
 
-@include export-margin {
+@mixin --is-margin-way($way, $name, $value, $omit) {
+  @if $omit == true {
+    &.is-margin-#{$way},
+    &.is-margin-#{$way}-#{$name} {
+      margin-#{$way}: $value;
+    }
+  } @else {
+    &.is-margin-#{$way}-#{$name} {
+      margin-#{$way}: $value;
+    }
+  }
+}
+
+@mixin musubii-style-margin-way() {
+  @include --is-margin-way(top, xxl, $margin-size-xxl, false);
+  @include --is-margin-way(top, xl, $margin-size-xl, false);
+  @include --is-margin-way(top, lg, $margin-size-lg, false);
+  @include --is-margin-way(top, md, $margin-size-md, true);
+  @include --is-margin-way(top, sm, $margin-size-sm, false);
+  @include --is-margin-way(top, xs, $margin-size-xs, false);
+  @include --is-margin-way(top, xxs, $margin-size-xxs, false);
+  @include --is-margin-way(top, auto, auto, false);
+  @include --is-margin-way(right, xxl, $margin-size-xxl, false);
+  @include --is-margin-way(right, xl, $margin-size-xl, false);
+  @include --is-margin-way(right, lg, $margin-size-lg, false);
+  @include --is-margin-way(right, md, $margin-size-md, true);
+  @include --is-margin-way(right, sm, $margin-size-sm, false);
+  @include --is-margin-way(right, xs, $margin-size-xs, false);
+  @include --is-margin-way(right, xxs, $margin-size-xxs, false);
+  @include --is-margin-way(right, auto, auto, false);
+  @include --is-margin-way(bottom, xxl, $margin-size-xxl, false);
+  @include --is-margin-way(bottom, xl, $margin-size-xl, false);
+  @include --is-margin-way(bottom, lg, $margin-size-lg, false);
+  @include --is-margin-way(bottom, md, $margin-size-md, true);
+  @include --is-margin-way(bottom, sm, $margin-size-sm, false);
+  @include --is-margin-way(bottom, xs, $margin-size-xs, false);
+  @include --is-margin-way(bottom, xxs, $margin-size-xxs, false);
+  @include --is-margin-way(bottom, auto, auto, false);
+  @include --is-margin-way(left, xxl, $margin-size-xxl, false);
+  @include --is-margin-way(left, xl, $margin-size-xl, false);
+  @include --is-margin-way(left, lg, $margin-size-lg, false);
+  @include --is-margin-way(left, md, $margin-size-md, true);
+  @include --is-margin-way(left, sm, $margin-size-sm, false);
+  @include --is-margin-way(left, xs, $margin-size-xs, false);
+  @include --is-margin-way(left, xxs, $margin-size-xxs, false);
+  @include --is-margin-way(left, auto, auto, false);
+}
+
+@include export-style-margin() {
+  @include musubii-style-margin-way();
+}
+
+//----------------------------------------------------
+// / Style - Margin Vertical
+//----------------------------------------------------
+
+@mixin --is-margin-vertical($name, $value, $omit) {
+  @if $omit == true {
+    &.is-margin-top-bottom,
+    &.is-margin-top-bottom-#{$name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  } @else {
+    &.is-margin-top-bottom-#{$name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  }
+}
+
+@mixin musubii-style-margin-vertical() {
+  @include --is-margin-vertical(xxl, $margin-size-xxl, false);
+  @include --is-margin-vertical(xl, $margin-size-xl, false);
+  @include --is-margin-vertical(lg, $margin-size-lg, false);
+  @include --is-margin-vertical(md, $margin-size-md, true);
+  @include --is-margin-vertical(sm, $margin-size-sm, false);
+  @include --is-margin-vertical(xs, $margin-size-xs, false);
+  @include --is-margin-vertical(xxs, $margin-size-xxs, false);
+  @include --is-margin-vertical(auto, auto, false);
+}
+
+@include export-style-margin() {
+  @include musubii-style-margin-vertical();
+}
+
+//----------------------------------------------------
+// / Style - Margin Horizontal
+//----------------------------------------------------
+
+@mixin --is-margin-horizontal($name, $value, $omit) {
+  @if $omit == true {
+    &.is-margin-right-left,
+    &.is-margin-right-left-#{$name} {
+      margin-right: $value;
+      margin-left: $value;
+    }
+  } @else {
+    &.is-margin-right-left-#{$name} {
+      margin-right: $value;
+      margin-left: $value;
+    }
+  }
+}
+
+@mixin musubii-style-margin-horizontal() {
+  @include --is-margin-horizontal(xxl, $margin-size-xxl, false);
+  @include --is-margin-horizontal(xl, $margin-size-xl, false);
+  @include --is-margin-horizontal(lg, $margin-size-lg, false);
+  @include --is-margin-horizontal(md, $margin-size-md, true);
+  @include --is-margin-horizontal(sm, $margin-size-sm, false);
+  @include --is-margin-horizontal(xs, $margin-size-xs, false);
+  @include --is-margin-horizontal(xxs, $margin-size-xxs, false);
+  @include --is-margin-horizontal(auto, auto, false);
+}
+
+@include export-style-margin() {
+  @include musubii-style-margin-horizontal();
+}
+
+//----------------------------------------------------
+// / Style - Margin Centering
+//----------------------------------------------------
+
+@mixin musubii-style-margin-centering {
   .is-centering {
     margin: 0 auto;
   }
-  .is-margin-right-auto {
-    margin-right: auto;
-  }
-  .is-margin-left-auto {
-    margin-left: auto;
-  }
+}
+
+@include export-style-margin() {
+  @include musubii-style-margin-centering();
 }
