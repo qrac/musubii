@@ -1,42 +1,82 @@
 //----------------------------------------------------
-// Utility: Size
+// Utilities: Size
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-size: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-size: true !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-size {
-  @if $use-style-size == true {
+@mixin export-style-size() {
+  @if $option-mixin-mode == false and $option-style-size == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Responsive Size
+// / Style - Size
 //----------------------------------------------------
 
-@include export-size {
-  @each $mediaquery in $pattern-size-mediaquery {
-    @include mediaquery-pattern-select($mediaquery) {
-      @each $key-size, $value in $pattern-font-size {
-        @if $mediaquery == "mobile" {
-          .is-#{$key-size},
-          .is-#{$mediaquery}-#{$key-size} {
-            font-size: $value;
-          }
-        } @else {
-          .is-#{$mediaquery}-#{$key-size} {
-            font-size: $value;
-          }
-        }
+@mixin --is-size($mediaquery, $name, $value) {
+  @include mediaquery-pattern-select($mediaquery) {
+    @if $mediaquery == "mobile" {
+      .is-#{$name},
+      .is-#{$mediaquery}-#{$name} {
+        font-size: $value;
+      }
+    } @else {
+      .is-#{$mediaquery}-#{$name} {
+        font-size: $value;
       }
     }
   }
+}
+
+@mixin musubii-style-size() {
+  @include --is-size(mobile, xxl, $font-size-xxl);
+  @include --is-size(mobile, xl, $font-size-xl);
+  @include --is-size(mobile, lg, $font-size-lg);
+  @include --is-size(mobile, md, $font-size-md);
+  @include --is-size(mobile, sm, $font-size-sm);
+  @include --is-size(mobile, xs, $font-size-xs);
+  @include --is-size(mobile, xxs, $font-size-xxs);
+  @include --is-size(fablet, xxl, $font-size-xxl);
+  @include --is-size(fablet, xl, $font-size-xl);
+  @include --is-size(fablet, lg, $font-size-lg);
+  @include --is-size(fablet, md, $font-size-md);
+  @include --is-size(fablet, sm, $font-size-sm);
+  @include --is-size(fablet, xs, $font-size-xs);
+  @include --is-size(fablet, xxs, $font-size-xxs);
+  @include --is-size(tablet, xxl, $font-size-xxl);
+  @include --is-size(tablet, xl, $font-size-xl);
+  @include --is-size(tablet, lg, $font-size-lg);
+  @include --is-size(tablet, md, $font-size-md);
+  @include --is-size(tablet, sm, $font-size-sm);
+  @include --is-size(tablet, xs, $font-size-xs);
+  @include --is-size(tablet, xxs, $font-size-xxs);
+  @include --is-size(desktop, xxl, $font-size-xxl);
+  @include --is-size(desktop, xl, $font-size-xl);
+  @include --is-size(desktop, lg, $font-size-lg);
+  @include --is-size(desktop, md, $font-size-md);
+  @include --is-size(desktop, sm, $font-size-sm);
+  @include --is-size(desktop, xs, $font-size-xs);
+  @include --is-size(desktop, xxs, $font-size-xxs);
+  @include --is-size(wide, xxl, $font-size-xxl);
+  @include --is-size(wide, xl, $font-size-xl);
+  @include --is-size(wide, lg, $font-size-lg);
+  @include --is-size(wide, md, $font-size-md);
+  @include --is-size(wide, sm, $font-size-sm);
+  @include --is-size(wide, xs, $font-size-xs);
+  @include --is-size(wide, xxs, $font-size-xxs);
+}
+
+@include export-style-size() {
+  @include musubii-style-size();
 }

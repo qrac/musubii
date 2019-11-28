@@ -3215,21 +3215,39 @@ svg.icon {
   .is-fablet-xxl {
     font-size: 200%;
   }
+}
+
+@media screen and (min-width: 576px) {
   .is-fablet-xl {
     font-size: 150%;
   }
+}
+
+@media screen and (min-width: 576px) {
   .is-fablet-lg {
     font-size: 125%;
   }
+}
+
+@media screen and (min-width: 576px) {
   .is-fablet-md {
     font-size: 100%;
   }
+}
+
+@media screen and (min-width: 576px) {
   .is-fablet-sm {
     font-size: 87.5%;
   }
+}
+
+@media screen and (min-width: 576px) {
   .is-fablet-xs {
     font-size: 75%;
   }
+}
+
+@media screen and (min-width: 576px) {
   .is-fablet-xxs {
     font-size: 62.5%;
   }
@@ -3239,21 +3257,39 @@ svg.icon {
   .is-tablet-xxl {
     font-size: 200%;
   }
+}
+
+@media screen and (min-width: 768px) {
   .is-tablet-xl {
     font-size: 150%;
   }
+}
+
+@media screen and (min-width: 768px) {
   .is-tablet-lg {
     font-size: 125%;
   }
+}
+
+@media screen and (min-width: 768px) {
   .is-tablet-md {
     font-size: 100%;
   }
+}
+
+@media screen and (min-width: 768px) {
   .is-tablet-sm {
     font-size: 87.5%;
   }
+}
+
+@media screen and (min-width: 768px) {
   .is-tablet-xs {
     font-size: 75%;
   }
+}
+
+@media screen and (min-width: 768px) {
   .is-tablet-xxs {
     font-size: 62.5%;
   }
@@ -3263,21 +3299,39 @@ svg.icon {
   .is-desktop-xxl {
     font-size: 200%;
   }
+}
+
+@media screen and (min-width: 992px) {
   .is-desktop-xl {
     font-size: 150%;
   }
+}
+
+@media screen and (min-width: 992px) {
   .is-desktop-lg {
     font-size: 125%;
   }
+}
+
+@media screen and (min-width: 992px) {
   .is-desktop-md {
     font-size: 100%;
   }
+}
+
+@media screen and (min-width: 992px) {
   .is-desktop-sm {
     font-size: 87.5%;
   }
+}
+
+@media screen and (min-width: 992px) {
   .is-desktop-xs {
     font-size: 75%;
   }
+}
+
+@media screen and (min-width: 992px) {
   .is-desktop-xxs {
     font-size: 62.5%;
   }
@@ -3287,21 +3341,39 @@ svg.icon {
   .is-wide-xxl {
     font-size: 200%;
   }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-xl {
     font-size: 150%;
   }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-lg {
     font-size: 125%;
   }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-md {
     font-size: 100%;
   }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-sm {
     font-size: 87.5%;
   }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-xs {
     font-size: 75%;
   }
+}
+
+@media screen and (min-width: 1200px) {
   .is-wide-xxs {
     font-size: 62.5%;
   }
