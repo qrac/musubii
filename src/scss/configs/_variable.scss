@@ -1,39 +1,6 @@
 //----------------------------------------------------
 // Config: Variable
 //----------------------------------------------------
-//----------------------------------------------------
-// / Utility - Flex
-//----------------------------------------------------
-
-// Pattern - Flex Media Query
-$pattern-flex-mediaquery: mobile, fablet, tablet, desktop, wide !default;
-
-//----------------------------------------------------
-// / Utility - Space
-//----------------------------------------------------
-
-// Space Size
-$space-size-xxl: $space-xxl !default;
-$space-size-xl: $space-xl !default;
-$space-size-lg: $space-lg !default;
-$space-size-md: $space-md !default;
-$space-size-sm: $space-sm !default;
-$space-size-xs: $space-xs !default;
-$space-size-xxs: $space-xxs !default;
-
-// Pattern - Space Size
-$pattern-space-size: (
-  xxl: $space-size-xxl,
-  xl: $space-size-xl,
-  lg: $space-size-lg,
-  md: $space-size-md,
-  sm: $space-size-sm,
-  xs: $space-size-xs,
-  xxs: $space-size-xxs
-) !default;
-
-// Pattern - Space Way
-$pattern-space-way: default, row, column !default;
 
 //----------------------------------------------------
 // / Utility - Margin

@@ -1,84 +1,139 @@
 //----------------------------------------------------
-// Utility: Space
+// Utilities: Space
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-space: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-space: true !default;
+
+// Space Size
+$space-size-xxl: $space-xxl !default;
+$space-size-xl: $space-xl !default;
+$space-size-lg: $space-lg !default;
+$space-size-md: $space-md !default;
+$space-size-sm: $space-sm !default;
+$space-size-xs: $space-xs !default;
+$space-size-xxs: $space-xxs !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-space {
-  @if $use-style-space == true {
+@mixin export-style-space() {
+  @if $option-mixin-mode == false and $option-style-space == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Add Space
+// / Style - Space
 //----------------------------------------------------
 
-@include export-space {
-  @each $way in $pattern-space-way {
-    @if $way == "default" {
-      @each $key, $value in $pattern-space-size {
-        @if $key == "md" {
-          .is-space,
-          .is-space-#{$key} {
-            > *:not(:first-child) {
-              margin-top: $value;
-            }
-          }
-        } @else {
-          .is-space-#{$key} {
-            > *:not(:first-child) {
-              margin-top: $value;
-            }
-          }
-        }
+@mixin --is-space($name, $value, $omit) {
+  @if $omit == true {
+    .is-space,
+    .is-space-#{$name} {
+      > *:not(:first-child) {
+        margin-top: $value;
       }
-    } @else if $way == "row" {
-      @each $key, $value in $pattern-space-size {
-        @if $key == "md" {
-          .is-space-row,
-          .is-space-row-#{$key} {
-            margin-bottom: -$value;
-            > * {
-              margin-bottom: $value;
-            }
-          }
-        } @else {
-          .is-space-row-#{$key} {
-            margin-bottom: -$value;
-            > * {
-              margin-bottom: $value;
-            }
-          }
-        }
-      }
-    } @else if $way == "column" {
-      @each $key, $value in $pattern-space-size {
-        @if $key == "md" {
-          .is-space-column,
-          .is-space-column-#{$key} {
-            margin-left: -$value;
-            > * {
-              margin-left: $value;
-            }
-          }
-        } @else {
-          .is-space-column-#{$key} {
-            margin-left: -$value;
-            > * {
-              margin-left: $value;
-            }
-          }
-        }
+    }
+  } @else {
+    .is-space-#{$name} {
+      > *:not(:first-child) {
+        margin-top: $value;
       }
     }
   }
+}
+
+@mixin musubii-style-space() {
+  @include --is-space(xxl, $space-size-xxl, false);
+  @include --is-space(xl, $space-size-xl, false);
+  @include --is-space(lg, $space-size-lg, false);
+  @include --is-space(md, $space-size-md, true);
+  @include --is-space(sm, $space-size-sm, false);
+  @include --is-space(xs, $space-size-xs, false);
+  @include --is-space(xxs, $space-size-xxs, false);
+}
+
+@include export-style-space() {
+  @include musubii-style-space();
+}
+
+//----------------------------------------------------
+// / Style - Space Row
+//----------------------------------------------------
+
+@mixin --is-space-row($name, $value, $omit) {
+  @if $omit == true {
+    .is-space-row,
+    .is-space-row-#{$name} {
+      margin-bottom: -$value;
+      > * {
+        margin-bottom: $value;
+      }
+    }
+  } @else {
+    .is-space-row-#{$name} {
+      margin-bottom: -$value;
+      > * {
+        margin-bottom: $value;
+      }
+    }
+  }
+}
+
+@mixin musubii-style-space-row() {
+  @include --is-space-row(xxl, $space-size-xxl, false);
+  @include --is-space-row(xl, $space-size-xl, false);
+  @include --is-space-row(lg, $space-size-lg, false);
+  @include --is-space-row(md, $space-size-md, true);
+  @include --is-space-row(sm, $space-size-sm, false);
+  @include --is-space-row(xs, $space-size-xs, false);
+  @include --is-space-row(xxs, $space-size-xxs, false);
+}
+
+@include export-style-space() {
+  @include musubii-style-space-row();
+}
+
+//----------------------------------------------------
+// / Style - Space Column
+//----------------------------------------------------
+
+@mixin --is-space-column($name, $value, $omit) {
+  @if $omit == true {
+    .is-space-column,
+    .is-space-column-#{$name} {
+      margin-left: -$value;
+      > * {
+        margin-left: $value;
+      }
+    }
+  } @else {
+    .is-space-column-#{$name} {
+      margin-left: -$value;
+      > * {
+        margin-left: $value;
+      }
+    }
+  }
+}
+
+@mixin musubii-style-space-column() {
+  @include --is-space-column(xxl, $space-size-xxl, false);
+  @include --is-space-column(xl, $space-size-xl, false);
+  @include --is-space-column(lg, $space-size-lg, false);
+  @include --is-space-column(md, $space-size-md, true);
+  @include --is-space-column(sm, $space-size-sm, false);
+  @include --is-space-column(xs, $space-size-xs, false);
+  @include --is-space-column(xxs, $space-size-xxs, false);
+}
+
+@include export-style-space() {
+  @include musubii-style-space-column();
 }
