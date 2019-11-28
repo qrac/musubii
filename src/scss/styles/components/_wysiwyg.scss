@@ -1,130 +1,194 @@
 //----------------------------------------------------
-// Module: WYSIWYG
+// Components: WYSIWYG
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-wysiwyg: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-wysiwyg: true !default;
+
+// Selectors
+$selector-wysiwyg: ".wysiwyg" !default;
+
+// WYSIWYG Heading
+$wysiwyg-heading-font-weight: $font-weight-strong !default;
+$wysiwyg-h1-font-size: $font-size-xxl !default;
+$wysiwyg-h2-font-size: $font-size-xl !default;
+$wysiwyg-h3-font-size: $font-size-lg !default;
+$wysiwyg-h4-font-size: $font-size-md !default;
+$wysiwyg-h5-font-size: $font-size-sm !default;
+$wysiwyg-h6-font-size: $font-size-xs !default;
+
+// WYSIWYG Text
+$wysiwyg-text-line-height: $line-height-xl !default;
+
+// WYSIWYG Small
+$wysiwyg-small-font-size: $font-size-sm !default;
+
+// WYSIWYG Strong
+$wysiwyg-strong-font-weight: $font-weight-strong !default;
+
+// WYSIWYG Link
+$wysiwyg-link-text-color: $convert-primary-strong !default;
+
+// WYSIWYG Table
+$wysiwyg-table-th-font-weight: $font-weight-normal !default;
+
+// WYSIWYG HR
+$wysiwyg-hr-border-width: $global-border-width !default;
+$wysiwyg-hr-border-style: solid !default;
+$wysiwyg-hr-border-color: $convert-border !default;
+
+// WYSIWYG Figure
+$wysiwyg-figure-text-align: center !default;
+$wysiwyg-figcaption-margin-top: $space-sm !default;
+$wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-wysiwyg {
-  @if $use-style-wysiwyg == true {
+@mixin export-style-wysiwyg() {
+  @if $option-mixin-mode == false and $option-style-wysiwyg == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Heading
+// / Style - WYSIWYG Heading
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-weight: $wysiwyg-heading-font-weight;
-    }
-    h1 {
-      font-size: $wysiwyg-h1-font-size;
-    }
-    h2 {
-      font-size: $wysiwyg-h2-font-size;
-    }
-    h3 {
-      font-size: $wysiwyg-h3-font-size;
-    }
-    h4 {
-      font-size: $wysiwyg-h4-font-size;
-    }
-    h5 {
-      font-size: $wysiwyg-h5-font-size;
-    }
-    h6 {
-      font-size: $wysiwyg-h6-font-size;
-    }
+@mixin musubii-style-wysiwyg-heading() {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $wysiwyg-heading-font-weight;
+  }
+  h1 {
+    font-size: $wysiwyg-h1-font-size;
+  }
+  h2 {
+    font-size: $wysiwyg-h2-font-size;
+  }
+  h3 {
+    font-size: $wysiwyg-h3-font-size;
+  }
+  h4 {
+    font-size: $wysiwyg-h4-font-size;
+  }
+  h5 {
+    font-size: $wysiwyg-h5-font-size;
+  }
+  h6 {
+    font-size: $wysiwyg-h6-font-size;
+  }
+}
+
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-heading();
   }
 }
 
 //----------------------------------------------------
-// / Text
+// / Style - WYSIWYG Text
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg {
-    p {
-      line-height: $wysiwyg-text-line-height;
-    }
-    small {
-      font-size: $wysiwyg-small-font-size;
-    }
-    strong {
-      font-weight: $wysiwyg-strong-font-weight;
-    }
-    em {
-      font-style: italic;
-    }
-    del,
-    s {
-      text-decoration: line-through;
-    }
+@mixin musubii-style-wysiwyg-text() {
+  p {
+    line-height: $wysiwyg-text-line-height;
+  }
+  small {
+    font-size: $wysiwyg-small-font-size;
+  }
+  strong {
+    font-weight: $wysiwyg-strong-font-weight;
+  }
+  em {
+    font-style: italic;
+  }
+  del,
+  s {
+    text-decoration: line-through;
+  }
+}
+
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-text();
   }
 }
 
 //----------------------------------------------------
-// / Link
+// / Style - WYSIWYG Text Link
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg {
-    a {
-      cursor: pointer;
-      color: $wysiwyg-link-text-color;
-      @if $text-link-border-change-underline == true {
-        text-decoration: underline;
-        &:hover {
-          text-decoration: none;
-        }
-      } @else {
-        border-bottom: $text-link-border-bottom-width
-          $text-link-border-bottom-style
-          currentColor;
-        &:hover,
-        &:active {
-          border-bottom-color: transparent;
-        }
-      }
-    }
-    &.is-link-reverse a {
-      @if $text-link-border-change-underline == true {
+@mixin musubii-style-wysiwyg-text-link() {
+  a {
+    cursor: pointer;
+    color: $wysiwyg-link-text-color;
+    @if $text-link-border-change-underline == true {
+      text-decoration: underline;
+      &:hover {
         text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      } @else {
+      }
+    } @else {
+      border-bottom: $text-link-border-bottom-width
+        $text-link-border-bottom-style
+        currentColor;
+      &:hover,
+      &:active {
         border-bottom-color: transparent;
-        &:hover,
-        &:active {
-          border-bottom-color: currentColor;
-        }
       }
     }
   }
 }
 
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-text-link();
+  }
+}
+
 //----------------------------------------------------
-// / Blockquote
+// / Style - WYSIWYG Text Link Reverse
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg blockquote {
+@mixin musubii-style-wysiwyg-text-link-reverse() {
+  &.is-link-reverse a {
+    @if $text-link-border-change-underline == true {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    } @else {
+      border-bottom-color: transparent;
+      &:hover,
+      &:active {
+        border-bottom-color: currentColor;
+      }
+    }
+  }
+}
+
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-text-link-reverse();
+  }
+}
+
+//----------------------------------------------------
+// / Style - WYSIWYG Text Blockquote
+//----------------------------------------------------
+
+@mixin musubii-style-wysiwyg-text-blockquote() {
+  blockquote {
     background-color: $blockquote-background-color;
     border-left: $blockquote-border-left-width solid
       $blockquote-border-left-color;
@@ -133,12 +197,18 @@ $use-style-wysiwyg: true !default;
   }
 }
 
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-text-blockquote();
+  }
+}
+
 //----------------------------------------------------
-// / Code
+// / Style - WYSIWYG Text Code
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg :not(pre) {
+@mixin musubii-style-wysiwyg-text-code() {
+  :not(pre) {
     > code {
       padding: $code-padding;
       background-color: $code-background-color;
@@ -151,8 +221,18 @@ $use-style-wysiwyg: true !default;
   }
 }
 
-@include export-wysiwyg {
-  .wysiwyg pre {
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-text-code();
+  }
+}
+
+//----------------------------------------------------
+// / Style - WYSIWYG Text Pre
+//----------------------------------------------------
+
+@mixin musubii-style-wysiwyg-text-pre() {
+  pre {
     background-color: $pre-background-color;
     border-radius: $pre-border-radius;
     color: $pre-text-color;
@@ -169,13 +249,19 @@ $use-style-wysiwyg: true !default;
   }
 }
 
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-text-pre();
+  }
+}
+
 //----------------------------------------------------
-// / List
+// / Style - WYSIWYG List
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg ul,
-  .wysiwyg ol {
+@mixin musubii-style-wysiwyg-list() {
+  ul,
+  ol {
     line-height: $wysiwyg-text-line-height;
     margin-left: $list-margin-left;
     > li {
@@ -185,26 +271,26 @@ $use-style-wysiwyg: true !default;
       font-size: 100%;
     }
   }
-}
-
-@include export-wysiwyg {
-  .wysiwyg ul > li {
+  ul > li {
     list-style: circle outside;
   }
-}
-
-@include export-wysiwyg {
-  .wysiwyg ol > li {
+  ol > li {
     list-style: decimal outside;
   }
 }
 
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-list();
+  }
+}
+
 //----------------------------------------------------
-// / Table
+// / Style - WYSIWYG Table
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg table {
+@mixin musubii-style-wysiwyg-table() {
+  table {
     width: 100%;
     background-color: $table-background-color;
     th {
@@ -220,53 +306,63 @@ $use-style-wysiwyg: true !default;
   }
 }
 
-//----------------------------------------------------
-// / Definition List
-//----------------------------------------------------
-
-@include export-wysiwyg {
-  .wysiwyg {
-    dl {
-      width: 100%;
-      background-color: $table-background-color;
-      border: $table-border-width solid $table-border-color;
-      border-top: none;
-    }
-    dt {
-      width: 100%;
-      padding: $table-padding;
-      background-color: $table-paint-background-color;
-      border-top: $table-border-width solid $table-border-color;
-      color: $table-paint-text-color;
-      font-weight: $wysiwyg-table-th-font-weight;
-    }
-    dd {
-      width: 100%;
-      padding: $table-padding;
-      border-top: $table-border-width solid $table-border-color;
-    }
-    @include fablet {
-      dl {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      dt {
-        width: 30%;
-      }
-      dd {
-        width: 70%;
-        border-left: $table-border-width solid $table-border-color;
-      }
-    }
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-table();
   }
 }
 
 //----------------------------------------------------
-// / HR
+// / Style - WYSIWYG Definition List
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg hr {
+@mixin musubii-style-wysiwyg-dl() {
+  dl {
+    width: 100%;
+    background-color: $table-background-color;
+    border: $table-border-width solid $table-border-color;
+    border-top: none;
+  }
+  dt {
+    width: 100%;
+    padding: $table-padding;
+    background-color: $table-paint-background-color;
+    border-top: $table-border-width solid $table-border-color;
+    color: $table-paint-text-color;
+    font-weight: $wysiwyg-table-th-font-weight;
+  }
+  dd {
+    width: 100%;
+    padding: $table-padding;
+    border-top: $table-border-width solid $table-border-color;
+  }
+  @include fablet {
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    dt {
+      width: 30%;
+    }
+    dd {
+      width: 70%;
+      border-left: $table-border-width solid $table-border-color;
+    }
+  }
+}
+
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-dl();
+  }
+}
+
+//----------------------------------------------------
+// / Style - WYSIWYG HR
+//----------------------------------------------------
+
+@mixin musubii-style-wysiwyg-hr() {
+  hr {
     height: 0;
     margin: 0;
     padding: 0;
@@ -276,16 +372,28 @@ $use-style-wysiwyg: true !default;
   }
 }
 
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-hr();
+  }
+}
+
 //----------------------------------------------------
-// / Figure
+// / Style - WYSIWYG Figure
 //----------------------------------------------------
 
-@include export-wysiwyg {
-  .wysiwyg figure {
+@mixin musubii-style-wysiwyg-figure() {
+  figure {
     text-align: $wysiwyg-figure-text-align;
     > figcaption {
       margin-top: $wysiwyg-figcaption-margin-top;
       font-size: $wysiwyg-figcaption-font-size;
     }
+  }
+}
+
+@include export-style-wysiwyg() {
+  #{$selector-wysiwyg} {
+    @include musubii-style-wysiwyg-figure();
   }
 }
