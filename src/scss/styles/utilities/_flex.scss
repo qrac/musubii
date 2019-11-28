@@ -1,54 +1,129 @@
 //----------------------------------------------------
-// Utility: Flex
+// Utilities: Flex
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-flex: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-flex: true !default;
 
-// Grid Split
-$grid-split: 12 !default;
+// Flex Split
+$flex-split: 12 !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-flex {
-  @if $use-style-flex == true {
+@mixin export-style-flex() {
+  @if $option-mixin-mode == false and $option-style-flex == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Responsive Flex
+// / Style - Flex Split
 //----------------------------------------------------
 
-@include export-flex {
-  @each $mediaquery in $pattern-flex-mediaquery {
-    @include mediaquery-pattern-select($mediaquery) {
-      @for $i from 0 through $grid-split {
-        @if $i == 0 {
-          .is-#{$mediaquery}-#{$i} {
-            flex: 1 0 0%;
-          }
-        } @else {
-          .is-#{$mediaquery}-#{$i} {
-            flex: 0 0 100% / $grid-split * $i;
-            width: 100% / $grid-split * $i;
-            max-width: 100% / $grid-split * $i;
-          }
+@mixin --is-flex-split($mediaquery) {
+  @include mediaquery-pattern-select($mediaquery) {
+    @for $i from 0 through $flex-split {
+      @if $i == 0 {
+        .is-#{$mediaquery}-#{$i} {
+          flex: 1 0 0%;
         }
-      }
-      .is-#{$mediaquery}-full {
-        flex: 0 1 100%;
-        width: 100%;
-      }
-      .is-#{$mediaquery}-auto {
-        flex: 0 1 auto;
-        width: auto;
+      } @else {
+        .is-#{$mediaquery}-#{$i} {
+          flex: 0 0 100% / $flex-split * $i;
+          width: 100% / $flex-split * $i;
+          max-width: 100% / $flex-split * $i;
+        }
       }
     }
   }
+}
+
+@mixin musubii-style-flex-split() {
+  @include --is-flex-split(mobile);
+  @include --is-flex-split(fablet);
+  @include --is-flex-split(tablet);
+  @include --is-flex-split(desktop);
+  @include --is-flex-split(wide);
+}
+
+@include export-style-flex() {
+  @include musubii-style-flex-split();
+}
+
+//----------------------------------------------------
+// / Style - Flex Full
+//----------------------------------------------------
+
+@mixin --is-flex-full($mediaquery) {
+  @include mediaquery-pattern-select($mediaquery) {
+    .is-#{$mediaquery}-full {
+      flex: 0 1 100%;
+      width: 100%;
+    }
+  }
+}
+
+@mixin musubii-style-flex-full() {
+  @include --is-flex-full(mobile);
+  @include --is-flex-full(fablet);
+  @include --is-flex-full(tablet);
+  @include --is-flex-full(desktop);
+  @include --is-flex-full(wide);
+}
+
+@include export-style-flex() {
+  @include musubii-style-flex-full();
+}
+
+//----------------------------------------------------
+// / Style - Flex Auto
+//----------------------------------------------------
+
+@mixin --is-flex-auto($mediaquery) {
+  @include mediaquery-pattern-select($mediaquery) {
+    .is-#{$mediaquery}-auto {
+      flex: 0 1 auto;
+      width: auto;
+    }
+  }
+}
+
+@mixin musubii-style-flex-auto() {
+  @include --is-flex-auto(mobile);
+  @include --is-flex-auto(fablet);
+  @include --is-flex-auto(tablet);
+  @include --is-flex-auto(desktop);
+  @include --is-flex-auto(wide);
+}
+
+@include export-style-flex() {
+  @include musubii-style-flex-auto();
+}
+
+//----------------------------------------------------
+// / Style - Flex Width
+//----------------------------------------------------
+
+@mixin --is-flex-width($mediaquery, $width) {
+  @include mediaquery-pattern-select($mediaquery) {
+    .is-#{$mediaquery}-#{$width} {
+      flex: 0 1 $width;
+      width: $width;
+    }
+  }
+}
+
+@mixin musubii-style-flex-width() {
+  //@include --is-flex-width(mobile, 5em); // Example
+}
+
+@include export-style-flex() {
+  @include musubii-style-flex-width();
 }
