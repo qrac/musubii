@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Utilities: Overflow
+// Utilities: Ellipsis
 //----------------------------------------------------
 
 //----------------------------------------------------
@@ -8,28 +8,30 @@
 
 // Option
 $option-mixin-mode: false !default;
-$option-style-overflow: true !default;
+$option-style-ellipsis: true !default;
 
 //----------------------------------------------------
 // / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-style-overflow() {
-  @if $option-mixin-mode == false and $option-style-overflow == true {
+@mixin export-style-ellipsis() {
+  @if $option-mixin-mode == false and $option-style-ellipsis == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Style - Overflow
+// / Style - Ellipsis
 //----------------------------------------------------
 
-@mixin musubii-style-overflow() {
-  .is-overflow-hidden {
+@mixin musubii-style-ellipsis() {
+  .is-ellipsis {
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
-@include export-style-overflow() {
-  @include musubii-style-overflow();
+@include export-style-ellipsis() {
+  @include musubii-style-ellipsis();
 }

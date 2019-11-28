@@ -1,31 +1,37 @@
 //----------------------------------------------------
-// Utility: Clearfix
+// Utilities: Clearfix
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
+// / Variables (Default)
 //----------------------------------------------------
 
-$use-style-clearfix: true !default;
+// Option
+$option-mixin-mode: false !default;
+$option-style-clearfix: true !default;
 
 //----------------------------------------------------
-// / Export Setting
+// / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-clearfix {
-  @if $use-style-clearfix == true {
+@mixin export-style-clearfix() {
+  @if $option-mixin-mode == false and $option-style-clearfix == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Basic
+// / Style - Clearfix
 //----------------------------------------------------
 
-@include export-clearfix {
+@mixin musubii-style-clearfix() {
   .is-clearfix:after {
     content: "";
     display: block;
     clear: both;
   }
+}
+
+@include export-style-clearfix() {
+  @include musubii-style-clearfix();
 }

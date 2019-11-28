@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Utilities: Overflow
+// Utilities: Scroll
 //----------------------------------------------------
 
 //----------------------------------------------------
@@ -8,28 +8,35 @@
 
 // Option
 $option-mixin-mode: false !default;
-$option-style-overflow: true !default;
+$option-style-scroll: true !default;
 
 //----------------------------------------------------
 // / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-style-overflow() {
-  @if $option-mixin-mode == false and $option-style-overflow == true {
+@mixin export-style-scroll() {
+  @if $option-mixin-mode == false and $option-style-scroll == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Style - Overflow
+// / Style - Scroll
 //----------------------------------------------------
 
-@mixin musubii-style-overflow() {
-  .is-overflow-hidden {
+@mixin musubii-style-scroll() {
+  .is-scroll-x {
     overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .is-scroll-y {
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
-@include export-style-overflow() {
-  @include musubii-style-overflow();
+@include export-style-scroll() {
+  @include musubii-style-scroll();
 }

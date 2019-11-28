@@ -4177,10 +4177,6 @@ svg.icon {
   margin-left: auto;
 }
 
-.is-centering {
-  margin: 0 auto;
-}
-
 .is-padding-xxl {
   padding: 28px;
 }
@@ -4396,6 +4392,30 @@ svg.icon {
 .is-padding-right-left-xxs {
   padding-right: 4px;
   padding-left: 4px;
+}
+
+.is-padding-top-safe {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+.is-padding-right-safe {
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+}
+
+.is-padding-bottom-safe {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.is-padding-left-safe {
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
+}
+
+.is-centering {
+  margin: 0 auto;
 }
 
 .is-overflow-hidden {

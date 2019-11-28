@@ -177,3 +177,24 @@ $padding-size-xxs: $space-xxs !default;
 @include export-style-padding() {
   @include musubii-style-padding-horizontal();
 }
+
+//----------------------------------------------------
+// / Style - Padding Horizontal
+//----------------------------------------------------
+
+@mixin --is-padding-safe($way) {
+  &.is-padding-#{$way}-safe {
+    @include safe-area-padding($way);
+  }
+}
+
+@mixin musubii-style-padding-safe() {
+  @include --is-padding-safe(top);
+  @include --is-padding-safe(right);
+  @include --is-padding-safe(bottom);
+  @include --is-padding-safe(left);
+}
+
+@include export-style-padding() {
+  @include musubii-style-padding-safe();
+}

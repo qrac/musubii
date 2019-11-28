@@ -1,5 +1,5 @@
 //----------------------------------------------------
-// Utilities: Overflow
+// Utilities: Centering
 //----------------------------------------------------
 
 //----------------------------------------------------
@@ -8,28 +8,28 @@
 
 // Option
 $option-mixin-mode: false !default;
-$option-style-overflow: true !default;
+$option-style-centering: true !default;
 
 //----------------------------------------------------
 // / Mixins (Default)
 //----------------------------------------------------
 
-@mixin export-style-overflow() {
-  @if $option-mixin-mode == false and $option-style-overflow == true {
+@mixin export-style-centering() {
+  @if $option-mixin-mode == false and $option-style-centering == true {
     @content;
   }
 }
 
 //----------------------------------------------------
-// / Style - Overflow
+// / Style - Centering
 //----------------------------------------------------
 
-@mixin musubii-style-overflow() {
-  .is-overflow-hidden {
-    overflow: hidden;
+@mixin musubii-style-centering() {
+  .is-centering {
+    margin: 0 auto;
   }
 }
 
-@include export-style-overflow() {
-  @include musubii-style-overflow();
+@include export-style-centering() {
+  @include musubii-style-centering();
 }

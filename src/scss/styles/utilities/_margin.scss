@@ -184,17 +184,3 @@ $margin-size-xxs: $space-xxs !default;
 @include export-style-margin() {
   @include musubii-style-margin-horizontal();
 }
-
-//----------------------------------------------------
-// / Style - Margin Centering
-//----------------------------------------------------
-
-@mixin musubii-style-margin-centering {
-  .is-centering {
-    margin: 0 auto;
-  }
-}
-
-@include export-style-margin() {
-  @include musubii-style-margin-centering();
-}

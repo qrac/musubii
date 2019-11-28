@@ -305,36 +305,6 @@ $light-8: rgba($white, 0.12) !default;
 $light-9: rgba($white, 0.05) !default;
 
 //----------------------------------------------------
-// / Dark & Light - Pattern
-//----------------------------------------------------
-
-$pattern-color-dark: (
-  dark: $dark,
-  dark-1: $dark-1,
-  dark-2: $dark-2,
-  dark-3: $dark-3,
-  dark-4: $dark-4,
-  dark-5: $dark-5,
-  dark-6: $dark-6,
-  dark-7: $dark-7,
-  dark-8: $dark-8,
-  dark-9: $dark-9
-) !default;
-
-$pattern-color-light: (
-  light: $light,
-  light-1: $light-1,
-  light-2: $light-2,
-  light-3: $light-3,
-  light-4: $light-4,
-  light-5: $light-5,
-  light-6: $light-6,
-  light-7: $light-7,
-  light-8: $light-8,
-  light-9: $light-9
-) !default;
-
-//----------------------------------------------------
 // / Theme
 //----------------------------------------------------
 
@@ -345,18 +315,6 @@ $warning: $orange-600 !default;
 $danger: $red-500 !default;
 
 //----------------------------------------------------
-// / Theme - Pattern
-//----------------------------------------------------
-
-$pattern-color-theme: (
-  primary: $primary,
-  info: $info,
-  success: $success,
-  warning: $warning,
-  danger: $danger
-) !default;
-
-//----------------------------------------------------
 // / Brand
 //----------------------------------------------------
 
@@ -365,15 +323,3 @@ $brand-facebook: #3b5998 !default;
 $brand-hatena: #45a3d9 !default;
 $brand-line: #00c300 !default;
 $brand-pocket: #ef4056 !default;
-
-//----------------------------------------------------
-// / Brand - Pattern
-//----------------------------------------------------
-
-$pattern-color-social: (
-  twitter: $brand-twitter,
-  facebook: $brand-facebook,
-  hatena: $brand-hatena,
-  line: $brand-line,
-  pocket: $brand-pocket
-) !default;

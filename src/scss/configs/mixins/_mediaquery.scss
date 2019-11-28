@@ -195,20 +195,6 @@
 }
 
 //----------------------------------------------------
-// / Media Query - Pattern
-//----------------------------------------------------
-
-@mixin mediaquery-pattern($mediaquery) {
-  @if $mediaquery == $screen-width-mobile {
-    @content;
-  } @else {
-    @media #{$mediaquery} {
-      @content;
-    }
-  }
-}
-
-//----------------------------------------------------
 // / Media Query - Pattern Select
 //----------------------------------------------------
 
