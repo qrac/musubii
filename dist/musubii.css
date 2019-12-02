@@ -2243,6 +2243,106 @@ iframe {
   line-height: inherit;
 }
 
+.icon.is-dark, .im.is-dark, .fa.is-dark, .fas.is-dark, .far.is-dark, .fal.is-dark, .fab.is-dark, .material-icons.is-dark {
+  color: black;
+}
+
+.icon.is-dark-1, .im.is-dark-1, .fa.is-dark-1, .fas.is-dark-1, .far.is-dark-1, .fal.is-dark-1, .fab.is-dark-1, .material-icons.is-dark-1 {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.icon.is-dark-2, .im.is-dark-2, .fa.is-dark-2, .fas.is-dark-2, .far.is-dark-2, .fal.is-dark-2, .fab.is-dark-2, .material-icons.is-dark-2 {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.icon.is-dark-3, .im.is-dark-3, .fa.is-dark-3, .fas.is-dark-3, .far.is-dark-3, .fal.is-dark-3, .fab.is-dark-3, .material-icons.is-dark-3 {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.icon.is-dark-4, .im.is-dark-4, .fa.is-dark-4, .fas.is-dark-4, .far.is-dark-4, .fal.is-dark-4, .fab.is-dark-4, .material-icons.is-dark-4 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.icon.is-dark-5, .im.is-dark-5, .fa.is-dark-5, .fas.is-dark-5, .far.is-dark-5, .fal.is-dark-5, .fab.is-dark-5, .material-icons.is-dark-5 {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.icon.is-dark-6, .im.is-dark-6, .fa.is-dark-6, .fas.is-dark-6, .far.is-dark-6, .fal.is-dark-6, .fab.is-dark-6, .material-icons.is-dark-6 {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.icon.is-dark-7, .im.is-dark-7, .fa.is-dark-7, .fas.is-dark-7, .far.is-dark-7, .fal.is-dark-7, .fab.is-dark-7, .material-icons.is-dark-7 {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.icon.is-dark-8, .im.is-dark-8, .fa.is-dark-8, .fas.is-dark-8, .far.is-dark-8, .fal.is-dark-8, .fab.is-dark-8, .material-icons.is-dark-8 {
+  color: rgba(0, 0, 0, 0.12);
+}
+
+.icon.is-dark-9, .im.is-dark-9, .fa.is-dark-9, .fas.is-dark-9, .far.is-dark-9, .fal.is-dark-9, .fab.is-dark-9, .material-icons.is-dark-9 {
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.icon.is-light, .im.is-light, .fa.is-light, .fas.is-light, .far.is-light, .fal.is-light, .fab.is-light, .material-icons.is-light {
+  color: white;
+}
+
+.icon.is-light-1, .im.is-light-1, .fa.is-light-1, .fas.is-light-1, .far.is-light-1, .fal.is-light-1, .fab.is-light-1, .material-icons.is-light-1 {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.icon.is-light-2, .im.is-light-2, .fa.is-light-2, .fas.is-light-2, .far.is-light-2, .fal.is-light-2, .fab.is-light-2, .material-icons.is-light-2 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.icon.is-light-3, .im.is-light-3, .fa.is-light-3, .fas.is-light-3, .far.is-light-3, .fal.is-light-3, .fab.is-light-3, .material-icons.is-light-3 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.icon.is-light-4, .im.is-light-4, .fa.is-light-4, .fas.is-light-4, .far.is-light-4, .fal.is-light-4, .fab.is-light-4, .material-icons.is-light-4 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.icon.is-light-5, .im.is-light-5, .fa.is-light-5, .fas.is-light-5, .far.is-light-5, .fal.is-light-5, .fab.is-light-5, .material-icons.is-light-5 {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.icon.is-light-6, .im.is-light-6, .fa.is-light-6, .fas.is-light-6, .far.is-light-6, .fal.is-light-6, .fab.is-light-6, .material-icons.is-light-6 {
+  color: rgba(255, 255, 255, 0.26);
+}
+
+.icon.is-light-7, .im.is-light-7, .fa.is-light-7, .fas.is-light-7, .far.is-light-7, .fal.is-light-7, .fab.is-light-7, .material-icons.is-light-7 {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.icon.is-light-8, .im.is-light-8, .fa.is-light-8, .fas.is-light-8, .far.is-light-8, .fal.is-light-8, .fab.is-light-8, .material-icons.is-light-8 {
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.icon.is-light-9, .im.is-light-9, .fa.is-light-9, .fas.is-light-9, .far.is-light-9, .fal.is-light-9, .fab.is-light-9, .material-icons.is-light-9 {
+  color: rgba(255, 255, 255, 0.05);
+}
+
+.icon.is-primary, .im.is-primary, .fa.is-primary, .fas.is-primary, .far.is-primary, .fal.is-primary, .fab.is-primary, .material-icons.is-primary {
+  color: #37b0be;
+}
+
+.icon.is-info, .im.is-info, .fa.is-info, .fas.is-info, .far.is-info, .fal.is-info, .fab.is-info, .material-icons.is-info {
+  color: #4b9bd8;
+}
+
+.icon.is-success, .im.is-success, .fa.is-success, .fas.is-success, .far.is-success, .fal.is-success, .fab.is-success, .material-icons.is-success {
+  color: #2ca52c;
+}
+
+.icon.is-warning, .im.is-warning, .fa.is-warning, .fas.is-warning, .far.is-warning, .fal.is-warning, .fab.is-warning, .material-icons.is-warning {
+  color: #ec9213;
+}
+
+.icon.is-danger, .im.is-danger, .fa.is-danger, .fas.is-danger, .far.is-danger, .fal.is-danger, .fab.is-danger, .material-icons.is-danger {
+  color: #db5757;
+}
+
 svg.icon {
   display: inline-block;
   flex: none;
