@@ -116,7 +116,10 @@ const noteBasic = md`
 basic.story = {
   name: "Basic",
   parameters: {
-    notes: { markdown: noteBasic }
+    notes: { markdown: noteBasic },
+    options: {
+      showPanel: true
+    }
   }
 }
 

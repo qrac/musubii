@@ -1,16 +1,28 @@
 //----------------------------------------------------
-// / heading
+// / Text
 //----------------------------------------------------
 
 .demo-h1 {
   //margin: 160px 16px 32px;
-  font-size: 20px;
+  font-size: 150%;
   font-weight: 700;
 }
 
 .demo-h2 {
   //margin: 20px 16px 8px;
   color: var(--demo-h2-text-color);
-  font-size: 14px;
+  font-size: 125%;
   font-weight: 700;
+}
+
+.demo-h3 {
+  //margin: 20px 16px 8px;
+  color: var(--demo-h2-text-color);
+  font-size: 100%;
+  font-weight: 700;
+}
+
+.demo-p {
+  font-size: 87.5%;
+  font-weight: 400;
 }

@@ -107,7 +107,14 @@ export const basic = () => {
   )
 }
 
-basic.story = { name: "Basic" }
+basic.story = {
+  name: "Basic",
+  parameters: {
+    options: {
+      showPanel: true
+    }
+  }
+}
 
 //----------------------------------------------------
 // / Monotone
