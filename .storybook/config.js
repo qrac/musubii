@@ -4,7 +4,6 @@ import { withDarkModeAttribute } from "./addon/storybook-dark-mode-attribute"
 
 import * as themes from "./themes"
 
-import "../src/scss/musubii.scss"
 import "./style/demo.scss"
 
 addParameters({
