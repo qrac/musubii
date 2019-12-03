@@ -3,12 +3,10 @@
 //----------------------------------------------------
 
 import React from "react"
-import { withKnobs, boolean, radios } from "@storybook/addon-knobs"
+import { withKnobs, boolean, radios, number } from "@storybook/addon-knobs"
 
-import copyCodeBlock from "@pickra/copy-code-block"
+import DemoCode from "../../../demo/components/demo-code"
 import beautify from "js-beautify"
-import hljs from "highlight.js/lib/highlight"
-hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
   title: "Styles | Components / Text",
@@ -88,7 +86,6 @@ export const basic = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Text</h1>
@@ -99,10 +96,7 @@ export const basic = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -139,7 +133,6 @@ export const monotone = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Text</h1>
@@ -150,10 +143,7 @@ export const monotone = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -177,7 +167,6 @@ export const ellipsis = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Text</h1>
@@ -188,10 +177,7 @@ export const ellipsis = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -212,7 +198,6 @@ export const blockquote = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Text</h1>
@@ -223,10 +208,7 @@ export const blockquote = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -246,7 +228,6 @@ export const code = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Text</h1>
@@ -257,10 +238,7 @@ export const code = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -284,7 +262,6 @@ export const pre = () => {
 }</code>`
   const contentsWrap = tagBefore + contents + tagAfter
   const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Text</h1>
@@ -295,10 +272,7 @@ export const pre = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }

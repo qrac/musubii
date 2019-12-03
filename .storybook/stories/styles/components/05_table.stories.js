@@ -5,10 +5,8 @@
 import React from "react"
 import { withKnobs, boolean, radios, number } from "@storybook/addon-knobs"
 
-import copyCodeBlock from "@pickra/copy-code-block"
+import DemoCode from "../../../demo/components/demo-code"
 import beautify from "js-beautify"
-import hljs from "highlight.js/lib/highlight"
-hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
   title: "Styles | Components / Table",
@@ -69,7 +67,6 @@ export const basic = () => {
     .replace(/\"\s/g, '"')
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contentsWrap, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Table</h1>
@@ -80,10 +77,7 @@ export const basic = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }

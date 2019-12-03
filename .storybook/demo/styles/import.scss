@@ -2,13 +2,12 @@
 // Demo
 //----------------------------------------------------
 
-$option-css-variables: true !default;
+$option-css-variables: true;
 
-@import "../../src/scss/configs/_import.scss";
-@import "../../src/scss/styles/_import.scss";
+@import "../../../src/scss/configs/_import.scss";
+@import "../../../src/scss/styles/_import.scss";
 
 @import "./_root.scss";
 @import "./_global.scss";
 @import "./_box.scss";
 @import "./_text.scss";
-@import "./_highlight.scss";

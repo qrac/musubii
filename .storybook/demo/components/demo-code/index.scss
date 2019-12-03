@@ -1,5 +1,72 @@
 //----------------------------------------------------
-// / Highlight
+// Demo Code
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Style - Pre / Code
+//----------------------------------------------------
+
+.demo-pre-wrap {
+  position: relative;
+  display: block;
+  background: var(--hljs-background-color);
+  border: 1px solid var(--hljs-border-color);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.demo-pre {
+  max-width: 100%;
+  white-space: pre;
+  word-wrap: normal;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.demo-code {
+  display: block;
+  padding: 16px 20px 32px;
+  background: var(--hljs-background-color);
+  font-size: 14px;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo,
+    monospace, serif;
+  //font-family: "Noto Sans Mono CJK JP", Menlo, Monaco, "Courier New", monospace;
+}
+
+.demo-code-copy-button {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 4px 8px;
+  background: var(--hljs-background-color);
+  border-top: 1px solid var(--hljs-border-color);
+  border-right: none;
+  border-bottom: none;
+  border-left: 1px solid var(--hljs-border-color);
+  border-radius: 3px 0 0 0;
+  color: var(--hljs-base-text-color);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
+    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  line-height: 16px;
+  white-space: nowrap;
+  //transition: 0.12s ease-out;
+  &:hover {
+    background: var(--hljs-background-color);
+    color: var(--hljs-base-text-color);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: #1ea7fd 0 -3px 0 0 inset;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Highlight.js
 //----------------------------------------------------
 
 // GitHub Gist Theme - https://github.com/highlightjs/highlight.js/blob/9.16.0/src/styles/github-gist.css
@@ -147,64 +214,5 @@
   .hljs-deletion,
   .hljs-meta {
     color: #75715e;
-  }
-}
-
-// @pickra/copy-code-block
-div.container_2Cs1XD {
-  position: relative;
-  display: block;
-  margin-bottom: 0;
-  padding: 0;
-  background: var(--hljs-background-color);
-  border: 1px solid var(--hljs-border-color);
-  border-radius: 2px;
-  overflow: hidden;
-  &:focus {
-    outline: none;
-  }
-  .displayCode_2Cs1XD {
-    flex-basis: 0;
-    max-width: 100%;
-    padding: 0;
-    overflow: hidden;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .hljs {
-    padding: 16px 20px 32px;
-    background: var(--hljs-background-color);
-    font-size: 14px;
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-      Meiryo, monospace, serif;
-    //font-family: "Noto Sans Mono CJK JP", Menlo, Monaco, "Courier New", monospace;
-  }
-}
-
-button.copyButton_2Cs1XD {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  flex-basis: 0;
-  max-width: 100%;
-  margin-left: 0;
-  padding: 4px 8px;
-  background: var(--hljs-background-color);
-  outline: none;
-  border-top: 1px solid var(--hljs-border-color);
-  border-left: 1px solid var(--hljs-border-color);
-  border-radius: 3px 0 0 0;
-  color: var(--hljs-base-text-color);
-  font-size: 12px;
-  font-weight: 700;
-  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
-    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
-    Arial, sans-serif;
-  line-height: 16px;
-  white-space: nowrap;
-  //transition: 0.12s ease-out;
-  &:hover {
-    background: var(--hljs-background-color);
-    color: var(--hljs-base-text-color);
   }
 }

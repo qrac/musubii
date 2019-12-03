@@ -3,12 +3,10 @@
 //----------------------------------------------------
 
 import React from "react"
-import { withKnobs, boolean, radios } from "@storybook/addon-knobs"
+import { withKnobs, boolean, radios, number } from "@storybook/addon-knobs"
 
-import copyCodeBlock from "@pickra/copy-code-block"
+import DemoCode from "../../../demo/components/demo-code"
 import beautify from "js-beautify"
-import hljs from "highlight.js/lib/highlight"
-hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
   title: "Styles | Components / Badge",
@@ -63,7 +61,6 @@ export const basic = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Badge</h1>
@@ -74,10 +71,7 @@ export const basic = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -102,7 +96,6 @@ export const square = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Badge</h1>
@@ -113,10 +106,7 @@ export const square = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -141,7 +131,6 @@ export const circle = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Badge</h1>
@@ -152,10 +141,7 @@ export const circle = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }

@@ -5,10 +5,8 @@
 import React from "react"
 import { withKnobs, boolean, radios, number } from "@storybook/addon-knobs"
 
-import copyCodeBlock from "@pickra/copy-code-block"
+import DemoCode from "../../../demo/components/demo-code"
 import beautify from "js-beautify"
-import hljs from "highlight.js/lib/highlight"
-hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 
 export default {
   title: "Styles | Components / Form",
@@ -80,7 +78,6 @@ export const text = () => {
     ${valueAttr}="Text" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -91,10 +88,7 @@ export const text = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -116,7 +110,6 @@ export const textarea = () => {
     ${disabled} ${readonly}>${valueAttr}</textarea>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -127,10 +120,7 @@ export const textarea = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -153,7 +143,6 @@ export const password = () => {
     ${valueAttr} ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -164,10 +153,7 @@ export const password = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -190,7 +176,6 @@ export const url = () => {
     ${valueAttr}="https://example.com" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -201,10 +186,7 @@ export const url = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -227,7 +209,6 @@ export const email = () => {
     ${valueAttr}="example@gmail.com" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -238,10 +219,7 @@ export const email = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -264,7 +242,6 @@ export const tel = () => {
     ${valueAttr}="000-0000-0000" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -275,10 +252,7 @@ export const tel = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -303,7 +277,6 @@ export const num = () => {
     ${valueAttr}="10000" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -314,10 +287,7 @@ export const num = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -339,7 +309,6 @@ export const date = () => {
     value="2019-11-12" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -350,10 +319,7 @@ export const date = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -375,7 +341,6 @@ export const time = () => {
     value="09:30:00" ${disabled} ${readonly}>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -386,10 +351,7 @@ export const time = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -414,7 +376,6 @@ export const file = () => {
     </label>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -425,10 +386,7 @@ export const file = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -464,7 +422,6 @@ export const radio = () => {
     </div>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -475,10 +432,7 @@ export const radio = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -514,7 +468,6 @@ export const checkbox = () => {
     </div>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -525,10 +478,7 @@ export const checkbox = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -556,7 +506,6 @@ export const select = () => {
     </div>`
   const contents = content.replace(/\s+/g, " ").replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -567,10 +516,7 @@ export const select = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -597,7 +543,6 @@ export const button = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -608,10 +553,7 @@ export const button = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -638,7 +580,6 @@ export const reset = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -649,10 +590,7 @@ export const reset = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }
@@ -679,7 +617,6 @@ export const submit = () => {
     .replace(/\s+/g, " ")
     .replace(/\s\"/g, '"')
   const formatted = beautify.html(contents, beautifyHtmlOptions)
-  const highlighted = copyCodeBlock(formatted, { lang: "html" })
   return (
     <div className="demo-space-box">
       <h1 className="demo-h1">Form</h1>
@@ -690,10 +627,7 @@ export const submit = () => {
           dangerouslySetInnerHTML={{ __html: formatted }}
         ></div>
       </div>
-      <div
-        className="box"
-        dangerouslySetInnerHTML={{ __html: highlighted }}
-      ></div>
+      <DemoCode language="html" code={formatted} />
     </div>
   )
 }

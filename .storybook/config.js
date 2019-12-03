@@ -4,7 +4,7 @@ import { withDarkModeAttribute } from "./addon/storybook-dark-mode-attribute"
 
 import * as themes from "./themes"
 
-import "./style/demo.scss"
+import "./demo/styles/import.scss"
 
 addParameters({
   viewport: {
