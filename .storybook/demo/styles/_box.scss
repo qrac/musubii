@@ -4,7 +4,16 @@
 
 .demo-space-box {
   > *:not(:first-child) {
-    margin-top: 1em;
+    margin-top: 12px;
+  }
+  > .demo-h2:not(:first-child) {
+    margin-top: 16px;
+  }
+  > .demo-h3:not(:first-child) {
+    margin-top: 40px;
+  }
+  > .demo-or:not(:first-child) {
+    margin: -12px 0;
   }
 }
 

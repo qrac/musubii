@@ -8,6 +8,11 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 import hljs from "highlight.js/lib/highlight"
 hljs.registerLanguage("bash", require("highlight.js/lib/languages/bash"))
 hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
+hljs.registerLanguage(
+  "javascript",
+  require("highlight.js/lib/languages/javascript")
+)
+hljs.registerLanguage("scss", require("highlight.js/lib/languages/scss"))
 
 import "./index.scss"
 
