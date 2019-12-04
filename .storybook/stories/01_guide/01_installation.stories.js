@@ -82,82 +82,6 @@ npm.story = {
 }
 
 //----------------------------------------------------
-// / gulp
-//----------------------------------------------------
-
-export const gulp = () => {
-  const codeConfig = `
-    const gulp = require("gulp")
-    const sass = require("gulp-sass")
-
-    const sassOptions = {
-      includePaths: "./node_modules/"
-    }
-
-    function buildSCSS() {
-      return gulp
-        .src("src/scss/**/*.scss")
-        .pipe(sass(sassOptions))
-        .pipe(gulp.dest("dist/assets/css"))
-    }
-
-    gulp.task("default", buildSCSS)
-  `
-  const formattedCodeConfig = prettier.format(codeConfig, {
-    parser: "babel",
-    plugins: [parserBabel],
-    semi: false
-  })
-  const codeScss = `
-    // Configs
-    // 変数をオーバーライドする場合は configs より先に同名で定義します
-    // 例えば $option-css-variables: true で CSS Variables を有効化
-    @import "musubii/src/scss/configs/_import.scss";
-
-    // Styles
-    @import "musubii/src/scss/styles/_import.scss";
-  `
-  const formattedCodeScss = prettier.format(codeScss, {
-    parser: "postcss",
-    plugins: [parserScss]
-  })
-  return (
-    <div className="demo-space-box">
-      <h1 className="demo-h1">Installation</h1>
-      <h2 className="demo-h2">gulp</h2>
-      <p className="demo-p">
-        MUSUBii を gulp
-        で使う場合は、必要なライブラリをインストールして設定を行います。
-      </p>
-      <DemoCode
-        language="bash"
-        code={`npm install --save-dev gulp gulp-sass`}
-      />
-      <DemoCode language="bash" code={`yarn add --dev gulp gulp-sass`} />
-      <h3 className="demo-h3">Setting</h3>
-      <p className="demo-p">
-        <code>gulpfile.js</code>
-      </p>
-      <DemoCode language="javascript" code={formattedCodeConfig} />
-      <h3 className="demo-h3">SCSS</h3>
-      <p className="demo-p">
-        <code>src/scss/project.scss</code>
-      </p>
-      <DemoCode language="javascript" code={formattedCodeScss} />
-    </div>
-  )
-}
-
-gulp.story = {
-  name: "gulp",
-  parameters: {
-    options: {
-      showPanel: false
-    }
-  }
-}
-
-//----------------------------------------------------
 // / Nuxt
 //----------------------------------------------------
 
@@ -436,6 +360,82 @@ export const gatsby = () => {
 
 gatsby.story = {
   name: "Gatsby",
+  parameters: {
+    options: {
+      showPanel: false
+    }
+  }
+}
+
+//----------------------------------------------------
+// / gulp
+//----------------------------------------------------
+
+export const gulp = () => {
+  const codeConfig = `
+    const gulp = require("gulp")
+    const sass = require("gulp-sass")
+
+    const sassOptions = {
+      includePaths: "./node_modules/"
+    }
+
+    function buildSCSS() {
+      return gulp
+        .src("src/scss/**/*.scss")
+        .pipe(sass(sassOptions))
+        .pipe(gulp.dest("dist/assets/css"))
+    }
+
+    gulp.task("default", buildSCSS)
+  `
+  const formattedCodeConfig = prettier.format(codeConfig, {
+    parser: "babel",
+    plugins: [parserBabel],
+    semi: false
+  })
+  const codeScss = `
+    // Configs
+    // 変数をオーバーライドする場合は configs より先に同名で定義します
+    // 例えば $option-css-variables: true で CSS Variables を有効化
+    @import "musubii/src/scss/configs/_import.scss";
+
+    // Styles
+    @import "musubii/src/scss/styles/_import.scss";
+  `
+  const formattedCodeScss = prettier.format(codeScss, {
+    parser: "postcss",
+    plugins: [parserScss]
+  })
+  return (
+    <div className="demo-space-box">
+      <h1 className="demo-h1">Installation</h1>
+      <h2 className="demo-h2">gulp</h2>
+      <p className="demo-p">
+        MUSUBii を gulp
+        で使う場合は、必要なライブラリをインストールして設定を行います。
+      </p>
+      <DemoCode
+        language="bash"
+        code={`npm install --save-dev gulp gulp-sass`}
+      />
+      <DemoCode language="bash" code={`yarn add --dev gulp gulp-sass`} />
+      <h3 className="demo-h3">Setting</h3>
+      <p className="demo-p">
+        <code>gulpfile.js</code>
+      </p>
+      <DemoCode language="javascript" code={formattedCodeConfig} />
+      <h3 className="demo-h3">SCSS</h3>
+      <p className="demo-p">
+        <code>src/scss/project.scss</code>
+      </p>
+      <DemoCode language="javascript" code={formattedCodeScss} />
+    </div>
+  )
+}
+
+gulp.story = {
+  name: "gulp",
   parameters: {
     options: {
       showPanel: false
