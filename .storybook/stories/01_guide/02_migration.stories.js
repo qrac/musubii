@@ -5,11 +5,6 @@
 import React from "react"
 import { withKnobs, boolean, radios, number } from "@storybook/addon-knobs"
 
-import DemoCode from "../../demo/components/demo-code"
-import prettier from "prettier/standalone"
-import parserBabel from "prettier/parser-babylon"
-import parserScss from "prettier/parser-postcss"
-
 export default {
   title: "Guide | Migtarion",
   decorators: [withKnobs]
