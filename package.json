@@ -39,7 +39,7 @@
     "last 1 versions"
   ],
   "devDependencies": {
-    "@babel/core": "^7.7.4",
+    "@babel/core": "^7.7.5",
     "@storybook/addon-knobs": "^5.2.8",
     "@storybook/addon-notes": "^5.2.8",
     "@storybook/addon-viewport": "^5.2.8",
