@@ -2,10 +2,10 @@
 // Styles: Import
 //----------------------------------------------------
 
-@import "base/_root-light.scss";
-@import "base/_root-dark.scss";
-@import "base/_reset.scss";
-@import "base/_html.scss";
+@import "bases/_root-light.scss";
+@import "bases/_root-dark.scss";
+@import "bases/_reset.scss";
+@import "bases/_html.scss";
 
 @import "layouts/_section.scss";
 @import "layouts/_grid.scss";
