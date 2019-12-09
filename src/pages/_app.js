@@ -10,10 +10,11 @@ class MyApp extends App {
 
     return (
       <>
-        <Head>
-          <title>Check your Priviledge</title>
-        </Head>
-        <Component {...pageProps} />
+        <Head></Head>
+        <div>test</div>
+        <main>
+          <Component {...pageProps} />
+        </main>
       </>
     )
   }

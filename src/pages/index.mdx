@@ -1,7 +1,23 @@
+export const title = "MUSUBii"
+
 import Button from "../components/button.js"
 
-# MDX + Next.js だよ
+# {{ title }}
 
 Look, a button! 👇
 
 <Button>👋 Hello</Button>
+
+```js
+module.exports = {
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass-resources",
+      options: {
+        resources: ["src/assets/scss/configs.scss"]
+      }
+    }
+  ]
+}
+```
