@@ -1,0 +1,43 @@
+//----------------------------------------------------
+// Styles
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Style - Root
+//----------------------------------------------------
+
+:root {
+  --demo-h2-text-color: #828282;
+  --demo-box-text-color: #fff;
+  --demo-line-box-border-color: rgba(0, 0, 0, 0.1);
+  --demo-paint-box-background-color: #1b2324;
+  --demo-background-color-cyan: #37b0be;
+  --demo-background-color-grey: #e0e0e0;
+  --demo-background-color-grey-light: #f1f1f1;
+}
+
+:root [data-theme="dark"] {
+  --demo-h2-text-color: #828282;
+  --demo-box-text-color: #d6d6d7;
+  --demo-line-box-border-color: rgba(255, 255, 255, 0.1);
+  --demo-paint-box-background-color: #2a2a2b;
+  --demo-background-color-cyan: #1f636b;
+  --demo-background-color-grey: #2e2e2e;
+}
+
+//----------------------------------------------------
+// / Style - HTML Body
+//----------------------------------------------------
+
+body {
+  transition: background 0.12s ease-in-out, color 0.12s ease-in-out;
+}
+
+//----------------------------------------------------
+// / Style - MUSUBii (Custom Import)
+//----------------------------------------------------
+
+$option-css-variables: true;
+
+@import "../scss/configs/_import.scss";
+@import "../scss/styles/_import.scss";
