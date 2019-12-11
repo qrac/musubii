@@ -9,14 +9,15 @@ import "../components/highlight.scss"
 
 class MyApp extends App {
   componentDidMount() {
-    if (localStorage.getItem("theme")) {
-      document.body.setAttribute("data-theme", localStorage.getItem("theme"))
-    } else if (window.matchMedia("(prefers-color-scheme: dark)")) {
+    const isLocal = localStorage.getItem("theme")
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)")
+
+    if (isLocal) {
+      document.body.setAttribute("data-theme", isLocal)
+    } else if (isDark.matches) {
       document.body.setAttribute("data-theme", "dark")
-      localStorage.setItem("theme", "dark")
     } else {
       document.body.setAttribute("data-theme", "light")
-      localStorage.setItem("theme", "light")
     }
   }
   render() {

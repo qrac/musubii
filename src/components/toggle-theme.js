@@ -6,14 +6,31 @@ class ToggleTheme extends React.Component {
     this.state = {
       theme: ""
     }
+    this.toggleMedia = this.toggleMedia.bind(this)
     this.toggleTheme = this.toggleTheme.bind(this)
   }
   componentDidMount() {
-    if (localStorage.getItem("theme")) {
+    const isLocal = localStorage.getItem("theme")
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)")
+
+    if (isLocal) {
       this.setState({ theme: localStorage.getItem("theme") })
-    } else if (window.matchMedia("(prefers-color-scheme: dark)")) {
+    } else if (isDark.matches) {
       this.setState({ theme: "dark" })
     } else {
+      this.setState({ theme: "light" })
+    }
+
+    isDark.addListener(this.toggleMedia)
+  }
+  toggleMedia(mql) {
+    if (process.browser && mql.matches) {
+      document.body.setAttribute("data-theme", "dark")
+      localStorage.setItem("theme", "dark")
+      this.setState({ theme: "dark" })
+    } else if (process.browser) {
+      document.body.setAttribute("data-theme", "light")
+      localStorage.setItem("theme", "light")
       this.setState({ theme: "light" })
     }
   }
