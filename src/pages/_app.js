@@ -2,7 +2,7 @@ import React from "react"
 import App from "next/app"
 import Head from "next/head"
 
-import ToggleTheme from "../components/toggle-theme"
+import Header from "../components/header"
 
 import "../components/styles.scss"
 import "../components/highlight.scss"
@@ -25,7 +25,7 @@ class MyApp extends App {
     return (
       <>
         <Head></Head>
-        <ToggleTheme />
+        <Header />
         <main>
           <Component {...pageProps} />
         </main>

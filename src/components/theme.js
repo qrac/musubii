@@ -1,6 +1,6 @@
 import React from "react"
 
-class ToggleTheme extends React.Component {
+class Theme extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -47,18 +47,16 @@ class ToggleTheme extends React.Component {
   }
   render() {
     return (
-      <button className="toggle-theme" type="button" onClick={this.toggleTheme}>
+      <button className="theme-button" type="button" onClick={this.toggleTheme}>
         {(() => {
           if (this.state.theme === "light") {
             return (
               <svg
-                className="toggle-theme-icon is-moon"
+                className="theme-icon is-moon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="currentColor"
+                stroke="var(--text-dark-4)"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -69,13 +67,11 @@ class ToggleTheme extends React.Component {
           } else if (this.state.theme === "dark") {
             return (
               <svg
-                className="toggle-theme-icon is-sun"
+                className="theme-icon is-sun"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="currentColor"
+                stroke="var(--text-dark-4)"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -94,20 +90,29 @@ class ToggleTheme extends React.Component {
           }
         })()}
         <style jsx>{`
-          .toggle-theme {
+          .theme-button {
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 48px;
-            height: 48px;
+            width: 32px;
+            height: 32px;
             background: none;
             border: none;
-            outline: none;
-            color: currentColor;
+            border-radius: 18px;
+            transition: ease-out 0.12s;
           }
-          .toggle-theme-icon {
+          .theme-button:hover {
+            opacity: 0.75;
+          }
+          .theme-button:focus {
+            box-shadow: 0 0 0 4px var(--focus-alpha);
+            outline: none;
+          }
+          .theme-icon {
             flex: none;
+            width: 20px;
+            height: 20px;
           }
         `}</style>
       </button>
@@ -115,4 +120,4 @@ class ToggleTheme extends React.Component {
   }
 }
 
-export default ToggleTheme
+export default Theme
