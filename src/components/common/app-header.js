@@ -1,11 +1,10 @@
 import React from "react"
 
-import Logo from "./logo"
-import Version from "./version"
-import Github from "./github"
-import Theme from "./theme"
+import SiteLogo from "~/components/parts/site-logo"
+import NavLinks from "~/components/parts/nav-links"
+import ToggleTheme from "~/components/parts/toggle-theme"
 
-class Header extends React.Component {
+class AppHeader extends React.Component {
   render() {
     return (
       <header className="section is-header">
@@ -13,30 +12,24 @@ class Header extends React.Component {
           <div className="grid is-middle is-between">
             <div className="column">
               <div className="box is-flex is-bottom">
-                <Logo />
+                <div className="box is-margin-right-md">
+                  <SiteLogo />
+                </div>
                 <div className="box">
-                  <Version />
-                  <Github />
+                  <NavLinks />
                 </div>
               </div>
             </div>
             <div className="column">
-              <div className="box is-flex is-middle">
-                <Theme />
+              <div className="box">
+                <ToggleTheme />
               </div>
             </div>
           </div>
         </div>
-        <style jsx>{`
-          .section.is-header {
-            position: relative;
-            padding: 0.75em 0;
-            z-index: 10;
-          }
-        `}</style>
       </header>
     )
   }
 }
 
-export default Header
+export default AppHeader

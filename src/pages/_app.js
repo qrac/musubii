@@ -2,10 +2,8 @@ import React from "react"
 import App from "next/app"
 import Head from "next/head"
 
-import Header from "../components/header"
-
-import "../components/styles.scss"
-import "../components/highlight.scss"
+import AppHeader from "~/components/common/app-header"
+import "~/components/common/app-styles.scss"
 
 class MyApp extends App {
   componentDidMount() {
@@ -25,7 +23,7 @@ class MyApp extends App {
     return (
       <>
         <Head></Head>
-        <Header />
+        <AppHeader />
         <main>
           <Component {...pageProps} />
         </main>

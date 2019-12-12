@@ -1,9 +1,131 @@
 //----------------------------------------------------
-// Highlight.js
+// App Styles
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Style - Common
+// / Style - MUSUBii (Custom Import)
+//----------------------------------------------------
+
+$option-css-variables: true;
+
+@import "../../scss/configs/_import.scss";
+@import "../../scss/styles/_import.scss";
+
+//----------------------------------------------------
+// / Style - Root
+//----------------------------------------------------
+
+:root {
+  --demo-h2-text-color: #828282;
+  --demo-box-text-color: #fff;
+  --demo-line-box-border-color: rgba(0, 0, 0, 0.1);
+  --demo-paint-box-background-color: #1b2324;
+  --demo-background-color-cyan: #37b0be;
+  --demo-background-color-grey: #e0e0e0;
+  --demo-background-color-grey-light: #f1f1f1;
+}
+
+:root [data-theme="dark"] {
+  --demo-h2-text-color: #828282;
+  --demo-box-text-color: #d6d6d7;
+  --demo-line-box-border-color: rgba(255, 255, 255, 0.1);
+  --demo-paint-box-background-color: #2a2a2b;
+  --demo-background-color-cyan: #1f636b;
+  --demo-background-color-grey: #2e2e2e;
+}
+
+//----------------------------------------------------
+// / Style - HTML Body
+//----------------------------------------------------
+
+body {
+  transition: background 0.12s ease-in-out, color 0.12s ease-in-out;
+}
+
+//----------------------------------------------------
+// / Style - Section
+//----------------------------------------------------
+
+.section {
+  &.is-header {
+    position: relative;
+    padding: 0.75em 0;
+    z-index: 10;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Site Logo
+//----------------------------------------------------
+
+.site-logo-link {
+  display: block;
+  flex: none;
+  width: 8em;
+}
+
+.site-logo {
+  width: 100%;
+  path {
+    fill: $convert-primary-strong;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Nav Links
+//----------------------------------------------------
+
+.nav-links {
+  > *:not(:last-child) {
+    margin-right: 0.75em;
+  }
+  .icon.is-external-link {
+    margin-left: 0.125em;
+    opacity: 0.75;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Ghost Button
+//----------------------------------------------------
+
+.ghost-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  background: none;
+  border: none;
+  border-radius: 1em;
+  transition: $global-transition;
+  &:hover {
+    opacity: 0.75;
+  }
+  &:focus {
+    box-shadow: $button-focus-shadow;
+    outline: none;
+  }
+}
+
+.ghost-button-icon {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  circle,
+  line,
+  path {
+    fill: none;
+    stroke: $convert-text-dark-4;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Highlight.js
 //----------------------------------------------------
 
 .hljs {
@@ -12,10 +134,6 @@
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo,
     monospace, serif;
 }
-
-//----------------------------------------------------
-// / Style - Light
-//----------------------------------------------------
 
 // GitHub Gist Theme - https://github.com/highlightjs/highlight.js/blob/9.16.0/src/styles/github-gist.css
 /**
@@ -87,10 +205,6 @@
     color: #032f62;
   }
 }
-
-//----------------------------------------------------
-// / Style - Dark
-//----------------------------------------------------
 
 // Monokai Sublime Theme - https://github.com/highlightjs/highlight.js/blob/9.16.0/src/styles/monokai-sublime.css
 /**

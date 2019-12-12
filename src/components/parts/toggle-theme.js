@@ -1,13 +1,13 @@
 import React from "react"
 
-class Theme extends React.Component {
+class ToggleTheme extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       theme: ""
     }
-    this.toggleMedia = this.toggleMedia.bind(this)
-    this.toggleTheme = this.toggleTheme.bind(this)
+    this.toggleThemeMode = this.toggleThemeMode.bind(this)
+    this.toggleThemeAttr = this.toggleThemeAttr.bind(this)
   }
   componentDidMount() {
     const isLocal = localStorage.getItem("theme")
@@ -21,9 +21,9 @@ class Theme extends React.Component {
       this.setState({ theme: "light" })
     }
 
-    isDark.addListener(this.toggleMedia)
+    isDark.addListener(this.toggleThemeMode)
   }
-  toggleMedia(mql) {
+  toggleThemeMode(mql) {
     if (process.browser && mql.matches) {
       document.body.setAttribute("data-theme", "dark")
       localStorage.setItem("theme", "dark")
@@ -34,7 +34,7 @@ class Theme extends React.Component {
       this.setState({ theme: "light" })
     }
   }
-  toggleTheme() {
+  toggleThemeAttr() {
     if (process.browser && this.state.theme === "light") {
       document.body.setAttribute("data-theme", "dark")
       localStorage.setItem("theme", "dark")
@@ -47,19 +47,18 @@ class Theme extends React.Component {
   }
   render() {
     return (
-      <button className="theme-button" type="button" onClick={this.toggleTheme}>
+      <button
+        className="ghost-button"
+        type="button"
+        onClick={this.toggleThemeAttr}
+      >
         {(() => {
           if (this.state.theme === "light") {
             return (
               <svg
-                className="theme-icon is-moon"
+                className="ghost-button-icon is-moon"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--text-dark-4)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
               >
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
@@ -67,14 +66,9 @@ class Theme extends React.Component {
           } else if (this.state.theme === "dark") {
             return (
               <svg
-                className="theme-icon is-sun"
+                className="ghost-button-icon is-sun"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--text-dark-4)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
               >
                 <circle cx="12" cy="12" r="5"></circle>
                 <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -89,35 +83,9 @@ class Theme extends React.Component {
             )
           }
         })()}
-        <style jsx>{`
-          .theme-button {
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 32px;
-            height: 32px;
-            background: none;
-            border: none;
-            border-radius: 18px;
-            transition: ease-out 0.12s;
-          }
-          .theme-button:hover {
-            opacity: 0.75;
-          }
-          .theme-button:focus {
-            box-shadow: 0 0 0 4px var(--focus-alpha);
-            outline: none;
-          }
-          .theme-icon {
-            flex: none;
-            width: 20px;
-            height: 20px;
-          }
-        `}</style>
       </button>
     )
   }
 }
 
-export default Theme
+export default ToggleTheme
