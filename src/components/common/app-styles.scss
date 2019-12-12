@@ -86,41 +86,23 @@ body {
 }
 
 //----------------------------------------------------
-// / Style - Ghost Button
+// / Style - Icon
 //----------------------------------------------------
 
-.ghost-button {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2em;
-  height: 2em;
-  background: none;
-  border: none;
-  border-radius: 1em;
-  transition: $global-transition;
-  &:hover {
-    opacity: 0.75;
-  }
-  &:focus {
-    box-shadow: $button-focus-shadow;
-    outline: none;
-  }
-}
-
-.ghost-button-icon {
-  flex: none;
-  width: 1.25em;
-  height: 1.25em;
-  circle,
-  line,
-  path {
-    fill: none;
-    stroke: $convert-text-dark-4;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.icon {
+  &.is-fill-none-stroke {
+    flex: none;
+    width: 1.25em;
+    height: 1.25em;
+    circle,
+    line,
+    path {
+      fill: none;
+      stroke: $convert-text-dark-4;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
   }
 }
 

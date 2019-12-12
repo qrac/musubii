@@ -48,7 +48,7 @@ class ToggleTheme extends React.Component {
   render() {
     return (
       <button
-        className="ghost-button"
+        className="button is-melt is-circle is-xs"
         type="button"
         onClick={this.toggleThemeAttr}
       >
@@ -56,7 +56,7 @@ class ToggleTheme extends React.Component {
           if (this.state.theme === "light") {
             return (
               <svg
-                className="ghost-button-icon is-moon"
+                className="icon is-moon is-fill-none-stroke is-xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -66,7 +66,7 @@ class ToggleTheme extends React.Component {
           } else if (this.state.theme === "dark") {
             return (
               <svg
-                className="ghost-button-icon is-sun"
+                className="icon is-sun is-fill-none-stroke is-xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
