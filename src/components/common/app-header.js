@@ -11,8 +11,8 @@ class AppHeader extends React.Component {
         <div className="inner is-padding-right-xs is-padding-left-md">
           <div className="grid is-middle is-between">
             <div className="column">
-              <div className="box is-flex is-bottom">
-                <div className="box is-margin-right-md">
+              <div className="box is-flex is-middle">
+                <div className="box is-margin-right-sm">
                   <SiteLogo />
                 </div>
                 <div className="box">
