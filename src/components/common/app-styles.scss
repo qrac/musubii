@@ -7,6 +7,7 @@
 //----------------------------------------------------
 
 $option-css-variables: true;
+//$theme-light-body-background-color: #f7fafc;
 
 @import "../../scss/configs/_import.scss";
 @import "../../scss/styles/_import.scss";
@@ -70,6 +71,9 @@ body {
     position: relative;
     padding: 0.75em 0;
     z-index: 10;
+    @include desktop {
+      padding: 1.5em 0;
+    }
   }
   &.is-footer {
     position: relative;
