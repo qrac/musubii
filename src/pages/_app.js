@@ -1,8 +1,8 @@
 import React from "react"
 import App from "next/app"
-import Head from "next/head"
 
 import AppHeader from "~/components/common/app-header"
+import AppFooter from "~/components/common/app-footer"
 import "~/components/common/app-styles.scss"
 
 class MyApp extends App {
@@ -21,13 +21,13 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <>
-        <Head></Head>
+      <div className="app">
         <AppHeader />
-        <main>
+        <main className="main">
           <Component {...pageProps} />
         </main>
-      </>
+        <AppFooter />
+      </div>
     )
   }
 }

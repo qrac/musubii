@@ -43,6 +43,25 @@ body {
 }
 
 //----------------------------------------------------
+// / Style - App
+//----------------------------------------------------
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  > * {
+    width: 100%;
+  }
+  > :not(.main) {
+    flex: none;
+  }
+  > .main {
+    flex: 1 0 0%;
+  }
+}
+
+//----------------------------------------------------
 // / Style - Section
 //----------------------------------------------------
 
@@ -51,6 +70,11 @@ body {
     position: relative;
     padding: 0.75em 0;
     z-index: 10;
+  }
+  &.is-footer {
+    position: relative;
+    padding: 1.5em 0;
+    z-index: 5;
   }
 }
 
@@ -61,7 +85,7 @@ body {
 .site-logo-link {
   display: block;
   flex: none;
-  width: 8em;
+  width: 10em;
 }
 
 .site-logo {
@@ -72,16 +96,13 @@ body {
 }
 
 //----------------------------------------------------
-// / Style - Nav Links
+// / Style - Text
 //----------------------------------------------------
 
-.nav-links {
-  > *:not(:last-child) {
-    margin-right: 0.75em;
-  }
-  .icon.is-external-link {
-    margin-left: 0.125em;
-    opacity: 0.75;
+.text {
+  &.is-font-sans-en {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica Neue, Arial, sans-serif;
   }
 }
 
@@ -263,4 +284,12 @@ body {
   .hljs-meta {
     color: #75715e;
   }
+}
+
+//----------------------------------------------------
+// / Style - Opacity
+//----------------------------------------------------
+
+.is-opacity-xs {
+  opacity: 0.75;
 }

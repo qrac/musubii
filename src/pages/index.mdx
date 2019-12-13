@@ -1,21 +1,5 @@
-export const title = "MUSUBii"
+import PageMeta from "~/components/common/app-head"
 
-import SiteLogo from "~/components/parts/site-logo"
+export const meta = {}
 
-<SiteLogo />
-
-Change Theme! 👇
-
-```js
-module.exports = {
-  plugins: [
-    "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-sass-resources",
-      options: {
-        resources: ["src/assets/scss/configs.scss"]
-      }
-    }
-  ]
-}
-```
+<PageMeta meta={meta} />

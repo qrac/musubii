@@ -1,3 +1,10 @@
 {
-  "name": "MUSUBii"
+  "name": "MUSUBii",
+  "site": {
+    "title": "MUSUBii",
+    "description": "MUSUBiiは日本語サイトのインブラウザデザインを想定したシンプルで薄味のレスポンシブ対応CSS(SCSS)フレームワークです。",
+    "url": "https://musubii.qranoko.jp",
+    "twitter_id": "Qrac_JP",
+    "start_year": "2016"
+  }
 }

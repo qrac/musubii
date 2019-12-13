@@ -1,35 +1,29 @@
-import React from "react"
-
 import SiteLogo from "~/components/parts/site-logo"
-import NavLinks from "~/components/parts/nav-links"
+import NavStatuses from "~/components/parts/nav-statuses"
 import ToggleTheme from "~/components/parts/toggle-theme"
 
-class AppHeader extends React.Component {
-  render() {
-    return (
-      <header className="section is-header">
-        <div className="inner is-padding-right-xs is-padding-left-md">
-          <div className="grid is-middle is-between">
-            <div className="column">
-              <div className="box is-flex is-middle">
-                <div className="box is-margin-right-sm">
-                  <SiteLogo />
-                </div>
-                <div className="box">
-                  <NavLinks />
-                </div>
+export default () => {
+  return (
+    <header className="section is-header">
+      <div className="inner is-padding-right-xs is-padding-left-md">
+        <div className="grid is-middle is-between">
+          <div className="column">
+            <div className="box is-flex is-bottom">
+              <div className="box is-margin-right-sm">
+                <SiteLogo />
               </div>
-            </div>
-            <div className="column">
-              <div className="box">
-                <ToggleTheme />
+              <div className="box is-flex">
+                <NavStatuses />
               </div>
             </div>
           </div>
+          <div className="column">
+            <div className="box">
+              <ToggleTheme />
+            </div>
+          </div>
         </div>
-      </header>
-    )
-  }
+      </div>
+    </header>
+  )
 }
-
-export default AppHeader
