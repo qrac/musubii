@@ -3,7 +3,11 @@ import App from "next/app"
 
 import AppHeader from "~/components/commons/app-header"
 import AppFooter from "~/components/commons/app-footer"
+import LayoutDefault from "~/components/commons/layout-default"
+import LayoutDocs from "~/components/commons/layout-docs"
 import "~/components/commons/app-styles.scss"
+
+const H1 = props => <h1 style={{ color: "tomato" }} {...props} />
 
 class MyApp extends App {
   componentDidMount() {
@@ -24,7 +28,15 @@ class MyApp extends App {
       <div className="app">
         <AppHeader />
         <main className="main">
-          <Component {...pageProps} />
+          {router.route === "/" ? (
+            <LayoutDefault>
+              <Component {...pageProps} />
+            </LayoutDefault>
+          ) : (
+            <LayoutDocs>
+              <Component {...pageProps} />
+            </LayoutDocs>
+          )}
         </main>
         <AppFooter />
       </div>
