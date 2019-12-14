@@ -17,7 +17,7 @@ export default ({ meta }) => {
         property="format-detection"
         content="telephone=no, email=no, address=no"
       />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta
         key="description"
         property="description"

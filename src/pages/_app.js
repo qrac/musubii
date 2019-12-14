@@ -1,5 +1,6 @@
 import React from "react"
 import App from "next/app"
+import { PageTransition } from "next-page-transitions"
 
 import AppHeader from "~/components/common/app-header"
 import AppFooter from "~/components/common/app-footer"
@@ -19,12 +20,14 @@ class MyApp extends App {
     }
   }
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps, router } = this.props
     return (
       <div className="app">
         <AppHeader />
         <main className="main">
-          <Component {...pageProps} />
+          <PageTransition timeout={300} classNames="page-transition">
+            <Component {...pageProps} key={router.route} />
+          </PageTransition>
         </main>
         <AppFooter />
       </div>
