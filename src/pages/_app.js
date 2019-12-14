@@ -7,8 +7,6 @@ import LayoutDefault from "~/components/commons/layout-default"
 import LayoutDocs from "~/components/commons/layout-docs"
 import "~/components/commons/app-styles.scss"
 
-const H1 = props => <h1 style={{ color: "tomato" }} {...props} />
-
 class MyApp extends App {
   componentDidMount() {
     const isLocal = localStorage.getItem("theme")
