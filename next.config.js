@@ -1,9 +1,6 @@
 const withSass = require("@zeit/next-sass")
 const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-  options: {
-    rehypePlugins: [require("rehype-highlight")]
-  }
+  extension: /\.mdx?$/
 })
 
 module.exports = withSass(
