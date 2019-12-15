@@ -1,3 +1,15 @@
+import { MDXProvider } from "@mdx-js/react"
+
+import DemoWrapper from "~/components/parts/demo-wrapper"
+
+const components = {
+  wrapper: DemoWrapper
+}
+
 export default ({ children }) => {
-  return <div className="layout">{children}</div>
+  return (
+    <MDXProvider components={components}>
+      <div className="layout">{children}</div>
+    </MDXProvider>
+  )
 }

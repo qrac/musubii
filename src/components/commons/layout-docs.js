@@ -1,8 +1,10 @@
 import { MDXProvider } from "@mdx-js/react"
 
+import DemoWrapper from "~/components/parts/demo-wrapper"
 import DemoPre from "~/components/parts/demo-pre"
 
 const components = {
+  wrapper: DemoWrapper,
   pre: DemoPre
 }
 
