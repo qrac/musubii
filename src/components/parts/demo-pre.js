@@ -28,17 +28,19 @@ class DemoPre extends React.Component {
     ).value
     return (
       <div className="demo-pre-wrap">
-        <CopyToClipboard
-          text={this.props.children.props.children}
-          onCopy={() => this.copyTimeout()}
-        >
-          <button className="demo-code-copy-button">
-            {this.state.copied ? "Copied!" : "Copy"}
-          </button>
-        </CopyToClipboard>
+        <div className="demo-pre-widget">
+          <CopyToClipboard
+            text={this.props.children.props.children}
+            onCopy={() => this.copyTimeout()}
+          >
+            <button className="button is-plain is-xs">
+              {this.state.copied ? "Copied!" : "Copy"}
+            </button>
+          </CopyToClipboard>
+        </div>
         <pre className="demo-pre">
           <code
-            className="demo-code hljs"
+            className="hljs"
             dangerouslySetInnerHTML={{ __html: highlightedCode }}
           ></code>
         </pre>

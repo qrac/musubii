@@ -150,6 +150,33 @@ body {
 }
 
 //----------------------------------------------------
+// / Style - Demo Pre
+//----------------------------------------------------
+
+.demo-pre-wrap {
+  position: relative;
+  display: block;
+  background: var(--hljs-background-color);
+  border: 1px solid var(--hljs-border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  .demo-pre-widget {
+    position: absolute;
+    top: $space-xxs;
+    right: $space-xxs;
+  }
+}
+
+.demo-pre {
+  max-width: 100%;
+  white-space: pre;
+  word-wrap: normal;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+//----------------------------------------------------
 // / Style - Highlight.js
 //----------------------------------------------------
 
