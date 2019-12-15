@@ -156,9 +156,6 @@ body {
 .demo-pre-wrap {
   position: relative;
   display: block;
-  background: var(--hljs-background-color);
-  border: 1px solid var(--hljs-border-color);
-  border-radius: 2px;
   overflow: hidden;
   .demo-pre-widget {
     position: absolute;
@@ -169,6 +166,9 @@ body {
 
 .demo-pre {
   max-width: 100%;
+  background: var(--hljs-background-color);
+  border: 1px solid var(--hljs-border-color);
+  border-radius: 2px;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
