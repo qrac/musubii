@@ -1,5 +1,6 @@
 import { MDXProvider } from "@mdx-js/react"
 
+import AppMenu from "~/components/commons/app-menu"
 import DemoWrapper from "~/components/parts/demo-wrapper"
 import DemoPre from "~/components/parts/demo-pre"
 
@@ -11,7 +12,12 @@ const components = {
 export default ({ children }) => {
   return (
     <MDXProvider components={components}>
-      <div className="layout is-docs">{children}</div>
+      <div className="section is-docs">
+        <div className="inner is-padding-right-left-md">
+          <AppMenu />
+          {children}
+        </div>
+      </div>
     </MDXProvider>
   )
 }

@@ -7,9 +7,5 @@ const components = {
 }
 
 export default ({ children }) => {
-  return (
-    <MDXProvider components={components}>
-      <div className="layout">{children}</div>
-    </MDXProvider>
-  )
+  return <MDXProvider components={components}>{children}</MDXProvider>
 }

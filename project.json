@@ -6,5 +6,33 @@
     "url": "https://musubii.qranoko.jp",
     "twitter_id": "Qrac_JP",
     "start_year": "2016"
-  }
+  },
+  "menus": [
+    {
+      "id": "getting-started",
+      "heading": "Getting Started",
+      "items": [
+        {
+          "id": "introduction",
+          "title": "Introduction"
+        }
+      ]
+    },
+    {
+      "id": "styles",
+      "heading": "Styles",
+      "items": [
+        {
+          "id": "elements",
+          "heading": "Elements",
+          "items": [
+            {
+              "id": "button",
+              "title": "Button"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
