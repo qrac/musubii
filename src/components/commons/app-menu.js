@@ -5,18 +5,18 @@ import pjt from "../../../project.json"
 export default () => {
   const menus = pjt.menus
   return (
-    <nav className="nav is-menu">
+    <nav className="menu">
       <ul className="menu-list">
         {menus.map(menu => (
           <li className="menu-item" key={menu.id}>
             {menu.heading ? (
-              <p className="text is-strong">{menu.heading}</p>
+              <p className="menu-heading is-first">{menu.heading}</p>
             ) : (
               ""
             )}
             {menu.id && menu.title ? (
               <ActiveLink href={"/" + menu.id} activeClassName="is-active">
-                <a className="text is-link-reverse">{menu.title}</a>
+                <a className="menu-link">{menu.title}</a>
               </ActiveLink>
             ) : (
               ""
@@ -26,7 +26,7 @@ export default () => {
                 {menu.items.map(item => (
                   <li className="menu-item" key={menu.id + "-" + item.id}>
                     {item.heading ? (
-                      <p className="text is-strong">{item.heading}</p>
+                      <p className="menu-heading is-second">{item.heading}</p>
                     ) : (
                       ""
                     )}
@@ -35,7 +35,7 @@ export default () => {
                         href={"/" + menu.id + "/" + item.id}
                         activeClassName="is-active"
                       >
-                        <a className="text is-link-reverse">{item.title}</a>
+                        <a className="menu-link">{item.title}</a>
                       </ActiveLink>
                     ) : (
                       ""
@@ -62,9 +62,7 @@ export default () => {
                                 }
                                 activeClassName="is-active"
                               >
-                                <a className="text is-link-reverse">
-                                  {childItem.title}
-                                </a>
+                                <a className="menu-link">{childItem.title}</a>
                               </ActiveLink>
                             ) : (
                               ""

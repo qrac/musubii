@@ -150,6 +150,48 @@ body {
 }
 
 //----------------------------------------------------
+// / Style - Menu
+//----------------------------------------------------
+
+.menu {
+  > .menu-list {
+    > .menu-item {
+      &:not(:first-child) {
+        margin-top: 1.5em;
+      }
+    }
+  }
+  .menu-list .menu-list {
+    padding-left: 1em;
+  }
+}
+
+.menu-heading {
+  display: block;
+  color: $convert-text-dark-4;
+  font-size: 75%;
+  font-weight: 700;
+  letter-spacing: 0.175em;
+  text-transform: uppercase;
+  &.is-first {
+  }
+  &.is-second {
+    padding-top: 1.5em;
+  }
+}
+
+.menu-link {
+  display: block;
+  padding: 0.75em 0;
+  //font-size: 87.5%;
+  transition: $global-transition;
+  &:hover,
+  &.is-active {
+    color: $convert-primary-strong;
+  }
+}
+
+//----------------------------------------------------
 // / Style - Demo Pre
 //----------------------------------------------------
 

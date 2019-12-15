@@ -14,8 +14,12 @@ export default ({ children }) => {
     <MDXProvider components={components}>
       <div className="section is-docs">
         <div className="inner is-padding-right-left-md">
-          <AppMenu />
-          {children}
+          <div className="grid is-gap-md">
+            <div className="column is-mobile-12 is-desktop-3">
+              <AppMenu />
+            </div>
+            <div className="column is-mobile-12 is-desktop-9">{children}</div>
+          </div>
         </div>
       </div>
     </MDXProvider>
