@@ -113,8 +113,94 @@
           "heading": "Elements",
           "items": [
             {
+              "id": "text",
+              "title": "Text"
+            },
+            {
               "id": "button",
               "title": "Button"
+            },
+            {
+              "id": "badge",
+              "title": "Badge"
+            },
+            {
+              "id": "list",
+              "title": "List"
+            },
+            {
+              "id": "table",
+              "title": "Table"
+            },
+            {
+              "id": "form",
+              "title": "Form"
+            },
+            {
+              "id": "iframe",
+              "title": "iframe"
+            },
+            {
+              "id": "icon",
+              "title": "Icon"
+            },
+            {
+              "id": "alert",
+              "title": "Alert"
+            },
+            {
+              "id": "wysiwyg",
+              "title": "WYSIWYG"
+            }
+          ]
+        },
+        {
+          "id": "utilities",
+          "heading": "Utilities",
+          "items": [
+            {
+              "id": "display",
+              "title": "Display"
+            },
+            {
+              "id": "size",
+              "title": "Size"
+            },
+            {
+              "id": "flex",
+              "title": "Flex"
+            },
+            {
+              "id": "space",
+              "title": "Space"
+            },
+            {
+              "id": "margin",
+              "title": "Margin"
+            },
+            {
+              "id": "padding",
+              "title": "Padding"
+            },
+            {
+              "id": "centering",
+              "title": "Centering"
+            },
+            {
+              "id": "overflow",
+              "title": "Overflow"
+            },
+            {
+              "id": "scroll",
+              "title": "Scroll"
+            },
+            {
+              "id": "ellipsis",
+              "title": "Ellipsis"
+            },
+            {
+              "id": "clearfix",
+              "title": "Clearfix"
             }
           ]
         }

@@ -18,7 +18,9 @@ export default ({ children }) => {
             <div className="column is-mobile-12 is-desktop-3">
               <AppMenu />
             </div>
-            <div className="column is-mobile-12 is-desktop-9">{children}</div>
+            <div className="column is-mobile-12 is-desktop-9">
+              <div className="wrappwr is-docs-content">{children}</div>
+            </div>
           </div>
         </div>
       </div>

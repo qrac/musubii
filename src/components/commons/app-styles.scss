@@ -95,11 +95,20 @@ body {
   }
   &.is-footer {
     position: relative;
-    padding: 1.5em 0;
+    padding: 2.5em 0;
     z-index: 5;
   }
 }
 
+//----------------------------------------------------
+// / Style - Wrapper
+//----------------------------------------------------
+
+.wrappwr {
+  &.is-docs-content {
+    padding: 0 0 2em;
+  }
+}
 //----------------------------------------------------
 // / Style - Site Logo
 //----------------------------------------------------
@@ -154,6 +163,16 @@ body {
 //----------------------------------------------------
 
 .menu {
+  @include desktop {
+    position: sticky;
+    top: 1em;
+    max-height: 100vh;
+    padding: 0 0 2em;
+    overflow-y: auto;
+  }
+}
+
+.menu {
   > .menu-list {
     > .menu-item {
       &:not(:first-child) {
@@ -176,7 +195,7 @@ body {
 .menu-heading {
   display: block;
   padding: 0.75em 0;
-  color: $convert-text-dark-4;
+  color: $convert-text-dark-5;
   font-size: 75%;
   font-weight: 700;
   letter-spacing: 0.175em;
