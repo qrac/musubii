@@ -209,8 +209,8 @@ body {
   overflow: hidden;
   .demo-pre-widget {
     position: absolute;
-    top: $space-xxs;
-    right: $space-xxs;
+    top: calc(#{$space-xxs} + 1px);
+    right: calc(#{$space-xxs} + 1px);
   }
 }
 

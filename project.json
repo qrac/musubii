@@ -61,6 +61,54 @@
       "heading": "Styles",
       "items": [
         {
+          "id": "bases",
+          "heading": "Bases",
+          "items": [
+            {
+              "id": "root-light",
+              "title": "Root Light"
+            },
+            {
+              "id": "root-dark",
+              "title": "Root Dark"
+            },
+            {
+              "id": "reset",
+              "title": "Reset"
+            },
+            {
+              "id": "html",
+              "title": "HTML"
+            }
+          ]
+        },
+        {
+          "id": "layouts",
+          "heading": "Layouts",
+          "items": [
+            {
+              "id": "section",
+              "title": "Section"
+            },
+            {
+              "id": "grid",
+              "title": "Grid"
+            },
+            {
+              "id": "box",
+              "title": "Box"
+            },
+            {
+              "id": "card",
+              "title": "Card"
+            },
+            {
+              "id": "joint",
+              "title": "Joint"
+            }
+          ]
+        },
+        {
           "id": "elements",
           "heading": "Elements",
           "items": [
