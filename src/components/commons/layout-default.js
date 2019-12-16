@@ -1,9 +1,9 @@
 import { MDXProvider } from "@mdx-js/react"
 
-import DemoWrapper from "~/components/parts/demo-wrapper"
+import DefaultWrapper from "~/components/parts/default-wrapper"
 
 const components = {
-  wrapper: DemoWrapper
+  wrapper: DefaultWrapper
 }
 
 export default ({ children }) => {

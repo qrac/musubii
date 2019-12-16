@@ -101,15 +101,6 @@ body {
 }
 
 //----------------------------------------------------
-// / Style - Wrapper
-//----------------------------------------------------
-
-.wrappwr {
-  &.is-docs-content {
-    padding: 0 0 2em;
-  }
-}
-//----------------------------------------------------
 // / Style - Site Logo
 //----------------------------------------------------
 
@@ -165,9 +156,9 @@ body {
 .menu {
   @include desktop {
     position: sticky;
-    top: 1em;
+    top: 16px;
     max-height: 100vh;
-    padding: 0 0 2em;
+    padding: 0 0 32px;
     overflow-y: auto;
   }
 }
@@ -216,6 +207,102 @@ body {
   &.is-active {
     color: $convert-primary-strong;
   }
+}
+
+//----------------------------------------------------
+// / Style - Opacity
+//----------------------------------------------------
+
+.is-opacity-xs {
+  opacity: 0.75;
+}
+
+//----------------------------------------------------
+// / Style - Demo Wrapper
+//----------------------------------------------------
+
+.demo-wrapper {
+  padding: 0 0 32px;
+  .demo-heading-1 {
+    margin: -8px 0 32px;
+  }
+  .demo-heading-2 {
+    margin: 32px 0 12px;
+  }
+  .demo-table-wrap {
+    margin: 12px 0;
+  }
+  .demo-text {
+    margin: 16px 0;
+  }
+  .demo-pre-wrap {
+    margin: 12px 0;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Demo Heading
+//----------------------------------------------------
+
+.demo-heading-1 {
+  //color: $convert-text-dark-3;
+  font-size: 200%;
+  //font-weight: 700;
+  //line-height: 1;
+}
+
+.demo-heading-2 {
+  //color: $convert-text-dark-3;
+  font-size: 150%;
+  //font-weight: 700;
+  //line-height: 1;
+}
+
+//----------------------------------------------------
+// / Style - Demo Table
+//----------------------------------------------------
+
+.demo-table-wrap {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.demo-table {
+  width: 100%;
+  background-color: $table-background-color;
+  white-space: nowrap;
+  th {
+    background-color: $table-paint-background-color;
+    color: $table-paint-text-color;
+    font-weight: $wysiwyg-table-th-font-weight;
+  }
+  th,
+  td {
+    padding: $table-padding;
+    border: $table-border-width solid $table-border-color;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Demo Text
+//----------------------------------------------------
+
+.demo-text {
+}
+
+.demo-link {
+  color: $convert-primary-strong;
+  border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
+    currentColor;
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.demo-inline-code {
+  @include musubii-style-text-code();
 }
 
 //----------------------------------------------------
@@ -402,12 +489,4 @@ body {
   .hljs-meta {
     color: #75715e;
   }
-}
-
-//----------------------------------------------------
-// / Style - Opacity
-//----------------------------------------------------
-
-.is-opacity-xs {
-  opacity: 0.75;
 }
