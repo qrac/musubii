@@ -15,6 +15,44 @@
         {
           "id": "introduction",
           "title": "Introduction"
+        },
+        {
+          "id": "support",
+          "title": "Support"
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "heading": "Installation",
+      "items": [
+        {
+          "id": "npm",
+          "title": "npm"
+        },
+        {
+          "id": "nuxt",
+          "title": "Nuxt"
+        },
+        {
+          "id": "gridsome",
+          "title": "Gridsome"
+        },
+        {
+          "id": "gatsby",
+          "title": "Gatsby"
+        },
+        {
+          "id": "next",
+          "title": "Next"
+        },
+        {
+          "id": "gulp",
+          "title": "gulp"
+        },
+        {
+          "id": "cdn",
+          "title": "CDN"
         }
       ]
     },

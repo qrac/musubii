@@ -160,6 +160,13 @@ body {
         margin-top: 1.5em;
       }
     }
+    &:first-child {
+      > .menu-item:first-child {
+        .menu-heading:first-child {
+          padding-top: 0;
+        }
+      }
+    }
   }
   .menu-list .menu-list {
     padding-left: 1em;
@@ -168,6 +175,7 @@ body {
 
 .menu-heading {
   display: block;
+  padding: 0.75em 0;
   color: $convert-text-dark-4;
   font-size: 75%;
   font-weight: 700;
@@ -176,13 +184,13 @@ body {
   &.is-first {
   }
   &.is-second {
-    padding-top: 1.5em;
+    //padding-top: 1.5em;
   }
 }
 
 .menu-link {
   display: block;
-  padding: 0.75em 0;
+  padding: 0.375em 0;
   //font-size: 87.5%;
   transition: $global-transition;
   &:hover,
