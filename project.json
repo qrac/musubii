@@ -219,6 +219,86 @@
           ]
         }
       ]
+    },
+    {
+      "id": "configs",
+      "heading": "Configs",
+      "items": [
+        {
+          "id": "variables",
+          "heading": "Variables",
+          "items": [
+            {
+              "id": "breakpoint",
+              "title": "Break Point"
+            },
+            {
+              "id": "color",
+              "title": "Color"
+            },
+            {
+              "id": "font",
+              "title": "Font"
+            },
+            {
+              "id": "radius",
+              "title": "Radius"
+            },
+            {
+              "id": "shadow",
+              "title": "Shadow"
+            },
+            {
+              "id": "space",
+              "title": "Space"
+            },
+            {
+              "id": "global",
+              "title": "Global"
+            }
+          ]
+        },
+        {
+          "id": "mixins",
+          "heading": "Mixins",
+          "items": [
+            {
+              "id": "mediaquery",
+              "title": "Media Query"
+            },
+            {
+              "id": "placeholder",
+              "title": "Placeholder"
+            },
+            {
+              "id": "safearea",
+              "title": "Safe Area"
+            }
+          ]
+        },
+        {
+          "id": "themes",
+          "heading": "Themes",
+          "items": [
+            {
+              "id": "theme-common",
+              "title": "Theme Common"
+            },
+            {
+              "id": "theme-light",
+              "title": "Theme Light"
+            },
+            {
+              "id": "theme-dark",
+              "title": "Theme Dark"
+            },
+            {
+              "id": "convert",
+              "title": "Convert"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
