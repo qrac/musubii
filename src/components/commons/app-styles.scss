@@ -3,6 +3,13 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+$font-sans-en: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Helvetica Neue, Arial, sans-serif;
+
+//----------------------------------------------------
 // / Style - MUSUBii (Custom Import)
 //----------------------------------------------------
 
@@ -123,8 +130,7 @@ body {
 
 .text {
   &.is-font-sans-en {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-      Helvetica Neue, Arial, sans-serif;
+    font-family: $font-sans-en;
   }
 }
 
@@ -154,7 +160,18 @@ body {
 //----------------------------------------------------
 
 .menu {
-  @include desktop {
+  @include mobile-tablet() {
+    border: 1px solid $convert-border;
+    border-radius: $radius-md;
+    //overflow: hidden;
+    > .menu-list {
+      padding: 0.75em 1em 1.5em;
+    }
+    > .menu-list:not(.is-active) {
+      display: none;
+    }
+  }
+  @include desktop() {
     position: sticky;
     top: 16px;
     max-height: 100vh;
@@ -180,6 +197,58 @@ body {
   }
   .menu-list .menu-list {
     padding-left: 1em;
+  }
+}
+
+.menu-button {
+  @include mobile-tablet() {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: $button-padding;
+    background-color: $button-outline-background-color;
+    border: none;
+    border-radius: $radius-md;
+    color: $body-text-color;
+    line-height: $button-line-height;
+    //font-family: $font-sans-en;
+    white-space: nowrap;
+    transition: $button-transition;
+    &:focus {
+      outline: none;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: $button-angle-size * 1.5;
+      width: $button-angle-size;
+      height: $button-angle-size;
+      border-top: $button-angle-border-width solid $button-angle-border-color;
+      border-right: $button-angle-border-width solid $button-angle-border-color;
+      transform: translateY(-70%) rotate(135deg);
+      z-index: 2;
+    }
+    &:not(.is-active) {
+      &:focus {
+        box-shadow: $button-focus-shadow;
+        outline: none;
+      }
+    }
+    &.is-active {
+      border-bottom: 1px solid $convert-border;
+      border-radius: $radius-md $radius-md 0 0;
+      &:focus {
+        box-shadow: $convert-focus-alpha 0 -3px 0 0 inset;
+      }
+      &:after {
+        transform: translateY(-30%) rotate(-45deg);
+      }
+    }
+  }
+  @include desktop() {
+    display: none;
   }
 }
 
@@ -222,7 +291,12 @@ body {
 //----------------------------------------------------
 
 .demo-wrapper {
-  padding: 0 0 32px;
+  @include mobile-tablet() {
+    padding: 12px 0 16px;
+  }
+  @include desktop() {
+    padding: 0 0 32px;
+  }
   .demo-heading-1 {
     margin: -8px 0 32px;
   }
