@@ -2,7 +2,7 @@ import React from "react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import hljs from "highlight.js/lib/highlight"
 
-hljs.registerLanguage("bash", require("highlight.js/lib/languages/bash"))
+//hljs.registerLanguage("shell", require("highlight.js/lib/languages/shell"))
 hljs.registerLanguage("json", require("highlight.js/lib/languages/json"))
 hljs.registerLanguage("html", require("highlight.js/lib/languages/xml"))
 hljs.registerLanguage("js", require("highlight.js/lib/languages/javascript"))
@@ -22,18 +22,28 @@ class DemoPre extends React.Component {
     }, 1000)
   }
   render() {
-    const language = this.props.children.props.className.split("-")[1]
-    const highlightedCode = hljs.highlight(
-      language,
-      this.props.children.props.children
-    ).value
+    const language = (() => {
+      if (this.props.children.props.className) {
+        return this.props.children.props.className.split("-")[1]
+      }
+    })()
+    const copyText = (() => {
+      if (this.props.children.props.children) {
+        return this.props.children.props.children
+      }
+    })()
+    const highlightedCode = (() => {
+      if (language && copyText) {
+        return hljs.highlight(language, this.props.children.props.children)
+          .value
+      } else if (copyText) {
+        return copyText
+      }
+    })()
     return (
       <div className="demo-pre-wrap">
         <div className="demo-pre-widget">
-          <CopyToClipboard
-            text={this.props.children.props.children}
-            onCopy={() => this.copyTimeout()}
-          >
+          <CopyToClipboard text={copyText} onCopy={() => this.copyTimeout()}>
             <button className="button is-plain is-xs">
               {this.state.copied ? "Copied!" : "Copy"}
             </button>
