@@ -25,99 +25,103 @@ class AppMenu extends React.Component {
   render() {
     const menus = pjt.menus
     return (
-      <nav className="menu">
+      <div className="menu-wrap">
         <button
           className={this.state.open ? "menu-button is-active" : "menu-button"}
           onClick={this.toggleMenu}
         >
           Menu
         </button>
-        <ul className={this.state.open ? "menu-list is-active" : "menu-list"}>
-          {menus.map(menu => (
-            <li className="menu-item" key={menu.id}>
-              {menu.heading ? (
-                <p className="menu-heading is-first">{menu.heading}</p>
-              ) : (
-                ""
-              )}
-              {menu.id && menu.title ? (
-                <ActiveLink href={"/" + menu.id} activeClassName="is-active">
-                  <a className="menu-link" onClick={this.closeMenu}>
-                    {menu.title}
-                  </a>
-                </ActiveLink>
-              ) : (
-                ""
-              )}
-              {menu.items ? (
-                <ul className="menu-list">
-                  {menu.items.map(item => (
-                    <li className="menu-item" key={menu.id + "-" + item.id}>
-                      {item.heading ? (
-                        <p className="menu-heading is-second">{item.heading}</p>
-                      ) : (
-                        ""
-                      )}
-                      {menu.id && item.id && item.title ? (
-                        <ActiveLink
-                          href={"/" + menu.id + "/" + item.id}
-                          activeClassName="is-active"
-                        >
-                          <a className="menu-link" onClick={this.closeMenu}>
-                            {item.title}
-                          </a>
-                        </ActiveLink>
-                      ) : (
-                        ""
-                      )}
-                      {item.items ? (
-                        <ul className="menu-list">
-                          {item.items.map(childItem => (
-                            <li
-                              className="menu-item"
-                              key={menu.id + item.id + childItem.id}
-                            >
-                              {menu.id &&
-                              item.id &&
-                              childItem.id &&
-                              childItem.title ? (
-                                <ActiveLink
-                                  href={
-                                    "/" +
-                                    menu.id +
-                                    "/" +
-                                    item.id +
-                                    "/" +
-                                    childItem.id
-                                  }
-                                  activeClassName="is-active"
-                                >
-                                  <a
-                                    className="menu-link"
-                                    onClick={this.closeMenu}
+        <nav className={this.state.open ? "menu is-active" : "menu"}>
+          <ul className="menu-list">
+            {menus.map(menu => (
+              <li className="menu-item" key={menu.id}>
+                {menu.heading ? (
+                  <p className="menu-heading is-first">{menu.heading}</p>
+                ) : (
+                  ""
+                )}
+                {menu.id && menu.title ? (
+                  <ActiveLink href={"/" + menu.id} activeClassName="is-active">
+                    <a className="menu-link" onClick={this.closeMenu}>
+                      {menu.title}
+                    </a>
+                  </ActiveLink>
+                ) : (
+                  ""
+                )}
+                {menu.items ? (
+                  <ul className="menu-list">
+                    {menu.items.map(item => (
+                      <li className="menu-item" key={menu.id + "-" + item.id}>
+                        {item.heading ? (
+                          <p className="menu-heading is-second">
+                            {item.heading}
+                          </p>
+                        ) : (
+                          ""
+                        )}
+                        {menu.id && item.id && item.title ? (
+                          <ActiveLink
+                            href={"/" + menu.id + "/" + item.id}
+                            activeClassName="is-active"
+                          >
+                            <a className="menu-link" onClick={this.closeMenu}>
+                              {item.title}
+                            </a>
+                          </ActiveLink>
+                        ) : (
+                          ""
+                        )}
+                        {item.items ? (
+                          <ul className="menu-list">
+                            {item.items.map(childItem => (
+                              <li
+                                className="menu-item"
+                                key={menu.id + item.id + childItem.id}
+                              >
+                                {menu.id &&
+                                item.id &&
+                                childItem.id &&
+                                childItem.title ? (
+                                  <ActiveLink
+                                    href={
+                                      "/" +
+                                      menu.id +
+                                      "/" +
+                                      item.id +
+                                      "/" +
+                                      childItem.id
+                                    }
+                                    activeClassName="is-active"
                                   >
-                                    {childItem.title}
-                                  </a>
-                                </ActiveLink>
-                              ) : (
-                                ""
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        ""
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                ""
-              )}
-            </li>
-          ))}
-        </ul>
-      </nav>
+                                    <a
+                                      className="menu-link"
+                                      onClick={this.closeMenu}
+                                    >
+                                      {childItem.title}
+                                    </a>
+                                  </ActiveLink>
+                                ) : (
+                                  ""
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          ""
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  ""
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     )
   }
 }

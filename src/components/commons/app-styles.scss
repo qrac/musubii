@@ -166,15 +166,15 @@ body {
 // / Style - Menu
 //----------------------------------------------------
 
-.menu {
+.menu-wrap {
   @include mobile-tablet() {
     border: 1px solid $convert-border;
     border-radius: $radius-md;
     //overflow: hidden;
-    > .menu-list {
+    .menu {
       padding: 0.75em 1em 1.5em;
     }
-    > .menu-list:not(.is-active) {
+    .menu:not(.is-active) {
       display: none;
     }
   }
