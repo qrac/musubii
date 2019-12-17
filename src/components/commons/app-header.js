@@ -5,7 +5,7 @@ import ToggleTheme from "~/components/parts/toggle-theme"
 export default () => {
   return (
     <header className="section is-header">
-      <div className="inner is-padding-right-xs is-padding-left-md">
+      <div className="inner is-padding-right-sm is-padding-left-md">
         <div className="box is-padding-top-safe">
           <div className="grid is-middle is-between">
             <div className="column">
