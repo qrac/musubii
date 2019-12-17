@@ -3,13 +3,14 @@ export const meta = {
   path: "/installation/cdn"
 }
 
+import DemoPre from "~/components/parts/demo-pre"
+import pkg from "../../../package.json"
+
+export const cdnUrl = `https://cdn.jsdelivr.net/npm/musubii@${pkg.version}/dist/musubii.min.css`
+export const cdnHtml = `<link rel="stylesheet" href="${cdnUrl}" />`
+
 # CDN
 
 MUSUBii を手っ取り早く使う場合は CDN リンクを HTML に貼ります。 ※CSS Variables は有効化できません
 
-```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/musubii@7.0.0/dist/musubii.min.css"
-/>
-```
+<DemoPre language="html" code={cdnHtml} />

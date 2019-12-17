@@ -8,7 +8,7 @@ import DemoTable from "~/components/parts/demo-table"
 import DemoText from "~/components/parts/demo-text"
 import DemoLink from "~/components/parts/demo-link"
 import DemoInlineCode from "~/components/parts/demo-inline-code"
-import DemoPre from "~/components/parts/demo-pre"
+import DemoPreForMdx from "~/components/parts/demo-pre-for-mdx"
 
 const components = {
   wrapper: DemoWrapper,
@@ -18,7 +18,7 @@ const components = {
   p: DemoText,
   a: DemoLink,
   inlineCode: DemoInlineCode,
-  pre: DemoPre
+  pre: DemoPreForMdx
 }
 
 export default ({ children }) => {

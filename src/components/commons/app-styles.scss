@@ -321,6 +321,7 @@ body {
 }
 
 .demo-pre {
+  display: flex;
   max-width: 100%;
   background: var(--hljs-background-color);
   border: 1px solid var(--hljs-border-color);
@@ -338,7 +339,7 @@ body {
 
 .hljs {
   display: block;
-  padding: 1em 1.25em;
+  padding: 1em 5.25em 1em 1.25em;
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo,
     monospace, serif;
 }
