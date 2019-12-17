@@ -41,13 +41,11 @@ class DemoPre extends React.Component {
     })()
     return (
       <div className="demo-pre-wrap">
-        <div className="demo-pre-widget">
-          <CopyToClipboard text={copyCode} onCopy={() => this.copyTimeout()}>
-            <button className="button is-plain is-xs">
-              {this.state.copied ? "Copied!" : "Copy"}
-            </button>
-          </CopyToClipboard>
-        </div>
+        <CopyToClipboard text={copyCode} onCopy={() => this.copyTimeout()}>
+          <button className="demo-pre-copy-button">
+            {this.state.copied ? "Copied!" : "Copy"}
+          </button>
+        </CopyToClipboard>
         <pre className="demo-pre">
           <code
             className="hljs"

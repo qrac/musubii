@@ -313,10 +313,37 @@ body {
   position: relative;
   display: block;
   overflow: hidden;
-  .demo-pre-widget {
+  .demo-pre-copy-button {
     position: absolute;
-    top: calc(#{$space-xxs} + 1px);
-    right: calc(#{$space-xxs} + 1px);
+    top: 1px;
+    right: 1px;
+  }
+}
+
+.demo-pre-copy-button {
+  cursor: pointer;
+  padding: 4px 8px;
+  background: var(--hljs-background-color);
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid var(--hljs-border-color);
+  border-left: 1px solid var(--hljs-border-color);
+  border-radius: 0 0 0 3px;
+  color: $convert-text-dark-2;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
+    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  line-height: 16px;
+  white-space: nowrap;
+  //transition: 0.12s ease-out;
+  &:hover {
+    background: var(--hljs-background-color);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: #1ea7fd 0 -3px 0 0 inset;
   }
 }
 
@@ -339,7 +366,7 @@ body {
 
 .hljs {
   display: block;
-  padding: 1em 5.25em 1em 1.25em;
+  padding: 1.25em 4.5em 1.25em 1.5em;
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo,
     monospace, serif;
 }
