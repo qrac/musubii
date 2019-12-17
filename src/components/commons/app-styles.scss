@@ -153,6 +153,13 @@ body {
       stroke-linejoin: round;
     }
   }
+  &.is-external-link-fix {
+    position: relative;
+    top: -0.25em;
+    margin-left: 0.25em;
+    font-size: 75%;
+    opacity: 0.75;
+  }
 }
 
 //----------------------------------------------------
@@ -276,14 +283,6 @@ body {
   &.is-active {
     color: $convert-primary-strong;
   }
-}
-
-//----------------------------------------------------
-// / Style - Opacity
-//----------------------------------------------------
-
-.is-opacity-xs {
-  opacity: 0.75;
 }
 
 //----------------------------------------------------
