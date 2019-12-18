@@ -24,6 +24,13 @@ class AppMenu extends React.Component {
   }
   render() {
     const menus = pjt.menus
+    /*const menuHeight = (() => {
+      if (process.browser && this.state.open) {
+        return document.getElementById("menu").clientHeight
+      } else {
+        return 0
+      }
+    })()*/
 
     const MenuItem1 = ({ menu }) => (
       <li className="menu-item">
@@ -133,13 +140,20 @@ class AppMenu extends React.Component {
         >
           Menu
         </button>
-        <nav className={this.state.open ? "menu is-active" : "menu"}>
-          <ul className="menu-list">
-            {menus.map(menu => (
-              <MenuItem1 menu={menu} key={menu.id} />
-            ))}
-          </ul>
-        </nav>
+        <div
+          className={
+            this.state.open ? "menu-accordion is-active" : "menu-accordion"
+          }
+          /*style={{ maxHeight: menuHeight }}*/
+        >
+          <nav className="menu" id="menu">
+            <ul className="menu-list">
+              {menus.map(menu => (
+                <MenuItem1 menu={menu} key={menu.id} />
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
     )
   }

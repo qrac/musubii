@@ -170,12 +170,16 @@ body {
   @include mobile-tablet() {
     border: 1px solid $convert-border;
     border-radius: $radius-md;
-    //overflow: hidden;
+    .menu-accordion {
+      overflow: hidden;
+      //transition: 0.6s ease;
+      &:not(.is-active) {
+        max-height: 0;
+        //transition: 0.3s ease;
+      }
+    }
     .menu {
       padding: 0.75em 1em 1.5em;
-    }
-    .menu:not(.is-active) {
-      display: none;
     }
   }
   @include desktop() {
