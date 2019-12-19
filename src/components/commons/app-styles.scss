@@ -3,13 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables
-//----------------------------------------------------
-
-$font-sans-en: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-  Helvetica Neue, Arial, sans-serif;
-
-//----------------------------------------------------
 // / Style - MUSUBii (Custom Import)
 //----------------------------------------------------
 
@@ -18,6 +11,17 @@ $option-css-variables: true;
 
 @import "../../scss/configs/_import.scss";
 @import "../../scss/styles/_import.scss";
+
+//----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+$grey-wind: #f7fafc;
+$global-transition-mode-change: background 0.12s ease-in-out,
+  color 0.12s ease-in-out;
+$font-sans-en: Nunito, $font-sans;
+$header-height-mobile: 3.5em;
+$header-height-desktop: 5.125em;
 
 //----------------------------------------------------
 // / Style - Root
@@ -31,6 +35,7 @@ $option-css-variables: true;
   --demo-background-color-cyan: #37b0be;
   --demo-background-color-grey: #e0e0e0;
   --demo-background-color-grey-light: #f1f1f1;
+  --demo-background-color-grey-wind: #{$grey-wind};
 }
 
 :root [data-theme="dark"] {
@@ -40,6 +45,7 @@ $option-css-variables: true;
   --demo-paint-box-background-color: #2a2a2b;
   --demo-background-color-cyan: #1f636b;
   --demo-background-color-grey: #2e2e2e;
+  --demo-background-color-grey-wind: #2e2e2e;
 }
 
 //----------------------------------------------------
@@ -47,7 +53,7 @@ $option-css-variables: true;
 //----------------------------------------------------
 
 body {
-  transition: background 0.12s ease-in-out, color 0.12s ease-in-out;
+  transition: $global-transition-mode-change;
 }
 
 //----------------------------------------------------
@@ -94,16 +100,35 @@ body {
 .section {
   &.is-header {
     position: relative;
-    padding: 0.75em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-height-mobile;
     z-index: 10;
-    @include desktop {
-      padding: 1.5em 0;
+    > .inner {
+      flex: none;
+      @include mobile-only() {
+        width: 100%;
+      }
+    }
+    @include desktop() {
+      height: $header-height-desktop;
     }
   }
   &.is-footer {
     position: relative;
     padding: 2.5em 0;
     z-index: 5;
+  }
+  &.is-hero {
+    margin-top: -$header-height-mobile;
+    padding: 1.5em + $header-height-mobile 0 3.5em;
+    background-color: var(--demo-background-color-grey-wind);
+    transition: $global-transition-mode-change;
+    @include desktop() {
+      margin-top: -$header-height-desktop;
+      padding: 1.5em + $header-height-desktop 0 3.5em;
+    }
   }
 }
 
@@ -131,6 +156,22 @@ body {
 .text {
   &.is-font-sans-en {
     font-family: $font-sans-en;
+  }
+  &.is-hero-1 {
+    font-size: 16.75vw;
+    line-height: 1.1;
+    white-space: nowrap;
+    @include tablet() {
+      font-size: 4.475em;
+    }
+  }
+  &.is-hero-2 {
+    font-size: 11vw;
+    line-height: 1.1;
+    white-space: nowrap;
+    @include tablet() {
+      font-size: 2.965em;
+    }
   }
 }
 
@@ -179,7 +220,7 @@ body {
       }
     }
     .menu {
-      padding: 0.75em 1em 1.5em;
+      padding: 1em 1em 1.5em;
     }
   }
   @include desktop() {
@@ -223,7 +264,7 @@ body {
     border-radius: $radius-md;
     color: $body-text-color;
     line-height: $button-line-height;
-    //font-family: $font-sans-en;
+    font-family: $font-sans-en;
     white-space: nowrap;
     transition: $button-transition;
     &:focus {
@@ -266,9 +307,10 @@ body {
 .menu-heading {
   display: block;
   padding: 0.75em 0;
-  color: $convert-text-dark-5;
+  color: $convert-text-dark-4;
   font-size: 75%;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: $font-sans-en;
   letter-spacing: 0.175em;
   text-transform: uppercase;
   &.is-first {
@@ -282,10 +324,28 @@ body {
   display: block;
   padding: 0.375em 0;
   //font-size: 87.5%;
+  font-family: $font-sans-en;
   transition: $global-transition;
   &:hover,
   &.is-active {
     color: $convert-primary-strong;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Demo SVG
+//----------------------------------------------------
+
+.demo-image {
+  display: block;
+  &.is-hero {
+    width: 90vw;
+    @include tablet() {
+      width: 23.5em;
+    }
+    @include desktop() {
+      margin-left: 28px;
+    }
   }
 }
 
@@ -304,7 +364,7 @@ body {
     margin: -8px 0 32px;
   }
   .demo-heading-2 {
-    margin: 32px 0 12px;
+    margin: 40px 0 12px;
   }
   .demo-table-wrap {
     margin: 12px 0;
@@ -322,16 +382,18 @@ body {
 //----------------------------------------------------
 
 .demo-heading-1 {
-  //color: $convert-text-dark-3;
+  color: $convert-text-dark-3;
   font-size: 200%;
-  //font-weight: 700;
+  font-weight: 700;
+  font-family: $font-sans-en;
   //line-height: 1;
 }
 
 .demo-heading-2 {
-  //color: $convert-text-dark-3;
+  color: $convert-text-dark-3;
   font-size: 150%;
-  //font-weight: 700;
+  font-weight: 700;
+  font-family: $font-sans-en;
   //line-height: 1;
 }
 

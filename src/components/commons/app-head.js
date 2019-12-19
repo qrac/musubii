@@ -48,6 +48,10 @@ export default ({ meta }) => {
       />
       <meta name="twitter:card" content="summary" />
       <meta property="twitter:creator" content={"@" + pjt.site.twitter_id} />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap"
+      ></link>
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="icon" href="/favicon.png" />
     </Head>

@@ -12,10 +12,10 @@ export default () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        {pkg.organization.name}
+        <span className="text is-font-sans-en">{pkg.organization.name}</span>
       </a>
       &nbsp;
-      <span className="text">
+      <span className="text is-font-sans-en">
         {pjt.site.start_year ? pjt.site.start_year : ""}
         {pjt.site.start_year != dateNowYear ? " - " : ""}
         {pjt.site.start_year != dateNowYear ? dateNowYear : ""}

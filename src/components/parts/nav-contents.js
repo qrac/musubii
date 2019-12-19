@@ -31,7 +31,7 @@ export default () => {
         <div className="column" key={i}>
           <p className="text is-sm">
             {content.title ? (
-              <span className="text">{content.title}: </span>
+              <span className="text is-font-sans-en">{content.title}: </span>
             ) : (
               ""
             )}
@@ -42,14 +42,14 @@ export default () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <span className="text">{content.text}</span>
+                <span className="text is-font-sans-en">{content.text}</span>
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
                   className="icon is-external-link-fix is-sm"
                 />
               </a>
             ) : (
-              <span className="text">{content.text}</span>
+              <span className="text is-font-sans-en">{content.text}</span>
             )}
           </p>
         </div>
