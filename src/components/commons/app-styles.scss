@@ -122,12 +122,12 @@ body {
   }
   &.is-hero {
     margin-top: -$header-height-mobile;
-    padding: 1.5em + $header-height-mobile 0 3.5em;
+    padding: 2em + $header-height-mobile 0 3.5em;
     background-color: var(--demo-background-color-grey-wind);
     transition: $global-transition-mode-change;
     @include desktop() {
       margin-top: -$header-height-desktop;
-      padding: 1.5em + $header-height-desktop 0 3.5em;
+      padding: 1em + $header-height-desktop 0 3.5em;
     }
   }
 }
