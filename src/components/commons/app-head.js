@@ -39,14 +39,21 @@ export default ({ meta }) => {
       />
       <meta
         property="og:image"
-        content={pjt.site.url + "/apple-touch-icon.png"}
+        content={
+          meta.path === "/"
+            ? pjt.site.url + "/ogp.png"
+            : pjt.site.url + "/apple-touch-icon.png"
+        }
       />
       <meta property="og:site_name" content={pjt.site.title} />
       <meta
         property="og:type"
         content={meta.path === "/" ? "website" : "article"}
       />
-      <meta name="twitter:card" content="summary" />
+      <meta
+        name="twitter:card"
+        content={meta.path === "/" ? "summary_large_image" : "summary"}
+      />
       <meta property="twitter:creator" content={"@" + pjt.site.twitter_id} />
       <link
         rel="stylesheet"
