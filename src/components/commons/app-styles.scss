@@ -128,6 +128,9 @@ body {
       padding: 1em + $header-height-desktop 0 3.5em;
     }
   }
+  &.is-about {
+    padding: 3em 0;
+  }
 }
 
 //----------------------------------------------------
