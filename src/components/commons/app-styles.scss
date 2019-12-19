@@ -355,13 +355,13 @@ body {
 
 .demo-wrapper {
   @include mobile-tablet() {
-    padding: 12px 0 16px;
+    padding: 28px 0 16px;
   }
   @include desktop() {
-    padding: 0 0 32px;
+    padding: 0 0 32px 32px;
   }
   .demo-heading-1 {
-    margin: -8px 0 32px;
+    margin: -8px 0 24px;
   }
   .demo-heading-2 {
     margin: 40px 0 12px;
