@@ -415,6 +415,8 @@ body {
   --demo-path-baloon-cloud-fill: #{$white};
   --demo-path-baloon-cloud-stroke: #{$blue-grey-50};
   --demo-path-object-red-light-fill: #{$red-100};
+  --demo-path-object-yellow-dark-fill: #{$yellow-800};
+  --demo-path-object-blue-dark-fill: #{$blue-700};
 }
 
 :root [data-theme="dark"] {
@@ -432,6 +434,8 @@ body {
   --demo-path-baloon-cloud-fill: #{$blue-grey-700};
   --demo-path-baloon-cloud-stroke: #{$blue-grey-600};
   --demo-path-object-red-light-fill: #{$red-200};
+  --demo-path-object-yellow-dark-fill: #{$yellow-900};
+  --demo-path-object-blue-dark-fill: #{$blue-800};
 }
 
 .demo-image {
@@ -503,6 +507,19 @@ body {
   .demo-path-face-lower-lip {
     fill: none;
     stroke: var(--demo-path-object-blue-fill);
+  }
+  .demo-path-badge-bg {
+    fill: var(--demo-path-baloon-cloud-fill);
+  }
+  .demo-path-object-yellow-dark {
+    fill: var(--demo-path-object-yellow-dark-fill);
+  }
+  .demo-path-stroke-yellow-dark {
+    fill: none;
+    stroke: var(--demo-path-object-yellow-dark-fill);
+  }
+  .demo-path-object-blue-dark {
+    fill: var(--demo-path-object-blue-dark-fill);
   }
 }
 
