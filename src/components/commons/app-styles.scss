@@ -131,6 +131,30 @@ body {
   &.is-about {
     padding: 3em 0;
   }
+  &.is-feature {
+    padding: 3em 0;
+    &:nth-child(odd) {
+      background-color: var(--demo-background-color-grey-wind);
+    }
+    &:nth-child(even) {
+      .grid {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  &.is-bg-wind {
+    background-color: var(--demo-background-color-grey-wind);
+  }
+}
+
+//----------------------------------------------------
+// / Style - Box
+//----------------------------------------------------
+
+.box {
+  &.is-feature-texts {
+    max-width: 25.45em;
+  }
 }
 
 //----------------------------------------------------
@@ -147,6 +171,17 @@ body {
   width: 100%;
   path {
     fill: $convert-primary-strong;
+  }
+}
+
+//----------------------------------------------------
+// / Style - Badge
+//----------------------------------------------------
+
+.badge {
+  &.is-position-top-fix {
+    position: relative;
+    top: -0.25em;
   }
 }
 
@@ -403,51 +438,54 @@ body {
     @include desktop() {
       margin-left: 28px;
     }
-    .demo-path-shadow {
-      fill: var(--demo-path-shadow-fill);
-    }
-    .demo-path-browser-window {
-      fill: var(--demo-path-browser-window-fill);
-    }
-    .demo-path-browser-title-bar {
-      fill: var(--demo-path-browser-title-bar-fill);
-    }
-    .demo-path-browser-button-danger {
-      fill: $red-500;
-    }
-    .demo-path-browser-button-warning {
-      fill: $amber-500;
-    }
-    .demo-path-browser-button-success {
-      fill: $green-500;
-    }
-    .demo-path-browser-wire-box {
-      fill: var(--demo-path-browser-wire-box-fill);
-    }
-    .demo-path-browser-wire-mark {
-      fill: var(--demo-path-browser-window-fill);
-    }
-    .demo-path-browser-pre {
-      fill: var(--demo-path-browser-pre-fill);
-    }
-    .demo-path-browser-code {
-      fill: var(--demo-path-browser-code-fill);
-    }
-    .demo-path-object-white {
-      fill: var(--demo-path-object-white-fill);
-    }
-    .demo-path-object-blue {
-      fill: var(--demo-path-object-blue-fill);
-    }
-    .demo-path-object-yellow {
-      fill: var(--demo-path-object-yellow-fill);
-    }
-    .demo-path-object-cyan-dark {
-      fill: var(--demo-path-object-cyan-dark-fill);
-    }
-    .demo-path-object-cyan {
-      fill: var(--demo-path-object-cyan-fill);
-    }
+  }
+  &.is-feature {
+    width: 12em;
+  }
+  .demo-path-shadow {
+    fill: var(--demo-path-shadow-fill);
+  }
+  .demo-path-browser-window {
+    fill: var(--demo-path-browser-window-fill);
+  }
+  .demo-path-browser-title-bar {
+    fill: var(--demo-path-browser-title-bar-fill);
+  }
+  .demo-path-browser-button-danger {
+    fill: $red-500;
+  }
+  .demo-path-browser-button-warning {
+    fill: $amber-500;
+  }
+  .demo-path-browser-button-success {
+    fill: $green-500;
+  }
+  .demo-path-browser-wire-box {
+    fill: var(--demo-path-browser-wire-box-fill);
+  }
+  .demo-path-browser-wire-mark {
+    fill: var(--demo-path-browser-window-fill);
+  }
+  .demo-path-browser-pre {
+    fill: var(--demo-path-browser-pre-fill);
+  }
+  .demo-path-browser-code {
+    fill: var(--demo-path-browser-code-fill);
+  }
+  .demo-path-object-white {
+    fill: var(--demo-path-object-white-fill);
+  }
+  .demo-path-object-blue {
+    fill: var(--demo-path-object-blue-fill);
+  }
+  .demo-path-object-yellow {
+    fill: var(--demo-path-object-yellow-fill);
+  }
+  .demo-path-object-cyan-dark {
+    fill: var(--demo-path-object-cyan-dark-fill);
+  }
+  .demo-path-object-cyan {
+    fill: var(--demo-path-object-cyan-fill);
   }
 }
 

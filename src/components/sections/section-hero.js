@@ -39,7 +39,6 @@ export default () => {
                 icon={faGithub}
                 className="icon is-margin-right-xxs"
               />
-              <span className="text is-font-sans-en">v{pkg.version}・</span>
               <span className="text is-font-sans-en">{pkg.license}・</span>
               <a
                 className="text is-link-reverse"
