@@ -417,6 +417,7 @@ body {
   --demo-path-object-red-light-fill: #{$red-100};
   --demo-path-object-yellow-dark-fill: #{$yellow-800};
   --demo-path-object-blue-dark-fill: #{$blue-700};
+  --demo-path-object-blue-light-fill: #{$blue-500};
 }
 
 :root [data-theme="dark"] {
@@ -436,6 +437,7 @@ body {
   --demo-path-object-red-light-fill: #{$red-200};
   --demo-path-object-yellow-dark-fill: #{$yellow-900};
   --demo-path-object-blue-dark-fill: #{$blue-800};
+  --demo-path-object-blue-light-fill: #{$blue-600};
 }
 
 .demo-image {
@@ -520,6 +522,12 @@ body {
   }
   .demo-path-object-blue-dark {
     fill: var(--demo-path-object-blue-dark-fill);
+  }
+  .demo-path-object-blue-light {
+    fill: var(--demo-path-object-blue-light-fill);
+  }
+  .demo-path-logo-sass {
+    fill: #cd6799;
   }
 }
 
