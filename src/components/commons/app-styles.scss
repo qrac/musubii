@@ -418,6 +418,16 @@ body {
   --demo-path-object-yellow-dark-fill: #{$yellow-800};
   --demo-path-object-blue-dark-fill: #{$blue-700};
   --demo-path-object-blue-light-fill: #{$blue-500};
+  --demo-path-chrome-green-fill: #{$green-500};
+  --demo-path-chrome-red-fill: #{$red-500};
+  --demo-path-chrome-yellow-fill: #{$yellow-500};
+  --demo-path-chrome-blue-fill: #{$blue-500};
+  --demo-path-firefox-blue-fill: #{$blue-500};
+  --demo-path-firefox-orange-fill: #{$orange-500};
+  --demo-path-edge-blue-fill: #{$blue-500};
+  --demo-path-ie-blue-fill: #{$light-blue-500};
+  --demo-path-safari-blue-fill: #{$light-blue-600};
+  --demo-path-safari-red-fill: #{$red-500};
 }
 
 :root [data-theme="dark"] {
@@ -438,6 +448,16 @@ body {
   --demo-path-object-yellow-dark-fill: #{$yellow-900};
   --demo-path-object-blue-dark-fill: #{$blue-800};
   --demo-path-object-blue-light-fill: #{$blue-600};
+  --demo-path-chrome-green-fill: #{$green-700};
+  --demo-path-chrome-red-fill: #{$red-700};
+  --demo-path-chrome-yellow-fill: #{$yellow-700};
+  --demo-path-chrome-blue-fill: #{$blue-700};
+  --demo-path-firefox-blue-fill: #{$blue-700};
+  --demo-path-firefox-orange-fill: #{$orange-800};
+  --demo-path-edge-blue-fill: #{$blue-700};
+  --demo-path-ie-blue-fill: #{$light-blue-700};
+  --demo-path-safari-blue-fill: #{$light-blue-700};
+  --demo-path-safari-red-fill: #{$red-600};
 }
 
 .demo-image {
@@ -528,6 +548,46 @@ body {
   }
   .demo-path-logo-sass {
     fill: #cd6799;
+  }
+  .demo-path-afterglow {
+    fill: $yellow-500;
+    opacity: 0.25;
+  }
+  .demo-path-chrome-bg {
+    fill: $convert-body-background-color;
+  }
+  .demo-path-chrome-green {
+    fill: var(--demo-path-chrome-green-fill);
+  }
+  .demo-path-chrome-red {
+    fill: var(--demo-path-chrome-red-fill);
+  }
+  .demo-path-chrome-yellow {
+    fill: var(--demo-path-chrome-yellow-fill);
+  }
+  .demo-path-chrome-blue {
+    fill: var(--demo-path-chrome-blue-fill);
+  }
+  .demo-path-firefox-blue {
+    fill: var(--demo-path-firefox-blue-fill);
+  }
+  .demo-path-firefox-orange {
+    fill: var(--demo-path-firefox-orange-fill);
+  }
+  .demo-path-edge-blue {
+    fill: var(--demo-path-edge-blue-fill);
+  }
+  .demo-path-ie-blue {
+    fill: var(--demo-path-ie-blue-fill);
+  }
+  .demo-path-safari-bg {
+    fill: $convert-body-background-color;
+  }
+  .demo-path-safari-blue {
+    fill: var(--demo-path-safari-blue-fill);
+  }
+  .demo-path-safari-red {
+    fill: var(--demo-path-safari-red-fill);
   }
 }
 
