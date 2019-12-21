@@ -382,6 +382,9 @@ body {
   .demo-box {
     margin: 12px 0;
   }
+  .demo-options {
+    margin: 12px 0;
+  }
   .demo-heading-1 {
     margin: -8px 0 24px;
   }
@@ -406,6 +409,7 @@ body {
 .demo-box {
   &.is-preview {
     > .demo-box,
+    > .demo-options,
     > .demo-pre-wrap {
       margin: 0;
       &:not(:first-child),
@@ -434,14 +438,20 @@ body {
   }
 }
 
-.demo-line-box {
-  padding: 1.25em;
+//----------------------------------------------------
+// / Style - Demo Option
+//----------------------------------------------------
+
+.demo-options {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--demo-line-box-border-color);
   border-radius: 2px;
 }
 
-.demo-paint-box {
-  padding: 1.25em;
-  border-radius: 2px;
+.demo-option {
+  display: inline-flex;
+  padding: 0.75em 1.25em;
 }
 
 //----------------------------------------------------

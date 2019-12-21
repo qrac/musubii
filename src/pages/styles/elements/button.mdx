@@ -3,69 +3,10 @@ export const meta = {
   path: "/styles/elements/button"
 }
 
-import beautify from "js-beautify"
-import DemoPre from "~/components/parts/demo-pre"
-
-export const items = [
-  { id: 0, role: "", text: "戻る", icon: "angle-left" },
-  { id: 1, role: "is-primary", text: "決定", icon: "check" },
-  { id: 2, role: "is-info", text: "情報", icon: "info-circle" },
-  { id: 3, role: "is-success", text: "登録", icon: "save" },
-  { id: 4, role: "is-warning", text: "注意", icon: "exclamation-triangle" },
-  { id: 5, role: "is-danger", text: "削除", icon: "times" }
-]
-
-export const styles = {
-  plain: "is-plain",
-  outline: "is-outline",
-  melt: "is-melt"
-}
-
-export const angles = {
-  none: "",
-  right: "is-angle-right",
-  left: "is-angle-left",
-  "right up": "is-angle-right is-angle-up",
-  "right down": "is-angle-right is-angle-down",
-  "left up": "is-angle-left is-angle-up",
-  "left down": "is-angle-left is-angle-down"
-}
-
-export const tags = {
-  button: "button",
-  anchor: "a"
-}
-
-export const beautifyHtmlOptions = {
-  inline: ["i"],
-  indent_size: 2
-}
+import { PreviewButtonBasic } from "~/components/preview/button"
 
 # Button
 
 ## Basic
-
-export const PreviewButtonBasic = () => {
-  const contents = items
-    .map(
-      item =>
-        `<button class="button is-plain ${item.role}">${item.text}</button>`
-    )
-    .join("")
-    .replace(/\s+/g, " ")
-    .replace(/\s\"/g, '"')
-  const formattedCode = beautify.html(contents, beautifyHtmlOptions)
-  return (
-    <div className="demo-box is-preview">
-      <div className="demo-box is-line">
-        <div
-          className="box is-flex is-space-row-xs is-space-column-xs"
-          dangerouslySetInnerHTML={{ __html: formattedCode }}
-        ></div>
-      </div>
-      <DemoPre language="html" code={formattedCode} />
-    </div>
-  )
-}
 
 <PreviewButtonBasic />
