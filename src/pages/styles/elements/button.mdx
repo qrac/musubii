@@ -56,8 +56,8 @@ export const PreviewButtonBasic = () => {
     .replace(/\s\"/g, '"')
   const formattedCode = beautify.html(contents, beautifyHtmlOptions)
   return (
-    <div className="demo-html-preview">
-      <div className="demo-line-box">
+    <div className="demo-box is-preview">
+      <div className="demo-box is-line">
         <div
           className="box is-flex is-space-row-xs is-space-column-xs"
           dangerouslySetInnerHTML={{ __html: formattedCode }}
