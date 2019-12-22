@@ -237,6 +237,13 @@ body {
     font-size: 75%;
     opacity: 0.75;
   }
+  &.is-angle-down-fix {
+    position: relative;
+    top: -0.25em;
+    margin-left: 0.25em;
+    font-size: 87.5%;
+    opacity: 0.75;
+  }
 }
 
 //----------------------------------------------------
@@ -518,6 +525,57 @@ body {
     > .demo-item {
       display: list-item;
       list-style: decimal outside;
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Demo TOC
+//----------------------------------------------------
+
+.demo-heading-2 {
+  &#table-of-contents {
+    margin-bottom: 8px;
+    //padding: 12px 0 0;
+    //border-top: 1px solid var(--demo-line-box-border-color);
+    //border-right: 1px solid var(--demo-line-box-border-color);
+    //border-left: 1px solid var(--demo-line-box-border-color);
+    //border-radius: 2px 2px 0 0;
+    color: $convert-text-dark-4;
+    font-size: 75%;
+    font-weight: 900;
+    letter-spacing: 0.175em;
+    text-transform: uppercase;
+    .demo-heading-anchor {
+      display: none;
+    }
+    + .demo-list {
+      display: flex;
+      flex-wrap: wrap;
+      //padding: 6px 0 12px;
+      margin-top: 8px;
+      margin-left: 0;
+      //border-right: 1px solid var(--demo-line-box-border-color);
+      //border-bottom: 1px solid var(--demo-line-box-border-color);
+      //border-left: 1px solid var(--demo-line-box-border-color);
+      //border-radius: 0 0 2px 2px;
+      //font-size: 87.5%;
+      > .demo-item {
+        position: relative;
+        display: flex;
+        margin-right: 12px;
+        margin-bottom: 8px;
+        font-family: $font-sans-en;
+        &:before {
+          content: "#";
+          color: $convert-text-dark-6;
+          font-weight: 900;
+          margin-right: 4px;
+        }
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
     }
   }
 }
