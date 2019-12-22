@@ -7,6 +7,8 @@ import DemoHeading2 from "~/components/parts/demo-heading-2"
 import DemoTable from "~/components/parts/demo-table"
 import DemoText from "~/components/parts/demo-text"
 import DemoLink from "~/components/parts/demo-link"
+import DemoListDisc from "~/components/parts/demo-list-disc"
+import DemoListItem from "~/components/parts/demo-list-item"
 import DemoInlineCode from "~/components/parts/demo-inline-code"
 import DemoPreForMdx from "~/components/parts/demo-pre-for-mdx"
 
@@ -17,6 +19,8 @@ const components = {
   table: DemoTable,
   p: DemoText,
   a: DemoLink,
+  ul: DemoListDisc,
+  li: DemoListItem,
   inlineCode: DemoInlineCode,
   pre: DemoPreForMdx
 }

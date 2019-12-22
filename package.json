@@ -58,6 +58,8 @@
     "postcss-sort-media-queries": "^1.0.9",
     "react": "^16.12.0",
     "react-copy-to-clipboard": "^5.0.2",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "remark-slug": "^5.1.2",
+    "remark-toc": "^6.0.0"
   }
 }

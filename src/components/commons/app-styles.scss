@@ -397,6 +397,9 @@ body {
   .demo-text {
     margin: 16px 0;
   }
+  .demo-list {
+    margin: 16px 0;
+  }
   .demo-pre-wrap {
     margin: 12px 0;
   }
@@ -452,6 +455,71 @@ body {
 .demo-option {
   display: inline-flex;
   padding: 0.75em 1.25em;
+}
+
+//----------------------------------------------------
+// / Style - Demo Heading
+//----------------------------------------------------
+
+.demo-heading-1 {
+  position: relative;
+  color: $convert-text-dark-3;
+  font-size: 200%;
+  font-weight: 700;
+  font-family: $font-sans-en;
+  //line-height: 1;
+}
+
+.demo-heading-2 {
+  position: relative;
+  color: $convert-text-dark-3;
+  font-size: 150%;
+  font-weight: 700;
+  font-family: $font-sans-en;
+  //line-height: 1;
+  &:hover {
+    .demo-heading-anchor {
+      opacity: 1;
+    }
+  }
+}
+
+.demo-heading-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-right: 0.175em;
+  color: $convert-primary-strong;
+  font-weight: 700;
+  font-family: $font-sans-en;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+//----------------------------------------------------
+// / Style - Demo List
+//----------------------------------------------------
+
+.demo-list {
+  > .demo-item {
+    &:not(:first-child) {
+      margin-top: $list-item-margin-top;
+    }
+  }
+  &.is-disc {
+    margin-left: $list-margin-left;
+    > .demo-item {
+      display: list-item;
+      list-style: disc outside;
+    }
+  }
+  &.is-decimal {
+    margin-left: $list-margin-left;
+    > .demo-item {
+      display: list-item;
+      list-style: decimal outside;
+    }
+  }
 }
 
 //----------------------------------------------------
@@ -647,26 +715,6 @@ body {
   .demo-path-safari-red {
     fill: var(--demo-path-safari-red-fill);
   }
-}
-
-//----------------------------------------------------
-// / Style - Demo Heading
-//----------------------------------------------------
-
-.demo-heading-1 {
-  color: $convert-text-dark-3;
-  font-size: 200%;
-  font-weight: 700;
-  font-family: $font-sans-en;
-  //line-height: 1;
-}
-
-.demo-heading-2 {
-  color: $convert-text-dark-3;
-  font-size: 150%;
-  font-weight: 700;
-  font-family: $font-sans-en;
-  //line-height: 1;
 }
 
 //----------------------------------------------------
