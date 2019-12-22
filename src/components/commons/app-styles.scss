@@ -389,7 +389,7 @@ body {
   .demo-box {
     margin: 12px 0;
   }
-  .demo-options {
+  .demo-options-wrap {
     margin: 12px 0;
   }
   .demo-heading-1 {
@@ -419,7 +419,7 @@ body {
 .demo-box {
   &.is-preview {
     > .demo-box,
-    > .demo-options,
+    > .demo-options-wrap,
     > .demo-pre-wrap {
       margin: 0;
       &:not(:first-child),
@@ -452,12 +452,17 @@ body {
 // / Style - Demo Option
 //----------------------------------------------------
 
-.demo-options {
+.demo-options-wrap {
   display: flex;
   flex-wrap: wrap;
   padding: 0.75em 0;
   border: 1px solid var(--demo-line-box-border-color);
   border-radius: 2px;
+}
+
+.demo-options {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .demo-option {
@@ -467,7 +472,7 @@ body {
 }
 
 .demo-option-box {
-  padding: 0.375em 0;
+  padding: 0.5em 0;
 }
 
 //----------------------------------------------------

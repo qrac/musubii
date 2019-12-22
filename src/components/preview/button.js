@@ -14,26 +14,25 @@ const items = [
   { id: 5, role: "is-danger", text: "削除", icon: "times" }
 ]
 
+const tags = [
+  { id: 0, text: "Button", value: "button" },
+  { id: 1, text: "Anchor", value: "a" }
+]
+
 const patterns = [
   { id: 0, text: "Plain", value: "is-plain" },
   { id: 1, text: "Outline", value: "is-outline" },
   { id: 2, text: "Melt", value: "is-melt" }
 ]
 
-const angles = {
-  none: "",
-  right: "is-angle-right",
-  left: "is-angle-left",
-  "right up": "is-angle-right is-angle-up",
-  "right down": "is-angle-right is-angle-down",
-  "left up": "is-angle-left is-angle-up",
-  "left down": "is-angle-left is-angle-down"
-}
-
-const tags = {
-  button: "button",
-  anchor: "a"
-}
+const angles = [
+  { id: 0, text: "Right", value: "is-angle-right" },
+  { id: 1, text: "Left", value: "is-angle-left" },
+  { id: 2, text: "Right Up", value: "is-angle-right is-angle-up" },
+  { id: 3, text: "Right Down", value: "is-angle-right is-angle-down" },
+  { id: 4, text: "Left Up", value: "is-angle-left is-angle-up" },
+  { id: 5, text: "Left Down", value: "is-angle-left is-angle-down" }
+]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
@@ -44,20 +43,24 @@ export class PreviewButtonBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      tag: "button",
       pattern: "is-plain",
       strong: false,
       round: false,
       floating: false,
       disabled: false,
-      angle: "",
-      tag: "button",
       externalLink: false
     }
+    this.changeTag = this.changeTag.bind(this)
     this.changePattern = this.changePattern.bind(this)
     this.toggleStrong = this.toggleStrong.bind(this)
     this.toggleRound = this.toggleRound.bind(this)
     this.toggleFloating = this.toggleFloating.bind(this)
     this.toggleDisabled = this.toggleDisabled.bind(this)
+    this.toggleExternalLink = this.toggleExternalLink.bind(this)
+  }
+  changeTag(value) {
+    this.setState({ tag: value })
   }
   changePattern(value) {
     this.setState({ pattern: value })
@@ -74,14 +77,16 @@ export class PreviewButtonBasic extends React.Component {
   toggleDisabled() {
     this.setState({ disabled: !this.state.disabled })
   }
+  toggleExternalLink() {
+    this.setState({ externalLink: !this.state.externalLink })
+  }
   render() {
+    const tag = this.state.tag
     const pattern = this.state.pattern
     const strong = this.state.strong ? "is-strong" : ""
     const round = this.state.round ? "is-round" : ""
     const floating = this.state.floating ? "is-floating" : ""
     const disabled = this.state.disabled
-    const angle = this.state.angle
-    const tag = this.state.tag
     const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
     const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
     const disabledAttr = disabled && tag === "button" ? "disabled" : ""
@@ -92,7 +97,7 @@ export class PreviewButtonBasic extends React.Component {
     const contents = items
       .map(
         item =>
-          `<${tag} class="button ${pattern} ${item.role} ${strong} ${round} ${floating} ${angle} ${disabledClass}"
+          `<${tag} class="button ${pattern} ${item.role} ${strong} ${round} ${floating} ${disabledClass}"
             ${tagAttr} ${externalLink} ${disabledAttr}>${item.text}</${tag}>`
       )
       .join("")
@@ -101,32 +106,46 @@ export class PreviewButtonBasic extends React.Component {
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
     return (
       <div className="demo-box is-preview">
-        <div className="demo-options">
-          <DemoOptionRadio
-            patterns={patterns}
-            parentChange={value => this.changePattern(value)}
-            checked={this.state.pattern}
-          />
-          <DemoOptionCheckbox
-            text={"Strong"}
-            parentChange={() => this.toggleStrong()}
-            checked={this.state.strong}
-          />
-          <DemoOptionCheckbox
-            text={"Round"}
-            parentChange={() => this.toggleRound()}
-            checked={this.state.round}
-          />
-          <DemoOptionCheckbox
-            text={"Floating"}
-            parentChange={() => this.toggleFloating()}
-            checked={this.state.floating}
-          />
-          <DemoOptionCheckbox
-            text={"Disabled"}
-            parentChange={() => this.toggleDisabled()}
-            checked={this.state.disabled}
-          />
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOptionRadio
+              patterns={tags}
+              parentChange={value => this.changeTag(value)}
+              checked={this.state.tag}
+            />
+            <DemoOptionRadio
+              patterns={patterns}
+              parentChange={value => this.changePattern(value)}
+              checked={this.state.pattern}
+            />
+          </div>
+          <div className="demo-options">
+            <DemoOptionCheckbox
+              text={"Strong"}
+              parentChange={() => this.toggleStrong()}
+              checked={this.state.strong}
+            />
+            <DemoOptionCheckbox
+              text={"Round"}
+              parentChange={() => this.toggleRound()}
+              checked={this.state.round}
+            />
+            <DemoOptionCheckbox
+              text={"Floating"}
+              parentChange={() => this.toggleFloating()}
+              checked={this.state.floating}
+            />
+            <DemoOptionCheckbox
+              text={"Disabled"}
+              parentChange={() => this.toggleDisabled()}
+              checked={this.state.disabled}
+            />
+            <DemoOptionCheckbox
+              text={"External Link"}
+              parentChange={() => this.toggleExternalLink()}
+              checked={this.state.externalLink}
+            />
+          </div>
         </div>
         <div className="demo-box is-line">
           <div
