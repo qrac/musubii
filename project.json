@@ -1,3 +1,304 @@
 {
-  "name": "MUSUBii"
+  "name": "MUSUBii",
+  "site": {
+    "title": "MUSUBii",
+    "description": "MUSUBiiは日本語サイトのインブラウザデザインを想定したシンプルで薄味のレスポンシブ対応CSSフレームワークです。",
+    "url": "https://musubii.qranoko.jp",
+    "twitter_id": "Qrac_JP",
+    "start_year": "2016"
+  },
+  "menus": [
+    {
+      "id": "getting-started",
+      "heading": "Getting Started",
+      "items": [
+        {
+          "id": "introduction",
+          "title": "Introduction"
+        },
+        {
+          "id": "support",
+          "title": "Support"
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "heading": "Installation",
+      "items": [
+        {
+          "id": "npm",
+          "title": "npm"
+        },
+        {
+          "id": "nuxt",
+          "title": "Nuxt"
+        },
+        {
+          "id": "gridsome",
+          "title": "Gridsome"
+        },
+        {
+          "id": "gatsby",
+          "title": "Gatsby"
+        },
+        {
+          "id": "next",
+          "title": "Next"
+        },
+        {
+          "id": "gulp",
+          "title": "gulp"
+        },
+        {
+          "id": "cdn",
+          "title": "CDN"
+        }
+      ]
+    },
+    {
+      "id": "migration",
+      "heading": "Migration",
+      "items": [
+        {
+          "id": "v6-to-v7",
+          "title": "v6.0.0 → v7.0.0"
+        },
+        {
+          "id": "v7-alpha-42-to-v7",
+          "title": "v7.0.0-α → v7.0.0"
+        }
+      ]
+    },
+    {
+      "id": "styles",
+      "heading": "Styles",
+      "items": [
+        {
+          "id": "bases",
+          "heading": "Bases",
+          "items": [
+            {
+              "id": "root-light",
+              "title": "Root Light"
+            },
+            {
+              "id": "root-dark",
+              "title": "Root Dark"
+            },
+            {
+              "id": "reset",
+              "title": "Reset"
+            },
+            {
+              "id": "html",
+              "title": "HTML"
+            }
+          ]
+        },
+        {
+          "id": "layouts",
+          "heading": "Layouts",
+          "items": [
+            {
+              "id": "section",
+              "title": "Section"
+            },
+            {
+              "id": "grid",
+              "title": "Grid"
+            },
+            {
+              "id": "box",
+              "title": "Box"
+            },
+            {
+              "id": "card",
+              "title": "Card"
+            },
+            {
+              "id": "joint",
+              "title": "Joint"
+            }
+          ]
+        },
+        {
+          "id": "elements",
+          "heading": "Elements",
+          "items": [
+            {
+              "id": "text",
+              "title": "Text"
+            },
+            {
+              "id": "button",
+              "title": "Button"
+            },
+            {
+              "id": "badge",
+              "title": "Badge"
+            },
+            {
+              "id": "list",
+              "title": "List"
+            },
+            {
+              "id": "table",
+              "title": "Table"
+            },
+            {
+              "id": "form",
+              "title": "Form"
+            },
+            {
+              "id": "iframe",
+              "title": "iframe"
+            },
+            {
+              "id": "icon",
+              "title": "Icon"
+            },
+            {
+              "id": "alert",
+              "title": "Alert"
+            },
+            {
+              "id": "wysiwyg",
+              "title": "WYSIWYG"
+            }
+          ]
+        },
+        {
+          "id": "utilities",
+          "heading": "Utilities",
+          "items": [
+            {
+              "id": "display",
+              "title": "Display"
+            },
+            {
+              "id": "size",
+              "title": "Size"
+            },
+            {
+              "id": "flex",
+              "title": "Flex"
+            },
+            {
+              "id": "space",
+              "title": "Space"
+            },
+            {
+              "id": "margin",
+              "title": "Margin"
+            },
+            {
+              "id": "padding",
+              "title": "Padding"
+            },
+            {
+              "id": "centering",
+              "title": "Centering"
+            },
+            {
+              "id": "overflow",
+              "title": "Overflow"
+            },
+            {
+              "id": "scroll",
+              "title": "Scroll"
+            },
+            {
+              "id": "ellipsis",
+              "title": "Ellipsis"
+            },
+            {
+              "id": "clearfix",
+              "title": "Clearfix"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "configs",
+      "heading": "Configs",
+      "items": [
+        {
+          "id": "variables",
+          "heading": "Variables",
+          "items": [
+            {
+              "id": "breakpoint",
+              "title": "Break Point"
+            },
+            {
+              "id": "color",
+              "title": "Color"
+            },
+            {
+              "id": "font",
+              "title": "Font"
+            },
+            {
+              "id": "radius",
+              "title": "Radius"
+            },
+            {
+              "id": "shadow",
+              "title": "Shadow"
+            },
+            {
+              "id": "space",
+              "title": "Space"
+            },
+            {
+              "id": "global",
+              "title": "Global"
+            }
+          ]
+        },
+        {
+          "id": "mixins",
+          "heading": "Mixins",
+          "items": [
+            {
+              "id": "mediaquery",
+              "title": "Media Query"
+            },
+            {
+              "id": "placeholder",
+              "title": "Placeholder"
+            },
+            {
+              "id": "safearea",
+              "title": "Safe Area"
+            }
+          ]
+        },
+        {
+          "id": "themes",
+          "heading": "Themes",
+          "items": [
+            {
+              "id": "theme-common",
+              "title": "Theme Common"
+            },
+            {
+              "id": "theme-light",
+              "title": "Theme Light"
+            },
+            {
+              "id": "theme-dark",
+              "title": "Theme Dark"
+            },
+            {
+              "id": "convert",
+              "title": "Convert"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

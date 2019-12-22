@@ -1,0 +1,39 @@
+export const meta = {
+  title: "Next",
+  path: "/installation/next"
+}
+
+# Next
+
+MUSUBii を Next.js で使う場合は、必要なライブラリをインストールして設定を行います。
+
+```
+npm install --save-dev next @zeit/next-sass node-sass
+```
+
+```
+yarn add --dev next @zeit/next-sass node-sass
+```
+
+## Setting
+
+`next.config.js`
+
+```js
+const withSass = require("@zeit/next-sass")
+module.exports = withSass()
+```
+
+## SCSS
+
+`src/assets/scss/styles.scss`
+
+```scss
+// Configs
+// 変数をオーバーライドする場合は configs より先に同名で定義します
+// 例えば $option-css-variables: true で CSS Variables を有効化
+@import "~musubii/src/scss/configs/_import.scss";
+
+// Styles
+@import "~musubii/src/scss/styles/_import.scss";
+```
