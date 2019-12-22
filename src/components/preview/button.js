@@ -158,3 +158,102 @@ export class PreviewButtonBasic extends React.Component {
     )
   }
 }
+
+export class PreviewButtonSquare extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      tag: "button",
+      pattern: "is-plain",
+      floating: false,
+      disabled: false,
+      externalLink: false
+    }
+    this.changeTag = this.changeTag.bind(this)
+    this.changePattern = this.changePattern.bind(this)
+    this.toggleFloating = this.toggleFloating.bind(this)
+    this.toggleDisabled = this.toggleDisabled.bind(this)
+    this.toggleExternalLink = this.toggleExternalLink.bind(this)
+  }
+  changeTag(value) {
+    this.setState({ tag: value })
+  }
+  changePattern(value) {
+    this.setState({ pattern: value })
+  }
+  toggleFloating() {
+    this.setState({ floating: !this.state.floating })
+  }
+  toggleDisabled() {
+    this.setState({ disabled: !this.state.disabled })
+  }
+  toggleExternalLink() {
+    this.setState({ externalLink: !this.state.externalLink })
+  }
+  render() {
+    const tag = this.state.tag
+    const pattern = this.state.pattern
+    const floating = this.state.floating ? "is-floating" : ""
+    const disabled = this.state.disabled
+    const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
+    const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
+    const disabledAttr = disabled && tag === "button" ? "disabled" : ""
+    const externalLink =
+      this.state.externalLink && tag === "a"
+        ? 'target="_blank" rel="noopener noreferrer"'
+        : ""
+    const contents = items
+      .map(
+        item =>
+          `<${tag} class="button ${pattern} is-square ${item.role} ${floating} ${disabledClass}"
+            ${tagAttr} ${externalLink} ${disabledAttr}
+            ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
+      )
+      .join("")
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOptionRadio
+              patterns={tags}
+              parentChange={value => this.changeTag(value)}
+              checked={this.state.tag}
+            />
+            <DemoOptionRadio
+              patterns={patterns}
+              parentChange={value => this.changePattern(value)}
+              checked={this.state.pattern}
+            />
+          </div>
+          <div className="demo-options">
+            <DemoOptionCheckbox
+              text={"Floating"}
+              parentChange={() => this.toggleFloating()}
+              checked={this.state.floating}
+            />
+            <DemoOptionCheckbox
+              text={"Disabled"}
+              parentChange={() => this.toggleDisabled()}
+              checked={this.state.disabled}
+            />
+            <DemoOptionCheckbox
+              text={"External Link"}
+              parentChange={() => this.toggleExternalLink()}
+              checked={this.state.externalLink}
+            />
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box is-flex is-space-row-xs is-space-column-xs"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
