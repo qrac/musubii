@@ -1,6 +1,8 @@
 import React from "react"
 import beautify from "js-beautify"
 
+import DemoOptionRadio from "~/components/parts/demo-option-radio"
+import DemoOptionCheckbox from "~/components/parts/demo-option-checkbox"
 import DemoPre from "~/components/parts/demo-pre"
 
 const items = [
@@ -51,6 +53,26 @@ export class PreviewButtonBasic extends React.Component {
       tag: "button",
       externalLink: false
     }
+    this.changePattern = this.changePattern.bind(this)
+    this.toggleStrong = this.toggleStrong.bind(this)
+    this.toggleRound = this.toggleRound.bind(this)
+    this.toggleFloating = this.toggleFloating.bind(this)
+    this.toggleDisabled = this.toggleDisabled.bind(this)
+  }
+  changePattern(value) {
+    this.setState({ pattern: value })
+  }
+  toggleStrong() {
+    this.setState({ strong: !this.state.strong })
+  }
+  toggleRound() {
+    this.setState({ round: !this.state.round })
+  }
+  toggleFloating() {
+    this.setState({ floating: !this.state.floating })
+  }
+  toggleDisabled() {
+    this.setState({ disabled: !this.state.disabled })
   }
   render() {
     const pattern = this.state.pattern
@@ -80,25 +102,31 @@ export class PreviewButtonBasic extends React.Component {
     return (
       <div className="demo-box is-preview">
         <div className="demo-options">
-          <div className="demo-option">
-            {patterns.map(patternEl => (
-              <div className="box is-margin-right-md" key={patternEl.id}>
-                <input
-                  className="input is-hidden"
-                  type="radio"
-                  onChange={() => this.setState({ pattern: patternEl.value })}
-                  checked={this.state.pattern === patternEl.value}
-                />
-                <label
-                  className="label is-middle"
-                  onClick={() => this.setState({ pattern: patternEl.value })}
-                >
-                  <span className="radio is-margin-right-xxs"></span>
-                  <span className="text">{patternEl.text}</span>
-                </label>
-              </div>
-            ))}
-          </div>
+          <DemoOptionRadio
+            patterns={patterns}
+            parentChange={value => this.changePattern(value)}
+            checked={this.state.pattern}
+          />
+          <DemoOptionCheckbox
+            text={"Strong"}
+            parentChange={() => this.toggleStrong()}
+            checked={this.state.strong}
+          />
+          <DemoOptionCheckbox
+            text={"Round"}
+            parentChange={() => this.toggleRound()}
+            checked={this.state.round}
+          />
+          <DemoOptionCheckbox
+            text={"Floating"}
+            parentChange={() => this.toggleFloating()}
+            checked={this.state.floating}
+          />
+          <DemoOptionCheckbox
+            text={"Disabled"}
+            parentChange={() => this.toggleDisabled()}
+            checked={this.state.disabled}
+          />
         </div>
         <div className="demo-box is-line">
           <div

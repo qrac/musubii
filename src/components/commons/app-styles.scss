@@ -455,13 +455,19 @@ body {
 .demo-options {
   display: flex;
   flex-wrap: wrap;
+  padding: 0.75em 0;
   border: 1px solid var(--demo-line-box-border-color);
   border-radius: 2px;
 }
 
 .demo-option {
   display: inline-flex;
-  padding: 0.75em 1.25em;
+  flex-wrap: wrap;
+  padding: 0 1.25em;
+}
+
+.demo-option-box {
+  padding: 0.375em 0;
 }
 
 //----------------------------------------------------
