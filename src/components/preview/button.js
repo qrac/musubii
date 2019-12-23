@@ -1,8 +1,9 @@
 import React from "react"
 import beautify from "js-beautify"
 
-import DemoOptionRadio from "~/components/parts/demo-option-radio"
-import DemoOptionCheckbox from "~/components/parts/demo-option-checkbox"
+import DemoOption from "~/components/parts/demo-option"
+import DemoOptionBoxRadios from "~/components/parts/demo-option-box-radios"
+import DemoOptionBoxCheckbox from "~/components/parts/demo-option-box-checkbox"
 import DemoPre from "~/components/parts/demo-pre"
 
 const items = [
@@ -116,49 +117,57 @@ export class PreviewButtonBasic extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
-            <DemoOptionRadio
-              patterns={tags}
-              parentChange={value => this.changeTag(value)}
-              checked={this.state.tag}
-            />
-            <DemoOptionRadio
-              patterns={patterns}
-              parentChange={value => this.changePattern(value)}
-              checked={this.state.pattern}
-            />
-            <DemoOptionRadio
-              title={"Angle"}
-              patterns={angles}
-              parentChange={value => this.changeAngle(value)}
-              checked={this.state.angle}
-            />
+            <DemoOption title={"Tag"}>
+              <DemoOptionBoxRadios
+                patterns={tags}
+                parentChange={value => this.changeTag(value)}
+                checked={this.state.tag}
+              />
+            </DemoOption>
+            <DemoOption title={"Pattern"}>
+              <DemoOptionBoxRadios
+                patterns={patterns}
+                parentChange={value => this.changePattern(value)}
+                checked={this.state.pattern}
+              />
+            </DemoOption>
+            <DemoOption title={"Angle"}>
+              <DemoOptionBoxRadios
+                title={"Angle"}
+                patterns={angles}
+                parentChange={value => this.changeAngle(value)}
+                checked={this.state.angle}
+              />
+            </DemoOption>
           </div>
           <div className="demo-options">
-            <DemoOptionCheckbox
-              text={"Strong"}
-              parentChange={() => this.toggleStrong()}
-              checked={this.state.strong}
-            />
-            <DemoOptionCheckbox
-              text={"Round"}
-              parentChange={() => this.toggleRound()}
-              checked={this.state.round}
-            />
-            <DemoOptionCheckbox
-              text={"Floating"}
-              parentChange={() => this.toggleFloating()}
-              checked={this.state.floating}
-            />
-            <DemoOptionCheckbox
-              text={"Disabled"}
-              parentChange={() => this.toggleDisabled()}
-              checked={this.state.disabled}
-            />
-            <DemoOptionCheckbox
-              text={"External Link"}
-              parentChange={() => this.toggleExternalLink()}
-              checked={this.state.externalLink}
-            />
+            <DemoOption title={"Other"}>
+              <DemoOptionBoxCheckbox
+                text={"Strong"}
+                parentChange={() => this.toggleStrong()}
+                checked={this.state.strong}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Round"}
+                parentChange={() => this.toggleRound()}
+                checked={this.state.round}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Floating"}
+                parentChange={() => this.toggleFloating()}
+                checked={this.state.floating}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Disabled"}
+                parentChange={() => this.toggleDisabled()}
+                checked={this.state.disabled}
+              />
+              <DemoOptionBoxCheckbox
+                text={"External Link"}
+                parentChange={() => this.toggleExternalLink()}
+                checked={this.state.externalLink}
+              />
+            </DemoOption>
           </div>
         </div>
         <div className="demo-box is-line">
@@ -231,33 +240,39 @@ export class PreviewButtonSquare extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
-            <DemoOptionRadio
-              patterns={tags}
-              parentChange={value => this.changeTag(value)}
-              checked={this.state.tag}
-            />
-            <DemoOptionRadio
-              patterns={patterns}
-              parentChange={value => this.changePattern(value)}
-              checked={this.state.pattern}
-            />
+            <DemoOption title={"Tag"}>
+              <DemoOptionBoxRadios
+                patterns={tags}
+                parentChange={value => this.changeTag(value)}
+                checked={this.state.tag}
+              />
+            </DemoOption>
+            <DemoOption title={"Pattern"}>
+              <DemoOptionBoxRadios
+                patterns={patterns}
+                parentChange={value => this.changePattern(value)}
+                checked={this.state.pattern}
+              />
+            </DemoOption>
           </div>
           <div className="demo-options">
-            <DemoOptionCheckbox
-              text={"Floating"}
-              parentChange={() => this.toggleFloating()}
-              checked={this.state.floating}
-            />
-            <DemoOptionCheckbox
-              text={"Disabled"}
-              parentChange={() => this.toggleDisabled()}
-              checked={this.state.disabled}
-            />
-            <DemoOptionCheckbox
-              text={"External Link"}
-              parentChange={() => this.toggleExternalLink()}
-              checked={this.state.externalLink}
-            />
+            <DemoOption title={"Other"}>
+              <DemoOptionBoxCheckbox
+                text={"Floating"}
+                parentChange={() => this.toggleFloating()}
+                checked={this.state.floating}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Disabled"}
+                parentChange={() => this.toggleDisabled()}
+                checked={this.state.disabled}
+              />
+              <DemoOptionBoxCheckbox
+                text={"External Link"}
+                parentChange={() => this.toggleExternalLink()}
+                checked={this.state.externalLink}
+              />
+            </DemoOption>
           </div>
         </div>
         <div className="demo-box is-line">
@@ -330,33 +345,39 @@ export class PreviewButtonCircle extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
-            <DemoOptionRadio
-              patterns={tags}
-              parentChange={value => this.changeTag(value)}
-              checked={this.state.tag}
-            />
-            <DemoOptionRadio
-              patterns={patterns}
-              parentChange={value => this.changePattern(value)}
-              checked={this.state.pattern}
-            />
+            <DemoOption title={"Tag"}>
+              <DemoOptionBoxRadios
+                patterns={tags}
+                parentChange={value => this.changeTag(value)}
+                checked={this.state.tag}
+              />
+            </DemoOption>
+            <DemoOption title={"Pattern"}>
+              <DemoOptionBoxRadios
+                patterns={patterns}
+                parentChange={value => this.changePattern(value)}
+                checked={this.state.pattern}
+              />
+            </DemoOption>
           </div>
           <div className="demo-options">
-            <DemoOptionCheckbox
-              text={"Floating"}
-              parentChange={() => this.toggleFloating()}
-              checked={this.state.floating}
-            />
-            <DemoOptionCheckbox
-              text={"Disabled"}
-              parentChange={() => this.toggleDisabled()}
-              checked={this.state.disabled}
-            />
-            <DemoOptionCheckbox
-              text={"External Link"}
-              parentChange={() => this.toggleExternalLink()}
-              checked={this.state.externalLink}
-            />
+            <DemoOption title={"Other"}>
+              <DemoOptionBoxCheckbox
+                text={"Floating"}
+                parentChange={() => this.toggleFloating()}
+                checked={this.state.floating}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Disabled"}
+                parentChange={() => this.toggleDisabled()}
+                checked={this.state.disabled}
+              />
+              <DemoOptionBoxCheckbox
+                text={"External Link"}
+                parentChange={() => this.toggleExternalLink()}
+                checked={this.state.externalLink}
+              />
+            </DemoOption>
           </div>
         </div>
         <div className="demo-box is-line">

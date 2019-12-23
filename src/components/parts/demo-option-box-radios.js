@@ -1,18 +1,13 @@
 import React from "react"
 
-class DemoOptionRadio extends React.Component {
+class DemoOptionBoxRadios extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
   }
   render() {
     return (
-      <div className="demo-option">
-        {(() => {
-          if (this.props.title) {
-            return <div className="demo-option-box">{this.props.title}：</div>
-          }
-        })()}
+      <>
         {this.props.patterns.map(patternEl => (
           <div
             className="demo-option-box is-margin-right-md"
@@ -33,9 +28,9 @@ class DemoOptionRadio extends React.Component {
             </label>
           </div>
         ))}
-      </div>
+      </>
     )
   }
 }
 
-export default DemoOptionRadio
+export default DemoOptionBoxRadios
