@@ -553,7 +553,7 @@ body {
     //border-left: 1px solid var(--demo-line-box-border-color);
     //border-radius: 2px 2px 0 0;
     color: $convert-text-dark-4;
-    font-size: 75%;
+    font-size: 87.5%;
     font-weight: 900;
     letter-spacing: 0.175em;
     text-transform: uppercase;
@@ -574,8 +574,9 @@ body {
       > .demo-item {
         position: relative;
         display: flex;
-        margin-right: 12px;
+        margin-right: 16px;
         margin-bottom: 8px;
+        font-size: 115%;
         font-family: $font-sans-en;
         &:before {
           content: "#";
@@ -585,6 +586,9 @@ body {
         }
         &:not(:first-child) {
           margin-top: 0;
+        }
+        .demo-link {
+          border-bottom: none;
         }
       }
     }

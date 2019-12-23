@@ -1,8 +1,8 @@
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faExternalLinkAlt,
-  faAngleDown
+  faExternalLinkAlt
+  //faAngleDown
 } from "@fortawesome/free-solid-svg-icons"
 
 export default ({ children, props, href }) => {
@@ -31,10 +31,10 @@ export default ({ children, props, href }) => {
           return (
             <a className="demo-link" href={href} {...props}>
               <span>{children}</span>
-              <FontAwesomeIcon
+              {/*<FontAwesomeIcon
                 icon={faAngleDown}
                 className="icon is-angle-down-fix"
-              />
+              />*/}
             </a>
           )
         } else {
