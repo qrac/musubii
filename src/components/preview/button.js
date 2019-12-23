@@ -26,12 +26,13 @@ const patterns = [
 ]
 
 const angles = [
-  { id: 0, text: "Right", value: "is-angle-right" },
-  { id: 1, text: "Left", value: "is-angle-left" },
-  { id: 2, text: "Right Up", value: "is-angle-right is-angle-up" },
-  { id: 3, text: "Right Down", value: "is-angle-right is-angle-down" },
-  { id: 4, text: "Left Up", value: "is-angle-left is-angle-up" },
-  { id: 5, text: "Left Down", value: "is-angle-left is-angle-down" }
+  { id: 0, text: "None", value: "" },
+  { id: 1, text: "Right", value: "is-angle-right" },
+  { id: 2, text: "Left", value: "is-angle-left" },
+  { id: 3, text: "Right Up", value: "is-angle-right is-angle-up" },
+  { id: 4, text: "Right Down", value: "is-angle-right is-angle-down" },
+  { id: 5, text: "Left Up", value: "is-angle-left is-angle-up" },
+  { id: 6, text: "Left Down", value: "is-angle-left is-angle-down" }
 ]
 
 const beautifyHtmlOptions = {
@@ -45,6 +46,7 @@ export class PreviewButtonBasic extends React.Component {
     this.state = {
       tag: "button",
       pattern: "is-plain",
+      angle: "",
       strong: false,
       round: false,
       floating: false,
@@ -53,6 +55,7 @@ export class PreviewButtonBasic extends React.Component {
     }
     this.changeTag = this.changeTag.bind(this)
     this.changePattern = this.changePattern.bind(this)
+    this.changeAngle = this.changeAngle.bind(this)
     this.toggleStrong = this.toggleStrong.bind(this)
     this.toggleRound = this.toggleRound.bind(this)
     this.toggleFloating = this.toggleFloating.bind(this)
@@ -64,6 +67,9 @@ export class PreviewButtonBasic extends React.Component {
   }
   changePattern(value) {
     this.setState({ pattern: value })
+  }
+  changeAngle(value) {
+    this.setState({ angle: value })
   }
   toggleStrong() {
     this.setState({ strong: !this.state.strong })
@@ -83,11 +89,13 @@ export class PreviewButtonBasic extends React.Component {
   render() {
     const tag = this.state.tag
     const pattern = this.state.pattern
+    const angle = this.state.angle
     const strong = this.state.strong ? "is-strong" : ""
     const round = this.state.round ? "is-round" : ""
     const floating = this.state.floating ? "is-floating" : ""
     const disabled = this.state.disabled
     const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
+    const angleClass = angle ? "is-mobile-0" + " " + angle : ""
     const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
     const disabledAttr = disabled && tag === "button" ? "disabled" : ""
     const externalLink =
@@ -97,7 +105,7 @@ export class PreviewButtonBasic extends React.Component {
     const contents = items
       .map(
         item =>
-          `<${tag} class="button ${pattern} ${item.role} ${strong} ${round} ${floating} ${disabledClass}"
+          `<${tag} class="button ${pattern} ${item.role} ${angleClass} ${strong} ${round} ${floating} ${disabledClass}"
             ${tagAttr} ${externalLink} ${disabledAttr}>${item.text}</${tag}>`
       )
       .join("")
@@ -117,6 +125,12 @@ export class PreviewButtonBasic extends React.Component {
               patterns={patterns}
               parentChange={value => this.changePattern(value)}
               checked={this.state.pattern}
+            />
+            <DemoOptionRadio
+              title={"Angle"}
+              patterns={angles}
+              parentChange={value => this.changeAngle(value)}
+              checked={this.state.angle}
             />
           </div>
           <div className="demo-options">

@@ -8,6 +8,11 @@ class DemoOptionRadio extends React.Component {
   render() {
     return (
       <div className="demo-option">
+        {(() => {
+          if (this.props.title) {
+            return <div className="demo-option-box">{this.props.title}：</div>
+          }
+        })()}
         {this.props.patterns.map(patternEl => (
           <div
             className="demo-option-box is-margin-right-md"
