@@ -17,6 +17,7 @@ $option-css-variables: true;
 //----------------------------------------------------
 
 $grey-wind: #f7fafc;
+$dark-warning: rgba($yellow-700, 0.1);
 $global-transition-mode-change: background 0.12s ease-in-out,
   color 0.12s ease-in-out;
 $font-sans-en: Nunito, $font-sans;
@@ -31,6 +32,7 @@ $header-height-desktop: 5.125em;
   --demo-box-text-color: #fff;
   --demo-line-box-border-color: rgba(0, 0, 0, 0.1);
   --demo-paint-box-background-color: #1b2324;
+  --demo-note-box-background-color: #{$yellow-50};
   --demo-background-color-cyan: #37b0be;
   --demo-background-color-grey: #e0e0e0;
   --demo-background-color-grey-light: #f1f1f1;
@@ -41,6 +43,7 @@ $header-height-desktop: 5.125em;
   --demo-box-text-color: #d6d6d7;
   --demo-line-box-border-color: rgba(255, 255, 255, 0.1);
   --demo-paint-box-background-color: #2a2a2b;
+  --demo-note-box-background-color: #{$dark-warning};
   --demo-background-color-cyan: #1f636b;
   --demo-background-color-grey: #2e2e2e;
   --demo-background-color-grey-wind: #2e2e2e;
@@ -445,6 +448,32 @@ body {
     background-color: var(--demo-paint-box-background-color);
     border: 1px solid var(--demo-line-box-border-color);
     border-radius: 2px;
+  }
+  &.is-warning {
+    padding: 1.25em;
+    background-color: $alert-warning-background-color;
+    border: 1px solid $alert-warning-border-color;
+    border-radius: 2px;
+    .custom-block-heading {
+      color: $convert-warning-strong;
+      font-weight: 900;
+      font-family: $font-sans-en;
+      letter-spacing: 0.175em;
+      text-transform: uppercase;
+    }
+  }
+  .custom-block-heading {
+    + .custom-block-body {
+      margin-top: 16px;
+    }
+  }
+  .custom-block-body {
+  }
+  .demo-text {
+    margin-bottom: 0;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
