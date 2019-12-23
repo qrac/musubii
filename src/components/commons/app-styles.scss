@@ -7,7 +7,6 @@
 //----------------------------------------------------
 
 $option-css-variables: true;
-//$theme-light-body-background-color: #f7fafc;
 
 @import "../../scss/configs/_import.scss";
 @import "../../scss/styles/_import.scss";
@@ -464,7 +463,7 @@ body {
   }
   .custom-block-heading {
     + .custom-block-body {
-      margin-top: 16px;
+      margin-top: 8px;
     }
   }
   .custom-block-body {
@@ -865,6 +864,7 @@ body {
 //----------------------------------------------------
 
 .demo-text {
+  line-height: 1.75;
 }
 
 .demo-link {
