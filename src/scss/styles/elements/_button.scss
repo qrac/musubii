@@ -295,48 +295,45 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   &.is-plain {
     background-color: $button-plain-background-color;
     border: $button-border-width solid transparent;
+    &:hover {
+      background-color: $button-plain-hover-background-color;
+    }
+    @include --is-plain-button-role(
+      primary,
+      $button-plain-primary-background-color,
+      $button-paint-text-color,
+      $button-plain-primary-hover-background-color
+    );
+    @include --is-plain-button-role(
+      info,
+      $button-plain-info-background-color,
+      $button-paint-text-color,
+      $button-plain-info-hover-background-color
+    );
+    @include --is-plain-button-role(
+      success,
+      $button-plain-success-background-color,
+      $button-paint-text-color,
+      $button-plain-success-hover-background-color
+    );
+    @include --is-plain-button-role(
+      warning,
+      $button-plain-warning-background-color,
+      $button-paint-text-color,
+      $button-plain-warning-hover-background-color
+    );
+    @include --is-plain-button-role(
+      danger,
+      $button-plain-danger-background-color,
+      $button-paint-text-color,
+      $button-plain-danger-hover-background-color
+    );
     &.is-disabled,
     &.is-disabled:hover,
     &[disabled],
     &[disabled]:hover {
       background-color: $button-disabled-background-color;
       color: $button-disabled-text-color;
-    }
-    &:not(.is-disabled),
-    &:not([disabled]) {
-      &:hover {
-        background-color: $button-plain-hover-background-color;
-      }
-      @include --is-plain-button-role(
-        primary,
-        $button-plain-primary-background-color,
-        $button-paint-text-color,
-        $button-plain-primary-hover-background-color
-      );
-      @include --is-plain-button-role(
-        info,
-        $button-plain-info-background-color,
-        $button-paint-text-color,
-        $button-plain-info-hover-background-color
-      );
-      @include --is-plain-button-role(
-        success,
-        $button-plain-success-background-color,
-        $button-paint-text-color,
-        $button-plain-success-hover-background-color
-      );
-      @include --is-plain-button-role(
-        warning,
-        $button-plain-warning-background-color,
-        $button-paint-text-color,
-        $button-plain-warning-hover-background-color
-      );
-      @include --is-plain-button-role(
-        danger,
-        $button-plain-danger-background-color,
-        $button-paint-text-color,
-        $button-plain-danger-hover-background-color
-      );
     }
   }
 }
@@ -367,6 +364,39 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   &.is-outline {
     background-color: $button-outline-background-color;
     border: $button-border-width solid $button-outline-border-color;
+    &:hover {
+      background-color: $button-outline-hover-background-color;
+    }
+    @include --is-outline-button-role(
+      primary,
+      $button-outline-primary-border-color,
+      $button-outline-primary-text-color,
+      $button-outline-primary-hover-background-color
+    );
+    @include --is-outline-button-role(
+      info,
+      $button-outline-info-border-color,
+      $button-outline-info-text-color,
+      $button-outline-info-hover-background-color
+    );
+    @include --is-outline-button-role(
+      success,
+      $button-outline-success-border-color,
+      $button-outline-success-text-color,
+      $button-outline-success-hover-background-color
+    );
+    @include --is-outline-button-role(
+      warning,
+      $button-outline-warning-border-color,
+      $button-outline-warning-text-color,
+      $button-outline-warning-hover-background-color
+    );
+    @include --is-outline-button-role(
+      danger,
+      $button-outline-danger-border-color,
+      $button-outline-danger-text-color,
+      $button-outline-danger-hover-background-color
+    );
     &.is-disabled,
     &.is-disabled:hover,
     &[disabled],
@@ -374,42 +404,6 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
       background-color: $button-disabled-background-color;
       color: $button-disabled-text-color;
       border-color: $button-outline-border-color;
-    }
-    &:not(.is-disabled),
-    &:not([disabled]) {
-      &:hover {
-        background-color: $button-outline-hover-background-color;
-      }
-      @include --is-outline-button-role(
-        primary,
-        $button-outline-primary-border-color,
-        $button-outline-primary-text-color,
-        $button-outline-primary-hover-background-color
-      );
-      @include --is-outline-button-role(
-        info,
-        $button-outline-info-border-color,
-        $button-outline-info-text-color,
-        $button-outline-info-hover-background-color
-      );
-      @include --is-outline-button-role(
-        success,
-        $button-outline-success-border-color,
-        $button-outline-success-text-color,
-        $button-outline-success-hover-background-color
-      );
-      @include --is-outline-button-role(
-        warning,
-        $button-outline-warning-border-color,
-        $button-outline-warning-text-color,
-        $button-outline-warning-hover-background-color
-      );
-      @include --is-outline-button-role(
-        danger,
-        $button-outline-danger-border-color,
-        $button-outline-danger-text-color,
-        $button-outline-danger-hover-background-color
-      );
     }
   }
 }
@@ -434,23 +428,20 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   &.is-melt {
     background-color: transparent;
     border: $button-border-width solid transparent;
+    &:hover {
+      background-color: $button-melt-hover-background-color;
+    }
+    @include --is-melt-button-role(primary, $button-melt-primary-text-color);
+    @include --is-melt-button-role(info, $button-melt-info-text-color);
+    @include --is-melt-button-role(success, $button-melt-success-text-color);
+    @include --is-melt-button-role(warning, $button-melt-warning-text-color);
+    @include --is-melt-button-role(danger, $button-melt-danger-text-color);
     &.is-disabled,
     &.is-disabled:hover,
     &[disabled],
     &[disabled]:hover {
       color: $button-disabled-text-color;
       background-color: transparent;
-    }
-    &:not(.is-disabled),
-    &:not([disabled]) {
-      &:hover {
-        background-color: $button-melt-hover-background-color;
-      }
-      @include --is-melt-button-role(primary, $button-melt-primary-text-color);
-      @include --is-melt-button-role(info, $button-melt-info-text-color);
-      @include --is-melt-button-role(success, $button-melt-success-text-color);
-      @include --is-melt-button-role(warning, $button-melt-warning-text-color);
-      @include --is-melt-button-role(danger, $button-melt-danger-text-color);
     }
   }
 }
