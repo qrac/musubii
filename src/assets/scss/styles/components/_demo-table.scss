@@ -1,0 +1,26 @@
+//----------------------------------------------------
+// Components: Demo Table
+//----------------------------------------------------
+
+.demo-table-wrap {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.demo-table {
+  width: 100%;
+  background-color: $table-background-color;
+  white-space: nowrap;
+  th {
+    background-color: $table-paint-background-color;
+    color: $table-paint-text-color;
+    font-weight: $wysiwyg-table-th-font-weight;
+  }
+  th,
+  td {
+    padding: $table-padding;
+    border: $table-border-width solid $table-border-color;
+  }
+}

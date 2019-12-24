@@ -9,7 +9,7 @@ import AppHeader from "~/components/commons/app-header"
 import AppFooter from "~/components/commons/app-footer"
 import LayoutDefault from "~/components/commons/layout-default"
 import LayoutDocs from "~/components/commons/layout-docs"
-import "~/components/commons/app-styles.scss"
+import "~/assets/scss/project.scss"
 
 class MyApp extends App {
   componentDidMount() {

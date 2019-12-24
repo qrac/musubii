@@ -1,0 +1,25 @@
+//----------------------------------------------------
+// Elements: Text
+//----------------------------------------------------
+
+.text {
+  &.is-font-sans-en {
+    font-family: $font-sans-en;
+  }
+  &.is-hero-1 {
+    font-size: 16.75vw;
+    line-height: 1.1;
+    white-space: nowrap;
+    @include tablet() {
+      font-size: 4.475em;
+    }
+  }
+  &.is-hero-2 {
+    font-size: 11vw;
+    line-height: 1.1;
+    white-space: nowrap;
+    @include tablet() {
+      font-size: 2.965em;
+    }
+  }
+}

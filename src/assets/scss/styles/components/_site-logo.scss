@@ -1,0 +1,16 @@
+//----------------------------------------------------
+// Components: Site Logo
+//----------------------------------------------------
+
+.site-logo-link {
+  display: block;
+  flex: none;
+  width: 10em;
+}
+
+.site-logo {
+  width: 100%;
+  path {
+    fill: $convert-primary-strong;
+  }
+}

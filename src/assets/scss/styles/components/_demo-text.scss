@@ -1,0 +1,20 @@
+//----------------------------------------------------
+// Components: Demo Text
+//----------------------------------------------------
+
+.demo-text {
+  line-height: 1.75;
+}
+
+.demo-link {
+  color: $convert-primary-strong;
+  border-bottom: $text-link-border-bottom-width $text-link-border-bottom-style
+    currentColor;
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.demo-inline-code {
+  @include musubii-style-text-code();
+}

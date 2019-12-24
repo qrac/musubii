@@ -1,5 +1,5 @@
-import SiteLogo from "~/components/parts/site-logo"
-import NavStatuses from "~/components/parts/nav-statuses"
+import SiteHome from "~/components/parts/site-home"
+import SiteStatuses from "~/components/parts/site-statuses"
 import ToggleTheme from "~/components/parts/toggle-theme"
 
 export default () => {
@@ -11,10 +11,10 @@ export default () => {
             <div className="column">
               <div className="box is-flex is-bottom">
                 <div className="box is-margin-right-sm">
-                  <SiteLogo />
+                  <SiteHome />
                 </div>
                 <div className="box is-flex">
-                  <NavStatuses />
+                  <SiteStatuses />
                 </div>
               </div>
             </div>

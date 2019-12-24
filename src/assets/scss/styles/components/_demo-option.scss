@@ -1,0 +1,40 @@
+//----------------------------------------------------
+// Components: Demo Option
+//----------------------------------------------------
+
+.demo-options-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5em 0;
+  border: 1px solid var(--demo-box-line-border-color);
+  border-radius: 2px;
+}
+
+.demo-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.demo-option {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 0.25em 1.25em;
+}
+
+.demo-option-title {
+  flex: 0 0 100%;
+  margin-top: -2px;
+  //margin-bottom: -4px;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  color: $convert-text-dark-4;
+  font-size: 75%;
+  font-weight: 900;
+  font-family: $font-sans-en;
+  letter-spacing: 0.175em;
+  text-transform: uppercase;
+}
+
+.demo-option-box {
+  padding: 0.5em 0;
+}

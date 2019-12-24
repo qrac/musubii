@@ -1,0 +1,25 @@
+//----------------------------------------------------
+// Components: Demo List
+//----------------------------------------------------
+
+.demo-list {
+  > .demo-item {
+    &:not(:first-child) {
+      margin-top: $list-item-margin-top;
+    }
+  }
+  &.is-disc {
+    margin-left: $list-margin-left;
+    > .demo-item {
+      display: list-item;
+      list-style: disc outside;
+    }
+  }
+  &.is-decimal {
+    margin-left: $list-margin-left;
+    > .demo-item {
+      display: list-item;
+      list-style: decimal outside;
+    }
+  }
+}

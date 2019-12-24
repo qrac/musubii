@@ -1,0 +1,128 @@
+//----------------------------------------------------
+// Components: Menu
+//----------------------------------------------------
+
+.menu-wrap {
+  @include mobile-tablet() {
+    border: 1px solid $convert-border;
+    border-radius: $radius-md;
+    .menu-accordion {
+      overflow: hidden;
+      //transition: 0.6s ease;
+      &:not(.is-active) {
+        max-height: 0;
+        //transition: 0.3s ease;
+      }
+    }
+    .menu {
+      padding: 1em 1em 1.5em;
+    }
+  }
+  @include desktop() {
+    position: sticky;
+    top: 16px;
+    max-height: 100vh;
+    padding: 0 0 32px;
+    overflow-y: auto;
+  }
+}
+
+.menu {
+  > .menu-list {
+    > .menu-item {
+      &:not(:first-child) {
+        margin-top: 1.5em;
+      }
+    }
+    &:first-child {
+      > .menu-item:first-child {
+        .menu-heading:first-child {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  .menu-list .menu-list {
+    padding-left: 1em;
+  }
+}
+
+.menu-button {
+  @include mobile-tablet() {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: $button-padding;
+    background-color: $button-outline-background-color;
+    border: none;
+    border-radius: $radius-md;
+    color: $body-text-color;
+    line-height: $button-line-height;
+    font-family: $font-sans-en;
+    white-space: nowrap;
+    transition: $button-transition;
+    &:focus {
+      outline: none;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: $button-angle-size * 1.5;
+      width: $button-angle-size;
+      height: $button-angle-size;
+      border-top: $button-angle-border-width solid $button-angle-border-color;
+      border-right: $button-angle-border-width solid $button-angle-border-color;
+      transform: translateY(-70%) rotate(135deg);
+      z-index: 2;
+    }
+    &:not(.is-active) {
+      &:focus {
+        box-shadow: $button-focus-shadow;
+        outline: none;
+      }
+    }
+    &.is-active {
+      border-bottom: 1px solid $convert-border;
+      border-radius: $radius-md $radius-md 0 0;
+      &:focus {
+        box-shadow: $convert-focus-alpha 0 -3px 0 0 inset;
+      }
+      &:after {
+        transform: translateY(-30%) rotate(-45deg);
+      }
+    }
+  }
+  @include desktop() {
+    display: none;
+  }
+}
+
+.menu-heading {
+  display: block;
+  padding: 0.75em 0;
+  color: $convert-text-dark-4;
+  font-size: 75%;
+  font-weight: 900;
+  font-family: $font-sans-en;
+  letter-spacing: 0.175em;
+  text-transform: uppercase;
+  &.is-first {
+  }
+  &.is-second {
+    //padding-top: 1.5em;
+  }
+}
+
+.menu-link {
+  display: block;
+  padding: 0.375em 0;
+  //font-size: 87.5%;
+  font-family: $font-sans-en;
+  transition: $global-transition;
+  &:hover,
+  &.is-active {
+    color: $convert-primary-strong;
+  }
+}
