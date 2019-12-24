@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sass-resources",
       options: {
-        resources: ["src/assets/scss/configs.scss"]
+        resources: ["src/assets/scss/configs/_import.scss"]
       }
     }
   ]
@@ -37,12 +37,12 @@ module.exports = {
 
 ```js
 // Import Styles
-import("src/assets/scss/styles.scss")
+import("src/assets/scss/styles/_import.scss")
 ```
 
 ## SCSS
 
-`src/assets/scss/configs.scss`
+`src/assets/scss/configs/_import.scss`
 
 ```scss
 // Configs
@@ -51,7 +51,7 @@ import("src/assets/scss/styles.scss")
 @import "~musubii/src/scss/configs/_import.scss";
 ```
 
-`src/assets/scss/styles.scss`
+`src/assets/scss/styles/_import.scss`
 
 ```scss
 // Styles

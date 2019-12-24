@@ -24,15 +24,15 @@ module.exports = {
   srcDir: "src",
   modules: ["@nuxtjs/style-resources"],
   styleResources: {
-    scss: ["~/assets/scss/configs.scss"]
+    scss: ["~/assets/scss/configs/_import.scss"]
   },
-  css: ["~/assets/scss/styles.scss"]
+  css: ["~/assets/scss/styles/_import.scss"]
 }
 ```
 
 ## SCSS
 
-`src/assets/scss/configs.scss`
+`src/assets/scss/configs/_import.scss`
 
 ```scss
 // Configs
@@ -41,7 +41,7 @@ module.exports = {
 @import "~musubii/src/scss/configs/_import.scss";
 ```
 
-`src/assets/scss/styles.scss`
+`src/assets/scss/styles/_import.scss`
 
 ```scss
 // Styles
