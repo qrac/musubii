@@ -11,8 +11,8 @@ $option-mixin-mode: false !default;
 $option-style-section: true !default;
 
 // Selectors
-$selector-section: ".section" !default;
-$selector-inner: ".inner" !default;
+$selector-section: "\.section" !default;
+$selector-inner: "\.inner" !default;
 
 // Section Inner
 $section-inner-width-fablet: 540px !default;

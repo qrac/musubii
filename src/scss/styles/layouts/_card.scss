@@ -11,7 +11,7 @@ $option-mixin-mode: false !default;
 $option-style-card: true !default;
 
 // Selectors
-$selector-card: ".card" !default;
+$selector-card: "\.card" !default;
 
 // Card
 $card-background-color: $convert-background-1 !default;

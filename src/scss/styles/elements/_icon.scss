@@ -11,9 +11,9 @@ $option-mixin-mode: false !default;
 $option-style-icon: true !default;
 
 // Selectors
-$selector-icon: ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons" !default;
-$selector-icon-svg: "svg.icon" !default;
-$selector-icon-material: ".material-icons" !default;
+$selector-icon: "\.icon, \.im, \.fa, \.fas, \.far, \.fal, \.fab, \.material-icons" !default;
+$selector-icon-svg: "svg\.icon" !default;
+$selector-icon-material: "\.material-icons" !default;
 
 // Icon Fit
 $icon-fit-width: 1em !default;

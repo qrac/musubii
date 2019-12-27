@@ -13,7 +13,7 @@ $option-style-html: true !default;
 // Selectors
 $selector-html-body: "body" !default;
 $selector-html-image: "img" !default;
-$selector-html-image-svg: 'img[src$=".svg"]' !default;
+$selector-html-image-svg: 'img[src\$="\.svg"]' !default;
 $selector-html-iframe: "iframe" !default;
 
 // Body

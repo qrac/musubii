@@ -11,7 +11,7 @@ $option-mixin-mode: false !default;
 $option-style-box: true !default;
 
 // Selectors
-$selector-box: ".box" !default;
+$selector-box: "\.box" !default;
 
 // Box
 $box-background-color: $convert-background-1 !default;

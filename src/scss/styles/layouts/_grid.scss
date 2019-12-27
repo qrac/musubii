@@ -11,8 +11,8 @@ $option-mixin-mode: false !default;
 $option-style-grid: true !default;
 
 // Selectors
-$selector-grid: ".grid" !default;
-$selector-column: ".column" !default;
+$selector-grid: "\.grid" !default;
+$selector-column: "\.column" !default;
 
 // Gap Size
 $gap-size-xxl: $space-xxl !default;

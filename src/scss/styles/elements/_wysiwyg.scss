@@ -11,7 +11,7 @@ $option-mixin-mode: false !default;
 $option-style-wysiwyg: true !default;
 
 // Selectors
-$selector-wysiwyg: ".wysiwyg" !default;
+$selector-wysiwyg: "\.wysiwyg" !default;
 
 // WYSIWYG Heading
 $wysiwyg-heading-font-weight: $font-weight-strong !default;

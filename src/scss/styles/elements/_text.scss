@@ -11,10 +11,10 @@ $option-mixin-mode: false !default;
 $option-style-text: true !default;
 
 // Selectors
-$selector-text: ".text" !default;
-$selector-blockquote: ".blockquote" !default;
-$selector-code: ".code" !default;
-$selector-pre: ".pre" !default;
+$selector-text: "\.text" !default;
+$selector-blockquote: "\.blockquote" !default;
+$selector-code: "\.code" !default;
+$selector-pre: "\.pre" !default;
 
 // Text Link
 $text-link-border-change-underline: false !default;

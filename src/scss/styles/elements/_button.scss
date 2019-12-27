@@ -11,7 +11,7 @@ $option-mixin-mode: false !default;
 $option-style-button: true !default;
 
 // Selectors
-$selector-button: ".button" !default;
+$selector-button: "\.button" !default;
 
 // Button
 $button-padding: 0.5em 1em !default;

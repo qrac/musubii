@@ -11,8 +11,8 @@ $option-mixin-mode: false !default;
 $option-style-joint: true !default;
 
 // Selectors
-$selector-joint: ".joint" !default;
-$selector-joint-none: ".is-joint-none" !default;
+$selector-joint: "\.joint" !default;
+$selector-joint-none: "\.is-joint-none" !default;
 
 //----------------------------------------------------
 // / Mixins (Default)

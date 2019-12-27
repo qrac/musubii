@@ -11,7 +11,7 @@ $option-mixin-mode: false !default;
 $option-style-alert: true !default;
 
 // Selectors
-$selector-alert: ".alert" !default;
+$selector-alert: "\.alert" !default;
 
 // Alert
 $alert-padding: 0.675em 0.875em !default;

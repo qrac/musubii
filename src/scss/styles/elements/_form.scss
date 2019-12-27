@@ -11,20 +11,20 @@ $option-mixin-mode: false !default;
 $option-style-form: true !default;
 
 // Selectors
-$selector-fieldset: ".fieldset" !default;
-$selector-input: ".input" !default;
-$selector-textarea: ".textarea" !default;
-$selector-radio: ".radio" !default;
-$selector-checkbox: ".checkbox" !default;
-$selector-label: ".label" !default;
-$selector-select-wrap: ".select" !default;
+$selector-fieldset: "\.fieldset" !default;
+$selector-input: "\.input" !default;
+$selector-textarea: "\.textarea" !default;
+$selector-radio: "\.radio" !default;
+$selector-checkbox: "\.checkbox" !default;
+$selector-label: "\.label" !default;
+$selector-select-wrap: "\.select" !default;
 $selector-select: "select" !default;
 
 // Modifiers
-$modifier-radio-active: ".is-active" !default;
-$modifier-checkbox-active: ".is-active" !default;
-$modifier-radio-disabled: ".is-disabled" !default;
-$modifier-checkbox-disabled: ".is-disabled" !default;
+$modifier-radio-active: "\.is-active" !default;
+$modifier-checkbox-active: "\.is-active" !default;
+$modifier-radio-disabled: "\.is-disabled" !default;
+$modifier-checkbox-disabled: "\.is-disabled" !default;
 
 // Input
 $input-height: 2.5em !default;

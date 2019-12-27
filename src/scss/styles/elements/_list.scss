@@ -11,8 +11,8 @@ $option-mixin-mode: false !default;
 $option-style-list: true !default;
 
 // Selectors
-$selector-list: ".list" !default;
-$selector-list-item: ".item" !default;
+$selector-list: "\.list" !default;
+$selector-list-item: "\.item" !default;
 
 // List
 $list-margin-left: 1.5em !default;
