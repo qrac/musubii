@@ -1039,7 +1039,7 @@ iframe {
 
 :not(.pre) > .code {
   padding: 0.2em 0.5em;
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 2px;
   color: #5d69a8;
   font-size: 87.5%;
@@ -1167,63 +1167,122 @@ iframe {
   border: 1px solid transparent;
 }
 
+.button.is-plain:hover {
+  background-color: #ededed;
+}
+
+.button.is-plain.is-primary {
+  background-color: #37b0be;
+  color: white;
+}
+
+.button.is-plain.is-primary:hover {
+  background-color: #319eaa;
+}
+
+.button.is-plain.is-info {
+  background-color: #4b9bd8;
+  color: white;
+}
+
+.button.is-plain.is-info:hover {
+  background-color: #368fd3;
+}
+
+.button.is-plain.is-success {
+  background-color: #2ca52c;
+  color: white;
+}
+
+.button.is-plain.is-success:hover {
+  background-color: #279127;
+}
+
+.button.is-plain.is-warning {
+  background-color: #ec9213;
+  color: white;
+}
+
+.button.is-plain.is-warning:hover {
+  background-color: #d48311;
+}
+
+.button.is-plain.is-danger {
+  background-color: #db5757;
+  color: white;
+}
+
+.button.is-plain.is-danger:hover {
+  background-color: #d74242;
+}
+
 .button.is-plain.is-disabled, .button.is-plain.is-disabled:hover, .button.is-plain[disabled], .button.is-plain[disabled]:hover {
   background-color: #bdbdbd;
   color: rgba(0, 0, 0, 0.26);
 }
 
-.button.is-plain:not(.is-disabled):hover, .button.is-plain:not([disabled]):hover {
-  background-color: #ededed;
-}
-
-.button.is-plain:not(.is-disabled).is-primary, .button.is-plain:not([disabled]).is-primary {
-  background-color: #37b0be;
-  color: white;
-}
-
-.button.is-plain:not(.is-disabled).is-primary:hover, .button.is-plain:not([disabled]).is-primary:hover {
-  background-color: #319eaa;
-}
-
-.button.is-plain:not(.is-disabled).is-info, .button.is-plain:not([disabled]).is-info {
-  background-color: #4b9bd8;
-  color: white;
-}
-
-.button.is-plain:not(.is-disabled).is-info:hover, .button.is-plain:not([disabled]).is-info:hover {
-  background-color: #368fd3;
-}
-
-.button.is-plain:not(.is-disabled).is-success, .button.is-plain:not([disabled]).is-success {
-  background-color: #2ca52c;
-  color: white;
-}
-
-.button.is-plain:not(.is-disabled).is-success:hover, .button.is-plain:not([disabled]).is-success:hover {
-  background-color: #279127;
-}
-
-.button.is-plain:not(.is-disabled).is-warning, .button.is-plain:not([disabled]).is-warning {
-  background-color: #ec9213;
-  color: white;
-}
-
-.button.is-plain:not(.is-disabled).is-warning:hover, .button.is-plain:not([disabled]).is-warning:hover {
-  background-color: #d48311;
-}
-
-.button.is-plain:not(.is-disabled).is-danger, .button.is-plain:not([disabled]).is-danger {
-  background-color: #db5757;
-  color: white;
-}
-
-.button.is-plain:not(.is-disabled).is-danger:hover, .button.is-plain:not([disabled]).is-danger:hover {
-  background-color: #d74242;
-}
-
 .button.is-outline {
   background-color: white;
   border: 1px solid #d1d8dc;
+}
+
+.button.is-outline:hover {
+  background-color: whitesmoke;
+}
+
+.button.is-outline.is-primary {
+  border-color: #37b0be;
+  color: #37b0be;
+}
+
+.button.is-outline.is-primary:hover {
+  background-color: #37b0be;
+  border-color: transparent;
+  color: white;
+}
+
+.button.is-outline.is-info {
+  border-color: #4b9bd8;
+  color: #4b9bd8;
+}
+
+.button.is-outline.is-info:hover {
+  background-color: #4b9bd8;
+  border-color: transparent;
+  color: white;
+}
+
+.button.is-outline.is-success {
+  border-color: #2ca52c;
+  color: #2ca52c;
+}
+
+.button.is-outline.is-success:hover {
+  background-color: #2ca52c;
+  border-color: transparent;
+  color: white;
+}
+
+.button.is-outline.is-warning {
+  border-color: #ec9213;
+  color: #ec9213;
+}
+
+.button.is-outline.is-warning:hover {
+  background-color: #ec9213;
+  border-color: transparent;
+  color: white;
+}
+
+.button.is-outline.is-danger {
+  border-color: #db5757;
+  color: #db5757;
+}
+
+.button.is-outline.is-danger:hover {
+  background-color: #db5757;
+  border-color: transparent;
+  color: white;
 }
 
 .button.is-outline.is-disabled, .button.is-outline.is-disabled:hover, .button.is-outline[disabled], .button.is-outline[disabled]:hover {
@@ -1232,97 +1291,38 @@ iframe {
   border-color: #d1d8dc;
 }
 
-.button.is-outline:not(.is-disabled):hover, .button.is-outline:not([disabled]):hover {
-  background-color: whitesmoke;
-}
-
-.button.is-outline:not(.is-disabled).is-primary, .button.is-outline:not([disabled]).is-primary {
-  border-color: #37b0be;
-  color: #37b0be;
-}
-
-.button.is-outline:not(.is-disabled).is-primary:hover, .button.is-outline:not([disabled]).is-primary:hover {
-  background-color: #37b0be;
-  border-color: transparent;
-  color: white;
-}
-
-.button.is-outline:not(.is-disabled).is-info, .button.is-outline:not([disabled]).is-info {
-  border-color: #4b9bd8;
-  color: #4b9bd8;
-}
-
-.button.is-outline:not(.is-disabled).is-info:hover, .button.is-outline:not([disabled]).is-info:hover {
-  background-color: #4b9bd8;
-  border-color: transparent;
-  color: white;
-}
-
-.button.is-outline:not(.is-disabled).is-success, .button.is-outline:not([disabled]).is-success {
-  border-color: #2ca52c;
-  color: #2ca52c;
-}
-
-.button.is-outline:not(.is-disabled).is-success:hover, .button.is-outline:not([disabled]).is-success:hover {
-  background-color: #2ca52c;
-  border-color: transparent;
-  color: white;
-}
-
-.button.is-outline:not(.is-disabled).is-warning, .button.is-outline:not([disabled]).is-warning {
-  border-color: #ec9213;
-  color: #ec9213;
-}
-
-.button.is-outline:not(.is-disabled).is-warning:hover, .button.is-outline:not([disabled]).is-warning:hover {
-  background-color: #ec9213;
-  border-color: transparent;
-  color: white;
-}
-
-.button.is-outline:not(.is-disabled).is-danger, .button.is-outline:not([disabled]).is-danger {
-  border-color: #db5757;
-  color: #db5757;
-}
-
-.button.is-outline:not(.is-disabled).is-danger:hover, .button.is-outline:not([disabled]).is-danger:hover {
-  background-color: #db5757;
-  border-color: transparent;
-  color: white;
-}
-
 .button.is-melt {
   background-color: transparent;
   border: 1px solid transparent;
 }
 
-.button.is-melt.is-disabled, .button.is-melt.is-disabled:hover, .button.is-melt[disabled], .button.is-melt[disabled]:hover {
-  color: rgba(0, 0, 0, 0.26);
-  background-color: transparent;
-}
-
-.button.is-melt:not(.is-disabled):hover, .button.is-melt:not([disabled]):hover {
+.button.is-melt:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.button.is-melt:not(.is-disabled).is-primary, .button.is-melt:not([disabled]).is-primary {
+.button.is-melt.is-primary {
   color: #37b0be;
 }
 
-.button.is-melt:not(.is-disabled).is-info, .button.is-melt:not([disabled]).is-info {
+.button.is-melt.is-info {
   color: #4b9bd8;
 }
 
-.button.is-melt:not(.is-disabled).is-success, .button.is-melt:not([disabled]).is-success {
+.button.is-melt.is-success {
   color: #2ca52c;
 }
 
-.button.is-melt:not(.is-disabled).is-warning, .button.is-melt:not([disabled]).is-warning {
+.button.is-melt.is-warning {
   color: #ec9213;
 }
 
-.button.is-melt:not(.is-disabled).is-danger, .button.is-melt:not([disabled]).is-danger {
+.button.is-melt.is-danger {
   color: #db5757;
+}
+
+.button.is-melt.is-disabled, .button.is-melt.is-disabled:hover, .button.is-melt[disabled], .button.is-melt[disabled]:hover {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
 }
 
 .badge {
@@ -2758,7 +2758,7 @@ svg.icon {
 
 .wysiwyg :not(pre) > code {
   padding: 0.2em 0.5em;
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 2px;
   color: #5d69a8;
   font-size: 87.5%;
