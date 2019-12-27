@@ -1,0 +1,50 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-css-variables",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-theme-default-dark",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-theme-media-dark",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-theme-attr-dark",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-root",
+      "value": ":root",
+      "compiledValue": ""
+    },
+    {
+      "name": "$selector-root-attr",
+      "value": "data-theme",
+      "compiledValue": "data-theme"
+    },
+    {
+      "name": "$root-attr-dark",
+      "value": "dark",
+      "compiledValue": "dark"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-root-dark",
+      "parameters": []
+    }
+  ]
+}

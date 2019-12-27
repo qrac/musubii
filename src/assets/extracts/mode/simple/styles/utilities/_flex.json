@@ -1,0 +1,66 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-flex",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$flex-split",
+      "value": "12",
+      "compiledValue": "12"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-flex",
+      "parameters": []
+    },
+    {
+      "name": "--is-flex-split",
+      "parameters": [
+        "$mediaquery"
+      ]
+    },
+    {
+      "name": "musubii-style-flex-split",
+      "parameters": []
+    },
+    {
+      "name": "--is-flex-full",
+      "parameters": [
+        "$mediaquery"
+      ]
+    },
+    {
+      "name": "musubii-style-flex-full",
+      "parameters": []
+    },
+    {
+      "name": "--is-flex-auto",
+      "parameters": [
+        "$mediaquery"
+      ]
+    },
+    {
+      "name": "musubii-style-flex-auto",
+      "parameters": []
+    },
+    {
+      "name": "--is-flex-width",
+      "parameters": [
+        "$mediaquery",
+        "$width"
+      ]
+    },
+    {
+      "name": "musubii-style-flex-width",
+      "parameters": []
+    }
+  ]
+}

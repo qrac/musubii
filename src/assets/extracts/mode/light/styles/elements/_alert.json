@@ -1,0 +1,210 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-alert",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-alert",
+      "value": ".alert",
+      "compiledValue": ""
+    },
+    {
+      "name": "$alert-padding",
+      "value": "0.675em 0.875em",
+      "compiledValue": "0.675em 0.875em"
+    },
+    {
+      "name": "$alert-background-color",
+      "value": "$convert-background-2",
+      "compiledValue": "var(--background-2)"
+    },
+    {
+      "name": "$alert-border-width",
+      "value": "$global-border-width",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$alert-border-color",
+      "value": "$convert-border",
+      "compiledValue": "var(--border)"
+    },
+    {
+      "name": "$alert-border-radius",
+      "value": "$radius-xs",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$alert-primary-background-color",
+      "value": "$convert-alert-primary-background-color",
+      "compiledValue": "var(--alert-primary-background-color)"
+    },
+    {
+      "name": "$alert-primary-border-color",
+      "value": "$convert-alert-primary-border-color",
+      "compiledValue": "var(--alert-primary-border-color)"
+    },
+    {
+      "name": "$alert-info-background-color",
+      "value": "$convert-alert-info-background-color",
+      "compiledValue": "var(--alert-info-background-color)"
+    },
+    {
+      "name": "$alert-info-border-color",
+      "value": "$convert-alert-info-border-color",
+      "compiledValue": "var(--alert-info-border-color)"
+    },
+    {
+      "name": "$alert-success-background-color",
+      "value": "$convert-alert-success-background-color",
+      "compiledValue": "var(--alert-success-background-color)"
+    },
+    {
+      "name": "$alert-success-border-color",
+      "value": "$convert-alert-success-border-color",
+      "compiledValue": "var(--alert-success-border-color)"
+    },
+    {
+      "name": "$alert-warning-background-color",
+      "value": "$convert-alert-warning-background-color",
+      "compiledValue": "var(--alert-warning-background-color)"
+    },
+    {
+      "name": "$alert-warning-border-color",
+      "value": "$convert-alert-warning-border-color",
+      "compiledValue": "var(--alert-warning-border-color)"
+    },
+    {
+      "name": "$alert-danger-background-color",
+      "value": "$convert-alert-danger-background-color",
+      "compiledValue": "var(--alert-danger-background-color)"
+    },
+    {
+      "name": "$alert-danger-border-color",
+      "value": "$convert-alert-danger-border-color",
+      "compiledValue": "var(--alert-danger-border-color)"
+    },
+    {
+      "name": "$alert-tail-size",
+      "value": "0.5em",
+      "compiledValue": "0.5em"
+    },
+    {
+      "name": "$alert-tail-position-end",
+      "value": "10%",
+      "compiledValue": "10%"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-alert",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert",
+      "parameters": []
+    },
+    {
+      "name": "--is-alert-role",
+      "parameters": [
+        "$name",
+        "$bg-color",
+        "$border-color"
+      ]
+    },
+    {
+      "name": "musubii-style-alert-role",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail",
+      "parameters": []
+    },
+    {
+      "name": "--is-tail-top",
+      "parameters": [
+        "$bg-color",
+        "$border-color",
+        "$border-width",
+        "$size",
+        "$end"
+      ]
+    },
+    {
+      "name": "--is-tail-right",
+      "parameters": [
+        "$bg-color",
+        "$border-color",
+        "$border-width",
+        "$size",
+        "$end"
+      ]
+    },
+    {
+      "name": "--is-tail-bottom",
+      "parameters": [
+        "$bg-color",
+        "$border-color",
+        "$border-width",
+        "$size",
+        "$end"
+      ]
+    },
+    {
+      "name": "--is-tail-left",
+      "parameters": [
+        "$bg-color",
+        "$border-color",
+        "$border-width",
+        "$size",
+        "$end"
+      ]
+    },
+    {
+      "name": "musubii-style-alert-tail-way",
+      "parameters": []
+    },
+    {
+      "name": "--is-tail-top-alert-role",
+      "parameters": [
+        "$name",
+        "$bg-color",
+        "$border-color"
+      ]
+    },
+    {
+      "name": "--is-tail-right-alert-role",
+      "parameters": [
+        "$name",
+        "$bg-color",
+        "$border-color"
+      ]
+    },
+    {
+      "name": "--is-tail-bottom-alert-role",
+      "parameters": [
+        "$name",
+        "$bg-color",
+        "$border-color"
+      ]
+    },
+    {
+      "name": "--is-tail-left-alert-role",
+      "parameters": [
+        "$name",
+        "$bg-color",
+        "$border-color"
+      ]
+    },
+    {
+      "name": "musubii-style-alert-tail-way-role",
+      "parameters": []
+    }
+  ]
+}

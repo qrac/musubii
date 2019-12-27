@@ -1,0 +1,376 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-button",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-button",
+      "value": ".button",
+      "compiledValue": ""
+    },
+    {
+      "name": "$button-padding",
+      "value": "0.5em 1em",
+      "compiledValue": "0.5em 1em"
+    },
+    {
+      "name": "$button-border-width",
+      "value": "$global-border-width",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$button-border-radius",
+      "value": "$radius-sm",
+      "compiledValue": "3px"
+    },
+    {
+      "name": "$button-paint-text-color",
+      "value": "$convert-button-paint-text-color",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$button-line-height",
+      "value": "$line-height-md",
+      "compiledValue": "1.5"
+    },
+    {
+      "name": "$button-transition",
+      "value": "$global-transition",
+      "compiledValue": "ease-out 0.12s"
+    },
+    {
+      "name": "$button-focus-shadow",
+      "value": "0 0 0 $space-xxs $convert-focus-alpha",
+      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5)"
+    },
+    {
+      "name": "$button-disabled-background-color",
+      "value": "$convert-disabled-background-color",
+      "compiledValue": "#bdbdbd"
+    },
+    {
+      "name": "$button-disabled-text-color",
+      "value": "$convert-disabled-text-color",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
+    },
+    {
+      "name": "$button-angle-size",
+      "value": "0.5em",
+      "compiledValue": "0.5em"
+    },
+    {
+      "name": "$button-angle-border-width",
+      "value": "$global-border-width * 2",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$button-angle-border-color",
+      "value": "$convert-border-1",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
+    },
+    {
+      "name": "$button-round-border-radius",
+      "value": "$radius-full",
+      "compiledValue": "999em"
+    },
+    {
+      "name": "$button-square-width",
+      "value": "calc(2.5em + #{$global-border-width} * 2)",
+      "compiledValue": "calc(2.5em + 1px * 2)"
+    },
+    {
+      "name": "$button-square-height",
+      "value": "calc(2.5em + #{$global-border-width} * 2)",
+      "compiledValue": "calc(2.5em + 1px * 2)"
+    },
+    {
+      "name": "$button-square-border-radius",
+      "value": "$radius-sm",
+      "compiledValue": "3px"
+    },
+    {
+      "name": "$button-circle-width",
+      "value": "calc(2.5em + #{$global-border-width} * 2)",
+      "compiledValue": "calc(2.5em + 1px * 2)"
+    },
+    {
+      "name": "$button-circle-height",
+      "value": "calc(2.5em + #{$global-border-width} * 2)",
+      "compiledValue": "calc(2.5em + 1px * 2)"
+    },
+    {
+      "name": "$button-circle-border-radius",
+      "value": "$radius-full",
+      "compiledValue": "999em"
+    },
+    {
+      "name": "$button-floating-shadow",
+      "value": "0 1px 3px 0 $convert-shadow-alpha",
+      "compiledValue": "0 1px 3px 0 rgba(0, 0, 0, 0.24)"
+    },
+    {
+      "name": "$button-floating-hover-shadow",
+      "value": "0 4px 12px 0 $convert-shadow-alpha",
+      "compiledValue": "0 4px 12px 0 rgba(0, 0, 0, 0.24)"
+    },
+    {
+      "name": "$button-floating-focus-shadow",
+      "value": "0 0 0 $space-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
+      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.24)"
+    },
+    {
+      "name": "$button-plain-background-color",
+      "value": "$convert-background-2",
+      "compiledValue": "whitesmoke"
+    },
+    {
+      "name": "$button-plain-hover-background-color",
+      "value": "$convert-background-4",
+      "compiledValue": "#ededed"
+    },
+    {
+      "name": "$button-plain-primary-background-color",
+      "value": "$convert-primary",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$button-plain-primary-hover-background-color",
+      "value": "$convert-primary-darken",
+      "compiledValue": "#319eaa"
+    },
+    {
+      "name": "$button-plain-info-background-color",
+      "value": "$convert-info",
+      "compiledValue": "#4b9bd8"
+    },
+    {
+      "name": "$button-plain-info-hover-background-color",
+      "value": "$convert-info-darken",
+      "compiledValue": "#368fd3"
+    },
+    {
+      "name": "$button-plain-success-background-color",
+      "value": "$convert-success",
+      "compiledValue": "#2ca52c"
+    },
+    {
+      "name": "$button-plain-success-hover-background-color",
+      "value": "$convert-success-darken",
+      "compiledValue": "#279127"
+    },
+    {
+      "name": "$button-plain-warning-background-color",
+      "value": "$convert-warning",
+      "compiledValue": "#ec9213"
+    },
+    {
+      "name": "$button-plain-warning-hover-background-color",
+      "value": "$convert-warning-darken",
+      "compiledValue": "#d48311"
+    },
+    {
+      "name": "$button-plain-danger-background-color",
+      "value": "$convert-danger",
+      "compiledValue": "#db5757"
+    },
+    {
+      "name": "$button-plain-danger-hover-background-color",
+      "value": "$convert-danger-darken",
+      "compiledValue": "#d74242"
+    },
+    {
+      "name": "$button-outline-background-color",
+      "value": "$convert-background",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$button-outline-border-color",
+      "value": "$convert-border",
+      "compiledValue": "#d1d8dc"
+    },
+    {
+      "name": "$button-outline-hover-background-color",
+      "value": "$convert-background-2",
+      "compiledValue": "whitesmoke"
+    },
+    {
+      "name": "$button-outline-primary-border-color",
+      "value": "$convert-primary",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$button-outline-primary-text-color",
+      "value": "$convert-primary-strong",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$button-outline-primary-hover-background-color",
+      "value": "$convert-primary",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$button-outline-info-border-color",
+      "value": "$convert-info",
+      "compiledValue": "#4b9bd8"
+    },
+    {
+      "name": "$button-outline-info-text-color",
+      "value": "$convert-info-strong",
+      "compiledValue": "#4b9bd8"
+    },
+    {
+      "name": "$button-outline-info-hover-background-color",
+      "value": "$convert-info",
+      "compiledValue": "#4b9bd8"
+    },
+    {
+      "name": "$button-outline-success-border-color",
+      "value": "$convert-success",
+      "compiledValue": "#2ca52c"
+    },
+    {
+      "name": "$button-outline-success-text-color",
+      "value": "$convert-success-strong",
+      "compiledValue": "#2ca52c"
+    },
+    {
+      "name": "$button-outline-success-hover-background-color",
+      "value": "$convert-success",
+      "compiledValue": "#2ca52c"
+    },
+    {
+      "name": "$button-outline-warning-border-color",
+      "value": "$convert-warning",
+      "compiledValue": "#ec9213"
+    },
+    {
+      "name": "$button-outline-warning-text-color",
+      "value": "$convert-warning-strong",
+      "compiledValue": "#ec9213"
+    },
+    {
+      "name": "$button-outline-warning-hover-background-color",
+      "value": "$convert-warning",
+      "compiledValue": "#ec9213"
+    },
+    {
+      "name": "$button-outline-danger-border-color",
+      "value": "$convert-danger",
+      "compiledValue": "#db5757"
+    },
+    {
+      "name": "$button-outline-danger-text-color",
+      "value": "$convert-danger-strong",
+      "compiledValue": "#db5757"
+    },
+    {
+      "name": "$button-outline-danger-hover-background-color",
+      "value": "$convert-danger",
+      "compiledValue": "#db5757"
+    },
+    {
+      "name": "$button-melt-hover-background-color",
+      "value": "$convert-background-alpha",
+      "compiledValue": "rgba(0, 0, 0, 0.05)"
+    },
+    {
+      "name": "$button-melt-primary-text-color",
+      "value": "$convert-primary-strong",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$button-melt-info-text-color",
+      "value": "$convert-info-strong",
+      "compiledValue": "#4b9bd8"
+    },
+    {
+      "name": "$button-melt-success-text-color",
+      "value": "$convert-success-strong",
+      "compiledValue": "#2ca52c"
+    },
+    {
+      "name": "$button-melt-warning-text-color",
+      "value": "$convert-warning-strong",
+      "compiledValue": "#ec9213"
+    },
+    {
+      "name": "$button-melt-danger-text-color",
+      "value": "$convert-danger-strong",
+      "compiledValue": "#db5757"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-button",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-angle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-round",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-square",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-circle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-floating",
+      "parameters": []
+    },
+    {
+      "name": "--is-plain-button-role",
+      "parameters": [
+        "$name",
+        "$bg-color",
+        "$color",
+        "$hover-bg-color"
+      ]
+    },
+    {
+      "name": "musubii-style-button-plain",
+      "parameters": []
+    },
+    {
+      "name": "--is-outline-button-role",
+      "parameters": [
+        "$name",
+        "$border-color",
+        "$color",
+        "$hover-bg-color"
+      ]
+    },
+    {
+      "name": "musubii-style-button-outline",
+      "parameters": []
+    },
+    {
+      "name": "--is-melt-button-role",
+      "parameters": [
+        "$name",
+        "$color"
+      ]
+    },
+    {
+      "name": "musubii-style-button-melt",
+      "parameters": []
+    }
+  ]
+}

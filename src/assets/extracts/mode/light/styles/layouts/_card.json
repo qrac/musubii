@@ -1,0 +1,159 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-card",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-card",
+      "value": ".card",
+      "compiledValue": ""
+    },
+    {
+      "name": "$card-background-color",
+      "value": "$convert-background-1",
+      "compiledValue": "var(--background-1)"
+    },
+    {
+      "name": "$card-border-width",
+      "value": "$global-border-width",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$card-border-color",
+      "value": "$convert-border",
+      "compiledValue": "var(--border)"
+    },
+    {
+      "name": "$card-focus-shadow",
+      "value": "0 0 0 $space-xxs $convert-focus-alpha",
+      "compiledValue": "0 0 0 4px var(--focus-alpha)"
+    },
+    {
+      "name": "$card-radius-xxl",
+      "value": "$radius-xxl",
+      "compiledValue": "16px"
+    },
+    {
+      "name": "$card-radius-xl",
+      "value": "$radius-xl",
+      "compiledValue": "12px"
+    },
+    {
+      "name": "$card-radius-lg",
+      "value": "$radius-lg",
+      "compiledValue": "8px"
+    },
+    {
+      "name": "$card-radius-md",
+      "value": "$radius-md",
+      "compiledValue": "4px"
+    },
+    {
+      "name": "$card-radius-sm",
+      "value": "$radius-sm",
+      "compiledValue": "3px"
+    },
+    {
+      "name": "$card-radius-xs",
+      "value": "$radius-xs",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$card-radius-xxs",
+      "value": "$radius-xxs",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$card-floating-shadow",
+      "value": "0 1px 3px 0 $convert-shadow-alpha",
+      "compiledValue": "0 1px 3px 0 var(--shadow-alpha)"
+    },
+    {
+      "name": "$card-floating-hover-shadow",
+      "value": "0 4px 12px 0 $convert-shadow-alpha",
+      "compiledValue": "0 4px 12px 0 var(--shadow-alpha)"
+    },
+    {
+      "name": "$card-floating-focus-shadow",
+      "value": "0 0 0 $space-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
+      "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-alpha)"
+    },
+    {
+      "name": "$card-link-hover-background-color",
+      "value": "$convert-background-3",
+      "compiledValue": "var(--background-3)"
+    },
+    {
+      "name": "$card-link-transition",
+      "value": "$global-transition",
+      "compiledValue": "ease-out 0.12s"
+    },
+    {
+      "name": "$card-zoom-transform",
+      "value": "scale(1.025)",
+      "compiledValue": "scale(1.025)"
+    },
+    {
+      "name": "$card-zoom-transition",
+      "value": "$global-transition",
+      "compiledValue": "ease-out 0.12s"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-card",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card",
+      "parameters": []
+    },
+    {
+      "name": "--is-bg-color",
+      "parameters": [
+        "$name",
+        "$value",
+        "$omit"
+      ]
+    },
+    {
+      "name": "musubii-style-card-bg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-outline",
+      "parameters": []
+    },
+    {
+      "name": "--is-radius-all",
+      "parameters": [
+        "$name",
+        "$value",
+        "$omit"
+      ]
+    },
+    {
+      "name": "musubii-style-card-radius-all",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-floating",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-link",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-zoom",
+      "parameters": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-overflow",
+      "value": "true",
+      "compiledValue": "true"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-overflow",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-overflow",
+      "parameters": []
+    }
+  ]
+}

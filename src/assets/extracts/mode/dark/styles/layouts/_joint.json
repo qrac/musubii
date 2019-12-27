@@ -1,0 +1,34 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-joint",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-joint",
+      "value": ".joint",
+      "compiledValue": ""
+    },
+    {
+      "name": "$selector-joint-none",
+      "value": ".is-joint-none",
+      "compiledValue": ""
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-joint",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-joint",
+      "parameters": []
+    }
+  ]
+}

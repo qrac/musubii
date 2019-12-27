@@ -1,0 +1,10 @@
+{
+  "mixins": [
+    {
+      "name": "safe-area-padding",
+      "parameters": [
+        "$way"
+      ]
+    }
+  ]
+}

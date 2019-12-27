@@ -1,0 +1,99 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-table",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-table",
+      "value": ".table",
+      "compiledValue": ""
+    },
+    {
+      "name": "$table-padding",
+      "value": "0.75em 1em",
+      "compiledValue": "0.75em 1em"
+    },
+    {
+      "name": "$table-background-color",
+      "value": "$convert-background",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$table-border-width",
+      "value": "$global-border-width",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$table-border-color",
+      "value": "$convert-border",
+      "compiledValue": "#d1d8dc"
+    },
+    {
+      "name": "$table-th-border-bottom-width",
+      "value": "$global-border-width * 2",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$table-stripe-background-color",
+      "value": "$convert-background-2",
+      "compiledValue": "whitesmoke"
+    },
+    {
+      "name": "$table-paint-background-color",
+      "value": "$convert-table-paint-background-color",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$table-paint-text-color",
+      "value": "$convert-table-paint-text-color",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$table-spot-background-color",
+      "value": "$convert-table-spot-background-color",
+      "compiledValue": "#f8f1a5"
+    },
+    {
+      "name": "$table-danger-background-color",
+      "value": "$convert-table-danger-background-color",
+      "compiledValue": "#f5d1d1"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-table",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-line",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-outline",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-border",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-stripe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-bg",
+      "parameters": []
+    }
+  ]
+}

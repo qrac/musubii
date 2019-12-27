@@ -1,0 +1,38 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-iframe",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-iframe-wrap",
+      "value": ".iframe-wrap",
+      "compiledValue": ""
+    },
+    {
+      "name": "$selector-iframe",
+      "value": ".iframe",
+      "compiledValue": ""
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-iframe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-iframe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-iframe-wrap",
+      "parameters": []
+    }
+  ]
+}

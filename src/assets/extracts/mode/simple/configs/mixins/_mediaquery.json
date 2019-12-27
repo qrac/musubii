@@ -1,0 +1,113 @@
+{
+  "mixins": [
+    {
+      "name": "mobile-first",
+      "parameters": [
+        "$min-width"
+      ]
+    },
+    {
+      "name": "fablet",
+      "parameters": []
+    },
+    {
+      "name": "tablet",
+      "parameters": []
+    },
+    {
+      "name": "desktop",
+      "parameters": []
+    },
+    {
+      "name": "wide",
+      "parameters": []
+    },
+    {
+      "name": "iphone5-only",
+      "parameters": []
+    },
+    {
+      "name": "mobile-only",
+      "parameters": []
+    },
+    {
+      "name": "fablet-only",
+      "parameters": []
+    },
+    {
+      "name": "tablet-only",
+      "parameters": []
+    },
+    {
+      "name": "desktop-only",
+      "parameters": []
+    },
+    {
+      "name": "wide-only",
+      "parameters": []
+    },
+    {
+      "name": "mobile-fablet",
+      "parameters": []
+    },
+    {
+      "name": "mobile-tablet",
+      "parameters": []
+    },
+    {
+      "name": "mobile-desktop",
+      "parameters": []
+    },
+    {
+      "name": "landscape",
+      "parameters": []
+    },
+    {
+      "name": "landscape-all",
+      "parameters": []
+    },
+    {
+      "name": "portrait",
+      "parameters": []
+    },
+    {
+      "name": "portrait-all",
+      "parameters": []
+    },
+    {
+      "name": "chrome",
+      "parameters": []
+    },
+    {
+      "name": "firefox",
+      "parameters": []
+    },
+    {
+      "name": "edge",
+      "parameters": []
+    },
+    {
+      "name": "ie",
+      "parameters": []
+    },
+    {
+      "name": "theme-media",
+      "parameters": [
+        "$theme"
+      ]
+    },
+    {
+      "name": "theme-attr",
+      "parameters": [
+        "$attr",
+        "$theme"
+      ]
+    },
+    {
+      "name": "mediaquery-pattern-select",
+      "parameters": [
+        "$mediaquery"
+      ]
+    }
+  ]
+}

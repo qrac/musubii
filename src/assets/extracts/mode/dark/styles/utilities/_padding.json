@@ -1,0 +1,114 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-padding",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$padding-size-xxl",
+      "value": "$space-xxl",
+      "compiledValue": "28px"
+    },
+    {
+      "name": "$padding-size-xl",
+      "value": "$space-xl",
+      "compiledValue": "24px"
+    },
+    {
+      "name": "$padding-size-lg",
+      "value": "$space-lg",
+      "compiledValue": "20px"
+    },
+    {
+      "name": "$padding-size-md",
+      "value": "$space-md",
+      "compiledValue": "16px"
+    },
+    {
+      "name": "$padding-size-sm",
+      "value": "$space-sm",
+      "compiledValue": "12px"
+    },
+    {
+      "name": "$padding-size-xs",
+      "value": "$space-xs",
+      "compiledValue": "8px"
+    },
+    {
+      "name": "$padding-size-xxs",
+      "value": "$space-xxs",
+      "compiledValue": "4px"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-padding",
+      "parameters": []
+    },
+    {
+      "name": "--is-padding",
+      "parameters": [
+        "$name",
+        "$value",
+        "$omit"
+      ]
+    },
+    {
+      "name": "musubii-style-padding",
+      "parameters": []
+    },
+    {
+      "name": "--is-padding-way",
+      "parameters": [
+        "$way",
+        "$name",
+        "$value",
+        "$omit"
+      ]
+    },
+    {
+      "name": "musubii-style-padding-way",
+      "parameters": []
+    },
+    {
+      "name": "--is-padding-vertical",
+      "parameters": [
+        "$name",
+        "$value",
+        "$omit"
+      ]
+    },
+    {
+      "name": "musubii-style-padding-vertical",
+      "parameters": []
+    },
+    {
+      "name": "--is-padding-horizontal",
+      "parameters": [
+        "$name",
+        "$value",
+        "$omit"
+      ]
+    },
+    {
+      "name": "musubii-style-padding-horizontal",
+      "parameters": []
+    },
+    {
+      "name": "--is-padding-safe",
+      "parameters": [
+        "$way"
+      ]
+    },
+    {
+      "name": "musubii-style-padding-safe",
+      "parameters": []
+    }
+  ]
+}

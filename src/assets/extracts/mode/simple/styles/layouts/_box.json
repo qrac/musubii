@@ -1,0 +1,101 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-box",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-box",
+      "value": ".box",
+      "compiledValue": ""
+    },
+    {
+      "name": "$box-background-color",
+      "value": "$convert-background-1",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$box-border-width",
+      "value": "$global-border-width",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$box-border-color",
+      "value": "$convert-border",
+      "compiledValue": "#d1d8dc"
+    },
+    {
+      "name": "$box-link-hover-background-color",
+      "value": "$convert-background-3",
+      "compiledValue": "whitesmoke"
+    },
+    {
+      "name": "$box-link-transition",
+      "value": "$global-transition",
+      "compiledValue": "ease-out 0.12s"
+    },
+    {
+      "name": "$box-angle-size",
+      "value": "0.5em",
+      "compiledValue": "0.5em"
+    },
+    {
+      "name": "$box-angle-border-width",
+      "value": "$global-border-width * 2",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$box-angle-border-color",
+      "value": "$convert-border-1",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-box",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-flex",
+      "parameters": []
+    },
+    {
+      "name": "--is-bg-color",
+      "parameters": [
+        "$name",
+        "$value",
+        "$omit"
+      ]
+    },
+    {
+      "name": "musubii-style-box-bg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-outline",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-separate",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-link",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-angle",
+      "parameters": []
+    }
+  ]
+}

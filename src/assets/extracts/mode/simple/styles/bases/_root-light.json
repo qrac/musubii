@@ -1,0 +1,50 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-css-variables",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-theme-default-light",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-theme-media-light",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-theme-attr-light",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$selector-root",
+      "value": ":root",
+      "compiledValue": ""
+    },
+    {
+      "name": "$selector-root-attr",
+      "value": "data-theme",
+      "compiledValue": "data-theme"
+    },
+    {
+      "name": "$root-attr-light",
+      "value": "light",
+      "compiledValue": "light"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-root-light",
+      "parameters": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-scroll",
+      "value": "true",
+      "compiledValue": "true"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-scroll",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-scroll",
+      "parameters": []
+    }
+  ]
+}

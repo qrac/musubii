@@ -1,0 +1,298 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-wysiwyg",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-wysiwyg",
+      "value": ".wysiwyg",
+      "compiledValue": ""
+    },
+    {
+      "name": "$wysiwyg-heading-font-weight",
+      "value": "$font-weight-strong",
+      "compiledValue": "700"
+    },
+    {
+      "name": "$wysiwyg-h1-font-size",
+      "value": "$font-size-xxl",
+      "compiledValue": "200%"
+    },
+    {
+      "name": "$wysiwyg-h2-font-size",
+      "value": "$font-size-xl",
+      "compiledValue": "150%"
+    },
+    {
+      "name": "$wysiwyg-h3-font-size",
+      "value": "$font-size-lg",
+      "compiledValue": "125%"
+    },
+    {
+      "name": "$wysiwyg-h4-font-size",
+      "value": "$font-size-md",
+      "compiledValue": "100%"
+    },
+    {
+      "name": "$wysiwyg-h5-font-size",
+      "value": "$font-size-sm",
+      "compiledValue": "87.5%"
+    },
+    {
+      "name": "$wysiwyg-h6-font-size",
+      "value": "$font-size-xs",
+      "compiledValue": "75%"
+    },
+    {
+      "name": "$wysiwyg-text-line-height",
+      "value": "$line-height-xl",
+      "compiledValue": "1.9"
+    },
+    {
+      "name": "$wysiwyg-small-font-size",
+      "value": "$font-size-sm",
+      "compiledValue": "87.5%"
+    },
+    {
+      "name": "$wysiwyg-strong-font-weight",
+      "value": "$font-weight-strong",
+      "compiledValue": "700"
+    },
+    {
+      "name": "$wysiwyg-link-border-change-underline",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$wysiwyg-link-border-bottom-width",
+      "value": "$global-border-width",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$wysiwyg-link-border-bottom-style",
+      "value": "solid",
+      "compiledValue": "solid"
+    },
+    {
+      "name": "$wysiwyg-link-text-color",
+      "value": "$convert-primary-strong",
+      "compiledValue": "var(--primary-strong)"
+    },
+    {
+      "name": "$wysiwyg-blockquote-background-color",
+      "value": "$convert-background-2",
+      "compiledValue": "var(--background-2)"
+    },
+    {
+      "name": "$wysiwyg-blockquote-border-left-width",
+      "value": "0.5em",
+      "compiledValue": "0.5em"
+    },
+    {
+      "name": "$wysiwyg-blockquote-border-left-color",
+      "value": "$convert-background-alpha",
+      "compiledValue": "var(--background-alpha)"
+    },
+    {
+      "name": "$wysiwyg-blockquote-border-radius",
+      "value": "$radius-xs",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$wysiwyg-blockquote-padding",
+      "value": "1.5em",
+      "compiledValue": "1.5em"
+    },
+    {
+      "name": "$wysiwyg-code-padding",
+      "value": "0.2em 0.5em",
+      "compiledValue": "0.2em 0.5em"
+    },
+    {
+      "name": "$wysiwyg-code-background-color",
+      "value": "$convert-background-alpha",
+      "compiledValue": "var(--background-alpha)"
+    },
+    {
+      "name": "$wysiwyg-code-border-radius",
+      "value": "$radius-xs",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$wysiwyg-code-text-color",
+      "value": "$convert-code-text-color",
+      "compiledValue": "var(--code-text-color)"
+    },
+    {
+      "name": "$wysiwyg-code-font-size",
+      "value": "$font-size-sm",
+      "compiledValue": "87.5%"
+    },
+    {
+      "name": "$wysiwyg-code-font-family",
+      "value": "$font-mono",
+      "compiledValue": "Menlo, Monaco, Consolas, Liberation Mono, Courier New, Meiryo, monospace, serif"
+    },
+    {
+      "name": "$wysiwyg-pre-background-color",
+      "value": "$convert-background-2",
+      "compiledValue": "var(--background-2)"
+    },
+    {
+      "name": "$wysiwyg-pre-border-radius",
+      "value": "$radius-xs",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$wysiwyg-pre-text-color",
+      "value": "$convert-code-text-color",
+      "compiledValue": "var(--code-text-color)"
+    },
+    {
+      "name": "$wysiwyg-pre-font-family",
+      "value": "$font-mono",
+      "compiledValue": "Menlo, Monaco, Consolas, Liberation Mono, Courier New, Meiryo, monospace, serif"
+    },
+    {
+      "name": "$wysiwyg-pre-white-space",
+      "value": "pre",
+      "compiledValue": "pre"
+    },
+    {
+      "name": "$wysiwyg-pre-code-padding",
+      "value": "1.25em 1.5em",
+      "compiledValue": "1.25em 1.5em"
+    },
+    {
+      "name": "$wysiwyg-list-margin-left",
+      "value": "1.5em",
+      "compiledValue": "1.5em"
+    },
+    {
+      "name": "$wysiwyg-table-padding",
+      "value": "0.75em 1em",
+      "compiledValue": "0.75em 1em"
+    },
+    {
+      "name": "$wysiwyg-table-background-color",
+      "value": "$convert-background",
+      "compiledValue": "var(--background)"
+    },
+    {
+      "name": "$wysiwyg-table-border-width",
+      "value": "$global-border-width",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$wysiwyg-table-border-color",
+      "value": "$convert-border",
+      "compiledValue": "var(--border)"
+    },
+    {
+      "name": "$wysiwyg-table-th-font-weight",
+      "value": "$font-weight-normal",
+      "compiledValue": "400"
+    },
+    {
+      "name": "$wysiwyg-table-paint-background-color",
+      "value": "$convert-table-paint-background-color",
+      "compiledValue": "var(--table-paint-background-color)"
+    },
+    {
+      "name": "$wysiwyg-table-paint-text-color",
+      "value": "$convert-table-paint-text-color",
+      "compiledValue": "var(--table-paint-text-color)"
+    },
+    {
+      "name": "$wysiwyg-hr-border-width",
+      "value": "$global-border-width",
+      "compiledValue": "1px"
+    },
+    {
+      "name": "$wysiwyg-hr-border-style",
+      "value": "solid",
+      "compiledValue": "solid"
+    },
+    {
+      "name": "$wysiwyg-hr-border-color",
+      "value": "$convert-border",
+      "compiledValue": "var(--border)"
+    },
+    {
+      "name": "$wysiwyg-figure-text-align",
+      "value": "center",
+      "compiledValue": "center"
+    },
+    {
+      "name": "$wysiwyg-figcaption-margin-top",
+      "value": "$space-sm",
+      "compiledValue": "12px"
+    },
+    {
+      "name": "$wysiwyg-figcaption-font-size",
+      "value": "$font-size-sm",
+      "compiledValue": "87.5%"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-wysiwyg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-heading",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-text",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-text-link",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-text-link-reverse",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-text-blockquote",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-text-code",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-text-pre",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-list",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-table",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-dl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-hr",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-figure",
+      "parameters": []
+    }
+  ]
+}

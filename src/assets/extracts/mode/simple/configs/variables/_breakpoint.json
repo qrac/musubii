@@ -1,0 +1,29 @@
+{
+  "variables": [
+    {
+      "name": "$screen-width-mobile",
+      "value": "0px",
+      "compiledValue": "0px"
+    },
+    {
+      "name": "$screen-width-fablet",
+      "value": "576px",
+      "compiledValue": "576px"
+    },
+    {
+      "name": "$screen-width-tablet",
+      "value": "768px",
+      "compiledValue": "768px"
+    },
+    {
+      "name": "$screen-width-desktop",
+      "value": "992px",
+      "compiledValue": "992px"
+    },
+    {
+      "name": "$screen-width-wide",
+      "value": "1200px",
+      "compiledValue": "1200px"
+    }
+  ]
+}

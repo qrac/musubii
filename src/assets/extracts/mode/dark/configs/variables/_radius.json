@@ -1,0 +1,44 @@
+{
+  "variables": [
+    {
+      "name": "$radius-full",
+      "value": "999em",
+      "compiledValue": "999em"
+    },
+    {
+      "name": "$radius-xxl",
+      "value": "16px",
+      "compiledValue": "16px"
+    },
+    {
+      "name": "$radius-xl",
+      "value": "12px",
+      "compiledValue": "12px"
+    },
+    {
+      "name": "$radius-lg",
+      "value": "8px",
+      "compiledValue": "8px"
+    },
+    {
+      "name": "$radius-md",
+      "value": "4px",
+      "compiledValue": "4px"
+    },
+    {
+      "name": "$radius-sm",
+      "value": "3px",
+      "compiledValue": "3px"
+    },
+    {
+      "name": "$radius-xs",
+      "value": "2px",
+      "compiledValue": "2px"
+    },
+    {
+      "name": "$radius-xxs",
+      "value": "1px",
+      "compiledValue": "1px"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-size",
+      "value": "true",
+      "compiledValue": "true"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-size",
+      "parameters": []
+    },
+    {
+      "name": "--is-size",
+      "parameters": [
+        "$mediaquery",
+        "$name",
+        "$value"
+      ]
+    },
+    {
+      "name": "musubii-style-size",
+      "parameters": []
+    }
+  ]
+}

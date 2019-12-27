@@ -1,0 +1,39 @@
+{
+  "variables": [
+    {
+      "name": "$space-xxl",
+      "value": "28px",
+      "compiledValue": "28px"
+    },
+    {
+      "name": "$space-xl",
+      "value": "24px",
+      "compiledValue": "24px"
+    },
+    {
+      "name": "$space-lg",
+      "value": "20px",
+      "compiledValue": "20px"
+    },
+    {
+      "name": "$space-md",
+      "value": "16px",
+      "compiledValue": "16px"
+    },
+    {
+      "name": "$space-sm",
+      "value": "12px",
+      "compiledValue": "12px"
+    },
+    {
+      "name": "$space-xs",
+      "value": "8px",
+      "compiledValue": "8px"
+    },
+    {
+      "name": "$space-xxs",
+      "value": "4px",
+      "compiledValue": "4px"
+    }
+  ]
+}

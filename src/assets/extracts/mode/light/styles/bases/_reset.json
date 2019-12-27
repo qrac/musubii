@@ -1,0 +1,24 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-reset",
+      "value": "true",
+      "compiledValue": "true"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-reset",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-reset",
+      "parameters": []
+    }
+  ]
+}

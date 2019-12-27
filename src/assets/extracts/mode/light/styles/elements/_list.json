@@ -1,0 +1,65 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-list",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-list",
+      "value": ".list",
+      "compiledValue": ""
+    },
+    {
+      "name": "$selector-list-item",
+      "value": ".item",
+      "compiledValue": ""
+    },
+    {
+      "name": "$list-margin-left",
+      "value": "1.5em",
+      "compiledValue": "1.5em"
+    },
+    {
+      "name": "$list-item-margin-top",
+      "value": "0.25em",
+      "compiledValue": "0.25em"
+    },
+    {
+      "name": "$list-note-item-margin-left",
+      "value": "0.25em",
+      "compiledValue": "0.25em"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-list",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-disc",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-circle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-decimal",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-note",
+      "parameters": []
+    }
+  ]
+}

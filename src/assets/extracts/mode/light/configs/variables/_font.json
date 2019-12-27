@@ -1,0 +1,144 @@
+{
+  "variables": [
+    {
+      "name": "$font-sans",
+      "value": "\"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Noto Sans Japanese\", Meiryo, \"Yu Gothic Medium\", sans-serif",
+      "compiledValue": "Hiragino Sans, Hiragino Kaku Gothic ProN, Noto Sans Japanese, Meiryo, Yu Gothic Medium, sans-serif"
+    },
+    {
+      "name": "$font-serif",
+      "value": "\"Hiragino Mincho ProN\", \"Noto Serif Japanese\", \"Yu Mincho\", YuMincho, serif",
+      "compiledValue": "Hiragino Mincho ProN, Noto Serif Japanese, Yu Mincho, YuMincho, serif"
+    },
+    {
+      "name": "$font-mono",
+      "value": "Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", Meiryo, monospace, serif",
+      "compiledValue": "Menlo, Monaco, Consolas, Liberation Mono, Courier New, Meiryo, monospace, serif"
+    },
+    {
+      "name": "$font-size-xxl",
+      "value": "200%",
+      "compiledValue": "200%"
+    },
+    {
+      "name": "$font-size-xl",
+      "value": "150%",
+      "compiledValue": "150%"
+    },
+    {
+      "name": "$font-size-lg",
+      "value": "125%",
+      "compiledValue": "125%"
+    },
+    {
+      "name": "$font-size-md",
+      "value": "100%",
+      "compiledValue": "100%"
+    },
+    {
+      "name": "$font-size-sm",
+      "value": "87.5%",
+      "compiledValue": "87.5%"
+    },
+    {
+      "name": "$font-size-xs",
+      "value": "75%",
+      "compiledValue": "75%"
+    },
+    {
+      "name": "$font-size-xxs",
+      "value": "62.5%",
+      "compiledValue": "62.5%"
+    },
+    {
+      "name": "$font-weight-normal",
+      "value": "400",
+      "compiledValue": "400"
+    },
+    {
+      "name": "$font-weight-strong",
+      "value": "700",
+      "compiledValue": "700"
+    },
+    {
+      "name": "$font-weight-100",
+      "value": "100",
+      "compiledValue": "100"
+    },
+    {
+      "name": "$font-weight-200",
+      "value": "200",
+      "compiledValue": "200"
+    },
+    {
+      "name": "$font-weight-300",
+      "value": "300",
+      "compiledValue": "300"
+    },
+    {
+      "name": "$font-weight-400",
+      "value": "400",
+      "compiledValue": "400"
+    },
+    {
+      "name": "$font-weight-500",
+      "value": "500",
+      "compiledValue": "500"
+    },
+    {
+      "name": "$font-weight-600",
+      "value": "600",
+      "compiledValue": "600"
+    },
+    {
+      "name": "$font-weight-700",
+      "value": "700",
+      "compiledValue": "700"
+    },
+    {
+      "name": "$font-weight-800",
+      "value": "800",
+      "compiledValue": "800"
+    },
+    {
+      "name": "$font-weight-900",
+      "value": "900",
+      "compiledValue": "900"
+    },
+    {
+      "name": "$line-height-xxl",
+      "value": "2",
+      "compiledValue": "2"
+    },
+    {
+      "name": "$line-height-xl",
+      "value": "1.9",
+      "compiledValue": "1.9"
+    },
+    {
+      "name": "$line-height-lg",
+      "value": "1.75",
+      "compiledValue": "1.75"
+    },
+    {
+      "name": "$line-height-md",
+      "value": "1.5",
+      "compiledValue": "1.5"
+    },
+    {
+      "name": "$line-height-sm",
+      "value": "1.375",
+      "compiledValue": "1.375"
+    },
+    {
+      "name": "$line-height-xs",
+      "value": "1.25",
+      "compiledValue": "1.25"
+    },
+    {
+      "name": "$line-height-xxs",
+      "value": "1",
+      "compiledValue": "1"
+    }
+  ]
+}

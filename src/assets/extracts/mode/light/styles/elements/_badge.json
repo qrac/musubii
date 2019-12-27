@@ -1,0 +1,234 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": ""
+    },
+    {
+      "name": "$option-style-badge",
+      "value": "true",
+      "compiledValue": ""
+    },
+    {
+      "name": "$selector-badge",
+      "value": ".badge",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-padding",
+      "value": "0.25em 0.375em",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-border-width",
+      "value": "$global-border-width",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-border-radius",
+      "value": "$radius-sm",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-paint-text-color",
+      "value": "$convert-button-paint-text-color",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-line-height",
+      "value": "$line-height-xs",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-transition",
+      "value": "$global-transition",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-focus-shadow",
+      "value": "0 0 0 $space-xxs $convert-focus-alpha",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-disabled-background-color",
+      "value": "$convert-disabled-background-color",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-disabled-text-color",
+      "value": "$convert-disabled-text-color",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-round-border-radius",
+      "value": "$radius-full",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-square-width",
+      "value": "calc(1.75em + #{$global-border-width} * 2)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-square-height",
+      "value": "calc(1.75em + #{$global-border-width} * 2)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-square-border-radius",
+      "value": "$radius-sm",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-circle-width",
+      "value": "calc(1.75em + #{$global-border-width} * 2)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-circle-height",
+      "value": "calc(1.75em + #{$global-border-width} * 2)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-circle-border-radius",
+      "value": "$radius-full",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-plain-background-color",
+      "value": "$convert-background-2",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-plain-primary-background-color",
+      "value": "$convert-primary",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-plain-info-background-color",
+      "value": "$convert-info",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-plain-success-background-color",
+      "value": "$convert-success",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-plain-warning-background-color",
+      "value": "$convert-warning",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-plain-danger-background-color",
+      "value": "$convert-danger",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-background-color",
+      "value": "$convert-background",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-border-color",
+      "value": "$convert-border",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-primary-border-color",
+      "value": "$convert-primary",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-primary-text-color",
+      "value": "$convert-primary-strong",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-info-border-color",
+      "value": "$convert-info",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-info-text-color",
+      "value": "$convert-info-strong",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-success-border-color",
+      "value": "$convert-success",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-success-text-color",
+      "value": "$convert-success-strong",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-warning-border-color",
+      "value": "$convert-warning",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-warning-text-color",
+      "value": "$convert-warning-strong",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-danger-border-color",
+      "value": "$convert-danger",
+      "compiledValue": ""
+    },
+    {
+      "name": "$badge-outline-danger-text-color",
+      "value": "$convert-danger-strong",
+      "compiledValue": ""
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-badge",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-round",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-square",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-circle",
+      "parameters": []
+    },
+    {
+      "name": "--is-plain-badge-role",
+      "parameters": [
+        "$name",
+        "$bg-color"
+      ]
+    },
+    {
+      "name": "musubii-style-badge-plain",
+      "parameters": []
+    },
+    {
+      "name": "--is-outline-badge-role",
+      "parameters": [
+        "$name",
+        "$border-color",
+        "$color"
+      ]
+    },
+    {
+      "name": "musubii-style-badge-outline",
+      "parameters": []
+    }
+  ]
+}

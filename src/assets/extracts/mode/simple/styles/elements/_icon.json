@@ -1,0 +1,75 @@
+{
+  "variables": [
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-style-icon",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$selector-icon",
+      "value": ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons",
+      "compiledValue": ""
+    },
+    {
+      "name": "$selector-icon-svg",
+      "value": "svg.icon",
+      "compiledValue": ""
+    },
+    {
+      "name": "$selector-icon-material",
+      "value": ".material-icons",
+      "compiledValue": ""
+    },
+    {
+      "name": "$icon-fit-width",
+      "value": "1em",
+      "compiledValue": "1em"
+    }
+  ],
+  "mixins": [
+    {
+      "name": "export-style-icon",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon",
+      "parameters": []
+    },
+    {
+      "name": "--is-color",
+      "parameters": [
+        "$color-name",
+        "$color"
+      ]
+    },
+    {
+      "name": "musubii-style-icon-dark",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-light",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-role",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-svg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-material",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-fit",
+      "parameters": []
+    }
+  ]
+}
