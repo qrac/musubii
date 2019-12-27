@@ -32,10 +32,45 @@ $wysiwyg-small-font-size: $font-size-sm !default;
 $wysiwyg-strong-font-weight: $font-weight-strong !default;
 
 // WYSIWYG Link
+$wysiwyg-link-border-change-underline: false !default;
+$wysiwyg-link-border-bottom-width: $global-border-width !default;
+$wysiwyg-link-border-bottom-style: solid !default;
 $wysiwyg-link-text-color: $convert-primary-strong !default;
 
+// WYSIWYG Blockquote
+$wysiwyg-blockquote-background-color: $convert-background-2 !default;
+$wysiwyg-blockquote-border-left-width: 0.5em !default;
+$wysiwyg-blockquote-border-left-color: $convert-background-alpha !default;
+$wysiwyg-blockquote-border-radius: $radius-xs !default;
+$wysiwyg-blockquote-padding: 1.5em !default;
+
+// WYSIWYG Code
+$wysiwyg-code-padding: 0.2em 0.5em !default;
+$wysiwyg-code-background-color: $convert-background-alpha !default;
+$wysiwyg-code-border-radius: $radius-xs !default;
+$wysiwyg-code-text-color: $convert-code-text-color !default;
+$wysiwyg-code-font-size: $font-size-sm !default;
+$wysiwyg-code-font-family: $font-mono !default;
+
+// WYSIWYG Pre
+$wysiwyg-pre-background-color: $convert-background-2 !default;
+$wysiwyg-pre-border-radius: $radius-xs !default;
+$wysiwyg-pre-text-color: $convert-code-text-color !default;
+$wysiwyg-pre-font-family: $font-mono !default;
+$wysiwyg-pre-white-space: pre !default;
+$wysiwyg-pre-code-padding: 1.25em 1.5em !default;
+
+// WYSIWYG List
+$wysiwyg-list-margin-left: 1.5em !default;
+
 // WYSIWYG Table
+$wysiwyg-table-padding: 0.75em 1em !default;
+$wysiwyg-table-background-color: $convert-background !default;
+$wysiwyg-table-border-width: $global-border-width !default;
+$wysiwyg-table-border-color: $convert-border !default;
 $wysiwyg-table-th-font-weight: $font-weight-normal !default;
+$wysiwyg-table-paint-background-color: $convert-table-paint-background-color !default;
+$wysiwyg-table-paint-text-color: $convert-table-paint-text-color !default;
 
 // WYSIWYG HR
 $wysiwyg-hr-border-width: $global-border-width !default;
@@ -133,14 +168,14 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   a {
     cursor: pointer;
     color: $wysiwyg-link-text-color;
-    @if $text-link-border-change-underline == true {
+    @if $wysiwyg-link-border-change-underline == true {
       text-decoration: underline;
       &:hover {
         text-decoration: none;
       }
     } @else {
-      border-bottom: $text-link-border-bottom-width
-        $text-link-border-bottom-style
+      border-bottom: $wysiwyg-link-border-bottom-width
+        $wysiwyg-link-border-bottom-style
         currentColor;
       &:hover,
       &:active {
@@ -162,7 +197,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 @mixin musubii-style-wysiwyg-text-link-reverse() {
   &.is-link-reverse a {
-    @if $text-link-border-change-underline == true {
+    @if $wysiwyg-link-border-change-underline == true {
       text-decoration: none;
       &:hover {
         text-decoration: underline;
@@ -189,11 +224,11 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 @mixin musubii-style-wysiwyg-text-blockquote() {
   blockquote {
-    background-color: $blockquote-background-color;
-    border-left: $blockquote-border-left-width solid
-      $blockquote-border-left-color;
-    border-radius: $blockquote-border-radius;
-    padding: $blockquote-padding;
+    background-color: $wysiwyg-blockquote-background-color;
+    border-left: $wysiwyg-blockquote-border-left-width solid
+      $wysiwyg-blockquote-border-left-color;
+    border-radius: $wysiwyg-blockquote-border-radius;
+    padding: $wysiwyg-blockquote-padding;
   }
 }
 
@@ -210,12 +245,12 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 @mixin musubii-style-wysiwyg-text-code() {
   :not(pre) {
     > code {
-      padding: $code-padding;
-      background-color: $code-background-color;
-      border-radius: $code-border-radius;
-      color: $code-text-color;
-      font-size: $code-font-size;
-      font-family: $code-font-family;
+      padding: $wysiwyg-code-padding;
+      background-color: $wysiwyg-code-background-color;
+      border-radius: $wysiwyg-code-border-radius;
+      color: $wysiwyg-code-text-color;
+      font-size: $wysiwyg-code-font-size;
+      font-family: $wysiwyg-code-font-family;
       word-break: break-all;
     }
   }
@@ -233,18 +268,18 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 @mixin musubii-style-wysiwyg-text-pre() {
   pre {
-    background-color: $pre-background-color;
-    border-radius: $pre-border-radius;
-    color: $pre-text-color;
-    font-family: $pre-font-family;
-    white-space: $pre-white-space;
+    background-color: $wysiwyg-pre-background-color;
+    border-radius: $wysiwyg-pre-border-radius;
+    color: $wysiwyg-pre-text-color;
+    font-family: $wysiwyg-pre-font-family;
+    white-space: $wysiwyg-pre-white-space;
     word-wrap: normal;
     overflow: hidden;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     > code {
       display: block;
-      padding: $pre-code-padding;
+      padding: $wysiwyg-pre-code-padding;
     }
   }
 }
@@ -263,7 +298,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   ul,
   ol {
     line-height: $wysiwyg-text-line-height;
-    margin-left: $list-margin-left;
+    margin-left: $wysiwyg-list-margin-left;
     > li {
       display: list-item;
     }
@@ -292,16 +327,16 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 @mixin musubii-style-wysiwyg-table() {
   table {
     width: 100%;
-    background-color: $table-background-color;
+    background-color: $wysiwyg-table-background-color;
     th {
-      background-color: $table-paint-background-color;
-      color: $table-paint-text-color;
+      background-color: $wysiwyg-table-paint-background-color;
+      color: $wysiwyg-table-paint-text-color;
       font-weight: $wysiwyg-table-th-font-weight;
     }
     th,
     td {
-      padding: $table-padding;
-      border: $table-border-width solid $table-border-color;
+      padding: $wysiwyg-table-padding;
+      border: $wysiwyg-table-border-width solid $wysiwyg-table-border-color;
     }
   }
 }
@@ -319,22 +354,22 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 @mixin musubii-style-wysiwyg-dl() {
   dl {
     width: 100%;
-    background-color: $table-background-color;
-    border: $table-border-width solid $table-border-color;
+    background-color: $wysiwyg-table-background-color;
+    border: $wysiwyg-table-border-width solid $wysiwyg-table-border-color;
     border-top: none;
   }
   dt {
     width: 100%;
-    padding: $table-padding;
-    background-color: $table-paint-background-color;
-    border-top: $table-border-width solid $table-border-color;
-    color: $table-paint-text-color;
+    padding: $wysiwyg-table-padding;
+    background-color: $wysiwyg-table-paint-background-color;
+    border-top: $wysiwyg-table-border-width solid $wysiwyg-table-border-color;
+    color: $wysiwyg-table-paint-text-color;
     font-weight: $wysiwyg-table-th-font-weight;
   }
   dd {
     width: 100%;
-    padding: $table-padding;
-    border-top: $table-border-width solid $table-border-color;
+    padding: $wysiwyg-table-padding;
+    border-top: $wysiwyg-table-border-width solid $wysiwyg-table-border-color;
   }
   @include fablet {
     dl {
@@ -346,7 +381,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
     }
     dd {
       width: 70%;
-      border-left: $table-border-width solid $table-border-color;
+      border-left: $wysiwyg-table-border-width solid $wysiwyg-table-border-color;
     }
   }
 }
