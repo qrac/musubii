@@ -3,187 +3,187 @@
     {
       "name": "$option-mixin-mode",
       "value": "false",
-      "compiledValue": ""
+      "compiledValue": "false"
     },
     {
       "name": "$option-style-badge",
       "value": "true",
-      "compiledValue": ""
+      "compiledValue": "true"
     },
     {
       "name": "$selector-badge",
       "value": ".badge",
-      "compiledValue": ""
+      "compiledValue": ".badge"
     },
     {
       "name": "$badge-padding",
       "value": "0.25em 0.375em",
-      "compiledValue": ""
+      "compiledValue": "0.25em 0.375em"
     },
     {
       "name": "$badge-border-width",
       "value": "$global-border-width",
-      "compiledValue": ""
+      "compiledValue": "1px"
     },
     {
       "name": "$badge-border-radius",
       "value": "$radius-sm",
-      "compiledValue": ""
+      "compiledValue": "3px"
     },
     {
       "name": "$badge-paint-text-color",
       "value": "$convert-button-paint-text-color",
-      "compiledValue": ""
+      "compiledValue": "white"
     },
     {
       "name": "$badge-line-height",
       "value": "$line-height-xs",
-      "compiledValue": ""
+      "compiledValue": "1.25"
     },
     {
       "name": "$badge-transition",
       "value": "$global-transition",
-      "compiledValue": ""
+      "compiledValue": "ease-out 0.12s"
     },
     {
       "name": "$badge-focus-shadow",
       "value": "0 0 0 $space-xxs $convert-focus-alpha",
-      "compiledValue": ""
+      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5)"
     },
     {
       "name": "$badge-disabled-background-color",
       "value": "$convert-disabled-background-color",
-      "compiledValue": ""
+      "compiledValue": "#bdbdbd"
     },
     {
       "name": "$badge-disabled-text-color",
       "value": "$convert-disabled-text-color",
-      "compiledValue": ""
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
       "name": "$badge-round-border-radius",
       "value": "$radius-full",
-      "compiledValue": ""
+      "compiledValue": "999em"
     },
     {
       "name": "$badge-square-width",
       "value": "calc(1.75em + #{$global-border-width} * 2)",
-      "compiledValue": ""
+      "compiledValue": "calc(1.75em + 1px * 2)"
     },
     {
       "name": "$badge-square-height",
       "value": "calc(1.75em + #{$global-border-width} * 2)",
-      "compiledValue": ""
+      "compiledValue": "calc(1.75em + 1px * 2)"
     },
     {
       "name": "$badge-square-border-radius",
       "value": "$radius-sm",
-      "compiledValue": ""
+      "compiledValue": "3px"
     },
     {
       "name": "$badge-circle-width",
       "value": "calc(1.75em + #{$global-border-width} * 2)",
-      "compiledValue": ""
+      "compiledValue": "calc(1.75em + 1px * 2)"
     },
     {
       "name": "$badge-circle-height",
       "value": "calc(1.75em + #{$global-border-width} * 2)",
-      "compiledValue": ""
+      "compiledValue": "calc(1.75em + 1px * 2)"
     },
     {
       "name": "$badge-circle-border-radius",
       "value": "$radius-full",
-      "compiledValue": ""
+      "compiledValue": "999em"
     },
     {
       "name": "$badge-plain-background-color",
       "value": "$convert-background-2",
-      "compiledValue": ""
+      "compiledValue": "whitesmoke"
     },
     {
       "name": "$badge-plain-primary-background-color",
       "value": "$convert-primary",
-      "compiledValue": ""
+      "compiledValue": "#37b0be"
     },
     {
       "name": "$badge-plain-info-background-color",
       "value": "$convert-info",
-      "compiledValue": ""
+      "compiledValue": "#4b9bd8"
     },
     {
       "name": "$badge-plain-success-background-color",
       "value": "$convert-success",
-      "compiledValue": ""
+      "compiledValue": "#2ca52c"
     },
     {
       "name": "$badge-plain-warning-background-color",
       "value": "$convert-warning",
-      "compiledValue": ""
+      "compiledValue": "#ec9213"
     },
     {
       "name": "$badge-plain-danger-background-color",
       "value": "$convert-danger",
-      "compiledValue": ""
+      "compiledValue": "#db5757"
     },
     {
       "name": "$badge-outline-background-color",
       "value": "$convert-background",
-      "compiledValue": ""
+      "compiledValue": "white"
     },
     {
       "name": "$badge-outline-border-color",
       "value": "$convert-border",
-      "compiledValue": ""
+      "compiledValue": "#d1d8dc"
     },
     {
       "name": "$badge-outline-primary-border-color",
       "value": "$convert-primary",
-      "compiledValue": ""
+      "compiledValue": "#37b0be"
     },
     {
       "name": "$badge-outline-primary-text-color",
       "value": "$convert-primary-strong",
-      "compiledValue": ""
+      "compiledValue": "#37b0be"
     },
     {
       "name": "$badge-outline-info-border-color",
       "value": "$convert-info",
-      "compiledValue": ""
+      "compiledValue": "#4b9bd8"
     },
     {
       "name": "$badge-outline-info-text-color",
       "value": "$convert-info-strong",
-      "compiledValue": ""
+      "compiledValue": "#4b9bd8"
     },
     {
       "name": "$badge-outline-success-border-color",
       "value": "$convert-success",
-      "compiledValue": ""
+      "compiledValue": "#2ca52c"
     },
     {
       "name": "$badge-outline-success-text-color",
       "value": "$convert-success-strong",
-      "compiledValue": ""
+      "compiledValue": "#2ca52c"
     },
     {
       "name": "$badge-outline-warning-border-color",
       "value": "$convert-warning",
-      "compiledValue": ""
+      "compiledValue": "#ec9213"
     },
     {
       "name": "$badge-outline-warning-text-color",
       "value": "$convert-warning-strong",
-      "compiledValue": ""
+      "compiledValue": "#ec9213"
     },
     {
       "name": "$badge-outline-danger-border-color",
       "value": "$convert-danger",
-      "compiledValue": ""
+      "compiledValue": "#db5757"
     },
     {
       "name": "$badge-outline-danger-text-color",
       "value": "$convert-danger-strong",
-      "compiledValue": ""
+      "compiledValue": "#db5757"
     }
   ],
   "mixins": [

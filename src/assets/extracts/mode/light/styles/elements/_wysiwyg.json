@@ -13,7 +13,7 @@
     {
       "name": "$selector-wysiwyg",
       "value": ".wysiwyg",
-      "compiledValue": ""
+      "compiledValue": ".wysiwyg"
     },
     {
       "name": "$wysiwyg-heading-font-weight",

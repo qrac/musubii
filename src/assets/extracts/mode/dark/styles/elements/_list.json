@@ -13,12 +13,12 @@
     {
       "name": "$selector-list",
       "value": ".list",
-      "compiledValue": ""
+      "compiledValue": ".list"
     },
     {
       "name": "$selector-list-item",
       "value": ".item",
-      "compiledValue": ""
+      "compiledValue": ".item"
     },
     {
       "name": "$list-margin-left",

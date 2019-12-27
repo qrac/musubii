@@ -13,12 +13,12 @@
     {
       "name": "$selector-iframe-wrap",
       "value": ".iframe-wrap",
-      "compiledValue": ""
+      "compiledValue": ".iframe-wrap"
     },
     {
       "name": "$selector-iframe",
       "value": ".iframe",
-      "compiledValue": ""
+      "compiledValue": ".iframe"
     }
   ],
   "mixins": [

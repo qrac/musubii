@@ -13,37 +13,37 @@
     {
       "name": "$selector-fieldset",
       "value": ".fieldset",
-      "compiledValue": ""
+      "compiledValue": ".fieldset"
     },
     {
       "name": "$selector-input",
       "value": ".input",
-      "compiledValue": ""
+      "compiledValue": ".input"
     },
     {
       "name": "$selector-textarea",
       "value": ".textarea",
-      "compiledValue": ""
+      "compiledValue": ".textarea"
     },
     {
       "name": "$selector-radio",
       "value": ".radio",
-      "compiledValue": ""
+      "compiledValue": ".radio"
     },
     {
       "name": "$selector-checkbox",
       "value": ".checkbox",
-      "compiledValue": ""
+      "compiledValue": ".checkbox"
     },
     {
       "name": "$selector-label",
       "value": ".label",
-      "compiledValue": ""
+      "compiledValue": ".label"
     },
     {
       "name": "$selector-select-wrap",
       "value": ".select",
-      "compiledValue": ""
+      "compiledValue": ".select"
     },
     {
       "name": "$selector-select",
@@ -53,22 +53,22 @@
     {
       "name": "$modifier-radio-active",
       "value": ".is-active",
-      "compiledValue": ""
+      "compiledValue": ".is-active"
     },
     {
       "name": "$modifier-checkbox-active",
       "value": ".is-active",
-      "compiledValue": ""
+      "compiledValue": ".is-active"
     },
     {
       "name": "$modifier-radio-disabled",
       "value": ".is-disabled",
-      "compiledValue": ""
+      "compiledValue": ".is-disabled"
     },
     {
       "name": "$modifier-checkbox-disabled",
       "value": ".is-disabled",
-      "compiledValue": ""
+      "compiledValue": ".is-disabled"
     },
     {
       "name": "$input-height",

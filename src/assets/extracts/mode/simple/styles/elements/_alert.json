@@ -13,7 +13,7 @@
     {
       "name": "$selector-alert",
       "value": ".alert",
-      "compiledValue": ""
+      "compiledValue": ".alert"
     },
     {
       "name": "$alert-padding",

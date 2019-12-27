@@ -30,9 +30,10 @@
     "build:sass": "node-sass ./src/scss -o ./dist --include-path ./node_modules --output-style expanded",
     "build:postcss": "postcss ./dist/musubii.css -d ./dist --no-map",
     "build:cleancss": "cleancss -o ./dist/musubii.min.css ./dist/musubii.css -d",
-    "extract": "yarn extract:sass && yarn extract:json",
+    "extract": "yarn extract:sass && yarn extract:json && yarn extract:replace",
     "extract:sass": "bash ./tasks/extract-sass.sh",
     "extract:json": "bash ./tasks/extract-json.sh",
+    "extract:replace": "bash ./tasks/extract-replace.sh",
     "clean": "rmtrash ./out ./next ./src/assets/extracts/.temp"
   },
   "browserslist": [
@@ -67,6 +68,7 @@
     "remark-custom-blocks": "^2.4.2",
     "remark-slug": "^5.1.2",
     "remark-toc": "^6.0.0",
+    "replace": "^1.1.1",
     "sass-export": "^1.0.6"
   }
 }

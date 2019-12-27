@@ -23,7 +23,7 @@
     {
       "name": "$selector-html-image-svg",
       "value": "img[src$=\".svg\"]",
-      "compiledValue": ""
+      "compiledValue": "img[src$=\".svg\"]"
     },
     {
       "name": "$selector-html-iframe",

@@ -13,22 +13,22 @@
     {
       "name": "$selector-text",
       "value": ".text",
-      "compiledValue": ""
+      "compiledValue": ".text"
     },
     {
       "name": "$selector-blockquote",
       "value": ".blockquote",
-      "compiledValue": ""
+      "compiledValue": ".blockquote"
     },
     {
       "name": "$selector-code",
       "value": ".code",
-      "compiledValue": ""
+      "compiledValue": ".code"
     },
     {
       "name": "$selector-pre",
       "value": ".pre",
-      "compiledValue": ""
+      "compiledValue": ".pre"
     },
     {
       "name": "$text-link-border-change-underline",

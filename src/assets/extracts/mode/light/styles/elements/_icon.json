@@ -13,17 +13,17 @@
     {
       "name": "$selector-icon",
       "value": ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons",
-      "compiledValue": ""
+      "compiledValue": ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons"
     },
     {
       "name": "$selector-icon-svg",
       "value": "svg.icon",
-      "compiledValue": ""
+      "compiledValue": "svg.icon"
     },
     {
       "name": "$selector-icon-material",
       "value": ".material-icons",
-      "compiledValue": ""
+      "compiledValue": ".material-icons"
     },
     {
       "name": "$icon-fit-width",

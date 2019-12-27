@@ -13,12 +13,12 @@
     {
       "name": "$selector-grid",
       "value": ".grid",
-      "compiledValue": ""
+      "compiledValue": ".grid"
     },
     {
       "name": "$selector-column",
       "value": ".column",
-      "compiledValue": ""
+      "compiledValue": ".column"
     },
     {
       "name": "$gap-size-xxl",

@@ -13,12 +13,12 @@
     {
       "name": "$selector-section",
       "value": ".section",
-      "compiledValue": ""
+      "compiledValue": ".section"
     },
     {
       "name": "$selector-inner",
       "value": ".inner",
-      "compiledValue": ""
+      "compiledValue": ".inner"
     },
     {
       "name": "$section-inner-width-fablet",

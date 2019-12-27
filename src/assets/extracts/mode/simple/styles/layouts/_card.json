@@ -13,7 +13,7 @@
     {
       "name": "$selector-card",
       "value": ".card",
-      "compiledValue": ""
+      "compiledValue": ".card"
     },
     {
       "name": "$card-background-color",

@@ -13,7 +13,7 @@
     {
       "name": "$selector-button",
       "value": ".button",
-      "compiledValue": ""
+      "compiledValue": ".button"
     },
     {
       "name": "$button-padding",

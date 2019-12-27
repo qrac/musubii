@@ -13,7 +13,7 @@
     {
       "name": "$selector-box",
       "value": ".box",
-      "compiledValue": ""
+      "compiledValue": ".box"
     },
     {
       "name": "$box-background-color",

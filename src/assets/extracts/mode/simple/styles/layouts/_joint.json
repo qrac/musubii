@@ -13,12 +13,12 @@
     {
       "name": "$selector-joint",
       "value": ".joint",
-      "compiledValue": ""
+      "compiledValue": ".joint"
     },
     {
       "name": "$selector-joint-none",
       "value": ".is-joint-none",
-      "compiledValue": ""
+      "compiledValue": ".is-joint-none"
     }
   ],
   "mixins": [
