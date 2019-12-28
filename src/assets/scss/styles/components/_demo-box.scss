@@ -16,7 +16,8 @@
   &.is-preview {
     > .demo-box,
     > .demo-options-wrap,
-    > .demo-pre-wrap {
+    > .demo-pre-wrap,
+    > .demo-flex-table {
       margin: 0;
       &:not(:first-child),
       &:not(:first-child) > .demo-pre {
@@ -28,6 +29,16 @@
       &:not(:last-child) > .demo-pre {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
+      }
+    }
+    > .demo-flex-table {
+      &:first-child {
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
       }
     }
   }

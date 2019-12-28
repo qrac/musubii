@@ -3,14 +3,15 @@
 //----------------------------------------------------
 
 .demo-flex-table {
-  + .demo-flex-table {
-    margin-top: 16px;
-  }
+  border: 1px solid var(--demo-box-line-border-color);
+  overflow: hidden;
   .table-header {
-    background-color: $table-paint-background-color;
-    color: $table-paint-text-color;
-    font-weight: 700;
+    display: none;
+    border-bottom: 1px solid var(--demo-box-line-border-color);
     font-family: $font-sans-en;
+    @include tablet() {
+      display: block;
+    }
   }
   .table-header-main {
     padding: 12px;
@@ -23,10 +24,7 @@
     }
   }
   .table-header-item {
-    display: none;
-    @include tablet() {
-      display: flex;
-    }
+    display: flex;
     .item-child {
       flex: 1 0 0%;
       padding: 12px;
@@ -36,10 +34,12 @@
   .table-body {
   }
   .table-body-item {
-    border: 1px solid var(--demo-box-line-border-color);
-    border-top: none;
+    border-top: 1px solid var(--demo-box-line-border-color);
+    &:first-child {
+      border-top: none;
+    }
     @include mobile-fablet() {
-      padding: 8px 12px 12px;
+      padding: 12px 12px 16px;
       > :not(:first-child) {
         margin-top: 12px;
       }

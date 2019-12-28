@@ -5,8 +5,8 @@ import DemoOptionBoxRadios from "~/components/parts/demo-option-box-radios"
 
 const modes = [
   { id: 0, text: "false", value: "simple" },
-  { id: 1, text: "true (light)", value: "light" },
-  { id: 2, text: "true (dark)", value: "dark" }
+  { id: 1, text: "true", value: "light" }
+  //{ id: 2, text: "true (dark)", value: "dark" }
 ]
 
 class PreviewVariables extends React.Component {
@@ -19,10 +19,10 @@ class PreviewVariables extends React.Component {
         ".json"),
       lightData: require("~/assets/extracts/mode/light/" +
         this.props.filePath +
-        ".json"),
-      darkData: require("~/assets/extracts/mode/dark/" +
-        this.props.filePath +
         ".json")
+      /*darkData: require("~/assets/extracts/mode/dark/" +
+        this.props.filePath +
+        ".json")*/
     }
     this.changeMode = this.changeMode.bind(this)
   }
@@ -33,19 +33,19 @@ class PreviewVariables extends React.Component {
     const TableBodyItem = ({ item }) => (
       <li className="table-body-item">
         <dl className="item-list">
-          <dt className="item-term">name</dt>
+          <dt className="item-term">Name</dt>
           <dd className="item-description">
             <code className="demo-inline-code">{item.name}</code>
           </dd>
         </dl>
         <dl className="item-list">
-          <dt className="item-term">value</dt>
+          <dt className="item-term">Default Value</dt>
           <dd className="item-description">
             <code className="demo-inline-code">{item.value}</code>
           </dd>
         </dl>
         <dl className="item-list">
-          <dt className="item-term">compiledValue</dt>
+          <dt className="item-term">Compiled Value</dt>
           <dd className="item-description">
             <code className="demo-inline-code">{item.compiledValue}</code>
           </dd>
@@ -63,34 +63,33 @@ class PreviewVariables extends React.Component {
             />
           </DemoOption>
         </div>
-        <div className="demo-box is-line">
-          <article className="demo-flex-table">
-            <header className="table-header">
-              <div className="table-header-main">Variables</div>
-              <div className="table-header-item">
-                <div className="item-child">name</div>
-                <div className="item-child">value</div>
-                <div className="item-child">compiledValue</div>
-              </div>
-            </header>
-            {(() => {
-              if (this.state.mode === "simple") {
-                return (
-                  <ul className="table-body">
-                    {this.state.simpleData.variables.map(variable => (
-                      <TableBodyItem item={variable} key={variable.name} />
-                    ))}
-                  </ul>
-                )
-              } else if (this.state.mode === "light") {
-                return (
-                  <ul className="table-body">
-                    {this.state.lightData.variables.map(variable => (
-                      <TableBodyItem item={variable} key={variable.name} />
-                    ))}
-                  </ul>
-                )
-              } else if (this.state.mode === "dark") {
+        <article className="demo-flex-table">
+          <header className="table-header">
+            {/*<div className="table-header-main">Variables</div>*/}
+            <div className="table-header-item">
+              <div className="item-child">Name</div>
+              <div className="item-child">Default Value</div>
+              <div className="item-child">Compiled Value</div>
+            </div>
+          </header>
+          {(() => {
+            if (this.state.mode === "simple") {
+              return (
+                <ul className="table-body">
+                  {this.state.simpleData.variables.map(variable => (
+                    <TableBodyItem item={variable} key={variable.name} />
+                  ))}
+                </ul>
+              )
+            } else if (this.state.mode === "light") {
+              return (
+                <ul className="table-body">
+                  {this.state.lightData.variables.map(variable => (
+                    <TableBodyItem item={variable} key={variable.name} />
+                  ))}
+                </ul>
+              )
+            } /* else if (this.state.mode === "dark") {
                 return (
                   <ul className="table-body">
                     {this.state.darkData.variables.map(variable => (
@@ -98,10 +97,9 @@ class PreviewVariables extends React.Component {
                     ))}
                   </ul>
                 )
-              }
-            })()}
-          </article>
-        </div>
+              }*/
+          })()}
+        </article>
       </div>
     )
   }
