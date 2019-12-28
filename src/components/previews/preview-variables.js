@@ -18,36 +18,63 @@ class PreviewVariables extends React.Component {
   }
   render() {
     //console.log(this.state.mode)
-    //console.log(this.state.simpleData)
+    console.log(this.state.simpleData)
     //console.log(this.state.lightData)
     //console.log(this.state.darkData)
     return (
-      <div className="demo-table-wrap">
-        <table className="demo-table">
-          <thead>
-            <tr>
-              <th>variable</th>
-              <th>value</th>
-              <th>compiledValue</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.simpleData.variables.map(variable => (
-              <tr key={variable.name}>
-                <td>
-                  <code className="code">{variable.name}</code>
-                </td>
-                <td>
-                  <code className="code">{variable.value}</code>
-                </td>
-                <td>
-                  <code className="code">{variable.compiledValue}</code>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <>
+        {(() => {
+          if (this.state.simpleData.variables) {
+            return (
+              <article className="demo-responsive-table">
+                <header className="table-header">
+                  <div className="table-header-main">Variables</div>
+                  <div className="table-header-item">
+                    <div className="item-child">name</div>
+                    <div className="item-child">value</div>
+                    <div className="item-child">compiledValue</div>
+                  </div>
+                </header>
+                <ul className="table-body">
+                  {this.state.simpleData.variables.map(variable => (
+                    <li className="table-body-item" key={variable.name}>
+                      <dl className="item-list">
+                        <dt className="item-term">name</dt>
+                        <dd className="item-description">
+                          <code className="demo-inline-code">
+                            {variable.name}
+                          </code>
+                        </dd>
+                      </dl>
+                      <dl className="item-list">
+                        <dt className="item-term">value</dt>
+                        <dd className="item-description">
+                          <code className="demo-inline-code">
+                            {variable.value}
+                          </code>
+                        </dd>
+                      </dl>
+                      <dl className="item-list">
+                        <dt className="item-term">compiledValue</dt>
+                        <dd className="item-description">
+                          <code className="demo-inline-code">
+                            {variable.compiledValue}
+                          </code>
+                        </dd>
+                      </dl>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            )
+          }
+        })()}
+        {(() => {
+          if (this.state.simpleData.mixins) {
+            return <p>test</p>
+          }
+        })()}
+      </>
     )
   }
 }
