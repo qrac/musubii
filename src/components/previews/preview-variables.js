@@ -1,5 +1,7 @@
 import React from "react"
 
+import CheckColor from "~/components/parts/check-color"
+import DemoColorBox from "~/components/parts/demo-color-box"
 import DemoOption from "~/components/parts/demo-option"
 import DemoOptionBoxRadios from "~/components/parts/demo-option-box-radios"
 
@@ -35,19 +37,31 @@ class PreviewVariables extends React.Component {
         <dl className="item-list">
           <dt className="item-term">Name</dt>
           <dd className="item-description">
-            <code className="demo-inline-code">{item.name}</code>
+            <div className="item-description-child">
+              <code className="demo-inline-code">{item.name}</code>
+            </div>
           </dd>
         </dl>
         <dl className="item-list">
           <dt className="item-term">Default Value</dt>
           <dd className="item-description">
-            <code className="demo-inline-code">{item.value}</code>
+            <CheckColor value={item.value}>
+              <DemoColorBox value={item.value} />
+            </CheckColor>
+            <div className="item-description-child">
+              <code className="demo-inline-code">{item.value}</code>
+            </div>
           </dd>
         </dl>
         <dl className="item-list">
           <dt className="item-term">Compiled Value</dt>
           <dd className="item-description">
-            <code className="demo-inline-code">{item.compiledValue}</code>
+            <CheckColor value={item.compiledValue}>
+              <DemoColorBox value={item.compiledValue} />
+            </CheckColor>
+            <div className="item-description-child">
+              <code className="demo-inline-code">{item.compiledValue}</code>
+            </div>
           </dd>
         </dl>
       </li>

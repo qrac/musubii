@@ -67,8 +67,19 @@
       }
     }
     .item-description {
+      display: flex;
+      align-items: center;
       @include tablet() {
         padding: 12px;
+      }
+      > .demo-color-box {
+        flex: none;
+      }
+      > .item-description-child {
+        flex: 1 0 0%;
+      }
+      .demo-color-box {
+        margin-right: 8px;
       }
       .demo-inline-code {
         word-break: normal;

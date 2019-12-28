@@ -34,16 +34,20 @@ class PreviewMixins extends React.Component {
       <li className="table-body-item">
         <dl className="item-list">
           <dd className="item-description">
-            <code className="demo-inline-code">
-              {item.name}
-              {"("}
-              {(() => {
-                if (item.parameters) {
-                  return item.parameters.map(parameter => parameter).join(", ")
-                }
-              })()}
-              {")"}
-            </code>
+            <div className="item-description-child">
+              <code className="demo-inline-code">
+                {item.name}
+                {"("}
+                {(() => {
+                  if (item.parameters) {
+                    return item.parameters
+                      .map(parameter => parameter)
+                      .join(", ")
+                  }
+                })()}
+                {")"}
+              </code>
+            </div>
           </dd>
         </dl>
       </li>
