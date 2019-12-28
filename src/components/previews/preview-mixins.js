@@ -9,7 +9,7 @@ const modes = [
   { id: 2, text: "true (dark)", value: "dark" }
 ]
 
-class PreviewVariables extends React.Component {
+class PreviewMixins extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -33,21 +33,17 @@ class PreviewVariables extends React.Component {
     const TableBodyItem = ({ item }) => (
       <li className="table-body-item">
         <dl className="item-list">
-          <dt className="item-term">name</dt>
           <dd className="item-description">
-            <code className="demo-inline-code">{item.name}</code>
-          </dd>
-        </dl>
-        <dl className="item-list">
-          <dt className="item-term">value</dt>
-          <dd className="item-description">
-            <code className="demo-inline-code">{item.value}</code>
-          </dd>
-        </dl>
-        <dl className="item-list">
-          <dt className="item-term">compiledValue</dt>
-          <dd className="item-description">
-            <code className="demo-inline-code">{item.compiledValue}</code>
+            <code className="demo-inline-code">
+              {item.name}
+              {"("}
+              {(() => {
+                if (item.parameters) {
+                  return item.parameters.map(parameter => parameter).join(", ")
+                }
+              })()}
+              {")"}
+            </code>
           </dd>
         </dl>
       </li>
@@ -66,35 +62,30 @@ class PreviewVariables extends React.Component {
         <div className="demo-box is-line">
           <article className="demo-flex-table">
             <header className="table-header">
-              <div className="table-header-main">Variables</div>
-              <div className="table-header-item">
-                <div className="item-child">name</div>
-                <div className="item-child">value</div>
-                <div className="item-child">compiledValue</div>
-              </div>
+              <div className="table-header-main">Mixins</div>
             </header>
             {(() => {
               if (this.state.mode === "simple") {
                 return (
                   <ul className="table-body">
-                    {this.state.simpleData.variables.map(variable => (
-                      <TableBodyItem item={variable} key={variable.name} />
+                    {this.state.simpleData.mixins.map(mixin => (
+                      <TableBodyItem item={mixin} key={mixin.name} />
                     ))}
                   </ul>
                 )
               } else if (this.state.mode === "light") {
                 return (
                   <ul className="table-body">
-                    {this.state.lightData.variables.map(variable => (
-                      <TableBodyItem item={variable} key={variable.name} />
+                    {this.state.lightData.mixins.map(mixin => (
+                      <TableBodyItem item={mixin} key={mixin.name} />
                     ))}
                   </ul>
                 )
               } else if (this.state.mode === "dark") {
                 return (
                   <ul className="table-body">
-                    {this.state.darkData.variables.map(variable => (
-                      <TableBodyItem item={variable} key={variable.name} />
+                    {this.state.darkData.mixins.map(mixin => (
+                      <TableBodyItem item={mixin} key={mixin.name} />
                     ))}
                   </ul>
                 )
@@ -107,4 +98,4 @@ class PreviewVariables extends React.Component {
   }
 }
 
-export default PreviewVariables
+export default PreviewMixins
