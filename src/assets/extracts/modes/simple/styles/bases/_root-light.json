@@ -41,380 +41,380 @@
       "compiledValue": "light"
     }
   ],
-  "css-variables-element": [
+  "css-variables": [
     {
-      "name": "$--primary",
-      "value": "#{$theme-light-primary}",
+      "name": "--primary",
+      "value": "$theme-light-primary",
       "compiledValue": "#37b0be"
     },
     {
-      "name": "$--primary-strong",
-      "value": "#{$theme-light-primary-strong}",
+      "name": "--primary-strong",
+      "value": "$theme-light-primary-strong",
       "compiledValue": "#37b0be"
     },
     {
-      "name": "$--primary-darken",
-      "value": "#{$theme-light-primary-darken}",
+      "name": "--primary-darken",
+      "value": "$theme-light-primary-darken",
       "compiledValue": "#319eaa"
     },
     {
-      "name": "$--info",
-      "value": "#{$theme-light-info}",
+      "name": "--info",
+      "value": "$theme-light-info",
       "compiledValue": "#4b9bd8"
     },
     {
-      "name": "$--info-strong",
-      "value": "#{$theme-light-info-strong}",
+      "name": "--info-strong",
+      "value": "$theme-light-info-strong",
       "compiledValue": "#4b9bd8"
     },
     {
-      "name": "$--info-darken",
-      "value": "#{$theme-light-info-darken}",
+      "name": "--info-darken",
+      "value": "$theme-light-info-darken",
       "compiledValue": "#368fd3"
     },
     {
-      "name": "$--success",
-      "value": "#{$theme-light-success}",
+      "name": "--success",
+      "value": "$theme-light-success",
       "compiledValue": "#2ca52c"
     },
     {
-      "name": "$--success-strong",
-      "value": "#{$theme-light-success-strong}",
+      "name": "--success-strong",
+      "value": "$theme-light-success-strong",
       "compiledValue": "#2ca52c"
     },
     {
-      "name": "$--success-darken",
-      "value": "#{$theme-light-success-darken}",
+      "name": "--success-darken",
+      "value": "$theme-light-success-darken",
       "compiledValue": "#279127"
     },
     {
-      "name": "$--warning",
-      "value": "#{$theme-light-warning}",
+      "name": "--warning",
+      "value": "$theme-light-warning",
       "compiledValue": "#ec9213"
     },
     {
-      "name": "$--warning-strong",
-      "value": "#{$theme-light-warning-strong}",
+      "name": "--warning-strong",
+      "value": "$theme-light-warning-strong",
       "compiledValue": "#ec9213"
     },
     {
-      "name": "$--warning-darken",
-      "value": "#{$theme-light-warning-darken}",
+      "name": "--warning-darken",
+      "value": "$theme-light-warning-darken",
       "compiledValue": "#d48311"
     },
     {
-      "name": "$--danger",
-      "value": "#{$theme-light-danger}",
+      "name": "--danger",
+      "value": "$theme-light-danger",
       "compiledValue": "#db5757"
     },
     {
-      "name": "$--danger-strong",
-      "value": "#{$theme-light-danger-strong}",
+      "name": "--danger-strong",
+      "value": "$theme-light-danger-strong",
       "compiledValue": "#db5757"
     },
     {
-      "name": "$--danger-darken",
-      "value": "#{$theme-light-danger-darken}",
+      "name": "--danger-darken",
+      "value": "$theme-light-danger-darken",
       "compiledValue": "#d74242"
     },
     {
-      "name": "$--text-dark",
-      "value": "#{$theme-light-text-dark}",
+      "name": "--text-dark",
+      "value": "$theme-light-text-dark",
       "compiledValue": "black"
     },
     {
-      "name": "$--text-dark-1",
-      "value": "#{$theme-light-text-dark-1}",
+      "name": "--text-dark-1",
+      "value": "$theme-light-text-dark-1",
       "compiledValue": "rgba(0, 0, 0, 0.87)"
     },
     {
-      "name": "$--text-dark-2",
-      "value": "#{$theme-light-text-dark-2}",
+      "name": "--text-dark-2",
+      "value": "$theme-light-text-dark-2",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {
-      "name": "$--text-dark-3",
-      "value": "#{$theme-light-text-dark-3}",
+      "name": "--text-dark-3",
+      "value": "$theme-light-text-dark-3",
       "compiledValue": "rgba(0, 0, 0, 0.6)"
     },
     {
-      "name": "$--text-dark-4",
-      "value": "#{$theme-light-text-dark-4}",
+      "name": "--text-dark-4",
+      "value": "$theme-light-text-dark-4",
       "compiledValue": "rgba(0, 0, 0, 0.5)"
     },
     {
-      "name": "$--text-dark-5",
-      "value": "#{$theme-light-text-dark-5}",
+      "name": "--text-dark-5",
+      "value": "$theme-light-text-dark-5",
       "compiledValue": "rgba(0, 0, 0, 0.4)"
     },
     {
-      "name": "$--text-dark-6",
-      "value": "#{$theme-light-text-dark-6}",
+      "name": "--text-dark-6",
+      "value": "$theme-light-text-dark-6",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
-      "name": "$--text-dark-7",
-      "value": "#{$theme-light-text-dark-7}",
+      "name": "--text-dark-7",
+      "value": "$theme-light-text-dark-7",
       "compiledValue": "rgba(0, 0, 0, 0.15)"
     },
     {
-      "name": "$--text-dark-8",
-      "value": "#{$theme-light-text-dark-8}",
+      "name": "--text-dark-8",
+      "value": "$theme-light-text-dark-8",
       "compiledValue": "rgba(0, 0, 0, 0.12)"
     },
     {
-      "name": "$--text-dark-9",
-      "value": "#{$theme-light-text-dark-9}",
+      "name": "--text-dark-9",
+      "value": "$theme-light-text-dark-9",
       "compiledValue": "rgba(0, 0, 0, 0.05)"
     },
     {
-      "name": "$--text-light",
-      "value": "#{$theme-light-text-light}",
+      "name": "--text-light",
+      "value": "$theme-light-text-light",
       "compiledValue": "white"
     },
     {
-      "name": "$--text-light-1",
-      "value": "#{$theme-light-text-light-1}",
+      "name": "--text-light-1",
+      "value": "$theme-light-text-light-1",
       "compiledValue": "rgba(255, 255, 255, 0.87)"
     },
     {
-      "name": "$--text-light-2",
-      "value": "#{$theme-light-text-light-2}",
+      "name": "--text-light-2",
+      "value": "$theme-light-text-light-2",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {
-      "name": "$--text-light-3",
-      "value": "#{$theme-light-text-light-3}",
+      "name": "--text-light-3",
+      "value": "$theme-light-text-light-3",
       "compiledValue": "rgba(255, 255, 255, 0.6)"
     },
     {
-      "name": "$--text-light-4",
-      "value": "#{$theme-light-text-light-4}",
+      "name": "--text-light-4",
+      "value": "$theme-light-text-light-4",
       "compiledValue": "rgba(255, 255, 255, 0.5)"
     },
     {
-      "name": "$--text-light-5",
-      "value": "#{$theme-light-text-light-5}",
+      "name": "--text-light-5",
+      "value": "$theme-light-text-light-5",
       "compiledValue": "rgba(255, 255, 255, 0.4)"
     },
     {
-      "name": "$--text-light-6",
-      "value": "#{$theme-light-text-light-6}",
+      "name": "--text-light-6",
+      "value": "$theme-light-text-light-6",
       "compiledValue": "rgba(255, 255, 255, 0.26)"
     },
     {
-      "name": "$--text-light-7",
-      "value": "#{$theme-light-text-light-7}",
+      "name": "--text-light-7",
+      "value": "$theme-light-text-light-7",
       "compiledValue": "rgba(255, 255, 255, 0.15)"
     },
     {
-      "name": "$--text-light-8",
-      "value": "#{$theme-light-text-light-8}",
+      "name": "--text-light-8",
+      "value": "$theme-light-text-light-8",
       "compiledValue": "rgba(255, 255, 255, 0.12)"
     },
     {
-      "name": "$--text-light-9",
-      "value": "#{$theme-light-text-light-9}",
+      "name": "--text-light-9",
+      "value": "$theme-light-text-light-9",
       "compiledValue": "rgba(255, 255, 255, 0.05)"
     },
     {
-      "name": "$--background",
-      "value": "#{$theme-light-background}",
+      "name": "--background",
+      "value": "$theme-light-background",
       "compiledValue": "white"
     },
     {
-      "name": "$--background-1",
-      "value": "#{$theme-light-background-1}",
+      "name": "--background-1",
+      "value": "$theme-light-background-1",
       "compiledValue": "white"
     },
     {
-      "name": "$--background-2",
-      "value": "#{$theme-light-background-2}",
+      "name": "--background-2",
+      "value": "$theme-light-background-2",
       "compiledValue": "whitesmoke"
     },
     {
-      "name": "$--background-3",
-      "value": "#{$theme-light-background-3}",
+      "name": "--background-3",
+      "value": "$theme-light-background-3",
       "compiledValue": "whitesmoke"
     },
     {
-      "name": "$--background-4",
-      "value": "#{$theme-light-background-4}",
+      "name": "--background-4",
+      "value": "$theme-light-background-4",
       "compiledValue": "#ededed"
     },
     {
-      "name": "$--background-alpha",
-      "value": "#{$theme-light-background-alpha}",
+      "name": "--background-alpha",
+      "value": "$theme-light-background-alpha",
       "compiledValue": "rgba(0, 0, 0, 0.05)"
     },
     {
-      "name": "$--border",
-      "value": "#{$theme-light-border}",
+      "name": "--border",
+      "value": "$theme-light-border",
       "compiledValue": "#d1d8dc"
     },
     {
-      "name": "$--border-1",
-      "value": "#{$theme-light-border-1}",
+      "name": "--border-1",
+      "value": "$theme-light-border-1",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
-      "name": "$--shadow-alpha",
-      "value": "#{$theme-light-shadow-alpha}",
+      "name": "--shadow-alpha",
+      "value": "$theme-light-shadow-alpha",
       "compiledValue": "rgba(0, 0, 0, 0.24)"
     },
     {
-      "name": "$--shadow-alpha-thin",
-      "value": "#{$theme-light-shadow-alpha-thin}",
+      "name": "--shadow-alpha-thin",
+      "value": "$theme-light-shadow-alpha-thin",
       "compiledValue": "rgba(0, 0, 0, 0.075)"
     },
     {
-      "name": "$--focus-darken",
-      "value": "#{$theme-light-focus-darken}",
+      "name": "--focus-darken",
+      "value": "$theme-light-focus-darken",
       "compiledValue": "#0f7dd2"
     },
     {
-      "name": "$--focus-alpha",
-      "value": "#{$theme-light-focus-alpha}",
+      "name": "--focus-alpha",
+      "value": "$theme-light-focus-alpha",
       "compiledValue": "rgba(36, 151, 240, 0.5)"
     },
     {
-      "name": "$--focus-alpha-thin",
-      "value": "#{$theme-light-focus-alpha-thin}",
+      "name": "--focus-alpha-thin",
+      "value": "$theme-light-focus-alpha-thin",
       "compiledValue": "rgba(36, 151, 240, 0.36)"
     },
     {
-      "name": "$--disabled-background-color",
-      "value": "#{$theme-light-disabled-background-color}",
+      "name": "--disabled-background-color",
+      "value": "$theme-light-disabled-background-color",
       "compiledValue": "#bdbdbd"
     },
     {
-      "name": "$--disabled-border-color",
-      "value": "#{$theme-light-disabled-border-color}",
+      "name": "--disabled-border-color",
+      "value": "$theme-light-disabled-border-color",
       "compiledValue": "#eef0f2"
     },
     {
-      "name": "$--disabled-text-color",
-      "value": "#{$theme-light-disabled-text-color}",
+      "name": "--disabled-text-color",
+      "value": "$theme-light-disabled-text-color",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
-      "name": "$--body-background-color",
-      "value": "#{$theme-light-body-background-color}",
+      "name": "--body-background-color",
+      "value": "$theme-light-body-background-color",
       "compiledValue": "white"
     },
     {
-      "name": "$--body-text-color",
-      "value": "#{$theme-light-body-text-color}",
+      "name": "--body-text-color",
+      "value": "$theme-light-body-text-color",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {
-      "name": "$--code-text-color",
-      "value": "#{$theme-light-code-text-color}",
+      "name": "--code-text-color",
+      "value": "$theme-light-code-text-color",
       "compiledValue": "#5d69a8"
     },
     {
-      "name": "$--button-paint-text-color",
-      "value": "#{$theme-light-button-paint-text-color}",
+      "name": "--button-paint-text-color",
+      "value": "$theme-light-button-paint-text-color",
       "compiledValue": "white"
     },
     {
-      "name": "$--table-paint-background-color",
-      "value": "#{$theme-light-table-paint-background-color}",
+      "name": "--table-paint-background-color",
+      "value": "$theme-light-table-paint-background-color",
       "compiledValue": "#37b0be"
     },
     {
-      "name": "$--table-paint-text-color",
-      "value": "#{$theme-light-table-paint-text-color}",
+      "name": "--table-paint-text-color",
+      "value": "$theme-light-table-paint-text-color",
       "compiledValue": "white"
     },
     {
-      "name": "$--table-spot-background-color",
-      "value": "#{$theme-light-table-spot-background-color}",
+      "name": "--table-spot-background-color",
+      "value": "$theme-light-table-spot-background-color",
       "compiledValue": "#f8f1a5"
     },
     {
-      "name": "$--table-danger-background-color",
-      "value": "#{$theme-light-table-danger-background-color}",
+      "name": "--table-danger-background-color",
+      "value": "$theme-light-table-danger-background-color",
       "compiledValue": "#f5d1d1"
     },
     {
-      "name": "$--input-placeholder-color",
-      "value": "#{$theme-light-input-placeholder-color}",
+      "name": "--input-placeholder-color",
+      "value": "$theme-light-input-placeholder-color",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
-      "name": "$--input-success-background-color",
-      "value": "#{$theme-light-input-success-background-color}",
+      "name": "--input-success-background-color",
+      "value": "$theme-light-input-success-background-color",
       "compiledValue": "#dbf5db"
     },
     {
-      "name": "$--input-success-border-color",
-      "value": "#{$theme-light-input-success-border-color}",
+      "name": "--input-success-border-color",
+      "value": "$theme-light-input-success-border-color",
       "compiledValue": "#7edd7e"
     },
     {
-      "name": "$--input-danger-background-color",
-      "value": "#{$theme-light-input-danger-background-color}",
+      "name": "--input-danger-background-color",
+      "value": "$theme-light-input-danger-background-color",
       "compiledValue": "#fbeaea"
     },
     {
-      "name": "$--input-danger-border-color",
-      "value": "#{$theme-light-input-danger-border-color}",
+      "name": "--input-danger-border-color",
+      "value": "$theme-light-input-danger-border-color",
       "compiledValue": "#eeafaf"
     },
     {
-      "name": "$--checkbox-before-border-color",
-      "value": "#{$theme-light-checkbox-before-border-color}",
+      "name": "--checkbox-before-border-color",
+      "value": "$theme-light-checkbox-before-border-color",
       "compiledValue": "white"
     },
     {
-      "name": "$--alert-primary-background-color",
-      "value": "#{$theme-light-alert-primary-background-color}",
+      "name": "--alert-primary-background-color",
+      "value": "$theme-light-alert-primary-background-color",
       "compiledValue": "#dff4f6"
     },
     {
-      "name": "$--alert-primary-border-color",
-      "value": "#{$theme-light-alert-primary-border-color}",
+      "name": "--alert-primary-border-color",
+      "value": "$theme-light-alert-primary-border-color",
       "compiledValue": "#9cdbe2"
     },
     {
-      "name": "$--alert-info-background-color",
-      "value": "#{$theme-light-alert-info-background-color}",
+      "name": "--alert-info-background-color",
+      "value": "$theme-light-alert-info-background-color",
       "compiledValue": "#deecf8"
     },
     {
-      "name": "$--alert-info-border-color",
-      "value": "#{$theme-light-alert-info-border-color}",
+      "name": "--alert-info-border-color",
+      "value": "$theme-light-alert-info-border-color",
       "compiledValue": "#a3cceb"
     },
     {
-      "name": "$--alert-success-background-color",
-      "value": "#{$theme-light-alert-success-background-color}",
+      "name": "--alert-success-background-color",
+      "value": "$theme-light-alert-success-background-color",
       "compiledValue": "#dbf5db"
     },
     {
-      "name": "$--alert-success-border-color",
-      "value": "#{$theme-light-alert-success-border-color}",
+      "name": "--alert-success-border-color",
+      "value": "$theme-light-alert-success-border-color",
       "compiledValue": "#7edd7e"
     },
     {
-      "name": "$--alert-warning-background-color",
-      "value": "#{$theme-light-alert-warning-background-color}",
+      "name": "--alert-warning-background-color",
+      "value": "$theme-light-alert-warning-background-color",
       "compiledValue": "#fcf0de"
     },
     {
-      "name": "$--alert-warning-border-color",
-      "value": "#{$theme-light-alert-warning-border-color}",
+      "name": "--alert-warning-border-color",
+      "value": "$theme-light-alert-warning-border-color",
       "compiledValue": "#f6cd92"
     },
     {
-      "name": "$--alert-danger-background-color",
-      "value": "#{$theme-light-alert-danger-background-color}",
+      "name": "--alert-danger-background-color",
+      "value": "$theme-light-alert-danger-background-color",
       "compiledValue": "#fbeaea"
     },
     {
-      "name": "$--alert-danger-border-color",
-      "value": "#{$theme-light-alert-danger-border-color}",
+      "name": "--alert-danger-border-color",
+      "value": "$theme-light-alert-danger-border-color",
       "compiledValue": "#eeafaf"
     }
   ],

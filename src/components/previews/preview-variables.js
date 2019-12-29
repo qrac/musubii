@@ -11,7 +11,81 @@ const modes = [
   //{ id: 2, text: "true (dark)", value: "dark" }
 ]
 
-class PreviewVariables extends React.Component {
+const TableBodyItem = ({ item }) => {
+  return (
+    <li className="table-body-item">
+      <dl className="item-list is-tablet-4">
+        <dt className="item-term">Name</dt>
+        <dd className="item-description">
+          <div className="item-description-child">
+            <code className="demo-inline-code">{item.name}</code>
+          </div>
+        </dd>
+      </dl>
+      <dl className="item-list is-tablet-4">
+        <dt className="item-term">Default Value</dt>
+        <dd className="item-description">
+          <CheckColor value={item.value}>
+            <DemoColorBox value={item.value} />
+          </CheckColor>
+          <div className="item-description-child">
+            <code className="demo-inline-code">{item.value}</code>
+          </div>
+        </dd>
+      </dl>
+      {(() => {
+        if (item.compiledValue) {
+          return (
+            <dl className="item-list is-tablet-4">
+              <dt className="item-term">Compiled Value</dt>
+              <dd className="item-description">
+                <CheckColor value={item.compiledValue}>
+                  <DemoColorBox value={item.compiledValue} />
+                </CheckColor>
+                <div className="item-description-child">
+                  <code className="demo-inline-code">{item.compiledValue}</code>
+                </div>
+              </dd>
+            </dl>
+          )
+        }
+      })()}
+    </li>
+  )
+}
+
+export class PreviewVariablesSingle extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      simpleData: require("~/assets/extracts/modes/simple/" +
+        this.props.filePath +
+        ".json")
+    }
+  }
+  render() {
+    return (
+      <div className="demo-box is-preview">
+        <article className="demo-flex-table">
+          <header className="table-header">
+            <div className="table-header-item">
+              <div className="item-child is-tablet-4">Name</div>
+              <div className="item-child is-tablet-4">Default Value</div>
+              <div className="item-child is-tablet-4">Compiled Value</div>
+            </div>
+          </header>
+          <ul className="table-body">
+            {this.state.simpleData.variables.map(variable => (
+              <TableBodyItem item={variable} key={variable.name} />
+            ))}
+          </ul>
+        </article>
+      </div>
+    )
+  }
+}
+
+export class PreviewVariablesDouble extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -29,48 +103,6 @@ class PreviewVariables extends React.Component {
     this.setState({ mode: value })
   }
   render() {
-    const TableBodyItem = ({ item }) => (
-      <li className="table-body-item">
-        <dl className="item-list is-tablet-4">
-          <dt className="item-term">Name</dt>
-          <dd className="item-description">
-            <div className="item-description-child">
-              <code className="demo-inline-code">{item.name}</code>
-            </div>
-          </dd>
-        </dl>
-        <dl className="item-list is-tablet-4">
-          <dt className="item-term">Default Value</dt>
-          <dd className="item-description">
-            <CheckColor value={item.value}>
-              <DemoColorBox value={item.value} />
-            </CheckColor>
-            <div className="item-description-child">
-              <code className="demo-inline-code">{item.value}</code>
-            </div>
-          </dd>
-        </dl>
-        {(() => {
-          if (item.compiledValue) {
-            return (
-              <dl className="item-list is-tablet-4">
-                <dt className="item-term">Compiled Value</dt>
-                <dd className="item-description">
-                  <CheckColor value={item.compiledValue}>
-                    <DemoColorBox value={item.compiledValue} />
-                  </CheckColor>
-                  <div className="item-description-child">
-                    <code className="demo-inline-code">
-                      {item.compiledValue}
-                    </code>
-                  </div>
-                </dd>
-              </dl>
-            )
-          }
-        })()}
-      </li>
-    )
     return (
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
@@ -84,7 +116,6 @@ class PreviewVariables extends React.Component {
         </div>
         <article className="demo-flex-table">
           <header className="table-header">
-            {/*<div className="table-header-main">Variables</div>*/}
             <div className="table-header-item">
               <div className="item-child is-tablet-4">Name</div>
               <div className="item-child is-tablet-4">Default Value</div>
@@ -116,4 +147,37 @@ class PreviewVariables extends React.Component {
   }
 }
 
-export default PreviewVariables
+export class PreviewVariablesCss extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      simpleData: require("~/assets/extracts/modes/simple/" +
+        this.props.filePath +
+        ".json")
+    }
+  }
+  render() {
+    return (
+      <div className="demo-box is-preview">
+        <article className="demo-flex-table">
+          <header className="table-header">
+            <div className="table-header-item">
+              <div className="item-child is-tablet-4">Name</div>
+              <div className="item-child is-tablet-4">Default Value</div>
+              <div className="item-child is-tablet-4">Compiled Value</div>
+            </div>
+          </header>
+          <ul className="table-body">
+            {this.state.simpleData["css-variables"].map(variable => (
+              <TableBodyItem
+                item={variable}
+                cssVariables={true}
+                key={variable.name}
+              />
+            ))}
+          </ul>
+        </article>
+      </div>
+    )
+  }
+}

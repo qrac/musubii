@@ -1,5 +1,26 @@
 import React from "react"
 
+const TableBodyItem = ({ item }) => (
+  <li className="table-body-item">
+    <dl className="item-list is-mobile-0">
+      <dd className="item-description">
+        <div className="item-description-child">
+          <code className="demo-inline-code">
+            {item.name}
+            {"("}
+            {(() => {
+              if (item.parameters) {
+                return item.parameters.map(parameter => parameter).join(", ")
+              }
+            })()}
+            {")"}
+          </code>
+        </div>
+      </dd>
+    </dl>
+  </li>
+)
+
 class PreviewMixins extends React.Component {
   constructor(props) {
     super(props)
@@ -10,28 +31,6 @@ class PreviewMixins extends React.Component {
     }
   }
   render() {
-    const TableBodyItem = ({ item }) => (
-      <li className="table-body-item">
-        <dl className="item-list is-mobile-0">
-          <dd className="item-description">
-            <div className="item-description-child">
-              <code className="demo-inline-code">
-                {item.name}
-                {"("}
-                {(() => {
-                  if (item.parameters) {
-                    return item.parameters
-                      .map(parameter => parameter)
-                      .join(", ")
-                  }
-                })()}
-                {")"}
-              </code>
-            </div>
-          </dd>
-        </dl>
-      </li>
-    )
     return (
       <div className="demo-box is-preview">
         <article className="demo-flex-table">

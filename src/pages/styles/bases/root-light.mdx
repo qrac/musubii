@@ -5,7 +5,10 @@ export const meta = {
   filePath: "styles/bases/_root-light"
 }
 
-import PreviewVariables from "~/components/previews/preview-variables"
+import {
+  PreviewVariablesCss,
+  PreviewVariablesSingle
+} from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
 
@@ -15,9 +18,13 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## CSS Variables
+
+<PreviewVariablesCss filePath={meta.filePath} />
+
 ## Variables
 
-<PreviewVariables filePath={meta.filePath} />
+<PreviewVariablesSingle filePath={meta.filePath} />
 
 ## Mixins
 

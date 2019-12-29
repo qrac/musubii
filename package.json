@@ -30,11 +30,10 @@
     "build:sass": "node-sass ./src/scss -o ./dist --include-path ./node_modules --output-style expanded",
     "build:postcss": "postcss ./dist/musubii.css -d ./dist --no-map",
     "build:cleancss": "cleancss -o ./dist/musubii.min.css ./dist/musubii.css -d",
-    "extract": "yarn extract:make-sass && yarn extract:replace-sass && yarn extract:make-json && yarn extract:replace-json",
-    "extract:make-sass": "bash ./tasks/extract-make-sass.sh",
-    "extract:replace-sass": "bash ./tasks/extract-replace-sass.sh",
-    "extract:make-json": "bash ./tasks/extract-make-json.sh",
-    "extract:replace-json": "bash ./tasks/extract-replace-json.sh",
+    "extract": "yarn extract:sass && yarn extract:json && yarn extract:replace",
+    "extract:sass": "bash ./tasks/extract-sass.sh",
+    "extract:json": "bash ./tasks/extract-json.sh",
+    "extract:replace": "bash ./tasks/extract-replace.sh",
     "clean": "rmtrash ./out ./next ./src/assets/extracts/.temp"
   },
   "browserslist": [
