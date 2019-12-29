@@ -11,11 +11,11 @@
 
 .demo-table {
   width: 100%;
-  background-color: $table-background-color;
+  background-color: $convert-background;
   th {
-    background-color: $table-paint-background-color;
-    color: $table-paint-text-color;
-    font-weight: $wysiwyg-table-th-font-weight;
+    background-color: $convert-table-paint-background-color;
+    color: $convert-table-paint-text-color;
+    font-weight: $font-weight-normal;
   }
   th,
   td {

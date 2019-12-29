@@ -7,9 +7,8 @@ class CheckColor extends React.Component {
   }
   checkColor(checkValue) {
     if (process.browser) {
-      const checkColorBox = document.createElement("div")
+      const checkColorBox = document.createElement("span")
       checkColorBox.style.backgroundColor = checkValue
-      console.log(checkValue)
       return checkColorBox.style.backgroundColor !== ""
     }
   }
@@ -17,7 +16,6 @@ class CheckColor extends React.Component {
     return (
       <>
         {(() => {
-          //console.log(value)
           if (this.checkColor(this.props.value)) {
             return <>{this.props.children}</>
           }

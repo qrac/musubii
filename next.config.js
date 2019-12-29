@@ -4,6 +4,10 @@ module.exports = () => {
   const customBlocks = require("remark-custom-blocks")
 
   const customBlocksTemplate = {
+    note: {
+      classes: "demo-box is-note",
+      title: "optional"
+    },
     tips: {
       classes: "demo-box is-tips",
       title: "optional"

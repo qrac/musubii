@@ -53,10 +53,23 @@
     border: 1px solid var(--demo-box-line-border-color);
     border-radius: 2px;
   }
+  &.is-note {
+    padding: 1.25em;
+    background-color: $convert-background-2;
+    border: 1px solid $convert-border;
+    border-radius: 2px;
+    .custom-block-heading {
+      color: $convert-text-dark-4;
+      font-weight: 900;
+      font-family: $font-sans-en;
+      letter-spacing: 0.175em;
+      text-transform: uppercase;
+    }
+  }
   &.is-warning {
     padding: 1.25em;
-    background-color: $alert-warning-background-color;
-    border: 1px solid $alert-warning-border-color;
+    background-color: $convert-alert-warning-background-color;
+    border: 1px solid $convert-alert-warning-border-color;
     border-radius: 2px;
     .custom-block-heading {
       color: $convert-warning-strong;
@@ -73,7 +86,8 @@
   }
   .custom-block-body {
   }
-  .demo-text {
+  .demo-text,
+  .demo-list {
     margin-bottom: 0;
     &:first-child {
       margin-top: 0;
