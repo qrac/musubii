@@ -1,6 +1,8 @@
 export const meta = {
   title: "Button",
-  path: "/styles/elements/button"
+  path: "/styles/elements/button",
+  docsPath: "styles/elements/button",
+  filePath: "styles/elements/_button"
 }
 
 import {
@@ -35,16 +37,16 @@ contents list
 
 ## Variables
 
-<PreviewVariables filePath={"styles/elements/_button"} />
+<PreviewVariables filePath={meta.filePath} />
 
 ## Mixins
 
-<PreviewMixins filePath={"styles/elements/_button"} />
+<PreviewMixins filePath={meta.filePath} />
 
 ## Sources
 
 <PreviewSources
   title={meta.title}
-  docsPath={"styles/elements/button"}
-  scssPath={"styles/elements/_button"}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
 />

@@ -1,6 +1,32 @@
 export const meta = {
   title: "Root Light",
-  path: "/styles/bases/root-light"
+  path: "/styles/bases/root-light",
+  docsPath: "styles/bases/root-light",
+  filePath: "styles/bases/_root-light"
 }
 
+import PreviewVariables from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Root Light
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariables filePath={meta.filePath} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>

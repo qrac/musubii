@@ -34,7 +34,7 @@ class PreviewVariables extends React.Component {
   render() {
     const TableBodyItem = ({ item }) => (
       <li className="table-body-item">
-        <dl className="item-list">
+        <dl className="item-list is-tablet-4">
           <dt className="item-term">Name</dt>
           <dd className="item-description">
             <div className="item-description-child">
@@ -42,7 +42,7 @@ class PreviewVariables extends React.Component {
             </div>
           </dd>
         </dl>
-        <dl className="item-list">
+        <dl className="item-list is-tablet-4">
           <dt className="item-term">Default Value</dt>
           <dd className="item-description">
             <CheckColor value={item.value}>
@@ -53,17 +53,25 @@ class PreviewVariables extends React.Component {
             </div>
           </dd>
         </dl>
-        <dl className="item-list">
-          <dt className="item-term">Compiled Value</dt>
-          <dd className="item-description">
-            <CheckColor value={item.compiledValue}>
-              <DemoColorBox value={item.compiledValue} />
-            </CheckColor>
-            <div className="item-description-child">
-              <code className="demo-inline-code">{item.compiledValue}</code>
-            </div>
-          </dd>
-        </dl>
+        {(() => {
+          if (item.compiledValue) {
+            return (
+              <dl className="item-list is-tablet-4">
+                <dt className="item-term">Compiled Value</dt>
+                <dd className="item-description">
+                  <CheckColor value={item.compiledValue}>
+                    <DemoColorBox value={item.compiledValue} />
+                  </CheckColor>
+                  <div className="item-description-child">
+                    <code className="demo-inline-code">
+                      {item.compiledValue}
+                    </code>
+                  </div>
+                </dd>
+              </dl>
+            )
+          }
+        })()}
       </li>
     )
     return (
@@ -81,9 +89,9 @@ class PreviewVariables extends React.Component {
           <header className="table-header">
             {/*<div className="table-header-main">Variables</div>*/}
             <div className="table-header-item">
-              <div className="item-child">Name</div>
-              <div className="item-child">Default Value</div>
-              <div className="item-child">Compiled Value</div>
+              <div className="item-child is-tablet-4">Name</div>
+              <div className="item-child is-tablet-4">Default Value</div>
+              <div className="item-child is-tablet-4">Compiled Value</div>
             </div>
           </header>
           {(() => {

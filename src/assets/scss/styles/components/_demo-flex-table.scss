@@ -26,7 +26,7 @@
   .table-header-item {
     display: flex;
     .item-child {
-      flex: 1 0 0%;
+      //flex: 1 0 0%;
       padding: 12px;
       text-align: center;
     }
@@ -54,7 +54,7 @@
         }
       }
       @include tablet() {
-        flex: 1 0 0%;
+        //flex: 1 0 0%;
       }
     }
     .item-term {
