@@ -3,20 +3,23 @@ import React from "react"
 class CheckColor extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      checkColor: false
+    }
   }
-  checkColor(checkValue) {
+  componentDidMount() {
     if (process.browser) {
-      const checkColorBox = document.createElement("span")
-      checkColorBox.style.backgroundColor = checkValue
-      return checkColorBox.style.backgroundColor !== ""
+      const dummy = document.createElement("span")
+      dummy.style.backgroundColor = this.props.value
+      const result = dummy.style.backgroundColor !== ""
+      this.setState({ checkColor: result })
     }
   }
   render() {
     return (
       <>
         {(() => {
-          if (this.checkColor(this.props.value)) {
+          if (this.state.checkColor) {
             return <>{this.props.children}</>
           }
         })()}
