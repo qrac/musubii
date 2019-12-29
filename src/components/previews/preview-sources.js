@@ -1,5 +1,7 @@
 import DemoLink from "~/components/parts/demo-link"
+
 import pkg from "../../../package.json"
+import pjt from "../../../project.json"
 
 export default ({ title, docsPath, scssPath }) => {
   const docsUrl = pkg.repository + "/tree/master/src/pages/" + docsPath + ".mdx"
@@ -14,7 +16,7 @@ export default ({ title, docsPath, scssPath }) => {
                 <li className="demo-item">
                   <span>Document: </span>
                   <DemoLink href={docsUrl}>
-                    {title} - GitHub Repository Source (MDX)
+                    {title} / {pjt.site.title} - GitHub Repository Source (MDX)
                   </DemoLink>
                 </li>
               )
@@ -26,7 +28,7 @@ export default ({ title, docsPath, scssPath }) => {
                 <li className="demo-item">
                   <span>SCSS: </span>
                   <DemoLink href={scssUrl}>
-                    {title} - GitHub Repository Source (SCSS)
+                    {title} / {pjt.site.title} - GitHub Repository Source (SCSS)
                   </DemoLink>
                 </li>
               )
