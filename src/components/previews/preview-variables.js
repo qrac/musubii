@@ -16,15 +16,12 @@ class PreviewVariables extends React.Component {
     super(props)
     this.state = {
       mode: "simple",
-      simpleData: require("~/assets/extracts/mode/simple/" +
+      simpleData: require("~/assets/extracts/modes/simple/" +
         this.props.filePath +
         ".json"),
-      lightData: require("~/assets/extracts/mode/light/" +
+      lightData: require("~/assets/extracts/modes/light/" +
         this.props.filePath +
         ".json")
-      /*darkData: require("~/assets/extracts/mode/dark/" +
-        this.props.filePath +
-        ".json")*/
     }
     this.changeMode = this.changeMode.bind(this)
   }
@@ -111,15 +108,7 @@ class PreviewVariables extends React.Component {
                   ))}
                 </ul>
               )
-            } /* else if (this.state.mode === "dark") {
-                return (
-                  <ul className="table-body">
-                    {this.state.darkData.variables.map(variable => (
-                      <TableBodyItem item={variable} key={variable.name} />
-                    ))}
-                  </ul>
-                )
-              }*/
+            }
           })()}
         </article>
       </div>

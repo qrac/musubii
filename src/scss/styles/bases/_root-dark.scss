@@ -146,3 +146,86 @@ $root-attr-dark: "dark" !default;
     --alert-danger-border-color: #{$theme-dark-alert-danger-border-color};
   }
 }
+
+//----------------------------------------------------
+// / Extract - Root Dark
+//----------------------------------------------------
+
+//xxxx/**
+//xxxx * @sass-export-section="css-variables-element"
+//xxxx */
+//yyyy--primary: #{$theme-dark-primary};
+//yyyy--primary-strong: #{$theme-dark-primary-strong};
+//yyyy--primary-darken: #{$theme-dark-primary-darken};
+//yyyy--info: #{$theme-dark-info};
+//yyyy--info-strong: #{$theme-dark-info-strong};
+//yyyy--info-darken: #{$theme-dark-info-darken};
+//yyyy--success: #{$theme-dark-success};
+//yyyy--success-strong: #{$theme-dark-success-strong};
+//yyyy--success-darken: #{$theme-dark-success-darken};
+//yyyy--warning: #{$theme-dark-warning};
+//yyyy--warning-strong: #{$theme-dark-warning-strong};
+//yyyy--warning-darken: #{$theme-dark-warning-darken};
+//yyyy--danger: #{$theme-dark-danger};
+//yyyy--danger-strong: #{$theme-dark-danger-strong};
+//yyyy--danger-darken: #{$theme-dark-danger-darken};
+//yyyy--text-dark: #{$theme-dark-text-dark};
+//yyyy--text-dark-1: #{$theme-dark-text-dark-1};
+//yyyy--text-dark-2: #{$theme-dark-text-dark-2};
+//yyyy--text-dark-3: #{$theme-dark-text-dark-3};
+//yyyy--text-dark-4: #{$theme-dark-text-dark-4};
+//yyyy--text-dark-5: #{$theme-dark-text-dark-5};
+//yyyy--text-dark-6: #{$theme-dark-text-dark-6};
+//yyyy--text-dark-7: #{$theme-dark-text-dark-7};
+//yyyy--text-dark-8: #{$theme-dark-text-dark-8};
+//yyyy--text-dark-9: #{$theme-dark-text-dark-9};
+//yyyy--text-light: #{$theme-dark-text-light};
+//yyyy--text-light-1: #{$theme-dark-text-light-1};
+//yyyy--text-light-2: #{$theme-dark-text-light-2};
+//yyyy--text-light-3: #{$theme-dark-text-light-3};
+//yyyy--text-light-4: #{$theme-dark-text-light-4};
+//yyyy--text-light-5: #{$theme-dark-text-light-5};
+//yyyy--text-light-6: #{$theme-dark-text-light-6};
+//yyyy--text-light-7: #{$theme-dark-text-light-7};
+//yyyy--text-light-8: #{$theme-dark-text-light-8};
+//yyyy--text-light-9: #{$theme-dark-text-light-9};
+//yyyy--background: #{$theme-dark-background};
+//yyyy--background-1: #{$theme-dark-background-1};
+//yyyy--background-2: #{$theme-dark-background-2};
+//yyyy--background-3: #{$theme-dark-background-3};
+//yyyy--background-4: #{$theme-dark-background-4};
+//yyyy--background-alpha: #{$theme-dark-background-alpha};
+//yyyy--border: #{$theme-dark-border};
+//yyyy--border-1: #{$theme-dark-border-1};
+//yyyy--shadow-alpha: #{$theme-dark-shadow-alpha};
+//yyyy--shadow-alpha-thin: #{$theme-dark-shadow-alpha-thin};
+//yyyy--focus-darken: #{$theme-dark-focus-darken};
+//yyyy--focus-alpha: #{$theme-dark-focus-alpha};
+//yyyy--focus-alpha-thin: #{$theme-dark-focus-alpha-thin};
+//yyyy--disabled-background-color: #{$theme-dark-disabled-background-color};
+//yyyy--disabled-border-color: #{$theme-dark-disabled-border-color};
+//yyyy--disabled-text-color: #{$theme-dark-disabled-text-color};
+//yyyy--body-background-color: #{$theme-dark-body-background-color};
+//yyyy--body-text-color: #{$theme-dark-body-text-color};
+//yyyy--code-text-color: #{$theme-dark-code-text-color};
+//yyyy--button-paint-text-color: #{$theme-dark-button-paint-text-color};
+//yyyy--table-paint-background-color: #{$theme-dark-table-paint-background-color};
+//yyyy--table-paint-text-color: #{$theme-dark-table-paint-text-color};
+//yyyy--table-spot-background-color: #{$theme-dark-table-spot-background-color};
+//yyyy--table-danger-background-color: #{$theme-dark-table-danger-background-color};
+//yyyy--input-placeholder-color: #{$theme-dark-input-placeholder-color};
+//yyyy--input-success-background-color: #{$theme-dark-input-success-background-color};
+//yyyy--input-success-border-color: #{$theme-dark-input-success-border-color};
+//yyyy--input-danger-background-color: #{$theme-dark-input-danger-background-color};
+//yyyy--input-danger-border-color: #{$theme-dark-input-danger-border-color};
+//yyyy--checkbox-before-border-color: #{$theme-dark-checkbox-before-border-color};
+//yyyy--alert-primary-background-color: #{$theme-dark-alert-primary-background-color};
+//yyyy--alert-primary-border-color: #{$theme-dark-alert-primary-border-color};
+//yyyy--alert-info-background-color: #{$theme-dark-alert-info-background-color};
+//yyyy--alert-info-border-color: #{$theme-dark-alert-info-border-color};
+//yyyy--alert-success-background-color: #{$theme-dark-alert-success-background-color};
+//yyyy--alert-success-border-color: #{$theme-dark-alert-success-border-color};
+//yyyy--alert-warning-background-color: #{$theme-dark-alert-warning-background-color};
+//yyyy--alert-warning-border-color: #{$theme-dark-alert-warning-border-color};
+//yyyy--alert-danger-background-color: #{$theme-dark-alert-danger-background-color};
+//yyyy--alert-danger-border-color: #{$theme-dark-alert-danger-border-color};
