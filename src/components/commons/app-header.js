@@ -1,6 +1,5 @@
 import SiteHome from "~/components/parts/site-home"
 import SiteStatuses from "~/components/parts/site-statuses"
-import ToggleTheme from "~/components/parts/toggle-theme"
 
 export default () => {
   return (
@@ -16,11 +15,6 @@ export default () => {
                 <div className="box is-flex">
                   <SiteStatuses />
                 </div>
-              </div>
-            </div>
-            <div className="column">
-              <div className="box">
-                <ToggleTheme />
               </div>
             </div>
           </div>

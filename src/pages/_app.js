@@ -7,6 +7,7 @@ config.autoAddCss = false
 
 import AppHeader from "~/components/commons/app-header"
 import AppFooter from "~/components/commons/app-footer"
+import AppActions from "~/components/commons/app-actions"
 import LayoutDefault from "~/components/commons/layout-default"
 import LayoutDocs from "~/components/commons/layout-docs"
 import "~/assets/scss/project.scss"
@@ -29,6 +30,7 @@ class MyApp extends App {
     return (
       <div className="app">
         <AppHeader />
+        <AppActions />
         <main className="main">
           {router.route === "/" ? (
             <LayoutDefault>

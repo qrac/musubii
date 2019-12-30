@@ -3,14 +3,14 @@
 //----------------------------------------------------
 
 .icon {
-  &.is-fill-none-stroke {
+  &.is-fill-body-stroke {
     flex: none;
     width: 1.25em;
     height: 1.25em;
     circle,
     line,
     path {
-      fill: none;
+      fill: $convert-body-background-color;
       stroke: $convert-text-dark-4;
       stroke-width: 2;
       stroke-linecap: round;
