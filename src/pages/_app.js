@@ -30,7 +30,7 @@ class MyApp extends App {
     return (
       <div className="app">
         <AppHeader />
-        <AppActions />
+        <AppActions checkHome={router.route === "/" ? true : false} />
         <main className="main">
           {router.route === "/" ? (
             <LayoutDefault>

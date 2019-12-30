@@ -48,7 +48,20 @@ class ToggleTheme extends React.Component {
   render() {
     return (
       <button
-        className="button is-plain is-bg-body is-circle is-xs"
+        className={
+          this.props.checkHome
+            ? [
+                "button",
+                "is-plain",
+                "is-bg-body",
+                "is-home",
+                "is-circle",
+                "is-xs"
+              ].join(" ")
+            : ["button", "is-plain", "is-bg-body", "is-circle", "is-xs"].join(
+                " "
+              )
+        }
         type="button"
         onClick={this.toggleThemeAttr}
       >

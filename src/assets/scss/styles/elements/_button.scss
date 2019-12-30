@@ -9,6 +9,12 @@
       &:hover {
         background-color: $convert-background-2;
       }
+      &.is-home {
+        background-color: var(--section-background-color-grey-wind);
+        &:hover {
+          background-color: $convert-background-2;
+        }
+      }
     }
   }
 }
