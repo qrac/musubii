@@ -2,8 +2,6 @@
 // Themes: Convert
 //----------------------------------------------------
 
-$option-css-variables: false !default;
-
 $convert-primary: if($option-css-variables == true, var(--primary), $theme-light-primary) !default;
 $convert-primary-strong: if($option-css-variables == true, var(--primary-strong), $theme-light-primary-strong) !default;
 $convert-primary-darken: if($option-css-variables == true, var(--primary-darken), $theme-light-primary-darken) !default;

@@ -8,17 +8,16 @@
 
 // Option
 $option-mixin-mode: false !default;
-$option-css-variables: false !default;
 $option-theme-default-dark: false !default;
 $option-theme-media-dark: false !default;
 $option-theme-attr-dark: true !default;
 
 // Selectors
-$selector-root: ":root" !default;
-$selector-root-attr: "data-theme" !default;
+$selector-root-dark: ":root" !default;
+$selector-root-dark-attr: "data-theme" !default;
 
 // Root
-$root-attr-dark: "dark" !default;
+$root-dark-attr: "dark" !default;
 
 //----------------------------------------------------
 // / Mixins (Default)
@@ -36,7 +35,7 @@ $root-attr-dark: "dark" !default;
       }
     }
     @if $option-css-variables == true and $option-theme-attr-dark == true {
-      @include theme-attr($selector-root-attr, $root-attr-dark) {
+      @include theme-attr($selector-root-dark-attr, $root-dark-attr) {
         @content;
       }
     }
@@ -47,7 +46,7 @@ $root-attr-dark: "dark" !default;
 // / Style - Root Dark
 //----------------------------------------------------
 
-#{$selector-root} {
+#{$selector-root-dark} {
   @include export-style-root-dark() {
     --primary: #{$theme-dark-primary};
     --primary-strong: #{$theme-dark-primary-strong};
@@ -67,7 +66,7 @@ $root-attr-dark: "dark" !default;
   }
 }
 
-#{$selector-root} {
+#{$selector-root-dark} {
   @include export-style-root-dark() {
     --text-dark: #{$theme-dark-text-dark};
     --text-dark-1: #{$theme-dark-text-dark-1};
@@ -92,7 +91,7 @@ $root-attr-dark: "dark" !default;
   }
 }
 
-#{$selector-root} {
+#{$selector-root-dark} {
   @include export-style-root-dark() {
     --background: #{$theme-dark-background};
     --background-1: #{$theme-dark-background-1};
@@ -110,7 +109,7 @@ $root-attr-dark: "dark" !default;
   }
 }
 
-#{$selector-root} {
+#{$selector-root-dark} {
   @include export-style-root-dark() {
     --disabled-background-color: #{$theme-dark-disabled-background-color};
     --disabled-border-color: #{$theme-dark-disabled-border-color};
@@ -118,7 +117,7 @@ $root-attr-dark: "dark" !default;
   }
 }
 
-#{$selector-root} {
+#{$selector-root-dark} {
   @include export-style-root-dark() {
     --body-background-color: #{$theme-dark-body-background-color};
     --body-text-color: #{$theme-dark-body-text-color};
