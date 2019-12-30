@@ -10,10 +10,24 @@ export const meta = {
 
 contents list
 
-## Directory
+## Detail
+
+MUSUBii は SCSS 製です。利用時に SCSS を使うことで細かいカスタマイズが可能となります。まずは、npm 経由で[インストール](/installation/npm)を行ってください。
 
 ```
-.
+npm install musubii
+```
+
+```
+yarn add musubii
+```
+
+## Directory
+
+MUSUBii の SCSS ファイルは `configs` と `styles` の 2 つに大きく分かれています。
+
+```
+src/scss
 ├── configs
 │   ├── _import.scss
 │   ├── mixins
@@ -71,4 +85,36 @@ contents list
 │      ├── _size.scss
 │      └── _space.scss
 └── musubii.scss
+```
+
+## Import
+
+`configs` はプロジェクト全体で読み込みます。
+
+```
+musubii/src/scss/configs/_import.scss
+```
+
+`styles` はプロジェクトで 1 回読み込みます。
+
+```
+musubii/src/scss/styles/_import.scss
+```
+
+フレームワークによっては効率的な読み込み方がありますので、各ページを参考にしてください。
+
+例：[Nuxt](/installation/nuxt)・[Gridsome](/installation/gridsome)・[Gatsby](/installation/gatsby)・[Next](/installation/next)・[gulp](/installation/gulp)
+
+## Override
+
+MUSUBii の SCSS 変数には `!default` が付与されており、インポートより前に同名の変数を宣言することで上書きできます。
+
+例えば、デフォルトでは CSS Variables が有効化されておらず、ダークモード対応ができません。有効化する場合は次のように `configs` よりも先に `$option-css-variables: true;` を書きます。
+
+```scss
+// Override
+$option-css-variables: true;
+
+// Import
+@import "~musubii/src/scss/configs/_import.scss";
 ```
