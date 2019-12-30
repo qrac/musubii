@@ -1,0 +1,14 @@
+//----------------------------------------------------
+// Elements: Button
+//----------------------------------------------------
+
+.button {
+  &.is-plain {
+    &.is-bg-body {
+      background-color: $convert-body-background-color;
+      &:hover {
+        background-color: $convert-background-2;
+      }
+    }
+  }
+}

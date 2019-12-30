@@ -17,6 +17,14 @@
           "title": "Introduction"
         },
         {
+          "id": "basic-structure",
+          "title": "Basic Structure"
+        },
+        {
+          "id": "using-with-scss",
+          "title": "Using with SCSS"
+        },
+        {
           "id": "support",
           "title": "Support"
         }
