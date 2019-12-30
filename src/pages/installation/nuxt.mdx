@@ -1,7 +1,10 @@
 export const meta = {
   title: "Nuxt",
-  path: "/installation/nuxt"
+  path: "/installation/nuxt",
+  docsPath: "installation/nuxt"
 }
+
+import PreviewSources from "~/components/previews/preview-sources"
 
 # Nuxt
 
@@ -47,3 +50,7 @@ module.exports = {
 // Styles
 @import "~musubii/src/scss/styles/_import.scss";
 ```
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

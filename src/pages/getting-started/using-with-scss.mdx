@@ -4,6 +4,8 @@ export const meta = {
   docsPath: "getting-started/using-with-scss"
 }
 
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Using with SCSS
 
 ## Table of Contents
@@ -24,7 +26,7 @@ yarn add musubii
 
 ## Directory
 
-MUSUBii の SCSS ファイルは `configs` と `styles` の 2 つに大きく分かれています。
+MUSUBii の SCSS ファイルは、全体で利用する変数や Mixin の集合体である `configs`・各スタイル出力を行う `styles` の 2 つに大きく分かれています。ディレクトリ構造は次の通りです。
 
 ```
 src/scss
@@ -95,19 +97,19 @@ src/scss
 musubii/src/scss/configs/_import.scss
 ```
 
-`styles` はプロジェクトで 1 回読み込みます。
+`styles` はプロジェクトで 1 回だけ読み込みます。`configs` が渡される状態になっている必要があります。また、`configs` が渡されていれば部分的に使う（グリッドだけなど）ことも可能です。
 
 ```
 musubii/src/scss/styles/_import.scss
 ```
 
-フレームワークによっては効率的な読み込み方がありますので、各ページを参考にしてください。
+フレームワークによっては効率的な使い方がありますので、各ページを参考にしてください。
 
 例：[Nuxt](/installation/nuxt)・[Gridsome](/installation/gridsome)・[Gatsby](/installation/gatsby)・[Next](/installation/next)・[gulp](/installation/gulp)
 
 ## Override
 
-MUSUBii の SCSS 変数には `!default` が付与されており、インポートより前に同名の変数を宣言することで上書きできます。
+MUSUBii の SCSS 変数にはすべて `!default` が付与されており、インポートより前に同名の変数を宣言することで上書きできます。
 
 例えば、デフォルトでは CSS Variables が有効化されておらず、ダークモード対応ができません。有効化する場合は次のように `configs` よりも先に `$option-css-variables: true;` を書きます。
 
@@ -118,3 +120,65 @@ $option-css-variables: true;
 // Import
 @import "~musubii/src/scss/configs/_import.scss";
 ```
+
+SCSS 変数は各ページに記載しています。`$option-css-variables` は「[Option](/configs/variables/option)」を参照ください。
+
+## Reduce
+
+MUSUBii の CSS 出力はスタイルごとに変数の `true` `false` で設定できます。例えば「MUSUBii を利用したいけれど Alert は使わないから CSS を削除したい（削減したい）」ケースでは次のように記述。
+
+```scss
+// Override
+$option-style-alert: false;
+
+// Import
+@import "~musubii/src/scss/styles/_import.scss";
+```
+
+これで Alert の CSS は出力されません。
+
+## Mixin Copy
+
+MUSUBii の スタイルはすべて Mixin で定義されているため、他コンポーネントへの転用が容易です。
+
+例えば「`.button.is-plain` のスタイルを当てたいけれど WordPress プラグインが生成したタグの class が編集できない」など、実務では HTML タグの構造変更が難しい場面があります。
+
+そこで、MUSUBii に使われているスタイルが登録されている Mixin を使います。
+
+```scss
+.wpcf7 input[type="submit"] {
+  @include musubii-style-button();
+  @include musubii-style-button-plain();
+}
+```
+
+これで、`.wpcf7 input[type=submit]` に MUSUBii の `.button` `.button.is-plain` と同じスタイルがあたりました。Mixin は各エレメントの SCSS ファイルに含まれているため、利用する場合は事前に対象の SCSS ファイルを読み込んでいる必要があります。
+
+## Mixin Mode
+
+`$option-mixin-mode` を使えば、MUSUBii の CSS を出力せずに Mixin だけ使うことが可能です。例えば、「Vue.js の SFC で MUSUBii のボタンに似たボタンを作りたい」ケースでは次のように記述。
+
+```scss
+$option-mixin-mode: true;
+@import "musubii/src/styles/elements/_button.scss";
+
+.category-button {
+  @include musubii-style-button();
+  @include musubii-style-button-plain();
+}
+```
+
+Dart Sass などで `@use` が使える状況であれば、次のようにスコープして書けます。
+
+```scss
+@use "musubii/src/styles/elements/_button.scss" with ($option-mixin-mode: true);
+
+.category-button {
+  @include musubii-style-button();
+  @include musubii-style-button-plain();
+}
+```
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

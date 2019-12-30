@@ -1,7 +1,10 @@
 export const meta = {
   title: "gulp",
-  path: "/installation/gulp"
+  path: "/installation/gulp",
+  docsPath: "installation/gulp"
 }
+
+import PreviewSources from "~/components/previews/preview-sources"
 
 # gulp
 
@@ -50,3 +53,7 @@ gulp.task("default", buildSCSS)
 // Styles
 @import "musubii/src/scss/styles/_import.scss";
 ```
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

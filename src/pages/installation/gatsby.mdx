@@ -1,7 +1,10 @@
 export const meta = {
   title: "Gatsby",
-  path: "/installation/gatsby"
+  path: "/installation/gatsby",
+  docsPath: "installation/gatsby"
 }
+
+import PreviewSources from "~/components/previews/preview-sources"
 
 # Gatsby
 
@@ -57,3 +60,7 @@ import("src/assets/scss/styles/_import.scss")
 // Styles
 @import "~musubii/src/scss/styles/_import.scss";
 ```
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

@@ -1,7 +1,10 @@
 export const meta = {
   title: "Introduction",
-  path: "/getting-started/introduction"
+  path: "/getting-started/introduction",
+  docsPath: "getting-started/introduction"
 }
+
+import PreviewSources from "~/components/previews/preview-sources"
 
 # Introduction
 
@@ -24,3 +27,7 @@ MUSUBii をベースにしたインブラウザデザインを想定していま
 余談ですが、開発初期にリセット CSS の [Shitaji.CSS](https://shitajicss.qranoko.jp/)、色を考えているときに [MOFTONE](https://mixtone.qranoko.jp/) などのカラーセット、 SCSS 変数をまとめて外部化した [Sass Dashi](https://github.com/qrac/sass-dashi) が生まれました。
 
 v6 以前は各ライブラリに役割を分担していましたが、コードの把握が難しくなったため、v7 以降は MUSUBii 内で全てのコードを管理しています。
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

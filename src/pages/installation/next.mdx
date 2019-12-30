@@ -1,7 +1,10 @@
 export const meta = {
   title: "Next",
-  path: "/installation/next"
+  path: "/installation/next",
+  docsPath: "installation/next"
 }
+
+import PreviewSources from "~/components/previews/preview-sources"
 
 # Next
 
@@ -37,3 +40,7 @@ module.exports = withSass()
 // Styles
 @import "~musubii/src/scss/styles/_import.scss";
 ```
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

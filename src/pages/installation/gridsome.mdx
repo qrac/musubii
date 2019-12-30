@@ -1,7 +1,10 @@
 export const meta = {
   title: "Gridsome",
-  path: "/installation/gridsome"
+  path: "/installation/gridsome",
+  docsPath: "installation/gridsome"
 }
+
+import PreviewSources from "~/components/previews/preview-sources"
 
 # Gridsome
 
@@ -64,3 +67,7 @@ export default function(Vue, { router, head, isClient }) {
 // Styles
 @import "~musubii/src/scss/styles/_import.scss";
 ```
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

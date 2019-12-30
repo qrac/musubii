@@ -1,7 +1,10 @@
 export const meta = {
   title: "CDN",
-  path: "/installation/cdn"
+  path: "/installation/cdn",
+  docsPath: "installation/cdn"
 }
+
+import PreviewSources from "~/components/previews/preview-sources"
 
 import DemoPre from "~/components/parts/demo-pre"
 import pkg from "../../../package.json"
@@ -16,3 +19,7 @@ MUSUBii を手っ取り早く使う場合は CDN リンクを HTML に貼りま�
 ※CSS Variables は有効化できません
 
 <DemoPre language="html" code={cdnHtml} />
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />
