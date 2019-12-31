@@ -27,7 +27,7 @@ class MyApp extends App {
       document.body.setAttribute("data-theme", "light")
     }
 
-    cssVars({})
+    cssVars({ exclude: "[data-theme='dark']" })
   }
   render() {
     const { Component, pageProps, router } = this.props
