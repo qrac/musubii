@@ -13,17 +13,17 @@
 .section {
   &.is-header {
     position: relative;
-    //display: flex;
+    display: flex;
     //justify-content: center;
-    //align-items: center;
+    align-items: center;
     height: $header-height-mobile;
     z-index: 10;
     > .inner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      //flex: none;
-      transform: translate(-50%, -50%);
+      //position: absolute;
+      //top: 50%;
+      //left: 50%;
+      flex: none;
+      //transform: translate(-50%, -50%);
       @include mobile-only() {
         width: 100%;
       }
