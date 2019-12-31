@@ -3,6 +3,10 @@ module.exports = () => {
   const toc = require("remark-toc")
   const customBlocks = require("remark-custom-blocks")
 
+  const tocOptions = {
+    maxDepth: 2
+  }
+
   const customBlocksTemplate = {
     note: {
       classes: "demo-box is-note",
@@ -23,7 +27,11 @@ module.exports = () => {
   const withMDX = require("@next/mdx")({
     extension: /\.mdx?$/,
     options: {
-      remarkPlugins: [slug, toc, [customBlocks, customBlocksTemplate]]
+      remarkPlugins: [
+        slug,
+        [toc, tocOptions],
+        [customBlocks, customBlocksTemplate]
+      ]
     }
   })
 
