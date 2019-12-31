@@ -34,7 +34,11 @@ MUSUBii はビルド時に PostCSS 及びそのプラグインを使用してい
 
 ```js
 module.exports = {
-  plugins: [require("postcss-sort-media-queries"), require("autoprefixer")]
+  plugins: [
+    require("postcss-flexbugs-fixes"),
+    require("postcss-sort-media-queries"),
+    require("autoprefixer")
+  ]
 }
 ```
 

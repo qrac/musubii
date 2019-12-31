@@ -2926,7 +2926,7 @@ svg.icon {
 }
 
 .is-mobile-0 {
-  flex: 1 0 0%;
+  flex: 1 0;
 }
 
 .is-mobile-1 {
@@ -3730,7 +3730,7 @@ svg.icon {
     font-size: 62.5%;
   }
   .is-fablet-0 {
-    flex: 1 0 0%;
+    flex: 1 0;
   }
   .is-fablet-1 {
     flex: 0 0 8.33333%;
@@ -3849,7 +3849,7 @@ svg.icon {
     font-size: 62.5%;
   }
   .is-tablet-0 {
-    flex: 1 0 0%;
+    flex: 1 0;
   }
   .is-tablet-1 {
     flex: 0 0 8.33333%;
@@ -3968,7 +3968,7 @@ svg.icon {
     font-size: 62.5%;
   }
   .is-desktop-0 {
-    flex: 1 0 0%;
+    flex: 1 0;
   }
   .is-desktop-1 {
     flex: 0 0 8.33333%;
@@ -4087,7 +4087,7 @@ svg.icon {
     font-size: 62.5%;
   }
   .is-wide-0 {
-    flex: 1 0 0%;
+    flex: 1 0;
   }
   .is-wide-1 {
     flex: 0 0 8.33333%;
