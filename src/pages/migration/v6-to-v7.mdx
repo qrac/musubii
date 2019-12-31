@@ -1,6 +1,130 @@
 export const meta = {
   title: "v6.0.0 → v7.0.0",
-  path: "/migration/v6-to-v7"
+  path: "/migration/v6-to-v7",
+  docsPath: "migration/v6-to-v7"
 }
 
+import PreviewSources from "~/components/previews/preview-sources"
+
 # v6.0.0 → v7.0.0
+
+## Table of Contents
+
+contents list
+
+## CSS
+
+- CSS のディレクトリを `docs/css` から `dist` に変更したのでパスを修正
+
+## SCSS
+
+- import ディレクトリを変更
+- 依存ファイルの import 削除
+- `.section` の `.inner-vw` は廃止
+- Grid の `$grid-split` は `$flex-split` に変更（定義も Flex に移動）
+
+---
+
+### Import
+
+SCSS ファイルを内部でまとめ、少ない import のみで使えるようになった。ファイルパスを以下 5 ファイルに修正する。移動・削除・追加されたファイルを修正しなくて済む。
+
+```scss
+// gulp-sass：普通に静的サイトを制作する場合
+@import "shitajicss/src/scss/_shitaji.scss";
+@import "moftone/src/scss/tone/_moftone.scss";
+@import "sass-dashi/src/scss/_dashi.scss";
+@import "musubii/src/scss/_configs.scss";
+@import "musubii/src/scss/_components.scss";
+```
+
+```scss
+// Vue.js：グローバル変数（各コンポーネントで読み込んでOK）
+@import "~moftone/src/scss/tone/_moftone.scss";
+@import "~sass-dashi/src/scss/_dashi.scss";
+@import "~musubii/src/scss/_configs.scss";
+
+// Vue.js：コンポーネント集（レイアウト層で1回のみ読み込む）
+@import "~shitajicss/src/scss/_shitaji.scss";
+@import "~musubii/src/scss/_components.scss";
+```
+
+### Export
+
+SCSS ファイルは全て読み込まれる仕様となったが、各スタイルを出力するかどうかは変数で設定し直せる。 https://github.com/qrac/musubii/blob/master/src/scss/config/_use.scss
+
+### Class
+
+カラム・ボタン名を変更しているので、古い Class を使っているプロジェクトの MUSUBii をアップグレードする場合は、以下の SCSS 変数で Class 名をオーバーライドする。
+
+```scss
+$column-class: ".col";
+$button-class: ".btn";
+```
+
+新旧の Class を同時に使えるようにもできる。
+
+```scss
+$column-class: ".column, .col";
+$button-class: ".button, .btn";
+```
+
+### Default
+
+変数に含まれていた `default` は省略しているものとしていないものが混在していた。そのため全てを省略。プロジェクト側で書いている場合は `-default` を削除する。
+
+### Disabled
+
+ボタンの変数や Class 名の `disable` を `disabled` に変更しているので、利用している場合は置換。
+
+### Section Inner Padding
+
+`.inner` `.inner-vw` に付与されていた Padding はモディファイアとして分離されたため、Padding は必須の場所は `.inner.is-padding-left.is-padding-right` `.inner-vw.is-padding-left.is-padding-right` とする。
+
+また、Padding を付与するだけだった `.inner-soft` は廃止されたため、`.box..is-padding-left.is-padding-right` などに置換する。
+
+### Grid Gap
+
+デフォルトが溝のできない `.is-gap-none` 状態になった。従来と同じ溝をつけるには HTML の `class="grid` を `class="grid is-gap-xs` に置換する。
+
+### Heading
+
+スタイルをほとんどなかった `.heading` は廃止。`position: relative;` のみ当たっていたので、レイアウトが崩れる場合はプロジェクト側に書く。
+
+### Texts
+
+Line Height を大きめに取っていた `.texts` は廃止され、モディファイア化された。`.text.is-line-height-xl` に置換する。
+
+### Text Deco
+
+`.is-dark` や `.is-center` などの適応範囲をテキストに限定したため、ざっくり当てていたスタイルを指定して当てる。後方互換を使う場合は変数を以下のように設定。
+
+```scss
+$text-class: ":not(.grid):not(.btns):not(.field)";
+```
+
+### Button
+
+`.button.is-ghost` は廃止したため、使っていた場合は `.button.is-outline` の SCSS 変数オーバーライドなどで対応する。
+
+### Buttons, Field
+
+`.buttons` `.field` は廃止したため、`.box.is-flex.is-space-row-xs.is-space-column-xs` などに置換する。
+
+また、Button・Input・Select を繋げていた `.is-bar` は `.joint` に変わりまとめられた。スタイルの記述は新規 SCSS ファイルへ移動。後方互換として変数で旧 class に変換することができる。
+
+```scss
+$joint-class: ".is-bar";
+```
+
+### Icon
+
+`.icon` `.text` の間に自動付与していたマージンは調整可能にするため削除された。ボタン内のスペースが詰まった部分は `.icon.is-margin-right-xs` などで対応。
+
+### Space
+
+`.is-space` のマージンが `.heading` `.groups` `.field` `.wysiwyg h2` などを用いても一定になったため調整を行う。
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

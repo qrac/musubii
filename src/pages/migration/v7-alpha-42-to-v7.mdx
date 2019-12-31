@@ -1,6 +1,40 @@
 export const meta = {
   title: "v7.0.0-alpha.42 → v7.0.0",
-  path: "/migration/v7-alpha-42-to-v7"
+  path: "/migration/v7-alpha-42-to-v7",
+  docsPath: "migration/v7-alpha-42-to-v7"
 }
 
+import PreviewSources from "~/components/previews/preview-sources"
+
 # v7.0.0-alpha.42 → v7.0.0
+
+## Table of Contents
+
+contents list
+
+## CSS
+
+- CSS のディレクトリを `docs/css` から `dist` に変更したのでパスを修正
+
+## SCSS
+
+- import ディレクトリを変更
+- 依存ファイルの import 削除
+- `$use-xxx` は 次世代 Sass の use と紛らわしいので `$option` に変更
+  - `$use-component-xxx` 周りの変数名を変更
+  - `$use-theme-xxx` 周りの変数名を変更
+- Section の `.inner-vw` は廃止
+- Grid の `$column-class` は `$selector-column` に変更
+- Grid の `$grid-split` は `$flex-split` に変更（定義も Flex に移動）
+- Box の `.is-bg-cover` などはコンポーネントに書いた方が良いので削除
+- Card の `.card` はデフォルトで `overflow: hidden;` するように変更
+- Card の flexbox は box と用途を迷うので削除
+- Joint の `$joint-class` は `selector-joint` に変更
+- Text の `$text-class` は `$selector-text` に変更
+- Button の `$button-class` は `$selector-button` に変更
+- Icon の `$icon-class` は `$selector-icon` に変更
+- WYSIWYG：別のエレメントに依存していた変数を分離 #248
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />
