@@ -3,3 +3,38 @@
 //----------------------------------------------------
 
 $theme-dark-section-background-color-grey-wind: lighten($grey-900, 5%) !default;
+
+$theme-dark-demo-box-line-border-color: rgba(255, 255, 255, 0.1) !default;
+$theme-dark-demo-box-paint-background-color: #2a2a2b !default;
+
+$theme-dark-demo-path-shadow-fill: rgba(255, 255, 255, 0.1) !default;
+$theme-dark-demo-path-browser-window-fill: #{$blue-grey-700} !default;
+$theme-dark-demo-path-browser-title-bar-fill: #{$blue-grey-500} !default;
+$theme-dark-demo-path-browser-wire-box-fill: #{$blue-grey-600} !default;
+$theme-dark-demo-path-browser-pre-fill: #{$blue-grey-800} !default;
+$theme-dark-demo-path-browser-code-fill: #{$blue-grey-700} !default;
+$theme-dark-demo-path-object-white-fill: #{$grey-100} !default;
+$theme-dark-demo-path-object-blue-fill: #{$blue-700} !default;
+$theme-dark-demo-path-object-yellow-fill: #{$yellow-700} !default;
+$theme-dark-demo-path-object-cyan-dark-fill: #{$cyan-700} !default;
+$theme-dark-demo-path-object-cyan-fill: #{$cyan-600} !default;
+$theme-dark-demo-path-baloon-cloud-fill: #{$blue-grey-700} !default;
+$theme-dark-demo-path-baloon-cloud-stroke: #{$blue-grey-600} !default;
+$theme-dark-demo-path-object-red-light-fill: #{$red-200} !default;
+$theme-dark-demo-path-object-yellow-dark-fill: #{$yellow-900} !default;
+$theme-dark-demo-path-object-blue-dark-fill: #{$blue-800} !default;
+$theme-dark-demo-path-object-blue-light-fill: #{$blue-600} !default;
+$theme-dark-demo-path-chrome-green-fill: #{$green-700} !default;
+$theme-dark-demo-path-chrome-red-fill: #{$red-700} !default;
+$theme-dark-demo-path-chrome-yellow-fill: #{$yellow-700} !default;
+$theme-dark-demo-path-chrome-blue-fill: #{$blue-700} !default;
+$theme-dark-demo-path-firefox-blue-fill: #{$blue-700} !default;
+$theme-dark-demo-path-firefox-orange-fill: #{$orange-800} !default;
+$theme-dark-demo-path-edge-blue-fill: #{$blue-700} !default;
+$theme-dark-demo-path-ie-blue-fill: #{$light-blue-700} !default;
+$theme-dark-demo-path-safari-blue-fill: #{$light-blue-700} !default;
+$theme-dark-demo-path-safari-red-fill: #{$red-600} !default;
+
+$theme-dark-hljs-background-color: #2e2e2e !default;
+$theme-dark-hljs-border-color: rgba(255, 255, 255, 0.1) !default;
+$theme-dark-hljs-base-text-color: #f8f8f2 !default;

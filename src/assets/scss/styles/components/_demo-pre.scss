@@ -16,11 +16,11 @@
 .demo-pre-copy-button {
   cursor: pointer;
   padding: 4px 8px;
-  background: var(--hljs-background-color);
+  background: $convert-hljs-background-color;
   border-top: none;
   border-right: none;
-  border-bottom: 1px solid var(--hljs-border-color);
-  border-left: 1px solid var(--hljs-border-color);
+  border-bottom: 1px solid $convert-hljs-border-color;
+  border-left: 1px solid $convert-hljs-border-color;
   border-radius: 0 0 0 3px;
   color: $convert-text-dark-2;
   font-size: 12px;
@@ -32,7 +32,7 @@
   white-space: nowrap;
   //transition: 0.12s ease-out;
   &:hover {
-    background: var(--hljs-background-color);
+    background: $convert-hljs-background-color;
   }
   &:focus {
     outline: none;
@@ -43,8 +43,8 @@
 .demo-pre {
   display: flex;
   max-width: 100%;
-  background: var(--hljs-background-color);
-  border: 1px solid var(--hljs-border-color);
+  background: $convert-hljs-background-color;
+  border: 1px solid $convert-hljs-border-color;
   border-radius: 2px;
   white-space: pre;
   word-wrap: normal;
@@ -71,13 +71,14 @@
  * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
  */
 
+//--hljs-background-color: #fafafa; // Original: white
+//--hljs-border-color: rgba(0, 0, 0, 0.1); // Add
+//--hljs-base-text-color: #333333;
+
 :root [data-theme="light"] {
-  --hljs-background-color: #fafafa; // Original: white
-  --hljs-border-color: rgba(0, 0, 0, 0.1); // Add
-  --hljs-base-text-color: #333333;
   .hljs {
-    background: var(--hljs-background-color);
-    color: var(--hljs-base-text-color);
+    background: $convert-hljs-background-color;
+    color: $convert-hljs-base-text-color;
   }
   .hljs-comment,
   .hljs-meta {
@@ -140,13 +141,14 @@
  * Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
  */
 
+//--hljs-background-color: #2e2e2e; // Original: #23241f
+//--hljs-border-color: rgba(255, 255, 255, 0.1); // Add
+//--hljs-base-text-color: #f8f8f2;
+
 :root [data-theme="dark"] {
-  --hljs-background-color: #2e2e2e; // Original: #23241f
-  --hljs-border-color: rgba(255, 255, 255, 0.1); // Add
-  --hljs-base-text-color: #f8f8f2;
   .hljs {
-    background: var(--hljs-background-color);
-    color: var(--hljs-base-text-color);
+    background: $convert-hljs-background-color;
+    color: $convert-hljs-base-text-color;
   }
   .hljs,
   .hljs-tag,

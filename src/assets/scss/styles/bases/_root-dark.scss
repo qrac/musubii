@@ -7,3 +7,50 @@
     --section-background-color-grey-wind: #{$theme-dark-section-background-color-grey-wind};
   }
 }
+
+#{$selector-root-dark} {
+  @include export-style-root-dark() {
+    --demo-box-line-border-color: #{$theme-dark-demo-box-line-border-color};
+    --demo-box-paint-background-color: #{$theme-dark-demo-box-paint-background-color};
+  }
+}
+
+#{$selector-root-dark} {
+  @include export-style-root-dark() {
+    --demo-path-shadow-fill: #{$theme-dark-demo-path-shadow-fill};
+    --demo-path-browser-window-fill: #{$theme-dark-demo-path-browser-window-fill};
+    --demo-path-browser-title-bar-fill: #{$theme-dark-demo-path-browser-title-bar-fill};
+    --demo-path-browser-wire-box-fill: #{$theme-dark-demo-path-browser-wire-box-fill};
+    --demo-path-browser-pre-fill: #{$theme-dark-demo-path-browser-pre-fill};
+    --demo-path-browser-code-fill: #{$theme-dark-demo-path-browser-code-fill};
+    --demo-path-object-white-fill: #{$theme-dark-demo-path-object-white-fill};
+    --demo-path-object-blue-fill: #{$theme-dark-demo-path-object-blue-fill};
+    --demo-path-object-yellow-fill: #{$theme-dark-demo-path-object-yellow-fill};
+    --demo-path-object-cyan-dark-fill: #{$theme-dark-demo-path-object-cyan-dark-fill};
+    --demo-path-object-cyan-fill: #{$theme-dark-demo-path-object-cyan-fill};
+    --demo-path-baloon-cloud-fill: #{$theme-dark-demo-path-baloon-cloud-fill};
+    --demo-path-baloon-cloud-stroke: #{$theme-dark-demo-path-baloon-cloud-stroke};
+    --demo-path-object-red-light-fill: #{$theme-dark-demo-path-object-red-light-fill};
+    --demo-path-object-yellow-dark-fill: #{$theme-dark-demo-path-object-yellow-dark-fill};
+    --demo-path-object-blue-dark-fill: #{$theme-dark-demo-path-object-blue-dark-fill};
+    --demo-path-object-blue-light-fill: #{$theme-dark-demo-path-object-blue-light-fill};
+    --demo-path-chrome-green-fill: #{$theme-dark-demo-path-chrome-green-fill};
+    --demo-path-chrome-red-fill: #{$theme-dark-demo-path-chrome-red-fill};
+    --demo-path-chrome-yellow-fill: #{$theme-dark-demo-path-chrome-yellow-fill};
+    --demo-path-chrome-blue-fill: #{$theme-dark-demo-path-chrome-blue-fill};
+    --demo-path-firefox-blue-fill: #{$theme-dark-demo-path-firefox-blue-fill};
+    --demo-path-firefox-orange-fill: #{$theme-dark-demo-path-firefox-orange-fill};
+    --demo-path-edge-blue-fill: #{$theme-dark-demo-path-edge-blue-fill};
+    --demo-path-ie-blue-fill: #{$theme-dark-demo-path-ie-blue-fill};
+    --demo-path-safari-blue-fill: #{$theme-dark-demo-path-safari-blue-fill};
+    --demo-path-safari-red-fill: #{$theme-dark-demo-path-safari-red-fill};
+  }
+}
+
+#{$selector-root-dark} {
+  @include export-style-root-dark() {
+    --hljs-background-color: #{$theme-dark-hljs-background-color};
+    --hljs-border-color: #{$theme-dark-hljs-border-color};
+    --hljs-base-text-color: #{$theme-dark-hljs-base-text-color};
+  }
+}

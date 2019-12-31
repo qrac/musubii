@@ -3,11 +3,11 @@
 //----------------------------------------------------
 
 .demo-flex-table {
-  border: 1px solid var(--demo-box-line-border-color);
+  border: 1px solid $convert-demo-box-line-border-color;
   overflow: hidden;
   .table-header {
     display: none;
-    border-bottom: 1px solid var(--demo-box-line-border-color);
+    border-bottom: 1px solid $convert-demo-box-line-border-color;
     font-family: $font-sans-en;
     @include tablet() {
       display: block;
@@ -34,7 +34,7 @@
   .table-body {
   }
   .table-body-item {
-    border-top: 1px solid var(--demo-box-line-border-color);
+    border-top: 1px solid $convert-demo-box-line-border-color;
     &:first-child {
       border-top: none;
     }

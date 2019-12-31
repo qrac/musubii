@@ -3,3 +3,38 @@
 //----------------------------------------------------
 
 $theme-light-section-background-color-grey-wind: $grey-wind !default;
+
+$theme-light-demo-box-line-border-color: rgba(0, 0, 0, 0.1) !default;
+$theme-light-demo-box-paint-background-color: #1b2324 !default;
+
+$theme-light-demo-path-shadow-fill: rgba(0, 0, 0, 0.1) !default;
+$theme-light-demo-path-browser-window-fill: #{$blue-grey-50} !default;
+$theme-light-demo-path-browser-title-bar-fill: #{$blue-grey-100} !default;
+$theme-light-demo-path-browser-wire-box-fill: #{$blue-grey-100} !default;
+$theme-light-demo-path-browser-pre-fill: #{$blue-grey-600} !default;
+$theme-light-demo-path-browser-code-fill: #{$blue-grey-500} !default;
+$theme-light-demo-path-object-white-fill: #{$white} !default;
+$theme-light-demo-path-object-blue-fill: #{$blue-600} !default;
+$theme-light-demo-path-object-yellow-fill: #{$yellow-600} !default;
+$theme-light-demo-path-object-cyan-dark-fill: #{$cyan-600} !default;
+$theme-light-demo-path-object-cyan-fill: #{$cyan-500} !default;
+$theme-light-demo-path-baloon-cloud-fill: #{$white} !default;
+$theme-light-demo-path-baloon-cloud-stroke: #{$blue-grey-50} !default;
+$theme-light-demo-path-object-red-light-fill: #{$red-100} !default;
+$theme-light-demo-path-object-yellow-dark-fill: #{$yellow-800} !default;
+$theme-light-demo-path-object-blue-dark-fill: #{$blue-700} !default;
+$theme-light-demo-path-object-blue-light-fill: #{$blue-500} !default;
+$theme-light-demo-path-chrome-green-fill: #{$green-500} !default;
+$theme-light-demo-path-chrome-red-fill: #{$red-500} !default;
+$theme-light-demo-path-chrome-yellow-fill: #{$yellow-500} !default;
+$theme-light-demo-path-chrome-blue-fill: #{$blue-500} !default;
+$theme-light-demo-path-firefox-blue-fill: #{$blue-500} !default;
+$theme-light-demo-path-firefox-orange-fill: #{$orange-500} !default;
+$theme-light-demo-path-edge-blue-fill: #{$blue-500} !default;
+$theme-light-demo-path-ie-blue-fill: #{$light-blue-500} !default;
+$theme-light-demo-path-safari-blue-fill: #{$light-blue-600} !default;
+$theme-light-demo-path-safari-red-fill: #{$red-500} !default;
+
+$theme-light-hljs-background-color: #fafafa !default;
+$theme-light-hljs-border-color: rgba(0, 0, 0, 0.1) !default;
+$theme-light-hljs-base-text-color: #333333 !default;

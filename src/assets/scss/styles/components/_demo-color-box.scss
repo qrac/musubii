@@ -5,6 +5,6 @@
 .demo-color-box {
   width: 1.5em;
   height: 1.5em;
-  border: 1px solid var(--demo-box-line-border-color);
+  border: 1px solid $convert-demo-box-line-border-color;
   border-radius: 2px;
 }

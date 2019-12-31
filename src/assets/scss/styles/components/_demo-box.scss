@@ -2,16 +2,6 @@
 // Components - Demo Box
 //----------------------------------------------------
 
-:root {
-  --demo-box-line-border-color: rgba(0, 0, 0, 0.1);
-  --demo-box-paint-background-color: #1b2324;
-}
-
-:root [data-theme="dark"] {
-  --demo-box-line-border-color: rgba(255, 255, 255, 0.1);
-  --demo-box-paint-background-color: #2a2a2b;
-}
-
 .demo-box {
   &.is-preview {
     > .demo-box,
@@ -44,13 +34,13 @@
   }
   &.is-line {
     padding: 1.25em;
-    border: 1px solid var(--demo-box-line-border-color);
+    border: 1px solid $convert-demo-box-line-border-color;
     border-radius: 2px;
   }
   &.is-paint {
     padding: 1.25em;
-    background-color: var(--demo-box-paint-background-color);
-    border: 1px solid var(--demo-box-line-border-color);
+    background-color: $convert-demo-box-paint-background-color;
+    border: 1px solid $convert-demo-box-line-border-color;
     border-radius: 2px;
   }
   &.is-note {
