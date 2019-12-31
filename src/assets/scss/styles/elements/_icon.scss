@@ -19,16 +19,14 @@
   }
   &.is-external-link-fix {
     position: relative;
-    top: -0.25em;
+    top: -0.125em;
     margin-left: 0.25em;
     font-size: 75%;
     opacity: 0.75;
   }
-  &.is-angle-down-fix {
-    position: relative;
-    top: -0.25em;
-    margin-left: 0.25em;
-    font-size: 87.5%;
-    opacity: 0.75;
-  }
+}
+
+// Fix IE11, Edge
+svg.icon {
+  vertical-align: middle;
 }

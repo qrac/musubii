@@ -16,4 +16,8 @@
   > .main {
     flex: 1 0 0%;
   }
+  @include ie() {
+    display: block;
+    min-height: auto;
+  }
 }
