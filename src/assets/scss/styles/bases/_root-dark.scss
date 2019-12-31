@@ -1,0 +1,9 @@
+//----------------------------------------------------
+// Bases: Root Dark
+//----------------------------------------------------
+
+#{$selector-root-dark} {
+  @include export-style-root-dark() {
+    --section-background-color-grey-wind: #{$theme-dark-section-background-color-grey-wind};
+  }
+}

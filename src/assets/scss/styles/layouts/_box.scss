@@ -12,7 +12,7 @@
   position: fixed;
   z-index: 100;
   &.is-top-right {
-    top: calc(#{$header-height-mobile} / 2);
+    top: calc(#{$global-header-height-mobile} / 2);
     left: calc(100% - #{$space-sm});
     transform: translate(-100%, -50%);
     @include fablet() {
@@ -22,7 +22,7 @@
       left: calc(50% + #{$section-inner-width-tablet} / 2 - #{$space-sm});
     }
     @include desktop() {
-      top: calc(#{$header-height-desktop} / 2);
+      top: calc(#{$global-header-height-desktop} / 2);
       left: calc(50% + #{$section-inner-width-desktop} / 2 - #{$space-sm});
     }
     @include wide() {

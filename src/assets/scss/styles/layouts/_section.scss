@@ -2,21 +2,13 @@
 // layouts: Section
 //----------------------------------------------------
 
-:root {
-  --section-background-color-grey-wind: #{$grey-wind};
-}
-
-:root [data-theme="dark"] {
-  --section-background-color-grey-wind: #2e2e2e;
-}
-
 .section {
   &.is-header {
     position: relative;
     display: flex;
     //justify-content: center;
     align-items: center;
-    height: $header-height-mobile;
+    height: $global-header-height-mobile;
     z-index: 10;
     > .inner {
       //position: absolute;
@@ -29,7 +21,7 @@
       }
     }
     @include desktop() {
-      height: $header-height-desktop;
+      height: $global-header-height-desktop;
     }
   }
   &.is-footer {
@@ -38,13 +30,13 @@
     z-index: 5;
   }
   &.is-hero {
-    margin-top: -$header-height-mobile;
-    padding: 2em + $header-height-mobile 0 3.5em;
-    background-color: var(--section-background-color-grey-wind);
+    margin-top: -$global-header-height-mobile;
+    padding: 2em + $global-header-height-mobile 0 3.5em;
+    background-color: $convert-section-background-color-grey-wind;
     transition: $global-transition-mode-change;
     @include desktop() {
-      margin-top: -$header-height-desktop;
-      padding: 1em + $header-height-desktop 0 3.5em;
+      margin-top: -$global-header-height-desktop;
+      padding: 1em + $global-header-height-desktop 0 3.5em;
     }
   }
   &.is-about {
@@ -53,7 +45,7 @@
   &.is-feature {
     padding: 3em 0;
     &:nth-child(odd) {
-      background-color: var(--section-background-color-grey-wind);
+      background-color: $convert-section-background-color-grey-wind;
     }
     &:nth-child(even) {
       .grid {

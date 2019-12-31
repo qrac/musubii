@@ -1,0 +1,5 @@
+//----------------------------------------------------
+// Themes: Convert
+//----------------------------------------------------
+
+$convert-section-background-color-grey-wind: if($option-css-variables == true, var(--section-background-color-grey-wind), $theme-light-section-background-color-grey-wind) !default;

@@ -1,0 +1,9 @@
+//----------------------------------------------------
+// Bases: Root Light
+//----------------------------------------------------
+
+#{$selector-root-light} {
+  @include export-style-root-light() {
+    --section-background-color-grey-wind: #{$theme-light-section-background-color-grey-wind};
+  }
+}

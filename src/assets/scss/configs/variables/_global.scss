@@ -3,12 +3,6 @@
 //----------------------------------------------------
 
 $global-transition-mode-change: background 0.12s ease-in-out,
-  color 0.12s ease-in-out;
-
-$header-height-mobile: 3.5em;
-$header-height-desktop: 5.125em;
-
-$font-sans-en: Nunito, $font-sans;
-
-$grey-wind: #f7fafc;
-$dark-warning: rgba($yellow-700, 0.1);
+  color 0.12s ease-in-out !default;
+$global-header-height-mobile: 3.5em !default;
+$global-header-height-desktop: 5.125em !default;
