@@ -6,7 +6,6 @@ module.exports = () => {
   const tocOptions = {
     maxDepth: 2
   }
-
   const customBlocksTemplate = {
     note: {
       classes: "demo-box is-note",

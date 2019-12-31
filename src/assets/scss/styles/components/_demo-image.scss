@@ -65,16 +65,25 @@
 .demo-image {
   display: block;
   &.is-hero {
-    width: 90vw;
+    $demo-image-hero-mobile-width: 90vw;
+    $demo-image-hero-mobile-height: $demo-image-hero-mobile-width * 0.79166;
+    $demo-image-hero-tablet-width: 23.5em;
+    $demo-image-hero-tablet-height: $demo-image-hero-tablet-width * 0.79166;
+    width: $demo-image-hero-mobile-width;
+    height: $demo-image-hero-mobile-height;
     @include tablet() {
-      width: 23.5em;
+      width: $demo-image-hero-tablet-width;
+      height: $demo-image-hero-tablet-height;
     }
     @include desktop() {
       margin-left: 28px;
     }
   }
   &.is-feature {
-    width: 12em;
+    $demo-image-feature-width: 12em;
+    $demo-image-feature-height: $demo-image-feature-width * 0.79166;
+    width: $demo-image-feature-width;
+    height: $demo-image-feature-height;
   }
   .demo-path-shadow {
     fill: var(--demo-path-shadow-fill);

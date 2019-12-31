@@ -26,6 +26,28 @@ contents list
 
 \*SCSS で CSS Variables を有効化した場合は非対応
 
+## PostCSS
+
+MUSUBii はビルド時に PostCSS 及びそのプラグインを使用しています。SCSS で同様の CSS を再現する場合は必要なライブラリをインストールして設定を行ってください。
+
+`postcss.config.js`
+
+```js
+module.exports = {
+  plugins: [require("postcss-sort-media-queries"), require("autoprefixer")]
+}
+```
+
+### Autoprefixer
+
+`package.json`
+
+```json
+{
+  "browserslist": ["> 3% in JP", "ie 11", "android 4.4", "last 1 versions"]
+}
+```
+
 ## Sources
 
 <PreviewSources title={meta.title} docsPath={meta.docsPath} />

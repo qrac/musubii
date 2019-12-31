@@ -5,11 +5,13 @@
 .site-logo-link {
   display: block;
   flex: none;
-  width: 10em;
 }
 
 .site-logo {
-  width: 100%;
+  $site-logo-width: 10em;
+  $site-logo-height: $site-logo-width * 0.142424;
+  width: $site-logo-width;
+  height: $site-logo-height;
   path {
     fill: $convert-primary-strong;
   }
