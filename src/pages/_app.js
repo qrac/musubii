@@ -5,6 +5,8 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 config.autoAddCss = false
 
+import cssVars from "css-vars-ponyfill"
+
 import AppHeader from "~/components/commons/app-header"
 import AppFooter from "~/components/commons/app-footer"
 import AppActions from "~/components/commons/app-actions"
@@ -24,6 +26,8 @@ class MyApp extends App {
     } else {
       document.body.setAttribute("data-theme", "light")
     }
+
+    cssVars({})
   }
   render() {
     const { Component, pageProps, router } = this.props
