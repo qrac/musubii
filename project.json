@@ -69,8 +69,8 @@
       "heading": "Migration",
       "items": [
         {
-          "id": "v6-to-v7",
-          "title": "v6.0.0 → v7.0.0"
+          "id": "v6-6-to-v7",
+          "title": "v6.6.0 → v7.0.0"
         },
         {
           "id": "v7-alpha-42-to-v7",
