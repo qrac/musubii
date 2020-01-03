@@ -78,7 +78,7 @@ npm install musubii
 
 ## License
 
-- MIT
+- CC0
 
 ## Credit
 
