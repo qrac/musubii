@@ -3,7 +3,7 @@
   "description": "Simple CSS Framework for JP",
   "version": "7.0.0",
   "main": "dist/musubii.css",
-  "license": "CC0",
+  "license": "CC0-1.0",
   "homepage": "https://musubii.qranoko.jp",
   "repository": "https://github.com/qrac/musubii",
   "bugs": "https://github.com/qrac/musubii/issues",

@@ -78,7 +78,7 @@ npm install musubii
 
 ## License
 
-- CC0
+- CC0 1.0 Public Domain
 
 ## Credit
 
