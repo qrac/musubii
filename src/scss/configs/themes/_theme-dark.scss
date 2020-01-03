@@ -2,6 +2,8 @@
 // Themes: Dark
 //----------------------------------------------------
 
+$theme-dark-id: "dark" !default;
+
 $theme-dark-primary: darken($theme-primary, 12%) !default;
 $theme-dark-primary-strong: $theme-primary !default;
 $theme-dark-primary-darken: darken($theme-primary, 17%) !default;

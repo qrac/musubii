@@ -2,39 +2,125 @@
 // Themes: Convert
 //----------------------------------------------------
 
-$convert-section-background-color-grey-wind: if($option-css-variables == true, var(--section-background-color-grey-wind), $theme-light-section-background-color-grey-wind) !default;
+//----------------------------------------------------
+// / CSS Variables
+//----------------------------------------------------
 
-$convert-demo-box-line-border-color: if($option-css-variables == true, var(--demo-box-line-border-color), $theme-light-demo-box-line-border-color) !default;
-$convert-demo-box-paint-background-color: if($option-css-variables == true, var(--demo-box-paint-background-color), $theme-light-demo-box-paint-background-color) !default;
+$convert-section-background-color-grey-wind: if($option-css-variables == true, var(--section-background-color-grey-wind), null) !default;
 
-$convert-demo-path-shadow-fill: if($option-css-variables == true, var(--demo-path-shadow-fill), $theme-light-demo-path-shadow-fill) !default;
-$convert-demo-path-browser-window-fill: if($option-css-variables == true, var(--demo-path-browser-window-fill), $theme-light-demo-path-browser-window-fill) !default;
-$convert-demo-path-browser-title-bar-fill: if($option-css-variables == true, var(--demo-path-browser-title-bar-fill), $theme-light-demo-path-browser-title-bar-fill) !default;
-$convert-demo-path-browser-wire-box-fill: if($option-css-variables == true, var(--demo-path-browser-wire-box-fill), $theme-light-demo-path-browser-wire-box-fill) !default;
-$convert-demo-path-browser-pre-fill: if($option-css-variables == true, var(--demo-path-browser-pre-fill), $theme-light-demo-path-browser-pre-fill) !default;
-$convert-demo-path-browser-code-fill: if($option-css-variables == true, var(--demo-path-browser-code-fill), $theme-light-demo-path-browser-code-fill) !default;
-$convert-demo-path-object-white-fill: if($option-css-variables == true, var(--demo-path-object-white-fill), $theme-light-demo-path-object-white-fill) !default;
-$convert-demo-path-object-blue-fill: if($option-css-variables == true, var(--demo-path-object-blue-fill), $theme-light-demo-path-object-blue-fill) !default;
-$convert-demo-path-object-yellow-fill: if($option-css-variables == true, var(--demo-path-object-yellow-fill), $theme-light-demo-path-object-yellow-fill) !default;
-$convert-demo-path-object-cyan-dark-fill: if($option-css-variables == true, var(--demo-path-object-cyan-dark-fill), $theme-light-demo-path-object-cyan-dark-fill) !default;
-$convert-demo-path-object-cyan-fill: if($option-css-variables == true, var(--demo-path-object-cyan-fill), $theme-light-demo-path-object-cyan-fill) !default;
-$convert-demo-path-baloon-cloud-fill: if($option-css-variables == true, var(--demo-path-baloon-cloud-fill), $theme-light-demo-path-baloon-cloud-fill) !default;
-$convert-demo-path-baloon-cloud-stroke: if($option-css-variables == true, var(--demo-path-baloon-cloud-stroke), $theme-light-demo-path-baloon-cloud-stroke) !default;
-$convert-demo-path-object-red-light-fill: if($option-css-variables == true, var(--demo-path-object-red-light-fill), $theme-light-demo-path-object-red-light-fill) !default;
-$convert-demo-path-object-yellow-dark-fill: if($option-css-variables == true, var(--demo-path-object-yellow-dark-fill), $theme-light-demo-path-object-yellow-dark-fill) !default;
-$convert-demo-path-object-blue-dark-fill: if($option-css-variables == true, var(--demo-path-object-blue-dark-fill), $theme-light-demo-path-object-blue-dark-fill) !default;
-$convert-demo-path-object-blue-light-fill: if($option-css-variables == true, var(--demo-path-object-blue-light-fill), $theme-light-demo-path-object-blue-light-fill) !default;
-$convert-demo-path-chrome-green-fill: if($option-css-variables == true, var(--demo-path-chrome-green-fill), $theme-light-demo-path-chrome-green-fill) !default;
-$convert-demo-path-chrome-red-fill: if($option-css-variables == true, var(--demo-path-chrome-red-fill), $theme-light-demo-path-chrome-red-fill) !default;
-$convert-demo-path-chrome-yellow-fill: if($option-css-variables == true, var(--demo-path-chrome-yellow-fill), $theme-light-demo-path-chrome-yellow-fill) !default;
-$convert-demo-path-chrome-blue-fill: if($option-css-variables == true, var(--demo-path-chrome-blue-fill), $theme-light-demo-path-chrome-blue-fill) !default;
-$convert-demo-path-firefox-blue-fill: if($option-css-variables == true, var(--demo-path-firefox-blue-fill), $theme-light-demo-path-firefox-blue-fill) !default;
-$convert-demo-path-firefox-orange-fill: if($option-css-variables == true, var(--demo-path-firefox-orange-fill), $theme-light-demo-path-firefox-orange-fill) !default;
-$convert-demo-path-edge-blue-fill: if($option-css-variables == true, var(--demo-path-edge-blue-fill), $theme-light-demo-path-edge-blue-fill) !default;
-$convert-demo-path-ie-blue-fill: if($option-css-variables == true, var(--demo-path-ie-blue-fill), $theme-light-demo-path-ie-blue-fill) !default;
-$convert-demo-path-safari-blue-fill: if($option-css-variables == true, var(--demo-path-safari-blue-fill), $theme-light-demo-path-safari-blue-fill) !default;
-$convert-demo-path-safari-red-fill: if($option-css-variables == true, var(--demo-path-safari-red-fill), $theme-light-demo-path-safari-red-fill) !default;
+$convert-demo-box-line-border-color: if($option-css-variables == true, var(--demo-box-line-border-color), null) !default;
+$convert-demo-box-paint-background-color: if($option-css-variables == true, var(--demo-box-paint-background-color), null) !default;
 
-$convert-hljs-background-color: if($option-css-variables == true, var(--hljs-background-color), $theme-light-hljs-background-color) !default;
-$convert-hljs-border-color: if($option-css-variables == true, var(--hljs-border-color), $theme-light-hljs-border-color) !default;
-$convert-hljs-base-text-color: if($option-css-variables == true, var(--hljs-base-text-color), $theme-light-hljs-base-text-color) !default;
+$convert-demo-path-shadow-fill: if($option-css-variables == true, var(--demo-path-shadow-fill), null) !default;
+$convert-demo-path-browser-window-fill: if($option-css-variables == true, var(--demo-path-browser-window-fill), null) !default;
+$convert-demo-path-browser-title-bar-fill: if($option-css-variables == true, var(--demo-path-browser-title-bar-fill), null) !default;
+$convert-demo-path-browser-wire-box-fill: if($option-css-variables == true, var(--demo-path-browser-wire-box-fill), null) !default;
+$convert-demo-path-browser-pre-fill: if($option-css-variables == true, var(--demo-path-browser-pre-fill), null) !default;
+$convert-demo-path-browser-code-fill: if($option-css-variables == true, var(--demo-path-browser-code-fill), null) !default;
+$convert-demo-path-object-white-fill: if($option-css-variables == true, var(--demo-path-object-white-fill), null) !default;
+$convert-demo-path-object-blue-fill: if($option-css-variables == true, var(--demo-path-object-blue-fill), null) !default;
+$convert-demo-path-object-yellow-fill: if($option-css-variables == true, var(--demo-path-object-yellow-fill), null) !default;
+$convert-demo-path-object-cyan-dark-fill: if($option-css-variables == true, var(--demo-path-object-cyan-dark-fill), null) !default;
+$convert-demo-path-object-cyan-fill: if($option-css-variables == true, var(--demo-path-object-cyan-fill), null) !default;
+$convert-demo-path-baloon-cloud-fill: if($option-css-variables == true, var(--demo-path-baloon-cloud-fill), null) !default;
+$convert-demo-path-baloon-cloud-stroke: if($option-css-variables == true, var(--demo-path-baloon-cloud-stroke), null) !default;
+$convert-demo-path-object-red-light-fill: if($option-css-variables == true, var(--demo-path-object-red-light-fill), null) !default;
+$convert-demo-path-object-yellow-dark-fill: if($option-css-variables == true, var(--demo-path-object-yellow-dark-fill), null) !default;
+$convert-demo-path-object-blue-dark-fill: if($option-css-variables == true, var(--demo-path-object-blue-dark-fill), null) !default;
+$convert-demo-path-object-blue-light-fill: if($option-css-variables == true, var(--demo-path-object-blue-light-fill), null) !default;
+$convert-demo-path-chrome-green-fill: if($option-css-variables == true, var(--demo-path-chrome-green-fill), null) !default;
+$convert-demo-path-chrome-red-fill: if($option-css-variables == true, var(--demo-path-chrome-red-fill), null) !default;
+$convert-demo-path-chrome-yellow-fill: if($option-css-variables == true, var(--demo-path-chrome-yellow-fill), null) !default;
+$convert-demo-path-chrome-blue-fill: if($option-css-variables == true, var(--demo-path-chrome-blue-fill), null) !default;
+$convert-demo-path-firefox-blue-fill: if($option-css-variables == true, var(--demo-path-firefox-blue-fill), null) !default;
+$convert-demo-path-firefox-orange-fill: if($option-css-variables == true, var(--demo-path-firefox-orange-fill), null) !default;
+$convert-demo-path-edge-blue-fill: if($option-css-variables == true, var(--demo-path-edge-blue-fill), null) !default;
+$convert-demo-path-ie-blue-fill: if($option-css-variables == true, var(--demo-path-ie-blue-fill), null) !default;
+$convert-demo-path-safari-blue-fill: if($option-css-variables == true, var(--demo-path-safari-blue-fill), null) !default;
+$convert-demo-path-safari-red-fill: if($option-css-variables == true, var(--demo-path-safari-red-fill), null) !default;
+
+$convert-hljs-background-color: if($option-css-variables == true, var(--hljs-background-color), null) !default;
+$convert-hljs-border-color: if($option-css-variables == true, var(--hljs-border-color), null) !default;
+$convert-hljs-base-text-color: if($option-css-variables == true, var(--hljs-base-text-color), null) !default;
+
+//----------------------------------------------------
+// / Theme Default - Dark
+//----------------------------------------------------
+
+$convert-section-background-color-grey-wind: if($option-theme-default == "dark", $theme-light-section-background-color-grey-wind, null) !default;
+
+$convert-demo-box-line-border-color: if($option-theme-default == "dark", $theme-light-demo-box-line-border-color, null) !default;
+$convert-demo-box-paint-background-color: if($option-theme-default == "dark", $theme-light-demo-box-paint-background-color, null) !default;
+
+$convert-demo-path-shadow-fill: if($option-theme-default == "dark", $theme-light-demo-path-shadow-fill, null) !default;
+$convert-demo-path-browser-window-fill: if($option-theme-default == "dark", $theme-light-demo-path-browser-window-fill, null) !default;
+$convert-demo-path-browser-title-bar-fill: if($option-theme-default == "dark", $theme-light-demo-path-browser-title-bar-fill, null) !default;
+$convert-demo-path-browser-wire-box-fill: if($option-theme-default == "dark", $theme-light-demo-path-browser-wire-box-fill, null) !default;
+$convert-demo-path-browser-pre-fill: if($option-theme-default == "dark", $theme-light-demo-path-browser-pre-fill, null) !default;
+$convert-demo-path-browser-code-fill: if($option-theme-default == "dark", $theme-light-demo-path-browser-code-fill, null) !default;
+$convert-demo-path-object-white-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-white-fill, null) !default;
+$convert-demo-path-object-blue-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-blue-fill, null) !default;
+$convert-demo-path-object-yellow-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-yellow-fill, null) !default;
+$convert-demo-path-object-cyan-dark-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-cyan-dark-fill, null) !default;
+$convert-demo-path-object-cyan-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-cyan-fill, null) !default;
+$convert-demo-path-baloon-cloud-fill: if($option-theme-default == "dark", $theme-light-demo-path-baloon-cloud-fill, null) !default;
+$convert-demo-path-baloon-cloud-stroke: if($option-theme-default == "dark", $theme-light-demo-path-baloon-cloud-stroke, null) !default;
+$convert-demo-path-object-red-light-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-red-light-fill, null) !default;
+$convert-demo-path-object-yellow-dark-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-yellow-dark-fill, null) !default;
+$convert-demo-path-object-blue-dark-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-blue-dark-fill, null) !default;
+$convert-demo-path-object-blue-light-fill: if($option-theme-default == "dark", $theme-light-demo-path-object-blue-light-fill, null) !default;
+$convert-demo-path-chrome-green-fill: if($option-theme-default == "dark", $theme-light-demo-path-chrome-green-fill, null) !default;
+$convert-demo-path-chrome-red-fill: if($option-theme-default == "dark", $theme-light-demo-path-chrome-red-fill, null) !default;
+$convert-demo-path-chrome-yellow-fill: if($option-theme-default == "dark", $theme-light-demo-path-chrome-yellow-fill, null) !default;
+$convert-demo-path-chrome-blue-fill: if($option-theme-default == "dark", $theme-light-demo-path-chrome-blue-fill, null) !default;
+$convert-demo-path-firefox-blue-fill: if($option-theme-default == "dark", $theme-light-demo-path-firefox-blue-fill, null) !default;
+$convert-demo-path-firefox-orange-fill: if($option-theme-default == "dark", $theme-light-demo-path-firefox-orange-fill, null) !default;
+$convert-demo-path-edge-blue-fill: if($option-theme-default == "dark", $theme-light-demo-path-edge-blue-fill, null) !default;
+$convert-demo-path-ie-blue-fill: if($option-theme-default == "dark", $theme-light-demo-path-ie-blue-fill, null) !default;
+$convert-demo-path-safari-blue-fill: if($option-theme-default == "dark", $theme-light-demo-path-safari-blue-fill, null) !default;
+$convert-demo-path-safari-red-fill: if($option-theme-default == "dark", $theme-light-demo-path-safari-red-fill, null) !default;
+
+$convert-hljs-background-color: if($option-theme-default == "dark", $theme-light-hljs-background-color, null) !default;
+$convert-hljs-border-color: if($option-theme-default == "dark", $theme-light-hljs-border-color, null) !default;
+$convert-hljs-base-text-color: if($option-theme-default == "dark", $theme-light-hljs-base-text-color, null) !default;
+
+//----------------------------------------------------
+// / Theme Default - Light
+//----------------------------------------------------
+
+$convert-section-background-color-grey-wind: $theme-light-section-background-color-grey-wind !default;
+
+$convert-demo-box-line-border-color: $theme-light-demo-box-line-border-color !default;
+$convert-demo-box-paint-background-color: $theme-light-demo-box-paint-background-color !default;
+
+$convert-demo-path-shadow-fill: $theme-light-demo-path-shadow-fill !default;
+$convert-demo-path-browser-window-fill: $theme-light-demo-path-browser-window-fill !default;
+$convert-demo-path-browser-title-bar-fill: $theme-light-demo-path-browser-title-bar-fill !default;
+$convert-demo-path-browser-wire-box-fill: $theme-light-demo-path-browser-wire-box-fill !default;
+$convert-demo-path-browser-pre-fill: $theme-light-demo-path-browser-pre-fill !default;
+$convert-demo-path-browser-code-fill: $theme-light-demo-path-browser-code-fill !default;
+$convert-demo-path-object-white-fill: $theme-light-demo-path-object-white-fill !default;
+$convert-demo-path-object-blue-fill: $theme-light-demo-path-object-blue-fill !default;
+$convert-demo-path-object-yellow-fill: $theme-light-demo-path-object-yellow-fill !default;
+$convert-demo-path-object-cyan-dark-fill: $theme-light-demo-path-object-cyan-dark-fill !default;
+$convert-demo-path-object-cyan-fill: $theme-light-demo-path-object-cyan-fill !default;
+$convert-demo-path-baloon-cloud-fill: $theme-light-demo-path-baloon-cloud-fill !default;
+$convert-demo-path-baloon-cloud-stroke: $theme-light-demo-path-baloon-cloud-stroke !default;
+$convert-demo-path-object-red-light-fill: $theme-light-demo-path-object-red-light-fill !default;
+$convert-demo-path-object-yellow-dark-fill: $theme-light-demo-path-object-yellow-dark-fill !default;
+$convert-demo-path-object-blue-dark-fill: $theme-light-demo-path-object-blue-dark-fill !default;
+$convert-demo-path-object-blue-light-fill: $theme-light-demo-path-object-blue-light-fill !default;
+$convert-demo-path-chrome-green-fill: $theme-light-demo-path-chrome-green-fill !default;
+$convert-demo-path-chrome-red-fill: $theme-light-demo-path-chrome-red-fill !default;
+$convert-demo-path-chrome-yellow-fill: $theme-light-demo-path-chrome-yellow-fill !default;
+$convert-demo-path-chrome-blue-fill: $theme-light-demo-path-chrome-blue-fill !default;
+$convert-demo-path-firefox-blue-fill: $theme-light-demo-path-firefox-blue-fill !default;
+$convert-demo-path-firefox-orange-fill: $theme-light-demo-path-firefox-orange-fill !default;
+$convert-demo-path-edge-blue-fill: $theme-light-demo-path-edge-blue-fill !default;
+$convert-demo-path-ie-blue-fill: $theme-light-demo-path-ie-blue-fill !default;
+$convert-demo-path-safari-blue-fill: $theme-light-demo-path-safari-blue-fill !default;
+$convert-demo-path-safari-red-fill: $theme-light-demo-path-safari-red-fill !default;
+
+$convert-hljs-background-color: $theme-light-hljs-background-color !default;
+$convert-hljs-border-color: $theme-light-hljs-border-color !default;
+$convert-hljs-base-text-color: $theme-light-hljs-base-text-color !default;

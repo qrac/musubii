@@ -2,6 +2,8 @@
 // Themes: Light
 //----------------------------------------------------
 
+$theme-light-id: "light" !default;
+
 $theme-light-primary: $theme-primary !default;
 $theme-light-primary-strong: $theme-primary !default;
 $theme-light-primary-darken: darken($theme-primary, 5%) !default;
