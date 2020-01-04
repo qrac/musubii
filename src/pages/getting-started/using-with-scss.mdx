@@ -33,6 +33,7 @@ src/scss
 ├── configs
 │   ├── _import.scss
 │   ├── mixins
+│   │   ├── _generate.scss
 │   │   ├── _mediaquery.scss
 │   │   ├── _placeholder.scss
 │   │   └── _safearea.scss
@@ -121,7 +122,7 @@ $option-css-variables: true;
 @import "~musubii/src/scss/configs/_import.scss";
 ```
 
-SCSS 変数は各ページに記載しています。`$option-css-variables` は「[Option](/configs/variables/option)」を参照ください。
+SCSS 変数 `$option-css-variables` は「[Option](/configs/variables/option)」を参照ください。
 
 ## Reduce
 
@@ -129,13 +130,13 @@ MUSUBii の CSS 出力はスタイルごとに変数の `true` `false` で設定
 
 ```scss
 // Override
-$option-style-alert: false;
+$option-generate-alert: false;
 
 // Import
-@import "~musubii/src/scss/styles/_import.scss";
+@import "~musubii/src/scss/configs/_import.scss";
 ```
 
-これで Alert の CSS は出力されません。
+これで Alert の CSS は出力されません。各スタイルの SCSS 変数は「[Option](/configs/variables/option)」を参照ください。
 
 ## Mixin Copy
 
@@ -152,7 +153,7 @@ MUSUBii の スタイルはすべて Mixin で定義されているため、他�
 }
 ```
 
-これで、`.wpcf7 input[type=submit]` に MUSUBii の `.button` `.button.is-plain` と同じスタイルがあたりました。Mixin は各エレメントの SCSS ファイルに含まれているため、利用する場合は事前に対象の SCSS ファイルを読み込んでいる必要があります。
+これで、`.wpcf7 input[type=submit]` に MUSUBii の `.button` `.button.is-plain` と同じスタイルがあたりました。Mixin は `styles` の各 SCSS ファイルに含まれているため、利用する場合は事前に対象の SCSS ファイルを読み込んでいる必要があります。
 
 ## Mixin Mode
 
