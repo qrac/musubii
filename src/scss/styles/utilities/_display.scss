@@ -3,24 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
-//----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-display: true !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-display() {
-  @if $option-mixin-mode == false and $option-style-display == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Display Block
 //----------------------------------------------------
 
@@ -47,7 +29,7 @@ $option-style-display: true !default;
   @include --is-display-block(wide);
 }
 
-@include export-style-display() {
+@include generate-style($option-generate-display) {
   @include musubii-style-display-block();
 }
 
@@ -78,7 +60,7 @@ $option-style-display: true !default;
   @include --is-display-inline(wide);
 }
 
-@include export-style-display() {
+@include generate-style($option-generate-display) {
   @include musubii-style-display-inline();
 }
 
@@ -109,7 +91,7 @@ $option-style-display: true !default;
   @include --is-display-inline-block(wide);
 }
 
-@include export-style-display() {
+@include generate-style($option-generate-display) {
   @include musubii-style-display-inline-block();
 }
 
@@ -140,7 +122,7 @@ $option-style-display: true !default;
   @include --is-display-none(wide);
 }
 
-@include export-style-display() {
+@include generate-style($option-generate-display) {
   @include musubii-style-display-none();
 }
 
@@ -171,6 +153,6 @@ $option-style-display: true !default;
   @include --is-display-hidden(mobile);
 }
 
-@include export-style-display() {
+@include generate-style($option-generate-display) {
   @include musubii-style-display-hidden();
 }

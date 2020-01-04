@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-card: true !default;
 
 // Selectors
 $selector-card: "\.card" !default;
@@ -43,17 +39,6 @@ $card-zoom-transform: scale(1.025) !default;
 $card-zoom-transition: $global-transition !default;
 
 //----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-// Export Style
-@mixin export-style-card() {
-  @if $option-mixin-mode == false and $option-style-card == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Card
 //----------------------------------------------------
 
@@ -63,7 +48,7 @@ $card-zoom-transition: $global-transition !default;
   overflow: hidden;
 }
 
-@include export-style-card() {
+@include generate-style($option-generate-card) {
   #{$selector-card} {
     @include musubii-style-card();
   }
@@ -90,7 +75,7 @@ $card-zoom-transition: $global-transition !default;
   @include --is-bg-color(light, $card-background-color, true);
 }
 
-@include export-style-card() {
+@include generate-style($option-generate-card) {
   #{$selector-card} {
     @include musubii-style-card-bg();
   }
@@ -106,7 +91,7 @@ $card-zoom-transition: $global-transition !default;
   }
 }
 
-@include export-style-card() {
+@include generate-style($option-generate-card) {
   #{$selector-card} {
     @include musubii-style-card-outline();
   }
@@ -139,7 +124,7 @@ $card-zoom-transition: $global-transition !default;
   @include --is-radius-all(xxs, $card-radius-xxs, false);
 }
 
-@include export-style-card() {
+@include generate-style($option-generate-card) {
   #{$selector-card} {
     @include musubii-style-card-radius-all();
   }
@@ -165,7 +150,7 @@ $card-zoom-transition: $global-transition !default;
   }
 }
 
-@include export-style-card() {
+@include generate-style($option-generate-card) {
   #{$selector-card} {
     @include musubii-style-card-floating();
   }
@@ -194,7 +179,7 @@ $card-zoom-transition: $global-transition !default;
   }
 }
 
-@include export-style-card() {
+@include generate-style($option-generate-card) {
   #{$selector-card} {
     @include musubii-style-card-link();
   }
@@ -223,7 +208,7 @@ $card-zoom-transition: $global-transition !default;
   }
 }
 
-@include export-style-card() {
+@include generate-style($option-generate-card) {
   #{$selector-card} {
     @include musubii-style-card-zoom();
   }

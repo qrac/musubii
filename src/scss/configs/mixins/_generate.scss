@@ -1,0 +1,36 @@
+//----------------------------------------------------
+// Mixins: Generate
+//----------------------------------------------------
+
+//----------------------------------------------------
+// / Root
+//----------------------------------------------------
+
+@mixin generate-root($theme-id, $data-attr) {
+  @if $option-mixin-mode == false and $option-css-variables == true {
+    @if $option-theme-default == $theme-id {
+      @content;
+    } @else {
+      @if $option-theme-media == true {
+        @include theme-media($theme-id) {
+          @content;
+        }
+      }
+      @if $option-theme-attr == true {
+        @include theme-attr($data-attr, $theme-id) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style
+//----------------------------------------------------
+
+@mixin generate-style($option-generate) {
+  @if $option-mixin-mode == false and $option-generate == true {
+    @content;
+  }
+}

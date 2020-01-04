@@ -3,51 +3,19 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-theme-default-light: true !default;
-$option-theme-media-light: false !default;
-$option-theme-attr-light: false !default;
 
 // Selectors
 $selector-root-light: ":root" !default;
 $selector-root-light-attr: "data-theme" !default;
-
-// Root
-$root-light-attr: "light" !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-// Export Style
-@mixin export-style-root-light() {
-  @if $option-mixin-mode == false {
-    @if $option-css-variables == true and $option-theme-default-light == true {
-      @content;
-    }
-    @if $option-css-variables == true and $option-theme-media-light == true {
-      @include theme-media(light) {
-        @content;
-      }
-    }
-    @if $option-css-variables == true and $option-theme-attr-light == true {
-      @include theme-attr($selector-root-light-attr, $root-light-attr) {
-        @content;
-      }
-    }
-  }
-}
 
 //----------------------------------------------------
 // / Style - Root Light
 //----------------------------------------------------
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --primary: #{$theme-light-primary};
     --primary-strong: #{$theme-light-primary-strong};
     --primary-darken: #{$theme-light-primary-darken};
@@ -67,7 +35,7 @@ $root-light-attr: "light" !default;
 }
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --text-dark: #{$theme-light-text-dark};
     --text-dark-1: #{$theme-light-text-dark-1};
     --text-dark-2: #{$theme-light-text-dark-2};
@@ -92,7 +60,7 @@ $root-light-attr: "light" !default;
 }
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --background: #{$theme-light-background};
     --background-1: #{$theme-light-background-1};
     --background-2: #{$theme-light-background-2};
@@ -110,7 +78,7 @@ $root-light-attr: "light" !default;
 }
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --disabled-background-color: #{$theme-light-disabled-background-color};
     --disabled-border-color: #{$theme-light-disabled-border-color};
     --disabled-text-color: #{$theme-light-disabled-text-color};
@@ -118,7 +86,7 @@ $root-light-attr: "light" !default;
 }
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --body-background-color: #{$theme-light-body-background-color};
     --body-text-color: #{$theme-light-body-text-color};
     --code-text-color: #{$theme-light-code-text-color};

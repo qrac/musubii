@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-grid: true !default;
 
 // Selectors
 $selector-grid: "\.grid" !default;
@@ -22,17 +18,6 @@ $gap-size-md: $space-md !default;
 $gap-size-sm: $space-sm !default;
 $gap-size-xs: $space-xs !default;
 $gap-size-xxs: $space-xxs !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-// Export Style
-@mixin export-style-grid() {
-  @if $option-mixin-mode == false and $option-style-grid == true {
-    @content;
-  }
-}
 
 //----------------------------------------------------
 // / Style - Grid
@@ -74,7 +59,7 @@ $gap-size-xxs: $space-xxs !default;
   }
 }
 
-@include export-style-grid() {
+@include generate-style($option-generate-grid) {
   #{$selector-grid} {
     @include musubii-style-grid();
   }
@@ -121,7 +106,7 @@ $gap-size-xxs: $space-xxs !default;
   @include --is-gap-all(xxs, $gap-size-xxs, $selector-column, false);
 }
 
-@include export-style-grid() {
+@include generate-style($option-generate-grid) {
   #{$selector-grid} {
     @include musubii-style-grid-gap-all();
   }
@@ -162,7 +147,7 @@ $gap-size-xxs: $space-xxs !default;
   @include --is-gap-row(xxs, $gap-size-xxs, $selector-column, false);
 }
 
-@include export-style-grid() {
+@include generate-style($option-generate-grid) {
   #{$selector-grid} {
     @include musubii-style-grid-gap-row();
   }
@@ -203,7 +188,7 @@ $gap-size-xxs: $space-xxs !default;
   @include --is-gap-column(xxs, $gap-size-xxs, $selector-column, false);
 }
 
-@include export-style-grid() {
+@include generate-style($option-generate-grid) {
   #{$selector-grid} {
     @include musubii-style-grid-gap-column();
   }

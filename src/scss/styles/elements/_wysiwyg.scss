@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-wysiwyg: true !default;
 
 // Selectors
 $selector-wysiwyg: "\.wysiwyg" !default;
@@ -83,16 +79,6 @@ $wysiwyg-figcaption-margin-top: $space-sm !default;
 $wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 //----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-wysiwyg() {
-  @if $option-mixin-mode == false and $option-style-wysiwyg == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - WYSIWYG Heading
 //----------------------------------------------------
 
@@ -125,7 +111,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-heading();
   }
@@ -154,7 +140,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-text();
   }
@@ -185,7 +171,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-text-link();
   }
@@ -212,7 +198,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-text-link-reverse();
   }
@@ -232,7 +218,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-text-blockquote();
   }
@@ -256,7 +242,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-text-code();
   }
@@ -284,7 +270,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-text-pre();
   }
@@ -314,7 +300,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-list();
   }
@@ -341,7 +327,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-table();
   }
@@ -386,7 +372,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-dl();
   }
@@ -407,7 +393,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-hr();
   }
@@ -427,7 +413,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   }
 }
 
-@include export-style-wysiwyg() {
+@include generate-style($option-generate-wysiwyg) {
   #{$selector-wysiwyg} {
     @include musubii-style-wysiwyg-figure();
   }

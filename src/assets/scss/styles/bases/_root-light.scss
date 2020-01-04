@@ -3,20 +3,20 @@
 //----------------------------------------------------
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --section-background-color-grey-wind: #{$theme-light-section-background-color-grey-wind};
   }
 }
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --demo-box-line-border-color: #{$theme-light-demo-box-line-border-color};
     --demo-box-paint-background-color: #{$theme-light-demo-box-paint-background-color};
   }
 }
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --demo-path-shadow-fill: #{$theme-light-demo-path-shadow-fill};
     --demo-path-browser-window-fill: #{$theme-light-demo-path-browser-window-fill};
     --demo-path-browser-title-bar-fill: #{$theme-light-demo-path-browser-title-bar-fill};
@@ -48,7 +48,7 @@
 }
 
 #{$selector-root-light} {
-  @include export-style-root-light() {
+  @include generate-root($theme-light-id, $selector-root-light-attr) {
     --hljs-background-color: #{$theme-light-hljs-background-color};
     --hljs-border-color: #{$theme-light-hljs-border-color};
     --hljs-base-text-color: #{$theme-light-hljs-base-text-color};

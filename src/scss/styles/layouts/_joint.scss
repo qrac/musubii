@@ -3,27 +3,12 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-joint: true !default;
 
 // Selectors
 $selector-joint: "\.joint" !default;
 $selector-joint-none: "\.is-joint-none" !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-// Export Style
-@mixin export-style-joint() {
-  @if $option-mixin-mode == false and $option-style-joint == true {
-    @content;
-  }
-}
 
 //----------------------------------------------------
 // / Style - Joint
@@ -61,7 +46,7 @@ $selector-joint-none: "\.is-joint-none" !default;
   }
 }
 
-@include export-style-joint() {
+@include generate-style($option-generate-joint) {
   #{$selector-joint} {
     @include musubii-style-joint();
   }

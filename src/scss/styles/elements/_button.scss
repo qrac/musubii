@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-button: true !default;
 
 // Selectors
 $selector-button: "\.button" !default;
@@ -93,16 +89,6 @@ $button-melt-warning-text-color: $convert-warning-strong !default;
 $button-melt-danger-text-color: $convert-danger-strong !default;
 
 //----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-button() {
-  @if $option-mixin-mode == false and $option-style-button == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Button
 //----------------------------------------------------
 
@@ -133,7 +119,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button();
   }
@@ -191,7 +177,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button-angle();
   }
@@ -207,7 +193,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button-round();
   }
@@ -227,7 +213,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button-square();
   }
@@ -247,7 +233,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button-circle();
   }
@@ -271,7 +257,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button-floating();
   }
@@ -338,7 +324,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button-plain();
   }
@@ -408,7 +394,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button-outline();
   }
@@ -446,7 +432,7 @@ $button-melt-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-button() {
+@include generate-style($option-generate-button) {
   #{$selector-button} {
     @include musubii-style-button-melt();
   }

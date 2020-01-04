@@ -3,20 +3,20 @@
 //----------------------------------------------------
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --section-background-color-grey-wind: #{$theme-dark-section-background-color-grey-wind};
   }
 }
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --demo-box-line-border-color: #{$theme-dark-demo-box-line-border-color};
     --demo-box-paint-background-color: #{$theme-dark-demo-box-paint-background-color};
   }
 }
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --demo-path-shadow-fill: #{$theme-dark-demo-path-shadow-fill};
     --demo-path-browser-window-fill: #{$theme-dark-demo-path-browser-window-fill};
     --demo-path-browser-title-bar-fill: #{$theme-dark-demo-path-browser-title-bar-fill};
@@ -48,7 +48,7 @@
 }
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --hljs-background-color: #{$theme-dark-hljs-background-color};
     --hljs-border-color: #{$theme-dark-hljs-border-color};
     --hljs-base-text-color: #{$theme-dark-hljs-base-text-color};

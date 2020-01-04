@@ -3,24 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
-//----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-overflow: true !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-overflow() {
-  @if $option-mixin-mode == false and $option-style-overflow == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Overflow
 //----------------------------------------------------
 
@@ -30,6 +12,6 @@ $option-style-overflow: true !default;
   }
 }
 
-@include export-style-overflow() {
+@include generate-style($option-generate-overflow) {
   @include musubii-style-overflow();
 }

@@ -3,51 +3,19 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-theme-default-dark: false !default;
-$option-theme-media-dark: false !default;
-$option-theme-attr-dark: true !default;
 
 // Selectors
 $selector-root-dark: ":root" !default;
 $selector-root-dark-attr: "data-theme" !default;
-
-// Root
-$root-dark-attr: "dark" !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-// Export Style
-@mixin export-style-root-dark() {
-  @if $option-mixin-mode == false {
-    @if $option-css-variables == true and $option-theme-default-dark == true {
-      @content;
-    }
-    @if $option-css-variables == true and $option-theme-media-dark == true {
-      @include theme-media(dark) {
-        @content;
-      }
-    }
-    @if $option-css-variables == true and $option-theme-attr-dark == true {
-      @include theme-attr($selector-root-dark-attr, $root-dark-attr) {
-        @content;
-      }
-    }
-  }
-}
 
 //----------------------------------------------------
 // / Style - Root Dark
 //----------------------------------------------------
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --primary: #{$theme-dark-primary};
     --primary-strong: #{$theme-dark-primary-strong};
     --primary-darken: #{$theme-dark-primary-darken};
@@ -67,7 +35,7 @@ $root-dark-attr: "dark" !default;
 }
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --text-dark: #{$theme-dark-text-dark};
     --text-dark-1: #{$theme-dark-text-dark-1};
     --text-dark-2: #{$theme-dark-text-dark-2};
@@ -92,7 +60,7 @@ $root-dark-attr: "dark" !default;
 }
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --background: #{$theme-dark-background};
     --background-1: #{$theme-dark-background-1};
     --background-2: #{$theme-dark-background-2};
@@ -110,7 +78,7 @@ $root-dark-attr: "dark" !default;
 }
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --disabled-background-color: #{$theme-dark-disabled-background-color};
     --disabled-border-color: #{$theme-dark-disabled-border-color};
     --disabled-text-color: #{$theme-dark-disabled-text-color};
@@ -118,7 +86,7 @@ $root-dark-attr: "dark" !default;
 }
 
 #{$selector-root-dark} {
-  @include export-style-root-dark() {
+  @include generate-root($theme-dark-id, $selector-root-dark-attr) {
     --body-background-color: #{$theme-dark-body-background-color};
     --body-text-color: #{$theme-dark-body-text-color};
     --code-text-color: #{$theme-dark-code-text-color};

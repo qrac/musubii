@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-padding: true !default;
 
 // Padding Size
 $padding-size-xxl: $space-xxl !default;
@@ -18,16 +14,6 @@ $padding-size-md: $space-md !default;
 $padding-size-sm: $space-sm !default;
 $padding-size-xs: $space-xs !default;
 $padding-size-xxs: $space-xxs !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-padding() {
-  @if $option-mixin-mode == false and $option-style-padding == true {
-    @content;
-  }
-}
 
 //----------------------------------------------------
 // / Style - Padding
@@ -56,7 +42,7 @@ $padding-size-xxs: $space-xxs !default;
   @include --is-padding(xxs, $padding-size-xxs, false);
 }
 
-@include export-style-padding() {
+@include generate-style($option-generate-padding) {
   @include musubii-style-padding();
 }
 
@@ -108,7 +94,7 @@ $padding-size-xxs: $space-xxs !default;
   @include --is-padding-way(left, xxs, $padding-size-xxs, false);
 }
 
-@include export-style-padding() {
+@include generate-style($option-generate-padding) {
   @include musubii-style-padding-way();
 }
 
@@ -141,7 +127,7 @@ $padding-size-xxs: $space-xxs !default;
   @include --is-padding-vertical(xxs, $padding-size-xxs, false);
 }
 
-@include export-style-padding() {
+@include generate-style($option-generate-padding) {
   @include musubii-style-padding-vertical();
 }
 
@@ -174,7 +160,7 @@ $padding-size-xxs: $space-xxs !default;
   @include --is-padding-horizontal(xxs, $padding-size-xxs, false);
 }
 
-@include export-style-padding() {
+@include generate-style($option-generate-padding) {
   @include musubii-style-padding-horizontal();
 }
 
@@ -195,6 +181,6 @@ $padding-size-xxs: $space-xxs !default;
   @include --is-padding-safe(left);
 }
 
-@include export-style-padding() {
+@include generate-style($option-generate-padding) {
   @include musubii-style-padding-safe();
 }

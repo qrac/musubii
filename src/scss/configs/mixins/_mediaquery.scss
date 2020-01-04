@@ -181,15 +181,15 @@
 //----------------------------------------------------
 
 // Theme - OS (light or dark)
-@mixin theme-media($theme) {
-  @media (prefers-color-scheme: #{$theme}) {
+@mixin theme-media($theme-id) {
+  @media (prefers-color-scheme: #{$theme-id}) {
     @content;
   }
 }
 
 // Theme - Custom Attributes (ex: data-theme, dark)
-@mixin theme-attr($attr, $theme) {
-  [#{$attr}="#{$theme}"] {
+@mixin theme-attr($data-attr, $theme-id) {
+  [#{$data-attr}="#{$theme-id}"] {
     @content;
   }
 }

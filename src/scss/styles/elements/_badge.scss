@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-badge: true !default;
 
 // Selectors
 $selector-badge: "\.badge" !default;
@@ -62,16 +58,6 @@ $badge-outline-danger-border-color: $convert-danger !default;
 $badge-outline-danger-text-color: $convert-danger-strong !default;
 
 //----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-badge() {
-  @if $option-mixin-mode == false and $option-style-badge == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Badge Basic
 //----------------------------------------------------
 
@@ -91,7 +77,7 @@ $badge-outline-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-badge() {
+@include generate-style($option-generate-badge) {
   #{$selector-badge} {
     @include musubii-style-badge();
   }
@@ -107,7 +93,7 @@ $badge-outline-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-badge() {
+@include generate-style($option-generate-badge) {
   #{$selector-badge} {
     @include musubii-style-badge-round();
   }
@@ -127,7 +113,7 @@ $badge-outline-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-badge() {
+@include generate-style($option-generate-badge) {
   #{$selector-badge} {
     @include musubii-style-badge-square();
   }
@@ -147,7 +133,7 @@ $badge-outline-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-badge() {
+@include generate-style($option-generate-badge) {
   #{$selector-badge} {
     @include musubii-style-badge-circle();
   }
@@ -194,7 +180,7 @@ $badge-outline-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-badge() {
+@include generate-style($option-generate-badge) {
   #{$selector-badge} {
     @include musubii-style-badge-plain();
   }
@@ -250,7 +236,7 @@ $badge-outline-danger-text-color: $convert-danger-strong !default;
   }
 }
 
-@include export-style-badge() {
+@include generate-style($option-generate-badge) {
   #{$selector-badge} {
     @include musubii-style-badge-outline();
   }

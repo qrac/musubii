@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-space: true !default;
 
 // Space Size
 $space-size-xxl: $space-xxl !default;
@@ -18,16 +14,6 @@ $space-size-md: $space-md !default;
 $space-size-sm: $space-sm !default;
 $space-size-xs: $space-xs !default;
 $space-size-xxs: $space-xxs !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-space() {
-  @if $option-mixin-mode == false and $option-style-space == true {
-    @content;
-  }
-}
 
 //----------------------------------------------------
 // / Style - Space
@@ -60,7 +46,7 @@ $space-size-xxs: $space-xxs !default;
   @include --is-space(xxs, $space-size-xxs, false);
 }
 
-@include export-style-space() {
+@include generate-style($option-generate-space) {
   @include musubii-style-space();
 }
 
@@ -97,7 +83,7 @@ $space-size-xxs: $space-xxs !default;
   @include --is-space-row(xxs, $space-size-xxs, false);
 }
 
-@include export-style-space() {
+@include generate-style($option-generate-space) {
   @include musubii-style-space-row();
 }
 
@@ -134,6 +120,6 @@ $space-size-xxs: $space-xxs !default;
   @include --is-space-column(xxs, $space-size-xxs, false);
 }
 
-@include export-style-space() {
+@include generate-style($option-generate-space) {
   @include musubii-style-space-column();
 }

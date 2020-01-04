@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-table: true !default;
 
 // Selectors
 $selector-table: "\.table" !default;
@@ -34,16 +30,6 @@ $table-spot-background-color: $convert-table-spot-background-color !default;
 
 // Table Danger
 $table-danger-background-color: $convert-table-danger-background-color !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-table() {
-  @if $option-mixin-mode == false and $option-style-table == true {
-    @content;
-  }
-}
 
 //----------------------------------------------------
 // / Style - Table
@@ -91,7 +77,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include export-style-table() {
+@include generate-style($option-generate-table) {
   #{$selector-table} {
     @include musubii-style-table();
   }
@@ -111,7 +97,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include export-style-table() {
+@include generate-style($option-generate-table) {
   #{$selector-table} {
     @include musubii-style-table-line();
   }
@@ -127,7 +113,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include export-style-table() {
+@include generate-style($option-generate-table) {
   #{$selector-table} {
     @include musubii-style-table-outline();
   }
@@ -147,7 +133,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include export-style-table() {
+@include generate-style($option-generate-table) {
   #{$selector-table} {
     @include musubii-style-table-border();
   }
@@ -168,7 +154,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include export-style-table() {
+@include generate-style($option-generate-table) {
   #{$selector-table} {
     @include musubii-style-table-stripe();
   }
@@ -200,6 +186,6 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include export-style-table() {
+@include generate-style($option-generate-table) {
   @include musubii-style-table-bg();
 }

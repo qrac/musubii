@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-icon: true !default;
 
 // Selectors
 $selector-icon: "\.icon, \.im, \.fa, \.fas, \.far, \.fal, \.fab, \.material-icons" !default;
@@ -19,16 +15,6 @@ $selector-icon-material: "\.material-icons" !default;
 $icon-fit-width: 1em !default;
 
 //----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-icon() {
-  @if $option-mixin-mode == false and $option-style-icon == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Icon
 //----------------------------------------------------
 
@@ -37,7 +23,7 @@ $icon-fit-width: 1em !default;
   line-height: inherit;
 }
 
-@include export-style-icon() {
+@include generate-style($option-generate-icon) {
   #{$selector-icon} {
     @include musubii-style-icon();
   }
@@ -66,7 +52,7 @@ $icon-fit-width: 1em !default;
   @include --is-color(dark-9, $convert-text-dark-9);
 }
 
-@include export-style-icon() {
+@include generate-style($option-generate-icon) {
   #{$selector-icon} {
     @include musubii-style-icon-dark();
   }
@@ -87,7 +73,7 @@ $icon-fit-width: 1em !default;
   @include --is-color(light-9, $convert-text-light-9);
 }
 
-@include export-style-icon() {
+@include generate-style($option-generate-icon) {
   #{$selector-icon} {
     @include musubii-style-icon-light();
   }
@@ -103,7 +89,7 @@ $icon-fit-width: 1em !default;
   @include --is-color(danger, $convert-danger-strong);
 }
 
-@include export-style-icon() {
+@include generate-style($option-generate-icon) {
   #{$selector-icon} {
     @include musubii-style-icon-role();
   }
@@ -121,7 +107,7 @@ $icon-fit-width: 1em !default;
   vertical-align: text-bottom;
 }
 
-@include export-style-icon() {
+@include generate-style($option-generate-icon) {
   #{$selector-icon-svg} {
     @include musubii-style-icon-svg();
   }
@@ -135,7 +121,7 @@ $icon-fit-width: 1em !default;
   vertical-align: bottom;
 }
 
-@include export-style-icon() {
+@include generate-style($option-generate-icon) {
   #{$selector-icon-material} {
     @include musubii-style-icon-material();
   }
@@ -152,7 +138,7 @@ $icon-fit-width: 1em !default;
   }
 }
 
-@include export-style-icon() {
+@include generate-style($option-generate-icon) {
   #{$selector-icon} {
     @include musubii-style-icon-fit();
   }

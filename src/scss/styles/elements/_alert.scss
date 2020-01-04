@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-alert: true !default;
 
 // Selectors
 $selector-alert: "\.alert" !default;
@@ -35,16 +31,6 @@ $alert-tail-size: 0.5em !default;
 $alert-tail-position-end: 10% !default;
 
 //----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-alert() {
-  @if $option-mixin-mode == false and $option-style-alert == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Alert
 //----------------------------------------------------
 
@@ -56,7 +42,7 @@ $alert-tail-position-end: 10% !default;
   border-radius: $alert-border-radius;
 }
 
-@include export-style-alert() {
+@include generate-style($option-generate-alert) {
   #{$selector-alert} {
     @include musubii-style-alert();
   }
@@ -101,7 +87,7 @@ $alert-tail-position-end: 10% !default;
   );
 }
 
-@include export-style-alert() {
+@include generate-style($option-generate-alert) {
   #{$selector-alert} {
     @include musubii-style-alert-role();
   }
@@ -124,7 +110,7 @@ $alert-tail-position-end: 10% !default;
   }
 }
 
-@include export-style-alert() {
+@include generate-style($option-generate-alert) {
   #{$selector-alert} {
     @include musubii-style-alert-tail();
   }
@@ -313,7 +299,7 @@ $alert-tail-position-end: 10% !default;
   );
 }
 
-@include export-style-alert() {
+@include generate-style($option-generate-alert) {
   #{$selector-alert} {
     @include musubii-style-alert-tail-way();
   }
@@ -470,7 +456,7 @@ $alert-tail-position-end: 10% !default;
   );
 }
 
-@include export-style-alert() {
+@include generate-style($option-generate-alert) {
   #{$selector-alert} {
     @include musubii-style-alert-tail-way-role();
   }

@@ -3,24 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
-//----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-scroll: true !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-scroll() {
-  @if $option-mixin-mode == false and $option-style-scroll == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Scroll
 //----------------------------------------------------
 
@@ -37,6 +19,6 @@ $option-style-scroll: true !default;
   }
 }
 
-@include export-style-scroll() {
+@include generate-style($option-generate-scroll) {
   @include musubii-style-scroll();
 }

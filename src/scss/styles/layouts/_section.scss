@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-section: true !default;
 
 // Selectors
 $selector-section: "\.section" !default;
@@ -19,17 +15,6 @@ $section-inner-width-fablet: 540px !default;
 $section-inner-width-tablet: 720px !default;
 $section-inner-width-desktop: 960px !default;
 $section-inner-width-wide: 1140px !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-// Export Style
-@mixin export-style-section() {
-  @if $option-mixin-mode == false and $option-style-section == true {
-    @content;
-  }
-}
 
 //----------------------------------------------------
 // / Style - Section Inner
@@ -52,7 +37,7 @@ $section-inner-width-wide: 1140px !default;
   }
 }
 
-@include export-style-section() {
+@include generate-style($option-generate-section) {
   #{$selector-section} {
     > {
       #{$selector-inner} {

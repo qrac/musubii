@@ -3,12 +3,8 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-margin: true !default;
 
 // Margin Size
 $margin-size-xxl: $space-xxl !default;
@@ -18,16 +14,6 @@ $margin-size-md: $space-md !default;
 $margin-size-sm: $space-sm !default;
 $margin-size-xs: $space-xs !default;
 $margin-size-xxs: $space-xxs !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-margin() {
-  @if $option-mixin-mode == false and $option-style-margin == true {
-    @content;
-  }
-}
 
 //----------------------------------------------------
 // / Style - Margin
@@ -57,7 +43,7 @@ $margin-size-xxs: $space-xxs !default;
   @include --is-margin(auto, auto, false);
 }
 
-@include export-style-margin() {
+@include generate-style($option-generate-margin) {
   @include musubii-style-margin();
 }
 
@@ -113,7 +99,7 @@ $margin-size-xxs: $space-xxs !default;
   @include --is-margin-way(left, auto, auto, false);
 }
 
-@include export-style-margin() {
+@include generate-style($option-generate-margin) {
   @include musubii-style-margin-way();
 }
 
@@ -147,7 +133,7 @@ $margin-size-xxs: $space-xxs !default;
   @include --is-margin-vertical(auto, auto, false);
 }
 
-@include export-style-margin() {
+@include generate-style($option-generate-margin) {
   @include musubii-style-margin-vertical();
 }
 
@@ -181,6 +167,6 @@ $margin-size-xxs: $space-xxs !default;
   @include --is-margin-horizontal(auto, auto, false);
 }
 
-@include export-style-margin() {
+@include generate-style($option-generate-margin) {
   @include musubii-style-margin-horizontal();
 }

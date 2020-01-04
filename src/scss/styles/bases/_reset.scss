@@ -3,25 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
-//----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-reset: true !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-// Export Style
-@mixin export-style-reset() {
-  @if $option-mixin-mode == false and $option-style-reset == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Reset
 //----------------------------------------------------
 
@@ -250,6 +231,6 @@ $option-style-reset: true !default;
   }
 }
 
-@include export-style-reset() {
+@include generate-style($option-generate-reset) {
   @include musubii-style-reset();
 }

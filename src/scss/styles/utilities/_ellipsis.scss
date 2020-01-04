@@ -3,24 +3,6 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
-//----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-ellipsis: true !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-ellipsis() {
-  @if $option-mixin-mode == false and $option-style-ellipsis == true {
-    @content;
-  }
-}
-
-//----------------------------------------------------
 // / Style - Ellipsis
 //----------------------------------------------------
 
@@ -32,6 +14,6 @@ $option-style-ellipsis: true !default;
   }
 }
 
-@include export-style-ellipsis() {
+@include generate-style($option-generate-ellipsis) {
   @include musubii-style-ellipsis();
 }

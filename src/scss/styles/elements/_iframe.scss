@@ -3,26 +3,12 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
-// / Variables (Default)
+// / Variables
 //----------------------------------------------------
-
-// Option
-$option-mixin-mode: false !default;
-$option-style-iframe: true !default;
 
 // Selectors
 $selector-iframe-wrap: "\.iframe-wrap" !default;
 $selector-iframe: "\.iframe" !default;
-
-//----------------------------------------------------
-// / Mixins (Default)
-//----------------------------------------------------
-
-@mixin export-style-iframe() {
-  @if $option-mixin-mode == false and $option-style-iframe == true {
-    @content;
-  }
-}
 
 //----------------------------------------------------
 // / Style - iframe
@@ -32,7 +18,7 @@ $selector-iframe: "\.iframe" !default;
   display: block;
 }
 
-@include export-style-iframe() {
+@include generate-style($option-generate-iframe) {
   #{$selector-iframe} {
     @include musubii-style-iframe();
   }
@@ -64,7 +50,7 @@ $selector-iframe: "\.iframe" !default;
   }
 }
 
-@include export-style-iframe() {
+@include generate-style($option-generate-iframe) {
   #{$selector-iframe-wrap} {
     @include musubii-style-iframe-wrap();
   }

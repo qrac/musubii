@@ -2,9 +2,53 @@
 // Variables: Option
 //----------------------------------------------------
 
+//----------------------------------------------------
+// / Mode
+//----------------------------------------------------
+
 $option-css-variables: false !default;
 $option-mixin-mode: false !default;
 
+//----------------------------------------------------
+// / Theme
+//----------------------------------------------------
+
 $option-theme-default: "light" !default;
 $option-theme-media: false !default;
-$option-theme-attr: false !default;
+$option-theme-attr: true !default;
+
+//----------------------------------------------------
+// / Generate
+//----------------------------------------------------
+
+$option-generate-reset: true !default;
+$option-generate-html: true !default;
+
+$option-generate-section: true !default;
+$option-generate-grid: true !default;
+$option-generate-box: true !default;
+$option-generate-card: true !default;
+$option-generate-joint: true !default;
+
+$option-generate-text: true !default;
+$option-generate-button: true !default;
+$option-generate-badge: true !default;
+$option-generate-list: true !default;
+$option-generate-table: true !default;
+$option-generate-form: true !default;
+$option-generate-iframe: true !default;
+$option-generate-icon: true !default;
+$option-generate-alert: true !default;
+$option-generate-wysiwyg: true !default;
+
+$option-generate-display: true !default;
+$option-generate-size: true !default;
+$option-generate-flex: true !default;
+$option-generate-space: true !default;
+$option-generate-margin: true !default;
+$option-generate-padding: true !default;
+$option-generate-centering: true !default;
+$option-generate-overflow: true !default;
+$option-generate-scroll: true !default;
+$option-generate-ellipsis: true !default;
+$option-generate-clearfix: true !default;
