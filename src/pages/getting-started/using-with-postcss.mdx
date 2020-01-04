@@ -1,0 +1,45 @@
+export const meta = {
+  title: "Using with PostCSS",
+  path: "/getting-started/using-with-postcss",
+  docsPath: "getting-started/using-with-postcss"
+}
+
+import PreviewSources from "~/components/previews/preview-sources"
+
+# Using with PostCSS
+
+## Table of Contents
+
+contents list
+
+## Detail
+
+MUSUBii はビルド時に PostCSS 及びそのプラグインを使用しています。SCSS で同様の CSS を再現する場合は必要なライブラリをインストールして設定を行ってください。以下は再現するための例です。
+
+## Config
+
+`postcss.config.js`
+
+```js
+module.exports = {
+  plugins: [
+    require("postcss-flexbugs-fixes"),
+    require("postcss-sort-media-queries"),
+    require("autoprefixer")
+  ]
+}
+```
+
+## Autoprefixer
+
+`package.json`
+
+```json
+{
+  "browserslist": ["> 3% in JP", "ie 11", "android 4.4", "last 1 versions"]
+}
+```
+
+## Sources
+
+<PreviewSources title={meta.title} docsPath={meta.docsPath} />

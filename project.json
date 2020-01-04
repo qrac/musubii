@@ -25,6 +25,14 @@
           "title": "Using with SCSS"
         },
         {
+          "id": "using-with-postcss",
+          "title": "Using with PostCSS"
+        },
+        {
+          "id": "dark-mode",
+          "title": "Dark Mode"
+        },
+        {
           "id": "support",
           "title": "Support"
         }
