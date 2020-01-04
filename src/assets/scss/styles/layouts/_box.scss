@@ -28,8 +28,11 @@
     @include wide() {
       left: calc(50% + #{$section-inner-width-wide} / 2 - #{$space-sm});
     }
-    @include ie {
-      display: none;
-    }
+  }
+}
+
+[data-browser="legacy"] {
+  .box.is-actions {
+    display: none;
   }
 }

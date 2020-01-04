@@ -11,14 +11,37 @@ import AppActions from "~/components/commons/app-actions"
 import LayoutDefault from "~/components/commons/layout-default"
 import LayoutDocs from "~/components/commons/layout-docs"
 
+import "~/assets/scss/project-legacy.scss"
+import "~/assets/scss/project.scss"
+
 class MyApp extends App {
+  constructor(props) {
+    super(props)
+    this.state = {
+      legacy: false
+    }
+  }
   componentDidMount() {
-    const userAgent = window.navigator.userAgent.toLowerCase()
+    /*const userAgent = window.navigator.userAgent.toLowerCase()
 
     if (userAgent.indexOf("msie") != -1 || userAgent.indexOf("trident") != -1) {
-      require("~/assets/scss/project-ie.scss")
+      //require("~/assets/scss/project-legacy.scss")
+      document.body.setAttribute("data-browser", "legacy")
+      this.setState({ legacy: true })
     } else {
-      require("~/assets/scss/project.scss")
+      //require("~/assets/scss/project.scss")
+      document.body.setAttribute("data-browser", "modern")
+    }*/
+
+    function browserCanUseCssVariables() {
+      return window.CSS && CSS.supports("color", "var(--check-variable)")
+    }
+
+    if (browserCanUseCssVariables()) {
+      document.body.setAttribute("data-browser", "modern")
+    } else {
+      document.body.setAttribute("data-browser", "legacy")
+      this.setState({ legacy: true })
     }
 
     const isLocal = localStorage.getItem("theme")

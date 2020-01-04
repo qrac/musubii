@@ -47,20 +47,20 @@
           "title": "npm"
         },
         {
-          "id": "nuxt",
-          "title": "Nuxt"
-        },
-        {
-          "id": "gridsome",
-          "title": "Gridsome"
+          "id": "next",
+          "title": "Next"
         },
         {
           "id": "gatsby",
           "title": "Gatsby"
         },
         {
-          "id": "next",
-          "title": "Next"
+          "id": "nuxt",
+          "title": "Nuxt"
+        },
+        {
+          "id": "gridsome",
+          "title": "Gridsome"
         },
         {
           "id": "gulp",

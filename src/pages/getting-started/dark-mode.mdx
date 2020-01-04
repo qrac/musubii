@@ -16,6 +16,28 @@ contents list
 
 MUSUBii の v7.0.0 以降は [SCSS](/getting-started/using-with-scss) を利用することでダークモード対応が可能です。
 
+## What is dark mode
+
+ダークモードとは、黒系を基調とした色合いの UI スキンを適応した状態のことを言います。ダークモードは目の疲労軽減・有機 LE の省電力化などのメリットを背景に広がり始めました。
+
+2019 年に、Google が [Material Design](https://material.io/design/color/dark-theme.html#) 対応し [Android 10](https://www.android.com/android-10/) へ反映、Apple も [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/dark-mode/) 適応後 [iOS・iPadOS](https://support.apple.com/ja-jp/HT210332) や [macOS](https://support.apple.com/ja-jp/HT208976) に実装したことで一般化しつつあります。
+
+呼び方は「ダークモード・ダークテーマ・ナイトモード・シャドウモード」など様々で、ブルーライト軽減の目的で実装された iOS の「ナイトシフト」も混同しがちですが、OS ベースで全体に設定したものをダークモード、Web サイトやアプリ毎に適応できるものをダークテーマと考えるとスッキリします。
+
+MUSUBii は OS ベースのダークモードを認識する対応ができますので、この頁はダークモードの章としています。また、JavaScript などで任意の `data` 属性等をトリガーとして対応することも可能なため、SCSS 変数ファイルは `_theme-dark.scss` と名付けています。
+
+## Activation
+
+利用に関して、実装の要となっている CSS Variables が IE11・Android 4.4 (OS Browser) 非対応のため、日本向けの Web 制作に照準を合わせている MUSUBii ではデフォルト設定を `false` としています。SCSS 変数 `$option-css-variables` を `true` で上書きすることで有効化できます。
+
+```scss
+// Override
+$option-css-variables: true;
+
+// Import
+@import "~musubii/src/scss/configs/_import.scss";
+```
+
 ## Sources
 
 <PreviewSources title={meta.title} docsPath={meta.docsPath} />

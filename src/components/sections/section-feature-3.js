@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import DemoImageFeature3 from "~/assets/images/demo-image-feature-3"
 
 export default () => {
@@ -19,8 +21,16 @@ export default () => {
                 </span>
               </h2>
               <p className="text is-line-height-lg is-sm">
-                v7以降はSCSSのカスタマイズ機能を大幅拡張しました。変数でCSS
-                Variablesを有効化すると簡単にダークモード対応ができます。その他、セレクタ名を変更したり、mixinだけ利用する使い方も可能です。
+                v7以降は
+                <Link href="/getting-started/using-with-scss">
+                  <a className="text is-link is-primary">SCSS</a>
+                </Link>
+                のカスタマイズ機能を大幅拡張しました。変数でCSS
+                Variablesを有効化すると簡単に
+                <Link href="/getting-started/dark-mode">
+                  <a className="text is-link is-primary">ダークモード</a>
+                </Link>
+                対応ができます。その他、セレクタ名を変更したり、mixinだけ利用する使い方も可能です。
               </p>
             </div>
           </div>
