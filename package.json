@@ -35,7 +35,7 @@
     "extract:sass": "bash ./tasks/extract-sass.sh",
     "extract:json": "bash ./tasks/extract-json.sh",
     "extract:replace": "bash ./tasks/extract-replace.sh",
-    "clean": "rmtrash ./out ./next ./src/assets/extracts/.temp"
+    "clean": "rmtrash ./out ./next ./temp ./src/assets/extracts/.temp"
   },
   "browserslist": [
     "> 3% in JP",

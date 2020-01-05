@@ -34,7 +34,26 @@ const withCSS = require("@zeit/next-css")
 const withSass = require("@zeit/next-sass")
 const withPlugins = require("next-compose-plugins")
 
-const nextConfig = {}
+//const ThemesGeneratorPlugin = require("themes-switch/ThemesGeneratorPlugin")
+//const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
+const nextConfig = {
+  /*webpack: config => {
+    config.module.rules.push({
+      test: /\.(scss|css)$/,
+      use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+    }),
+      config.plugins.push(
+        new ThemesGeneratorPlugin({
+          srcDir: "src",
+          themesDir: "src/assets/scss",
+          outputDir: "static/css",
+          defaultStyleName: "project.scss"
+        })
+      )
+    return config
+  }*/
+}
 
 module.exports = withPlugins(
   [

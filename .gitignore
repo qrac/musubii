@@ -5,4 +5,5 @@ db.json
 node_modules/
 .next
 .temp
+temp
 out
