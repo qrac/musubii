@@ -1,44 +1,51 @@
-module.exports = () => {
-  const slug = require("remark-slug")
-  const toc = require("remark-toc")
-  const customBlocks = require("remark-custom-blocks")
+const remarkSlug = require("remark-slug")
+const remarkToc = require("remark-toc")
+const remarkCustomBlocks = require("remark-custom-blocks")
 
-  const tocOptions = {
-    maxDepth: 2
-  }
-  const customBlocksTemplate = {
-    note: {
-      classes: "demo-box is-note",
-      title: "optional"
-    },
-    tips: {
-      classes: "demo-box is-tips",
-      title: "optional"
-    },
-    warning: {
-      classes: "demo-box is-warning",
-      title: "optional"
-    }
-  }
-
-  const withCSS = require("@zeit/next-css")
-  const withSass = require("@zeit/next-sass")
-  const withMDX = require("@next/mdx")({
-    extension: /\.mdx?$/,
-    options: {
-      remarkPlugins: [
-        slug,
-        [toc, tocOptions],
-        [customBlocks, customBlocksTemplate]
-      ]
-    }
-  })
-
-  return withCSS(
-    withSass(
-      withMDX({
-        pageExtensions: ["js", "jsx", "mdx", "md"]
-      })
-    )
-  )
+const remarkTocOptions = {
+  maxDepth: 2
 }
+const remarkCustomBlocksTemplate = {
+  note: {
+    classes: "demo-box is-note",
+    title: "optional"
+  },
+  tips: {
+    classes: "demo-box is-tips",
+    title: "optional"
+  },
+  warning: {
+    classes: "demo-box is-warning",
+    title: "optional"
+  }
+}
+
+const withMDX = require("@next/mdx")({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [
+      remarkSlug,
+      [remarkToc, remarkTocOptions],
+      [remarkCustomBlocks, remarkCustomBlocksTemplate]
+    ]
+  }
+})
+const withCSS = require("@zeit/next-css")
+const withSass = require("@zeit/next-sass")
+const withPlugins = require("next-compose-plugins")
+
+const nextConfig = {}
+
+module.exports = withPlugins(
+  [
+    [
+      withMDX,
+      {
+        pageExtensions: ["js", "jsx", "mdx", "md"]
+      }
+    ],
+    [withCSS],
+    [withSass]
+  ],
+  nextConfig
+)
