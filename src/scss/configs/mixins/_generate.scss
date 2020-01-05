@@ -15,8 +15,7 @@
         @include theme-media($theme-id) {
           @content;
         }
-      }
-      @if $option-theme-attr == true {
+      } @else {
         @include theme-attr($data-attr, $theme-id) {
           @content;
         }
