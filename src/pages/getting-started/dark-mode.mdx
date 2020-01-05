@@ -16,9 +16,9 @@ contents list
 
 MUSUBii の v7.0.0 以降は [SCSS](/getting-started/using-with-scss) を利用することでダークモード対応が可能です。
 
-## What is dark mode
+## What is Dark Mode
 
-ダークモードとは、黒系を基調とした色合いの UI スキンを適応した状態のことを言います。ダークモードは目の疲労軽減・有機 LE の省電力化などのメリットを背景に広がり始めました。
+ダークモードとは、黒を基調とした色合いの UI スキンを適応した状態のことを言います。ダークモードは目の疲労軽減・有機 LE の省電力化などのメリットを背景に広がり始めました。
 
 2019 年に、Google が [Material Design](https://material.io/design/color/dark-theme.html#) 対応し [Android 10](https://www.android.com/android-10/) へ反映、Apple も [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/dark-mode/) 適応後 [iOS・iPadOS](https://support.apple.com/ja-jp/HT210332) や [macOS](https://support.apple.com/ja-jp/HT208976) に実装したことで一般化しつつあります。
 
@@ -28,11 +28,59 @@ MUSUBii は OS ベースのダークモードを認識する対応ができま�
 
 ## Activation
 
-利用に関して、実装の要となっている CSS Variables が IE11・Android 4.4 (OS Browser) 非対応のため、日本向けの Web 制作に照準を合わせている MUSUBii ではデフォルト設定を `false` としています。SCSS 変数 `$option-css-variables` を `true` で上書きすることで有効化できます。
+SCSS 変数 `$option-css-variables` を `true` で上書きすることで有効化できます。
 
 ```scss
 // Override
 $option-css-variables: true;
+
+// Import
+@import "~musubii/src/scss/configs/_import.scss";
+```
+
+[[warning | Warning]]
+| デフォルトは `false` です。有効化すると CSS Variables に対応していない IE11・Android 4.4 (OS Browser) では色設定が認識されなくなります。
+
+## Media Query or Attribute
+
+モダンブラウザには OS のダークモード設定を認識するメディアクエリ `prefers-color-scheme` が実装され始めています。これを利用する場合は、CSS Variables 有効化に加え SCSS 変数 `$option-theme-media` を `true` で上書きします。
+
+```scss
+// Override
+$option-css-variables: true;
+$option-theme-media: true;
+
+// Import
+@import "~musubii/src/scss/configs/_import.scss";
+```
+
+[[warning | Warning]]
+| デフォルトは `false` です。`prefers-color-scheme` が使えるブラウザは限られていますし「ダークモードは使っていないけれどサイトはダークにしたい」などの自由な切り替えに対応できません。
+
+MUSUBii のデフォルト設定では、カスタムデータ属性（デフォルトは `data-theme="dark"`）をトリガーにしてダークテーマへ切り替えられる CSS を出力しています。
+
+このドキュメントサイトでは、最初に JavaScript で `prefers-color-scheme: dark` が使用されているかを判定してダークテーマ・ライトテーマを適応。その後はサイト右上の切り替えボタンを押すたびに localStrage へ状態を保存する手法を取っています。
+
+```js
+const isLocal = localStorage.getItem("theme")
+const isDark = window.matchMedia("(prefers-color-scheme: dark)")
+
+if (isLocal) {
+  document.body.setAttribute("data-theme", isLocal)
+} else if (isDark.matches) {
+  document.body.setAttribute("data-theme", "dark")
+} else {
+  document.body.setAttribute("data-theme", "light")
+}
+```
+
+## Default Dark
+
+`$option-theme-default` を `dark` で上書きすることで、デフォルトの色合いをダークテーマにすることが可能です。CSS Variables を有効化していない状態でもこの機能は使えます。
+
+```scss
+// Override
+$option-theme-default: "dark";
 
 // Import
 @import "~musubii/src/scss/configs/_import.scss";
