@@ -6,17 +6,17 @@
 // / Root
 //----------------------------------------------------
 
-@mixin generate-root($theme-id, $data-attr) {
+@mixin generate-root($theme-id, $theme-attr) {
   @if $option-mixin-mode == false and $option-css-variables == true {
     @if $option-theme-default == $theme-id {
       @content;
     } @else {
-      @if $option-theme-media == true {
-        @include theme-media($theme-id) {
+      @if $option-theme-trigger-media == true {
+        @include theme-trigger-media($theme-id) {
           @content;
         }
       } @else {
-        @include theme-attr($data-attr, $theme-id) {
+        @include theme-trigger-attr($theme-attr) {
           @content;
         }
       }

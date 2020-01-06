@@ -3,6 +3,8 @@
 //----------------------------------------------------
 
 $option-css-variables: true;
+$selector-root-dark: "body";
+$selector-root-dark-attr: '&[data-theme="dark"]';
 
 @import "configs/_import.scss";
 @import "styles/_import.scss";

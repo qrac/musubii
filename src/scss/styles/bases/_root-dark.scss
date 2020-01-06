@@ -8,7 +8,7 @@
 
 // Selectors
 $selector-root-dark: ":root" !default;
-$selector-root-dark-attr: "data-theme" !default;
+$selector-root-dark-attr: '[data-theme="dark"]' !default;
 
 //----------------------------------------------------
 // / Style - Root Dark

@@ -43,12 +43,12 @@ $option-css-variables: true;
 
 ## Media Query or Attribute
 
-モダンブラウザには OS のダークモード設定を認識するメディアクエリ `prefers-color-scheme` が実装され始めています。これを利用する場合は、CSS Variables 有効化に加え SCSS 変数 `$option-theme-media` を `true` で上書きします。
+モダンブラウザには OS のダークモード設定を認識するメディアクエリ `prefers-color-scheme` が実装され始めています。これを利用する場合は、CSS Variables 有効化に加え SCSS 変数 `$option-theme-trigger-media` を `true` で上書きします。
 
 ```scss
 // Override
 $option-css-variables: true;
-$option-theme-media: true;
+$option-theme-trigger-media: true;
 
 // Import
 @import "~musubii/src/scss/configs/_import.scss";

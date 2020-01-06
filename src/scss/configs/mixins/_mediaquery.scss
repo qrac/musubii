@@ -180,16 +180,16 @@
 // / Theme
 //----------------------------------------------------
 
-// Theme - OS (light or dark)
-@mixin theme-media($theme-id) {
+// Trigger - Media Query (light or dark)
+@mixin theme-trigger-media($theme-id) {
   @media (prefers-color-scheme: #{$theme-id}) {
     @content;
   }
 }
 
-// Theme - Custom Attributes (ex: data-theme, dark)
-@mixin theme-attr($data-attr, $theme-id) {
-  [#{$data-attr}="#{$theme-id}"] {
+// Trigger - Attribute (ex: [data-theme="dark"])
+@mixin theme-trigger-attr($theme-attr) {
+  #{$theme-attr} {
     @content;
   }
 }

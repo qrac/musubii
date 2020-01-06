@@ -8,7 +8,7 @@
 
 // Selectors
 $selector-root-light: ":root" !default;
-$selector-root-light-attr: "data-theme" !default;
+$selector-root-light-attr: '[data-theme="light"]' !default;
 
 //----------------------------------------------------
 // / Style - Root Light
