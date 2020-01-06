@@ -35,7 +35,11 @@ class MyApp extends App {
     }*/
 
     cssVars({
-      //onlyLegacy: false
+      //onlyLegacy: false,
+      /*onComplete() {
+        console.log("test")
+        document.body.setAttribute("data-browser", "legacy")
+      }*/
     })
 
     function browserCanUseCssVariables() {

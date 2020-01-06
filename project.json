@@ -29,12 +29,20 @@
           "title": "Using with PostCSS"
         },
         {
+          "id": "css-variables",
+          "title": "CSS Variables"
+        },
+        {
           "id": "dark-mode",
           "title": "Dark Mode"
         },
         {
           "id": "support",
           "title": "Support"
+        },
+        {
+          "id": "license",
+          "title": "License"
         }
       ]
     },
@@ -132,6 +140,10 @@
           "id": "mixins",
           "heading": "Mixins",
           "items": [
+            {
+              "id": "generate",
+              "title": "Generate"
+            },
             {
               "id": "mediaquery",
               "title": "Media Query"

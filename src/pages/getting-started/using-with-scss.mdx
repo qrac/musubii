@@ -14,7 +14,7 @@ contents list
 
 ## Detail
 
-MUSUBii は SCSS 製です。利用時に SCSS を使うことで細かいカスタマイズが可能となります。まずは、npm 経由で[インストール](/installation/npm)を行ってください。
+MUSUBii は SCSS 製です。利用時に SCSS を使うことで細かいカスタマイズが可能となります。まずは、[npm](/installation/npm) でインストールを行ってください。
 
 ```
 npm install musubii
@@ -114,7 +114,7 @@ musubii/src/scss/styles/_import.scss
 
 MUSUBii の SCSS 変数にはすべて `!default` が付与されており、インポートより前に同名の変数を宣言することで上書きできます。
 
-例えば、デフォルトでは CSS Variables が有効化されておらず、ダークモード対応ができません。有効化する場合は次のように `configs` よりも先に `$option-css-variables: true;` を書きます。
+例えば、デフォルトでは [CSS Variables](/getting-started/css-variables) が有効化されておらず、[ダークモード](/getting-started/dark-mode)対応ができません。有効化する場合は次のように `configs` よりも先に `$option-css-variables: true;` を書きます。
 
 ```scss
 // Override
@@ -124,7 +124,22 @@ $option-css-variables: true;
 @import "~musubii/src/scss/configs/_import.scss";
 ```
 
-SCSS 変数 `$option-css-variables` は「[Option](/configs/variables/option)」を参照ください。
+[[warning | Warning]]
+| CSS Variables を有効化すると、対応していない IE11・Android 4.4 (OS Browser) では色プロパティが認識されなくなります。[Ponyfill](/getting-started/css-variables#ponyfill) の導入を検討してください。
+
+その他、プライマリーカラーを全体的に変更・ボタンの class 名をプレフィックス付きに変更・ボタンの角をもっと丸くするなど、様々な調整が可能です。
+
+```scss
+// Override
+$theme-primary: red;
+$selector-button: ".c-musubii-button";
+$button-border-radius: 12px;
+
+// Import
+@import "~musubii/src/scss/configs/_import.scss";
+```
+
+SCSS 変数はコンフィグ・スタイルの各ページを参照してください。
 
 ## Reduce
 
@@ -163,18 +178,8 @@ MUSUBii の スタイルはすべて Mixin で定義されているため、他�
 
 ```scss
 $option-mixin-mode: true;
+@import "musubii/src/scss/configs/_import.scss";
 @import "musubii/src/styles/elements/_button.scss";
-
-.category-button {
-  @include musubii-style-button();
-  @include musubii-style-button-plain();
-}
-```
-
-Dart Sass などで `@use` が使える状況であれば、次のようにスコープして書けます。
-
-```scss
-@use "musubii/src/styles/elements/_button.scss" with ($option-mixin-mode: true);
 
 .category-button {
   @include musubii-style-button();

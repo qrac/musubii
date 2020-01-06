@@ -14,9 +14,9 @@ contents list
 
 ## Detail
 
-MUSUBii の v7.0.0 以降は [SCSS](/getting-started/using-with-scss) を利用することでダークモード対応が可能です。
+[SCSS](/getting-started/using-with-scss) を利用することでダークモード対応が可能です。
 
-## What is Dark Mode
+## What is this
 
 ダークモードとは、黒を基調とした色合いの UI スキンを適応した状態のことを言います。ダークモードは目の疲労軽減・有機 LE の省電力化などのメリットを背景に広がり始めました。
 
@@ -24,7 +24,7 @@ MUSUBii の v7.0.0 以降は [SCSS](/getting-started/using-with-scss) を利用�
 
 呼び方は「ダークモード・ダークテーマ・ナイトモード・シャドウモード」など様々で、ブルーライト軽減の目的で実装された iOS の「ナイトシフト」も混同しがちですが、OS ベースで全体に設定したものをダークモード、Web サイトやアプリ毎に適応できるものをダークテーマと考えるとスッキリします。
 
-MUSUBii は OS ベースのダークモードを認識する対応ができますので、この頁はダークモードの章としています。また、JavaScript などで任意の `data` 属性等をトリガーとして対応することも可能なため、SCSS 変数ファイルは `_theme-dark.scss` と名付けています。
+MUSUBii は OS ベースのダークモードを認識する対応ができますので、このページをダークモードの章としています。また、JavaScript などで任意の `data` 属性等をトリガーとして対応することも可能なため、SCSS 変数ファイルは `_theme-dark.scss` と名付けています。
 
 ## Activation
 
@@ -39,9 +39,9 @@ $option-css-variables: true;
 ```
 
 [[warning | Warning]]
-| デフォルトは `false` です。有効化すると CSS Variables に対応していない IE11・Android 4.4 (OS Browser) では色設定が認識されなくなります。
+| デフォルトは `false` です。有効化すると CSS Variables に対応していない IE11・Android 4.4 (OS Browser) では色プロパティが認識されなくなります。[Ponyfill](/getting-started/css-variables#ponyfill) の導入を検討してください。
 
-## Media Query or Attribute
+## Trigger
 
 モダンブラウザには OS のダークモード設定を認識するメディアクエリ `prefers-color-scheme` が実装され始めています。これを利用する場合は、CSS Variables 有効化に加え SCSS 変数 `$option-theme-trigger-media` を `true` で上書きします。
 
