@@ -4,6 +4,7 @@ import App from "next/app"
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 config.autoAddCss = false
+import cssVars from "css-vars-ponyfill"
 
 import AppHeader from "~/components/commons/app-header"
 import AppFooter from "~/components/commons/app-footer"
@@ -11,7 +12,7 @@ import AppActions from "~/components/commons/app-actions"
 import LayoutDefault from "~/components/commons/layout-default"
 import LayoutDocs from "~/components/commons/layout-docs"
 
-import "~/assets/scss/project-legacy.scss"
+//import "~/assets/scss/project-legacy.scss"
 import "~/assets/scss/project.scss"
 
 class MyApp extends App {
@@ -32,6 +33,10 @@ class MyApp extends App {
       //require("~/assets/scss/project.scss")
       document.body.setAttribute("data-browser", "modern")
     }*/
+
+    cssVars({
+      //onlyLegacy: false
+    })
 
     function browserCanUseCssVariables() {
       return window.CSS && CSS.supports("color", "var(--check-variable)")
@@ -60,7 +65,10 @@ class MyApp extends App {
     return (
       <div className="app">
         <AppHeader />
-        <AppActions checkHome={router.route === "/" ? true : false} />
+        <AppActions
+          legacy={this.state.legacy}
+          checkHome={router.route === "/" ? true : false}
+        />
         <main className="main">
           {router.route === "/" ? (
             <LayoutDefault>

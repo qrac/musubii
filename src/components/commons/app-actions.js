@@ -1,9 +1,13 @@
 import ToggleTheme from "~/components/parts/toggle-theme"
 
-export default ({ checkHome }) => {
+export default ({ legacy, checkHome }) => {
   return (
     <div className="box is-actions is-top-right">
-      <ToggleTheme checkHome={checkHome} />
+      {(() => {
+        if (!legacy) {
+          return <ToggleTheme checkHome={checkHome} />
+        }
+      })()}
     </div>
   )
 }
