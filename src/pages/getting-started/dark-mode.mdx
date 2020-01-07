@@ -59,7 +59,7 @@ $option-theme-trigger-media: true;
 
 MUSUBii のデフォルト設定では、カスタムデータ属性（デフォルトは `data-theme="dark"`）をトリガーにしてダークテーマへ切り替えられる CSS を出力しています。
 
-このドキュメントサイトでは、最初に JavaScript で `prefers-color-scheme: dark` が使用されているかを判定してダークテーマ・ライトテーマを適応。その後はサイト右上の切り替えボタンを押すたびに localStrage へ状態を保存する手法を取っています。
+このドキュメントサイトでは、JavaScript で最初に `prefers-color-scheme: dark` が使用されているかを判定してダークテーマ・ライトテーマを適応。その後はサイト右上の切り替えボタンを押すたびに localStrage へ状態を保存する手法を取っています。
 
 - [musubii/\_app.js at master · qrac/musubii](https://github.com/qrac/musubii/blob/master/src/pages/_app.js)
 - [musubii/toggle-theme.js at master · qrac/musubii](https://github.com/qrac/musubii/blob/master/src/components/parts/toggle-theme.js)
