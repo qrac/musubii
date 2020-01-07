@@ -14,7 +14,7 @@ Web デザインの腹ごなしに、CSS フレームワーク「MUSUBii（む�
 - 日本語フォントの利用を想定
 - JavaScript 未使用
 
-## Basic Structure
+## Detail
 
 ### Markup
 
@@ -47,7 +47,7 @@ CSS は 5 つの画面サイズで可変できるレスポンシブウェブデ�
 | `desktop` | `992px ~ 1199px` |
 | `wide`    | `1200px ~`       |
 
-## Installation
+## Install
 
 npm インストールからの SCSS 利用を想定しています。
 
