@@ -8,73 +8,73 @@
 
 _「腹が減ってはコードが書けぬ」_
 
-Web デザインの腹ごなしに、HTML/CSS フレームワーク「MUSUBii（むすびー）」をどうぞ。MUSUBii は、日本語サイトのデザイン・コーディングを元気づけます。
+Web デザインの腹ごなしに、CSS フレームワーク「MUSUBii（むすびー）」をどうぞ。MUSUBii は、日本語サイトのデザイン・コーディングを元気づけます。
 
 - OOCSS を応用したラフな設計
 - 日本語フォントの利用を想定
 - JavaScript 未使用
 
-## Detail
+## Basic Structure
 
 ### Markup
 
 要素 `.(xxxx)` 1 つに対して、状態 `.is-(xxxx)` を複数追加してスタイリングするのが基本です。また、すべてのクラス名は英小文字・数字・ハイフン 1 つで構成されています。
 
+### Unit
+
+CSS の単位は em と px を採用。エレメントの大きさをフォントサイズ変更で一括調整できます。また、すべての値には 16 を割れる数値を用いているため、サイズ変更を行った場合に割り切れない端数が出づらくなっています。
+
 ### Layers
 
-CSS のレイヤーは主に 4 つに分類されています。
+CSS のレイヤーは大きく 4 つに分類。「下地にレイアウトを組んでボタンやテキストを置いたら調整する」使い方です。実務で固有のスタイルとなる `components` や `pages` が加わることも想定しています。
 
-- _Base_ … リセット CSS などの下地
-- _Layout_ … 余白・マージン・グリッドシステム
-- _Module_ … ボタン・テキスト・リスト・見出しなど
-- _Utility_ … 調整用モディファイア
+| Layer       | Detail                           |
+| ----------- | -------------------------------- |
+| `bases`     | 文字色などの下地                 |
+| `layouts`   | セクション・グリッドシステムなど |
+| `elements`  | ボタン・テキスト・フォームなど   |
+| `utilities` | 調整用モディファイア             |
 
-### RWD
+### Responsive
 
-5 つの画面サイズで可変できるレスポンシブウェブデザインになっています。
+CSS は 5 つの画面サイズで可変できるレスポンシブウェブデザインになっています。
 
-- _Mobile_ … ~ 575px
-- _Fablet_ … 576px ~ 767px
-- _Tablet_ … 768px ~ 991px
-- _Desktop_ … 992px ~ 1199px
-- _Wide_ … 1200px ~
+| Name      | Value            |
+| --------- | ---------------- |
+| `mobile`  | `~ 575px`        |
+| `fablet`  | `576px ~ 767px`  |
+| `tablet`  | `768px ~ 991px`  |
+| `desktop` | `992px ~ 1199px` |
+| `wide`    | `1200px ~`       |
 
-## Use
+## Installation
 
-### Download
+npm インストールからの SCSS 利用を想定しています。
 
-ファイルをダウンロード後、CSS ファイル `musubii.min.css` を読み込んでお使いください。
-
-```html
-<link rel="stylesheet" href="css/musubii.min.css" />
-```
-
-### [CDN](https://www.jsdelivr.com/package/npm/musubii)
-
-```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/musubii@6.6.0/docs/css/musubii.min.css"
-/>
-```
-
-### [npm](https://www.npmjs.com/package/musubii)
+- [musubii - npm](https://www.npmjs.com/package/musubii)
 
 ```
 npm install musubii
+```
+
+```
+yarn add musubii
 ```
 
 ## Support
 
 日本で多く使われているブラウザを基準にバグフィックスを行なっています。
 
-| Chrome | Firefox | IE  |  Ege   | Safari(Mac) |
-| :----: | :-----: | :-: | :----: | :---------: |
-| Newest | Newest  | 11~ | Newest |   Newest    |
+| Chrome | Firefox | IE    | Ege    | Safari(Mac) |
+| ------ | ------- | ----- | ------ | ----------- |
+| Newest | Newest  | \*11~ | Newest | Newest      |
 
 | Safari(iOS) | Chrome(Android) | Browser(Android) |
-| :---------: | :-------------: | :--------------: |
-|   Newest    |     Newest      |       4.4~       |
+| ----------- | --------------- | ---------------- |
+| Newest      | Newest          | \*4.4~           |
+
+- \*SCSS で CSS Variables を有効化した場合、 IE11・Android Browser では色プロパティが認識されなくなります。[Ponyfill](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) の導入を検討してください。
+- \*PostCSS の設定によっては IE11・Android Browser が非対応となります
 
 ## License
 
