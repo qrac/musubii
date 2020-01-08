@@ -19,7 +19,6 @@ sass-export "$simpleTempPath/configs/variables/_breakpoint.scss" -o "$simplePath
 sass-export "$simpleTempPath/configs/variables/_color.scss" -o "$simplePath/configs/variables/_color.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/variables/_font.scss" -o "$simplePath/configs/variables/_font.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/variables/_radius.scss" -o "$simplePath/configs/variables/_radius.json" -d "$importPath"
-sass-export "$simpleTempPath/configs/variables/_shadow.scss" -o "$simplePath/configs/variables/_shadow.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/variables/_space.scss" -o "$simplePath/configs/variables/_space.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/variables/_global.scss" -o "$simplePath/configs/variables/_global.json" -d "$importPath"
 
@@ -88,7 +87,6 @@ sass-export "$simpleTempPath/styles/utilities/_clearfix.scss" -o "$simplePath/st
 ###sass-export "$lightTempPath/configs/variables/_color.scss" -o "$lightPath/configs/variables/_color.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/variables/_font.scss" -o "$lightPath/configs/variables/_font.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/variables/_radius.scss" -o "$lightPath/configs/variables/_radius.json" -d "$importPath"
-###sass-export "$lightTempPath/configs/variables/_shadow.scss" -o "$lightPath/configs/variables/_shadow.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/variables/_space.scss" -o "$lightPath/configs/variables/_space.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/variables/_global.scss" -o "$lightPath/configs/variables/_global.json" -d "$importPath"
 
