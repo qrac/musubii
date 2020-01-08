@@ -5,7 +5,7 @@
 .demo-options-wrap {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.5em 0;
+  padding: 8px 0;
   border: 1px solid $convert-demo-box-line-border-color;
   border-radius: 2px;
 }
@@ -18,7 +18,7 @@
 .demo-option {
   display: inline-flex;
   flex-wrap: wrap;
-  padding: 0.25em 1.25em;
+  padding: 4px 20px;
 }
 
 .demo-option-title {
@@ -36,5 +36,5 @@
 }
 
 .demo-option-box {
-  padding: 0.5em 0;
+  padding: 8px 0;
 }

@@ -27,8 +27,8 @@
     display: flex;
     .item-child {
       //flex: 1 0 0%;
-      padding: 12px;
-      text-align: center;
+      padding: 8px 12px;
+      //text-align: center;
     }
   }
   .table-body {
@@ -39,7 +39,7 @@
       border-top: none;
     }
     @include mobile-fablet() {
-      padding: 12px 12px 16px;
+      padding: 12px 16px 16px;
       > :not(:first-child) {
         margin-top: 12px;
       }

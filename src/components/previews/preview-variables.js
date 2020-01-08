@@ -11,10 +11,14 @@ const modes = [
   //{ id: 2, text: "true (dark)", value: "dark" }
 ]
 
-const TableBodyItem = ({ item }) => {
+const TableBodyItem = ({ item, viewCompiled }) => {
   return (
     <li className="table-body-item">
-      <dl className="item-list is-tablet-4">
+      <dl
+        className={
+          viewCompiled ? "item-list is-tablet-4" : "item-list is-tablet-6"
+        }
+      >
         <dt className="item-term">Name</dt>
         <dd className="item-description">
           <div className="item-description-child">
@@ -22,7 +26,11 @@ const TableBodyItem = ({ item }) => {
           </div>
         </dd>
       </dl>
-      <dl className="item-list is-tablet-4">
+      <dl
+        className={
+          viewCompiled ? "item-list is-tablet-4" : "item-list is-tablet-6"
+        }
+      >
         <dt className="item-term">Default Value</dt>
         <dd className="item-description">
           <CheckColor value={item.value}>
@@ -34,7 +42,7 @@ const TableBodyItem = ({ item }) => {
         </dd>
       </dl>
       {(() => {
-        if (item.compiledValue) {
+        if (item.compiledValue && viewCompiled) {
           return (
             <dl className="item-list is-tablet-4">
               <dt className="item-term">Compiled Value</dt>
@@ -76,7 +84,45 @@ export class PreviewVariablesSingle extends React.Component {
           </header>
           <ul className="table-body">
             {this.state.simpleData.variables.map(variable => (
-              <TableBodyItem item={variable} key={variable.name} />
+              <TableBodyItem
+                item={variable}
+                key={variable.name}
+                viewCompiled={true}
+              />
+            ))}
+          </ul>
+        </article>
+      </div>
+    )
+  }
+}
+
+export class PreviewVariablesSingleNotCompiled extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      simpleData: require("~/assets/extracts/modes/simple/" +
+        this.props.filePath +
+        ".json")
+    }
+  }
+  render() {
+    return (
+      <div className="demo-box is-preview">
+        <article className="demo-flex-table">
+          <header className="table-header">
+            <div className="table-header-item">
+              <div className="item-child is-tablet-6">Name</div>
+              <div className="item-child is-tablet-6">Default Value</div>
+            </div>
+          </header>
+          <ul className="table-body">
+            {this.state.simpleData.variables.map(variable => (
+              <TableBodyItem
+                item={variable}
+                key={variable.name}
+                viewCompiled={false}
+              />
             ))}
           </ul>
         </article>
@@ -127,7 +173,11 @@ export class PreviewVariablesDouble extends React.Component {
               return (
                 <ul className="table-body">
                   {this.state.simpleData.variables.map(variable => (
-                    <TableBodyItem item={variable} key={variable.name} />
+                    <TableBodyItem
+                      item={variable}
+                      key={variable.name}
+                      viewCompiled={true}
+                    />
                   ))}
                 </ul>
               )
@@ -135,7 +185,11 @@ export class PreviewVariablesDouble extends React.Component {
               return (
                 <ul className="table-body">
                   {this.state.lightData.variables.map(variable => (
-                    <TableBodyItem item={variable} key={variable.name} />
+                    <TableBodyItem
+                      item={variable}
+                      key={variable.name}
+                      viewCompiled={true}
+                    />
                   ))}
                 </ul>
               )
@@ -173,6 +227,7 @@ export class PreviewVariablesCss extends React.Component {
                 item={variable}
                 cssVariables={true}
                 key={variable.name}
+                viewCompiled={true}
               />
             ))}
           </ul>

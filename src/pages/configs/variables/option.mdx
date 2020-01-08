@@ -1,6 +1,27 @@
 export const meta = {
   title: "Option",
-  path: "/configs/variables/option"
+  path: "/configs/variables/option",
+  docsPath: "configs/variables/option",
+  filePath: "configs/variables/_option"
 }
 
+import { PreviewVariablesSingleNotCompiled } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Option
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingleNotCompiled filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
