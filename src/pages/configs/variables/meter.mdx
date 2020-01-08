@@ -1,6 +1,27 @@
 export const meta = {
   title: "Meter",
-  path: "/configs/variables/meter"
+  path: "/configs/variables/meter",
+  docsPath: "configs/variables/meter",
+  filePath: "configs/variables/_meter"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Meter
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
