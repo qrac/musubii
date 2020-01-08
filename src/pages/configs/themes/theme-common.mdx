@@ -1,6 +1,27 @@
 export const meta = {
   title: "Theme Common",
-  path: "/configs/themes/theme-common"
+  path: "/configs/themes/theme-common",
+  docsPath: "configs/themes/theme-common",
+  filePath: "configs/themes/_theme-common"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Theme Common
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={true} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
