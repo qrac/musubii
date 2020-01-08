@@ -9,6 +9,30 @@
 // Selectors
 $selector-alert: "\.alert" !default;
 
+// Modifiers
+$modifier-alert-primary: "\.is-primary" !default;
+$modifier-alert-info: "\.is-info" !default;
+$modifier-alert-success: "\.is-success" !default;
+$modifier-alert-warning: "\.is-warning" !default;
+$modifier-alert-danger: "\.is-danger" !default;
+$modifier-alert-tail: '[class\*="is-tail-"]' !default;
+$modifier-alert-tail-top: '[class\*="is-tail-top-"]' !default;
+$modifier-alert-tail-right: '[class\*="is-tail-right-"]' !default;
+$modifier-alert-tail-bottom: '[class\*="is-tail-bottom-"]' !default;
+$modifier-alert-tail-left-: '[class\*="is-tail-left-"]' !default;
+$modifier-alert-tail-top-right: "\.is-tail-top-right" !default;
+$modifier-alert-tail-top-center: "\.is-tail-top-center" !default;
+$modifier-alert-tail-top-left: "\.is-tail-top-left" !default;
+$modifier-alert-tail-right-top: "\.is-tail-right-top" !default;
+$modifier-alert-tail-right-middle: "\.is-tail-right-middle" !default;
+$modifier-alert-tail-right-bottom: "\.is-tail-right-bottom" !default;
+$modifier-alert-tail-bottom-right: "\.is-tail-bottom-right" !default;
+$modifier-alert-tail-bottom-center: "\.is-tail-bottom-center" !default;
+$modifier-alert-tail-bottom-left: "\.is-tail-bottom-left" !default;
+$modifier-alert-tail-left-top: "\.is-tail-left-top" !default;
+$modifier-alert-tail-left-middle: "\.is-tail-left-middle" !default;
+$modifier-alert-tail-left-bottom: "\.is-tail-left-bottom" !default;
+
 // Alert
 $alert-padding: 0.675em 0.875em !default;
 $alert-background-color: $convert-background-2 !default;
@@ -52,44 +76,48 @@ $alert-tail-position-end: 10% !default;
 // / Style - Alert Role
 //----------------------------------------------------
 
-@mixin --is-alert-role($name, $bg-color, $border-color) {
-  &.is-#{$name} {
-    background-color: $bg-color;
-    border-color: $border-color;
-  }
+@mixin musubii-style-alert-primary() {
+  background-color: $alert-primary-background-color;
+  border-color: $alert-primary-border-color;
 }
 
-@mixin musubii-style-alert-role() {
-  @include --is-alert-role(
-    primary,
-    $alert-primary-background-color,
-    $alert-primary-border-color
-  );
-  @include --is-alert-role(
-    info,
-    $alert-info-background-color,
-    $alert-info-border-color
-  );
-  @include --is-alert-role(
-    success,
-    $alert-success-background-color,
-    $alert-success-border-color
-  );
-  @include --is-alert-role(
-    warning,
-    $alert-warning-background-color,
-    $alert-warning-border-color
-  );
-  @include --is-alert-role(
-    danger,
-    $alert-danger-background-color,
-    $alert-danger-border-color
-  );
+@mixin musubii-style-alert-info() {
+  background-color: $alert-info-background-color;
+  border-color: $alert-info-border-color;
+}
+
+@mixin musubii-style-alert-success() {
+  background-color: $alert-success-background-color;
+  border-color: $alert-success-border-color;
+}
+
+@mixin musubii-style-alert-warning() {
+  background-color: $alert-warning-background-color;
+  border-color: $alert-warning-border-color;
+}
+
+@mixin musubii-style-alert-danger() {
+  background-color: $alert-danger-background-color;
+  border-color: $alert-danger-border-color;
 }
 
 @include generate-style($option-generate-alert) {
   #{$selector-alert} {
-    @include musubii-style-alert-role();
+    &#{$modifier-alert-primary} {
+      @include musubii-style-alert-primary();
+    }
+    &#{$modifier-alert-info} {
+      @include musubii-style-alert-info();
+    }
+    &#{$modifier-alert-success} {
+      @include musubii-style-alert-success();
+    }
+    &#{$modifier-alert-warning} {
+      @include musubii-style-alert-warning();
+    }
+    &#{$modifier-alert-danger} {
+      @include musubii-style-alert-danger();
+    }
   }
 }
 
