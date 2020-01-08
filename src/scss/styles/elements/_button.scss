@@ -36,7 +36,7 @@ $button-border-radius: $radius-sm !default;
 $button-paint-text-color: $convert-button-paint-text-color !default;
 $button-line-height: $line-height-md !default;
 $button-transition: $global-transition !default;
-$button-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
+$button-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha !default;
 
 // Button Strong
 $button-strong-font-weight: $font-weight-strong !default;
@@ -47,7 +47,7 @@ $button-round-border-radius: $radius-full !default;
 // Button Floating
 $button-floating-shadow: 0 1px 3px 0 $convert-shadow-alpha !default;
 $button-floating-hover-shadow: 0 4px 12px 0 $convert-shadow-alpha !default;
-$button-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
+$button-floating-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha,
   0 4px 12px 0 $convert-shadow-alpha !default;
 
 // Button Disabled

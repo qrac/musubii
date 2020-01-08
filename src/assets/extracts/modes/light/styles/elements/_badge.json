@@ -37,7 +37,7 @@
     },
     {
       "name": "$badge-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha)"
     },
     {

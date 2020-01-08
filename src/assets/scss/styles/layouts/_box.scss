@@ -13,20 +13,20 @@
   z-index: 100;
   &.is-top-right {
     top: calc(#{$global-header-height-mobile} / 2);
-    left: calc(100% - #{$space-sm});
+    left: calc(100% - #{$meter-sm});
     transform: translate(-100%, -50%);
     @include fablet() {
-      left: calc(50% + #{$section-inner-width-fablet} / 2 - #{$space-sm});
+      left: calc(50% + #{$section-inner-width-fablet} / 2 - #{$meter-sm});
     }
     @include tablet() {
-      left: calc(50% + #{$section-inner-width-tablet} / 2 - #{$space-sm});
+      left: calc(50% + #{$section-inner-width-tablet} / 2 - #{$meter-sm});
     }
     @include desktop() {
       top: calc(#{$global-header-height-desktop} / 2);
-      left: calc(50% + #{$section-inner-width-desktop} / 2 - #{$space-sm});
+      left: calc(50% + #{$section-inner-width-desktop} / 2 - #{$meter-sm});
     }
     @include wide() {
-      left: calc(50% + #{$section-inner-width-wide} / 2 - #{$space-sm});
+      left: calc(50% + #{$section-inner-width-wide} / 2 - #{$meter-sm});
     }
   }
 }

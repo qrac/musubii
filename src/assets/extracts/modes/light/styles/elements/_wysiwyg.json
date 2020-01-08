@@ -222,7 +222,7 @@
     },
     {
       "name": "$wysiwyg-figcaption-margin-top",
-      "value": "$space-sm",
+      "value": "$meter-sm",
       "compiledValue": "12px"
     },
     {

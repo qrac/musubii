@@ -2,37 +2,37 @@
   "variables": [
     {
       "name": "$padding-size-xxl",
-      "value": "$space-xxl",
+      "value": "$meter-xxl",
       "compiledValue": "28px"
     },
     {
       "name": "$padding-size-xl",
-      "value": "$space-xl",
+      "value": "$meter-xl",
       "compiledValue": "24px"
     },
     {
       "name": "$padding-size-lg",
-      "value": "$space-lg",
+      "value": "$meter-lg",
       "compiledValue": "20px"
     },
     {
       "name": "$padding-size-md",
-      "value": "$space-md",
+      "value": "$meter-md",
       "compiledValue": "16px"
     },
     {
       "name": "$padding-size-sm",
-      "value": "$space-sm",
+      "value": "$meter-sm",
       "compiledValue": "12px"
     },
     {
       "name": "$padding-size-xs",
-      "value": "$space-xs",
+      "value": "$meter-xs",
       "compiledValue": "8px"
     },
     {
       "name": "$padding-size-xxs",
-      "value": "$space-xxs",
+      "value": "$meter-xxs",
       "compiledValue": "4px"
     }
   ],

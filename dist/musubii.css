@@ -1080,59 +1080,34 @@ iframe {
   transition: ease-out 0.12s;
 }
 
-.button.is-disabled, .button[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
 .button:focus {
   box-shadow: 0 0 0 4px rgba(36, 151, 240, 0.5);
   outline: none;
 }
 
-.button.is-strong, .button is-st {
+.button.is-strong {
   font-weight: 700;
-}
-
-.button.is-angle-right:after, .button.is-angle-left:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  border-top: 2px solid rgba(0, 0, 0, 0.26);
-  border-right: 2px solid rgba(0, 0, 0, 0.26);
-  z-index: 2;
-}
-
-.button.is-angle-right.is-plain:after, .button.is-angle-right.is-outline:after, .button.is-angle-right.is-melt:after, .button.is-angle-left.is-plain:after, .button.is-angle-left.is-outline:after, .button.is-angle-left.is-melt:after {
-  border-color: currentColor;
-}
-
-.button.is-angle-right:after {
-  right: 0.75em;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-}
-
-.button.is-angle-left:after {
-  left: 0.75em;
-  -webkit-transform: translateY(-50%) rotate(-135deg);
-          transform: translateY(-50%) rotate(-135deg);
-}
-
-.button.is-angle-left.is-angle-up:after, .button.is-angle-right.is-angle-up:after {
-  -webkit-transform: translateY(-30%) rotate(-45deg);
-          transform: translateY(-30%) rotate(-45deg);
-}
-
-.button.is-angle-left.is-angle-down:after, .button.is-angle-right.is-angle-down:after {
-  -webkit-transform: translateY(-70%) rotate(135deg);
-          transform: translateY(-70%) rotate(135deg);
 }
 
 .button.is-round {
   border-radius: 999em;
+}
+
+.button.is-floating:not([disabled]), .button.is-floating:not(.is-disabled) {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24);
+}
+
+.button.is-floating:not([disabled]):hover, .button.is-floating:not(.is-disabled):hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24);
+}
+
+.button.is-floating:not([disabled]):focus, .button.is-floating:not([disabled]):hover:focus, .button.is-floating:not(.is-disabled):focus, .button.is-floating:not(.is-disabled):hover:focus {
+  box-shadow: 0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.24);
+}
+
+.button[disabled], .button.is-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .button.is-square {
@@ -1149,18 +1124,6 @@ iframe {
   padding: 0;
   border-radius: 999em;
   line-height: 1;
-}
-
-.button.is-floating:not(.is-disabled), .button.is-floating:not([disabled]) {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24);
-}
-
-.button.is-floating:not(.is-disabled):focus, .button.is-floating:not(.is-disabled):hover:focus, .button.is-floating:not([disabled]):focus, .button.is-floating:not([disabled]):hover:focus {
-  box-shadow: 0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.24);
-}
-
-.button.is-floating:not(.is-disabled):hover, .button.is-floating:not([disabled]):hover {
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.24);
 }
 
 .button.is-plain {
@@ -1217,7 +1180,7 @@ iframe {
   background-color: #d74242;
 }
 
-.button.is-plain.is-disabled, .button.is-plain.is-disabled:hover, .button.is-plain[disabled], .button.is-plain[disabled]:hover {
+.button.is-plain[disabled], .button.is-plain[disabled]:hover, .button.is-plain.is-disabled, .button.is-plain.is-disabled:hover {
   background-color: #bdbdbd;
   color: rgba(0, 0, 0, 0.26);
 }
@@ -1286,10 +1249,10 @@ iframe {
   color: white;
 }
 
-.button.is-outline.is-disabled, .button.is-outline.is-disabled:hover, .button.is-outline[disabled], .button.is-outline[disabled]:hover {
+.button.is-outline[disabled], .button.is-outline[disabled]:hover, .button.is-outline.is-disabled, .button.is-outline.is-disabled:hover {
   background-color: #bdbdbd;
-  color: rgba(0, 0, 0, 0.26);
   border-color: #d1d8dc;
+  color: rgba(0, 0, 0, 0.26);
 }
 
 .button.is-melt {
@@ -1321,9 +1284,46 @@ iframe {
   color: #db5757;
 }
 
-.button.is-melt.is-disabled, .button.is-melt.is-disabled:hover, .button.is-melt[disabled], .button.is-melt[disabled]:hover {
+.button.is-melt[disabled], .button.is-melt[disabled]:hover, .button.is-melt.is-disabled, .button.is-melt.is-disabled:hover {
   color: rgba(0, 0, 0, 0.26);
   background-color: transparent;
+}
+
+.button.is-angle-right:after, .button.is-angle-left:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border-top: 2px solid rgba(0, 0, 0, 0.26);
+  border-right: 2px solid rgba(0, 0, 0, 0.26);
+  z-index: 2;
+}
+
+.button.is-angle-right:after {
+  right: 0.75em;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+.button.is-angle-left:after {
+  left: 0.75em;
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+          transform: translateY(-50%) rotate(-135deg);
+}
+
+.button.is-angle-right.is-angle-up:after, .button.is-angle-left.is-angle-up:after {
+  -webkit-transform: translateY(-30%) rotate(-45deg);
+          transform: translateY(-30%) rotate(-45deg);
+}
+
+.button.is-angle-right.is-angle-down:after, .button.is-angle-left.is-angle-down:after {
+  -webkit-transform: translateY(-70%) rotate(135deg);
+          transform: translateY(-70%) rotate(135deg);
+}
+
+.button.is-angle-right.is-primary:after, .button.is-angle-right.is-info:after, .button.is-angle-right.is-success:after, .button.is-angle-right.is-warning:after, .button.is-angle-right.is-danger:after, .button.is-angle-left.is-primary:after, .button.is-angle-left.is-info:after, .button.is-angle-left.is-success:after, .button.is-angle-left.is-warning:after, .button.is-angle-left.is-danger:after {
+  border-color: currentColor;
 }
 
 .badge {

@@ -22,7 +22,7 @@
     },
     {
       "name": "$card-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha)"
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "name": "$card-floating-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-alpha)"
     },
     {

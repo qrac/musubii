@@ -12,37 +12,37 @@
     },
     {
       "name": "$gap-size-xxl",
-      "value": "$space-xxl",
+      "value": "$meter-xxl",
       "compiledValue": "28px"
     },
     {
       "name": "$gap-size-xl",
-      "value": "$space-xl",
+      "value": "$meter-xl",
       "compiledValue": "24px"
     },
     {
       "name": "$gap-size-lg",
-      "value": "$space-lg",
+      "value": "$meter-lg",
       "compiledValue": "20px"
     },
     {
       "name": "$gap-size-md",
-      "value": "$space-md",
+      "value": "$meter-md",
       "compiledValue": "16px"
     },
     {
       "name": "$gap-size-sm",
-      "value": "$space-sm",
+      "value": "$meter-sm",
       "compiledValue": "12px"
     },
     {
       "name": "$gap-size-xs",
-      "value": "$space-xs",
+      "value": "$meter-xs",
       "compiledValue": "8px"
     },
     {
       "name": "$gap-size-xxs",
-      "value": "$space-xxs",
+      "value": "$meter-xxs",
       "compiledValue": "4px"
     }
   ],

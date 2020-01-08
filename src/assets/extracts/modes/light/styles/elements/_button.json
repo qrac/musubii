@@ -127,8 +127,13 @@
     },
     {
       "name": "$button-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha)"
+    },
+    {
+      "name": "$button-strong-font-weight",
+      "value": "$font-weight-strong",
+      "compiledValue": "700"
     },
     {
       "name": "$button-round-border-radius",
@@ -147,7 +152,7 @@
     },
     {
       "name": "$button-floating-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-alpha)"
     },
     {

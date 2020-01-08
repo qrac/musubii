@@ -157,7 +157,7 @@
     },
     {
       "name": "$input-focus-shadow",
-      "value": "inset 0 1px 1px $convert-shadow-alpha-thin, 0 0 0 $space-xxs $convert-focus-alpha-thin",
+      "value": "inset 0 1px 1px $convert-shadow-alpha-thin, 0 0 0 $meter-xxs $convert-focus-alpha-thin",
       "compiledValue": "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 4px rgba(36, 151, 240, 0.36)"
     },
     {
@@ -182,7 +182,7 @@
     },
     {
       "name": "$input-plain-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha-thin",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha-thin",
       "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.36)"
     },
     {
@@ -262,7 +262,7 @@
     },
     {
       "name": "$radio-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha-thin",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha-thin",
       "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.36)"
     },
     {
@@ -307,7 +307,7 @@
     },
     {
       "name": "$checkbox-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha-thin",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha-thin",
       "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.36)"
     },
     {
@@ -347,7 +347,7 @@
     },
     {
       "name": "$select-focus-shadow",
-      "value": "0 0 0 $space-xxs $convert-focus-alpha-thin",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha-thin",
       "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.36)"
     }
   ],

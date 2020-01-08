@@ -11,13 +11,13 @@ $selector-grid: "\.grid" !default;
 $selector-column: "\.column" !default;
 
 // Gap Size
-$gap-size-xxl: $space-xxl !default;
-$gap-size-xl: $space-xl !default;
-$gap-size-lg: $space-lg !default;
-$gap-size-md: $space-md !default;
-$gap-size-sm: $space-sm !default;
-$gap-size-xs: $space-xs !default;
-$gap-size-xxs: $space-xxs !default;
+$gap-size-xxl: $meter-xxl !default;
+$gap-size-xl: $meter-xl !default;
+$gap-size-lg: $meter-lg !default;
+$gap-size-md: $meter-md !default;
+$gap-size-sm: $meter-sm !default;
+$gap-size-xs: $meter-xs !default;
+$gap-size-xxs: $meter-xxs !default;
 
 //----------------------------------------------------
 // / Style - Grid

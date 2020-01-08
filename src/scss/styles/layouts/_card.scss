@@ -13,7 +13,7 @@ $selector-card: "\.card" !default;
 $card-background-color: $convert-background-1 !default;
 $card-border-width: $global-border-width !default;
 $card-border-color: $convert-border !default;
-$card-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
+$card-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha !default;
 
 // Card Radius
 $card-radius-xxl: $radius-xxl !default;
@@ -27,7 +27,7 @@ $card-radius-xxs: $radius-xxs !default;
 // Card Floating
 $card-floating-shadow: 0 1px 3px 0 $convert-shadow-alpha !default;
 $card-floating-hover-shadow: 0 4px 12px 0 $convert-shadow-alpha !default;
-$card-floating-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha,
+$card-floating-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha,
   0 4px 12px 0 $convert-shadow-alpha !default;
 
 // Card Link
