@@ -38,6 +38,9 @@ $button-line-height: $line-height-md !default;
 $button-transition: $global-transition !default;
 $button-focus-shadow: 0 0 0 $space-xxs $convert-focus-alpha !default;
 
+// Button Strong
+$button-strong-font-weight: $font-weight-strong !default;
+
 // Button Round
 $button-round-border-radius: $radius-full !default;
 
@@ -134,7 +137,7 @@ $button-angle-border-color: $convert-border-1 !default;
 }
 
 @mixin musubii-style-button-strong() {
-  font-weight: 700;
+  font-weight: $button-strong-font-weight;
 }
 
 @mixin musubii-style-button-disabled() {
