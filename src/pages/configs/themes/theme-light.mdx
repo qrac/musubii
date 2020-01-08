@@ -1,6 +1,27 @@
 export const meta = {
   title: "Theme Light",
-  path: "/configs/themes/theme-light"
+  path: "/configs/themes/theme-light",
+  docsPath: "configs/themes/theme-light",
+  filePath: "configs/themes/_theme-light"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Theme Light
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={true} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
