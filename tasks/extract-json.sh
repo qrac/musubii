@@ -14,6 +14,7 @@ lightPath='./src/assets/extracts/modes/light'
 
 mkdir -p "$simplePath/configs/variables"
 
+sass-export "$simpleTempPath/configs/variables/_option.scss" -o "$simplePath/configs/variables/_option.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/variables/_breakpoint.scss" -o "$simplePath/configs/variables/_breakpoint.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/variables/_color.scss" -o "$simplePath/configs/variables/_color.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/variables/_font.scss" -o "$simplePath/configs/variables/_font.json" -d "$importPath"
@@ -27,6 +28,7 @@ mkdir -p "$simplePath/configs/mixins"
 sass-export "$simpleTempPath/configs/mixins/_mediaquery.scss" -o "$simplePath/configs/mixins/_mediaquery.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/mixins/_placeholder.scss" -o "$simplePath/configs/mixins/_placeholder.json" -d "$importPath"
 sass-export "$simpleTempPath/configs/mixins/_safearea.scss" -o "$simplePath/configs/mixins/_safearea.json" -d "$importPath"
+sass-export "$simpleTempPath/configs/mixins/_generate.scss" -o "$simplePath/configs/mixins/_generate.json" -d "$importPath"
 
 mkdir -p "$simplePath/configs/themes"
 
@@ -81,6 +83,7 @@ sass-export "$simpleTempPath/styles/utilities/_clearfix.scss" -o "$simplePath/st
 
 ###mkdir -p "$lightPath/configs/variables"
 
+###sass-export "$lightTempPath/configs/variables/_option.scss" -o "$lightPath/configs/variables/_option.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/variables/_breakpoint.scss" -o "$lightPath/configs/variables/_breakpoint.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/variables/_color.scss" -o "$lightPath/configs/variables/_color.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/variables/_font.scss" -o "$lightPath/configs/variables/_font.json" -d "$importPath"
@@ -94,6 +97,7 @@ sass-export "$simpleTempPath/styles/utilities/_clearfix.scss" -o "$simplePath/st
 ###sass-export "$lightTempPath/configs/mixins/_mediaquery.scss" -o "$lightPath/configs/mixins/_mediaquery.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/mixins/_placeholder.scss" -o "$lightPath/configs/mixins/_placeholder.json" -d "$importPath"
 ###sass-export "$lightTempPath/configs/mixins/_safearea.scss" -o "$lightPath/configs/mixins/_safearea.json" -d "$importPath"
+###sass-export "$lightTempPath/configs/mixins/_generate.scss" -o "$lightPath/configs/mixins/_generate.json" -d "$importPath"
 
 mkdir -p "$lightPath/configs/themes"
 

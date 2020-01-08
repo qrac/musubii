@@ -1,9 +1,10 @@
 //----------------------------------------------------
-// Template: Light
+// Template: Mode - Simple
 //----------------------------------------------------
 
-@import "switchings/_switching-light.scss";
+@import "switchings/_switching-mode-simple.scss";
 
+@import "variables/_option.scss";
 @import "variables/_breakpoint.scss";
 @import "variables/_color.scss";
 @import "variables/_font.scss";

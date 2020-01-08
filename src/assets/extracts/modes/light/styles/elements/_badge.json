@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-badge",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-badge",
       "value": ".badge",
       "compiledValue": ".badge"
@@ -187,10 +177,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-badge",
-      "parameters": []
-    },
     {
       "name": "musubii-style-badge",
       "parameters": []

@@ -13,15 +13,6 @@ do
   replace '\\{2,}' '' $i
 done
 
-# Fix Image tag
-
-modeHtmlFiles=`find $modePath -maxdepth 4 -type f -name _html.json`
-
-for i in $modeHtmlFiles;
-do
-  replace 'img src\$= \\".svg\\"' 'img[src$=\".svg\"]' $i
-done
-
 # Fix Root
 
 modeHtmlFiles=`find $modePath -maxdepth 4 -type f -name _root-light.json`
@@ -40,4 +31,26 @@ do
   replace '\"\$--' '"--' $i
   replace '#{\$' '$' $i
   replace '}\"' '"' $i
+done
+
+# Fix HTML
+
+modeHtmlFiles=`find $modePath -maxdepth 4 -type f -name _html.json`
+
+for i in $modeHtmlFiles;
+do
+  replace 'img src\$= \\".svg\\"' 'img[src$=\".svg\"]' $i
+done
+
+# Fix Alert
+
+modeHtmlFiles=`find $modePath -maxdepth 4 -type f -name _alert.json`
+
+for i in $modeHtmlFiles;
+do
+  replace 'class\*= \\"is-tail-\\"' '[class*=\"is-tail-\"]' $i
+  replace 'class\*= \\"is-tail-top-\\"' '[class*=\"is-tail-top-\"]' $i
+  replace 'class\*= \\"is-tail-right-\\"' '[class*=\"is-tail-right-\"]' $i
+  replace 'class\*= \\"is-tail-bottom-\\"' '[class*=\"is-tail-bottom-\"]' $i
+  replace 'class\*= \\"is-tail-left-\\"' '[class*=\"is-tail-left-\"]' $i
 done

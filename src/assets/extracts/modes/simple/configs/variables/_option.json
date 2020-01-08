@@ -1,0 +1,179 @@
+{
+  "variables": [
+    {
+      "name": "$option-css-variables",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-mixin-mode",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-theme-default",
+      "value": "light",
+      "compiledValue": "light"
+    },
+    {
+      "name": "$option-theme-trigger-media",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-generate-reset",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-html",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-section",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-grid",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-box",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-card",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-joint",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-text",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-button",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-badge",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-list",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-table",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-form",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-iframe",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-icon",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-alert",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-wysiwyg",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-display",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-size",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-flex",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-space",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-margin",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-padding",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-centering",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-overflow",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-scroll",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-ellipsis",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-generate-clearfix",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-style-button-focus",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-style-button-angle",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-style-alert-tail",
+      "value": "false",
+      "compiledValue": "false"
+    }
+  ]
+}

@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-margin",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$margin-size-xxl",
       "value": "$space-xxl",
       "compiledValue": "28px"
@@ -47,10 +37,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-margin",
-      "parameters": []
-    },
     {
       "name": "--is-margin",
       "parameters": [

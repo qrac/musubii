@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-card",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-card",
       "value": ".card",
       "compiledValue": ".card"
@@ -107,10 +97,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-card",
-      "parameters": []
-    },
     {
       "name": "musubii-style-card",
       "parameters": []

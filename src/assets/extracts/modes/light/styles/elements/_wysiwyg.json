@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-wysiwyg",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-wysiwyg",
       "value": ".wysiwyg",
       "compiledValue": ".wysiwyg"
@@ -242,10 +232,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-wysiwyg",
-      "parameters": []
-    },
     {
       "name": "musubii-style-wysiwyg-heading",
       "parameters": []

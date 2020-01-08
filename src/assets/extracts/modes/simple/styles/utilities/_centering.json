@@ -1,21 +1,5 @@
 {
-  "variables": [
-    {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-centering",
-      "value": "true",
-      "compiledValue": "true"
-    }
-  ],
   "mixins": [
-    {
-      "name": "export-style-centering",
-      "parameters": []
-    },
     {
       "name": "musubii-style-centering",
       "parameters": []

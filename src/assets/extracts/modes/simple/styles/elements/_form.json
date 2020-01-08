@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-form",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-fieldset",
       "value": ".fieldset",
       "compiledValue": ".fieldset"
@@ -362,10 +352,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-form",
-      "parameters": []
-    },
     {
       "name": "musubii-style-form-fieldset",
       "parameters": []

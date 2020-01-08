@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-section",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-section",
       "value": ".section",
       "compiledValue": ".section"
@@ -42,10 +32,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-section",
-      "parameters": []
-    },
     {
       "name": "musubii-style-section-inner",
       "parameters": []

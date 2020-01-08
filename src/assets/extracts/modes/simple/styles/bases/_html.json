@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-html",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-html-body",
       "value": "body",
       "compiledValue": "body"
@@ -52,10 +42,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-html",
-      "parameters": []
-    },
     {
       "name": "musubii-style-html-body",
       "parameters": []

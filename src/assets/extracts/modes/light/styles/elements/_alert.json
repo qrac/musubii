@@ -1,19 +1,119 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-alert",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-alert",
       "value": ".alert",
       "compiledValue": ".alert"
+    },
+    {
+      "name": "$modifier-alert-primary",
+      "value": ".is-primary",
+      "compiledValue": ".is-primary"
+    },
+    {
+      "name": "$modifier-alert-info",
+      "value": ".is-info",
+      "compiledValue": ".is-info"
+    },
+    {
+      "name": "$modifier-alert-success",
+      "value": ".is-success",
+      "compiledValue": ".is-success"
+    },
+    {
+      "name": "$modifier-alert-warning",
+      "value": ".is-warning",
+      "compiledValue": ".is-warning"
+    },
+    {
+      "name": "$modifier-alert-danger",
+      "value": ".is-danger",
+      "compiledValue": ".is-danger"
+    },
+    {
+      "name": "$modifier-alert-tail",
+      "value": "[class*=\"is-tail-\"]",
+      "compiledValue": "[class*=\"is-tail-\"]"
+    },
+    {
+      "name": "$modifier-alert-tail-top",
+      "value": "[class*=\"is-tail-top-\"]",
+      "compiledValue": "[class*=\"is-tail-top-\"]"
+    },
+    {
+      "name": "$modifier-alert-tail-right",
+      "value": "[class*=\"is-tail-right-\"]",
+      "compiledValue": "[class*=\"is-tail-right-\"]"
+    },
+    {
+      "name": "$modifier-alert-tail-bottom",
+      "value": "[class*=\"is-tail-bottom-\"]",
+      "compiledValue": "[class*=\"is-tail-bottom-\"]"
+    },
+    {
+      "name": "$modifier-alert-tail-left-",
+      "value": "[class*=\"is-tail-left-\"]",
+      "compiledValue": "[class*=\"is-tail-left-\"]"
+    },
+    {
+      "name": "$modifier-alert-tail-top-right",
+      "value": ".is-tail-top-right",
+      "compiledValue": ".is-tail-top-right"
+    },
+    {
+      "name": "$modifier-alert-tail-top-center",
+      "value": ".is-tail-top-center",
+      "compiledValue": ".is-tail-top-center"
+    },
+    {
+      "name": "$modifier-alert-tail-top-left",
+      "value": ".is-tail-top-left",
+      "compiledValue": ".is-tail-top-left"
+    },
+    {
+      "name": "$modifier-alert-tail-right-top",
+      "value": ".is-tail-right-top",
+      "compiledValue": ".is-tail-right-top"
+    },
+    {
+      "name": "$modifier-alert-tail-right-middle",
+      "value": ".is-tail-right-middle",
+      "compiledValue": ".is-tail-right-middle"
+    },
+    {
+      "name": "$modifier-alert-tail-right-bottom",
+      "value": ".is-tail-right-bottom",
+      "compiledValue": ".is-tail-right-bottom"
+    },
+    {
+      "name": "$modifier-alert-tail-bottom-right",
+      "value": ".is-tail-bottom-right",
+      "compiledValue": ".is-tail-bottom-right"
+    },
+    {
+      "name": "$modifier-alert-tail-bottom-center",
+      "value": ".is-tail-bottom-center",
+      "compiledValue": ".is-tail-bottom-center"
+    },
+    {
+      "name": "$modifier-alert-tail-bottom-left",
+      "value": ".is-tail-bottom-left",
+      "compiledValue": ".is-tail-bottom-left"
+    },
+    {
+      "name": "$modifier-alert-tail-left-top",
+      "value": ".is-tail-left-top",
+      "compiledValue": ".is-tail-left-top"
+    },
+    {
+      "name": "$modifier-alert-tail-left-middle",
+      "value": ".is-tail-left-middle",
+      "compiledValue": ".is-tail-left-middle"
+    },
+    {
+      "name": "$modifier-alert-tail-left-bottom",
+      "value": ".is-tail-left-bottom",
+      "compiledValue": ".is-tail-left-bottom"
     },
     {
       "name": "$alert-padding",
@@ -103,23 +203,27 @@
   ],
   "mixins": [
     {
-      "name": "export-style-alert",
-      "parameters": []
-    },
-    {
       "name": "musubii-style-alert",
       "parameters": []
     },
     {
-      "name": "--is-alert-role",
-      "parameters": [
-        "$name",
-        "$bg-color",
-        "$border-color"
-      ]
+      "name": "musubii-style-alert-primary",
+      "parameters": []
     },
     {
-      "name": "musubii-style-alert-role",
+      "name": "musubii-style-alert-info",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-warning",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-danger",
       "parameters": []
     },
     {

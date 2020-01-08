@@ -91,16 +91,15 @@
       "parameters": []
     },
     {
-      "name": "theme-media",
+      "name": "theme-trigger-media",
       "parameters": [
-        "$theme"
+        "$theme-id"
       ]
     },
     {
-      "name": "theme-attr",
+      "name": "theme-trigger-attr",
       "parameters": [
-        "$attr",
-        "$theme"
+        "$theme-attr"
       ]
     },
     {

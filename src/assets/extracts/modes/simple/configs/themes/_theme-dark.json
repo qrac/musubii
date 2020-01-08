@@ -1,6 +1,11 @@
 {
   "variables": [
     {
+      "name": "$theme-dark-id",
+      "value": "dark",
+      "compiledValue": "dark"
+    },
+    {
       "name": "$theme-dark-primary",
       "value": "darken($theme-primary, 12%)",
       "compiledValue": "#29848e"

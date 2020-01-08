@@ -1,6 +1,11 @@
 {
   "variables": [
     {
+      "name": "$theme-light-id",
+      "value": "light",
+      "compiledValue": "light"
+    },
+    {
       "name": "$theme-light-primary",
       "value": "$theme-primary",
       "compiledValue": "#37b0be"

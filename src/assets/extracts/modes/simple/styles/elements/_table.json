@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-table",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-table",
       "value": ".table",
       "compiledValue": ".table"
@@ -67,10 +57,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-table",
-      "parameters": []
-    },
     {
       "name": "musubii-style-table",
       "parameters": []

@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-text",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-text",
       "value": ".text",
       "compiledValue": ".text"
@@ -132,10 +122,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-text",
-      "parameters": []
-    },
     {
       "name": "--is-color",
       "parameters": [

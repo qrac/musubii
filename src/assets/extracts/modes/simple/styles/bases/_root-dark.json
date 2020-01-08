@@ -1,44 +1,14 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-css-variables",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-theme-default-dark",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-theme-media-dark",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-theme-attr-dark",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
-      "name": "$selector-root",
+      "name": "$selector-root-dark",
       "value": ":root",
       "compiledValue": ""
     },
     {
-      "name": "$selector-root-attr",
-      "value": "data-theme",
-      "compiledValue": "data-theme"
-    },
-    {
-      "name": "$root-attr-dark",
-      "value": "dark",
-      "compiledValue": "dark"
+      "name": "$selector-root-dark-attr",
+      "value": "[data-theme=\"dark\"]",
+      "compiledValue": "data-theme= \"dark\""
     }
   ],
   "css-variables": [
@@ -416,12 +386,6 @@
       "name": "--alert-danger-border-color",
       "value": "$theme-dark-alert-danger-border-color",
       "compiledValue": "#ca2b2b"
-    }
-  ],
-  "mixins": [
-    {
-      "name": "export-style-root-dark",
-      "parameters": []
     }
   ]
 }

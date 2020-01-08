@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-padding",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$padding-size-xxl",
       "value": "$space-xxl",
       "compiledValue": "28px"
@@ -47,10 +37,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-padding",
-      "parameters": []
-    },
     {
       "name": "--is-padding",
       "parameters": [

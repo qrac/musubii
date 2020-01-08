@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-list",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-list",
       "value": ".list",
       "compiledValue": ".list"
@@ -37,10 +27,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-list",
-      "parameters": []
-    },
     {
       "name": "musubii-style-list",
       "parameters": []

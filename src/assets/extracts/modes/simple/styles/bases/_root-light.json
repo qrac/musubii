@@ -1,44 +1,14 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-css-variables",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-theme-default-light",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
-      "name": "$option-theme-media-light",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-theme-attr-light",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$selector-root",
+      "name": "$selector-root-light",
       "value": ":root",
       "compiledValue": ""
     },
     {
-      "name": "$selector-root-attr",
-      "value": "data-theme",
-      "compiledValue": "data-theme"
-    },
-    {
-      "name": "$root-attr-light",
-      "value": "light",
-      "compiledValue": "light"
+      "name": "$selector-root-light-attr",
+      "value": "[data-theme=\"light\"]",
+      "compiledValue": "data-theme= \"light\""
     }
   ],
   "css-variables": [
@@ -416,12 +386,6 @@
       "name": "--alert-danger-border-color",
       "value": "$theme-light-alert-danger-border-color",
       "compiledValue": "#eeafaf"
-    }
-  ],
-  "mixins": [
-    {
-      "name": "export-style-root-light",
-      "parameters": []
     }
   ]
 }

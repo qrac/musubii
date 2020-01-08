@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-space",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$space-size-xxl",
       "value": "$space-xxl",
       "compiledValue": "28px"
@@ -47,10 +37,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-space",
-      "parameters": []
-    },
     {
       "name": "--is-space",
       "parameters": [

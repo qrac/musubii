@@ -1,16 +1,6 @@
 {
   "variables": [
     {
-      "name": "$option-mixin-mode",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-style-icon",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$selector-icon",
       "value": ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons",
       "compiledValue": ".icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons"
@@ -32,10 +22,6 @@
     }
   ],
   "mixins": [
-    {
-      "name": "export-style-icon",
-      "parameters": []
-    },
     {
       "name": "musubii-style-icon",
       "parameters": []

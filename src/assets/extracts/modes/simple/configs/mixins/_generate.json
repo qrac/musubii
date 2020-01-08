@@ -1,0 +1,17 @@
+{
+  "mixins": [
+    {
+      "name": "generate-root",
+      "parameters": [
+        "$theme-id",
+        "$theme-attr"
+      ]
+    },
+    {
+      "name": "generate-style",
+      "parameters": [
+        "$option-generate"
+      ]
+    }
+  ]
+}
