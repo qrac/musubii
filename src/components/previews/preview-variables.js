@@ -77,9 +77,31 @@ export class PreviewVariablesSingle extends React.Component {
         <article className="demo-flex-table">
           <header className="table-header">
             <div className="table-header-item">
-              <div className="item-child is-tablet-4">Name</div>
-              <div className="item-child is-tablet-4">Default Value</div>
-              <div className="item-child is-tablet-4">Compiled Value</div>
+              <div
+                className={
+                  this.props.viewCompiled
+                    ? "item-child is-tablet-4"
+                    : "item-child is-tablet-6"
+                }
+              >
+                Name
+              </div>
+              <div
+                className={
+                  this.props.viewCompiled
+                    ? "item-child is-tablet-4"
+                    : "item-child is-tablet-6"
+                }
+              >
+                Default Value
+              </div>
+              {(() => {
+                if (this.props.viewCompiled) {
+                  return (
+                    <div className="item-child is-tablet-4">Compiled Value</div>
+                  )
+                }
+              })()}
             </div>
           </header>
           <ul className="table-body">
@@ -87,41 +109,7 @@ export class PreviewVariablesSingle extends React.Component {
               <TableBodyItem
                 item={variable}
                 key={variable.name}
-                viewCompiled={true}
-              />
-            ))}
-          </ul>
-        </article>
-      </div>
-    )
-  }
-}
-
-export class PreviewVariablesSingleNotCompiled extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      simpleData: require("~/assets/extracts/modes/simple/" +
-        this.props.filePath +
-        ".json")
-    }
-  }
-  render() {
-    return (
-      <div className="demo-box is-preview">
-        <article className="demo-flex-table">
-          <header className="table-header">
-            <div className="table-header-item">
-              <div className="item-child is-tablet-6">Name</div>
-              <div className="item-child is-tablet-6">Default Value</div>
-            </div>
-          </header>
-          <ul className="table-body">
-            {this.state.simpleData.variables.map(variable => (
-              <TableBodyItem
-                item={variable}
-                key={variable.name}
-                viewCompiled={false}
+                viewCompiled={this.props.viewCompiled}
               />
             ))}
           </ul>
@@ -163,9 +151,31 @@ export class PreviewVariablesDouble extends React.Component {
         <article className="demo-flex-table">
           <header className="table-header">
             <div className="table-header-item">
-              <div className="item-child is-tablet-4">Name</div>
-              <div className="item-child is-tablet-4">Default Value</div>
-              <div className="item-child is-tablet-4">Compiled Value</div>
+              <div
+                className={
+                  this.props.viewCompiled
+                    ? "item-child is-tablet-4"
+                    : "item-child is-tablet-6"
+                }
+              >
+                Name
+              </div>
+              <div
+                className={
+                  this.props.viewCompiled
+                    ? "item-child is-tablet-4"
+                    : "item-child is-tablet-6"
+                }
+              >
+                Default Value
+              </div>
+              {(() => {
+                if (this.props.viewCompiled) {
+                  return (
+                    <div className="item-child is-tablet-4">Compiled Value</div>
+                  )
+                }
+              })()}
             </div>
           </header>
           {(() => {
@@ -176,7 +186,7 @@ export class PreviewVariablesDouble extends React.Component {
                     <TableBodyItem
                       item={variable}
                       key={variable.name}
-                      viewCompiled={true}
+                      viewCompiled={this.props.viewCompiled}
                     />
                   ))}
                 </ul>
@@ -188,7 +198,7 @@ export class PreviewVariablesDouble extends React.Component {
                     <TableBodyItem
                       item={variable}
                       key={variable.name}
-                      viewCompiled={true}
+                      viewCompiled={this.props.viewCompiled}
                     />
                   ))}
                 </ul>

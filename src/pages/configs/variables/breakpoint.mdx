@@ -5,7 +5,7 @@ export const meta = {
   filePath: "configs/variables/_breakpoint"
 }
 
-import { PreviewVariablesSingleNotCompiled } from "~/components/previews/preview-variables"
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewSources from "~/components/previews/preview-sources"
 
 # Break Point
@@ -16,7 +16,7 @@ contents list
 
 ## Variables
 
-<PreviewVariablesSingleNotCompiled filePath={meta.filePath} />
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
 
 ## Sources
 

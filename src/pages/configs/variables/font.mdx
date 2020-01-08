@@ -1,6 +1,27 @@
 export const meta = {
   title: "Font",
-  path: "/configs/variables/font"
+  path: "/configs/variables/font",
+  docsPath: "configs/variables/font",
+  filePath: "configs/variables/_font"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Font
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
