@@ -9,6 +9,10 @@ class CheckColor extends React.Component {
   }
   componentDidMount() {
     if (process.browser) {
+      const formula = "if($"
+      if (this.props.value.startsWith(formula)) {
+        return
+      }
       const dummy = document.createElement("span")
       dummy.style.backgroundColor = this.props.value
       const result = dummy.style.backgroundColor !== ""
