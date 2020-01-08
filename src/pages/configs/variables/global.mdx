@@ -1,6 +1,27 @@
 export const meta = {
   title: "Global",
-  path: "/configs/variables/global"
+  path: "/configs/variables/global",
+  docsPath: "configs/variables/global",
+  filePath: "configs/variables/_global"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Global
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
