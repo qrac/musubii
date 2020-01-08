@@ -1,6 +1,27 @@
 export const meta = {
   title: "Placeholder",
-  path: "/configs/mixins/placeholder"
+  path: "/configs/mixins/placeholder",
+  docsPath: "configs/mixins/placeholder",
+  filePath: "configs/mixins/_placeholder"
 }
 
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Placeholder
+
+## Table of Contents
+
+contents list
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
