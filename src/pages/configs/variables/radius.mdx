@@ -1,6 +1,27 @@
 export const meta = {
   title: "Radius",
-  path: "/configs/variables/Radius"
+  path: "/configs/variables/radius",
+  docsPath: "configs/variables/radius",
+  filePath: "configs/variables/_radius"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Radius
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
