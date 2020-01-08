@@ -1080,10 +1080,6 @@ iframe {
   transition: ease-out 0.12s;
 }
 
-.button.is-strong {
-  font-weight: 700;
-}
-
 .button.is-disabled, .button[disabled] {
   cursor: not-allowed;
   pointer-events: none;
@@ -1092,6 +1088,10 @@ iframe {
 .button:focus {
   box-shadow: 0 0 0 4px rgba(36, 151, 240, 0.5);
   outline: none;
+}
+
+.button.is-strong, .button is-st {
+  font-weight: 700;
 }
 
 .button.is-angle-right:after, .button.is-angle-left:after {
