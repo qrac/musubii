@@ -1,6 +1,27 @@
 export const meta = {
   title: "Color",
-  path: "/configs/variables/color"
+  path: "/configs/variables/color",
+  docsPath: "configs/variables/color",
+  filePath: "configs/variables/_color"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Color
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
