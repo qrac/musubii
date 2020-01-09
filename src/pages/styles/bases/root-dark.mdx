@@ -1,6 +1,35 @@
 export const meta = {
   title: "Root Dark",
-  path: "/styles/bases/root-dark"
+  path: "/styles/bases/root-dark",
+  docsPath: "styles/bases/root-dark",
+  filePath: "styles/bases/_root-dark"
 }
 
+import {
+  PreviewVariablesCss,
+  PreviewVariablesSingle
+} from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Root Dark
+
+## Table of Contents
+
+contents list
+
+## CSS Variables
+
+<PreviewVariablesCss filePath={meta.filePath} viewCompiled={true} />
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
