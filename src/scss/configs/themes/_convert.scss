@@ -9,16 +9,16 @@
 $convert-primary: if($option-css-variables == true, var(--primary), null) !default;
 $convert-primary-strong: if($option-css-variables == true, var(--primary-strong), null) !default;
 $convert-primary-darken: if($option-css-variables == true, var(--primary-darken), null) !default;
-$convert-info: if($option-css-variables == true, var(--info), $theme-light-info) !default;
+$convert-info: if($option-css-variables == true, var(--info), null) !default;
 $convert-info-strong: if($option-css-variables == true, var(--info-strong), null) !default;
 $convert-info-darken: if($option-css-variables == true, var(--info-darken), null) !default;
 $convert-success: if($option-css-variables == true, var(--success), null) !default;
 $convert-success-strong: if($option-css-variables == true, var(--success-strong), null) !default;
 $convert-success-darken: if($option-css-variables == true, var(--success-darken), null) !default;
-$convert-warning: if($option-css-variables == true, var(--warning), $theme-light-warning) !default;
+$convert-warning: if($option-css-variables == true, var(--warning), null) !default;
 $convert-warning-strong: if($option-css-variables == true, var(--warning-strong), null) !default;
 $convert-warning-darken: if($option-css-variables == true, var(--warning-darken), null) !default;
-$convert-danger: if($option-css-variables == true, var(--danger), $theme-light-danger) !default;
+$convert-danger: if($option-css-variables == true, var(--danger), null) !default;
 $convert-danger-strong: if($option-css-variables == true, var(--danger-strong), null) !default;
 $convert-danger-darken: if($option-css-variables == true, var(--danger-darken), null) !default;
 

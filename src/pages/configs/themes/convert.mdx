@@ -1,6 +1,27 @@
 export const meta = {
   title: "Convert",
-  path: "/configs/themes/convert"
+  path: "/configs/themes/convert",
+  docsPath: "configs/themes/convert",
+  filePath: "configs/themes/_convert"
 }
 
+import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Convert
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesDouble filePath={meta.filePath} viewCompiled={true} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>

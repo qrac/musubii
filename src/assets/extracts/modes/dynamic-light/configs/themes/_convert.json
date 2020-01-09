@@ -3,378 +3,380 @@
     {
       "name": "$convert-primary",
       "value": "if($option-css-variables == true, var(--primary), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--primary)"
     },
     {
       "name": "$convert-primary-strong",
       "value": "if($option-css-variables == true, var(--primary-strong), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--primary-strong)"
     },
     {
       "name": "$convert-primary-darken",
       "value": "if($option-css-variables == true, var(--primary-darken), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--primary-darken)"
     },
     {
       "name": "$convert-info",
-      "value": "if($option-css-variables == true, var(--info), $theme-light-info)",
-      "compiledValue": "#4b9bd8"
+      "value": "if($option-css-variables == true, var(--info), null)",
+      "compiledValue": "var(--info)"
     },
     {
       "name": "$convert-info-strong",
       "value": "if($option-css-variables == true, var(--info-strong), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--info-strong)"
     },
     {
       "name": "$convert-info-darken",
       "value": "if($option-css-variables == true, var(--info-darken), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--info-darken)"
     },
     {
       "name": "$convert-success",
       "value": "if($option-css-variables == true, var(--success), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--success)"
     },
     {
       "name": "$convert-success-strong",
       "value": "if($option-css-variables == true, var(--success-strong), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--success-strong)"
     },
     {
       "name": "$convert-success-darken",
       "value": "if($option-css-variables == true, var(--success-darken), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--success-darken)"
     },
     {
       "name": "$convert-warning",
-      "value": "if($option-css-variables == true, var(--warning), $theme-light-warning)",
-      "compiledValue": "#ec9213"
+      "value": "if($option-css-variables == true, var(--warning), null)",
+      "compiledValue": "var(--warning)"
     },
     {
       "name": "$convert-warning-strong",
       "value": "if($option-css-variables == true, var(--warning-strong), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--warning-strong)"
     },
     {
       "name": "$convert-warning-darken",
       "value": "if($option-css-variables == true, var(--warning-darken), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--warning-darken)"
     },
     {
       "name": "$convert-danger",
-      "value": "if($option-css-variables == true, var(--danger), $theme-light-danger)",
-      "compiledValue": "#db5757"
+      "value": "if($option-css-variables == true, var(--danger), null)",
+      "compiledValue": "var(--danger)"
     },
     {
       "name": "$convert-danger-strong",
       "value": "if($option-css-variables == true, var(--danger-strong), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--danger-strong)"
     },
     {
       "name": "$convert-danger-darken",
       "value": "if($option-css-variables == true, var(--danger-darken), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--danger-darken)"
     },
     {
       "name": "$convert-text-dark",
       "value": "if($option-css-variables == true, var(--text-dark), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark)"
     },
     {
       "name": "$convert-text-dark-1",
       "value": "if($option-css-variables == true, var(--text-dark-1), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-1)"
     },
     {
       "name": "$convert-text-dark-2",
       "value": "if($option-css-variables == true, var(--text-dark-2), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-2)"
     },
     {
       "name": "$convert-text-dark-3",
       "value": "if($option-css-variables == true, var(--text-dark-3), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-3)"
     },
     {
       "name": "$convert-text-dark-4",
       "value": "if($option-css-variables == true, var(--text-dark-4), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-4)"
     },
     {
       "name": "$convert-text-dark-5",
       "value": "if($option-css-variables == true, var(--text-dark-5), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-5)"
     },
     {
       "name": "$convert-text-dark-6",
       "value": "if($option-css-variables == true, var(--text-dark-6), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-6)"
     },
     {
       "name": "$convert-text-dark-7",
       "value": "if($option-css-variables == true, var(--text-dark-7), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-7)"
     },
     {
       "name": "$convert-text-dark-8",
       "value": "if($option-css-variables == true, var(--text-dark-8), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-8)"
     },
     {
       "name": "$convert-text-dark-9",
       "value": "if($option-css-variables == true, var(--text-dark-9), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-dark-9)"
     },
     {
       "name": "$convert-text-light",
       "value": "if($option-css-variables == true, var(--text-light), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light)"
     },
     {
       "name": "$convert-text-light-1",
       "value": "if($option-css-variables == true, var(--text-light-1), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-1)"
     },
     {
       "name": "$convert-text-light-2",
       "value": "if($option-css-variables == true, var(--text-light-2), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-2)"
     },
     {
       "name": "$convert-text-light-3",
       "value": "if($option-css-variables == true, var(--text-light-3), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-3)"
     },
     {
       "name": "$convert-text-light-4",
       "value": "if($option-css-variables == true, var(--text-light-4), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-4)"
     },
     {
       "name": "$convert-text-light-5",
       "value": "if($option-css-variables == true, var(--text-light-5), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-5)"
     },
     {
       "name": "$convert-text-light-6",
       "value": "if($option-css-variables == true, var(--text-light-6), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-6)"
     },
     {
       "name": "$convert-text-light-7",
       "value": "if($option-css-variables == true, var(--text-light-7), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-7)"
     },
     {
       "name": "$convert-text-light-8",
       "value": "if($option-css-variables == true, var(--text-light-8), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-8)"
     },
     {
       "name": "$convert-text-light-9",
       "value": "if($option-css-variables == true, var(--text-light-9), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--text-light-9)"
     },
     {
       "name": "$convert-background",
       "value": "if($option-css-variables == true, var(--background), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--background)"
     },
     {
       "name": "$convert-background-1",
       "value": "if($option-css-variables == true, var(--background-1), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--background-1)"
     },
     {
       "name": "$convert-background-2",
       "value": "if($option-css-variables == true, var(--background-2), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--background-2)"
     },
     {
       "name": "$convert-background-3",
       "value": "if($option-css-variables == true, var(--background-3), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--background-3)"
     },
     {
       "name": "$convert-background-4",
       "value": "if($option-css-variables == true, var(--background-4), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--background-4)"
     },
     {
       "name": "$convert-background-alpha",
       "value": "if($option-css-variables == true, var(--background-alpha), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--background-alpha)"
     },
     {
       "name": "$convert-border",
       "value": "if($option-css-variables == true, var(--border), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--border)"
     },
     {
       "name": "$convert-border-1",
       "value": "if($option-css-variables == true, var(--border-1), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--border-1)"
     },
     {
       "name": "$convert-shadow-alpha",
       "value": "if($option-css-variables == true, var(--shadow-alpha), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--shadow-alpha)"
     },
     {
       "name": "$convert-shadow-alpha-thin",
       "value": "if($option-css-variables == true, var(--shadow-alpha-thin), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--shadow-alpha-thin)"
     },
     {
       "name": "$convert-focus-darken",
       "value": "if($option-css-variables == true, var(--focus-darken), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--focus-darken)"
     },
     {
       "name": "$convert-focus-alpha",
       "value": "if($option-css-variables == true, var(--focus-alpha), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--focus-alpha)"
     },
     {
       "name": "$convert-focus-alpha-thin",
       "value": "if($option-css-variables == true, var(--focus-alpha-thin), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--focus-alpha-thin)"
     },
     {
       "name": "$convert-disabled-background-color",
       "value": "if($option-css-variables == true, var(--disabled-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--disabled-background-color)"
     },
     {
       "name": "$convert-disabled-border-color",
       "value": "if($option-css-variables == true, var(--disabled-border-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--disabled-border-color)"
     },
     {
       "name": "$convert-disabled-text-color",
       "value": "if($option-css-variables == true, var(--disabled-text-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--disabled-text-color)"
     },
     {
       "name": "$convert-body-background-color",
       "value": "if($option-css-variables == true, var(--body-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--body-background-color)"
     },
     {
       "name": "$convert-body-text-color",
       "value": "if($option-css-variables == true, var(--body-text-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--body-text-color)"
     },
     {
       "name": "$convert-code-text-color",
       "value": "if($option-css-variables == true, var(--code-text-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--code-text-color)"
     },
     {
       "name": "$convert-button-paint-text-color",
       "value": "if($option-css-variables == true, var(--button-paint-text-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--button-paint-text-color)"
     },
     {
       "name": "$convert-table-paint-background-color",
       "value": "if($option-css-variables == true, var(--table-paint-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--table-paint-background-color)"
     },
     {
       "name": "$convert-table-paint-text-color",
       "value": "if($option-css-variables == true, var(--table-paint-text-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--table-paint-text-color)"
     },
     {
       "name": "$convert-table-spot-background-color",
       "value": "if($option-css-variables == true, var(--table-spot-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--table-spot-background-color)"
     },
     {
       "name": "$convert-table-danger-background-color",
       "value": "if($option-css-variables == true, var(--table-danger-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--table-danger-background-color)"
     },
     {
       "name": "$convert-input-placeholder-color",
       "value": "if($option-css-variables == true, var(--input-placeholder-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--input-placeholder-color)"
     },
     {
       "name": "$convert-input-success-background-color",
       "value": "if($option-css-variables == true, var(--input-success-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--input-success-background-color)"
     },
     {
       "name": "$convert-input-success-border-color",
       "value": "if($option-css-variables == true, var(--input-success-border-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--input-success-border-color)"
     },
     {
       "name": "$convert-input-danger-background-color",
       "value": "if($option-css-variables == true, var(--input-danger-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--input-danger-background-color)"
     },
     {
       "name": "$convert-input-danger-border-color",
       "value": "if($option-css-variables == true, var(--input-danger-border-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--input-danger-border-color)"
     },
     {
       "name": "$convert-checkbox-before-border-color",
       "value": "if($option-css-variables == true, var(--checkbox-before-border-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--checkbox-before-border-color)"
     },
     {
       "name": "$convert-alert-primary-background-color",
       "value": "if($option-css-variables == true, var(--alert-primary-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-primary-background-color)"
     },
     {
       "name": "$convert-alert-primary-border-color",
       "value": "if($option-css-variables == true, var(--alert-primary-border-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-primary-border-color)"
     },
     {
       "name": "$convert-alert-info-background-color",
       "value": "if($option-css-variables == true, var(--alert-info-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-info-background-color)"
     },
     {
       "name": "$convert-alert-info-border-color",
       "value": "if($option-css-variables == true, var(--alert-info-border-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-info-border-color)"
     },
     {
       "name": "$convert-alert-success-background-color",
       "value": "if($option-css-variables == true, var(--alert-success-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-success-background-color)"
     },
     {
       "name": "$convert-alert-success-border-color",
       "value": "if($option-css-variables == true, var(--alert-success-border-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-success-border-color)"
     },
     {
       "name": "$convert-alert-warning-background-color",
       "value": "if($option-css-variables == true, var(--alert-warning-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-warning-background-color)"
     },
     {
       "name": "$convert-alert-warning-border-color",
       "value": "if($option-css-variables == true, var(--alert-warning-border-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-warning-border-color)"
     },
     {
       "name": "$convert-alert-danger-background-color",
       "value": "if($option-css-variables == true, var(--alert-danger-background-color), null)",
-      "compiledValue": ""
+      "compiledValue": "var(--alert-danger-background-color)"
     },
     {
       "name": "$convert-alert-danger-border-color",
       "value": "if($option-css-variables == true, var(--alert-danger-border-color), null)",
-      "compiledValue": ""
-    },
+      "compiledValue": "var(--alert-danger-border-color)"
+    }
+  ],
+  "not-used-variables": [
     {
       "name": "$convert-primary",
       "value": "if($option-theme-default == $theme-dark-id, $theme-dark-primary, null)",

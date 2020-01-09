@@ -1,0 +1,23 @@
+//----------------------------------------------------
+// Template: Mode - Dynamic Light
+//----------------------------------------------------
+
+@import "switchings/_switching-mode-dynamic-light.scss";
+
+@import "variables/_option.scss";
+@import "variables/_breakpoint.scss";
+@import "variables/_color.scss";
+@import "variables/_font.scss";
+@import "variables/_radius.scss";
+@import "variables/_meter.scss";
+@import "variables/_global.scss";
+
+@import "mixins/_mediaquery.scss";
+@import "mixins/_placeholder.scss";
+@import "mixins/_safearea.scss";
+@import "mixins/_generate.scss";
+
+@import "themes/_theme-common.scss";
+@import "themes/_theme-light.scss";
+@import "themes/_theme-dark.scss";
+@import "themes/_convert.scss";

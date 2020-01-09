@@ -66,7 +66,7 @@ export class PreviewVariablesSingle extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      simpleData: require("~/assets/extracts/modes/simple/" +
+      staticLightData: require("~/assets/extracts/modes/static-light/" +
         this.props.filePath +
         ".json")
     }
@@ -105,7 +105,7 @@ export class PreviewVariablesSingle extends React.Component {
             </div>
           </header>
           <ul className="table-body">
-            {this.state.simpleData.variables.map(variable => (
+            {this.state.staticLightData.variables.map(variable => (
               <TableBodyItem
                 item={variable}
                 key={variable.name}
@@ -124,10 +124,10 @@ export class PreviewVariablesDouble extends React.Component {
     super(props)
     this.state = {
       mode: "simple",
-      simpleData: require("~/assets/extracts/modes/simple/" +
+      staticLightData: require("~/assets/extracts/modes/static-light/" +
         this.props.filePath +
         ".json"),
-      lightData: require("~/assets/extracts/modes/light/" +
+      dynamicLightData: require("~/assets/extracts/modes/dynamic-light/" +
         this.props.filePath +
         ".json")
     }
@@ -182,7 +182,7 @@ export class PreviewVariablesDouble extends React.Component {
             if (this.state.mode === "simple") {
               return (
                 <ul className="table-body">
-                  {this.state.simpleData.variables.map(variable => (
+                  {this.state.staticLightData.variables.map(variable => (
                     <TableBodyItem
                       item={variable}
                       key={variable.name}
@@ -194,7 +194,7 @@ export class PreviewVariablesDouble extends React.Component {
             } else if (this.state.mode === "light") {
               return (
                 <ul className="table-body">
-                  {this.state.lightData.variables.map(variable => (
+                  {this.state.dynamicLightData.variables.map(variable => (
                     <TableBodyItem
                       item={variable}
                       key={variable.name}
@@ -215,7 +215,7 @@ export class PreviewVariablesCss extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      simpleData: require("~/assets/extracts/modes/simple/" +
+      staticLightData: require("~/assets/extracts/modes/static-light/" +
         this.props.filePath +
         ".json")
     }
@@ -232,7 +232,7 @@ export class PreviewVariablesCss extends React.Component {
             </div>
           </header>
           <ul className="table-body">
-            {this.state.simpleData["css-variables"].map(variable => (
+            {this.state.staticLightData["css-variables"].map(variable => (
               <TableBodyItem
                 item={variable}
                 cssVariables={true}

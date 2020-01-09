@@ -25,7 +25,7 @@ class PreviewMixins extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      simpleData: require("~/assets/extracts/modes/simple/" +
+      staticLightData: require("~/assets/extracts/modes/static-light/" +
         this.props.filePath +
         ".json")
     }
@@ -35,7 +35,7 @@ class PreviewMixins extends React.Component {
       <div className="demo-box is-preview">
         <article className="demo-flex-table">
           <ul className="table-body">
-            {this.state.simpleData.mixins.map(mixin => (
+            {this.state.staticLightData.mixins.map(mixin => (
               <TableBodyItem item={mixin} key={mixin.name} />
             ))}
           </ul>

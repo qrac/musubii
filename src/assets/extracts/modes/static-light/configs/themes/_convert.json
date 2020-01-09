@@ -1,0 +1,1131 @@
+{
+  "variables": [
+    {
+      "name": "$convert-primary",
+      "value": "$theme-light-primary",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$convert-primary-strong",
+      "value": "$theme-light-primary-strong",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$convert-primary-darken",
+      "value": "$theme-light-primary-darken",
+      "compiledValue": "#319eaa"
+    },
+    {
+      "name": "$convert-info",
+      "value": "$theme-light-info",
+      "compiledValue": "#4b9bd8"
+    },
+    {
+      "name": "$convert-info-strong",
+      "value": "$theme-light-info-strong",
+      "compiledValue": "#4b9bd8"
+    },
+    {
+      "name": "$convert-info-darken",
+      "value": "$theme-light-info-darken",
+      "compiledValue": "#368fd3"
+    },
+    {
+      "name": "$convert-success",
+      "value": "$theme-light-success",
+      "compiledValue": "#2ca52c"
+    },
+    {
+      "name": "$convert-success-strong",
+      "value": "$theme-light-success-strong",
+      "compiledValue": "#2ca52c"
+    },
+    {
+      "name": "$convert-success-darken",
+      "value": "$theme-light-success-darken",
+      "compiledValue": "#279127"
+    },
+    {
+      "name": "$convert-warning",
+      "value": "$theme-light-warning",
+      "compiledValue": "#ec9213"
+    },
+    {
+      "name": "$convert-warning-strong",
+      "value": "$theme-light-warning-strong",
+      "compiledValue": "#ec9213"
+    },
+    {
+      "name": "$convert-warning-darken",
+      "value": "$theme-light-warning-darken",
+      "compiledValue": "#d48311"
+    },
+    {
+      "name": "$convert-danger",
+      "value": "$theme-light-danger",
+      "compiledValue": "#db5757"
+    },
+    {
+      "name": "$convert-danger-strong",
+      "value": "$theme-light-danger-strong",
+      "compiledValue": "#db5757"
+    },
+    {
+      "name": "$convert-danger-darken",
+      "value": "$theme-light-danger-darken",
+      "compiledValue": "#d74242"
+    },
+    {
+      "name": "$convert-text-dark",
+      "value": "$theme-light-text-dark",
+      "compiledValue": "black"
+    },
+    {
+      "name": "$convert-text-dark-1",
+      "value": "$theme-light-text-dark-1",
+      "compiledValue": "rgba(0, 0, 0, 0.87)"
+    },
+    {
+      "name": "$convert-text-dark-2",
+      "value": "$theme-light-text-dark-2",
+      "compiledValue": "rgba(0, 0, 0, 0.7)"
+    },
+    {
+      "name": "$convert-text-dark-3",
+      "value": "$theme-light-text-dark-3",
+      "compiledValue": "rgba(0, 0, 0, 0.6)"
+    },
+    {
+      "name": "$convert-text-dark-4",
+      "value": "$theme-light-text-dark-4",
+      "compiledValue": "rgba(0, 0, 0, 0.5)"
+    },
+    {
+      "name": "$convert-text-dark-5",
+      "value": "$theme-light-text-dark-5",
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "$convert-text-dark-6",
+      "value": "$theme-light-text-dark-6",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
+    },
+    {
+      "name": "$convert-text-dark-7",
+      "value": "$theme-light-text-dark-7",
+      "compiledValue": "rgba(0, 0, 0, 0.15)"
+    },
+    {
+      "name": "$convert-text-dark-8",
+      "value": "$theme-light-text-dark-8",
+      "compiledValue": "rgba(0, 0, 0, 0.12)"
+    },
+    {
+      "name": "$convert-text-dark-9",
+      "value": "$theme-light-text-dark-9",
+      "compiledValue": "rgba(0, 0, 0, 0.05)"
+    },
+    {
+      "name": "$convert-text-light",
+      "value": "$theme-light-text-light",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$convert-text-light-1",
+      "value": "$theme-light-text-light-1",
+      "compiledValue": "rgba(255, 255, 255, 0.87)"
+    },
+    {
+      "name": "$convert-text-light-2",
+      "value": "$theme-light-text-light-2",
+      "compiledValue": "rgba(255, 255, 255, 0.7)"
+    },
+    {
+      "name": "$convert-text-light-3",
+      "value": "$theme-light-text-light-3",
+      "compiledValue": "rgba(255, 255, 255, 0.6)"
+    },
+    {
+      "name": "$convert-text-light-4",
+      "value": "$theme-light-text-light-4",
+      "compiledValue": "rgba(255, 255, 255, 0.5)"
+    },
+    {
+      "name": "$convert-text-light-5",
+      "value": "$theme-light-text-light-5",
+      "compiledValue": "rgba(255, 255, 255, 0.4)"
+    },
+    {
+      "name": "$convert-text-light-6",
+      "value": "$theme-light-text-light-6",
+      "compiledValue": "rgba(255, 255, 255, 0.26)"
+    },
+    {
+      "name": "$convert-text-light-7",
+      "value": "$theme-light-text-light-7",
+      "compiledValue": "rgba(255, 255, 255, 0.15)"
+    },
+    {
+      "name": "$convert-text-light-8",
+      "value": "$theme-light-text-light-8",
+      "compiledValue": "rgba(255, 255, 255, 0.12)"
+    },
+    {
+      "name": "$convert-text-light-9",
+      "value": "$theme-light-text-light-9",
+      "compiledValue": "rgba(255, 255, 255, 0.05)"
+    },
+    {
+      "name": "$convert-background",
+      "value": "$theme-light-background",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$convert-background-1",
+      "value": "$theme-light-background-1",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$convert-background-2",
+      "value": "$theme-light-background-2",
+      "compiledValue": "whitesmoke"
+    },
+    {
+      "name": "$convert-background-3",
+      "value": "$theme-light-background-3",
+      "compiledValue": "whitesmoke"
+    },
+    {
+      "name": "$convert-background-4",
+      "value": "$theme-light-background-4",
+      "compiledValue": "#ededed"
+    },
+    {
+      "name": "$convert-background-alpha",
+      "value": "$theme-light-background-alpha",
+      "compiledValue": "rgba(0, 0, 0, 0.05)"
+    },
+    {
+      "name": "$convert-border",
+      "value": "$theme-light-border",
+      "compiledValue": "#d1d8dc"
+    },
+    {
+      "name": "$convert-border-1",
+      "value": "$theme-light-border-1",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
+    },
+    {
+      "name": "$convert-shadow-alpha",
+      "value": "$theme-light-shadow-alpha",
+      "compiledValue": "rgba(0, 0, 0, 0.24)"
+    },
+    {
+      "name": "$convert-shadow-alpha-thin",
+      "value": "$theme-light-shadow-alpha-thin",
+      "compiledValue": "rgba(0, 0, 0, 0.075)"
+    },
+    {
+      "name": "$convert-focus-darken",
+      "value": "$theme-light-focus-darken",
+      "compiledValue": "#0f7dd2"
+    },
+    {
+      "name": "$convert-focus-alpha",
+      "value": "$theme-light-focus-alpha",
+      "compiledValue": "rgba(36, 151, 240, 0.5)"
+    },
+    {
+      "name": "$convert-focus-alpha-thin",
+      "value": "$theme-light-focus-alpha-thin",
+      "compiledValue": "rgba(36, 151, 240, 0.36)"
+    },
+    {
+      "name": "$convert-disabled-background-color",
+      "value": "$theme-light-disabled-background-color",
+      "compiledValue": "#bdbdbd"
+    },
+    {
+      "name": "$convert-disabled-border-color",
+      "value": "$theme-light-disabled-border-color",
+      "compiledValue": "#eef0f2"
+    },
+    {
+      "name": "$convert-disabled-text-color",
+      "value": "$theme-light-disabled-text-color",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
+    },
+    {
+      "name": "$convert-body-background-color",
+      "value": "$theme-light-body-background-color",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$convert-body-text-color",
+      "value": "$theme-light-body-text-color",
+      "compiledValue": "rgba(0, 0, 0, 0.7)"
+    },
+    {
+      "name": "$convert-code-text-color",
+      "value": "$theme-light-code-text-color",
+      "compiledValue": "#5d69a8"
+    },
+    {
+      "name": "$convert-button-paint-text-color",
+      "value": "$theme-light-button-paint-text-color",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$convert-table-paint-background-color",
+      "value": "$theme-light-table-paint-background-color",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$convert-table-paint-text-color",
+      "value": "$theme-light-table-paint-text-color",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$convert-table-spot-background-color",
+      "value": "$theme-light-table-spot-background-color",
+      "compiledValue": "#f8f1a5"
+    },
+    {
+      "name": "$convert-table-danger-background-color",
+      "value": "$theme-light-table-danger-background-color",
+      "compiledValue": "#f5d1d1"
+    },
+    {
+      "name": "$convert-input-placeholder-color",
+      "value": "$theme-light-input-placeholder-color",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
+    },
+    {
+      "name": "$convert-input-success-background-color",
+      "value": "$theme-light-input-success-background-color",
+      "compiledValue": "#dbf5db"
+    },
+    {
+      "name": "$convert-input-success-border-color",
+      "value": "$theme-light-input-success-border-color",
+      "compiledValue": "#7edd7e"
+    },
+    {
+      "name": "$convert-input-danger-background-color",
+      "value": "$theme-light-input-danger-background-color",
+      "compiledValue": "#fbeaea"
+    },
+    {
+      "name": "$convert-input-danger-border-color",
+      "value": "$theme-light-input-danger-border-color",
+      "compiledValue": "#eeafaf"
+    },
+    {
+      "name": "$convert-checkbox-before-border-color",
+      "value": "$theme-light-checkbox-before-border-color",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$convert-alert-primary-background-color",
+      "value": "$theme-light-alert-primary-background-color",
+      "compiledValue": "#dff4f6"
+    },
+    {
+      "name": "$convert-alert-primary-border-color",
+      "value": "$theme-light-alert-primary-border-color",
+      "compiledValue": "#9cdbe2"
+    },
+    {
+      "name": "$convert-alert-info-background-color",
+      "value": "$theme-light-alert-info-background-color",
+      "compiledValue": "#deecf8"
+    },
+    {
+      "name": "$convert-alert-info-border-color",
+      "value": "$theme-light-alert-info-border-color",
+      "compiledValue": "#a3cceb"
+    },
+    {
+      "name": "$convert-alert-success-background-color",
+      "value": "$theme-light-alert-success-background-color",
+      "compiledValue": "#dbf5db"
+    },
+    {
+      "name": "$convert-alert-success-border-color",
+      "value": "$theme-light-alert-success-border-color",
+      "compiledValue": "#7edd7e"
+    },
+    {
+      "name": "$convert-alert-warning-background-color",
+      "value": "$theme-light-alert-warning-background-color",
+      "compiledValue": "#fcf0de"
+    },
+    {
+      "name": "$convert-alert-warning-border-color",
+      "value": "$theme-light-alert-warning-border-color",
+      "compiledValue": "#f6cd92"
+    },
+    {
+      "name": "$convert-alert-danger-background-color",
+      "value": "$theme-light-alert-danger-background-color",
+      "compiledValue": "#fbeaea"
+    },
+    {
+      "name": "$convert-alert-danger-border-color",
+      "value": "$theme-light-alert-danger-border-color",
+      "compiledValue": "#eeafaf"
+    }
+  ],
+  "not-used-variables": [
+    {
+      "name": "$convert-primary",
+      "value": "if($option-css-variables == true, var(--primary), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-primary-strong",
+      "value": "if($option-css-variables == true, var(--primary-strong), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-primary-darken",
+      "value": "if($option-css-variables == true, var(--primary-darken), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-info",
+      "value": "if($option-css-variables == true, var(--info), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-info-strong",
+      "value": "if($option-css-variables == true, var(--info-strong), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-info-darken",
+      "value": "if($option-css-variables == true, var(--info-darken), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-success",
+      "value": "if($option-css-variables == true, var(--success), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-success-strong",
+      "value": "if($option-css-variables == true, var(--success-strong), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-success-darken",
+      "value": "if($option-css-variables == true, var(--success-darken), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-warning",
+      "value": "if($option-css-variables == true, var(--warning), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-warning-strong",
+      "value": "if($option-css-variables == true, var(--warning-strong), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-warning-darken",
+      "value": "if($option-css-variables == true, var(--warning-darken), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-danger",
+      "value": "if($option-css-variables == true, var(--danger), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-danger-strong",
+      "value": "if($option-css-variables == true, var(--danger-strong), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-danger-darken",
+      "value": "if($option-css-variables == true, var(--danger-darken), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark",
+      "value": "if($option-css-variables == true, var(--text-dark), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-1",
+      "value": "if($option-css-variables == true, var(--text-dark-1), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-2",
+      "value": "if($option-css-variables == true, var(--text-dark-2), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-3",
+      "value": "if($option-css-variables == true, var(--text-dark-3), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-4",
+      "value": "if($option-css-variables == true, var(--text-dark-4), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-5",
+      "value": "if($option-css-variables == true, var(--text-dark-5), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-6",
+      "value": "if($option-css-variables == true, var(--text-dark-6), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-7",
+      "value": "if($option-css-variables == true, var(--text-dark-7), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-8",
+      "value": "if($option-css-variables == true, var(--text-dark-8), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-9",
+      "value": "if($option-css-variables == true, var(--text-dark-9), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light",
+      "value": "if($option-css-variables == true, var(--text-light), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-1",
+      "value": "if($option-css-variables == true, var(--text-light-1), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-2",
+      "value": "if($option-css-variables == true, var(--text-light-2), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-3",
+      "value": "if($option-css-variables == true, var(--text-light-3), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-4",
+      "value": "if($option-css-variables == true, var(--text-light-4), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-5",
+      "value": "if($option-css-variables == true, var(--text-light-5), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-6",
+      "value": "if($option-css-variables == true, var(--text-light-6), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-7",
+      "value": "if($option-css-variables == true, var(--text-light-7), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-8",
+      "value": "if($option-css-variables == true, var(--text-light-8), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-9",
+      "value": "if($option-css-variables == true, var(--text-light-9), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background",
+      "value": "if($option-css-variables == true, var(--background), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-1",
+      "value": "if($option-css-variables == true, var(--background-1), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-2",
+      "value": "if($option-css-variables == true, var(--background-2), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-3",
+      "value": "if($option-css-variables == true, var(--background-3), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-4",
+      "value": "if($option-css-variables == true, var(--background-4), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-alpha",
+      "value": "if($option-css-variables == true, var(--background-alpha), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-border",
+      "value": "if($option-css-variables == true, var(--border), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-border-1",
+      "value": "if($option-css-variables == true, var(--border-1), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-shadow-alpha",
+      "value": "if($option-css-variables == true, var(--shadow-alpha), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-shadow-alpha-thin",
+      "value": "if($option-css-variables == true, var(--shadow-alpha-thin), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-focus-darken",
+      "value": "if($option-css-variables == true, var(--focus-darken), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-focus-alpha",
+      "value": "if($option-css-variables == true, var(--focus-alpha), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-focus-alpha-thin",
+      "value": "if($option-css-variables == true, var(--focus-alpha-thin), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-disabled-background-color",
+      "value": "if($option-css-variables == true, var(--disabled-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-disabled-border-color",
+      "value": "if($option-css-variables == true, var(--disabled-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-disabled-text-color",
+      "value": "if($option-css-variables == true, var(--disabled-text-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-body-background-color",
+      "value": "if($option-css-variables == true, var(--body-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-body-text-color",
+      "value": "if($option-css-variables == true, var(--body-text-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-code-text-color",
+      "value": "if($option-css-variables == true, var(--code-text-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-button-paint-text-color",
+      "value": "if($option-css-variables == true, var(--button-paint-text-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-table-paint-background-color",
+      "value": "if($option-css-variables == true, var(--table-paint-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-table-paint-text-color",
+      "value": "if($option-css-variables == true, var(--table-paint-text-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-table-spot-background-color",
+      "value": "if($option-css-variables == true, var(--table-spot-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-table-danger-background-color",
+      "value": "if($option-css-variables == true, var(--table-danger-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-placeholder-color",
+      "value": "if($option-css-variables == true, var(--input-placeholder-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-success-background-color",
+      "value": "if($option-css-variables == true, var(--input-success-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-success-border-color",
+      "value": "if($option-css-variables == true, var(--input-success-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-danger-background-color",
+      "value": "if($option-css-variables == true, var(--input-danger-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-danger-border-color",
+      "value": "if($option-css-variables == true, var(--input-danger-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-checkbox-before-border-color",
+      "value": "if($option-css-variables == true, var(--checkbox-before-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-primary-background-color",
+      "value": "if($option-css-variables == true, var(--alert-primary-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-primary-border-color",
+      "value": "if($option-css-variables == true, var(--alert-primary-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-info-background-color",
+      "value": "if($option-css-variables == true, var(--alert-info-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-info-border-color",
+      "value": "if($option-css-variables == true, var(--alert-info-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-success-background-color",
+      "value": "if($option-css-variables == true, var(--alert-success-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-success-border-color",
+      "value": "if($option-css-variables == true, var(--alert-success-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-warning-background-color",
+      "value": "if($option-css-variables == true, var(--alert-warning-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-warning-border-color",
+      "value": "if($option-css-variables == true, var(--alert-warning-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-danger-background-color",
+      "value": "if($option-css-variables == true, var(--alert-danger-background-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-danger-border-color",
+      "value": "if($option-css-variables == true, var(--alert-danger-border-color), null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-primary",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-primary, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-primary-strong",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-primary-strong, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-primary-darken",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-primary-darken, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-info",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-info, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-info-strong",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-info-strong, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-info-darken",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-info-darken, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-success",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-success, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-success-strong",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-success-strong, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-success-darken",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-success-darken, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-warning",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-warning, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-warning-strong",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-warning-strong, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-warning-darken",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-warning-darken, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-danger",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-danger, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-danger-strong",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-danger-strong, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-danger-darken",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-danger-darken, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-1",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-1, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-2",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-2, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-3",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-3, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-4",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-4, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-5",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-5, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-6",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-6, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-7",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-7, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-8",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-8, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-dark-9",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-9, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-1",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-1, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-2",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-2, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-3",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-3, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-4",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-4, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-5",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-5, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-6",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-6, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-7",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-7, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-8",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-8, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-text-light-9",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-9, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-background, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-1",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-background-1, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-2",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-background-2, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-3",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-background-3, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-4",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-background-4, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-background-alpha",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-background-alpha, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-border",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-border, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-border-1",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-border-1, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-shadow-alpha",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-shadow-alpha, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-shadow-alpha-thin",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-shadow-alpha-thin, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-focus-darken",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-focus-darken, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-focus-alpha",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-focus-alpha, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-focus-alpha-thin",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-focus-alpha-thin, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-disabled-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-disabled-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-disabled-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-disabled-border-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-disabled-text-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-disabled-text-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-body-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-body-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-body-text-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-body-text-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-code-text-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-code-text-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-button-paint-text-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-button-paint-text-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-table-paint-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-table-paint-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-table-paint-text-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-table-paint-text-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-table-spot-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-table-spot-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-table-danger-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-table-danger-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-placeholder-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-input-placeholder-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-success-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-input-success-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-success-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-input-success-border-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-danger-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-input-danger-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-input-danger-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-input-danger-border-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-checkbox-before-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-checkbox-before-border-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-primary-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-primary-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-primary-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-primary-border-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-info-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-info-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-info-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-info-border-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-success-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-success-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-success-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-success-border-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-warning-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-warning-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-warning-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-warning-border-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-danger-background-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-danger-background-color, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-alert-danger-border-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-alert-danger-border-color, null)",
+      "compiledValue": ""
+    }
+  ]
+}

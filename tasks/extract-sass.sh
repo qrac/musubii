@@ -4,50 +4,67 @@
 
 extractTemplatePath='./src/assets/extracts/templates'
 settingTempPath='./src/assets/extracts/.temp/settings'
-simpleTempPath='./src/assets/extracts/.temp/simple'
-lightTempPath='./src/assets/extracts/.temp/light'
-darkTempPath='./src/assets/extracts/.temp/dark'
+staticLightTempPath='./src/assets/extracts/.temp/static-light'
+dynamicLightTempPath='./src/assets/extracts/.temp/dynamic-light'
 
 # Copy All
 
 cpx './src/scss/configs/**/!(_import.scss)' $settingTempPath
 cpx './src/assets/extracts/switchings/**/*' "$settingTempPath/switchings"
-cpx './src/scss/**/!(musubii.scss|_import.scss)' $simpleTempPath
-cpx './src/scss/**/!(musubii.scss|_import.scss)' $lightTempPath
-###cpx './src/scss/**/!(musubii.scss|_import.scss)' $darkTempPath
+cpx './src/scss/**/!(musubii.scss|_import.scss)' $staticLightTempPath
+cpx './src/scss/**/!(musubii.scss|_import.scss)' $dynamicLightTempPath
 
-# Extract Setting for Simple
+# Setting Static Light
 
-simpleTempFiles=`find $simpleTempPath -maxdepth 3 -type f -name *.scss`
+staticLightTempFiles=`find $staticLightTempPath -maxdepth 3 -type f -name *.scss`
 
-for i in $simpleTempFiles;
+for i in $staticLightTempFiles;
 do
-  concat -o $i "$extractTemplatePath/template-mode-simple.scss" $i
+  concat -o $i "$extractTemplatePath/template-mode-static-light.scss" $i
 done
 
-# Extract Setting for Light
+# Setting Dynamic Light
 
-lightTempFiles=`find $lightTempPath -maxdepth 3 -type f -name *.scss`
+dynamicLightTempFiles=`find $dynamicLightTempPath -maxdepth 3 -type f -name *.scss`
 
-for i in $lightTempFiles;
+for i in $dynamicLightTempFiles;
 do
-  concat -o $i "$extractTemplatePath/template-mode-light.scss" $i
+  concat -o $i "$extractTemplatePath/template-mode-dynamic-light.scss" $i
 done
 
-# Extract Setting for Root Light
+# Attached Root Light
 
-simpleTempFiles=`find $simpleTempPath -maxdepth 3 -type f -name _root-light.scss`
+rootLightFiles=`find $staticLightTempPath -maxdepth 3 -type f -name _root-light.scss`
 
-for i in $simpleTempFiles;
+for i in $rootLightFiles;
 do
-  concat -o $i $i "$extractTemplatePath/template-css-variables-root-light.scss"
+  concat -o $i $i "$extractTemplatePath/template-attached-root-light.scss"
 done
 
-# Extract Setting for Root Dark
+# Attached Root Dark
 
-simpleTempFiles=`find $simpleTempPath -maxdepth 3 -type f -name _root-dark.scss`
+rootDarkFiles=`find $staticLightTempPath -maxdepth 3 -type f -name _root-dark.scss`
 
-for i in $simpleTempFiles;
+for i in $rootDarkFiles;
 do
-  concat -o $i $i "$extractTemplatePath/template-css-variables-root-dark.scss"
+  concat -o $i $i "$extractTemplatePath/template-attached-root-dark.scss"
+done
+
+# Fix Static Light Convert
+
+staticLightConvertFiles=`find $staticLightTempPath -maxdepth 3 -type f -name _convert.scss`
+
+for i in $staticLightConvertFiles;
+do
+  replace '\/\/ \/ CSS Variables' '/* @sass-export-section="not-used-variables" */' $i
+  replace '\/\/ \/ Theme Default - Light' '//@end-sass-export-section' $i
+done
+
+# Fix Dynamic Light Convert
+
+dynamicLightConvertFiles=`find $dynamicLightTempPath -maxdepth 3 -type f -name _convert.scss`
+
+for i in $dynamicLightConvertFiles;
+do
+  replace '\/\/ \/ Theme Default - Dark' '/* @sass-export-section="not-used-variables" */' $i
 done
