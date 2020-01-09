@@ -1,6 +1,32 @@
 export const meta = {
   title: "Text",
-  path: "/styles/elements/text"
+  path: "/styles/elements/text",
+  docsPath: "styles/elements/text",
+  filePath: "styles/elements/_text"
 }
 
+import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Text
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesDouble filePath={meta.filePath} viewCompiled={true} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
