@@ -1,6 +1,32 @@
 export const meta = {
   title: "iframe",
-  path: "/styles/elements/iframe"
+  path: "/styles/elements/iframe",
+  docsPath: "styles/elements/iframe",
+  filePath: "styles/elements/_iframe"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # iframe
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
