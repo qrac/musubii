@@ -1,6 +1,32 @@
 export const meta = {
   title: "WYSIWYG",
-  path: "/styles/elements/wysiwyg"
+  path: "/styles/elements/wysiwyg",
+  docsPath: "styles/elements/wysiwyg",
+  filePath: "styles/elements/_wysiwyg"
 }
 
+import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # WYSIWYG
+
+## Table of Contents
+
+contents list
+
+## Variables
+
+<PreviewVariablesDouble filePath={meta.filePath} viewCompiled={true} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
