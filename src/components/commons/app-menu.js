@@ -1,5 +1,8 @@
 import React from "react"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
+
 import ActiveLink from "~/components/parts/active-link"
 import pjt from "../../../project.json"
 
@@ -7,10 +10,29 @@ class AppMenu extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      open: false
+      open: false,
+      filter: false,
+      initialItems: [],
+      filterItems: []
     }
     this.toggleMenu = this.toggleMenu.bind(this)
     this.closeMenu = this.closeMenu.bind(this)
+    //this.filterMenu = this.filterMenu.bind(this)
+  }
+  componentDidMount() {
+    const menus = pjt.menus
+    const lists = []
+    menus.map(menu =>
+      menu.items.map(item => {
+        if (item["id"] && item["title"]) {
+          lists.push(item)
+        } else if (item.items) {
+          item.items.map(childItem => lists.push(childItem))
+        }
+      })
+    )
+    //console.log(lists)
+    this.setState({ initialItems: lists })
   }
   toggleMenu() {
     this.setState({
@@ -21,6 +43,17 @@ class AppMenu extends React.Component {
     this.setState({
       open: false
     })
+  }
+  filterMenu = e => {
+    e.target.value
+      ? this.setState({ filter: true })
+      : this.setState({ filter: false })
+    const updateItems = this.state.initialItems.filter(item => {
+      return (
+        item.title.toLowerCase().search(e.target.value.toLowerCase()) !== -1
+      )
+    })
+    this.setState({ filterItems: updateItems })
   }
   render() {
     const menus = pjt.menus
@@ -146,13 +179,48 @@ class AppMenu extends React.Component {
           }
           /*style={{ maxHeight: menuHeight }}*/
         >
-          <nav className="menu" id="menu">
-            <ul className="menu-list">
-              {menus.map(menu => (
-                <MenuItem1 menu={menu} key={menu.id} />
-              ))}
-            </ul>
-          </nav>
+          <div className="menu-filter-wrap">
+            <div className="menu-filter-input-wrap">
+              <input
+                className="input is-plain"
+                type="search"
+                placeholder="Filter the menu..."
+                onChange={this.filterMenu}
+              />
+              <FontAwesomeIcon
+                icon={faSearch}
+                className="icon is-search is-dark-6"
+              />
+            </div>
+          </div>
+          {(() => {
+            if (this.state.filter) {
+              return (
+                <nav className="menu" id="menu">
+                  <ul className="menu-list">
+                    <li className="menu-item">
+                      <p className="menu-heading">Filter results</p>
+                      <ul className="menu-list">
+                        {this.state.filterItems.map(menu => (
+                          <MenuItem3 menu={menu} key={menu.id} />
+                        ))}
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              )
+            } else {
+              return (
+                <nav className="menu" id="menu">
+                  <ul className="menu-list">
+                    {menus.map(menu => (
+                      <MenuItem1 menu={menu} key={menu.id} />
+                    ))}
+                  </ul>
+                </nav>
+              )
+            }
+          })()}
         </div>
       </div>
     )

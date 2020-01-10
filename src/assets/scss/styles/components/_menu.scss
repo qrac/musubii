@@ -15,7 +15,7 @@
       }
     }
     .menu {
-      padding: 1em 1em 1.5em;
+      padding: 16px 16px 24px;
     }
   }
   @include desktop() {
@@ -27,11 +27,48 @@
   }
 }
 
+.menu-filter-wrap {
+  @include mobile-tablet() {
+    padding: 16px 16px 0;
+  }
+  @include desktop() {
+    position: sticky;
+    top: 0;
+    background-color: $convert-background;
+    padding: 0 0 16px;
+  }
+}
+
+.menu-filter-input-wrap {
+  position: relative;
+  @include mobile-tablet() {
+    width: 100%;
+  }
+  @include desktop() {
+    width: 210px;
+  }
+  .input.is-plain {
+    width: 100%;
+    padding: 0.5em 0.75em 0.5em 2.25em;
+    &:focus {
+      border-color: $convert-primary-strong;
+      box-shadow: none;
+    }
+  }
+  .icon.is-search {
+    position: absolute;
+    top: 50%;
+    left: 0.75em;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+}
+
 .menu {
   > .menu-list {
     > .menu-item {
       &:not(:first-child) {
-        margin-top: 1.5em;
+        margin-top: 24px;
       }
     }
     &:first-child {
@@ -43,7 +80,7 @@
     }
   }
   .menu-list .menu-list {
-    padding-left: 1em;
+    padding-left: 16px;
   }
 }
 
@@ -79,7 +116,8 @@
     }
     &:not(.is-active) {
       &:focus {
-        box-shadow: $button-focus-shadow;
+        box-shadow: 0 0 1px 1px $convert-primary-strong;
+        //box-shadow: $button-focus-shadow;
         outline: none;
       }
     }
@@ -87,7 +125,8 @@
       border-bottom: 1px solid $convert-border;
       border-radius: $radius-md $radius-md 0 0;
       &:focus {
-        box-shadow: $convert-focus-alpha 0 -3px 0 0 inset;
+        border-color: $convert-primary-strong;
+        //box-shadow: $convert-focus-alpha 0 -3px 0 0 inset;
       }
       &:after {
         transform: translateY(-30%) rotate(-45deg);
@@ -101,7 +140,7 @@
 
 .menu-heading {
   display: block;
-  padding: 0.75em 0;
+  padding: 8px 0;
   color: $convert-text-dark-4;
   font-size: 75%;
   font-weight: 900;
@@ -117,7 +156,7 @@
 
 .menu-link {
   display: block;
-  padding: 0.375em 0;
+  padding: 8px 0;
   //font-size: 87.5%;
   font-family: $font-sans-en;
   transition: $global-transition;
