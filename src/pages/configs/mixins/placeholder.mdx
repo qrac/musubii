@@ -14,6 +14,19 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+`.input` などの Placeholder カラー設定に使われている Mixin です。
+
+```scss
+// ex. Placeholderの文字色を薄くしたい
+.input {
+  @include placeholder() {
+    color: rgba(0, 0, 0, 0.26);
+  }
+}
+```
+
 ## Mixins
 
 <PreviewMixins filePath={meta.filePath} />
