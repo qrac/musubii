@@ -35,7 +35,7 @@
     position: sticky;
     top: 0;
     background-color: $convert-background;
-    padding: 0 0 16px;
+    padding: 0 0 12px;
   }
 }
 
@@ -65,6 +65,9 @@
 }
 
 .menu {
+  @include desktop() {
+    padding-top: 12px;
+  }
   > .menu-list {
     > .menu-item {
       &:not(:first-child) {
