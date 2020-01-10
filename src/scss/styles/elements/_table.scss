@@ -77,7 +77,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include generate-style($option-generate-table) {
+@include generate-style($option-generate-style-table) {
   #{$selector-table} {
     @include musubii-style-table();
   }
@@ -97,7 +97,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include generate-style($option-generate-table) {
+@include generate-style($option-generate-style-table) {
   #{$selector-table} {
     @include musubii-style-table-line();
   }
@@ -113,7 +113,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include generate-style($option-generate-table) {
+@include generate-style($option-generate-style-table) {
   #{$selector-table} {
     @include musubii-style-table-outline();
   }
@@ -133,7 +133,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include generate-style($option-generate-table) {
+@include generate-style($option-generate-style-table) {
   #{$selector-table} {
     @include musubii-style-table-border();
   }
@@ -154,7 +154,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include generate-style($option-generate-table) {
+@include generate-style($option-generate-style-table) {
   #{$selector-table} {
     @include musubii-style-table-stripe();
   }
@@ -186,6 +186,6 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@include generate-style($option-generate-table) {
+@include generate-style($option-generate-style-table) {
   @include musubii-style-table-bg();
 }

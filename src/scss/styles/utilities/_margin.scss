@@ -43,7 +43,7 @@ $margin-size-xxs: $meter-xxs !default;
   @include --is-margin(auto, auto, false);
 }
 
-@include generate-style($option-generate-margin) {
+@include generate-style($option-generate-style-margin) {
   @include musubii-style-margin();
 }
 
@@ -99,7 +99,7 @@ $margin-size-xxs: $meter-xxs !default;
   @include --is-margin-way(left, auto, auto, false);
 }
 
-@include generate-style($option-generate-margin) {
+@include generate-style($option-generate-style-margin) {
   @include musubii-style-margin-way();
 }
 
@@ -133,7 +133,7 @@ $margin-size-xxs: $meter-xxs !default;
   @include --is-margin-vertical(auto, auto, false);
 }
 
-@include generate-style($option-generate-margin) {
+@include generate-style($option-generate-style-margin) {
   @include musubii-style-margin-vertical();
 }
 
@@ -167,6 +167,6 @@ $margin-size-xxs: $meter-xxs !default;
   @include --is-margin-horizontal(auto, auto, false);
 }
 
-@include generate-style($option-generate-margin) {
+@include generate-style($option-generate-style-margin) {
   @include musubii-style-margin-horizontal();
 }

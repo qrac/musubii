@@ -12,6 +12,6 @@
   }
 }
 
-@include generate-style($option-generate-centering) {
+@include generate-style($option-generate-style-centering) {
   @include musubii-style-centering();
 }

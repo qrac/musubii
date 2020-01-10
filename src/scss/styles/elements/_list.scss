@@ -42,7 +42,7 @@ $list-note-item-margin-left: 0.25em !default;
   }
 }
 
-@include generate-style($option-generate-list) {
+@include generate-style($option-generate-style-list) {
   #{$selector-list} {
     @include musubii-style-list();
   }
@@ -64,7 +64,7 @@ $list-note-item-margin-left: 0.25em !default;
   }
 }
 
-@include generate-style($option-generate-list) {
+@include generate-style($option-generate-style-list) {
   #{$selector-list} {
     @include musubii-style-list-disc();
   }
@@ -86,7 +86,7 @@ $list-note-item-margin-left: 0.25em !default;
   }
 }
 
-@include generate-style($option-generate-list) {
+@include generate-style($option-generate-style-list) {
   #{$selector-list} {
     @include musubii-style-list-circle();
   }
@@ -108,7 +108,7 @@ $list-note-item-margin-left: 0.25em !default;
   }
 }
 
-@include generate-style($option-generate-list) {
+@include generate-style($option-generate-style-list) {
   #{$selector-list} {
     @include musubii-style-list-decimal();
   }
@@ -135,7 +135,7 @@ $list-note-item-margin-left: 0.25em !default;
   }
 }
 
-@include generate-style($option-generate-list) {
+@include generate-style($option-generate-style-list) {
   #{$selector-list} {
     @include musubii-style-list-note();
   }

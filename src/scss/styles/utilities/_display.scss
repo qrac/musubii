@@ -29,7 +29,7 @@
   @include --is-display-block(wide);
 }
 
-@include generate-style($option-generate-display) {
+@include generate-style($option-generate-style-display) {
   @include musubii-style-display-block();
 }
 
@@ -60,7 +60,7 @@
   @include --is-display-inline(wide);
 }
 
-@include generate-style($option-generate-display) {
+@include generate-style($option-generate-style-display) {
   @include musubii-style-display-inline();
 }
 
@@ -91,7 +91,7 @@
   @include --is-display-inline-block(wide);
 }
 
-@include generate-style($option-generate-display) {
+@include generate-style($option-generate-style-display) {
   @include musubii-style-display-inline-block();
 }
 
@@ -122,7 +122,7 @@
   @include --is-display-none(wide);
 }
 
-@include generate-style($option-generate-display) {
+@include generate-style($option-generate-style-display) {
   @include musubii-style-display-none();
 }
 
@@ -153,6 +153,6 @@
   @include --is-display-hidden(mobile);
 }
 
-@include generate-style($option-generate-display) {
+@include generate-style($option-generate-style-display) {
   @include musubii-style-display-hidden();
 }

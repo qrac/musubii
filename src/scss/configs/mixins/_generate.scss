@@ -28,8 +28,8 @@
 // / Style
 //----------------------------------------------------
 
-@mixin generate-style($option-generate) {
-  @if $option-mixin-mode == false and $option-generate == true {
+@mixin generate-style($option-generate-style) {
+  @if $option-mixin-mode == false and $option-generate-style == true {
     @content;
   }
 }

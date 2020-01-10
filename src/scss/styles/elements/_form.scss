@@ -124,7 +124,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   border: none;
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-fieldset} {
     @include musubii-style-form-fieldset();
   }
@@ -218,7 +218,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-input} {
     &[type="text"],
     &[type="search"],
@@ -250,7 +250,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-input} {
     &[type="text"],
     &[type="search"],
@@ -295,7 +295,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-input} {
     &[type="text"],
     &[type="search"],
@@ -349,7 +349,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-input} {
     &[type="text"],
     &[type="search"],
@@ -401,7 +401,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-input} {
     &[type="text"],
     &[type="search"],
@@ -431,7 +431,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   display: none;
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-input} {
     &[type="file"] {
       @include musubii-style-form-input-file();
@@ -462,7 +462,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-label} {
     @include musubii-style-form-label();
   }
@@ -497,7 +497,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-radio} {
     @include musubii-style-form-radio();
   }
@@ -512,7 +512,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   outline: none;
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-radio} {
     &:focus {
       @include musubii-style-form-radio-focus();
@@ -544,7 +544,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-radio} {
     &#{$modifier-radio-active} {
       @include musubii-style-form-radio-active();
@@ -579,7 +579,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   color: $input-disabled-text-color;
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-radio} {
     &#{$modifier-radio-disabled} {
       @include musubii-style-form-radio-disabled();
@@ -630,7 +630,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-checkbox} {
     @include musubii-style-form-checkbox();
   }
@@ -646,7 +646,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   outline: none;
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-checkbox} {
     &:focus {
       @include musubii-style-form-checkbox-focus();
@@ -679,7 +679,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-checkbox} {
     &#{$modifier-checkbox-active} {
       @include musubii-style-form-checkbox-active();
@@ -714,7 +714,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   color: $input-disabled-text-color;
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-checkbox} {
     &#{$modifier-checkbox-disabled} {
       @include musubii-style-form-checkbox-disabled();
@@ -816,7 +816,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-select-wrap} {
     @include musubii-style-form-select();
   }
@@ -836,7 +836,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-select-wrap} {
     @include musubii-style-form-select-round();
   }
@@ -878,7 +878,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-select-wrap} {
     @include musubii-style-form-select-plain();
   }
@@ -927,7 +927,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-select-wrap} {
     @include musubii-style-form-select-underline();
   }
@@ -982,7 +982,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-select-wrap} {
     @include musubii-style-form-select-inside();
   }
@@ -1007,7 +1007,7 @@ $select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
   }
 }
 
-@include generate-style($option-generate-form) {
+@include generate-style($option-generate-style-form) {
   #{$selector-select-wrap} {
     @include musubii-style-form-select-multiple();
   }

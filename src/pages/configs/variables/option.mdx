@@ -18,8 +18,6 @@ contents list
 
 SCSS の全体に関わるオプション変数です。オーバーライドすることで CSS の出力を変更できます。
 
-## Variables
-
 ### `$option-css-variables`
 
 デフォルトは `false`。`true` にすることで、CSS の色コードをすべて [CSS Variables](/getting-started/css-variables) に差し替えます。また、同時に[ダークモード](/getting-started/dark-mode)が使えるようになります。
@@ -36,15 +34,15 @@ SCSS の全体に関わるオプション変数です。オーバーライドす
 
 デフォルトは `light`。`dark` にすることで、[常時ダークテーマカラー](/getting-started/dark-mode#default-dark)となります。
 
-### `$option-generate-(xxxx)`
+### `$option-generate-style-(xxxx)`
 
-CSS を出力するかどうかをスタイル毎に決められます。デフォルトは出力する `true`。
+CSS を出力するかどうかスタイル毎に決められます。デフォルトは出力する `true`。
 
-### `$option-style-(xxxx)`
+### `$option-add-style-(xxxx)`
 
-CSS の細かい調整が可能です。例えば `$option-style-button-focus` を `false` にすると、ボタンのフォーカススタイルがブラウザデフォルトに戻ります。
+一部の CSS はプロジェクトによって付与する否かを選べます。例えば `$option-add-style-button-focus` を `false` にすると、ボタンのフォーカススタイルがブラウザデフォルトに戻ります。
 
-### Variables List
+## Variables
 
 <PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
 

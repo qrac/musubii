@@ -46,7 +46,7 @@ $selector-joint-none: "\.is-joint-none" !default;
   }
 }
 
-@include generate-style($option-generate-joint) {
+@include generate-style($option-generate-style-joint) {
   #{$selector-joint} {
     @include musubii-style-joint();
   }

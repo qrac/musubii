@@ -66,7 +66,7 @@ $alert-tail-position-end: 10% !default;
   border-radius: $alert-border-radius;
 }
 
-@include generate-style($option-generate-alert) {
+@include generate-style($option-generate-style-alert) {
   #{$selector-alert} {
     @include musubii-style-alert();
   }
@@ -101,7 +101,7 @@ $alert-tail-position-end: 10% !default;
   border-color: $alert-danger-border-color;
 }
 
-@include generate-style($option-generate-alert) {
+@include generate-style($option-generate-style-alert) {
   #{$selector-alert} {
     &#{$modifier-alert-primary} {
       @include musubii-style-alert-primary();
@@ -138,7 +138,7 @@ $alert-tail-position-end: 10% !default;
   }
 }
 
-@include generate-style($option-generate-alert) {
+@include generate-style($option-generate-style-alert) {
   #{$selector-alert} {
     @include musubii-style-alert-tail();
   }
@@ -327,7 +327,7 @@ $alert-tail-position-end: 10% !default;
   );
 }
 
-@include generate-style($option-generate-alert) {
+@include generate-style($option-generate-style-alert) {
   #{$selector-alert} {
     @include musubii-style-alert-tail-way();
   }
@@ -484,7 +484,7 @@ $alert-tail-position-end: 10% !default;
   );
 }
 
-@include generate-style($option-generate-alert) {
+@include generate-style($option-generate-style-alert) {
   #{$selector-alert} {
     @include musubii-style-alert-tail-way-role();
   }

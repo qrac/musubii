@@ -59,7 +59,7 @@ $gap-size-xxs: $meter-xxs !default;
   }
 }
 
-@include generate-style($option-generate-grid) {
+@include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
     @include musubii-style-grid();
   }
@@ -106,7 +106,7 @@ $gap-size-xxs: $meter-xxs !default;
   @include --is-gap-all(xxs, $gap-size-xxs, $selector-column, false);
 }
 
-@include generate-style($option-generate-grid) {
+@include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
     @include musubii-style-grid-gap-all();
   }
@@ -147,7 +147,7 @@ $gap-size-xxs: $meter-xxs !default;
   @include --is-gap-row(xxs, $gap-size-xxs, $selector-column, false);
 }
 
-@include generate-style($option-generate-grid) {
+@include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
     @include musubii-style-grid-gap-row();
   }
@@ -188,7 +188,7 @@ $gap-size-xxs: $meter-xxs !default;
   @include --is-gap-column(xxs, $gap-size-xxs, $selector-column, false);
 }
 
-@include generate-style($option-generate-grid) {
+@include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
     @include musubii-style-grid-gap-column();
   }

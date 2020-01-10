@@ -17,45 +17,45 @@ $option-theme-trigger-media: false !default;
 $option-theme-default: "light" !default;
 
 //----------------------------------------------------
-// / Generate
+// / Generate Style
 //----------------------------------------------------
 
-$option-generate-reset: true !default;
-$option-generate-html: true !default;
+$option-generate-style-reset: true !default;
+$option-generate-style-html: true !default;
 
-$option-generate-section: true !default;
-$option-generate-grid: true !default;
-$option-generate-box: true !default;
-$option-generate-card: true !default;
-$option-generate-joint: true !default;
+$option-generate-style-section: true !default;
+$option-generate-style-grid: true !default;
+$option-generate-style-box: true !default;
+$option-generate-style-card: true !default;
+$option-generate-style-joint: true !default;
 
-$option-generate-text: true !default;
-$option-generate-button: true !default;
-$option-generate-badge: true !default;
-$option-generate-list: true !default;
-$option-generate-table: true !default;
-$option-generate-form: true !default;
-$option-generate-iframe: true !default;
-$option-generate-icon: true !default;
-$option-generate-alert: true !default;
-$option-generate-wysiwyg: true !default;
+$option-generate-style-text: true !default;
+$option-generate-style-button: true !default;
+$option-generate-style-badge: true !default;
+$option-generate-style-list: true !default;
+$option-generate-style-table: true !default;
+$option-generate-style-form: true !default;
+$option-generate-style-iframe: true !default;
+$option-generate-style-icon: true !default;
+$option-generate-style-alert: true !default;
+$option-generate-style-wysiwyg: true !default;
 
-$option-generate-display: true !default;
-$option-generate-size: true !default;
-$option-generate-flex: true !default;
-$option-generate-space: true !default;
-$option-generate-margin: true !default;
-$option-generate-padding: true !default;
-$option-generate-centering: true !default;
-$option-generate-overflow: true !default;
-$option-generate-scroll: true !default;
-$option-generate-ellipsis: true !default;
-$option-generate-clearfix: true !default;
+$option-generate-style-display: true !default;
+$option-generate-style-size: true !default;
+$option-generate-style-flex: true !default;
+$option-generate-style-space: true !default;
+$option-generate-style-margin: true !default;
+$option-generate-style-padding: true !default;
+$option-generate-style-centering: true !default;
+$option-generate-style-overflow: true !default;
+$option-generate-style-scroll: true !default;
+$option-generate-style-ellipsis: true !default;
+$option-generate-style-clearfix: true !default;
 
 //----------------------------------------------------
-// / Style
+// / Add Style
 //----------------------------------------------------
 
-$option-style-button-focus: true !default;
-$option-style-button-angle: true !default;
-$option-style-alert-tail: false !default;
+$option-add-style-button-focus: true !default;
+$option-add-style-button-angle: true !default;
+$option-add-style-alert-tail: false !default;

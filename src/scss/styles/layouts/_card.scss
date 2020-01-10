@@ -48,7 +48,7 @@ $card-zoom-transition: $global-transition !default;
   overflow: hidden;
 }
 
-@include generate-style($option-generate-card) {
+@include generate-style($option-generate-style-card) {
   #{$selector-card} {
     @include musubii-style-card();
   }
@@ -75,7 +75,7 @@ $card-zoom-transition: $global-transition !default;
   @include --is-bg-color(light, $card-background-color, true);
 }
 
-@include generate-style($option-generate-card) {
+@include generate-style($option-generate-style-card) {
   #{$selector-card} {
     @include musubii-style-card-bg();
   }
@@ -91,7 +91,7 @@ $card-zoom-transition: $global-transition !default;
   }
 }
 
-@include generate-style($option-generate-card) {
+@include generate-style($option-generate-style-card) {
   #{$selector-card} {
     @include musubii-style-card-outline();
   }
@@ -124,7 +124,7 @@ $card-zoom-transition: $global-transition !default;
   @include --is-radius-all(xxs, $card-radius-xxs, false);
 }
 
-@include generate-style($option-generate-card) {
+@include generate-style($option-generate-style-card) {
   #{$selector-card} {
     @include musubii-style-card-radius-all();
   }
@@ -150,7 +150,7 @@ $card-zoom-transition: $global-transition !default;
   }
 }
 
-@include generate-style($option-generate-card) {
+@include generate-style($option-generate-style-card) {
   #{$selector-card} {
     @include musubii-style-card-floating();
   }
@@ -179,7 +179,7 @@ $card-zoom-transition: $global-transition !default;
   }
 }
 
-@include generate-style($option-generate-card) {
+@include generate-style($option-generate-style-card) {
   #{$selector-card} {
     @include musubii-style-card-link();
   }
@@ -208,7 +208,7 @@ $card-zoom-transition: $global-transition !default;
   }
 }
 
-@include generate-style($option-generate-card) {
+@include generate-style($option-generate-style-card) {
   #{$selector-card} {
     @include musubii-style-card-zoom();
   }

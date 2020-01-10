@@ -32,7 +32,7 @@ $box-angle-border-color: $convert-border-1 !default;
   display: block;
 }
 
-@include generate-style($option-generate-box) {
+@include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box();
   }
@@ -81,7 +81,7 @@ $box-angle-border-color: $convert-border-1 !default;
   }
 }
 
-@include generate-style($option-generate-box) {
+@include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box-flex();
   }
@@ -108,7 +108,7 @@ $box-angle-border-color: $convert-border-1 !default;
   @include --is-bg-color(light, $box-background-color, true);
 }
 
-@include generate-style($option-generate-box) {
+@include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box-bg();
   }
@@ -136,7 +136,7 @@ $box-angle-border-color: $convert-border-1 !default;
   }
 }
 
-@include generate-style($option-generate-box) {
+@include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box-outline();
   }
@@ -155,7 +155,7 @@ $box-angle-border-color: $convert-border-1 !default;
   }
 }
 
-@include generate-style($option-generate-box) {
+@include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box-separate();
   }
@@ -180,7 +180,7 @@ $box-angle-border-color: $convert-border-1 !default;
   }
 }
 
-@include generate-style($option-generate-box) {
+@include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box-link();
   }
@@ -233,7 +233,7 @@ $box-angle-border-color: $convert-border-1 !default;
   }
 }
 
-@include generate-style($option-generate-box) {
+@include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box-angle();
   }

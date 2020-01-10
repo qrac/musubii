@@ -29,7 +29,7 @@ $body-line-height: $line-height-md !default;
   line-height: $body-line-height;
 }
 
-@include generate-style($option-generate-html) {
+@include generate-style($option-generate-style-html) {
   #{$selector-html-body} {
     @include musubii-style-html-body();
   }
@@ -44,7 +44,7 @@ $body-line-height: $line-height-md !default;
   height: auto;
 }
 
-@include generate-style($option-generate-html) {
+@include generate-style($option-generate-style-html) {
   #{$selector-html-image} {
     @include musubii-style-html-image();
   }
@@ -56,7 +56,7 @@ $body-line-height: $line-height-md !default;
   width: 100%;
 }
 
-@include generate-style($option-generate-html) {
+@include generate-style($option-generate-style-html) {
   #{$selector-html-image-svg} {
     @include musubii-style-html-image-svg();
   }
@@ -70,7 +70,7 @@ $body-line-height: $line-height-md !default;
   max-width: 100%;
 }
 
-@include generate-style($option-generate-html) {
+@include generate-style($option-generate-style-html) {
   #{$selector-html-iframe} {
     @include musubii-style-html-iframe();
   }

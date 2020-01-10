@@ -19,6 +19,6 @@
   }
 }
 
-@include generate-style($option-generate-scroll) {
+@include generate-style($option-generate-style-scroll) {
   @include musubii-style-scroll();
 }

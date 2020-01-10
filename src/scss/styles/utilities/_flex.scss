@@ -39,7 +39,7 @@ $flex-split: 12 !default;
   @include --is-flex-split(wide);
 }
 
-@include generate-style($option-generate-flex) {
+@include generate-style($option-generate-style-flex) {
   @include musubii-style-flex-split();
 }
 
@@ -64,7 +64,7 @@ $flex-split: 12 !default;
   @include --is-flex-full(wide);
 }
 
-@include generate-style($option-generate-flex) {
+@include generate-style($option-generate-style-flex) {
   @include musubii-style-flex-full();
 }
 
@@ -89,7 +89,7 @@ $flex-split: 12 !default;
   @include --is-flex-auto(wide);
 }
 
-@include generate-style($option-generate-flex) {
+@include generate-style($option-generate-style-flex) {
   @include musubii-style-flex-auto();
 }
 
@@ -110,6 +110,6 @@ $flex-split: 12 !default;
   //@include --is-flex-width(mobile, 5em); // Example
 }
 
-@include generate-style($option-generate-flex) {
+@include generate-style($option-generate-style-flex) {
   @include musubii-style-flex-width();
 }

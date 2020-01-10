@@ -128,7 +128,7 @@ $button-angle-border-color: $convert-border-1 !default;
   line-height: $button-line-height;
   text-align: center;
   transition: $button-transition;
-  @if $option-style-button-focus == true {
+  @if $option-add-style-button-focus == true {
     &:focus {
       box-shadow: $button-focus-shadow;
       outline: none;
@@ -154,7 +154,7 @@ $button-angle-border-color: $convert-border-1 !default;
   &:hover {
     box-shadow: $button-floating-hover-shadow;
   }
-  @if $option-style-button-focus == true {
+  @if $option-add-style-button-focus == true {
     &:focus,
     &:hover:focus {
       box-shadow: $button-floating-focus-shadow;
@@ -162,7 +162,7 @@ $button-angle-border-color: $convert-border-1 !default;
   }
 }
 
-@include generate-style($option-generate-button) {
+@include generate-style($option-generate-style-button) {
   #{$selector-button} {
     @include musubii-style-button();
     &#{$modifier-button-strong} {
@@ -196,7 +196,7 @@ $button-angle-border-color: $convert-border-1 !default;
   line-height: 1;
 }
 
-@include generate-style($option-generate-button) {
+@include generate-style($option-generate-style-button) {
   #{$selector-button} {
     &#{$modifier-button-square} {
       @include musubii-style-button-square();
@@ -216,7 +216,7 @@ $button-angle-border-color: $convert-border-1 !default;
   line-height: 1;
 }
 
-@include generate-style($option-generate-button) {
+@include generate-style($option-generate-style-button) {
   #{$selector-button} {
     &#{$modifier-button-circle} {
       @include musubii-style-button-circle();
@@ -281,7 +281,7 @@ $button-angle-border-color: $convert-border-1 !default;
   color: $button-disabled-text-color;
 }
 
-@include generate-style($option-generate-button) {
+@include generate-style($option-generate-style-button) {
   #{$selector-button} {
     &#{$modifier-button-plain} {
       @include musubii-style-button-plain();
@@ -378,7 +378,7 @@ $button-angle-border-color: $convert-border-1 !default;
   color: $button-disabled-text-color;
 }
 
-@include generate-style($option-generate-button) {
+@include generate-style($option-generate-style-button) {
   #{$selector-button} {
     &#{$modifier-button-outline} {
       @include musubii-style-button-outline();
@@ -444,7 +444,7 @@ $button-angle-border-color: $convert-border-1 !default;
   background-color: transparent;
 }
 
-@include generate-style($option-generate-button) {
+@include generate-style($option-generate-style-button) {
   #{$selector-button} {
     &#{$modifier-button-melt} {
       @include musubii-style-button-melt();
@@ -522,9 +522,9 @@ $button-angle-border-color: $convert-border-1 !default;
   }
 }
 
-@include generate-style($option-generate-button) {
+@include generate-style($option-generate-style-button) {
   #{$selector-button} {
-    @if $option-style-button-angle == true {
+    @if $option-add-style-button-angle == true {
       &#{$modifier-button-angle-right},
       &#{$modifier-button-angle-left} {
         @include musubii-style-button-angle();

@@ -46,7 +46,7 @@ $space-size-xxs: $meter-xxs !default;
   @include --is-space(xxs, $space-size-xxs, false);
 }
 
-@include generate-style($option-generate-space) {
+@include generate-style($option-generate-style-space) {
   @include musubii-style-space();
 }
 
@@ -83,7 +83,7 @@ $space-size-xxs: $meter-xxs !default;
   @include --is-space-row(xxs, $space-size-xxs, false);
 }
 
-@include generate-style($option-generate-space) {
+@include generate-style($option-generate-style-space) {
   @include musubii-style-space-row();
 }
 
@@ -120,6 +120,6 @@ $space-size-xxs: $meter-xxs !default;
   @include --is-space-column(xxs, $space-size-xxs, false);
 }
 
-@include generate-style($option-generate-space) {
+@include generate-style($option-generate-style-space) {
   @include musubii-style-space-column();
 }

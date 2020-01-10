@@ -18,7 +18,7 @@ $selector-iframe: "\.iframe" !default;
   display: block;
 }
 
-@include generate-style($option-generate-iframe) {
+@include generate-style($option-generate-style-iframe) {
   #{$selector-iframe} {
     @include musubii-style-iframe();
   }
@@ -50,7 +50,7 @@ $selector-iframe: "\.iframe" !default;
   }
 }
 
-@include generate-style($option-generate-iframe) {
+@include generate-style($option-generate-style-iframe) {
   #{$selector-iframe-wrap} {
     @include musubii-style-iframe-wrap();
   }

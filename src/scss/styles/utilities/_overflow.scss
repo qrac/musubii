@@ -12,6 +12,6 @@
   }
 }
 
-@include generate-style($option-generate-overflow) {
+@include generate-style($option-generate-style-overflow) {
   @include musubii-style-overflow();
 }

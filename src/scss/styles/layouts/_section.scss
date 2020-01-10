@@ -37,7 +37,7 @@ $section-inner-width-wide: 1140px !default;
   }
 }
 
-@include generate-style($option-generate-section) {
+@include generate-style($option-generate-style-section) {
   #{$selector-section} {
     > {
       #{$selector-inner} {

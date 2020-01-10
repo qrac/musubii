@@ -231,6 +231,6 @@
   }
 }
 
-@include generate-style($option-generate-reset) {
+@include generate-style($option-generate-style-reset) {
   @include musubii-style-reset();
 }

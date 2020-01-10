@@ -42,7 +42,7 @@ $padding-size-xxs: $meter-xxs !default;
   @include --is-padding(xxs, $padding-size-xxs, false);
 }
 
-@include generate-style($option-generate-padding) {
+@include generate-style($option-generate-style-padding) {
   @include musubii-style-padding();
 }
 
@@ -94,7 +94,7 @@ $padding-size-xxs: $meter-xxs !default;
   @include --is-padding-way(left, xxs, $padding-size-xxs, false);
 }
 
-@include generate-style($option-generate-padding) {
+@include generate-style($option-generate-style-padding) {
   @include musubii-style-padding-way();
 }
 
@@ -127,7 +127,7 @@ $padding-size-xxs: $meter-xxs !default;
   @include --is-padding-vertical(xxs, $padding-size-xxs, false);
 }
 
-@include generate-style($option-generate-padding) {
+@include generate-style($option-generate-style-padding) {
   @include musubii-style-padding-vertical();
 }
 
@@ -160,7 +160,7 @@ $padding-size-xxs: $meter-xxs !default;
   @include --is-padding-horizontal(xxs, $padding-size-xxs, false);
 }
 
-@include generate-style($option-generate-padding) {
+@include generate-style($option-generate-style-padding) {
   @include musubii-style-padding-horizontal();
 }
 
@@ -181,6 +181,6 @@ $padding-size-xxs: $meter-xxs !default;
   @include --is-padding-safe(left);
 }
 
-@include generate-style($option-generate-padding) {
+@include generate-style($option-generate-style-padding) {
   @include musubii-style-padding-safe();
 }

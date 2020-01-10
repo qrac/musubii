@@ -59,6 +59,6 @@
   @include --is-size(wide, xxs, $font-size-xxs);
 }
 
-@include generate-style($option-generate-size) {
+@include generate-style($option-generate-style-size) {
   @include musubii-style-size();
 }

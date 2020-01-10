@@ -23,7 +23,7 @@ $icon-fit-width: 1em !default;
   line-height: inherit;
 }
 
-@include generate-style($option-generate-icon) {
+@include generate-style($option-generate-style-icon) {
   #{$selector-icon} {
     @include musubii-style-icon();
   }
@@ -52,7 +52,7 @@ $icon-fit-width: 1em !default;
   @include --is-color(dark-9, $convert-text-dark-9);
 }
 
-@include generate-style($option-generate-icon) {
+@include generate-style($option-generate-style-icon) {
   #{$selector-icon} {
     @include musubii-style-icon-dark();
   }
@@ -73,7 +73,7 @@ $icon-fit-width: 1em !default;
   @include --is-color(light-9, $convert-text-light-9);
 }
 
-@include generate-style($option-generate-icon) {
+@include generate-style($option-generate-style-icon) {
   #{$selector-icon} {
     @include musubii-style-icon-light();
   }
@@ -89,7 +89,7 @@ $icon-fit-width: 1em !default;
   @include --is-color(danger, $convert-danger-strong);
 }
 
-@include generate-style($option-generate-icon) {
+@include generate-style($option-generate-style-icon) {
   #{$selector-icon} {
     @include musubii-style-icon-role();
   }
@@ -107,7 +107,7 @@ $icon-fit-width: 1em !default;
   vertical-align: text-bottom;
 }
 
-@include generate-style($option-generate-icon) {
+@include generate-style($option-generate-style-icon) {
   #{$selector-icon-svg} {
     @include musubii-style-icon-svg();
   }
@@ -121,7 +121,7 @@ $icon-fit-width: 1em !default;
   vertical-align: bottom;
 }
 
-@include generate-style($option-generate-icon) {
+@include generate-style($option-generate-style-icon) {
   #{$selector-icon-material} {
     @include musubii-style-icon-material();
   }
@@ -138,7 +138,7 @@ $icon-fit-width: 1em !default;
   }
 }
 
-@include generate-style($option-generate-icon) {
+@include generate-style($option-generate-style-icon) {
   #{$selector-icon} {
     @include musubii-style-icon-fit();
   }
