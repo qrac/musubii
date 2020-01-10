@@ -14,7 +14,37 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+SCSS の全体に関わるオプション変数です。オーバーライドすることで CSS の出力を変更できます。
+
 ## Variables
+
+### `$option-css-variables`
+
+デフォルトは `false`。`true` にすることで、CSS の色コードをすべて [CSS Variables](/getting-started/css-variables) に差し替えます。また、同時に[ダークモード](/getting-started/dark-mode)が使えるようになります。
+
+### `$option-mixin-mode`
+
+デフォルトは `false`。`true` にすると CSS 出力が停止。[Mixin のみ稼働するモード](/getting-started/using-with-scss#mixin-mode)に切り替えます。
+
+### `$option-theme-trigger-media`
+
+デフォルトは `false`。`true` にすることで、[OS のダークモードを認識](/getting-started/dark-mode#trigger)するようになります。
+
+### `$option-theme-default`
+
+デフォルトは `light`。`dark` にすることで、[常時ダークテーマカラー](/getting-started/dark-mode#default-dark)となります。
+
+### `$option-generate-(xxxx)`
+
+CSS を出力するかどうかをスタイル毎に決められます。デフォルトは出力する `true`。
+
+### `$option-style-(xxxx)`
+
+CSS の細かい調整が可能です。例えば `$option-style-button-focus` を `false` にすると、ボタンのフォーカススタイルがブラウザデフォルトに戻ります。
+
+### Variables List
 
 <PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
 
