@@ -137,10 +137,6 @@
           "heading": "Mixins",
           "items": [
             {
-              "id": "generate",
-              "title": "Generate"
-            },
-            {
               "id": "mediaquery",
               "title": "Media Query"
             },
@@ -151,6 +147,10 @@
             {
               "id": "safearea",
               "title": "Safe Area"
+            },
+            {
+              "id": "generate",
+              "title": "Generate"
             }
           ]
         },
