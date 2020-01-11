@@ -55,13 +55,14 @@
     > .column {
       &:before {
         content: "children";
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         padding: 12px 20px;
         background-color: $convert-table-paint-background-color;
         border-radius: 2px;
         color: $convert-table-paint-text-color;
-        text-align: center;
       }
     }
   }

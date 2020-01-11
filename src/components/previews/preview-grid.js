@@ -92,6 +92,8 @@ export class PreviewGridBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      splitGap: false,
+      stretch: false,
       columnNum: 4,
       columnSize: "",
       align: "",
@@ -99,12 +101,29 @@ export class PreviewGridBasic extends React.Component {
       topBottomGap: "",
       rightLeftGap: ""
     }
+    this.toggleSplitGap = this.toggleSplitGap.bind(this)
+    this.toggleStretch = this.toggleStretch.bind(this)
     this.changeColumnNum = this.changeColumnNum.bind(this)
     this.changeColumnSize = this.changeColumnSize.bind(this)
     this.changeAlign = this.changeAlign.bind(this)
     this.changeGap = this.changeGap.bind(this)
     this.changeTopBottomGap = this.changeTopBottomGap.bind(this)
     this.changeRightLeftGap = this.changeRightLeftGap.bind(this)
+  }
+  toggleSplitGap() {
+    this.setState({ splitGap: !this.state.splitGap })
+    if (this.state.splitGap) {
+      this.setState({ gap: "is-gap-md" })
+      this.setState({ topBottomGap: "" })
+      this.setState({ rightLeftGap: "" })
+    } else {
+      this.setState({ gap: "" })
+      this.setState({ topBottomGap: "is-gap-top-bottom-md" })
+      this.setState({ rightLeftGap: "is-gap-right-left-md" })
+    }
+  }
+  toggleStretch() {
+    this.setState({ stretch: !this.state.stretch })
   }
   changeColumnNum(value) {
     this.setState({ columnNum: value })
@@ -129,13 +148,15 @@ export class PreviewGridBasic extends React.Component {
     this.setState({ gap: "" })
   }
   render() {
+    const stretch = this.state.stretch ? "is-stretch" : ""
     const columnNum = this.state.columnNum
     const columnSize = this.state.columnSize
     const align = this.state.align
     const gap = this.state.gap
     const topBottomGap = this.state.topBottomGap
     const rightLeftGap = this.state.rightLeftGap
-    const gridTagBefore = `<div class="grid ${align} ${gap} ${topBottomGap} ${rightLeftGap}">`
+    const gridTagBefore = `<div class="grid
+      ${align} ${gap} ${topBottomGap} ${rightLeftGap} ${stretch}">`
     const gridTagAfter = `</div>`
     const columns = []
     for (let i = 0; i < columnNum; i++) {
@@ -149,6 +170,18 @@ export class PreviewGridBasic extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
+            <DemoOption title={"Grid"}>
+              <DemoOptionBoxCheckbox
+                text={"Split Gap"}
+                parentChange={() => this.toggleSplitGap()}
+                checked={this.state.splitGap}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Stretch"}
+                parentChange={() => this.toggleStretch()}
+                checked={this.state.stretch}
+              />
+            </DemoOption>
             <DemoOption title={"Column"}>
               <DemoOptionBoxSelect
                 patterns={columnNums}
@@ -168,36 +201,43 @@ export class PreviewGridBasic extends React.Component {
                 checked={this.state.align}
               />
             </DemoOption>
-            <DemoOption title={"Gap (All)"}>
-              <DemoOptionBoxRadios
-                patterns={gaps}
-                parentChange={value => this.changeGap(value)}
-                checked={this.state.gap}
-              />
-            </DemoOption>
-            <DemoOption title={"Gap (Top-Bottom)"}>
-              <DemoOptionBoxRadios
-                patterns={topBottomGaps}
-                parentChange={value => this.changeTopBottomGap(value)}
-                checked={this.state.topBottomGap}
-              />
-            </DemoOption>
-            <DemoOption title={"Gap (Right-Left)"}>
-              <DemoOptionBoxRadios
-                patterns={rightLeftGaps}
-                parentChange={value => this.changeRightLeftGap(value)}
-                checked={this.state.rightLeftGap}
-              />
-            </DemoOption>
+            {(() => {
+              if (!this.state.splitGap) {
+                return (
+                  <DemoOption title={"Gap (All)"}>
+                    <DemoOptionBoxRadios
+                      patterns={gaps}
+                      parentChange={value => this.changeGap(value)}
+                      checked={this.state.gap}
+                    />
+                  </DemoOption>
+                )
+              } else {
+                return (
+                  <>
+                    <DemoOption title={"Gap (Top-Bottom)"}>
+                      <DemoOptionBoxRadios
+                        patterns={topBottomGaps}
+                        parentChange={value => this.changeTopBottomGap(value)}
+                        checked={this.state.topBottomGap}
+                      />
+                    </DemoOption>
+                    <DemoOption title={"Gap (Right-Left)"}>
+                      <DemoOptionBoxRadios
+                        patterns={rightLeftGaps}
+                        parentChange={value => this.changeRightLeftGap(value)}
+                        checked={this.state.rightLeftGap}
+                      />
+                    </DemoOption>
+                  </>
+                )
+              }
+            })()}
           </div>
         </div>
         <div className="demo-box is-line">
           <div
-            className={
-              this.state.customHeight
-                ? "box is-custom-grid-demo is-custom-height"
-                : "box is-custom-grid-demo"
-            }
+            className="box is-custom-grid-demo"
             dangerouslySetInnerHTML={{ __html: formattedCode }}
           ></div>
         </div>
