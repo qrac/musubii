@@ -30,3 +30,40 @@
     }
   }
 }
+
+.box.is-custom-grid-demo {
+  .grid {
+    &.is-baseline,
+    &.is-middle,
+    &.is-bottom,
+    &.is-stretch {
+      min-height: 200px;
+    }
+    &.is-baseline {
+      > .column {
+        &:nth-child(2) {
+          &:before {
+            font-size: 200%;
+          }
+        }
+        &:nth-child(4) {
+          &:before {
+            font-size: 75%;
+          }
+        }
+      }
+    }
+    > .column {
+      &:before {
+        content: "children";
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        background-color: $convert-table-paint-background-color;
+        border-radius: 2px;
+        color: $convert-table-paint-text-color;
+        text-align: center;
+      }
+    }
+  }
+}
