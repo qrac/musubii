@@ -4,7 +4,40 @@ import beautify from "js-beautify"
 import DemoOption from "~/components/parts/demo-option"
 import DemoOptionBoxRadios from "~/components/parts/demo-option-box-radios"
 import DemoOptionBoxCheckbox from "~/components/parts/demo-option-box-checkbox"
+import DemoOptionBoxSelect from "~/components/parts/demo-option-box-select"
 import DemoPre from "~/components/parts/demo-pre"
+
+const columnNums = [
+  { id: 1, text: "1カラム", value: 1 },
+  { id: 2, text: "2カラム", value: 2 },
+  { id: 3, text: "3カラム", value: 3 },
+  { id: 4, text: "4カラム", value: 4 },
+  { id: 5, text: "5カラム", value: 5 },
+  { id: 6, text: "6カラム", value: 6 },
+  { id: 7, text: "7カラム", value: 7 },
+  { id: 8, text: "8カラム", value: 8 },
+  { id: 9, text: "9カラム", value: 9 },
+  { id: 10, text: "10カラム", value: 10 },
+  { id: 11, text: "11カラム", value: 11 },
+  { id: 12, text: "12カラム", value: 12 }
+]
+
+const columnSizes = [
+  { id: 0, text: "自動幅", value: "" },
+  { id: 13, text: "伸縮幅", value: "is-mobile-0" },
+  { id: 1, text: "1/12幅", value: "is-mobile-1" },
+  { id: 2, text: "2/12幅", value: "is-mobile-2" },
+  { id: 3, text: "3/12幅", value: "is-mobile-3" },
+  { id: 4, text: "4/12幅", value: "is-mobile-4" },
+  { id: 5, text: "5/12幅", value: "is-mobile-5" },
+  { id: 6, text: "6/12幅", value: "is-mobile-6" },
+  { id: 7, text: "7/12幅", value: "is-mobile-7" },
+  { id: 8, text: "8/12幅", value: "is-mobile-8" },
+  { id: 9, text: "9/12幅", value: "is-mobile-9" },
+  { id: 10, text: "10/12幅", value: "is-mobile-10" },
+  { id: 11, text: "11/12幅", value: "is-mobile-11" },
+  { id: 12, text: "12/12幅", value: "is-mobile-12" }
+]
 
 const aligns = [
   { id: 0, text: "None", value: "" },
@@ -37,16 +70,21 @@ export class PreviewGridBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      columnsNum: 4,
+      columnNum: 4,
+      columnSize: "",
       align: "",
-      gap: ""
+      gap: "is-gap-md"
     }
-    this.changeColumnsNum = this.changeColumnsNum.bind(this)
+    this.changeColumnNum = this.changeColumnNum.bind(this)
+    this.changeColumnSize = this.changeColumnSize.bind(this)
     this.changeAlign = this.changeAlign.bind(this)
     this.changeGap = this.changeGap.bind(this)
   }
-  changeColumnsNum(value) {
-    this.setState({ columnsNum: value })
+  changeColumnNum(value) {
+    this.setState({ columnNum: value })
+  }
+  changeColumnSize(value) {
+    this.setState({ columnSize: value })
   }
   changeAlign(value) {
     this.setState({ align: value })
@@ -55,15 +93,17 @@ export class PreviewGridBasic extends React.Component {
     this.setState({ gap: value })
   }
   render() {
-    const columnsNum = this.state.columnsNum
+    const columnNum = this.state.columnNum
+    const columnSize = this.state.columnSize
     const align = this.state.align
     const gap = this.state.gap
     const gridTagBefore = `<div class="grid ${align} ${gap}">`
     const gridTagAfter = `</div>`
-    const columns = [...Array(columnsNum)]
-      .map(() => `<div class="column"></div>`)
-      .join("")
-    const contents = (gridTagBefore + columns + gridTagAfter)
+    const columns = []
+    for (let i = 0; i < columnNum; i++) {
+      columns.push(`<div class="column ${columnSize}"></div>`)
+    }
+    const contents = (gridTagBefore + columns.join("") + gridTagAfter)
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
@@ -71,6 +111,18 @@ export class PreviewGridBasic extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
+            <DemoOption title={"Column"}>
+              <DemoOptionBoxSelect
+                patterns={columnNums}
+                parentChange={value => this.changeColumnNum(value)}
+                checked={this.state.columnNum}
+              />
+              <DemoOptionBoxSelect
+                patterns={columnSizes}
+                parentChange={value => this.changeColumnSize(value)}
+                checked={this.state.columnSize}
+              />
+            </DemoOption>
             <DemoOption title={"Align"}>
               <DemoOptionBoxRadios
                 patterns={aligns}

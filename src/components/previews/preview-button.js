@@ -133,7 +133,6 @@ export class PreviewButtonBasic extends React.Component {
             </DemoOption>
             <DemoOption title={"Angle"}>
               <DemoOptionBoxRadios
-                title={"Angle"}
                 patterns={angles}
                 parentChange={value => this.changeAngle(value)}
                 checked={this.state.angle}

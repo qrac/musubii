@@ -33,11 +33,10 @@
 
 .box.is-custom-grid-demo {
   .grid {
-    &.is-baseline,
     &.is-middle,
     &.is-bottom,
     &.is-stretch {
-      min-height: 200px;
+      min-height: 120px;
     }
     &.is-baseline {
       > .column {
