@@ -10,6 +10,38 @@
 $selector-grid: "\.grid" !default;
 $selector-column: "\.column" !default;
 
+// Modifiers
+$modifier-grid-baseline: "\.is-baseline" !default;
+$modifier-grid-middle: "\.is-middle" !default;
+$modifier-grid-bottom: "\.is-bottom" !default;
+$modifier-grid-center: "\.is-center" !default;
+$modifier-grid-right: "\.is-right" !default;
+$modifier-grid-between: "\.is-between" !default;
+$modifier-grid-around: "\.is-around" !default;
+$modifier-grid-reverse: "\.is-reverse" !default;
+$modifier-grid-stretch: "\.is-stretch" !default;
+$modifier-grid-gap-xxl: "\.is-gap-xxl" !default;
+$modifier-grid-gap-xl: "\.is-gap-xl" !default;
+$modifier-grid-gap-lg: "\.is-gap-lg" !default;
+$modifier-grid-gap-md: "\.is-gap, \.is-gap-md" !default;
+$modifier-grid-gap-sm: "\.is-gap-sm" !default;
+$modifier-grid-gap-xs: "\.is-gap-xs" !default;
+$modifier-grid-gap-xxs: "\.is-gap-xxs" !default;
+$modifier-grid-gap-top-bottom-xxl: "\.is-gap-top-bottom-xxl" !default;
+$modifier-grid-gap-top-bottom-xl: "\.is-gap-top-bottom-xl" !default;
+$modifier-grid-gap-top-bottom-lg: "\.is-gap-top-bottom-lg" !default;
+$modifier-grid-gap-top-bottom-md: "\.is-gap-top-bottom, \.is-gap-top-bottom-md" !default;
+$modifier-grid-gap-top-bottom-sm: "\.is-gap-top-bottom-sm" !default;
+$modifier-grid-gap-top-bottom-xs: "\.is-gap-top-bottom-xs" !default;
+$modifier-grid-gap-top-bottom-xxs: "\.is-gap-top-bottom-xxs" !default;
+$modifier-grid-gap-right-left-xxl: "\.is-gap-right-left-xxl" !default;
+$modifier-grid-gap-right-left-xl: "\.is-gap-right-left-xl" !default;
+$modifier-grid-gap-right-left-lg: "\.is-gap-right-left-lg" !default;
+$modifier-grid-gap-right-left-md: "\.is-gap-right-left, \.is-gap-right-left-md" !default;
+$modifier-grid-gap-right-left-sm: "\.is-gap-right-left-sm" !default;
+$modifier-grid-gap-right-left-xs: "\.is-gap-right-left-xs" !default;
+$modifier-grid-gap-right-left-xxs: "\.is-gap-right-left-xxs" !default;
+
 // Gap Size
 $gap-size-xxl: $meter-xxl !default;
 $gap-size-xl: $meter-xl !default;
@@ -26,35 +58,44 @@ $gap-size-xxs: $meter-xxs !default;
 @mixin musubii-style-grid() {
   display: flex;
   flex-wrap: wrap;
-  &.is-baseline {
-    align-items: baseline;
-  }
-  &.is-middle {
-    align-items: center;
-  }
-  &.is-bottom {
-    align-items: flex-end;
-  }
-  &.is-center {
-    justify-content: center;
-  }
-  &.is-right {
-    justify-content: flex-end;
-  }
-  &.is-between {
-    justify-content: space-between;
-  }
-  &.is-around {
-    justify-content: space-around;
-  }
-  &.is-reverse {
-    flex-direction: row-reverse;
-  }
-  &.is-stretch {
-    > {
-      #{$selector-column} {
-        display: flex;
-      }
+}
+
+@mixin musubii-style-grid-baseline() {
+  align-items: baseline;
+}
+
+@mixin musubii-style-grid-middle() {
+  align-items: center;
+}
+
+@mixin musubii-style-grid-bottom() {
+  align-items: flex-end;
+}
+
+@mixin musubii-style-grid-center() {
+  justify-content: center;
+}
+
+@mixin musubii-style-grid-right() {
+  justify-content: flex-end;
+}
+
+@mixin musubii-style-grid-between() {
+  justify-content: space-between;
+}
+
+@mixin musubii-style-grid-around() {
+  justify-content: space-around;
+}
+
+@mixin musubii-style-grid-reverse() {
+  flex-direction: row-reverse;
+}
+
+@mixin musubii-style-grid-stretch() {
+  > {
+    #{$selector-column} {
+      display: flex;
     }
   }
 }
@@ -62,6 +103,33 @@ $gap-size-xxs: $meter-xxs !default;
 @include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
     @include musubii-style-grid();
+    &#{$modifier-grid-baseline} {
+      @include musubii-style-grid-baseline();
+    }
+    &#{$modifier-grid-middle} {
+      @include musubii-style-grid-middle();
+    }
+    &#{$modifier-grid-bottom} {
+      @include musubii-style-grid-bottom();
+    }
+    &#{$modifier-grid-center} {
+      @include musubii-style-grid-center();
+    }
+    &#{$modifier-grid-right} {
+      @include musubii-style-grid-right();
+    }
+    &#{$modifier-grid-between} {
+      @include musubii-style-grid-between();
+    }
+    &#{$modifier-grid-around} {
+      @include musubii-style-grid-around();
+    }
+    &#{$modifier-grid-reverse} {
+      @include musubii-style-grid-reverse();
+    }
+    &#{$modifier-grid-stretch} {
+      @include musubii-style-grid-stretch();
+    }
   }
 }
 
@@ -69,127 +137,291 @@ $gap-size-xxs: $meter-xxs !default;
 // / Style - Grid Gap
 //----------------------------------------------------
 
-@mixin --is-gap-all($name, $value, $child-selector, $omit) {
-  @if $omit == true {
-    &.is-gap,
-    &.is-gap-#{$name} {
-      margin-left: -$value;
-      margin-bottom: -$value;
-      > {
-        #{$child-selector} {
-          padding-left: $value;
-          padding-bottom: $value;
-        }
-      }
-    }
-  } @else {
-    &.is-gap-#{$name} {
-      margin-left: -$value;
-      margin-bottom: -$value;
-      > {
-        #{$child-selector} {
-          padding-left: $value;
-          padding-bottom: $value;
-        }
-      }
+@mixin musubii-style-grid-gap-xxl() {
+  margin-left: -$gap-size-xxl;
+  margin-bottom: -$gap-size-xxl;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-xxl;
+      padding-bottom: $gap-size-xxl;
     }
   }
 }
 
-@mixin musubii-style-grid-gap-all() {
-  @include --is-gap-all(xxl, $gap-size-xxl, $selector-column, false);
-  @include --is-gap-all(xl, $gap-size-xl, $selector-column, false);
-  @include --is-gap-all(lg, $gap-size-lg, $selector-column, false);
-  @include --is-gap-all(md, $gap-size-md, $selector-column, true);
-  @include --is-gap-all(sm, $gap-size-sm, $selector-column, false);
-  @include --is-gap-all(xs, $gap-size-xs, $selector-column, false);
-  @include --is-gap-all(xxs, $gap-size-xxs, $selector-column, false);
+@mixin musubii-style-grid-gap-xl() {
+  margin-left: -$gap-size-xl;
+  margin-bottom: -$gap-size-xl;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-xl;
+      padding-bottom: $gap-size-xl;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-lg() {
+  margin-left: -$gap-size-lg;
+  margin-bottom: -$gap-size-lg;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-lg;
+      padding-bottom: $gap-size-lg;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-md() {
+  margin-left: -$gap-size-md;
+  margin-bottom: -$gap-size-md;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-md;
+      padding-bottom: $gap-size-md;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-sm() {
+  margin-left: -$gap-size-sm;
+  margin-bottom: -$gap-size-sm;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-sm;
+      padding-bottom: $gap-size-sm;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-xs() {
+  margin-left: -$gap-size-xs;
+  margin-bottom: -$gap-size-xs;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-xs;
+      padding-bottom: $gap-size-xs;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-xxs() {
+  margin-left: -$gap-size-xxs;
+  margin-bottom: -$gap-size-xxs;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-xxs;
+      padding-bottom: $gap-size-xxs;
+    }
+  }
 }
 
 @include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
-    @include musubii-style-grid-gap-all();
+    &#{$modifier-grid-gap-xxl} {
+      @include musubii-style-grid-gap-xxl();
+    }
+    &#{$modifier-grid-gap-xl} {
+      @include musubii-style-grid-gap-xl();
+    }
+    &#{$modifier-grid-gap-lg} {
+      @include musubii-style-grid-gap-lg();
+    }
+    &#{$modifier-grid-gap-md} {
+      @include musubii-style-grid-gap-md();
+    }
+    &#{$modifier-grid-gap-sm} {
+      @include musubii-style-grid-gap-sm();
+    }
+    &#{$modifier-grid-gap-xs} {
+      @include musubii-style-grid-gap-xs();
+    }
+    &#{$modifier-grid-gap-xxs} {
+      @include musubii-style-grid-gap-xxs();
+    }
   }
 }
 
 //----------------------------------------------------
 
-@mixin --is-gap-row($name, $value, $child-selector, $omit) {
-  @if $omit == true {
-    &.is-gap-row,
-    &.is-gap-row-#{$name} {
-      margin-bottom: -$value;
-      > {
-        #{$child-selector} {
-          padding-bottom: $value;
-        }
-      }
-    }
-  } @else {
-    &.is-gap-row-#{$name} {
-      margin-bottom: -$value;
-      > {
-        #{$child-selector} {
-          padding-bottom: $value;
-        }
-      }
+@mixin musubii-style-grid-gap-top-bottom-xxl() {
+  margin-bottom: -$gap-size-xxl;
+  > {
+    #{$selector-column} {
+      padding-bottom: $gap-size-xxl;
     }
   }
 }
 
-@mixin musubii-style-grid-gap-row() {
-  @include --is-gap-row(xxl, $gap-size-xxl, $selector-column, false);
-  @include --is-gap-row(xl, $gap-size-xl, $selector-column, false);
-  @include --is-gap-row(lg, $gap-size-lg, $selector-column, false);
-  @include --is-gap-row(md, $gap-size-md, $selector-column, true);
-  @include --is-gap-row(sm, $gap-size-sm, $selector-column, false);
-  @include --is-gap-row(xs, $gap-size-xs, $selector-column, false);
-  @include --is-gap-row(xxs, $gap-size-xxs, $selector-column, false);
+@mixin musubii-style-grid-gap-top-bottom-xl() {
+  margin-bottom: -$gap-size-xl;
+  > {
+    #{$selector-column} {
+      padding-bottom: $gap-size-xl;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-top-bottom-lg() {
+  margin-bottom: -$gap-size-lg;
+  > {
+    #{$selector-column} {
+      padding-bottom: $gap-size-lg;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-top-bottom-md() {
+  margin-bottom: -$gap-size-md;
+  > {
+    #{$selector-column} {
+      padding-bottom: $gap-size-md;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-top-bottom-sm() {
+  margin-bottom: -$gap-size-sm;
+  > {
+    #{$selector-column} {
+      padding-bottom: $gap-size-sm;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-top-bottom-xs() {
+  margin-bottom: -$gap-size-xs;
+  > {
+    #{$selector-column} {
+      padding-bottom: $gap-size-xs;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-top-bottom-xxs() {
+  margin-bottom: -$gap-size-xxs;
+  > {
+    #{$selector-column} {
+      padding-bottom: $gap-size-xxs;
+    }
+  }
 }
 
 @include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
-    @include musubii-style-grid-gap-row();
+    @if $option-add-style-grid-gap-one-side == true {
+      &#{$modifier-grid-gap-top-bottom-xxl} {
+        @include musubii-style-grid-gap-top-bottom-xxl();
+      }
+      &#{$modifier-grid-gap-top-bottom-xl} {
+        @include musubii-style-grid-gap-top-bottom-xl();
+      }
+      &#{$modifier-grid-gap-top-bottom-lg} {
+        @include musubii-style-grid-gap-top-bottom-lg();
+      }
+      &#{$modifier-grid-gap-top-bottom-md} {
+        @include musubii-style-grid-gap-top-bottom-md();
+      }
+      &#{$modifier-grid-gap-top-bottom-sm} {
+        @include musubii-style-grid-gap-top-bottom-sm();
+      }
+      &#{$modifier-grid-gap-top-bottom-xs} {
+        @include musubii-style-grid-gap-top-bottom-xs();
+      }
+      &#{$modifier-grid-gap-top-bottom-xxs} {
+        @include musubii-style-grid-gap-top-bottom-xxs();
+      }
+    }
   }
 }
 
 //----------------------------------------------------
 
-@mixin --is-gap-column($name, $value, $child-selector, $omit) {
-  @if $omit == true {
-    &.is-gap-column,
-    &.is-gap-column-#{$name} {
-      margin-left: -$value;
-      > {
-        #{$child-selector} {
-          padding-left: $value;
-        }
-      }
-    }
-  } @else {
-    &.is-gap-column-#{$name} {
-      margin-left: -$value;
-      > {
-        #{$child-selector} {
-          padding-left: $value;
-        }
-      }
+@mixin musubii-style-grid-gap-right-left-xxl() {
+  margin-left: -$gap-size-xxl;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-xxl;
     }
   }
 }
 
-@mixin musubii-style-grid-gap-column() {
-  @include --is-gap-column(xxl, $gap-size-xxl, $selector-column, false);
-  @include --is-gap-column(xl, $gap-size-xl, $selector-column, false);
-  @include --is-gap-column(lg, $gap-size-lg, $selector-column, false);
-  @include --is-gap-column(md, $gap-size-md, $selector-column, true);
-  @include --is-gap-column(sm, $gap-size-sm, $selector-column, false);
-  @include --is-gap-column(xs, $gap-size-xs, $selector-column, false);
-  @include --is-gap-column(xxs, $gap-size-xxs, $selector-column, false);
+@mixin musubii-style-grid-gap-right-left-xl() {
+  margin-left: -$gap-size-xl;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-xl;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-right-left-lg() {
+  margin-left: -$gap-size-lg;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-lg;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-right-left-md() {
+  margin-left: -$gap-size-md;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-md;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-right-left-sm() {
+  margin-left: -$gap-size-sm;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-sm;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-right-left-xs() {
+  margin-left: -$gap-size-xs;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-xs;
+    }
+  }
+}
+
+@mixin musubii-style-grid-gap-right-left-xxs() {
+  margin-left: -$gap-size-xxs;
+  > {
+    #{$selector-column} {
+      padding-left: $gap-size-xxs;
+    }
+  }
 }
 
 @include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
-    @include musubii-style-grid-gap-column();
+    @if $option-add-style-grid-gap-one-side == true {
+      &#{$modifier-grid-gap-right-left-xxl} {
+        @include musubii-style-grid-gap-right-left-xxl();
+      }
+      &#{$modifier-grid-gap-right-left-xl} {
+        @include musubii-style-grid-gap-right-left-xl();
+      }
+      &#{$modifier-grid-gap-right-left-lg} {
+        @include musubii-style-grid-gap-right-left-lg();
+      }
+      &#{$modifier-grid-gap-right-left-md} {
+        @include musubii-style-grid-gap-right-left-md();
+      }
+      &#{$modifier-grid-gap-right-left-sm} {
+        @include musubii-style-grid-gap-right-left-sm();
+      }
+      &#{$modifier-grid-gap-right-left-xs} {
+        @include musubii-style-grid-gap-right-left-xs();
+      }
+      &#{$modifier-grid-gap-right-left-xxs} {
+        @include musubii-style-grid-gap-right-left-xxs();
+      }
+    }
   }
 }
