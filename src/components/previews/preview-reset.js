@@ -13,7 +13,7 @@ export class PreviewResetBasic extends React.Component {
   render() {
     return (
       <div className="demo-box is-preview">
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <h1>h1見出し</h1>
           <h2>h2見出し</h2>
           <h3>h3見出し</h3>
@@ -21,10 +21,10 @@ export class PreviewResetBasic extends React.Component {
           <h5>h5見出し</h5>
           <h6>h6見出し</h6>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <a href="#">リンク</a>｜<b>ストロング</b>｜<small>スモール</small>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <ol>
             <li>リスト</li>
             <li>リスト</li>
@@ -34,7 +34,7 @@ export class PreviewResetBasic extends React.Component {
             <li>リスト</li>
           </ul>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <p>
             <dfn>dfnは定義</dfn>
           </p>
@@ -61,12 +61,12 @@ export class PreviewResetBasic extends React.Component {
             <span>など。</span>
           </p>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <pre>
             <code>pre > code</code>
           </pre>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <form>
             <fieldset>
               <legend>TEXT</legend>
@@ -238,16 +238,16 @@ export class PreviewResetBasic extends React.Component {
             </p>
           </form>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <progress></progress>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <details>
             <summary>サマリー</summary>
             <p>詳細の文章</p>
           </details>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <table>
             <thead>
               <tr>
@@ -287,12 +287,12 @@ export class PreviewResetBasic extends React.Component {
             </tfoot>
           </table>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <p>text hr text</p>
           <hr />
           <p>text hr text</p>
         </div>
-        <div className="demo-box is-line">
+        <div className="demo-box is-line is-overflow-hidden">
           <address>address address address address address</address>
         </div>
       </div>
