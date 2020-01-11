@@ -5,6 +5,7 @@ export const meta = {
   filePath: "styles/layouts/_grid"
 }
 
+import { PreviewGridBasic } from "~/components/previews/preview-grid"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -15,9 +16,17 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Grid
+
+グリッドレイアウトを作るための CSS。`.grid` の直下に `.column` を複数配置します。`.column` の幅はユーティリティの [Flex](/styles/utilities/flex) を付与して設定。
+
+## Basic
+
+<PreviewGridBasic />
+
 ## Variables
 
-<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={true} />
 
 ## Mixins
 
