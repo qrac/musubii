@@ -10,7 +10,7 @@
     {
       "name": "generate-style",
       "parameters": [
-        "$option-generate"
+        "$option-generate-style"
       ]
     }
   ]

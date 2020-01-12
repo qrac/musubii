@@ -230,12 +230,12 @@
     {
       "name": "--shadow-alpha",
       "value": "$theme-dark-shadow-alpha",
-      "compiledValue": "rgba(81, 102, 205, 0.7)"
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
     },
     {
       "name": "--shadow-alpha-thin",
       "value": "$theme-dark-shadow-alpha-thin",
-      "compiledValue": "rgba(81, 102, 205, 0.075)"
+      "compiledValue": "rgba(0, 0, 0, 0.075)"
     },
     {
       "name": "--focus-darken",

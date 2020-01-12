@@ -1,12 +1,6 @@
 {
   "mixins": [
     {
-      "name": "mobile-first",
-      "parameters": [
-        "$min-width"
-      ]
-    },
-    {
       "name": "fablet",
       "parameters": []
     },

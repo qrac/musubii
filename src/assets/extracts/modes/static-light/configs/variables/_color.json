@@ -1379,56 +1379,6 @@
       "name": "$light-9",
       "value": "rgba($white, 0.05)",
       "compiledValue": "rgba(255, 255, 255, 0.05)"
-    },
-    {
-      "name": "$primary",
-      "value": "$cyan-500",
-      "compiledValue": "#37b0be"
-    },
-    {
-      "name": "$info",
-      "value": "$blue-500",
-      "compiledValue": "#4b9bd8"
-    },
-    {
-      "name": "$success",
-      "value": "$green-a700",
-      "compiledValue": "#2ca52c"
-    },
-    {
-      "name": "$warning",
-      "value": "$orange-600",
-      "compiledValue": "#ec9213"
-    },
-    {
-      "name": "$danger",
-      "value": "$red-500",
-      "compiledValue": "#db5757"
-    },
-    {
-      "name": "$brand-twitter",
-      "value": "#1da1f2",
-      "compiledValue": "#1da1f2"
-    },
-    {
-      "name": "$brand-facebook",
-      "value": "#3b5998",
-      "compiledValue": "#3b5998"
-    },
-    {
-      "name": "$brand-hatena",
-      "value": "#45a3d9",
-      "compiledValue": "#45a3d9"
-    },
-    {
-      "name": "$brand-line",
-      "value": "#00c300",
-      "compiledValue": "#00c300"
-    },
-    {
-      "name": "$brand-pocket",
-      "value": "#ef4056",
-      "compiledValue": "#ef4056"
     }
   ]
 }

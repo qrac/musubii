@@ -11,6 +11,171 @@
       "compiledValue": ".column"
     },
     {
+      "name": "$modifier-grid-baseline",
+      "value": ".is-baseline",
+      "compiledValue": ".is-baseline"
+    },
+    {
+      "name": "$modifier-grid-middle",
+      "value": ".is-middle",
+      "compiledValue": ".is-middle"
+    },
+    {
+      "name": "$modifier-grid-bottom",
+      "value": ".is-bottom",
+      "compiledValue": ".is-bottom"
+    },
+    {
+      "name": "$modifier-grid-center",
+      "value": ".is-center",
+      "compiledValue": ".is-center"
+    },
+    {
+      "name": "$modifier-grid-right",
+      "value": ".is-right",
+      "compiledValue": ".is-right"
+    },
+    {
+      "name": "$modifier-grid-between",
+      "value": ".is-between",
+      "compiledValue": ".is-between"
+    },
+    {
+      "name": "$modifier-grid-around",
+      "value": ".is-around",
+      "compiledValue": ".is-around"
+    },
+    {
+      "name": "$modifier-grid-reverse",
+      "value": ".is-reverse",
+      "compiledValue": ".is-reverse"
+    },
+    {
+      "name": "$modifier-grid-stretch",
+      "value": ".is-stretch",
+      "compiledValue": ".is-stretch"
+    },
+    {
+      "name": "$modifier-grid-gap",
+      "value": ".is-gap",
+      "compiledValue": ".is-gap"
+    },
+    {
+      "name": "$modifier-grid-gap-xxl",
+      "value": ".is-gap-xxl",
+      "compiledValue": ".is-gap-xxl"
+    },
+    {
+      "name": "$modifier-grid-gap-xl",
+      "value": ".is-gap-xl",
+      "compiledValue": ".is-gap-xl"
+    },
+    {
+      "name": "$modifier-grid-gap-lg",
+      "value": ".is-gap-lg",
+      "compiledValue": ".is-gap-lg"
+    },
+    {
+      "name": "$modifier-grid-gap-md",
+      "value": ".is-gap-md",
+      "compiledValue": ".is-gap-md"
+    },
+    {
+      "name": "$modifier-grid-gap-sm",
+      "value": ".is-gap-sm",
+      "compiledValue": ".is-gap-sm"
+    },
+    {
+      "name": "$modifier-grid-gap-xs",
+      "value": ".is-gap-xs",
+      "compiledValue": ".is-gap-xs"
+    },
+    {
+      "name": "$modifier-grid-gap-xxs",
+      "value": ".is-gap-xxs",
+      "compiledValue": ".is-gap-xxs"
+    },
+    {
+      "name": "$modifier-grid-gap-top-bottom",
+      "value": ".is-gap-top-bottom",
+      "compiledValue": ".is-gap-top-bottom"
+    },
+    {
+      "name": "$modifier-grid-gap-top-bottom-xxl",
+      "value": ".is-gap-top-bottom-xxl",
+      "compiledValue": ".is-gap-top-bottom-xxl"
+    },
+    {
+      "name": "$modifier-grid-gap-top-bottom-xl",
+      "value": ".is-gap-top-bottom-xl",
+      "compiledValue": ".is-gap-top-bottom-xl"
+    },
+    {
+      "name": "$modifier-grid-gap-top-bottom-lg",
+      "value": ".is-gap-top-bottom-lg",
+      "compiledValue": ".is-gap-top-bottom-lg"
+    },
+    {
+      "name": "$modifier-grid-gap-top-bottom-md",
+      "value": ".is-gap-top-bottom-md",
+      "compiledValue": ".is-gap-top-bottom-md"
+    },
+    {
+      "name": "$modifier-grid-gap-top-bottom-sm",
+      "value": ".is-gap-top-bottom-sm",
+      "compiledValue": ".is-gap-top-bottom-sm"
+    },
+    {
+      "name": "$modifier-grid-gap-top-bottom-xs",
+      "value": ".is-gap-top-bottom-xs",
+      "compiledValue": ".is-gap-top-bottom-xs"
+    },
+    {
+      "name": "$modifier-grid-gap-top-bottom-xxs",
+      "value": ".is-gap-top-bottom-xxs",
+      "compiledValue": ".is-gap-top-bottom-xxs"
+    },
+    {
+      "name": "$modifier-grid-gap-right-left",
+      "value": ".is-gap-right-left",
+      "compiledValue": ".is-gap-right-left"
+    },
+    {
+      "name": "$modifier-grid-gap-right-left-xxl",
+      "value": ".is-gap-right-left-xxl",
+      "compiledValue": ".is-gap-right-left-xxl"
+    },
+    {
+      "name": "$modifier-grid-gap-right-left-xl",
+      "value": ".is-gap-right-left-xl",
+      "compiledValue": ".is-gap-right-left-xl"
+    },
+    {
+      "name": "$modifier-grid-gap-right-left-lg",
+      "value": ".is-gap-right-left-lg",
+      "compiledValue": ".is-gap-right-left-lg"
+    },
+    {
+      "name": "$modifier-grid-gap-right-left-md",
+      "value": ".is-gap-right-left-md, &.is-gap-right-left",
+      "compiledValue": ".is-gap-right-left-md, #sass-export-id.modifier-grid-gap-right-left-md .is-gap-right-left"
+    },
+    {
+      "name": "$modifier-grid-gap-right-left-sm",
+      "value": ".is-gap-right-left-sm",
+      "compiledValue": ".is-gap-right-left-sm"
+    },
+    {
+      "name": "$modifier-grid-gap-right-left-xs",
+      "value": ".is-gap-right-left-xs",
+      "compiledValue": ".is-gap-right-left-xs"
+    },
+    {
+      "name": "$modifier-grid-gap-right-left-xxs",
+      "value": ".is-gap-right-left-xxs",
+      "compiledValue": ".is-gap-right-left-xxs"
+    },
+    {
       "name": "$gap-size-xxl",
       "value": "$meter-xxl",
       "compiledValue": "28px"
@@ -52,42 +217,123 @@
       "parameters": []
     },
     {
-      "name": "--is-gap-all",
-      "parameters": [
-        "$name",
-        "$value",
-        "$child-selector",
-        "$omit"
-      ]
-    },
-    {
-      "name": "musubii-style-grid-gap-all",
+      "name": "musubii-style-grid-baseline",
       "parameters": []
     },
     {
-      "name": "--is-gap-row",
-      "parameters": [
-        "$name",
-        "$value",
-        "$child-selector",
-        "$omit"
-      ]
-    },
-    {
-      "name": "musubii-style-grid-gap-row",
+      "name": "musubii-style-grid-middle",
       "parameters": []
     },
     {
-      "name": "--is-gap-column",
-      "parameters": [
-        "$name",
-        "$value",
-        "$child-selector",
-        "$omit"
-      ]
+      "name": "musubii-style-grid-bottom",
+      "parameters": []
     },
     {
-      "name": "musubii-style-grid-gap-column",
+      "name": "musubii-style-grid-center",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-right",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-between",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-around",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-reverse",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-stretch",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-xxl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-xl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-lg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-md",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-sm",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-xs",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-xxs",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-top-bottom-xxl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-top-bottom-xl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-top-bottom-lg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-top-bottom-md",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-top-bottom-sm",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-top-bottom-xs",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-top-bottom-xxs",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-right-left-xxl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-right-left-xl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-right-left-lg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-right-left-md",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-right-left-sm",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-right-left-xs",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-grid-gap-right-left-xxs",
       "parameters": []
     }
   ]

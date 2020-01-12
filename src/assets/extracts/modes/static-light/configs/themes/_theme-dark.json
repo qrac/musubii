@@ -222,18 +222,18 @@
     },
     {
       "name": "$theme-dark-shadow",
-      "value": "$indigo-a400",
-      "compiledValue": "#5166cd"
+      "value": "$black",
+      "compiledValue": "black"
     },
     {
       "name": "$theme-dark-shadow-alpha",
-      "value": "rgba($theme-dark-shadow, 0.7)",
-      "compiledValue": "rgba(81, 102, 205, 0.7)"
+      "value": "rgba($theme-dark-shadow, 0.4)",
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
     },
     {
       "name": "$theme-dark-shadow-alpha-thin",
       "value": "rgba($theme-dark-shadow, 0.075)",
-      "compiledValue": "rgba(81, 102, 205, 0.075)"
+      "compiledValue": "rgba(0, 0, 0, 0.075)"
     },
     {
       "name": "$theme-dark-focus",

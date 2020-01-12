@@ -11,167 +11,177 @@
       "compiledValue": "false"
     },
     {
-      "name": "$option-theme-default",
-      "value": "light",
-      "compiledValue": "light"
-    },
-    {
       "name": "$option-theme-trigger-media",
       "value": "false",
       "compiledValue": "false"
     },
     {
-      "name": "$option-generate-reset",
+      "name": "$option-theme-default",
+      "value": "light",
+      "compiledValue": "light"
+    },
+    {
+      "name": "$option-generate-style-reset",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-html",
+      "name": "$option-generate-style-html",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-section",
+      "name": "$option-generate-style-section",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-grid",
+      "name": "$option-generate-style-grid",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-box",
+      "name": "$option-generate-style-card",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-card",
+      "name": "$option-generate-style-box",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-joint",
+      "name": "$option-generate-style-joint",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-text",
+      "name": "$option-generate-style-text",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-button",
+      "name": "$option-generate-style-button",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-badge",
+      "name": "$option-generate-style-badge",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-list",
+      "name": "$option-generate-style-list",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-table",
+      "name": "$option-generate-style-table",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-form",
+      "name": "$option-generate-style-form",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-iframe",
+      "name": "$option-generate-style-iframe",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-icon",
+      "name": "$option-generate-style-icon",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-alert",
+      "name": "$option-generate-style-alert",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-wysiwyg",
+      "name": "$option-generate-style-wysiwyg",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-display",
+      "name": "$option-generate-style-display",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-size",
+      "name": "$option-generate-style-size",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-flex",
+      "name": "$option-generate-style-flex",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-space",
+      "name": "$option-generate-style-space",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-margin",
+      "name": "$option-generate-style-margin",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-padding",
+      "name": "$option-generate-style-padding",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-centering",
+      "name": "$option-generate-style-centering",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-overflow",
+      "name": "$option-generate-style-overflow",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-scroll",
+      "name": "$option-generate-style-scroll",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-ellipsis",
+      "name": "$option-generate-style-ellipsis",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-clearfix",
+      "name": "$option-generate-style-clearfix",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-style-button-focus",
+      "name": "$option-add-style-grid-split-gap",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-style-button-angle",
+      "name": "$option-add-style-card-focus",
       "value": "true",
       "compiledValue": "true"
     },
     {
-      "name": "$option-style-alert-tail",
+      "name": "$option-add-style-button-focus",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-button-angle",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-alert-tail",
       "value": "false",
       "compiledValue": "false"
     }

@@ -6,6 +6,81 @@
       "compiledValue": ".card"
     },
     {
+      "name": "$modifier-card-bg",
+      "value": ".is-bg",
+      "compiledValue": ".is-bg"
+    },
+    {
+      "name": "$modifier-card-bg-light",
+      "value": ".is-bg-light",
+      "compiledValue": ".is-bg-light"
+    },
+    {
+      "name": "$modifier-card-outline",
+      "value": ".is-outline",
+      "compiledValue": ".is-outline"
+    },
+    {
+      "name": "$modifier-card-disabled",
+      "value": ".is-disabled",
+      "compiledValue": ".is-disabled"
+    },
+    {
+      "name": "$modifier-card-link",
+      "value": ".is-link",
+      "compiledValue": ".is-link"
+    },
+    {
+      "name": "$modifier-card-zoom",
+      "value": ".is-zoom",
+      "compiledValue": ".is-zoom"
+    },
+    {
+      "name": "$modifier-card-floating",
+      "value": ".is-floating",
+      "compiledValue": ".is-floating"
+    },
+    {
+      "name": "$modifier-card-radius",
+      "value": ".is-radius",
+      "compiledValue": ".is-radius"
+    },
+    {
+      "name": "$modifier-card-radius-xxl",
+      "value": ".is-radius-xxl",
+      "compiledValue": ".is-radius-xxl"
+    },
+    {
+      "name": "$modifier-card-radius-xl",
+      "value": ".is-radius-xl",
+      "compiledValue": ".is-radius-xl"
+    },
+    {
+      "name": "$modifier-card-radius-lg",
+      "value": ".is-radius-lg",
+      "compiledValue": ".is-radius-lg"
+    },
+    {
+      "name": "$modifier-card-radius-md",
+      "value": ".is-radius-md",
+      "compiledValue": ".is-radius-md"
+    },
+    {
+      "name": "$modifier-card-radius-sm",
+      "value": ".is-radius-sm",
+      "compiledValue": ".is-radius-sm"
+    },
+    {
+      "name": "$modifier-card-radius-xs",
+      "value": ".is-radius-xs",
+      "compiledValue": ".is-radius-xs"
+    },
+    {
+      "name": "$modifier-card-radius-xxs",
+      "value": ".is-radius-xxs",
+      "compiledValue": ".is-radius-xxs"
+    },
+    {
       "name": "$card-background-color",
       "value": "$convert-background-1",
       "compiledValue": "white"
@@ -24,6 +99,41 @@
       "name": "$card-focus-shadow",
       "value": "0 0 0 $meter-xxs $convert-focus-alpha",
       "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5)"
+    },
+    {
+      "name": "$card-link-hover-background-color",
+      "value": "$convert-background-3",
+      "compiledValue": "whitesmoke"
+    },
+    {
+      "name": "$card-link-transition",
+      "value": "$global-transition",
+      "compiledValue": "ease-out 0.12s"
+    },
+    {
+      "name": "$card-zoom-transform",
+      "value": "scale(1.025)",
+      "compiledValue": "scale(1.025)"
+    },
+    {
+      "name": "$card-zoom-transition",
+      "value": "$global-transition",
+      "compiledValue": "ease-out 0.12s"
+    },
+    {
+      "name": "$card-floating-shadow",
+      "value": "0 1px 3px 0 $convert-shadow-alpha",
+      "compiledValue": "0 1px 3px 0 rgba(0, 0, 0, 0.24)"
+    },
+    {
+      "name": "$card-floating-hover-shadow",
+      "value": "0 4px 12px 0 $convert-shadow-alpha",
+      "compiledValue": "0 4px 12px 0 rgba(0, 0, 0, 0.24)"
+    },
+    {
+      "name": "$card-floating-focus-shadow",
+      "value": "0 0 0 $meter-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
+      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.24)"
     },
     {
       "name": "$card-radius-xxl",
@@ -59,41 +169,6 @@
       "name": "$card-radius-xxs",
       "value": "$radius-xxs",
       "compiledValue": "1px"
-    },
-    {
-      "name": "$card-floating-shadow",
-      "value": "0 1px 3px 0 $convert-shadow-alpha",
-      "compiledValue": "0 1px 3px 0 rgba(0, 0, 0, 0.24)"
-    },
-    {
-      "name": "$card-floating-hover-shadow",
-      "value": "0 4px 12px 0 $convert-shadow-alpha",
-      "compiledValue": "0 4px 12px 0 rgba(0, 0, 0, 0.24)"
-    },
-    {
-      "name": "$card-floating-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
-      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.24)"
-    },
-    {
-      "name": "$card-link-hover-background-color",
-      "value": "$convert-background-3",
-      "compiledValue": "whitesmoke"
-    },
-    {
-      "name": "$card-link-transition",
-      "value": "$global-transition",
-      "compiledValue": "ease-out 0.12s"
-    },
-    {
-      "name": "$card-zoom-transform",
-      "value": "scale(1.025)",
-      "compiledValue": "scale(1.025)"
-    },
-    {
-      "name": "$card-zoom-transition",
-      "value": "$global-transition",
-      "compiledValue": "ease-out 0.12s"
     }
   ],
   "mixins": [
@@ -102,15 +177,7 @@
       "parameters": []
     },
     {
-      "name": "--is-bg-color",
-      "parameters": [
-        "$name",
-        "$value",
-        "$omit"
-      ]
-    },
-    {
-      "name": "musubii-style-card-bg",
+      "name": "musubii-style-card-bg-light",
       "parameters": []
     },
     {
@@ -118,19 +185,7 @@
       "parameters": []
     },
     {
-      "name": "--is-radius-all",
-      "parameters": [
-        "$name",
-        "$value",
-        "$omit"
-      ]
-    },
-    {
-      "name": "musubii-style-card-radius-all",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-card-floating",
+      "name": "musubii-style-card-disabled",
       "parameters": []
     },
     {
@@ -139,6 +194,38 @@
     },
     {
       "name": "musubii-style-card-zoom",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-floating",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-radius-xxl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-radius-xl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-radius-lg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-radius-md",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-radius-sm",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-radius-xs",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-card-radius-xxs",
       "parameters": []
     }
   ]
