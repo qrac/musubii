@@ -307,7 +307,7 @@ $gap-size-xxs: $meter-xxs !default;
 
 @include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
-    @if $option-add-style-grid-gap-one-side == true {
+    @if $option-add-style-grid-split-gap == true {
       &#{$modifier-grid-gap-top-bottom-xxl} {
         @include musubii-style-grid-gap-top-bottom-xxl();
       }
@@ -400,7 +400,7 @@ $gap-size-xxs: $meter-xxs !default;
 
 @include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
-    @if $option-add-style-grid-gap-one-side == true {
+    @if $option-add-style-grid-split-gap == true {
       &#{$modifier-grid-gap-right-left-xxl} {
         @include musubii-style-grid-gap-right-left-xxl();
       }
