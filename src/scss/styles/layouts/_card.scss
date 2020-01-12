@@ -10,7 +10,8 @@
 $selector-card: "\.card" !default;
 
 // Modifiers
-$modifier-card-bg-light: "\.is-bg-light, &\.is-bg" !default;
+$modifier-card-bg: "\.is-bg" !default;
+$modifier-card-bg-light: "\.is-bg-light" !default;
 $modifier-card-outline: "\.is-outline" !default;
 $modifier-card-disabled: "\.is-disabled" !default;
 $modifier-card-link: "\.is-link" !default;
@@ -80,6 +81,7 @@ $card-radius-xxs: $radius-xxs !default;
 @include generate-style($option-generate-style-card) {
   #{$selector-card} {
     @include musubii-style-card();
+    &#{$modifier-card-bg},
     &#{$modifier-card-bg-light} {
       @include musubii-style-card-bg-light();
     }
