@@ -95,7 +95,8 @@ export class PreviewCardBasic extends React.Component {
         ? 'target="_blank" rel="noopener noreferrer"'
         : ""
     const contents = `<${tag} class="card ${bgLight} ${outline} ${link} ${zoom} ${floating}
-      ${radiusPattern} ${disabledClass}" ${tagAttr} ${externalLink}>Card</${tag}>`
+      ${radiusPattern} ${disabledClass}" ${tagAttr} ${externalLink}
+      ><div class="box is-padding-md">children</div></${tag}>`
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
