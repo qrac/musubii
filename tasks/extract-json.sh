@@ -45,8 +45,8 @@ mkdir -p "$staticLightPath/styles/layouts"
 
 sass-export "$staticLightTempPath/styles/layouts/_section.scss" -o "$staticLightPath/styles/layouts/_section.json" -d "$importPath"
 sass-export "$staticLightTempPath/styles/layouts/_grid.scss" -o "$staticLightPath/styles/layouts/_grid.json" -d "$importPath"
-sass-export "$staticLightTempPath/styles/layouts/_box.scss" -o "$staticLightPath/styles/layouts/_box.json" -d "$importPath"
 sass-export "$staticLightTempPath/styles/layouts/_card.scss" -o "$staticLightPath/styles/layouts/_card.json" -d "$importPath"
+sass-export "$staticLightTempPath/styles/layouts/_box.scss" -o "$staticLightPath/styles/layouts/_box.json" -d "$importPath"
 sass-export "$staticLightTempPath/styles/layouts/_joint.scss" -o "$staticLightPath/styles/layouts/_joint.json" -d "$importPath"
 
 mkdir -p "$staticLightPath/styles/elements"
@@ -113,8 +113,8 @@ mkdir -p "$dynamicLightPath/styles/layouts"
 
 #sass-export "$dynamicLightTempPath/styles/layouts/_section.scss" -o "$dynamicLightPath/styles/layouts/_section.json" -d "$importPath"
 #sass-export "$dynamicLightTempPath/styles/layouts/_grid.scss" -o "$dynamicLightPath/styles/layouts/_grid.json" -d "$importPath"
-sass-export "$dynamicLightTempPath/styles/layouts/_box.scss" -o "$dynamicLightPath/styles/layouts/_box.json" -d "$importPath"
 sass-export "$dynamicLightTempPath/styles/layouts/_card.scss" -o "$dynamicLightPath/styles/layouts/_card.json" -d "$importPath"
+sass-export "$dynamicLightTempPath/styles/layouts/_box.scss" -o "$dynamicLightPath/styles/layouts/_box.json" -d "$importPath"
 #sass-export "$dynamicLightTempPath/styles/layouts/_joint.scss" -o "$dynamicLightPath/styles/layouts/_joint.json" -d "$importPath"
 
 mkdir -p "$dynamicLightPath/styles/elements"

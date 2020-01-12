@@ -255,14 +255,14 @@
               "title": "Grid"
             },
             {
-              "id": "box",
-              "path": "/styles/layouts/box",
-              "title": "Box"
-            },
-            {
               "id": "card",
               "path": "/styles/layouts/card",
               "title": "Card"
+            },
+            {
+              "id": "box",
+              "path": "/styles/layouts/box",
+              "title": "Box"
             },
             {
               "id": "joint",
