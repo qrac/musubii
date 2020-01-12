@@ -24,7 +24,7 @@ class AppMenu extends React.Component {
     const lists = []
     menus.map(menu =>
       menu.items.map(item => {
-        if (item["id"] && item["title"]) {
+        if (item["path"]) {
           lists.push(item)
         } else if (item.items) {
           item.items.map(childItem => lists.push(childItem))
@@ -73,9 +73,9 @@ class AppMenu extends React.Component {
           }
         })()}
         {(() => {
-          if (menu.id && menu.title) {
+          if (menu.path && menu.title) {
             return (
-              <ActiveLink href={"/" + menu.id} activeClassName="is-active">
+              <ActiveLink href={menu.path} activeClassName="is-active">
                 <a className="menu-link" onClick={this.closeMenu}>
                   {menu.title}
                 </a>
@@ -90,7 +90,6 @@ class AppMenu extends React.Component {
                 {menu.items.map(item => (
                   <MenuItem2
                     menu={item}
-                    path={menu.id}
                     id={menu.id}
                     key={menu.id + "-" + item.id}
                   />
@@ -102,7 +101,7 @@ class AppMenu extends React.Component {
       </li>
     )
 
-    const MenuItem2 = ({ menu, path, id }) => (
+    const MenuItem2 = ({ menu, id }) => (
       <li className="menu-item">
         {(() => {
           if (menu.heading) {
@@ -110,12 +109,9 @@ class AppMenu extends React.Component {
           }
         })()}
         {(() => {
-          if (menu.id && menu.title) {
+          if (menu.path && menu.title) {
             return (
-              <ActiveLink
-                href={"/" + (path ? path + "/" : "") + menu.id}
-                activeClassName="is-active"
-              >
+              <ActiveLink href={menu.path} activeClassName="is-active">
                 <a className="menu-link" onClick={this.closeMenu}>
                   {menu.title}
                 </a>
@@ -130,7 +126,6 @@ class AppMenu extends React.Component {
                 {menu.items.map(item => (
                   <MenuItem3
                     menu={item}
-                    path={(id ? id + "/" : "") + menu.id}
                     id={(id ? id + "-" : "") + menu.id}
                     key={(id ? id + "-" : "") + menu.id + "-" + item.id}
                   />
@@ -142,7 +137,7 @@ class AppMenu extends React.Component {
       </li>
     )
 
-    const MenuItem3 = ({ menu, path }) => (
+    const MenuItem3 = ({ menu }) => (
       <li className="menu-item">
         {(() => {
           if (menu.heading) {
@@ -150,12 +145,9 @@ class AppMenu extends React.Component {
           }
         })()}
         {(() => {
-          if (menu.id && menu.title) {
+          if (menu.path && menu.title) {
             return (
-              <ActiveLink
-                href={"/" + (path ? path + "/" : "") + menu.id}
-                activeClassName="is-active"
-              >
+              <ActiveLink href={menu.path} activeClassName="is-active">
                 <a className="menu-link" onClick={this.closeMenu}>
                   {menu.title}
                 </a>
