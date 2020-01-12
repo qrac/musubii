@@ -52,8 +52,8 @@ $theme-dark-background-alpha: $light-9 !default;
 $theme-dark-border: $grey-700 !default;
 $theme-dark-border-1: $light-6 !default;
 
-$theme-dark-shadow: $indigo-a400 !default;
-$theme-dark-shadow-alpha: rgba($theme-dark-shadow, 0.7) !default;
+$theme-dark-shadow: $black !default;
+$theme-dark-shadow-alpha: rgba($theme-dark-shadow, 0.4) !default;
 $theme-dark-shadow-alpha-thin: rgba($theme-dark-shadow, 0.075) !default;
 
 $theme-dark-focus: $theme-focus !default;
