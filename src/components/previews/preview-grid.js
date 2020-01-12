@@ -52,35 +52,35 @@ const aligns = [
 
 const gaps = [
   { id: 0, text: "None", value: "" },
-  { id: 1, text: "XXL", value: "is-gap-xxl" },
-  { id: 2, text: "XL", value: "is-gap-xl" },
-  { id: 3, text: "Large", value: "is-gap-lg" },
-  { id: 4, text: "Middle", value: "is-gap-md" },
-  { id: 5, text: "Small", value: "is-gap-sm" },
+  { id: 7, text: "XXS", value: "is-gap-xxs" },
   { id: 6, text: "XS", value: "is-gap-xs" },
-  { id: 7, text: "XXS", value: "is-gap-xxs" }
+  { id: 5, text: "Small", value: "is-gap-sm" },
+  { id: 4, text: "Middle", value: "is-gap-md" },
+  { id: 3, text: "Large", value: "is-gap-lg" },
+  { id: 2, text: "XL", value: "is-gap-xl" },
+  { id: 1, text: "XXL", value: "is-gap-xxl" }
 ]
 
 const topBottomGaps = [
   { id: 0, text: "None", value: "" },
-  { id: 1, text: "XXL", value: "is-gap-top-bottom-xxl" },
-  { id: 2, text: "XL", value: "is-gap-top-bottom-xl" },
-  { id: 3, text: "Large", value: "is-gap-top-bottom-lg" },
-  { id: 4, text: "Middle", value: "is-gap-top-bottom-md" },
-  { id: 5, text: "Small", value: "is-gap-top-bottom-sm" },
+  { id: 7, text: "XXS", value: "is-gap-top-bottom-xxs" },
   { id: 6, text: "XS", value: "is-gap-top-bottom-xs" },
-  { id: 7, text: "XXS", value: "is-gap-top-bottom-xxs" }
+  { id: 5, text: "Small", value: "is-gap-top-bottom-sm" },
+  { id: 4, text: "Middle", value: "is-gap-top-bottom-md" },
+  { id: 3, text: "Large", value: "is-gap-top-bottom-lg" },
+  { id: 2, text: "XL", value: "is-gap-top-bottom-xl" },
+  { id: 1, text: "XXL", value: "is-gap-top-bottom-xxl" }
 ]
 
 const rightLeftGaps = [
   { id: 0, text: "None", value: "" },
-  { id: 1, text: "XXL", value: "is-gap-right-left-xxl" },
-  { id: 2, text: "XL", value: "is-gap-right-left-xl" },
-  { id: 3, text: "Large", value: "is-gap-right-left-lg" },
-  { id: 4, text: "Middle", value: "is-gap-right-left-md" },
-  { id: 5, text: "Small", value: "is-gap-right-left-sm" },
+  { id: 7, text: "XXS", value: "is-gap-right-left-xxs" },
   { id: 6, text: "XS", value: "is-gap-right-left-xs" },
-  { id: 7, text: "XXS", value: "is-gap-right-left-xxs" }
+  { id: 5, text: "Small", value: "is-gap-right-left-sm" },
+  { id: 4, text: "Middle", value: "is-gap-right-left-md" },
+  { id: 3, text: "Large", value: "is-gap-right-left-lg" },
+  { id: 2, text: "XL", value: "is-gap-right-left-xl" },
+  { id: 1, text: "XXL", value: "is-gap-right-left-xxl" }
 ]
 
 const beautifyHtmlOptions = {
