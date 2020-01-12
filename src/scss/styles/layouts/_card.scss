@@ -10,16 +10,17 @@
 $selector-card: "\.card" !default;
 
 // Modifiers
-$modifier-card-bg-light: "\.is-bg, \.is-bg-light" !default;
+$modifier-card-bg-light: "\.is-bg-light, &\.is-bg" !default;
 $modifier-card-outline: "\.is-outline" !default;
 $modifier-card-disabled: "\.is-disabled" !default;
 $modifier-card-link: "\.is-link" !default;
 $modifier-card-zoom: "\.is-zoom" !default;
 $modifier-card-floating: "\.is-floating" !default;
+$modifier-card-radius: "\.is-radius" !default;
 $modifier-card-radius-xxl: "\.is-radius-xxl" !default;
 $modifier-card-radius-xl: "\.is-radius-xl" !default;
 $modifier-card-radius-lg: "\.is-radius-lg" !default;
-$modifier-card-radius-md: "\.is-radius, \.is-radius-md" !default;
+$modifier-card-radius-md: "\.is-radius-md" !default;
 $modifier-card-radius-sm: "\.is-radius-sm" !default;
 $modifier-card-radius-xs: "\.is-radius-xs" !default;
 $modifier-card-radius-xxs: "\.is-radius-xxs" !default;
@@ -218,6 +219,7 @@ $card-radius-xxs: $radius-xxs !default;
     &#{$modifier-card-radius-lg} {
       @include musubii-style-card-radius-lg();
     }
+    &#{$modifier-card-radius},
     &#{$modifier-card-radius-md} {
       @include musubii-style-card-radius-md();
     }
