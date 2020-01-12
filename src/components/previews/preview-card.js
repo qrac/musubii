@@ -110,14 +110,7 @@ export class PreviewCardBasic extends React.Component {
                 checked={this.state.tag}
               />
             </DemoOption>
-            <DemoOption title={"Radius"}>
-              <DemoOptionBoxRadios
-                patterns={radiusPatterns}
-                parentChange={value => this.changeRadiusPattern(value)}
-                checked={this.state.radiusPattern}
-              />
-            </DemoOption>
-            <DemoOption title={"Other"}>
+            <DemoOption title={"Attached"}>
               <DemoOptionBoxCheckbox
                 text={"Background Light"}
                 parentChange={() => this.toggleBgLight()}
@@ -129,6 +122,20 @@ export class PreviewCardBasic extends React.Component {
                 checked={this.state.outline}
               />
               <DemoOptionBoxCheckbox
+                text={"Floating"}
+                parentChange={() => this.toggleFloating()}
+                checked={this.state.floating}
+              />
+            </DemoOption>
+            <DemoOption title={"Radius"}>
+              <DemoOptionBoxRadios
+                patterns={radiusPatterns}
+                parentChange={value => this.changeRadiusPattern(value)}
+                checked={this.state.radiusPattern}
+              />
+            </DemoOption>
+            <DemoOption title={"Other"}>
+              <DemoOptionBoxCheckbox
                 text={"Link"}
                 parentChange={() => this.toggleLink()}
                 checked={this.state.link}
@@ -137,11 +144,6 @@ export class PreviewCardBasic extends React.Component {
                 text={"Zoom"}
                 parentChange={() => this.toggleZoom()}
                 checked={this.state.zoom}
-              />
-              <DemoOptionBoxCheckbox
-                text={"Floating"}
-                parentChange={() => this.toggleFloating()}
-                checked={this.state.floating}
               />
               <DemoOptionBoxCheckbox
                 text={"Disabled"}
