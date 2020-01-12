@@ -88,7 +88,8 @@ $card-radius-xxs: $radius-xxs !default;
     &#{$modifier-card-outline} {
       @include musubii-style-card-outline();
     }
-    &#{$modifier-card-disabled} {
+    &#{$modifier-card-disabled},
+    &[disabled] {
       @include musubii-style-card-disabled();
     }
   }

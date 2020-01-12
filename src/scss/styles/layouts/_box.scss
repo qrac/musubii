@@ -9,6 +9,35 @@
 // Selectors
 $selector-box: "\.box" !default;
 
+// Modifiers
+$modifier-box-flex: "\.is-flex" !default;
+$modifier-box-inline-flex: "\.is-inline-flex" !default;
+$modifier-box-nowrap: "\.is-nowrap" !default;
+$modifier-box-baseline: "\.is-baseline" !default;
+$modifier-box-middle: "\.is-middle" !default;
+$modifier-box-bottom: "\.is-bottom" !default;
+$modifier-box-center: "\.is-center" !default;
+$modifier-box-right: "\.is-right" !default;
+$modifier-box-between: "\.is-between" !default;
+$modifier-box-around: "\.is-around" !default;
+$modifier-box-reverse: "\.is-reverse" !default;
+$modifier-box-bg: "\.is-bg" !default;
+$modifier-box-bg-light: "\.is-bg-light" !default;
+$modifier-box-outline: "\.is-outline" !default;
+$modifier-box-outline-top: "\.is-outline-top" !default;
+$modifier-box-outline-right: "\.is-outline-right" !default;
+$modifier-box-outline-bottom: "\.is-outline-bottom" !default;
+$modifier-box-outline-left: "\.is-outline-left" !default;
+$modifier-box-separate: "\.is-separate" !default;
+$modifier-box-separate-parent: "\.is-separate-parent" !default;
+$modifier-box-separate-child: "\.is-separate-child" !default;
+$modifier-box-disabled: "\.is-disabled" !default;
+$modifier-box-link: "\.is-link" !default;
+$modifier-box-angle-right: "\.is-angle-right" !default;
+$modifier-box-angle-left: "\.is-angle-left" !default;
+$modifier-box-angle-up: "\.is-angle-up" !default;
+$modifier-box-angle-down: "\.is-angle-down" !default;
+
 // Box
 $box-background-color: $convert-background-1 !default;
 $box-border-width: $global-border-width !default;
@@ -32,9 +61,26 @@ $box-angle-border-color: $convert-border-1 !default;
   display: block;
 }
 
+@mixin musubii-style-box-bg-light() {
+  background-color: $box-background-color;
+}
+
+@mixin musubii-style-box-disabled() {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 @include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box();
+    &#{$modifier-card-bg},
+    &#{$modifier-card-bg-light} {
+      @include musubii-style-card-bg-light();
+    }
+    &#{$modifier-card-disabled},
+    &[disabled] {
+      @include musubii-style-card-disabled();
+    }
   }
 }
 
@@ -43,74 +89,87 @@ $box-angle-border-color: $convert-border-1 !default;
 //----------------------------------------------------
 
 @mixin musubii-style-box-flex() {
-  &.is-flex {
-    display: flex;
-  }
-  &.is-inline-flex {
-    display: inline-flex;
-  }
-  &.is-flex,
-  &.is-inline-flex {
-    &:not(.is-nowrap) {
-      flex-wrap: wrap;
-    }
-    &.is-baseline {
-      align-items: baseline;
-    }
-    &.is-middle {
-      align-items: center;
-    }
-    &.is-bottom {
-      align-items: flex-end;
-    }
-    &.is-center {
-      justify-content: center;
-    }
-    &.is-right {
-      justify-content: flex-end;
-    }
-    &.is-between {
-      justify-content: space-between;
-    }
-    &.is-around {
-      justify-content: space-around;
-    }
-    &.is-reverse {
-      flex-direction: row-reverse;
-    }
-  }
+  display: flex;
+}
+
+@mixin musubii-style-box-inline-flex() {
+  display: inline-flex;
+}
+
+@mixin musubii-style-box-wrap() {
+  flex-wrap: wrap;
+}
+
+@mixin musubii-style-box-baseline() {
+  align-items: baseline;
+}
+
+@mixin musubii-style-box-middle() {
+  align-items: center;
+}
+
+@mixin musubii-style-box-bottom() {
+  align-items: flex-end;
+}
+
+@mixin musubii-style-box-center() {
+  justify-content: center;
+}
+
+@mixin musubii-style-box-right() {
+  justify-content: flex-end;
+}
+
+@mixin musubii-style-box-between() {
+  justify-content: space-between;
+}
+
+@mixin musubii-style-box-around() {
+  justify-content: space-around;
+}
+
+@mixin musubii-style-box-reverse() {
+  flex-direction: row-reverse;
 }
 
 @include generate-style($option-generate-style-box) {
   #{$selector-box} {
-    @include musubii-style-box-flex();
-  }
-}
-
-//----------------------------------------------------
-// / Style - Box Background
-//----------------------------------------------------
-
-@mixin --is-bg-color($name, $value, $omit) {
-  @if $omit == true {
-    &.is-bg,
-    &.is-bg-#{$name} {
-      background-color: $value;
+    &#{$modifier-box-flex} {
+      @include musubii-style-box-flex();
     }
-  } @else {
-    &.is-bg-#{$name} {
-      background-color: $value;
+    &#{$modifier-box-inline-flex} {
+      @include musubii-style-box-inline-flex();
     }
-  }
-}
-
-@mixin musubii-style-box-bg() {
-  @include --is-bg-color(light, $box-background-color, true);
-}
-
-@include generate-style($option-generate-style-box) {
-  #{$selector-box} {
-    @include musubii-style-box-bg();
+    &#{$modifier-box-flex},
+    &#{$modifier-box-inline-flex} {
+      &:not(#{$modifier-box-nowrap}) {
+        @include musubii-style-box-wrap();
+      }
+      &#{$modifier-box-baseline} {
+        @include musubii-style-box-baseline();
+      }
+      &#{$modifier-box-middle} {
+        @include musubii-style-box-middle();
+      }
+      &#{$modifier-box-bottom} {
+        @include musubii-style-box-bottom();
+      }
+      &#{$modifier-box-center} {
+        @include musubii-style-box-center();
+      }
+      &#{$modifier-box-right} {
+        @include musubii-style-box-right();
+      }
+      &#{$modifier-box-between} {
+        @include musubii-style-box-between();
+      }
+      &#{$modifier-box-around} {
+        @include musubii-style-box-around();
+      }
+      &#{$modifier-box-reverse} {
+        @include musubii-style-box-reverse();
+      }
+    }
   }
 }
 
@@ -119,26 +178,42 @@ $box-angle-border-color: $convert-border-1 !default;
 //----------------------------------------------------
 
 @mixin musubii-style-box-outline() {
-  &.is-outline {
-    border: $box-border-width solid $box-border-color;
-  }
-  &.is-outline-top {
-    border-top: $box-border-width solid $box-border-color;
-  }
-  &.is-outline-right {
-    border-right: $box-border-width solid $box-border-color;
-  }
-  &.is-outline-bottom {
-    border-bottom: $box-border-width solid $box-border-color;
-  }
-  &.is-outline-left {
-    border-left: $box-border-width solid $box-border-color;
-  }
+  border: $box-border-width solid $box-border-color;
+}
+
+@mixin musubii-style-box-outline-top() {
+  border-top: $box-border-width solid $box-border-color;
+}
+
+@mixin musubii-style-box-outline-right() {
+  border-right: $box-border-width solid $box-border-color;
+}
+
+@mixin musubii-style-box-outline-bottom() {
+  border-bottom: $box-border-width solid $box-border-color;
+}
+
+@mixin musubii-style-box-outline-left() {
+  border-left: $box-border-width solid $box-border-color;
 }
 
 @include generate-style($option-generate-style-box) {
   #{$selector-box} {
-    @include musubii-style-box-outline();
+    &#{$modifier-box-outline} {
+      @include musubii-style-box-outline();
+    }
+    &#{$modifier-box-outline-top} {
+      @include musubii-style-box-outline-top();
+    }
+    &#{$modifier-box-outline-right} {
+      @include musubii-style-box-outline-right();
+    }
+    &#{$modifier-box-outline-bottom} {
+      @include musubii-style-box-outline-bottom();
+    }
+    &#{$modifier-box-outline-left} {
+      @include musubii-style-box-outline-left();
+    }
   }
 }
 
@@ -147,17 +222,25 @@ $box-angle-border-color: $convert-border-1 !default;
 //----------------------------------------------------
 
 @mixin musubii-style-box-separate() {
-  &.is-separate > *:not(:last-child) {
+  > *:not(:last-child) {
     border-bottom: $box-border-width solid $box-border-color;
   }
-  &.is-separate-parent > *:not(:last-child) .is-separate-child {
+}
+
+@mixin musubii-style-box-separate-parent() {
+  > *:not(:last-child) #{$modifier-box-separate-child} {
     border-bottom: $box-border-width solid $box-border-color;
   }
 }
 
 @include generate-style($option-generate-style-box) {
   #{$selector-box} {
-    @include musubii-style-box-separate();
+    &#{$modifier-box-separate} {
+      @include musubii-style-box-separate();
+    }
+    &#{$modifier-box-separate-parent} {
+      @include musubii-style-box-separate-parent();
+    }
   }
 }
 
@@ -166,23 +249,20 @@ $box-angle-border-color: $convert-border-1 !default;
 //----------------------------------------------------
 
 @mixin musubii-style-box-link() {
-  &.is-link {
-    cursor: pointer;
-    transition: $box-link-transition;
-    &:not(.is-disabled):not([disabled]):hover {
+  cursor: pointer;
+  transition: $box-link-transition;
+  &:not(#{$modifier-box-disabled}):not([disabled]) {
+    &:hover {
       background-color: $box-link-hover-background-color;
-    }
-    &.is-disabled,
-    &[disabled] {
-      cursor: not-allowed;
-      pointer-events: none;
     }
   }
 }
 
 @include generate-style($option-generate-style-box) {
   #{$selector-box} {
-    @include musubii-style-box-link();
+    &#{$modifier-box-link} {
+      @include musubii-style-box-link();
+    }
   }
 }
 
@@ -191,50 +271,69 @@ $box-angle-border-color: $convert-border-1 !default;
 //----------------------------------------------------
 
 @mixin musubii-style-box-angle() {
-  &.is-angle-right,
-  &.is-angle-left {
-    &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: $box-angle-size;
-      height: $box-angle-size;
-      border-top: $box-angle-border-width solid $box-angle-border-color;
-      border-right: $box-angle-border-width solid $box-angle-border-color;
-      z-index: 2;
-    }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: $box-angle-size;
+    height: $box-angle-size;
+    border-top: $box-angle-border-width solid $box-angle-border-color;
+    border-right: $box-angle-border-width solid $box-angle-border-color;
+    z-index: 2;
   }
-  &.is-angle-right {
-    padding-right: $box-angle-size * 3.5;
-    &:after {
-      right: $box-angle-size * 1.5;
-      transform: translateY(-50%) rotate(45deg);
-    }
+}
+
+@mixin musubii-style-box-angle-right() {
+  padding-right: $box-angle-size * 3.5;
+  &:after {
+    right: $box-angle-size * 1.5;
+    transform: translateY(-50%) rotate(45deg);
   }
-  &.is-angle-left {
-    padding-left: $box-angle-size * 3.5;
-    &:after {
-      left: $box-angle-size * 1.5;
-      transform: translateY(-50%) rotate(-135deg);
-    }
+}
+
+@mixin musubii-style-box-angle-left() {
+  padding-left: $box-angle-size * 3.5;
+  &:after {
+    left: $box-angle-size * 1.5;
+    transform: translateY(-50%) rotate(-135deg);
   }
-  &.is-angle-left,
-  &.is-angle-right {
-    &.is-angle-up {
-      &:after {
-        transform: translateY(-30%) rotate(-45deg);
-      }
-    }
-    &.is-angle-down {
-      &:after {
-        transform: translateY(-70%) rotate(135deg);
-      }
-    }
+}
+
+@mixin musubii-style-box-angle-up() {
+  &:after {
+    transform: translateY(-30%) rotate(-45deg);
+  }
+}
+
+@mixin musubii-style-box-angle-down() {
+  &:after {
+    transform: translateY(-70%) rotate(135deg);
   }
 }
 
 @include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box-angle();
+    @if $option-add-style-box-angle == true {
+      &#{$modifier-box-angle-right},
+      &#{$modifier-box-angle-left} {
+        @include musubii-style-box-angle();
+      }
+      &#{$modifier-box-angle-right} {
+        @include musubii-style-box-angle-right();
+      }
+      &#{$modifier-box-angle-left} {
+        @include musubii-style-box-angle-left();
+      }
+      &#{$modifier-box-angle-right},
+      &#{$modifier-box-angle-left} {
+        &#{$modifier-box-angle-up} {
+          @include musubii-style-box-angle-up();
+        }
+        &#{$modifier-box-angle-down} {
+          @include musubii-style-box-angle-down();
+        }
+      }
+    }
   }
 }
