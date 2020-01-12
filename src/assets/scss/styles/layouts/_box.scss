@@ -53,8 +53,7 @@
       }
     }
     > .column {
-      &:before {
-        content: "children";
+      > div {
         display: flex;
         justify-content: center;
         align-items: center;

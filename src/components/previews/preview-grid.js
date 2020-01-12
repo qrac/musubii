@@ -93,6 +93,7 @@ export class PreviewGridBasic extends React.Component {
     super(props)
     this.state = {
       splitGap: false,
+      reverse: false,
       stretch: false,
       columnNum: 4,
       columnSize: "",
@@ -102,6 +103,7 @@ export class PreviewGridBasic extends React.Component {
       rightLeftGap: ""
     }
     this.toggleSplitGap = this.toggleSplitGap.bind(this)
+    this.toggleReverse = this.toggleReverse.bind(this)
     this.toggleStretch = this.toggleStretch.bind(this)
     this.changeColumnNum = this.changeColumnNum.bind(this)
     this.changeColumnSize = this.changeColumnSize.bind(this)
@@ -121,6 +123,9 @@ export class PreviewGridBasic extends React.Component {
       this.setState({ topBottomGap: "is-gap-top-bottom-md" })
       this.setState({ rightLeftGap: "is-gap-right-left-md" })
     }
+  }
+  toggleReverse() {
+    this.setState({ reverse: !this.state.reverse })
   }
   toggleStretch() {
     this.setState({ stretch: !this.state.stretch })
@@ -148,6 +153,7 @@ export class PreviewGridBasic extends React.Component {
     this.setState({ gap: "" })
   }
   render() {
+    const reverse = this.state.reverse ? "is-reverse" : ""
     const stretch = this.state.stretch ? "is-stretch" : ""
     const columnNum = this.state.columnNum
     const columnSize = this.state.columnSize
@@ -156,11 +162,13 @@ export class PreviewGridBasic extends React.Component {
     const topBottomGap = this.state.topBottomGap
     const rightLeftGap = this.state.rightLeftGap
     const gridTagBefore = `<div class="grid
-      ${align} ${gap} ${topBottomGap} ${rightLeftGap} ${stretch}">`
+      ${align} ${gap} ${topBottomGap} ${rightLeftGap} ${reverse} ${stretch}">`
     const gridTagAfter = `</div>`
     const columns = []
     for (let i = 0; i < columnNum; i++) {
-      columns.push(`<div class="column ${columnSize}"></div>`)
+      columns.push(
+        `<div class="column ${columnSize}"><div>children ${i + 1}</div></div>`
+      )
     }
     const contents = (gridTagBefore + columns.join("") + gridTagAfter)
       .replace(/\s+/g, " ")
@@ -175,6 +183,11 @@ export class PreviewGridBasic extends React.Component {
                 text={"Split Gap"}
                 parentChange={() => this.toggleSplitGap()}
                 checked={this.state.splitGap}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Reverse"}
+                parentChange={() => this.toggleReverse()}
+                checked={this.state.reverse}
               />
               <DemoOptionBoxCheckbox
                 text={"Stretch"}
