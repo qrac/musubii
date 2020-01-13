@@ -140,79 +140,13 @@ $gap-size-xxs: $meter-xxs !default;
 // / Style - Grid Gap
 //----------------------------------------------------
 
-@mixin musubii-style-grid-gap-xxl() {
-  margin-left: -$gap-size-xxl;
-  margin-bottom: -$gap-size-xxl;
+@mixin musubii-style-grid-gap($gap-size) {
+  margin-left: -$gap-size;
+  margin-bottom: -$gap-size;
   > {
     #{$selector-column} {
-      padding-left: $gap-size-xxl;
-      padding-bottom: $gap-size-xxl;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-xl() {
-  margin-left: -$gap-size-xl;
-  margin-bottom: -$gap-size-xl;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-xl;
-      padding-bottom: $gap-size-xl;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-lg() {
-  margin-left: -$gap-size-lg;
-  margin-bottom: -$gap-size-lg;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-lg;
-      padding-bottom: $gap-size-lg;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-md() {
-  margin-left: -$gap-size-md;
-  margin-bottom: -$gap-size-md;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-md;
-      padding-bottom: $gap-size-md;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-sm() {
-  margin-left: -$gap-size-sm;
-  margin-bottom: -$gap-size-sm;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-sm;
-      padding-bottom: $gap-size-sm;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-xs() {
-  margin-left: -$gap-size-xs;
-  margin-bottom: -$gap-size-xs;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-xs;
-      padding-bottom: $gap-size-xs;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-xxs() {
-  margin-left: -$gap-size-xxs;
-  margin-bottom: -$gap-size-xxs;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-xxs;
-      padding-bottom: $gap-size-xxs;
+      padding-left: $gap-size;
+      padding-bottom: $gap-size;
     }
   }
 }
@@ -220,91 +154,37 @@ $gap-size-xxs: $meter-xxs !default;
 @include generate-style($option-generate-style-grid) {
   #{$selector-grid} {
     &#{$modifier-grid-gap-xxl} {
-      @include musubii-style-grid-gap-xxl();
+      @include musubii-style-grid-gap($gap-size-xxl);
     }
     &#{$modifier-grid-gap-xl} {
-      @include musubii-style-grid-gap-xl();
+      @include musubii-style-grid-gap($gap-size-xl);
     }
     &#{$modifier-grid-gap-lg} {
-      @include musubii-style-grid-gap-lg();
+      @include musubii-style-grid-gap($gap-size-lg);
     }
     &#{$modifier-grid-gap},
     &#{$modifier-grid-gap-md} {
-      @include musubii-style-grid-gap-md();
+      @include musubii-style-grid-gap($gap-size-md);
     }
     &#{$modifier-grid-gap-sm} {
-      @include musubii-style-grid-gap-sm();
+      @include musubii-style-grid-gap($gap-size-sm);
     }
     &#{$modifier-grid-gap-xs} {
-      @include musubii-style-grid-gap-xs();
+      @include musubii-style-grid-gap($gap-size-xs);
     }
     &#{$modifier-grid-gap-xxs} {
-      @include musubii-style-grid-gap-xxs();
+      @include musubii-style-grid-gap($gap-size-xxs);
     }
   }
 }
 
 //----------------------------------------------------
 
-@mixin musubii-style-grid-gap-top-bottom-xxl() {
-  margin-bottom: -$gap-size-xxl;
+@mixin musubii-style-grid-gap-top-bottom($gap-size) {
+  margin-bottom: -$gap-size;
   > {
     #{$selector-column} {
-      padding-bottom: $gap-size-xxl;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-top-bottom-xl() {
-  margin-bottom: -$gap-size-xl;
-  > {
-    #{$selector-column} {
-      padding-bottom: $gap-size-xl;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-top-bottom-lg() {
-  margin-bottom: -$gap-size-lg;
-  > {
-    #{$selector-column} {
-      padding-bottom: $gap-size-lg;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-top-bottom-md() {
-  margin-bottom: -$gap-size-md;
-  > {
-    #{$selector-column} {
-      padding-bottom: $gap-size-md;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-top-bottom-sm() {
-  margin-bottom: -$gap-size-sm;
-  > {
-    #{$selector-column} {
-      padding-bottom: $gap-size-sm;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-top-bottom-xs() {
-  margin-bottom: -$gap-size-xs;
-  > {
-    #{$selector-column} {
-      padding-bottom: $gap-size-xs;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-top-bottom-xxs() {
-  margin-bottom: -$gap-size-xxs;
-  > {
-    #{$selector-column} {
-      padding-bottom: $gap-size-xxs;
+      padding-bottom: $gap-size;
     }
   }
 }
@@ -313,26 +193,26 @@ $gap-size-xxs: $meter-xxs !default;
   #{$selector-grid} {
     @if $option-add-style-grid-split-gap == true {
       &#{$modifier-grid-gap-top-bottom-xxl} {
-        @include musubii-style-grid-gap-top-bottom-xxl();
+        @include musubii-style-grid-gap-top-bottom($gap-size-xxl);
       }
       &#{$modifier-grid-gap-top-bottom-xl} {
-        @include musubii-style-grid-gap-top-bottom-xl();
+        @include musubii-style-grid-gap-top-bottom($gap-size-xl);
       }
       &#{$modifier-grid-gap-top-bottom-lg} {
-        @include musubii-style-grid-gap-top-bottom-lg();
+        @include musubii-style-grid-gap-top-bottom($gap-size-lg);
       }
       &#{$modifier-grid-gap-top-bottom},
       &#{$modifier-grid-gap-top-bottom-md} {
-        @include musubii-style-grid-gap-top-bottom-md();
+        @include musubii-style-grid-gap-top-bottom($gap-size-md);
       }
       &#{$modifier-grid-gap-top-bottom-sm} {
-        @include musubii-style-grid-gap-top-bottom-sm();
+        @include musubii-style-grid-gap-top-bottom($gap-size-sm);
       }
       &#{$modifier-grid-gap-top-bottom-xs} {
-        @include musubii-style-grid-gap-top-bottom-xs();
+        @include musubii-style-grid-gap-top-bottom($gap-size-xs);
       }
       &#{$modifier-grid-gap-top-bottom-xxs} {
-        @include musubii-style-grid-gap-top-bottom-xxs();
+        @include musubii-style-grid-gap-top-bottom($gap-size-xxs);
       }
     }
   }
@@ -340,65 +220,11 @@ $gap-size-xxs: $meter-xxs !default;
 
 //----------------------------------------------------
 
-@mixin musubii-style-grid-gap-right-left-xxl() {
-  margin-left: -$gap-size-xxl;
+@mixin musubii-style-grid-gap-right-left($gap-size) {
+  margin-left: -$gap-size;
   > {
     #{$selector-column} {
-      padding-left: $gap-size-xxl;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-right-left-xl() {
-  margin-left: -$gap-size-xl;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-xl;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-right-left-lg() {
-  margin-left: -$gap-size-lg;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-lg;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-right-left-md() {
-  margin-left: -$gap-size-md;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-md;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-right-left-sm() {
-  margin-left: -$gap-size-sm;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-sm;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-right-left-xs() {
-  margin-left: -$gap-size-xs;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-xs;
-    }
-  }
-}
-
-@mixin musubii-style-grid-gap-right-left-xxs() {
-  margin-left: -$gap-size-xxs;
-  > {
-    #{$selector-column} {
-      padding-left: $gap-size-xxs;
+      padding-left: $gap-size;
     }
   }
 }
@@ -407,26 +233,26 @@ $gap-size-xxs: $meter-xxs !default;
   #{$selector-grid} {
     @if $option-add-style-grid-split-gap == true {
       &#{$modifier-grid-gap-right-left-xxl} {
-        @include musubii-style-grid-gap-right-left-xxl();
+        @include musubii-style-grid-gap-right-left($gap-size-xxl);
       }
       &#{$modifier-grid-gap-right-left-xl} {
-        @include musubii-style-grid-gap-right-left-xl();
+        @include musubii-style-grid-gap-right-left($gap-size-xl);
       }
       &#{$modifier-grid-gap-right-left-lg} {
-        @include musubii-style-grid-gap-right-left-lg();
+        @include musubii-style-grid-gap-right-left($gap-size-lg);
       }
       &#{$modifier-grid-gap-right-left},
       &#{$modifier-grid-gap-right-left-md} {
-        @include musubii-style-grid-gap-right-left-md();
+        @include musubii-style-grid-gap-right-left($gap-size-md);
       }
       &#{$modifier-grid-gap-right-left-sm} {
-        @include musubii-style-grid-gap-right-left-sm();
+        @include musubii-style-grid-gap-right-left($gap-size-sm);
       }
       &#{$modifier-grid-gap-right-left-xs} {
-        @include musubii-style-grid-gap-right-left-xs();
+        @include musubii-style-grid-gap-right-left($gap-size-xs);
       }
       &#{$modifier-grid-gap-right-left-xxs} {
-        @include musubii-style-grid-gap-right-left-xxs();
+        @include musubii-style-grid-gap-right-left($gap-size-xxs);
       }
     }
   }
