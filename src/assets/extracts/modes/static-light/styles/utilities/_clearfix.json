@@ -1,4 +1,16 @@
 {
+  "variables": [
+    {
+      "name": "$modifier-clearfix",
+      "value": ".is-clearfix",
+      "compiledValue": ".is-clearfix"
+    },
+    {
+      "name": "$clearfix-important",
+      "value": "if( $option-add-style-clearfix-important == true, !important, null )",
+      "compiledValue": ""
+    }
+  ],
   "mixins": [
     {
       "name": "musubii-style-clearfix",

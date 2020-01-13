@@ -91,12 +91,6 @@
       "parameters": [
         "$theme-attr"
       ]
-    },
-    {
-      "name": "mediaquery-pattern-select",
-      "parameters": [
-        "$mediaquery"
-      ]
     }
   ]
 }

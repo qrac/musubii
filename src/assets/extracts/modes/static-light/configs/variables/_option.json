@@ -264,6 +264,56 @@
       "name": "$option-add-style-flex-browser",
       "value": "false",
       "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-space-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-space-way",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-margin-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-margin-minus",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-padding-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-centering-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-overflow-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-scroll-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-ellipsis-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-clearfix-important",
+      "value": "false",
+      "compiledValue": "false"
     }
   ]
 }

@@ -1,4 +1,16 @@
 {
+  "variables": [
+    {
+      "name": "$modifier-ellipsis",
+      "value": ".is-ellipsis",
+      "compiledValue": ".is-ellipsis"
+    },
+    {
+      "name": "$ellipsis-important",
+      "value": "if( $option-add-style-ellipsis-important == true, !important, null )",
+      "compiledValue": ""
+    }
+  ],
   "mixins": [
     {
       "name": "musubii-style-ellipsis",

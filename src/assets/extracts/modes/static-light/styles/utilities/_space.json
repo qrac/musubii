@@ -1,6 +1,206 @@
 {
   "variables": [
     {
+      "name": "$modifier-space",
+      "value": ".is-space",
+      "compiledValue": ".is-space"
+    },
+    {
+      "name": "$modifier-space-xxl",
+      "value": ".is-space-xxl",
+      "compiledValue": ".is-space-xxl"
+    },
+    {
+      "name": "$modifier-space-xl",
+      "value": ".is-space-xl",
+      "compiledValue": ".is-space-xl"
+    },
+    {
+      "name": "$modifier-space-lg",
+      "value": ".is-space-lg",
+      "compiledValue": ".is-space-lg"
+    },
+    {
+      "name": "$modifier-space-md",
+      "value": ".is-space-md",
+      "compiledValue": ".is-space-md"
+    },
+    {
+      "name": "$modifier-space-sm",
+      "value": ".is-space-sm",
+      "compiledValue": ".is-space-sm"
+    },
+    {
+      "name": "$modifier-space-xs",
+      "value": ".is-space-xs",
+      "compiledValue": ".is-space-xs"
+    },
+    {
+      "name": "$modifier-space-xxs",
+      "value": ".is-space-xxs",
+      "compiledValue": ".is-space-xxs"
+    },
+    {
+      "name": "$modifier-space-top",
+      "value": ".is-space-top",
+      "compiledValue": ".is-space-top"
+    },
+    {
+      "name": "$modifier-space-top-xxl",
+      "value": ".is-space-top-xxl",
+      "compiledValue": ".is-space-top-xxl"
+    },
+    {
+      "name": "$modifier-space-top-xl",
+      "value": ".is-space-top-xl",
+      "compiledValue": ".is-space-top-xl"
+    },
+    {
+      "name": "$modifier-space-top-lg",
+      "value": ".is-space-top-lg",
+      "compiledValue": ".is-space-top-lg"
+    },
+    {
+      "name": "$modifier-space-top-md",
+      "value": ".is-space-top-md",
+      "compiledValue": ".is-space-top-md"
+    },
+    {
+      "name": "$modifier-space-top-sm",
+      "value": ".is-space-top-sm",
+      "compiledValue": ".is-space-top-sm"
+    },
+    {
+      "name": "$modifier-space-top-xs",
+      "value": ".is-space-top-xs",
+      "compiledValue": ".is-space-top-xs"
+    },
+    {
+      "name": "$modifier-space-top-xxs",
+      "value": ".is-space-top-xxs",
+      "compiledValue": ".is-space-top-xxs"
+    },
+    {
+      "name": "$modifier-space-right",
+      "value": ".is-space-right",
+      "compiledValue": ".is-space-right"
+    },
+    {
+      "name": "$modifier-space-right-xxl",
+      "value": ".is-space-right-xxl",
+      "compiledValue": ".is-space-right-xxl"
+    },
+    {
+      "name": "$modifier-space-right-xl",
+      "value": ".is-space-right-xl",
+      "compiledValue": ".is-space-right-xl"
+    },
+    {
+      "name": "$modifier-space-right-lg",
+      "value": ".is-space-right-lg",
+      "compiledValue": ".is-space-right-lg"
+    },
+    {
+      "name": "$modifier-space-right-md",
+      "value": ".is-space-right-md",
+      "compiledValue": ".is-space-right-md"
+    },
+    {
+      "name": "$modifier-space-right-sm",
+      "value": ".is-space-right-sm",
+      "compiledValue": ".is-space-right-sm"
+    },
+    {
+      "name": "$modifier-space-right-xs",
+      "value": ".is-space-right-xs",
+      "compiledValue": ".is-space-right-xs"
+    },
+    {
+      "name": "$modifier-space-right-xxs",
+      "value": ".is-space-right-xxs",
+      "compiledValue": ".is-space-right-xxs"
+    },
+    {
+      "name": "$modifier-space-bottom",
+      "value": ".is-space-bottom",
+      "compiledValue": ".is-space-bottom"
+    },
+    {
+      "name": "$modifier-space-bottom-xxl",
+      "value": ".is-space-bottom-xxl",
+      "compiledValue": ".is-space-bottom-xxl"
+    },
+    {
+      "name": "$modifier-space-bottom-xl",
+      "value": ".is-space-bottom-xl",
+      "compiledValue": ".is-space-bottom-xl"
+    },
+    {
+      "name": "$modifier-space-bottom-lg",
+      "value": ".is-space-bottom-lg",
+      "compiledValue": ".is-space-bottom-lg"
+    },
+    {
+      "name": "$modifier-space-bottom-md",
+      "value": ".is-space-bottom-md",
+      "compiledValue": ".is-space-bottom-md"
+    },
+    {
+      "name": "$modifier-space-bottom-sm",
+      "value": ".is-space-bottom-sm",
+      "compiledValue": ".is-space-bottom-sm"
+    },
+    {
+      "name": "$modifier-space-bottom-xs",
+      "value": ".is-space-bottom-xs",
+      "compiledValue": ".is-space-bottom-xs"
+    },
+    {
+      "name": "$modifier-space-bottom-xxs",
+      "value": ".is-space-bottom-xxs",
+      "compiledValue": ".is-space-bottom-xxs"
+    },
+    {
+      "name": "$modifier-space-left",
+      "value": ".is-space-left",
+      "compiledValue": ".is-space-left"
+    },
+    {
+      "name": "$modifier-space-left-xxl",
+      "value": ".is-space-left-xxl",
+      "compiledValue": ".is-space-left-xxl"
+    },
+    {
+      "name": "$modifier-space-left-xl",
+      "value": ".is-space-left-xl",
+      "compiledValue": ".is-space-left-xl"
+    },
+    {
+      "name": "$modifier-space-left-lg",
+      "value": ".is-space-left-lg",
+      "compiledValue": ".is-space-left-lg"
+    },
+    {
+      "name": "$modifier-space-left-md",
+      "value": ".is-space-left-md",
+      "compiledValue": ".is-space-left-md"
+    },
+    {
+      "name": "$modifier-space-left-sm",
+      "value": ".is-space-left-sm",
+      "compiledValue": ".is-space-left-sm"
+    },
+    {
+      "name": "$modifier-space-left-xs",
+      "value": ".is-space-left-xs",
+      "compiledValue": ".is-space-left-xs"
+    },
+    {
+      "name": "$modifier-space-left-xxs",
+      "value": ".is-space-left-xxs",
+      "compiledValue": ".is-space-left-xxs"
+    },
+    {
       "name": "$space-size-xxl",
       "value": "$meter-xxl",
       "compiledValue": "28px"
@@ -34,44 +234,43 @@
       "name": "$space-size-xxs",
       "value": "$meter-xxs",
       "compiledValue": "4px"
+    },
+    {
+      "name": "$space-important",
+      "value": "if( $option-add-style-space-important == true, !important, null )",
+      "compiledValue": ""
     }
   ],
   "mixins": [
     {
-      "name": "--is-space",
-      "parameters": [
-        "$name",
-        "$value",
-        "$omit"
-      ]
-    },
-    {
       "name": "musubii-style-space",
-      "parameters": []
-    },
-    {
-      "name": "--is-space-row",
       "parameters": [
-        "$name",
-        "$value",
-        "$omit"
+        "$space-size"
       ]
     },
     {
-      "name": "musubii-style-space-row",
-      "parameters": []
-    },
-    {
-      "name": "--is-space-column",
+      "name": "musubii-style-space-top",
       "parameters": [
-        "$name",
-        "$value",
-        "$omit"
+        "$space-size"
       ]
     },
     {
-      "name": "musubii-style-space-column",
-      "parameters": []
+      "name": "musubii-style-space-right",
+      "parameters": [
+        "$space-size"
+      ]
+    },
+    {
+      "name": "musubii-style-space-bottom",
+      "parameters": [
+        "$space-size"
+      ]
+    },
+    {
+      "name": "musubii-style-space-left",
+      "parameters": [
+        "$space-size"
+      ]
     }
   ]
 }

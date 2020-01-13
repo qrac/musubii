@@ -1,4 +1,16 @@
 {
+  "variables": [
+    {
+      "name": "$modifier-overflow-hidden",
+      "value": ".is-overflow-hidden",
+      "compiledValue": ".is-overflow-hidden"
+    },
+    {
+      "name": "$overflow-important",
+      "value": "if( $option-add-style-overflow-important == true, !important, null )",
+      "compiledValue": ""
+    }
+  ],
   "mixins": [
     {
       "name": "musubii-style-overflow",

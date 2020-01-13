@@ -253,88 +253,22 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-grid-gap-xxl",
-      "parameters": []
+      "name": "musubii-style-grid-gap",
+      "parameters": [
+        "$gap-size"
+      ]
     },
     {
-      "name": "musubii-style-grid-gap-xl",
-      "parameters": []
+      "name": "musubii-style-grid-gap-top-bottom",
+      "parameters": [
+        "$gap-size"
+      ]
     },
     {
-      "name": "musubii-style-grid-gap-lg",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-md",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-sm",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-xs",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-xxs",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-top-bottom-xxl",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-top-bottom-xl",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-top-bottom-lg",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-top-bottom-md",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-top-bottom-sm",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-top-bottom-xs",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-top-bottom-xxs",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-right-left-xxl",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-right-left-xl",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-right-left-lg",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-right-left-md",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-right-left-sm",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-right-left-xs",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-grid-gap-right-left-xxs",
-      "parameters": []
+      "name": "musubii-style-grid-gap-right-left",
+      "parameters": [
+        "$gap-size"
+      ]
     }
   ]
 }

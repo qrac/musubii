@@ -111,37 +111,25 @@
       "compiledValue": "12"
     },
     {
-      "name": "$size-important",
-      "value": "if( $option-add-style-size-important == true, !important, null )",
+      "name": "$flex-important",
+      "value": "if( $option-add-style-flex-important == true, !important, null )",
       "compiledValue": ""
     }
   ],
   "mixins": [
     {
-      "name": "--is-flex-split",
-      "parameters": [
-        "$mediaquery"
-      ]
-    },
-    {
-      "name": "musubii-style-flex-split",
+      "name": "musubii-style-flex-grow",
       "parameters": []
     },
     {
-      "name": "--is-flex-full",
+      "name": "musubii-style-flex-split",
       "parameters": [
-        "$mediaquery"
+        "$i"
       ]
     },
     {
       "name": "musubii-style-flex-full",
       "parameters": []
-    },
-    {
-      "name": "--is-flex-auto",
-      "parameters": [
-        "$mediaquery"
-      ]
     },
     {
       "name": "musubii-style-flex-auto",

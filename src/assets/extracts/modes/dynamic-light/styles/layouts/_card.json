@@ -201,32 +201,10 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-card-radius-xxl",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-card-radius-xl",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-card-radius-lg",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-card-radius-md",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-card-radius-sm",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-card-radius-xs",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-card-radius-xxs",
-      "parameters": []
+      "name": "musubii-style-card-radius",
+      "parameters": [
+        "$radius-size"
+      ]
     }
   ]
 }

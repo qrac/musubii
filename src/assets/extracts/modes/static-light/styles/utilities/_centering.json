@@ -1,4 +1,16 @@
 {
+  "variables": [
+    {
+      "name": "$modifier-centering",
+      "value": ".is-centering",
+      "compiledValue": ".is-centering"
+    },
+    {
+      "name": "$centering-important",
+      "value": "if( $option-add-style-centering-important == true, !important, null )",
+      "compiledValue": ""
+    }
+  ],
   "mixins": [
     {
       "name": "musubii-style-centering",

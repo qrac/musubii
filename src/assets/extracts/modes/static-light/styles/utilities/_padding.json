@@ -1,6 +1,206 @@
 {
   "variables": [
     {
+      "name": "$modifier-padding",
+      "value": ".is-padding",
+      "compiledValue": ".is-padding"
+    },
+    {
+      "name": "$modifier-padding-xxl",
+      "value": ".is-padding-xxl",
+      "compiledValue": ".is-padding-xxl"
+    },
+    {
+      "name": "$modifier-padding-xl",
+      "value": ".is-padding-xl",
+      "compiledValue": ".is-padding-xl"
+    },
+    {
+      "name": "$modifier-padding-lg",
+      "value": ".is-padding-lg",
+      "compiledValue": ".is-padding-lg"
+    },
+    {
+      "name": "$modifier-padding-md",
+      "value": ".is-padding-md",
+      "compiledValue": ".is-padding-md"
+    },
+    {
+      "name": "$modifier-padding-sm",
+      "value": ".is-padding-sm",
+      "compiledValue": ".is-padding-sm"
+    },
+    {
+      "name": "$modifier-padding-xs",
+      "value": ".is-padding-xs",
+      "compiledValue": ".is-padding-xs"
+    },
+    {
+      "name": "$modifier-padding-xxs",
+      "value": ".is-padding-xxs",
+      "compiledValue": ".is-padding-xxs"
+    },
+    {
+      "name": "$modifier-padding-top",
+      "value": ".is-padding-top",
+      "compiledValue": ".is-padding-top"
+    },
+    {
+      "name": "$modifier-padding-top-xxl",
+      "value": ".is-padding-top-xxl",
+      "compiledValue": ".is-padding-top-xxl"
+    },
+    {
+      "name": "$modifier-padding-top-xl",
+      "value": ".is-padding-top-xl",
+      "compiledValue": ".is-padding-top-xl"
+    },
+    {
+      "name": "$modifier-padding-top-lg",
+      "value": ".is-padding-top-lg",
+      "compiledValue": ".is-padding-top-lg"
+    },
+    {
+      "name": "$modifier-padding-top-md",
+      "value": ".is-padding-top-md",
+      "compiledValue": ".is-padding-top-md"
+    },
+    {
+      "name": "$modifier-padding-top-sm",
+      "value": ".is-padding-top-sm",
+      "compiledValue": ".is-padding-top-sm"
+    },
+    {
+      "name": "$modifier-padding-top-xs",
+      "value": ".is-padding-top-xs",
+      "compiledValue": ".is-padding-top-xs"
+    },
+    {
+      "name": "$modifier-padding-top-xxs",
+      "value": ".is-padding-top-xxs",
+      "compiledValue": ".is-padding-top-xxs"
+    },
+    {
+      "name": "$modifier-padding-right",
+      "value": ".is-padding-right",
+      "compiledValue": ".is-padding-right"
+    },
+    {
+      "name": "$modifier-padding-right-xxl",
+      "value": ".is-padding-right-xxl",
+      "compiledValue": ".is-padding-right-xxl"
+    },
+    {
+      "name": "$modifier-padding-right-xl",
+      "value": ".is-padding-right-xl",
+      "compiledValue": ".is-padding-right-xl"
+    },
+    {
+      "name": "$modifier-padding-right-lg",
+      "value": ".is-padding-right-lg",
+      "compiledValue": ".is-padding-right-lg"
+    },
+    {
+      "name": "$modifier-padding-right-md",
+      "value": ".is-padding-right-md",
+      "compiledValue": ".is-padding-right-md"
+    },
+    {
+      "name": "$modifier-padding-right-sm",
+      "value": ".is-padding-right-sm",
+      "compiledValue": ".is-padding-right-sm"
+    },
+    {
+      "name": "$modifier-padding-right-xs",
+      "value": ".is-padding-right-xs",
+      "compiledValue": ".is-padding-right-xs"
+    },
+    {
+      "name": "$modifier-padding-right-xxs",
+      "value": ".is-padding-right-xxs",
+      "compiledValue": ".is-padding-right-xxs"
+    },
+    {
+      "name": "$modifier-padding-bottom",
+      "value": ".is-padding-bottom",
+      "compiledValue": ".is-padding-bottom"
+    },
+    {
+      "name": "$modifier-padding-bottom-xxl",
+      "value": ".is-padding-bottom-xxl",
+      "compiledValue": ".is-padding-bottom-xxl"
+    },
+    {
+      "name": "$modifier-padding-bottom-xl",
+      "value": ".is-padding-bottom-xl",
+      "compiledValue": ".is-padding-bottom-xl"
+    },
+    {
+      "name": "$modifier-padding-bottom-lg",
+      "value": ".is-padding-bottom-lg",
+      "compiledValue": ".is-padding-bottom-lg"
+    },
+    {
+      "name": "$modifier-padding-bottom-md",
+      "value": ".is-padding-bottom-md",
+      "compiledValue": ".is-padding-bottom-md"
+    },
+    {
+      "name": "$modifier-padding-bottom-sm",
+      "value": ".is-padding-bottom-sm",
+      "compiledValue": ".is-padding-bottom-sm"
+    },
+    {
+      "name": "$modifier-padding-bottom-xs",
+      "value": ".is-padding-bottom-xs",
+      "compiledValue": ".is-padding-bottom-xs"
+    },
+    {
+      "name": "$modifier-padding-bottom-xxs",
+      "value": ".is-padding-bottom-xxs",
+      "compiledValue": ".is-padding-bottom-xxs"
+    },
+    {
+      "name": "$modifier-padding-left",
+      "value": ".is-padding-left",
+      "compiledValue": ".is-padding-left"
+    },
+    {
+      "name": "$modifier-padding-left-xxl",
+      "value": ".is-padding-left-xxl",
+      "compiledValue": ".is-padding-left-xxl"
+    },
+    {
+      "name": "$modifier-padding-left-xl",
+      "value": ".is-padding-left-xl",
+      "compiledValue": ".is-padding-left-xl"
+    },
+    {
+      "name": "$modifier-padding-left-lg",
+      "value": ".is-padding-left-lg",
+      "compiledValue": ".is-padding-left-lg"
+    },
+    {
+      "name": "$modifier-padding-left-md",
+      "value": ".is-padding-left-md",
+      "compiledValue": ".is-padding-left-md"
+    },
+    {
+      "name": "$modifier-padding-left-sm",
+      "value": ".is-padding-left-sm",
+      "compiledValue": ".is-padding-left-sm"
+    },
+    {
+      "name": "$modifier-padding-left-xs",
+      "value": ".is-padding-left-xs",
+      "compiledValue": ".is-padding-left-xs"
+    },
+    {
+      "name": "$modifier-padding-left-xxs",
+      "value": ".is-padding-left-xxs",
+      "compiledValue": ".is-padding-left-xxs"
+    },
+    {
       "name": "$padding-size-xxl",
       "value": "$meter-xxl",
       "compiledValue": "28px"
@@ -34,67 +234,43 @@
       "name": "$padding-size-xxs",
       "value": "$meter-xxs",
       "compiledValue": "4px"
+    },
+    {
+      "name": "$padding-important",
+      "value": "if( $option-add-style-padding-important == true, !important, null )",
+      "compiledValue": ""
     }
   ],
   "mixins": [
     {
-      "name": "--is-padding",
-      "parameters": [
-        "$name",
-        "$value",
-        "$omit"
-      ]
-    },
-    {
       "name": "musubii-style-padding",
-      "parameters": []
-    },
-    {
-      "name": "--is-padding-way",
       "parameters": [
-        "$way",
-        "$name",
-        "$value",
-        "$omit"
+        "$padding-size"
       ]
     },
     {
-      "name": "musubii-style-padding-way",
-      "parameters": []
-    },
-    {
-      "name": "--is-padding-vertical",
+      "name": "musubii-style-padding-top",
       "parameters": [
-        "$name",
-        "$value",
-        "$omit"
+        "$padding-size"
       ]
     },
     {
-      "name": "musubii-style-padding-vertical",
-      "parameters": []
-    },
-    {
-      "name": "--is-padding-horizontal",
+      "name": "musubii-style-padding-right",
       "parameters": [
-        "$name",
-        "$value",
-        "$omit"
+        "$padding-size"
       ]
     },
     {
-      "name": "musubii-style-padding-horizontal",
-      "parameters": []
-    },
-    {
-      "name": "--is-padding-safe",
+      "name": "musubii-style-padding-bottom",
       "parameters": [
-        "$way"
+        "$padding-size"
       ]
     },
     {
-      "name": "musubii-style-padding-safe",
-      "parameters": []
+      "name": "musubii-style-padding-left",
+      "parameters": [
+        "$padding-size"
+      ]
     }
   ]
 }
