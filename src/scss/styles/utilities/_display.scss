@@ -116,19 +116,19 @@ $display-important: if(
 //----------------------------------------------------
 
 @mixin musubii-style-display-block() {
-  display: block$display-important;
+  display: block $display-important;
 }
 
 @mixin musubii-style-display-inline() {
-  display: inline$display-important;
+  display: inline $display-important;
 }
 
 @mixin musubii-style-display-inline-block() {
-  display: inline-block$display-important;
+  display: inline-block $display-important;
 }
 
 @mixin musubii-style-display-none() {
-  display: none$display-important;
+  display: none $display-important;
 }
 
 //----------------------------------------------------
