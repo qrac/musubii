@@ -18,7 +18,7 @@ contents list
 
 ## SCSS
 
-- import ディレクトリを変更
+- インポートディレクトリを変更
 - 依存ファイルの import 削除
 - `$use-xxx` は 次世代 Sass の use と紛らわしいので `$option` に変更
   - `$use-component-xxx` 周りの変数名を変更
@@ -27,6 +27,7 @@ contents list
 - Grid の `$column-class` は `$selector-column` に変更
 - Grid の `$grid-split` は `$flex-split` に変更（定義も Flex に移動）
 - Box の `.is-bg-cover` などはコンポーネントに書いた方が良いので削除
+- Box の `is-angle-(xxx)` から Padding を削除
 - Card の `.card` はデフォルトで `overflow: hidden;` するように変更
 - Card の flexbox は box と用途を迷うので削除
 - Joint の `$joint-class` は `selector-joint` に変更
