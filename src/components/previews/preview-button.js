@@ -171,7 +171,7 @@ export class PreviewButtonBasic extends React.Component {
         </div>
         <div className="demo-box is-line">
           <div
-            className="box is-flex is-space-right-xs is-space-bottom-xs"
+            className="box is-flex is-space-right-xs is-space-bottom-xs is-margin-bottom-minus-xs"
             dangerouslySetInnerHTML={{ __html: formattedCode }}
           ></div>
         </div>
@@ -276,7 +276,7 @@ export class PreviewButtonSquare extends React.Component {
         </div>
         <div className="demo-box is-line">
           <div
-            className="box is-flex is-space-right-xs is-space-bottom-xs"
+            className="box is-flex is-space-right-xs is-space-bottom-xs is-margin-bottom-minus-xs"
             dangerouslySetInnerHTML={{ __html: formattedCode }}
           ></div>
         </div>
@@ -381,7 +381,7 @@ export class PreviewButtonCircle extends React.Component {
         </div>
         <div className="demo-box is-line">
           <div
-            className="box is-flex is-space-right-xs is-space-bottom-xs"
+            className="box is-flex is-space-right-xs is-space-bottom-xs is-margin-bottom-minus-xs"
             dangerouslySetInnerHTML={{ __html: formattedCode }}
           ></div>
         </div>
