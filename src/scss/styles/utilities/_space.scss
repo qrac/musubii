@@ -6,6 +6,52 @@
 // / Variables
 //----------------------------------------------------
 
+// Modifiers
+$modifier-space: "\.is-space" !default;
+$modifier-space-xxl: "\.is-space-xxl" !default;
+$modifier-space-xl: "\.is-space-xl" !default;
+$modifier-space-lg: "\.is-space-lg" !default;
+$modifier-space-md: "\.is-space-md" !default;
+$modifier-space-sm: "\.is-space-sm" !default;
+$modifier-space-xs: "\.is-space-xs" !default;
+$modifier-space-xxs: "\.is-space-xxs" !default;
+
+$modifier-space-top: "\.is-space-top" !default;
+$modifier-space-top-xxl: "\.is-space-top-xxl" !default;
+$modifier-space-top-xl: "\.is-space-top-xl" !default;
+$modifier-space-top-lg: "\.is-space-top-lg" !default;
+$modifier-space-top-md: "\.is-space-top-md" !default;
+$modifier-space-top-sm: "\.is-space-top-sm" !default;
+$modifier-space-top-xs: "\.is-space-top-xs" !default;
+$modifier-space-top-xxs: "\.is-space-top-xxs" !default;
+
+$modifier-space-right: "\.is-space-right" !default;
+$modifier-space-right-xxl: "\.is-space-right-xxl" !default;
+$modifier-space-right-xl: "\.is-space-right-xl" !default;
+$modifier-space-right-lg: "\.is-space-right-lg" !default;
+$modifier-space-right-md: "\.is-space-right-md" !default;
+$modifier-space-right-sm: "\.is-space-right-sm" !default;
+$modifier-space-right-xs: "\.is-space-right-xs" !default;
+$modifier-space-right-xxs: "\.is-space-right-xxs" !default;
+
+$modifier-space-bottom: "\.is-space-bottom" !default;
+$modifier-space-bottom-xxl: "\.is-space-bottom-xxl" !default;
+$modifier-space-bottom-xl: "\.is-space-bottom-xl" !default;
+$modifier-space-bottom-lg: "\.is-space-bottom-lg" !default;
+$modifier-space-bottom-md: "\.is-space-bottom-md" !default;
+$modifier-space-bottom-sm: "\.is-space-bottom-sm" !default;
+$modifier-space-bottom-xs: "\.is-space-bottom-xs" !default;
+$modifier-space-bottom-xxs: "\.is-space-bottom-xxs" !default;
+
+$modifier-space-left: "\.is-space-left" !default;
+$modifier-space-left-xxl: "\.is-space-left-xxl" !default;
+$modifier-space-left-xl: "\.is-space-left-xl" !default;
+$modifier-space-left-lg: "\.is-space-left-lg" !default;
+$modifier-space-left-md: "\.is-space-left-md" !default;
+$modifier-space-left-sm: "\.is-space-left-sm" !default;
+$modifier-space-left-xs: "\.is-space-left-xs" !default;
+$modifier-space-left-xxs: "\.is-space-left-xxs" !default;
+
 // Space Size
 $space-size-xxl: $meter-xxl !default;
 $space-size-xl: $meter-xl !default;
@@ -15,111 +61,192 @@ $space-size-sm: $meter-sm !default;
 $space-size-xs: $meter-xs !default;
 $space-size-xxs: $meter-xxs !default;
 
+// Space Important
+$space-important: if(
+  $option-add-style-space-important == true,
+  !important,
+  null
+) !default;
+
 //----------------------------------------------------
 // / Style - Space
 //----------------------------------------------------
 
-@mixin --is-space($name, $value, $omit) {
-  @if $omit == true {
-    .is-space,
-    .is-space-#{$name} {
-      > *:not(:first-child) {
-        margin-top: $value;
-      }
+@mixin musubii-style-space($space-size) {
+  > *:not(:first-child) {
+    margin-top: $space-size $space-important;
+  }
+}
+
+@include generate-style($option-generate-style-space) {
+  #{$modifier-space-xxl} {
+    @include musubii-style-space($space-size-xxl);
+  }
+  #{$modifier-space-xl} {
+    @include musubii-style-space($space-size-xl);
+  }
+  #{$modifier-space-lg} {
+    @include musubii-style-space($space-size-lg);
+  }
+  #{$modifier-space},
+  #{$modifier-space-md} {
+    @include musubii-style-space($space-size-md);
+  }
+  #{$modifier-space-sm} {
+    @include musubii-style-space($space-size-sm);
+  }
+  #{$modifier-space-xs} {
+    @include musubii-style-space($space-size-xs);
+  }
+  #{$modifier-space-xxs} {
+    @include musubii-style-space($space-size-xxs);
+  }
+}
+
+//----------------------------------------------------
+// / Style - Space Top
+//----------------------------------------------------
+
+@mixin musubii-style-space-top($space-size) {
+  > * {
+    margin-top: $space-size $space-important;
+  }
+}
+
+@include generate-style($option-generate-style-space) {
+  @if $option-add-style-space-way == true {
+    #{$modifier-space-top-xxl} {
+      @include musubii-style-space-top($space-size-xxl);
     }
-  } @else {
-    .is-space-#{$name} {
-      > *:not(:first-child) {
-        margin-top: $value;
-      }
+    #{$modifier-space-top-xl} {
+      @include musubii-style-space-top($space-size-xl);
+    }
+    #{$modifier-space-top-lg} {
+      @include musubii-style-space-top($space-size-lg);
+    }
+    #{$modifier-space-top},
+    #{$modifier-space-top-md} {
+      @include musubii-style-space-top($space-size-md);
+    }
+    #{$modifier-space-top-sm} {
+      @include musubii-style-space-top($space-size-sm);
+    }
+    #{$modifier-space-top-xs} {
+      @include musubii-style-space-top($space-size-xs);
+    }
+    #{$modifier-space-top-xxs} {
+      @include musubii-style-space-top($space-size-xxs);
     }
   }
 }
 
-@mixin musubii-style-space() {
-  @include --is-space(xxl, $space-size-xxl, false);
-  @include --is-space(xl, $space-size-xl, false);
-  @include --is-space(lg, $space-size-lg, false);
-  @include --is-space(md, $space-size-md, true);
-  @include --is-space(sm, $space-size-sm, false);
-  @include --is-space(xs, $space-size-xs, false);
-  @include --is-space(xxs, $space-size-xxs, false);
+//----------------------------------------------------
+// / Style - Space Right
+//----------------------------------------------------
+
+@mixin musubii-style-space-right($space-size) {
+  > * {
+    margin-right: $space-size $space-important;
+  }
 }
 
 @include generate-style($option-generate-style-space) {
-  @include musubii-style-space();
-}
-
-//----------------------------------------------------
-// / Style - Space Row
-//----------------------------------------------------
-
-@mixin --is-space-row($name, $value, $omit) {
-  @if $omit == true {
-    .is-space-row,
-    .is-space-row-#{$name} {
-      margin-bottom: -$value;
-      > * {
-        margin-bottom: $value;
-      }
+  @if $option-add-style-space-way == true {
+    #{$modifier-space-right-xxl} {
+      @include musubii-style-space-right($space-size-xxl);
     }
-  } @else {
-    .is-space-row-#{$name} {
-      margin-bottom: -$value;
-      > * {
-        margin-bottom: $value;
-      }
+    #{$modifier-space-right-xl} {
+      @include musubii-style-space-right($space-size-xl);
+    }
+    #{$modifier-space-right-lg} {
+      @include musubii-style-space-right($space-size-lg);
+    }
+    #{$modifier-space-right},
+    #{$modifier-space-right-md} {
+      @include musubii-style-space-right($space-size-md);
+    }
+    #{$modifier-space-right-sm} {
+      @include musubii-style-space-right($space-size-sm);
+    }
+    #{$modifier-space-right-xs} {
+      @include musubii-style-space-right($space-size-xs);
+    }
+    #{$modifier-space-right-xxs} {
+      @include musubii-style-space-right($space-size-xxs);
     }
   }
 }
 
-@mixin musubii-style-space-row() {
-  @include --is-space-row(xxl, $space-size-xxl, false);
-  @include --is-space-row(xl, $space-size-xl, false);
-  @include --is-space-row(lg, $space-size-lg, false);
-  @include --is-space-row(md, $space-size-md, true);
-  @include --is-space-row(sm, $space-size-sm, false);
-  @include --is-space-row(xs, $space-size-xs, false);
-  @include --is-space-row(xxs, $space-size-xxs, false);
+//----------------------------------------------------
+// / Style - Space Bottom
+//----------------------------------------------------
+
+@mixin musubii-style-space-bottom($space-size) {
+  > * {
+    margin-bottom: $space-size $space-important;
+  }
 }
 
 @include generate-style($option-generate-style-space) {
-  @include musubii-style-space-row();
-}
-
-//----------------------------------------------------
-// / Style - Space Column
-//----------------------------------------------------
-
-@mixin --is-space-column($name, $value, $omit) {
-  @if $omit == true {
-    .is-space-column,
-    .is-space-column-#{$name} {
-      margin-left: -$value;
-      > * {
-        margin-left: $value;
-      }
+  @if $option-add-style-space-way == true {
+    #{$modifier-space-bottom-xxl} {
+      @include musubii-style-space-bottom($space-size-xxl);
     }
-  } @else {
-    .is-space-column-#{$name} {
-      margin-left: -$value;
-      > * {
-        margin-left: $value;
-      }
+    #{$modifier-space-bottom-xl} {
+      @include musubii-style-space-bottom($space-size-xl);
+    }
+    #{$modifier-space-bottom-lg} {
+      @include musubii-style-space-bottom($space-size-lg);
+    }
+    #{$modifier-space-bottom},
+    #{$modifier-space-bottom-md} {
+      @include musubii-style-space-bottom($space-size-md);
+    }
+    #{$modifier-space-bottom-sm} {
+      @include musubii-style-space-bottom($space-size-sm);
+    }
+    #{$modifier-space-bottom-xs} {
+      @include musubii-style-space-bottom($space-size-xs);
+    }
+    #{$modifier-space-bottom-xxs} {
+      @include musubii-style-space-bottom($space-size-xxs);
     }
   }
 }
 
-@mixin musubii-style-space-column() {
-  @include --is-space-column(xxl, $space-size-xxl, false);
-  @include --is-space-column(xl, $space-size-xl, false);
-  @include --is-space-column(lg, $space-size-lg, false);
-  @include --is-space-column(md, $space-size-md, true);
-  @include --is-space-column(sm, $space-size-sm, false);
-  @include --is-space-column(xs, $space-size-xs, false);
-  @include --is-space-column(xxs, $space-size-xxs, false);
+//----------------------------------------------------
+// / Style - Space Left
+//----------------------------------------------------
+
+@mixin musubii-style-space-left($space-size) {
+  > * {
+    margin-left: $space-size $space-important;
+  }
 }
 
 @include generate-style($option-generate-style-space) {
-  @include musubii-style-space-column();
+  @if $option-add-style-space-way == true {
+    #{$modifier-space-left-xxl} {
+      @include musubii-style-space-left($space-size-xxl);
+    }
+    #{$modifier-space-left-xl} {
+      @include musubii-style-space-left($space-size-xl);
+    }
+    #{$modifier-space-left-lg} {
+      @include musubii-style-space-left($space-size-lg);
+    }
+    #{$modifier-space-left},
+    #{$modifier-space-left-md} {
+      @include musubii-style-space-left($space-size-md);
+    }
+    #{$modifier-space-left-sm} {
+      @include musubii-style-space-left($space-size-sm);
+    }
+    #{$modifier-space-left-xs} {
+      @include musubii-style-space-left($space-size-xs);
+    }
+    #{$modifier-space-left-xxs} {
+      @include musubii-style-space-left($space-size-xxs);
+    }
+  }
 }
