@@ -3,62 +3,273 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+// Modifiers
+$modifier-size-xxl: "\.is-xxl" !default;
+$modifier-size-xl: "\.is-xl" !default;
+$modifier-size-lg: "\.is-lg" !default;
+$modifier-size-md: "\.is-md" !default;
+$modifier-size-sm: "\.is-sm" !default;
+$modifier-size-xs: "\.is-xs" !default;
+$modifier-size-xxs: "\.is-xxs" !default;
+$modifier-size-mobile-xxl: "\.is-mobile-xxl" !default;
+$modifier-size-mobile-xl: "\.is-mobile-xl" !default;
+$modifier-size-mobile-lg: "\.is-mobile-lg" !default;
+$modifier-size-mobile-md: "\.is-mobile-md" !default;
+$modifier-size-mobile-sm: "\.is-mobile-sm" !default;
+$modifier-size-mobile-xs: "\.is-mobile-xs" !default;
+$modifier-size-mobile-xxs: "\.is-mobile-xxs" !default;
+$modifier-size-fablet-xxl: "\.is-fablet-xxl" !default;
+$modifier-size-fablet-xl: "\.is-fablet-xl" !default;
+$modifier-size-fablet-lg: "\.is-fablet-lg" !default;
+$modifier-size-fablet-md: "\.is-fablet-md" !default;
+$modifier-size-fablet-sm: "\.is-fablet-sm" !default;
+$modifier-size-fablet-xs: "\.is-fablet-xs" !default;
+$modifier-size-fablet-xxs: "\.is-fablet-xxs" !default;
+$modifier-size-tablet-xxl: "\.is-tablet-xxl" !default;
+$modifier-size-tablet-xl: "\.is-tablet-xl" !default;
+$modifier-size-tablet-lg: "\.is-tablet-lg" !default;
+$modifier-size-tablet-md: "\.is-tablet-md" !default;
+$modifier-size-tablet-sm: "\.is-tablet-sm" !default;
+$modifier-size-tablet-xs: "\.is-tablet-xs" !default;
+$modifier-size-tablet-xxs: "\.is-tablet-xxs" !default;
+$modifier-size-desktop-xxl: "\.is-desktop-xxl" !default;
+$modifier-size-desktop-xl: "\.is-desktop-xl" !default;
+$modifier-size-desktop-lg: "\.is-desktop-lg" !default;
+$modifier-size-desktop-md: "\.is-desktop-md" !default;
+$modifier-size-desktop-sm: "\.is-desktop-sm" !default;
+$modifier-size-desktop-xs: "\.is-desktop-xs" !default;
+$modifier-size-desktop-xxs: "\.is-desktop-xxs" !default;
+$modifier-size-wide-xxl: "\.is-wide-xxl" !default;
+$modifier-size-wide-xl: "\.is-wide-xl" !default;
+$modifier-size-wide-lg: "\.is-wide-lg" !default;
+$modifier-size-wide-md: "\.is-wide-md" !default;
+$modifier-size-wide-sm: "\.is-wide-sm" !default;
+$modifier-size-wide-xs: "\.is-wide-xs" !default;
+$modifier-size-wide-xxs: "\.is-wide-xxs" !default;
+
+// Size
+$size-xxl: $font-size-xxl !default;
+$size-xl: $font-size-xl !default;
+$size-lg: $font-size-lg !default;
+$size-md: $font-size-md !default;
+$size-sm: $font-size-sm !default;
+$size-xs: $font-size-xs !default;
+$size-xxs: $font-size-xxs !default;
+
+//----------------------------------------------------
 // / Style - Size
 //----------------------------------------------------
 
-@mixin --is-size($mediaquery, $name, $value) {
-  @include mediaquery-pattern-select($mediaquery) {
-    @if $mediaquery == "mobile" {
-      .is-#{$name},
-      .is-#{$mediaquery}-#{$name} {
-        font-size: $value;
-      }
-    } @else {
-      .is-#{$mediaquery}-#{$name} {
-        font-size: $value;
-      }
+@mixin musubii-style-size-xxl() {
+  font-size: $size-xxl;
+}
+
+@mixin musubii-style-size-xl() {
+  font-size: $size-xl;
+}
+
+@mixin musubii-style-size-lg() {
+  font-size: $size-lg;
+}
+
+@mixin musubii-style-size-md() {
+  font-size: $size-md;
+}
+
+@mixin musubii-style-size-sm() {
+  font-size: $size-sm;
+}
+
+@mixin musubii-style-size-xs() {
+  font-size: $size-xs;
+}
+
+@mixin musubii-style-size-xxs() {
+  font-size: $size-xxs;
+}
+
+@include generate-style($option-generate-style-size) {
+  #{$modifier-size-xxl},
+  #{$modifier-size-mobile-xxl} {
+    @include musubii-style-size-xxl();
+  }
+  #{$modifier-size-xl},
+  #{$modifier-size-mobile-xl} {
+    @include musubii-style-size-xl();
+  }
+  #{$modifier-size-lg},
+  #{$modifier-size-mobile-lg} {
+    @include musubii-style-size-lg();
+  }
+  #{$modifier-size-md},
+  #{$modifier-size-mobile-md} {
+    @include musubii-style-size-md();
+  }
+  #{$modifier-size-sm},
+  #{$modifier-size-mobile-sm} {
+    @include musubii-style-size-sm();
+  }
+  #{$modifier-size-xs},
+  #{$modifier-size-mobile-xs} {
+    @include musubii-style-size-xs();
+  }
+  #{$modifier-size-xxs},
+  #{$modifier-size-mobile-xxs} {
+    @include musubii-style-size-xxs();
+  }
+}
+
+@include generate-style($option-generate-style-size) {
+  #{$modifier-size-fablet-xxl} {
+    @include fablet() {
+      @include musubii-style-size-xxl();
+    }
+  }
+  #{$modifier-size-fablet-xl} {
+    @include fablet() {
+      @include musubii-style-size-xl();
+    }
+  }
+  #{$modifier-size-fablet-lg} {
+    @include fablet() {
+      @include musubii-style-size-lg();
+    }
+  }
+  #{$modifier-size-fablet-md} {
+    @include fablet() {
+      @include musubii-style-size-md();
+    }
+  }
+  #{$modifier-size-fablet-sm} {
+    @include fablet() {
+      @include musubii-style-size-sm();
+    }
+  }
+  #{$modifier-size-fablet-xs} {
+    @include fablet() {
+      @include musubii-style-size-xs();
+    }
+  }
+  #{$modifier-size-fablet-xxs} {
+    @include fablet() {
+      @include musubii-style-size-xxs();
     }
   }
 }
 
-@mixin musubii-style-size() {
-  @include --is-size(mobile, xxl, $font-size-xxl);
-  @include --is-size(mobile, xl, $font-size-xl);
-  @include --is-size(mobile, lg, $font-size-lg);
-  @include --is-size(mobile, md, $font-size-md);
-  @include --is-size(mobile, sm, $font-size-sm);
-  @include --is-size(mobile, xs, $font-size-xs);
-  @include --is-size(mobile, xxs, $font-size-xxs);
-  @include --is-size(fablet, xxl, $font-size-xxl);
-  @include --is-size(fablet, xl, $font-size-xl);
-  @include --is-size(fablet, lg, $font-size-lg);
-  @include --is-size(fablet, md, $font-size-md);
-  @include --is-size(fablet, sm, $font-size-sm);
-  @include --is-size(fablet, xs, $font-size-xs);
-  @include --is-size(fablet, xxs, $font-size-xxs);
-  @include --is-size(tablet, xxl, $font-size-xxl);
-  @include --is-size(tablet, xl, $font-size-xl);
-  @include --is-size(tablet, lg, $font-size-lg);
-  @include --is-size(tablet, md, $font-size-md);
-  @include --is-size(tablet, sm, $font-size-sm);
-  @include --is-size(tablet, xs, $font-size-xs);
-  @include --is-size(tablet, xxs, $font-size-xxs);
-  @include --is-size(desktop, xxl, $font-size-xxl);
-  @include --is-size(desktop, xl, $font-size-xl);
-  @include --is-size(desktop, lg, $font-size-lg);
-  @include --is-size(desktop, md, $font-size-md);
-  @include --is-size(desktop, sm, $font-size-sm);
-  @include --is-size(desktop, xs, $font-size-xs);
-  @include --is-size(desktop, xxs, $font-size-xxs);
-  @include --is-size(wide, xxl, $font-size-xxl);
-  @include --is-size(wide, xl, $font-size-xl);
-  @include --is-size(wide, lg, $font-size-lg);
-  @include --is-size(wide, md, $font-size-md);
-  @include --is-size(wide, sm, $font-size-sm);
-  @include --is-size(wide, xs, $font-size-xs);
-  @include --is-size(wide, xxs, $font-size-xxs);
+@include generate-style($option-generate-style-size) {
+  #{$modifier-size-tablet-xxl} {
+    @include tablet() {
+      @include musubii-style-size-xxl();
+    }
+  }
+  #{$modifier-size-tablet-xl} {
+    @include tablet() {
+      @include musubii-style-size-xl();
+    }
+  }
+  #{$modifier-size-tablet-lg} {
+    @include tablet() {
+      @include musubii-style-size-lg();
+    }
+  }
+  #{$modifier-size-tablet-md} {
+    @include tablet() {
+      @include musubii-style-size-md();
+    }
+  }
+  #{$modifier-size-tablet-sm} {
+    @include tablet() {
+      @include musubii-style-size-sm();
+    }
+  }
+  #{$modifier-size-tablet-xs} {
+    @include tablet() {
+      @include musubii-style-size-xs();
+    }
+  }
+  #{$modifier-size-tablet-xxs} {
+    @include tablet() {
+      @include musubii-style-size-xxs();
+    }
+  }
 }
 
 @include generate-style($option-generate-style-size) {
-  @include musubii-style-size();
+  #{$modifier-size-desktop-xxl} {
+    @include desktop() {
+      @include musubii-style-size-xxl();
+    }
+  }
+  #{$modifier-size-desktop-xl} {
+    @include desktop() {
+      @include musubii-style-size-xl();
+    }
+  }
+  #{$modifier-size-desktop-lg} {
+    @include desktop() {
+      @include musubii-style-size-lg();
+    }
+  }
+  #{$modifier-size-desktop-md} {
+    @include desktop() {
+      @include musubii-style-size-md();
+    }
+  }
+  #{$modifier-size-desktop-sm} {
+    @include desktop() {
+      @include musubii-style-size-sm();
+    }
+  }
+  #{$modifier-size-desktop-xs} {
+    @include desktop() {
+      @include musubii-style-size-xs();
+    }
+  }
+  #{$modifier-size-desktop-xxs} {
+    @include desktop() {
+      @include musubii-style-size-xxs();
+    }
+  }
+}
+
+@include generate-style($option-generate-style-size) {
+  #{$modifier-size-wide-xxl} {
+    @include wide() {
+      @include musubii-style-size-xxl();
+    }
+  }
+  #{$modifier-size-wide-xl} {
+    @include wide() {
+      @include musubii-style-size-xl();
+    }
+  }
+  #{$modifier-size-wide-lg} {
+    @include wide() {
+      @include musubii-style-size-lg();
+    }
+  }
+  #{$modifier-size-wide-md} {
+    @include wide() {
+      @include musubii-style-size-md();
+    }
+  }
+  #{$modifier-size-wide-sm} {
+    @include wide() {
+      @include musubii-style-size-sm();
+    }
+  }
+  #{$modifier-size-wide-xs} {
+    @include wide() {
+      @include musubii-style-size-xs();
+    }
+  }
+  #{$modifier-size-wide-xxs} {
+    @include wide() {
+      @include musubii-style-size-xxs();
+    }
+  }
 }
