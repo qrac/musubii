@@ -3,17 +3,31 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+// Modifiers
+$modifier-ellipsis: "\.is-ellipsis" !default;
+
+// Ellipsis Important
+$ellipsis-important: if(
+  $option-add-style-ellipsis-important == true,
+  !important,
+  null
+) !default;
+
+//----------------------------------------------------
 // / Style - Ellipsis
 //----------------------------------------------------
 
 @mixin musubii-style-ellipsis() {
-  .is-ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  white-space: nowrap $ellipsis-important;
+  overflow: hidden $ellipsis-important;
+  text-overflow: ellipsis $ellipsis-important;
 }
 
 @include generate-style($option-generate-style-ellipsis) {
-  @include musubii-style-ellipsis();
+  #{$modifier-ellipsis} {
+    @include musubii-style-ellipsis();
+  }
 }

@@ -3,15 +3,29 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+// Modifiers
+$modifier-overflow-hidden: "\.is-overflow-hidden" !default;
+
+// Overflow Important
+$overflow-important: if(
+  $option-add-style-overflow-important == true,
+  !important,
+  null
+) !default;
+
+//----------------------------------------------------
 // / Style - Overflow
 //----------------------------------------------------
 
 @mixin musubii-style-overflow() {
-  .is-overflow-hidden {
-    overflow: hidden;
-  }
+  overflow: hidden $overflow-important;
 }
 
 @include generate-style($option-generate-style-overflow) {
-  @include musubii-style-overflow();
+  #{$modifier-overflow-hidden} {
+    @include musubii-style-overflow();
+  }
 }

@@ -3,22 +3,41 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+// Modifiers
+$modifier-scroll-x: "\.is-scroll-x" !default;
+$modifier-scroll-y: "\.is-scroll-y" !default;
+
+// Scroll Important
+$scroll-important: if(
+  $option-add-style-scroll-important == true,
+  !important,
+  null
+) !default;
+
+//----------------------------------------------------
 // / Style - Scroll
 //----------------------------------------------------
 
-@mixin musubii-style-scroll() {
-  .is-scroll-x {
-    overflow: hidden;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .is-scroll-y {
-    overflow: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+@mixin musubii-style-scroll-x() {
+  overflow: hidden $scroll-important;
+  overflow-x: auto $scroll-important;
+  -webkit-overflow-scrolling: touch $scroll-important;
+}
+
+@mixin musubii-style-scroll-y() {
+  overflow: hidden $scroll-important;
+  overflow-y: auto $scroll-important;
+  -webkit-overflow-scrolling: touch $scroll-important;
 }
 
 @include generate-style($option-generate-style-scroll) {
-  @include musubii-style-scroll();
+  #{$modifier-scroll-x} {
+    @include musubii-style-scroll-x();
+  }
+  #{$modifier-scroll-y} {
+    @include musubii-style-scroll-y();
+  }
 }

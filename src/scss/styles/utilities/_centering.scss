@@ -3,15 +3,29 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+// Modifiers
+$modifier-centering: "\.is-centering" !default;
+
+// Centering Important
+$centering-important: if(
+  $option-add-style-centering-important == true,
+  !important,
+  null
+) !default;
+
+//----------------------------------------------------
 // / Style - Centering
 //----------------------------------------------------
 
 @mixin musubii-style-centering() {
-  .is-centering {
-    margin: 0 auto;
-  }
+  margin: 0 auto $centering-important;
 }
 
 @include generate-style($option-generate-style-centering) {
-  @include musubii-style-centering();
+  #{$modifier-centering} {
+    @include musubii-style-centering();
+  }
 }

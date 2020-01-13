@@ -3,17 +3,33 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+// Modifiers
+$modifier-clearfix: "\.is-clearfix" !default;
+
+// Clearfix Important
+$clearfix-important: if(
+  $option-add-style-clearfix-important == true,
+  !important,
+  null
+) !default;
+
+//----------------------------------------------------
 // / Style - Clearfix
 //----------------------------------------------------
 
 @mixin musubii-style-clearfix() {
-  .is-clearfix:after {
-    content: "";
-    display: block;
-    clear: both;
+  &:after {
+    content: "" $clearfix-important;
+    display: block $clearfix-important;
+    clear: both $clearfix-important;
   }
 }
 
 @include generate-style($option-generate-style-clearfix) {
-  @include musubii-style-clearfix();
+  #{$modifier-clearfix} {
+    @include musubii-style-clearfix();
+  }
 }
