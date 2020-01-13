@@ -183,57 +183,33 @@ $card-radius-xxs: $radius-xxs !default;
 // / Style - Card Radius
 //----------------------------------------------------
 
-@mixin musubii-style-card-radius-xxl() {
-  border-radius: $card-radius-xxl;
-}
-
-@mixin musubii-style-card-radius-xl() {
-  border-radius: $card-radius-xl;
-}
-
-@mixin musubii-style-card-radius-lg() {
-  border-radius: $card-radius-lg;
-}
-
-@mixin musubii-style-card-radius-md() {
-  border-radius: $card-radius-md;
-}
-
-@mixin musubii-style-card-radius-sm() {
-  border-radius: $card-radius-sm;
-}
-
-@mixin musubii-style-card-radius-xs() {
-  border-radius: $card-radius-xs;
-}
-
-@mixin musubii-style-card-radius-xxs() {
-  border-radius: $card-radius-xxs;
+@mixin musubii-style-card-radius($radius-size) {
+  border-radius: $radius-size;
 }
 
 @include generate-style($option-generate-style-card) {
   #{$selector-card} {
     &#{$modifier-card-radius-xxl} {
-      @include musubii-style-card-radius-xxl();
+      @include musubii-style-card-radius($card-radius-xxl);
     }
     &#{$modifier-card-radius-xl} {
-      @include musubii-style-card-radius-xl();
+      @include musubii-style-card-radius($card-radius-xl);
     }
     &#{$modifier-card-radius-lg} {
-      @include musubii-style-card-radius-lg();
+      @include musubii-style-card-radius($card-radius-lg);
     }
     &#{$modifier-card-radius},
     &#{$modifier-card-radius-md} {
-      @include musubii-style-card-radius-md();
+      @include musubii-style-card-radius($card-radius-md);
     }
     &#{$modifier-card-radius-sm} {
-      @include musubii-style-card-radius-sm();
+      @include musubii-style-card-radius($card-radius-sm);
     }
     &#{$modifier-card-radius-xs} {
-      @include musubii-style-card-radius-xs();
+      @include musubii-style-card-radius($card-radius-xs);
     }
     &#{$modifier-card-radius-xxs} {
-      @include musubii-style-card-radius-xxs();
+      @include musubii-style-card-radius($card-radius-xxs);
     }
   }
 }
