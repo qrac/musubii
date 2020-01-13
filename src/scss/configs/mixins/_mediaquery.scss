@@ -73,13 +73,6 @@
   }
 }
 
-// Wide Size Only
-@mixin wide-only() {
-  @media screen and (min-width: $screen-width-wide) {
-    @content;
-  }
-}
-
 //----------------------------------------------------
 // / Combination
 //----------------------------------------------------
@@ -228,22 +221,6 @@
     }
   } @else if $mediaquery == "desktop-only" {
     @include desktop-only {
-      @content;
-    }
-  } @else if $mediaquery == "wide-only" {
-    @include wide-only {
-      @content;
-    }
-  } @else if $mediaquery == "mobile-fablet" {
-    @include mobile-fablet {
-      @content;
-    }
-  } @else if $mediaquery == "mobile-tablet" {
-    @include mobile-tablet {
-      @content;
-    }
-  } @else if $mediaquery == "mobile-desktop" {
-    @include mobile-desktop {
       @content;
     }
   } @else if $mediaquery == "landscape" {
