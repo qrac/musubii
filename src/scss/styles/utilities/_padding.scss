@@ -6,6 +6,52 @@
 // / Variables
 //----------------------------------------------------
 
+// Modifiers
+$modifier-padding: "\.is-padding" !default;
+$modifier-padding-xxl: "\.is-padding-xxl" !default;
+$modifier-padding-xl: "\.is-padding-xl" !default;
+$modifier-padding-lg: "\.is-padding-lg" !default;
+$modifier-padding-md: "\.is-padding-md" !default;
+$modifier-padding-sm: "\.is-padding-sm" !default;
+$modifier-padding-xs: "\.is-padding-xs" !default;
+$modifier-padding-xxs: "\.is-padding-xxs" !default;
+
+$modifier-padding-top: "\.is-padding-top" !default;
+$modifier-padding-top-xxl: "\.is-padding-top-xxl" !default;
+$modifier-padding-top-xl: "\.is-padding-top-xl" !default;
+$modifier-padding-top-lg: "\.is-padding-top-lg" !default;
+$modifier-padding-top-md: "\.is-padding-top-md" !default;
+$modifier-padding-top-sm: "\.is-padding-top-sm" !default;
+$modifier-padding-top-xs: "\.is-padding-top-xs" !default;
+$modifier-padding-top-xxs: "\.is-padding-top-xxs" !default;
+
+$modifier-padding-right: "\.is-padding-right" !default;
+$modifier-padding-right-xxl: "\.is-padding-right-xxl" !default;
+$modifier-padding-right-xl: "\.is-padding-right-xl" !default;
+$modifier-padding-right-lg: "\.is-padding-right-lg" !default;
+$modifier-padding-right-md: "\.is-padding-right-md" !default;
+$modifier-padding-right-sm: "\.is-padding-right-sm" !default;
+$modifier-padding-right-xs: "\.is-padding-right-xs" !default;
+$modifier-padding-right-xxs: "\.is-padding-right-xxs" !default;
+
+$modifier-padding-bottom: "\.is-padding-bottom" !default;
+$modifier-padding-bottom-xxl: "\.is-padding-bottom-xxl" !default;
+$modifier-padding-bottom-xl: "\.is-padding-bottom-xl" !default;
+$modifier-padding-bottom-lg: "\.is-padding-bottom-lg" !default;
+$modifier-padding-bottom-md: "\.is-padding-bottom-md" !default;
+$modifier-padding-bottom-sm: "\.is-padding-bottom-sm" !default;
+$modifier-padding-bottom-xs: "\.is-padding-bottom-xs" !default;
+$modifier-padding-bottom-xxs: "\.is-padding-bottom-xxs" !default;
+
+$modifier-padding-left: "\.is-padding-left" !default;
+$modifier-padding-left-xxl: "\.is-padding-left-xxl" !default;
+$modifier-padding-left-xl: "\.is-padding-left-xl" !default;
+$modifier-padding-left-lg: "\.is-padding-left-lg" !default;
+$modifier-padding-left-md: "\.is-padding-left-md" !default;
+$modifier-padding-left-sm: "\.is-padding-left-sm" !default;
+$modifier-padding-left-xs: "\.is-padding-left-xs" !default;
+$modifier-padding-left-xxs: "\.is-padding-left-xxs" !default;
+
 // Padding Size
 $padding-size-xxl: $meter-xxl !default;
 $padding-size-xl: $meter-xl !default;
@@ -15,172 +61,174 @@ $padding-size-sm: $meter-sm !default;
 $padding-size-xs: $meter-xs !default;
 $padding-size-xxs: $meter-xxs !default;
 
+// Margin Important
+$padding-important: if(
+  $option-add-style-padding-important == true,
+  !important,
+  null
+) !default;
+
 //----------------------------------------------------
 // / Style - Padding
 //----------------------------------------------------
 
-@mixin --is-padding($name, $value, $omit) {
-  @if $omit == true {
-    &.is-padding,
-    &.is-padding-#{$name} {
-      padding: $value;
-    }
-  } @else {
-    &.is-padding-#{$name} {
-      padding: $value;
-    }
-  }
-}
-
-@mixin musubii-style-padding() {
-  @include --is-padding(xxl, $padding-size-xxl, false);
-  @include --is-padding(xl, $padding-size-xl, false);
-  @include --is-padding(lg, $padding-size-lg, false);
-  @include --is-padding(md, $padding-size-md, true);
-  @include --is-padding(sm, $padding-size-sm, false);
-  @include --is-padding(xs, $padding-size-xs, false);
-  @include --is-padding(xxs, $padding-size-xxs, false);
+@mixin musubii-style-padding($padding-size) {
+  padding: $padding-size $padding-important;
 }
 
 @include generate-style($option-generate-style-padding) {
-  @include musubii-style-padding();
-}
-
-//----------------------------------------------------
-// / Style - Padding Way
-//----------------------------------------------------
-
-@mixin --is-padding-way($way, $name, $value, $omit) {
-  @if $omit == true {
-    &.is-padding-#{$way},
-    &.is-padding-#{$way}-#{$name} {
-      padding-#{$way}: $value;
-    }
-  } @else {
-    &.is-padding-#{$way}-#{$name} {
-      padding-#{$way}: $value;
-    }
+  #{$modifier-padding-xxl} {
+    @include musubii-style-padding($padding-size-xxl);
+  }
+  #{$modifier-padding-xl} {
+    @include musubii-style-padding($padding-size-xl);
+  }
+  #{$modifier-padding-lg} {
+    @include musubii-style-padding($padding-size-lg);
+  }
+  #{$modifier-padding},
+  #{$modifier-padding-md} {
+    @include musubii-style-padding($padding-size-md);
+  }
+  #{$modifier-padding-sm} {
+    @include musubii-style-padding($padding-size-sm);
+  }
+  #{$modifier-padding-xs} {
+    @include musubii-style-padding($padding-size-xs);
+  }
+  #{$modifier-padding-xxs} {
+    @include musubii-style-padding($padding-size-xxs);
   }
 }
 
-@mixin musubii-style-padding-way() {
-  @include --is-padding-way(top, xxl, $padding-size-xxl, false);
-  @include --is-padding-way(top, xl, $padding-size-xl, false);
-  @include --is-padding-way(top, lg, $padding-size-lg, false);
-  @include --is-padding-way(top, md, $padding-size-md, true);
-  @include --is-padding-way(top, sm, $padding-size-sm, false);
-  @include --is-padding-way(top, xs, $padding-size-xs, false);
-  @include --is-padding-way(top, xxs, $padding-size-xxs, false);
-  @include --is-padding-way(right, xxl, $padding-size-xxl, false);
-  @include --is-padding-way(right, xl, $padding-size-xl, false);
-  @include --is-padding-way(right, lg, $padding-size-lg, false);
-  @include --is-padding-way(right, md, $padding-size-md, true);
-  @include --is-padding-way(right, sm, $padding-size-sm, false);
-  @include --is-padding-way(right, xs, $padding-size-xs, false);
-  @include --is-padding-way(right, xxs, $padding-size-xxs, false);
-  @include --is-padding-way(bottom, xxl, $padding-size-xxl, false);
-  @include --is-padding-way(bottom, xl, $padding-size-xl, false);
-  @include --is-padding-way(bottom, lg, $padding-size-lg, false);
-  @include --is-padding-way(bottom, md, $padding-size-md, true);
-  @include --is-padding-way(bottom, sm, $padding-size-sm, false);
-  @include --is-padding-way(bottom, xs, $padding-size-xs, false);
-  @include --is-padding-way(bottom, xxs, $padding-size-xxs, false);
-  @include --is-padding-way(left, xxl, $padding-size-xxl, false);
-  @include --is-padding-way(left, xl, $padding-size-xl, false);
-  @include --is-padding-way(left, lg, $padding-size-lg, false);
-  @include --is-padding-way(left, md, $padding-size-md, true);
-  @include --is-padding-way(left, sm, $padding-size-sm, false);
-  @include --is-padding-way(left, xs, $padding-size-xs, false);
-  @include --is-padding-way(left, xxs, $padding-size-xxs, false);
+//----------------------------------------------------
+// / Style - Padding Top
+//----------------------------------------------------
+
+@mixin musubii-style-padding-top($padding-size) {
+  padding-top: $padding-size $padding-important;
 }
 
 @include generate-style($option-generate-style-padding) {
-  @include musubii-style-padding-way();
-}
-
-//----------------------------------------------------
-// / Style - Padding Vertical
-//----------------------------------------------------
-
-@mixin --is-padding-vertical($name, $value, $omit) {
-  @if $omit == true {
-    &.is-padding-top-bottom,
-    &.is-padding-top-bottom-#{$name} {
-      padding-top: $value;
-      padding-bottom: $value;
-    }
-  } @else {
-    &.is-padding-top-bottom-#{$name} {
-      padding-top: $value;
-      padding-bottom: $value;
-    }
+  #{$modifier-padding-top-xxl} {
+    @include musubii-style-padding-top($padding-size-xxl);
+  }
+  #{$modifier-padding-top-xl} {
+    @include musubii-style-padding-top($padding-size-xl);
+  }
+  #{$modifier-padding-top-lg} {
+    @include musubii-style-padding-top($padding-size-lg);
+  }
+  #{$modifier-padding-top},
+  #{$modifier-padding-top-md} {
+    @include musubii-style-padding-top($padding-size-md);
+  }
+  #{$modifier-padding-top-sm} {
+    @include musubii-style-padding-top($padding-size-sm);
+  }
+  #{$modifier-padding-top-xs} {
+    @include musubii-style-padding-top($padding-size-xs);
+  }
+  #{$modifier-padding-top-xxs} {
+    @include musubii-style-padding-top($padding-size-xxs);
   }
 }
 
-@mixin musubii-style-padding-vertical() {
-  @include --is-padding-vertical(xxl, $padding-size-xxl, false);
-  @include --is-padding-vertical(xl, $padding-size-xl, false);
-  @include --is-padding-vertical(lg, $padding-size-lg, false);
-  @include --is-padding-vertical(md, $padding-size-md, true);
-  @include --is-padding-vertical(sm, $padding-size-sm, false);
-  @include --is-padding-vertical(xs, $padding-size-xs, false);
-  @include --is-padding-vertical(xxs, $padding-size-xxs, false);
+//----------------------------------------------------
+// / Style - Padding Right
+//----------------------------------------------------
+
+@mixin musubii-style-padding-right($padding-size) {
+  padding-right: $padding-size $padding-important;
 }
 
 @include generate-style($option-generate-style-padding) {
-  @include musubii-style-padding-vertical();
-}
-
-//----------------------------------------------------
-// / Style - Padding Horizontal
-//----------------------------------------------------
-
-@mixin --is-padding-horizontal($name, $value, $omit) {
-  @if $omit == true {
-    &.is-padding-right-left,
-    &.is-padding-right-left-#{$name} {
-      padding-right: $value;
-      padding-left: $value;
-    }
-  } @else {
-    &.is-padding-right-left-#{$name} {
-      padding-right: $value;
-      padding-left: $value;
-    }
+  #{$modifier-padding-right-xxl} {
+    @include musubii-style-padding-right($padding-size-xxl);
+  }
+  #{$modifier-padding-right-xl} {
+    @include musubii-style-padding-right($padding-size-xl);
+  }
+  #{$modifier-padding-right-lg} {
+    @include musubii-style-padding-right($padding-size-lg);
+  }
+  #{$modifier-padding-right},
+  #{$modifier-padding-right-md} {
+    @include musubii-style-padding-right($padding-size-md);
+  }
+  #{$modifier-padding-right-sm} {
+    @include musubii-style-padding-right($padding-size-sm);
+  }
+  #{$modifier-padding-right-xs} {
+    @include musubii-style-padding-right($padding-size-xs);
+  }
+  #{$modifier-padding-right-xxs} {
+    @include musubii-style-padding-right($padding-size-xxs);
   }
 }
 
-@mixin musubii-style-padding-horizontal() {
-  @include --is-padding-horizontal(xxl, $padding-size-xxl, false);
-  @include --is-padding-horizontal(xl, $padding-size-xl, false);
-  @include --is-padding-horizontal(lg, $padding-size-lg, false);
-  @include --is-padding-horizontal(md, $padding-size-md, true);
-  @include --is-padding-horizontal(sm, $padding-size-sm, false);
-  @include --is-padding-horizontal(xs, $padding-size-xs, false);
-  @include --is-padding-horizontal(xxs, $padding-size-xxs, false);
+//----------------------------------------------------
+// / Style - Padding Bottom
+//----------------------------------------------------
+
+@mixin musubii-style-padding-bottom($padding-size) {
+  padding-bottom: $padding-size $padding-important;
 }
 
 @include generate-style($option-generate-style-padding) {
-  @include musubii-style-padding-horizontal();
-}
-
-//----------------------------------------------------
-// / Style - Padding Horizontal
-//----------------------------------------------------
-
-@mixin --is-padding-safe($way) {
-  &.is-padding-#{$way}-safe {
-    @include safe-area-padding($way);
+  #{$modifier-padding-bottom-xxl} {
+    @include musubii-style-padding-bottom($padding-size-xxl);
+  }
+  #{$modifier-padding-bottom-xl} {
+    @include musubii-style-padding-bottom($padding-size-xl);
+  }
+  #{$modifier-padding-bottom-lg} {
+    @include musubii-style-padding-bottom($padding-size-lg);
+  }
+  #{$modifier-padding-bottom},
+  #{$modifier-padding-bottom-md} {
+    @include musubii-style-padding-bottom($padding-size-md);
+  }
+  #{$modifier-padding-bottom-sm} {
+    @include musubii-style-padding-bottom($padding-size-sm);
+  }
+  #{$modifier-padding-bottom-xs} {
+    @include musubii-style-padding-bottom($padding-size-xs);
+  }
+  #{$modifier-padding-bottom-xxs} {
+    @include musubii-style-padding-bottom($padding-size-xxs);
   }
 }
 
-@mixin musubii-style-padding-safe() {
-  @include --is-padding-safe(top);
-  @include --is-padding-safe(right);
-  @include --is-padding-safe(bottom);
-  @include --is-padding-safe(left);
+//----------------------------------------------------
+// / Style - Padding Left
+//----------------------------------------------------
+
+@mixin musubii-style-padding-left($padding-size) {
+  padding-left: $padding-size $padding-important;
 }
 
 @include generate-style($option-generate-style-padding) {
-  @include musubii-style-padding-safe();
+  #{$modifier-padding-left-xxl} {
+    @include musubii-style-padding-left($padding-size-xxl);
+  }
+  #{$modifier-padding-left-xl} {
+    @include musubii-style-padding-left($padding-size-xl);
+  }
+  #{$modifier-padding-left-lg} {
+    @include musubii-style-padding-left($padding-size-lg);
+  }
+  #{$modifier-padding-left},
+  #{$modifier-padding-left-md} {
+    @include musubii-style-padding-left($padding-size-md);
+  }
+  #{$modifier-padding-left-sm} {
+    @include musubii-style-padding-left($padding-size-sm);
+  }
+  #{$modifier-padding-left-xs} {
+    @include musubii-style-padding-left($padding-size-xs);
+  }
+  #{$modifier-padding-left-xxs} {
+    @include musubii-style-padding-left($padding-size-xxs);
+  }
 }
