@@ -5,6 +5,7 @@ export const meta = {
   filePath: "styles/layouts/_box"
 }
 
+import { PreviewBoxBasic } from "~/components/previews/preview-box"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -18,6 +19,13 @@ contents list
 ## Detail
 
 Block や Flexbox を使った汎用レイアウトを作る CSS。余白を作る場合は [Padding](/styles/utilities/padding) を付与。配下にはエレメントやコンポーネント、または入れ子で Box を配置します。
+
+## Basic
+
+<PreviewBoxBasic />
+
+[[warning | Warning]]
+| Angle には余白の調整が含まれていませんので、ボックスに `is-padding-right-xxl` などで余白を追加する工夫が必要です。
 
 ## Variables
 
