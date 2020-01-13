@@ -3,156 +3,188 @@
 //----------------------------------------------------
 
 //----------------------------------------------------
+// / Variables
+//----------------------------------------------------
+
+// Modifiers
+$modifier-display-block: "\.is-block" !default;
+$modifier-display-mobile-block: "\.is-mobile-block" !default;
+$modifier-display-fablet-block: "\.is-fablet-block" !default;
+$modifier-display-tablet-block: "\.is-tablet-block" !default;
+$modifier-display-desktop-block: "\.is-desktop-block" !default;
+$modifier-display-wide-block: "\.is-wide-block" !default;
+$modifier-display-inline: "\.is-inline" !default;
+$modifier-display-mobile-inline: "\.is-mobile-inline" !default;
+$modifier-display-fablet-inline: "\.is-fablet-inline" !default;
+$modifier-display-tablet-inline: "\.is-tablet-inline" !default;
+$modifier-display-desktop-inline: "\.is-desktop-inline" !default;
+$modifier-display-wide-inline: "\.is-wide-inline" !default;
+$modifier-display-inline-block: "\.is-inline-block" !default;
+$modifier-display-mobile-inline-block: "\.is-mobile-inline-block" !default;
+$modifier-display-fablet-inline-block: "\.is-fablet-inline-block" !default;
+$modifier-display-tablet-inline-block: "\.is-tablet-inline-block" !default;
+$modifier-display-desktop-inline-block: "\.is-desktop-inline-block" !default;
+$modifier-display-wide-inline-block: "\.is-wide-inline-block" !default;
+$modifier-display-none: "\.is-none" !default;
+$modifier-display-mobile-none: "\.is-mobile-none" !default;
+$modifier-display-fablet-none: "\.is-fablet-none" !default;
+$modifier-display-tablet-none: "\.is-tablet-none" !default;
+$modifier-display-desktop-none: "\.is-desktop-none" !default;
+$modifier-display-wide-none: "\.is-wide-none" !default;
+$modifier-display-hidden: "\.is-hidden" !default;
+
+//----------------------------------------------------
 // / Style - Display Block
 //----------------------------------------------------
 
-@mixin --is-display-block($mediaquery) {
-  @include mediaquery-pattern-select($mediaquery) {
-    @if $mediaquery == "mobile" {
-      .is-block,
-      .is-#{$mediaquery}-block {
-        display: block;
-      }
-    } @else {
-      .is-#{$mediaquery}-block {
-        display: block;
-      }
-    }
-  }
-}
-
 @mixin musubii-style-display-block() {
-  @include --is-display-block(mobile);
-  @include --is-display-block(fablet);
-  @include --is-display-block(tablet);
-  @include --is-display-block(desktop);
-  @include --is-display-block(wide);
+  display: block;
 }
 
 @include generate-style($option-generate-style-display) {
-  @include musubii-style-display-block();
+  #{$modifier-display-block},
+  #{$modifier-display-mobile-block} {
+    @include musubii-style-display-block();
+  }
+  #{$modifier-display-fablet-block} {
+    @include fablet() {
+      @include musubii-style-display-block();
+    }
+  }
+  #{$modifier-display-tablet-block} {
+    @include tablet() {
+      @include musubii-style-display-block();
+    }
+  }
+  #{$modifier-display-desktop-block} {
+    @include desktop() {
+      @include musubii-style-display-block();
+    }
+  }
+  #{$modifier-display-wide-block} {
+    @include wide() {
+      @include musubii-style-display-block();
+    }
+  }
 }
 
 //----------------------------------------------------
 // / Style - Display Inline
 //----------------------------------------------------
 
-@mixin --is-display-inline($mediaquery) {
-  @include mediaquery-pattern-select($mediaquery) {
-    @if $mediaquery == "mobile" {
-      .is-inline,
-      .is-#{$mediaquery}-inline {
-        display: inline;
-      }
-    } @else {
-      .is-#{$mediaquery}-inline {
-        display: inline;
-      }
-    }
-  }
-}
-
 @mixin musubii-style-display-inline() {
-  @include --is-display-inline(mobile);
-  @include --is-display-inline(fablet);
-  @include --is-display-inline(tablet);
-  @include --is-display-inline(desktop);
-  @include --is-display-inline(wide);
+  display: inline;
 }
 
 @include generate-style($option-generate-style-display) {
-  @include musubii-style-display-inline();
+  #{$modifier-display-inline},
+  #{$modifier-display-mobile-inline} {
+    @include musubii-style-display-inline();
+  }
+  #{$modifier-display-fablet-inline} {
+    @include fablet() {
+      @include musubii-style-display-inline();
+    }
+  }
+  #{$modifier-display-tablet-inline} {
+    @include tablet() {
+      @include musubii-style-display-inline();
+    }
+  }
+  #{$modifier-display-desktop-inline} {
+    @include desktop() {
+      @include musubii-style-display-inline();
+    }
+  }
+  #{$modifier-display-wide-inline} {
+    @include wide() {
+      @include musubii-style-display-inline();
+    }
+  }
 }
 
 //----------------------------------------------------
 // / Style - Display Inline Block
 //----------------------------------------------------
 
-@mixin --is-display-inline-block($mediaquery) {
-  @include mediaquery-pattern-select($mediaquery) {
-    @if $mediaquery == "mobile" {
-      .is-inline-block,
-      .is-#{$mediaquery}-inline-block {
-        display: inline-block;
-      }
-    } @else {
-      .is-#{$mediaquery}-inline-block {
-        display: inline-block;
-      }
-    }
-  }
-}
-
 @mixin musubii-style-display-inline-block() {
-  @include --is-display-inline-block(mobile);
-  @include --is-display-inline-block(fablet);
-  @include --is-display-inline-block(tablet);
-  @include --is-display-inline-block(desktop);
-  @include --is-display-inline-block(wide);
+  display: inline-block;
 }
 
 @include generate-style($option-generate-style-display) {
-  @include musubii-style-display-inline-block();
+  #{$modifier-display-inline-block},
+  #{$modifier-display-mobile-inline-block} {
+    @include musubii-style-display-inline-block();
+  }
+  #{$modifier-display-fablet-inline-block} {
+    @include fablet() {
+      @include musubii-style-display-inline-block();
+    }
+  }
+  #{$modifier-display-tablet-inline-block} {
+    @include tablet() {
+      @include musubii-style-display-inline-block();
+    }
+  }
+  #{$modifier-display-desktop-inline-block} {
+    @include desktop() {
+      @include musubii-style-display-inline-block();
+    }
+  }
+  #{$modifier-display-wide-inline-block} {
+    @include wide() {
+      @include musubii-style-display-inline-block();
+    }
+  }
 }
 
 //----------------------------------------------------
 // / Style - Display None
 //----------------------------------------------------
 
-@mixin --is-display-none($mediaquery) {
-  @include mediaquery-pattern-select($mediaquery) {
-    @if $mediaquery == "mobile" {
-      .is-none,
-      .is-#{$mediaquery}-none {
-        display: none;
-      }
-    } @else {
-      .is-#{$mediaquery}-none {
-        display: none;
-      }
-    }
-  }
-}
-
 @mixin musubii-style-display-none() {
-  @include --is-display-none(mobile);
-  @include --is-display-none(fablet);
-  @include --is-display-none(tablet);
-  @include --is-display-none(desktop);
-  @include --is-display-none(wide);
+  display: none;
 }
 
 @include generate-style($option-generate-style-display) {
-  @include musubii-style-display-none();
+  #{$modifier-display-none},
+  #{$modifier-display-mobile-none} {
+    @include musubii-style-display-none();
+  }
+  #{$modifier-display-fablet-none} {
+    @include fablet() {
+      @include musubii-style-display-none();
+    }
+  }
+  #{$modifier-display-tablet-none} {
+    @include tablet() {
+      @include musubii-style-display-none();
+    }
+  }
+  #{$modifier-display-desktop-none} {
+    @include desktop() {
+      @include musubii-style-display-none();
+    }
+  }
+  #{$modifier-display-wide-none} {
+    @include wide() {
+      @include musubii-style-display-none();
+    }
+  }
 }
 
 //----------------------------------------------------
 // / Style - Display Hidden
 //----------------------------------------------------
 
-@mixin --is-display-hidden($mediaquery) {
-  @include mediaquery-pattern-select($mediaquery) {
-    @if $mediaquery == "mobile" {
-      .is-hidden,
-      .is-#{$mediaquery}-hidden {
-        position: absolute;
-        opacity: 0;
-        z-index: -1;
-      }
-    } @else {
-      .is-#{$mediaquery}-hidden {
-        position: absolute;
-        opacity: 0;
-        z-index: -1;
-      }
-    }
-  }
-}
-
 @mixin musubii-style-display-hidden() {
-  @include --is-display-hidden(mobile);
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 }
 
 @include generate-style($option-generate-style-display) {
-  @include musubii-style-display-hidden();
+  #{$modifier-display-hidden} {
+    @include musubii-style-display-hidden();
+  }
 }
