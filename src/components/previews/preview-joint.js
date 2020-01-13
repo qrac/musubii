@@ -4,7 +4,7 @@ import beautify from "js-beautify"
 import DemoOption from "~/components/parts/demo-option"
 import DemoOptionBoxRadios from "~/components/parts/demo-option-box-radios"
 import DemoOptionBoxCheckbox from "~/components/parts/demo-option-box-checkbox"
-import DemoOptionBoxSelect from "~/components/parts/demo-option-box-select"
+//import DemoOptionBoxSelect from "~/components/parts/demo-option-box-select"
 import DemoPre from "~/components/parts/demo-pre"
 
 const buttonItems = [
@@ -33,15 +33,20 @@ export class PreviewJointButton extends React.Component {
     super(props)
     this.state = {
       pattern: "is-outline",
+      joint: true,
       grow: false,
       round: false
     }
     this.changePattern = this.changePattern.bind(this)
+    this.toggleJoint = this.toggleJoint.bind(this)
     this.toggleGrow = this.toggleGrow.bind(this)
     this.toggleRound = this.toggleRound.bind(this)
   }
   changePattern(value) {
     this.setState({ pattern: value })
+  }
+  toggleJoint() {
+    this.setState({ joint: !this.state.joint })
   }
   toggleGrow() {
     this.setState({ grow: !this.state.grow })
@@ -51,9 +56,10 @@ export class PreviewJointButton extends React.Component {
   }
   render() {
     const pattern = this.state.pattern
+    const joint = this.state.joint ? "joint" : ""
     const grow = this.state.grow ? "is-mobile-0" : ""
     const round = this.state.round ? "is-round" : ""
-    const jointTagBefore = `<div class="joint">`
+    const jointTagBefore = `<div class="${joint}">`
     const jointTagAfter = `</div>`
     const items = buttonItems
       .map(
@@ -72,6 +78,13 @@ export class PreviewJointButton extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
+            <DemoOption title={"Joint"}>
+              <DemoOptionBoxCheckbox
+                text={"Active"}
+                parentChange={() => this.toggleJoint()}
+                checked={this.state.joint}
+              />
+            </DemoOption>
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
@@ -109,16 +122,22 @@ export class PreviewJointBadge extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      joint: true,
       round: false
     }
+    this.toggleJoint = this.toggleJoint.bind(this)
     this.toggleRound = this.toggleRound.bind(this)
+  }
+  toggleJoint() {
+    this.setState({ joint: !this.state.joint })
   }
   toggleRound() {
     this.setState({ round: !this.state.round })
   }
   render() {
+    const joint = this.state.joint ? "joint" : ""
     const round = this.state.round ? "is-round" : ""
-    const jointTagBefore = `<div class="joint">`
+    const jointTagBefore = `<div class="${joint}">`
     const jointTagAfter = `</div>`
     const items = badgeItems
       .map(
@@ -134,6 +153,13 @@ export class PreviewJointBadge extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
+            <DemoOption title={"Joint"}>
+              <DemoOptionBoxCheckbox
+                text={"Active"}
+                parentChange={() => this.toggleJoint()}
+                checked={this.state.joint}
+              />
+            </DemoOption>
             <DemoOption title={"Other"}>
               <DemoOptionBoxCheckbox
                 text={"Round"}
@@ -159,22 +185,28 @@ export class PreviewJointForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      joint: true,
       grow: false,
       round: false
     }
+    this.toggleJoint = this.toggleJoint.bind(this)
     this.toggleGrow = this.toggleGrow.bind(this)
     this.toggleRound = this.toggleRound.bind(this)
   }
   toggleGrow() {
     this.setState({ grow: !this.state.grow })
   }
+  toggleJoint() {
+    this.setState({ joint: !this.state.joint })
+  }
   toggleRound() {
     this.setState({ round: !this.state.round })
   }
   render() {
+    const joint = this.state.joint ? "joint" : ""
     const grow = this.state.grow ? "is-mobile-0" : ""
     const round = this.state.round ? "is-round" : ""
-    const jointTagBefore = `<div class="joint">`
+    const jointTagBefore = `<div class="${joint}">`
     const jointTagAfter = `</div>`
     const items = `<div class="select ${round}">
         <select>
@@ -195,6 +227,13 @@ export class PreviewJointForm extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
+            <DemoOption title={"Joint"}>
+              <DemoOptionBoxCheckbox
+                text={"Active"}
+                parentChange={() => this.toggleJoint()}
+                checked={this.state.joint}
+              />
+            </DemoOption>
             <DemoOption title={"Other"}>
               <DemoOptionBoxCheckbox
                 text={"Grow (Text Input)"}
