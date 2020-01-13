@@ -104,7 +104,7 @@ $modifier-display-ie-none: "\.is-ie-none" !default;
 
 $modifier-display-hidden: "\.is-hidden" !default;
 
-// Display
+// Display Important
 $display-important: if(
   $option-add-style-display-important == true,
   !important,
