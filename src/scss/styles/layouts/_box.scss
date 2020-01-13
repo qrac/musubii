@@ -73,13 +73,13 @@ $box-angle-border-color: $convert-border-1 !default;
 @include generate-style($option-generate-style-box) {
   #{$selector-box} {
     @include musubii-style-box();
-    &#{$modifier-card-bg},
-    &#{$modifier-card-bg-light} {
-      @include musubii-style-card-bg-light();
+    &#{$modifier-box-bg},
+    &#{$modifier-box-bg-light} {
+      @include musubii-style-box-bg-light();
     }
-    &#{$modifier-card-disabled},
+    &#{$modifier-box-disabled},
     &[disabled] {
-      @include musubii-style-card-disabled();
+      @include musubii-style-box-disabled();
     }
   }
 }
