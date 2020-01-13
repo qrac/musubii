@@ -143,7 +143,7 @@ SCSS 変数はコンフィグ・スタイルの各ページを参照してくだ
 
 ## Reduce
 
-MUSUBii の CSS 出力はスタイルごとに変数の `true` `false` で設定できます。例えば「MUSUBii を利用したいけれど Alert は使わないから CSS を削除したい（削減したい）」ケースでは次のように記述。
+MUSUBii の CSS 出力はスタイルごとに設定可能で、例えば `$option-generate-alert` を `false` にすると Alert の CSS をすべて削除できます。
 
 ```scss
 // Override
@@ -153,7 +153,17 @@ $option-generate-alert: false;
 @import "~musubii/src/scss/configs/_import.scss";
 ```
 
-これで Alert の CSS は出力されません。各スタイルの SCSS 変数は「[Option](/configs/variables/option)」を参照ください。
+また、一部の CSS は付与するか否かを選べます。例えば `$option-add-style-button-focus` を `false` にすると、ボタンのフォーカススタイルだけを削除できます。
+
+```scss
+// Override
+$option-add-style-button-focus: false;
+
+// Import
+@import "~musubii/src/scss/configs/_import.scss";
+```
+
+各 SCSS 変数 `$option-generate-(xxxx)` `$option-add-style-(xxxx)` は「[Option](/configs/variables/option)」を参照ください。
 
 ## Mixin Copy
 
