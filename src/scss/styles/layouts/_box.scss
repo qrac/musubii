@@ -313,7 +313,6 @@ $box-angle-border-color: $convert-border-1 !default;
 
 @include generate-style($option-generate-style-box) {
   #{$selector-box} {
-    @include musubii-style-box-angle();
     @if $option-add-style-box-angle == true {
       &#{$modifier-box-angle-right},
       &#{$modifier-box-angle-left} {
