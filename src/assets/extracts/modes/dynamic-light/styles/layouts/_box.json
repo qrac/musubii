@@ -6,6 +6,141 @@
       "compiledValue": ".box"
     },
     {
+      "name": "$modifier-box-flex",
+      "value": ".is-flex",
+      "compiledValue": ".is-flex"
+    },
+    {
+      "name": "$modifier-box-inline-flex",
+      "value": ".is-inline-flex",
+      "compiledValue": ".is-inline-flex"
+    },
+    {
+      "name": "$modifier-box-nowrap",
+      "value": ".is-nowrap",
+      "compiledValue": ".is-nowrap"
+    },
+    {
+      "name": "$modifier-box-baseline",
+      "value": ".is-baseline",
+      "compiledValue": ".is-baseline"
+    },
+    {
+      "name": "$modifier-box-middle",
+      "value": ".is-middle",
+      "compiledValue": ".is-middle"
+    },
+    {
+      "name": "$modifier-box-bottom",
+      "value": ".is-bottom",
+      "compiledValue": ".is-bottom"
+    },
+    {
+      "name": "$modifier-box-center",
+      "value": ".is-center",
+      "compiledValue": ".is-center"
+    },
+    {
+      "name": "$modifier-box-right",
+      "value": ".is-right",
+      "compiledValue": ".is-right"
+    },
+    {
+      "name": "$modifier-box-between",
+      "value": ".is-between",
+      "compiledValue": ".is-between"
+    },
+    {
+      "name": "$modifier-box-around",
+      "value": ".is-around",
+      "compiledValue": ".is-around"
+    },
+    {
+      "name": "$modifier-box-reverse",
+      "value": ".is-reverse",
+      "compiledValue": ".is-reverse"
+    },
+    {
+      "name": "$modifier-box-bg",
+      "value": ".is-bg",
+      "compiledValue": ".is-bg"
+    },
+    {
+      "name": "$modifier-box-bg-light",
+      "value": ".is-bg-light",
+      "compiledValue": ".is-bg-light"
+    },
+    {
+      "name": "$modifier-box-outline",
+      "value": ".is-outline",
+      "compiledValue": ".is-outline"
+    },
+    {
+      "name": "$modifier-box-outline-top",
+      "value": ".is-outline-top",
+      "compiledValue": ".is-outline-top"
+    },
+    {
+      "name": "$modifier-box-outline-right",
+      "value": ".is-outline-right",
+      "compiledValue": ".is-outline-right"
+    },
+    {
+      "name": "$modifier-box-outline-bottom",
+      "value": ".is-outline-bottom",
+      "compiledValue": ".is-outline-bottom"
+    },
+    {
+      "name": "$modifier-box-outline-left",
+      "value": ".is-outline-left",
+      "compiledValue": ".is-outline-left"
+    },
+    {
+      "name": "$modifier-box-separate",
+      "value": ".is-separate",
+      "compiledValue": ".is-separate"
+    },
+    {
+      "name": "$modifier-box-separate-parent",
+      "value": ".is-separate-parent",
+      "compiledValue": ".is-separate-parent"
+    },
+    {
+      "name": "$modifier-box-separate-child",
+      "value": ".is-separate-child",
+      "compiledValue": ".is-separate-child"
+    },
+    {
+      "name": "$modifier-box-disabled",
+      "value": ".is-disabled",
+      "compiledValue": ".is-disabled"
+    },
+    {
+      "name": "$modifier-box-link",
+      "value": ".is-link",
+      "compiledValue": ".is-link"
+    },
+    {
+      "name": "$modifier-box-angle-right",
+      "value": ".is-angle-right",
+      "compiledValue": ".is-angle-right"
+    },
+    {
+      "name": "$modifier-box-angle-left",
+      "value": ".is-angle-left",
+      "compiledValue": ".is-angle-left"
+    },
+    {
+      "name": "$modifier-box-angle-up",
+      "value": ".is-angle-up",
+      "compiledValue": ".is-angle-up"
+    },
+    {
+      "name": "$modifier-box-angle-down",
+      "value": ".is-angle-down",
+      "compiledValue": ".is-angle-down"
+    },
+    {
       "name": "$box-background-color",
       "value": "$convert-background-1",
       "compiledValue": "var(--background-1)"
@@ -52,19 +187,55 @@
       "parameters": []
     },
     {
+      "name": "musubii-style-box-bg-light",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-disabled",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-box-flex",
       "parameters": []
     },
     {
-      "name": "--is-bg-color",
-      "parameters": [
-        "$name",
-        "$value",
-        "$omit"
-      ]
+      "name": "musubii-style-box-inline-flex",
+      "parameters": []
     },
     {
-      "name": "musubii-style-box-bg",
+      "name": "musubii-style-box-wrap",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-baseline",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-middle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-bottom",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-center",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-right",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-between",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-around",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-reverse",
       "parameters": []
     },
     {
@@ -72,7 +243,27 @@
       "parameters": []
     },
     {
+      "name": "musubii-style-box-outline-top",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-outline-right",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-outline-bottom",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-outline-left",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-box-separate",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-separate-parent",
       "parameters": []
     },
     {
@@ -81,6 +272,22 @@
     },
     {
       "name": "musubii-style-box-angle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-angle-right",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-angle-left",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-angle-up",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-box-angle-down",
       "parameters": []
     }
   ]

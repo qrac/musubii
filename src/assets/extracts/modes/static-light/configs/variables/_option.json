@@ -171,6 +171,11 @@
       "compiledValue": "true"
     },
     {
+      "name": "$option-add-style-box-angle",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
       "name": "$option-add-style-button-focus",
       "value": "true",
       "compiledValue": "true"
@@ -182,6 +187,81 @@
     },
     {
       "name": "$option-add-style-alert-tail",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-display-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-display-only",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-display-landscape",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-display-portrait",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-display-browser",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-size-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-size-only",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-size-landscape",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-size-portrait",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-size-browser",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-flex-important",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-flex-only",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-flex-landscape",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-flex-portrait",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-flex-browser",
       "value": "false",
       "compiledValue": "false"
     }

@@ -9,6 +9,26 @@
       "name": "$selector-joint-none",
       "value": ".is-joint-none",
       "compiledValue": ".is-joint-none"
+    },
+    {
+      "name": "$selector-joint-button",
+      "value": ".button",
+      "compiledValue": ".button"
+    },
+    {
+      "name": "$selector-joint-badge",
+      "value": ".badge",
+      "compiledValue": ".badge"
+    },
+    {
+      "name": "$selector-joint-input",
+      "value": ".input",
+      "compiledValue": ".input"
+    },
+    {
+      "name": "$selector-joint-select",
+      "value": ".select",
+      "compiledValue": ".select"
     }
   ],
   "mixins": [

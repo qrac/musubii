@@ -157,8 +157,8 @@
     },
     {
       "name": "$modifier-grid-gap-right-left-md",
-      "value": ".is-gap-right-left-md, &.is-gap-right-left",
-      "compiledValue": ".is-gap-right-left-md, #sass-export-id.modifier-grid-gap-right-left-md .is-gap-right-left"
+      "value": ".is-gap-right-left-md",
+      "compiledValue": ".is-gap-right-left-md"
     },
     {
       "name": "$modifier-grid-gap-right-left-sm",
