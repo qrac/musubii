@@ -180,31 +180,31 @@ $size-important: if(
 //----------------------------------------------------
 
 @mixin musubii-style-size-xxl() {
-  font-size: $size-xxl$size-important;
+  font-size: $size-xxl $size-important;
 }
 
 @mixin musubii-style-size-xl() {
-  font-size: $size-xl$size-important;
+  font-size: $size-xl $size-important;
 }
 
 @mixin musubii-style-size-lg() {
-  font-size: $size-lg$size-important;
+  font-size: $size-lg $size-important;
 }
 
 @mixin musubii-style-size-md() {
-  font-size: $size-md$size-important;
+  font-size: $size-md $size-important;
 }
 
 @mixin musubii-style-size-sm() {
-  font-size: $size-sm$size-important;
+  font-size: $size-sm $size-important;
 }
 
 @mixin musubii-style-size-xs() {
-  font-size: $size-xs$size-important;
+  font-size: $size-xs $size-important;
 }
 
 @mixin musubii-style-size-xxs() {
-  font-size: $size-xxs$size-important;
+  font-size: $size-xxs $size-important;
 }
 
 //----------------------------------------------------
