@@ -9,6 +9,10 @@
 // Selectors
 $selector-joint: "\.joint" !default;
 $selector-joint-none: "\.is-joint-none" !default;
+$selector-joint-button: "\.button" !default;
+$selector-joint-badge: "\.badge" !default;
+$selector-joint-input: "\.input" !default;
+$selector-joint-select: "\.select" !default;
 
 //----------------------------------------------------
 // / Style - Joint
@@ -18,29 +22,34 @@ $selector-joint-none: "\.is-joint-none" !default;
   display: flex;
   flex-wrap: nowrap;
   > {
-    :not(#{$selector-joint-none}) {
-      overflow: hidden;
-      &:not(:last-child),
-      &:not(:last-child) > select {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      &:not(:first-child),
-      &:not(:first-child) > select {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-      &:nth-child(2) {
-        border-left: none;
-        ~ {
-          :not(#{$selector-joint-none}),
-          :not(#{$selector-joint-none}) > select {
-            border-left: none;
+    #{$selector-joint-button},
+    #{$selector-joint-badge},
+    #{$selector-joint-input},
+    #{$selector-joint-select} {
+      &:not(#{$selector-joint-none}) {
+        overflow: hidden;
+        &:not(:last-child),
+        &:not(:last-child) > select {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        &:not(:first-child),
+        &:not(:first-child) > select {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        &:nth-child(2) {
+          border-left: none;
+          ~ {
+            :not(#{$selector-joint-none}),
+            :not(#{$selector-joint-none}) > select {
+              border-left: none;
+            }
           }
         }
-      }
-      &:focus {
-        z-index: 2;
+        &:focus {
+          z-index: 2;
+        }
       }
     }
   }
