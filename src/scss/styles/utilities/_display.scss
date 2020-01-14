@@ -542,9 +542,9 @@ $display-important: if(
 //----------------------------------------------------
 
 @mixin musubii-style-display-hidden() {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+  position: absolute $display-important;
+  opacity: 0 $display-important;
+  z-index: -1 $display-important;
 }
 
 @include generate-style($option-generate-style-display) {
