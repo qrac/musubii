@@ -44,8 +44,14 @@ export class PreviewFlexBasic extends React.Component {
   }
   render() {
     const size = this.state.size
-    const contents = `<div class="box is-flex">
-      <button class="button is-plain is-success ${size}" type="button">ボタン</button></div>`
+    const contents = `<div class="grid is-gap-xs">
+        <div class="column ${size}">
+          <button class="button is-plain is-primary is-full" type="button">ボタン</button>
+        </div>
+        <div class="column ${size}">
+          <button class="button is-outline is-danger is-full" type="button">ボタン</button>
+        </div>
+      </div>`
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
