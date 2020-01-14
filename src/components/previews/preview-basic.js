@@ -40,7 +40,7 @@ class PreviewBasic extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-box is-line">
           <div
-            className="box is-flex is-bottom is-space-row-xs is-space-column-xs"
+            className="box is-flex is-bottom is-space-right-xs is-space-bottom-xs is-margin-bottom-minus-xs"
             dangerouslySetInnerHTML={{ __html: formattedCode }}
           ></div>
         </div>
