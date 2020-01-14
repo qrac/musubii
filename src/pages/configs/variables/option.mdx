@@ -20,27 +20,45 @@ SCSS の全体に関わるオプション変数です。オーバーライドす
 
 ### `$option-css-variables`
 
-デフォルトは `false`。`true` にすることで、CSS の色コードをすべて [CSS Variables](/getting-started/css-variables) に差し替えます。また、同時に[ダークモード](/getting-started/dark-mode)が使えるようになります。
+CSS の色コードを [CSS Variables](/getting-started/css-variables) に差し替えるオプション変数。
+
+デフォルト値は `false`。`true` で有効化。また、同時に[ダークモード](/getting-started/dark-mode)が使えるようになります。
 
 ### `$option-mixin-mode`
 
-デフォルトは `false`。`true` にすると CSS 出力が停止。[Mixin のみ稼働するモード](/getting-started/using-with-scss#mixin-mode)に切り替えます。
+[Mixin のみ稼働するモード](/getting-started/using-with-scss#mixin-mode)に切り替えるオプション変数。
+
+デフォルト値は `false`。`true` で有効化。
 
 ### `$option-theme-trigger-media`
 
-デフォルトは `false`。`true` にすることで、[OS のダークモードを認識](/getting-started/dark-mode#trigger)するようになります。
+[ダークモードの認識を OS 標準](/getting-started/dark-mode#trigger)に切り替えるオプション変数。
+
+デフォルト値は `false`。`true` で有効化。
 
 ### `$option-theme-default`
 
-デフォルトは `light`。`dark` にすることで、[常時ダークテーマカラー](/getting-started/dark-mode#default-dark)となります。
+標準のテーマカラーを切り替えるオプション変数。
+
+デフォルト値は `light`。`dark` にすることで、[常時ダークテーマカラー](/getting-started/dark-mode#default-dark)となります。
 
 ### `$option-generate-style-(xxxx)`
 
-CSS を出力するかどうかスタイル毎に決められます。デフォルトは出力する `true`。
+スタイル毎に CSS を出力するかどうか決められるオプション変数。
+
+デフォルト値は出力する `true`。`false` で出力停止。
 
 ### `$option-add-style-(xxxx)`
 
-一部の CSS はプロジェクトによって付与するか否かを選べます。例えば `$option-add-style-button-focus` を `false` にすると、ボタンのフォーカススタイルがブラウザデフォルトに戻ります。
+追加要素扱いの CSS を個別に出力制御できるオプション変数。プロジェクトによって利用度が低くなる想定の CSS や、ボリュームの大きい CSS が対象。
+
+デフォルト値は追加 CSS による。`true` で出力、`false` で出力停止。例えば、`$option-add-style-button-focus` を `false` にすると、ボタンフォーカスがブラウザデフォルトに戻ります。
+
+### `$option-add-style-(xxxx)-important`
+
+ユーティリティ CSS の全プロパティに `!important` を付与するオプション変数。
+
+デフォルト値は `false`。`true` で有効化。
 
 ## Variables
 
