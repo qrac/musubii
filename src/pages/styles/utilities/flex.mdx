@@ -24,8 +24,85 @@ contents list
 
 <PreviewFlexBasic />
 
+| 等分して伸縮 | 12 分割からの指定 | 100% に広がる | 元のサイズを保持 |
+| ------------ | ----------------- | ------------- | ---------------- |
+| `.is-0`      | `.is-1 ~ .is-12`  | `.is-full`    | `.is-auto`       |
+
 ## Media Query
 
 ### Mobile First
 
 `.is-(mediaquery)-(value)` の形式で、[Media Query](/configs/mixins/mediaquery) に応じた `flex` プロパティの変更を行えます。
+
+| 等分して伸縮    | 12 分割からの指定                | 100% に広がる      | 元のサイズを保持   |
+| --------------- | -------------------------------- | ------------------ | ------------------ |
+| `.is-mobile-0`  | `.is-mobile-1 ~ .is-mobile-12`   | `.is-mobile-full`  | `.is-mobile-auto`  |
+| `.is-fablet-0`  | `.is-fablet-1 ~ .is-fablet-12`   | `.is-fablet-full`  | `.is-fablet-auto`  |
+| `.is-tablet-0`  | `.is-tablet-1 ~ .is-tablet-12`   | `.is-tablet-full`  | `.is-tablet-auto`  |
+| `.is-desktop-0` | `.is-desktop-1 ~ .is-desktop-12` | `.is-desktop-full` | `.is-desktop-auto` |
+| `.is-wide-0`    | `.is-wide-1 ~ .is-wide-12`       | `.is-wide-full`    | `.is-wide-auto`    |
+
+### Size Only
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-flex-only` を `true` にすると、ウィンドウサイズを限定した `flex` プロパティの適応が可能になります。
+
+| 等分して伸縮         | 12 分割からの指定                          | 100% に広がる           | 元のサイズを保持        |
+| -------------------- | ------------------------------------------ | ----------------------- | ----------------------- |
+| `.is-iphone5-only-0` | `.is-iphone5-only-1 ~ .is-iphone5-only-12` | `.is-iphone5-only-full` | `.is-iphone5-only-auto` |
+| `.is-mobile-only-0`  | `.is-mobile-only-1 ~ .is-mobile-only-12`   | `.is-mobile-only-full`  | `.is-mobile-only-auto`  |
+| `.is-fablet-only-0`  | `.is-fablet-only-1 ~ .is-fablet-only-12`   | `.is-fablet-only-full`  | `.is-fablet-only-auto`  |
+| `.is-tablet-only-0`  | `.is-tablet-only-1 ~ .is-tablet-only-12`   | `.is-tablet-only-full`  | `.is-tablet-only-auto`  |
+| `.is-desktop-only-0` | `.is-desktop-only-1 ~ .is-desktop-only-12` | `.is-desktop-only-full` | `.is-desktop-only-auto` |
+
+### Landscape
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-flex-landscape` を `true` にすると、横向きに限定した `flex` プロパティの適応が可能になります。（`all` 無しは Tablet サイズ以下のみ）
+
+| 等分して伸縮          | 12 分割からの指定                            | 100% に広がる            | 元のサイズを保持         |
+| --------------------- | -------------------------------------------- | ------------------------ | ------------------------ |
+| `.is-landscape-0`     | `.is-landscape-1 ~ .is-landscape-12`         | `.is-landscape-full`     | `.is-landscape-auto`     |
+| `.is-landscape-all-0` | `.is-landscape-all-1 ~ .is-landscape-all-12` | `.is-landscape-all-full` | `.is-landscape-all-auto` |
+
+### Portrait
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-flex-portrait` を `true` にすると、縦向きに限定した `flex` プロパティの適応が可能になります。（`all` 無しは Tablet サイズ以下のみ）
+
+| 等分して伸縮         | 12 分割からの指定                          | 100% に広がる           | 元のサイズを保持        |
+| -------------------- | ------------------------------------------ | ----------------------- | ----------------------- |
+| `.is-portrait-0`     | `.is-portrait-1 ~ .is-portrait-12`         | `.is-portrait-full`     | `.is-portrait-auto`     |
+| `.is-portrait-all-0` | `.is-portrait-all-1 ~ .is-portrait-all-12` | `.is-portrait-all-full` | `.is-portrait-all-auto` |
+
+### Browser
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-size-browser` を `true` にすると、ブラウザを限定した `flex` プロパティの適応が可能になります。
+
+| 等分して伸縮    | 12 分割からの指定                | 100% に広がる      | 元のサイズを保持   |
+| --------------- | -------------------------------- | ------------------ | ------------------ |
+| `.is-chrome-0`  | `.is-chrome-1 ~ .is-chrome-12`   | `.is-chrome-full`  | `.is-chrome-auto`  |
+| `.is-firefox-0` | `.is-firefox-1 ~ .is-firefox-12` | `.is-firefox-full` | `.is-firefox-auto` |
+| `.is-edge-0`    | `.is-edge-1 ~ .is-edge-12`       | `.is-edge-full`    | `.is-edge-auto`    |
+| `.is-ie-0`      | `.is-ie-1 ~ .is-ie-12`           | `.is-ie-full`      | `.is-ie-auto`      |
+
+## Split
+
+SCSS 変数 `$flex-split` のオーバーライドで 12 等分を別の数に変更できます。
+
+## Important
+
+[Option](/configs/variables/option#option-important-xxxx) の `$option-important-flex` を `true` にすると、全プロパティに `!important` を付与できます。
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
