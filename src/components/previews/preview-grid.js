@@ -61,26 +61,26 @@ const gaps = [
   { id: 1, text: "XXL", value: "is-gap-xxl" }
 ]
 
-const topBottomGaps = [
+const verticalGaps = [
   { id: 0, text: "None", value: "" },
-  { id: 7, text: "XXS", value: "is-gap-top-bottom-xxs" },
-  { id: 6, text: "XS", value: "is-gap-top-bottom-xs" },
-  { id: 5, text: "Small", value: "is-gap-top-bottom-sm" },
-  { id: 4, text: "Middle", value: "is-gap-top-bottom-md" },
-  { id: 3, text: "Large", value: "is-gap-top-bottom-lg" },
-  { id: 2, text: "XL", value: "is-gap-top-bottom-xl" },
-  { id: 1, text: "XXL", value: "is-gap-top-bottom-xxl" }
+  { id: 7, text: "XXS", value: "is-gap-vertical-xxs" },
+  { id: 6, text: "XS", value: "is-gap-vertical-xs" },
+  { id: 5, text: "Small", value: "is-gap-vertical-sm" },
+  { id: 4, text: "Middle", value: "is-gap-vertical-md" },
+  { id: 3, text: "Large", value: "is-gap-vertical-lg" },
+  { id: 2, text: "XL", value: "is-gap-vertical-xl" },
+  { id: 1, text: "XXL", value: "is-gap-vertical-xxl" }
 ]
 
-const rightLeftGaps = [
+const horizontalGaps = [
   { id: 0, text: "None", value: "" },
-  { id: 7, text: "XXS", value: "is-gap-right-left-xxs" },
-  { id: 6, text: "XS", value: "is-gap-right-left-xs" },
-  { id: 5, text: "Small", value: "is-gap-right-left-sm" },
-  { id: 4, text: "Middle", value: "is-gap-right-left-md" },
-  { id: 3, text: "Large", value: "is-gap-right-left-lg" },
-  { id: 2, text: "XL", value: "is-gap-right-left-xl" },
-  { id: 1, text: "XXL", value: "is-gap-right-left-xxl" }
+  { id: 7, text: "XXS", value: "is-gap-horizontal-xxs" },
+  { id: 6, text: "XS", value: "is-gap-horizontal-xs" },
+  { id: 5, text: "Small", value: "is-gap-horizontal-sm" },
+  { id: 4, text: "Middle", value: "is-gap-horizontal-md" },
+  { id: 3, text: "Large", value: "is-gap-horizontal-lg" },
+  { id: 2, text: "XL", value: "is-gap-horizontal-xl" },
+  { id: 1, text: "XXL", value: "is-gap-horizontal-xxl" }
 ]
 
 const beautifyHtmlOptions = {
@@ -99,8 +99,8 @@ export class PreviewGridBasic extends React.Component {
       columnSize: "",
       align: "",
       gap: "is-gap-md",
-      topBottomGap: "",
-      rightLeftGap: ""
+      verticalGap: "",
+      horizontalGap: ""
     }
     this.toggleSplitGap = this.toggleSplitGap.bind(this)
     this.toggleReverse = this.toggleReverse.bind(this)
@@ -109,19 +109,19 @@ export class PreviewGridBasic extends React.Component {
     this.changeColumnSize = this.changeColumnSize.bind(this)
     this.changeAlign = this.changeAlign.bind(this)
     this.changeGap = this.changeGap.bind(this)
-    this.changeTopBottomGap = this.changeTopBottomGap.bind(this)
-    this.changeRightLeftGap = this.changeRightLeftGap.bind(this)
+    this.changeVerticalGap = this.changeVerticalGap.bind(this)
+    this.changeHorizontalGap = this.changeHorizontalGap.bind(this)
   }
   toggleSplitGap() {
     this.setState({ splitGap: !this.state.splitGap })
     if (this.state.splitGap) {
       this.setState({ gap: "is-gap-md" })
-      this.setState({ topBottomGap: "" })
-      this.setState({ rightLeftGap: "" })
+      this.setState({ verticalGap: "" })
+      this.setState({ horizontalGap: "" })
     } else {
       this.setState({ gap: "" })
-      this.setState({ topBottomGap: "is-gap-top-bottom-md" })
-      this.setState({ rightLeftGap: "is-gap-right-left-md" })
+      this.setState({ verticalGap: "is-gap-vertical-md" })
+      this.setState({ horizontalGap: "is-gap-horizontal-md" })
     }
   }
   toggleReverse() {
@@ -141,15 +141,15 @@ export class PreviewGridBasic extends React.Component {
   }
   changeGap(value) {
     this.setState({ gap: value })
-    this.setState({ topBottomGap: "" })
-    this.setState({ rightLeftGap: "" })
+    this.setState({ verticalGap: "" })
+    this.setState({ horizontalGap: "" })
   }
-  changeTopBottomGap(value) {
-    this.setState({ topBottomGap: value })
+  changeVerticalGap(value) {
+    this.setState({ verticalGap: value })
     this.setState({ gap: "" })
   }
-  changeRightLeftGap(value) {
-    this.setState({ rightLeftGap: value })
+  changeHorizontalGap(value) {
+    this.setState({ horizontalGap: value })
     this.setState({ gap: "" })
   }
   render() {
@@ -159,10 +159,10 @@ export class PreviewGridBasic extends React.Component {
     const columnSize = this.state.columnSize
     const align = this.state.align
     const gap = this.state.gap
-    const topBottomGap = this.state.topBottomGap
-    const rightLeftGap = this.state.rightLeftGap
+    const verticalGap = this.state.verticalGap
+    const horizontalGap = this.state.horizontalGap
     const gridTagBefore = `<div class="grid
-      ${align} ${gap} ${topBottomGap} ${rightLeftGap} ${reverse} ${stretch}">`
+      ${align} ${gap} ${verticalGap} ${horizontalGap} ${reverse} ${stretch}">`
     const gridTagAfter = `</div>`
     const columns = []
     for (let i = 0; i < columnNum; i++) {
@@ -217,7 +217,7 @@ export class PreviewGridBasic extends React.Component {
             {(() => {
               if (!this.state.splitGap) {
                 return (
-                  <DemoOption title={"Gap (All)"}>
+                  <DemoOption title={"Gap - All"}>
                     <DemoOptionBoxRadios
                       patterns={gaps}
                       parentChange={value => this.changeGap(value)}
@@ -228,18 +228,18 @@ export class PreviewGridBasic extends React.Component {
               } else {
                 return (
                   <>
-                    <DemoOption title={"Gap (Top-Bottom)"}>
+                    <DemoOption title={"Gap - Vertical"}>
                       <DemoOptionBoxRadios
-                        patterns={topBottomGaps}
-                        parentChange={value => this.changeTopBottomGap(value)}
-                        checked={this.state.topBottomGap}
+                        patterns={verticalGaps}
+                        parentChange={value => this.changeVerticalGap(value)}
+                        checked={this.state.verticalGap}
                       />
                     </DemoOption>
-                    <DemoOption title={"Gap (Right-Left)"}>
+                    <DemoOption title={"Gap - Horizontal"}>
                       <DemoOptionBoxRadios
-                        patterns={rightLeftGaps}
-                        parentChange={value => this.changeRightLeftGap(value)}
-                        checked={this.state.rightLeftGap}
+                        patterns={horizontalGaps}
+                        parentChange={value => this.changeHorizontalGap(value)}
+                        checked={this.state.horizontalGap}
                       />
                     </DemoOption>
                   </>

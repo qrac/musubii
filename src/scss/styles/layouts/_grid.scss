@@ -20,6 +20,7 @@ $modifier-grid-between: "\.is-between" !default;
 $modifier-grid-around: "\.is-around" !default;
 $modifier-grid-reverse: "\.is-reverse" !default;
 $modifier-grid-stretch: "\.is-stretch" !default;
+
 $modifier-grid-gap: "\.is-gap" !default;
 $modifier-grid-gap-xxl: "\.is-gap-xxl" !default;
 $modifier-grid-gap-xl: "\.is-gap-xl" !default;
@@ -28,22 +29,24 @@ $modifier-grid-gap-md: "\.is-gap-md" !default;
 $modifier-grid-gap-sm: "\.is-gap-sm" !default;
 $modifier-grid-gap-xs: "\.is-gap-xs" !default;
 $modifier-grid-gap-xxs: "\.is-gap-xxs" !default;
-$modifier-grid-gap-top-bottom: "\.is-gap-top-bottom" !default;
-$modifier-grid-gap-top-bottom-xxl: "\.is-gap-top-bottom-xxl" !default;
-$modifier-grid-gap-top-bottom-xl: "\.is-gap-top-bottom-xl" !default;
-$modifier-grid-gap-top-bottom-lg: "\.is-gap-top-bottom-lg" !default;
-$modifier-grid-gap-top-bottom-md: "\.is-gap-top-bottom-md" !default;
-$modifier-grid-gap-top-bottom-sm: "\.is-gap-top-bottom-sm" !default;
-$modifier-grid-gap-top-bottom-xs: "\.is-gap-top-bottom-xs" !default;
-$modifier-grid-gap-top-bottom-xxs: "\.is-gap-top-bottom-xxs" !default;
-$modifier-grid-gap-right-left: "\.is-gap-right-left" !default;
-$modifier-grid-gap-right-left-xxl: "\.is-gap-right-left-xxl" !default;
-$modifier-grid-gap-right-left-xl: "\.is-gap-right-left-xl" !default;
-$modifier-grid-gap-right-left-lg: "\.is-gap-right-left-lg" !default;
-$modifier-grid-gap-right-left-md: "\.is-gap-right-left-md" !default;
-$modifier-grid-gap-right-left-sm: "\.is-gap-right-left-sm" !default;
-$modifier-grid-gap-right-left-xs: "\.is-gap-right-left-xs" !default;
-$modifier-grid-gap-right-left-xxs: "\.is-gap-right-left-xxs" !default;
+
+$modifier-grid-gap-vertical: "\.is-gap-vertical" !default;
+$modifier-grid-gap-vertical-xxl: "\.is-gap-vertical-xxl" !default;
+$modifier-grid-gap-vertical-xl: "\.is-gap-vertical-xl" !default;
+$modifier-grid-gap-vertical-lg: "\.is-gap-vertical-lg" !default;
+$modifier-grid-gap-vertical-md: "\.is-gap-vertical-md" !default;
+$modifier-grid-gap-vertical-sm: "\.is-gap-vertical-sm" !default;
+$modifier-grid-gap-vertical-xs: "\.is-gap-vertical-xs" !default;
+$modifier-grid-gap-vertical-xxs: "\.is-gap-vertical-xxs" !default;
+
+$modifier-grid-gap-horizontal: "\.is-gap-horizontal" !default;
+$modifier-grid-gap-horizontal-xxl: "\.is-gap-horizontal-xxl" !default;
+$modifier-grid-gap-horizontal-xl: "\.is-gap-horizontal-xl" !default;
+$modifier-grid-gap-horizontal-lg: "\.is-gap-horizontal-lg" !default;
+$modifier-grid-gap-horizontal-md: "\.is-gap-horizontal-md" !default;
+$modifier-grid-gap-horizontal-sm: "\.is-gap-horizontal-sm" !default;
+$modifier-grid-gap-horizontal-xs: "\.is-gap-horizontal-xs" !default;
+$modifier-grid-gap-horizontal-xxs: "\.is-gap-horizontal-xxs" !default;
 
 // Gap Size
 $gap-size-xxl: $meter-xxl !default;
@@ -179,8 +182,10 @@ $gap-size-xxs: $meter-xxs !default;
 }
 
 //----------------------------------------------------
+// / Style - Grid Gap vertical
+//----------------------------------------------------
 
-@mixin musubii-style-grid-gap-top-bottom($gap-size) {
+@mixin musubii-style-grid-gap-vertical($gap-size) {
   margin-bottom: -$gap-size;
   > {
     #{$selector-column} {
@@ -190,37 +195,39 @@ $gap-size-xxs: $meter-xxs !default;
 }
 
 @include generate-style($option-generate-style-grid) {
-  #{$selector-grid} {
-    @if $option-add-style-grid-split-gap == true {
-      &#{$modifier-grid-gap-top-bottom-xxl} {
-        @include musubii-style-grid-gap-top-bottom($gap-size-xxl);
+  @if $option-add-style-grid-gap-vertical == true {
+    #{$selector-grid} {
+      &#{$modifier-grid-gap-vertical-xxl} {
+        @include musubii-style-grid-gap-vertical($gap-size-xxl);
       }
-      &#{$modifier-grid-gap-top-bottom-xl} {
-        @include musubii-style-grid-gap-top-bottom($gap-size-xl);
+      &#{$modifier-grid-gap-vertical-xl} {
+        @include musubii-style-grid-gap-vertical($gap-size-xl);
       }
-      &#{$modifier-grid-gap-top-bottom-lg} {
-        @include musubii-style-grid-gap-top-bottom($gap-size-lg);
+      &#{$modifier-grid-gap-vertical-lg} {
+        @include musubii-style-grid-gap-vertical($gap-size-lg);
       }
-      &#{$modifier-grid-gap-top-bottom},
-      &#{$modifier-grid-gap-top-bottom-md} {
-        @include musubii-style-grid-gap-top-bottom($gap-size-md);
+      &#{$modifier-grid-gap-vertical},
+      &#{$modifier-grid-gap-vertical-md} {
+        @include musubii-style-grid-gap-vertical($gap-size-md);
       }
-      &#{$modifier-grid-gap-top-bottom-sm} {
-        @include musubii-style-grid-gap-top-bottom($gap-size-sm);
+      &#{$modifier-grid-gap-vertical-sm} {
+        @include musubii-style-grid-gap-vertical($gap-size-sm);
       }
-      &#{$modifier-grid-gap-top-bottom-xs} {
-        @include musubii-style-grid-gap-top-bottom($gap-size-xs);
+      &#{$modifier-grid-gap-vertical-xs} {
+        @include musubii-style-grid-gap-vertical($gap-size-xs);
       }
-      &#{$modifier-grid-gap-top-bottom-xxs} {
-        @include musubii-style-grid-gap-top-bottom($gap-size-xxs);
+      &#{$modifier-grid-gap-vertical-xxs} {
+        @include musubii-style-grid-gap-vertical($gap-size-xxs);
       }
     }
   }
 }
 
 //----------------------------------------------------
+// / Style - Grid Gap Horizontal
+//----------------------------------------------------
 
-@mixin musubii-style-grid-gap-right-left($gap-size) {
+@mixin musubii-style-grid-gap-horizontal($gap-size) {
   margin-left: -$gap-size;
   > {
     #{$selector-column} {
@@ -230,29 +237,29 @@ $gap-size-xxs: $meter-xxs !default;
 }
 
 @include generate-style($option-generate-style-grid) {
-  #{$selector-grid} {
-    @if $option-add-style-grid-split-gap == true {
-      &#{$modifier-grid-gap-right-left-xxl} {
-        @include musubii-style-grid-gap-right-left($gap-size-xxl);
+  @if $option-add-style-grid-gap-horizontal == true {
+    #{$selector-grid} {
+      &#{$modifier-grid-gap-horizontal-xxl} {
+        @include musubii-style-grid-gap-horizontal($gap-size-xxl);
       }
-      &#{$modifier-grid-gap-right-left-xl} {
-        @include musubii-style-grid-gap-right-left($gap-size-xl);
+      &#{$modifier-grid-gap-horizontal-xl} {
+        @include musubii-style-grid-gap-horizontal($gap-size-xl);
       }
-      &#{$modifier-grid-gap-right-left-lg} {
-        @include musubii-style-grid-gap-right-left($gap-size-lg);
+      &#{$modifier-grid-gap-horizontal-lg} {
+        @include musubii-style-grid-gap-horizontal($gap-size-lg);
       }
-      &#{$modifier-grid-gap-right-left},
-      &#{$modifier-grid-gap-right-left-md} {
-        @include musubii-style-grid-gap-right-left($gap-size-md);
+      &#{$modifier-grid-gap-horizontal},
+      &#{$modifier-grid-gap-horizontal-md} {
+        @include musubii-style-grid-gap-horizontal($gap-size-md);
       }
-      &#{$modifier-grid-gap-right-left-sm} {
-        @include musubii-style-grid-gap-right-left($gap-size-sm);
+      &#{$modifier-grid-gap-horizontal-sm} {
+        @include musubii-style-grid-gap-horizontal($gap-size-sm);
       }
-      &#{$modifier-grid-gap-right-left-xs} {
-        @include musubii-style-grid-gap-right-left($gap-size-xs);
+      &#{$modifier-grid-gap-horizontal-xs} {
+        @include musubii-style-grid-gap-horizontal($gap-size-xs);
       }
-      &#{$modifier-grid-gap-right-left-xxs} {
-        @include musubii-style-grid-gap-right-left($gap-size-xxs);
+      &#{$modifier-grid-gap-horizontal-xxs} {
+        @include musubii-style-grid-gap-horizontal($gap-size-xxs);
       }
     }
   }
