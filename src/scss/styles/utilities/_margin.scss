@@ -683,7 +683,7 @@ $margin-important: if(
       @include musubii-style-margin-left-auto();
     }
   }
-  @if $option-add-style-margin-way == true {
+  @if $option-add-style-margin-horizontal == true {
     #{$modifier-margin-horizontal-auto} {
       @include musubii-style-margin-horizontal-auto();
     }

@@ -70,6 +70,14 @@ $modifier-padding-horizontal-sm: "\.is-padding-horizontal-sm" !default;
 $modifier-padding-horizontal-xs: "\.is-padding-horizontal-xs" !default;
 $modifier-padding-horizontal-xxs: "\.is-padding-horizontal-xxs" !default;
 
+$modifier-padding-safe: "\.is-padding-safe" !default;
+$modifier-padding-top-safe: "\.is-padding-top-safe" !default;
+$modifier-padding-right-safe: "\.is-padding-right-safe" !default;
+$modifier-padding-bottom-safe: "\.is-padding-bottom-safe" !default;
+$modifier-padding-left-safe: "\.is-padding-left-safe" !default;
+$modifier-padding-vertical-safe: "\.is-padding-vertical-safe" !default;
+$modifier-padding-horizontal-safe: "\.is-padding-horizontal-safe" !default;
+
 // Padding Size
 $padding-size-xxl: $meter-xxl !default;
 $padding-size-xl: $meter-xl !default;
@@ -327,6 +335,75 @@ $padding-important: if(
     }
     #{$modifier-padding-horizontal-xxs} {
       @include musubii-style-padding-horizontal($padding-size-xxs);
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Padding Safe
+//----------------------------------------------------
+
+@mixin musubii-style-padding-safe() {
+  @include safe-area-padding(top);
+  @include safe-area-padding(right);
+  @include safe-area-padding(bottom);
+  @include safe-area-padding(left);
+}
+
+@mixin musubii-style-padding-top-safe() {
+  @include safe-area-padding(top);
+}
+
+@mixin musubii-style-padding-right-safe() {
+  @include safe-area-padding(right);
+}
+
+@mixin musubii-style-padding-bottom-safe() {
+  @include safe-area-padding(bottom);
+}
+
+@mixin musubii-style-padding-left-safe() {
+  @include safe-area-padding(left);
+}
+
+@mixin musubii-style-padding-vertical-safe() {
+  @include safe-area-padding(top);
+  @include safe-area-padding(bottom);
+}
+
+@mixin musubii-style-padding-horizontal-safe() {
+  @include safe-area-padding(right);
+  @include safe-area-padding(left);
+}
+
+@include generate-style($option-generate-style-padding) {
+  @if $option-add-style-padding-safe == true {
+    #{$modifier-padding-safe} {
+      @include musubii-style-padding-safe();
+    }
+    @if $option-add-style-padding-way == true {
+      #{$modifier-padding-top-safe} {
+        @include musubii-style-padding-top-safe();
+      }
+      #{$modifier-padding-right-safe} {
+        @include musubii-style-padding-right-safe();
+      }
+      #{$modifier-padding-bottom-safe} {
+        @include musubii-style-padding-bottom-safe();
+      }
+      #{$modifier-padding-left-safe} {
+        @include musubii-style-padding-left-safe();
+      }
+    }
+    @if $option-add-style-padding-vertical == true {
+      #{$modifier-padding-vertical-safe} {
+        @include musubii-style-padding-vertical-safe();
+      }
+    }
+    @if $option-add-style-padding-horizontal == true {
+      #{$modifier-padding-horizontal-safe} {
+        @include musubii-style-padding-horizontal-safe();
+      }
     }
   }
 }
