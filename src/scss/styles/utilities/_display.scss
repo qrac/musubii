@@ -106,7 +106,7 @@ $modifier-display-hidden: "\.is-hidden" !default;
 
 // Display Important
 $display-important: if(
-  $option-add-style-display-important == true,
+  $option-important-display == true,
   !important,
   null
 ) !default;

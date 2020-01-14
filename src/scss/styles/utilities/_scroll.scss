@@ -12,7 +12,7 @@ $modifier-scroll-y: "\.is-scroll-y" !default;
 
 // Scroll Important
 $scroll-important: if(
-  $option-add-style-scroll-important == true,
+  $option-important-scroll == true,
   !important,
   null
 ) !default;

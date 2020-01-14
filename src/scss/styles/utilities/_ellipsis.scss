@@ -11,7 +11,7 @@ $modifier-ellipsis: "\.is-ellipsis" !default;
 
 // Ellipsis Important
 $ellipsis-important: if(
-  $option-add-style-ellipsis-important == true,
+  $option-important-ellipsis == true,
   !important,
   null
 ) !default;

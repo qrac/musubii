@@ -148,7 +148,7 @@ $margin-size-xxs: $meter-xxs !default;
 
 // Margin Important
 $margin-important: if(
-  $option-add-style-margin-important == true,
+  $option-important-margin == true,
   !important,
   null
 ) !default;

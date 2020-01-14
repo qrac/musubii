@@ -11,7 +11,7 @@ $modifier-overflow-hidden: "\.is-overflow-hidden" !default;
 
 // Overflow Important
 $overflow-important: if(
-  $option-add-style-overflow-important == true,
+  $option-important-overflow == true,
   !important,
   null
 ) !default;

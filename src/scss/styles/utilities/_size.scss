@@ -169,11 +169,7 @@ $size-xs: $font-size-xs !default;
 $size-xxs: $font-size-xxs !default;
 
 // Size Important
-$size-important: if(
-  $option-add-style-size-important == true,
-  !important,
-  null
-) !default;
+$size-important: if($option-important-size == true, !important, null) !default;
 
 //----------------------------------------------------
 // / Mixin

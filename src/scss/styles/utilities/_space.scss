@@ -63,7 +63,7 @@ $space-size-xxs: $meter-xxs !default;
 
 // Space Important
 $space-important: if(
-  $option-add-style-space-important == true,
+  $option-important-space == true,
   !important,
   null
 ) !default;

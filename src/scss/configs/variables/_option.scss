@@ -63,34 +63,38 @@ $option-add-style-box-angle: true !default;
 $option-add-style-button-focus: true !default;
 $option-add-style-button-angle: true !default;
 $option-add-style-alert-tail: false !default;
-$option-add-style-display-important: false !default;
 $option-add-style-display-only: false !default;
 $option-add-style-display-landscape: false !default;
 $option-add-style-display-portrait: false !default;
 $option-add-style-display-browser: false !default;
-$option-add-style-size-important: false !default;
 $option-add-style-size-only: false !default;
 $option-add-style-size-landscape: false !default;
 $option-add-style-size-portrait: false !default;
 $option-add-style-size-browser: false !default;
-$option-add-style-flex-important: false !default;
 $option-add-style-flex-only: false !default;
 $option-add-style-flex-landscape: false !default;
 $option-add-style-flex-portrait: false !default;
 $option-add-style-flex-browser: false !default;
-$option-add-style-space-important: false !default;
 $option-add-style-space-way: true !default;
-$option-add-style-margin-important: false !default;
 $option-add-style-margin-way: true !default;
 $option-add-style-margin-vertical: true !default;
 $option-add-style-margin-horizontal: true !default;
 $option-add-style-margin-minus: true !default;
-$option-add-style-padding-important: false !default;
 $option-add-style-padding-way: true !default;
 $option-add-style-padding-vertical: true !default;
 $option-add-style-padding-horizontal: true !default;
-$option-add-style-centering-important: false !default;
-$option-add-style-overflow-important: false !default;
-$option-add-style-scroll-important: false !default;
-$option-add-style-ellipsis-important: false !default;
-$option-add-style-clearfix-important: false !default;
+
+//----------------------------------------------------
+// / Important
+//----------------------------------------------------
+
+$option-important-display: false !default;
+$option-important-size: false !default;
+$option-important-flex: false !default;
+$option-important-space: false !default;
+$option-important-margin: false !default;
+$option-important-padding: false !default;
+$option-important-overflow: false !default;
+$option-important-scroll: false !default;
+$option-important-ellipsis: false !default;
+$option-important-clearfix: false !default;

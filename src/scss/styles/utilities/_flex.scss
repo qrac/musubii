@@ -35,11 +35,7 @@ $suffix-flex-auto: "\-auto" !default;
 $flex-split: 12 !default;
 
 // Flex Important
-$flex-important: if(
-  $option-add-style-flex-important == true,
-  !important,
-  null
-) !default;
+$flex-important: if($option-important-flex == true, !important, null) !default;
 
 //----------------------------------------------------
 // / Mixin

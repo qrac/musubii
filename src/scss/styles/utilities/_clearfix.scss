@@ -11,7 +11,7 @@ $modifier-clearfix: "\.is-clearfix" !default;
 
 // Clearfix Important
 $clearfix-important: if(
-  $option-add-style-clearfix-important == true,
+  $option-important-clearfix == true,
   !important,
   null
 ) !default;

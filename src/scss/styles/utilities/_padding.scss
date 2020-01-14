@@ -81,7 +81,7 @@ $padding-size-xxs: $meter-xxs !default;
 
 // Margin Important
 $padding-important: if(
-  $option-add-style-padding-important == true,
+  $option-important-padding == true,
   !important,
   null
 ) !default;
