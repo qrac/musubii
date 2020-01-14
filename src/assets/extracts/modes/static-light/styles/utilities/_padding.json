@@ -201,6 +201,86 @@
       "compiledValue": ".is-padding-left-xxs"
     },
     {
+      "name": "$modifier-padding-vertical",
+      "value": ".is-padding-vertical",
+      "compiledValue": ".is-padding-vertical"
+    },
+    {
+      "name": "$modifier-padding-vertical-xxl",
+      "value": ".is-padding-vertical-xxl",
+      "compiledValue": ".is-padding-vertical-xxl"
+    },
+    {
+      "name": "$modifier-padding-vertical-xl",
+      "value": ".is-padding-vertical-xl",
+      "compiledValue": ".is-padding-vertical-xl"
+    },
+    {
+      "name": "$modifier-padding-vertical-lg",
+      "value": ".is-padding-vertical-lg",
+      "compiledValue": ".is-padding-vertical-lg"
+    },
+    {
+      "name": "$modifier-padding-vertical-md",
+      "value": ".is-padding-vertical-md",
+      "compiledValue": ".is-padding-vertical-md"
+    },
+    {
+      "name": "$modifier-padding-vertical-sm",
+      "value": ".is-padding-vertical-sm",
+      "compiledValue": ".is-padding-vertical-sm"
+    },
+    {
+      "name": "$modifier-padding-vertical-xs",
+      "value": ".is-padding-vertical-xs",
+      "compiledValue": ".is-padding-vertical-xs"
+    },
+    {
+      "name": "$modifier-padding-vertical-xxs",
+      "value": ".is-padding-vertical-xxs",
+      "compiledValue": ".is-padding-vertical-xxs"
+    },
+    {
+      "name": "$modifier-padding-horizontal",
+      "value": ".is-padding-horizontal",
+      "compiledValue": ".is-padding-horizontal"
+    },
+    {
+      "name": "$modifier-padding-horizontal-xxl",
+      "value": ".is-padding-horizontal-xxl",
+      "compiledValue": ".is-padding-horizontal-xxl"
+    },
+    {
+      "name": "$modifier-padding-horizontal-xl",
+      "value": ".is-padding-horizontal-xl",
+      "compiledValue": ".is-padding-horizontal-xl"
+    },
+    {
+      "name": "$modifier-padding-horizontal-lg",
+      "value": ".is-padding-horizontal-lg",
+      "compiledValue": ".is-padding-horizontal-lg"
+    },
+    {
+      "name": "$modifier-padding-horizontal-md",
+      "value": ".is-padding-horizontal-md",
+      "compiledValue": ".is-padding-horizontal-md"
+    },
+    {
+      "name": "$modifier-padding-horizontal-sm",
+      "value": ".is-padding-horizontal-sm",
+      "compiledValue": ".is-padding-horizontal-sm"
+    },
+    {
+      "name": "$modifier-padding-horizontal-xs",
+      "value": ".is-padding-horizontal-xs",
+      "compiledValue": ".is-padding-horizontal-xs"
+    },
+    {
+      "name": "$modifier-padding-horizontal-xxs",
+      "value": ".is-padding-horizontal-xxs",
+      "compiledValue": ".is-padding-horizontal-xxs"
+    },
+    {
       "name": "$padding-size-xxl",
       "value": "$meter-xxl",
       "compiledValue": "28px"
@@ -268,6 +348,18 @@
     },
     {
       "name": "musubii-style-padding-left",
+      "parameters": [
+        "$padding-size"
+      ]
+    },
+    {
+      "name": "musubii-style-padding-vertical",
+      "parameters": [
+        "$padding-size"
+      ]
+    },
+    {
+      "name": "musubii-style-padding-horizontal",
       "parameters": [
         "$padding-size"
       ]

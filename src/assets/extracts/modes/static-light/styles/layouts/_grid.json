@@ -96,84 +96,84 @@
       "compiledValue": ".is-gap-xxs"
     },
     {
-      "name": "$modifier-grid-gap-top-bottom",
-      "value": ".is-gap-top-bottom",
-      "compiledValue": ".is-gap-top-bottom"
+      "name": "$modifier-grid-gap-vertical",
+      "value": ".is-gap-vertical",
+      "compiledValue": ".is-gap-vertical"
     },
     {
-      "name": "$modifier-grid-gap-top-bottom-xxl",
-      "value": ".is-gap-top-bottom-xxl",
-      "compiledValue": ".is-gap-top-bottom-xxl"
+      "name": "$modifier-grid-gap-vertical-xxl",
+      "value": ".is-gap-vertical-xxl",
+      "compiledValue": ".is-gap-vertical-xxl"
     },
     {
-      "name": "$modifier-grid-gap-top-bottom-xl",
-      "value": ".is-gap-top-bottom-xl",
-      "compiledValue": ".is-gap-top-bottom-xl"
+      "name": "$modifier-grid-gap-vertical-xl",
+      "value": ".is-gap-vertical-xl",
+      "compiledValue": ".is-gap-vertical-xl"
     },
     {
-      "name": "$modifier-grid-gap-top-bottom-lg",
-      "value": ".is-gap-top-bottom-lg",
-      "compiledValue": ".is-gap-top-bottom-lg"
+      "name": "$modifier-grid-gap-vertical-lg",
+      "value": ".is-gap-vertical-lg",
+      "compiledValue": ".is-gap-vertical-lg"
     },
     {
-      "name": "$modifier-grid-gap-top-bottom-md",
-      "value": ".is-gap-top-bottom-md",
-      "compiledValue": ".is-gap-top-bottom-md"
+      "name": "$modifier-grid-gap-vertical-md",
+      "value": ".is-gap-vertical-md",
+      "compiledValue": ".is-gap-vertical-md"
     },
     {
-      "name": "$modifier-grid-gap-top-bottom-sm",
-      "value": ".is-gap-top-bottom-sm",
-      "compiledValue": ".is-gap-top-bottom-sm"
+      "name": "$modifier-grid-gap-vertical-sm",
+      "value": ".is-gap-vertical-sm",
+      "compiledValue": ".is-gap-vertical-sm"
     },
     {
-      "name": "$modifier-grid-gap-top-bottom-xs",
-      "value": ".is-gap-top-bottom-xs",
-      "compiledValue": ".is-gap-top-bottom-xs"
+      "name": "$modifier-grid-gap-vertical-xs",
+      "value": ".is-gap-vertical-xs",
+      "compiledValue": ".is-gap-vertical-xs"
     },
     {
-      "name": "$modifier-grid-gap-top-bottom-xxs",
-      "value": ".is-gap-top-bottom-xxs",
-      "compiledValue": ".is-gap-top-bottom-xxs"
+      "name": "$modifier-grid-gap-vertical-xxs",
+      "value": ".is-gap-vertical-xxs",
+      "compiledValue": ".is-gap-vertical-xxs"
     },
     {
-      "name": "$modifier-grid-gap-right-left",
-      "value": ".is-gap-right-left",
-      "compiledValue": ".is-gap-right-left"
+      "name": "$modifier-grid-gap-horizontal",
+      "value": ".is-gap-horizontal",
+      "compiledValue": ".is-gap-horizontal"
     },
     {
-      "name": "$modifier-grid-gap-right-left-xxl",
-      "value": ".is-gap-right-left-xxl",
-      "compiledValue": ".is-gap-right-left-xxl"
+      "name": "$modifier-grid-gap-horizontal-xxl",
+      "value": ".is-gap-horizontal-xxl",
+      "compiledValue": ".is-gap-horizontal-xxl"
     },
     {
-      "name": "$modifier-grid-gap-right-left-xl",
-      "value": ".is-gap-right-left-xl",
-      "compiledValue": ".is-gap-right-left-xl"
+      "name": "$modifier-grid-gap-horizontal-xl",
+      "value": ".is-gap-horizontal-xl",
+      "compiledValue": ".is-gap-horizontal-xl"
     },
     {
-      "name": "$modifier-grid-gap-right-left-lg",
-      "value": ".is-gap-right-left-lg",
-      "compiledValue": ".is-gap-right-left-lg"
+      "name": "$modifier-grid-gap-horizontal-lg",
+      "value": ".is-gap-horizontal-lg",
+      "compiledValue": ".is-gap-horizontal-lg"
     },
     {
-      "name": "$modifier-grid-gap-right-left-md",
-      "value": ".is-gap-right-left-md",
-      "compiledValue": ".is-gap-right-left-md"
+      "name": "$modifier-grid-gap-horizontal-md",
+      "value": ".is-gap-horizontal-md",
+      "compiledValue": ".is-gap-horizontal-md"
     },
     {
-      "name": "$modifier-grid-gap-right-left-sm",
-      "value": ".is-gap-right-left-sm",
-      "compiledValue": ".is-gap-right-left-sm"
+      "name": "$modifier-grid-gap-horizontal-sm",
+      "value": ".is-gap-horizontal-sm",
+      "compiledValue": ".is-gap-horizontal-sm"
     },
     {
-      "name": "$modifier-grid-gap-right-left-xs",
-      "value": ".is-gap-right-left-xs",
-      "compiledValue": ".is-gap-right-left-xs"
+      "name": "$modifier-grid-gap-horizontal-xs",
+      "value": ".is-gap-horizontal-xs",
+      "compiledValue": ".is-gap-horizontal-xs"
     },
     {
-      "name": "$modifier-grid-gap-right-left-xxs",
-      "value": ".is-gap-right-left-xxs",
-      "compiledValue": ".is-gap-right-left-xxs"
+      "name": "$modifier-grid-gap-horizontal-xxs",
+      "value": ".is-gap-horizontal-xxs",
+      "compiledValue": ".is-gap-horizontal-xxs"
     },
     {
       "name": "$gap-size-xxl",
@@ -259,13 +259,13 @@
       ]
     },
     {
-      "name": "musubii-style-grid-gap-top-bottom",
+      "name": "musubii-style-grid-gap-vertical",
       "parameters": [
         "$gap-size"
       ]
     },
     {
-      "name": "musubii-style-grid-gap-right-left",
+      "name": "musubii-style-grid-gap-horizontal",
       "parameters": [
         "$gap-size"
       ]

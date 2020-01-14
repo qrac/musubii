@@ -161,7 +161,12 @@
       "compiledValue": "true"
     },
     {
-      "name": "$option-add-style-grid-split-gap",
+      "name": "$option-add-style-grid-gap-vertical",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-grid-gap-horizontal",
       "value": "true",
       "compiledValue": "true"
     },
@@ -281,6 +286,21 @@
       "compiledValue": "false"
     },
     {
+      "name": "$option-add-style-margin-way",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-margin-vertical",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-margin-horizontal",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
       "name": "$option-add-style-margin-minus",
       "value": "true",
       "compiledValue": "true"
@@ -289,6 +309,21 @@
       "name": "$option-add-style-padding-important",
       "value": "false",
       "compiledValue": "false"
+    },
+    {
+      "name": "$option-add-style-padding-way",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-padding-vertical",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-padding-horizontal",
+      "value": "true",
+      "compiledValue": "true"
     },
     {
       "name": "$option-add-style-centering-important",

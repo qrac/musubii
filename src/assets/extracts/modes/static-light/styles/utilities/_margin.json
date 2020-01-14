@@ -201,6 +201,86 @@
       "compiledValue": ".is-margin-left-xxs"
     },
     {
+      "name": "$modifier-margin-vertical",
+      "value": ".is-margin-vertical",
+      "compiledValue": ".is-margin-vertical"
+    },
+    {
+      "name": "$modifier-margin-vertical-xxl",
+      "value": ".is-margin-vertical-xxl",
+      "compiledValue": ".is-margin-vertical-xxl"
+    },
+    {
+      "name": "$modifier-margin-vertical-xl",
+      "value": ".is-margin-vertical-xl",
+      "compiledValue": ".is-margin-vertical-xl"
+    },
+    {
+      "name": "$modifier-margin-vertical-lg",
+      "value": ".is-margin-vertical-lg",
+      "compiledValue": ".is-margin-vertical-lg"
+    },
+    {
+      "name": "$modifier-margin-vertical-md",
+      "value": ".is-margin-vertical-md",
+      "compiledValue": ".is-margin-vertical-md"
+    },
+    {
+      "name": "$modifier-margin-vertical-sm",
+      "value": ".is-margin-vertical-sm",
+      "compiledValue": ".is-margin-vertical-sm"
+    },
+    {
+      "name": "$modifier-margin-vertical-xs",
+      "value": ".is-margin-vertical-xs",
+      "compiledValue": ".is-margin-vertical-xs"
+    },
+    {
+      "name": "$modifier-margin-vertical-xxs",
+      "value": ".is-margin-vertical-xxs",
+      "compiledValue": ".is-margin-vertical-xxs"
+    },
+    {
+      "name": "$modifier-margin-horizontal",
+      "value": ".is-margin-horizontal",
+      "compiledValue": ".is-margin-horizontal"
+    },
+    {
+      "name": "$modifier-margin-horizontal-xxl",
+      "value": ".is-margin-horizontal-xxl",
+      "compiledValue": ".is-margin-horizontal-xxl"
+    },
+    {
+      "name": "$modifier-margin-horizontal-xl",
+      "value": ".is-margin-horizontal-xl",
+      "compiledValue": ".is-margin-horizontal-xl"
+    },
+    {
+      "name": "$modifier-margin-horizontal-lg",
+      "value": ".is-margin-horizontal-lg",
+      "compiledValue": ".is-margin-horizontal-lg"
+    },
+    {
+      "name": "$modifier-margin-horizontal-md",
+      "value": ".is-margin-horizontal-md",
+      "compiledValue": ".is-margin-horizontal-md"
+    },
+    {
+      "name": "$modifier-margin-horizontal-sm",
+      "value": ".is-margin-horizontal-sm",
+      "compiledValue": ".is-margin-horizontal-sm"
+    },
+    {
+      "name": "$modifier-margin-horizontal-xs",
+      "value": ".is-margin-horizontal-xs",
+      "compiledValue": ".is-margin-horizontal-xs"
+    },
+    {
+      "name": "$modifier-margin-horizontal-xxs",
+      "value": ".is-margin-horizontal-xxs",
+      "compiledValue": ".is-margin-horizontal-xxs"
+    },
+    {
       "name": "$modifier-margin-minus",
       "value": ".is-margin-minus",
       "compiledValue": ".is-margin-minus"
@@ -401,6 +481,101 @@
       "compiledValue": ".is-margin-left-minus-xxs"
     },
     {
+      "name": "$modifier-margin-vertical-minus",
+      "value": ".is-margin-vertical-minus",
+      "compiledValue": ".is-margin-vertical-minus"
+    },
+    {
+      "name": "$modifier-margin-vertical-minus-xxl",
+      "value": ".is-margin-vertical-minus-xxl",
+      "compiledValue": ".is-margin-vertical-minus-xxl"
+    },
+    {
+      "name": "$modifier-margin-vertical-minus-xl",
+      "value": ".is-margin-vertical-minus-xl",
+      "compiledValue": ".is-margin-vertical-minus-xl"
+    },
+    {
+      "name": "$modifier-margin-vertical-minus-lg",
+      "value": ".is-margin-vertical-minus-lg",
+      "compiledValue": ".is-margin-vertical-minus-lg"
+    },
+    {
+      "name": "$modifier-margin-vertical-minus-md",
+      "value": ".is-margin-vertical-minus-md",
+      "compiledValue": ".is-margin-vertical-minus-md"
+    },
+    {
+      "name": "$modifier-margin-vertical-minus-sm",
+      "value": ".is-margin-vertical-minus-sm",
+      "compiledValue": ".is-margin-vertical-minus-sm"
+    },
+    {
+      "name": "$modifier-margin-vertical-minus-xs",
+      "value": ".is-margin-vertical-minus-xs",
+      "compiledValue": ".is-margin-vertical-minus-xs"
+    },
+    {
+      "name": "$modifier-margin-vertical-minus-xxs",
+      "value": ".is-margin-vertical-minus-xxs",
+      "compiledValue": ".is-margin-vertical-minus-xxs"
+    },
+    {
+      "name": "$modifier-margin-horizontal-minus",
+      "value": ".is-margin-horizontal-minus",
+      "compiledValue": ".is-margin-horizontal-minus"
+    },
+    {
+      "name": "$modifier-margin-horizontal-minus-xxl",
+      "value": ".is-margin-horizontal-minus-xxl",
+      "compiledValue": ".is-margin-horizontal-minus-xxl"
+    },
+    {
+      "name": "$modifier-margin-horizontal-minus-xl",
+      "value": ".is-margin-horizontal-minus-xl",
+      "compiledValue": ".is-margin-horizontal-minus-xl"
+    },
+    {
+      "name": "$modifier-margin-horizontal-minus-lg",
+      "value": ".is-margin-horizontal-minus-lg",
+      "compiledValue": ".is-margin-horizontal-minus-lg"
+    },
+    {
+      "name": "$modifier-margin-horizontal-minus-md",
+      "value": ".is-margin-horizontal-minus-md",
+      "compiledValue": ".is-margin-horizontal-minus-md"
+    },
+    {
+      "name": "$modifier-margin-horizontal-minus-sm",
+      "value": ".is-margin-horizontal-minus-sm",
+      "compiledValue": ".is-margin-horizontal-minus-sm"
+    },
+    {
+      "name": "$modifier-margin-horizontal-minus-xs",
+      "value": ".is-margin-horizontal-minus-xs",
+      "compiledValue": ".is-margin-horizontal-minus-xs"
+    },
+    {
+      "name": "$modifier-margin-horizontal-minus-xxs",
+      "value": ".is-margin-horizontal-minus-xxs",
+      "compiledValue": ".is-margin-horizontal-minus-xxs"
+    },
+    {
+      "name": "$modifier-margin-right-auto",
+      "value": ".is-margin-right-auto",
+      "compiledValue": ".is-margin-right-auto"
+    },
+    {
+      "name": "$modifier-margin-left-auto",
+      "value": ".is-margin-left-auto",
+      "compiledValue": ".is-margin-left-auto"
+    },
+    {
+      "name": "$modifier-margin-horizontal-auto",
+      "value": ".is-margin-horizontal-auto",
+      "compiledValue": ".is-margin-horizontal-auto"
+    },
+    {
       "name": "$margin-size-xxl",
       "value": "$meter-xxl",
       "compiledValue": "28px"
@@ -473,6 +648,18 @@
       ]
     },
     {
+      "name": "musubii-style-margin-vertical",
+      "parameters": [
+        "$margin-size"
+      ]
+    },
+    {
+      "name": "musubii-style-margin-horizontal",
+      "parameters": [
+        "$margin-size"
+      ]
+    },
+    {
       "name": "musubii-style-margin-minus",
       "parameters": [
         "$margin-size"
@@ -501,6 +688,30 @@
       "parameters": [
         "$margin-size"
       ]
+    },
+    {
+      "name": "musubii-style-margin-vertical-minus",
+      "parameters": [
+        "$margin-size"
+      ]
+    },
+    {
+      "name": "musubii-style-margin-horizontal-minus",
+      "parameters": [
+        "$margin-size"
+      ]
+    },
+    {
+      "name": "musubii-style-margin-right-auto",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-margin-left-auto",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-margin-horizontal-auto",
+      "parameters": []
     }
   ]
 }

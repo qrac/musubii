@@ -362,11 +362,6 @@
               "title": "Padding"
             },
             {
-              "id": "centering",
-              "path": "/styles/utilities/centering",
-              "title": "Centering"
-            },
-            {
               "id": "overflow",
               "path": "/styles/utilities/overflow",
               "title": "Overflow"
