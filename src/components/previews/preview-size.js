@@ -36,8 +36,8 @@ export class PreviewSizeBasic extends React.Component {
   }
   render() {
     const size = this.state.size
-    const contents = `<button class="button is-plain is-primary ${size}" type="button">ボタン A</button>
-    <button class="button is-outline is-danger ${size}" type="button">ボタン B</button>`
+    const contents = `<button class="button is-plain is-primary ${size}" type="button">ボタンA</button>
+    <button class="button is-outline is-danger ${size}" type="button">ボタンB</button>`
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
