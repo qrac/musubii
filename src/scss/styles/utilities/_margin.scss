@@ -133,6 +133,10 @@ $modifier-margin-horizontal-minus-sm: "\.is-margin-horizontal-minus-sm" !default
 $modifier-margin-horizontal-minus-xs: "\.is-margin-horizontal-minus-xs" !default;
 $modifier-margin-horizontal-minus-xxs: "\.is-margin-horizontal-minus-xxs" !default;
 
+$modifier-margin-right-auto: "\.is-margin-right-auto" !default;
+$modifier-margin-left-auto: "\.is-margin-left-auto" !default;
+$modifier-margin-horizontal-auto: "\.is-margin-horizontal-auto" !default;
+
 // Margin Size
 $margin-size-xxl: $meter-xxl !default;
 $margin-size-xl: $meter-xl !default;
@@ -649,6 +653,39 @@ $margin-important: if(
       #{$modifier-margin-horizontal-minus-xxs} {
         @include musubii-style-margin-horizontal-minus($margin-size-xxs);
       }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Margin Auto
+//----------------------------------------------------
+
+@mixin musubii-style-margin-right-auto() {
+  margin-right: auto $margin-important;
+}
+
+@mixin musubii-style-margin-left-auto() {
+  margin-left: auto $margin-important;
+}
+
+@mixin musubii-style-margin-horizontal-auto() {
+  margin-right: auto $margin-important;
+  margin-left: auto $margin-important;
+}
+
+@include generate-style($option-generate-style-margin) {
+  @if $option-add-style-margin-way == true {
+    #{$modifier-margin-right-auto} {
+      @include musubii-style-margin-right-auto();
+    }
+    #{$modifier-margin-left-auto} {
+      @include musubii-style-margin-left-auto();
+    }
+  }
+  @if $option-add-style-margin-way == true {
+    #{$modifier-margin-horizontal-auto} {
+      @include musubii-style-margin-horizontal-auto();
     }
   }
 }
