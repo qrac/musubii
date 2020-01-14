@@ -52,6 +52,24 @@ $modifier-padding-left-sm: "\.is-padding-left-sm" !default;
 $modifier-padding-left-xs: "\.is-padding-left-xs" !default;
 $modifier-padding-left-xxs: "\.is-padding-left-xxs" !default;
 
+$modifier-padding-vertical: "\.is-padding-vertical" !default;
+$modifier-padding-vertical-xxl: "\.is-padding-vertical-xxl" !default;
+$modifier-padding-vertical-xl: "\.is-padding-vertical-xl" !default;
+$modifier-padding-vertical-lg: "\.is-padding-vertical-lg" !default;
+$modifier-padding-vertical-md: "\.is-padding-vertical-md" !default;
+$modifier-padding-vertical-sm: "\.is-padding-vertical-sm" !default;
+$modifier-padding-vertical-xs: "\.is-padding-vertical-xs" !default;
+$modifier-padding-vertical-xxs: "\.is-padding-vertical-xxs" !default;
+
+$modifier-padding-horizontal: "\.is-padding-horizontal" !default;
+$modifier-padding-horizontal-xxl: "\.is-padding-horizontal-xxl" !default;
+$modifier-padding-horizontal-xl: "\.is-padding-horizontal-xl" !default;
+$modifier-padding-horizontal-lg: "\.is-padding-horizontal-lg" !default;
+$modifier-padding-horizontal-md: "\.is-padding-horizontal-md" !default;
+$modifier-padding-horizontal-sm: "\.is-padding-horizontal-sm" !default;
+$modifier-padding-horizontal-xs: "\.is-padding-horizontal-xs" !default;
+$modifier-padding-horizontal-xxs: "\.is-padding-horizontal-xxs" !default;
+
 // Padding Size
 $padding-size-xxl: $meter-xxl !default;
 $padding-size-xl: $meter-xl !default;
@@ -110,27 +128,29 @@ $padding-important: if(
 }
 
 @include generate-style($option-generate-style-padding) {
-  #{$modifier-padding-top-xxl} {
-    @include musubii-style-padding-top($padding-size-xxl);
-  }
-  #{$modifier-padding-top-xl} {
-    @include musubii-style-padding-top($padding-size-xl);
-  }
-  #{$modifier-padding-top-lg} {
-    @include musubii-style-padding-top($padding-size-lg);
-  }
-  #{$modifier-padding-top},
-  #{$modifier-padding-top-md} {
-    @include musubii-style-padding-top($padding-size-md);
-  }
-  #{$modifier-padding-top-sm} {
-    @include musubii-style-padding-top($padding-size-sm);
-  }
-  #{$modifier-padding-top-xs} {
-    @include musubii-style-padding-top($padding-size-xs);
-  }
-  #{$modifier-padding-top-xxs} {
-    @include musubii-style-padding-top($padding-size-xxs);
+  @if $option-add-style-padding-way == true {
+    #{$modifier-padding-top-xxl} {
+      @include musubii-style-padding-top($padding-size-xxl);
+    }
+    #{$modifier-padding-top-xl} {
+      @include musubii-style-padding-top($padding-size-xl);
+    }
+    #{$modifier-padding-top-lg} {
+      @include musubii-style-padding-top($padding-size-lg);
+    }
+    #{$modifier-padding-top},
+    #{$modifier-padding-top-md} {
+      @include musubii-style-padding-top($padding-size-md);
+    }
+    #{$modifier-padding-top-sm} {
+      @include musubii-style-padding-top($padding-size-sm);
+    }
+    #{$modifier-padding-top-xs} {
+      @include musubii-style-padding-top($padding-size-xs);
+    }
+    #{$modifier-padding-top-xxs} {
+      @include musubii-style-padding-top($padding-size-xxs);
+    }
   }
 }
 
@@ -143,27 +163,29 @@ $padding-important: if(
 }
 
 @include generate-style($option-generate-style-padding) {
-  #{$modifier-padding-right-xxl} {
-    @include musubii-style-padding-right($padding-size-xxl);
-  }
-  #{$modifier-padding-right-xl} {
-    @include musubii-style-padding-right($padding-size-xl);
-  }
-  #{$modifier-padding-right-lg} {
-    @include musubii-style-padding-right($padding-size-lg);
-  }
-  #{$modifier-padding-right},
-  #{$modifier-padding-right-md} {
-    @include musubii-style-padding-right($padding-size-md);
-  }
-  #{$modifier-padding-right-sm} {
-    @include musubii-style-padding-right($padding-size-sm);
-  }
-  #{$modifier-padding-right-xs} {
-    @include musubii-style-padding-right($padding-size-xs);
-  }
-  #{$modifier-padding-right-xxs} {
-    @include musubii-style-padding-right($padding-size-xxs);
+  @if $option-add-style-padding-way == true {
+    #{$modifier-padding-right-xxl} {
+      @include musubii-style-padding-right($padding-size-xxl);
+    }
+    #{$modifier-padding-right-xl} {
+      @include musubii-style-padding-right($padding-size-xl);
+    }
+    #{$modifier-padding-right-lg} {
+      @include musubii-style-padding-right($padding-size-lg);
+    }
+    #{$modifier-padding-right},
+    #{$modifier-padding-right-md} {
+      @include musubii-style-padding-right($padding-size-md);
+    }
+    #{$modifier-padding-right-sm} {
+      @include musubii-style-padding-right($padding-size-sm);
+    }
+    #{$modifier-padding-right-xs} {
+      @include musubii-style-padding-right($padding-size-xs);
+    }
+    #{$modifier-padding-right-xxs} {
+      @include musubii-style-padding-right($padding-size-xxs);
+    }
   }
 }
 
@@ -176,27 +198,29 @@ $padding-important: if(
 }
 
 @include generate-style($option-generate-style-padding) {
-  #{$modifier-padding-bottom-xxl} {
-    @include musubii-style-padding-bottom($padding-size-xxl);
-  }
-  #{$modifier-padding-bottom-xl} {
-    @include musubii-style-padding-bottom($padding-size-xl);
-  }
-  #{$modifier-padding-bottom-lg} {
-    @include musubii-style-padding-bottom($padding-size-lg);
-  }
-  #{$modifier-padding-bottom},
-  #{$modifier-padding-bottom-md} {
-    @include musubii-style-padding-bottom($padding-size-md);
-  }
-  #{$modifier-padding-bottom-sm} {
-    @include musubii-style-padding-bottom($padding-size-sm);
-  }
-  #{$modifier-padding-bottom-xs} {
-    @include musubii-style-padding-bottom($padding-size-xs);
-  }
-  #{$modifier-padding-bottom-xxs} {
-    @include musubii-style-padding-bottom($padding-size-xxs);
+  @if $option-add-style-padding-way == true {
+    #{$modifier-padding-bottom-xxl} {
+      @include musubii-style-padding-bottom($padding-size-xxl);
+    }
+    #{$modifier-padding-bottom-xl} {
+      @include musubii-style-padding-bottom($padding-size-xl);
+    }
+    #{$modifier-padding-bottom-lg} {
+      @include musubii-style-padding-bottom($padding-size-lg);
+    }
+    #{$modifier-padding-bottom},
+    #{$modifier-padding-bottom-md} {
+      @include musubii-style-padding-bottom($padding-size-md);
+    }
+    #{$modifier-padding-bottom-sm} {
+      @include musubii-style-padding-bottom($padding-size-sm);
+    }
+    #{$modifier-padding-bottom-xs} {
+      @include musubii-style-padding-bottom($padding-size-xs);
+    }
+    #{$modifier-padding-bottom-xxs} {
+      @include musubii-style-padding-bottom($padding-size-xxs);
+    }
   }
 }
 
@@ -209,26 +233,100 @@ $padding-important: if(
 }
 
 @include generate-style($option-generate-style-padding) {
-  #{$modifier-padding-left-xxl} {
-    @include musubii-style-padding-left($padding-size-xxl);
+  @if $option-add-style-padding-way == true {
+    #{$modifier-padding-left-xxl} {
+      @include musubii-style-padding-left($padding-size-xxl);
+    }
+    #{$modifier-padding-left-xl} {
+      @include musubii-style-padding-left($padding-size-xl);
+    }
+    #{$modifier-padding-left-lg} {
+      @include musubii-style-padding-left($padding-size-lg);
+    }
+    #{$modifier-padding-left},
+    #{$modifier-padding-left-md} {
+      @include musubii-style-padding-left($padding-size-md);
+    }
+    #{$modifier-padding-left-sm} {
+      @include musubii-style-padding-left($padding-size-sm);
+    }
+    #{$modifier-padding-left-xs} {
+      @include musubii-style-padding-left($padding-size-xs);
+    }
+    #{$modifier-padding-left-xxs} {
+      @include musubii-style-padding-left($padding-size-xxs);
+    }
   }
-  #{$modifier-padding-left-xl} {
-    @include musubii-style-padding-left($padding-size-xl);
+}
+
+//----------------------------------------------------
+// / Style - Padding Vertical
+//----------------------------------------------------
+
+@mixin musubii-style-padding-vertical($padding-size) {
+  padding-top: $padding-size $padding-important;
+  padding-bottom: $padding-size $padding-important;
+}
+
+@include generate-style($option-generate-style-padding) {
+  @if $option-add-style-padding-vertical == true {
+    #{$modifier-padding-vertical-xxl} {
+      @include musubii-style-padding-vertical($padding-size-xxl);
+    }
+    #{$modifier-padding-vertical-xl} {
+      @include musubii-style-padding-vertical($padding-size-xl);
+    }
+    #{$modifier-padding-vertical-lg} {
+      @include musubii-style-padding-vertical($padding-size-lg);
+    }
+    #{$modifier-padding-vertical},
+    #{$modifier-padding-vertical-md} {
+      @include musubii-style-padding-vertical($padding-size-md);
+    }
+    #{$modifier-padding-vertical-sm} {
+      @include musubii-style-padding-vertical($padding-size-sm);
+    }
+    #{$modifier-padding-vertical-xs} {
+      @include musubii-style-padding-vertical($padding-size-xs);
+    }
+    #{$modifier-padding-vertical-xxs} {
+      @include musubii-style-padding-vertical($padding-size-xxs);
+    }
   }
-  #{$modifier-padding-left-lg} {
-    @include musubii-style-padding-left($padding-size-lg);
-  }
-  #{$modifier-padding-left},
-  #{$modifier-padding-left-md} {
-    @include musubii-style-padding-left($padding-size-md);
-  }
-  #{$modifier-padding-left-sm} {
-    @include musubii-style-padding-left($padding-size-sm);
-  }
-  #{$modifier-padding-left-xs} {
-    @include musubii-style-padding-left($padding-size-xs);
-  }
-  #{$modifier-padding-left-xxs} {
-    @include musubii-style-padding-left($padding-size-xxs);
+}
+
+//----------------------------------------------------
+// / Style - Padding Horizontal
+//----------------------------------------------------
+
+@mixin musubii-style-padding-horizontal($padding-size) {
+  padding-right: $padding-size $padding-important;
+  padding-left: $padding-size $padding-important;
+}
+
+@include generate-style($option-generate-style-padding) {
+  @if $option-add-style-padding-horizontal == true {
+    #{$modifier-padding-horizontal-xxl} {
+      @include musubii-style-padding-horizontal($padding-size-xxl);
+    }
+    #{$modifier-padding-horizontal-xl} {
+      @include musubii-style-padding-horizontal($padding-size-xl);
+    }
+    #{$modifier-padding-horizontal-lg} {
+      @include musubii-style-padding-horizontal($padding-size-lg);
+    }
+    #{$modifier-padding-horizontal},
+    #{$modifier-padding-horizontal-md} {
+      @include musubii-style-padding-horizontal($padding-size-md);
+    }
+    #{$modifier-padding-horizontal-sm} {
+      @include musubii-style-padding-horizontal($padding-size-sm);
+    }
+    #{$modifier-padding-horizontal-xs} {
+      @include musubii-style-padding-horizontal($padding-size-xs);
+    }
+    #{$modifier-padding-horizontal-xxs} {
+      @include musubii-style-padding-horizontal($padding-size-xxs);
+    }
   }
 }

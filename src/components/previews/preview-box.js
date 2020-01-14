@@ -202,7 +202,7 @@ export class PreviewBoxBasic extends React.Component {
             ${link} ${disabledClass} ${wrapAngle}"
             ${tagAttr} ${externalLink}>${withIcon}
             <div class="box ${separateChildClass} ${childAngle}
-            is-padding-top-bottom-md ${withGrow}">children ${i + 1}</div>
+            is-padding-vertical-md ${withGrow}">children ${i + 1}</div>
           </${tag}>
         </li>`
       )
