@@ -2,6 +2,27 @@
 // Components: Demo Table
 //----------------------------------------------------
 
+.demo-table-wrap-border {
+  position: relative;
+  width: 100%;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: $table-border-width;
+    height: 100%;
+    background-color: $table-border-color;
+    z-index: 2;
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+}
+
 .demo-table-wrap {
   width: 100%;
   overflow: hidden;
@@ -23,6 +44,7 @@
     border: $table-border-width solid $table-border-color;
   }
   .demo-inline-code {
-    word-break: normal;
+    //word-break: normal;
+    white-space: nowrap;
   }
 }

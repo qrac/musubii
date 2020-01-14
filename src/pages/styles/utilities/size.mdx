@@ -1,6 +1,103 @@
 export const meta = {
   title: "Size",
-  path: "/styles/utilities/size"
+  path: "/styles/utilities/size",
+  docsPath: "styles/utilities/size",
+  filePath: "styles/utilities/_size"
 }
 
+import { PreviewSizeBasic } from "~/components/previews/preview-size"
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Size
+
+## Table of Contents
+
+contents list
+
+## Detail
+
+共通モディファイアでエレメントのサイズを変更するユーティリティ CSS。
+
+## Basic
+
+<PreviewSizeBasic />
+
+| 62.5%     | 75%      | 87.5%    | 100%     | 125%     | 150%     | 200%      |
+| --------- | -------- | -------- | -------- | -------- | -------- | --------- |
+| `.is-xxs` | `.is-xs` | `.is-sm` | `.is-md` | `.is-lg` | `.is-xl` | `.is-xxl` |
+
+[[tips | Tips]]
+| MUSUBii のエレメントは、サイズ変更したい部分を `em`・変更したくない余白やボーダーを `px` で設計しているため、ユーティリティのフォントサイズ変更のみで良い塩梅にサイズ変更できます。
+
+## Media Query
+
+### Mobile First
+
+`.is-(mediaquery)-(value)` の形式で、[Media Query](/configs/mixins/mediaquery) に応じた `font-size` プロパティの変更を行えます。
+
+| 62.5%             | 75%              | 87.5%            | 100%             | 125%             | 150%             | 200%              |
+| ----------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ----------------- |
+| `.is-mobile-xxs`  | `.is-mobile-xs`  | `.is-mobile-sm`  | `.is-mobile-md`  | `.is-mobile-lg`  | `.is-mobile-xl`  | `.is-mobile-xxl`  |
+| `.is-fablet-xxs`  | `.is-fablet-xs`  | `.is-fablet-sm`  | `.is-fablet-md`  | `.is-fablet-lg`  | `.is-fablet-xl`  | `.is-fablet-xxl`  |
+| `.is-tablet-xxs`  | `.is-tablet-xs`  | `.is-tablet-sm`  | `.is-tablet-md`  | `.is-tablet-lg`  | `.is-tablet-xl`  | `.is-tablet-xxl`  |
+| `.is-desktop-xxs` | `.is-desktop-xs` | `.is-desktop-sm` | `.is-desktop-md` | `.is-desktop-lg` | `.is-desktop-xl` | `.is-desktop-xxl` |
+| `.is-wide-xxs`    | `.is-wide-xs`    | `.is-wide-sm`    | `.is-wide-md`    | `.is-wide-lg`    | `.is-wide-xl`    | `.is-wide-xxl`    |
+
+### Size Only
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-size-only` を `true` にすると、ウィンドウサイズを限定した `font-size` プロパティの適応が可能になります。
+
+| 62.5%                  | 75%                   | 87.5%                 | 100%                  | 125%                  | 150%                  | 200%                   |
+| ---------------------- | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- | ---------------------- |
+| `.is-iphone5-only-xxs` | `.is-iphone5-only-xs` | `.is-iphone5-only-sm` | `.is-iphone5-only-md` | `.is-iphone5-only-lg` | `.is-iphone5-only-xl` | `.is-iphone5-only-xxl` |
+| `.is-mobile-only-xxs`  | `.is-mobile-only-xs`  | `.is-mobile-only-sm`  | `.is-mobile-only-md`  | `.is-mobile-only-lg`  | `.is-mobile-only-xl`  | `.is-mobile-xxl`       |
+| `.is-fablet-only-xxs`  | `.is-fablet-only-xs`  | `.is-fablet-only-sm`  | `.is-fablet-only-md`  | `.is-fablet-only-lg`  | `.is-fablet-only-xl`  | `.is-fablet-xxl`       |
+| `.is-tablet-only-xxs`  | `.is-tablet-only-xs`  | `.is-tablet-only-sm`  | `.is-tablet-only-md`  | `.is-tablet-only-lg`  | `.is-tablet-only-xl`  | `.is-tablet-xxl`       |
+| `.is-desktop-only-xxs` | `.is-desktop-only-xs` | `.is-desktop-only-sm` | `.is-desktop-only-md` | `.is-desktop-only-lg` | `.is-desktop-only-xl` | `.is-desktop-xxl`      |
+
+### Landscape
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-size-landscape` を `true` にすると、横向きに限定した `font-size` プロパティの適応が可能になります。（`all` 無しは Tablet サイズ以下のみ）
+
+| 62.5%                   | 75%                    | 87.5%                  | 100%                   | 125%                   | 150%                   | 200%                    |
+| ----------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ----------------------- |
+| `.is-landscape-xxs`     | `.is-landscape-xs`     | `.is-landscape-sm`     | `.is-landscape-md`     | `.is-landscape-lg`     | `.is-landscape-xl`     | `.is-landscape-xxl`     |
+| `.is-landscape-all-xxs` | `.is-landscape-all-xs` | `.is-landscape-all-sm` | `.is-landscape-all-md` | `.is-landscape-all-lg` | `.is-landscape-all-xl` | `.is-landscape-all-xxl` |
+
+### Portrait
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-size-portrait` を `true` にすると、縦向きに限定した `font-size` プロパティの適応が可能になります。（`all` 無しは Tablet サイズ以下のみ）
+
+| 62.5%                  | 75%                   | 87.5%                 | 100%                  | 125%                  | 150%                  | 200%                   |
+| ---------------------- | --------------------- | --------------------- | --------------------- | --------------------- | --------------------- | ---------------------- |
+| `.is-portrait-xxs`     | `.is-portrait-xs`     | `.is-portrait-sm`     | `.is-portrait-md`     | `.is-portrait-lg`     | `.is-portrait-xl`     | `.is-portrait-xxl`     |
+| `.is-portrait-all-xxs` | `.is-portrait-all-xs` | `.is-portrait-all-sm` | `.is-portrait-all-md` | `.is-portrait-all-lg` | `.is-portrait-all-xl` | `.is-portrait-all-xxl` |
+
+### Browser
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-size-browser` を `true` にすると、ブラウザを限定した `font-size` プロパティの適応が可能になります。
+
+| 62.5%             | 75%              | 87.5%            | 100%             | 125%             | 150%             | 200%              |
+| ----------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ----------------- |
+| `.is-chrome-xxs`  | `.is-chrome-xs`  | `.is-chrome-sm`  | `.is-chrome-md`  | `.is-chrome-lg`  | `.is-chrome-xl`  | `.is-chrome-xxl`  |
+| `.is-firefox-xxs` | `.is-firefox-xs` | `.is-firefox-sm` | `.is-firefox-md` | `.is-firefox-lg` | `.is-firefox-xl` | `.is-firefox-xxl` |
+| `.is-edge-xxs`    | `.is-edge-xs`    | `.is-edge-sm`    | `.is-edge-md`    | `.is-edge-lg`    | `.is-edge-xl`    | `.is-edge-xxl`    |
+| `.is-ie-xxs`      | `.is-ie-xs`      | `.is-ie-sm`      | `.is-ie-md`      | `.is-ie-lg`      | `.is-ie-xl`      | `.is-ie-xxl`      |
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={true} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>

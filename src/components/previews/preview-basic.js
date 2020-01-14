@@ -21,7 +21,7 @@ const beautifyHtmlOptions = {
   indent_size: 2
 }
 
-class PreviewBasic extends React.Component {
+export class PreviewBasicMarkup extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -49,5 +49,3 @@ class PreviewBasic extends React.Component {
     )
   }
 }
-
-export default PreviewBasic

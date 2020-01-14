@@ -56,6 +56,19 @@
       text-transform: uppercase;
     }
   }
+  &.is-tips {
+    padding: 1.25em;
+    background-color: $convert-alert-primary-background-color;
+    border: 1px solid $convert-alert-primary-border-color;
+    border-radius: 2px;
+    .custom-block-heading {
+      color: $convert-primary-strong;
+      font-weight: 900;
+      font-family: $font-sans-en;
+      letter-spacing: 0.175em;
+      text-transform: uppercase;
+    }
+  }
   &.is-warning {
     padding: 1.25em;
     background-color: $convert-alert-warning-background-color;
