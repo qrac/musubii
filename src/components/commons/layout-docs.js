@@ -33,7 +33,7 @@ export default ({ children }) => {
   return (
     <MDXProvider components={components}>
       <div className="section is-docs">
-        <div className="inner is-padding-right-left-md">
+        <div className="inner is-padding-horizontal-md">
           <div className="grid">
             <div className="column is-mobile-12 is-desktop-3">
               <AppMenu />

@@ -22,4 +22,7 @@
     padding: $table-padding;
     border: $table-border-width solid $table-border-color;
   }
+  .demo-inline-code {
+    word-break: normal;
+  }
 }

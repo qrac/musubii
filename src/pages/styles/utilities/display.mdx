@@ -17,7 +17,79 @@ contents list
 
 ## Detail
 
-test
+共通モディファイアで `display` プロパティを変更するユーティリティ CSS。
+
+## Basic
+
+| Block       | Inline       | Inline Block       | None       | \*Hidden     |
+| ----------- | ------------ | ------------------ | ---------- | ------------ |
+| `.is-block` | `.is-inline` | `.is-inline-block` | `.is-none` | `.is-hidden` |
+
+[[warning | Warning]]
+| \*Hidden は`position: absolute; opacity: 0; z-index: -1` を Display ユーティリティと同じの要領で付与できるようにしたモディファイアです。[Form](/styles/elements/form) の Radio や Checkbox など、デフォルトの HTML タグ機能を残して装飾する場合に用います。メディアクエリ版はありません。
+
+## Media Query
+
+`.is-(mediaquery)-(value)` の形式で、[Media Query](/configs/mixins/mediaquery) に応じた `display` プロパティの変更を行えます。
+
+### Mobile First
+
+| Block               | Inline               | Inline Block               | None                      |
+| ------------------- | -------------------- | -------------------------- | ------------------------- |
+| `.is-mobile-block`  | `.is-mobile-inline`  | `.is-mobile-inline-block`  | `.is-mobile-inline-none`  |
+| `.is-fablet-block`  | `.is-fablet-inline`  | `.is-fablet-inline-block`  | `.is-fablet-inline-none`  |
+| `.is-tablet-block`  | `.is-tablet-inline`  | `.is-tablet-inline-block`  | `.is-tablet-inline-none`  |
+| `.is-desktop-block` | `.is-desktop-inline` | `.is-desktop-inline-block` | `.is-desktop-inline-none` |
+| `.is-wide-block`    | `.is-wide-inline`    | `.is-wide-inline-block`    | `.is-wide-inline-none`    |
+
+### Size Only
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-display-only` を `true` にすると、ウィンドウサイズを限定した `display` プロパティの適応が可能になります。
+
+| Block                    | Inline                    | Inline Block                    | None                    |
+| ------------------------ | ------------------------- | ------------------------------- | ----------------------- |
+| `.is-iphone5-only-block` | `.is-iphone5-only-inline` | `.is-iphone5-only-inline-block` | `.is-iphone5-only-none` |
+| `.is-mobile-only-block`  | `.is-mobile-only-inline`  | `.is-mobile-only-inline-block`  | `.is-mobile-only-none`  |
+| `.is-fablet-only-block`  | `.is-fablet-only-inline`  | `.is-fablet-only-inline-block`  | `.is-fablet-only-none`  |
+| `.is-tablet-only-block`  | `.is-tablet-only-inline`  | `.is-tablet-only-inline-block`  | `.is-tablet-only-none`  |
+| `.is-desktop-only-block` | `.is-desktop-only-inline` | `.is-desktop-only-inline-block` | `.is-desktop-only-none` |
+
+### Landscape
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-display-landscape` を `true` にすると、横向きに限定した `display` プロパティの適応が可能になります。（`all` 無しは Tablet サイズ以下のみ）
+
+| Block                     | Inline                     | Inline Block                     | None                     |
+| ------------------------- | -------------------------- | -------------------------------- | ------------------------ |
+| `.is-landscape-block`     | `.is-landscape-inline`     | `.is-landscape-inline-block`     | `.is-landscape-none`     |
+| `.is-landscape-all-block` | `.is-landscape-all-inline` | `.is-landscape-all-inline-block` | `.is-landscape-all-none` |
+
+### Portrait
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-display-portrait` を `true` にすると、縦向きに限定した `display` プロパティの適応が可能になります。（`all` 無しは Tablet サイズ以下のみ）
+
+| Block                    | Inline                    | Inline Block                    | None                    |
+| ------------------------ | ------------------------- | ------------------------------- | ----------------------- |
+| `.is-portrait-block`     | `.is-portrait-inline`     | `.is-portrait-inline-block`     | `.is-portrait-none`     |
+| `.is-portrait-all-block` | `.is-portrait-all-inline` | `.is-portrait-all-inline-block` | `.is-portrait-all-none` |
+
+### Browser
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-display-browser` を `true` にすると、ブラウザを限定した `display` プロパティの適応が可能になります。
+
+| Block               | Inline               | Inline Block               | None               |
+| ------------------- | -------------------- | -------------------------- | ------------------ |
+| `.is-chrome-block`  | `.is-chrome-inline`  | `.is-chrome-inline-block`  | `.is-chrome-none`  |
+| `.is-firefox-block` | `.is-firefox-inline` | `.is-firefox-inline-block` | `.is-firefox-none` |
+| `.is-edge-block`    | `.is-edge-inline`    | `.is-edge-inline-block`    | `.is-edge-none`    |
+| `.is-ie-block`      | `.is-ie-inline`      | `.is-ie-inline-block`      | `.is-ie-none`      |
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
 
 ## Sources
 
