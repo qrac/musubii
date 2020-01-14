@@ -24,19 +24,19 @@ const columnNums = [
 
 const columnSizes = [
   { id: 0, text: "自動幅", value: "" },
-  { id: 13, text: "伸縮幅", value: "is-mobile-0" },
-  { id: 1, text: "1/12幅", value: "is-mobile-1" },
-  { id: 2, text: "2/12幅", value: "is-mobile-2" },
-  { id: 3, text: "3/12幅", value: "is-mobile-3" },
-  { id: 4, text: "4/12幅", value: "is-mobile-4" },
-  { id: 5, text: "5/12幅", value: "is-mobile-5" },
-  { id: 6, text: "6/12幅", value: "is-mobile-6" },
-  { id: 7, text: "7/12幅", value: "is-mobile-7" },
-  { id: 8, text: "8/12幅", value: "is-mobile-8" },
-  { id: 9, text: "9/12幅", value: "is-mobile-9" },
-  { id: 10, text: "10/12幅", value: "is-mobile-10" },
-  { id: 11, text: "11/12幅", value: "is-mobile-11" },
-  { id: 12, text: "12/12幅", value: "is-mobile-12" }
+  { id: 13, text: "伸縮幅", value: "is-0" },
+  { id: 1, text: "1/12幅", value: "is-1" },
+  { id: 2, text: "2/12幅", value: "is-2" },
+  { id: 3, text: "3/12幅", value: "is-3" },
+  { id: 4, text: "4/12幅", value: "is-4" },
+  { id: 5, text: "5/12幅", value: "is-5" },
+  { id: 6, text: "6/12幅", value: "is-6" },
+  { id: 7, text: "7/12幅", value: "is-7" },
+  { id: 8, text: "8/12幅", value: "is-8" },
+  { id: 9, text: "9/12幅", value: "is-9" },
+  { id: 10, text: "10/12幅", value: "is-10" },
+  { id: 11, text: "11/12幅", value: "is-11" },
+  { id: 12, text: "12/12幅", value: "is-12" }
 ]
 
 const aligns = [

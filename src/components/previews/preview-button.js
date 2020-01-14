@@ -96,7 +96,7 @@ export class PreviewButtonBasic extends React.Component {
     const floating = this.state.floating ? "is-floating" : ""
     const disabled = this.state.disabled
     const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
-    const angleClass = angle ? "is-mobile-0" + " " + angle : ""
+    const angleClass = angle ? "is-0" + " " + angle : ""
     const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
     const disabledAttr = disabled && tag === "button" ? "disabled" : ""
     const externalLink =

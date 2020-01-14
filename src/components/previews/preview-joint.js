@@ -57,7 +57,7 @@ export class PreviewJointButton extends React.Component {
   render() {
     const pattern = this.state.pattern
     const joint = this.state.joint ? "joint" : ""
-    const grow = this.state.grow ? "is-mobile-0" : ""
+    const grow = this.state.grow ? "is-0" : ""
     const round = this.state.round ? "is-round" : ""
     const jointTagBefore = `<div class="${joint}">`
     const jointTagAfter = `</div>`
@@ -204,7 +204,7 @@ export class PreviewJointForm extends React.Component {
   }
   render() {
     const joint = this.state.joint ? "joint" : ""
-    const grow = this.state.grow ? "is-mobile-0" : ""
+    const grow = this.state.grow ? "is-0" : ""
     const round = this.state.round ? "is-round" : ""
     const jointTagBefore = `<div class="${joint}">`
     const jointTagAfter = `</div>`

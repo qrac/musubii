@@ -1,6 +1,31 @@
 export const meta = {
   title: "Flex",
-  path: "/styles/utilities/flex"
+  path: "/styles/utilities/flex",
+  docsPath: "styles/utilities/flex",
+  filePath: "styles/utilities/_flex"
 }
 
+import { PreviewFlexBasic } from "~/components/previews/preview-flex"
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Flex
+
+## Table of Contents
+
+contents list
+
+## Detail
+
+共通モディファイアで Flexbox 子要素の幅を変更するユーティリティ CSS。
+
+## Basic
+
+<PreviewFlexBasic />
+
+## Media Query
+
+### Mobile First
+
+`.is-(mediaquery)-(value)` の形式で、[Media Query](/configs/mixins/mediaquery) に応じた `flex` プロパティの変更を行えます。

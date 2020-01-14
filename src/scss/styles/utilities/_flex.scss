@@ -7,6 +7,7 @@
 //----------------------------------------------------
 
 // Modifiers
+$modifier-flex: "\.is" !default;
 $modifier-flex-mobile: "\.is-mobile" !default;
 $modifier-flex-fablet: "\.is-fablet" !default;
 $modifier-flex-tablet: "\.is-tablet" !default;
@@ -66,17 +67,21 @@ $flex-important: if($option-important-flex == true, !important, null) !default;
 //----------------------------------------------------
 
 @include generate-style($option-generate-style-flex) {
+  #{$modifier-flex}#{$suffix-flex-grow},
   #{$modifier-flex-mobile}#{$suffix-flex-grow} {
     @include musubii-style-flex-grow();
   }
   @for $i from 1 through $flex-split {
+    #{$modifier-flex}-#{$i},
     #{$modifier-flex-mobile}-#{$i} {
       @include musubii-style-flex-split($i);
     }
   }
+  #{$modifier-flex}#{$suffix-flex-full},
   #{$modifier-flex-mobile}#{$suffix-flex-full} {
     @include musubii-style-flex-full();
   }
+  #{$modifier-flex}#{$suffix-flex-auto},
   #{$modifier-flex-mobile}#{$suffix-flex-auto} {
     @include musubii-style-flex-auto();
   }
