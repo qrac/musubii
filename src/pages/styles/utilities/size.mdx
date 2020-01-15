@@ -5,7 +5,7 @@ export const meta = {
   filePath: "styles/utilities/_size"
 }
 
-import { PreviewSizeBasic } from "~/components/previews/preview-size"
+import { PreviewSizeDetail } from "~/components/previews/preview-size"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -22,16 +22,16 @@ contents list
 
 `.is-(mediaquery)-(value)` の形式で利用。`(mediaquery)` を省略すると常時反映、`(value)` を省略した場合は `md` と同等の値になります。サイズ変更における倍率は [Font](/configs/variables/font) の値を引き継いでいます。
 
-## Basic
+<PreviewSizeDetail />
 
-<PreviewSizeBasic />
+[[tips | Tips]]
+| MUSUBii のエレメントは、サイズ変更したい部分を `em`・変更したくない余白やボーダーを `px` で設計しているため、ユーティリティのフォントサイズ変更のみでバランスの良いサイズ変更ができます。
+
+## Basic
 
 | 62.5%     | 75%      | 87.5%    | 100%     | 125%     | 150%     | 200%      |
 | --------- | -------- | -------- | -------- | -------- | -------- | --------- |
 | `.is-xxs` | `.is-xs` | `.is-sm` | `.is-md` | `.is-lg` | `.is-xl` | `.is-xxl` |
-
-[[tips | Tips]]
-| MUSUBii のエレメントは、サイズ変更したい部分を `em`・変更したくない余白やボーダーを `px` で設計しているため、ユーティリティのフォントサイズ変更のみでバランスの良いサイズ変更ができます。
 
 ## Media Query
 

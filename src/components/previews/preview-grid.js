@@ -88,7 +88,7 @@ const beautifyHtmlOptions = {
   indent_size: 2
 }
 
-export class PreviewGridBasic extends React.Component {
+export class PreviewGridDetail extends React.Component {
   constructor(props) {
     super(props)
     this.state = {

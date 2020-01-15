@@ -5,7 +5,7 @@ export const meta = {
   filePath: "styles/layouts/_box"
 }
 
-import { PreviewBoxBasic } from "~/components/previews/preview-box"
+import { PreviewBoxDetail } from "~/components/previews/preview-box"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -20,12 +20,65 @@ contents list
 
 Block や Flexbox を使った汎用レイアウトを作る CSS。余白を作る場合は [Padding](/styles/utilities/padding) を付与。配下にはエレメントやコンポーネント、または入れ子で Box を配置します。
 
+<PreviewBoxDetail />
+
 ## Basic
 
-<PreviewBoxBasic />
+| Selector | Description                          |
+| -------- | ------------------------------------ |
+| `.box`   | ボックスレイアウトに使うセレクター。 |
+
+| Modifier               | Description                                       |
+| ---------------------- | ------------------------------------------------- |
+| `.is-bg, .is-bg-light` | `.box` に付与すると白背景が追加されます。         |
+| `.is-disabled`         | `.box` に付与するとリンクを無効化します。         |
+| `.is-link`             | `.box` に付与するとリンクホバー装飾を追加します。 |
+
+## Flexbox
+
+| Modifier          | Description                                                                             |
+| ----------------- | --------------------------------------------------------------------------------------- |
+| `.is-flex`        | `.box` に付与するとボーダーが追加されます。                                             |
+| `.is-inline-flex` | `.box` に付与するとボーダーが追加されます。                                             |
+| `.is-nowrap`      | `.box.is-flex, box.is-inline-flex` に付与すると子要素が折り返さなくなる。               |
+| `.is-baseline`    | `.box.is-flex, box.is-inline-flex` に付与すると子要素がテキストベースラインで並びます。 |
+| `.is-middle`      | `.box.is-flex, box.is-inline-flex` に付与すると子要素が天地中央寄せで並びます。         |
+| `.is-bottom`      | `.box.is-flex, box.is-inline-flex` に付与すると子要素が下寄せで並びます。               |
+| `.is-center`      | `.box.is-flex, box.is-inline-flex` に付与すると子要素が左右中央寄せで並びます。         |
+| `.is-right`       | `.box.is-flex, box.is-inline-flex` に付与すると子要素が右寄せで並びます。               |
+| `.is-between`     | `.box.is-flex, box.is-inline-flex` に付与すると子要素が等間隔で並びます。               |
+| `.is-around`      | `.box.is-flex, box.is-inline-flex` に付与すると子要素が余白を含めた等間隔で並びます。   |
+| `.is-reverse`     | `.box.is-flex, box.is-inline-flex` に付与すると子要素が折り返した時に右から並びます。   |
+
+## Outline
+
+| Modifier             | Description                                          |
+| -------------------- | ---------------------------------------------------- |
+| `.is-outline`        | `.box` に付与すると `border` が追加されます。        |
+| `.is-outline-top`    | `.box` に付与すると `border-top` が追加されます。    |
+| `.is-outline-right`  | `.box` に付与すると `border-right` が追加されます。  |
+| `.is-outline-bottom` | `.box` に付与すると `border-bottom` が追加されます。 |
+| `.is-outline-left`   | `.box` に付与すると `border-left` が追加されます。   |
+
+## Separate
+
+| Modifier              | Description                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------- |
+| `.is-separate`        | `.box` に付与すると、直下にある最後の要素以外に `border-bottom` が追加されます。      |
+| `.is-separate-parent` | `.box` に付与すると、直下にある最後の要素以外を `.is-separate-child` の対象にします。 |
+| `.is-separate-child`  | `.box.is-separate-parent` 内で使うと、付与した要素に `border-bottom` が追加されます。 |
+
+## Angle
+
+| Modifier          | Description                                                                    |
+| ----------------- | ------------------------------------------------------------------------------ |
+| `.is-angle-right` | `.box` に付与すると右に角マークが追加されます。                                |
+| `.is-angle-left`  | `.box` に付与すると左に角マークが追加されます。                                |
+| `.is-angle-up`    | `.box.is-angle-right, .box.is-angle-left` に付与すると角マークが上を向きます。 |
+| `.is-angle-down`  | `.box.is-angle-right, .box.is-angle-left` に付与すると角マークが下を向きます。 |
 
 [[warning | Warning]]
-| Angle には余白の調整が含まれていませんので、ボックスに `is-padding-right-xxl` などで余白を追加する工夫が必要です。
+| Angle には余白の調整が含まれていませんので、`.box` に `is-padding-right-xxl` などで余白を追加する工夫が必要です。
 
 ## Variables
 

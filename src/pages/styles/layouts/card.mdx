@@ -5,7 +5,7 @@ export const meta = {
   filePath: "styles/layouts/_card"
 }
 
-import { PreviewCardBasic } from "~/components/previews/preview-card"
+import { PreviewCardDetail } from "~/components/previews/preview-card"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -20,9 +20,9 @@ contents list
 
 カード型の汎用レイアウトを作る CSS。余白を作る場合は [Padding](/styles/utilities/padding) を付与。配下には [Box](/styles/layouts/box)・その他エレメントやコンポーネントを配置します。
 
-## Basic
+<PreviewCardDetail />
 
-<PreviewCardBasic />
+## Basic
 
 | Selector | Description                        |
 | -------- | ---------------------------------- |
@@ -31,8 +31,8 @@ contents list
 | Modifier               | Description                                            |
 | ---------------------- | ------------------------------------------------------ |
 | `.is-bg, .is-bg-light` | `.card` に付与すると白背景が追加されます。             |
-| `.is-outline`          | `.card` に付与するとボーダーが追加されます。           |
-| `.is-disabled`         | `.card` に付与するとリンクを非活性化させます。         |
+| `.is-outline`          | `.card` に付与すると `border` が追加されます。         |
+| `.is-disabled`         | `.card` に付与するとリンクを無効化します。             |
 | `.is-link`             | `.card` に付与するとリンクホバー装飾を追加します。     |
 | `.is-zoom`             | `.card` に付与するとホバーでズームするようになります。 |
 | `.is-floating`         | `.card` に付与するとフローティング装飾が追加されます。 |
