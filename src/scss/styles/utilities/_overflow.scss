@@ -8,6 +8,9 @@
 
 // Modifiers
 $modifier-overflow-hidden: "\.is-overflow-hidden" !default;
+$modifier-overflow-scroll-x: "\.is-scroll-x" !default;
+$modifier-overflow-scroll-y: "\.is-scroll-y" !default;
+$modifier-overflow-ellipsis: "\.is-ellipsis" !default;
 
 // Overflow Important
 $overflow-important: if(
@@ -17,15 +20,56 @@ $overflow-important: if(
 ) !default;
 
 //----------------------------------------------------
-// / Style - Overflow
+// / Style - Overflow Hidden
 //----------------------------------------------------
 
-@mixin musubii-style-overflow() {
+@mixin musubii-style-overflow-hidden() {
   overflow: hidden $overflow-important;
 }
 
 @include generate-style($option-generate-style-overflow) {
   #{$modifier-overflow-hidden} {
-    @include musubii-style-overflow();
+    @include musubii-style-overflow-hidden();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Overflow Scroll
+//----------------------------------------------------
+
+@mixin musubii-style-overflow-scroll-x() {
+  overflow: hidden $overflow-important;
+  overflow-x: auto $overflow-important;
+  -webkit-overflow-scrolling: touch $overflow-important;
+}
+
+@mixin musubii-style-overflow-scroll-y() {
+  overflow: hidden $overflow-important;
+  overflow-y: auto $overflow-important;
+  -webkit-overflow-scrolling: touch $overflow-important;
+}
+
+@include generate-style($option-generate-style-overflow) {
+  #{$modifier-overflow-scroll-x} {
+    @include musubii-style-overflow-scroll-x();
+  }
+  #{$modifier-overflow-scroll-y} {
+    @include musubii-style-overflow-scroll-y();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Overflow Ellipsis
+//----------------------------------------------------
+
+@mixin musubii-style-overflow-ellipsis() {
+  white-space: nowrap $overflow-important;
+  overflow: hidden $overflow-important;
+  text-overflow: ellipsis $overflow-important;
+}
+
+@include generate-style($option-generate-style-overflow) {
+  #{$modifier-overflow-ellipsis} {
+    @include musubii-style-overflow-ellipsis();
   }
 }

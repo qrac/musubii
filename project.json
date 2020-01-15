@@ -367,16 +367,6 @@
               "title": "Overflow"
             },
             {
-              "id": "scroll",
-              "path": "/styles/utilities/scroll",
-              "title": "Scroll"
-            },
-            {
-              "id": "ellipsis",
-              "path": "/styles/utilities/ellipsis",
-              "title": "Ellipsis"
-            },
-            {
               "id": "clearfix",
               "path": "/styles/utilities/clearfix",
               "title": "Clearfix"

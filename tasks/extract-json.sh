@@ -71,8 +71,6 @@ sass-export "$staticLightTempPath/styles/utilities/_space.scss" -o "$staticLight
 sass-export "$staticLightTempPath/styles/utilities/_margin.scss" -o "$staticLightPath/styles/utilities/_margin.json" -d "$importPath"
 sass-export "$staticLightTempPath/styles/utilities/_padding.scss" -o "$staticLightPath/styles/utilities/_padding.json" -d "$importPath"
 sass-export "$staticLightTempPath/styles/utilities/_overflow.scss" -o "$staticLightPath/styles/utilities/_overflow.json" -d "$importPath"
-sass-export "$staticLightTempPath/styles/utilities/_scroll.scss" -o "$staticLightPath/styles/utilities/_scroll.json" -d "$importPath"
-sass-export "$staticLightTempPath/styles/utilities/_ellipsis.scss" -o "$staticLightPath/styles/utilities/_ellipsis.json" -d "$importPath"
 sass-export "$staticLightTempPath/styles/utilities/_clearfix.scss" -o "$staticLightPath/styles/utilities/_clearfix.json" -d "$importPath"
 
 # Extract Dynamic Light
@@ -138,6 +136,4 @@ sass-export "$dynamicLightTempPath/styles/elements/_wysiwyg.scss" -o "$dynamicLi
 #sass-export "$dynamicLightTempPath/styles/utilities/_margin.scss" -o "$dynamicLightPath/styles/utilities/_margin.json" -d "$importPath"
 #sass-export "$dynamicLightTempPath/styles/utilities/_padding.scss" -o "$dynamicLightPath/styles/utilities/_padding.json" -d "$importPath"
 #sass-export "$dynamicLightTempPath/styles/utilities/_overflow.scss" -o "$dynamicLightPath/styles/utilities/_overflow.json" -d "$importPath"
-#sass-export "$dynamicLightTempPath/styles/utilities/_scroll.scss" -o "$dynamicLightPath/styles/utilities/_scroll.json" -d "$importPath"
-#sass-export "$dynamicLightTempPath/styles/utilities/_ellipsis.scss" -o "$dynamicLightPath/styles/utilities/_ellipsis.json" -d "$importPath"
 #sass-export "$dynamicLightTempPath/styles/utilities/_clearfix.scss" -o "$dynamicLightPath/styles/utilities/_clearfix.json" -d "$importPath"
