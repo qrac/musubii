@@ -17,7 +17,7 @@ const radiusPatterns = [
   { id: 7, text: "XXS", value: "is-radius-xxs" },
   { id: 6, text: "XS", value: "is-radius-xs" },
   { id: 5, text: "Small", value: "is-radius-sm" },
-  { id: 4, text: "Middle", value: "is-radius-md" },
+  { id: 4, text: "Medium", value: "is-radius-md" },
   { id: 3, text: "Large", value: "is-radius-lg" },
   { id: 2, text: "XL", value: "is-radius-xl" },
   { id: 1, text: "XXL", value: "is-radius-xxl" }

@@ -55,7 +55,7 @@ const gaps = [
   { id: 7, text: "XXS", value: "is-gap-xxs" },
   { id: 6, text: "XS", value: "is-gap-xs" },
   { id: 5, text: "Small", value: "is-gap-sm" },
-  { id: 4, text: "Middle", value: "is-gap-md" },
+  { id: 4, text: "Medium", value: "is-gap-md" },
   { id: 3, text: "Large", value: "is-gap-lg" },
   { id: 2, text: "XL", value: "is-gap-xl" },
   { id: 1, text: "XXL", value: "is-gap-xxl" }
@@ -66,7 +66,7 @@ const verticalGaps = [
   { id: 7, text: "XXS", value: "is-gap-vertical-xxs" },
   { id: 6, text: "XS", value: "is-gap-vertical-xs" },
   { id: 5, text: "Small", value: "is-gap-vertical-sm" },
-  { id: 4, text: "Middle", value: "is-gap-vertical-md" },
+  { id: 4, text: "Medium", value: "is-gap-vertical-md" },
   { id: 3, text: "Large", value: "is-gap-vertical-lg" },
   { id: 2, text: "XL", value: "is-gap-vertical-xl" },
   { id: 1, text: "XXL", value: "is-gap-vertical-xxl" }
@@ -77,7 +77,7 @@ const horizontalGaps = [
   { id: 7, text: "XXS", value: "is-gap-horizontal-xxs" },
   { id: 6, text: "XS", value: "is-gap-horizontal-xs" },
   { id: 5, text: "Small", value: "is-gap-horizontal-sm" },
-  { id: 4, text: "Middle", value: "is-gap-horizontal-md" },
+  { id: 4, text: "Medium", value: "is-gap-horizontal-md" },
   { id: 3, text: "Large", value: "is-gap-horizontal-lg" },
   { id: 2, text: "XL", value: "is-gap-horizontal-xl" },
   { id: 1, text: "XXL", value: "is-gap-horizontal-xxl" }

@@ -1,6 +1,72 @@
 export const meta = {
   title: "Space",
-  path: "/styles/utilities/space"
+  path: "/styles/utilities/space",
+  docsPath: "styles/utilities/space",
+  filePath: "styles/utilities/_space"
 }
 
+import {
+  PreviewSpaceBasic,
+  PreviewSpaceWay
+} from "~/components/previews/preview-space"
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Space
+
+## Table of Contents
+
+contents list
+
+## Detail
+
+共通モディファイアで直下要素に余白を与えるユーティリティ CSS。
+
+余白の大きさは [Meter](/configs/variables/meter) の値を引き継いでいます。
+
+## Basic
+
+`.is-space` または `.is-space-(value)` を使った場合は、直下にある最初の要素意外に `margin-top` が付与されます。文章のラッパーに使うと便利です。
+
+<PreviewSpaceBasic />
+
+| XXS             | XS             | Small          | Medium                    | Large          | XL             | XXL             |
+| --------------- | -------------- | -------------- | ------------------------- | -------------- | -------------- | --------------- |
+| `.is-space-xxs` | `.is-space-xs` | `.is-space-sm` | `.is-space, .is-space-md` | `.is-space-lg` | `.is-space-xl` | `.is-space-xxl` |
+
+## Way
+
+`.is-space-(way)` または `.is-space-(way)-(value)` を使った場合は、直下にある要素に指定した方向の `margin-(way)` が付与されます。Flexbox 子要素などの配置で役立ちます。
+
+<PreviewSpaceWay />
+
+| XXS                    | XS                    | Small                 | Medium                                  | Large                 | XL                    | XXL                    |
+| ---------------------- | --------------------- | --------------------- | --------------------------------------- | --------------------- | --------------------- | ---------------------- |
+| `.is-space-top-xxs`    | `.is-space-top-xs`    | `.is-space-top-sm`    | `.is-space-top, .is-space-top-md`       | `.is-space-top-lg`    | `.is-space-top-xl`    | `.is-space-top-xxl`    |
+| `.is-space-right-xxs`  | `.is-space-right-xs`  | `.is-space-right-sm`  | `.is-space-right, .is-space-right-md`   | `.is-space-right-lg`  | `.is-space-right-xl`  | `.is-space-right-xxl`  |
+| `.is-space-bottom-xxs` | `.is-space-bottom-xs` | `.is-space-bottom-sm` | `.is-space-bottom, .is-space-bottom-md` | `.is-space-bottom-lg` | `.is-space-bottom-xl` | `.is-space-bottom-xxl` |
+| `.is-space-left-xxs`   | `.is-space-left-xs`   | `.is-space-left-sm`   | `.is-space-left, .is-space-left-md`     | `.is-space-left-lg`   | `.is-space-left-xl`   | `.is-space-left-xxl`   |
+
+[[warning | Warning]]
+| 各方向の Space は順番による除外が無いため、通常の Space と異なりすべての要素に `margin-(way)` が付与されます。レイアウトに余分なスペースが発生する場合は、[Margin](/styles/utilities/margin) の Margin Minus（ネガティブマージン）を併用してください。
+
+## Important
+
+[Option](/configs/variables/option#option-important-xxxx) の `$option-important-space` を `true` にすると、全プロパティに `!important` を付与できます。
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={true} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>

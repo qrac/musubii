@@ -46,10 +46,10 @@ export class PreviewFlexBasic extends React.Component {
     const size = this.state.size
     const contents = `<div class="grid is-gap-xs">
         <div class="column ${size}">
-          <button class="button is-plain is-primary is-full" type="button">ボタン</button>
+          <button class="button is-plain is-primary is-full" type="button">ボタンA</button>
         </div>
         <div class="column ${size}">
-          <button class="button is-outline is-danger is-full" type="button">ボタン</button>
+          <button class="button is-outline is-danger is-full" type="button">ボタンB</button>
         </div>
       </div>`
       .replace(/\s+/g, " ")

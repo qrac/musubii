@@ -12,7 +12,7 @@ const sizes = [
   { id: 7, text: "XXS", value: "is-xxs" },
   { id: 6, text: "XS", value: "is-xs" },
   { id: 5, text: "Small", value: "is-sm" },
-  { id: 4, text: "Middle", value: "is-md" },
+  { id: 4, text: "Medium", value: "is-md" },
   { id: 3, text: "Large", value: "is-lg" },
   { id: 2, text: "XL", value: "is-xl" },
   { id: 1, text: "XXL", value: "is-xxl" }
