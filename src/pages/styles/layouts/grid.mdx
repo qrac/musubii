@@ -29,32 +29,37 @@ contents list
 | `.grid`   | グリッドの起点となるラッパー。                 |
 | `.column` | `.grid` 直下に配置する。グリッドを分割する箱。 |
 
-| Modifier         | Description                                                           |
-| ---------------- | --------------------------------------------------------------------- |
-| `.is-baseline`   | `.grid` に付与すると `.column` がテキストベースラインで並ぶ。         |
-| `.is-middle`     | `.grid` に付与すると `.column` が天地中央寄せで並ぶ。                 |
-| `.is-bottom`     | `.grid` に付与すると `.column` が下寄せで並ぶ。                       |
-| `.is-center`     | `.grid` に付与すると `.column` が左右中央寄せで並ぶ。                 |
-| `.is-right`      | `.grid` に付与すると `.column` が右寄せで並ぶ。                       |
-| `.is-between`    | `.grid` に付与すると `.column` が等間隔で並ぶ。                       |
-| `.is-around`     | `.grid` に付与すると `.column` が余白を含めた等間隔で並ぶ。           |
-| `.is-reverse`    | `.grid` に付与すると `.column` が折り返した時に右から並ぶ。           |
-| `.is-stretch`    | `.grid` に付与すると `.column` が Flexbox となり直下の高さが揃う。    |
-| `.is-gap-(size)` | `.grid` に付与すると `.column` 間の溝が発生。バリュエーションは後述。 |
+| Modifier       | Description                                                        |
+| -------------- | ------------------------------------------------------------------ |
+| `.is-baseline` | `.grid` に付与すると `.column` がテキストベースラインで並ぶ。      |
+| `.is-middle`   | `.grid` に付与すると `.column` が天地中央寄せで並ぶ。              |
+| `.is-bottom`   | `.grid` に付与すると `.column` が下寄せで並ぶ。                    |
+| `.is-center`   | `.grid` に付与すると `.column` が左右中央寄せで並ぶ。              |
+| `.is-right`    | `.grid` に付与すると `.column` が右寄せで並ぶ。                    |
+| `.is-between`  | `.grid` に付与すると `.column` が等間隔で並ぶ。                    |
+| `.is-around`   | `.grid` に付与すると `.column` が余白を含めた等間隔で並ぶ。        |
+| `.is-reverse`  | `.grid` に付与すると `.column` が折り返した時に右から並ぶ。        |
+| `.is-stretch`  | `.grid` に付与すると `.column` が Flexbox となり直下の高さが揃う。 |
 
-### Gap All
+## Gap
+
+`.is-gap-(way)-(value)` 形式のモディファイアを `.grid` に付与すると溝を作れます。`(way)` を省略すると上下左右の溝を同時設定。`(value)` を省略した場合は `md` と同等の値になります。
+
+`(value)` は [Meter](/configs/variables/meter) の値を引き継いでいます。
+
+### All
 
 | XXS           | XS           | Small        | Medium               | Large        | XL           | XXL           |
 | ------------- | ------------ | ------------ | -------------------- | ------------ | ------------ | ------------- |
 | `.is-gap-xxs` | `.is-gap-xs` | `.is-gap-sm` | `is-gap, .is-gap-md` | `.is-gap-lg` | `.is-gap-xl` | `.is-gap-xxl` |
 
-### Gap Vertical
+### Vertical
 
 | XXS                    | XS                    | Small                 | Medium                                 | Large                 | XL                    | XXL                    |
 | ---------------------- | --------------------- | --------------------- | -------------------------------------- | --------------------- | --------------------- | ---------------------- |
 | `.is-gap-vertical-xxs` | `.is-gap-vertical-xs` | `.is-gap-vertical-sm` | `is-gap-vertical, .is-gap-vertical-md` | `.is-gap-vertical-lg` | `.is-gap-vertical-xl` | `.is-gap-vertical-xxl` |
 
-### Gap Horizontal
+### Horizontal
 
 | XXS                      | XS                      | Small                   | Medium                                     | Large                   | XL                      | XXL                      |
 | ------------------------ | ----------------------- | ----------------------- | ------------------------------------------ | ----------------------- | ----------------------- | ------------------------ |

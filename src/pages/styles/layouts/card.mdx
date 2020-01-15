@@ -24,6 +24,29 @@ contents list
 
 <PreviewCardBasic />
 
+| Selector | Description                        |
+| -------- | ---------------------------------- |
+| `.card`  | カードレイアウトに使うセレクター。 |
+
+| Modifier               | Description                                            |
+| ---------------------- | ------------------------------------------------------ |
+| `.is-bg, .is-bg-light` | `.card` に付与すると白背景が追加されます。             |
+| `.is-outline`          | `.card` に付与するとボーダーが追加されます。           |
+| `.is-disabled`         | `.card` に付与するとリンクを非活性化させます。         |
+| `.is-link`             | `.card` に付与するとリンクホバー装飾を追加します。     |
+| `.is-zoom`             | `.card` に付与するとホバーでズームするようになります。 |
+| `.is-floating`         | `.card` に付与するとフローティング装飾が追加されます。 |
+
+## Radius
+
+`.is-radius-(value)` 形式のモディファイアを `.card` に付与すると溝を作れます。`(value)` を省略した場合は `md` と同等の値になります。
+
+`(value)` は [Meter](/configs/variables/meter) の値を引き継いでいます。
+
+| XXS              | XS              | Small           | Medium                     | Large           | XL              | XXL              |
+| ---------------- | --------------- | --------------- | -------------------------- | --------------- | --------------- | ---------------- |
+| `.is-radius-xxs` | `.is-radius-xs` | `.is-radius-sm` | `is-radius, .is-radius-md` | `.is-radius-lg` | `.is-radius-xl` | `.is-radius-xxl` |
+
 ## Variables
 
 <PreviewVariablesDouble filePath={meta.filePath} viewCompiled={true} />

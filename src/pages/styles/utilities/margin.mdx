@@ -1,6 +1,28 @@
 export const meta = {
   title: "Margin",
-  path: "/styles/utilities/margin"
+  path: "/styles/utilities/margin",
+  docsPath: "styles/utilities/margin",
+  filePath: "styles/utilities/_margin"
 }
 
+import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
+import PreviewMixins from "~/components/previews/preview-mixins"
+import PreviewSources from "~/components/previews/preview-sources"
+
 # Margin
+
+## Table of Contents
+
+contents list
+
+## Detail
+
+共通モディファイアで余白（Margin）を与えるユーティリティ CSS。
+
+## Basic
+
+`.is-margin`・`.is-margin-(way)`・`.is-margin-(way)-(value)` 形式のモディファイアを使います。
+
+`(value)` を省略すると `md` と同等値、`(way)` を省略した場合は全方向への Margin 付与となります。
+
+`(value)` は [Meter](/configs/variables/meter) の値を引き継いでいます。
