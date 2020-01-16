@@ -18,3 +18,39 @@ contents list
 ## Detail
 
 共通モディファイアで `overflow` 関連のプロパティを操作するユーティリティ CSS。
+
+`.is-overflow-(value)` 形式で使います。
+
+## Basic
+
+| Modifier                | Description                                    |
+| ----------------------- | ---------------------------------------------- |
+| `.is-overflow-hidden`   | 収まらない部分があった場合、非表示にする。     |
+| `.is-overflow-scroll-x` | 収まらない部分があった場合に横スクロールする。 |
+| `.is-overflow-scroll-y` | 収まらない部分があった場合に縦スクロールする。 |
+
+## Ellipsis
+
+| Modifier                | Description                                          |
+| ----------------------- | ---------------------------------------------------- |
+| `.is-overflow-ellipsis` | 収まらない文字があった場合に三点リーダーで省略する。 |
+
+## Important
+
+[Option](/configs/variables/option#option-important-xxxx) の `$option-important-overflow` を `true` にすると、全プロパティに `!important` を付与できます。
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
