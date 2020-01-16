@@ -22,6 +22,7 @@
     position: sticky;
     top: 16px;
     max-height: 100vh;
+    width: 240px;
     padding: 0 16px 32px 0;
     overflow-y: auto;
   }
@@ -157,12 +158,24 @@
   }
 }
 
-.menu-link {
+.menu-item {
   display: block;
-  padding: 8px 0;
+  @include desktop() {
+    padding: 8px 0;
+  }
+}
+
+.menu-link {
   //font-size: 87.5%;
   font-family: $font-sans-en;
   transition: $global-transition;
+  @include mobile-tablet() {
+    display: block;
+    padding: 8px 0;
+  }
+  @include desktop() {
+    display: inline-block;
+  }
   &:hover,
   &.is-active {
     color: $convert-primary-strong;
