@@ -2939,87 +2939,102 @@ svg.icon {
   font-size: 62.5%;
 }
 
+.is-0,
 .is-mobile-0 {
   flex: 1 0;
 }
 
+.is-1,
 .is-mobile-1 {
   flex: 0 0 8.33333%;
   width: 8.33333%;
   max-width: 8.33333%;
 }
 
+.is-2,
 .is-mobile-2 {
   flex: 0 0 16.66667%;
   width: 16.66667%;
   max-width: 16.66667%;
 }
 
+.is-3,
 .is-mobile-3 {
   flex: 0 0 25%;
   width: 25%;
   max-width: 25%;
 }
 
+.is-4,
 .is-mobile-4 {
   flex: 0 0 33.33333%;
   width: 33.33333%;
   max-width: 33.33333%;
 }
 
+.is-5,
 .is-mobile-5 {
   flex: 0 0 41.66667%;
   width: 41.66667%;
   max-width: 41.66667%;
 }
 
+.is-6,
 .is-mobile-6 {
   flex: 0 0 50%;
   width: 50%;
   max-width: 50%;
 }
 
+.is-7,
 .is-mobile-7 {
   flex: 0 0 58.33333%;
   width: 58.33333%;
   max-width: 58.33333%;
 }
 
+.is-8,
 .is-mobile-8 {
   flex: 0 0 66.66667%;
   width: 66.66667%;
   max-width: 66.66667%;
 }
 
+.is-9,
 .is-mobile-9 {
   flex: 0 0 75%;
   width: 75%;
   max-width: 75%;
 }
 
+.is-10,
 .is-mobile-10 {
   flex: 0 0 83.33333%;
   width: 83.33333%;
   max-width: 83.33333%;
 }
 
+.is-11,
 .is-mobile-11 {
   flex: 0 0 91.66667%;
   width: 91.66667%;
   max-width: 91.66667%;
 }
 
+.is-12,
 .is-mobile-12 {
   flex: 0 0 100%;
   width: 100%;
   max-width: 100%;
 }
 
+.is-full,
 .is-mobile-full {
   flex: 0 1 100%;
   width: 100%;
 }
 
+.is-auto,
 .is-mobile-auto {
   flex: 0 1 auto;
   width: auto;
@@ -3832,6 +3847,51 @@ svg.icon {
 .is-padding-horizontal-xxs {
   padding-right: 4px;
   padding-left: 4px;
+}
+
+.is-padding-safe {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
+}
+
+.is-padding-top-safe {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+.is-padding-right-safe {
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+}
+
+.is-padding-bottom-safe {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.is-padding-left-safe {
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
+}
+
+.is-padding-vertical-safe {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.is-padding-horizontal-safe {
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
 }
 
 .is-overflow-hidden {
