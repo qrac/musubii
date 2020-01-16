@@ -27,7 +27,6 @@ $selector-joint-select: "\.select" !default;
     #{$selector-joint-input},
     #{$selector-joint-select} {
       &:not(#{$selector-joint-none}) {
-        overflow: hidden;
         &:not(:last-child),
         &:not(:last-child) > select {
           border-top-right-radius: 0;
@@ -47,7 +46,8 @@ $selector-joint-select: "\.select" !default;
             }
           }
         }
-        &:focus {
+        &:focus,
+        > select:focus {
           z-index: 2;
         }
       }
