@@ -30,7 +30,7 @@ $input-border-width: $global-border-width !default;
 $input-border-color: $convert-border !default;
 $input-border-radius: $radius-xs !default;
 $input-line-height: $line-height-md !default;
-$input-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
+$input-shadow: $global-inset-shadow-size $convert-shadow-alpha-thin !default;
 $input-transition: $global-transition !default;
 
 // Input Placeholder
@@ -39,19 +39,19 @@ $input-placeholder-color: $convert-input-placeholder-color !default;
 // Input Disabled
 $input-disabled-background-color: $convert-disabled-background-color !default;
 $input-disabled-border-color: $convert-disabled-border-color !default;
-$input-disabled-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
+$input-disabled-shadow: $global-inset-shadow-size $convert-shadow-alpha-thin !default;
 $input-disabled-text-color: $convert-disabled-text-color !default;
 
 // Input Readonly
 $input-readonly-background-color: $convert-background-2 !default;
 $input-readonly-border-color: $convert-border !default;
-$input-readonly-shadow: inset 0 1px 1px $convert-shadow-alpha-thin !default;
+$input-readonly-shadow: $global-inset-shadow-size $convert-shadow-alpha-thin !default;
 $input-readonly-text-color: $convert-body-text-color !default;
 
 // Input Focus
 $input-focus-border-color: $convert-focus-darken !default;
-$input-focus-shadow: inset 0 1px 1px $convert-shadow-alpha-thin,
-  0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
+$input-focus-shadow: $global-inset-shadow-size $convert-shadow-alpha-thin,
+  $global-focus-shadow-size $convert-focus-alpha-thin !default;
 
 // Input Round
 $input-round-border-radius: $radius-full !default;
@@ -62,7 +62,7 @@ $pattern-input-custom: round !default;
 // Input Plain
 $input-plain-background-color: $convert-background-2 !default;
 $input-plain-border-color: transparent !default;
-$input-plain-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
+$input-plain-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !default;
 
 // Input Underline
 $input-underline-padding-left: 0 !default;
@@ -92,7 +92,7 @@ $radio-size: 1em !default;
 $radio-border-width: $global-border-width * 2 !default;
 $radio-background-color: $convert-background !default;
 $radio-transition: $global-transition !default;
-$radio-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
+$radio-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !default;
 $radio-before-checked-background-color: $convert-primary-strong !default;
 $radio-checked-border-color: $convert-primary-strong !default;
 
@@ -103,7 +103,7 @@ $checkbox-border-radius: $radius-xs !default;
 $checkbox-background-color: $convert-background !default;
 $checkbox-transition: $global-transition !default;
 $checkbox-focus-border-color: $convert-focus-darken !default;
-$checkbox-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
+$checkbox-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !default;
 $checkbox-before-border-color: $convert-checkbox-before-border-color !default;
 $checkbox-checked-background-color: $convert-primary !default;
 $checkbox-checked-border-color: $convert-primary !default;
@@ -113,7 +113,7 @@ $select-angle-size: 0.5em !default;
 $select-angle-border-width: $global-border-width * 2 !default;
 $select-angle-border-color: $convert-border-1 !default;
 $select-transition: $global-transition !default;
-$select-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha-thin !default;
+$select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !default;
 
 //----------------------------------------------------
 // / Style - Form Fieldset

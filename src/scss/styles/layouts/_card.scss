@@ -30,7 +30,7 @@ $modifier-card-radius-xxs: "\.is-radius-xxs" !default;
 $card-background-color: $convert-background-1 !default;
 $card-border-width: $global-border-width !default;
 $card-border-color: $convert-border !default;
-$card-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha !default;
+$card-focus-shadow: $global-focus-shadow-size $convert-focus-alpha !default;
 
 // Card Link
 $card-link-hover-background-color: $convert-background-3 !default;
@@ -41,10 +41,11 @@ $card-zoom-transform: scale(1.025) !default;
 $card-zoom-transition: $global-transition !default;
 
 // Card Floating
-$card-floating-shadow: 0 1px 3px 0 $convert-shadow-alpha !default;
-$card-floating-hover-shadow: 0 4px 12px 0 $convert-shadow-alpha !default;
-$card-floating-focus-shadow: 0 0 0 $meter-xxs $convert-focus-alpha,
-  0 4px 12px 0 $convert-shadow-alpha !default;
+$card-floating-shadow: $global-floating-shadow-size $convert-shadow-alpha !default;
+$card-floating-hover-shadow: $global-floating-hover-shadow-size
+  $convert-shadow-alpha !default;
+$card-floating-focus-shadow: $global-focus-shadow-size $convert-focus-alpha,
+  $global-floating-hover-shadow-size $convert-shadow-alpha !default;
 
 // Card Radius
 $card-radius-xxl: $radius-xxl !default;
