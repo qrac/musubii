@@ -17,4 +17,30 @@ contents list
 
 ## Detail
 
-共通モディファイアで `float` を解除するユーティリティ CSS。
+共通モディファイアで `float` プロパティを解除するユーティリティ CSS。
+
+## Basic
+
+| Modifier       | Description                                                 |
+| -------------- | ----------------------------------------------------------- |
+| `.is-clearfix` | 擬似要素 `:after` を挿入して `float` プロパティを解除する。 |
+
+## Important
+
+[Option](/configs/variables/option#option-important-xxxx) の `$option-important-clearfix` を `true` にすると、全プロパティに `!important` を付与できます。
+
+## Variables
+
+<PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
+
+## Mixins
+
+<PreviewMixins filePath={meta.filePath} />
+
+## Sources
+
+<PreviewSources
+  title={meta.title}
+  docsPath={meta.docsPath}
+  scssPath={meta.filePath}
+/>
