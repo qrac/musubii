@@ -57,6 +57,12 @@ $convert-border-1: if($option-css-variables == true, var(--border-1), null) !def
 $convert-shadow-alpha: if($option-css-variables == true, var(--shadow-alpha), null) !default;
 $convert-shadow-alpha-thin: if($option-css-variables == true, var(--shadow-alpha-thin), null) !default;
 
+$convert-shadow-primary-alpha: if($option-css-variables == true, var(--shadow-primary-alpha), null) !default;
+$convert-shadow-info-alpha: if($option-css-variables == true, var(--shadow-info-alpha), null) !default;
+$convert-shadow-success-alpha: if($option-css-variables == true, var(--shadow-success-alpha), null) !default;
+$convert-shadow-warning-alpha: if($option-css-variables == true, var(--shadow-warning-alpha), null) !default;
+$convert-shadow-danger-alpha: if($option-css-variables == true, var(--shadow-danger-alpha), null) !default;
+
 $convert-focus-darken: if($option-css-variables == true, var(--focus-darken), null) !default;
 $convert-focus-alpha: if($option-css-variables == true, var(--focus-alpha), null) !default;
 $convert-focus-alpha-thin: if($option-css-variables == true, var(--focus-alpha-thin), null) !default;
@@ -150,6 +156,12 @@ $convert-border-1: if($option-theme-default == $theme-dark-id, $theme-dark-borde
 $convert-shadow-alpha: if($option-theme-default == $theme-dark-id, $theme-dark-shadow-alpha, null) !default;
 $convert-shadow-alpha-thin: if($option-theme-default == $theme-dark-id, $theme-dark-shadow-alpha-thin, null) !default;
 
+$convert-shadow-primary-alpha: if($option-theme-default == $theme-dark-id, $theme-dark-shadow-primary-alpha, null) !default;
+$convert-shadow-info-alpha: if($option-theme-default == $theme-dark-id, $theme-dark-shadow-info-alpha, null) !default;
+$convert-shadow-success-alpha: if($option-theme-default == $theme-dark-id, $theme-dark-shadow-success-alpha, null) !default;
+$convert-shadow-warning-alpha: if($option-theme-default == $theme-dark-id, $theme-dark-shadow-warning-alpha, null) !default;
+$convert-shadow-danger-alpha: if($option-theme-default == $theme-dark-id, $theme-dark-shadow-danger-alpha, null) !default;
+
 $convert-focus-darken: if($option-theme-default == $theme-dark-id, $theme-dark-focus-darken, null) !default;
 $convert-focus-alpha: if($option-theme-default == $theme-dark-id, $theme-dark-focus-alpha, null) !default;
 $convert-focus-alpha-thin: if($option-theme-default == $theme-dark-id, $theme-dark-focus-alpha-thin, null) !default;
@@ -242,6 +254,12 @@ $convert-border-1: $theme-light-border-1 !default;
 
 $convert-shadow-alpha: $theme-light-shadow-alpha !default;
 $convert-shadow-alpha-thin: $theme-light-shadow-alpha-thin !default;
+
+$convert-shadow-primary-alpha: $theme-light-shadow-primary-alpha !default;
+$convert-shadow-info-alpha: $theme-light-shadow-info-alpha !default;
+$convert-shadow-success-alpha: $theme-light-shadow-success-alpha !default;
+$convert-shadow-warning-alpha: $theme-light-shadow-warning-alpha !default;
+$convert-shadow-danger-alpha: $theme-light-shadow-danger-alpha !default;
 
 $convert-focus-darken: $theme-light-focus-darken !default;
 $convert-focus-alpha: $theme-light-focus-alpha !default;

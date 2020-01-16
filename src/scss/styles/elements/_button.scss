@@ -79,6 +79,42 @@ $button-plain-warning-hover-background-color: $convert-warning-darken !default;
 $button-plain-danger-background-color: $convert-danger !default;
 $button-plain-danger-hover-background-color: $convert-danger-darken !default;
 
+$button-plain-primary-floating-shadow: $global-floating-shadow-size
+  $convert-shadow-primary-alpha !default;
+$button-plain-primary-floating-hover-shadow: $global-floating-hover-shadow-size
+  $convert-shadow-primary-alpha !default;
+$button-plain-primary-floating-focus-shadow: $global-focus-shadow-size
+    $convert-focus-alpha,
+  $global-floating-hover-shadow-size $convert-shadow-primary-alpha !default;
+$button-plain-info-floating-shadow: $global-floating-shadow-size
+  $convert-shadow-info-alpha !default;
+$button-plain-info-floating-hover-shadow: $global-floating-hover-shadow-size
+  $convert-shadow-info-alpha !default;
+$button-plain-info-floating-focus-shadow: $global-focus-shadow-size
+    $convert-focus-alpha,
+  $global-floating-hover-shadow-size $convert-shadow-info-alpha !default;
+$button-plain-success-floating-shadow: $global-floating-shadow-size
+  $convert-shadow-success-alpha !default;
+$button-plain-success-floating-hover-shadow: $global-floating-hover-shadow-size
+  $convert-shadow-success-alpha !default;
+$button-plain-success-floating-focus-shadow: $global-focus-shadow-size
+    $convert-focus-alpha,
+  $global-floating-hover-shadow-size $convert-shadow-success-alpha !default;
+$button-plain-warning-floating-shadow: $global-floating-shadow-size
+  $convert-shadow-warning-alpha !default;
+$button-plain-warning-floating-hover-shadow: $global-floating-hover-shadow-size
+  $convert-shadow-warning-alpha !default;
+$button-plain-warning-floating-focus-shadow: $global-focus-shadow-size
+    $convert-focus-alpha,
+  $global-floating-hover-shadow-size $convert-shadow-warning-alpha !default;
+$button-plain-danger-floating-shadow: $global-floating-shadow-size
+  $convert-shadow-danger-alpha !default;
+$button-plain-danger-floating-hover-shadow: $global-floating-hover-shadow-size
+  $convert-shadow-danger-alpha !default;
+$button-plain-danger-floating-focus-shadow: $global-focus-shadow-size
+    $convert-focus-alpha,
+  $global-floating-hover-shadow-size $convert-shadow-danger-alpha !default;
+
 // Button Outline
 $button-outline-background-color: $convert-background !default;
 $button-outline-border-color: $convert-border !default;
@@ -282,24 +318,99 @@ $button-angle-border-color: $convert-border-1 !default;
   color: $button-disabled-text-color;
 }
 
+@mixin musubii-style-button-plain-primary-floating() {
+  box-shadow: $button-plain-primary-floating-shadow;
+  &:hover {
+    box-shadow: $button-plain-primary-floating-hover-shadow;
+  }
+  &:focus {
+    box-shadow: $button-plain-primary-floating-focus-shadow;
+  }
+}
+
+@mixin musubii-style-button-plain-info-floating() {
+  box-shadow: $button-plain-info-floating-shadow;
+  &:hover {
+    box-shadow: $button-plain-info-floating-hover-shadow;
+  }
+  &:focus {
+    box-shadow: $button-plain-info-floating-focus-shadow;
+  }
+}
+
+@mixin musubii-style-button-plain-success-floating() {
+  box-shadow: $button-plain-success-floating-shadow;
+  &:hover {
+    box-shadow: $button-plain-success-floating-hover-shadow;
+  }
+  &:focus {
+    box-shadow: $button-plain-success-floating-focus-shadow;
+  }
+}
+
+@mixin musubii-style-button-plain-warning-floating() {
+  box-shadow: $button-plain-warning-floating-shadow;
+  &:hover {
+    box-shadow: $button-plain-warning-floating-hover-shadow;
+  }
+  &:focus {
+    box-shadow: $button-plain-warning-floating-focus-shadow;
+  }
+}
+
+@mixin musubii-style-button-plain-danger-floating() {
+  box-shadow: $button-plain-danger-floating-shadow;
+  &:hover {
+    box-shadow: $button-plain-danger-floating-hover-shadow;
+  }
+  &:focus {
+    box-shadow: $button-plain-danger-floating-focus-shadow;
+  }
+}
+
 @include generate-style($option-generate-style-button) {
   #{$selector-button} {
     &#{$modifier-button-plain} {
       @include musubii-style-button-plain();
       &#{$modifier-button-primary} {
         @include musubii-style-button-plain-primary();
+        @if $option-add-style-button-role-shadow == true {
+          &#{$modifier-button-floating} {
+            @include musubii-style-button-plain-primary-floating();
+          }
+        }
       }
       &#{$modifier-button-info} {
         @include musubii-style-button-plain-info();
+        @if $option-add-style-button-role-shadow == true {
+          &#{$modifier-button-floating} {
+            @include musubii-style-button-plain-info-floating();
+          }
+        }
       }
       &#{$modifier-button-success} {
         @include musubii-style-button-plain-success();
+        @if $option-add-style-button-role-shadow == true {
+          &#{$modifier-button-floating} {
+            @include musubii-style-button-plain-success-floating();
+          }
+        }
       }
       &#{$modifier-button-warning} {
         @include musubii-style-button-plain-warning();
+        @if $option-add-style-button-role-shadow == true {
+          &#{$modifier-button-floating} {
+            @include musubii-style-button-plain-warning-floating();
+          }
+        }
       }
       &#{$modifier-button-danger} {
         @include musubii-style-button-plain-danger();
+        @if $option-add-style-button-role-shadow == true {
+          &#{$modifier-button-floating} {
+            @include musubii-style-button-plain-danger-floating();
+          }
+        }
       }
       &[disabled],
       &[disabled]:hover,

@@ -56,6 +56,12 @@ $theme-light-shadow: $black !default;
 $theme-light-shadow-alpha: rgba($theme-light-shadow, 0.24) !default;
 $theme-light-shadow-alpha-thin: rgba($theme-light-shadow, 0.075) !default;
 
+$theme-light-shadow-primary-alpha: rgba($theme-light-primary, 0.5) !default;
+$theme-light-shadow-info-alpha: rgba($theme-light-info, 0.5) !default;
+$theme-light-shadow-success-alpha: rgba($theme-light-success, 0.5) !default;
+$theme-light-shadow-warning-alpha: rgba($theme-light-warning, 0.5) !default;
+$theme-light-shadow-danger-alpha: rgba($theme-light-danger, 0.5) !default;
+
 $theme-light-focus: $theme-focus !default;
 $theme-light-focus-darken: darken($theme-focus, 10%) !default;
 $theme-light-focus-alpha: rgba($theme-focus, 0.5) !default;
