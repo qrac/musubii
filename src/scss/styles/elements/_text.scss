@@ -97,6 +97,59 @@ $modifier-text-break: "\.is-break" !default;
 $modifier-text-link: "\.is-link" !default;
 $modifier-text-link-reverse: "\.is-link-reverse" !default;
 
+// Text Dark
+$text-dark: $convert-dark !default;
+$text-dark-1: $convert-dark-1 !default;
+$text-dark-2: $convert-dark-2 !default;
+$text-dark-3: $convert-dark-3 !default;
+$text-dark-4: $convert-dark-4 !default;
+$text-dark-5: $convert-dark-5 !default;
+$text-dark-6: $convert-dark-6 !default;
+$text-dark-7: $convert-dark-7 !default;
+$text-dark-8: $convert-dark-8 !default;
+$text-dark-9: $convert-dark-9 !default;
+
+// Text Light
+$text-light: $convert-light !default;
+$text-light-1: $convert-light-1 !default;
+$text-light-2: $convert-light-2 !default;
+$text-light-3: $convert-light-3 !default;
+$text-light-4: $convert-light-4 !default;
+$text-light-5: $convert-light-5 !default;
+$text-light-6: $convert-light-6 !default;
+$text-light-7: $convert-light-7 !default;
+$text-light-8: $convert-light-8 !default;
+$text-light-9: $convert-light-9 !default;
+
+// Text Role
+$text-primary: $convert-primary !default;
+$text-info: $convert-info !default;
+$text-success: $convert-success !default;
+$text-warning: $convert-warning !default;
+$text-danger: $convert-danger !default;
+
+// Text Weight
+$text-weight-normal: $font-weight-normal !default;
+$text-weight-strong: $font-weight-strong !default;
+$text-weight-100: $font-weight-100 !default;
+$text-weight-200: $font-weight-200 !default;
+$text-weight-300: $font-weight-300 !default;
+$text-weight-400: $font-weight-400 !default;
+$text-weight-500: $font-weight-500 !default;
+$text-weight-600: $font-weight-600 !default;
+$text-weight-700: $font-weight-700 !default;
+$text-weight-800: $font-weight-800 !default;
+$text-weight-900: $font-weight-900 !default;
+
+// Text Weight
+$text-line-height-xxl: $line-height-xxl !default;
+$text-line-height-xl: $line-height-xl !default;
+$text-line-height-lg: $line-height-lg !default;
+$text-line-height-md: $line-height-md !default;
+$text-line-height-sm: $line-height-sm !default;
+$text-line-height-xs: $line-height-xs !default;
+$text-line-height-xxs: $line-height-xxs !default;
+
 // Text Link
 $text-link-border-bottom-width: $global-border-width !default;
 $text-link-border-bottom-style: solid !default;
@@ -129,43 +182,43 @@ $pre-code-padding: 1.25em 1.5em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-text-dark() {
-  color: $convert-dark;
+  color: $text-dark;
 }
 
 @mixin musubii-style-text-dark-1() {
-  color: $convert-dark-1;
+  color: $text-dark-1;
 }
 
 @mixin musubii-style-text-dark-2() {
-  color: $convert-dark-2;
+  color: $text-dark-2;
 }
 
 @mixin musubii-style-text-dark-3() {
-  color: $convert-dark-3;
+  color: $text-dark-3;
 }
 
 @mixin musubii-style-text-dark-4() {
-  color: $convert-dark-4;
+  color: $text-dark-4;
 }
 
 @mixin musubii-style-text-dark-5() {
-  color: $convert-dark-5;
+  color: $text-dark-5;
 }
 
 @mixin musubii-style-text-dark-6() {
-  color: $convert-dark-6;
+  color: $text-dark-6;
 }
 
 @mixin musubii-style-text-dark-7() {
-  color: $convert-dark-7;
+  color: $text-dark-7;
 }
 
 @mixin musubii-style-text-dark-8() {
-  color: $convert-dark-8;
+  color: $text-dark-8;
 }
 
 @mixin musubii-style-text-dark-9() {
-  color: $convert-dark-9;
+  color: $text-dark-9;
 }
 
 @include generate-style($option-generate-style-text) {
@@ -208,43 +261,43 @@ $pre-code-padding: 1.25em 1.5em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-text-light() {
-  color: $convert-light;
+  color: $text-light;
 }
 
 @mixin musubii-style-text-light-1() {
-  color: $convert-light-1;
+  color: $text-light-1;
 }
 
 @mixin musubii-style-text-light-2() {
-  color: $convert-light-2;
+  color: $text-light-2;
 }
 
 @mixin musubii-style-text-light-3() {
-  color: $convert-light-3;
+  color: $text-light-3;
 }
 
 @mixin musubii-style-text-light-4() {
-  color: $convert-light-4;
+  color: $text-light-4;
 }
 
 @mixin musubii-style-text-light-5() {
-  color: $convert-light-5;
+  color: $text-light-5;
 }
 
 @mixin musubii-style-text-light-6() {
-  color: $convert-light-6;
+  color: $text-light-6;
 }
 
 @mixin musubii-style-text-light-7() {
-  color: $convert-light-7;
+  color: $text-light-7;
 }
 
 @mixin musubii-style-text-light-8() {
-  color: $convert-light-8;
+  color: $text-light-8;
 }
 
 @mixin musubii-style-text-light-9() {
-  color: $convert-light-9;
+  color: $text-light-9;
 }
 
 @include generate-style($option-generate-style-text) {
@@ -287,23 +340,23 @@ $pre-code-padding: 1.25em 1.5em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-text-primary() {
-  color: $convert-primary-strong;
+  color: $text-primary;
 }
 
 @mixin musubii-style-text-info() {
-  color: $convert-info-strong;
+  color: $text-info;
 }
 
 @mixin musubii-style-text-success() {
-  color: $convert-success-strong;
+  color: $text-success;
 }
 
 @mixin musubii-style-text-warning() {
-  color: $convert-warning-strong;
+  color: $text-warning;
 }
 
 @mixin musubii-style-text-danger() {
-  color: $convert-danger-strong;
+  color: $text-danger;
 }
 
 @include generate-style($option-generate-style-text) {
@@ -331,47 +384,47 @@ $pre-code-padding: 1.25em 1.5em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-text-weight-normal() {
-  font-weight: $font-weight-normal;
+  font-weight: $text-weight-normal;
 }
 
 @mixin musubii-style-text-weight-strong() {
-  font-strong: $font-weight-normal;
+  font-weight: $text-weight-strong;
 }
 
 @mixin musubii-style-text-weight-100() {
-  font-weight: $font-weight-100;
+  font-weight: $text-weight-100;
 }
 
 @mixin musubii-style-text-weight-200() {
-  font-weight: $font-weight-200;
+  font-weight: $text-weight-200;
 }
 
 @mixin musubii-style-text-weight-300() {
-  font-weight: $font-weight-300;
+  font-weight: $text-weight-300;
 }
 
 @mixin musubii-style-text-weight-400() {
-  font-weight: $font-weight-400;
+  font-weight: $text-weight-400;
 }
 
 @mixin musubii-style-text-weight-500() {
-  font-weight: $font-weight-500;
+  font-weight: $text-weight-500;
 }
 
 @mixin musubii-style-text-weight-600() {
-  font-weight: $font-weight-600;
+  font-weight: $text-weight-600;
 }
 
 @mixin musubii-style-text-weight-700() {
-  font-weight: $font-weight-700;
+  font-weight: $text-weight-700;
 }
 
 @mixin musubii-style-text-weight-800() {
-  font-weight: $font-weight-800;
+  font-weight: $text-weight-800;
 }
 
 @mixin musubii-style-text-weight-900() {
-  font-weight: $font-weight-900;
+  font-weight: $text-weight-900;
 }
 
 @include generate-style($option-generate-style-text) {
@@ -417,31 +470,31 @@ $pre-code-padding: 1.25em 1.5em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-text-line-height-xxl() {
-  line-height: $line-height-xxl;
+  line-height: $text-line-height-xxl;
 }
 
 @mixin musubii-style-text-line-height-xl() {
-  line-height: $line-height-xl;
+  line-height: $text-line-height-xl;
 }
 
 @mixin musubii-style-text-line-height-lg() {
-  line-height: $line-height-lg;
+  line-height: $text-line-height-lg;
 }
 
 @mixin musubii-style-text-line-height-md() {
-  line-height: $line-height-md;
+  line-height: $text-line-height-md;
 }
 
 @mixin musubii-style-text-line-height-sm() {
-  line-height: $line-height-sm;
+  line-height: $text-line-height-sm;
 }
 
 @mixin musubii-style-text-line-height-xs() {
-  line-height: $line-height-xs;
+  line-height: $text-line-height-xs;
 }
 
 @mixin musubii-style-text-line-height-xxs() {
-  line-height: $line-height-xxs;
+  line-height: $text-line-height-xxs;
 }
 
 @include generate-style($option-generate-style-text) {
@@ -518,57 +571,111 @@ $pre-code-padding: 1.25em 1.5em !default;
 // / Style - Text Align
 //----------------------------------------------------
 
-@mixin --align-way-mobile-wide($value) {
-  &.is-#{$value},
-  &.is-mobile-#{$value} {
-    text-align: $value;
-  }
-  @include fablet() {
-    &.is-fablet-#{$value} {
-      text-align: $value;
-    }
-  }
-  @include tablet() {
-    &.is-tablet-#{$value} {
-      text-align: $value;
-    }
-  }
-  @include desktop() {
-    &.is-desktop-#{$value} {
-      text-align: $value;
-    }
-  }
-  @include wide() {
-    &.is-wide-#{$value} {
-      text-align: $value;
-    }
-  }
+@mixin musubii-style-text-right() {
+  text-align: right;
 }
 
-@mixin musubii-style-text-align() {
-  @include --align-way-mobile-wide(left);
-  @include --align-way-mobile-wide(center);
-  @include --align-way-mobile-wide(right);
-  &.is-justify {
-    text-align: justify;
-  }
-  &.is-baseline {
-    vertical-align: baseline;
-  }
-  &.is-top {
-    vertical-align: top;
-  }
-  &.is-middle {
-    vertical-align: middle;
-  }
-  &.is-bottom {
-    vertical-align: bottom;
-  }
+@mixin musubii-style-text-center() {
+  text-align: center;
+}
+
+@mixin musubii-style-text-left() {
+  text-align: left;
+}
+
+@mixin musubii-style-text-justify() {
+  text-align: justify;
+}
+
+@mixin musubii-style-text-baseline() {
+  vertical-align: baseline;
+}
+
+@mixin musubii-style-text-top() {
+  vertical-align: top;
+}
+
+@mixin musubii-style-text-middle() {
+  vertical-align: middle;
+}
+
+@mixin musubii-style-text-bottom() {
+  vertical-align: bottom;
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-align();
+    &#{$modifier-text-right},
+    &#{$modifier-text-mobile-right} {
+      @include musubii-style-text-right();
+    }
+    &#{$modifier-text-center},
+    &#{$modifier-text-mobile-center} {
+      @include musubii-style-text-center();
+    }
+    &#{$modifier-text-left},
+    &#{$modifier-text-mobile-left} {
+      @include musubii-style-text-left();
+    }
+    @include fablet() {
+      &#{$modifier-text-fablet-right} {
+        @include musubii-style-text-right();
+      }
+      &#{$modifier-text-fablet-center} {
+        @include musubii-style-text-center();
+      }
+      &#{$modifier-text-fablet-left} {
+        @include musubii-style-text-left();
+      }
+    }
+    @include tablet() {
+      &#{$modifier-text-tablet-right} {
+        @include musubii-style-text-right();
+      }
+      &#{$modifier-text-tablet-center} {
+        @include musubii-style-text-center();
+      }
+      &#{$modifier-text-tablet-left} {
+        @include musubii-style-text-left();
+      }
+    }
+    @include desktop() {
+      &#{$modifier-text-desktop-right} {
+        @include musubii-style-text-right();
+      }
+      &#{$modifier-text-desktop-center} {
+        @include musubii-style-text-center();
+      }
+      &#{$modifier-text-desktop-left} {
+        @include musubii-style-text-left();
+      }
+    }
+    @include wide() {
+      &#{$modifier-text-wide-right} {
+        @include musubii-style-text-right();
+      }
+      &#{$modifier-text-wide-center} {
+        @include musubii-style-text-center();
+      }
+      &#{$modifier-text-wide-left} {
+        @include musubii-style-text-left();
+      }
+    }
+    &#{$modifier-text-justify} {
+      @include musubii-style-text-justify();
+    }
+    &#{$modifier-text-baseline} {
+      @include musubii-style-text-baseline();
+    }
+    &#{$modifier-text-top} {
+      @include musubii-style-text-top();
+    }
+    &#{$modifier-text-middle} {
+      @include musubii-style-text-middle();
+    }
+    &#{$modifier-text-bottom} {
+      @include musubii-style-text-bottom();
+    }
   }
 }
 
@@ -576,18 +683,22 @@ $pre-code-padding: 1.25em 1.5em !default;
 // / Style - Text Wrap
 //----------------------------------------------------
 
-@mixin musubii-style-text-wrap() {
-  &.is-nowrap {
-    white-space: nowrap;
-  }
-  &.is-break {
-    word-break: break-all;
-  }
+@mixin musubii-style-text-nowrap() {
+  white-space: nowrap;
+}
+
+@mixin musubii-style-text-break() {
+  word-break: break-all;
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-wrap();
+    &#{$modifier-text-nowrap} {
+      @include musubii-style-text-nowrap();
+    }
+    &#{$modifier-text-break} {
+      @include musubii-style-text-break();
+    }
   }
 }
 
@@ -596,27 +707,27 @@ $pre-code-padding: 1.25em 1.5em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-text-link() {
-  &.is-link {
-    cursor: pointer;
-    @if $option-add-style-text-link-border == true {
-      border-bottom: $text-link-border-bottom-width
-        $text-link-border-bottom-style
-        currentColor;
-      &:hover {
-        border-bottom-color: transparent;
-      }
-    } @else {
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
+  cursor: pointer;
+  @if $option-add-style-text-link-border == true {
+    border-bottom: $text-link-border-bottom-width
+      $text-link-border-bottom-style
+      currentColor;
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  } @else {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-link();
+    &#{$modifier-text-link} {
+      @include musubii-style-text-link();
+    }
   }
 }
 
@@ -625,26 +736,26 @@ $pre-code-padding: 1.25em 1.5em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-text-link-reverse() {
-  &.is-link-reverse {
-    cursor: pointer;
-    @if $option-add-style-text-link-border == true {
-      border-bottom: $text-link-border-bottom-width
-        $text-link-border-bottom-style
-        transparent;
-      &:hover {
-        border-color: currentColor;
-      }
-    } @else {
-      &:hover {
-        text-decoration: underline;
-      }
+  cursor: pointer;
+  @if $option-add-style-text-link-border == true {
+    border-bottom: $text-link-border-bottom-width
+      $text-link-border-bottom-style
+      transparent;
+    &:hover {
+      border-color: currentColor;
+    }
+  } @else {
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-link-reverse();
+    &#{$modifier-text-link-reverse} {
+      @include musubii-style-text-link-reverse();
+    }
   }
 }
 
