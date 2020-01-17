@@ -33,7 +33,7 @@ $modifier-button-angle-down: "\.is-angle-down" !default;
 $button-padding: 0.5em 1em !default;
 $button-border-width: $global-border-width !default;
 $button-border-radius: $radius-sm !default;
-$button-paint-text-color: $convert-button-paint-text-color !default;
+$button-paint-color: $convert-button-paint-color !default;
 $button-line-height: $line-height-md !default;
 $button-transition: $global-transition !default;
 $button-focus-shadow: $global-focus-shadow-size $convert-focus-alpha !default;
@@ -53,7 +53,7 @@ $button-floating-focus-shadow: $global-focus-shadow-size $convert-focus-alpha,
 
 // Button Disabled
 $button-disabled-background-color: $convert-disabled-background-color !default;
-$button-disabled-text-color: $convert-disabled-text-color !default;
+$button-disabled-color: $convert-disabled-color !default;
 
 // Button Square
 $button-square-width: calc(2.5em + #{$global-border-width} * 2) !default;
@@ -120,28 +120,28 @@ $button-outline-background-color: $convert-background !default;
 $button-outline-border-color: $convert-border !default;
 $button-outline-hover-background-color: $convert-background-2 !default;
 $button-outline-primary-border-color: $convert-primary !default;
-$button-outline-primary-text-color: $convert-primary-strong !default;
+$button-outline-primary-color: $convert-primary-strong !default;
 $button-outline-primary-hover-background-color: $convert-primary !default;
 $button-outline-info-border-color: $convert-info !default;
-$button-outline-info-text-color: $convert-info-strong !default;
+$button-outline-info-color: $convert-info-strong !default;
 $button-outline-info-hover-background-color: $convert-info !default;
 $button-outline-success-border-color: $convert-success !default;
-$button-outline-success-text-color: $convert-success-strong !default;
+$button-outline-success-color: $convert-success-strong !default;
 $button-outline-success-hover-background-color: $convert-success !default;
 $button-outline-warning-border-color: $convert-warning !default;
-$button-outline-warning-text-color: $convert-warning-strong !default;
+$button-outline-warning-color: $convert-warning-strong !default;
 $button-outline-warning-hover-background-color: $convert-warning !default;
 $button-outline-danger-border-color: $convert-danger !default;
-$button-outline-danger-text-color: $convert-danger-strong !default;
+$button-outline-danger-color: $convert-danger-strong !default;
 $button-outline-danger-hover-background-color: $convert-danger !default;
 
 // Button Melt
 $button-melt-hover-background-color: $convert-background-alpha !default;
-$button-melt-primary-text-color: $convert-primary-strong !default;
-$button-melt-info-text-color: $convert-info-strong !default;
-$button-melt-success-text-color: $convert-success-strong !default;
-$button-melt-warning-text-color: $convert-warning-strong !default;
-$button-melt-danger-text-color: $convert-danger-strong !default;
+$button-melt-primary-color: $convert-primary-strong !default;
+$button-melt-info-color: $convert-info-strong !default;
+$button-melt-success-color: $convert-success-strong !default;
+$button-melt-warning-color: $convert-warning-strong !default;
+$button-melt-danger-color: $convert-danger-strong !default;
 
 // Button Angle
 $button-angle-size: 0.5em !default;
@@ -161,7 +161,7 @@ $button-angle-border-color: $convert-border-1 !default;
   white-space: nowrap;
   padding: $button-padding;
   border-radius: $button-border-radius;
-  color: $convert-body-text-color;
+  color: $convert-body-color;
   line-height: $button-line-height;
   text-align: center;
   transition: $button-transition;
@@ -275,7 +275,7 @@ $button-angle-border-color: $convert-border-1 !default;
 
 @mixin musubii-style-button-plain-primary() {
   background-color: $button-plain-primary-background-color;
-  color: $button-paint-text-color;
+  color: $button-paint-color;
   &:hover {
     background-color: $button-plain-primary-hover-background-color;
   }
@@ -283,7 +283,7 @@ $button-angle-border-color: $convert-border-1 !default;
 
 @mixin musubii-style-button-plain-info() {
   background-color: $button-plain-info-background-color;
-  color: $button-paint-text-color;
+  color: $button-paint-color;
   &:hover {
     background-color: $button-plain-info-hover-background-color;
   }
@@ -291,7 +291,7 @@ $button-angle-border-color: $convert-border-1 !default;
 
 @mixin musubii-style-button-plain-success() {
   background-color: $button-plain-success-background-color;
-  color: $button-paint-text-color;
+  color: $button-paint-color;
   &:hover {
     background-color: $button-plain-success-hover-background-color;
   }
@@ -299,7 +299,7 @@ $button-angle-border-color: $convert-border-1 !default;
 
 @mixin musubii-style-button-plain-warning() {
   background-color: $button-plain-warning-background-color;
-  color: $button-paint-text-color;
+  color: $button-paint-color;
   &:hover {
     background-color: $button-plain-warning-hover-background-color;
   }
@@ -307,7 +307,7 @@ $button-angle-border-color: $convert-border-1 !default;
 
 @mixin musubii-style-button-plain-danger() {
   background-color: $button-plain-danger-background-color;
-  color: $button-paint-text-color;
+  color: $button-paint-color;
   &:hover {
     background-color: $button-plain-danger-hover-background-color;
   }
@@ -315,7 +315,7 @@ $button-angle-border-color: $convert-border-1 !default;
 
 @mixin musubii-style-button-plain-disabled() {
   background-color: $button-disabled-background-color;
-  color: $button-disabled-text-color;
+  color: $button-disabled-color;
 }
 
 @mixin musubii-style-button-plain-primary-floating() {
@@ -436,58 +436,58 @@ $button-angle-border-color: $convert-border-1 !default;
 
 @mixin musubii-style-button-outline-primary() {
   border-color: $button-outline-primary-border-color;
-  color: $button-outline-primary-text-color;
+  color: $button-outline-primary-color;
   &:hover {
     background-color: $button-outline-primary-hover-background-color;
     border-color: transparent;
-    color: $button-paint-text-color;
+    color: $button-paint-color;
   }
 }
 
 @mixin musubii-style-button-outline-info() {
   border-color: $button-outline-info-border-color;
-  color: $button-outline-info-text-color;
+  color: $button-outline-info-color;
   &:hover {
     background-color: $button-outline-info-hover-background-color;
     border-color: transparent;
-    color: $button-paint-text-color;
+    color: $button-paint-color;
   }
 }
 
 @mixin musubii-style-button-outline-success() {
   border-color: $button-outline-success-border-color;
-  color: $button-outline-success-text-color;
+  color: $button-outline-success-color;
   &:hover {
     background-color: $button-outline-success-hover-background-color;
     border-color: transparent;
-    color: $button-paint-text-color;
+    color: $button-paint-color;
   }
 }
 
 @mixin musubii-style-button-outline-warning() {
   border-color: $button-outline-warning-border-color;
-  color: $button-outline-warning-text-color;
+  color: $button-outline-warning-color;
   &:hover {
     background-color: $button-outline-warning-hover-background-color;
     border-color: transparent;
-    color: $button-paint-text-color;
+    color: $button-paint-color;
   }
 }
 
 @mixin musubii-style-button-outline-danger() {
   border-color: $button-outline-danger-border-color;
-  color: $button-outline-danger-text-color;
+  color: $button-outline-danger-color;
   &:hover {
     background-color: $button-outline-danger-hover-background-color;
     border-color: transparent;
-    color: $button-paint-text-color;
+    color: $button-paint-color;
   }
 }
 
 @mixin musubii-style-button-outline-disabled() {
   background-color: $button-disabled-background-color;
   border-color: $button-outline-border-color;
-  color: $button-disabled-text-color;
+  color: $button-disabled-color;
 }
 
 @include generate-style($option-generate-style-button) {
@@ -532,27 +532,27 @@ $button-angle-border-color: $convert-border-1 !default;
 }
 
 @mixin musubii-style-button-melt-primary() {
-  color: $button-melt-primary-text-color;
+  color: $button-melt-primary-color;
 }
 
 @mixin musubii-style-button-melt-info() {
-  color: $button-melt-info-text-color;
+  color: $button-melt-info-color;
 }
 
 @mixin musubii-style-button-melt-success() {
-  color: $button-melt-success-text-color;
+  color: $button-melt-success-color;
 }
 
 @mixin musubii-style-button-melt-warning() {
-  color: $button-melt-warning-text-color;
+  color: $button-melt-warning-color;
 }
 
 @mixin musubii-style-button-melt-danger() {
-  color: $button-melt-danger-text-color;
+  color: $button-melt-danger-color;
 }
 
 @mixin musubii-style-button-melt-disabled() {
-  color: $button-disabled-text-color;
+  color: $button-disabled-color;
   background-color: transparent;
 }
 

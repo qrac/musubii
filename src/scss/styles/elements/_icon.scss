@@ -40,16 +40,16 @@ $icon-fit-width: 1em !default;
 }
 
 @mixin musubii-style-icon-dark() {
-  @include --is-color(dark, $convert-text-dark);
-  @include --is-color(dark-1, $convert-text-dark-1);
-  @include --is-color(dark-2, $convert-text-dark-2);
-  @include --is-color(dark-3, $convert-text-dark-3);
-  @include --is-color(dark-4, $convert-text-dark-4);
-  @include --is-color(dark-5, $convert-text-dark-5);
-  @include --is-color(dark-6, $convert-text-dark-6);
-  @include --is-color(dark-7, $convert-text-dark-7);
-  @include --is-color(dark-8, $convert-text-dark-8);
-  @include --is-color(dark-9, $convert-text-dark-9);
+  @include --is-color(dark, $convert-dark);
+  @include --is-color(dark-1, $convert-dark-1);
+  @include --is-color(dark-2, $convert-dark-2);
+  @include --is-color(dark-3, $convert-dark-3);
+  @include --is-color(dark-4, $convert-dark-4);
+  @include --is-color(dark-5, $convert-dark-5);
+  @include --is-color(dark-6, $convert-dark-6);
+  @include --is-color(dark-7, $convert-dark-7);
+  @include --is-color(dark-8, $convert-dark-8);
+  @include --is-color(dark-9, $convert-dark-9);
 }
 
 @include generate-style($option-generate-style-icon) {
@@ -61,16 +61,16 @@ $icon-fit-width: 1em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-icon-light() {
-  @include --is-color(light, $convert-text-light);
-  @include --is-color(light-1, $convert-text-light-1);
-  @include --is-color(light-2, $convert-text-light-2);
-  @include --is-color(light-3, $convert-text-light-3);
-  @include --is-color(light-4, $convert-text-light-4);
-  @include --is-color(light-5, $convert-text-light-5);
-  @include --is-color(light-6, $convert-text-light-6);
-  @include --is-color(light-7, $convert-text-light-7);
-  @include --is-color(light-8, $convert-text-light-8);
-  @include --is-color(light-9, $convert-text-light-9);
+  @include --is-color(light, $convert-light);
+  @include --is-color(light-1, $convert-light-1);
+  @include --is-color(light-2, $convert-light-2);
+  @include --is-color(light-3, $convert-light-3);
+  @include --is-color(light-4, $convert-light-4);
+  @include --is-color(light-5, $convert-light-5);
+  @include --is-color(light-6, $convert-light-6);
+  @include --is-color(light-7, $convert-light-7);
+  @include --is-color(light-8, $convert-light-8);
+  @include --is-color(light-9, $convert-light-9);
 }
 
 @include generate-style($option-generate-style-icon) {

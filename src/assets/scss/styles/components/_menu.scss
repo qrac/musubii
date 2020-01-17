@@ -98,7 +98,7 @@
     background-color: $button-outline-background-color;
     border: none;
     border-radius: $radius-md;
-    color: $body-text-color;
+    color: $body-color;
     line-height: $button-line-height;
     font-family: $font-sans-en;
     white-space: nowrap;
@@ -145,7 +145,7 @@
 .menu-heading {
   display: block;
   padding: 8px 0;
-  color: $convert-text-dark-4;
+  color: $convert-dark-4;
   font-size: 75%;
   font-weight: 900;
   font-family: $font-sans-en;

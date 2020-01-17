@@ -12,8 +12,92 @@ $selector-blockquote: "\.blockquote" !default;
 $selector-code: "\.code" !default;
 $selector-pre: "\.pre" !default;
 
+// Modifiers
+$modifier-text-dark: "\.is-dark" !default;
+$modifier-text-dark-1: "\.is-dark-1" !default;
+$modifier-text-dark-2: "\.is-dark-2" !default;
+$modifier-text-dark-3: "\.is-dark-3" !default;
+$modifier-text-dark-4: "\.is-dark-4" !default;
+$modifier-text-dark-5: "\.is-dark-5" !default;
+$modifier-text-dark-6: "\.is-dark-6" !default;
+$modifier-text-dark-7: "\.is-dark-7" !default;
+$modifier-text-dark-8: "\.is-dark-8" !default;
+$modifier-text-dark-9: "\.is-dark-9" !default;
+
+$modifier-text-light: "\.is-light" !default;
+$modifier-text-light-1: "\.is-light-1" !default;
+$modifier-text-light-2: "\.is-light-2" !default;
+$modifier-text-light-3: "\.is-light-3" !default;
+$modifier-text-light-4: "\.is-light-4" !default;
+$modifier-text-light-5: "\.is-light-5" !default;
+$modifier-text-light-6: "\.is-light-6" !default;
+$modifier-text-light-7: "\.is-light-7" !default;
+$modifier-text-light-8: "\.is-light-8" !default;
+$modifier-text-light-9: "\.is-light-9" !default;
+
+$modifier-text-primary: "\.is-primary" !default;
+$modifier-text-info: "\.is-info" !default;
+$modifier-text-success: "\.is-success" !default;
+$modifier-text-warning: "\.is-warning" !default;
+$modifier-text-danger: "\.is-danger" !default;
+
+$modifier-text-weight-normal: "\.is-weight-normal" !default;
+$modifier-text-weight-strong: "\.is-weight-strong" !default;
+$modifier-text-weight-100: "\.is-weight-100" !default;
+$modifier-text-weight-200: "\.is-weight-200" !default;
+$modifier-text-weight-300: "\.is-weight-300" !default;
+$modifier-text-weight-400: "\.is-weight-400" !default;
+$modifier-text-weight-500: "\.is-weight-500" !default;
+$modifier-text-weight-600: "\.is-weight-600" !default;
+$modifier-text-weight-700: "\.is-weight-700" !default;
+$modifier-text-weight-800: "\.is-weight-800" !default;
+$modifier-text-weight-900: "\.is-weight-900" !default;
+
+$modifier-text-line-height-xxl: "\.is-line-height-xxl" !default;
+$modifier-text-line-height-xl: "\.is-line-height-xl" !default;
+$modifier-text-line-height-lg: "\.is-line-height-lg" !default;
+$modifier-text-line-height-md: "\.is-line-height-md" !default;
+$modifier-text-line-height-sm: "\.is-line-height-sm" !default;
+$modifier-text-line-height-xs: "\.is-line-height-xs" !default;
+$modifier-text-line-height-xxs: "\.is-line-height-xxs" !default;
+
+$modifier-text-italic: "\.is-italic" !default;
+$modifier-text-delete: "\.is-delete" !default;
+$modifier-text-capitalize: "\.is-capitalize" !default;
+$modifier-text-lowercase: "\.is-lowercase" !default;
+$modifier-text-uppercase: "\.is-uppercase" !default;
+
+$modifier-text-right: "\.is-right" !default;
+$modifier-text-center: "\.is-center" !default;
+$modifier-text-left: "\.is-left" !default;
+$modifier-text-mobile-right: "\.is-mobile-right" !default;
+$modifier-text-mobile-center: "\.is-mobile-center" !default;
+$modifier-text-mobile-left: "\.is-mobile-left" !default;
+$modifier-text-fablet-right: "\.is-fablet-right" !default;
+$modifier-text-fablet-center: "\.is-fablet-center" !default;
+$modifier-text-fablet-left: "\.is-fablet-left" !default;
+$modifier-text-tablet-right: "\.is-tablet-right" !default;
+$modifier-text-tablet-center: "\.is-tablet-center" !default;
+$modifier-text-tablet-left: "\.is-tablet-left" !default;
+$modifier-text-desktop-right: "\.is-desktop-right" !default;
+$modifier-text-desktop-center: "\.is-desktop-center" !default;
+$modifier-text-desktop-left: "\.is-desktop-left" !default;
+$modifier-text-wide-right: "\.is-wide-right" !default;
+$modifier-text-wide-center: "\.is-wide-center" !default;
+$modifier-text-wide-left: "\.is-wide-left" !default;
+
+$modifier-text-justify: "\.is-justify" !default;
+$modifier-text-baseline: "\.is-baseline" !default;
+$modifier-text-top: "\.is-top" !default;
+$modifier-text-middle: "\.is-middle" !default;
+$modifier-text-bottom: "\.is-bottom" !default;
+
+$modifier-text-nowrap: "\.is-nowrap" !default;
+$modifier-text-break: "\.is-break" !default;
+$modifier-text-link: "\.is-link" !default;
+$modifier-text-link-reverse: "\.is-link-reverse" !default;
+
 // Text Link
-$text-link-border-change-underline: false !default;
 $text-link-border-bottom-width: $global-border-width !default;
 $text-link-border-bottom-style: solid !default;
 
@@ -28,81 +112,217 @@ $blockquote-padding: 1.5em !default;
 $code-padding: 0.2em 0.5em !default;
 $code-background-color: $convert-background-alpha !default;
 $code-border-radius: $radius-xs !default;
-$code-text-color: $convert-code-text-color !default;
+$code-color: $convert-code-color !default;
 $code-font-size: $font-size-sm !default;
 $code-font-family: $font-mono !default;
 
 // Pre
 $pre-background-color: $convert-background-2 !default;
 $pre-border-radius: $radius-xs !default;
-$pre-text-color: $convert-code-text-color !default;
+$pre-color: $convert-code-color !default;
 $pre-font-family: $font-mono !default;
 $pre-white-space: pre !default;
 $pre-code-padding: 1.25em 1.5em !default;
 
 //----------------------------------------------------
-// / Style - Text Color
+// / Style - Text Dark
 //----------------------------------------------------
 
-@mixin --is-color($color-name, $color) {
-  &.is-#{$color-name} {
-    color: $color;
-  }
+@mixin musubii-style-text-dark() {
+  color: $convert-dark;
 }
 
-@mixin musubii-style-text-dark() {
-  @include --is-color(dark, $convert-text-dark);
-  @include --is-color(dark-1, $convert-text-dark-1);
-  @include --is-color(dark-2, $convert-text-dark-2);
-  @include --is-color(dark-3, $convert-text-dark-3);
-  @include --is-color(dark-4, $convert-text-dark-4);
-  @include --is-color(dark-5, $convert-text-dark-5);
-  @include --is-color(dark-6, $convert-text-dark-6);
-  @include --is-color(dark-7, $convert-text-dark-7);
-  @include --is-color(dark-8, $convert-text-dark-8);
-  @include --is-color(dark-9, $convert-text-dark-9);
+@mixin musubii-style-text-dark-1() {
+  color: $convert-dark-1;
+}
+
+@mixin musubii-style-text-dark-2() {
+  color: $convert-dark-2;
+}
+
+@mixin musubii-style-text-dark-3() {
+  color: $convert-dark-3;
+}
+
+@mixin musubii-style-text-dark-4() {
+  color: $convert-dark-4;
+}
+
+@mixin musubii-style-text-dark-5() {
+  color: $convert-dark-5;
+}
+
+@mixin musubii-style-text-dark-6() {
+  color: $convert-dark-6;
+}
+
+@mixin musubii-style-text-dark-7() {
+  color: $convert-dark-7;
+}
+
+@mixin musubii-style-text-dark-8() {
+  color: $convert-dark-8;
+}
+
+@mixin musubii-style-text-dark-9() {
+  color: $convert-dark-9;
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-dark();
+    &#{$modifier-text-dark} {
+      @include musubii-style-text-dark();
+    }
+    &#{$modifier-text-dark-1} {
+      @include musubii-style-text-dark-1();
+    }
+    &#{$modifier-text-dark-2} {
+      @include musubii-style-text-dark-2();
+    }
+    &#{$modifier-text-dark-3} {
+      @include musubii-style-text-dark-3();
+    }
+    &#{$modifier-text-dark-4} {
+      @include musubii-style-text-dark-4();
+    }
+    &#{$modifier-text-dark-5} {
+      @include musubii-style-text-dark-5();
+    }
+    &#{$modifier-text-dark-6} {
+      @include musubii-style-text-dark-6();
+    }
+    &#{$modifier-text-dark-7} {
+      @include musubii-style-text-dark-7();
+    }
+    &#{$modifier-text-dark-8} {
+      @include musubii-style-text-dark-8();
+    }
+    &#{$modifier-text-dark-9} {
+      @include musubii-style-text-dark-9();
+    }
   }
 }
 
+//----------------------------------------------------
+// / Style - Text Light
 //----------------------------------------------------
 
 @mixin musubii-style-text-light() {
-  @include --is-color(light, $convert-text-light);
-  @include --is-color(light-1, $convert-text-light-1);
-  @include --is-color(light-2, $convert-text-light-2);
-  @include --is-color(light-3, $convert-text-light-3);
-  @include --is-color(light-4, $convert-text-light-4);
-  @include --is-color(light-5, $convert-text-light-5);
-  @include --is-color(light-6, $convert-text-light-6);
-  @include --is-color(light-7, $convert-text-light-7);
-  @include --is-color(light-8, $convert-text-light-8);
-  @include --is-color(light-9, $convert-text-light-9);
+  color: $convert-light;
+}
+
+@mixin musubii-style-text-light-1() {
+  color: $convert-light-1;
+}
+
+@mixin musubii-style-text-light-2() {
+  color: $convert-light-2;
+}
+
+@mixin musubii-style-text-light-3() {
+  color: $convert-light-3;
+}
+
+@mixin musubii-style-text-light-4() {
+  color: $convert-light-4;
+}
+
+@mixin musubii-style-text-light-5() {
+  color: $convert-light-5;
+}
+
+@mixin musubii-style-text-light-6() {
+  color: $convert-light-6;
+}
+
+@mixin musubii-style-text-light-7() {
+  color: $convert-light-7;
+}
+
+@mixin musubii-style-text-light-8() {
+  color: $convert-light-8;
+}
+
+@mixin musubii-style-text-light-9() {
+  color: $convert-light-9;
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-light();
+    &#{$modifier-text-light} {
+      @include musubii-style-text-light();
+    }
+    &#{$modifier-text-light-1} {
+      @include musubii-style-text-light-1();
+    }
+    &#{$modifier-text-light-2} {
+      @include musubii-style-text-light-2();
+    }
+    &#{$modifier-text-light-3} {
+      @include musubii-style-text-light-3();
+    }
+    &#{$modifier-text-light-4} {
+      @include musubii-style-text-light-4();
+    }
+    &#{$modifier-text-light-5} {
+      @include musubii-style-text-light-5();
+    }
+    &#{$modifier-text-light-6} {
+      @include musubii-style-text-light-6();
+    }
+    &#{$modifier-text-light-7} {
+      @include musubii-style-text-light-7();
+    }
+    &#{$modifier-text-light-8} {
+      @include musubii-style-text-light-8();
+    }
+    &#{$modifier-text-light-9} {
+      @include musubii-style-text-light-9();
+    }
   }
 }
 
 //----------------------------------------------------
+// / Style - Text Role
+//----------------------------------------------------
 
-@mixin musubii-style-text-role() {
-  @include --is-color(primary, $convert-primary-strong);
-  @include --is-color(info, $convert-info-strong);
-  @include --is-color(success, $convert-success-strong);
-  @include --is-color(warning, $convert-warning-strong);
-  @include --is-color(danger, $convert-danger-strong);
+@mixin musubii-style-text-primary() {
+  color: $convert-primary-strong;
+}
+
+@mixin musubii-style-text-info() {
+  color: $convert-info-strong;
+}
+
+@mixin musubii-style-text-success() {
+  color: $convert-success-strong;
+}
+
+@mixin musubii-style-text-warning() {
+  color: $convert-warning-strong;
+}
+
+@mixin musubii-style-text-danger() {
+  color: $convert-danger-strong;
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-role();
+    &#{$modifier-text-primary} {
+      @include musubii-style-text-primary();
+    }
+    &#{$modifier-text-info} {
+      @include musubii-style-text-info();
+    }
+    &#{$modifier-text-success} {
+      @include musubii-style-text-success();
+    }
+    &#{$modifier-text-warning} {
+      @include musubii-style-text-warning();
+    }
+    &#{$modifier-text-danger} {
+      @include musubii-style-text-danger();
+    }
   }
 }
 
@@ -110,29 +330,85 @@ $pre-code-padding: 1.25em 1.5em !default;
 // / Style - Text Weight
 //----------------------------------------------------
 
-@mixin --is-weight($name, $value) {
-  &.is-#{$name} {
-    font-weight: $value;
-  }
+@mixin musubii-style-text-weight-normal() {
+  font-weight: $font-weight-normal;
 }
 
-@mixin musubii-style-text-weight() {
-  @include --is-weight(normal, $font-weight-normal);
-  @include --is-weight(strong, $font-weight-strong);
-  @include --is-weight(weight-100, $font-weight-100);
-  @include --is-weight(weight-200, $font-weight-200);
-  @include --is-weight(weight-300, $font-weight-300);
-  @include --is-weight(weight-400, $font-weight-400);
-  @include --is-weight(weight-500, $font-weight-500);
-  @include --is-weight(weight-600, $font-weight-600);
-  @include --is-weight(weight-700, $font-weight-700);
-  @include --is-weight(weight-800, $font-weight-800);
-  @include --is-weight(weight-900, $font-weight-900);
+@mixin musubii-style-text-weight-strong() {
+  font-strong: $font-weight-normal;
+}
+
+@mixin musubii-style-text-weight-100() {
+  font-weight: $font-weight-100;
+}
+
+@mixin musubii-style-text-weight-200() {
+  font-weight: $font-weight-200;
+}
+
+@mixin musubii-style-text-weight-300() {
+  font-weight: $font-weight-300;
+}
+
+@mixin musubii-style-text-weight-400() {
+  font-weight: $font-weight-400;
+}
+
+@mixin musubii-style-text-weight-500() {
+  font-weight: $font-weight-500;
+}
+
+@mixin musubii-style-text-weight-600() {
+  font-weight: $font-weight-600;
+}
+
+@mixin musubii-style-text-weight-700() {
+  font-weight: $font-weight-700;
+}
+
+@mixin musubii-style-text-weight-800() {
+  font-weight: $font-weight-800;
+}
+
+@mixin musubii-style-text-weight-900() {
+  font-weight: $font-weight-900;
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-weight();
+    &#{$modifier-text-weight-normal} {
+      @include musubii-style-text-weight-normal();
+    }
+    &#{$modifier-text-weight-strong} {
+      @include musubii-style-text-weight-strong();
+    }
+    &#{$modifier-text-weight-100} {
+      @include musubii-style-text-weight-100();
+    }
+    &#{$modifier-text-weight-200} {
+      @include musubii-style-text-weight-200();
+    }
+    &#{$modifier-text-weight-300} {
+      @include musubii-style-text-weight-300();
+    }
+    &#{$modifier-text-weight-400} {
+      @include musubii-style-text-weight-400();
+    }
+    &#{$modifier-text-weight-500} {
+      @include musubii-style-text-weight-500();
+    }
+    &#{$modifier-text-weight-600} {
+      @include musubii-style-text-weight-600();
+    }
+    &#{$modifier-text-weight-700} {
+      @include musubii-style-text-weight-700();
+    }
+    &#{$modifier-text-weight-800} {
+      @include musubii-style-text-weight-800();
+    }
+    &#{$modifier-text-weight-900} {
+      @include musubii-style-text-weight-900();
+    }
   }
 }
 
@@ -140,25 +416,57 @@ $pre-code-padding: 1.25em 1.5em !default;
 // / Style - Text Line Height
 //----------------------------------------------------
 
-@mixin --is-line-height($name, $value) {
-  &.is-line-height-#{$name} {
-    line-height: $value;
-  }
+@mixin musubii-style-text-line-height-xxl() {
+  line-height: $line-height-xxl;
 }
 
-@mixin musubii-style-text-line-height() {
-  @include --is-line-height(xxl, $line-height-xxl);
-  @include --is-line-height(xl, $line-height-xl);
-  @include --is-line-height(lg, $line-height-lg);
-  @include --is-line-height(md, $line-height-md);
-  @include --is-line-height(sm, $line-height-sm);
-  @include --is-line-height(xs, $line-height-xs);
-  @include --is-line-height(xxs, $line-height-xxs);
+@mixin musubii-style-text-line-height-xl() {
+  line-height: $line-height-xl;
+}
+
+@mixin musubii-style-text-line-height-lg() {
+  line-height: $line-height-lg;
+}
+
+@mixin musubii-style-text-line-height-md() {
+  line-height: $line-height-md;
+}
+
+@mixin musubii-style-text-line-height-sm() {
+  line-height: $line-height-sm;
+}
+
+@mixin musubii-style-text-line-height-xs() {
+  line-height: $line-height-xs;
+}
+
+@mixin musubii-style-text-line-height-xxs() {
+  line-height: $line-height-xxs;
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-line-height();
+    &#{$modifier-text-line-height-xxl} {
+      @include musubii-style-text-line-height-xxl();
+    }
+    &#{$modifier-text-line-height-xl} {
+      @include musubii-style-text-line-height-xl();
+    }
+    &#{$modifier-text-line-height-lg} {
+      @include musubii-style-text-line-height-lg();
+    }
+    &#{$modifier-text-line-height-md} {
+      @include musubii-style-text-line-height-md();
+    }
+    &#{$modifier-text-line-height-sm} {
+      @include musubii-style-text-line-height-sm();
+    }
+    &#{$modifier-text-line-height-xs} {
+      @include musubii-style-text-line-height-xs();
+    }
+    &#{$modifier-text-line-height-xxs} {
+      @include musubii-style-text-line-height-xxs();
+    }
   }
 }
 
@@ -166,27 +474,43 @@ $pre-code-padding: 1.25em 1.5em !default;
 // / Style - Text Transform
 //----------------------------------------------------
 
-@mixin musubii-style-text-transform() {
-  &.is-italic {
-    font-style: italic;
-  }
-  &.is-delete {
-    text-decoration: line-through;
-  }
-  &.is-capitalize {
-    text-transform: capitalize;
-  }
-  &.is-lowercase {
-    text-transform: lowercase;
-  }
-  &.is-uppercase {
-    text-transform: uppercase;
-  }
+@mixin musubii-style-text-italic() {
+  font-style: italic;
+}
+
+@mixin musubii-style-text-delete() {
+  text-decoration: line-through;
+}
+
+@mixin musubii-style-text-capitalize() {
+  text-transform: capitalize;
+}
+
+@mixin musubii-style-text-lowercase() {
+  text-transform: lowercase;
+}
+
+@mixin musubii-style-text-uppercase() {
+  text-transform: uppercase;
 }
 
 @include generate-style($option-generate-style-text) {
   #{$selector-text} {
-    @include musubii-style-text-transform();
+    &#{$modifier-text-italic} {
+      @include musubii-style-text-italic();
+    }
+    &#{$modifier-text-delete} {
+      @include musubii-style-text-delete();
+    }
+    &#{$modifier-text-capitalize} {
+      @include musubii-style-text-capitalize();
+    }
+    &#{$modifier-text-lowercase} {
+      @include musubii-style-text-lowercase();
+    }
+    &#{$modifier-text-uppercase} {
+      @include musubii-style-text-uppercase();
+    }
   }
 }
 
@@ -274,17 +598,17 @@ $pre-code-padding: 1.25em 1.5em !default;
 @mixin musubii-style-text-link() {
   &.is-link {
     cursor: pointer;
-    @if $text-link-border-change-underline == true {
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    } @else {
+    @if $option-add-style-text-link-border == true {
       border-bottom: $text-link-border-bottom-width
         $text-link-border-bottom-style
         currentColor;
       &:hover {
         border-bottom-color: transparent;
+      }
+    } @else {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
       }
     }
   }
@@ -303,16 +627,16 @@ $pre-code-padding: 1.25em 1.5em !default;
 @mixin musubii-style-text-link-reverse() {
   &.is-link-reverse {
     cursor: pointer;
-    @if $text-link-border-change-underline == true {
-      &:hover {
-        text-decoration: underline;
-      }
-    } @else {
+    @if $option-add-style-text-link-border == true {
       border-bottom: $text-link-border-bottom-width
         $text-link-border-bottom-style
         transparent;
       &:hover {
         border-color: currentColor;
+      }
+    } @else {
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -349,7 +673,7 @@ $pre-code-padding: 1.25em 1.5em !default;
   padding: $code-padding;
   background-color: $code-background-color;
   border-radius: $code-border-radius;
-  color: $code-text-color;
+  color: $code-color;
   font-size: $code-font-size;
   font-family: $code-font-family;
   word-break: break-all;
@@ -372,7 +696,7 @@ $pre-code-padding: 1.25em 1.5em !default;
 @mixin musubii-style-text-pre() {
   background-color: $pre-background-color;
   border-radius: $pre-border-radius;
-  color: $pre-text-color;
+  color: $pre-color;
   font-family: $pre-font-family;
   white-space: $pre-white-space;
   word-wrap: normal;

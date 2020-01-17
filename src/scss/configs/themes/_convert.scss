@@ -22,27 +22,27 @@ $convert-danger: if($option-css-variables == true, var(--danger), null) !default
 $convert-danger-strong: if($option-css-variables == true, var(--danger-strong), null) !default;
 $convert-danger-darken: if($option-css-variables == true, var(--danger-darken), null) !default;
 
-$convert-text-dark: if($option-css-variables == true, var(--text-dark), null) !default;
-$convert-text-dark-1: if($option-css-variables == true, var(--text-dark-1), null) !default;
-$convert-text-dark-2: if($option-css-variables == true, var(--text-dark-2), null) !default;
-$convert-text-dark-3: if($option-css-variables == true, var(--text-dark-3), null) !default;
-$convert-text-dark-4: if($option-css-variables == true, var(--text-dark-4), null) !default;
-$convert-text-dark-5: if($option-css-variables == true, var(--text-dark-5), null) !default;
-$convert-text-dark-6: if($option-css-variables == true, var(--text-dark-6), null) !default;
-$convert-text-dark-7: if($option-css-variables == true, var(--text-dark-7), null) !default;
-$convert-text-dark-8: if($option-css-variables == true, var(--text-dark-8), null) !default;
-$convert-text-dark-9: if($option-css-variables == true, var(--text-dark-9), null) !default;
+$convert-dark: if($option-css-variables == true, var(--dark), null) !default;
+$convert-dark-1: if($option-css-variables == true, var(--dark-1), null) !default;
+$convert-dark-2: if($option-css-variables == true, var(--dark-2), null) !default;
+$convert-dark-3: if($option-css-variables == true, var(--dark-3), null) !default;
+$convert-dark-4: if($option-css-variables == true, var(--dark-4), null) !default;
+$convert-dark-5: if($option-css-variables == true, var(--dark-5), null) !default;
+$convert-dark-6: if($option-css-variables == true, var(--dark-6), null) !default;
+$convert-dark-7: if($option-css-variables == true, var(--dark-7), null) !default;
+$convert-dark-8: if($option-css-variables == true, var(--dark-8), null) !default;
+$convert-dark-9: if($option-css-variables == true, var(--dark-9), null) !default;
 
-$convert-text-light: if($option-css-variables == true, var(--text-light), null) !default;
-$convert-text-light-1: if($option-css-variables == true, var(--text-light-1), null) !default;
-$convert-text-light-2: if($option-css-variables == true, var(--text-light-2), null) !default;
-$convert-text-light-3: if($option-css-variables == true, var(--text-light-3), null) !default;
-$convert-text-light-4: if($option-css-variables == true, var(--text-light-4), null) !default;
-$convert-text-light-5: if($option-css-variables == true, var(--text-light-5), null) !default;
-$convert-text-light-6: if($option-css-variables == true, var(--text-light-6), null) !default;
-$convert-text-light-7: if($option-css-variables == true, var(--text-light-7), null) !default;
-$convert-text-light-8: if($option-css-variables == true, var(--text-light-8), null) !default;
-$convert-text-light-9: if($option-css-variables == true, var(--text-light-9), null) !default;
+$convert-light: if($option-css-variables == true, var(--light), null) !default;
+$convert-light-1: if($option-css-variables == true, var(--light-1), null) !default;
+$convert-light-2: if($option-css-variables == true, var(--light-2), null) !default;
+$convert-light-3: if($option-css-variables == true, var(--light-3), null) !default;
+$convert-light-4: if($option-css-variables == true, var(--light-4), null) !default;
+$convert-light-5: if($option-css-variables == true, var(--light-5), null) !default;
+$convert-light-6: if($option-css-variables == true, var(--light-6), null) !default;
+$convert-light-7: if($option-css-variables == true, var(--light-7), null) !default;
+$convert-light-8: if($option-css-variables == true, var(--light-8), null) !default;
+$convert-light-9: if($option-css-variables == true, var(--light-9), null) !default;
 
 $convert-background: if($option-css-variables == true, var(--background), null) !default;
 $convert-background-1: if($option-css-variables == true, var(--background-1), null) !default;
@@ -69,17 +69,17 @@ $convert-focus-alpha-thin: if($option-css-variables == true, var(--focus-alpha-t
 
 $convert-disabled-background-color: if($option-css-variables == true, var(--disabled-background-color), null) !default;
 $convert-disabled-border-color: if($option-css-variables == true, var(--disabled-border-color), null) !default;
-$convert-disabled-text-color: if($option-css-variables == true, var(--disabled-text-color), null) !default;
+$convert-disabled-color: if($option-css-variables == true, var(--disabled-color), null) !default;
 
 $convert-body-background-color: if($option-css-variables == true, var(--body-background-color), null) !default;
-$convert-body-text-color: if($option-css-variables == true, var(--body-text-color), null) !default;
+$convert-body-color: if($option-css-variables == true, var(--body-color), null) !default;
 
-$convert-code-text-color: if($option-css-variables == true, var(--code-text-color), null) !default;
+$convert-code-color: if($option-css-variables == true, var(--code-color), null) !default;
 
-$convert-button-paint-text-color: if($option-css-variables == true, var(--button-paint-text-color), null) !default;
+$convert-button-paint-color: if($option-css-variables == true, var(--button-paint-color), null) !default;
 
 $convert-table-paint-background-color: if($option-css-variables == true, var(--table-paint-background-color), null) !default;
-$convert-table-paint-text-color: if($option-css-variables == true, var(--table-paint-text-color), null) !default;
+$convert-table-paint-color: if($option-css-variables == true, var(--table-paint-color), null) !default;
 $convert-table-spot-background-color: if($option-css-variables == true, var(--table-spot-background-color), null) !default;
 $convert-table-danger-background-color: if($option-css-variables == true, var(--table-danger-background-color), null) !default;
 
@@ -121,27 +121,27 @@ $convert-danger: if($option-theme-default == $theme-dark-id, $theme-dark-danger,
 $convert-danger-strong: if($option-theme-default == $theme-dark-id, $theme-dark-danger-strong, null) !default;
 $convert-danger-darken: if($option-theme-default == $theme-dark-id, $theme-dark-danger-darken, null) !default;
 
-$convert-text-dark: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark, null) !default;
-$convert-text-dark-1: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-1, null) !default;
-$convert-text-dark-2: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-2, null) !default;
-$convert-text-dark-3: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-3, null) !default;
-$convert-text-dark-4: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-4, null) !default;
-$convert-text-dark-5: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-5, null) !default;
-$convert-text-dark-6: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-6, null) !default;
-$convert-text-dark-7: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-7, null) !default;
-$convert-text-dark-8: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-8, null) !default;
-$convert-text-dark-9: if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-9, null) !default;
+$convert-dark: if($option-theme-default == $theme-dark-id, $theme-dark-dark, null) !default;
+$convert-dark-1: if($option-theme-default == $theme-dark-id, $theme-dark-dark-1, null) !default;
+$convert-dark-2: if($option-theme-default == $theme-dark-id, $theme-dark-dark-2, null) !default;
+$convert-dark-3: if($option-theme-default == $theme-dark-id, $theme-dark-dark-3, null) !default;
+$convert-dark-4: if($option-theme-default == $theme-dark-id, $theme-dark-dark-4, null) !default;
+$convert-dark-5: if($option-theme-default == $theme-dark-id, $theme-dark-dark-5, null) !default;
+$convert-dark-6: if($option-theme-default == $theme-dark-id, $theme-dark-dark-6, null) !default;
+$convert-dark-7: if($option-theme-default == $theme-dark-id, $theme-dark-dark-7, null) !default;
+$convert-dark-8: if($option-theme-default == $theme-dark-id, $theme-dark-dark-8, null) !default;
+$convert-dark-9: if($option-theme-default == $theme-dark-id, $theme-dark-dark-9, null) !default;
 
-$convert-text-light: if($option-theme-default == $theme-dark-id, $theme-dark-text-light, null) !default;
-$convert-text-light-1: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-1, null) !default;
-$convert-text-light-2: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-2, null) !default;
-$convert-text-light-3: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-3, null) !default;
-$convert-text-light-4: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-4, null) !default;
-$convert-text-light-5: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-5, null) !default;
-$convert-text-light-6: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-6, null) !default;
-$convert-text-light-7: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-7, null) !default;
-$convert-text-light-8: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-8, null) !default;
-$convert-text-light-9: if($option-theme-default == $theme-dark-id, $theme-dark-text-light-9, null) !default;
+$convert-light: if($option-theme-default == $theme-dark-id, $theme-dark-light, null) !default;
+$convert-light-1: if($option-theme-default == $theme-dark-id, $theme-dark-light-1, null) !default;
+$convert-light-2: if($option-theme-default == $theme-dark-id, $theme-dark-light-2, null) !default;
+$convert-light-3: if($option-theme-default == $theme-dark-id, $theme-dark-light-3, null) !default;
+$convert-light-4: if($option-theme-default == $theme-dark-id, $theme-dark-light-4, null) !default;
+$convert-light-5: if($option-theme-default == $theme-dark-id, $theme-dark-light-5, null) !default;
+$convert-light-6: if($option-theme-default == $theme-dark-id, $theme-dark-light-6, null) !default;
+$convert-light-7: if($option-theme-default == $theme-dark-id, $theme-dark-light-7, null) !default;
+$convert-light-8: if($option-theme-default == $theme-dark-id, $theme-dark-light-8, null) !default;
+$convert-light-9: if($option-theme-default == $theme-dark-id, $theme-dark-light-9, null) !default;
 
 $convert-background: if($option-theme-default == $theme-dark-id, $theme-dark-background, null) !default;
 $convert-background-1: if($option-theme-default == $theme-dark-id, $theme-dark-background-1, null) !default;
@@ -168,17 +168,17 @@ $convert-focus-alpha-thin: if($option-theme-default == $theme-dark-id, $theme-da
 
 $convert-disabled-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-disabled-background-color, null) !default;
 $convert-disabled-border-color: if($option-theme-default == $theme-dark-id, $theme-dark-disabled-border-color, null) !default;
-$convert-disabled-text-color: if($option-theme-default == $theme-dark-id, $theme-dark-disabled-text-color, null) !default;
+$convert-disabled-color: if($option-theme-default == $theme-dark-id, $theme-dark-disabled-color, null) !default;
 
 $convert-body-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-body-background-color, null) !default;
-$convert-body-text-color: if($option-theme-default == $theme-dark-id, $theme-dark-body-text-color, null) !default;
+$convert-body-color: if($option-theme-default == $theme-dark-id, $theme-dark-body-color, null) !default;
 
-$convert-code-text-color: if($option-theme-default == $theme-dark-id, $theme-dark-code-text-color, null) !default;
+$convert-code-color: if($option-theme-default == $theme-dark-id, $theme-dark-code-color, null) !default;
 
-$convert-button-paint-text-color: if($option-theme-default == $theme-dark-id, $theme-dark-button-paint-text-color, null) !default;
+$convert-button-paint-color: if($option-theme-default == $theme-dark-id, $theme-dark-button-paint-color, null) !default;
 
 $convert-table-paint-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-paint-background-color, null) !default;
-$convert-table-paint-text-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-paint-text-color, null) !default;
+$convert-table-paint-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-paint-color, null) !default;
 $convert-table-spot-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-spot-background-color, null) !default;
 $convert-table-danger-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-danger-background-color, null) !default;
 
@@ -220,27 +220,27 @@ $convert-danger: $theme-light-danger !default;
 $convert-danger-strong: $theme-light-danger-strong !default;
 $convert-danger-darken: $theme-light-danger-darken !default;
 
-$convert-text-dark: $theme-light-text-dark !default;
-$convert-text-dark-1: $theme-light-text-dark-1 !default;
-$convert-text-dark-2: $theme-light-text-dark-2 !default;
-$convert-text-dark-3: $theme-light-text-dark-3 !default;
-$convert-text-dark-4: $theme-light-text-dark-4 !default;
-$convert-text-dark-5: $theme-light-text-dark-5 !default;
-$convert-text-dark-6: $theme-light-text-dark-6 !default;
-$convert-text-dark-7: $theme-light-text-dark-7 !default;
-$convert-text-dark-8: $theme-light-text-dark-8 !default;
-$convert-text-dark-9: $theme-light-text-dark-9 !default;
+$convert-dark: $theme-light-dark !default;
+$convert-dark-1: $theme-light-dark-1 !default;
+$convert-dark-2: $theme-light-dark-2 !default;
+$convert-dark-3: $theme-light-dark-3 !default;
+$convert-dark-4: $theme-light-dark-4 !default;
+$convert-dark-5: $theme-light-dark-5 !default;
+$convert-dark-6: $theme-light-dark-6 !default;
+$convert-dark-7: $theme-light-dark-7 !default;
+$convert-dark-8: $theme-light-dark-8 !default;
+$convert-dark-9: $theme-light-dark-9 !default;
 
-$convert-text-light: $theme-light-text-light !default;
-$convert-text-light-1: $theme-light-text-light-1 !default;
-$convert-text-light-2: $theme-light-text-light-2 !default;
-$convert-text-light-3: $theme-light-text-light-3 !default;
-$convert-text-light-4: $theme-light-text-light-4 !default;
-$convert-text-light-5: $theme-light-text-light-5 !default;
-$convert-text-light-6: $theme-light-text-light-6 !default;
-$convert-text-light-7: $theme-light-text-light-7 !default;
-$convert-text-light-8: $theme-light-text-light-8 !default;
-$convert-text-light-9: $theme-light-text-light-9 !default;
+$convert-light: $theme-light-light !default;
+$convert-light-1: $theme-light-light-1 !default;
+$convert-light-2: $theme-light-light-2 !default;
+$convert-light-3: $theme-light-light-3 !default;
+$convert-light-4: $theme-light-light-4 !default;
+$convert-light-5: $theme-light-light-5 !default;
+$convert-light-6: $theme-light-light-6 !default;
+$convert-light-7: $theme-light-light-7 !default;
+$convert-light-8: $theme-light-light-8 !default;
+$convert-light-9: $theme-light-light-9 !default;
 
 $convert-background: $theme-light-background !default;
 $convert-background-1: $theme-light-background-1 !default;
@@ -267,17 +267,17 @@ $convert-focus-alpha-thin: $theme-light-focus-alpha-thin !default;
 
 $convert-disabled-background-color: $theme-light-disabled-background-color !default;
 $convert-disabled-border-color: $theme-light-disabled-border-color !default;
-$convert-disabled-text-color: $theme-light-disabled-text-color !default;
+$convert-disabled-color: $theme-light-disabled-color !default;
 
 $convert-body-background-color: $theme-light-body-background-color !default;
-$convert-body-text-color: $theme-light-body-text-color !default;
+$convert-body-color: $theme-light-body-color !default;
 
-$convert-code-text-color: $theme-light-code-text-color !default;
+$convert-code-color: $theme-light-code-color !default;
 
-$convert-button-paint-text-color: $theme-light-button-paint-text-color !default;
+$convert-button-paint-color: $theme-light-button-paint-color !default;
 
 $convert-table-paint-background-color: $theme-light-table-paint-background-color !default;
-$convert-table-paint-text-color: $theme-light-table-paint-text-color !default;
+$convert-table-paint-color: $theme-light-table-paint-color !default;
 $convert-table-spot-background-color: $theme-light-table-spot-background-color !default;
 $convert-table-danger-background-color: $theme-light-table-danger-background-color !default;
 

@@ -23,7 +23,7 @@ $table-stripe-background-color: $convert-background-2 !default;
 
 // Table Paint
 $table-paint-background-color: $convert-table-paint-background-color !default;
-$table-paint-text-color: $convert-table-paint-text-color !default;
+$table-paint-color: $convert-table-paint-color !default;
 
 // Table Spot
 $table-spot-background-color: $convert-table-spot-background-color !default;
@@ -171,7 +171,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
     td {
       &.is-paint {
         background-color: $table-paint-background-color;
-        color: $table-paint-text-color;
+        color: $table-paint-color;
       }
       &.is-stripe {
         background-color: $table-stripe-background-color;

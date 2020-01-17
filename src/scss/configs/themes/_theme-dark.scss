@@ -20,27 +20,27 @@ $theme-dark-danger: darken($theme-danger, 12%) !default;
 $theme-dark-danger-strong: $theme-danger !default;
 $theme-dark-danger-darken: darken($theme-danger, 17%) !default;
 
-$theme-dark-text-dark: $white !default;
-$theme-dark-text-dark-1: rgba($theme-dark-text-dark, 0.87) !default;
-$theme-dark-text-dark-2: rgba($theme-dark-text-dark, 0.7) !default;
-$theme-dark-text-dark-3: rgba($theme-dark-text-dark, 0.6) !default;
-$theme-dark-text-dark-4: rgba($theme-dark-text-dark, 0.5) !default;
-$theme-dark-text-dark-5: rgba($theme-dark-text-dark, 0.4) !default;
-$theme-dark-text-dark-6: rgba($theme-dark-text-dark, 0.26) !default;
-$theme-dark-text-dark-7: rgba($theme-dark-text-dark, 0.15) !default;
-$theme-dark-text-dark-8: rgba($theme-dark-text-dark, 0.12) !default;
-$theme-dark-text-dark-9: rgba($theme-dark-text-dark, 0.05) !default;
+$theme-dark-dark: $white !default;
+$theme-dark-dark-1: rgba($theme-dark-dark, 0.87) !default;
+$theme-dark-dark-2: rgba($theme-dark-dark, 0.7) !default;
+$theme-dark-dark-3: rgba($theme-dark-dark, 0.6) !default;
+$theme-dark-dark-4: rgba($theme-dark-dark, 0.5) !default;
+$theme-dark-dark-5: rgba($theme-dark-dark, 0.4) !default;
+$theme-dark-dark-6: rgba($theme-dark-dark, 0.26) !default;
+$theme-dark-dark-7: rgba($theme-dark-dark, 0.15) !default;
+$theme-dark-dark-8: rgba($theme-dark-dark, 0.12) !default;
+$theme-dark-dark-9: rgba($theme-dark-dark, 0.05) !default;
 
-$theme-dark-text-light: $white !default;
-$theme-dark-text-light-1: rgba($theme-dark-text-light, 0.87) !default;
-$theme-dark-text-light-2: rgba($theme-dark-text-light, 0.7) !default;
-$theme-dark-text-light-3: rgba($theme-dark-text-light, 0.6) !default;
-$theme-dark-text-light-4: rgba($theme-dark-text-light, 0.5) !default;
-$theme-dark-text-light-5: rgba($theme-dark-text-light, 0.4) !default;
-$theme-dark-text-light-6: rgba($theme-dark-text-light, 0.26) !default;
-$theme-dark-text-light-7: rgba($theme-dark-text-light, 0.15) !default;
-$theme-dark-text-light-8: rgba($theme-dark-text-light, 0.12) !default;
-$theme-dark-text-light-9: rgba($theme-dark-text-light, 0.05) !default;
+$theme-dark-light: $white !default;
+$theme-dark-light-1: rgba($theme-dark-light, 0.87) !default;
+$theme-dark-light-2: rgba($theme-dark-light, 0.7) !default;
+$theme-dark-light-3: rgba($theme-dark-light, 0.6) !default;
+$theme-dark-light-4: rgba($theme-dark-light, 0.5) !default;
+$theme-dark-light-5: rgba($theme-dark-light, 0.4) !default;
+$theme-dark-light-6: rgba($theme-dark-light, 0.26) !default;
+$theme-dark-light-7: rgba($theme-dark-light, 0.15) !default;
+$theme-dark-light-8: rgba($theme-dark-light, 0.12) !default;
+$theme-dark-light-9: rgba($theme-dark-light, 0.05) !default;
 
 $theme-dark-background: $grey-900 !default;
 $theme-dark-background-1: lighten($grey-900, 5%) !default;
@@ -69,17 +69,17 @@ $theme-dark-focus-alpha-thin: rgba($theme-focus, 0.36) !default;
 
 $theme-dark-disabled-background-color: $grey-800 !default;
 $theme-dark-disabled-border-color: $grey-600 !default;
-$theme-dark-disabled-text-color: $light-6 !default;
+$theme-dark-disabled-color: $light-6 !default;
 
 $theme-dark-body-background-color: $grey-900 !default;
-$theme-dark-body-text-color: $light-2 !default;
+$theme-dark-body-color: $light-2 !default;
 
-$theme-dark-code-text-color: $blue-300 !default;
+$theme-dark-code-color: $blue-300 !default;
 
-$theme-dark-button-paint-text-color: $theme-dark-body-text-color !default;
+$theme-dark-button-paint-color: $theme-dark-body-color !default;
 
 $theme-dark-table-paint-background-color: rgba($theme-dark-primary, 0.4) !default;
-$theme-dark-table-paint-text-color: $theme-dark-body-text-color !default;
+$theme-dark-table-paint-color: $theme-dark-body-color !default;
 $theme-dark-table-spot-background-color: rgba($yellow-700, 0.4) !default;
 $theme-dark-table-danger-background-color: rgba($theme-dark-danger, 0.4) !default;
 

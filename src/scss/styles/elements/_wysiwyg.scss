@@ -31,7 +31,7 @@ $wysiwyg-strong-font-weight: $font-weight-strong !default;
 $wysiwyg-link-border-change-underline: false !default;
 $wysiwyg-link-border-bottom-width: $global-border-width !default;
 $wysiwyg-link-border-bottom-style: solid !default;
-$wysiwyg-link-text-color: $convert-primary-strong !default;
+$wysiwyg-link-color: $convert-primary-strong !default;
 
 // WYSIWYG Blockquote
 $wysiwyg-blockquote-background-color: $convert-background-2 !default;
@@ -44,14 +44,14 @@ $wysiwyg-blockquote-padding: 1.5em !default;
 $wysiwyg-code-padding: 0.2em 0.5em !default;
 $wysiwyg-code-background-color: $convert-background-alpha !default;
 $wysiwyg-code-border-radius: $radius-xs !default;
-$wysiwyg-code-text-color: $convert-code-text-color !default;
+$wysiwyg-code-color: $convert-code-color !default;
 $wysiwyg-code-font-size: $font-size-sm !default;
 $wysiwyg-code-font-family: $font-mono !default;
 
 // WYSIWYG Pre
 $wysiwyg-pre-background-color: $convert-background-2 !default;
 $wysiwyg-pre-border-radius: $radius-xs !default;
-$wysiwyg-pre-text-color: $convert-code-text-color !default;
+$wysiwyg-pre-color: $convert-code-color !default;
 $wysiwyg-pre-font-family: $font-mono !default;
 $wysiwyg-pre-white-space: pre !default;
 $wysiwyg-pre-code-padding: 1.25em 1.5em !default;
@@ -66,7 +66,7 @@ $wysiwyg-table-border-width: $global-border-width !default;
 $wysiwyg-table-border-color: $convert-border !default;
 $wysiwyg-table-th-font-weight: $font-weight-normal !default;
 $wysiwyg-table-paint-background-color: $convert-table-paint-background-color !default;
-$wysiwyg-table-paint-text-color: $convert-table-paint-text-color !default;
+$wysiwyg-table-paint-color: $convert-table-paint-color !default;
 
 // WYSIWYG HR
 $wysiwyg-hr-border-width: $global-border-width !default;
@@ -153,7 +153,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 @mixin musubii-style-wysiwyg-text-link() {
   a {
     cursor: pointer;
-    color: $wysiwyg-link-text-color;
+    color: $wysiwyg-link-color;
     @if $wysiwyg-link-border-change-underline == true {
       text-decoration: underline;
       &:hover {
@@ -234,7 +234,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
       padding: $wysiwyg-code-padding;
       background-color: $wysiwyg-code-background-color;
       border-radius: $wysiwyg-code-border-radius;
-      color: $wysiwyg-code-text-color;
+      color: $wysiwyg-code-color;
       font-size: $wysiwyg-code-font-size;
       font-family: $wysiwyg-code-font-family;
       word-break: break-all;
@@ -256,7 +256,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   pre {
     background-color: $wysiwyg-pre-background-color;
     border-radius: $wysiwyg-pre-border-radius;
-    color: $wysiwyg-pre-text-color;
+    color: $wysiwyg-pre-color;
     font-family: $wysiwyg-pre-font-family;
     white-space: $wysiwyg-pre-white-space;
     word-wrap: normal;
@@ -316,7 +316,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
     background-color: $wysiwyg-table-background-color;
     th {
       background-color: $wysiwyg-table-paint-background-color;
-      color: $wysiwyg-table-paint-text-color;
+      color: $wysiwyg-table-paint-color;
       font-weight: $wysiwyg-table-th-font-weight;
     }
     th,
@@ -349,7 +349,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
     padding: $wysiwyg-table-padding;
     background-color: $wysiwyg-table-paint-background-color;
     border-top: $wysiwyg-table-border-width solid $wysiwyg-table-border-color;
-    color: $wysiwyg-table-paint-text-color;
+    color: $wysiwyg-table-paint-color;
     font-weight: $wysiwyg-table-th-font-weight;
   }
   dd {

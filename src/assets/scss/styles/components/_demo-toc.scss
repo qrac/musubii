@@ -10,7 +10,7 @@
     //border-right: 1px solid var(--demo-box-line-border-color);
     //border-left: 1px solid var(--demo-box-line-border-color);
     //border-radius: 2px 2px 0 0;
-    color: $convert-text-dark-4;
+    color: $convert-dark-4;
     font-size: 87.5%;
     font-weight: 900;
     letter-spacing: 0.175em;
@@ -38,7 +38,7 @@
         font-family: $font-sans-en;
         &:before {
           content: "#";
-          color: $convert-text-dark-6;
+          color: $convert-dark-6;
           font-weight: 900;
           margin-right: 4px;
         }

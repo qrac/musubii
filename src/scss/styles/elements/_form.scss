@@ -40,13 +40,13 @@ $input-placeholder-color: $convert-input-placeholder-color !default;
 $input-disabled-background-color: $convert-disabled-background-color !default;
 $input-disabled-border-color: $convert-disabled-border-color !default;
 $input-disabled-shadow: $global-inset-shadow-size $convert-shadow-alpha-thin !default;
-$input-disabled-text-color: $convert-disabled-text-color !default;
+$input-disabled-color: $convert-disabled-color !default;
 
 // Input Readonly
 $input-readonly-background-color: $convert-background-2 !default;
 $input-readonly-border-color: $convert-border !default;
 $input-readonly-shadow: $global-inset-shadow-size $convert-shadow-alpha-thin !default;
-$input-readonly-text-color: $convert-body-text-color !default;
+$input-readonly-color: $convert-body-color !default;
 
 // Input Focus
 $input-focus-border-color: $convert-focus-darken !default;
@@ -143,7 +143,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   border: $input-border-width solid $input-border-color;
   border-radius: $input-border-radius;
   box-shadow: $input-shadow;
-  color: $convert-body-text-color;
+  color: $convert-body-color;
   line-height: $input-line-height;
   appearance: none;
   transition: $input-transition;
@@ -151,13 +151,13 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
     cursor: not-allowed;
     background-color: $input-disabled-background-color;
     box-shadow: $input-disabled-shadow;
-    color: $input-disabled-text-color;
+    color: $input-disabled-color;
   }
   &[readonly] {
     background-color: $input-readonly-background-color;
     border-color: $input-readonly-border-color;
     box-shadow: $input-readonly-shadow;
-    color: $input-readonly-text-color;
+    color: $input-readonly-color;
   }
   &:focus,
   &[readonly]:focus {
@@ -185,20 +185,20 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   border: $input-border-width solid $input-border-color;
   border-radius: $input-border-radius;
   box-shadow: $input-shadow;
-  color: $convert-body-text-color;
+  color: $convert-body-color;
   appearance: none;
   transition: $input-transition;
   &[disabled] {
     cursor: not-allowed;
     background-color: $input-disabled-background-color;
     box-shadow: $input-disabled-shadow;
-    color: $input-disabled-text-color;
+    color: $input-disabled-color;
   }
   &[readonly] {
     background-color: $input-readonly-background-color;
     border-color: $input-readonly-border-color;
     box-shadow: $input-readonly-shadow;
-    color: $input-readonly-text-color;
+    color: $input-readonly-color;
   }
   &:focus,
   &[readonly]:focus {
@@ -576,7 +576,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @mixin musubii-style-form-radio-label-disabled() {
   cursor: not-allowed;
-  color: $input-disabled-text-color;
+  color: $input-disabled-color;
 }
 
 @include generate-style($option-generate-style-form) {
@@ -711,7 +711,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @mixin musubii-style-form-checkbox-label-disabled() {
   cursor: not-allowed;
-  color: $input-disabled-text-color;
+  color: $input-disabled-color;
 }
 
 @include generate-style($option-generate-style-form) {
@@ -753,21 +753,21 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
       background-color: $input-background-color;
       border: $input-border-width solid $input-border-color;
       border-radius: $input-border-radius;
-      color: $convert-body-text-color;
+      color: $convert-body-color;
       line-height: $input-line-height;
       transition: $select-transition;
       appearance: none;
       &[disabled] {
         cursor: not-allowed;
         background-color: $input-disabled-background-color;
-        color: $input-disabled-text-color;
+        color: $input-disabled-color;
         > option {
-          color: $input-disabled-text-color;
+          color: $input-disabled-color;
         }
       }
       &[readonly] {
         background-color: $input-readonly-background-color;
-        color: $input-readonly-text-color;
+        color: $input-readonly-color;
       }
       &:focus,
       &[readonly]:focus {

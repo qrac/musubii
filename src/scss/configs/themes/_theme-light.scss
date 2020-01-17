@@ -20,27 +20,27 @@ $theme-light-danger: $theme-danger !default;
 $theme-light-danger-strong: $theme-danger !default;
 $theme-light-danger-darken: darken($theme-danger, 5%) !default;
 
-$theme-light-text-dark: $black !default;
-$theme-light-text-dark-1: rgba($theme-light-text-dark, 0.87) !default;
-$theme-light-text-dark-2: rgba($theme-light-text-dark, 0.7) !default;
-$theme-light-text-dark-3: rgba($theme-light-text-dark, 0.6) !default;
-$theme-light-text-dark-4: rgba($theme-light-text-dark, 0.5) !default;
-$theme-light-text-dark-5: rgba($theme-light-text-dark, 0.4) !default;
-$theme-light-text-dark-6: rgba($theme-light-text-dark, 0.26) !default;
-$theme-light-text-dark-7: rgba($theme-light-text-dark, 0.15) !default;
-$theme-light-text-dark-8: rgba($theme-light-text-dark, 0.12) !default;
-$theme-light-text-dark-9: rgba($theme-light-text-dark, 0.05) !default;
+$theme-light-dark: $black !default;
+$theme-light-dark-1: rgba($theme-light-dark, 0.87) !default;
+$theme-light-dark-2: rgba($theme-light-dark, 0.7) !default;
+$theme-light-dark-3: rgba($theme-light-dark, 0.6) !default;
+$theme-light-dark-4: rgba($theme-light-dark, 0.5) !default;
+$theme-light-dark-5: rgba($theme-light-dark, 0.4) !default;
+$theme-light-dark-6: rgba($theme-light-dark, 0.26) !default;
+$theme-light-dark-7: rgba($theme-light-dark, 0.15) !default;
+$theme-light-dark-8: rgba($theme-light-dark, 0.12) !default;
+$theme-light-dark-9: rgba($theme-light-dark, 0.05) !default;
 
-$theme-light-text-light: $white !default;
-$theme-light-text-light-1: rgba($theme-light-text-light, 0.87) !default;
-$theme-light-text-light-2: rgba($theme-light-text-light, 0.7) !default;
-$theme-light-text-light-3: rgba($theme-light-text-light, 0.6) !default;
-$theme-light-text-light-4: rgba($theme-light-text-light, 0.5) !default;
-$theme-light-text-light-5: rgba($theme-light-text-light, 0.4) !default;
-$theme-light-text-light-6: rgba($theme-light-text-light, 0.26) !default;
-$theme-light-text-light-7: rgba($theme-light-text-light, 0.15) !default;
-$theme-light-text-light-8: rgba($theme-light-text-light, 0.12) !default;
-$theme-light-text-light-9: rgba($theme-light-text-light, 0.05) !default;
+$theme-light-light: $white !default;
+$theme-light-light-1: rgba($theme-light-light, 0.87) !default;
+$theme-light-light-2: rgba($theme-light-light, 0.7) !default;
+$theme-light-light-3: rgba($theme-light-light, 0.6) !default;
+$theme-light-light-4: rgba($theme-light-light, 0.5) !default;
+$theme-light-light-5: rgba($theme-light-light, 0.4) !default;
+$theme-light-light-6: rgba($theme-light-light, 0.26) !default;
+$theme-light-light-7: rgba($theme-light-light, 0.15) !default;
+$theme-light-light-8: rgba($theme-light-light, 0.12) !default;
+$theme-light-light-9: rgba($theme-light-light, 0.05) !default;
 
 $theme-light-background: $light !default;
 $theme-light-background-1: $light !default;
@@ -69,17 +69,17 @@ $theme-light-focus-alpha-thin: rgba($theme-focus, 0.36) !default;
 
 $theme-light-disabled-background-color: $grey-400 !default;
 $theme-light-disabled-border-color: $blue-grey-50 !default;
-$theme-light-disabled-text-color: $dark-6 !default;
+$theme-light-disabled-color: $dark-6 !default;
 
 $theme-light-body-background-color: $light !default;
-$theme-light-body-text-color: $dark-2 !default;
+$theme-light-body-color: $dark-2 !default;
 
-$theme-light-code-text-color: $indigo-500 !default;
+$theme-light-code-color: $indigo-500 !default;
 
-$theme-light-button-paint-text-color: $light !default;
+$theme-light-button-paint-color: $light !default;
 
 $theme-light-table-paint-background-color: $theme-light-primary !default;
-$theme-light-table-paint-text-color: $light !default;
+$theme-light-table-paint-color: $light !default;
 $theme-light-table-spot-background-color: $yellow-200 !default;
 $theme-light-table-danger-background-color: lighten($theme-light-danger, 29%) !default;
 
