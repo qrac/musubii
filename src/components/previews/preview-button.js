@@ -171,7 +171,7 @@ export class PreviewButtonDetail extends React.Component {
         </div>
         <div className="demo-box is-line">
           <div
-            className="box is-flex is-space-right-xs is-space-bottom-xs is-margin-bottom-minus-xs"
+            className="box is-flex is-space-right-xs is-space-bottom-xs is-margin-right-minus-xs is-margin-bottom-minus-xs"
             dangerouslySetInnerHTML={{ __html: formattedCode }}
           ></div>
         </div>
