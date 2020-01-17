@@ -21,12 +21,9 @@ contents list
 
 ## Basic
 
-| Selector      | Description                                          |
-| ------------- | ---------------------------------------------------- |
-| `.text`       | テキストに使うセレクター。                           |
-| `.blockquote` | 引用ブロックに使うセレクター。                       |
-| `.code`       | コード表示に使うセレクター。                         |
-| `.pre`        | `.code` をラップしてコードブロックを作るセレクター。 |
+| Selector | Description                              |
+| -------- | ---------------------------------------- |
+| `.text`  | テキスト装飾の起点として使うセレクター。 |
 
 ## Dark
 
@@ -47,6 +44,14 @@ contents list
 | Brightest   | Light 1       | Light 2       | Light 3       | Light 4       | Light 5       | Light 6       | Light 7       | Light 8       | Light 9       |
 | ----------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | `.is-light` | `.is-light-1` | `.is-light-2` | `.is-light-3` | `.is-light-4` | `.is-light-5` | `.is-light-6` | `.is-light-7` | `.is-light-8` | `.is-light-9` |
+
+## Role
+
+`.is-(role)` 形式のモディファイアを `.text` に付与すると、各役割毎のカラーリングに変化します。
+
+| Primary       | Info       | Success       | Warning       | Danger       |
+| ------------- | ---------- | ------------- | ------------- | ------------ |
+| `.is-primary` | `.is-info` | `.is-success` | `.is-warning` | `.is-danger` |
 
 ## Weight
 

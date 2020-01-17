@@ -5,11 +5,7 @@ export const meta = {
   filePath: "styles/elements/_button"
 }
 
-import {
-  PreviewButtonBasic,
-  PreviewButtonSquare,
-  PreviewButtonCircle
-} from "~/components/previews/preview-button"
+import { PreviewButtonDetail } from "~/components/previews/preview-button"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -20,20 +16,58 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+ボタン装飾を作るエレメント CSS。
+
+<PreviewButtonDetail />
+
 ## Basic
 
-<PreviewButtonBasic />
+| Selector  | Description                            |
+| --------- | -------------------------------------- |
+| `.button` | ボタン装飾の起点として使うセレクター。 |
+
+[[warning | Warning]]
+| `.button` には `.is-plain` `.is-outline` `.is-melt` いずれかの付与が必須です。
+
+| Modifier (One is required) | Description                                                |
+| -------------------------- | ---------------------------------------------------------- |
+| `.is-plain`                | `.button` に付与すると塗りベースのボタンになります。       |
+| `.is-outline`              | `.button` に付与するとアウトラインのあるボタンになります。 |
+| `.is-melt`                 | `.button` に付与すると背景に溶けた印象のボタンになります。 |
+
+| Modifier                   | Description                                           |
+| -------------------------- | ----------------------------------------------------- |
+| `.is-strong`               | `.button` に付与すると太文字になります。              |
+| `.is-round`                | `.button` に付与すると角が完全に丸くなります。        |
+| `.is-floating`             | `.button.is-plain` に付与すると浮いた装飾になります。 |
+| `.is-square`               | `.button` に付与すると正方形になります。              |
+| `.is-circle`               | `.button` に付与すると正円になります。                |
+| `[disabled], .is-disabled` | `.button` に付与すると非活性になります。              |
+
+## Role
+
+`.is-(role)` 形式のモディファイアを `.button` に付与すると、各役割毎のカラーリングに変化します。
+
+| Primary       | Info       | Success       | Warning       | Danger       |
+| ------------- | ---------- | ------------- | ------------- | ------------ |
+| `.is-primary` | `.is-info` | `.is-success` | `.is-warning` | `.is-danger` |
+
+[[tips | Tips]]
+| 各役割毎のカラーリングと `.is-floating` を併用すると、影もカラーリングに添います。影をモノトーンにしたい場合は、[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-button-role-shadow` を `false` にします。
+
+## Angle
+
+| Modifier          | Description                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| `.is-angle-right` | `.button` に付与すると右に角マークが追加されます。                                   |
+| `.is-angle-left`  | `.button` に付与すると左に角マークが追加されます。                                   |
+| `.is-angle-up`    | `.button.is-angle-right, .button.is-angle-left` に付与すると角マークが上を向きます。 |
+| `.is-angle-down`  | `.button.is-angle-right, .button.is-angle-left` に付与すると角マークが下を向きます。 |
 
 [[warning | Warning]]
 | Angle には幅調整が含まれていませんので、ボタンの幅を [Flex](/styles/utilities/flex) で広げたり、子要素の余白を `is-padding-right-xxl` などで追加する工夫が必要です。
-
-## Square
-
-<PreviewButtonSquare />
-
-## Circle
-
-<PreviewButtonCircle />
 
 ## Variables
 

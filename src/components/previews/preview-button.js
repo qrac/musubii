@@ -41,7 +41,7 @@ const beautifyHtmlOptions = {
   indent_size: 2
 }
 
-export class PreviewButtonBasic extends React.Component {
+export class PreviewButtonDetail extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
