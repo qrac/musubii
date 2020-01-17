@@ -15,6 +15,118 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+テキストを装飾するエレメント CSS。
+
+## Basic
+
+| Selector      | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| `.text`       | テキストに使うセレクター。                           |
+| `.blockquote` | 引用ブロックに使うセレクター。                       |
+| `.code`       | コード表示に使うセレクター。                         |
+| `.pre`        | `.code` をラップしてコードブロックを作るセレクター。 |
+
+## Dark
+
+`.is-dark-(value)` 形式のモディファイアを `.text` に付与すると黒文字を表現。`(value)` を省略すると最も濃く、1 > 9 の順に薄くなります。
+
+`(value)` は [Color](/configs/variables/color) の値を引き継いでいます。
+
+| Darkest    | Dark 1       | Dark 2       | Dark 3       | Dark 4       | Dark 5       | Dark 6       | Dark 7       | Dark 8       | Dark 9       |
+| ---------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| `.is-dark` | `.is-dark-1` | `.is-dark-2` | `.is-dark-3` | `.is-dark-4` | `.is-dark-5` | `.is-dark-6` | `.is-dark-7` | `.is-dark-8` | `.is-dark-9` |
+
+## Light
+
+`.is-light-(value)` 形式のモディファイアを `.text` に付与すると白文字を表現。`(value)` を省略すると最も濃く、1 > 9 の順に薄くなります。
+
+`(value)` は [Color](/configs/variables/color) の値を引き継いでいます。
+
+| Brightest   | Light 1       | Light 2       | Light 3       | Light 4       | Light 5       | Light 6       | Light 7       | Light 8       | Light 9       |
+| ----------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| `.is-light` | `.is-light-1` | `.is-light-2` | `.is-light-3` | `.is-light-4` | `.is-light-5` | `.is-light-6` | `.is-light-7` | `.is-light-8` | `.is-light-9` |
+
+## Weight
+
+`.is-weight-(value)` 形式のモディファイアを `.text` に付与すると文字の太さが変化。
+
+`(value)` は [Font](/configs/variables/font) の値を引き継いでいます。
+
+| Normal              | Strong              | W100             | W200             | W300             | W400             | W500             | W600             | W700             | W800             | W900             |
+| ------------------- | ------------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| `.is-weight-normal` | `.is-weight-strong` | `.is-weight-100` | `.is-weight-200` | `.is-weight-300` | `.is-weight-400` | `.is-weight-500` | `.is-weight-600` | `.is-weight-700` | `.is-weight-800` | `.is-weight-900` |
+
+## Line Height
+
+`.is-line-height-(value)` 形式のモディファイアを `.text` に付与すると行間が変化。
+
+`(value)` は [Font](/configs/variables/font) の値を引き継いでいます。
+
+| XXS                   | XS                   | Small                | Medium               | Large                | XL                   | XXL                   |
+| --------------------- | -------------------- | -------------------- | -------------------- | -------------------- | -------------------- | --------------------- |
+| `.is-line-height-xxs` | `.is-line-height-xs` | `.is-line-height-sm` | `.is-line-height-md` | `.is-line-height-lg` | `.is-line-height-xl` | `.is-line-height-xxl` |
+
+## Transform
+
+`.text` に付与することで文字の表示方法を変化させるモディファイア。
+
+| Italic       | Delete       | Capitalize       | Lowercase       | Uppercase       |
+| ------------ | ------------ | ---------------- | --------------- | --------------- |
+| `.is-italic` | `.is-delete` | `.is-capitalize` | `.is-lowercase` | `.is-uppercase` |
+
+## Align
+
+`.text` に付与することで `text-align` や `vertical-align` の調整ができるモディファイア。
+
+`right` `center` `left` のみ [Media Query](/configs/mixins/mediaquery) に応じた変更も若干行えます。
+
+| Right                         | Center                          | Left                        |
+| ----------------------------- | ------------------------------- | --------------------------- |
+| `.is-right, .is-mobile-right` | `.is-center, .is-mobile-center` | `.is-left, .is-mobile-left` |
+| `.is-fablet-right`            | `.is-fablet-center`             | `.is-fablet-left`           |
+| `.is-tablet-right`            | `.is-tablet-center`             | `.is-tablet-left`           |
+| `.is-desktop-right`           | `.is-desktop-center`            | `.is-desktop-left`          |
+| `.is-wide-right`              | `.is-wide-center`               | `.is-wide-left`             |
+
+| Justify       | Baseline       | Top       | Middle       | Bottom       |
+| ------------- | -------------- | --------- | ------------ | ------------ |
+| `.is-justify` | `.is-baseline` | `.is-top` | `.is-middle` | `.is-bottom` |
+
+## Wrap
+
+`.text` に付与することで文章の折り返し調整ができるモディファイア。
+
+| Modifier     | Description                          |
+| ------------ | ------------------------------------ |
+| `.is-nowrap` | 文章が折り返さなくなります。         |
+| `.is-break`  | 文章が英単語の途中でも折り返します。 |
+
+## Link
+
+`.text` に付与することで下線リンクの装飾を施すモディファイア。
+
+デフォルトは `border-bottom` プロパティが使われていますが、[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-text-link-border` を `false` にすると、下線が `text-decoration: underline;` に切り替わります。
+
+| Modifier           | Description                                                        |
+| ------------------ | ------------------------------------------------------------------ |
+| `.is-link`         | `.text` に付与すると下線リンク装飾。ホバーで下線は消えます。       |
+| `.is-link-reverse` | `.text` に付与するとホバーで下線が表示されるリンク装飾になります。 |
+
+## Blockquote
+
+| Selector      | Description                    |
+| ------------- | ------------------------------ |
+| `.blockquote` | 引用ブロックに使うセレクター。 |
+
+## Code
+
+| Selector | Description                                          |
+| -------- | ---------------------------------------------------- |
+| `.code`  | コード表示に使うセレクター。                         |
+| `.pre`   | `.code` をラップしてコードブロックを作るセレクター。 |
+
 ## Variables
 
 <PreviewVariablesDouble filePath={meta.filePath} viewCompiled={true} />
