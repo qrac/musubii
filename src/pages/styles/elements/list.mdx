@@ -15,6 +15,33 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+リスト装飾を作るエレメント CSS。
+
+## Basic
+
+| Selector | Description                            |
+| -------- | -------------------------------------- |
+| `.list`  | リスト装飾の起点として使うセレクター。 |
+| `.item`  | `.list` 直下に置くセレクター。         |
+
+| Modifier      | Description                                        |
+| ------------- | -------------------------------------------------- |
+| `.is-disc`    | `.list` に付与すると塗り円のリスト装飾になります。 |
+| `.is-circle`  | `.list` に付与すると線円のリスト装飾になります。   |
+| `.is-decimal` | `.list` に付与すると数字の番号リストになります。   |
+
+## Note
+
+`.is-note` はレイアウト調整を含んだ特殊なモディファイアです。リストの頭に合判となる `※1` を付けて文章のインデントを揃える・合判が歯抜けになるなど、パターン化しづらい要望に対処するための CSS です。
+
+`.item` 直下には、`span` などでアイコンや不規則な装飾をインラインの HTML で記述します。`.item` が Flexbox となり直下要素を横並びにするため、急な要望の変化に対応しやすくなります。
+
+| Modifier   | Description                                                              |
+| ---------- | ------------------------------------------------------------------------ |
+| `.is-note` | `.list` に付与すると `.item` が Flexbox となり直下要素を横並びにします。 |
+
 ## Variables
 
 <PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
