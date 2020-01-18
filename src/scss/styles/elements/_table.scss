@@ -15,7 +15,7 @@ $selector-table-tr: "tr" !default;
 $selector-table-th: "th" !default;
 $selector-table-td: "td" !default;
 $selector-table-wrap: "\.table-wrap" !default;
-$selector-table-scroll-x: "\.table-scroll-x" !default;
+$selector-table-scroll: "\.table-scroll" !default;
 
 // Modifiers
 $modifier-table-line: "\.is-line" !default;
@@ -331,7 +331,7 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
   }
 }
 
-@mixin musubii-style-table-scroll-x() {
+@mixin musubii-style-table-scroll() {
   overflow: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -345,8 +345,8 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
         @include musubii-style-table-wrap-outline();
       }
     }
-    #{$selector-table-scroll-x} {
-      @include musubii-style-table-scroll-x();
+    #{$selector-table-scroll} {
+      @include musubii-style-table-scroll();
     }
   }
 }
