@@ -635,8 +635,8 @@ $button-angle-border-color: $convert-border-1 !default;
 }
 
 @include generate-style($option-generate-style-button) {
-  #{$selector-button} {
-    @if $option-add-style-button-angle == true {
+  @if $option-add-style-button-angle == true {
+    #{$selector-button} {
       &#{$modifier-button-angle-right},
       &#{$modifier-button-angle-left} {
         @include musubii-style-button-angle();
