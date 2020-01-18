@@ -18,11 +18,6 @@ $selector-table-wrap: "\.table-wrap" !default;
 $selector-table-scroll-x: "\.table-scroll-x" !default;
 
 // Modifiers
-$modifier-table-right: "\.is-right" !default;
-$modifier-table-center: "\.is-center" !default;
-$modifier-table-left: "\.is-left" !default;
-$modifier-table-middle: "\.is-middle" !default;
-$modifier-table-fixed: "\.is-fixed" !default;
 $modifier-table-line: "\.is-line" !default;
 $modifier-table-outline: "\.is-outline" !default;
 $modifier-table-border: "\.is-border" !default;
@@ -30,6 +25,11 @@ $modifier-table-stripe: "\.is-stripe" !default;
 $modifier-table-paint: "\.is-paint" !default;
 $modifier-table-spot: "\.is-spot" !default;
 $modifier-table-danger: "\.is-danger" !default;
+$modifier-table-right: "\.is-right" !default;
+$modifier-table-center: "\.is-center" !default;
+$modifier-table-left: "\.is-left" !default;
+$modifier-table-middle: "\.is-middle" !default;
+$modifier-table-fixed: "\.is-fixed" !default;
 
 // Table
 $table-width: 100% !default;
@@ -89,99 +89,6 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 @include generate-style($option-generate-style-table) {
   #{$selector-table} {
     @include musubii-style-table();
-  }
-}
-
-//----------------------------------------------------
-// / Style - Table Align
-//----------------------------------------------------
-
-@mixin musubii-style-table-right() {
-  text-align: right;
-}
-
-@mixin musubii-style-table-center() {
-  text-align: center;
-}
-
-@mixin musubii-style-table-left() {
-  text-align: left;
-}
-
-@mixin musubii-style-table-middle() {
-  vertical-align: middle;
-}
-
-@include generate-style($option-generate-style-table) {
-  #{$selector-table} {
-    &#{$modifier-table-right} {
-      #{$selector-table-th},
-      #{$selector-table-td} {
-        @include musubii-style-table-right();
-      }
-    }
-    #{$selector-table-tr},
-    #{$selector-table-th},
-    #{$selector-table-td} {
-      &#{$modifier-table-right} {
-        @include musubii-style-table-right();
-      }
-    }
-    &#{$modifier-table-center} {
-      #{$selector-table-th},
-      #{$selector-table-td} {
-        @include musubii-style-table-center();
-      }
-    }
-    #{$selector-table-tr},
-    #{$selector-table-th},
-    #{$selector-table-td} {
-      &#{$modifier-table-center} {
-        @include musubii-style-table-center();
-      }
-    }
-    &#{$modifier-table-left} {
-      #{$selector-table-th},
-      #{$selector-table-td} {
-        @include musubii-style-table-left();
-      }
-    }
-    #{$selector-table-tr},
-    #{$selector-table-th},
-    #{$selector-table-td} {
-      &#{$modifier-table-left} {
-        @include musubii-style-table-left();
-      }
-    }
-    &#{$modifier-table-middle} {
-      #{$selector-table-th},
-      #{$selector-table-td} {
-        @include musubii-style-table-middle();
-      }
-    }
-    #{$selector-table-tr},
-    #{$selector-table-th},
-    #{$selector-table-td} {
-      &#{$modifier-table-middle} {
-        @include musubii-style-table-middle();
-      }
-    }
-  }
-}
-
-//----------------------------------------------------
-// / Style - Table Fixed
-//----------------------------------------------------
-
-@mixin musubii-style-table-fixed() {
-  table-layout: fixed;
-}
-
-@include generate-style($option-generate-style-table) {
-  #{$selector-table} {
-    &#{$modifier-table-fixed} {
-      @include musubii-style-table-fixed();
-    }
   }
 }
 
@@ -300,6 +207,99 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
       &#{$modifier-table-danger} {
         @include musubii-style-table-bg-danger();
       }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Table Align
+//----------------------------------------------------
+
+@mixin musubii-style-table-right() {
+  text-align: right;
+}
+
+@mixin musubii-style-table-center() {
+  text-align: center;
+}
+
+@mixin musubii-style-table-left() {
+  text-align: left;
+}
+
+@mixin musubii-style-table-middle() {
+  vertical-align: middle;
+}
+
+@include generate-style($option-generate-style-table) {
+  #{$selector-table} {
+    &#{$modifier-table-right} {
+      #{$selector-table-th},
+      #{$selector-table-td} {
+        @include musubii-style-table-right();
+      }
+    }
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-right} {
+        @include musubii-style-table-right();
+      }
+    }
+    &#{$modifier-table-center} {
+      #{$selector-table-th},
+      #{$selector-table-td} {
+        @include musubii-style-table-center();
+      }
+    }
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-center} {
+        @include musubii-style-table-center();
+      }
+    }
+    &#{$modifier-table-left} {
+      #{$selector-table-th},
+      #{$selector-table-td} {
+        @include musubii-style-table-left();
+      }
+    }
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-left} {
+        @include musubii-style-table-left();
+      }
+    }
+    &#{$modifier-table-middle} {
+      #{$selector-table-th},
+      #{$selector-table-td} {
+        @include musubii-style-table-middle();
+      }
+    }
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-middle} {
+        @include musubii-style-table-middle();
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Table Fixed
+//----------------------------------------------------
+
+@mixin musubii-style-table-fixed() {
+  table-layout: fixed;
+}
+
+@include generate-style($option-generate-style-table) {
+  #{$selector-table} {
+    &#{$modifier-table-fixed} {
+      @include musubii-style-table-fixed();
     }
   }
 }
