@@ -25,9 +25,9 @@ $modifier-form-underline: "\.is-underline" !default;
 $modifier-form-inside: "\.is-inside" !default;
 $modifier-form-middle: "\.is-middle" !default;
 $modifier-form-center: "\.is-center" !default;
-$modifier-form-hidden: "\.is-hidden" !default;
-$modifier-form-active: "\.is-active" !default;
+$modifier-form-checkbox: "\.is-checkbox" !default;
 $modifier-form-disabled: "\.is-disabled" !default;
+$modifier-form-hidden: "\.is-hidden" !default;
 $modifier-form-multiple: "\.is-multiple" !default;
 
 // Input
@@ -633,10 +633,10 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 }
 
 //----------------------------------------------------
-// / Style - Form Radio Active
+// / Style - Form Radio Checked
 //----------------------------------------------------
 
-@mixin musubii-style-form-radio-active() {
+@mixin musubii-style-form-radio-checkbox() {
   border-color: $radio-checked-border-color;
   &:before {
     opacity: 1;
@@ -645,8 +645,8 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @include generate-style($option-generate-style-form) {
   #{$selector-form-radio} {
-    &#{$modifier-form-active} {
-      @include musubii-style-form-radio-active();
+    &#{$modifier-form-checkbox} {
+      @include musubii-style-form-radio-checkbox();
     }
   }
   #{$selector-form-input} {
@@ -655,7 +655,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
         + {
           #{$selector-form-label} {
             #{$selector-form-radio} {
-              @include musubii-style-form-radio-active();
+              @include musubii-style-form-radio-checkbox();
             }
           }
         }
@@ -780,10 +780,10 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 }
 
 //----------------------------------------------------
-// / Style - Form Checkbox Active
+// / Style - Form Checkbox Checked
 //----------------------------------------------------
 
-@mixin musubii-style-form-checkbox-active() {
+@mixin musubii-style-form-checkbox-checkbox() {
   background-color: $checkbox-checked-background-color;
   border-color: $checkbox-checked-border-color;
   &:before {
@@ -793,8 +793,8 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @include generate-style($option-generate-style-form) {
   #{$selector-form-checkbox} {
-    &#{$modifier-form-active} {
-      @include musubii-style-form-checkbox-active();
+    &#{$modifier-form-checkbox} {
+      @include musubii-style-form-checkbox-checkbox();
     }
   }
   #{$selector-form-input} {
@@ -803,7 +803,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
         + {
           #{$selector-form-label} {
             #{$selector-form-checkbox} {
-              @include musubii-style-form-checkbox-active();
+              @include musubii-style-form-checkbox-checkbox();
             }
           }
         }
