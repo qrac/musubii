@@ -15,6 +15,59 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+テーブル装飾を作るエレメント CSS。
+
+## Basic
+
+| Selector | Description                              |
+| -------- | ---------------------------------------- |
+| `.table` | テーブル装飾の起点として使うセレクター。 |
+
+| Modifier      | Description                                                           |
+| ------------- | --------------------------------------------------------------------- |
+| `.is-line`    | `.table` に付与すると横線で区切ったテーブル装飾になります。           |
+| `.is-outline` | `.table` に付与するとテーブルの周りに線を引きます。                   |
+| `.is-border`  | `.table` に付与すると縦線・横線・外周線のあるテーブル装飾になります。 |
+| `.is-stripe`  | `.table` に付与すると行背景色が交互に塗られます。                     |
+
+## Background
+
+`.table` 内の `tr, th, td` はモディファイア付与で個別に背景を塗ることができます。
+
+| Paint       | Stripe       | Spot       | Danger       |
+| ----------- | ------------ | ---------- | ------------ |
+| `.is-paint` | `.is-stripe` | `.is-spot` | `.is-danger` |
+
+## Align
+
+`.table` または `.table` 内の `tr, th, td` はモディファイア付与で文字の方向を調整できます。
+
+| Right       | Center       | Left       | Left         |
+| ----------- | ------------ | ---------- | ------------ |
+| `.is-right` | `.is-center` | `.is-left` | `.is-middle` |
+
+## Fixed
+
+`.table` に `.is-Fixed` を付与すると、列の幅が最初の行に設定されます。列の幅を任意の幅で固定する場合に用います。
+
+[[warning | Warning]]
+| `.is-Fixed` を付与すると 2 行目以降がはみ出しても無視されるようになります。`.text.is-beak` などでテーブル内に収める工夫が必要です。
+
+## Wrap
+
+`.table` 内データが収まりきれないと分かっている場合はラッピングして横スクロールさせます。冗長ですが、`.table-wrap > .table-scroll > .table` の順に 2 重ラップを施します。
+
+| Selector        | Description                                            |
+| --------------- | ------------------------------------------------------ |
+| `.table-wrap`   | テーブルをラップした時に補助の装飾を施すセレクター。   |
+| `.table-scroll` | テーブルをラップした時に横スクロールさせるセレクター。 |
+
+| Modifier      | Description                                                                  |
+| ------------- | ---------------------------------------------------------------------------- |
+| `.is-outline` | `.table-wrap` に付与するとテーブルの外周線がスクロールで消えるのを防ぎます。 |
+
 ## Variables
 
 <PreviewVariablesDouble filePath={meta.filePath} viewCompiled={true} />
