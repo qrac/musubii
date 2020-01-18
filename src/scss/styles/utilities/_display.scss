@@ -102,8 +102,6 @@ $modifier-display-ie-inline: "\.is-ie-inline" !default;
 $modifier-display-ie-inline-block: "\.is-ie-inline-block" !default;
 $modifier-display-ie-none: "\.is-ie-none" !default;
 
-$modifier-display-hidden: "\.is-hidden" !default;
-
 // Display Important
 $display-important: if(
   $option-important-display == true,
@@ -534,21 +532,5 @@ $display-important: if(
         @include musubii-style-display-none();
       }
     }
-  }
-}
-
-//----------------------------------------------------
-// / Style - Display Hidden
-//----------------------------------------------------
-
-@mixin musubii-style-display-hidden() {
-  position: absolute $display-important;
-  opacity: 0 $display-important;
-  z-index: -1 $display-important;
-}
-
-@include generate-style($option-generate-style-display) {
-  #{$modifier-display-hidden} {
-    @include musubii-style-display-hidden();
   }
 }

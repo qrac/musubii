@@ -9,9 +9,9 @@
 // Selectors
 $selector-form-input: "\.input" !default;
 $selector-form-textarea: "\.textarea" !default;
+$selector-form-label: "\.label" !default;
 $selector-form-radio: "\.radio" !default;
 $selector-form-checkbox: "\.checkbox" !default;
-$selector-form-label: "\.label" !default;
 $selector-form-select-wrap: "\.select" !default;
 $selector-form-select: "select" !default;
 $selector-form-fieldset: "\.fieldset" !default;
@@ -25,6 +25,7 @@ $modifier-form-underline: "\.is-underline" !default;
 $modifier-form-inside: "\.is-inside" !default;
 $modifier-form-middle: "\.is-middle" !default;
 $modifier-form-center: "\.is-center" !default;
+$modifier-form-hidden: "\.is-hidden" !default;
 $modifier-form-active: "\.is-active" !default;
 $modifier-form-disabled: "\.is-disabled" !default;
 $modifier-form-multiple: "\.is-multiple" !default;
@@ -582,9 +583,22 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
+@mixin musubii-style-form-radio-hidden() {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
 @include generate-style($option-generate-style-form) {
   #{$selector-form-radio} {
     @include musubii-style-form-radio();
+  }
+  #{$selector-form-input} {
+    &[type="radio"] {
+      &#{$modifier-form-hidden} {
+        @include musubii-style-form-radio-hidden();
+      }
+    }
   }
 }
 
@@ -715,9 +729,22 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
+@mixin musubii-style-form-checkbox-hidden() {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
 @include generate-style($option-generate-style-form) {
   #{$selector-form-checkbox} {
     @include musubii-style-form-checkbox();
+  }
+  #{$selector-form-input} {
+    &[type="checkbox"] {
+      &#{$modifier-form-hidden} {
+        @include musubii-style-form-checkbox-hidden();
+      }
+    }
   }
 }
 
