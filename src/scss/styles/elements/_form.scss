@@ -25,7 +25,7 @@ $modifier-form-underline: "\.is-underline" !default;
 $modifier-form-inside: "\.is-inside" !default;
 $modifier-form-middle: "\.is-middle" !default;
 $modifier-form-center: "\.is-center" !default;
-$modifier-form-checkbox: "\.is-checkbox" !default;
+$modifier-form-checked: "\.is-checked" !default;
 $modifier-form-disabled: "\.is-disabled" !default;
 $modifier-form-hidden: "\.is-hidden" !default;
 $modifier-form-multiple: "\.is-multiple" !default;
@@ -645,7 +645,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @include generate-style($option-generate-style-form) {
   #{$selector-form-radio} {
-    &#{$modifier-form-checkbox} {
+    &#{$modifier-form-checked} {
       @include musubii-style-form-radio-checkbox();
     }
   }
@@ -793,7 +793,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @include generate-style($option-generate-style-form) {
   #{$selector-form-checkbox} {
-    &#{$modifier-form-checkbox} {
+    &#{$modifier-form-checked} {
       @include musubii-style-form-checkbox-checkbox();
     }
   }
