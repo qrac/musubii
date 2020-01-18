@@ -174,6 +174,7 @@ export class PreviewBoxDetail extends React.Component {
       separate === "is-separate-parent" ? "is-separate-child" : ""
     const tagAttr = tag === "a" ? 'href="#"' : ""
     const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
+    const disabledTabIndex = disabled && tag === "a" ? 'tabindex="-1"' : ""
     const angleLeft = angle.startsWith("is-angle-left")
       ? `${angle} is-padding-left-xxl`
       : ""
@@ -200,7 +201,7 @@ export class PreviewBoxDetail extends React.Component {
         `<li>
           <${tag} class="box ${flexPattern} ${verticalAlign} ${horizontalAlign}
             ${link} ${disabledClass} ${wrapAngle}"
-            ${tagAttr} ${externalLink}>${withIcon}
+            ${tagAttr} ${externalLink} ${disabledTabIndex}>${withIcon}
             <div class="box ${separateChildClass} ${childAngle}
             is-padding-vertical-md ${withGrow}">children ${i + 1}</div>
           </${tag}>

@@ -99,6 +99,7 @@ export class PreviewButtonDetail extends React.Component {
     const angleClass = angle ? "is-0" + " " + angle : ""
     const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
     const disabledAttr = disabled && tag === "button" ? "disabled" : ""
+    const disabledTabIndex = disabled ? 'tabindex="-1"' : ""
     const externalLink =
       this.state.externalLink && tag === "a"
         ? 'target="_blank" rel="noopener noreferrer"'
@@ -107,7 +108,7 @@ export class PreviewButtonDetail extends React.Component {
       .map(
         item =>
           `<${tag} class="button ${pattern} ${item.role} ${angleClass} ${strong} ${round} ${floating} ${disabledClass}"
-            ${tagAttr} ${externalLink} ${disabledAttr}>${item.text}</${tag}>`
+            ${tagAttr} ${externalLink} ${disabledTabIndex} ${disabledAttr}>${item.text}</${tag}>`
       )
       .join("")
       .replace(/\s+/g, " ")
