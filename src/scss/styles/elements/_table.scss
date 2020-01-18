@@ -8,15 +8,38 @@
 
 // Selectors
 $selector-table: "\.table" !default;
+$selector-table-box: "\.box" !default;
+$selector-table-thead: "thead" !default;
+$selector-table-tbody: "tbody" !default;
+$selector-table-tr: "tr" !default;
+$selector-table-th: "th" !default;
+$selector-table-td: "td" !default;
+$selector-table-wrap: "\.table-wrap" !default;
+$selector-table-scroll-x: "\.table-scroll-x" !default;
+
+// Modifiers
+$modifier-table-right: "\.is-right" !default;
+$modifier-table-center: "\.is-center" !default;
+$modifier-table-left: "\.is-left" !default;
+$modifier-table-middle: "\.is-middle" !default;
+$modifier-table-fixed: "\.is-fixed" !default;
+$modifier-table-line: "\.is-line" !default;
+$modifier-table-outline: "\.is-outline" !default;
+$modifier-table-border: "\.is-border" !default;
+$modifier-table-stripe: "\.is-stripe" !default;
+$modifier-table-paint: "\.is-paint" !default;
+$modifier-table-spot: "\.is-spot" !default;
+$modifier-table-danger: "\.is-danger" !default;
 
 // Table
+$table-width: 100% !default;
 $table-padding: 0.75em 1em !default;
 $table-background-color: $convert-background !default;
 $table-border-width: $global-border-width !default;
 $table-border-color: $convert-border !default;
 
 // Table th
-$table-th-border-bottom-width: $global-border-width * 2 !default;
+$table-th-border-bottom-width: $global-border-width !default;
 
 // Table Stripe
 $table-stripe-background-color: $convert-background-2 !default;
@@ -36,43 +59,29 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 //----------------------------------------------------
 
 @mixin musubii-style-table() {
-  width: 100%;
+  width: $table-width;
   background-color: $table-background-color;
   border-collapse: collapse;
   border-spacing: 0;
-  th,
-  td {
+  #{$selector-table-th},
+  #{$selector-table-td} {
     padding: $table-padding;
     vertical-align: top;
   }
-  > thead > tr:last-child > th {
+  #{$selector-table-thead}
+    > #{$selector-table-tr}:last-child
+    > #{$selector-table-th} {
     border-bottom: $table-th-border-bottom-width solid $table-border-color;
   }
-  tr.box {
-    display: table-row;
-  }
-  th.box,
-  td.box {
-    display: table-cell;
-  }
-  &.is-middle th,
-  &.is-middle td {
-    vertical-align: middle;
-  }
-  tr,
-  th,
-  td {
-    &.is-left {
-      text-align: left;
+  #{$selector-table-tr} {
+    &#{$selector-table-box} {
+      display: table-row;
     }
-    &.is-center {
-      text-align: center;
-    }
-    &.is-right {
-      text-align: right;
-    }
-    &.is-middle {
-      vertical-align: middle;
+  }
+  #{$selector-table-th},
+  #{$selector-table-td} {
+    &#{$selector-table-box} {
+      display: table-cell;
     }
   }
 }
@@ -84,22 +93,115 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 }
 
 //----------------------------------------------------
+// / Style - Table Align
+//----------------------------------------------------
+
+@mixin musubii-style-table-right() {
+  text-align: right;
+}
+
+@mixin musubii-style-table-center() {
+  text-align: center;
+}
+
+@mixin musubii-style-table-left() {
+  text-align: left;
+}
+
+@mixin musubii-style-table-middle() {
+  vertical-align: middle;
+}
+
+@include generate-style($option-generate-style-table) {
+  #{$selector-table} {
+    &#{$modifier-table-right} {
+      #{$selector-table-th},
+      #{$selector-table-td} {
+        @include musubii-style-table-right();
+      }
+    }
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-right} {
+        @include musubii-style-table-right();
+      }
+    }
+    &#{$modifier-table-center} {
+      #{$selector-table-th},
+      #{$selector-table-td} {
+        @include musubii-style-table-center();
+      }
+    }
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-center} {
+        @include musubii-style-table-center();
+      }
+    }
+    &#{$modifier-table-left} {
+      #{$selector-table-th},
+      #{$selector-table-td} {
+        @include musubii-style-table-left();
+      }
+    }
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-left} {
+        @include musubii-style-table-left();
+      }
+    }
+    &#{$modifier-table-middle} {
+      #{$selector-table-th},
+      #{$selector-table-td} {
+        @include musubii-style-table-middle();
+      }
+    }
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-middle} {
+        @include musubii-style-table-middle();
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Table Fixed
+//----------------------------------------------------
+
+@mixin musubii-style-table-fixed() {
+  table-layout: fixed;
+}
+
+@include generate-style($option-generate-style-table) {
+  #{$selector-table} {
+    &#{$modifier-table-fixed} {
+      @include musubii-style-table-fixed();
+    }
+  }
+}
+
+//----------------------------------------------------
 // / Style - Table Line
 //----------------------------------------------------
 
 @mixin musubii-style-table-line() {
-  &.is-line {
+  border-top: $table-border-width solid $table-border-color;
+  border-bottom: $table-border-width solid $table-border-color;
+  > #{$selector-table-tbody} > #{$selector-table-tr}:not(:first-child) {
     border-top: $table-border-width solid $table-border-color;
-    border-bottom: $table-border-width solid $table-border-color;
-    > tbody > tr:not(:first-child) {
-      border-top: $table-border-width solid $table-border-color;
-    }
   }
 }
 
 @include generate-style($option-generate-style-table) {
   #{$selector-table} {
-    @include musubii-style-table-line();
+    &#{$modifier-table-line} {
+      @include musubii-style-table-line();
+    }
   }
 }
 
@@ -108,14 +210,14 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 //----------------------------------------------------
 
 @mixin musubii-style-table-outline() {
-  &.is-outline {
-    border: $table-border-width solid $table-border-color;
-  }
+  border: $table-border-width solid $table-border-color;
 }
 
 @include generate-style($option-generate-style-table) {
   #{$selector-table} {
-    @include musubii-style-table-outline();
+    &#{$modifier-table-outline} {
+      @include musubii-style-table-outline();
+    }
   }
 }
 
@@ -124,18 +226,18 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 //----------------------------------------------------
 
 @mixin musubii-style-table-border() {
-  &.is-border {
+  border: $table-border-width solid $table-border-color;
+  #{$selector-table-th},
+  #{$selector-table-td} {
     border: $table-border-width solid $table-border-color;
-    th,
-    td {
-      border: $table-border-width solid $table-border-color;
-    }
   }
 }
 
 @include generate-style($option-generate-style-table) {
   #{$selector-table} {
-    @include musubii-style-table-border();
+    &#{$modifier-table-border} {
+      @include musubii-style-table-border();
+    }
   }
 }
 
@@ -144,19 +246,19 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 //----------------------------------------------------
 
 @mixin musubii-style-table-stripe() {
-  &.is-stripe {
-    thead {
-      background-color: $table-stripe-background-color;
-    }
-    tbody tr:nth-child(even) {
-      background-color: $table-stripe-background-color;
-    }
+  #{$selector-table-thead} {
+    background-color: $table-stripe-background-color;
+  }
+  #{$selector-table-tbody} #{$selector-table-tr}:nth-child(even) {
+    background-color: $table-stripe-background-color;
   }
 }
 
 @include generate-style($option-generate-style-table) {
   #{$selector-table} {
-    @include musubii-style-table-stripe();
+    &#{$modifier-table-stripe} {
+      @include musubii-style-table-stripe();
+    }
   }
 }
 
@@ -164,28 +266,87 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 // / Style - Table Background
 //----------------------------------------------------
 
-@mixin musubii-style-table-bg() {
+@mixin musubii-style-table-bg-paint() {
+  background-color: $table-paint-background-color;
+  color: $table-paint-color;
+}
+
+@mixin musubii-style-table-bg-stripe() {
+  background-color: $table-stripe-background-color;
+}
+
+@mixin musubii-style-table-bg-spot() {
+  background-color: $table-spot-background-color;
+}
+
+@mixin musubii-style-table-bg-danger() {
+  background-color: $table-danger-background-color;
+}
+
+@include generate-style($option-generate-style-table) {
   #{$selector-table} {
-    tr,
-    th,
-    td {
-      &.is-paint {
-        background-color: $table-paint-background-color;
-        color: $table-paint-color;
+    #{$selector-table-tr},
+    #{$selector-table-th},
+    #{$selector-table-td} {
+      &#{$modifier-table-paint} {
+        @include musubii-style-table-bg-paint();
       }
-      &.is-stripe {
-        background-color: $table-stripe-background-color;
+      &#{$modifier-table-stripe} {
+        @include musubii-style-table-bg-stripe();
       }
-      &.is-spot {
-        background-color: $table-spot-background-color;
+      &#{$modifier-table-spot} {
+        @include musubii-style-table-bg-spot();
       }
-      &.is-danger {
-        background-color: $table-danger-background-color;
+      &#{$modifier-table-danger} {
+        @include musubii-style-table-bg-danger();
       }
     }
   }
 }
 
+//----------------------------------------------------
+// / Style - Table Wrap
+//----------------------------------------------------
+
+@mixin musubii-style-table-wrap() {
+  position: relative;
+}
+
+@mixin musubii-style-table-wrap-outline() {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: $table-border-width;
+    height: 100%;
+    background-color: $table-border-color;
+    z-index: 2;
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+}
+
+@mixin musubii-style-table-scroll-x() {
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 @include generate-style($option-generate-style-table) {
-  @include musubii-style-table-bg();
+  @if $option-add-style-table-wrap == true {
+    #{$selector-table-wrap} {
+      @include musubii-style-table-wrap();
+      &#{$modifier-table-outline} {
+        @include musubii-style-table-wrap-outline();
+      }
+    }
+    #{$selector-table-scroll-x} {
+      @include musubii-style-table-scroll-x();
+    }
+  }
 }
