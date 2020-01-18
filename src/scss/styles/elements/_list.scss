@@ -140,9 +140,11 @@ $list-note-item-margin-left: 0.25em !default;
 }
 
 @include generate-style($option-generate-style-list) {
-  #{$selector-list} {
-    &#{$modifier-list-note} {
-      @include musubii-style-list-note();
+  @if $option-add-style-list-note == true {
+    #{$selector-list} {
+      &#{$modifier-list-note} {
+        @include musubii-style-list-note();
+      }
     }
   }
 }
