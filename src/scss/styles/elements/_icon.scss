@@ -11,6 +11,68 @@ $selector-icon: "\.icon, \.im, \.fa, \.fas, \.far, \.fal, \.fab, \.material-icon
 $selector-icon-svg: "svg\.icon" !default;
 $selector-icon-material: "\.material-icons" !default;
 
+// Modifiers
+$modifier-icon-dark: "\.is-dark" !default;
+$modifier-icon-dark-1: "\.is-dark-1" !default;
+$modifier-icon-dark-2: "\.is-dark-2" !default;
+$modifier-icon-dark-3: "\.is-dark-3" !default;
+$modifier-icon-dark-4: "\.is-dark-4" !default;
+$modifier-icon-dark-5: "\.is-dark-5" !default;
+$modifier-icon-dark-6: "\.is-dark-6" !default;
+$modifier-icon-dark-7: "\.is-dark-7" !default;
+$modifier-icon-dark-8: "\.is-dark-8" !default;
+$modifier-icon-dark-9: "\.is-dark-9" !default;
+
+$modifier-icon-light: "\.is-light" !default;
+$modifier-icon-light-1: "\.is-light-1" !default;
+$modifier-icon-light-2: "\.is-light-2" !default;
+$modifier-icon-light-3: "\.is-light-3" !default;
+$modifier-icon-light-4: "\.is-light-4" !default;
+$modifier-icon-light-5: "\.is-light-5" !default;
+$modifier-icon-light-6: "\.is-light-6" !default;
+$modifier-icon-light-7: "\.is-light-7" !default;
+$modifier-icon-light-8: "\.is-light-8" !default;
+$modifier-icon-light-9: "\.is-light-9" !default;
+
+$modifier-icon-primary: "\.is-primary" !default;
+$modifier-icon-info: "\.is-info" !default;
+$modifier-icon-success: "\.is-success" !default;
+$modifier-icon-warning: "\.is-warning" !default;
+$modifier-icon-danger: "\.is-danger" !default;
+
+$modifier-icon-fit: "\.is-fit" !default;
+
+// Icon Dark
+$icon-dark: $convert-dark !default;
+$icon-dark-1: $convert-dark-1 !default;
+$icon-dark-2: $convert-dark-2 !default;
+$icon-dark-3: $convert-dark-3 !default;
+$icon-dark-4: $convert-dark-4 !default;
+$icon-dark-5: $convert-dark-5 !default;
+$icon-dark-6: $convert-dark-6 !default;
+$icon-dark-7: $convert-dark-7 !default;
+$icon-dark-8: $convert-dark-8 !default;
+$icon-dark-9: $convert-dark-9 !default;
+
+// Icon Light
+$icon-light: $convert-light !default;
+$icon-light-1: $convert-light-1 !default;
+$icon-light-2: $convert-light-2 !default;
+$icon-light-3: $convert-light-3 !default;
+$icon-light-4: $convert-light-4 !default;
+$icon-light-5: $convert-light-5 !default;
+$icon-light-6: $convert-light-6 !default;
+$icon-light-7: $convert-light-7 !default;
+$icon-light-8: $convert-light-8 !default;
+$icon-light-9: $convert-light-9 !default;
+
+// Icon Role
+$icon-primary: $convert-primary !default;
+$icon-info: $convert-info !default;
+$icon-success: $convert-success !default;
+$icon-warning: $convert-warning !default;
+$icon-danger: $convert-danger !default;
+
 // Icon Fit
 $icon-fit-width: 1em !default;
 
@@ -23,82 +85,6 @@ $icon-fit-width: 1em !default;
   line-height: inherit;
 }
 
-@include generate-style($option-generate-style-icon) {
-  #{$selector-icon} {
-    @include musubii-style-icon();
-  }
-}
-
-//----------------------------------------------------
-// / Style - Text Color
-//----------------------------------------------------
-
-@mixin --is-color($color-name, $color) {
-  &.is-#{$color-name} {
-    color: $color;
-  }
-}
-
-@mixin musubii-style-icon-dark() {
-  @include --is-color(dark, $convert-dark);
-  @include --is-color(dark-1, $convert-dark-1);
-  @include --is-color(dark-2, $convert-dark-2);
-  @include --is-color(dark-3, $convert-dark-3);
-  @include --is-color(dark-4, $convert-dark-4);
-  @include --is-color(dark-5, $convert-dark-5);
-  @include --is-color(dark-6, $convert-dark-6);
-  @include --is-color(dark-7, $convert-dark-7);
-  @include --is-color(dark-8, $convert-dark-8);
-  @include --is-color(dark-9, $convert-dark-9);
-}
-
-@include generate-style($option-generate-style-icon) {
-  #{$selector-icon} {
-    @include musubii-style-icon-dark();
-  }
-}
-
-//----------------------------------------------------
-
-@mixin musubii-style-icon-light() {
-  @include --is-color(light, $convert-light);
-  @include --is-color(light-1, $convert-light-1);
-  @include --is-color(light-2, $convert-light-2);
-  @include --is-color(light-3, $convert-light-3);
-  @include --is-color(light-4, $convert-light-4);
-  @include --is-color(light-5, $convert-light-5);
-  @include --is-color(light-6, $convert-light-6);
-  @include --is-color(light-7, $convert-light-7);
-  @include --is-color(light-8, $convert-light-8);
-  @include --is-color(light-9, $convert-light-9);
-}
-
-@include generate-style($option-generate-style-icon) {
-  #{$selector-icon} {
-    @include musubii-style-icon-light();
-  }
-}
-
-//----------------------------------------------------
-
-@mixin musubii-style-icon-role() {
-  @include --is-color(primary, $convert-primary-strong);
-  @include --is-color(info, $convert-info-strong);
-  @include --is-color(success, $convert-success-strong);
-  @include --is-color(warning, $convert-warning-strong);
-  @include --is-color(danger, $convert-danger-strong);
-}
-
-@include generate-style($option-generate-style-icon) {
-  #{$selector-icon} {
-    @include musubii-style-icon-role();
-  }
-}
-
-//----------------------------------------------------
-// / Style - Icon SVG
-//----------------------------------------------------
-
 @mixin musubii-style-icon-svg() {
   display: inline-block;
   flex: none;
@@ -107,23 +93,221 @@ $icon-fit-width: 1em !default;
   vertical-align: text-bottom;
 }
 
-@include generate-style($option-generate-style-icon) {
-  #{$selector-icon-svg} {
-    @include musubii-style-icon-svg();
-  }
-}
-
-//----------------------------------------------------
-// / Style - Icon Material
-//----------------------------------------------------
-
 @mixin musubii-style-icon-material() {
   vertical-align: bottom;
 }
 
 @include generate-style($option-generate-style-icon) {
+  #{$selector-icon} {
+    @include musubii-style-icon();
+  }
+  #{$selector-icon-svg} {
+    @include musubii-style-icon-svg();
+  }
   #{$selector-icon-material} {
     @include musubii-style-icon-material();
+  }
+}
+
+//----------------------------------------------------
+// / Style - Icon Dark
+//----------------------------------------------------
+
+@mixin musubii-style-icon-dark() {
+  color: $icon-dark;
+}
+
+@mixin musubii-style-icon-dark-1() {
+  color: $icon-dark-1;
+}
+
+@mixin musubii-style-icon-dark-2() {
+  color: $icon-dark-2;
+}
+
+@mixin musubii-style-icon-dark-3() {
+  color: $icon-dark-3;
+}
+
+@mixin musubii-style-icon-dark-4() {
+  color: $icon-dark-4;
+}
+
+@mixin musubii-style-icon-dark-5() {
+  color: $icon-dark-5;
+}
+
+@mixin musubii-style-icon-dark-6() {
+  color: $icon-dark-6;
+}
+
+@mixin musubii-style-icon-dark-7() {
+  color: $icon-dark-7;
+}
+
+@mixin musubii-style-icon-dark-8() {
+  color: $icon-dark-8;
+}
+
+@mixin musubii-style-icon-dark-9() {
+  color: $icon-dark-9;
+}
+
+@include generate-style($option-generate-style-icon) {
+  #{$selector-icon} {
+    &#{$modifier-icon-dark} {
+      @include musubii-style-icon-dark();
+    }
+    &#{$modifier-icon-dark-1} {
+      @include musubii-style-icon-dark-1();
+    }
+    &#{$modifier-icon-dark-2} {
+      @include musubii-style-icon-dark-2();
+    }
+    &#{$modifier-icon-dark-3} {
+      @include musubii-style-icon-dark-3();
+    }
+    &#{$modifier-icon-dark-4} {
+      @include musubii-style-icon-dark-4();
+    }
+    &#{$modifier-icon-dark-5} {
+      @include musubii-style-icon-dark-5();
+    }
+    &#{$modifier-icon-dark-6} {
+      @include musubii-style-icon-dark-6();
+    }
+    &#{$modifier-icon-dark-7} {
+      @include musubii-style-icon-dark-7();
+    }
+    &#{$modifier-icon-dark-8} {
+      @include musubii-style-icon-dark-8();
+    }
+    &#{$modifier-icon-dark-9} {
+      @include musubii-style-icon-dark-9();
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Icon Light
+//----------------------------------------------------
+
+@mixin musubii-style-icon-light() {
+  color: $icon-light;
+}
+
+@mixin musubii-style-icon-light-1() {
+  color: $icon-light-1;
+}
+
+@mixin musubii-style-icon-light-2() {
+  color: $icon-light-2;
+}
+
+@mixin musubii-style-icon-light-3() {
+  color: $icon-light-3;
+}
+
+@mixin musubii-style-icon-light-4() {
+  color: $icon-light-4;
+}
+
+@mixin musubii-style-icon-light-5() {
+  color: $icon-light-5;
+}
+
+@mixin musubii-style-icon-light-6() {
+  color: $icon-light-6;
+}
+
+@mixin musubii-style-icon-light-7() {
+  color: $icon-light-7;
+}
+
+@mixin musubii-style-icon-light-8() {
+  color: $icon-light-8;
+}
+
+@mixin musubii-style-icon-light-9() {
+  color: $icon-light-9;
+}
+
+@include generate-style($option-generate-style-icon) {
+  #{$selector-icon} {
+    &#{$modifier-icon-light} {
+      @include musubii-style-icon-light();
+    }
+    &#{$modifier-icon-light-1} {
+      @include musubii-style-icon-light-1();
+    }
+    &#{$modifier-icon-light-2} {
+      @include musubii-style-icon-light-2();
+    }
+    &#{$modifier-icon-light-3} {
+      @include musubii-style-icon-light-3();
+    }
+    &#{$modifier-icon-light-4} {
+      @include musubii-style-icon-light-4();
+    }
+    &#{$modifier-icon-light-5} {
+      @include musubii-style-icon-light-5();
+    }
+    &#{$modifier-icon-light-6} {
+      @include musubii-style-icon-light-6();
+    }
+    &#{$modifier-icon-light-7} {
+      @include musubii-style-icon-light-7();
+    }
+    &#{$modifier-icon-light-8} {
+      @include musubii-style-icon-light-8();
+    }
+    &#{$modifier-icon-light-9} {
+      @include musubii-style-icon-light-9();
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Icon Role
+//----------------------------------------------------
+
+@mixin musubii-style-icon-primary() {
+  color: $icon-primary;
+}
+
+@mixin musubii-style-icon-info() {
+  color: $icon-info;
+}
+
+@mixin musubii-style-icon-success() {
+  color: $icon-success;
+}
+
+@mixin musubii-style-icon-warning() {
+  color: $icon-warning;
+}
+
+@mixin musubii-style-icon-danger() {
+  color: $icon-danger;
+}
+
+@include generate-style($option-generate-style-icon) {
+  #{$selector-icon} {
+    &#{$modifier-icon-primary} {
+      @include musubii-style-icon-primary();
+    }
+    &#{$modifier-icon-info} {
+      @include musubii-style-icon-info();
+    }
+    &#{$modifier-icon-success} {
+      @include musubii-style-icon-success();
+    }
+    &#{$modifier-icon-warning} {
+      @include musubii-style-icon-warning();
+    }
+    &#{$modifier-icon-danger} {
+      @include musubii-style-icon-danger();
+    }
   }
 }
 
