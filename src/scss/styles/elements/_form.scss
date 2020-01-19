@@ -12,8 +12,8 @@ $selector-form-textarea: "\.textarea" !default;
 $selector-form-label: "\.label" !default;
 $selector-form-radio: "\.radio" !default;
 $selector-form-checkbox: "\.checkbox" !default;
-$selector-form-select-wrap: "\.select" !default;
-$selector-form-select: "select" !default;
+$selector-form-select: "\.select" !default;
+$selector-form-select-core: "select" !default;
 $selector-form-fieldset: "\.fieldset" !default;
 
 // Modifiers
@@ -25,7 +25,6 @@ $modifier-form-underline: "\.is-underline" !default;
 $modifier-form-inside: "\.is-inside" !default;
 $modifier-form-middle: "\.is-middle" !default;
 $modifier-form-center: "\.is-center" !default;
-$modifier-form-hidden: "\.is-hidden" !default;
 $modifier-form-checked: "\.is-checked" !default;
 $modifier-form-disabled: "\.is-disabled" !default;
 $modifier-form-multiple: "\.is-multiple" !default;
@@ -583,7 +582,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
-@mixin musubii-style-form-radio-hidden() {
+@mixin musubii-style-form-radio-core() {
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -595,9 +594,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
   #{$selector-form-input} {
     &[type="radio"] {
-      &#{$modifier-form-hidden} {
-        @include musubii-style-form-radio-hidden();
-      }
+      @include musubii-style-form-radio-core();
     }
   }
 }
@@ -729,7 +726,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
-@mixin musubii-style-form-checkbox-hidden() {
+@mixin musubii-style-form-checkbox-core() {
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -741,9 +738,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
   #{$selector-form-input} {
     &[type="checkbox"] {
-      &#{$modifier-form-hidden} {
-        @include musubii-style-form-checkbox-hidden();
-      }
+      @include musubii-style-form-checkbox-core();
     }
   }
 }
@@ -852,12 +847,12 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 // / Style - Form Select
 //----------------------------------------------------
 
-@mixin musubii-style-form-select-wrap() {
+@mixin musubii-style-form-select() {
   position: relative;
   display: inline-flex;
 }
 
-@mixin musubii-style-form-select-wrap-angle() {
+@mixin musubii-style-form-select-angle() {
   &:after {
     content: "";
     pointer-events: none;
@@ -873,7 +868,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
-@mixin musubii-style-form-select() {
+@mixin musubii-style-form-select-core() {
   cursor: pointer;
   flex: none;
   width: 100%;
@@ -899,11 +894,11 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
-@mixin musubii-style-form-select-angle-fix() {
+@mixin musubii-style-form-select-core-angle-fix() {
   padding-right: ($select-angle-size * 5);
 }
 
-@mixin musubii-style-form-select-disabled() {
+@mixin musubii-style-form-select-core-disabled() {
   cursor: not-allowed;
   background-color: $input-disabled-background-color;
   color: $input-disabled-color;
@@ -912,53 +907,53 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
-@mixin musubii-style-form-select-readonly() {
+@mixin musubii-style-form-select-core-readonly() {
   background-color: $input-readonly-background-color;
   color: $input-readonly-color;
 }
 
-@mixin musubii-style-form-select-success() {
+@mixin musubii-style-form-select-core-success() {
   border-color: $input-success-border-color;
 }
 
-@mixin musubii-style-form-select-danger() {
+@mixin musubii-style-form-select-core-danger() {
   background-color: $input-danger-background-color;
   border-color: $input-danger-border-color;
 }
 
 @include generate-style($option-generate-style-form) {
-  #{$selector-form-select-wrap} {
-    @include musubii-style-form-select-wrap();
+  #{$selector-form-select} {
+    @include musubii-style-form-select();
     > {
-      #{$selector-form-select} {
-        @include musubii-style-form-select();
+      #{$selector-form-select-core} {
+        @include musubii-style-form-select-core();
         &[disabled] {
-          @include musubii-style-form-select-disabled();
+          @include musubii-style-form-select-core-disabled();
         }
         &[readonly] {
-          @include musubii-style-form-select-readonly();
+          @include musubii-style-form-select-core-readonly();
         }
       }
     }
     &:not(#{$modifier-form-multiple}) {
-      @include musubii-style-form-select-wrap-angle();
+      @include musubii-style-form-select-angle();
       > {
-        #{$selector-form-select} {
-          @include musubii-style-form-select-angle-fix();
+        #{$selector-form-select-core} {
+          @include musubii-style-form-select-core-angle-fix();
         }
       }
     }
     &#{$modifier-form-success} {
       > {
-        #{$selector-form-select} {
-          @include musubii-style-form-select-success();
+        #{$selector-form-select-core} {
+          @include musubii-style-form-select-core-success();
         }
       }
     }
     &#{$modifier-form-danger} {
       > {
-        #{$selector-form-select} {
-          @include musubii-style-form-select-danger();
+        #{$selector-form-select-core} {
+          @include musubii-style-form-select-core-danger();
         }
       }
     }
@@ -974,10 +969,10 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 }
 
 @include generate-style($option-generate-style-form) {
-  #{$selector-form-select-wrap} {
+  #{$selector-form-select} {
     &#{$modifier-form-round}:not(#{$modifier-form-multiple}) {
       > {
-        #{$selector-form-select} {
+        #{$selector-form-select-core} {
           @include musubii-style-form-select-round();
         }
       }
@@ -989,7 +984,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 // / Style - Form Select Plain
 //----------------------------------------------------
 
-@mixin musubii-style-form-select-plain() {
+@mixin musubii-style-form-select-core-plain() {
   background-color: $input-plain-background-color;
   border: $input-border-width solid transparent;
   @if $option-add-style-form-focus == true {
@@ -1000,40 +995,40 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
-@mixin musubii-style-form-select-plain-disabled() {
+@mixin musubii-style-form-select-core-plain-disabled() {
   background-color: $input-disabled-background-color;
 }
 
-@mixin musubii-style-form-select-plain-success() {
+@mixin musubii-style-form-select-core-plain-success() {
   background-color: $input-success-background-color;
 }
 
-@mixin musubii-style-form-select-plain-danger() {
+@mixin musubii-style-form-select-core-plain-danger() {
   background-color: $input-danger-background-color;
 }
 
 @include generate-style($option-generate-style-form) {
-  #{$selector-form-select-wrap} {
+  #{$selector-form-select} {
     &#{$modifier-form-plain} {
       > {
-        #{$selector-form-select} {
-          @include musubii-style-form-select-plain();
+        #{$selector-form-select-core} {
+          @include musubii-style-form-select-core-plain();
           &[disabled] {
-            @include musubii-style-form-select-plain-disabled();
+            @include musubii-style-form-select-core-plain-disabled();
           }
         }
       }
       &#{$modifier-form-success} {
         > {
-          #{$selector-form-select} {
-            @include musubii-style-form-select-plain-success();
+          #{$selector-form-select-core} {
+            @include musubii-style-form-select-core-plain-success();
           }
         }
       }
       &#{$modifier-form-danger} {
         > {
-          #{$selector-form-select} {
-            @include musubii-style-form-select-plain-danger();
+          #{$selector-form-select-core} {
+            @include musubii-style-form-select-core-plain-danger();
           }
         }
       }
@@ -1045,7 +1040,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 // / Style - Form Select Underline
 //----------------------------------------------------
 
-@mixin musubii-style-form-select-underline() {
+@mixin musubii-style-form-select-core-underline() {
   padding-left: $input-underline-padding-left;
   background-color: transparent;
   border: none;
@@ -1062,41 +1057,41 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
-@mixin musubii-style-form-select-underline-disabled() {
+@mixin musubii-style-form-select-core-underline-disabled() {
   background-color: transparent;
 }
 
-@mixin musubii-style-form-select-underline-success() {
+@mixin musubii-style-form-select-core-underline-success() {
   border-bottom-color: $input-success-border-color;
 }
 
-@mixin musubii-style-form-select-underline-danger() {
+@mixin musubii-style-form-select-core-underline-danger() {
   border-bottom-color: $input-danger-border-color;
 }
 
 @include generate-style($option-generate-style-form) {
-  #{$selector-form-select-wrap} {
+  #{$selector-form-select} {
     &#{$modifier-form-underline} {
       > {
-        #{$selector-form-select} {
-          @include musubii-style-form-select-underline();
+        #{$selector-form-select-core} {
+          @include musubii-style-form-select-core-underline();
           &[disabled],
           &[readonly] {
-            @include musubii-style-form-select-underline-disabled();
+            @include musubii-style-form-select-core-underline-disabled();
           }
         }
       }
       &#{$modifier-form-success} {
         > {
-          #{$selector-form-select} {
-            @include musubii-style-form-select-underline-success();
+          #{$selector-form-select-core} {
+            @include musubii-style-form-select-core-underline-success();
           }
         }
       }
       &#{$modifier-form-danger} {
         > {
-          #{$selector-form-select} {
-            @include musubii-style-form-select-underline-danger();
+          #{$selector-form-select-core} {
+            @include musubii-style-form-select-core-underline-danger();
           }
         }
       }
@@ -1108,7 +1103,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 // / Style - Form Select Inside
 //----------------------------------------------------
 
-@mixin musubii-style-form-select-inside() {
+@mixin musubii-style-form-select-core-inside() {
   padding: $input-inside-padding;
   background-color: transparent;
   border-color: transparent;
@@ -1123,53 +1118,53 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   }
 }
 
-@mixin musubii-style-form-select-inside-disabled() {
+@mixin musubii-style-form-select-core-inside-disabled() {
   background-color: transparent;
   border-color: transparent;
 }
 
-@mixin musubii-style-form-select-inside-angle-fix() {
+@mixin musubii-style-form-select-core-inside-angle-fix() {
   padding-right: ($select-angle-size * 5);
 }
 
-@mixin musubii-style-form-select-inside-success() {
+@mixin musubii-style-form-select-core-inside-success() {
   background-color: $input-success-background-color;
 }
 
-@mixin musubii-style-form-select-inside-danger() {
+@mixin musubii-style-form-select-core-inside-danger() {
   background-color: $input-danger-background-color;
 }
 
 @include generate-style($option-generate-style-form) {
-  #{$selector-form-select-wrap} {
+  #{$selector-form-select} {
     &#{$modifier-form-inside} {
       > {
-        #{$selector-form-select} {
-          @include musubii-style-form-select-inside();
+        #{$selector-form-select-core} {
+          @include musubii-style-form-select-core-inside();
           &[disabled],
           &[readonly] {
-            @include musubii-style-form-select-inside-disabled();
+            @include musubii-style-form-select-core-inside-disabled();
           }
         }
       }
       &:not(#{$modifier-form-multiple}) {
         > {
-          #{$selector-form-select} {
-            @include musubii-style-form-select-inside-angle-fix();
+          #{$selector-form-select-core} {
+            @include musubii-style-form-select-core-inside-angle-fix();
           }
         }
       }
       &#{$modifier-form-success} {
         > {
-          #{$selector-form-select} {
-            @include musubii-style-form-select-inside-success();
+          #{$selector-form-select-core} {
+            @include musubii-style-form-select-core-inside-success();
           }
         }
       }
       &#{$modifier-form-danger} {
         > {
-          #{$selector-form-select} {
-            @include musubii-style-form-select-inside-danger();
+          #{$selector-form-select-core} {
+            @include musubii-style-form-select-core-inside-danger();
           }
         }
       }
@@ -1181,7 +1176,7 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 // / Style - Form Select Multiple
 //----------------------------------------------------
 
-@mixin musubii-style-form-select-multiple() {
+@mixin musubii-style-form-select-core-multiple() {
   height: auto;
   padding: 0;
   > option {
@@ -1191,11 +1186,11 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 }
 
 @include generate-style($option-generate-style-form) {
-  #{$selector-form-select-wrap} {
+  #{$selector-form-select} {
     &#{$modifier-form-multiple} {
       > {
-        #{$selector-form-select} {
-          @include musubii-style-form-select-multiple();
+        #{$selector-form-select-core} {
+          @include musubii-style-form-select-core-multiple();
         }
       }
     }
