@@ -12,7 +12,7 @@ const items = [
   {
     id: 4,
     text: "ボタンF",
-    classes: "is-outline is-danger is-mobile-0 is-angle-right is-lg"
+    classes: "is-outline is-danger is-0 is-angle-right is-lg"
   }
 ]
 
