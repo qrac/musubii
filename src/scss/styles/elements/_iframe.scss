@@ -10,19 +10,9 @@
 $selector-iframe-wrap: "\.iframe-wrap" !default;
 $selector-iframe: "\.iframe" !default;
 
-//----------------------------------------------------
-// / Style - iframe
-//----------------------------------------------------
-
-@mixin musubii-style-iframe() {
-  display: block;
-}
-
-@include generate-style($option-generate-style-iframe) {
-  #{$selector-iframe} {
-    @include musubii-style-iframe();
-  }
-}
+// Modifiers
+$modifier-iframe-aspect-16x9: "\.is-aspect-16x9" !default;
+$modifier-iframe-aspect-4x3: "\.is-aspect-4x3" !default;
 
 //----------------------------------------------------
 // / Style - iframe Wrap
@@ -36,11 +26,6 @@ $selector-iframe: "\.iframe" !default;
     content: "";
     display: block;
   }
-  &.is-aspect-16x9 {
-    &:before {
-      padding-top: 9 / 16 * 100%;
-    }
-  }
   > #{$selector-iframe} {
     position: absolute;
     top: 0;
@@ -50,8 +35,40 @@ $selector-iframe: "\.iframe" !default;
   }
 }
 
+@mixin musubii-style-iframe-wrap-aspect-16x9() {
+  &:before {
+    padding-top: 9 / 16 * 100%;
+  }
+}
+
+@mixin musubii-style-iframe-wrap-aspect-4x3() {
+  &:before {
+    padding-top: 3 / 4 * 100%;
+  }
+}
+
 @include generate-style($option-generate-style-iframe) {
   #{$selector-iframe-wrap} {
     @include musubii-style-iframe-wrap();
+    &#{$modifier-iframe-aspect-16x9} {
+      @include musubii-style-iframe-wrap-aspect-16x9();
+    }
+    &#{$modifier-iframe-aspect-4x3} {
+      @include musubii-style-iframe-wrap-aspect-4x3();
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - iframe
+//----------------------------------------------------
+
+@mixin musubii-style-iframe() {
+  display: block;
+}
+
+@include generate-style($option-generate-style-iframe) {
+  #{$selector-iframe} {
+    @include musubii-style-iframe();
   }
 }
