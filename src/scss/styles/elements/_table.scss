@@ -14,7 +14,7 @@ $selector-table-tbody: "tbody" !default;
 $selector-table-tr: "tr" !default;
 $selector-table-th: "th" !default;
 $selector-table-td: "td" !default;
-$selector-table-wrap: "\.table-wrap" !default;
+$selector-table-sideline: "\.table-sideline" !default;
 $selector-table-scroll: "\.table-scroll" !default;
 
 // Modifiers
@@ -305,14 +305,11 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 }
 
 //----------------------------------------------------
-// / Style - Table Wrap
+// / Style - Table Scroll
 //----------------------------------------------------
 
-@mixin musubii-style-table-wrap() {
+@mixin musubii-style-table-sideline() {
   position: relative;
-}
-
-@mixin musubii-style-table-wrap-outline() {
   &:before,
   &:after {
     content: "";
@@ -338,12 +335,9 @@ $table-danger-background-color: $convert-table-danger-background-color !default;
 }
 
 @include generate-style($option-generate-style-table) {
-  @if $option-add-style-table-wrap == true {
-    #{$selector-table-wrap} {
-      @include musubii-style-table-wrap();
-      &#{$modifier-table-outline} {
-        @include musubii-style-table-wrap-outline();
-      }
+  @if $option-add-style-table-scroll == true {
+    #{$selector-table-sideline} {
+      @include musubii-style-table-sideline();
     }
     #{$selector-table-scroll} {
       @include musubii-style-table-scroll();
