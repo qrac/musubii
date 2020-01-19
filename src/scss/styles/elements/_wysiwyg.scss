@@ -28,7 +28,6 @@ $wysiwyg-small-font-size: $font-size-sm !default;
 $wysiwyg-strong-font-weight: $font-weight-strong !default;
 
 // WYSIWYG Link
-$wysiwyg-link-border-change-underline: false !default;
 $wysiwyg-link-border-bottom-width: $global-border-width !default;
 $wysiwyg-link-border-bottom-style: solid !default;
 $wysiwyg-link-color: $convert-primary-strong !default;
@@ -154,18 +153,18 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
   a {
     cursor: pointer;
     color: $wysiwyg-link-color;
-    @if $wysiwyg-link-border-change-underline == true {
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    } @else {
+    @if $option-add-style-wysiwyg-link-border == true {
       border-bottom: $wysiwyg-link-border-bottom-width
         $wysiwyg-link-border-bottom-style
         currentColor;
       &:hover,
       &:active {
         border-bottom-color: transparent;
+      }
+    } @else {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
       }
     }
   }
@@ -183,16 +182,16 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 @mixin musubii-style-wysiwyg-text-link-reverse() {
   &.is-link-reverse a {
-    @if $wysiwyg-link-border-change-underline == true {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    } @else {
+    @if $option-add-style-wysiwyg-link-border == true {
       border-bottom-color: transparent;
       &:hover,
       &:active {
         border-bottom-color: currentColor;
+      }
+    } @else {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
