@@ -15,6 +15,44 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+アラート装飾を作るエレメント CSS。
+
+## Basic
+
+| Selector | Description                              |
+| -------- | ---------------------------------------- |
+| `.alert` | アラート装飾の起点として使うセレクター。 |
+
+## Role
+
+`.is-(role)` 形式のモディファイアを `.alert` に付与することで、各役割毎のカラーリングに変化します。
+
+| Primary       | Info       | Success       | Warning       | Danger       |
+| ------------- | ---------- | ------------- | ------------- | ------------ |
+| `.is-primary` | `.is-info` | `.is-success` | `.is-warning` | `.is-danger` |
+
+## Tail
+
+[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-alert-tail` を `true` にすると、吹き出しのような方向を指し示すスタイルを追加できるようになります。表示できる場所は全 12 種類です。
+
+| Top Left            | Top Center            | Top Right            |
+| ------------------- | --------------------- | -------------------- |
+| `.is-tail-top-left` | `.is-tail-top-center` | `.is-tail-top-right` |
+
+| Right Top            | Right Middle            | Right Bottom            |
+| -------------------- | ----------------------- | ----------------------- |
+| `.is-tail-right-top` | `.is-tail-right-middle` | `.is-tail-right-bottom` |
+
+| Bottom Right            | Bottom Center            | Bottom Left            |
+| ----------------------- | ------------------------ | ---------------------- |
+| `.is-tail-bottom-right` | `.is-tail-bottom-center` | `.is-tail-bottom-left` |
+
+| Left Bottom            | Left Middle            | Left Top            |
+| ---------------------- | ---------------------- | ------------------- |
+| `.is-tail-left-bottom` | `.is-tail-left-middle` | `.is-tail-left-top` |
+
 ## Variables
 
 <PreviewVariablesDouble filePath={meta.filePath} viewCompiled={true} />
