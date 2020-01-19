@@ -15,6 +15,50 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+アイコンの装飾をサポートするエレメント CSS。
+
+## Basic
+
+| Selector                                                   | Description                                |
+| ---------------------------------------------------------- | ------------------------------------------ |
+| `.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons` | アイコン装飾の起点として使えるセレクター。 |
+
+## Dark
+
+`.is-dark-(value)` 形式のモディファイアをアイコンセレクターに付与すると黒アイコンを表現。`(value)` を省略すると最も濃く、1 > 9 の順に薄くなります。
+
+`(value)` は [Color](/configs/variables/color) の値を引き継いでいます。
+
+| Darkest    | Dark 1       | Dark 2       | Dark 3       | Dark 4       | Dark 5       | Dark 6       | Dark 7       | Dark 8       | Dark 9       |
+| ---------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| `.is-dark` | `.is-dark-1` | `.is-dark-2` | `.is-dark-3` | `.is-dark-4` | `.is-dark-5` | `.is-dark-6` | `.is-dark-7` | `.is-dark-8` | `.is-dark-9` |
+
+## Light
+
+`.is-light-(value)` 形式のモディファイアをアイコンセレクターに付与すると白アイコンを表現。`(value)` を省略すると最も濃く、1 > 9 の順に薄くなります。
+
+`(value)` は [Color](/configs/variables/color) の値を引き継いでいます。
+
+| Brightest   | Light 1       | Light 2       | Light 3       | Light 4       | Light 5       | Light 6       | Light 7       | Light 8       | Light 9       |
+| ----------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| `.is-light` | `.is-light-1` | `.is-light-2` | `.is-light-3` | `.is-light-4` | `.is-light-5` | `.is-light-6` | `.is-light-7` | `.is-light-8` | `.is-light-9` |
+
+## Role
+
+`.is-(role)` 形式のモディファイアをアイコンセレクターに付与すると、各役割毎のカラーリングに変化します。
+
+| Primary       | Info       | Success       | Warning       | Danger       |
+| ------------- | ---------- | ------------- | ------------- | ------------ |
+| `.is-primary` | `.is-info` | `.is-success` | `.is-warning` | `.is-danger` |
+
+## Fit
+
+| Modifier  | Description                                                     |
+| --------- | --------------------------------------------------------------- |
+| `.is-fit` | アイコンセレクターに付与するとアイコンの幅が `1em` に揃います。 |
+
 ## Variables
 
 <PreviewVariablesSingle filePath={meta.filePath} viewCompiled={false} />
