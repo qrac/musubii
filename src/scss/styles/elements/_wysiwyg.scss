@@ -268,7 +268,7 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 @include generate-style($option-generate-style-wysiwyg) {
   #{$selector-wysiwyg} {
-    &#{$modifier-text-dark-9} {
+    &#{$modifier-wysiwyg-link-reverse} {
       #{$selector-wysiwyg-a} {
         @include musubii-style-wysiwyg-text-link-reverse();
       }
