@@ -357,24 +357,6 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 //----------------------------------------------------
 
 @mixin musubii-style-wysiwyg-list() {
-  ul,
-  ol {
-    > li {
-      display: list-item;
-    }
-    > li li {
-      font-size: 100%;
-    }
-  }
-  ul > li {
-    list-style: $wysiwyg-list-unordered-style-type outside;
-  }
-  ol > li {
-    list-style: decimal outside;
-  }
-}
-
-@mixin musubii-style-wysiwyg-list() {
   line-height: $wysiwyg-text-line-height;
   margin-left: $wysiwyg-list-margin-left;
 }
