@@ -316,14 +316,14 @@ $icon-fit-width: 1em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-icon-fit() {
-  &.is-fit {
-    width: $icon-fit-width;
-    text-align: center;
-  }
+  width: $icon-fit-width;
+  text-align: center;
 }
 
 @include generate-style($option-generate-style-icon) {
   #{$selector-icon} {
-    @include musubii-style-icon-fit();
+    &#{$modifier-icon-fit} {
+      @include musubii-style-icon-fit();
+    }
   }
 }
