@@ -13,14 +13,19 @@ $selector-list-item: "\.item" !default;
 // Modifiers
 $modifier-list-disc: "\.is-disc" !default;
 $modifier-list-circle: "\.is-circle" !default;
+$modifier-list-square: "\.is-square" !default;
+$modifier-list-kome: "\.is-kome" !default;
 $modifier-list-decimal: "\.is-decimal" !default;
 $modifier-list-note: "\.is-note" !default;
 
 // List
 $list-margin-left: 1.5em !default;
-
-// List Item
 $list-item-margin-top: 0.25em !default;
+$list-disc-item-list-style: disc outside !default;
+$list-circle-item-list-style: circle outside !default;
+$list-square-item-list-style: square outside !default;
+$list-kome-item-list-style: "\203B"outside !default;
+$list-decimal-item-list-style: decimal outside !default;
 
 // List Note
 $list-note-item-margin-left: 0.25em !default;
@@ -30,92 +35,97 @@ $list-note-item-margin-left: 0.25em !default;
 //----------------------------------------------------
 
 @mixin musubii-style-list() {
-  > {
-    #{$selector-list-item} {
-      &:not(:first-child) {
-        margin-top: $list-item-margin-top;
-      }
-    }
-  }
-  > {
-    #{$selector-list-item} {
+  margin-left: $list-margin-left;
+}
+
+@mixin musubii-style-list-not-first-item() {
+  margin-top: $list-item-margin-top;
+}
+
+@mixin musubii-style-list-item-child-list() {
+  margin-top: $list-item-margin-top * 2;
+}
+
+@mixin musubii-style-list-disc-item() {
+  display: list-item;
+  list-style: $list-disc-item-list-style;
+}
+
+@mixin musubii-style-list-square-item() {
+  display: list-item;
+  list-style: $list-square-item-list-style;
+}
+
+@mixin musubii-style-list-circle-item() {
+  display: list-item;
+  list-style: $list-circle-item-list-style;
+}
+
+@mixin musubii-style-list-kome-item() {
+  display: list-item;
+  list-style: $list-kome-item-list-style;
+}
+
+@mixin musubii-style-list-decimal-item() {
+  display: list-item;
+  list-style: $list-decimal-item-list-style;
+}
+
+@include generate-style($option-generate-style-list) {
+  #{$selector-list} {
+    &#{$modifier-list-disc},
+    &#{$modifier-list-circle},
+    &#{$modifier-list-square},
+    &#{$modifier-list-kome},
+    &#{$modifier-list-decimal} {
+      @include musubii-style-list();
       > {
-        #{$selector-list} {
-          margin-top: ($list-item-margin-top * 2);
+        #{$selector-list-item} {
+          &:not(:first-child) {
+            @include musubii-style-list-not-first-item();
+          }
+          > {
+            #{$selector-list} {
+              @include musubii-style-list-item-child-list();
+            }
+          }
         }
       }
     }
-  }
-}
-
-@include generate-style($option-generate-style-list) {
-  #{$selector-list} {
-    @include musubii-style-list();
-  }
-}
-
-//----------------------------------------------------
-// / Style - List Disc
-//----------------------------------------------------
-
-@mixin musubii-style-list-disc() {
-  margin-left: $list-margin-left;
-  > {
-    #{$selector-list-item} {
-      display: list-item;
-      list-style: disc outside;
-    }
-  }
-}
-
-@include generate-style($option-generate-style-list) {
-  #{$selector-list} {
     &#{$modifier-list-disc} {
-      @include musubii-style-list-disc();
+      > {
+        #{$selector-list-item} {
+          @include musubii-style-list-disc-item();
+        }
+      }
     }
-  }
-}
-
-//----------------------------------------------------
-// / Style - List Circle
-//----------------------------------------------------
-
-@mixin musubii-style-list-circle() {
-  margin-left: $list-margin-left;
-  > {
-    #{$selector-list-item} {
-      display: list-item;
-      list-style: circle outside;
-    }
-  }
-}
-
-@include generate-style($option-generate-style-list) {
-  #{$selector-list} {
     &#{$modifier-list-circle} {
-      @include musubii-style-list-circle();
+      > {
+        #{$selector-list-item} {
+          @include musubii-style-list-circle-item();
+        }
+      }
     }
-  }
-}
-
-//----------------------------------------------------
-// / Style - List Decimal
-//----------------------------------------------------
-
-@mixin musubii-style-list-decimal() {
-  margin-left: $list-margin-left;
-  > {
-    #{$selector-list-item} {
-      display: list-item;
-      list-style: decimal outside;
+    &#{$modifier-list-square} {
+      > {
+        #{$selector-list-item} {
+          @include musubii-style-list-square-item();
+        }
+      }
     }
-  }
-}
-
-@include generate-style($option-generate-style-list) {
-  #{$selector-list} {
+    &#{$modifier-list-kome} {
+      > {
+        #{$selector-list-item} {
+          @include musubii-style-list-kome-item();
+        }
+      }
+    }
     &#{$modifier-list-decimal} {
-      @include musubii-style-list-decimal();
+      > {
+        #{$selector-list-item} {
+          @include musubii-style-list-decimal-item();
+        }
+      }
     }
   }
 }
@@ -124,26 +134,26 @@ $list-note-item-margin-left: 0.25em !default;
 // / Style - List Note
 //----------------------------------------------------
 
-@mixin musubii-style-list-note() {
-  > {
-    #{$selector-list-item} {
-      display: flex;
-    }
-  }
-  > {
-    #{$selector-list-item} {
-      > *:not(:first-child) {
-        margin-left: $list-note-item-margin-left;
-      }
-    }
-  }
+@mixin musubii-style-list-note-item() {
+  display: flex;
+}
+
+@mixin musubii-style-list-note-item-not-first-child() {
+  margin-left: $list-note-item-margin-left;
 }
 
 @include generate-style($option-generate-style-list) {
   @if $option-add-style-list-note == true {
     #{$selector-list} {
       &#{$modifier-list-note} {
-        @include musubii-style-list-note();
+        > {
+          #{$selector-list-item} {
+            @include musubii-style-list-note-item();
+            > *:not(:first-child) {
+              @include musubii-style-list-note-item-not-first-child();
+            }
+          }
+        }
       }
     }
   }
