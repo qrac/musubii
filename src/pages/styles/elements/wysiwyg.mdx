@@ -15,6 +15,92 @@ import PreviewSources from "~/components/previews/preview-sources"
 
 contents list
 
+## Detail
+
+WYSIWYG や Markdown から出力された「class 名の無いプレーンな HTML タグ」に対して、一括で装飾を施すエレメント CSS。[Text](/styles/elements/text)・[List](/styles/elements/list)・[Table](/styles/elements/table) と近い見た目を簡単に作れます。
+
+## Basic
+
+`.wysiwyg` をラッパーとして装飾を施したいエリアに設定します。
+
+| Selector   | Description                              |
+| ---------- | ---------------------------------------- |
+| `.wysiwyg` | WYSIWYG 装飾の起点として使うセレクター。 |
+
+## Heading
+
+| Selector  | Description                           |
+| --------- | ------------------------------------- |
+| `h1 ~ h6` | `.wysiwyg` 内で装飾される見出しタグ。 |
+
+## Text
+
+| Selector | Description                                               |
+| -------- | --------------------------------------------------------- |
+| `p`      | `.wysiwyg` 内で装飾される段落タグ。                       |
+| `small`  | `.wysiwyg` 内で装飾されるひとまわり小さめのテキストタグ。 |
+| `strong` | `.wysiwyg` 内で装飾される強調タグ。表示はボールド。       |
+| `em`     | `.wysiwyg` 内で装飾される強調タグ。表示はイタリック。     |
+| `del, s` | `.wysiwyg` 内で装飾される打ち消しタグ。                   |
+
+## Link
+
+`.wysiwyg` 内の `a` タグは自動的に下線リンク装飾となります。`.wysiwyg` に `.is-link-reverse` を付与するとホバーで下線が表示されるよう変更できます。
+
+デフォルトは `border-bottom` プロパティが使われていますが、[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-wysiwyg-link-border` を `false` にすると、下線が `text-decoration: underline;` に切り替わります。
+
+| Selector | Description                             |
+| -------- | --------------------------------------- |
+| `a`      | `.wysiwyg` 内で装飾されるアンカータグ。 |
+
+| Modifier           | Description                                                             |
+| ------------------ | ----------------------------------------------------------------------- |
+| `.is-link-reverse` | `.wysiwyg` に付与するとアンカーがホバーで下線表示されるようになります。 |
+
+## Blockquote
+
+| Selector     | Description                         |
+| ------------ | ----------------------------------- |
+| `blockquote` | `.wysiwyg` 内で装飾される引用タグ。 |
+
+## Code
+
+| Selector | Description                                     |
+| -------- | ----------------------------------------------- |
+| `code`   | `.wysiwyg` 内で装飾されるコードタグ。           |
+| `pre`    | `.wysiwyg` 内で装飾される整形済みテキストタグ。 |
+
+## List
+
+| Selector | Description                                   |
+| -------- | --------------------------------------------- |
+| `ul`     | `.wysiwyg` 内で装飾される順番なしリストタグ。 |
+| `ol`     | `.wysiwyg` 内で装飾される順番ありリストタグ。 |
+| `li`     | `.wysiwyg` 内で装飾されるリストアイテムタグ。 |
+
+## Table
+
+| Selector | Description                               |
+| -------- | ----------------------------------------- |
+| `table`  | `.wysiwyg` 内で装飾されるテーブルタグ。   |
+| `th`     | `.wysiwyg` 内で装飾される見出しセルタグ。 |
+| `td`     | `.wysiwyg` 内で装飾されるデータセルタグ。 |
+
+## Definition List
+
+| Selector | Description                               |
+| -------- | ----------------------------------------- |
+| `dl`     | `.wysiwyg` 内で装飾される定義リストタグ。 |
+| `dt`     | `.wysiwyg` 内で装飾される定義語タグ。     |
+| `dd`     | `.wysiwyg` 内で装飾される定義説明タグ。   |
+
+## Definition List
+
+| Selector     | Description                                           |
+| ------------ | ----------------------------------------------------- |
+| `figure`     | `.wysiwyg` 内で装飾されるキャプション付きの図表タグ。 |
+| `figcaption` | `.wysiwyg` 内で装飾される図表のキャプションタグ。     |
+
 ## Variables
 
 <PreviewVariablesDouble filePath={meta.filePath} viewCompiled={true} />
