@@ -11,6 +11,36 @@
       "compiledValue": ".item"
     },
     {
+      "name": "$modifier-list-disc",
+      "value": ".is-disc",
+      "compiledValue": ".is-disc"
+    },
+    {
+      "name": "$modifier-list-circle",
+      "value": ".is-circle",
+      "compiledValue": ".is-circle"
+    },
+    {
+      "name": "$modifier-list-square",
+      "value": ".is-square",
+      "compiledValue": ".is-square"
+    },
+    {
+      "name": "$modifier-list-kome",
+      "value": ".is-kome",
+      "compiledValue": ".is-kome"
+    },
+    {
+      "name": "$modifier-list-decimal",
+      "value": ".is-decimal",
+      "compiledValue": ".is-decimal"
+    },
+    {
+      "name": "$modifier-list-note",
+      "value": ".is-note",
+      "compiledValue": ".is-note"
+    },
+    {
       "name": "$list-margin-left",
       "value": "1.5em",
       "compiledValue": "1.5em"
@@ -19,6 +49,31 @@
       "name": "$list-item-margin-top",
       "value": "0.25em",
       "compiledValue": "0.25em"
+    },
+    {
+      "name": "$list-disc-item-list-style",
+      "value": "disc outside",
+      "compiledValue": "disc outside"
+    },
+    {
+      "name": "$list-circle-item-list-style",
+      "value": "circle outside",
+      "compiledValue": "circle outside"
+    },
+    {
+      "name": "$list-square-item-list-style",
+      "value": "square outside",
+      "compiledValue": "square outside"
+    },
+    {
+      "name": "$list-kome-item-list-style",
+      "value": "\"203B\"outside",
+      "compiledValue": "※ outside"
+    },
+    {
+      "name": "$list-decimal-item-list-style",
+      "value": "decimal outside",
+      "compiledValue": "decimal outside"
     },
     {
       "name": "$list-note-item-margin-left",
@@ -32,19 +87,39 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-list-disc",
+      "name": "musubii-style-list-not-first-item",
       "parameters": []
     },
     {
-      "name": "musubii-style-list-circle",
+      "name": "musubii-style-list-item-child-list",
       "parameters": []
     },
     {
-      "name": "musubii-style-list-decimal",
+      "name": "musubii-style-list-disc-item",
       "parameters": []
     },
     {
-      "name": "musubii-style-list-note",
+      "name": "musubii-style-list-square-item",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-circle-item",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-kome-item",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-decimal-item",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-note-item",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-list-note-item-not-first-child",
       "parameters": []
     }
   ]

@@ -381,13 +381,8 @@
       "compiledValue": ".is-ie-none"
     },
     {
-      "name": "$modifier-display-hidden",
-      "value": ".is-hidden",
-      "compiledValue": ".is-hidden"
-    },
-    {
       "name": "$display-important",
-      "value": "if( $option-add-style-display-important == true, !important, null )",
+      "value": "if( $option-important-display == true, !important, null )",
       "compiledValue": ""
     }
   ],
@@ -406,10 +401,6 @@
     },
     {
       "name": "musubii-style-display-none",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-display-hidden",
       "parameters": []
     }
   ]

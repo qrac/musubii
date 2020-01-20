@@ -1,64 +1,99 @@
 {
   "variables": [
     {
-      "name": "$selector-fieldset",
-      "value": ".fieldset",
-      "compiledValue": ".fieldset"
-    },
-    {
-      "name": "$selector-input",
+      "name": "$selector-form-input",
       "value": ".input",
       "compiledValue": ".input"
     },
     {
-      "name": "$selector-textarea",
+      "name": "$selector-form-textarea",
       "value": ".textarea",
       "compiledValue": ".textarea"
     },
     {
-      "name": "$selector-radio",
-      "value": ".radio",
-      "compiledValue": ".radio"
-    },
-    {
-      "name": "$selector-checkbox",
-      "value": ".checkbox",
-      "compiledValue": ".checkbox"
-    },
-    {
-      "name": "$selector-label",
+      "name": "$selector-form-label",
       "value": ".label",
       "compiledValue": ".label"
     },
     {
-      "name": "$selector-select-wrap",
+      "name": "$selector-form-radio",
+      "value": ".radio",
+      "compiledValue": ".radio"
+    },
+    {
+      "name": "$selector-form-checkbox",
+      "value": ".checkbox",
+      "compiledValue": ".checkbox"
+    },
+    {
+      "name": "$selector-form-select",
       "value": ".select",
       "compiledValue": ".select"
     },
     {
-      "name": "$selector-select",
+      "name": "$selector-form-select-core",
       "value": "select",
       "compiledValue": "select"
     },
     {
-      "name": "$modifier-radio-active",
-      "value": ".is-active",
-      "compiledValue": ".is-active"
+      "name": "$selector-form-fieldset",
+      "value": ".fieldset",
+      "compiledValue": ".fieldset"
     },
     {
-      "name": "$modifier-checkbox-active",
-      "value": ".is-active",
-      "compiledValue": ".is-active"
+      "name": "$modifier-form-success",
+      "value": ".is-success",
+      "compiledValue": ".is-success"
     },
     {
-      "name": "$modifier-radio-disabled",
+      "name": "$modifier-form-danger",
+      "value": ".is-danger",
+      "compiledValue": ".is-danger"
+    },
+    {
+      "name": "$modifier-form-round",
+      "value": ".is-round",
+      "compiledValue": ".is-round"
+    },
+    {
+      "name": "$modifier-form-plain",
+      "value": ".is-plain",
+      "compiledValue": ".is-plain"
+    },
+    {
+      "name": "$modifier-form-underline",
+      "value": ".is-underline",
+      "compiledValue": ".is-underline"
+    },
+    {
+      "name": "$modifier-form-inside",
+      "value": ".is-inside",
+      "compiledValue": ".is-inside"
+    },
+    {
+      "name": "$modifier-form-middle",
+      "value": ".is-middle",
+      "compiledValue": ".is-middle"
+    },
+    {
+      "name": "$modifier-form-center",
+      "value": ".is-center",
+      "compiledValue": ".is-center"
+    },
+    {
+      "name": "$modifier-form-checked",
+      "value": ".is-checked",
+      "compiledValue": ".is-checked"
+    },
+    {
+      "name": "$modifier-form-disabled",
       "value": ".is-disabled",
       "compiledValue": ".is-disabled"
     },
     {
-      "name": "$modifier-checkbox-disabled",
-      "value": ".is-disabled",
-      "compiledValue": ".is-disabled"
+      "name": "$modifier-form-multiple",
+      "value": ".is-multiple",
+      "compiledValue": ".is-multiple"
     },
     {
       "name": "$input-height",
@@ -97,7 +132,7 @@
     },
     {
       "name": "$input-shadow",
-      "value": "inset 0 1px 1px $convert-shadow-alpha-thin",
+      "value": "$global-inset-shadow-size $convert-shadow-alpha-thin",
       "compiledValue": "inset 0 1px 1px var(--shadow-alpha-thin)"
     },
     {
@@ -122,13 +157,13 @@
     },
     {
       "name": "$input-disabled-shadow",
-      "value": "inset 0 1px 1px $convert-shadow-alpha-thin",
+      "value": "$global-inset-shadow-size $convert-shadow-alpha-thin",
       "compiledValue": "inset 0 1px 1px var(--shadow-alpha-thin)"
     },
     {
-      "name": "$input-disabled-text-color",
-      "value": "$convert-disabled-text-color",
-      "compiledValue": "var(--disabled-text-color)"
+      "name": "$input-disabled-color",
+      "value": "$convert-disabled-color",
+      "compiledValue": "var(--disabled-color)"
     },
     {
       "name": "$input-readonly-background-color",
@@ -142,13 +177,13 @@
     },
     {
       "name": "$input-readonly-shadow",
-      "value": "inset 0 1px 1px $convert-shadow-alpha-thin",
+      "value": "$global-inset-shadow-size $convert-shadow-alpha-thin",
       "compiledValue": "inset 0 1px 1px var(--shadow-alpha-thin)"
     },
     {
-      "name": "$input-readonly-text-color",
-      "value": "$convert-body-text-color",
-      "compiledValue": "var(--body-text-color)"
+      "name": "$input-readonly-color",
+      "value": "$convert-body-color",
+      "compiledValue": "var(--body-color)"
     },
     {
       "name": "$input-focus-border-color",
@@ -157,18 +192,13 @@
     },
     {
       "name": "$input-focus-shadow",
-      "value": "inset 0 1px 1px $convert-shadow-alpha-thin, 0 0 0 $meter-xxs $convert-focus-alpha-thin",
+      "value": "$global-inset-shadow-size $convert-shadow-alpha-thin, $global-focus-shadow-size $convert-focus-alpha-thin",
       "compiledValue": "inset 0 1px 1px var(--shadow-alpha-thin), 0 0 0 4px var(--focus-alpha-thin)"
     },
     {
       "name": "$input-round-border-radius",
       "value": "$radius-full",
       "compiledValue": "999em"
-    },
-    {
-      "name": "$pattern-input-custom",
-      "value": "round",
-      "compiledValue": "round"
     },
     {
       "name": "$input-plain-background-color",
@@ -182,7 +212,7 @@
     },
     {
       "name": "$input-plain-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha-thin",
+      "value": "$global-focus-shadow-size $convert-focus-alpha-thin",
       "compiledValue": "0 0 0 4px var(--focus-alpha-thin)"
     },
     {
@@ -209,11 +239,6 @@
       "name": "$input-inside-padding",
       "value": "0.5em 0.75em",
       "compiledValue": "0.5em 0.75em"
-    },
-    {
-      "name": "$pattern-input-style",
-      "value": "plain, underline, inside",
-      "compiledValue": "plain, underline, inside"
     },
     {
       "name": "$input-success-background-color",
@@ -262,7 +287,7 @@
     },
     {
       "name": "$radio-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha-thin",
+      "value": "$global-focus-shadow-size $convert-focus-alpha-thin",
       "compiledValue": "0 0 0 4px var(--focus-alpha-thin)"
     },
     {
@@ -307,7 +332,7 @@
     },
     {
       "name": "$checkbox-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha-thin",
+      "value": "$global-focus-shadow-size $convert-focus-alpha-thin",
       "compiledValue": "0 0 0 4px var(--focus-alpha-thin)"
     },
     {
@@ -347,21 +372,33 @@
     },
     {
       "name": "$select-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha-thin",
+      "value": "$global-focus-shadow-size $convert-focus-alpha-thin",
       "compiledValue": "0 0 0 4px var(--focus-alpha-thin)"
     }
   ],
   "mixins": [
-    {
-      "name": "musubii-style-form-fieldset",
-      "parameters": []
-    },
     {
       "name": "musubii-style-form-input",
       "parameters": []
     },
     {
       "name": "musubii-style-form-textarea",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-readonly",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-danger",
       "parameters": []
     },
     {
@@ -373,11 +410,47 @@
       "parameters": []
     },
     {
+      "name": "musubii-style-form-input-plain-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-plain-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-plain-danger",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-form-input-underline",
       "parameters": []
     },
     {
+      "name": "musubii-style-form-input-underline-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-underline-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-underline-danger",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-form-input-inside",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-inside-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-inside-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-inside-danger",
       "parameters": []
     },
     {
@@ -389,7 +462,19 @@
       "parameters": []
     },
     {
+      "name": "musubii-style-form-label-middle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-label-center",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-form-radio",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-radio-core",
       "parameters": []
     },
     {
@@ -397,7 +482,7 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-form-radio-active",
+      "name": "musubii-style-form-radio-checkbox",
       "parameters": []
     },
     {
@@ -413,11 +498,15 @@
       "parameters": []
     },
     {
+      "name": "musubii-style-form-checkbox-core",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-form-checkbox-focus",
       "parameters": []
     },
     {
-      "name": "musubii-style-form-checkbox-active",
+      "name": "musubii-style-form-checkbox-checkbox",
       "parameters": []
     },
     {
@@ -433,23 +522,95 @@
       "parameters": []
     },
     {
+      "name": "musubii-style-form-select-angle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-angle-fix",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-readonly",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-danger",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-form-select-round",
       "parameters": []
     },
     {
-      "name": "musubii-style-form-select-plain",
+      "name": "musubii-style-form-select-core-plain",
       "parameters": []
     },
     {
-      "name": "musubii-style-form-select-underline",
+      "name": "musubii-style-form-select-core-plain-disabled",
       "parameters": []
     },
     {
-      "name": "musubii-style-form-select-inside",
+      "name": "musubii-style-form-select-core-plain-success",
       "parameters": []
     },
     {
-      "name": "musubii-style-form-select-multiple",
+      "name": "musubii-style-form-select-core-plain-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-underline",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-underline-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-underline-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-underline-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-inside",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-inside-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-inside-angle-fix",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-inside-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-inside-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-select-core-multiple",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-fieldset",
       "parameters": []
     }
   ]

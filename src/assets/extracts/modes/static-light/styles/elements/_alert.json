@@ -231,83 +231,147 @@
       "parameters": []
     },
     {
-      "name": "--is-tail-top",
-      "parameters": [
-        "$bg-color",
-        "$border-color",
-        "$border-width",
-        "$size",
-        "$end"
-      ]
-    },
-    {
-      "name": "--is-tail-right",
-      "parameters": [
-        "$bg-color",
-        "$border-color",
-        "$border-width",
-        "$size",
-        "$end"
-      ]
-    },
-    {
-      "name": "--is-tail-bottom",
-      "parameters": [
-        "$bg-color",
-        "$border-color",
-        "$border-width",
-        "$size",
-        "$end"
-      ]
-    },
-    {
-      "name": "--is-tail-left",
-      "parameters": [
-        "$bg-color",
-        "$border-color",
-        "$border-width",
-        "$size",
-        "$end"
-      ]
-    },
-    {
-      "name": "musubii-style-alert-tail-way",
+      "name": "musubii-style-alert-tail-top",
       "parameters": []
     },
     {
-      "name": "--is-tail-top-alert-role",
-      "parameters": [
-        "$name",
-        "$bg-color",
-        "$border-color"
-      ]
+      "name": "musubii-style-alert-tail-top-right",
+      "parameters": []
     },
     {
-      "name": "--is-tail-right-alert-role",
-      "parameters": [
-        "$name",
-        "$bg-color",
-        "$border-color"
-      ]
+      "name": "musubii-style-alert-tail-top-center",
+      "parameters": []
     },
     {
-      "name": "--is-tail-bottom-alert-role",
-      "parameters": [
-        "$name",
-        "$bg-color",
-        "$border-color"
-      ]
+      "name": "musubii-style-alert-tail-top-left",
+      "parameters": []
     },
     {
-      "name": "--is-tail-left-alert-role",
-      "parameters": [
-        "$name",
-        "$bg-color",
-        "$border-color"
-      ]
+      "name": "musubii-style-alert-tail-right",
+      "parameters": []
     },
     {
-      "name": "musubii-style-alert-tail-way-role",
+      "name": "musubii-style-alert-tail-right-top",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-right-middle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-right-bottom",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom-right",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom-center",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom-left",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left-top",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left-middle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left-bottom",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-top-primary",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-top-info",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-top-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-top-warning",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-top-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-right-primary",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-right-info",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-right-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-right-warning",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-right-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom-primary",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom-info",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom-warning",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-bottom-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left-primary",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left-info",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left-warning",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-alert-tail-left-danger",
       "parameters": []
     }
   ]

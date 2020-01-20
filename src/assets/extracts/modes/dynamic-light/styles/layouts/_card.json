@@ -97,7 +97,7 @@
     },
     {
       "name": "$card-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha",
+      "value": "$global-focus-shadow-size $convert-focus-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha)"
     },
     {
@@ -122,17 +122,17 @@
     },
     {
       "name": "$card-floating-shadow",
-      "value": "0 1px 3px 0 $convert-shadow-alpha",
-      "compiledValue": "0 1px 3px 0 var(--shadow-alpha)"
+      "value": "$global-floating-shadow-size $convert-shadow-alpha",
+      "compiledValue": "0 2px 6px 0 var(--shadow-alpha)"
     },
     {
       "name": "$card-floating-hover-shadow",
-      "value": "0 4px 12px 0 $convert-shadow-alpha",
+      "value": "$global-floating-hover-shadow-size $convert-shadow-alpha",
       "compiledValue": "0 4px 12px 0 var(--shadow-alpha)"
     },
     {
       "name": "$card-floating-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
+      "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-alpha)"
     },
     {

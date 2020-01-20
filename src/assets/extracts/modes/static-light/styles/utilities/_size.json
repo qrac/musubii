@@ -702,7 +702,7 @@
     },
     {
       "name": "$size-important",
-      "value": "if( $option-add-style-size-important == true, !important, null )",
+      "value": "if($option-important-size == true, !important, null)",
       "compiledValue": ""
     }
   ],

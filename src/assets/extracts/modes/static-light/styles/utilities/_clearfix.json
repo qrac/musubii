@@ -7,7 +7,7 @@
     },
     {
       "name": "$clearfix-important",
-      "value": "if( $option-add-style-clearfix-important == true, !important, null )",
+      "value": "if( $option-important-clearfix == true, !important, null )",
       "compiledValue": ""
     }
   ],

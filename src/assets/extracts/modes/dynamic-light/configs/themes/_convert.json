@@ -76,104 +76,104 @@
       "compiledValue": "var(--danger-darken)"
     },
     {
-      "name": "$convert-text-dark",
-      "value": "if($option-css-variables == true, var(--text-dark), null)",
-      "compiledValue": "var(--text-dark)"
+      "name": "$convert-dark",
+      "value": "if($option-css-variables == true, var(--dark), null)",
+      "compiledValue": "var(--dark)"
     },
     {
-      "name": "$convert-text-dark-1",
-      "value": "if($option-css-variables == true, var(--text-dark-1), null)",
-      "compiledValue": "var(--text-dark-1)"
+      "name": "$convert-dark-1",
+      "value": "if($option-css-variables == true, var(--dark-1), null)",
+      "compiledValue": "var(--dark-1)"
     },
     {
-      "name": "$convert-text-dark-2",
-      "value": "if($option-css-variables == true, var(--text-dark-2), null)",
-      "compiledValue": "var(--text-dark-2)"
+      "name": "$convert-dark-2",
+      "value": "if($option-css-variables == true, var(--dark-2), null)",
+      "compiledValue": "var(--dark-2)"
     },
     {
-      "name": "$convert-text-dark-3",
-      "value": "if($option-css-variables == true, var(--text-dark-3), null)",
-      "compiledValue": "var(--text-dark-3)"
+      "name": "$convert-dark-3",
+      "value": "if($option-css-variables == true, var(--dark-3), null)",
+      "compiledValue": "var(--dark-3)"
     },
     {
-      "name": "$convert-text-dark-4",
-      "value": "if($option-css-variables == true, var(--text-dark-4), null)",
-      "compiledValue": "var(--text-dark-4)"
+      "name": "$convert-dark-4",
+      "value": "if($option-css-variables == true, var(--dark-4), null)",
+      "compiledValue": "var(--dark-4)"
     },
     {
-      "name": "$convert-text-dark-5",
-      "value": "if($option-css-variables == true, var(--text-dark-5), null)",
-      "compiledValue": "var(--text-dark-5)"
+      "name": "$convert-dark-5",
+      "value": "if($option-css-variables == true, var(--dark-5), null)",
+      "compiledValue": "var(--dark-5)"
     },
     {
-      "name": "$convert-text-dark-6",
-      "value": "if($option-css-variables == true, var(--text-dark-6), null)",
-      "compiledValue": "var(--text-dark-6)"
+      "name": "$convert-dark-6",
+      "value": "if($option-css-variables == true, var(--dark-6), null)",
+      "compiledValue": "var(--dark-6)"
     },
     {
-      "name": "$convert-text-dark-7",
-      "value": "if($option-css-variables == true, var(--text-dark-7), null)",
-      "compiledValue": "var(--text-dark-7)"
+      "name": "$convert-dark-7",
+      "value": "if($option-css-variables == true, var(--dark-7), null)",
+      "compiledValue": "var(--dark-7)"
     },
     {
-      "name": "$convert-text-dark-8",
-      "value": "if($option-css-variables == true, var(--text-dark-8), null)",
-      "compiledValue": "var(--text-dark-8)"
+      "name": "$convert-dark-8",
+      "value": "if($option-css-variables == true, var(--dark-8), null)",
+      "compiledValue": "var(--dark-8)"
     },
     {
-      "name": "$convert-text-dark-9",
-      "value": "if($option-css-variables == true, var(--text-dark-9), null)",
-      "compiledValue": "var(--text-dark-9)"
+      "name": "$convert-dark-9",
+      "value": "if($option-css-variables == true, var(--dark-9), null)",
+      "compiledValue": "var(--dark-9)"
     },
     {
-      "name": "$convert-text-light",
-      "value": "if($option-css-variables == true, var(--text-light), null)",
-      "compiledValue": "var(--text-light)"
+      "name": "$convert-light",
+      "value": "if($option-css-variables == true, var(--light), null)",
+      "compiledValue": "var(--light)"
     },
     {
-      "name": "$convert-text-light-1",
-      "value": "if($option-css-variables == true, var(--text-light-1), null)",
-      "compiledValue": "var(--text-light-1)"
+      "name": "$convert-light-1",
+      "value": "if($option-css-variables == true, var(--light-1), null)",
+      "compiledValue": "var(--light-1)"
     },
     {
-      "name": "$convert-text-light-2",
-      "value": "if($option-css-variables == true, var(--text-light-2), null)",
-      "compiledValue": "var(--text-light-2)"
+      "name": "$convert-light-2",
+      "value": "if($option-css-variables == true, var(--light-2), null)",
+      "compiledValue": "var(--light-2)"
     },
     {
-      "name": "$convert-text-light-3",
-      "value": "if($option-css-variables == true, var(--text-light-3), null)",
-      "compiledValue": "var(--text-light-3)"
+      "name": "$convert-light-3",
+      "value": "if($option-css-variables == true, var(--light-3), null)",
+      "compiledValue": "var(--light-3)"
     },
     {
-      "name": "$convert-text-light-4",
-      "value": "if($option-css-variables == true, var(--text-light-4), null)",
-      "compiledValue": "var(--text-light-4)"
+      "name": "$convert-light-4",
+      "value": "if($option-css-variables == true, var(--light-4), null)",
+      "compiledValue": "var(--light-4)"
     },
     {
-      "name": "$convert-text-light-5",
-      "value": "if($option-css-variables == true, var(--text-light-5), null)",
-      "compiledValue": "var(--text-light-5)"
+      "name": "$convert-light-5",
+      "value": "if($option-css-variables == true, var(--light-5), null)",
+      "compiledValue": "var(--light-5)"
     },
     {
-      "name": "$convert-text-light-6",
-      "value": "if($option-css-variables == true, var(--text-light-6), null)",
-      "compiledValue": "var(--text-light-6)"
+      "name": "$convert-light-6",
+      "value": "if($option-css-variables == true, var(--light-6), null)",
+      "compiledValue": "var(--light-6)"
     },
     {
-      "name": "$convert-text-light-7",
-      "value": "if($option-css-variables == true, var(--text-light-7), null)",
-      "compiledValue": "var(--text-light-7)"
+      "name": "$convert-light-7",
+      "value": "if($option-css-variables == true, var(--light-7), null)",
+      "compiledValue": "var(--light-7)"
     },
     {
-      "name": "$convert-text-light-8",
-      "value": "if($option-css-variables == true, var(--text-light-8), null)",
-      "compiledValue": "var(--text-light-8)"
+      "name": "$convert-light-8",
+      "value": "if($option-css-variables == true, var(--light-8), null)",
+      "compiledValue": "var(--light-8)"
     },
     {
-      "name": "$convert-text-light-9",
-      "value": "if($option-css-variables == true, var(--text-light-9), null)",
-      "compiledValue": "var(--text-light-9)"
+      "name": "$convert-light-9",
+      "value": "if($option-css-variables == true, var(--light-9), null)",
+      "compiledValue": "var(--light-9)"
     },
     {
       "name": "$convert-background",
@@ -226,6 +226,31 @@
       "compiledValue": "var(--shadow-alpha-thin)"
     },
     {
+      "name": "$convert-shadow-primary-alpha",
+      "value": "if($option-css-variables == true, var(--shadow-primary-alpha), null)",
+      "compiledValue": "var(--shadow-primary-alpha)"
+    },
+    {
+      "name": "$convert-shadow-info-alpha",
+      "value": "if($option-css-variables == true, var(--shadow-info-alpha), null)",
+      "compiledValue": "var(--shadow-info-alpha)"
+    },
+    {
+      "name": "$convert-shadow-success-alpha",
+      "value": "if($option-css-variables == true, var(--shadow-success-alpha), null)",
+      "compiledValue": "var(--shadow-success-alpha)"
+    },
+    {
+      "name": "$convert-shadow-warning-alpha",
+      "value": "if($option-css-variables == true, var(--shadow-warning-alpha), null)",
+      "compiledValue": "var(--shadow-warning-alpha)"
+    },
+    {
+      "name": "$convert-shadow-danger-alpha",
+      "value": "if($option-css-variables == true, var(--shadow-danger-alpha), null)",
+      "compiledValue": "var(--shadow-danger-alpha)"
+    },
+    {
       "name": "$convert-focus-darken",
       "value": "if($option-css-variables == true, var(--focus-darken), null)",
       "compiledValue": "var(--focus-darken)"
@@ -251,9 +276,9 @@
       "compiledValue": "var(--disabled-border-color)"
     },
     {
-      "name": "$convert-disabled-text-color",
-      "value": "if($option-css-variables == true, var(--disabled-text-color), null)",
-      "compiledValue": "var(--disabled-text-color)"
+      "name": "$convert-disabled-color",
+      "value": "if($option-css-variables == true, var(--disabled-color), null)",
+      "compiledValue": "var(--disabled-color)"
     },
     {
       "name": "$convert-body-background-color",
@@ -261,19 +286,19 @@
       "compiledValue": "var(--body-background-color)"
     },
     {
-      "name": "$convert-body-text-color",
-      "value": "if($option-css-variables == true, var(--body-text-color), null)",
-      "compiledValue": "var(--body-text-color)"
+      "name": "$convert-body-color",
+      "value": "if($option-css-variables == true, var(--body-color), null)",
+      "compiledValue": "var(--body-color)"
     },
     {
-      "name": "$convert-code-text-color",
-      "value": "if($option-css-variables == true, var(--code-text-color), null)",
-      "compiledValue": "var(--code-text-color)"
+      "name": "$convert-code-color",
+      "value": "if($option-css-variables == true, var(--code-color), null)",
+      "compiledValue": "var(--code-color)"
     },
     {
-      "name": "$convert-button-paint-text-color",
-      "value": "if($option-css-variables == true, var(--button-paint-text-color), null)",
-      "compiledValue": "var(--button-paint-text-color)"
+      "name": "$convert-button-paint-color",
+      "value": "if($option-css-variables == true, var(--button-paint-color), null)",
+      "compiledValue": "var(--button-paint-color)"
     },
     {
       "name": "$convert-table-paint-background-color",
@@ -281,9 +306,9 @@
       "compiledValue": "var(--table-paint-background-color)"
     },
     {
-      "name": "$convert-table-paint-text-color",
-      "value": "if($option-css-variables == true, var(--table-paint-text-color), null)",
-      "compiledValue": "var(--table-paint-text-color)"
+      "name": "$convert-table-paint-color",
+      "value": "if($option-css-variables == true, var(--table-paint-color), null)",
+      "compiledValue": "var(--table-paint-color)"
     },
     {
       "name": "$convert-table-spot-background-color",
@@ -453,103 +478,103 @@
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark, null)",
+      "name": "$convert-dark",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-1",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-1, null)",
+      "name": "$convert-dark-1",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-1, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-2",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-2, null)",
+      "name": "$convert-dark-2",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-2, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-3",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-3, null)",
+      "name": "$convert-dark-3",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-3, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-4",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-4, null)",
+      "name": "$convert-dark-4",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-4, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-5",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-5, null)",
+      "name": "$convert-dark-5",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-5, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-6",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-6, null)",
+      "name": "$convert-dark-6",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-6, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-7",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-7, null)",
+      "name": "$convert-dark-7",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-7, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-8",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-8, null)",
+      "name": "$convert-dark-8",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-8, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-dark-9",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-dark-9, null)",
+      "name": "$convert-dark-9",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-dark-9, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light, null)",
+      "name": "$convert-light",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-1",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-1, null)",
+      "name": "$convert-light-1",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-1, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-2",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-2, null)",
+      "name": "$convert-light-2",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-2, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-3",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-3, null)",
+      "name": "$convert-light-3",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-3, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-4",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-4, null)",
+      "name": "$convert-light-4",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-4, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-5",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-5, null)",
+      "name": "$convert-light-5",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-5, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-6",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-6, null)",
+      "name": "$convert-light-6",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-6, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-7",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-7, null)",
+      "name": "$convert-light-7",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-7, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-8",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-8, null)",
+      "name": "$convert-light-8",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-8, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-text-light-9",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-text-light-9, null)",
+      "name": "$convert-light-9",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-light-9, null)",
       "compiledValue": ""
     },
     {
@@ -603,6 +628,31 @@
       "compiledValue": ""
     },
     {
+      "name": "$convert-shadow-primary-alpha",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-shadow-primary-alpha, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-shadow-info-alpha",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-shadow-info-alpha, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-shadow-success-alpha",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-shadow-success-alpha, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-shadow-warning-alpha",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-shadow-warning-alpha, null)",
+      "compiledValue": ""
+    },
+    {
+      "name": "$convert-shadow-danger-alpha",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-shadow-danger-alpha, null)",
+      "compiledValue": ""
+    },
+    {
       "name": "$convert-focus-darken",
       "value": "if($option-theme-default == $theme-dark-id, $theme-dark-focus-darken, null)",
       "compiledValue": ""
@@ -628,8 +678,8 @@
       "compiledValue": ""
     },
     {
-      "name": "$convert-disabled-text-color",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-disabled-text-color, null)",
+      "name": "$convert-disabled-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-disabled-color, null)",
       "compiledValue": ""
     },
     {
@@ -638,18 +688,18 @@
       "compiledValue": ""
     },
     {
-      "name": "$convert-body-text-color",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-body-text-color, null)",
+      "name": "$convert-body-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-body-color, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-code-text-color",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-code-text-color, null)",
+      "name": "$convert-code-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-code-color, null)",
       "compiledValue": ""
     },
     {
-      "name": "$convert-button-paint-text-color",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-button-paint-text-color, null)",
+      "name": "$convert-button-paint-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-button-paint-color, null)",
       "compiledValue": ""
     },
     {
@@ -658,8 +708,8 @@
       "compiledValue": ""
     },
     {
-      "name": "$convert-table-paint-text-color",
-      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-table-paint-text-color, null)",
+      "name": "$convert-table-paint-color",
+      "value": "if($option-theme-default == $theme-dark-id, $theme-dark-table-paint-color, null)",
       "compiledValue": ""
     },
     {
@@ -828,103 +878,103 @@
       "compiledValue": "#d74242"
     },
     {
-      "name": "$convert-text-dark",
-      "value": "$theme-light-text-dark",
+      "name": "$convert-dark",
+      "value": "$theme-light-dark",
       "compiledValue": "black"
     },
     {
-      "name": "$convert-text-dark-1",
-      "value": "$theme-light-text-dark-1",
+      "name": "$convert-dark-1",
+      "value": "$theme-light-dark-1",
       "compiledValue": "rgba(0, 0, 0, 0.87)"
     },
     {
-      "name": "$convert-text-dark-2",
-      "value": "$theme-light-text-dark-2",
+      "name": "$convert-dark-2",
+      "value": "$theme-light-dark-2",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {
-      "name": "$convert-text-dark-3",
-      "value": "$theme-light-text-dark-3",
+      "name": "$convert-dark-3",
+      "value": "$theme-light-dark-3",
       "compiledValue": "rgba(0, 0, 0, 0.6)"
     },
     {
-      "name": "$convert-text-dark-4",
-      "value": "$theme-light-text-dark-4",
+      "name": "$convert-dark-4",
+      "value": "$theme-light-dark-4",
       "compiledValue": "rgba(0, 0, 0, 0.5)"
     },
     {
-      "name": "$convert-text-dark-5",
-      "value": "$theme-light-text-dark-5",
+      "name": "$convert-dark-5",
+      "value": "$theme-light-dark-5",
       "compiledValue": "rgba(0, 0, 0, 0.4)"
     },
     {
-      "name": "$convert-text-dark-6",
-      "value": "$theme-light-text-dark-6",
+      "name": "$convert-dark-6",
+      "value": "$theme-light-dark-6",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
-      "name": "$convert-text-dark-7",
-      "value": "$theme-light-text-dark-7",
+      "name": "$convert-dark-7",
+      "value": "$theme-light-dark-7",
       "compiledValue": "rgba(0, 0, 0, 0.15)"
     },
     {
-      "name": "$convert-text-dark-8",
-      "value": "$theme-light-text-dark-8",
+      "name": "$convert-dark-8",
+      "value": "$theme-light-dark-8",
       "compiledValue": "rgba(0, 0, 0, 0.12)"
     },
     {
-      "name": "$convert-text-dark-9",
-      "value": "$theme-light-text-dark-9",
+      "name": "$convert-dark-9",
+      "value": "$theme-light-dark-9",
       "compiledValue": "rgba(0, 0, 0, 0.05)"
     },
     {
-      "name": "$convert-text-light",
-      "value": "$theme-light-text-light",
+      "name": "$convert-light",
+      "value": "$theme-light-light",
       "compiledValue": "white"
     },
     {
-      "name": "$convert-text-light-1",
-      "value": "$theme-light-text-light-1",
+      "name": "$convert-light-1",
+      "value": "$theme-light-light-1",
       "compiledValue": "rgba(255, 255, 255, 0.87)"
     },
     {
-      "name": "$convert-text-light-2",
-      "value": "$theme-light-text-light-2",
+      "name": "$convert-light-2",
+      "value": "$theme-light-light-2",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {
-      "name": "$convert-text-light-3",
-      "value": "$theme-light-text-light-3",
+      "name": "$convert-light-3",
+      "value": "$theme-light-light-3",
       "compiledValue": "rgba(255, 255, 255, 0.6)"
     },
     {
-      "name": "$convert-text-light-4",
-      "value": "$theme-light-text-light-4",
+      "name": "$convert-light-4",
+      "value": "$theme-light-light-4",
       "compiledValue": "rgba(255, 255, 255, 0.5)"
     },
     {
-      "name": "$convert-text-light-5",
-      "value": "$theme-light-text-light-5",
+      "name": "$convert-light-5",
+      "value": "$theme-light-light-5",
       "compiledValue": "rgba(255, 255, 255, 0.4)"
     },
     {
-      "name": "$convert-text-light-6",
-      "value": "$theme-light-text-light-6",
+      "name": "$convert-light-6",
+      "value": "$theme-light-light-6",
       "compiledValue": "rgba(255, 255, 255, 0.26)"
     },
     {
-      "name": "$convert-text-light-7",
-      "value": "$theme-light-text-light-7",
+      "name": "$convert-light-7",
+      "value": "$theme-light-light-7",
       "compiledValue": "rgba(255, 255, 255, 0.15)"
     },
     {
-      "name": "$convert-text-light-8",
-      "value": "$theme-light-text-light-8",
+      "name": "$convert-light-8",
+      "value": "$theme-light-light-8",
       "compiledValue": "rgba(255, 255, 255, 0.12)"
     },
     {
-      "name": "$convert-text-light-9",
-      "value": "$theme-light-text-light-9",
+      "name": "$convert-light-9",
+      "value": "$theme-light-light-9",
       "compiledValue": "rgba(255, 255, 255, 0.05)"
     },
     {
@@ -970,12 +1020,37 @@
     {
       "name": "$convert-shadow-alpha",
       "value": "$theme-light-shadow-alpha",
-      "compiledValue": "rgba(0, 0, 0, 0.24)"
+      "compiledValue": "rgba(0, 0, 0, 0.15)"
     },
     {
       "name": "$convert-shadow-alpha-thin",
       "value": "$theme-light-shadow-alpha-thin",
       "compiledValue": "rgba(0, 0, 0, 0.075)"
+    },
+    {
+      "name": "$convert-shadow-primary-alpha",
+      "value": "$theme-light-shadow-primary-alpha",
+      "compiledValue": "rgba(55, 176, 190, 0.6)"
+    },
+    {
+      "name": "$convert-shadow-info-alpha",
+      "value": "$theme-light-shadow-info-alpha",
+      "compiledValue": "rgba(75, 155, 216, 0.6)"
+    },
+    {
+      "name": "$convert-shadow-success-alpha",
+      "value": "$theme-light-shadow-success-alpha",
+      "compiledValue": "rgba(44, 165, 44, 0.6)"
+    },
+    {
+      "name": "$convert-shadow-warning-alpha",
+      "value": "$theme-light-shadow-warning-alpha",
+      "compiledValue": "rgba(236, 146, 19, 0.6)"
+    },
+    {
+      "name": "$convert-shadow-danger-alpha",
+      "value": "$theme-light-shadow-danger-alpha",
+      "compiledValue": "rgba(219, 87, 87, 0.6)"
     },
     {
       "name": "$convert-focus-darken",
@@ -1003,8 +1078,8 @@
       "compiledValue": "#eef0f2"
     },
     {
-      "name": "$convert-disabled-text-color",
-      "value": "$theme-light-disabled-text-color",
+      "name": "$convert-disabled-color",
+      "value": "$theme-light-disabled-color",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
@@ -1013,18 +1088,18 @@
       "compiledValue": "white"
     },
     {
-      "name": "$convert-body-text-color",
-      "value": "$theme-light-body-text-color",
+      "name": "$convert-body-color",
+      "value": "$theme-light-body-color",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {
-      "name": "$convert-code-text-color",
-      "value": "$theme-light-code-text-color",
+      "name": "$convert-code-color",
+      "value": "$theme-light-code-color",
       "compiledValue": "#5d69a8"
     },
     {
-      "name": "$convert-button-paint-text-color",
-      "value": "$theme-light-button-paint-text-color",
+      "name": "$convert-button-paint-color",
+      "value": "$theme-light-button-paint-color",
       "compiledValue": "white"
     },
     {
@@ -1033,8 +1108,8 @@
       "compiledValue": "#37b0be"
     },
     {
-      "name": "$convert-table-paint-text-color",
-      "value": "$theme-light-table-paint-text-color",
+      "name": "$convert-table-paint-color",
+      "value": "$theme-light-table-paint-color",
       "compiledValue": "white"
     },
     {

@@ -146,16 +146,6 @@
       "compiledValue": "true"
     },
     {
-      "name": "$option-generate-style-scroll",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
-      "name": "$option-generate-style-ellipsis",
-      "value": "true",
-      "compiledValue": "true"
-    },
-    {
       "name": "$option-generate-style-clearfix",
       "value": "true",
       "compiledValue": "true"
@@ -181,7 +171,17 @@
       "compiledValue": "true"
     },
     {
+      "name": "$option-add-style-text-link-border",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
       "name": "$option-add-style-button-focus",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-button-role-shadow",
       "value": "true",
       "compiledValue": "true"
     },
@@ -191,14 +191,29 @@
       "compiledValue": "true"
     },
     {
+      "name": "$option-add-style-list-note",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-table-scroll",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-add-style-form-focus",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
       "name": "$option-add-style-alert-tail",
       "value": "false",
       "compiledValue": "false"
     },
     {
-      "name": "$option-add-style-display-important",
-      "value": "false",
-      "compiledValue": "false"
+      "name": "$option-add-style-wysiwyg-link-border",
+      "value": "true",
+      "compiledValue": "true"
     },
     {
       "name": "$option-add-style-display-only",
@@ -217,11 +232,6 @@
     },
     {
       "name": "$option-add-style-display-browser",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
-      "name": "$option-add-style-size-important",
       "value": "false",
       "compiledValue": "false"
     },
@@ -246,11 +256,6 @@
       "compiledValue": "false"
     },
     {
-      "name": "$option-add-style-flex-important",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
       "name": "$option-add-style-flex-only",
       "value": "false",
       "compiledValue": "false"
@@ -271,19 +276,9 @@
       "compiledValue": "false"
     },
     {
-      "name": "$option-add-style-space-important",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
       "name": "$option-add-style-space-way",
       "value": "true",
       "compiledValue": "true"
-    },
-    {
-      "name": "$option-add-style-margin-important",
-      "value": "false",
-      "compiledValue": "false"
     },
     {
       "name": "$option-add-style-margin-way",
@@ -306,11 +301,6 @@
       "compiledValue": "true"
     },
     {
-      "name": "$option-add-style-padding-important",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
       "name": "$option-add-style-padding-way",
       "value": "true",
       "compiledValue": "true"
@@ -326,27 +316,47 @@
       "compiledValue": "true"
     },
     {
-      "name": "$option-add-style-centering-important",
+      "name": "$option-add-style-padding-safe",
+      "value": "true",
+      "compiledValue": "true"
+    },
+    {
+      "name": "$option-important-display",
       "value": "false",
       "compiledValue": "false"
     },
     {
-      "name": "$option-add-style-overflow-important",
+      "name": "$option-important-size",
       "value": "false",
       "compiledValue": "false"
     },
     {
-      "name": "$option-add-style-scroll-important",
+      "name": "$option-important-flex",
       "value": "false",
       "compiledValue": "false"
     },
     {
-      "name": "$option-add-style-ellipsis-important",
+      "name": "$option-important-space",
       "value": "false",
       "compiledValue": "false"
     },
     {
-      "name": "$option-add-style-clearfix-important",
+      "name": "$option-important-margin",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-important-padding",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-important-overflow",
+      "value": "false",
+      "compiledValue": "false"
+    },
+    {
+      "name": "$option-important-clearfix",
       "value": "false",
       "compiledValue": "false"
     }

@@ -26,8 +26,8 @@
       "compiledValue": "white"
     },
     {
-      "name": "$body-text-color",
-      "value": "$convert-body-text-color",
+      "name": "$body-color",
+      "value": "$convert-body-color",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {

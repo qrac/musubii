@@ -97,7 +97,7 @@
     },
     {
       "name": "$card-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha",
+      "value": "$global-focus-shadow-size $convert-focus-alpha",
       "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5)"
     },
     {
@@ -122,18 +122,18 @@
     },
     {
       "name": "$card-floating-shadow",
-      "value": "0 1px 3px 0 $convert-shadow-alpha",
-      "compiledValue": "0 1px 3px 0 rgba(0, 0, 0, 0.24)"
+      "value": "$global-floating-shadow-size $convert-shadow-alpha",
+      "compiledValue": "0 2px 6px 0 rgba(0, 0, 0, 0.15)"
     },
     {
       "name": "$card-floating-hover-shadow",
-      "value": "0 4px 12px 0 $convert-shadow-alpha",
-      "compiledValue": "0 4px 12px 0 rgba(0, 0, 0, 0.24)"
+      "value": "$global-floating-hover-shadow-size $convert-shadow-alpha",
+      "compiledValue": "0 4px 12px 0 rgba(0, 0, 0, 0.15)"
     },
     {
       "name": "$card-floating-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
-      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.24)"
+      "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-alpha",
+      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.15)"
     },
     {
       "name": "$card-radius-xxl",

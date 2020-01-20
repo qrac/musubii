@@ -6,6 +6,111 @@
       "compiledValue": ".table"
     },
     {
+      "name": "$selector-table-box",
+      "value": ".box",
+      "compiledValue": ".box"
+    },
+    {
+      "name": "$selector-table-thead",
+      "value": "thead",
+      "compiledValue": "thead"
+    },
+    {
+      "name": "$selector-table-tbody",
+      "value": "tbody",
+      "compiledValue": "tbody"
+    },
+    {
+      "name": "$selector-table-tr",
+      "value": "tr",
+      "compiledValue": "tr"
+    },
+    {
+      "name": "$selector-table-th",
+      "value": "th",
+      "compiledValue": "th"
+    },
+    {
+      "name": "$selector-table-td",
+      "value": "td",
+      "compiledValue": "td"
+    },
+    {
+      "name": "$selector-table-sideline",
+      "value": ".table-sideline",
+      "compiledValue": ".table-sideline"
+    },
+    {
+      "name": "$selector-table-scroll",
+      "value": ".table-scroll",
+      "compiledValue": ".table-scroll"
+    },
+    {
+      "name": "$modifier-table-line",
+      "value": ".is-line",
+      "compiledValue": ".is-line"
+    },
+    {
+      "name": "$modifier-table-outline",
+      "value": ".is-outline",
+      "compiledValue": ".is-outline"
+    },
+    {
+      "name": "$modifier-table-border",
+      "value": ".is-border",
+      "compiledValue": ".is-border"
+    },
+    {
+      "name": "$modifier-table-stripe",
+      "value": ".is-stripe",
+      "compiledValue": ".is-stripe"
+    },
+    {
+      "name": "$modifier-table-paint",
+      "value": ".is-paint",
+      "compiledValue": ".is-paint"
+    },
+    {
+      "name": "$modifier-table-spot",
+      "value": ".is-spot",
+      "compiledValue": ".is-spot"
+    },
+    {
+      "name": "$modifier-table-danger",
+      "value": ".is-danger",
+      "compiledValue": ".is-danger"
+    },
+    {
+      "name": "$modifier-table-right",
+      "value": ".is-right",
+      "compiledValue": ".is-right"
+    },
+    {
+      "name": "$modifier-table-center",
+      "value": ".is-center",
+      "compiledValue": ".is-center"
+    },
+    {
+      "name": "$modifier-table-left",
+      "value": ".is-left",
+      "compiledValue": ".is-left"
+    },
+    {
+      "name": "$modifier-table-middle",
+      "value": ".is-middle",
+      "compiledValue": ".is-middle"
+    },
+    {
+      "name": "$modifier-table-fixed",
+      "value": ".is-fixed",
+      "compiledValue": ".is-fixed"
+    },
+    {
+      "name": "$table-width",
+      "value": "100%",
+      "compiledValue": "100%"
+    },
+    {
       "name": "$table-padding",
       "value": "0.75em 1em",
       "compiledValue": "0.75em 1em"
@@ -27,8 +132,8 @@
     },
     {
       "name": "$table-th-border-bottom-width",
-      "value": "$global-border-width * 2",
-      "compiledValue": "2px"
+      "value": "$global-border-width",
+      "compiledValue": "1px"
     },
     {
       "name": "$table-stripe-background-color",
@@ -41,8 +146,8 @@
       "compiledValue": "#37b0be"
     },
     {
-      "name": "$table-paint-text-color",
-      "value": "$convert-table-paint-text-color",
+      "name": "$table-paint-color",
+      "value": "$convert-table-paint-color",
       "compiledValue": "white"
     },
     {
@@ -78,7 +183,47 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-table-bg",
+      "name": "musubii-style-table-bg-paint",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-bg-stripe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-bg-spot",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-bg-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-right",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-center",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-left",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-middle",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-fixed",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-sideline",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-scroll",
       "parameters": []
     }
   ]

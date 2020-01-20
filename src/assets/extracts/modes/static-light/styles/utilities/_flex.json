@@ -1,6 +1,11 @@
 {
   "variables": [
     {
+      "name": "$modifier-flex",
+      "value": ".is",
+      "compiledValue": ".is"
+    },
+    {
       "name": "$modifier-flex-mobile",
       "value": ".is-mobile",
       "compiledValue": ".is-mobile"
@@ -112,7 +117,7 @@
     },
     {
       "name": "$flex-important",
-      "value": "if( $option-add-style-flex-important == true, !important, null )",
+      "value": "if($option-important-flex == true, !important, null)",
       "compiledValue": ""
     }
   ],

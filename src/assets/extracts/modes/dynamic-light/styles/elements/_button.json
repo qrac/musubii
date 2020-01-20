@@ -111,9 +111,9 @@
       "compiledValue": "3px"
     },
     {
-      "name": "$button-paint-text-color",
-      "value": "$convert-button-paint-text-color",
-      "compiledValue": "var(--button-paint-text-color)"
+      "name": "$button-paint-color",
+      "value": "$convert-button-paint-color",
+      "compiledValue": "var(--button-paint-color)"
     },
     {
       "name": "$button-line-height",
@@ -127,7 +127,7 @@
     },
     {
       "name": "$button-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha",
+      "value": "$global-focus-shadow-size $convert-focus-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha)"
     },
     {
@@ -142,17 +142,17 @@
     },
     {
       "name": "$button-floating-shadow",
-      "value": "0 1px 3px 0 $convert-shadow-alpha",
-      "compiledValue": "0 1px 3px 0 var(--shadow-alpha)"
+      "value": "$global-floating-shadow-size $convert-shadow-alpha",
+      "compiledValue": "0 2px 6px 0 var(--shadow-alpha)"
     },
     {
       "name": "$button-floating-hover-shadow",
-      "value": "0 4px 12px 0 $convert-shadow-alpha",
+      "value": "$global-floating-hover-shadow-size $convert-shadow-alpha",
       "compiledValue": "0 4px 12px 0 var(--shadow-alpha)"
     },
     {
       "name": "$button-floating-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha, 0 4px 12px 0 $convert-shadow-alpha",
+      "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-alpha",
       "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-alpha)"
     },
     {
@@ -161,9 +161,9 @@
       "compiledValue": "var(--disabled-background-color)"
     },
     {
-      "name": "$button-disabled-text-color",
-      "value": "$convert-disabled-text-color",
-      "compiledValue": "var(--disabled-text-color)"
+      "name": "$button-disabled-color",
+      "value": "$convert-disabled-color",
+      "compiledValue": "var(--disabled-color)"
     },
     {
       "name": "$button-square-width",
@@ -256,6 +256,81 @@
       "compiledValue": "var(--danger-darken)"
     },
     {
+      "name": "$button-plain-primary-floating-shadow",
+      "value": "$global-floating-shadow-size $convert-shadow-primary-alpha",
+      "compiledValue": "0 2px 6px 0 var(--shadow-primary-alpha)"
+    },
+    {
+      "name": "$button-plain-primary-floating-hover-shadow",
+      "value": "$global-floating-hover-shadow-size $convert-shadow-primary-alpha",
+      "compiledValue": "0 4px 12px 0 var(--shadow-primary-alpha)"
+    },
+    {
+      "name": "$button-plain-primary-floating-focus-shadow",
+      "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-primary-alpha",
+      "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-primary-alpha)"
+    },
+    {
+      "name": "$button-plain-info-floating-shadow",
+      "value": "$global-floating-shadow-size $convert-shadow-info-alpha",
+      "compiledValue": "0 2px 6px 0 var(--shadow-info-alpha)"
+    },
+    {
+      "name": "$button-plain-info-floating-hover-shadow",
+      "value": "$global-floating-hover-shadow-size $convert-shadow-info-alpha",
+      "compiledValue": "0 4px 12px 0 var(--shadow-info-alpha)"
+    },
+    {
+      "name": "$button-plain-info-floating-focus-shadow",
+      "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-info-alpha",
+      "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-info-alpha)"
+    },
+    {
+      "name": "$button-plain-success-floating-shadow",
+      "value": "$global-floating-shadow-size $convert-shadow-success-alpha",
+      "compiledValue": "0 2px 6px 0 var(--shadow-success-alpha)"
+    },
+    {
+      "name": "$button-plain-success-floating-hover-shadow",
+      "value": "$global-floating-hover-shadow-size $convert-shadow-success-alpha",
+      "compiledValue": "0 4px 12px 0 var(--shadow-success-alpha)"
+    },
+    {
+      "name": "$button-plain-success-floating-focus-shadow",
+      "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-success-alpha",
+      "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-success-alpha)"
+    },
+    {
+      "name": "$button-plain-warning-floating-shadow",
+      "value": "$global-floating-shadow-size $convert-shadow-warning-alpha",
+      "compiledValue": "0 2px 6px 0 var(--shadow-warning-alpha)"
+    },
+    {
+      "name": "$button-plain-warning-floating-hover-shadow",
+      "value": "$global-floating-hover-shadow-size $convert-shadow-warning-alpha",
+      "compiledValue": "0 4px 12px 0 var(--shadow-warning-alpha)"
+    },
+    {
+      "name": "$button-plain-warning-floating-focus-shadow",
+      "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-warning-alpha",
+      "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-warning-alpha)"
+    },
+    {
+      "name": "$button-plain-danger-floating-shadow",
+      "value": "$global-floating-shadow-size $convert-shadow-danger-alpha",
+      "compiledValue": "0 2px 6px 0 var(--shadow-danger-alpha)"
+    },
+    {
+      "name": "$button-plain-danger-floating-hover-shadow",
+      "value": "$global-floating-hover-shadow-size $convert-shadow-danger-alpha",
+      "compiledValue": "0 4px 12px 0 var(--shadow-danger-alpha)"
+    },
+    {
+      "name": "$button-plain-danger-floating-focus-shadow",
+      "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-danger-alpha",
+      "compiledValue": "0 0 0 4px var(--focus-alpha), 0 4px 12px 0 var(--shadow-danger-alpha)"
+    },
+    {
       "name": "$button-outline-background-color",
       "value": "$convert-background",
       "compiledValue": "var(--background)"
@@ -276,7 +351,7 @@
       "compiledValue": "var(--primary)"
     },
     {
-      "name": "$button-outline-primary-text-color",
+      "name": "$button-outline-primary-color",
       "value": "$convert-primary-strong",
       "compiledValue": "var(--primary-strong)"
     },
@@ -291,7 +366,7 @@
       "compiledValue": "var(--info)"
     },
     {
-      "name": "$button-outline-info-text-color",
+      "name": "$button-outline-info-color",
       "value": "$convert-info-strong",
       "compiledValue": "var(--info-strong)"
     },
@@ -306,7 +381,7 @@
       "compiledValue": "var(--success)"
     },
     {
-      "name": "$button-outline-success-text-color",
+      "name": "$button-outline-success-color",
       "value": "$convert-success-strong",
       "compiledValue": "var(--success-strong)"
     },
@@ -321,7 +396,7 @@
       "compiledValue": "var(--warning)"
     },
     {
-      "name": "$button-outline-warning-text-color",
+      "name": "$button-outline-warning-color",
       "value": "$convert-warning-strong",
       "compiledValue": "var(--warning-strong)"
     },
@@ -336,7 +411,7 @@
       "compiledValue": "var(--danger)"
     },
     {
-      "name": "$button-outline-danger-text-color",
+      "name": "$button-outline-danger-color",
       "value": "$convert-danger-strong",
       "compiledValue": "var(--danger-strong)"
     },
@@ -351,27 +426,27 @@
       "compiledValue": "var(--background-alpha)"
     },
     {
-      "name": "$button-melt-primary-text-color",
+      "name": "$button-melt-primary-color",
       "value": "$convert-primary-strong",
       "compiledValue": "var(--primary-strong)"
     },
     {
-      "name": "$button-melt-info-text-color",
+      "name": "$button-melt-info-color",
       "value": "$convert-info-strong",
       "compiledValue": "var(--info-strong)"
     },
     {
-      "name": "$button-melt-success-text-color",
+      "name": "$button-melt-success-color",
       "value": "$convert-success-strong",
       "compiledValue": "var(--success-strong)"
     },
     {
-      "name": "$button-melt-warning-text-color",
+      "name": "$button-melt-warning-color",
       "value": "$convert-warning-strong",
       "compiledValue": "var(--warning-strong)"
     },
     {
-      "name": "$button-melt-danger-text-color",
+      "name": "$button-melt-danger-color",
       "value": "$convert-danger-strong",
       "compiledValue": "var(--danger-strong)"
     },
@@ -446,6 +521,26 @@
     },
     {
       "name": "musubii-style-button-plain-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-plain-primary-floating",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-plain-info-floating",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-plain-success-floating",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-plain-warning-floating",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-button-plain-danger-floating",
       "parameters": []
     },
     {

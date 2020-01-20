@@ -26,9 +26,9 @@
       "compiledValue": "var(--body-background-color)"
     },
     {
-      "name": "$body-text-color",
-      "value": "$convert-body-text-color",
-      "compiledValue": "var(--body-text-color)"
+      "name": "$body-color",
+      "value": "$convert-body-color",
+      "compiledValue": "var(--body-color)"
     },
     {
       "name": "$body-font-family",

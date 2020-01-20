@@ -6,6 +6,66 @@
       "compiledValue": ".badge"
     },
     {
+      "name": "$modifier-badge-strong",
+      "value": ".is-strong",
+      "compiledValue": ".is-strong"
+    },
+    {
+      "name": "$modifier-badge-round",
+      "value": ".is-round",
+      "compiledValue": ".is-round"
+    },
+    {
+      "name": "$modifier-badge-square",
+      "value": ".is-square",
+      "compiledValue": ".is-square"
+    },
+    {
+      "name": "$modifier-badge-circle",
+      "value": ".is-circle",
+      "compiledValue": ".is-circle"
+    },
+    {
+      "name": "$modifier-badge-disabled",
+      "value": ".is-disabled",
+      "compiledValue": ".is-disabled"
+    },
+    {
+      "name": "$modifier-badge-plain",
+      "value": ".is-plain",
+      "compiledValue": ".is-plain"
+    },
+    {
+      "name": "$modifier-badge-outline",
+      "value": ".is-outline",
+      "compiledValue": ".is-outline"
+    },
+    {
+      "name": "$modifier-badge-primary",
+      "value": ".is-primary",
+      "compiledValue": ".is-primary"
+    },
+    {
+      "name": "$modifier-badge-info",
+      "value": ".is-info",
+      "compiledValue": ".is-info"
+    },
+    {
+      "name": "$modifier-badge-success",
+      "value": ".is-success",
+      "compiledValue": ".is-success"
+    },
+    {
+      "name": "$modifier-badge-warning",
+      "value": ".is-warning",
+      "compiledValue": ".is-warning"
+    },
+    {
+      "name": "$modifier-badge-danger",
+      "value": ".is-danger",
+      "compiledValue": ".is-danger"
+    },
+    {
       "name": "$badge-padding",
       "value": "0.25em 0.375em",
       "compiledValue": "0.25em 0.375em"
@@ -21,9 +81,9 @@
       "compiledValue": "3px"
     },
     {
-      "name": "$badge-paint-text-color",
-      "value": "$convert-button-paint-text-color",
-      "compiledValue": "var(--button-paint-text-color)"
+      "name": "$badge-paint-color",
+      "value": "$convert-button-paint-color",
+      "compiledValue": "var(--button-paint-color)"
     },
     {
       "name": "$badge-line-height",
@@ -41,19 +101,24 @@
       "compiledValue": "0 0 0 4px var(--focus-alpha)"
     },
     {
-      "name": "$badge-disabled-background-color",
-      "value": "$convert-disabled-background-color",
-      "compiledValue": "var(--disabled-background-color)"
-    },
-    {
-      "name": "$badge-disabled-text-color",
-      "value": "$convert-disabled-text-color",
-      "compiledValue": "var(--disabled-text-color)"
+      "name": "$badge-strong-font-weight",
+      "value": "$font-weight-strong",
+      "compiledValue": "700"
     },
     {
       "name": "$badge-round-border-radius",
       "value": "$radius-full",
       "compiledValue": "999em"
+    },
+    {
+      "name": "$badge-disabled-background-color",
+      "value": "$convert-disabled-background-color",
+      "compiledValue": "var(--disabled-background-color)"
+    },
+    {
+      "name": "$badge-disabled-color",
+      "value": "$convert-disabled-color",
+      "compiledValue": "var(--disabled-color)"
     },
     {
       "name": "$badge-square-width",
@@ -131,7 +196,7 @@
       "compiledValue": "var(--primary)"
     },
     {
-      "name": "$badge-outline-primary-text-color",
+      "name": "$badge-outline-primary-color",
       "value": "$convert-primary-strong",
       "compiledValue": "var(--primary-strong)"
     },
@@ -141,7 +206,7 @@
       "compiledValue": "var(--info)"
     },
     {
-      "name": "$badge-outline-info-text-color",
+      "name": "$badge-outline-info-color",
       "value": "$convert-info-strong",
       "compiledValue": "var(--info-strong)"
     },
@@ -151,7 +216,7 @@
       "compiledValue": "var(--success)"
     },
     {
-      "name": "$badge-outline-success-text-color",
+      "name": "$badge-outline-success-color",
       "value": "$convert-success-strong",
       "compiledValue": "var(--success-strong)"
     },
@@ -161,7 +226,7 @@
       "compiledValue": "var(--warning)"
     },
     {
-      "name": "$badge-outline-warning-text-color",
+      "name": "$badge-outline-warning-color",
       "value": "$convert-warning-strong",
       "compiledValue": "var(--warning-strong)"
     },
@@ -171,7 +236,7 @@
       "compiledValue": "var(--danger)"
     },
     {
-      "name": "$badge-outline-danger-text-color",
+      "name": "$badge-outline-danger-color",
       "value": "$convert-danger-strong",
       "compiledValue": "var(--danger-strong)"
     }
@@ -179,6 +244,10 @@
   "mixins": [
     {
       "name": "musubii-style-badge",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-strong",
       "parameters": []
     },
     {
@@ -194,26 +263,59 @@
       "parameters": []
     },
     {
-      "name": "--is-plain-badge-role",
-      "parameters": [
-        "$name",
-        "$bg-color"
-      ]
-    },
-    {
       "name": "musubii-style-badge-plain",
       "parameters": []
     },
     {
-      "name": "--is-outline-badge-role",
-      "parameters": [
-        "$name",
-        "$border-color",
-        "$color"
-      ]
+      "name": "musubii-style-badge-plain-primary",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-plain-info",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-plain-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-plain-warning",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-plain-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-plain-disabled",
+      "parameters": []
     },
     {
       "name": "musubii-style-badge-outline",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-outline-primary",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-outline-info",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-outline-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-outline-warning",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-outline-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-badge-outline-disabled",
       "parameters": []
     }
   ]

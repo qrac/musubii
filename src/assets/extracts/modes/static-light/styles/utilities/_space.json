@@ -237,7 +237,7 @@
     },
     {
       "name": "$space-important",
-      "value": "if( $option-add-style-space-important == true, !important, null )",
+      "value": "if( $option-important-space == true, !important, null )",
       "compiledValue": ""
     }
   ],

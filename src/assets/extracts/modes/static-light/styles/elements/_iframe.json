@@ -1,14 +1,24 @@
 {
   "variables": [
     {
-      "name": "$selector-iframe-wrap",
-      "value": ".iframe-wrap",
-      "compiledValue": ".iframe-wrap"
-    },
-    {
       "name": "$selector-iframe",
       "value": ".iframe",
       "compiledValue": ".iframe"
+    },
+    {
+      "name": "$selector-iframe-core",
+      "value": "iframe",
+      "compiledValue": "iframe"
+    },
+    {
+      "name": "$modifier-iframe-aspect-16x9",
+      "value": ".is-aspect-16x9",
+      "compiledValue": ".is-aspect-16x9"
+    },
+    {
+      "name": "$modifier-iframe-aspect-4x3",
+      "value": ".is-aspect-4x3",
+      "compiledValue": ".is-aspect-4x3"
     }
   ],
   "mixins": [
@@ -17,7 +27,15 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-iframe-wrap",
+      "name": "musubii-style-iframe-core",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-iframe-wrap-aspect-16x9",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-iframe-wrap-aspect-4x3",
       "parameters": []
     }
   ]

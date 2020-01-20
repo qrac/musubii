@@ -81,103 +81,103 @@
       "compiledValue": "#b52626"
     },
     {
-      "name": "$theme-dark-text-dark",
+      "name": "$theme-dark-dark",
       "value": "$white",
       "compiledValue": "white"
     },
     {
-      "name": "$theme-dark-text-dark-1",
-      "value": "rgba($theme-dark-text-dark, 0.87)",
+      "name": "$theme-dark-dark-1",
+      "value": "rgba($theme-dark-dark, 0.87)",
       "compiledValue": "rgba(255, 255, 255, 0.87)"
     },
     {
-      "name": "$theme-dark-text-dark-2",
-      "value": "rgba($theme-dark-text-dark, 0.7)",
+      "name": "$theme-dark-dark-2",
+      "value": "rgba($theme-dark-dark, 0.7)",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {
-      "name": "$theme-dark-text-dark-3",
-      "value": "rgba($theme-dark-text-dark, 0.6)",
+      "name": "$theme-dark-dark-3",
+      "value": "rgba($theme-dark-dark, 0.6)",
       "compiledValue": "rgba(255, 255, 255, 0.6)"
     },
     {
-      "name": "$theme-dark-text-dark-4",
-      "value": "rgba($theme-dark-text-dark, 0.5)",
+      "name": "$theme-dark-dark-4",
+      "value": "rgba($theme-dark-dark, 0.5)",
       "compiledValue": "rgba(255, 255, 255, 0.5)"
     },
     {
-      "name": "$theme-dark-text-dark-5",
-      "value": "rgba($theme-dark-text-dark, 0.4)",
+      "name": "$theme-dark-dark-5",
+      "value": "rgba($theme-dark-dark, 0.4)",
       "compiledValue": "rgba(255, 255, 255, 0.4)"
     },
     {
-      "name": "$theme-dark-text-dark-6",
-      "value": "rgba($theme-dark-text-dark, 0.26)",
+      "name": "$theme-dark-dark-6",
+      "value": "rgba($theme-dark-dark, 0.26)",
       "compiledValue": "rgba(255, 255, 255, 0.26)"
     },
     {
-      "name": "$theme-dark-text-dark-7",
-      "value": "rgba($theme-dark-text-dark, 0.15)",
+      "name": "$theme-dark-dark-7",
+      "value": "rgba($theme-dark-dark, 0.15)",
       "compiledValue": "rgba(255, 255, 255, 0.15)"
     },
     {
-      "name": "$theme-dark-text-dark-8",
-      "value": "rgba($theme-dark-text-dark, 0.12)",
+      "name": "$theme-dark-dark-8",
+      "value": "rgba($theme-dark-dark, 0.12)",
       "compiledValue": "rgba(255, 255, 255, 0.12)"
     },
     {
-      "name": "$theme-dark-text-dark-9",
-      "value": "rgba($theme-dark-text-dark, 0.05)",
+      "name": "$theme-dark-dark-9",
+      "value": "rgba($theme-dark-dark, 0.05)",
       "compiledValue": "rgba(255, 255, 255, 0.05)"
     },
     {
-      "name": "$theme-dark-text-light",
+      "name": "$theme-dark-light",
       "value": "$white",
       "compiledValue": "white"
     },
     {
-      "name": "$theme-dark-text-light-1",
-      "value": "rgba($theme-dark-text-light, 0.87)",
+      "name": "$theme-dark-light-1",
+      "value": "rgba($theme-dark-light, 0.87)",
       "compiledValue": "rgba(255, 255, 255, 0.87)"
     },
     {
-      "name": "$theme-dark-text-light-2",
-      "value": "rgba($theme-dark-text-light, 0.7)",
+      "name": "$theme-dark-light-2",
+      "value": "rgba($theme-dark-light, 0.7)",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {
-      "name": "$theme-dark-text-light-3",
-      "value": "rgba($theme-dark-text-light, 0.6)",
+      "name": "$theme-dark-light-3",
+      "value": "rgba($theme-dark-light, 0.6)",
       "compiledValue": "rgba(255, 255, 255, 0.6)"
     },
     {
-      "name": "$theme-dark-text-light-4",
-      "value": "rgba($theme-dark-text-light, 0.5)",
+      "name": "$theme-dark-light-4",
+      "value": "rgba($theme-dark-light, 0.5)",
       "compiledValue": "rgba(255, 255, 255, 0.5)"
     },
     {
-      "name": "$theme-dark-text-light-5",
-      "value": "rgba($theme-dark-text-light, 0.4)",
+      "name": "$theme-dark-light-5",
+      "value": "rgba($theme-dark-light, 0.4)",
       "compiledValue": "rgba(255, 255, 255, 0.4)"
     },
     {
-      "name": "$theme-dark-text-light-6",
-      "value": "rgba($theme-dark-text-light, 0.26)",
+      "name": "$theme-dark-light-6",
+      "value": "rgba($theme-dark-light, 0.26)",
       "compiledValue": "rgba(255, 255, 255, 0.26)"
     },
     {
-      "name": "$theme-dark-text-light-7",
-      "value": "rgba($theme-dark-text-light, 0.15)",
+      "name": "$theme-dark-light-7",
+      "value": "rgba($theme-dark-light, 0.15)",
       "compiledValue": "rgba(255, 255, 255, 0.15)"
     },
     {
-      "name": "$theme-dark-text-light-8",
-      "value": "rgba($theme-dark-text-light, 0.12)",
+      "name": "$theme-dark-light-8",
+      "value": "rgba($theme-dark-light, 0.12)",
       "compiledValue": "rgba(255, 255, 255, 0.12)"
     },
     {
-      "name": "$theme-dark-text-light-9",
-      "value": "rgba($theme-dark-text-light, 0.05)",
+      "name": "$theme-dark-light-9",
+      "value": "rgba($theme-dark-light, 0.05)",
       "compiledValue": "rgba(255, 255, 255, 0.05)"
     },
     {
@@ -236,6 +236,31 @@
       "compiledValue": "rgba(0, 0, 0, 0.075)"
     },
     {
+      "name": "$theme-dark-shadow-primary-alpha",
+      "value": "rgba($theme-dark-shadow, 0.4)",
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "$theme-dark-shadow-info-alpha",
+      "value": "rgba($theme-dark-shadow, 0.4)",
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "$theme-dark-shadow-success-alpha",
+      "value": "rgba($theme-dark-shadow, 0.4)",
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "$theme-dark-shadow-warning-alpha",
+      "value": "rgba($theme-dark-shadow, 0.4)",
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "$theme-dark-shadow-danger-alpha",
+      "value": "rgba($theme-dark-shadow, 0.4)",
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
+    },
+    {
       "name": "$theme-dark-focus",
       "value": "$theme-focus",
       "compiledValue": "#2497f0"
@@ -266,7 +291,7 @@
       "compiledValue": "#757575"
     },
     {
-      "name": "$theme-dark-disabled-text-color",
+      "name": "$theme-dark-disabled-color",
       "value": "$light-6",
       "compiledValue": "rgba(255, 255, 255, 0.26)"
     },
@@ -276,18 +301,18 @@
       "compiledValue": "#212121"
     },
     {
-      "name": "$theme-dark-body-text-color",
+      "name": "$theme-dark-body-color",
       "value": "$light-2",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {
-      "name": "$theme-dark-code-text-color",
+      "name": "$theme-dark-code-color",
       "value": "$blue-300",
       "compiledValue": "#82b9e3"
     },
     {
-      "name": "$theme-dark-button-paint-text-color",
-      "value": "$theme-dark-body-text-color",
+      "name": "$theme-dark-button-paint-color",
+      "value": "$theme-dark-body-color",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {
@@ -296,8 +321,8 @@
       "compiledValue": "rgba(41, 132, 142, 0.4)"
     },
     {
-      "name": "$theme-dark-table-paint-text-color",
-      "value": "$theme-dark-body-text-color",
+      "name": "$theme-dark-table-paint-color",
+      "value": "$theme-dark-body-color",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {

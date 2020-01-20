@@ -281,6 +281,41 @@
       "compiledValue": ".is-padding-horizontal-xxs"
     },
     {
+      "name": "$modifier-padding-safe",
+      "value": ".is-padding-safe",
+      "compiledValue": ".is-padding-safe"
+    },
+    {
+      "name": "$modifier-padding-top-safe",
+      "value": ".is-padding-top-safe",
+      "compiledValue": ".is-padding-top-safe"
+    },
+    {
+      "name": "$modifier-padding-right-safe",
+      "value": ".is-padding-right-safe",
+      "compiledValue": ".is-padding-right-safe"
+    },
+    {
+      "name": "$modifier-padding-bottom-safe",
+      "value": ".is-padding-bottom-safe",
+      "compiledValue": ".is-padding-bottom-safe"
+    },
+    {
+      "name": "$modifier-padding-left-safe",
+      "value": ".is-padding-left-safe",
+      "compiledValue": ".is-padding-left-safe"
+    },
+    {
+      "name": "$modifier-padding-vertical-safe",
+      "value": ".is-padding-vertical-safe",
+      "compiledValue": ".is-padding-vertical-safe"
+    },
+    {
+      "name": "$modifier-padding-horizontal-safe",
+      "value": ".is-padding-horizontal-safe",
+      "compiledValue": ".is-padding-horizontal-safe"
+    },
+    {
       "name": "$padding-size-xxl",
       "value": "$meter-xxl",
       "compiledValue": "28px"
@@ -317,7 +352,7 @@
     },
     {
       "name": "$padding-important",
-      "value": "if( $option-add-style-padding-important == true, !important, null )",
+      "value": "if( $option-important-padding == true, !important, null )",
       "compiledValue": ""
     }
   ],
@@ -363,6 +398,34 @@
       "parameters": [
         "$padding-size"
       ]
+    },
+    {
+      "name": "musubii-style-padding-safe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-padding-top-safe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-padding-right-safe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-padding-bottom-safe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-padding-left-safe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-padding-vertical-safe",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-padding-horizontal-safe",
+      "parameters": []
     }
   ]
 }

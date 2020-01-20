@@ -88,103 +88,103 @@
       "compiledValue": "#d74242"
     },
     {
-      "name": "--text-dark",
-      "value": "$theme-light-text-dark",
+      "name": "--dark",
+      "value": "$theme-light-dark",
       "compiledValue": "black"
     },
     {
-      "name": "--text-dark-1",
-      "value": "$theme-light-text-dark-1",
+      "name": "--dark-1",
+      "value": "$theme-light-dark-1",
       "compiledValue": "rgba(0, 0, 0, 0.87)"
     },
     {
-      "name": "--text-dark-2",
-      "value": "$theme-light-text-dark-2",
+      "name": "--dark-2",
+      "value": "$theme-light-dark-2",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {
-      "name": "--text-dark-3",
-      "value": "$theme-light-text-dark-3",
+      "name": "--dark-3",
+      "value": "$theme-light-dark-3",
       "compiledValue": "rgba(0, 0, 0, 0.6)"
     },
     {
-      "name": "--text-dark-4",
-      "value": "$theme-light-text-dark-4",
+      "name": "--dark-4",
+      "value": "$theme-light-dark-4",
       "compiledValue": "rgba(0, 0, 0, 0.5)"
     },
     {
-      "name": "--text-dark-5",
-      "value": "$theme-light-text-dark-5",
+      "name": "--dark-5",
+      "value": "$theme-light-dark-5",
       "compiledValue": "rgba(0, 0, 0, 0.4)"
     },
     {
-      "name": "--text-dark-6",
-      "value": "$theme-light-text-dark-6",
+      "name": "--dark-6",
+      "value": "$theme-light-dark-6",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
-      "name": "--text-dark-7",
-      "value": "$theme-light-text-dark-7",
+      "name": "--dark-7",
+      "value": "$theme-light-dark-7",
       "compiledValue": "rgba(0, 0, 0, 0.15)"
     },
     {
-      "name": "--text-dark-8",
-      "value": "$theme-light-text-dark-8",
+      "name": "--dark-8",
+      "value": "$theme-light-dark-8",
       "compiledValue": "rgba(0, 0, 0, 0.12)"
     },
     {
-      "name": "--text-dark-9",
-      "value": "$theme-light-text-dark-9",
+      "name": "--dark-9",
+      "value": "$theme-light-dark-9",
       "compiledValue": "rgba(0, 0, 0, 0.05)"
     },
     {
-      "name": "--text-light",
-      "value": "$theme-light-text-light",
+      "name": "--light",
+      "value": "$theme-light-light",
       "compiledValue": "white"
     },
     {
-      "name": "--text-light-1",
-      "value": "$theme-light-text-light-1",
+      "name": "--light-1",
+      "value": "$theme-light-light-1",
       "compiledValue": "rgba(255, 255, 255, 0.87)"
     },
     {
-      "name": "--text-light-2",
-      "value": "$theme-light-text-light-2",
+      "name": "--light-2",
+      "value": "$theme-light-light-2",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {
-      "name": "--text-light-3",
-      "value": "$theme-light-text-light-3",
+      "name": "--light-3",
+      "value": "$theme-light-light-3",
       "compiledValue": "rgba(255, 255, 255, 0.6)"
     },
     {
-      "name": "--text-light-4",
-      "value": "$theme-light-text-light-4",
+      "name": "--light-4",
+      "value": "$theme-light-light-4",
       "compiledValue": "rgba(255, 255, 255, 0.5)"
     },
     {
-      "name": "--text-light-5",
-      "value": "$theme-light-text-light-5",
+      "name": "--light-5",
+      "value": "$theme-light-light-5",
       "compiledValue": "rgba(255, 255, 255, 0.4)"
     },
     {
-      "name": "--text-light-6",
-      "value": "$theme-light-text-light-6",
+      "name": "--light-6",
+      "value": "$theme-light-light-6",
       "compiledValue": "rgba(255, 255, 255, 0.26)"
     },
     {
-      "name": "--text-light-7",
-      "value": "$theme-light-text-light-7",
+      "name": "--light-7",
+      "value": "$theme-light-light-7",
       "compiledValue": "rgba(255, 255, 255, 0.15)"
     },
     {
-      "name": "--text-light-8",
-      "value": "$theme-light-text-light-8",
+      "name": "--light-8",
+      "value": "$theme-light-light-8",
       "compiledValue": "rgba(255, 255, 255, 0.12)"
     },
     {
-      "name": "--text-light-9",
-      "value": "$theme-light-text-light-9",
+      "name": "--light-9",
+      "value": "$theme-light-light-9",
       "compiledValue": "rgba(255, 255, 255, 0.05)"
     },
     {
@@ -230,12 +230,37 @@
     {
       "name": "--shadow-alpha",
       "value": "$theme-light-shadow-alpha",
-      "compiledValue": "rgba(0, 0, 0, 0.24)"
+      "compiledValue": "rgba(0, 0, 0, 0.15)"
     },
     {
       "name": "--shadow-alpha-thin",
       "value": "$theme-light-shadow-alpha-thin",
       "compiledValue": "rgba(0, 0, 0, 0.075)"
+    },
+    {
+      "name": "--shadow-primary-alpha",
+      "value": "$theme-light-shadow-primary-alpha",
+      "compiledValue": "rgba(55, 176, 190, 0.6)"
+    },
+    {
+      "name": "--shadow-info-alpha",
+      "value": "$theme-light-shadow-info-alpha",
+      "compiledValue": "rgba(75, 155, 216, 0.6)"
+    },
+    {
+      "name": "--shadow-success-alpha",
+      "value": "$theme-light-shadow-success-alpha",
+      "compiledValue": "rgba(44, 165, 44, 0.6)"
+    },
+    {
+      "name": "--shadow-warning-alpha",
+      "value": "$theme-light-shadow-warning-alpha",
+      "compiledValue": "rgba(236, 146, 19, 0.6)"
+    },
+    {
+      "name": "--shadow-danger-alpha",
+      "value": "$theme-light-shadow-danger-alpha",
+      "compiledValue": "rgba(219, 87, 87, 0.6)"
     },
     {
       "name": "--focus-darken",
@@ -263,8 +288,8 @@
       "compiledValue": "#eef0f2"
     },
     {
-      "name": "--disabled-text-color",
-      "value": "$theme-light-disabled-text-color",
+      "name": "--disabled-color",
+      "value": "$theme-light-disabled-color",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
@@ -273,18 +298,18 @@
       "compiledValue": "white"
     },
     {
-      "name": "--body-text-color",
-      "value": "$theme-light-body-text-color",
+      "name": "--body-color",
+      "value": "$theme-light-body-color",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {
-      "name": "--code-text-color",
-      "value": "$theme-light-code-text-color",
+      "name": "--code-color",
+      "value": "$theme-light-code-color",
       "compiledValue": "#5d69a8"
     },
     {
-      "name": "--button-paint-text-color",
-      "value": "$theme-light-button-paint-text-color",
+      "name": "--button-paint-color",
+      "value": "$theme-light-button-paint-color",
       "compiledValue": "white"
     },
     {
@@ -293,8 +318,8 @@
       "compiledValue": "#37b0be"
     },
     {
-      "name": "--table-paint-text-color",
-      "value": "$theme-light-table-paint-text-color",
+      "name": "--table-paint-color",
+      "value": "$theme-light-table-paint-color",
       "compiledValue": "white"
     },
     {

@@ -612,7 +612,7 @@
     },
     {
       "name": "$margin-important",
-      "value": "if( $option-add-style-margin-important == true, !important, null )",
+      "value": "if( $option-important-margin == true, !important, null )",
       "compiledValue": ""
     }
   ],

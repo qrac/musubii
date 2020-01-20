@@ -6,14 +6,41 @@
       "compiledValue": ".is-overflow-hidden"
     },
     {
+      "name": "$modifier-overflow-scroll-x",
+      "value": ".is-overflow-scroll-x",
+      "compiledValue": ".is-overflow-scroll-x"
+    },
+    {
+      "name": "$modifier-overflow-scroll-y",
+      "value": ".is-overflow-scroll-y",
+      "compiledValue": ".is-overflow-scroll-y"
+    },
+    {
+      "name": "$modifier-overflow-ellipsis",
+      "value": ".is-overflow-ellipsis",
+      "compiledValue": ".is-overflow-ellipsis"
+    },
+    {
       "name": "$overflow-important",
-      "value": "if( $option-add-style-overflow-important == true, !important, null )",
+      "value": "if( $option-important-overflow == true, !important, null )",
       "compiledValue": ""
     }
   ],
   "mixins": [
     {
-      "name": "musubii-style-overflow",
+      "name": "musubii-style-overflow-hidden",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-overflow-scroll-x",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-overflow-scroll-y",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-overflow-ellipsis",
       "parameters": []
     }
   ]

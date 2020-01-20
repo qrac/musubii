@@ -6,6 +6,146 @@
       "compiledValue": ".wysiwyg"
     },
     {
+      "name": "$selector-wysiwyg-h1",
+      "value": "h1",
+      "compiledValue": "h1"
+    },
+    {
+      "name": "$selector-wysiwyg-h2",
+      "value": "h2",
+      "compiledValue": "h2"
+    },
+    {
+      "name": "$selector-wysiwyg-h3",
+      "value": "h3",
+      "compiledValue": "h3"
+    },
+    {
+      "name": "$selector-wysiwyg-h4",
+      "value": "h4",
+      "compiledValue": "h4"
+    },
+    {
+      "name": "$selector-wysiwyg-h5",
+      "value": "h5",
+      "compiledValue": "h5"
+    },
+    {
+      "name": "$selector-wysiwyg-h6",
+      "value": "h6",
+      "compiledValue": "h6"
+    },
+    {
+      "name": "$selector-wysiwyg-p",
+      "value": "p",
+      "compiledValue": "p"
+    },
+    {
+      "name": "$selector-wysiwyg-small",
+      "value": "small",
+      "compiledValue": "small"
+    },
+    {
+      "name": "$selector-wysiwyg-strong",
+      "value": "strong",
+      "compiledValue": "strong"
+    },
+    {
+      "name": "$selector-wysiwyg-em",
+      "value": "em",
+      "compiledValue": "em"
+    },
+    {
+      "name": "$selector-wysiwyg-del",
+      "value": "del, s",
+      "compiledValue": "del, s"
+    },
+    {
+      "name": "$selector-wysiwyg-a",
+      "value": "a",
+      "compiledValue": "a"
+    },
+    {
+      "name": "$selector-wysiwyg-blockquote",
+      "value": "blockquote",
+      "compiledValue": "blockquote"
+    },
+    {
+      "name": "$selector-wysiwyg-pre",
+      "value": "pre",
+      "compiledValue": "pre"
+    },
+    {
+      "name": "$selector-wysiwyg-code",
+      "value": "code",
+      "compiledValue": "code"
+    },
+    {
+      "name": "$selector-wysiwyg-ul",
+      "value": "ul",
+      "compiledValue": "ul"
+    },
+    {
+      "name": "$selector-wysiwyg-ol",
+      "value": "ol",
+      "compiledValue": "ol"
+    },
+    {
+      "name": "$selector-wysiwyg-li",
+      "value": "li",
+      "compiledValue": "li"
+    },
+    {
+      "name": "$selector-wysiwyg-table",
+      "value": "table",
+      "compiledValue": "table"
+    },
+    {
+      "name": "$selector-wysiwyg-th",
+      "value": "th",
+      "compiledValue": "th"
+    },
+    {
+      "name": "$selector-wysiwyg-td",
+      "value": "td",
+      "compiledValue": "td"
+    },
+    {
+      "name": "$selector-wysiwyg-dl",
+      "value": "dl",
+      "compiledValue": "dl"
+    },
+    {
+      "name": "$selector-wysiwyg-dt",
+      "value": "dt",
+      "compiledValue": "dt"
+    },
+    {
+      "name": "$selector-wysiwyg-dd",
+      "value": "dd",
+      "compiledValue": "dd"
+    },
+    {
+      "name": "$selector-wysiwyg-hr",
+      "value": "hr",
+      "compiledValue": "hr"
+    },
+    {
+      "name": "$selector-wysiwyg-figure",
+      "value": "figure",
+      "compiledValue": "figure"
+    },
+    {
+      "name": "$selector-wysiwyg-figcaption",
+      "value": "figcaption",
+      "compiledValue": "figcaption"
+    },
+    {
+      "name": "$modifier-wysiwyg-link-reverse",
+      "value": ".is-link-reverse",
+      "compiledValue": ".is-link-reverse"
+    },
+    {
       "name": "$wysiwyg-heading-font-weight",
       "value": "$font-weight-strong",
       "compiledValue": "700"
@@ -56,11 +196,6 @@
       "compiledValue": "700"
     },
     {
-      "name": "$wysiwyg-link-border-change-underline",
-      "value": "false",
-      "compiledValue": "false"
-    },
-    {
       "name": "$wysiwyg-link-border-bottom-width",
       "value": "$global-border-width",
       "compiledValue": "1px"
@@ -71,7 +206,7 @@
       "compiledValue": "solid"
     },
     {
-      "name": "$wysiwyg-link-text-color",
+      "name": "$wysiwyg-link-color",
       "value": "$convert-primary-strong",
       "compiledValue": "var(--primary-strong)"
     },
@@ -116,9 +251,9 @@
       "compiledValue": "2px"
     },
     {
-      "name": "$wysiwyg-code-text-color",
-      "value": "$convert-code-text-color",
-      "compiledValue": "var(--code-text-color)"
+      "name": "$wysiwyg-code-color",
+      "value": "$convert-code-color",
+      "compiledValue": "var(--code-color)"
     },
     {
       "name": "$wysiwyg-code-font-size",
@@ -141,9 +276,9 @@
       "compiledValue": "2px"
     },
     {
-      "name": "$wysiwyg-pre-text-color",
-      "value": "$convert-code-text-color",
-      "compiledValue": "var(--code-text-color)"
+      "name": "$wysiwyg-pre-color",
+      "value": "$convert-code-color",
+      "compiledValue": "var(--code-color)"
     },
     {
       "name": "$wysiwyg-pre-font-family",
@@ -164,6 +299,16 @@
       "name": "$wysiwyg-list-margin-left",
       "value": "1.5em",
       "compiledValue": "1.5em"
+    },
+    {
+      "name": "$wysiwyg-list-unordered-style-type",
+      "value": "circle",
+      "compiledValue": "circle"
+    },
+    {
+      "name": "$wysiwyg-list-ordered-style-type",
+      "value": "decimal",
+      "compiledValue": "decimal"
     },
     {
       "name": "$wysiwyg-table-padding",
@@ -196,9 +341,9 @@
       "compiledValue": "var(--table-paint-background-color)"
     },
     {
-      "name": "$wysiwyg-table-paint-text-color",
-      "value": "$convert-table-paint-text-color",
-      "compiledValue": "var(--table-paint-text-color)"
+      "name": "$wysiwyg-table-paint-color",
+      "value": "$convert-table-paint-color",
+      "compiledValue": "var(--table-paint-color)"
     },
     {
       "name": "$wysiwyg-hr-border-width",
@@ -237,7 +382,47 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-wysiwyg-text",
+      "name": "musubii-style-wysiwyg-h1",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-h2",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-h3",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-h4",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-h5",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-h6",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-p",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-small",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-strong",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-em",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-del",
       "parameters": []
     },
     {
@@ -261,7 +446,27 @@
       "parameters": []
     },
     {
+      "name": "musubii-style-wysiwyg-text-pre-code",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-wysiwyg-list",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-list-item",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-list-item-child",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-list-unordered-item",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-list-ordered-item",
       "parameters": []
     },
     {
@@ -269,7 +474,23 @@
       "parameters": []
     },
     {
+      "name": "musubii-style-wysiwyg-table-th",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-table-cell",
+      "parameters": []
+    },
+    {
       "name": "musubii-style-wysiwyg-dl",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-dt",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-dd",
       "parameters": []
     },
     {
@@ -278,6 +499,10 @@
     },
     {
       "name": "musubii-style-wysiwyg-figure",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-wysiwyg-figcaption",
       "parameters": []
     }
   ]

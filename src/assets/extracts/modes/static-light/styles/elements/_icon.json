@@ -16,6 +16,261 @@
       "compiledValue": ".material-icons"
     },
     {
+      "name": "$modifier-icon-dark",
+      "value": ".is-dark",
+      "compiledValue": ".is-dark"
+    },
+    {
+      "name": "$modifier-icon-dark-1",
+      "value": ".is-dark-1",
+      "compiledValue": ".is-dark-1"
+    },
+    {
+      "name": "$modifier-icon-dark-2",
+      "value": ".is-dark-2",
+      "compiledValue": ".is-dark-2"
+    },
+    {
+      "name": "$modifier-icon-dark-3",
+      "value": ".is-dark-3",
+      "compiledValue": ".is-dark-3"
+    },
+    {
+      "name": "$modifier-icon-dark-4",
+      "value": ".is-dark-4",
+      "compiledValue": ".is-dark-4"
+    },
+    {
+      "name": "$modifier-icon-dark-5",
+      "value": ".is-dark-5",
+      "compiledValue": ".is-dark-5"
+    },
+    {
+      "name": "$modifier-icon-dark-6",
+      "value": ".is-dark-6",
+      "compiledValue": ".is-dark-6"
+    },
+    {
+      "name": "$modifier-icon-dark-7",
+      "value": ".is-dark-7",
+      "compiledValue": ".is-dark-7"
+    },
+    {
+      "name": "$modifier-icon-dark-8",
+      "value": ".is-dark-8",
+      "compiledValue": ".is-dark-8"
+    },
+    {
+      "name": "$modifier-icon-dark-9",
+      "value": ".is-dark-9",
+      "compiledValue": ".is-dark-9"
+    },
+    {
+      "name": "$modifier-icon-light",
+      "value": ".is-light",
+      "compiledValue": ".is-light"
+    },
+    {
+      "name": "$modifier-icon-light-1",
+      "value": ".is-light-1",
+      "compiledValue": ".is-light-1"
+    },
+    {
+      "name": "$modifier-icon-light-2",
+      "value": ".is-light-2",
+      "compiledValue": ".is-light-2"
+    },
+    {
+      "name": "$modifier-icon-light-3",
+      "value": ".is-light-3",
+      "compiledValue": ".is-light-3"
+    },
+    {
+      "name": "$modifier-icon-light-4",
+      "value": ".is-light-4",
+      "compiledValue": ".is-light-4"
+    },
+    {
+      "name": "$modifier-icon-light-5",
+      "value": ".is-light-5",
+      "compiledValue": ".is-light-5"
+    },
+    {
+      "name": "$modifier-icon-light-6",
+      "value": ".is-light-6",
+      "compiledValue": ".is-light-6"
+    },
+    {
+      "name": "$modifier-icon-light-7",
+      "value": ".is-light-7",
+      "compiledValue": ".is-light-7"
+    },
+    {
+      "name": "$modifier-icon-light-8",
+      "value": ".is-light-8",
+      "compiledValue": ".is-light-8"
+    },
+    {
+      "name": "$modifier-icon-light-9",
+      "value": ".is-light-9",
+      "compiledValue": ".is-light-9"
+    },
+    {
+      "name": "$modifier-icon-primary",
+      "value": ".is-primary",
+      "compiledValue": ".is-primary"
+    },
+    {
+      "name": "$modifier-icon-info",
+      "value": ".is-info",
+      "compiledValue": ".is-info"
+    },
+    {
+      "name": "$modifier-icon-success",
+      "value": ".is-success",
+      "compiledValue": ".is-success"
+    },
+    {
+      "name": "$modifier-icon-warning",
+      "value": ".is-warning",
+      "compiledValue": ".is-warning"
+    },
+    {
+      "name": "$modifier-icon-danger",
+      "value": ".is-danger",
+      "compiledValue": ".is-danger"
+    },
+    {
+      "name": "$modifier-icon-fit",
+      "value": ".is-fit",
+      "compiledValue": ".is-fit"
+    },
+    {
+      "name": "$icon-dark",
+      "value": "$convert-dark",
+      "compiledValue": "black"
+    },
+    {
+      "name": "$icon-dark-1",
+      "value": "$convert-dark-1",
+      "compiledValue": "rgba(0, 0, 0, 0.87)"
+    },
+    {
+      "name": "$icon-dark-2",
+      "value": "$convert-dark-2",
+      "compiledValue": "rgba(0, 0, 0, 0.7)"
+    },
+    {
+      "name": "$icon-dark-3",
+      "value": "$convert-dark-3",
+      "compiledValue": "rgba(0, 0, 0, 0.6)"
+    },
+    {
+      "name": "$icon-dark-4",
+      "value": "$convert-dark-4",
+      "compiledValue": "rgba(0, 0, 0, 0.5)"
+    },
+    {
+      "name": "$icon-dark-5",
+      "value": "$convert-dark-5",
+      "compiledValue": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "$icon-dark-6",
+      "value": "$convert-dark-6",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
+    },
+    {
+      "name": "$icon-dark-7",
+      "value": "$convert-dark-7",
+      "compiledValue": "rgba(0, 0, 0, 0.15)"
+    },
+    {
+      "name": "$icon-dark-8",
+      "value": "$convert-dark-8",
+      "compiledValue": "rgba(0, 0, 0, 0.12)"
+    },
+    {
+      "name": "$icon-dark-9",
+      "value": "$convert-dark-9",
+      "compiledValue": "rgba(0, 0, 0, 0.05)"
+    },
+    {
+      "name": "$icon-light",
+      "value": "$convert-light",
+      "compiledValue": "white"
+    },
+    {
+      "name": "$icon-light-1",
+      "value": "$convert-light-1",
+      "compiledValue": "rgba(255, 255, 255, 0.87)"
+    },
+    {
+      "name": "$icon-light-2",
+      "value": "$convert-light-2",
+      "compiledValue": "rgba(255, 255, 255, 0.7)"
+    },
+    {
+      "name": "$icon-light-3",
+      "value": "$convert-light-3",
+      "compiledValue": "rgba(255, 255, 255, 0.6)"
+    },
+    {
+      "name": "$icon-light-4",
+      "value": "$convert-light-4",
+      "compiledValue": "rgba(255, 255, 255, 0.5)"
+    },
+    {
+      "name": "$icon-light-5",
+      "value": "$convert-light-5",
+      "compiledValue": "rgba(255, 255, 255, 0.4)"
+    },
+    {
+      "name": "$icon-light-6",
+      "value": "$convert-light-6",
+      "compiledValue": "rgba(255, 255, 255, 0.26)"
+    },
+    {
+      "name": "$icon-light-7",
+      "value": "$convert-light-7",
+      "compiledValue": "rgba(255, 255, 255, 0.15)"
+    },
+    {
+      "name": "$icon-light-8",
+      "value": "$convert-light-8",
+      "compiledValue": "rgba(255, 255, 255, 0.12)"
+    },
+    {
+      "name": "$icon-light-9",
+      "value": "$convert-light-9",
+      "compiledValue": "rgba(255, 255, 255, 0.05)"
+    },
+    {
+      "name": "$icon-primary",
+      "value": "$convert-primary",
+      "compiledValue": "#37b0be"
+    },
+    {
+      "name": "$icon-info",
+      "value": "$convert-info",
+      "compiledValue": "#4b9bd8"
+    },
+    {
+      "name": "$icon-success",
+      "value": "$convert-success",
+      "compiledValue": "#2ca52c"
+    },
+    {
+      "name": "$icon-warning",
+      "value": "$convert-warning",
+      "compiledValue": "#ec9213"
+    },
+    {
+      "name": "$icon-danger",
+      "value": "$convert-danger",
+      "compiledValue": "#db5757"
+    },
+    {
       "name": "$icon-fit-width",
       "value": "1em",
       "compiledValue": "1em"
@@ -27,14 +282,51 @@
       "parameters": []
     },
     {
-      "name": "--is-color",
-      "parameters": [
-        "$color-name",
-        "$color"
-      ]
+      "name": "musubii-style-icon-svg",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-material",
+      "parameters": []
     },
     {
       "name": "musubii-style-icon-dark",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-1",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-2",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-3",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-4",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-5",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-6",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-7",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-8",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-dark-9",
       "parameters": []
     },
     {
@@ -42,15 +334,59 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-icon-role",
+      "name": "musubii-style-icon-light-1",
       "parameters": []
     },
     {
-      "name": "musubii-style-icon-svg",
+      "name": "musubii-style-icon-light-2",
       "parameters": []
     },
     {
-      "name": "musubii-style-icon-material",
+      "name": "musubii-style-icon-light-3",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-light-4",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-light-5",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-light-6",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-light-7",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-light-8",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-light-9",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-primary",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-info",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-success",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-warning",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-icon-danger",
       "parameters": []
     },
     {

@@ -81,103 +81,103 @@
       "compiledValue": "#d74242"
     },
     {
-      "name": "$theme-light-text-dark",
+      "name": "$theme-light-dark",
       "value": "$black",
       "compiledValue": "black"
     },
     {
-      "name": "$theme-light-text-dark-1",
-      "value": "rgba($theme-light-text-dark, 0.87)",
+      "name": "$theme-light-dark-1",
+      "value": "rgba($theme-light-dark, 0.87)",
       "compiledValue": "rgba(0, 0, 0, 0.87)"
     },
     {
-      "name": "$theme-light-text-dark-2",
-      "value": "rgba($theme-light-text-dark, 0.7)",
+      "name": "$theme-light-dark-2",
+      "value": "rgba($theme-light-dark, 0.7)",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {
-      "name": "$theme-light-text-dark-3",
-      "value": "rgba($theme-light-text-dark, 0.6)",
+      "name": "$theme-light-dark-3",
+      "value": "rgba($theme-light-dark, 0.6)",
       "compiledValue": "rgba(0, 0, 0, 0.6)"
     },
     {
-      "name": "$theme-light-text-dark-4",
-      "value": "rgba($theme-light-text-dark, 0.5)",
+      "name": "$theme-light-dark-4",
+      "value": "rgba($theme-light-dark, 0.5)",
       "compiledValue": "rgba(0, 0, 0, 0.5)"
     },
     {
-      "name": "$theme-light-text-dark-5",
-      "value": "rgba($theme-light-text-dark, 0.4)",
+      "name": "$theme-light-dark-5",
+      "value": "rgba($theme-light-dark, 0.4)",
       "compiledValue": "rgba(0, 0, 0, 0.4)"
     },
     {
-      "name": "$theme-light-text-dark-6",
-      "value": "rgba($theme-light-text-dark, 0.26)",
+      "name": "$theme-light-dark-6",
+      "value": "rgba($theme-light-dark, 0.26)",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
-      "name": "$theme-light-text-dark-7",
-      "value": "rgba($theme-light-text-dark, 0.15)",
+      "name": "$theme-light-dark-7",
+      "value": "rgba($theme-light-dark, 0.15)",
       "compiledValue": "rgba(0, 0, 0, 0.15)"
     },
     {
-      "name": "$theme-light-text-dark-8",
-      "value": "rgba($theme-light-text-dark, 0.12)",
+      "name": "$theme-light-dark-8",
+      "value": "rgba($theme-light-dark, 0.12)",
       "compiledValue": "rgba(0, 0, 0, 0.12)"
     },
     {
-      "name": "$theme-light-text-dark-9",
-      "value": "rgba($theme-light-text-dark, 0.05)",
+      "name": "$theme-light-dark-9",
+      "value": "rgba($theme-light-dark, 0.05)",
       "compiledValue": "rgba(0, 0, 0, 0.05)"
     },
     {
-      "name": "$theme-light-text-light",
+      "name": "$theme-light-light",
       "value": "$white",
       "compiledValue": "white"
     },
     {
-      "name": "$theme-light-text-light-1",
-      "value": "rgba($theme-light-text-light, 0.87)",
+      "name": "$theme-light-light-1",
+      "value": "rgba($theme-light-light, 0.87)",
       "compiledValue": "rgba(255, 255, 255, 0.87)"
     },
     {
-      "name": "$theme-light-text-light-2",
-      "value": "rgba($theme-light-text-light, 0.7)",
+      "name": "$theme-light-light-2",
+      "value": "rgba($theme-light-light, 0.7)",
       "compiledValue": "rgba(255, 255, 255, 0.7)"
     },
     {
-      "name": "$theme-light-text-light-3",
-      "value": "rgba($theme-light-text-light, 0.6)",
+      "name": "$theme-light-light-3",
+      "value": "rgba($theme-light-light, 0.6)",
       "compiledValue": "rgba(255, 255, 255, 0.6)"
     },
     {
-      "name": "$theme-light-text-light-4",
-      "value": "rgba($theme-light-text-light, 0.5)",
+      "name": "$theme-light-light-4",
+      "value": "rgba($theme-light-light, 0.5)",
       "compiledValue": "rgba(255, 255, 255, 0.5)"
     },
     {
-      "name": "$theme-light-text-light-5",
-      "value": "rgba($theme-light-text-light, 0.4)",
+      "name": "$theme-light-light-5",
+      "value": "rgba($theme-light-light, 0.4)",
       "compiledValue": "rgba(255, 255, 255, 0.4)"
     },
     {
-      "name": "$theme-light-text-light-6",
-      "value": "rgba($theme-light-text-light, 0.26)",
+      "name": "$theme-light-light-6",
+      "value": "rgba($theme-light-light, 0.26)",
       "compiledValue": "rgba(255, 255, 255, 0.26)"
     },
     {
-      "name": "$theme-light-text-light-7",
-      "value": "rgba($theme-light-text-light, 0.15)",
+      "name": "$theme-light-light-7",
+      "value": "rgba($theme-light-light, 0.15)",
       "compiledValue": "rgba(255, 255, 255, 0.15)"
     },
     {
-      "name": "$theme-light-text-light-8",
-      "value": "rgba($theme-light-text-light, 0.12)",
+      "name": "$theme-light-light-8",
+      "value": "rgba($theme-light-light, 0.12)",
       "compiledValue": "rgba(255, 255, 255, 0.12)"
     },
     {
-      "name": "$theme-light-text-light-9",
-      "value": "rgba($theme-light-text-light, 0.05)",
+      "name": "$theme-light-light-9",
+      "value": "rgba($theme-light-light, 0.05)",
       "compiledValue": "rgba(255, 255, 255, 0.05)"
     },
     {
@@ -227,13 +227,38 @@
     },
     {
       "name": "$theme-light-shadow-alpha",
-      "value": "rgba($theme-light-shadow, 0.24)",
-      "compiledValue": "rgba(0, 0, 0, 0.24)"
+      "value": "rgba($theme-light-shadow, 0.15)",
+      "compiledValue": "rgba(0, 0, 0, 0.15)"
     },
     {
       "name": "$theme-light-shadow-alpha-thin",
       "value": "rgba($theme-light-shadow, 0.075)",
       "compiledValue": "rgba(0, 0, 0, 0.075)"
+    },
+    {
+      "name": "$theme-light-shadow-primary-alpha",
+      "value": "rgba($theme-light-primary, 0.6)",
+      "compiledValue": "rgba(55, 176, 190, 0.6)"
+    },
+    {
+      "name": "$theme-light-shadow-info-alpha",
+      "value": "rgba($theme-light-info, 0.6)",
+      "compiledValue": "rgba(75, 155, 216, 0.6)"
+    },
+    {
+      "name": "$theme-light-shadow-success-alpha",
+      "value": "rgba($theme-light-success, 0.6)",
+      "compiledValue": "rgba(44, 165, 44, 0.6)"
+    },
+    {
+      "name": "$theme-light-shadow-warning-alpha",
+      "value": "rgba($theme-light-warning, 0.6)",
+      "compiledValue": "rgba(236, 146, 19, 0.6)"
+    },
+    {
+      "name": "$theme-light-shadow-danger-alpha",
+      "value": "rgba($theme-light-danger, 0.6)",
+      "compiledValue": "rgba(219, 87, 87, 0.6)"
     },
     {
       "name": "$theme-light-focus",
@@ -266,7 +291,7 @@
       "compiledValue": "#eef0f2"
     },
     {
-      "name": "$theme-light-disabled-text-color",
+      "name": "$theme-light-disabled-color",
       "value": "$dark-6",
       "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
@@ -276,17 +301,17 @@
       "compiledValue": "white"
     },
     {
-      "name": "$theme-light-body-text-color",
+      "name": "$theme-light-body-color",
       "value": "$dark-2",
       "compiledValue": "rgba(0, 0, 0, 0.7)"
     },
     {
-      "name": "$theme-light-code-text-color",
+      "name": "$theme-light-code-color",
       "value": "$indigo-500",
       "compiledValue": "#5d69a8"
     },
     {
-      "name": "$theme-light-button-paint-text-color",
+      "name": "$theme-light-button-paint-color",
       "value": "$light",
       "compiledValue": "white"
     },
@@ -296,7 +321,7 @@
       "compiledValue": "#37b0be"
     },
     {
-      "name": "$theme-light-table-paint-text-color",
+      "name": "$theme-light-table-paint-color",
       "value": "$light",
       "compiledValue": "white"
     },
