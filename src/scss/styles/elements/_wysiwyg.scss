@@ -343,8 +343,8 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 @include generate-style($option-generate-style-wysiwyg) {
   #{$selector-wysiwyg} {
-    @include musubii-style-wysiwyg-text-pre();
     #{$selector-wysiwyg-pre} {
+      @include musubii-style-wysiwyg-text-pre();
       > #{$selector-wysiwyg-code} {
         @include musubii-style-wysiwyg-text-pre-code();
       }
@@ -379,7 +379,6 @@ $wysiwyg-figcaption-font-size: $font-size-sm !default;
 
 @include generate-style($option-generate-style-wysiwyg) {
   #{$selector-wysiwyg} {
-    @include musubii-style-wysiwyg-list();
     #{$selector-wysiwyg-ul},
     #{$selector-wysiwyg-ol} {
       @include musubii-style-wysiwyg-list();
