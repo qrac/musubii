@@ -1,6 +1,29 @@
-# MUSUBii
+<p align="center">
+  <br>
+  <a href="https://musubii.qranoko.jp" target="_blank" rel="noopener noreferrer">
+    <img src="https://i.gyazo.com/fe915845b753d96c6d539022049e7a02.png" width="90"/>
+  </a>
+</p>
 
-## Site
+<h1 align="center">MUSUBii</h1>
+<h3 align="center">Simple CSS Framework for JP</h3>
+<p align="center">
+MUSUBiiは日本語サイトのインブラウザデザインを想定したシンプルで薄味のレスポンシブ対応CSSフレームワークです。
+</p>
+
+<p align="center">
+  <a aria-label="Made by QRANOKO" href="https://qranoko.jp" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/MADE%20BY%20QRANOKO-212121.svg?style=for-the-badge&labelColor=212121">
+  </a>
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/musubii" target="_blank" rel="noopener noreferrer">
+    <img alt="" src="https://img.shields.io/npm/v/musubii.svg?style=for-the-badge&labelColor=212121">
+  </a>
+  <a aria-label="License" href="https://github.com/qrac/musubii/blob/master/LICENSE">
+    <img alt="" src="https://img.shields.io/npm/l/musubii.svg?style=for-the-badge&labelColor=212121">
+  </a>
+</p>
+
+## Site & Documentation
 
 - https://musubii.qranoko.jp
 
