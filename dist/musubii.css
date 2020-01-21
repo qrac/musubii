@@ -1,6 +1,5 @@
 /*! MUSUBii v7.0.0 CC0-1.0 by Qrac */
 
-@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -1539,7 +1538,7 @@ iframe {
 
 .list.is-kome > .item {
   display: list-item;
-  list-style: "※" outside;
+  list-style: "\203B" outside;
 }
 
 .list.is-decimal > .item {
@@ -3772,7 +3771,7 @@ svg.icon {
   clear: both;
 }
 
-@media screen and (min-width: 576px){
+@media screen and (min-width: 576px) {
   .section > .inner {
     width: 540px;
   }
@@ -3902,7 +3901,7 @@ svg.icon {
   }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .section > .inner {
     width: 720px;
   }
@@ -4021,7 +4020,7 @@ svg.icon {
   }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   .section > .inner {
     width: 960px;
   }
@@ -4140,7 +4139,7 @@ svg.icon {
   }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   .section > .inner {
     width: 1140px;
   }
