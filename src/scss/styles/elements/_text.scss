@@ -97,6 +97,7 @@ $modifier-text-break: "\.is-break" !default;
 
 $modifier-text-link: "\.is-link" !default;
 $modifier-text-link-reverse: "\.is-link-reverse" !default;
+$modifier-text-disabled: "\.is-disabled" !default;
 
 // Text Dark
 $text-dark: $convert-dark !default;
@@ -154,6 +155,9 @@ $text-line-height-xxs: $line-height-xxs !default;
 // Text Link
 $text-link-border-bottom-width: $global-border-width !default;
 $text-link-border-bottom-style: solid !default;
+
+// Text Disabled
+$text-disabled-color: $convert-disabled-color !default;
 
 // Blockquote
 $blockquote-background-color: $convert-background-2 !default;
@@ -756,6 +760,61 @@ $pre-code-padding: 1.25em 1.5em !default;
   #{$selector-text} {
     &#{$modifier-text-link-reverse} {
       @include musubii-style-text-link-reverse();
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Text Link Disabled
+//----------------------------------------------------
+
+@mixin musubii-style-text-disabled() {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@mixin musubii-style-text-disabled-color() {
+  color: $text-disabled-color;
+}
+
+@mixin musubii-style-text-link-disabled() {
+  @if $option-add-style-text-link-border == true {
+    border-bottom-color: transparent;
+  } @else {
+    text-decoration: none;
+  }
+}
+
+@mixin musubii-style-text-link-reverse-disabled() {
+  @if $option-add-style-text-link-border == true {
+    &:hover {
+      border-color: transparent;
+    }
+  } @else {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@include generate-style($option-generate-style-text) {
+  #{$selector-text} {
+    &#{$modifier-text-disabled} {
+      @include musubii-style-text-disabled();
+      @include musubii-style-text-disabled-color();
+      &#{$modifier-text-primary},
+      &#{$modifier-text-info},
+      &#{$modifier-text-success},
+      &#{$modifier-text-warning},
+      &#{$modifier-text-danger} {
+        @include musubii-style-text-disabled-color();
+      }
+      &#{$modifier-text-link} {
+        @include musubii-style-text-link-disabled();
+      }
+      &#{$modifier-text-link-reverse} {
+        @include musubii-style-text-link-reverse-disabled();
+      }
     }
   }
 }
