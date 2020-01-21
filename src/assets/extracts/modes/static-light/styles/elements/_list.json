@@ -67,7 +67,7 @@
     },
     {
       "name": "$list-kome-unicode",
-      "value": "unquote('\"') + unquote(str-insert(\"203B\", \"", 1)) + unquote('\"')",
+      "value": "unquote('\"') + unquote(str-insert(\"203B\", \"\\\", 1)) + unquote('\"')",
       "compiledValue": "\"203B\""
     },
     {
