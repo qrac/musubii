@@ -19,14 +19,14 @@ contents list
 メディアクエリの Mixin です。変数 [Breakpoint](/configs/variables/breakpoint) をメインで利用します。モバイルファースト設計なので、例えば `tablet()` を使うとタブレット以上のウインドウサイズで適応される CSS となります。
 
 ```scss
-// ex. Tablet以上で非表示にしたい
+// Example: Tablet以上で非表示にしたい
 .is-tablet-none {
   @include tablet() {
     display: none;
   }
 }
 
-// ex. iPhone5やSEだけ小さくしたい
+// Example: iPhone5やSEだけ小さくしたい
 .is-iphone5-xxs {
   @include iphone5-only() {
     font-size: 75%;

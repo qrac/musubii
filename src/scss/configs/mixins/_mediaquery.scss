@@ -173,7 +173,7 @@
   }
 }
 
-// Trigger - Attribute (ex: [data-theme="dark"])
+// Trigger - Attribute (Example: [data-theme="dark"])
 @mixin theme-trigger-attr($theme-attr) {
   #{$theme-attr} {
     @content;
