@@ -17,7 +17,7 @@ const ways = [
   { id: 6, text: "Horizontal", value: "horizontal" }
 ]
 
-const margins = [
+const paddings = [
   { id: 0, text: "None", value: "" },
   { id: 7, text: "XXS", value: "xxs" },
   { id: 6, text: "XS", value: "xs" },
@@ -33,37 +33,28 @@ const beautifyHtmlOptions = {
   indent_size: 2
 }
 
-export class PreviewMarginDetail extends React.Component {
+export class PreviewPaddingDetail extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       way: "",
-      margin: "",
-      minus: false
+      padding: ""
     }
     this.changeWay = this.changeWay.bind(this)
-    this.changeMargin = this.changeMargin.bind(this)
-    this.toggleMinus = this.toggleMinus.bind(this)
+    this.changePadding = this.changePadding.bind(this)
   }
   changeWay(value) {
     this.setState({ way: value })
   }
-  changeMargin(value) {
-    this.setState({ margin: value })
-  }
-  toggleMinus() {
-    this.setState({ minus: !this.state.minus })
+  changePadding(value) {
+    this.setState({ padding: value })
   }
   render() {
     const way = this.state.way
     const wayConnect = way ? way + "-" : ""
-    const minus = this.state.minus
-    const minusConnect = minus ? "minus-" : ""
-    const margin = this.state.margin
-    const marginClass = margin
-      ? "is-margin-" + wayConnect + minusConnect + margin
-      : ""
-    const contents = `<button class="button ${marginClass} is-plain is-warning" type="button">ボタンA</button>`
+    const padding = this.state.padding
+    const paddingClass = padding ? "is-padding-" + wayConnect + padding : ""
+    const contents = `<div class="card ${paddingClass} is-bg-light is-outline is-radius-md">カード</div>`
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
@@ -78,18 +69,11 @@ export class PreviewMarginDetail extends React.Component {
                 checked={this.state.way}
               />
             </DemoOption>
-            <DemoOption title={"Margin"}>
+            <DemoOption title={"Padding"}>
               <DemoOptionBoxRadios
-                patterns={margins}
-                parentChange={value => this.changeMargin(value)}
-                checked={this.state.margin}
-              />
-            </DemoOption>
-            <DemoOption title={"Fix"}>
-              <DemoOptionBoxCheckbox
-                text={"Minus"}
-                parentChange={() => this.toggleMinus()}
-                checked={this.state.minus}
+                patterns={paddings}
+                parentChange={value => this.changePadding(value)}
+                checked={this.state.padding}
               />
             </DemoOption>
           </div>

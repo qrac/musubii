@@ -5,6 +5,7 @@ export const meta = {
   filePath: "styles/utilities/_padding"
 }
 
+import { PreviewPaddingDetail } from "~/components/previews/preview-padding"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -22,6 +23,8 @@ contents list
 `.is-padding-(way)-(value)` `.is-padding-(way)-safe` 形式で使います。`(way)` を省略すると全方向、`(value)` を省略した場合は `md` と同等値の Padding 付与となります。
 
 `(value)` は [Meter](/configs/variables/meter) の値を引き継いでいます。
+
+<PreviewPaddingDetail />
 
 ## Basic
 
