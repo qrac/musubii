@@ -20,10 +20,6 @@ Web デザインの腹ごなしに、CSS フレームワーク「MUSUBii（む�
 
 要素 `.(xxxx)` 1 つに対して、状態 `.is-(xxxx)` を複数追加してスタイリングするのが基本です。また、すべてのクラス名は英小文字・数字・ハイフン 1 つで構成されています。
 
-### Unit
-
-CSS の単位は em と px を採用。エレメントの大きさをフォントサイズ変更で一括調整できます。また、すべての値には 16 を割れる数値を用いているため、サイズ変更を行った場合に割り切れない端数が出づらくなっています。
-
 ### Layers
 
 CSS のレイヤーは大きく 4 つに分類。「下地にレイアウトを組んでボタンやテキストを置いたら調整する」使い方です。実務で固有のスタイルとなる `components` や `pages` が加わることも想定しています。
@@ -46,6 +42,14 @@ CSS は 5 つの画面サイズで可変できるレスポンシブウェブデ�
 | `tablet`  | `768px ~ 991px`  |
 | `desktop` | `992px ~ 1199px` |
 | `wide`    | `1200px ~`       |
+
+### Unit
+
+CSS の単位は em と px を採用。エレメントの大きさをフォントサイズ変更で一括調整できます。また、すべての値には 16 を割れる数値を用いているため、サイズ変更を行った場合に割り切れない端数が出づらくなっています。
+
+### Capacity
+
+出力される [CSS ファイル](https://github.com/qrac/musubii/blob/master/dist/musubii.min.css) の容量は [Bootstrap](https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap.min.css)・[Bulma](https://github.com/jgthms/bulma/blob/master/css/bulma.min.css) の半分以下で、72KB 程度です。
 
 ## Install
 
