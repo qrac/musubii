@@ -1046,6 +1046,24 @@ iframe {
   border-color: currentColor;
 }
 
+.text.is-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.text.is-disabled.is-primary, .text.is-disabled.is-info, .text.is-disabled.is-success, .text.is-disabled.is-warning, .text.is-disabled.is-danger {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.text.is-disabled.is-link {
+  border-bottom-color: transparent;
+}
+
+.text.is-disabled.is-link-reverse:hover {
+  border-color: transparent;
+}
+
 .blockquote {
   background-color: whitesmoke;
   border-left: 0.5em solid rgba(0, 0, 0, 0.05);
