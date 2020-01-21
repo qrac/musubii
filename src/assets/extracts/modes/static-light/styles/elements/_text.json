@@ -396,6 +396,11 @@
       "compiledValue": ".is-link-reverse"
     },
     {
+      "name": "$modifier-text-disabled",
+      "value": ".is-disabled",
+      "compiledValue": ".is-disabled"
+    },
+    {
       "name": "$text-dark",
       "value": "$convert-dark",
       "compiledValue": "black"
@@ -619,6 +624,11 @@
       "name": "$text-link-border-bottom-style",
       "value": "solid",
       "compiledValue": "solid"
+    },
+    {
+      "name": "$text-disabled-color",
+      "value": "$convert-disabled-color",
+      "compiledValue": "rgba(0, 0, 0, 0.26)"
     },
     {
       "name": "$blockquote-background-color",
@@ -945,6 +955,22 @@
     },
     {
       "name": "musubii-style-text-link-reverse",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-text-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-text-disabled-color",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-text-link-disabled",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-text-link-reverse-disabled",
       "parameters": []
     },
     {
