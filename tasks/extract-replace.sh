@@ -42,6 +42,15 @@ do
   replace 'img src\$= \\".svg\\"' 'img[src$=\".svg\"]' $i
 done
 
+# Fix List
+
+modeHtmlFiles=`find $modePath -maxdepth 4 -type f -name _list.json`
+
+for i in $modeHtmlFiles;
+do
+  replace '\\"203B\\", \\"\"' '\"203B\", \"\\\"' $i
+done
+
 # Fix Alert
 
 modeHtmlFiles=`find $modePath -maxdepth 4 -type f -name _alert.json`
