@@ -5,7 +5,15 @@ export const meta = {
   filePath: "styles/layouts/_grid"
 }
 
-import { PreviewGridDetail } from "~/components/previews/preview-grid"
+import {
+  PreviewGridBasic,
+  PreviewGridGap,
+  PreviewGridGapVertical,
+  PreviewGridGapHorizontal,
+  PreviewGridAlign,
+  PreviewGridReverse,
+  PreviewGridStretch
+} from "~/components/previews/preview-grid"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -18,38 +26,26 @@ contents list
 
 ## Detail
 
-グリッドレイアウトを作るための CSS。`.grid` の直下に `.column` を複数配置します。`.column` の幅はユーティリティの [Flex](/styles/utilities/flex) を付与して設定。
-
-<PreviewGridDetail />
+グリッドレイアウトを作るための CSS。`.grid` の直下に `.column` を複数配置します。
 
 ## Basic
+
+`.column` の幅はユーティリティの [Flex](/styles/utilities/flex) を付与して設定します。
+
+<PreviewGridBasic />
 
 | Selector  | Description                                    |
 | --------- | ---------------------------------------------- |
 | `.grid`   | グリッドの起点となるラッパー。                 |
 | `.column` | `.grid` 直下に配置する。グリッドを分割する箱。 |
 
-| Modifier       | Description                                                            |
-| -------------- | ---------------------------------------------------------------------- |
-| `.is-baseline` | `.grid` に付与すると `.column` がテキストベースラインで並びます。      |
-| `.is-middle`   | `.grid` に付与すると `.column` が天地中央寄せで並びます。              |
-| `.is-bottom`   | `.grid` に付与すると `.column` が下寄せで並びます。                    |
-| `.is-center`   | `.grid` に付与すると `.column` が左右中央寄せで並びます。              |
-| `.is-right`    | `.grid` に付与すると `.column` が右寄せで並びます。                    |
-| `.is-between`  | `.grid` に付与すると `.column` が等間隔で並びます。                    |
-| `.is-around`   | `.grid` に付与すると `.column` が余白を含めた等間隔で並びます。        |
-| `.is-reverse`  | `.grid` に付与すると `.column` が折り返した時に右から並びます。        |
-| `.is-stretch`  | `.grid` に付与すると `.column` が Flexbox となり直下の高さが揃います。 |
-
 ## Gap
 
-`.is-gap-(way)-(value)` 形式のモディファイアを `.grid` に付与すると溝を作れます。`(value)` を省略した場合は `md` と同等の値になります。
-
-`(value)` は [Meter](/configs/variables/meter) の値を引き継いでいます。
-
-### All
+`.is-gap-(way)-(value)` 形式のモディファイアを `.grid` に付与すると溝を作れます。`(value)` を省略した場合は `md` と同等の値になります。`(value)` は [Meter](/configs/variables/meter) の値を引き継いでいます。
 
 `.is-gap-(value)` では上下左右の溝を同時設定します。
+
+<PreviewGridGap />
 
 | XXS           | XS           | Small        | Medium               | Large        | XL           | XXL           |
 | ------------- | ------------ | ------------ | -------------------- | ------------ | ------------ | ------------- |
@@ -59,6 +55,8 @@ contents list
 
 `.is-gap-vertical-(value)` では上下方向のみ溝を設定します。Horizontal と同時利用が可能。
 
+<PreviewGridGapVertical />
+
 | XXS                    | XS                    | Small                 | Medium                                 | Large                 | XL                    | XXL                    |
 | ---------------------- | --------------------- | --------------------- | -------------------------------------- | --------------------- | --------------------- | ---------------------- |
 | `.is-gap-vertical-xxs` | `.is-gap-vertical-xs` | `.is-gap-vertical-sm` | `is-gap-vertical, .is-gap-vertical-md` | `.is-gap-vertical-lg` | `.is-gap-vertical-xl` | `.is-gap-vertical-xxl` |
@@ -67,9 +65,41 @@ contents list
 
 `.is-gap-horizontal-(value)` では左右方向のみ溝を設定します。Vertical と同時利用が可能。
 
+<PreviewGridGapHorizontal />
+
 | XXS                      | XS                      | Small                   | Medium                                     | Large                   | XL                      | XXL                      |
 | ------------------------ | ----------------------- | ----------------------- | ------------------------------------------ | ----------------------- | ----------------------- | ------------------------ |
 | `.is-gap-horizontal-xxs` | `.is-gap-horizontal-xs` | `.is-gap-horizontal-sm` | `is-gap-horizontal, .is-gap-horizontal-md` | `.is-gap-horizontal-lg` | `.is-gap-horizontal-xl` | `.is-gap-horizontal-xxl` |
+
+## Align
+
+<PreviewGridAlign />
+
+| Modifier       | Description                                                       |
+| -------------- | ----------------------------------------------------------------- |
+| `.is-baseline` | `.grid` に付与すると `.column` がテキストベースラインで並びます。 |
+| `.is-middle`   | `.grid` に付与すると `.column` が天地中央寄せで並びます。         |
+| `.is-bottom`   | `.grid` に付与すると `.column` が下寄せで並びます。               |
+| `.is-center`   | `.grid` に付与すると `.column` が左右中央寄せで並びます。         |
+| `.is-right`    | `.grid` に付与すると `.column` が右寄せで並びます。               |
+| `.is-between`  | `.grid` に付与すると `.column` が等間隔で並びます。               |
+| `.is-around`   | `.grid` に付与すると `.column` が余白を含めた等間隔で並びます。   |
+
+## Reverse
+
+<PreviewGridReverse />
+
+| Modifier      | Description                                                     |
+| ------------- | --------------------------------------------------------------- |
+| `.is-reverse` | `.grid` に付与すると `.column` が折り返した時に右から並びます。 |
+
+## Stretch
+
+<PreviewGridStretch />
+
+| Modifier      | Description                                                            |
+| ------------- | ---------------------------------------------------------------------- |
+| `.is-stretch` | `.grid` に付与すると `.column` が Flexbox となり直下の高さが揃います。 |
 
 ## Variables
 
