@@ -5,6 +5,11 @@ export const meta = {
   filePath: "styles/elements/_badge"
 }
 
+import {
+  PreviewBadgeBasic,
+  PreviewBadgeSquare,
+  PreviewBadgeCircle
+} from "~/components/previews/preview-badge"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -20,6 +25,8 @@ contents list
 バッジ装飾を作るエレメント CSS。
 
 ## Basic
+
+<PreviewBadgeBasic />
 
 | Selector | Description                            |
 | -------- | -------------------------------------- |
@@ -49,11 +56,15 @@ contents list
 
 ## Square
 
+<PreviewBadgeSquare />
+
 | Modifier     | Description                             |
 | ------------ | --------------------------------------- |
 | `.is-square` | `.badge` に付与すると正方形になります。 |
 
 ## Circle
+
+<PreviewBadgeCircle />
 
 | Modifier     | Description                           |
 | ------------ | ------------------------------------- |
