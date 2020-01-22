@@ -215,10 +215,14 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
         @include musubii-style-form-input-readonly();
       }
       &#{$modifier-form-success} {
-        @include musubii-style-form-input-success();
+        &:not([disabled]):not([readonly]) {
+          @include musubii-style-form-input-success();
+        }
       }
       &#{$modifier-form-danger} {
-        @include musubii-style-form-input-danger();
+        &:not([disabled]):not([readonly]) {
+          @include musubii-style-form-input-danger();
+        }
       }
     }
   }
@@ -231,10 +235,14 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
       @include musubii-style-form-input-readonly();
     }
     &#{$modifier-form-success} {
-      @include musubii-style-form-input-success();
+      &:not([disabled]):not([readonly]) {
+        @include musubii-style-form-input-success();
+      }
     }
     &#{$modifier-form-danger} {
-      @include musubii-style-form-input-danger();
+      &:not([disabled]):not([readonly]) {
+        @include musubii-style-form-input-danger();
+      }
     }
   }
 }
@@ -317,10 +325,14 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
           @include musubii-style-form-input-plain-disabled();
         }
         &#{$modifier-form-success} {
-          @include musubii-style-form-input-plain-success();
+          &:not([disabled]):not([readonly]) {
+            @include musubii-style-form-input-plain-success();
+          }
         }
         &#{$modifier-form-danger} {
-          @include musubii-style-form-input-plain-danger();
+          &:not([disabled]):not([readonly]) {
+            @include musubii-style-form-input-plain-danger();
+          }
         }
       }
     }
@@ -332,10 +344,14 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
         @include musubii-style-form-input-plain-disabled();
       }
       &#{$modifier-form-success} {
-        @include musubii-style-form-input-plain-success();
+        &:not([disabled]):not([readonly]) {
+          @include musubii-style-form-input-plain-success();
+        }
       }
       &#{$modifier-form-danger} {
-        @include musubii-style-form-input-plain-danger();
+        &:not([disabled]):not([readonly]) {
+          @include musubii-style-form-input-plain-danger();
+        }
       }
     }
   }
@@ -396,16 +412,19 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
           @include musubii-style-form-input-underline-disabled();
         }
         &#{$modifier-form-success} {
-          @include musubii-style-form-input-underline-success();
+          &:not([disabled]):not([readonly]) {
+            @include musubii-style-form-input-underline-success();
+          }
         }
         &#{$modifier-form-danger} {
-          @include musubii-style-form-input-underline-danger();
+          &:not([disabled]):not([readonly]) {
+            @include musubii-style-form-input-underline-danger();
+          }
         }
       }
     }
   }
   #{$selector-form-textarea} {
-    @include musubii-style-form-input-underline();
     &#{$modifier-form-underline} {
       @include musubii-style-form-input-underline();
       &[disabled],
@@ -413,10 +432,14 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
         @include musubii-style-form-input-underline-disabled();
       }
       &#{$modifier-form-success} {
-        @include musubii-style-form-input-underline-success();
+        &:not([disabled]):not([readonly]) {
+          @include musubii-style-form-input-underline-success();
+        }
       }
       &#{$modifier-form-danger} {
-        @include musubii-style-form-input-underline-danger();
+        &:not([disabled]):not([readonly]) {
+          @include musubii-style-form-input-underline-danger();
+        }
       }
     }
   }
@@ -475,10 +498,14 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
           @include musubii-style-form-input-inside-disabled();
         }
         &#{$modifier-form-success} {
-          @include musubii-style-form-input-inside-success();
+          &:not([disabled]):not([readonly]) {
+            @include musubii-style-form-input-inside-success();
+          }
         }
         &#{$modifier-form-danger} {
-          @include musubii-style-form-input-inside-danger();
+          &:not([disabled]):not([readonly]) {
+            @include musubii-style-form-input-inside-danger();
+          }
         }
       }
     }
@@ -491,10 +518,14 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
         @include musubii-style-form-input-inside-disabled();
       }
       &#{$modifier-form-success} {
-        @include musubii-style-form-input-inside-success();
+        &:not([disabled]):not([readonly]) {
+          @include musubii-style-form-input-inside-success();
+        }
       }
       &#{$modifier-form-danger} {
-        @include musubii-style-form-input-inside-danger();
+        &:not([disabled]):not([readonly]) {
+          @include musubii-style-form-input-inside-danger();
+        }
       }
     }
   }
