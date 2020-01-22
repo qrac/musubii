@@ -28,35 +28,17 @@ const beautifyHtmlOptions = {
   indent_size: 2
 }
 
-export class PreviewCardDetail extends React.Component {
+export class PreviewCardBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      tag: "div",
-      radiusPattern: "is-radius-md",
       bgLight: true,
       outline: false,
-      link: false,
-      zoom: false,
-      floating: true,
-      disabled: false,
-      externalLink: false
+      floating: true
     }
-    this.changeTag = this.changeTag.bind(this)
-    this.changeRadiusPattern = this.changeRadiusPattern.bind(this)
     this.toggleBgLight = this.toggleBgLight.bind(this)
     this.toggleOutline = this.toggleOutline.bind(this)
-    this.toggleLink = this.toggleLink.bind(this)
-    this.toggleZoom = this.toggleZoom.bind(this)
     this.toggleFloating = this.toggleFloating.bind(this)
-    this.toggleDisabled = this.toggleDisabled.bind(this)
-    this.toggleExternalLink = this.toggleExternalLink.bind(this)
-  }
-  changeTag(value) {
-    this.setState({ tag: value })
-  }
-  changeRadiusPattern(value) {
-    this.setState({ radiusPattern: value })
   }
   toggleBgLight() {
     this.setState({ bgLight: !this.state.bgLight })
@@ -64,39 +46,16 @@ export class PreviewCardDetail extends React.Component {
   toggleOutline() {
     this.setState({ outline: !this.state.outline })
   }
-  toggleLink() {
-    this.setState({ link: !this.state.link })
-  }
-  toggleZoom() {
-    this.setState({ zoom: !this.state.zoom })
-  }
   toggleFloating() {
     this.setState({ floating: !this.state.floating })
   }
-  toggleDisabled() {
-    this.setState({ disabled: !this.state.disabled })
-  }
-  toggleExternalLink() {
-    this.setState({ externalLink: !this.state.externalLink })
-  }
   render() {
-    const tag = this.state.tag
-    const radiusPattern = this.state.radiusPattern
     const bgLight = this.state.bgLight ? "is-bg-light" : ""
     const outline = this.state.outline ? "is-outline" : ""
-    const link = this.state.link ? "is-link" : ""
-    const zoom = this.state.zoom ? "is-zoom" : ""
     const floating = this.state.floating ? "is-floating" : ""
-    const disabled = this.state.disabled
-    const tagAttr = tag === "a" ? 'href="#"' : ""
-    const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
-    const externalLink =
-      this.state.externalLink && tag === "a"
-        ? 'target="_blank" rel="noopener noreferrer"'
-        : ""
-    const contents = `<${tag} class="card ${bgLight} ${outline} ${link} ${zoom} ${floating}
-      ${radiusPattern} ${disabledClass}" ${tagAttr} ${externalLink}
-      ><div class="box is-padding-md">children</div></${tag}>`
+    const contents = `<div class="card ${bgLight} ${outline} ${floating}">
+        <div class="box is-padding-md">children</div>
+      </div>`
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
@@ -104,13 +63,6 @@ export class PreviewCardDetail extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
-            <DemoOption title={"Tag"}>
-              <DemoOptionBoxRadios
-                patterns={tags}
-                parentChange={value => this.changeTag(value)}
-                checked={this.state.tag}
-              />
-            </DemoOption>
             <DemoOption title={"Attached"}>
               <DemoOptionBoxCheckbox
                 text={"Background Light"}
@@ -128,6 +80,43 @@ export class PreviewCardDetail extends React.Component {
                 checked={this.state.floating}
               />
             </DemoOption>
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewCardRadius extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      radiusPattern: "is-radius-md"
+    }
+    this.changeRadiusPattern = this.changeRadiusPattern.bind(this)
+  }
+  changeRadiusPattern(value) {
+    this.setState({ radiusPattern: value })
+  }
+  render() {
+    const radiusPattern = this.state.radiusPattern
+    const contents = `<div class="card ${radiusPattern} is-bg-light is-floating">
+        <div class="box is-padding-md">children</div>
+      </div>`
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
             <DemoOption title={"Radius"}>
               <DemoOptionBoxRadios
                 patterns={radiusPatterns}
@@ -135,17 +124,111 @@ export class PreviewCardDetail extends React.Component {
                 checked={this.state.radiusPattern}
               />
             </DemoOption>
-            <DemoOption title={"Other"}>
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewCardLink extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      disabled: false,
+      externalLink: false
+    }
+    this.toggleDisabled = this.toggleDisabled.bind(this)
+    this.toggleExternalLink = this.toggleExternalLink.bind(this)
+  }
+  toggleDisabled() {
+    this.setState({ disabled: !this.state.disabled })
+  }
+  toggleExternalLink() {
+    this.setState({ externalLink: !this.state.externalLink })
+  }
+  render() {
+    const disabled = this.state.disabled
+    const disabledClass = disabled ? "is-disabled" : ""
+    const externalLink = this.state.externalLink
+      ? 'target="_blank" rel="noopener noreferrer"'
+      : ""
+    const contents = `<a class="card is-link is-bg-light is-floating is-radius-md
+        ${disabledClass}" href="#" ${externalLink}>
+          <div class="box is-padding-md">children</div></a>`
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOption title={"Link"}>
               <DemoOptionBoxCheckbox
-                text={"Link"}
-                parentChange={() => this.toggleLink()}
-                checked={this.state.link}
+                text={"Disabled"}
+                parentChange={() => this.toggleDisabled()}
+                checked={this.state.disabled}
               />
               <DemoOptionBoxCheckbox
-                text={"Zoom"}
-                parentChange={() => this.toggleZoom()}
-                checked={this.state.zoom}
+                text={"External Link"}
+                parentChange={() => this.toggleExternalLink()}
+                checked={this.state.externalLink}
               />
+            </DemoOption>
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewCardZoom extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      disabled: false,
+      externalLink: false
+    }
+    this.toggleDisabled = this.toggleDisabled.bind(this)
+    this.toggleExternalLink = this.toggleExternalLink.bind(this)
+  }
+  toggleDisabled() {
+    this.setState({ disabled: !this.state.disabled })
+  }
+  toggleExternalLink() {
+    this.setState({ externalLink: !this.state.externalLink })
+  }
+  render() {
+    const disabled = this.state.disabled
+    const disabledClass = disabled ? "is-disabled" : ""
+    const externalLink = this.state.externalLink
+      ? 'target="_blank" rel="noopener noreferrer"'
+      : ""
+    const contents = `<a class="card is-zoom is-bg-light is-floating is-radius-md
+        ${disabledClass}" href="#" ${externalLink}>
+          <div class="box is-padding-md">children</div></a>`
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOption title={"Zoom"}>
               <DemoOptionBoxCheckbox
                 text={"Disabled"}
                 parentChange={() => this.toggleDisabled()}

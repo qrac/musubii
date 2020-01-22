@@ -40,6 +40,7 @@ const columnSizes = [
 ]
 
 const gaps = [
+  { id: 0, text: "None", value: "" },
   { id: 7, text: "XXS", value: "xxs" },
   { id: 6, text: "XS", value: "xs" },
   { id: 5, text: "Small", value: "sm" },
@@ -153,7 +154,8 @@ export class PreviewGridGap extends React.Component {
     const columnNum = this.state.columnNum
     const columnSize = this.state.columnSize
     const gap = this.state.gap
-    const gridTagBefore = `<div class="grid is-gap-${gap}">`
+    const gapClass = gap ? "is-gap-" + gap : ""
+    const gridTagBefore = `<div class="grid ${gapClass}">`
     const gridTagAfter = `</div>`
     const columns = []
     for (let i = 0; i < columnNum; i++) {
@@ -215,7 +217,8 @@ export class PreviewGridGapVertical extends React.Component {
     const columnNum = this.state.columnNum
     const columnSize = this.state.columnSize
     const gap = this.state.gap
-    const gridTagBefore = `<div class="grid is-gap-vertical-${gap}">`
+    const gapClass = gap ? "is-gap-vertical-" + gap : ""
+    const gridTagBefore = `<div class="grid ${gapClass}">`
     const gridTagAfter = `</div>`
     const columns = []
     for (let i = 0; i < columnNum; i++) {
@@ -277,7 +280,8 @@ export class PreviewGridGapHorizontal extends React.Component {
     const columnNum = this.state.columnNum
     const columnSize = this.state.columnSize
     const gap = this.state.gap
-    const gridTagBefore = `<div class="grid is-gap-horizontal-${gap}">`
+    const gapClass = gap ? "is-gap-horizontal-" + gap : ""
+    const gridTagBefore = `<div class="grid ${gapClass}">`
     const gridTagAfter = `</div>`
     const columns = []
     for (let i = 0; i < columnNum; i++) {
