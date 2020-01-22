@@ -41,13 +41,12 @@ const beautifyHtmlOptions = {
   indent_size: 2
 }
 
-export class PreviewButtonDetail extends React.Component {
+export class PreviewButtonBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       tag: "button",
       pattern: "is-plain",
-      angle: "",
       strong: false,
       round: false,
       floating: false,
@@ -56,7 +55,6 @@ export class PreviewButtonDetail extends React.Component {
     }
     this.changeTag = this.changeTag.bind(this)
     this.changePattern = this.changePattern.bind(this)
-    this.changeAngle = this.changeAngle.bind(this)
     this.toggleStrong = this.toggleStrong.bind(this)
     this.toggleRound = this.toggleRound.bind(this)
     this.toggleFloating = this.toggleFloating.bind(this)
@@ -68,9 +66,6 @@ export class PreviewButtonDetail extends React.Component {
   }
   changePattern(value) {
     this.setState({ pattern: value })
-  }
-  changeAngle(value) {
-    this.setState({ angle: value })
   }
   toggleStrong() {
     this.setState({ strong: !this.state.strong })
@@ -90,13 +85,11 @@ export class PreviewButtonDetail extends React.Component {
   render() {
     const tag = this.state.tag
     const pattern = this.state.pattern
-    const angle = this.state.angle
     const strong = this.state.strong ? "is-strong" : ""
     const round = this.state.round ? "is-round" : ""
     const floating = this.state.floating ? "is-floating" : ""
     const disabled = this.state.disabled
     const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
-    const angleClass = angle ? "is-0" + " " + angle : ""
     const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
     const disabledAttr = disabled && tag === "button" ? "disabled" : ""
     const disabledTabIndex = disabled ? 'tabindex="-1"' : ""
@@ -107,7 +100,7 @@ export class PreviewButtonDetail extends React.Component {
     const contents = items
       .map(
         item =>
-          `<${tag} class="button ${pattern} ${item.role} ${angleClass} ${strong} ${round} ${floating} ${disabledClass}"
+          `<${tag} class="button ${pattern} ${item.role} ${strong} ${round} ${floating} ${disabledClass}"
             ${tagAttr} ${externalLink} ${disabledTabIndex} ${disabledAttr}>${item.text}</${tag}>`
       )
       .join("")
@@ -130,13 +123,6 @@ export class PreviewButtonDetail extends React.Component {
                 patterns={patterns}
                 parentChange={value => this.changePattern(value)}
                 checked={this.state.pattern}
-              />
-            </DemoOption>
-            <DemoOption title={"Angle"}>
-              <DemoOptionBoxRadios
-                patterns={angles}
-                parentChange={value => this.changeAngle(value)}
-                checked={this.state.angle}
               />
             </DemoOption>
           </div>
@@ -383,6 +369,146 @@ export class PreviewButtonCircle extends React.Component {
         <div className="demo-box is-line">
           <div
             className="box is-flex is-space-right-xs is-space-bottom-xs is-margin-bottom-minus-xs"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewButtonAngle extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      tag: "button",
+      pattern: "is-plain",
+      angle: "is-angle-right",
+      strong: false,
+      round: false,
+      floating: false,
+      disabled: false,
+      externalLink: false
+    }
+    this.changeTag = this.changeTag.bind(this)
+    this.changePattern = this.changePattern.bind(this)
+    this.changeAngle = this.changeAngle.bind(this)
+    this.toggleStrong = this.toggleStrong.bind(this)
+    this.toggleRound = this.toggleRound.bind(this)
+    this.toggleFloating = this.toggleFloating.bind(this)
+    this.toggleDisabled = this.toggleDisabled.bind(this)
+    this.toggleExternalLink = this.toggleExternalLink.bind(this)
+  }
+  changeTag(value) {
+    this.setState({ tag: value })
+  }
+  changePattern(value) {
+    this.setState({ pattern: value })
+  }
+  changeAngle(value) {
+    this.setState({ angle: value })
+  }
+  toggleStrong() {
+    this.setState({ strong: !this.state.strong })
+  }
+  toggleRound() {
+    this.setState({ round: !this.state.round })
+  }
+  toggleFloating() {
+    this.setState({ floating: !this.state.floating })
+  }
+  toggleDisabled() {
+    this.setState({ disabled: !this.state.disabled })
+  }
+  toggleExternalLink() {
+    this.setState({ externalLink: !this.state.externalLink })
+  }
+  render() {
+    const tag = this.state.tag
+    const pattern = this.state.pattern
+    const angle = this.state.angle
+    const strong = this.state.strong ? "is-strong" : ""
+    const round = this.state.round ? "is-round" : ""
+    const floating = this.state.floating ? "is-floating" : ""
+    const disabled = this.state.disabled
+    const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
+    const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
+    const disabledAttr = disabled && tag === "button" ? "disabled" : ""
+    const disabledTabIndex = disabled ? 'tabindex="-1"' : ""
+    const externalLink =
+      this.state.externalLink && tag === "a"
+        ? 'target="_blank" rel="noopener noreferrer"'
+        : ""
+    const contents = items
+      .map(
+        item =>
+          `<${tag} class="button ${pattern} ${item.role} is-0 ${angle} ${strong} ${round} ${floating} ${disabledClass}"
+            ${tagAttr} ${externalLink} ${disabledTabIndex} ${disabledAttr}>${item.text}</${tag}>`
+      )
+      .join("")
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOption title={"Angle"}>
+              <DemoOptionBoxRadios
+                patterns={angles}
+                parentChange={value => this.changeAngle(value)}
+                checked={this.state.angle}
+              />
+            </DemoOption>
+            <DemoOption title={"Tag"}>
+              <DemoOptionBoxRadios
+                patterns={tags}
+                parentChange={value => this.changeTag(value)}
+                checked={this.state.tag}
+              />
+            </DemoOption>
+            <DemoOption title={"Pattern"}>
+              <DemoOptionBoxRadios
+                patterns={patterns}
+                parentChange={value => this.changePattern(value)}
+                checked={this.state.pattern}
+              />
+            </DemoOption>
+          </div>
+          <div className="demo-options">
+            <DemoOption title={"Other"}>
+              <DemoOptionBoxCheckbox
+                text={"Strong"}
+                parentChange={() => this.toggleStrong()}
+                checked={this.state.strong}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Round"}
+                parentChange={() => this.toggleRound()}
+                checked={this.state.round}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Floating"}
+                parentChange={() => this.toggleFloating()}
+                checked={this.state.floating}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Disabled"}
+                parentChange={() => this.toggleDisabled()}
+                checked={this.state.disabled}
+              />
+              <DemoOptionBoxCheckbox
+                text={"External Link"}
+                parentChange={() => this.toggleExternalLink()}
+                checked={this.state.externalLink}
+              />
+            </DemoOption>
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box is-flex is-space-right-xs is-space-bottom-xs is-margin-right-minus-xs is-margin-bottom-minus-xs"
             dangerouslySetInnerHTML={{ __html: formattedCode }}
           ></div>
         </div>

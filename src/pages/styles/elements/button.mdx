@@ -5,7 +5,12 @@ export const meta = {
   filePath: "styles/elements/_button"
 }
 
-import { PreviewButtonDetail } from "~/components/previews/preview-button"
+import {
+  PreviewButtonBasic,
+  PreviewButtonSquare,
+  PreviewButtonCircle,
+  PreviewButtonAngle
+} from "~/components/previews/preview-button"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -20,9 +25,9 @@ contents list
 
 ボタン装飾を作るエレメント CSS。
 
-<PreviewButtonDetail />
-
 ## Basic
+
+<PreviewButtonBasic />
 
 | Selector  | Description                            |
 | --------- | -------------------------------------- |
@@ -42,8 +47,6 @@ contents list
 | `.is-strong`               | `.button` に付与すると太文字になります。              |
 | `.is-round`                | `.button` に付与すると角が完全に丸くなります。        |
 | `.is-floating`             | `.button.is-plain` に付与すると浮いた装飾になります。 |
-| `.is-square`               | `.button` に付与すると正方形になります。              |
-| `.is-circle`               | `.button` に付与すると正円になります。                |
 | `[disabled], .is-disabled` | `.button` に付与すると非活性になります。              |
 
 ## Role
@@ -57,7 +60,25 @@ contents list
 [[tips | Tips]]
 | 各役割毎のカラーリングと `.is-floating` を併用すると、影もカラーリングに添います。影をモノトーンにしたい場合は、[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-button-role-shadow` を `false` にします。
 
+## Square
+
+<PreviewButtonSquare />
+
+| Modifier     | Description                              |
+| ------------ | ---------------------------------------- |
+| `.is-square` | `.button` に付与すると正方形になります。 |
+
+## Circle
+
+<PreviewButtonCircle />
+
+| Modifier     | Description                            |
+| ------------ | -------------------------------------- |
+| `.is-circle` | `.button` に付与すると正円になります。 |
+
 ## Angle
+
+<PreviewButtonAngle />
 
 | Modifier          | Description                                                                          |
 | ----------------- | ------------------------------------------------------------------------------------ |
