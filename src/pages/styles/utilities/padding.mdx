@@ -5,7 +5,10 @@ export const meta = {
   filePath: "styles/utilities/_padding"
 }
 
-import { PreviewPaddingDetail } from "~/components/previews/preview-padding"
+import {
+  PreviewPaddingBasic,
+  PreviewPaddingWay
+} from "~/components/previews/preview-padding"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -24,11 +27,11 @@ contents list
 
 `(value)` は [Meter](/configs/variables/meter) の値を引き継いでいます。
 
-<PreviewPaddingDetail />
-
 ## Basic
 
 `.is-padding-(value)` では上下左右に Padding を付与します。
+
+<PreviewPaddingBasic />
 
 | XXS               | XS               | Small            | Medium                        | Large            | XL               | XXL               |
 | ----------------- | ---------------- | ---------------- | ----------------------------- | ---------------- | ---------------- | ----------------- |
@@ -38,6 +41,8 @@ contents list
 
 `.is-padding-(way)-(value)` では 1 方向のみに Padding を付与します。
 
+<PreviewPaddingWay />
+
 | XXS                      | XS                      | Small                   | Medium                                      | Large                   | XL                      | XXL                      |
 | ------------------------ | ----------------------- | ----------------------- | ------------------------------------------- | ----------------------- | ----------------------- | ------------------------ |
 | `.is-padding-top-xxs`    | `.is-padding-top-xs`    | `.is-padding-top-sm`    | `.is-padding-top, .is-padding-top-md`       | `.is-padding-top-lg`    | `.is-padding-top-xl`    | `.is-padding-top-xxl`    |
@@ -45,7 +50,7 @@ contents list
 | `.is-padding-bottom-xxs` | `.is-padding-bottom-xs` | `.is-padding-bottom-sm` | `.is-padding-bottom, .is-padding-bottom-md` | `.is-padding-bottom-lg` | `.is-padding-bottom-xl` | `.is-padding-bottom-xxl` |
 | `.is-padding-left-xxs`   | `.is-padding-left-xs`   | `.is-padding-left-sm`   | `.is-padding-left, .is-padding-left-md`     | `.is-padding-left-lg`   | `.is-padding-left-xl`   | `.is-padding-left-xxl`   |
 
-## Vertical
+### Vertical
 
 `.is-padding-vertical-(value)` では上下方向同時に Padding を付与します。
 
@@ -53,7 +58,7 @@ contents list
 | -------------------------- | ------------------------- | ------------------------- | ---------------------------------------------- | ------------------------- | ------------------------- | -------------------------- |
 | `.is-padding-vertical-xxs` | `.is-padding-vertical-xs` | `.is-padding-vertical-sm` | `is-padding-vertical, .is-padding-vertical-md` | `.is-padding-vertical-lg` | `.is-padding-vertical-xl` | `.is-padding-vertical-xxl` |
 
-## Horizontal
+### Horizontal
 
 `.is-padding-horizontal-(value)` では左右方向同時に Padding を付与します。
 

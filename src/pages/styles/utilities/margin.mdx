@@ -5,7 +5,10 @@ export const meta = {
   filePath: "styles/utilities/_margin"
 }
 
-import { PreviewMarginDetail } from "~/components/previews/preview-margin"
+import {
+  PreviewMarginBasic,
+  PreviewMarginWay
+} from "~/components/previews/preview-margin"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -24,11 +27,11 @@ contents list
 
 `(value)` は [Meter](/configs/variables/meter) の値を引き継いでいます。
 
-<PreviewMarginDetail />
-
 ## Basic
 
 `.is-margin-(value)` では上下左右に Margin を付与します。
+
+<PreviewMarginBasic />
 
 | XXS              | XS              | Small           | Medium                      | Large           | XL              | XXL              |
 | ---------------- | --------------- | --------------- | --------------------------- | --------------- | --------------- | ---------------- |
@@ -43,6 +46,8 @@ contents list
 ## Way
 
 `.is-margin-(way)-(value)` では 1 方向のみに Margin を付与します。
+
+<PreviewMarginWay />
 
 | XXS                     | XS                     | Small                  | Medium                                    | Large                  | XL                     | XXL                     |
 | ----------------------- | ---------------------- | ---------------------- | ----------------------------------------- | ---------------------- | ---------------------- | ----------------------- |
@@ -60,7 +65,7 @@ contents list
 | `.is-margin-bottom-minus-xxs` | `.is-margin-bottom-minus-xs` | `.is-margin-bottom-minus-sm` | `.is-margin-bottom-minus, .is-margin-bottom-minus-md` | `.is-margin-bottom-minus-lg` | `.is-margin-bottom-minus-xl` | `.is-margin-bottom-minus-xxl` |
 | `.is-margin-left-minus-xxs`   | `.is-margin-left-minus-xs`   | `.is-margin-left-minus-sm`   | `.is-margin-left-minus, .is-margin-left-minus-md`     | `.is-margin-left-minus-lg`   | `.is-margin-left-minus-xl`   | `.is-margin-left-minus-xxl`   |
 
-## Vertical
+### Vertical
 
 `.is-margin-vertical-(value)` では上下方向同時に Margin を付与します。
 
@@ -74,7 +79,7 @@ contents list
 | ------------------------------- | ------------------------------ | ------------------------------ | -------------------------------------------------------- | ------------------------------ | ------------------------------ | ------------------------------- |
 | `.is-margin-vertical-minus-xxs` | `.is-margin-vertical-minus-xs` | `.is-margin-vertical-minus-sm` | `is-margin-vertical-minus, .is-margin-vertical-minus-md` | `.is-margin-vertical-minus-lg` | `.is-margin-vertical-minus-xl` | `.is-margin-vertical-minus-xxl` |
 
-## Horizontal
+### Horizontal
 
 `.is-margin-horizontal-(value)` では左右方向同時に Margin を付与します。
 

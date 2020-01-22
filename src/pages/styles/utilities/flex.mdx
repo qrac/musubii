@@ -5,7 +5,7 @@ export const meta = {
   filePath: "styles/utilities/_flex"
 }
 
-import { PreviewFlexDetail } from "~/components/previews/preview-flex"
+import { PreviewFlexBasic } from "~/components/previews/preview-flex"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -22,16 +22,16 @@ contents list
 
 `.is-(mediaquery)-(value)` の形式で利用。`(mediaquery)` を省略した場合は常時反映となります。
 
-<PreviewFlexDetail />
-
-[[warning | Warning]]
-| レイアウトの [Grid](/styles/layouts/grid) で使うことを推奨します。エレメントに使っても基本的には問題ありませんが、Margin を付与した場合に余剰が発生し、意図しない段落ちがおきます。
-
 ## Basic
+
+<PreviewFlexBasic />
 
 | 等分して伸縮 | 12 分割からの指定 | 100% に広がる | 元のサイズを保持 |
 | ------------ | ----------------- | ------------- | ---------------- |
 | `.is-0`      | `.is-1 ~ .is-12`  | `.is-full`    | `.is-auto`       |
+
+[[warning | Warning]]
+| レイアウトの [Grid](/styles/layouts/grid) で使うことを推奨します。エレメントに使っても基本的には問題ありませんが、Margin を付与した場合に余剰が発生し、意図しない段落ちがおきます。
 
 ## Media Query
 
