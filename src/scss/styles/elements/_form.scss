@@ -299,10 +299,12 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @mixin musubii-style-form-input-plain-success() {
   background-color: $input-success-background-color;
+  border-color: $input-plain-border-color;
 }
 
 @mixin musubii-style-form-input-plain-danger() {
   background-color: $input-danger-background-color;
+  border-color: $input-plain-border-color;
 }
 
 @include generate-style($option-generate-style-form) {
@@ -384,10 +386,12 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 }
 
 @mixin musubii-style-form-input-underline-success() {
+  background-color: transparent;
   border-bottom-color: $input-success-border-color;
 }
 
 @mixin musubii-style-form-input-underline-danger() {
+  background-color: transparent;
   border-bottom-color: $input-danger-border-color;
 }
 
@@ -471,10 +475,12 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @mixin musubii-style-form-input-inside-success() {
   background-color: $input-success-background-color;
+  border-color: transparent;
 }
 
 @mixin musubii-style-form-input-inside-danger() {
   background-color: $input-danger-background-color;
+  border-color: transparent;
 }
 
 @include generate-style($option-generate-style-form) {
