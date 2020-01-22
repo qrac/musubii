@@ -5,6 +5,10 @@ export const meta = {
   filePath: "styles/elements/_list"
 }
 
+import {
+  PreviewListBasic,
+  PreviewListNote
+} from "~/components/previews/preview-list"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -20,6 +24,8 @@ contents list
 リスト装飾を作るエレメント CSS。
 
 ## Basic
+
+<PreviewListBasic />
 
 | Selector | Description                            |
 | -------- | -------------------------------------- |
@@ -39,6 +45,8 @@ contents list
 `.is-note` はレイアウト調整を含んだ特殊なモディファイアです。リストの頭に合判となる `※1` を付けて文章のインデントを揃える・合判が歯抜けになるなど、パターン化しづらい要望に対処するための CSS です。
 
 `.item` 直下には、`span` などでアイコンや不規則な装飾をインラインの HTML で記述します。`.item` が Flexbox となり直下要素を横並びにするため、急な要望の変化に対応しやすくなります。
+
+<PreviewListNote />
 
 | Modifier   | Description                                                              |
 | ---------- | ------------------------------------------------------------------------ |
