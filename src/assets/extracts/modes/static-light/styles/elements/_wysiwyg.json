@@ -338,7 +338,7 @@
     {
       "name": "$wysiwyg-table-paint-background-color",
       "value": "$convert-table-paint-background-color",
-      "compiledValue": "#37b0be"
+      "compiledValue": "rgba(38, 121, 130, 0.7)"
     },
     {
       "name": "$wysiwyg-table-paint-color",

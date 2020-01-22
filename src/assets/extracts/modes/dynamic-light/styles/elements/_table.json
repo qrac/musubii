@@ -36,14 +36,9 @@
       "compiledValue": "td"
     },
     {
-      "name": "$selector-table-sideline",
-      "value": ".table-sideline",
-      "compiledValue": ".table-sideline"
-    },
-    {
-      "name": "$selector-table-scroll",
-      "value": ".table-scroll",
-      "compiledValue": ".table-scroll"
+      "name": "$selector-table-wrap",
+      "value": ".table-wrap",
+      "compiledValue": ".table-wrap"
     },
     {
       "name": "$modifier-table-line",
@@ -137,8 +132,8 @@
     },
     {
       "name": "$table-stripe-background-color",
-      "value": "$convert-background-2",
-      "compiledValue": "var(--background-2)"
+      "value": "$convert-table-stripe-background-color",
+      "compiledValue": "var(--table-stripe-background-color)"
     },
     {
       "name": "$table-paint-background-color",
@@ -159,6 +154,21 @@
       "name": "$table-danger-background-color",
       "value": "$convert-table-danger-background-color",
       "compiledValue": "var(--table-danger-background-color)"
+    },
+    {
+      "name": "$table-wrap-shadow-start",
+      "value": "$convert-table-wrap-shadow-start",
+      "compiledValue": "var(--table-wrap-shadow-start)"
+    },
+    {
+      "name": "$table-wrap-shadow-end",
+      "value": "$convert-table-wrap-shadow-end",
+      "compiledValue": "var(--table-wrap-shadow-end)"
+    },
+    {
+      "name": "$table-wrap-shadow-size",
+      "value": "20px",
+      "compiledValue": "20px"
     }
   ],
   "mixins": [
@@ -219,11 +229,11 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-table-sideline",
+      "name": "musubii-style-table-wrap",
       "parameters": []
     },
     {
-      "name": "musubii-style-table-scroll",
+      "name": "musubii-style-table-wrap-child-table",
       "parameters": []
     }
   ]

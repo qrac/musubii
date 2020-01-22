@@ -315,7 +315,7 @@
     {
       "name": "--table-paint-background-color",
       "value": "$theme-light-table-paint-background-color",
-      "compiledValue": "#37b0be"
+      "compiledValue": "rgba(38, 121, 130, 0.7)"
     },
     {
       "name": "--table-paint-color",
@@ -325,12 +325,27 @@
     {
       "name": "--table-spot-background-color",
       "value": "$theme-light-table-spot-background-color",
-      "compiledValue": "#f8f1a5"
+      "compiledValue": "rgba(240, 225, 66, 0.45)"
     },
     {
       "name": "--table-danger-background-color",
       "value": "$theme-light-table-danger-background-color",
-      "compiledValue": "#f5d1d1"
+      "compiledValue": "rgba(219, 87, 87, 0.2)"
+    },
+    {
+      "name": "--table-stripe-background-color",
+      "value": "$theme-light-table-stripe-background-color",
+      "compiledValue": "rgba(40, 48, 52, 0.05)"
+    },
+    {
+      "name": "--table-wrap-shadow-start",
+      "value": "$theme-light-table-wrap-shadow-start",
+      "compiledValue": "rgba(102, 122, 133, 0.15)"
+    },
+    {
+      "name": "--table-wrap-shadow-end",
+      "value": "$theme-light-table-wrap-shadow-end",
+      "compiledValue": "rgba(255, 255, 255, 0)"
     },
     {
       "name": "--input-placeholder-color",

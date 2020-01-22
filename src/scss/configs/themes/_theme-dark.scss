@@ -78,10 +78,13 @@ $theme-dark-code-color: $blue-300 !default;
 
 $theme-dark-button-paint-color: $theme-dark-body-color !default;
 
-$theme-dark-table-paint-background-color: rgba($theme-dark-primary, 0.4) !default;
+$theme-dark-table-paint-background-color: rgba(darken($theme-primary, 14%), 0.2) !default;
 $theme-dark-table-paint-color: $theme-dark-body-color !default;
-$theme-dark-table-spot-background-color: rgba($yellow-700, 0.4) !default;
-$theme-dark-table-danger-background-color: rgba($theme-dark-danger, 0.4) !default;
+$theme-dark-table-spot-background-color: rgba($yellow-700, 0.2) !default;
+$theme-dark-table-danger-background-color: rgba($theme-dark-danger, 0.25) !default;
+$theme-dark-table-stripe-background-color: rgba($blue-grey-400, 0.1) !default;
+$theme-dark-table-wrap-shadow-start: rgba($white, 0.15) !default;
+$theme-dark-table-wrap-shadow-end: rgba($black, 0) !default;
 
 $theme-dark-input-placeholder-color: $light-6 !default;
 $theme-dark-input-success-background-color: rgba($theme-dark-success, 0.25) !default;

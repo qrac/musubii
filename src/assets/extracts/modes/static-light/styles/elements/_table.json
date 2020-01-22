@@ -36,14 +36,9 @@
       "compiledValue": "td"
     },
     {
-      "name": "$selector-table-sideline",
-      "value": ".table-sideline",
-      "compiledValue": ".table-sideline"
-    },
-    {
-      "name": "$selector-table-scroll",
-      "value": ".table-scroll",
-      "compiledValue": ".table-scroll"
+      "name": "$selector-table-wrap",
+      "value": ".table-wrap",
+      "compiledValue": ".table-wrap"
     },
     {
       "name": "$modifier-table-line",
@@ -137,13 +132,13 @@
     },
     {
       "name": "$table-stripe-background-color",
-      "value": "$convert-background-2",
-      "compiledValue": "whitesmoke"
+      "value": "$convert-table-stripe-background-color",
+      "compiledValue": "rgba(40, 48, 52, 0.05)"
     },
     {
       "name": "$table-paint-background-color",
       "value": "$convert-table-paint-background-color",
-      "compiledValue": "#37b0be"
+      "compiledValue": "rgba(38, 121, 130, 0.7)"
     },
     {
       "name": "$table-paint-color",
@@ -153,12 +148,27 @@
     {
       "name": "$table-spot-background-color",
       "value": "$convert-table-spot-background-color",
-      "compiledValue": "#f8f1a5"
+      "compiledValue": "rgba(240, 225, 66, 0.45)"
     },
     {
       "name": "$table-danger-background-color",
       "value": "$convert-table-danger-background-color",
-      "compiledValue": "#f5d1d1"
+      "compiledValue": "rgba(219, 87, 87, 0.2)"
+    },
+    {
+      "name": "$table-wrap-shadow-start",
+      "value": "$convert-table-wrap-shadow-start",
+      "compiledValue": "rgba(102, 122, 133, 0.15)"
+    },
+    {
+      "name": "$table-wrap-shadow-end",
+      "value": "$convert-table-wrap-shadow-end",
+      "compiledValue": "rgba(255, 255, 255, 0)"
+    },
+    {
+      "name": "$table-wrap-shadow-size",
+      "value": "20px",
+      "compiledValue": "20px"
     }
   ],
   "mixins": [
@@ -219,11 +229,11 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-table-sideline",
+      "name": "musubii-style-table-wrap",
       "parameters": []
     },
     {
-      "name": "musubii-style-table-scroll",
+      "name": "musubii-style-table-wrap-child-table",
       "parameters": []
     }
   ]

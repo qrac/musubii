@@ -2,32 +2,11 @@
 // Components: Demo Table
 //----------------------------------------------------
 
-.demo-table-wrap-border {
-  position: relative;
-  width: 100%;
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: $table-border-width;
-    height: 100%;
-    background-color: $table-border-color;
-    z-index: 2;
-  }
-  &:before {
-    left: 0;
-  }
-  &:after {
-    right: 0;
-  }
-}
-
 .demo-table-wrap {
-  width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  @include musubii-style-table-wrap();
+  .demo-table {
+    @include musubii-style-table-wrap-child-table();
+  }
 }
 
 .demo-table {

@@ -82,6 +82,9 @@ $convert-table-paint-background-color: if($option-css-variables == true, var(--t
 $convert-table-paint-color: if($option-css-variables == true, var(--table-paint-color), null) !default;
 $convert-table-spot-background-color: if($option-css-variables == true, var(--table-spot-background-color), null) !default;
 $convert-table-danger-background-color: if($option-css-variables == true, var(--table-danger-background-color), null) !default;
+$convert-table-stripe-background-color: if($option-css-variables == true, var(--table-stripe-background-color), null) !default;
+$convert-table-wrap-shadow-start: if($option-css-variables == true, var(--table-wrap-shadow-start), null) !default;
+$convert-table-wrap-shadow-end: if($option-css-variables == true, var(--table-wrap-shadow-end), null) !default;
 
 $convert-input-placeholder-color: if($option-css-variables == true, var(--input-placeholder-color), null) !default;
 $convert-input-success-background-color: if($option-css-variables == true, var(--input-success-background-color), null) !default;
@@ -181,6 +184,9 @@ $convert-table-paint-background-color: if($option-theme-default == $theme-dark-i
 $convert-table-paint-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-paint-color, null) !default;
 $convert-table-spot-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-spot-background-color, null) !default;
 $convert-table-danger-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-danger-background-color, null) !default;
+$convert-table-stripe-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-table-stripe-background-color, null) !default;
+$convert-table-wrap-shadow-start: if($option-theme-default == $theme-dark-id, $theme-dark-table-wrap-shadow-start, null) !default;
+$convert-table-wrap-shadow-end: if($option-theme-default == $theme-dark-id, $theme-dark-table-wrap-shadow-end, null) !default;
 
 $convert-input-placeholder-color: if($option-theme-default == $theme-dark-id, $theme-dark-input-placeholder-color, null) !default;
 $convert-input-success-background-color: if($option-theme-default == $theme-dark-id, $theme-dark-input-success-background-color, null) !default;
@@ -280,6 +286,9 @@ $convert-table-paint-background-color: $theme-light-table-paint-background-color
 $convert-table-paint-color: $theme-light-table-paint-color !default;
 $convert-table-spot-background-color: $theme-light-table-spot-background-color !default;
 $convert-table-danger-background-color: $theme-light-table-danger-background-color !default;
+$convert-table-stripe-background-color: $theme-light-table-stripe-background-color !default;
+$convert-table-wrap-shadow-start: $theme-light-table-wrap-shadow-start !default;
+$convert-table-wrap-shadow-end: $theme-light-table-wrap-shadow-end !default;
 
 $convert-input-placeholder-color: $theme-light-input-placeholder-color !default;
 $convert-input-success-background-color: $theme-light-input-success-background-color !default;

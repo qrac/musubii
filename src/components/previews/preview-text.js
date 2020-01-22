@@ -16,11 +16,6 @@ const items = [
   { id: 5, role: "is-danger", text: "禁止する" }
 ]
 
-const tags = [
-  { id: 0, text: "Span", value: "span" },
-  { id: 1, text: "Anchor", value: "a" }
-]
-
 const weights = [
   { id: 0, text: "None", value: "" },
   { id: 1, text: "Normal", value: "is-normal" },

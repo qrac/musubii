@@ -317,8 +317,8 @@
     },
     {
       "name": "$theme-dark-table-paint-background-color",
-      "value": "rgba($theme-dark-primary, 0.4)",
-      "compiledValue": "rgba(41, 132, 142, 0.4)"
+      "value": "rgba(darken($theme-primary, 14%), 0.2)",
+      "compiledValue": "rgba(39, 125, 134, 0.2)"
     },
     {
       "name": "$theme-dark-table-paint-color",
@@ -327,13 +327,28 @@
     },
     {
       "name": "$theme-dark-table-spot-background-color",
-      "value": "rgba($yellow-700, 0.4)",
-      "compiledValue": "rgba(236, 189, 19, 0.4)"
+      "value": "rgba($yellow-700, 0.2)",
+      "compiledValue": "rgba(236, 189, 19, 0.2)"
     },
     {
       "name": "$theme-dark-table-danger-background-color",
-      "value": "rgba($theme-dark-danger, 0.4)",
-      "compiledValue": "rgba(202, 43, 43, 0.4)"
+      "value": "rgba($theme-dark-danger, 0.25)",
+      "compiledValue": "rgba(202, 43, 43, 0.25)"
+    },
+    {
+      "name": "$theme-dark-table-stripe-background-color",
+      "value": "rgba($blue-grey-400, 0.1)",
+      "compiledValue": "rgba(122, 143, 153, 0.1)"
+    },
+    {
+      "name": "$theme-dark-table-wrap-shadow-start",
+      "value": "rgba($white, 0.15)",
+      "compiledValue": "rgba(255, 255, 255, 0.15)"
+    },
+    {
+      "name": "$theme-dark-table-wrap-shadow-end",
+      "value": "rgba($black, 0)",
+      "compiledValue": "rgba(0, 0, 0, 0)"
     },
     {
       "name": "$theme-dark-input-placeholder-color",

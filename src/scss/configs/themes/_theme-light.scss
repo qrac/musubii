@@ -78,10 +78,13 @@ $theme-light-code-color: $indigo-500 !default;
 
 $theme-light-button-paint-color: $light !default;
 
-$theme-light-table-paint-background-color: $theme-light-primary !default;
+$theme-light-table-paint-background-color: rgba(darken($theme-primary, 15%), 0.7) !default;
 $theme-light-table-paint-color: $light !default;
-$theme-light-table-spot-background-color: $yellow-200 !default;
-$theme-light-table-danger-background-color: lighten($theme-light-danger, 29%) !default;
+$theme-light-table-spot-background-color: rgba($yellow-500, 0.45) !default;
+$theme-light-table-danger-background-color: rgba($theme-light-danger, 0.2) !default;
+$theme-light-table-stripe-background-color: rgba($blue-grey-900, 0.05) !default;
+$theme-light-table-wrap-shadow-start: rgba($blue-grey-500, 0.15) !default;
+$theme-light-table-wrap-shadow-end: rgba($white, 0) !default;
 
 $theme-light-input-placeholder-color: $dark-6 !default;
 $theme-light-input-success-background-color: lighten($theme-light-success, 50%) !default;

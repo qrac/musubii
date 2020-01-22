@@ -5,6 +5,14 @@ export const meta = {
   filePath: "styles/elements/_table"
 }
 
+import {
+  PreviewTableBasic,
+  PreviewTableBackground,
+  PreviewTableBackgroundStripe,
+  PreviewTableAlign,
+  PreviewTableFixed,
+  PreviewTableWrap
+} from "~/components/previews/preview-table"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -21,6 +29,8 @@ contents list
 
 ## Basic
 
+<PreviewTableBasic />
+
 | Selector | Description                              |
 | -------- | ---------------------------------------- |
 | `.table` | テーブル装飾の起点として使うセレクター。 |
@@ -30,39 +40,57 @@ contents list
 | `.is-line`    | `.table` に付与すると横線で区切ったテーブル装飾になります。           |
 | `.is-outline` | `.table` に付与するとテーブルの周りに線を引きます。                   |
 | `.is-border`  | `.table` に付与すると縦線・横線・外周線のあるテーブル装飾になります。 |
-| `.is-stripe`  | `.table` に付与すると行背景色が交互に塗られます。                     |
 
 ## Background
 
-`.table` 内の `tr, th, td` はモディファイア付与で個別に背景を塗ることができます。
+<PreviewTableBackground />
 
-| Paint       | Stripe       | Spot       | Danger       |
-| ----------- | ------------ | ---------- | ------------ |
-| `.is-paint` | `.is-stripe` | `.is-spot` | `.is-danger` |
+| Modifier     | Description                                               |
+| ------------ | --------------------------------------------------------- |
+| `.is-paint`  | `tr, th, td` に付与するとセル背景がベタ塗りになります。   |
+| `.is-spot`   | `tr, th, td` に付与するとセル背景が強調されます。         |
+| `.is-danger` | `tr, th, td` に付与するとセル背景がエラー装飾になります。 |
+
+### Stripe
+
+<PreviewTableBackgroundStripe />
+
+| Modifier     | Description                                       |
+| ------------ | ------------------------------------------------- |
+| `.is-stripe` | `.table` に付与すると行背景色が交互に塗られます。 |
 
 ## Align
 
 `.table` または `.table` 内の `tr, th, td` はモディファイア付与で文字の方向を調整できます。
 
-| Right       | Center       | Left       | Left         |
-| ----------- | ------------ | ---------- | ------------ |
-| `.is-right` | `.is-center` | `.is-left` | `.is-middle` |
+<PreviewTableAlign />
+
+| Left       | Center       | Right       | Middle       |
+| ---------- | ------------ | ----------- | ------------ |
+| `.is-left` | `.is-center` | `.is-right` | `.is-middle` |
 
 ## Fixed
 
-`.table` に `.is-Fixed` を付与すると、列の幅が最初の行に設定されます。列の幅を任意の幅で固定する場合に用います。
+<PreviewTableFixed />
+
+| Selector    | Description                                             |
+| ----------- | ------------------------------------------------------- |
+| `.is-Fixed` | `.table` に付与すると、列の幅が最初の行で固定されます。 |
 
 [[warning | Warning]]
-| `.is-Fixed` を付与すると 2 行目以降がはみ出しても無視されるようになります。`.text.is-beak` などでテーブル内に収める工夫が必要です。
+| `.is-Fixed` を付与すると 2 行目以降がはみ出しても無視されるようになります。`.text.is-break` などでテーブル内に収める工夫が必要です。
 
-## Scroll
+## Wrap
 
-`.table` 内データが収まりきれないと分かっている場合は専用のラッパーでスクロールさせます。
+`.table` 内データが収まりきれないと分かっている場合は専用のラッパーでスクロールさせます。スクロール可能な方向には影が付くので、アクセシビリティ向上に役立ちます。
 
-| Selector          | Description                                                            |
-| ----------------- | ---------------------------------------------------------------------- |
-| `.table-sideline` | テーブルをラップした時に横スクロールで側線が消えるのを防ぐセレクター。 |
-| `.table-scroll`   | テーブルをラップした時に横スクロールさせるセレクター。                 |
+影を取り除く場合は、[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-table-wrap-shadow` を `false` にします。
+
+<PreviewTableWrap />
+
+| Selector      | Description                                         |
+| ------------- | --------------------------------------------------- |
+| `.table-wrap` | `.table` をラップして横スクロールさせるセレクター。 |
 
 ## Variables
 

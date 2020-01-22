@@ -1622,37 +1622,31 @@ iframe {
   border: 1px solid #d1d8dc;
 }
 
-.table.is-stripe thead {
-  background-color: whitesmoke;
-}
-
-.table.is-stripe tbody tr:nth-child(even) {
-  background-color: whitesmoke;
-}
-
 .table tr.is-paint,
 .table th.is-paint,
 .table td.is-paint {
-  background-color: #37b0be;
+  background-color: rgba(38, 121, 130, 0.7);
   color: white;
-}
-
-.table tr.is-stripe,
-.table th.is-stripe,
-.table td.is-stripe {
-  background-color: whitesmoke;
 }
 
 .table tr.is-spot,
 .table th.is-spot,
 .table td.is-spot {
-  background-color: #f8f1a5;
+  background-color: rgba(240, 225, 66, 0.45);
 }
 
 .table tr.is-danger,
 .table th.is-danger,
 .table td.is-danger {
-  background-color: #f5d1d1;
+  background-color: rgba(219, 87, 87, 0.2);
+}
+
+.table.is-stripe thead {
+  background-color: rgba(40, 48, 52, 0.05);
+}
+
+.table.is-stripe tbody tr:nth-child(even) {
+  background-color: rgba(40, 48, 52, 0.05);
 }
 
 .table.is-right th,
@@ -1703,32 +1697,20 @@ iframe {
   table-layout: fixed;
 }
 
-.table-sideline {
-  position: relative;
-}
-
-.table-sideline:before, .table-sideline:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background-color: #d1d8dc;
-  z-index: 2;
-}
-
-.table-sideline:before {
-  left: 0;
-}
-
-.table-sideline:after {
-  right: 0;
-}
-
-.table-scroll {
+.table-wrap {
+  background-image: linear-gradient(to right, white, white), linear-gradient(to right, white, white), linear-gradient(to right, rgba(102, 122, 133, 0.15), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(102, 122, 133, 0.15), rgba(255, 255, 255, 0));
+  background-position: left center, right center, left center, right center;
+  background-size: 40px 100%, 40px 100%, 20px 100%, 20px 100%;
+  background-attachment: local, local, scroll, scroll;
+  background-color: white;
+  background-repeat: no-repeat;
   overflow: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.table-wrap .table {
+  background-color: transparent;
 }
 
 .input[type="text"], .input[type="search"], .input[type="url"], .input[type="email"], .input[type="tel"], .input[type="password"], .input[type="datetime-local"], .input[type="date"], .input[type="month"], .input[type="week"], .input[type="time"], .input[type="number"] {
@@ -2701,7 +2683,7 @@ svg.icon {
 }
 
 .wysiwyg table th {
-  background-color: #37b0be;
+  background-color: rgba(38, 121, 130, 0.7);
   color: white;
   font-weight: 400;
 }
@@ -2722,7 +2704,7 @@ svg.icon {
 .wysiwyg dt {
   width: 100%;
   padding: 0.75em 1em;
-  background-color: #37b0be;
+  background-color: rgba(38, 121, 130, 0.7);
   border-top: 1px solid #d1d8dc;
   color: white;
   font-weight: 400;
