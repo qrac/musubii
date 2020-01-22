@@ -131,11 +131,6 @@
       "compiledValue": "1px"
     },
     {
-      "name": "$table-stripe-background-color",
-      "value": "$convert-table-stripe-background-color",
-      "compiledValue": "rgba(40, 48, 52, 0.05)"
-    },
-    {
       "name": "$table-paint-background-color",
       "value": "$convert-table-paint-background-color",
       "compiledValue": "rgba(38, 121, 130, 0.7)"
@@ -154,6 +149,11 @@
       "name": "$table-danger-background-color",
       "value": "$convert-table-danger-background-color",
       "compiledValue": "rgba(219, 87, 87, 0.2)"
+    },
+    {
+      "name": "$table-stripe-background-color",
+      "value": "$convert-table-stripe-background-color",
+      "compiledValue": "rgba(40, 48, 52, 0.05)"
     },
     {
       "name": "$table-wrap-shadow-start",
@@ -189,15 +189,7 @@
       "parameters": []
     },
     {
-      "name": "musubii-style-table-stripe",
-      "parameters": []
-    },
-    {
       "name": "musubii-style-table-bg-paint",
-      "parameters": []
-    },
-    {
-      "name": "musubii-style-table-bg-stripe",
       "parameters": []
     },
     {
@@ -206,6 +198,10 @@
     },
     {
       "name": "musubii-style-table-bg-danger",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-table-stripe",
       "parameters": []
     },
     {

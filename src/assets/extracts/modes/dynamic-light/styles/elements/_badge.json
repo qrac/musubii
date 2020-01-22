@@ -91,16 +91,6 @@
       "compiledValue": "1.25"
     },
     {
-      "name": "$badge-transition",
-      "value": "$global-transition",
-      "compiledValue": "ease-out 0.12s"
-    },
-    {
-      "name": "$badge-focus-shadow",
-      "value": "0 0 0 $meter-xxs $convert-focus-alpha",
-      "compiledValue": "0 0 0 4px var(--focus-alpha)"
-    },
-    {
       "name": "$badge-strong-font-weight",
       "value": "$font-weight-strong",
       "compiledValue": "700"
