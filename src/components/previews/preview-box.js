@@ -8,44 +8,18 @@ import DemoOptionBoxSelect from "~/components/parts/demo-option-box-select"
 import DemoPre from "~/components/parts/demo-pre"
 
 const outlines = [
-  { id: 0, text: "Outline None", value: "" },
-  { id: 1, text: "Outline All", value: "is-outline" },
-  { id: 2, text: "Outline Top", value: "is-outline-top" },
-  { id: 3, text: "Outline Right", value: "is-outline-right" },
-  { id: 4, text: "Outline Bottom", value: "is-outline-bottom" },
-  { id: 5, text: "Outline Left", value: "is-outline-left" }
+  { id: 0, text: "None", value: "" },
+  { id: 1, text: "All", value: "is-outline" },
+  { id: 2, text: "Top", value: "is-outline-top" },
+  { id: 3, text: "Right", value: "is-outline-right" },
+  { id: 4, text: "Bottom", value: "is-outline-bottom" },
+  { id: 5, text: "Left", value: "is-outline-left" }
 ]
 
 const separates = [
-  { id: 0, text: "Separate None", value: "" },
-  { id: 1, text: "Separate All", value: "is-separate" },
-  { id: 2, text: "Separate Parent", value: "is-separate-parent" }
-]
-
-const boxNums = [
-  { id: 1, text: "1行", value: 1 },
-  { id: 2, text: "2行", value: 2 },
-  { id: 3, text: "3行", value: 3 },
-  { id: 4, text: "4行", value: 4 },
-  { id: 5, text: "5行", value: 5 },
-  { id: 6, text: "6行", value: 6 },
-  { id: 7, text: "7行", value: 7 },
-  { id: 8, text: "8行", value: 8 },
-  { id: 9, text: "9行", value: 9 },
-  { id: 10, text: "10行", value: 10 },
-  { id: 11, text: "11行", value: 11 },
-  { id: 12, text: "12行", value: 12 }
-]
-
-const tags = [
-  { id: 0, text: "Div", value: "div" },
-  { id: 1, text: "Anchor", value: "a" }
-]
-
-const flexPatterns = [
   { id: 0, text: "None", value: "" },
-  { id: 1, text: "Flex", value: "is-flex" },
-  { id: 2, text: "Inline Flex", value: "is-inline-flex" }
+  { id: 1, text: "All", value: "is-separate" },
+  { id: 2, text: "Parent & Child", value: "is-separate-parent" }
 ]
 
 const verticalAligns = [
@@ -78,137 +52,26 @@ const beautifyHtmlOptions = {
   indent_size: 2
 }
 
-export class PreviewBoxDetail extends React.Component {
+export class PreviewBoxBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      outline: "is-outline",
-      separate: "is-separate",
-      boxNum: 3,
-      tag: "div",
-      flexPattern: "is-flex",
-      verticalAlign: "is-middle",
-      horizontalAlign: "",
-      angle: "",
-      withIcon: true,
-      withGrow: true,
-      bgLight: true,
-      link: false,
-      disabled: false,
-      externalLink: false
+      outline: true,
+      bgLight: true
     }
-    this.changeOutline = this.changeOutline.bind(this)
-    this.changeSeparate = this.changeSeparate.bind(this)
-    this.changeBoxNum = this.changeBoxNum.bind(this)
-    this.changeTag = this.changeTag.bind(this)
-    this.changeFlexPattern = this.changeFlexPattern.bind(this)
-    this.changeVerticalAlign = this.changeVerticalAlign.bind(this)
-    this.changeHorizontalAlign = this.changeHorizontalAlign.bind(this)
-    this.changeAngle = this.changeAngle.bind(this)
-    this.toggleWithIcon = this.toggleWithIcon.bind(this)
-    this.toggleWithGrow = this.toggleWithGrow.bind(this)
+    this.toggleOutline = this.toggleOutline.bind(this)
     this.toggleBgLight = this.toggleBgLight.bind(this)
-    this.toggleLink = this.toggleLink.bind(this)
-    this.toggleDisabled = this.toggleDisabled.bind(this)
-    this.toggleExternalLink = this.toggleExternalLink.bind(this)
   }
-  changeOutline(value) {
-    this.setState({ outline: value })
-  }
-  changeSeparate(value) {
-    this.setState({ separate: value })
-  }
-  changeBoxNum(value) {
-    this.setState({ boxNum: value })
-  }
-  changeTag(value) {
-    this.setState({ tag: value })
-  }
-  changeFlexPattern(value) {
-    this.setState({ flexPattern: value })
-  }
-  changeVerticalAlign(value) {
-    this.setState({ verticalAlign: value })
-  }
-  changeAngle(value) {
-    this.setState({ angle: value })
-  }
-  changeHorizontalAlign(value) {
-    this.setState({ horizontalAlign: value })
-  }
-  toggleWithIcon() {
-    this.setState({ withIcon: !this.state.withIcon })
-  }
-  toggleWithGrow() {
-    this.setState({ withGrow: !this.state.withGrow })
+  toggleOutline() {
+    this.setState({ outline: !this.state.outline })
   }
   toggleBgLight() {
     this.setState({ bgLight: !this.state.bgLight })
   }
-  toggleLink() {
-    this.setState({ link: !this.state.link })
-  }
-  toggleDisabled() {
-    this.setState({ disabled: !this.state.disabled })
-  }
-  toggleExternalLink() {
-    this.setState({ externalLink: !this.state.externalLink })
-  }
   render() {
-    const outline = this.state.outline
-    const separate = this.state.separate
-    const boxNum = this.state.boxNum
-    const tag = this.state.tag
-    const angle = this.state.angle
-    const flexPattern = this.state.flexPattern
-    const verticalAlign = this.state.verticalAlign
-    const horizontalAlign = this.state.horizontalAlign
-    const withIcon = this.state.withIcon
-      ? '<i aria-hidden="true" class="fas fa-archive is-margin-right-md is-lg"></i>'
-      : ""
-    const withGrow = this.state.withGrow ? "is-mobile-0" : ""
     const bgLight = this.state.bgLight ? "is-bg-light" : ""
-    const link = this.state.link ? "is-link" : ""
-    const disabled = this.state.disabled
-    const separateChildClass =
-      separate === "is-separate-parent" ? "is-separate-child" : ""
-    const tagAttr = tag === "a" ? 'href="#"' : ""
-    const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
-    const disabledTabIndex = disabled && tag === "a" ? 'tabindex="-1"' : ""
-    const angleLeft = angle.startsWith("is-angle-left")
-      ? `${angle} is-padding-left-xxl`
-      : ""
-    const angleRight = angle.startsWith("is-angle-right")
-      ? `${angle} is-padding-right-xxl`
-      : ""
-    const wrapAngleLeft = angle.startsWith("is-angle-left")
-      ? `${angle} is-padding-left-xxl`
-      : "is-padding-left-md"
-    const wrapAngle =
-      separate != "is-separate-parent"
-        ? `${wrapAngleLeft} ${angleRight}`
-        : `${wrapAngleLeft}`
-    const childAngle = separate === "is-separate-parent" ? `${angleRight}` : ""
-    const externalLink =
-      this.state.externalLink && tag === "a"
-        ? 'target="_blank" rel="noopener noreferrer"'
-        : ""
-    const boxTagBefore = `<ul class="box ${outline} ${bgLight} ${separate}">`
-    const boxTagAfter = `</ul>`
-    const boxes = []
-    for (let i = 0; i < boxNum; i++) {
-      boxes.push(
-        `<li>
-          <${tag} class="box ${flexPattern} ${verticalAlign} ${horizontalAlign}
-            ${link} ${disabledClass} ${wrapAngle}"
-            ${tagAttr} ${externalLink} ${disabledTabIndex}>${withIcon}
-            <div class="box ${separateChildClass} ${childAngle}
-            is-padding-vertical-md ${withGrow}">children ${i + 1}</div>
-          </${tag}>
-        </li>`
-      )
-    }
-    const contents = (boxTagBefore + boxes.join("") + boxTagAfter)
+    const outline = this.state.outline ? "is-outline" : ""
+    const contents = `<div class="box ${bgLight} ${outline} is-padding-md">children</div>`
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
@@ -216,37 +79,74 @@ export class PreviewBoxDetail extends React.Component {
       <div className="demo-box is-preview">
         <div className="demo-options-wrap">
           <div className="demo-options">
-            <DemoOption title={"Border"}>
-              <DemoOptionBoxSelect
-                patterns={outlines}
-                parentChange={value => this.changeOutline(value)}
+            <DemoOption title={"Attached"}>
+              <DemoOptionBoxCheckbox
+                text={"Background Light"}
+                parentChange={() => this.toggleBgLight()}
+                checked={this.state.bgLight}
+              />
+              <DemoOptionBoxCheckbox
+                text={"Outline"}
+                parentChange={() => this.toggleOutline()}
                 checked={this.state.outline}
               />
-              <DemoOptionBoxSelect
-                patterns={separates}
-                parentChange={value => this.changeSeparate(value)}
-                checked={this.state.separate}
-              />
             </DemoOption>
-            <DemoOption title={"Row"}>
-              <DemoOptionBoxSelect
-                patterns={boxNums}
-                parentChange={value => this.changeBoxNum(value)}
-                checked={this.state.boxNum}
-              />
-            </DemoOption>
-            <DemoOption title={"Tag"}>
-              <DemoOptionBoxRadios
-                patterns={tags}
-                parentChange={value => this.changeTag(value)}
-                checked={this.state.tag}
-              />
-            </DemoOption>
-            <DemoOption title={"Flex"}>
-              <DemoOptionBoxRadios
-                patterns={flexPatterns}
-                parentChange={value => this.changeFlexPattern(value)}
-                checked={this.state.flexPattern}
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewBoxFlexbox extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      verticalAlign: "is-middle",
+      horizontalAlign: "",
+      reverse: false
+    }
+    this.changeVerticalAlign = this.changeVerticalAlign.bind(this)
+    this.changeHorizontalAlign = this.changeHorizontalAlign.bind(this)
+    this.toggleReverse = this.toggleReverse.bind(this)
+  }
+  changeVerticalAlign(value) {
+    this.setState({ verticalAlign: value })
+  }
+  changeHorizontalAlign(value) {
+    this.setState({ horizontalAlign: value })
+  }
+  toggleReverse() {
+    this.setState({ reverse: !this.state.reverse })
+  }
+  render() {
+    const verticalAlign = this.state.verticalAlign
+    const horizontalAlign = this.state.horizontalAlign
+    const reverse = this.state.reverse ? "is-reverse" : ""
+    const contents = `<div class="box is-flex ${verticalAlign} ${horizontalAlign} ${reverse}
+        is-bg-light is-outline is-padding-md">
+        <i aria-hidden="true" class="fas fa-archive is-margin-right-md is-lg"></i>
+        <div class="box">children</div>
+      </div>`
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOption title={"Attached"}>
+              <DemoOptionBoxCheckbox
+                text={"Reverse"}
+                parentChange={() => this.toggleReverse()}
+                checked={this.state.reverse}
               />
             </DemoOption>
             <DemoOption title={"Vertical Align"}>
@@ -263,6 +163,269 @@ export class PreviewBoxDetail extends React.Component {
                 checked={this.state.horizontalAlign}
               />
             </DemoOption>
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewBoxOutline extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      outline: "is-outline"
+    }
+    this.changeOutline = this.changeOutline.bind(this)
+  }
+  changeOutline(value) {
+    this.setState({ outline: value })
+  }
+  render() {
+    const outline = this.state.outline
+    const contents = `<div class="box is-flex ${outline}
+        is-bg-light is-padding-md">children</div>`
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOption title={"Outline"}>
+              <DemoOptionBoxRadios
+                patterns={outlines}
+                parentChange={value => this.changeOutline(value)}
+                checked={this.state.outline}
+              />
+            </DemoOption>
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewBoxSeparate extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      separate: "is-separate",
+      boxNum: 3
+    }
+    this.changeSeparate = this.changeSeparate.bind(this)
+    this.changeBoxNum = this.changeBoxNum.bind(this)
+  }
+  changeSeparate(value) {
+    this.setState({ separate: value })
+  }
+  changeBoxNum(value) {
+    this.setState({ boxNum: value })
+  }
+  render() {
+    const separate = this.state.separate
+    const boxNum = this.state.boxNum
+    const separateChildClass =
+      separate === "is-separate-parent" ? "is-separate-child" : ""
+    const boxTagBefore = `<ul class="box is-outline is-bg-light ${separate}">`
+    const boxTagAfter = `</ul>`
+    const boxes = []
+    for (let i = 0; i < boxNum; i++) {
+      boxes.push(
+        `<li>
+          <div class="box is-flex is-middle is-padding-left-md">
+            <i aria-hidden="true" class="fas fa-archive is-margin-right-md is-lg"></i>
+            <div class="box ${separateChildClass}
+            is-padding-vertical-md is-0">children ${i + 1}</div>
+          </div>
+        </li>`
+      )
+    }
+    const contents = (boxTagBefore + boxes.join("") + boxTagAfter)
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOption title={"Separate"}>
+              <DemoOptionBoxRadios
+                patterns={separates}
+                parentChange={value => this.changeSeparate(value)}
+                checked={this.state.separate}
+              />
+            </DemoOption>
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewBoxLink extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      boxNum: 3,
+      disabled: false,
+      externalLink: false
+    }
+    this.changeBoxNum = this.changeBoxNum.bind(this)
+    this.toggleDisabled = this.toggleDisabled.bind(this)
+    this.toggleExternalLink = this.toggleExternalLink.bind(this)
+  }
+  changeBoxNum(value) {
+    this.setState({ boxNum: value })
+  }
+  toggleDisabled() {
+    this.setState({ disabled: !this.state.disabled })
+  }
+  toggleExternalLink() {
+    this.setState({ externalLink: !this.state.externalLink })
+  }
+  render() {
+    const boxNum = this.state.boxNum
+    const disabled = this.state.disabled
+    const disabledClass = disabled ? "is-disabled" : ""
+    const disabledTabIndex = disabled ? 'tabindex="-1"' : ""
+    const externalLink = this.state.externalLink
+      ? 'target="_blank" rel="noopener noreferrer"'
+      : ""
+    const boxTagBefore = `<ul class="box is-outline is-bg-light is-separate-parent">`
+    const boxTagAfter = `</ul>`
+    const boxes = []
+    for (let i = 0; i < boxNum; i++) {
+      boxes.push(
+        `<li>
+          <a class="box is-link is-flex is-middle is-padding-left-md ${disabledClass}"
+            href="#" ${externalLink} ${disabledTabIndex}>
+            <i aria-hidden="true" class="fas fa-archive is-margin-right-md is-lg"></i>
+            <div class="box is-separate-child
+            is-padding-vertical-md is-0">children ${i + 1}</div>
+          </a>
+        </li>`
+      )
+    }
+    const contents = (boxTagBefore + boxes.join("") + boxTagAfter)
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
+            <DemoOption title={"Link"}>
+              <DemoOptionBoxCheckbox
+                text={"Disabled"}
+                parentChange={() => this.toggleDisabled()}
+                checked={this.state.disabled}
+              />
+              <DemoOptionBoxCheckbox
+                text={"External Link"}
+                parentChange={() => this.toggleExternalLink()}
+                checked={this.state.externalLink}
+              />
+            </DemoOption>
+          </div>
+        </div>
+        <div className="demo-box is-line">
+          <div
+            className="box"
+            dangerouslySetInnerHTML={{ __html: formattedCode }}
+          ></div>
+        </div>
+        <DemoPre language="html" code={formattedCode} />
+      </div>
+    )
+  }
+}
+
+export class PreviewBoxAngle extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      boxNum: 3,
+      angle: "is-angle-right",
+      disabled: false,
+      externalLink: false
+    }
+    this.changeBoxNum = this.changeBoxNum.bind(this)
+    this.changeAngle = this.changeAngle.bind(this)
+    this.toggleDisabled = this.toggleDisabled.bind(this)
+    this.toggleExternalLink = this.toggleExternalLink.bind(this)
+  }
+  changeBoxNum(value) {
+    this.setState({ boxNum: value })
+  }
+  changeAngle(value) {
+    this.setState({ angle: value })
+  }
+  toggleDisabled() {
+    this.setState({ disabled: !this.state.disabled })
+  }
+  toggleExternalLink() {
+    this.setState({ externalLink: !this.state.externalLink })
+  }
+  render() {
+    const boxNum = this.state.boxNum
+    const angle = this.state.angle
+    const disabled = this.state.disabled
+    const disabledClass = disabled ? "is-disabled" : ""
+    const disabledTabIndex = disabled ? 'tabindex="-1"' : ""
+    const angleRight = angle.startsWith("is-angle-right")
+      ? `${angle} is-padding-right-xxl`
+      : ""
+    const wrapAngleLeft = angle.startsWith("is-angle-left")
+      ? `${angle} is-padding-left-xxl`
+      : "is-padding-left-md"
+    const externalLink = this.state.externalLink
+      ? 'target="_blank" rel="noopener noreferrer"'
+      : ""
+    const boxTagBefore = `<ul class="box is-outline is-bg-light is-separate-parent">`
+    const boxTagAfter = `</ul>`
+    const boxes = []
+    for (let i = 0; i < boxNum; i++) {
+      boxes.push(
+        `<li>
+          <a class="box is-link is-flex is-middle ${wrapAngleLeft} ${disabledClass}"
+            href="#" ${externalLink} ${disabledTabIndex}>
+            <i aria-hidden="true" class="fas fa-archive is-margin-right-md is-lg"></i>
+            <div class="box is-separate-child ${angleRight}
+            is-padding-vertical-md is-0">children ${i + 1}</div>
+          </a>
+        </li>`
+      )
+    }
+    const contents = (boxTagBefore + boxes.join("") + boxTagAfter)
+      .replace(/\s+/g, " ")
+      .replace(/\s\"/g, '"')
+    const formattedCode = beautify.html(contents, beautifyHtmlOptions)
+    return (
+      <div className="demo-box is-preview">
+        <div className="demo-options-wrap">
+          <div className="demo-options">
             <DemoOption title={"Angle"}>
               <DemoOptionBoxRadios
                 patterns={angles}
@@ -271,26 +434,6 @@ export class PreviewBoxDetail extends React.Component {
               />
             </DemoOption>
             <DemoOption title={"Other"}>
-              <DemoOptionBoxCheckbox
-                text={"Icon"}
-                parentChange={() => this.toggleWithIcon()}
-                checked={this.state.withIcon}
-              />
-              <DemoOptionBoxCheckbox
-                text={"Grow"}
-                parentChange={() => this.toggleWithGrow()}
-                checked={this.state.withGrow}
-              />
-              <DemoOptionBoxCheckbox
-                text={"Background Light"}
-                parentChange={() => this.toggleBgLight()}
-                checked={this.state.bgLight}
-              />
-              <DemoOptionBoxCheckbox
-                text={"Link"}
-                parentChange={() => this.toggleLink()}
-                checked={this.state.link}
-              />
               <DemoOptionBoxCheckbox
                 text={"Disabled"}
                 parentChange={() => this.toggleDisabled()}

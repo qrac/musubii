@@ -157,11 +157,12 @@ export class PreviewCardLink extends React.Component {
   render() {
     const disabled = this.state.disabled
     const disabledClass = disabled ? "is-disabled" : ""
+    const disabledTabIndex = disabled ? 'tabindex="-1"' : ""
     const externalLink = this.state.externalLink
       ? 'target="_blank" rel="noopener noreferrer"'
       : ""
     const contents = `<a class="card is-link is-bg-light is-floating is-radius-md
-        ${disabledClass}" href="#" ${externalLink}>
+        ${disabledClass}" href="#" ${disabledTabIndex} ${externalLink}>
           <div class="box is-padding-md">children</div></a>`
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
@@ -215,11 +216,12 @@ export class PreviewCardZoom extends React.Component {
   render() {
     const disabled = this.state.disabled
     const disabledClass = disabled ? "is-disabled" : ""
+    const disabledTabIndex = disabled ? 'tabindex="-1"' : ""
     const externalLink = this.state.externalLink
       ? 'target="_blank" rel="noopener noreferrer"'
       : ""
     const contents = `<a class="card is-zoom is-bg-light is-floating is-radius-md
-        ${disabledClass}" href="#" ${externalLink}>
+        ${disabledClass}" href="#" ${disabledTabIndex} ${externalLink}>
           <div class="box is-padding-md">children</div></a>`
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')

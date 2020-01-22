@@ -16,12 +16,14 @@ contents list
 
 ## Detail
 
-iPhone X 以降のセーフエリアを簡単に設定するための Mixin です。[Padding](/styles/utilities/padding) で使用しています。
+iPhone X 以降のセーフエリアを簡単に設定するための Mixin。[Padding](/styles/utilities/padding) で使用しています。
+
+## Example
 
 `safe-area-padding($way)` の `$way` にセーフエリアを付与したい方向 `top` `right` `bottom` `left` のいずれかを入れます。サイトの viewport 設定に `viewport-fit=cover` が追加されている必要があります。
 
 ```scss
-// Example: iPhone X 以降で上下のセーフエリアを追加する
+// iPhone X 以降で上下のセーフエリアを追加する
 .wrapper {
   @include safe-area-padding(top);
   @include safe-area-padding(bottom);

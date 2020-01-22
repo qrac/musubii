@@ -5,7 +5,14 @@ export const meta = {
   filePath: "styles/layouts/_box"
 }
 
-import { PreviewBoxDetail } from "~/components/previews/preview-box"
+import {
+  PreviewBoxBasic,
+  PreviewBoxFlexbox,
+  PreviewBoxOutline,
+  PreviewBoxSeparate,
+  PreviewBoxLink,
+  PreviewBoxAngle
+} from "~/components/previews/preview-box"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -18,23 +25,25 @@ contents list
 
 ## Detail
 
-Block や Flexbox を使った汎用レイアウトを作る CSS。余白を作る場合は [Padding](/styles/utilities/padding) を付与。配下にはエレメントやコンポーネント、または入れ子で Box を配置します。
-
-<PreviewBoxDetail />
+Block や Flexbox を使った汎用レイアウトを作る CSS。
 
 ## Basic
+
+`.box` セレクターを使用します。余白を作る場合は [Padding](/styles/utilities/padding) を付与。配下にはエレメントやコンポーネント、または入れ子で Box を配置します。
+
+<PreviewBoxBasic />
 
 | Selector | Description                          |
 | -------- | ------------------------------------ |
 | `.box`   | ボックスレイアウトに使うセレクター。 |
 
-| Modifier               | Description                                       |
-| ---------------------- | ------------------------------------------------- |
-| `.is-bg, .is-bg-light` | `.box` に付与すると白背景が追加されます。         |
-| `.is-disabled`         | `.box` に付与するとリンクを無効化します。         |
-| `.is-link`             | `.box` に付与するとリンクホバー装飾を追加します。 |
+| Modifier               | Description                               |
+| ---------------------- | ----------------------------------------- |
+| `.is-bg, .is-bg-light` | `.box` に付与すると白背景が追加されます。 |
 
 ## Flexbox
+
+<PreviewBoxFlexbox />
 
 | Modifier          | Description                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------ |
@@ -52,6 +61,8 @@ Block や Flexbox を使った汎用レイアウトを作る CSS。余白を作�
 
 ## Outline
 
+<PreviewBoxOutline />
+
 | Modifier             | Description                                          |
 | -------------------- | ---------------------------------------------------- |
 | `.is-outline`        | `.box` に付与すると `border` が追加されます。        |
@@ -62,13 +73,26 @@ Block や Flexbox を使った汎用レイアウトを作る CSS。余白を作�
 
 ## Separate
 
+<PreviewBoxSeparate />
+
 | Modifier              | Description                                                                           |
 | --------------------- | ------------------------------------------------------------------------------------- |
 | `.is-separate`        | `.box` に付与すると、直下にある最後の要素以外に `border-bottom` が追加されます。      |
 | `.is-separate-parent` | `.box` に付与すると、直下にある最後の要素以外を `.is-separate-child` の対象にします。 |
 | `.is-separate-child`  | `.box.is-separate-parent` 内で使うと、付与した要素に `border-bottom` が追加されます。 |
 
+## Link
+
+<PreviewBoxLink />
+
+| Modifier       | Description                                 |
+| -------------- | ------------------------------------------- |
+| `.is-link`     | `.box` に付与するとリンク装飾を追加します。 |
+| `.is-disabled` | `.box` に付与するとリンクを無効化します。   |
+
 ## Angle
+
+<PreviewBoxAngle />
 
 | Modifier          | Description                                                                            |
 | ----------------- | -------------------------------------------------------------------------------------- |
