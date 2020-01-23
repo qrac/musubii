@@ -5,6 +5,17 @@ export const meta = {
   filePath: "styles/elements/_form"
 }
 
+import {
+  PreviewFormBasic,
+  PreviewFormTextarea,
+  PreviewFormFile,
+  PreviewFormRadio,
+  PreviewFormCheckbox,
+  PreviewFormSelect,
+  PreviewFormSelectMultiple,
+  PreviewFormFieldset,
+  PreviewFormButton
+} from "~/components/previews/preview-form"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -21,30 +32,59 @@ contents list
 
 ## Basic
 
-入力枠には `.input` または `.textarea` を使います。
+<PreviewFormBasic />
 
-| Selector    | Description                                    |
-| ----------- | ---------------------------------------------- |
-| `.input`    | インプット装飾の起点として使うセレクター。     |
-| `.textarea` | テキストエリア装飾の起点として使うセレクター。 |
+| Selector | Description                                |
+| -------- | ------------------------------------------ |
+| `.input` | 入力フィールドの起点として使うセレクター。 |
 
-| Modifier        | Description                                                              |
-| --------------- | ------------------------------------------------------------------------ |
-| `.is-plain`     | `.input, .textarea` に付与すると塗りベースの入力欄になります。           |
-| `.is-underline` | `.input, .textarea` に付与すると下線のみの入力欄になります。             |
-| `.is-inside`    | `.input, .textarea` に付与すると装飾の無い埋め込み用の入力欄になります。 |
+| Modifier        | Description                                                   |
+| --------------- | ------------------------------------------------------------- |
+| `.is-plain`     | `.input` に付与すると塗りベースの入力欄になります。           |
+| `.is-underline` | `.input` に付与すると下線のみの入力欄になります。             |
+| `.is-inside`    | `.input` に付与すると装飾の無い埋め込み用の入力欄になります。 |
 
-| Modifier      | Description                                                      |
-| ------------- | ---------------------------------------------------------------- |
-| `.is-success` | `.input, .textarea` に付与すると入力を成功した色味に変わります。 |
-| `.is-danger`  | `.input, .textarea` に付与すると入力を失敗した色味に変わります。 |
-| `.is-round`   | `.input` に付与すると角が完全に丸くなります。                    |
-| `[disabled]`  | `.input, .textarea` に付与すると非活性になります。               |
-| `[readonly]`  | `.input, .textarea` に付与すると読み取り専用になります。         |
+| Modifier      | Description                                           |
+| ------------- | ----------------------------------------------------- |
+| `.is-success` | `.input` に付与すると入力を成功した色味に変わります。 |
+| `.is-danger`  | `.input` に付与すると入力を失敗した色味に変わります。 |
+| `.is-round`   | `.input` に付与すると角が完全に丸くなります。         |
+| `[disabled]`  | `.input` に付与すると非活性になります。               |
+| `[readonly]`  | `.input` に付与すると読み取り専用になります。         |
+
+## Textarea
+
+<PreviewFormTextarea />
+
+| Selector    | Description                                |
+| ----------- | ------------------------------------------ |
+| `.textarea` | テキストエリアの起点として使うセレクター。 |
+
+| Modifier        | Description                                                      |
+| --------------- | ---------------------------------------------------------------- |
+| `.is-plain`     | `.textarea` に付与すると塗りベースの入力欄になります。           |
+| `.is-underline` | `.textarea` に付与すると下線のみの入力欄になります。             |
+| `.is-inside`    | `.textarea` に付与すると装飾の無い埋め込み用の入力欄になります。 |
+
+| Modifier      | Description                                              |
+| ------------- | -------------------------------------------------------- |
+| `.is-success` | `.textarea` に付与すると入力を成功した色味に変わります。 |
+| `.is-danger`  | `.textarea` に付与すると入力を失敗した色味に変わります。 |
+| `[disabled]`  | `.textarea` に付与すると非活性になります。               |
+| `[readonly]`  | `.textarea` に付与すると読み取り専用になります。         |
+
+## File
+
+<PreviewFormFile />
+
+[[warning | Warning]]
+| `input[type="file"]` はデフォルトスタイルがブラウザ毎に大きく異なり、尚且つ装飾が困難。レイアウト崩れの原因にもなりやすいため、[Button](/styles/elements/button) に内包します。また、CSS のみではファイル名表示ができないため、実務では JavaScript を併用します。
 
 ## Radio
 
 ラジオボタンは、デフォルトの `input[type="radio"]` の機能を生かしたまま、CSS スタイリングのラジオボタンを使う手法を用いています。マークアップはデモを参考にしてください。
+
+<PreviewFormRadio />
 
 | Selector               | Description                                          |
 | ---------------------- | ---------------------------------------------------- |
@@ -65,6 +105,8 @@ contents list
 
 チェックボックスは、デフォルトの `input[type="checkbox"]` の機能を生かしたまま、CSS スタイリングのチェックボックスを使う手法を用いています。マークアップはデモを参考にしてください。
 
+<PreviewFormCheckbox />
+
 | Selector                  | Description                                              |
 | ------------------------- | -------------------------------------------------------- |
 | `.label`                  | チェックボックスの項目をラップして起点にするセレクター。 |
@@ -83,6 +125,8 @@ contents list
 ## Select
 
 セレクトボックスは、ラッパーとしての `.select` を用いることでブラウザ互換のある CSS スタイリングを実現しました。マークアップはデモを参考にしてください。
+
+<PreviewFormSelect />
 
 | Selector  | Description                                               |
 | --------- | --------------------------------------------------------- |
@@ -106,6 +150,8 @@ contents list
 
 `.select` に `.is-multiple`、`select` に `multiple` 属性を付与することで、選択肢を複数表示させたセレクトボックスになります。
 
+<PreviewFormSelectMultiple />
+
 | Modifier       | Description                                                     |
 | -------------- | --------------------------------------------------------------- |
 | `.is-multiple` | `.select` に付与することで複数表示の装飾へ切り替えます。        |
@@ -113,11 +159,19 @@ contents list
 
 ## Fieldset
 
-アクセシビリティの高いマークアップを行う際に、`fieldset` のデフォルトスタイルが邪魔になるかもしれません。以下はそれをリセットするためだけのセレクターです。
+アクセシビリティの高いマークアップを行う際に、`fieldset` のデフォルトスタイルが邪魔になるかもしれません。`.fieldset` はそれをリセットするためだけのセレクターです。
+
+<PreviewFormFieldset />
 
 | Selector    | Description                                                     |
 | ----------- | --------------------------------------------------------------- |
 | `.fieldset` | `fieldset` のデフォルトスタイルをリセットするためのセレクター。 |
+
+## Button
+
+汎用ボタン・リセット・送信ボタンは [Button](/styles/elements/button) の装飾で対応できます。
+
+<PreviewFormButton />
 
 ## Variables
 

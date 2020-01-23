@@ -92,7 +92,7 @@ export class PreviewButtonBasic extends React.Component {
     const tagAttr = tag === "button" ? 'type="button"' : 'href="#"'
     const disabledClass = disabled && tag === "a" ? "is-disabled" : ""
     const disabledAttr = disabled && tag === "button" ? "disabled" : ""
-    const disabledTabIndex = disabled ? 'tabindex="-1"' : ""
+    const disabledTabIndex = disabled && tag === "a" ? 'tabindex="-1"' : ""
     const externalLink =
       this.state.externalLink && tag === "a"
         ? 'target="_blank" rel="noopener noreferrer"'
