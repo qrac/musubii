@@ -6,124 +6,302 @@ export const meta = {
 
 import PreviewSources from "~/components/previews/preview-sources"
 
+import DemoPre from "~/components/parts/demo-pre"
+import pkg from "../../../package.json"
+
+export const cdnUrl = `https://cdn.jsdelivr.net/npm/musubii@${pkg.version}/dist/musubii.min.css`
+export const cdnHtml = `<link rel="stylesheet" href="${cdnUrl}" />`
+
 # v6.6.0 → v7.0.0
 
 ## Table of Contents
 
 contents list
 
-## CSS
+## Introduction
 
-- CSS のディレクトリを `docs/css` から `dist` に変更したのでパスを修正
+この章は、MUSUBii v6.6.0 で制作した案件を v7.0.0 にアップデートするためのリファレンスです。ここには全体の変更点を書き連ねていますので、状況に応じて必要な内容をピックアップしてください。
 
-## SCSS
+v6.6.0 のデモ・ドキュメントはアーカイブがあります。→ [MUSUBii archive v6.6.0](https://musubii-archive-v6-6-0.netlify.com/)
 
-- ディレクトリを変更
-- 依存ファイルの import 削除
-- `.section` の `.inner-vw` は廃止
-- Grid の `$grid-split` は `$flex-split` に変更（定義も Flex に移動）
+## Link
 
----
+CSS ファイルのディレクトリが `docs/css` から `dist` に変更となりましたので、パスを見直してください。
 
-### Import
+CDN リンクを引っ張っている場合は以下に変更します。
 
-SCSS ファイルを内部でまとめ、少ない import のみで使えるようになった。ファイルパスを以下 5 ファイルに修正する。移動・削除・追加されたファイルを修正しなくて済む。
+<DemoPre language="html" code={cdnHtml} />
+
+## Install
+
+インストール方法は変わっていませんが、依存ライブラリ `shitajicss` `moftone` `sass-dashi` が不要となりました。以下コマンドで最新版がインストールされます。
+
+```
+npm install musubii
+```
+
+```
+yarn add musubii
+```
+
+## Import
+
+SCSS ファイルが内部でまとまったため、少ない `import` で使えるようになりました。以下のように `configs/_import.scss` と `styles/_import.scss` を読み込んでいれば大丈夫です。
 
 ```scss
-// gulp-sass：普通に静的サイトを制作する場合
-@import "shitajicss/src/scss/_shitaji.scss";
-@import "moftone/src/scss/tone/_moftone.scss";
-@import "sass-dashi/src/scss/_dashi.scss";
-@import "musubii/src/scss/_configs.scss";
-@import "musubii/src/scss/_components.scss";
+// gulp
+@import "musubii/src/scss/configs/_import.scss";
+@import "musubii/src/scss/styles/_import.scss";
 ```
 
 ```scss
-// Vue.js：グローバル変数（各コンポーネントで読み込んでOK）
-@import "~moftone/src/scss/tone/_moftone.scss";
-@import "~sass-dashi/src/scss/_dashi.scss";
-@import "~musubii/src/scss/_configs.scss";
-
-// Vue.js：コンポーネント集（レイアウト層で1回のみ読み込む）
-@import "~shitajicss/src/scss/_shitaji.scss";
-@import "~musubii/src/scss/_components.scss";
+// Next, Gatsby, Nuxt, Gridsome
+@import "~musubii/src/scss/configs/_import.scss";
+@import "~musubii/src/scss/styles/_import.scss";
 ```
 
-### Export
+詳細な設定方法は、各ページを参考にしてください。
 
-SCSS ファイルは全て読み込まれる仕様となったが、各スタイルを出力するかどうかは変数で設定し直せる。 https://github.com/qrac/musubii/blob/master/src/scss/config/_use.scss
+例：[Next](/installation/next)・[Gatsby](/installation/gatsby)・[Nuxt](/installation/nuxt)・[Gridsome](/installation/gridsome)・[gulp](/installation/gulp)
 
-### Class
+## Export
 
-カラム・ボタン名を変更しているので、古い Class を使っているプロジェクトの MUSUBii をアップグレードする場合は、以下の SCSS 変数で Class 名をオーバーライドする。
+SCSS は Import するファイルを選ばず全て読み込まれる仕様となりましたが、各スタイルを出力するかどうかを変数で設定できる新たな機能が搭載されました。詳細は [Option](/configs/variables/option) の `$option-generate-style-(xxxx)` と `$option-add-style-(xxxx)` をご確認ください。
 
-```scss
-$column-class: ".col";
-$button-class: ".btn";
-```
+## Variables
 
-新旧の Class を同時に使えるようにもできる。
+SCSS 全体の見直しを行った関係で、変数を利用・オーバーライドしている場合はエラーが発生します。
 
-```scss
-$column-class: ".column, .col";
-$button-class: ".button, .btn";
-```
+新しい変数名は全てこのドキュメント内で確認できます。また、各ページ下部には GitHub 上の SCSS ファイルへリンクを貼っていますので、詳細な確認はそちらでも行えます。
 
 ### Default
 
-変数に含まれていた `default` は省略しているものとしていないものが混在していた。そのため全てを省略。プロジェクト側で書いている場合は `-default` を削除する。
+変数に使われている `default` は省略しているものとしていないものが混在していました。そのため今は全てを省略しています。プロジェクト側で書いている場合は `-default` を削除します。
 
-### Disabled
+### Disable
 
-ボタンの変数や Class 名の `disable` を `disabled` に変更しているので、利用している場合は置換。
+変数に使われている `disable` は `disabled` にリネームされています。クラス名も同様です。
 
-### Section Inner Padding
+### Text Color
 
-`.inner` `.inner-vw` に付与されていた Padding はモディファイアとして分離されたため、Padding は必須の場所は `.inner.is-padding-left.is-padding-right` `.inner-vw.is-padding-left.is-padding-right` とする。
+変数に使われている `text-color` は `color` にリネームされています。これは CSS のプロパティに合わせると共に、Text エレメントで `text-text-color` となってしまうのを防ぐ意味があります。
 
-また、Padding を付与するだけだった `.inner-soft` は廃止されたため、`.box..is-padding-left.is-padding-right` などに置換する。
+## Section
 
-### Grid Gap
+### Inner
 
-デフォルトが溝のできない `.is-gap-none` 状態になった。従来と同じ溝をつけるには HTML の `class="grid` を `class="grid is-gap-xs` に置換する。
+[Section](/styles/layouts/section) の `.inner` にはデフォルトの Padding がなくなりました。`.inner.is-padding-horizontal-md` のように [Padding](/styles/utilities/padding) ユーティリティを追加することで対処できます。
 
-### Heading
+### Inner Soft
 
-スタイルをほとんどなかった `.heading` は廃止。`position: relative;` のみ当たっていたので、レイアウトが崩れる場合はプロジェクト側に書く。
+`.inner-soft` が廃止となりました。`.is-padding-horizontal-md` への置換で対処できます。
 
-### Texts
+### Inner VW
 
-Line Height を大きめに取っていた `.texts` は廃止され、モディファイア化された。`.text.is-line-height-xl` に置換する。
-
-### Text Deco
-
-`.is-dark` や `.is-center` などの適応範囲をテキストに限定したため、ざっくり当てていたスタイルを指定して当てる。後方互換を使う場合は変数を以下のように設定。
+`.inner-vw` も廃止となりました。再現する CSS がないため、`.inner-vw` が必須の場合は次の SCSS をプロジェクト内に追記します。
 
 ```scss
-$text-class: ":not(.grid):not(.btns):not(.field)";
+.inner-vw {
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  @include fablet {
+    width: 90vw;
+  }
+}
 ```
 
-### Button
+## Space
 
-`.button.is-ghost` は廃止したため、使っていた場合は `.button.is-outline` の SCSS 変数オーバーライドなどで対応する。
+`.is-space` で付与される Margin は `16px` 固定となりました。
 
-### Buttons, Field
-
-`.buttons` `.field` は廃止したため、`.box.is-flex.is-space-row-xs.is-space-column-xs` などに置換する。
-
-また、Button・Input・Select を繋げていた `.is-bar` は `.joint` に変わりまとめられた。スタイルの記述は新規 SCSS ファイルへ移動。後方互換として変数で旧 class に変換することができる。
+[Space](/styles/utilities/space) ユーティリティはバリュエーションが増えましたが、いずれも固定幅を追加します。以下のように SCSS 変数をオーバーライドすることで、要素のサイズごとに Margin が変化させられます。
 
 ```scss
-$joint-class: ".is-bar";
+$space-size-md: 1em;
 ```
 
-### Icon
+それでも違和感がある場合は次の SCSS をプロジェクト内に追記します。
 
-`.icon` `.text` の間に自動付与していたマージンは調整可能にするため削除された。ボタン内のスペースが詰まった部分は `.icon.is-margin-right-xs` などで対応。
+```scss
+.is-space {
+  > .heading:not(:first-child) {
+    margin-top: 1.5em;
+  }
+  > .groups:not(:first-child) {
+    margin-top: 3em;
+  }
+  .heading + .field {
+    margin-top: 0.5em;
+  }
+  .field + .texts {
+    margin-top: 0.5em;
+  }
+  .field + .alert {
+    margin-top: 0.5em;
+  }
+}
 
-### Space
+.wysiwyg.is-space {
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+}
+```
 
-`.is-space` のマージンが `.heading` `.groups` `.field` `.wysiwyg h2` などを用いても一定になったため調整を行う。
+## Grid
+
+### Column
+
+[Grid](/styles/layouts/grid) の `.col` は `.column` にリネームされてます。HTML で class 名をリネームできればその方法で、難しければ以下のように SCSS 変数で対処します。
+
+```scss
+// セレクター名をv6状態にします
+$selector-column: ".col";
+
+// セレクター名をv6+v7状態にします
+$selector-column: ".col, .column";
+```
+
+### Gap
+
+`.grid` はデフォルトで溝が付かなくなりました。`.grid.is-gap-xs` で同様の状態が作れます。
+
+### Split
+
+`$grid-split` 変数が `$flex-split` に変更となりました。オーバーライドしている場合は修正します。
+
+## Heading
+
+Heading 自体が廃止となりました。問題が起きるとしても、以下の SCSS を足す程度です。
+
+```scss
+.heading {
+  position: relative;
+}
+```
+
+## Text
+
+Line Height を大きめに取っていた `.texts` が廃止されました。`.text.is-line-height-xl` にすることで再現が可能です。
+
+## Button
+
+[Button](/styles/elements/button) は `.btn` が `.button` にリネームとなりました。HTML で class 名をリネームできればその方法で、難しければ以下のように SCSS 変数で対処します。
+
+```scss
+// セレクター名をv6状態にします
+$selector-button: ".btn";
+
+// セレクター名をv6+v7状態にします
+$selector-button: ".btn, .button";
+```
+
+### Ghost
+
+`.btn.is-ghost` は廃止されました。`.button.is-outline` の変数をオーバーライドするか、以下の SCSS を追加します。
+
+```scss
+$btn-pattern-color-theme: (
+  primary: $theme-primary,
+  info: $theme-info,
+  success: $theme-success,
+  warning: $theme-warning,
+  danger: $theme-danger
+);
+
+.btn.is-ghost {
+  background-color: transparent;
+  border: 1px solid $light;
+  color: $light;
+  &:hover {
+    background-color: $light;
+    color: $dark-2;
+  }
+  @each $key, $value in $btn-pattern-color-theme {
+    &.is-#{$key} {
+      border-color: lighten($value, 30%);
+      color: lighten($value, 30%);
+      &:hover {
+        background-color: $value;
+        border-color: transparent;
+        color: $light;
+      }
+    }
+  }
+  &.is-disabled,
+  &.is-disabled:hover,
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $light-8;
+    border-color: $light-4;
+    color: $light-4;
+  }
+}
+```
+
+### Buttons
+
+Flexbox レイアウトの `.buttons` は廃止されましたが、`.box.is-flex.is-space-row-xs.is-space-column-xs` などで再現できます。
+
+### Bar
+
+Button などをつなげていた `.is-bar` は廃止されましたが、`.joint` という共通のレイアウト CSS が作られています。詳細は [Joint](/styles/layouts/joint) をご確認ください。SCSS 変数での対応も可能です。
+
+```scss
+// セレクター名をv6状態にします
+$selector-joint: ".is-bar";
+
+// セレクター名をv6+v7状態にします
+$selector-joint: ".is-bar, .joint";
+```
+
+## Table
+
+スクロールさせるために `.is-scroll-x` を使っていましたが、新しい [Table](/styles/elements/table) では `.table-wrap` を使います。スクロール可能な方向に影が出るなど、ユーザビリティが向上しています。
+
+## Form
+
+### Radio, Checkbox
+
+Radio・Checkbox はブラウザデフォルトではなく、CSS で描画されるようになりました。
+
+ブラウザデフォルトのスタイルは生きているため、基本的には変更の必要はありません。新しい CSS 版を使う場合は [Form](/styles/elements/form) をご確認ください。
+
+### Field
+
+Flexbox レイアウトの `.field` は廃止されましたが、`.box.is-flex.is-space-row-xs.is-space-column-xs` などで再現できます。
+
+### Bar
+
+Input などをつなげていた `.is-bar` は廃止されましたが、`.joint` という共通のレイアウト CSS が作られています。詳細は [Joint](/styles/layouts/joint) をご確認ください。SCSS 変数での対応も可能です。
+
+```scss
+// セレクター名をv6状態にします
+$selector-joint: ".is-bar";
+
+// セレクター名をv6+v7状態にします
+$selector-joint: ".is-bar, .joint";
+```
+
+## Icon
+
+`.icon` `.text` の間に自動付与していた Margin は削除されました。スペースが詰まった部分は `.icon.is-margin-right-xs` などで対処可能です。
+
+## Deco
+
+`.is-dark` や `.is-center` などの適応範囲をテキストに限定したため、ざっくり当てていた部分は指定し直す必要があります。後方互換を使う場合は変数を以下のように設定。
+
+```scss
+$selector-text: ":not(.grid):not(.box)";
+```
 
 ## Sources
 

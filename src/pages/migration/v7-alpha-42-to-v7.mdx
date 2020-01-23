@@ -6,11 +6,23 @@ export const meta = {
 
 import PreviewSources from "~/components/previews/preview-sources"
 
+import DemoPre from "~/components/parts/demo-pre"
+import pkg from "../../../package.json"
+
+export const cdnUrl = `https://cdn.jsdelivr.net/npm/musubii@${pkg.version}/dist/musubii.min.css`
+export const cdnHtml = `<link rel="stylesheet" href="${cdnUrl}" />`
+
 # v7.0.0-alpha.42 → v7.0.0
 
 ## Table of Contents
 
 contents list
+
+## Introduction
+
+この章は、MUSUBii v7.0.0-alpha.42 で制作した案件を v7.0.0 にアップデートするためのリファレンスです。必要な内容は、CSS のみで運用しているか SCSS を使っているかによって大きく変わります。
+
+v7.0.0-alpha.42 のデモは開発関係者にのみ共有しています。ドキュメントはありません。
 
 ## CSS
 
