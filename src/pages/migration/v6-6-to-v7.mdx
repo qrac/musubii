@@ -297,10 +297,40 @@ $selector-joint: ".is-bar, .joint";
 
 ## Deco
 
+### Text
+
 `.is-dark` や `.is-center` などの適応範囲をテキストに限定したため、ざっくり当てていた部分は指定し直す必要があります。後方互換を使う場合は変数を以下のように設定。
 
 ```scss
 $selector-text: ":not(.grid):not(.box)";
+```
+
+### Centering
+
+`.is-centering` は廃止されましたが、`.is-margin-horizontal-auto` で同様の効果が得られます。
+
+### Scroll
+
+`.is-scroll-x` は `.is-overflow-scroll-x` にリネームされました。HTML で class 名をリネームできればその方法で、難しければ以下のように SCSS 変数で対処します。
+
+```scss
+// セレクター名をv6状態にします
+$modifier-overflow-scroll-x: ".is-scroll-x";
+
+// セレクター名をv6+v7状態にします
+$modifier-overflow-scroll-x: ".is-scroll-x, .is-overflow-scroll-x";
+```
+
+### Ellipsis
+
+`.is-ellipsis` は `.is-overflow-ellipsis` にリネームされました。HTML で class 名をリネームできればその方法で、難しければ以下のように SCSS 変数で対処します。
+
+```scss
+// セレクター名をv6状態にします
+$modifier-overflow-ellipsis: ".is-ellipsis";
+
+// セレクター名をv6+v7状態にします
+$modifier-overflow-ellipsis: ".is-ellipsis, .is-overflow-ellipsis";
 ```
 
 ## Sources

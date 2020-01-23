@@ -20,50 +20,151 @@ contents list
 
 ## Introduction
 
-この章は、MUSUBii v7.0.0-alpha.42 で制作した案件を v7.0.0 にアップデートするためのリファレンスです。必要な内容は、CSS のみで運用しているか SCSS を使っているかによって大きく変わります。
+この章は、MUSUBii v7.0.0-alpha.42 で制作した案件を v7.0.0 にアップデートするためのリファレンスです。ここには全体の変更点を書き連ねていますので、状況に応じて必要な内容をピックアップしてください。
 
 v7.0.0-alpha.42 のデモは開発関係者にのみ共有しています。ドキュメントはありません。
 
-## CSS
+## Link
 
-- CSS のディレクトリを `docs/css` から `dist` に変更したのでパスを修正
+CSS ファイルのディレクトリが `docs/css` から `dist` に変更となりましたので、パスを見直してください。
 
-## SCSS
+CDN リンクを引っ張っている場合は以下に変更します。
 
-- インポートディレクトリを変更
-- 依存ファイルの import 削除
-- モディファイア Mixin をセレクターに依存させない調整 #245
-- Focus スタイル等の利用を任意にし設定を一元管理 #251
-- `$use-xxx` は 次世代 Sass の use と紛らわしいので `$option` に変更
-  - `$use-component-xxx` 周りの変数名を変更
-  - `$use-theme-xxx` 周りの変数名を変更
-- Variables：Text Color を Color にリネーム #264
-- Variables：Text Dark・Text Light を Dark・Light にリネーム #265
-- Utilities：Important を付与するオプションを追加 #256
-- Utilities：Overflow・Ellipsis・Scroll を統合してリネーム #261
-- Global：Floating・Focus 変数の集約 #263
-- Section の `.inner-vw` は廃止
-- Grid の `$column-class` は `$selector-column` に変更
-- Grid の `$grid-split` は `$flex-split` に変更（定義も Flex に移動）
-- Grid：Gap の Row・Column をリネーム #254
-- Box の `.is-bg-cover` などはコンポーネントに書いた方が良いので削除
-- Box の `is-angle-(xxx)` から Padding を削除
-- Card の `.card` はデフォルトで `overflow: hidden;` するように変更
-- Card の flexbox は box と用途を迷うので削除
-- Joint の `$joint-class` は `selector-joint` に変更
-- Text の `$text-class` は `$selector-text` に変更
-- Text：Disabled スタイルを追加 #267
-- Button の `$button-class` は `$selector-button` に変更
-- Button：役割ごとの Floating 設定を可能にする #262
-- List：四角と米印のスタイルを追加 #266
-- Table：Wrapper の横スクロールを影で強調 #268
-- Icon の `$icon-class` は `$selector-icon` に変更
-- WYSIWYG：別のエレメントに依存していた変数を分離 #248
-- Flex：メディアクエリ指定無しのモディファイアを追加 #260
-- Space：Row・Column を 4 方向に分割 #255
-- Margin：ネガティブマージンの追加 #257
-- Padding：縦横ショートカットをリネーム #258
-- Centering：Margin Auto 拡張につき廃止 #259
+<DemoPre language="html" code={cdnHtml} />
+
+## Install
+
+インストール方法は変わっていませんが、依存ライブラリ `shitajicss` `mixtone` `sass-dashi` が不要となりました。以下コマンドで最新版がインストールされます。
+
+```
+npm install musubii
+```
+
+```
+yarn add musubii
+```
+
+## Import
+
+SCSS ファイル数の増加に伴い、`import` するファイルは `configs/_import.scss` `styles/_import.scss` に変更となりました。
+
+```scss
+// gulp
+@import "musubii/src/scss/configs/_import.scss";
+@import "musubii/src/scss/styles/_import.scss";
+```
+
+```scss
+// Next, Gatsby, Nuxt, Gridsome
+@import "~musubii/src/scss/configs/_import.scss";
+@import "~musubii/src/scss/styles/_import.scss";
+```
+
+詳細な設定方法は、各ページを参考にしてください。
+
+例：[Next](/installation/next)・[Gatsby](/installation/gatsby)・[Nuxt](/installation/nuxt)・[Gridsome](/installation/gridsome)・[gulp](/installation/gulp)
+
+## Variables
+
+SCSS 全体の見直しを行った関係で、変数を利用・オーバーライドしている場合はエラーが発生します。
+
+新しい変数名は全てこのドキュメント内で確認できます。また、各ページ下部には GitHub 上の SCSS ファイルへリンクを貼っていますので、詳細な確認はそちらでも行えます。
+
+### Use
+
+`$use-(xxxx)` は 次世代 Sass の `use` と紛らわしいので `$option-(xxxx)` に変更となっています。
+
+### Text Color, Dark, Light
+
+変数に使われている `text-color` は `color` にリネームされています。これは CSS のプロパティに合わせると共に、Text エレメントで `text-text-color` となってしまうのを防ぐ意味があります。
+
+同様の理由で `text-dark` `text-light` の部分も `dark` `light` になっています。場面によっては `(xxxx)-dark-dark-(xxxx)` と続いている箇所もありますが、命名規則的には正しい構成です。
+
+## Section
+
+### Inner VW
+
+[Section](/styles/layouts/section) では `.inner-vw` が廃止となりました。再現する CSS がないため、`.inner-vw` が必須の場合は次の SCSS をプロジェクト内に追記します。
+
+```scss
+.inner-vw {
+  max-width: 100%;
+  margin: 0 auto;
+  @include fablet {
+    width: 90vw;
+  }
+}
+```
+
+## Grid
+
+### Column
+
+`$column-class` は `$selector-column` に変更となりました。
+
+### Gap
+
+`is-gap-row-(xxxx)` `is-gap-column-(xxxx)` は、命名の混乱を避けるため `is-gap-vertical-(xxxx)` `is-gap-horizontal-(xxxx)` に変更となりました。詳細・バリュエーションは [Grid](/styles/layouts/grid) をご確認ください。
+
+### Split
+
+`$grid-split` は `$flex-split` に変更となりました。
+
+## Card
+
+[Card](/styles/layouts/card) の `.card` はデフォルトで `overflow: hidden;` するようになりました。また、Flexbox 機能は box と用途を迷うので削除となっています。
+
+## Box
+
+### Background Cover
+
+[Box](/styles/layouts/box) の `.is-bg-cover` などはコンポーネント側に書いた方が良いと判断したため削除となっています。
+
+### Angle
+
+`is-angle-(xxxx)` から Padding がなくなっています。使用箇所が潰れる場合は [Padding](/styles/utilities/padding) ユーティリティで補填します。
+
+## Joint
+
+[Joint](/styles/layouts/joint) の `$joint-class` は `selector-joint` に変更となりました。
+
+## Text
+
+[Text](/styles/elements/text) の `$text-class` は `$selector-text` に変更となりました。
+
+## Button
+
+[Button](/styles/elements/button) の `$button-class` は `$selector-button` に変更となりました。
+
+## Table
+
+スクロールさせるために `.is-scroll-x` を使っていましたが、新しい [Table](/styles/elements/table) では `.table-wrap` を使います。スクロール可能な方向に影が出るなど、ユーザビリティが向上しています。
+
+## Icon
+
+[Icon](/styles/elements/icon) の `$icon-class` は `$selector-icon` に変更となりました。
+
+## WYSIWYG
+
+[WYSIWYG](/styles/elements/wysiwyg) で別のエレメントに依存していた変数が分離されています。反映されていない場合は新しい変数をオーバーライドしてください。
+
+## Space
+
+[Space](/styles/utilities/space) の Row・Column は 4 方向に分割しました。
+
+`.is-space-row-(xxxx)` `.is-space-column-(xxxx)` を使っている部分は `.is-space-right-(xxxx).is-margin-right-minus-(xxxx)` など、[Margin](/styles/utilities/margin) のネガティブマージンを加えて修正する必要があります。
+
+## Padding
+
+[Padding](/styles/utilities/padding) の `.is-padding-top-bottom-(xxxx)` `.is-padding-right-left-(xxxx)` は、それぞれ `.is-padding-vertical-(xxxx)` `.is-padding-horizontal-(xxxx)` にリネームとなりました。
+
+## Centering
+
+`.is-centering` は廃止されましたが、`.is-margin-horizontal-auto` で同様の効果が得られます。
+
+## Overflow
+
+`.is-scroll-x` `.is-scroll-y` はそれぞれ `.is-overflow-scroll-x` `.is-overflow-scroll-x` に、`.is-ellipsis` は `.is-overflow-ellipsis` にリネームとなりました。
 
 ## Sources
 
