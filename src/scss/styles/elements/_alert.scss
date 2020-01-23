@@ -20,7 +20,7 @@ $modifier-alert-tail: '[class\*="is-tail-"]' !default;
 $modifier-alert-tail-top: '[class\*="is-tail-top-"]' !default;
 $modifier-alert-tail-right: '[class\*="is-tail-right-"]' !default;
 $modifier-alert-tail-bottom: '[class\*="is-tail-bottom-"]' !default;
-$modifier-alert-tail-left-: '[class\*="is-tail-left-"]' !default;
+$modifier-alert-tail-left: '[class\*="is-tail-left-"]' !default;
 $modifier-alert-tail-top-right: "\.is-tail-top-right" !default;
 $modifier-alert-tail-top-center: "\.is-tail-top-center" !default;
 $modifier-alert-tail-top-left: "\.is-tail-top-left" !default;
@@ -321,13 +321,13 @@ $alert-tail-position-end: 10% !default;
       &#{$modifier-alert-tail-right} {
         @include musubii-style-alert-tail-right();
       }
-      &#{$modifier-alert-tail-right-right} {
+      &#{$modifier-alert-tail-right-top} {
         @include musubii-style-alert-tail-right-top();
       }
-      &#{$modifier-alert-tail-right-center} {
+      &#{$modifier-alert-tail-right-middle} {
         @include musubii-style-alert-tail-right-middle();
       }
-      &#{$modifier-alert-tail-right-left} {
+      &#{$modifier-alert-tail-right-bottom} {
         @include musubii-style-alert-tail-right-bottom();
       }
       &#{$modifier-alert-tail-bottom} {
@@ -345,13 +345,13 @@ $alert-tail-position-end: 10% !default;
       &#{$modifier-alert-tail-left} {
         @include musubii-style-alert-tail-left();
       }
-      &#{$modifier-alert-tail-left-right} {
+      &#{$modifier-alert-tail-left-top} {
         @include musubii-style-alert-tail-left-top();
       }
-      &#{$modifier-alert-tail-left-center} {
+      &#{$modifier-alert-tail-left-middle} {
         @include musubii-style-alert-tail-left-middle();
       }
-      &#{$modifier-alert-tail-left-left} {
+      &#{$modifier-alert-tail-left-bottom} {
         @include musubii-style-alert-tail-left-bottom();
       }
     }

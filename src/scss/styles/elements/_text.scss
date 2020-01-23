@@ -124,11 +124,11 @@ $text-light-8: $convert-light-8 !default;
 $text-light-9: $convert-light-9 !default;
 
 // Text Role
-$text-primary: $convert-primary !default;
-$text-info: $convert-info !default;
-$text-success: $convert-success !default;
-$text-warning: $convert-warning !default;
-$text-danger: $convert-danger !default;
+$text-primary: $convert-primary-strong !default;
+$text-info: $convert-info-strong !default;
+$text-success: $convert-success-strong !default;
+$text-warning: $convert-warning-strong !default;
+$text-danger: $convert-danger-strong !default;
 
 // Text Weight
 $text-weight-normal: $font-weight-normal !default;
