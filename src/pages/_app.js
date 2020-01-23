@@ -85,6 +85,12 @@ class MyApp extends App {
           )}
         </main>
         <AppFooter />
+        {/*<script
+          //defer
+          src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"
+          crossOrigin="anonymous"
+          //SameSite="none Secure"
+        ></script>*/}
       </div>
     )
   }

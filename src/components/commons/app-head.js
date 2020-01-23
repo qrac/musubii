@@ -62,7 +62,15 @@ export default ({ meta }) => {
       <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+        crossorigin="anonymous"
+        //SameSite="none Secure"
       />
+      {/*<script
+        defer
+        src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"
+        crossorigin="anonymous"
+        //SameSite="none Secure"
+      ></script>*/}
       {/* <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/> */}
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="icon" href="/favicon.png" />
