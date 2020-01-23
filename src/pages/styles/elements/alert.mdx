@@ -5,6 +5,10 @@ export const meta = {
   filePath: "styles/elements/_alert"
 }
 
+import {
+  PreviewAlertRole,
+  PreviewAlertTail
+} from "~/components/previews/preview-alert"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -29,6 +33,8 @@ contents list
 
 `.is-(role)` 形式のモディファイアを `.alert` に付与することで、各役割毎のカラーリングに変化します。
 
+<PreviewAlertRole />
+
 | Primary       | Info       | Success       | Warning       | Danger       |
 | ------------- | ---------- | ------------- | ------------- | ------------ |
 | `.is-primary` | `.is-info` | `.is-success` | `.is-warning` | `.is-danger` |
@@ -36,6 +42,8 @@ contents list
 ## Tail
 
 [Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-alert-tail` を `true` にすると、吹き出しのような方向を指し示すスタイルを追加できるようになります。表示できる場所は全 12 種類です。
+
+<PreviewAlertTail />
 
 | Top Left            | Top Center            | Top Right            |
 | ------------------- | --------------------- | -------------------- |
