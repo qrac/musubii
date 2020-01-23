@@ -14,10 +14,10 @@ $theme-dark-success: darken($theme-success, 12%) !default;
 $theme-dark-success-strong: lighten($theme-success, 3%) !default;
 $theme-dark-success-darken: darken($theme-success, 17%) !default;
 $theme-dark-warning: darken($theme-warning, 12%) !default;
-$theme-dark-warning-strong: darken($theme-warning, 4%) !default;
+$theme-dark-warning-strong: darken($theme-warning, 3%) !default;
 $theme-dark-warning-darken: darken($theme-warning, 17%) !default;
 $theme-dark-danger: darken($theme-danger, 12%) !default;
-$theme-dark-danger-strong: $theme-danger !default;
+$theme-dark-danger-strong: lighten($theme-danger, 3%) !default;
 $theme-dark-danger-darken: darken($theme-danger, 17%) !default;
 
 $theme-dark-dark: $white !default;
@@ -102,4 +102,4 @@ $theme-dark-alert-success-border-color: $theme-dark-success !default;
 $theme-dark-alert-warning-background-color: desaturate(darken($theme-dark-warning, 26%), 15%) !default;
 $theme-dark-alert-warning-border-color: darken($theme-dark-warning, 8%) !default;
 $theme-dark-alert-danger-background-color: desaturate(darken($theme-dark-danger, 32%), 36%) !default;
-$theme-dark-alert-danger-border-color: darken($theme-dark-danger, 5%) !default;
+$theme-dark-alert-danger-border-color: darken($theme-dark-danger, 12%) !default;

@@ -263,7 +263,7 @@
     {
       "name": "$icon-warning",
       "value": "$convert-warning-strong",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$icon-danger",

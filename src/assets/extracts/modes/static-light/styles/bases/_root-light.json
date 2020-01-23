@@ -60,17 +60,17 @@
     {
       "name": "--warning",
       "value": "$theme-light-warning",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "--warning-strong",
       "value": "$theme-light-warning-strong",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "--warning-darken",
       "value": "$theme-light-warning-darken",
-      "compiledValue": "#d48311"
+      "compiledValue": "#d47611"
     },
     {
       "name": "--danger",
@@ -255,7 +255,7 @@
     {
       "name": "--shadow-warning-alpha",
       "value": "$theme-light-shadow-warning-alpha",
-      "compiledValue": "rgba(236, 146, 19, 0.6)"
+      "compiledValue": "rgba(236, 131, 19, 0.6)"
     },
     {
       "name": "--shadow-danger-alpha",
@@ -395,7 +395,7 @@
     {
       "name": "--alert-info-border-color",
       "value": "$theme-light-alert-info-border-color",
-      "compiledValue": "#a3cceb"
+      "compiledValue": "#abd0ed"
     },
     {
       "name": "--alert-success-background-color",
@@ -410,12 +410,12 @@
     {
       "name": "--alert-warning-background-color",
       "value": "$theme-light-alert-warning-background-color",
-      "compiledValue": "#fdf2e3"
+      "compiledValue": "#fdf0e3"
     },
     {
       "name": "--alert-warning-border-color",
       "value": "$theme-light-alert-warning-border-color",
-      "compiledValue": "#f6cd92"
+      "compiledValue": "#f5bf84"
     },
     {
       "name": "--alert-danger-background-color",

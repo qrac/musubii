@@ -518,7 +518,7 @@
     {
       "name": "$text-warning",
       "value": "$convert-warning-strong",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$text-danger",

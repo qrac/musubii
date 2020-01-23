@@ -158,7 +158,7 @@
     {
       "name": "$alert-info-border-color",
       "value": "$convert-alert-info-border-color",
-      "compiledValue": "#a3cceb"
+      "compiledValue": "#abd0ed"
     },
     {
       "name": "$alert-success-background-color",
@@ -173,12 +173,12 @@
     {
       "name": "$alert-warning-background-color",
       "value": "$convert-alert-warning-background-color",
-      "compiledValue": "#fdf2e3"
+      "compiledValue": "#fdf0e3"
     },
     {
       "name": "$alert-warning-border-color",
       "value": "$convert-alert-warning-border-color",
-      "compiledValue": "#f6cd92"
+      "compiledValue": "#f5bf84"
     },
     {
       "name": "$alert-danger-background-color",

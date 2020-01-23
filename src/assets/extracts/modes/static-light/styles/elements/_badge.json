@@ -163,7 +163,7 @@
     {
       "name": "$badge-plain-warning-background-color",
       "value": "$convert-warning",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$badge-plain-danger-background-color",
@@ -213,12 +213,12 @@
     {
       "name": "$badge-outline-warning-border-color",
       "value": "$convert-warning",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$badge-outline-warning-color",
       "value": "$convert-warning-strong",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$badge-outline-danger-border-color",

@@ -17,8 +17,8 @@
     },
     {
       "name": "$theme-warning",
-      "value": "$orange-600",
-      "compiledValue": "#ec9213"
+      "value": "$orange-700",
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$theme-danger",

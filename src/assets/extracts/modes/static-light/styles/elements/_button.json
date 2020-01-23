@@ -238,12 +238,12 @@
     {
       "name": "$button-plain-warning-background-color",
       "value": "$convert-warning",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$button-plain-warning-hover-background-color",
       "value": "$convert-warning-darken",
-      "compiledValue": "#d48311"
+      "compiledValue": "#d47611"
     },
     {
       "name": "$button-plain-danger-background-color",
@@ -303,17 +303,17 @@
     {
       "name": "$button-plain-warning-floating-shadow",
       "value": "$global-floating-shadow-size $convert-shadow-warning-alpha",
-      "compiledValue": "0 2px 6px 0 rgba(236, 146, 19, 0.6)"
+      "compiledValue": "0 2px 6px 0 rgba(236, 131, 19, 0.6)"
     },
     {
       "name": "$button-plain-warning-floating-hover-shadow",
       "value": "$global-floating-hover-shadow-size $convert-shadow-warning-alpha",
-      "compiledValue": "0 4px 12px 0 rgba(236, 146, 19, 0.6)"
+      "compiledValue": "0 4px 12px 0 rgba(236, 131, 19, 0.6)"
     },
     {
       "name": "$button-plain-warning-floating-focus-shadow",
       "value": "$global-focus-shadow-size $convert-focus-alpha, $global-floating-hover-shadow-size $convert-shadow-warning-alpha",
-      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(236, 146, 19, 0.6)"
+      "compiledValue": "0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(236, 131, 19, 0.6)"
     },
     {
       "name": "$button-plain-danger-floating-shadow",
@@ -393,17 +393,17 @@
     {
       "name": "$button-outline-warning-border-color",
       "value": "$convert-warning",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$button-outline-warning-color",
       "value": "$convert-warning-strong",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$button-outline-warning-hover-background-color",
       "value": "$convert-warning",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$button-outline-danger-border-color",
@@ -443,7 +443,7 @@
     {
       "name": "$button-melt-warning-color",
       "value": "$convert-warning-strong",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#ec8313"
     },
     {
       "name": "$button-melt-danger-color",

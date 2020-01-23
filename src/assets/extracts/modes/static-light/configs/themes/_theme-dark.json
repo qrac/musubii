@@ -53,17 +53,17 @@
     {
       "name": "$theme-dark-warning",
       "value": "darken($theme-warning, 12%)",
-      "compiledValue": "#b36f0f"
+      "compiledValue": "#b3640f"
     },
     {
       "name": "$theme-dark-warning-strong",
-      "value": "darken($theme-warning, 4%)",
-      "compiledValue": "#d98612"
+      "value": "darken($theme-warning, 3%)",
+      "compiledValue": "#de7b12"
     },
     {
       "name": "$theme-dark-warning-darken",
       "value": "darken($theme-warning, 17%)",
-      "compiledValue": "#9c600d"
+      "compiledValue": "#9c570d"
     },
     {
       "name": "$theme-dark-danger",
@@ -72,8 +72,8 @@
     },
     {
       "name": "$theme-dark-danger-strong",
-      "value": "$theme-danger",
-      "compiledValue": "#db5757"
+      "value": "lighten($theme-danger, 3%)",
+      "compiledValue": "#de6363"
     },
     {
       "name": "$theme-dark-danger-darken",
@@ -413,12 +413,12 @@
     {
       "name": "$theme-dark-alert-warning-background-color",
       "value": "desaturate(darken($theme-dark-warning, 26%), 15%)",
-      "compiledValue": "#342209"
+      "compiledValue": "#341f09"
     },
     {
       "name": "$theme-dark-alert-warning-border-color",
       "value": "darken($theme-dark-warning, 8%)",
-      "compiledValue": "#8e570b"
+      "compiledValue": "#8e4f0b"
     },
     {
       "name": "$theme-dark-alert-danger-background-color",
@@ -427,8 +427,8 @@
     },
     {
       "name": "$theme-dark-alert-danger-border-color",
-      "value": "darken($theme-dark-danger, 5%)",
-      "compiledValue": "#b52626"
+      "value": "darken($theme-dark-danger, 12%)",
+      "compiledValue": "#972020"
     }
   ]
 }

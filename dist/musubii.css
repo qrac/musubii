@@ -889,7 +889,7 @@ iframe {
 }
 
 .text.is-warning {
-  color: #ec9213;
+  color: #ec8313;
 }
 
 .text.is-danger {
@@ -1232,24 +1232,24 @@ iframe {
 }
 
 .button.is-plain.is-warning {
-  background-color: #ec9213;
+  background-color: #ec8313;
   color: white;
 }
 
 .button.is-plain.is-warning:hover {
-  background-color: #d48311;
+  background-color: #d47611;
 }
 
 .button.is-plain.is-warning.is-floating {
-  box-shadow: 0 2px 6px 0 rgba(236, 146, 19, 0.6);
+  box-shadow: 0 2px 6px 0 rgba(236, 131, 19, 0.6);
 }
 
 .button.is-plain.is-warning.is-floating:hover {
-  box-shadow: 0 4px 12px 0 rgba(236, 146, 19, 0.6);
+  box-shadow: 0 4px 12px 0 rgba(236, 131, 19, 0.6);
 }
 
 .button.is-plain.is-warning.is-floating:focus {
-  box-shadow: 0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(236, 146, 19, 0.6);
+  box-shadow: 0 0 0 4px rgba(36, 151, 240, 0.5), 0 4px 12px 0 rgba(236, 131, 19, 0.6);
 }
 
 .button.is-plain.is-danger {
@@ -1321,12 +1321,12 @@ iframe {
 }
 
 .button.is-outline.is-warning {
-  border-color: #ec9213;
-  color: #ec9213;
+  border-color: #ec8313;
+  color: #ec8313;
 }
 
 .button.is-outline.is-warning:hover {
-  background-color: #ec9213;
+  background-color: #ec8313;
   border-color: transparent;
   color: white;
 }
@@ -1370,7 +1370,7 @@ iframe {
 }
 
 .button.is-melt.is-warning {
-  color: #ec9213;
+  color: #ec8313;
 }
 
 .button.is-melt.is-danger {
@@ -1477,7 +1477,7 @@ iframe {
 }
 
 .badge.is-plain.is-warning {
-  background-color: #ec9213;
+  background-color: #ec8313;
   color: white;
 }
 
@@ -1512,8 +1512,8 @@ iframe {
 }
 
 .badge.is-outline.is-warning {
-  border-color: #ec9213;
-  color: #ec9213;
+  border-color: #ec8313;
+  color: #ec8313;
 }
 
 .badge.is-outline.is-danger {
@@ -2506,7 +2506,7 @@ svg.icon {
 }
 
 .icon.is-warning, .im.is-warning, .fa.is-warning, .fas.is-warning, .far.is-warning, .fal.is-warning, .fab.is-warning, .material-icons.is-warning {
-  color: #ec9213;
+  color: #ec8313;
 }
 
 .icon.is-danger, .im.is-danger, .fa.is-danger, .fas.is-danger, .far.is-danger, .fal.is-danger, .fab.is-danger, .material-icons.is-danger {
@@ -2533,7 +2533,7 @@ svg.icon {
 
 .alert.is-info {
   background-color: #eaf3fa;
-  border-color: #a3cceb;
+  border-color: #abd0ed;
 }
 
 .alert.is-success {
@@ -2542,8 +2542,8 @@ svg.icon {
 }
 
 .alert.is-warning {
-  background-color: #fdf2e3;
-  border-color: #f6cd92;
+  background-color: #fdf0e3;
+  border-color: #f5bf84;
 }
 
 .alert.is-danger {
