@@ -10,7 +10,7 @@ import pkg from "../../../package.json"
 export default () => {
   return (
     <section className="section is-hero is-wide-lg">
-      <div className="inner is-padding-right-left-md">
+      <div className="inner is-padding-horizontal-md">
         <div className="grid is-middle is-center is-gap-xxl">
           <div className="column is-space-md">
             <p className="text is-primary is-font-sans-en is-weight-700">
