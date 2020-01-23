@@ -502,28 +502,28 @@
     },
     {
       "name": "$text-primary",
-      "value": "$convert-primary",
-      "compiledValue": "var(--primary)"
+      "value": "$convert-primary-strong",
+      "compiledValue": "var(--primary-strong)"
     },
     {
       "name": "$text-info",
-      "value": "$convert-info",
-      "compiledValue": "var(--info)"
+      "value": "$convert-info-strong",
+      "compiledValue": "var(--info-strong)"
     },
     {
       "name": "$text-success",
-      "value": "$convert-success",
-      "compiledValue": "var(--success)"
+      "value": "$convert-success-strong",
+      "compiledValue": "var(--success-strong)"
     },
     {
       "name": "$text-warning",
-      "value": "$convert-warning",
-      "compiledValue": "var(--warning)"
+      "value": "$convert-warning-strong",
+      "compiledValue": "var(--warning-strong)"
     },
     {
       "name": "$text-danger",
-      "value": "$convert-danger",
-      "compiledValue": "var(--danger)"
+      "value": "$convert-danger-strong",
+      "compiledValue": "var(--danger-strong)"
     },
     {
       "name": "$text-weight-normal",

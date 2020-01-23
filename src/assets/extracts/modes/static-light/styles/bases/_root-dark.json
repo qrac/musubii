@@ -50,7 +50,7 @@
     {
       "name": "--success-strong",
       "value": "$theme-dark-success-strong",
-      "compiledValue": "#2ca52c"
+      "compiledValue": "#2fb12f"
     },
     {
       "name": "--success-darken",
@@ -65,7 +65,7 @@
     {
       "name": "--warning-strong",
       "value": "$theme-dark-warning-strong",
-      "compiledValue": "#ec9213"
+      "compiledValue": "#d98612"
     },
     {
       "name": "--warning-darken",
@@ -380,27 +380,27 @@
     {
       "name": "--alert-primary-background-color",
       "value": "$theme-dark-alert-primary-background-color",
-      "compiledValue": "rgba(41, 132, 142, 0.075)"
+      "compiledValue": "#1b2b2d"
     },
     {
       "name": "--alert-primary-border-color",
       "value": "$theme-dark-alert-primary-border-color",
-      "compiledValue": "#29848e"
+      "compiledValue": "#267982"
     },
     {
       "name": "--alert-info-background-color",
       "value": "$theme-dark-alert-info-background-color",
-      "compiledValue": "rgba(41, 125, 188, 0.075)"
+      "compiledValue": "#1a2832"
     },
     {
       "name": "--alert-info-border-color",
       "value": "$theme-dark-alert-info-border-color",
-      "compiledValue": "#297dbc"
+      "compiledValue": "#23699f"
     },
     {
       "name": "--alert-success-background-color",
       "value": "$theme-dark-alert-success-background-color",
-      "compiledValue": "rgba(31, 117, 31, 0.075)"
+      "compiledValue": "#182a18"
     },
     {
       "name": "--alert-success-border-color",
@@ -410,22 +410,22 @@
     {
       "name": "--alert-warning-background-color",
       "value": "$theme-dark-alert-warning-background-color",
-      "compiledValue": "rgba(179, 111, 15, 0.075)"
+      "compiledValue": "#342209"
     },
     {
       "name": "--alert-warning-border-color",
       "value": "$theme-dark-alert-warning-border-color",
-      "compiledValue": "#b36f0f"
+      "compiledValue": "#8e570b"
     },
     {
       "name": "--alert-danger-background-color",
       "value": "$theme-dark-alert-danger-background-color",
-      "compiledValue": "rgba(202, 43, 43, 0.075)"
+      "compiledValue": "#351d1d"
     },
     {
       "name": "--alert-danger-border-color",
       "value": "$theme-dark-alert-danger-border-color",
-      "compiledValue": "#ca2b2b"
+      "compiledValue": "#b52626"
     }
   ]
 }

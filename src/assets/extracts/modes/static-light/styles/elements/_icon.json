@@ -247,27 +247,27 @@
     },
     {
       "name": "$icon-primary",
-      "value": "$convert-primary",
+      "value": "$convert-primary-strong",
       "compiledValue": "#37b0be"
     },
     {
       "name": "$icon-info",
-      "value": "$convert-info",
+      "value": "$convert-info-strong",
       "compiledValue": "#4b9bd8"
     },
     {
       "name": "$icon-success",
-      "value": "$convert-success",
+      "value": "$convert-success-strong",
       "compiledValue": "#2ca52c"
     },
     {
       "name": "$icon-warning",
-      "value": "$convert-warning",
+      "value": "$convert-warning-strong",
       "compiledValue": "#ec9213"
     },
     {
       "name": "$icon-danger",
-      "value": "$convert-danger",
+      "value": "$convert-danger-strong",
       "compiledValue": "#db5757"
     },
     {

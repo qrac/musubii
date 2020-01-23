@@ -42,8 +42,8 @@
     },
     {
       "name": "$theme-dark-success-strong",
-      "value": "$theme-success",
-      "compiledValue": "#2ca52c"
+      "value": "lighten($theme-success, 3%)",
+      "compiledValue": "#2fb12f"
     },
     {
       "name": "$theme-dark-success-darken",
@@ -57,8 +57,8 @@
     },
     {
       "name": "$theme-dark-warning-strong",
-      "value": "$theme-warning",
-      "compiledValue": "#ec9213"
+      "value": "darken($theme-warning, 4%)",
+      "compiledValue": "#d98612"
     },
     {
       "name": "$theme-dark-warning-darken",
@@ -382,28 +382,28 @@
     },
     {
       "name": "$theme-dark-alert-primary-background-color",
-      "value": "rgba($theme-dark-primary, 0.075)",
-      "compiledValue": "rgba(41, 132, 142, 0.075)"
+      "value": "desaturate(darken($theme-dark-primary, 22%), 30%)",
+      "compiledValue": "#1b2b2d"
     },
     {
       "name": "$theme-dark-alert-primary-border-color",
-      "value": "$theme-dark-primary",
-      "compiledValue": "#29848e"
+      "value": "darken($theme-dark-primary, 3%)",
+      "compiledValue": "#267982"
     },
     {
       "name": "$theme-dark-alert-info-background-color",
-      "value": "rgba($theme-dark-info, 0.075)",
-      "compiledValue": "rgba(41, 125, 188, 0.075)"
+      "value": "desaturate(darken($theme-dark-info, 30%), 32%)",
+      "compiledValue": "#1a2832"
     },
     {
       "name": "$theme-dark-alert-info-border-color",
-      "value": "$theme-dark-info",
-      "compiledValue": "#297dbc"
+      "value": "darken($theme-dark-info, 7%)",
+      "compiledValue": "#23699f"
     },
     {
       "name": "$theme-dark-alert-success-background-color",
-      "value": "rgba($theme-dark-success, 0.075)",
-      "compiledValue": "rgba(31, 117, 31, 0.075)"
+      "value": "desaturate(darken($theme-dark-success, 16%), 30%)",
+      "compiledValue": "#182a18"
     },
     {
       "name": "$theme-dark-alert-success-border-color",
@@ -412,23 +412,23 @@
     },
     {
       "name": "$theme-dark-alert-warning-background-color",
-      "value": "rgba($theme-dark-warning, 0.075)",
-      "compiledValue": "rgba(179, 111, 15, 0.075)"
+      "value": "desaturate(darken($theme-dark-warning, 26%), 15%)",
+      "compiledValue": "#342209"
     },
     {
       "name": "$theme-dark-alert-warning-border-color",
-      "value": "$theme-dark-warning",
-      "compiledValue": "#b36f0f"
+      "value": "darken($theme-dark-warning, 8%)",
+      "compiledValue": "#8e570b"
     },
     {
       "name": "$theme-dark-alert-danger-background-color",
-      "value": "rgba($theme-dark-danger, 0.075)",
-      "compiledValue": "rgba(202, 43, 43, 0.075)"
+      "value": "desaturate(darken($theme-dark-danger, 32%), 36%)",
+      "compiledValue": "#351d1d"
     },
     {
       "name": "$theme-dark-alert-danger-border-color",
-      "value": "$theme-dark-danger",
-      "compiledValue": "#ca2b2b"
+      "value": "darken($theme-dark-danger, 5%)",
+      "compiledValue": "#b52626"
     }
   ]
 }

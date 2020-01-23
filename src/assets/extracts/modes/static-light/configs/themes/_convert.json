@@ -368,7 +368,7 @@
     {
       "name": "$convert-alert-primary-background-color",
       "value": "$theme-light-alert-primary-background-color",
-      "compiledValue": "#dff4f6"
+      "compiledValue": "#ebf8f9"
     },
     {
       "name": "$convert-alert-primary-border-color",
@@ -378,7 +378,7 @@
     {
       "name": "$convert-alert-info-background-color",
       "value": "$theme-light-alert-info-background-color",
-      "compiledValue": "#deecf8"
+      "compiledValue": "#eaf3fa"
     },
     {
       "name": "$convert-alert-info-border-color",
@@ -388,17 +388,17 @@
     {
       "name": "$convert-alert-success-background-color",
       "value": "$theme-light-alert-success-background-color",
-      "compiledValue": "#dbf5db"
+      "compiledValue": "#e7f9e7"
     },
     {
       "name": "$convert-alert-success-border-color",
       "value": "$theme-light-alert-success-border-color",
-      "compiledValue": "#7edd7e"
+      "compiledValue": "#8ae08a"
     },
     {
       "name": "$convert-alert-warning-background-color",
       "value": "$theme-light-alert-warning-background-color",
-      "compiledValue": "#fcf0de"
+      "compiledValue": "#fdf2e3"
     },
     {
       "name": "$convert-alert-warning-border-color",
@@ -408,12 +408,12 @@
     {
       "name": "$convert-alert-danger-background-color",
       "value": "$theme-light-alert-danger-background-color",
-      "compiledValue": "#fbeaea"
+      "compiledValue": "#fbeeee"
     },
     {
       "name": "$convert-alert-danger-border-color",
       "value": "$theme-light-alert-danger-border-color",
-      "compiledValue": "#eeafaf"
+      "compiledValue": "#f0b7b7"
     }
   ],
   "not-used-variables": [

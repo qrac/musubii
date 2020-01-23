@@ -51,7 +51,7 @@
       "compiledValue": "[class*=\"is-tail-bottom-\"]"
     },
     {
-      "name": "$modifier-alert-tail-left-",
+      "name": "$modifier-alert-tail-left",
       "value": "[class*=\"is-tail-left-\"]",
       "compiledValue": "[class*=\"is-tail-left-\"]"
     },

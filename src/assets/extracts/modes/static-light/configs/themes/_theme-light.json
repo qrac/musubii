@@ -382,8 +382,8 @@
     },
     {
       "name": "$theme-light-alert-primary-background-color",
-      "value": "lighten($theme-light-primary, 44%)",
-      "compiledValue": "#dff4f6"
+      "value": "lighten($theme-light-primary, 47%)",
+      "compiledValue": "#ebf8f9"
     },
     {
       "name": "$theme-light-alert-primary-border-color",
@@ -392,8 +392,8 @@
     },
     {
       "name": "$theme-light-alert-info-background-color",
-      "value": "lighten($theme-light-info, 35%)",
-      "compiledValue": "#deecf8"
+      "value": "lighten($theme-light-info, 38%)",
+      "compiledValue": "#eaf3fa"
     },
     {
       "name": "$theme-light-alert-info-border-color",
@@ -402,18 +402,18 @@
     },
     {
       "name": "$theme-light-alert-success-background-color",
-      "value": "lighten($theme-light-success, 50%)",
-      "compiledValue": "#dbf5db"
+      "value": "lighten($theme-light-success, 53%)",
+      "compiledValue": "#e7f9e7"
     },
     {
       "name": "$theme-light-alert-success-border-color",
-      "value": "lighten($theme-light-success, 27%)",
-      "compiledValue": "#7edd7e"
+      "value": "lighten($theme-light-success, 30%)",
+      "compiledValue": "#8ae08a"
     },
     {
       "name": "$theme-light-alert-warning-background-color",
-      "value": "lighten($theme-light-warning, 43%)",
-      "compiledValue": "#fcf0de"
+      "value": "lighten($theme-light-warning, 44%)",
+      "compiledValue": "#fdf2e3"
     },
     {
       "name": "$theme-light-alert-warning-border-color",
@@ -422,13 +422,13 @@
     },
     {
       "name": "$theme-light-alert-danger-background-color",
-      "value": "lighten($theme-light-danger, 35%)",
-      "compiledValue": "#fbeaea"
+      "value": "lighten($theme-light-danger, 36%)",
+      "compiledValue": "#fbeeee"
     },
     {
       "name": "$theme-light-alert-danger-border-color",
-      "value": "lighten($theme-light-danger, 21%)",
-      "compiledValue": "#eeafaf"
+      "value": "lighten($theme-light-danger, 23%)",
+      "compiledValue": "#f0b7b7"
     }
   ]
 }
