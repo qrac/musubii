@@ -983,14 +983,18 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
     &#{$modifier-form-success} {
       > {
         #{$selector-form-select-core} {
-          @include musubii-style-form-select-core-success();
+          &:not([disabled]):not([readonly]) {
+            @include musubii-style-form-select-core-success();
+          }
         }
       }
     }
     &#{$modifier-form-danger} {
       > {
         #{$selector-form-select-core} {
-          @include musubii-style-form-select-core-danger();
+          &:not([disabled]):not([readonly]) {
+            @include musubii-style-form-select-core-danger();
+          }
         }
       }
     }
@@ -1038,10 +1042,12 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @mixin musubii-style-form-select-core-plain-success() {
   background-color: $input-success-background-color;
+  border-color: transparent;
 }
 
 @mixin musubii-style-form-select-core-plain-danger() {
   background-color: $input-danger-background-color;
+  border-color: transparent;
 }
 
 @include generate-style($option-generate-style-form) {
@@ -1058,14 +1064,18 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
       &#{$modifier-form-success} {
         > {
           #{$selector-form-select-core} {
-            @include musubii-style-form-select-core-plain-success();
+            &:not([disabled]):not([readonly]) {
+              @include musubii-style-form-select-core-plain-success();
+            }
           }
         }
       }
       &#{$modifier-form-danger} {
         > {
           #{$selector-form-select-core} {
-            @include musubii-style-form-select-core-plain-danger();
+            &:not([disabled]):not([readonly]) {
+              @include musubii-style-form-select-core-plain-danger();
+            }
           }
         }
       }
@@ -1099,10 +1109,12 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 }
 
 @mixin musubii-style-form-select-core-underline-success() {
+  background-color: transparent;
   border-bottom-color: $input-success-border-color;
 }
 
 @mixin musubii-style-form-select-core-underline-danger() {
+  background-color: transparent;
   border-bottom-color: $input-danger-border-color;
 }
 
@@ -1121,14 +1133,18 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
       &#{$modifier-form-success} {
         > {
           #{$selector-form-select-core} {
-            @include musubii-style-form-select-core-underline-success();
+            &:not([disabled]):not([readonly]) {
+              @include musubii-style-form-select-core-underline-success();
+            }
           }
         }
       }
       &#{$modifier-form-danger} {
         > {
           #{$selector-form-select-core} {
-            @include musubii-style-form-select-core-underline-danger();
+            &:not([disabled]):not([readonly]) {
+              @include musubii-style-form-select-core-underline-danger();
+            }
           }
         }
       }
@@ -1166,10 +1182,12 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
 
 @mixin musubii-style-form-select-core-inside-success() {
   background-color: $input-success-background-color;
+  border-color: transparent;
 }
 
 @mixin musubii-style-form-select-core-inside-danger() {
   background-color: $input-danger-background-color;
+  border-color: transparent;
 }
 
 @include generate-style($option-generate-style-form) {
@@ -1194,14 +1212,18 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
       &#{$modifier-form-success} {
         > {
           #{$selector-form-select-core} {
-            @include musubii-style-form-select-core-inside-success();
+            &:not([disabled]):not([readonly]) {
+              @include musubii-style-form-select-core-inside-success();
+            }
           }
         }
       }
       &#{$modifier-form-danger} {
         > {
           #{$selector-form-select-core} {
-            @include musubii-style-form-select-core-inside-danger();
+            &:not([disabled]):not([readonly]) {
+              @include musubii-style-form-select-core-inside-danger();
+            }
           }
         }
       }
