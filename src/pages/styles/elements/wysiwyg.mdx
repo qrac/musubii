@@ -5,6 +5,18 @@ export const meta = {
   filePath: "styles/elements/_wysiwyg"
 }
 
+import {
+  PreviewWysiwygHeading,
+  PreviewWysiwygText,
+  PreviewWysiwygLink,
+  PreviewWysiwygBlockquote,
+  PreviewWysiwygCode,
+  PreviewWysiwygPre,
+  PreviewWysiwygList,
+  PreviewWysiwygTable,
+  PreviewWysiwygDefinitionList,
+  PreviewWysiwygFigure
+} from "~/components/previews/preview-wysiwyg"
 import { PreviewVariablesDouble } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -29,11 +41,15 @@ WYSIWYG や Markdown から出力された「class 名の無いプレーンな H
 
 ## Heading
 
+<PreviewWysiwygHeading />
+
 | Selector  | Description                           |
 | --------- | ------------------------------------- |
 | `h1 ~ h6` | `.wysiwyg` 内で装飾される見出しタグ。 |
 
 ## Text
+
+<PreviewWysiwygText />
 
 | Selector | Description                                               |
 | -------- | --------------------------------------------------------- |
@@ -49,6 +65,8 @@ WYSIWYG や Markdown から出力された「class 名の無いプレーンな H
 
 デフォルトは `border-bottom` プロパティが使われていますが、[Option](/configs/variables/option#option-add-style-xxxx) の `$option-add-style-wysiwyg-link-border` を `false` にすると、下線が `text-decoration: underline;` に切り替わります。
 
+<PreviewWysiwygLink />
+
 | Selector | Description                             |
 | -------- | --------------------------------------- |
 | `a`      | `.wysiwyg` 内で装飾されるアンカータグ。 |
@@ -59,11 +77,16 @@ WYSIWYG や Markdown から出力された「class 名の無いプレーンな H
 
 ## Blockquote
 
+<PreviewWysiwygBlockquote />
+
 | Selector     | Description                         |
 | ------------ | ----------------------------------- |
 | `blockquote` | `.wysiwyg` 内で装飾される引用タグ。 |
 
 ## Code
+
+<PreviewWysiwygCode />
+<PreviewWysiwygPre />
 
 | Selector | Description                                     |
 | -------- | ----------------------------------------------- |
@@ -71,6 +94,8 @@ WYSIWYG や Markdown から出力された「class 名の無いプレーンな H
 | `pre`    | `.wysiwyg` 内で装飾される整形済みテキストタグ。 |
 
 ## List
+
+<PreviewWysiwygList />
 
 | Selector | Description                                   |
 | -------- | --------------------------------------------- |
@@ -80,6 +105,8 @@ WYSIWYG や Markdown から出力された「class 名の無いプレーンな H
 
 ## Table
 
+<PreviewWysiwygTable />
+
 | Selector | Description                               |
 | -------- | ----------------------------------------- |
 | `table`  | `.wysiwyg` 内で装飾されるテーブルタグ。   |
@@ -88,13 +115,17 @@ WYSIWYG や Markdown から出力された「class 名の無いプレーンな H
 
 ## Definition List
 
+<PreviewWysiwygDefinitionList />
+
 | Selector | Description                               |
 | -------- | ----------------------------------------- |
 | `dl`     | `.wysiwyg` 内で装飾される定義リストタグ。 |
 | `dt`     | `.wysiwyg` 内で装飾される定義語タグ。     |
 | `dd`     | `.wysiwyg` 内で装飾される定義説明タグ。   |
 
-## Definition List
+## Figure
+
+<PreviewWysiwygFigure />
 
 | Selector     | Description                                           |
 | ------------ | ----------------------------------------------------- |
