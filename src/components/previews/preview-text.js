@@ -90,7 +90,7 @@ export class PreviewTextDark extends React.Component {
   }
   render() {
     const texts = []
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 10; i++) {
       const suffix = i === 0 ? "" : "-" + i
       texts.push(`<span class="text is-dark${suffix}">ダーク</span>`)
     }
@@ -120,7 +120,7 @@ export class PreviewTextLight extends React.Component {
   }
   render() {
     const texts = []
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 10; i++) {
       const suffix = i === 0 ? "" : "-" + i
       texts.push(`<span class="text is-light${suffix}">ライト</span>`)
     }

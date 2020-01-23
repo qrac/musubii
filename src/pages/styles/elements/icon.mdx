@@ -5,6 +5,12 @@ export const meta = {
   filePath: "styles/elements/_icon"
 }
 
+import {
+  PreviewIconDark,
+  PreviewIconLight,
+  PreviewIconRole,
+  PreviewIconFit
+} from "~/components/previews/preview-icon"
 import { PreviewVariablesSingle } from "~/components/previews/preview-variables"
 import PreviewMixins from "~/components/previews/preview-mixins"
 import PreviewSources from "~/components/previews/preview-sources"
@@ -31,6 +37,8 @@ contents list
 
 `(value)` は [Color](/configs/variables/color) の値を引き継いでいます。
 
+<PreviewIconDark />
+
 | Darkest    | Dark 1       | Dark 2       | Dark 3       | Dark 4       | Dark 5       | Dark 6       | Dark 7       | Dark 8       | Dark 9       |
 | ---------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
 | `.is-dark` | `.is-dark-1` | `.is-dark-2` | `.is-dark-3` | `.is-dark-4` | `.is-dark-5` | `.is-dark-6` | `.is-dark-7` | `.is-dark-8` | `.is-dark-9` |
@@ -41,6 +49,8 @@ contents list
 
 `(value)` は [Color](/configs/variables/color) の値を引き継いでいます。
 
+<PreviewIconLight />
+
 | Brightest   | Light 1       | Light 2       | Light 3       | Light 4       | Light 5       | Light 6       | Light 7       | Light 8       | Light 9       |
 | ----------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | `.is-light` | `.is-light-1` | `.is-light-2` | `.is-light-3` | `.is-light-4` | `.is-light-5` | `.is-light-6` | `.is-light-7` | `.is-light-8` | `.is-light-9` |
@@ -49,11 +59,15 @@ contents list
 
 `.is-(role)` 形式のモディファイアをアイコンセレクターに付与すると、各役割毎のカラーリングに変化します。
 
+<PreviewIconRole />
+
 | Primary       | Info       | Success       | Warning       | Danger       |
 | ------------- | ---------- | ------------- | ------------- | ------------ |
 | `.is-primary` | `.is-info` | `.is-success` | `.is-warning` | `.is-danger` |
 
 ## Fit
+
+<PreviewIconFit />
 
 | Modifier  | Description                                                     |
 | --------- | --------------------------------------------------------------- |
