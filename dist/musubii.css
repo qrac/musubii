@@ -1772,11 +1772,11 @@ iframe {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.input[type="text"].is-success, .input[type="search"].is-success, .input[type="url"].is-success, .input[type="email"].is-success, .input[type="tel"].is-success, .input[type="password"].is-success, .input[type="datetime-local"].is-success, .input[type="date"].is-success, .input[type="month"].is-success, .input[type="week"].is-success, .input[type="time"].is-success, .input[type="number"].is-success {
+.input[type="text"].is-success:not([disabled]):not([readonly]), .input[type="search"].is-success:not([disabled]):not([readonly]), .input[type="url"].is-success:not([disabled]):not([readonly]), .input[type="email"].is-success:not([disabled]):not([readonly]), .input[type="tel"].is-success:not([disabled]):not([readonly]), .input[type="password"].is-success:not([disabled]):not([readonly]), .input[type="datetime-local"].is-success:not([disabled]):not([readonly]), .input[type="date"].is-success:not([disabled]):not([readonly]), .input[type="month"].is-success:not([disabled]):not([readonly]), .input[type="week"].is-success:not([disabled]):not([readonly]), .input[type="time"].is-success:not([disabled]):not([readonly]), .input[type="number"].is-success:not([disabled]):not([readonly]) {
   border-color: #7edd7e;
 }
 
-.input[type="text"].is-danger, .input[type="search"].is-danger, .input[type="url"].is-danger, .input[type="email"].is-danger, .input[type="tel"].is-danger, .input[type="password"].is-danger, .input[type="datetime-local"].is-danger, .input[type="date"].is-danger, .input[type="month"].is-danger, .input[type="week"].is-danger, .input[type="time"].is-danger, .input[type="number"].is-danger {
+.input[type="text"].is-danger:not([disabled]):not([readonly]), .input[type="search"].is-danger:not([disabled]):not([readonly]), .input[type="url"].is-danger:not([disabled]):not([readonly]), .input[type="email"].is-danger:not([disabled]):not([readonly]), .input[type="tel"].is-danger:not([disabled]):not([readonly]), .input[type="password"].is-danger:not([disabled]):not([readonly]), .input[type="datetime-local"].is-danger:not([disabled]):not([readonly]), .input[type="date"].is-danger:not([disabled]):not([readonly]), .input[type="month"].is-danger:not([disabled]):not([readonly]), .input[type="week"].is-danger:not([disabled]):not([readonly]), .input[type="time"].is-danger:not([disabled]):not([readonly]), .input[type="number"].is-danger:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
   border-color: #eeafaf;
 }
@@ -1838,11 +1838,11 @@ iframe {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.textarea.is-success {
+.textarea.is-success:not([disabled]):not([readonly]) {
   border-color: #7edd7e;
 }
 
-.textarea.is-danger {
+.textarea.is-danger:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
   border-color: #eeafaf;
 }
@@ -1866,12 +1866,14 @@ iframe {
   background-color: #bdbdbd;
 }
 
-.input[type="text"].is-plain.is-success, .input[type="search"].is-plain.is-success, .input[type="url"].is-plain.is-success, .input[type="email"].is-plain.is-success, .input[type="tel"].is-plain.is-success, .input[type="password"].is-plain.is-success, .input[type="datetime-local"].is-plain.is-success, .input[type="date"].is-plain.is-success, .input[type="month"].is-plain.is-success, .input[type="week"].is-plain.is-success, .input[type="time"].is-plain.is-success, .input[type="number"].is-plain.is-success {
+.input[type="text"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="search"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="url"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="email"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="tel"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="password"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="datetime-local"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="date"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="month"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="week"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="time"].is-plain.is-success:not([disabled]):not([readonly]), .input[type="number"].is-plain.is-success:not([disabled]):not([readonly]) {
   background-color: #dbf5db;
+  border-color: transparent;
 }
 
-.input[type="text"].is-plain.is-danger, .input[type="search"].is-plain.is-danger, .input[type="url"].is-plain.is-danger, .input[type="email"].is-plain.is-danger, .input[type="tel"].is-plain.is-danger, .input[type="password"].is-plain.is-danger, .input[type="datetime-local"].is-plain.is-danger, .input[type="date"].is-plain.is-danger, .input[type="month"].is-plain.is-danger, .input[type="week"].is-plain.is-danger, .input[type="time"].is-plain.is-danger, .input[type="number"].is-plain.is-danger {
+.input[type="text"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="search"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="url"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="email"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="tel"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="password"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="datetime-local"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="date"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="month"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="week"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="time"].is-plain.is-danger:not([disabled]):not([readonly]), .input[type="number"].is-plain.is-danger:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
+  border-color: transparent;
 }
 
 .textarea.is-plain {
@@ -1889,12 +1891,14 @@ iframe {
   background-color: #bdbdbd;
 }
 
-.textarea.is-plain.is-success {
+.textarea.is-plain.is-success:not([disabled]):not([readonly]) {
   background-color: #dbf5db;
+  border-color: transparent;
 }
 
-.textarea.is-plain.is-danger {
+.textarea.is-plain.is-danger:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
+  border-color: transparent;
 }
 
 .input[type="text"].is-underline, .input[type="search"].is-underline, .input[type="url"].is-underline, .input[type="email"].is-underline, .input[type="tel"].is-underline, .input[type="password"].is-underline, .input[type="datetime-local"].is-underline, .input[type="date"].is-underline, .input[type="month"].is-underline, .input[type="week"].is-underline, .input[type="time"].is-underline, .input[type="number"].is-underline {
@@ -1916,27 +1920,14 @@ iframe {
   background-color: transparent;
 }
 
-.input[type="text"].is-underline.is-success, .input[type="search"].is-underline.is-success, .input[type="url"].is-underline.is-success, .input[type="email"].is-underline.is-success, .input[type="tel"].is-underline.is-success, .input[type="password"].is-underline.is-success, .input[type="datetime-local"].is-underline.is-success, .input[type="date"].is-underline.is-success, .input[type="month"].is-underline.is-success, .input[type="week"].is-underline.is-success, .input[type="time"].is-underline.is-success, .input[type="number"].is-underline.is-success {
+.input[type="text"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="search"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="url"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="email"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="tel"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="password"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="datetime-local"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="date"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="month"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="week"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="time"].is-underline.is-success:not([disabled]):not([readonly]), .input[type="number"].is-underline.is-success:not([disabled]):not([readonly]) {
+  background-color: transparent;
   border-bottom-color: #7edd7e;
 }
 
-.input[type="text"].is-underline.is-danger, .input[type="search"].is-underline.is-danger, .input[type="url"].is-underline.is-danger, .input[type="email"].is-underline.is-danger, .input[type="tel"].is-underline.is-danger, .input[type="password"].is-underline.is-danger, .input[type="datetime-local"].is-underline.is-danger, .input[type="date"].is-underline.is-danger, .input[type="month"].is-underline.is-danger, .input[type="week"].is-underline.is-danger, .input[type="time"].is-underline.is-danger, .input[type="number"].is-underline.is-danger {
-  border-bottom-color: #eeafaf;
-}
-
-.textarea {
-  padding-left: 0;
-  padding-right: 0;
+.input[type="text"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="search"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="url"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="email"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="tel"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="password"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="datetime-local"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="date"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="month"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="week"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="time"].is-underline.is-danger:not([disabled]):not([readonly]), .input[type="number"].is-underline.is-danger:not([disabled]):not([readonly]) {
   background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #d1d8dc;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.textarea:focus, .textarea[readonly]:focus {
-  border-color: #0f7dd2;
-  box-shadow: none;
+  border-bottom-color: #eeafaf;
 }
 
 .textarea.is-underline {
@@ -1958,11 +1949,13 @@ iframe {
   background-color: transparent;
 }
 
-.textarea.is-underline.is-success {
+.textarea.is-underline.is-success:not([disabled]):not([readonly]) {
+  background-color: transparent;
   border-bottom-color: #7edd7e;
 }
 
-.textarea.is-underline.is-danger {
+.textarea.is-underline.is-danger:not([disabled]):not([readonly]) {
+  background-color: transparent;
   border-bottom-color: #eeafaf;
 }
 
@@ -1984,12 +1977,14 @@ iframe {
   border-color: transparent;
 }
 
-.input[type="text"].is-inside.is-success, .input[type="search"].is-inside.is-success, .input[type="url"].is-inside.is-success, .input[type="email"].is-inside.is-success, .input[type="tel"].is-inside.is-success, .input[type="password"].is-inside.is-success, .input[type="datetime-local"].is-inside.is-success, .input[type="date"].is-inside.is-success, .input[type="month"].is-inside.is-success, .input[type="week"].is-inside.is-success, .input[type="time"].is-inside.is-success, .input[type="number"].is-inside.is-success {
+.input[type="text"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="search"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="url"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="email"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="tel"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="password"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="datetime-local"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="date"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="month"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="week"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="time"].is-inside.is-success:not([disabled]):not([readonly]), .input[type="number"].is-inside.is-success:not([disabled]):not([readonly]) {
   background-color: #dbf5db;
+  border-color: transparent;
 }
 
-.input[type="text"].is-inside.is-danger, .input[type="search"].is-inside.is-danger, .input[type="url"].is-inside.is-danger, .input[type="email"].is-inside.is-danger, .input[type="tel"].is-inside.is-danger, .input[type="password"].is-inside.is-danger, .input[type="datetime-local"].is-inside.is-danger, .input[type="date"].is-inside.is-danger, .input[type="month"].is-inside.is-danger, .input[type="week"].is-inside.is-danger, .input[type="time"].is-inside.is-danger, .input[type="number"].is-inside.is-danger {
+.input[type="text"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="search"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="url"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="email"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="tel"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="password"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="datetime-local"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="date"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="month"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="week"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="time"].is-inside.is-danger:not([disabled]):not([readonly]), .input[type="number"].is-inside.is-danger:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
+  border-color: transparent;
 }
 
 .textarea.is-inside {
@@ -2010,12 +2005,14 @@ iframe {
   border-color: transparent;
 }
 
-.textarea.is-inside.is-success {
+.textarea.is-inside.is-success:not([disabled]):not([readonly]) {
   background-color: #dbf5db;
+  border-color: transparent;
 }
 
-.textarea.is-inside.is-danger {
+.textarea.is-inside.is-danger:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
+  border-color: transparent;
 }
 
 .input[type="file"] {
@@ -2261,11 +2258,11 @@ iframe {
   padding-right: 2.5em;
 }
 
-.select.is-success > select {
+.select.is-success > select:not([disabled]):not([readonly]) {
   border-color: #7edd7e;
 }
 
-.select.is-danger > select {
+.select.is-danger > select:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
   border-color: #eeafaf;
 }
@@ -2287,12 +2284,14 @@ iframe {
   background-color: #bdbdbd;
 }
 
-.select.is-plain.is-success > select {
+.select.is-plain.is-success > select:not([disabled]):not([readonly]) {
   background-color: #dbf5db;
+  border-color: transparent;
 }
 
-.select.is-plain.is-danger > select {
+.select.is-plain.is-danger > select:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
+  border-color: transparent;
 }
 
 .select.is-underline > select {
@@ -2313,11 +2312,13 @@ iframe {
   background-color: transparent;
 }
 
-.select.is-underline.is-success > select {
+.select.is-underline.is-success > select:not([disabled]):not([readonly]) {
+  background-color: transparent;
   border-bottom-color: #7edd7e;
 }
 
-.select.is-underline.is-danger > select {
+.select.is-underline.is-danger > select:not([disabled]):not([readonly]) {
+  background-color: transparent;
   border-bottom-color: #eeafaf;
 }
 
@@ -2343,12 +2344,14 @@ iframe {
   padding-right: 2.5em;
 }
 
-.select.is-inside.is-success > select {
+.select.is-inside.is-success > select:not([disabled]):not([readonly]) {
   background-color: #dbf5db;
+  border-color: transparent;
 }
 
-.select.is-inside.is-danger > select {
+.select.is-inside.is-danger > select:not([disabled]):not([readonly]) {
   background-color: #fbeaea;
+  border-color: transparent;
 }
 
 .select.is-multiple > select {
@@ -2524,28 +2527,28 @@ svg.icon {
 }
 
 .alert.is-primary {
-  background-color: #dff4f6;
+  background-color: #ebf8f9;
   border-color: #9cdbe2;
 }
 
 .alert.is-info {
-  background-color: #deecf8;
+  background-color: #eaf3fa;
   border-color: #a3cceb;
 }
 
 .alert.is-success {
-  background-color: #dbf5db;
-  border-color: #7edd7e;
+  background-color: #e7f9e7;
+  border-color: #8ae08a;
 }
 
 .alert.is-warning {
-  background-color: #fcf0de;
+  background-color: #fdf2e3;
   border-color: #f6cd92;
 }
 
 .alert.is-danger {
-  background-color: #fbeaea;
-  border-color: #eeafaf;
+  background-color: #fbeeee;
+  border-color: #f0b7b7;
 }
 
 .wysiwyg h1,
