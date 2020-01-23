@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <section className="section is-about is-wide-lg">
+    <section className="section is-about is-padding-horizontal-safe is-wide-lg">
       <div className="inner is-padding-horizontal-md is-space">
         <h2 className="text is-primary is-strong is-center is-lg is-fablet-xl is-tablet-xxl">
           腹が減ってはコードが書けぬ！

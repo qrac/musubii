@@ -3,9 +3,9 @@ import SiteCopylight from "~/components/parts/site-copylight"
 
 export default () => {
   return (
-    <footer className="section is-footer">
-      <div className="inner is-padding-right-left-md">
-        <div className="box is-padding-bottom-safe is-space-md">
+    <footer className="section is-footer is-padding-bottom-safe">
+      <div className="inner is-padding-horizontal-md">
+        <div className="box is-space-md">
           <div className="box">
             <SiteOther />
           </div>

@@ -32,7 +32,7 @@ const components = {
 export default ({ children }) => {
   return (
     <MDXProvider components={components}>
-      <div className="section is-docs">
+      <div className="section is-docs is-padding-horizontal-safe">
         <div className="inner is-padding-horizontal-md">
           <div className="grid">
             <div className="column is-mobile-12 is-desktop-3">

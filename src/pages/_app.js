@@ -67,7 +67,7 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, router } = this.props
     return (
-      <div className="app is-padding-safe">
+      <div className="app">
         <AppHeader />
         <AppActions
           legacy={this.state.legacy}

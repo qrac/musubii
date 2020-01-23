@@ -2,7 +2,7 @@ import DemoImageFeature2 from "~/assets/images/demo-image-feature-2"
 
 export default () => {
   return (
-    <section className="section is-feature is-wide-lg">
+    <section className="section is-feature is-padding-horizontal-safe is-wide-lg">
       <div className="inner is-padding-horizontal-md is-space">
         <div className="grid is-middle is-center is-gap-xl">
           <div className="column">

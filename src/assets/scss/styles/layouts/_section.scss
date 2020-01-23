@@ -26,12 +26,14 @@
   }
   &.is-footer {
     position: relative;
-    padding: 2.5em 0;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
     z-index: 5;
   }
   &.is-hero {
     margin-top: -$global-header-height-mobile;
-    padding: 2em + $global-header-height-mobile 0 3.5em;
+    padding-top: 2em + $global-header-height-mobile;
+    padding-bottom: 3.5em;
     background-color: $convert-section-background-color-grey-wind;
     transition: $global-transition-mode-change;
     @include desktop() {
@@ -40,10 +42,12 @@
     }
   }
   &.is-about {
-    padding: 3em 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
   &.is-feature {
-    padding: 3em 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
     &:nth-child(odd) {
       background-color: $convert-section-background-color-grey-wind;
     }
