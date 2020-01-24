@@ -17,11 +17,11 @@ contents list
 MUSUBii を Gatsby.js で使う場合は、必要なライブラリをインストールして設定を行います。
 
 ```
-npm install --save-dev gatsby gatsby-plugin-sass gatsby-plugin-sass-resources node-sass
+npm install --save-dev gatsby gatsby-plugin-sass node-sass
 ```
 
 ```
-yarn add --dev gatsby gatsby-plugin-sass gatsby-plugin-sass-resources node-sass
+yarn add --dev gatsby gatsby-plugin-sass node-sass
 ```
 
 ## Setting
@@ -30,26 +30,25 @@ yarn add --dev gatsby gatsby-plugin-sass gatsby-plugin-sass-resources node-sass
 
 ```js
 module.exports = {
-  plugins: [
-    "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-sass-resources",
-      options: {
-        resources: ["src/assets/scss/configs/_import.scss"]
-      }
-    }
-  ]
+  plugins: ["gatsby-plugin-sass"]
 }
 ```
 
-`gatsby-browser.js`
+`layout.js`
 
 ```js
 // Import Styles
-import("src/assets/scss/styles/_import.scss")
+import "src/assets/scss/project.scss"
 ```
 
 ## SCSS
+
+`src/assets/scss/project.scss`
+
+```scss
+@import "./configs/_import.scss";
+@import "./configs/_import.scss";
+```
 
 `src/assets/scss/configs/_import.scss`
 
