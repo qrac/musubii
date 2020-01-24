@@ -14,7 +14,7 @@ export default () => {
             <div className="box is-feature-texts is-space-md">
               <h2 className="text is-xl">
                 <span className="text is-margin-right-xs">
-                  SCSSでダークモード対応
+                  ダークモード対応
                 </span>
                 <span className="badge is-plain is-info is-position-top-fix is-xxs">
                   <span className="text is-strong">NEW</span>

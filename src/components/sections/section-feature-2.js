@@ -11,7 +11,7 @@ export default () => {
           <div className="column">
             <div className="box is-feature-texts is-space-md">
               <h2 className="text is-xl">
-                <span className="text">簡単で分かりやすい記述</span>
+                <span className="text">簡単で分かりやすい記法</span>
               </h2>
               <p className="text is-line-height-lg is-sm">
                 命名規則は単純で、特定の要素に{" "}
