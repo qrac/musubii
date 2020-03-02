@@ -96,6 +96,11 @@
       "compiledValue": ".is-ie"
     },
     {
+      "name": "$suffix-flex-pipe",
+      "value": "-",
+      "compiledValue": "-"
+    },
+    {
       "name": "$suffix-flex-grow",
       "value": "-0",
       "compiledValue": "-0"
