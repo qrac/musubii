@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.1 CC0-1.0 by Qrac */
+/*! MUSUBii v7.0.2 CC0-1.0 by Qrac */
 
 *,
 ::before,
@@ -1555,8 +1555,15 @@ iframe {
 }
 
 .list.is-kome > .item {
-  display: list-item;
-  list-style: "\203B" outside;
+  position: relative;
+  display: block;
+}
+
+.list.is-kome > .item:before {
+  content: "\203B";
+  position: absolute;
+  top: 0;
+  left: -1em;
 }
 
 .list.is-decimal > .item {
