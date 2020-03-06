@@ -66,19 +66,14 @@
       "compiledValue": "square outside"
     },
     {
-      "name": "$list-kome-unicode",
-      "value": "unquote('\"') + unquote(str-insert(\"203B\", \"\\\", 1)) + unquote('\"')",
-      "compiledValue": "\"203B\""
-    },
-    {
-      "name": "$list-kome-item-list-style",
-      "value": "$list-kome-unicode outside",
-      "compiledValue": "\"※\" outside"
-    },
-    {
       "name": "$list-decimal-item-list-style",
       "value": "decimal outside",
       "compiledValue": "decimal outside"
+    },
+    {
+      "name": "$list-kome-unicode",
+      "value": "unquote('\"') + unquote(str-insert(\"203B\", \"\\\", 1)) + unquote('\"')",
+      "compiledValue": "\"203B\""
     },
     {
       "name": "$list-note-item-margin-left",
