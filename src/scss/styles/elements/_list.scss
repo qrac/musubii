@@ -24,10 +24,9 @@ $list-item-margin-top: 0.25em !default;
 $list-disc-item-list-style: disc outside !default;
 $list-circle-item-list-style: circle outside !default;
 $list-square-item-list-style: square outside !default;
+$list-decimal-item-list-style: decimal outside !default;
 $list-kome-unicode: unquote('"') + unquote(str-insert("203B", "\\", 1)) +
   unquote('"') !default;
-$list-kome-item-list-style: $list-kome-unicode outside !default;
-$list-decimal-item-list-style: decimal outside !default;
 
 // List Note
 $list-note-item-margin-left: 0.25em !default;
@@ -64,8 +63,14 @@ $list-note-item-margin-left: 0.25em !default;
 }
 
 @mixin musubii-style-list-kome-item() {
-  display: list-item;
-  list-style: $list-kome-item-list-style;
+  position: relative;
+  display: block;
+  &:before {
+    content: $list-kome-unicode;
+    position: absolute;
+    top: 0;
+    left: -1em;
+  }
 }
 
 @mixin musubii-style-list-decimal-item() {
