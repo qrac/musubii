@@ -71,14 +71,24 @@
       "compiledValue": ".is-inside"
     },
     {
-      "name": "$modifier-form-middle",
-      "value": ".is-middle",
-      "compiledValue": ".is-middle"
+      "name": "$modifier-form-right",
+      "value": ".is-right",
+      "compiledValue": ".is-right"
     },
     {
       "name": "$modifier-form-center",
       "value": ".is-center",
       "compiledValue": ".is-center"
+    },
+    {
+      "name": "$modifier-form-left",
+      "value": ".is-left",
+      "compiledValue": ".is-left"
+    },
+    {
+      "name": "$modifier-form-middle",
+      "value": ".is-middle",
+      "compiledValue": ".is-middle"
     },
     {
       "name": "$modifier-form-checked",
@@ -391,6 +401,18 @@
     },
     {
       "name": "musubii-style-form-input-readonly",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-right",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-center",
+      "parameters": []
+    },
+    {
+      "name": "musubii-style-form-input-left",
       "parameters": []
     },
     {
