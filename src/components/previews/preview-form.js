@@ -13,32 +13,32 @@ const types = [
   { id: 3, text: "TEL", value: "tel" },
   { id: 4, text: "Number", value: "number" },
   { id: 5, text: "Date", value: "date" },
-  { id: 6, text: "Time", value: "time" }
+  { id: 6, text: "Time", value: "time" },
 ]
 
 const patterns = [
   { id: 0, text: "None", value: "" },
   { id: 1, text: "Plain", value: "is-plain" },
   { id: 2, text: "Underline", value: "is-underline" },
-  { id: 3, text: "Inside", value: "is-inside" }
+  { id: 3, text: "Inside", value: "is-inside" },
 ]
 
 const multiplePatterns = [
   { id: 0, text: "None", value: "" },
   { id: 1, text: "Plain", value: "is-plain" },
-  { id: 3, text: "Inside", value: "is-inside" }
+  { id: 3, text: "Inside", value: "is-inside" },
 ]
 
 const buttonPatterns = [
   { id: 0, text: "Plain", value: "is-plain" },
   { id: 1, text: "Outline", value: "is-outline" },
-  { id: 2, text: "Melt", value: "is-melt" }
+  { id: 2, text: "Melt", value: "is-melt" },
 ]
 
 const roles = [
   { id: 0, text: "None", value: "" },
   { id: 1, text: "Success", value: "is-success" },
-  { id: 2, text: "Danger", value: "is-danger" }
+  { id: 2, text: "Danger", value: "is-danger" },
 ]
 
 const buttonRoles = [
@@ -47,12 +47,19 @@ const buttonRoles = [
   { id: 2, text: "Info", value: "is-info" },
   { id: 3, text: "Success", value: "is-success" },
   { id: 4, text: "Warning", value: "is-warning" },
-  { id: 5, text: "Danger", value: "is-danger" }
+  { id: 5, text: "Danger", value: "is-danger" },
+]
+
+const aligns = [
+  { id: 0, text: "None", value: "" },
+  { id: 1, text: "left", value: "is-left" },
+  { id: 2, text: "Center", value: "is-center" },
+  { id: 3, text: "Right", value: "is-right" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewFormBasic extends React.Component {
@@ -62,13 +69,15 @@ export class PreviewFormBasic extends React.Component {
       type: "text",
       pattern: "",
       role: "",
+      align: "",
       round: false,
       disabled: false,
-      readonly: false
+      readonly: false,
     }
     this.changeType = this.changeType.bind(this)
     this.changePattern = this.changePattern.bind(this)
     this.changeRole = this.changeRole.bind(this)
+    this.changeAlign = this.changeAlign.bind(this)
     this.toggleRound = this.toggleRound.bind(this)
     this.toggleDisabled = this.toggleDisabled.bind(this)
     this.toggleReadonly = this.toggleReadonly.bind(this)
@@ -81,6 +90,9 @@ export class PreviewFormBasic extends React.Component {
   }
   changeRole(value) {
     this.setState({ role: value })
+  }
+  changeAlign(value) {
+    this.setState({ align: value })
   }
   toggleRound() {
     this.setState({ round: !this.state.round })
@@ -96,6 +108,7 @@ export class PreviewFormBasic extends React.Component {
     const pattern = this.state.pattern
     const role = this.state.role
     const round = this.state.round ? "is-round" : ""
+    const align = this.state.align
     const disabled = this.state.disabled ? "disabled" : ""
     const readonly = this.state.readonly ? "readonly" : ""
     const subText = type === "text" ? 'placeholder="Text"' : ""
@@ -105,7 +118,7 @@ export class PreviewFormBasic extends React.Component {
     const subNumber = type === "number" ? 'step="100" placeholder="10000"' : ""
     const subDate = type === "date" ? 'value="2020-01-01"' : ""
     const subTime = type === "time" ? 'value="09:30:00"' : ""
-    const contents = `<input class="input ${pattern} ${role} ${round}"
+    const contents = `<input class="input ${pattern} ${role} ${align} ${round}"
       type="${type}" name="${type}"
       ${subText} ${subUrl} ${subEmal} ${subTel} ${subNumber} ${subDate} ${subTime}
       ${disabled} ${readonly} />`
@@ -119,22 +132,29 @@ export class PreviewFormBasic extends React.Component {
             <DemoOption title={"Type"}>
               <DemoOptionBoxRadios
                 patterns={types}
-                parentChange={value => this.changeType(value)}
+                parentChange={(value) => this.changeType(value)}
                 checked={this.state.type}
               />
             </DemoOption>
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={roles}
-                parentChange={value => this.changeRole(value)}
+                parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
+              />
+            </DemoOption>
+            <DemoOption title={"Align"}>
+              <DemoOptionBoxRadios
+                patterns={aligns}
+                parentChange={(value) => this.changeAlign(value)}
+                checked={this.state.align}
               />
             </DemoOption>
             <DemoOption title={"Other"}>
@@ -175,7 +195,7 @@ export class PreviewFormTextarea extends React.Component {
       pattern: "",
       role: "",
       disabled: false,
-      readonly: false
+      readonly: false,
     }
     this.changePattern = this.changePattern.bind(this)
     this.changeRole = this.changeRole.bind(this)
@@ -211,14 +231,14 @@ export class PreviewFormTextarea extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={roles}
-                parentChange={value => this.changeRole(value)}
+                parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
             </DemoOption>
@@ -257,7 +277,7 @@ export class PreviewFormFile extends React.Component {
       strong: false,
       round: false,
       floating: false,
-      disabled: false
+      disabled: false,
     }
     this.changePattern = this.changePattern.bind(this)
     this.changeRole = this.changeRole.bind(this)
@@ -308,14 +328,14 @@ export class PreviewFormFile extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={buttonPatterns}
-                parentChange={value => this.changePattern(value)}
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={buttonRoles}
-                parentChange={value => this.changeRole(value)}
+                parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
             </DemoOption>
@@ -449,7 +469,7 @@ export class PreviewFormSelect extends React.Component {
     this.state = {
       pattern: "",
       role: "",
-      disabled: false
+      disabled: false,
     }
     this.changePattern = this.changePattern.bind(this)
     this.changeRole = this.changeRole.bind(this)
@@ -487,14 +507,14 @@ export class PreviewFormSelect extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={roles}
-                parentChange={value => this.changeRole(value)}
+                parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
             </DemoOption>
@@ -525,7 +545,7 @@ export class PreviewFormSelectMultiple extends React.Component {
     this.state = {
       pattern: "",
       role: "",
-      disabled: false
+      disabled: false,
     }
     this.changePattern = this.changePattern.bind(this)
     this.changeRole = this.changeRole.bind(this)
@@ -563,14 +583,14 @@ export class PreviewFormSelectMultiple extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={multiplePatterns}
-                parentChange={value => this.changePattern(value)}
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={roles}
-                parentChange={value => this.changeRole(value)}
+                parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
             </DemoOption>
@@ -629,7 +649,7 @@ export class PreviewFormButton extends React.Component {
       strong: false,
       round: false,
       floating: false,
-      disabled: false
+      disabled: false,
     }
     this.changePattern = this.changePattern.bind(this)
     this.toggleStrong = this.toggleStrong.bind(this)
@@ -681,7 +701,7 @@ export class PreviewFormButton extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={buttonPatterns}
-                parentChange={value => this.changePattern(value)}
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
