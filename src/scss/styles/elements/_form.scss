@@ -23,8 +23,10 @@ $modifier-form-round: "\.is-round" !default;
 $modifier-form-plain: "\.is-plain" !default;
 $modifier-form-underline: "\.is-underline" !default;
 $modifier-form-inside: "\.is-inside" !default;
-$modifier-form-middle: "\.is-middle" !default;
+$modifier-form-right: "\.is-right" !default;
 $modifier-form-center: "\.is-center" !default;
+$modifier-form-left: "\.is-left" !default;
+$modifier-form-middle: "\.is-middle" !default;
 $modifier-form-checked: "\.is-checked" !default;
 $modifier-form-disabled: "\.is-disabled" !default;
 $modifier-form-multiple: "\.is-multiple" !default;
@@ -184,6 +186,18 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
   color: $input-readonly-color;
 }
 
+@mixin musubii-style-form-input-right() {
+  text-align: right;
+}
+
+@mixin musubii-style-form-input-center() {
+  text-align: center;
+}
+
+@mixin musubii-style-form-input-left() {
+  text-align: left;
+}
+
 @mixin musubii-style-form-input-success() {
   border-color: $input-success-border-color;
 }
@@ -213,6 +227,15 @@ $select-focus-shadow: $global-focus-shadow-size $convert-focus-alpha-thin !defau
       }
       &[readonly] {
         @include musubii-style-form-input-readonly();
+      }
+      &#{$modifier-form-right} {
+        @include musubii-style-form-input-right();
+      }
+      &#{$modifier-form-center} {
+        @include musubii-style-form-input-center();
+      }
+      &#{$modifier-form-left} {
+        @include musubii-style-form-input-left();
       }
       &#{$modifier-form-success} {
         &:not([disabled]):not([readonly]) {
