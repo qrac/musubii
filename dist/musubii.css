@@ -1,4 +1,4 @@
-/*! MUSUBii v7.0.3 CC0-1.0 by Qrac */
+/*! MUSUBii v7.1.0 CC0-1.0 by Qrac */
 
 *,
 ::before,
@@ -1776,6 +1776,18 @@ iframe {
   border-color: #d1d8dc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   color: rgba(0, 0, 0, 0.7);
+}
+
+.input[type="text"].is-right, .input[type="search"].is-right, .input[type="url"].is-right, .input[type="email"].is-right, .input[type="tel"].is-right, .input[type="password"].is-right, .input[type="datetime-local"].is-right, .input[type="date"].is-right, .input[type="month"].is-right, .input[type="week"].is-right, .input[type="time"].is-right, .input[type="number"].is-right {
+  text-align: right;
+}
+
+.input[type="text"].is-center, .input[type="search"].is-center, .input[type="url"].is-center, .input[type="email"].is-center, .input[type="tel"].is-center, .input[type="password"].is-center, .input[type="datetime-local"].is-center, .input[type="date"].is-center, .input[type="month"].is-center, .input[type="week"].is-center, .input[type="time"].is-center, .input[type="number"].is-center {
+  text-align: center;
+}
+
+.input[type="text"].is-left, .input[type="search"].is-left, .input[type="url"].is-left, .input[type="email"].is-left, .input[type="tel"].is-left, .input[type="password"].is-left, .input[type="datetime-local"].is-left, .input[type="date"].is-left, .input[type="month"].is-left, .input[type="week"].is-left, .input[type="time"].is-left, .input[type="number"].is-left {
+  text-align: left;
 }
 
 .input[type="text"].is-success:not([disabled]):not([readonly]), .input[type="search"].is-success:not([disabled]):not([readonly]), .input[type="url"].is-success:not([disabled]):not([readonly]), .input[type="email"].is-success:not([disabled]):not([readonly]), .input[type="tel"].is-success:not([disabled]):not([readonly]), .input[type="password"].is-success:not([disabled]):not([readonly]), .input[type="datetime-local"].is-success:not([disabled]):not([readonly]), .input[type="date"].is-success:not([disabled]):not([readonly]), .input[type="month"].is-success:not([disabled]):not([readonly]), .input[type="week"].is-success:not([disabled]):not([readonly]), .input[type="time"].is-success:not([disabled]):not([readonly]), .input[type="number"].is-success:not([disabled]):not([readonly]) {
