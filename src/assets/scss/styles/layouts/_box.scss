@@ -50,9 +50,7 @@
     }
     > .column {
       > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
         width: 100%;
         padding: 12px 20px;
         background-color: $convert-table-paint-background-color;

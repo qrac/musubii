@@ -19,7 +19,7 @@ const columnNums = [
   { id: 9, text: "9", value: 9 },
   { id: 10, text: "10", value: 10 },
   { id: 11, text: "11", value: 11 },
-  { id: 12, text: "12", value: 12 }
+  { id: 12, text: "12", value: 12 },
 ]
 
 const columnSizes = [
@@ -36,7 +36,7 @@ const columnSizes = [
   { id: 9, text: "9/12幅", value: "is-9" },
   { id: 10, text: "10/12幅", value: "is-10" },
   { id: 11, text: "11/12幅", value: "is-11" },
-  { id: 12, text: "12/12幅", value: "is-12" }
+  { id: 12, text: "12/12幅", value: "is-12" },
 ]
 
 const gaps = [
@@ -47,7 +47,7 @@ const gaps = [
   { id: 4, text: "Medium", value: "md" },
   { id: 3, text: "Large", value: "lg" },
   { id: 2, text: "XL", value: "xl" },
-  { id: 1, text: "XXL", value: "xxl" }
+  { id: 1, text: "XXL", value: "xxl" },
 ]
 
 const aligns = [
@@ -58,12 +58,12 @@ const aligns = [
   { id: 4, text: "Center", value: "is-center" },
   { id: 5, text: "Right", value: "is-right" },
   { id: 6, text: "Between", value: "is-between" },
-  { id: 7, text: "Around", value: "is-around" }
+  { id: 7, text: "Around", value: "is-around" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewGridBasic extends React.Component {
@@ -71,7 +71,7 @@ export class PreviewGridBasic extends React.Component {
     super(props)
     this.state = {
       columnNum: 3,
-      columnSize: "is-0"
+      columnSize: "is-0",
     }
     this.changeColumnNum = this.changeColumnNum.bind(this)
     this.changeColumnSize = this.changeColumnSize.bind(this)
@@ -104,14 +104,14 @@ export class PreviewGridBasic extends React.Component {
             <DemoOption title={"Columns"}>
               <DemoOptionBoxRadios
                 patterns={columnNums}
-                parentChange={value => this.changeColumnNum(value)}
+                parentChange={(value) => this.changeColumnNum(value)}
                 checked={this.state.columnNum}
               />
             </DemoOption>
             <DemoOption title={"Flex"}>
               <DemoOptionBoxRadios
                 patterns={columnSizes}
-                parentChange={value => this.changeColumnSize(value)}
+                parentChange={(value) => this.changeColumnSize(value)}
                 checked={this.state.columnSize}
               />
             </DemoOption>
@@ -135,7 +135,7 @@ export class PreviewGridGap extends React.Component {
     this.state = {
       columnNum: 4,
       columnSize: "is-6",
-      gap: "md"
+      gap: "md",
     }
     this.changeColumnNum = this.changeColumnNum.bind(this)
     this.changeColumnSize = this.changeColumnSize.bind(this)
@@ -174,7 +174,7 @@ export class PreviewGridGap extends React.Component {
             <DemoOption title={"Gap"}>
               <DemoOptionBoxRadios
                 patterns={gaps}
-                parentChange={value => this.changeGap(value)}
+                parentChange={(value) => this.changeGap(value)}
                 checked={this.state.gap}
               />
             </DemoOption>
@@ -198,7 +198,7 @@ export class PreviewGridGapVertical extends React.Component {
     this.state = {
       columnNum: 3,
       columnSize: "is-12",
-      gap: "md"
+      gap: "md",
     }
     this.changeColumnNum = this.changeColumnNum.bind(this)
     this.changeColumnSize = this.changeColumnSize.bind(this)
@@ -237,7 +237,7 @@ export class PreviewGridGapVertical extends React.Component {
             <DemoOption title={"Gap Vertical"}>
               <DemoOptionBoxRadios
                 patterns={gaps}
-                parentChange={value => this.changeGap(value)}
+                parentChange={(value) => this.changeGap(value)}
                 checked={this.state.gap}
               />
             </DemoOption>
@@ -261,7 +261,7 @@ export class PreviewGridGapHorizontal extends React.Component {
     this.state = {
       columnNum: 3,
       columnSize: "is-0",
-      gap: "md"
+      gap: "md",
     }
     this.changeColumnNum = this.changeColumnNum.bind(this)
     this.changeColumnSize = this.changeColumnSize.bind(this)
@@ -300,7 +300,7 @@ export class PreviewGridGapHorizontal extends React.Component {
             <DemoOption title={"Gap Horizontal"}>
               <DemoOptionBoxRadios
                 patterns={gaps}
-                parentChange={value => this.changeGap(value)}
+                parentChange={(value) => this.changeGap(value)}
                 checked={this.state.gap}
               />
             </DemoOption>
@@ -323,7 +323,7 @@ export class PreviewGridAlign extends React.Component {
     super(props)
     this.state = {
       columnNum: 4,
-      align: ""
+      align: "",
     }
     this.changeColumnNum = this.changeColumnNum.bind(this)
     this.changeAlign = this.changeAlign.bind(this)
@@ -355,7 +355,7 @@ export class PreviewGridAlign extends React.Component {
             <DemoOption title={"Align"}>
               <DemoOptionBoxRadios
                 patterns={aligns}
-                parentChange={value => this.changeAlign(value)}
+                parentChange={(value) => this.changeAlign(value)}
                 checked={this.state.align}
               />
             </DemoOption>
@@ -378,7 +378,7 @@ export class PreviewGridReverse extends React.Component {
     super(props)
     this.state = {
       reverse: true,
-      columnNum: 4
+      columnNum: 4,
     }
     this.toggleReverse = this.toggleReverse.bind(this)
   }
@@ -428,7 +428,6 @@ export class PreviewGridStretch extends React.Component {
     super(props)
     this.state = {
       stretch: true,
-      columnNum: 4
     }
     this.toggleStretch = this.toggleStretch.bind(this)
   }
@@ -437,14 +436,18 @@ export class PreviewGridStretch extends React.Component {
   }
   render() {
     const stretch = this.state.stretch ? "is-stretch" : ""
-    const columnNum = this.state.columnNum
     const gridTagBefore = `<div class="grid is-gap-md ${stretch}">`
     const gridTagAfter = `</div>`
-    const columns = []
-    for (let i = 0; i < columnNum; i++) {
-      columns.push(`<div class="column"><div>children ${i + 1}</div></div>`)
-    }
-    const contents = (gridTagBefore + columns.join("") + gridTagAfter)
+    const columns = `<div class="column">
+      <div><p>children 1</p></div>
+    </div>
+    <div class="column">
+      <div><p>children 2</p><p>children 2</p></div>
+    </div>
+    <div class="column">
+      <div><p>children 3</p><p>children 3</p><p>children 3</p></div>
+    </div>`
+    const contents = (gridTagBefore + columns + gridTagAfter)
       .replace(/\s+/g, " ")
       .replace(/\s\"/g, '"')
     const formattedCode = beautify.html(contents, beautifyHtmlOptions)
