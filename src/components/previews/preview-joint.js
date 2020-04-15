@@ -10,22 +10,22 @@ import DemoPre from "~/components/parts/demo-pre"
 const buttonItems = [
   { id: 0, text: "左揃え", icon: "align-left" },
   { id: 1, text: "中央揃え", icon: "align-center" },
-  { id: 2, text: "右揃え", icon: "align-right" }
+  { id: 2, text: "右揃え", icon: "align-right" },
 ]
 
 const badgeItems = [
   { id: 0, role: "", text: "Build" },
-  { id: 1, role: "is-success", text: "Passing" }
+  { id: 1, role: "is-success", text: "Passing" },
 ]
 
 const patterns = [
   { id: 0, text: "Plain", value: "is-plain" },
-  { id: 1, text: "Outline", value: "is-outline" }
+  { id: 1, text: "Outline", value: "is-outline" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["img"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewJointButton extends React.Component {
@@ -35,7 +35,7 @@ export class PreviewJointButton extends React.Component {
       pattern: "is-outline",
       joint: true,
       grow: false,
-      round: false
+      round: false,
     }
     this.changePattern = this.changePattern.bind(this)
     this.toggleJoint = this.toggleJoint.bind(this)
@@ -63,7 +63,7 @@ export class PreviewJointButton extends React.Component {
     const jointTagAfter = `</div>`
     const items = buttonItems
       .map(
-        item =>
+        (item) =>
           `<button class="button ${pattern} ${grow} ${round}" type="button">
           <i aria-hidden="true" class="fas fa-${item.icon} is-fit is-margin-right-xxs"></i>
           <span class="text">${item.text}</span>
@@ -88,7 +88,8 @@ export class PreviewJointButton extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                name="radio-joint-button-pattern"
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
@@ -123,7 +124,7 @@ export class PreviewJointBadge extends React.Component {
     super(props)
     this.state = {
       joint: true,
-      round: false
+      round: false,
     }
     this.toggleJoint = this.toggleJoint.bind(this)
     this.toggleRound = this.toggleRound.bind(this)
@@ -141,7 +142,7 @@ export class PreviewJointBadge extends React.Component {
     const jointTagAfter = `</div>`
     const items = badgeItems
       .map(
-        item => `<span class="badge is-plain ${item.role}
+        (item) => `<span class="badge is-plain ${item.role}
         ${round}">${item.text}</span>`
       )
       .join("")
@@ -187,7 +188,7 @@ export class PreviewJointForm extends React.Component {
     this.state = {
       joint: true,
       grow: false,
-      round: false
+      round: false,
     }
     this.toggleJoint = this.toggleJoint.bind(this)
     this.toggleGrow = this.toggleGrow.bind(this)

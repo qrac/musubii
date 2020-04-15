@@ -132,6 +132,7 @@ export class PreviewFormBasic extends React.Component {
             <DemoOption title={"Type"}>
               <DemoOptionBoxRadios
                 patterns={types}
+                name="radio-form-basic-type"
                 parentChange={(value) => this.changeType(value)}
                 checked={this.state.type}
               />
@@ -139,6 +140,7 @@ export class PreviewFormBasic extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
+                name="radio-form-basic-pattern"
                 parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
@@ -146,6 +148,7 @@ export class PreviewFormBasic extends React.Component {
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={roles}
+                name="radio-form-basic-role"
                 parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
@@ -153,6 +156,7 @@ export class PreviewFormBasic extends React.Component {
             <DemoOption title={"Align"}>
               <DemoOptionBoxRadios
                 patterns={aligns}
+                name="radio-form-basic-align"
                 parentChange={(value) => this.changeAlign(value)}
                 checked={this.state.align}
               />
@@ -231,6 +235,7 @@ export class PreviewFormTextarea extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
+                name="radio-form-textarea-pattern"
                 parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
@@ -238,6 +243,7 @@ export class PreviewFormTextarea extends React.Component {
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={roles}
+                name="radio-form-textarea-role"
                 parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
@@ -328,6 +334,7 @@ export class PreviewFormFile extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={buttonPatterns}
+                name="radio-form-file-pattern"
                 parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
@@ -335,6 +342,7 @@ export class PreviewFormFile extends React.Component {
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={buttonRoles}
+                name="radio-form-file-role"
                 parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
@@ -507,6 +515,7 @@ export class PreviewFormSelect extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
+                name="radio-form-select-pattern"
                 parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
@@ -514,6 +523,7 @@ export class PreviewFormSelect extends React.Component {
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={roles}
+                name="radio-form-select-role"
                 parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
@@ -583,6 +593,7 @@ export class PreviewFormSelectMultiple extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={multiplePatterns}
+                name="radio-form-select-multiple-pattern"
                 parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
@@ -590,6 +601,7 @@ export class PreviewFormSelectMultiple extends React.Component {
             <DemoOption title={"Role"}>
               <DemoOptionBoxRadios
                 patterns={roles}
+                name="radio-form-select-multiple-role"
                 parentChange={(value) => this.changeRole(value)}
                 checked={this.state.role}
               />
@@ -701,6 +713,7 @@ export class PreviewFormButton extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={buttonPatterns}
+                name="radio-form-button-pattern"
                 parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />

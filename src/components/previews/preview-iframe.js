@@ -8,19 +8,19 @@ import DemoPre from "~/components/parts/demo-pre"
 
 const aspects = [
   { id: 0, text: "16:9", value: "is-aspect-16x9" },
-  { id: 1, text: "4:3", value: "is-aspect-4x3" }
+  { id: 1, text: "4:3", value: "is-aspect-4x3" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewIframeBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      aspect: "is-aspect-16x9"
+      aspect: "is-aspect-16x9",
     }
     this.changeAspect = this.changeAspect.bind(this)
   }
@@ -43,7 +43,8 @@ export class PreviewIframeBasic extends React.Component {
             <DemoOption title={"Aspect"}>
               <DemoOptionBoxRadios
                 patterns={aspects}
-                parentChange={value => this.changeAspect(value)}
+                name="radio-iframe-basic-aspect"
+                parentChange={(value) => this.changeAspect(value)}
                 checked={this.state.aspect}
               />
             </DemoOption>

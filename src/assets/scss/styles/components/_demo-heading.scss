@@ -38,4 +38,7 @@
   font-family: $font-sans-en;
   opacity: 0;
   transform: translateX(-100%);
+  &:focus {
+    opacity: 1;
+  }
 }

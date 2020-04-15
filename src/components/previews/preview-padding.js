@@ -14,7 +14,7 @@ const paddings = [
   { id: 4, text: "Middle", value: "md" },
   { id: 3, text: "Large", value: "lg" },
   { id: 2, text: "XL", value: "xl" },
-  { id: 1, text: "XXL", value: "xxl" }
+  { id: 1, text: "XXL", value: "xxl" },
 ]
 
 const ways = [
@@ -23,19 +23,19 @@ const ways = [
   { id: 3, text: "Bottom", value: "bottom" },
   { id: 4, text: "Left", value: "left" },
   { id: 5, text: "Vertical", value: "vertical" },
-  { id: 6, text: "Horizontal", value: "horizontal" }
+  { id: 6, text: "Horizontal", value: "horizontal" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewPaddingBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      padding: "md"
+      padding: "md",
     }
     this.changePadding = this.changePadding.bind(this)
   }
@@ -56,7 +56,8 @@ export class PreviewPaddingBasic extends React.Component {
             <DemoOption title={"Padding"}>
               <DemoOptionBoxRadios
                 patterns={paddings}
-                parentChange={value => this.changePadding(value)}
+                name="radio-padding-basic"
+                parentChange={(value) => this.changePadding(value)}
                 checked={this.state.padding}
               />
             </DemoOption>
@@ -79,7 +80,7 @@ export class PreviewPaddingWay extends React.Component {
     super(props)
     this.state = {
       way: "top",
-      padding: "md"
+      padding: "md",
     }
     this.changeWay = this.changeWay.bind(this)
     this.changePadding = this.changePadding.bind(this)
@@ -106,14 +107,16 @@ export class PreviewPaddingWay extends React.Component {
             <DemoOption title={"Way"}>
               <DemoOptionBoxRadios
                 patterns={ways}
-                parentChange={value => this.changeWay(value)}
+                name="radio-padding-way"
+                parentChange={(value) => this.changeWay(value)}
                 checked={this.state.way}
               />
             </DemoOption>
             <DemoOption title={"Padding"}>
               <DemoOptionBoxRadios
                 patterns={paddings}
-                parentChange={value => this.changePadding(value)}
+                name="radio-padding-way-padding"
+                parentChange={(value) => this.changePadding(value)}
                 checked={this.state.padding}
               />
             </DemoOption>

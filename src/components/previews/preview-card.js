@@ -9,7 +9,7 @@ import DemoPre from "~/components/parts/demo-pre"
 
 const tags = [
   { id: 0, text: "Div", value: "div" },
-  { id: 1, text: "Anchor", value: "a" }
+  { id: 1, text: "Anchor", value: "a" },
 ]
 
 const radiusPatterns = [
@@ -20,12 +20,12 @@ const radiusPatterns = [
   { id: 4, text: "Medium", value: "is-radius-md" },
   { id: 3, text: "Large", value: "is-radius-lg" },
   { id: 2, text: "XL", value: "is-radius-xl" },
-  { id: 1, text: "XXL", value: "is-radius-xxl" }
+  { id: 1, text: "XXL", value: "is-radius-xxl" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewCardBasic extends React.Component {
@@ -34,7 +34,7 @@ export class PreviewCardBasic extends React.Component {
     this.state = {
       bgLight: true,
       outline: false,
-      floating: true
+      floating: true,
     }
     this.toggleBgLight = this.toggleBgLight.bind(this)
     this.toggleOutline = this.toggleOutline.bind(this)
@@ -98,7 +98,7 @@ export class PreviewCardRadius extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      radiusPattern: "is-radius-md"
+      radiusPattern: "is-radius-md",
     }
     this.changeRadiusPattern = this.changeRadiusPattern.bind(this)
   }
@@ -120,7 +120,8 @@ export class PreviewCardRadius extends React.Component {
             <DemoOption title={"Radius"}>
               <DemoOptionBoxRadios
                 patterns={radiusPatterns}
-                parentChange={value => this.changeRadiusPattern(value)}
+                name="radio-card-radius"
+                parentChange={(value) => this.changeRadiusPattern(value)}
                 checked={this.state.radiusPattern}
               />
             </DemoOption>
@@ -143,7 +144,7 @@ export class PreviewCardLink extends React.Component {
     super(props)
     this.state = {
       disabled: false,
-      externalLink: false
+      externalLink: false,
     }
     this.toggleDisabled = this.toggleDisabled.bind(this)
     this.toggleExternalLink = this.toggleExternalLink.bind(this)
@@ -202,7 +203,7 @@ export class PreviewCardZoom extends React.Component {
     super(props)
     this.state = {
       disabled: false,
-      externalLink: false
+      externalLink: false,
     }
     this.toggleDisabled = this.toggleDisabled.bind(this)
     this.toggleExternalLink = this.toggleExternalLink.bind(this)

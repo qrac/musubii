@@ -14,7 +14,7 @@ const margins = [
   { id: 4, text: "Middle", value: "md" },
   { id: 3, text: "Large", value: "lg" },
   { id: 2, text: "XL", value: "xl" },
-  { id: 1, text: "XXL", value: "xxl" }
+  { id: 1, text: "XXL", value: "xxl" },
 ]
 
 const ways = [
@@ -23,12 +23,12 @@ const ways = [
   { id: 3, text: "Bottom", value: "bottom" },
   { id: 4, text: "Left", value: "left" },
   { id: 5, text: "Vertical", value: "vertical" },
-  { id: 6, text: "Horizontal", value: "horizontal" }
+  { id: 6, text: "Horizontal", value: "horizontal" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewMarginBasic extends React.Component {
@@ -36,7 +36,7 @@ export class PreviewMarginBasic extends React.Component {
     super(props)
     this.state = {
       margin: "md",
-      minus: false
+      minus: false,
     }
     this.changeMargin = this.changeMargin.bind(this)
     this.toggleMinus = this.toggleMinus.bind(this)
@@ -63,7 +63,8 @@ export class PreviewMarginBasic extends React.Component {
             <DemoOption title={"Margin"}>
               <DemoOptionBoxRadios
                 patterns={margins}
-                parentChange={value => this.changeMargin(value)}
+                name="radio-margin-basic"
+                parentChange={(value) => this.changeMargin(value)}
                 checked={this.state.margin}
               />
             </DemoOption>
@@ -94,7 +95,7 @@ export class PreviewMarginWay extends React.Component {
     this.state = {
       way: "top",
       margin: "md",
-      minus: false
+      minus: false,
     }
     this.changeWay = this.changeWay.bind(this)
     this.changeMargin = this.changeMargin.bind(this)
@@ -129,14 +130,16 @@ export class PreviewMarginWay extends React.Component {
             <DemoOption title={"Way"}>
               <DemoOptionBoxRadios
                 patterns={ways}
-                parentChange={value => this.changeWay(value)}
+                name="radio-margin-way"
+                parentChange={(value) => this.changeWay(value)}
                 checked={this.state.way}
               />
             </DemoOption>
             <DemoOption title={"Margin"}>
               <DemoOptionBoxRadios
                 patterns={margins}
-                parentChange={value => this.changeMargin(value)}
+                name="radio-margin-way-margin"
+                parentChange={(value) => this.changeMargin(value)}
                 checked={this.state.margin}
               />
             </DemoOption>

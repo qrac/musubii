@@ -7,7 +7,7 @@ import DemoOptionBoxRadios from "~/components/parts/demo-option-box-radios"
 
 const modes = [
   { id: 0, text: "false", value: "simple" },
-  { id: 1, text: "true", value: "light" }
+  { id: 1, text: "true", value: "light" },
   //{ id: 2, text: "true (dark)", value: "dark" }
 ]
 
@@ -68,7 +68,7 @@ export class PreviewVariablesSingle extends React.Component {
     this.state = {
       staticLightData: require("~/assets/extracts/modes/static-light/" +
         this.props.filePath +
-        ".json")
+        ".json"),
     }
   }
   render() {
@@ -105,7 +105,7 @@ export class PreviewVariablesSingle extends React.Component {
             </div>
           </header>
           <ul className="table-body">
-            {this.state.staticLightData.variables.map(variable => (
+            {this.state.staticLightData.variables.map((variable) => (
               <TableBodyItem
                 item={variable}
                 key={variable.name}
@@ -129,7 +129,7 @@ export class PreviewVariablesDouble extends React.Component {
         ".json"),
       dynamicLightData: require("~/assets/extracts/modes/dynamic-light/" +
         this.props.filePath +
-        ".json")
+        ".json"),
     }
     this.changeMode = this.changeMode.bind(this)
   }
@@ -143,7 +143,8 @@ export class PreviewVariablesDouble extends React.Component {
           <DemoOption title={"CSS Variables"}>
             <DemoOptionBoxRadios
               patterns={modes}
-              parentChange={value => this.changeMode(value)}
+              name="radio-css-variables"
+              parentChange={(value) => this.changeMode(value)}
               checked={this.state.mode}
             />
           </DemoOption>
@@ -182,7 +183,7 @@ export class PreviewVariablesDouble extends React.Component {
             if (this.state.mode === "simple") {
               return (
                 <ul className="table-body">
-                  {this.state.staticLightData.variables.map(variable => (
+                  {this.state.staticLightData.variables.map((variable) => (
                     <TableBodyItem
                       item={variable}
                       key={variable.name}
@@ -194,7 +195,7 @@ export class PreviewVariablesDouble extends React.Component {
             } else if (this.state.mode === "light") {
               return (
                 <ul className="table-body">
-                  {this.state.dynamicLightData.variables.map(variable => (
+                  {this.state.dynamicLightData.variables.map((variable) => (
                     <TableBodyItem
                       item={variable}
                       key={variable.name}
@@ -217,7 +218,7 @@ export class PreviewVariablesCss extends React.Component {
     this.state = {
       staticLightData: require("~/assets/extracts/modes/static-light/" +
         this.props.filePath +
-        ".json")
+        ".json"),
     }
   }
   render() {
@@ -232,7 +233,7 @@ export class PreviewVariablesCss extends React.Component {
             </div>
           </header>
           <ul className="table-body">
-            {this.state.staticLightData["css-variables"].map(variable => (
+            {this.state.staticLightData["css-variables"].map((variable) => (
               <TableBodyItem
                 item={variable}
                 cssVariables={true}

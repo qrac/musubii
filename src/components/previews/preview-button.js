@@ -12,18 +12,18 @@ const items = [
   { id: 2, role: "is-info", text: "情報", icon: "info-circle" },
   { id: 3, role: "is-success", text: "登録", icon: "save" },
   { id: 4, role: "is-warning", text: "注意", icon: "exclamation-triangle" },
-  { id: 5, role: "is-danger", text: "削除", icon: "times" }
+  { id: 5, role: "is-danger", text: "削除", icon: "times" },
 ]
 
 const tags = [
   { id: 0, text: "Button", value: "button" },
-  { id: 1, text: "Anchor", value: "a" }
+  { id: 1, text: "Anchor", value: "a" },
 ]
 
 const patterns = [
   { id: 0, text: "Plain", value: "is-plain" },
   { id: 1, text: "Outline", value: "is-outline" },
-  { id: 2, text: "Melt", value: "is-melt" }
+  { id: 2, text: "Melt", value: "is-melt" },
 ]
 
 const angles = [
@@ -33,12 +33,12 @@ const angles = [
   { id: 3, text: "Right Up", value: "is-angle-right is-angle-up" },
   { id: 4, text: "Right Down", value: "is-angle-right is-angle-down" },
   { id: 5, text: "Left Up", value: "is-angle-left is-angle-up" },
-  { id: 6, text: "Left Down", value: "is-angle-left is-angle-down" }
+  { id: 6, text: "Left Down", value: "is-angle-left is-angle-down" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewButtonBasic extends React.Component {
@@ -51,7 +51,7 @@ export class PreviewButtonBasic extends React.Component {
       round: false,
       floating: false,
       disabled: false,
-      externalLink: false
+      externalLink: false,
     }
     this.changeTag = this.changeTag.bind(this)
     this.changePattern = this.changePattern.bind(this)
@@ -99,7 +99,7 @@ export class PreviewButtonBasic extends React.Component {
         : ""
     const contents = items
       .map(
-        item =>
+        (item) =>
           `<${tag} class="button ${pattern} ${item.role} ${strong} ${round} ${floating} ${disabledClass}"
             ${tagAttr} ${externalLink} ${disabledTabIndex} ${disabledAttr}>${item.text}</${tag}>`
       )
@@ -114,14 +114,16 @@ export class PreviewButtonBasic extends React.Component {
             <DemoOption title={"Tag"}>
               <DemoOptionBoxRadios
                 patterns={tags}
-                parentChange={value => this.changeTag(value)}
+                name="radio-button-basic-tag"
+                parentChange={(value) => this.changeTag(value)}
                 checked={this.state.tag}
               />
             </DemoOption>
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                name="radio-button-basic-pattern"
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
@@ -176,7 +178,7 @@ export class PreviewButtonSquare extends React.Component {
       pattern: "is-plain",
       floating: false,
       disabled: false,
-      externalLink: false
+      externalLink: false,
     }
     this.changeTag = this.changeTag.bind(this)
     this.changePattern = this.changePattern.bind(this)
@@ -213,7 +215,7 @@ export class PreviewButtonSquare extends React.Component {
         : ""
     const contents = items
       .map(
-        item =>
+        (item) =>
           `<${tag} class="button ${pattern} is-square ${item.role} ${floating} ${disabledClass}"
             ${tagAttr} ${externalLink} ${disabledAttr}
             ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
@@ -229,14 +231,16 @@ export class PreviewButtonSquare extends React.Component {
             <DemoOption title={"Tag"}>
               <DemoOptionBoxRadios
                 patterns={tags}
-                parentChange={value => this.changeTag(value)}
+                name="radio-button-square-tag"
+                parentChange={(value) => this.changeTag(value)}
                 checked={this.state.tag}
               />
             </DemoOption>
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                name="radio-button-square-pattern"
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
@@ -281,7 +285,7 @@ export class PreviewButtonCircle extends React.Component {
       pattern: "is-plain",
       floating: false,
       disabled: false,
-      externalLink: false
+      externalLink: false,
     }
     this.changeTag = this.changeTag.bind(this)
     this.changePattern = this.changePattern.bind(this)
@@ -318,7 +322,7 @@ export class PreviewButtonCircle extends React.Component {
         : ""
     const contents = items
       .map(
-        item =>
+        (item) =>
           `<${tag} class="button ${pattern} is-circle ${item.role} ${floating} ${disabledClass}"
             ${tagAttr} ${externalLink} ${disabledAttr}
             ><i aria-hidden="true" class="fas fa-${item.icon}"></i></${tag}>`
@@ -334,14 +338,16 @@ export class PreviewButtonCircle extends React.Component {
             <DemoOption title={"Tag"}>
               <DemoOptionBoxRadios
                 patterns={tags}
-                parentChange={value => this.changeTag(value)}
+                name="radio-button-circle-tag"
+                parentChange={(value) => this.changeTag(value)}
                 checked={this.state.tag}
               />
             </DemoOption>
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                name="radio-button-circle-pattern"
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
@@ -389,7 +395,7 @@ export class PreviewButtonAngle extends React.Component {
       round: false,
       floating: false,
       disabled: false,
-      externalLink: false
+      externalLink: false,
     }
     this.changeTag = this.changeTag.bind(this)
     this.changePattern = this.changePattern.bind(this)
@@ -442,7 +448,7 @@ export class PreviewButtonAngle extends React.Component {
         : ""
     const contents = items
       .map(
-        item =>
+        (item) =>
           `<${tag} class="button ${pattern} ${item.role} is-0 ${angle} ${strong} ${round} ${floating} ${disabledClass}"
             ${tagAttr} ${externalLink} ${disabledTabIndex} ${disabledAttr}>${item.text}</${tag}>`
       )
@@ -457,21 +463,24 @@ export class PreviewButtonAngle extends React.Component {
             <DemoOption title={"Angle"}>
               <DemoOptionBoxRadios
                 patterns={angles}
-                parentChange={value => this.changeAngle(value)}
+                name="radio-button-angle"
+                parentChange={(value) => this.changeAngle(value)}
                 checked={this.state.angle}
               />
             </DemoOption>
             <DemoOption title={"Tag"}>
               <DemoOptionBoxRadios
                 patterns={tags}
-                parentChange={value => this.changeTag(value)}
+                name="radio-button-angle-tag"
+                parentChange={(value) => this.changeTag(value)}
                 checked={this.state.tag}
               />
             </DemoOption>
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                name="radio-button-angle-pattern"
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>

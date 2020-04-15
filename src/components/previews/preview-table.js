@@ -10,7 +10,7 @@ import DemoPre from "~/components/parts/demo-pre"
 const patterns = [
   { id: 2, text: "Border", value: "is-border" },
   { id: 0, text: "Line", value: "is-line" },
-  { id: 1, text: "Outline", value: "is-outline" }
+  { id: 1, text: "Outline", value: "is-outline" },
 ]
 
 const aligns = [
@@ -18,19 +18,19 @@ const aligns = [
   { id: 1, text: "left", value: "is-left" },
   { id: 2, text: "Center", value: "is-center" },
   { id: 3, text: "Right", value: "is-right" },
-  { id: 4, text: "middle", value: "is-middle" }
+  { id: 4, text: "middle", value: "is-middle" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["th", "td", "br", "span"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewTableBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      pattern: "is-border"
+      pattern: "is-border",
     }
     this.changePattern = this.changePattern.bind(this)
   }
@@ -58,7 +58,8 @@ export class PreviewTableBasic extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                name="radio-table-basic-pattern"
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
@@ -146,7 +147,7 @@ export class PreviewTableAlign extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      align: ""
+      align: "",
     }
     this.changeAlign = this.changeAlign.bind(this)
   }
@@ -174,7 +175,8 @@ export class PreviewTableAlign extends React.Component {
             <DemoOption title={"Align"}>
               <DemoOptionBoxRadios
                 patterns={aligns}
-                parentChange={value => this.changeAlign(value)}
+                name="radio-table-align"
+                parentChange={(value) => this.changeAlign(value)}
                 checked={this.state.align}
               />
             </DemoOption>

@@ -11,12 +11,12 @@ const patterns = [
   { id: 1, text: "Circle", value: "is-circle" },
   { id: 2, text: "Square", value: "is-square" },
   { id: 3, text: "Kome", value: "is-kome" },
-  { id: 4, text: "Decimal", value: "is-decimal" }
+  { id: 4, text: "Decimal", value: "is-decimal" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["span", "div"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewListBasic extends React.Component {
@@ -24,7 +24,7 @@ export class PreviewListBasic extends React.Component {
     super(props)
     this.state = {
       pattern: "is-disc",
-      nested: false
+      nested: false,
     }
     this.changePattern = this.changePattern.bind(this)
     this.toggleNested = this.toggleNested.bind(this)
@@ -65,7 +65,8 @@ export class PreviewListBasic extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={patterns}
-                parentChange={value => this.changePattern(value)}
+                name="radio-list-basic-pattern"
+                parentChange={(value) => this.changePattern(value)}
                 checked={this.state.pattern}
               />
             </DemoOption>
@@ -94,7 +95,7 @@ export class PreviewListNote extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      nested: false
+      nested: false,
     }
     this.toggleNested = this.toggleNested.bind(this)
   }

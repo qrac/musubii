@@ -13,20 +13,20 @@ const outlines = [
   { id: 2, text: "Top", value: "is-outline-top" },
   { id: 3, text: "Right", value: "is-outline-right" },
   { id: 4, text: "Bottom", value: "is-outline-bottom" },
-  { id: 5, text: "Left", value: "is-outline-left" }
+  { id: 5, text: "Left", value: "is-outline-left" },
 ]
 
 const separates = [
   { id: 0, text: "None", value: "" },
   { id: 1, text: "All", value: "is-separate" },
-  { id: 2, text: "Parent & Child", value: "is-separate-parent" }
+  { id: 2, text: "Parent & Child", value: "is-separate-parent" },
 ]
 
 const verticalAligns = [
   { id: 0, text: "None", value: "" },
   { id: 1, text: "Baseline", value: "is-baseline" },
   { id: 2, text: "Middle", value: "is-middle" },
-  { id: 3, text: "Bottom", value: "is-bottom" }
+  { id: 3, text: "Bottom", value: "is-bottom" },
 ]
 
 const horizontalAligns = [
@@ -34,7 +34,7 @@ const horizontalAligns = [
   { id: 1, text: "Center", value: "is-center" },
   { id: 2, text: "Right", value: "is-right" },
   { id: 3, text: "Between", value: "is-between" },
-  { id: 4, text: "Around", value: "is-around" }
+  { id: 4, text: "Around", value: "is-around" },
 ]
 
 const angles = [
@@ -44,12 +44,12 @@ const angles = [
   { id: 3, text: "Right Up", value: "is-angle-right is-angle-up" },
   { id: 4, text: "Right Down", value: "is-angle-right is-angle-down" },
   { id: 5, text: "Left Up", value: "is-angle-left is-angle-up" },
-  { id: 6, text: "Left Down", value: "is-angle-left is-angle-down" }
+  { id: 6, text: "Left Down", value: "is-angle-left is-angle-down" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["span"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewBoxBasic extends React.Component {
@@ -57,7 +57,7 @@ export class PreviewBoxBasic extends React.Component {
     super(props)
     this.state = {
       outline: true,
-      bgLight: true
+      bgLight: true,
     }
     this.toggleOutline = this.toggleOutline.bind(this)
     this.toggleBgLight = this.toggleBgLight.bind(this)
@@ -111,7 +111,7 @@ export class PreviewBoxFlexbox extends React.Component {
     this.state = {
       verticalAlign: "is-middle",
       horizontalAlign: "",
-      reverse: false
+      reverse: false,
     }
     this.changeVerticalAlign = this.changeVerticalAlign.bind(this)
     this.changeHorizontalAlign = this.changeHorizontalAlign.bind(this)
@@ -152,14 +152,16 @@ export class PreviewBoxFlexbox extends React.Component {
             <DemoOption title={"Vertical Align"}>
               <DemoOptionBoxRadios
                 patterns={verticalAligns}
-                parentChange={value => this.changeVerticalAlign(value)}
+                name="radio-box-flexbox-verticai-align"
+                parentChange={(value) => this.changeVerticalAlign(value)}
                 checked={this.state.verticalAlign}
               />
             </DemoOption>
             <DemoOption title={"Horizontal Align"}>
               <DemoOptionBoxRadios
                 patterns={horizontalAligns}
-                parentChange={value => this.changeHorizontalAlign(value)}
+                name="radio-box-flexbox-horizontal-align"
+                parentChange={(value) => this.changeHorizontalAlign(value)}
                 checked={this.state.horizontalAlign}
               />
             </DemoOption>
@@ -181,7 +183,7 @@ export class PreviewBoxOutline extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      outline: "is-outline"
+      outline: "is-outline",
     }
     this.changeOutline = this.changeOutline.bind(this)
   }
@@ -202,7 +204,8 @@ export class PreviewBoxOutline extends React.Component {
             <DemoOption title={"Outline"}>
               <DemoOptionBoxRadios
                 patterns={outlines}
-                parentChange={value => this.changeOutline(value)}
+                name="radio-box-outline"
+                parentChange={(value) => this.changeOutline(value)}
                 checked={this.state.outline}
               />
             </DemoOption>
@@ -225,7 +228,7 @@ export class PreviewBoxSeparate extends React.Component {
     super(props)
     this.state = {
       separate: "is-separate",
-      boxNum: 3
+      boxNum: 3,
     }
     this.changeSeparate = this.changeSeparate.bind(this)
     this.changeBoxNum = this.changeBoxNum.bind(this)
@@ -266,7 +269,8 @@ export class PreviewBoxSeparate extends React.Component {
             <DemoOption title={"Separate"}>
               <DemoOptionBoxRadios
                 patterns={separates}
-                parentChange={value => this.changeSeparate(value)}
+                name="radio-box-separate"
+                parentChange={(value) => this.changeSeparate(value)}
                 checked={this.state.separate}
               />
             </DemoOption>
@@ -290,7 +294,7 @@ export class PreviewBoxLink extends React.Component {
     this.state = {
       boxNum: 3,
       disabled: false,
-      externalLink: false
+      externalLink: false,
     }
     this.changeBoxNum = this.changeBoxNum.bind(this)
     this.toggleDisabled = this.toggleDisabled.bind(this)
@@ -369,7 +373,7 @@ export class PreviewBoxAngle extends React.Component {
       boxNum: 3,
       angle: "is-angle-right",
       disabled: false,
-      externalLink: false
+      externalLink: false,
     }
     this.changeBoxNum = this.changeBoxNum.bind(this)
     this.changeAngle = this.changeAngle.bind(this)
@@ -429,7 +433,8 @@ export class PreviewBoxAngle extends React.Component {
             <DemoOption title={"Angle"}>
               <DemoOptionBoxRadios
                 patterns={angles}
-                parentChange={value => this.changeAngle(value)}
+                name="radio-box-angle"
+                parentChange={(value) => this.changeAngle(value)}
                 checked={this.state.angle}
               />
             </DemoOption>

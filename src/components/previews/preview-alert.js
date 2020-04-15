@@ -12,38 +12,38 @@ const items = [
     id: 0,
     role: "",
     text: "WordPressプラグインの設定へようこそ！",
-    icon: "thumbs-up"
+    icon: "thumbs-up",
   },
   {
     id: 1,
     role: "is-primary",
     text: "WordPressプラグインの設定へようこそ！",
-    icon: "thumbs-up"
+    icon: "thumbs-up",
   },
   {
     id: 2,
     role: "is-info",
     text: "プラグインに関するチュートリアルはこちら。",
-    icon: "info-circle"
+    icon: "info-circle",
   },
   {
     id: 3,
     role: "is-success",
     text: "プラグインの設定は自動的に保存されました。",
-    icon: "check"
+    icon: "check",
   },
   {
     id: 4,
     role: "is-warning",
     text: "プラグインはアクティベートされていません。",
-    icon: "exclamation-triangle"
+    icon: "exclamation-triangle",
   },
   {
     id: 5,
     role: "is-danger",
     text: "プラグインは削除されました。",
-    icon: "times"
-  }
+    icon: "times",
+  },
 ]
 
 const tails = [
@@ -58,12 +58,12 @@ const tails = [
   { id: 8, text: "Bottom Left", value: "is-tail-bottom-left" },
   { id: 9, text: "Left Bottom", value: "is-tail-left-bottom" },
   { id: 10, text: "Left Middle", value: "is-tail-left-middle" },
-  { id: 11, text: "Left Top", value: "is-tail-left-top" }
+  { id: 11, text: "Left Top", value: "is-tail-left-top" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["s"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewAlertRole extends React.Component {
@@ -74,7 +74,7 @@ export class PreviewAlertRole extends React.Component {
   render() {
     const contents = items
       .map(
-        item =>
+        (item) =>
           `<div class="alert ${item.role}">
             <i aria-hidden="true" class="fas fa-${item.icon} ${item.role} is-fit is-margin-right-xxs"></i>
             <span class="text ${item.role}">${item.text}</span>
@@ -102,7 +102,7 @@ export class PreviewAlertTail extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      tail: "is-tail-top-left"
+      tail: "is-tail-top-left",
     }
     this.changeTail = this.changeTail.bind(this)
   }
@@ -113,7 +113,7 @@ export class PreviewAlertTail extends React.Component {
     const tail = this.state.tail
     const contents = items
       .map(
-        item =>
+        (item) =>
           `<div class="alert ${item.role} ${tail}">
             <i aria-hidden="true" class="fas fa-${item.icon} ${item.role} is-fit is-margin-right-xxs"></i>
             <span class="text ${item.role}">${item.text}</span>
@@ -130,7 +130,8 @@ export class PreviewAlertTail extends React.Component {
             <DemoOption title={"Tail"}>
               <DemoOptionBoxRadios
                 patterns={tails}
-                parentChange={value => this.changeTail(value)}
+                name="radio-alert-tail"
+                parentChange={(value) => this.changeTail(value)}
                 checked={this.state.tail}
               />
             </DemoOption>

@@ -15,26 +15,26 @@ const spaces = [
   { id: 4, text: "Middle", value: "md" },
   { id: 3, text: "Large", value: "lg" },
   { id: 2, text: "XL", value: "xl" },
-  { id: 1, text: "XXL", value: "xxl" }
+  { id: 1, text: "XXL", value: "xxl" },
 ]
 
 const ways = [
   { id: 0, text: "Top", value: "top" },
   { id: 1, text: "Right", value: "right" },
   { id: 2, text: "Bottom", value: "bottom" },
-  { id: 3, text: "Left", value: "left" }
+  { id: 3, text: "Left", value: "left" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["i"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewSpaceBasic extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      space: "md"
+      space: "md",
     }
     this.changeSpace = this.changeSpace.bind(this)
   }
@@ -62,7 +62,8 @@ export class PreviewSpaceBasic extends React.Component {
             <DemoOption title={"Space"}>
               <DemoOptionBoxRadios
                 patterns={spaces}
-                parentChange={value => this.changeSpace(value)}
+                name="radio-space-basic"
+                parentChange={(value) => this.changeSpace(value)}
                 checked={this.state.space}
               />
             </DemoOption>
@@ -86,7 +87,7 @@ export class PreviewSpaceWay extends React.Component {
     this.state = {
       way: "top",
       space: "md",
-      minus: false
+      minus: false,
     }
     this.changeWay = this.changeWay.bind(this)
     this.changeSpace = this.changeSpace.bind(this)
@@ -123,7 +124,8 @@ export class PreviewSpaceWay extends React.Component {
             <DemoOption title={"Way"}>
               <DemoOptionBoxRadios
                 patterns={ways}
-                parentChange={value => this.changeWay(value)}
+                name="radio-space-way"
+                parentChange={(value) => this.changeWay(value)}
                 checked={this.state.way}
               />
             </DemoOption>
@@ -137,7 +139,8 @@ export class PreviewSpaceWay extends React.Component {
             <DemoOption title={"Space"}>
               <DemoOptionBoxRadios
                 patterns={spaces}
-                parentChange={value => this.changeSpace(value)}
+                name="radio-space-way-space"
+                parentChange={(value) => this.changeSpace(value)}
                 checked={this.state.space}
               />
             </DemoOption>

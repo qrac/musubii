@@ -9,12 +9,12 @@ import DemoPre from "~/components/parts/demo-pre"
 
 const listPatterns = [
   { id: 0, text: "Unordered", value: "ul" },
-  { id: 1, text: "Ordered", value: "ol" }
+  { id: 1, text: "Ordered", value: "ol" },
 ]
 
 const beautifyHtmlOptions = {
   inline: ["small", "strong", "em", "del", "code"],
-  indent_size: 2
+  indent_size: 2,
 }
 
 export class PreviewWysiwygHeading extends React.Component {
@@ -80,7 +80,7 @@ export class PreviewWysiwygLink extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      reverse: false
+      reverse: false,
     }
     this.toggleReverse = this.toggleReverse.bind(this)
   }
@@ -208,7 +208,7 @@ export class PreviewWysiwygList extends React.Component {
     super(props)
     this.state = {
       listPattern: "ul",
-      nested: false
+      nested: false,
     }
     this.changeListPattern = this.changeListPattern.bind(this)
     this.toggleNested = this.toggleNested.bind(this)
@@ -257,7 +257,8 @@ export class PreviewWysiwygList extends React.Component {
             <DemoOption title={"Pattern"}>
               <DemoOptionBoxRadios
                 patterns={listPatterns}
-                parentChange={value => this.changeListPattern(value)}
+                name="radio-wysiwyg-list-pattern"
+                parentChange={(value) => this.changeListPattern(value)}
                 checked={this.state.listPattern}
               />
             </DemoOption>
