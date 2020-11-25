@@ -58,7 +58,7 @@
     "concat": "^1.0.3",
     "cpx": "^1.5.0",
     "css-vars-ponyfill": "^2.2.1",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.1.2",
     "js-beautify": "^1.10.3",
     "next": "^9.3.3",
     "next-compose-plugins": "^2.2.0",
