@@ -60,7 +60,7 @@
     "css-vars-ponyfill": "^2.2.1",
     "highlight.js": "^9.18.1",
     "js-beautify": "^1.10.3",
-    "next": "^9.3.3",
+    "next": "^11.1.0",
     "next-compose-plugins": "^2.2.0",
     "node-sass": "^4.13.1",
     "postcss-cli": "^7.1.0",
