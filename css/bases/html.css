@@ -1,0 +1,15 @@
+body {
+  background-color: var(--theme-bg-1);
+  color: var(--theme-tx-2);
+  font-family: var(--theme-font-sans);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}

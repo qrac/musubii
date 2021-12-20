@@ -1,0 +1,14 @@
+:root {
+  --theme-tx-1: #000000;
+  --theme-tx-2: #383838;
+  --theme-bg-1: #ffffff;
+  --theme-bg-2: #f5f5f5;
+  --theme-bd-1: #d1d8dc;
+  --theme-lk-1: #37b0be;
+  --theme-lk-tx: #ffffff;
+  --theme-primary: #37b0be;
+  --theme-info: #4b9bd8;
+  --theme-success: #2ca52c;
+  --theme-warning: #ec8313;
+  --theme-danger: #db5757;
+}
