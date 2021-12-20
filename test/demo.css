@@ -1,0 +1,10 @@
+.demo-toc {
+  margin: 32px 0;
+  padding-left: 48px;
+  list-style: outside;
+}
+
+.demo-content {
+  margin: 32px 0;
+  padding: 0 32px;
+}
