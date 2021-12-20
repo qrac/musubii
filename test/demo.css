@@ -1,10 +1,24 @@
-.demo-toc {
-  margin: 32px 0;
-  padding-left: 48px;
-  list-style: outside;
+body {
+  background-color: #282a37;
+}
+
+.demo-contents {
+  padding: 16px;
 }
 
 .demo-content {
-  margin: 32px 0;
-  padding: 0 32px;
+  padding: 16px;
+  background-color: var(--theme-bg-1);
+  border: 1px solid var(--theme-bd-1);
+  border-radius: 4px;
+}
+
+.demo-content + .demo-content {
+  margin-top: 32px;
+}
+
+.demo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }

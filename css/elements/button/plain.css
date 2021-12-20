@@ -1,3 +1,28 @@
 .button.is-plain {
   background-color: var(--theme-bg-2);
 }
+
+.button.is-plain.is-primary {
+  background-color: var(--theme-primary);
+  color: var(--theme-lk-tx);
+}
+
+.button.is-plain.is-info {
+  background-color: var(--theme-info);
+  color: var(--theme-lk-tx);
+}
+
+.button.is-plain.is-success {
+  background-color: var(--theme-success);
+  color: var(--theme-lk-tx);
+}
+
+.button.is-plain.is-warning {
+  background-color: var(--theme-warning);
+  color: var(--theme-lk-tx);
+}
+
+.button.is-plain.is-danger {
+  background-color: var(--theme-danger);
+  color: var(--theme-lk-tx);
+}
