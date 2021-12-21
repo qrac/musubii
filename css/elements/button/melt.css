@@ -14,10 +14,6 @@
   color: var(--theme-success);
 }
 
-.button.is-melt.is-warning {
-  color: var(--theme-warning);
-}
-
 .button.is-melt.is-danger {
   color: var(--theme-danger);
 }

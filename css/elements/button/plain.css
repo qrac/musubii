@@ -5,7 +5,6 @@
 .button.is-plain.is-primary,
 .button.is-plain.is-info,
 .button.is-plain.is-success,
-.button.is-plain.is-warning,
 .button.is-plain.is-danger {
   color: var(--theme-lk-tx);
 }
@@ -20,10 +19,6 @@
 
 .button.is-plain.is-success {
   background-color: var(--theme-success);
-}
-
-.button.is-plain.is-warning {
-  background-color: var(--theme-warning);
 }
 
 .button.is-plain.is-danger {
