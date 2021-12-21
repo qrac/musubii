@@ -14,7 +14,7 @@ body {
 }
 
 .demo-content + .demo-content {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .demo-buttons {
