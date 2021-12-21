@@ -4,7 +4,7 @@
 }
 
 .button.is-outline.is-primary,
-.button.is-outline.is-info,
+.button.is-outline.is-secondary,
 .button.is-outline.is-success,
 .button.is-outline.is-danger {
   border-color: currentColor;
@@ -14,8 +14,8 @@
   color: var(--theme-primary);
 }
 
-.button.is-outline.is-info {
-  color: var(--theme-info);
+.button.is-outline.is-secondary {
+  color: var(--theme-secondary);
 }
 
 .button.is-outline.is-success {
@@ -28,7 +28,7 @@
 
 @media (hover: hover) and (pointer: fine) {
   .button.is-outline.is-primary:hover,
-  .button.is-outline.is-info:hover,
+  .button.is-outline.is-secondary:hover,
   .button.is-outline.is-success:hover,
   .button.is-outline.is-danger:hover {
     border-color: transparent;
@@ -40,8 +40,8 @@
   .button.is-outline.is-primary:hover {
     background-color: var(--theme-primary);
   }
-  .button.is-outline.is-info:hover {
-    background-color: var(--theme-info);
+  .button.is-outline.is-secondary:hover {
+    background-color: var(--theme-secondary);
   }
   .button.is-outline.is-success:hover {
     background-color: var(--theme-success);

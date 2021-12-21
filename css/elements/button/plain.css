@@ -3,7 +3,7 @@
 }
 
 .button.is-plain.is-primary,
-.button.is-plain.is-info,
+.button.is-plain.is-secondary,
 .button.is-plain.is-success,
 .button.is-plain.is-danger {
   color: var(--theme-lk-tx);
@@ -13,8 +13,8 @@
   background-color: var(--theme-primary);
 }
 
-.button.is-plain.is-info {
-  background-color: var(--theme-info);
+.button.is-plain.is-secondary {
+  background-color: var(--theme-secondary);
 }
 
 .button.is-plain.is-success {

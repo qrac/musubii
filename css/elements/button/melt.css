@@ -6,8 +6,8 @@
   color: var(--theme-primary);
 }
 
-.button.is-melt.is-info {
-  color: var(--theme-info);
+.button.is-melt.is-secondary {
+  color: var(--theme-secondary);
 }
 
 .button.is-melt.is-success {
