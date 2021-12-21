@@ -26,3 +26,9 @@
   background-color: var(--theme-danger);
   color: var(--theme-lk-tx);
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-plain:hover {
+    filter: brightness(0.9);
+  }
+}
