@@ -1,0 +1,61 @@
+.button.is-outline {
+  background-color: var(--theme-bg-1);
+  border-color: var(--theme-bd-1);
+}
+
+.button.is-outline.is-primary,
+.button.is-outline.is-info,
+.button.is-outline.is-success,
+.button.is-outline.is-warning,
+.button.is-outline.is-danger {
+  border-color: currentColor;
+}
+
+.button.is-outline.is-primary {
+  color: var(--theme-primary);
+}
+
+.button.is-outline.is-info {
+  color: var(--theme-info);
+}
+
+.button.is-outline.is-success {
+  color: var(--theme-success);
+}
+
+.button.is-outline.is-warning {
+  color: var(--theme-warning);
+}
+
+.button.is-outline.is-danger {
+  color: var(--theme-danger);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-outline.is-primary:hover,
+  .button.is-outline.is-info:hover,
+  .button.is-outline.is-success:hover,
+  .button.is-outline.is-warning:hover,
+  .button.is-outline.is-danger:hover {
+    border-color: transparent;
+    color: var(--theme-lk-tx);
+  }
+  .button.is-outline:hover {
+    background-color: var(--theme-bg-2);
+  }
+  .button.is-outline.is-primary:hover {
+    background-color: var(--theme-primary);
+  }
+  .button.is-outline.is-info:hover {
+    background-color: var(--theme-info);
+  }
+  .button.is-outline.is-success:hover {
+    background-color: var(--theme-success);
+  }
+  .button.is-outline.is-warning:hover {
+    background-color: var(--theme-warning);
+  }
+  .button.is-outline.is-danger:hover {
+    background-color: var(--theme-danger);
+  }
+}

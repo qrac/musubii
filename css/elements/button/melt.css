@@ -1,0 +1,29 @@
+.button.is-melt {
+  background-color: transparent;
+}
+
+.button.is-melt.is-primary {
+  color: var(--theme-primary);
+}
+
+.button.is-melt.is-info {
+  color: var(--theme-info);
+}
+
+.button.is-melt.is-success {
+  color: var(--theme-success);
+}
+
+.button.is-melt.is-warning {
+  color: var(--theme-warning);
+}
+
+.button.is-melt.is-danger {
+  color: var(--theme-danger);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-melt:hover {
+    background-color: var(--theme-bg-2);
+  }
+}
