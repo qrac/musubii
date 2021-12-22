@@ -7,78 +7,72 @@
     <title>Button</title>
     <link rel="stylesheet" href="../../css/musubii.css" />
     <link rel="stylesheet" href="../demo.css" />
-    <script
-      crossorigin
-      src="https://unpkg.com/react@17/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
-    ></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script
-      data-plugins="transform-es2015-modules-umd"
-      type="text/babel"
-      src="../demo.js"
-    ></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
   <body>
-    <div className="demo-contents">
-      <div className="demo-content"></div>
-    </div>
-    <div id="app"></div>
-    <script type="text/babel" data-plugins="transform-es2015-modules-umd">
-      import { DemoRadios } from "../demo.js"
-
-      const App = () => {
-        const variants = ["plain", "outline", "ghost"]
-        const [variant, setVariant] = React.useState("plain")
-        return (
-          <div className="demo-contents">
-            <div className="demo-content">
-              <DemoRadios
-                items={variants}
-                name="variant"
-                checked={variant}
-                action={(value) => setVariant(value)}
-              />
-            </div>
-            <div className="demo-content">
-              <Buttons variant={variant} />
-            </div>
-          </div>
-        )
-      }
-
-      const Buttons = ({ variant }) => {
-        return (
-          <div className="demo-buttons">
-            <Button variant={variant} text="戻る" />
-            <Button variant={variant} text="決定" color="primary" />
-            <Button variant={variant} text="変更" color="secondary" />
-            <Button variant={variant} text="登録" color="success" />
-            <Button variant={variant} text="削除" color="danger" />
-          </div>
-        )
-      }
-
-      const Button = ({ variant, text, color }) => {
-        const classNames = [
-          "button",
-          variant ? `is-${variant}` : "is-plain",
-          color && `is-${color}`,
-        ].join(" ")
-        return (
-          <button type="button" className={classNames}>
-            {text}
+    <div class="demo-contents" x-data="{ variant: 'plain' }">
+      <div class="demo-content">
+        <div class="demo-radios">
+          <label class="demo-radio">
+            <input
+              type="radio"
+              name="variant"
+              x-model="variant"
+              value="plain"
+            />
+            <span>plain</span>
+          </label>
+          <label class="demo-radio">
+            <input
+              type="radio"
+              name="variant"
+              x-model="variant"
+              value="outline"
+            />
+            <span>outline</span>
+          </label>
+          <label class="demo-radio">
+            <input
+              type="radio"
+              name="variant"
+              x-model="variant"
+              value="ghost"
+            />
+            <span>ghost</span>
+          </label>
+        </div>
+      </div>
+      <div class="demo-content">
+        <div class="demo-buttons">
+          <button class="button" :class="'is-'+variant" type="button">
+            戻る
           </button>
-        )
-      }
-
-      const app = document.querySelector("#app")
-      const element = <App />
-      ReactDOM.render(element, app)
-    </script>
+          <button
+            class="button is-primary"
+            :class="'is-'+variant"
+            type="button"
+          >
+            決定
+          </button>
+          <button
+            class="button is-secondary"
+            :class="'is-'+variant"
+            type="button"
+          >
+            変更
+          </button>
+          <button
+            class="button is-success"
+            :class="'is-'+variant"
+            type="button"
+          >
+            登録
+          </button>
+          <button class="button is-danger" :class="'is-'+variant" type="button">
+            削除
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
