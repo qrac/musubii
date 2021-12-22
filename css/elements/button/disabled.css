@@ -1,0 +1,4 @@
+.button[disabled],
+.button.is-disabled {
+  pointer-events: none;
+}

@@ -23,13 +23,19 @@ body {
   gap: 8px;
 }
 
-.demo-radios {
+.demo-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.demo-labels {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.demo-radio {
+.demo-label {
   cursor: pointer;
   display: flex;
   align-items: center;
