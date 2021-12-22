@@ -1,25 +1,25 @@
-.button.is-melt {
+.button.is-ghost {
   background-color: transparent;
 }
 
-.button.is-melt.is-primary {
+.button.is-ghost.is-primary {
   color: var(--theme-primary);
 }
 
-.button.is-melt.is-secondary {
+.button.is-ghost.is-secondary {
   color: var(--theme-secondary);
 }
 
-.button.is-melt.is-success {
+.button.is-ghost.is-success {
   color: var(--theme-success);
 }
 
-.button.is-melt.is-danger {
+.button.is-ghost.is-danger {
   color: var(--theme-danger);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button.is-melt:hover {
+  .button.is-ghost:hover {
     background-color: var(--theme-bg-2);
   }
 }
