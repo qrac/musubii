@@ -22,3 +22,16 @@ body {
   flex-wrap: wrap;
   gap: 8px;
 }
+
+.demo-radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.demo-radio {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

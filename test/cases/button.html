@@ -7,49 +7,78 @@
     <title>Button</title>
     <link rel="stylesheet" href="../../css/musubii.css" />
     <link rel="stylesheet" href="../demo.css" />
-    <link rel="stylesheet" defer="" href="../demo.js" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+      src="../demo.js"
+    ></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
   <body>
-    <div class="demo-contents">
-      <div class="demo-content">
-        <div class="demo-buttons">
-          <button type="button" class="button is-plain">戻る</button>
-          <button type="button" class="button is-plain is-primary">決定</button>
-          <button type="button" class="button is-plain is-secondary">
-            変更
-          </button>
-          <button type="button" class="button is-plain is-success">登録</button>
-          <button type="button" class="button is-plain is-danger">削除</button>
-        </div>
-      </div>
-      <div class="demo-content">
-        <div class="demo-buttons">
-          <button type="button" class="button is-outline">戻る</button>
-          <button type="button" class="button is-outline is-primary">
-            決定
-          </button>
-          <button type="button" class="button is-outline is-secondary">
-            変更
-          </button>
-          <button type="button" class="button is-outline is-success">
-            登録
-          </button>
-          <button type="button" class="button is-outline is-danger">
-            削除
-          </button>
-        </div>
-      </div>
-      <div class="demo-content">
-        <div class="demo-buttons">
-          <button type="button" class="button is-ghost">戻る</button>
-          <button type="button" class="button is-ghost is-primary">決定</button>
-          <button type="button" class="button is-ghost is-secondary">
-            変更
-          </button>
-          <button type="button" class="button is-ghost is-success">登録</button>
-          <button type="button" class="button is-ghost is-danger">削除</button>
-        </div>
-      </div>
+    <div className="demo-contents">
+      <div className="demo-content"></div>
     </div>
+    <div id="app"></div>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd">
+      import { DemoRadios } from "../demo.js"
+
+      const App = () => {
+        const variants = ["plain", "outline", "ghost"]
+        const [variant, setVariant] = React.useState("plain")
+        return (
+          <div className="demo-contents">
+            <div className="demo-content">
+              <DemoRadios
+                items={variants}
+                name="variant"
+                checked={variant}
+                action={(value) => setVariant(value)}
+              />
+            </div>
+            <div className="demo-content">
+              <Buttons variant={variant} />
+            </div>
+          </div>
+        )
+      }
+
+      const Buttons = ({ variant }) => {
+        return (
+          <div className="demo-buttons">
+            <Button variant={variant} text="戻る" />
+            <Button variant={variant} text="決定" color="primary" />
+            <Button variant={variant} text="変更" color="secondary" />
+            <Button variant={variant} text="登録" color="success" />
+            <Button variant={variant} text="削除" color="danger" />
+          </div>
+        )
+      }
+
+      const Button = ({ variant, text, color }) => {
+        const classNames = [
+          "button",
+          variant ? `is-${variant}` : "is-plain",
+          color && `is-${color}`,
+        ].join(" ")
+        return (
+          <button type="button" className={classNames}>
+            {text}
+          </button>
+        )
+      }
+
+      const app = document.querySelector("#app")
+      const element = <App />
+      ReactDOM.render(element, app)
+    </script>
   </body>
 </html>
