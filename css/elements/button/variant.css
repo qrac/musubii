@@ -37,19 +37,19 @@
   border-color: currentColor;
 }
 
-.button.is-primary:is(.is-outline, .is-ghost) {
+.button:is(.is-outline, .is-ghost).is-primary {
   color: var(--theme-primary);
 }
 
-.button.is-secondary:is(.is-outline, .is-ghost) {
+.button:is(.is-outline, .is-ghost).is-secondary {
   color: var(--theme-secondary);
 }
 
-.button.is-success:is(.is-outline, .is-ghost) {
+.button:is(.is-outline, .is-ghost).is-success {
   color: var(--theme-success);
 }
 
-.button.is-danger:is(.is-outline, .is-ghost) {
+.button:is(.is-outline, .is-ghost).is-danger {
   color: var(--theme-danger);
 }
 
@@ -57,16 +57,16 @@
   .button:is(.is-outline, .is-ghost):hover {
     background-color: var(--theme-bg-2);
   }
-  .button.is-primary:is(.is-outline, .is-ghost):hover {
+  .button:is(.is-outline, .is-ghost).is-primary:hover {
     background-color: var(--theme-primary-light);
   }
-  .button.is-secondary:is(.is-outline, .is-ghost):hover {
+  .button:is(.is-outline, .is-ghost).is-secondary:hover {
     background-color: var(--theme-secondary-light);
   }
-  .button.is-success:is(.is-outline, .is-ghost):hover {
+  .button:is(.is-outline, .is-ghost).is-success:hover {
     background-color: var(--theme-success-light);
   }
-  .button.is-danger:is(.is-outline, .is-ghost):hover {
+  .button:is(.is-outline, .is-ghost).is-danger:hover {
     background-color: var(--theme-danger-light);
   }
 }
