@@ -1,0 +1,72 @@
+.button.is-plain {
+  background-color: var(--theme-bg-2);
+}
+
+.button.is-plain:is(.is-primary, .is-secondary, .is-success, .is-danger) {
+  color: var(--theme-lk-tx);
+}
+
+.button.is-plain.is-primary {
+  background-color: var(--theme-primary);
+}
+
+.button.is-plain.is-secondary {
+  background-color: var(--theme-secondary);
+}
+
+.button.is-plain.is-success {
+  background-color: var(--theme-success);
+}
+
+.button.is-plain.is-danger {
+  background-color: var(--theme-danger);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-plain:hover {
+    filter: brightness(0.9);
+  }
+}
+
+.button.is-outline {
+  background-color: var(--theme-bg-1);
+  border-color: var(--theme-bd-1);
+}
+
+.button.is-outline:is(.is-primary, .is-secondary, .is-success, .is-danger) {
+  border-color: currentColor;
+}
+
+.button.is-primary:is(.is-outline, .is-ghost) {
+  color: var(--theme-primary);
+}
+
+.button.is-secondary:is(.is-outline, .is-ghost) {
+  color: var(--theme-secondary);
+}
+
+.button.is-success:is(.is-outline, .is-ghost) {
+  color: var(--theme-success);
+}
+
+.button.is-danger:is(.is-outline, .is-ghost) {
+  color: var(--theme-danger);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:is(.is-outline, .is-ghost):hover {
+    background-color: var(--theme-bg-2);
+  }
+  .button.is-primary:is(.is-outline, .is-ghost):hover {
+    background-color: var(--theme-primary-light);
+  }
+  .button.is-secondary:is(.is-outline, .is-ghost):hover {
+    background-color: var(--theme-secondary-light);
+  }
+  .button.is-success:is(.is-outline, .is-ghost):hover {
+    background-color: var(--theme-success-light);
+  }
+  .button.is-danger:is(.is-outline, .is-ghost):hover {
+    background-color: var(--theme-danger-light);
+  }
+}
