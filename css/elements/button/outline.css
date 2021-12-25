@@ -27,26 +27,19 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button.is-outline.is-primary:hover,
-  .button.is-outline.is-secondary:hover,
-  .button.is-outline.is-success:hover,
-  .button.is-outline.is-danger:hover {
-    border-color: transparent;
-    color: var(--theme-lk-tx);
-  }
   .button.is-outline:hover {
     background-color: var(--theme-bg-2);
   }
   .button.is-outline.is-primary:hover {
-    background-color: var(--theme-primary);
+    background-color: var(--theme-primary-light);
   }
   .button.is-outline.is-secondary:hover {
-    background-color: var(--theme-secondary);
+    background-color: var(--theme-secondary-light);
   }
   .button.is-outline.is-success:hover {
-    background-color: var(--theme-success);
+    background-color: var(--theme-success-light);
   }
   .button.is-outline.is-danger:hover {
-    background-color: var(--theme-danger);
+    background-color: var(--theme-danger-light);
   }
 }
