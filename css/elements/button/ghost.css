@@ -1,7 +1,3 @@
-.button.is-ghost {
-  background-color: transparent;
-}
-
 .button.is-ghost.is-primary {
   color: var(--theme-primary);
 }
@@ -21,5 +17,17 @@
 @media (hover: hover) and (pointer: fine) {
   .button.is-ghost:hover {
     background-color: var(--theme-bg-2);
+  }
+  .button.is-ghost.is-primary:hover {
+    background-color: var(--theme-primary-light);
+  }
+  .button.is-ghost.is-secondary:hover {
+    background-color: var(--theme-secondary-light);
+  }
+  .button.is-ghost.is-success:hover {
+    background-color: var(--theme-success-light);
+  }
+  .button.is-ghost.is-danger:hover {
+    background-color: var(--theme-danger-light);
   }
 }
