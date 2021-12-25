@@ -1,29 +1,29 @@
-.button.is-plain {
+.button.is-solid {
   background-color: var(--theme-bg-2);
 }
 
-.button.is-plain:is(.is-primary, .is-secondary, .is-success, .is-danger) {
+.button.is-solid:is(.is-primary, .is-secondary, .is-success, .is-danger) {
   color: var(--theme-lk-tx);
 }
 
-.button.is-plain.is-primary {
+.button.is-solid.is-primary {
   background-color: var(--theme-primary);
 }
 
-.button.is-plain.is-secondary {
+.button.is-solid.is-secondary {
   background-color: var(--theme-secondary);
 }
 
-.button.is-plain.is-success {
+.button.is-solid.is-success {
   background-color: var(--theme-success);
 }
 
-.button.is-plain.is-danger {
+.button.is-solid.is-danger {
   background-color: var(--theme-danger);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button.is-plain:hover {
+  .button.is-solid:hover {
     filter: brightness(0.9);
   }
 }
