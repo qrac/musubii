@@ -7,9 +7,13 @@
   --theme-lk-1: #02abc9;
   --theme-lk-tx: #ffffff;
   --theme-primary: #02abc9;
+  --theme-primary-light: #ecfeff;
   --theme-secondary: #5b52ce;
-  --theme-info: #4b9bd8;
+  --theme-secondary-light: #f5f3ff;
   --theme-success: #05ad05;
-  --theme-warning: #ec8313;
+  --theme-success-light: #f0fdf4;
   --theme-danger: #ce4141;
+  --theme-danger-light: #fef2f2;
+  /*--theme-info: #4b9bd8;
+  --theme-warning: #ec8313;*/
 }

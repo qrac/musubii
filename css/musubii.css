@@ -1,5 +1,5 @@
-@import "./themes/default/light.css";
-@import "./themes/data-theme/dark.css";
+@import "./themes/light/default.css";
+@import "./themes/dark/attribute.css";
 @import "./themes/variable.css";
 @import "./bases/reset.css";
 @import "./bases/html.css";
