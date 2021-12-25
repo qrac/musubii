@@ -4,11 +4,14 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5em 1em;
+  width: auto;
+  height: 2.5rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
-  line-height: 1.5;
+  line-height: 1.25;
   white-space: nowrap;
   appearance: none;
 }
