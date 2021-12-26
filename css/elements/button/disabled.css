@@ -1,4 +1,4 @@
-.button[disabled],
-.button.is-disabled {
+.button:is([disabled], .is-disabled) {
   pointer-events: none;
+  opacity: 0.4;
 }
