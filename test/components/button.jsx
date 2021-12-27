@@ -3,7 +3,7 @@ import React from "react"
 const Button = ({ variant, text, color, disabled }) => {
   const classNames = [
     "button",
-    variant ? `is-${variant}` : "is-plain",
+    variant ? `is-${variant}` : "is-solid",
     color && `is-${color}`,
   ].join(" ")
   return (
