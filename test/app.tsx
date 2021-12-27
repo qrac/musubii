@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 import SceneButton from "./scenes/scene-button"
 
-import "../css/musubii.css"
+import "../src/musubii.css"
 import "./assets/demo.css"
 
 const App = () => {
