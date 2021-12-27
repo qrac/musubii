@@ -2,8 +2,8 @@ import { useState } from "react"
 
 import SceneButton from "./scenes/scene-button"
 
-import "../src/musubii.css"
-import "./assets/demo.css"
+import "musubii/src/musubii.css"
+import "./demo.css"
 
 const App = () => {
   const [scene, setScene] = useState("button")

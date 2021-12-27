@@ -22,13 +22,10 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "dev": "vite --host",
     "build": "npm run build:concat && npm run build:minify",
     "build:concat": "postcss ./src/*.css -d ./dist --no-map",
     "build:minify": "cleancss --batch --batch-suffix '.min' dist/*.css !dist/*.min.css -d",
-    "site": "vite build",
-    "preview": "vite preview --port 8080",
-    "clean": "trash ./dist ./test/dist"
+    "clean": "trash ./dist"
   },
   "prettier": {
     "semi": false
@@ -42,17 +39,10 @@
     "last 1 ChromeAndroid versions"
   ],
   "devDependencies": {
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
-    "@vitejs/plugin-react": "^1.1.3",
     "clean-css-cli": "^5.5.0",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.0.2",
-    "postcss-sort-media-queries": "^4.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^4.5.4",
-    "vite": "^2.7.7"
+    "postcss-sort-media-queries": "^4.2.1"
   }
 }

@@ -1,7 +1,6 @@
 import { useState } from "react"
 
-import { DemoRadios, DemoCheckbox } from "../assets"
-import { Button, ButtonProps } from "../../src/elements/button"
+import { DemoRadios, DemoCheckbox, Button, ButtonProps } from "../components"
 
 const SceneButton = () => {
   const variants = ["solid", "outline", "ghost"]
