@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import SceneButton from "./scenes/scene-button"
+import { SceneButton } from "./scenes"
 
 import "musubii/src/musubii.css"
 import "./demo.css"

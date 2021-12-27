@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { DemoRadios, DemoCheckbox, Button, ButtonProps } from "../components"
 
-const SceneButton = () => {
+export const SceneButton = () => {
   const variants = ["solid", "outline", "ghost"]
   const [variant, setVariant] = useState<ButtonProps["variant"]>("solid")
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
@@ -57,5 +57,3 @@ const SceneButton = () => {
     </div>
   )
 }
-
-export default SceneButton
