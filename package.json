@@ -26,7 +26,9 @@
     "build": "npm run build:concat && npm run build:minify",
     "build:concat": "postcss ./src/*.css -d ./dist --no-map",
     "build:minify": "cleancss --batch --batch-suffix '.min' dist/*.css !dist/*.min.css -d",
-    "clean": "trash ./dist"
+    "site": "vite build",
+    "preview": "vite preview --port 8080",
+    "clean": "trash ./dist ./test/dist"
   },
   "prettier": {
     "semi": false
