@@ -1,3 +1,5 @@
+import classNames from "classnames"
+
 export interface ButtonProps {
   DOMElement?: "button" | "a"
   type?: "button" | "reset" | "submit"
@@ -22,17 +24,16 @@ export const Button = (props: ButtonProps) => {
     isDisabled,
     text,
   } = props
-  const classNames = [
-    "button",
-    `is-${variant}`,
-    color && `is-${color}`,
-    isRound && `is-round`,
-  ].join(" ")
   const ariaDisabled = isDisabled ? true : undefined
   const tabIndex = isDisabled ? -1 : undefined
   return (
     <DOMElement
-      className={classNames}
+      className={classNames(
+        "button",
+        `is-${variant}`,
+        color && `is-${color}`,
+        isRound && "is-round"
+      )}
       type={DOMElement === "button" ? type : undefined}
       href={DOMElement === "a" ? href : undefined}
       target={DOMElement === "a" ? target : undefined}

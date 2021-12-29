@@ -67,6 +67,7 @@ export const SceneButton = () => {
         <div className="demo-buttons">
           {buttonList.map((item, index) => (
             <Button
+              key={index}
               DOMElement={domElement}
               variant={variant}
               color={item.color}
