@@ -29,6 +29,10 @@ body {
   gap: 8px 24px;
 }
 
+.demo-options + .demo-options {
+  margin-top: 8px;
+}
+
 .demo-labels {
   display: flex;
   flex-wrap: wrap;

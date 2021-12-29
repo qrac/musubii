@@ -3,6 +3,7 @@ export interface ButtonProps {
   type?: "button" | "reset" | "submit"
   variant: "solid" | "outline" | "ghost"
   color?: "primary" | "secondary" | "success" | "danger"
+  isRound?: boolean
   href?: string
   target?: "_self" | "_blank"
   isDisabled?: boolean
@@ -15,14 +16,18 @@ export const Button = (props: ButtonProps) => {
     type = "button",
     variant,
     color,
+    isRound,
     href = "",
     target,
     isDisabled,
     text,
   } = props
-  const classNames = ["button", `is-${variant}`, color && `is-${color}`].join(
-    " "
-  )
+  const classNames = [
+    "button",
+    `is-${variant}`,
+    color && `is-${color}`,
+    isRound && `is-round`,
+  ].join(" ")
   const ariaDisabled = isDisabled ? true : undefined
   const tabIndex = isDisabled ? -1 : undefined
   return (
