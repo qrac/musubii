@@ -92,10 +92,23 @@ export const SceneButton = () => {
               size={item}
               target={targetAttr}
               isDisabled={isDisabled}
-            >
-              決定
-            </Button>
+              text="決定"
+            />
           ))}
+        </div>
+      </div>
+      <div className="demo-content">
+        <div className="demo-buttons">
+          <Button
+            DOMElement={domElement}
+            variant={variant}
+            color="primary"
+            isRound={isRound}
+            target={targetAttr}
+            isDisabled={isDisabled}
+          >
+            children
+          </Button>
         </div>
       </div>
     </div>
