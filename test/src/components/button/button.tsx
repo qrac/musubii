@@ -11,6 +11,7 @@ export interface ButtonProps {
   target?: "_self" | "_blank"
   isDisabled?: boolean
   text?: string
+  children?: React.ReactNode
 }
 
 export const Button = (props: ButtonProps) => {
@@ -25,6 +26,7 @@ export const Button = (props: ButtonProps) => {
     target,
     isDisabled,
     text,
+    children,
   } = props
   const ariaDisabled = isDisabled ? true : undefined
   const tabIndex = isDisabled ? -1 : undefined
@@ -45,6 +47,7 @@ export const Button = (props: ButtonProps) => {
       tabIndex={DOMElement !== "button" ? tabIndex : undefined}
     >
       {text}
+      {children}
     </DOMElement>
   )
 }

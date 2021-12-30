@@ -92,8 +92,9 @@ export const SceneButton = () => {
               size={item}
               target={targetAttr}
               isDisabled={isDisabled}
-              text="決定"
-            />
+            >
+              決定
+            </Button>
           ))}
         </div>
       </div>
