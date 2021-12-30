@@ -8,8 +8,7 @@
   min-width: 2.5em;
   width: auto;
   height: 2.5em;
-  padding-inline-start: 1em;
-  padding-inline-end: 1em;
+  padding: 0 1em;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
