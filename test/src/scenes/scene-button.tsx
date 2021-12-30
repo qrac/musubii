@@ -9,6 +9,8 @@ export const SceneButton = () => {
   const domElements = ["button", "a"]
   const [domElement, setDomElement] =
     useState<ButtonProps["DOMElement"]>("button")
+  const types = ["button", "reset", "submit"]
+  const [type, setType] = useState<ButtonProps["type"]>("button")
   const targets = ["_self", "_blank"]
   const [target, setTarget] = useState<ButtonProps["target"]>("_self")
   const targetAttr = target === "_blank" ? target : undefined
@@ -50,6 +52,14 @@ export const SceneButton = () => {
             }
           />
           <DemoRadios
+            items={types}
+            checkedItem={type}
+            name="type"
+            onChange={(event) =>
+              setType(event.target.value as ButtonProps["type"])
+            }
+          />
+          <DemoRadios
             items={targets}
             checkedItem={target}
             name="target"
@@ -70,6 +80,7 @@ export const SceneButton = () => {
             <Button
               key={index}
               DOMElement={domElement}
+              type={type}
               variant={variant}
               color={item.color}
               isRound={isRound}
@@ -86,6 +97,7 @@ export const SceneButton = () => {
             <Button
               key={index}
               DOMElement={domElement}
+              type={type}
               variant={variant}
               color="primary"
               isRound={isRound}
@@ -100,14 +112,48 @@ export const SceneButton = () => {
       <div className="demo-content">
         <div className="demo-buttons">
           <Button
+            id="button-id-demo"
             DOMElement={domElement}
+            type={type}
+            variant={variant}
+            color="primary"
+            isRound={isRound}
+            target={targetAttr}
+            isDisabled={isDisabled}
+            text="id"
+          />
+          <Button
+            DOMElement={domElement}
+            type={type}
+            variant={variant}
+            color="primary"
+            isRound={isRound}
+            target={targetAttr}
+            isDisabled={isDisabled}
+            text="class"
+            customClass="is-disabled"
+          />
+          <Button
+            DOMElement={domElement}
+            type={type}
+            variant={variant}
+            color="primary"
+            isRound={isRound}
+            target={targetAttr}
+            isDisabled={isDisabled}
+            text="style"
+            customStyle={{ backgroundColor: "rgb(17, 24, 39)" }}
+          />
+          <Button
+            DOMElement={domElement}
+            type={type}
             variant={variant}
             color="primary"
             isRound={isRound}
             target={targetAttr}
             isDisabled={isDisabled}
           >
-            children
+            <span>children</span>
           </Button>
         </div>
       </div>
