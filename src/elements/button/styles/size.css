@@ -1,0 +1,19 @@
+.button.is-size-xl {
+  font-size: 1.25rem;
+}
+
+.button.is-size-lg {
+  font-size: 1.125rem;
+}
+
+.button.is-size-md {
+  font-size: 1rem;
+}
+
+.button.is-size-sm {
+  font-size: 0.875rem;
+}
+
+.button.is-size-xs {
+  font-size: 0.75rem;
+}

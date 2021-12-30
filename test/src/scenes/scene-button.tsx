@@ -21,6 +21,7 @@ export const SceneButton = () => {
     { color: "success", text: "登録" },
     { color: "danger", text: "削除" },
   ]
+  const buttonSizes: ButtonProps["size"][] = ["xs", "sm", "md", "lg", "xl"]
   return (
     <div className="demo-contents">
       <div className="demo-content">
@@ -75,6 +76,23 @@ export const SceneButton = () => {
               target={targetAttr}
               isDisabled={isDisabled}
               text={item.text}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="demo-content">
+        <div className="demo-buttons">
+          {buttonSizes.map((item, index) => (
+            <Button
+              key={index}
+              DOMElement={domElement}
+              variant={variant}
+              color="primary"
+              isRound={isRound}
+              size={item}
+              target={targetAttr}
+              isDisabled={isDisabled}
+              text="決定"
             />
           ))}
         </div>

@@ -6,6 +6,7 @@ export interface ButtonProps {
   variant: "solid" | "outline" | "ghost"
   color?: "primary" | "secondary" | "success" | "danger"
   isRound?: boolean
+  size?: "xs" | "sm" | "md" | "lg" | "xl"
   href?: string
   target?: "_self" | "_blank"
   isDisabled?: boolean
@@ -18,6 +19,7 @@ export const Button = (props: ButtonProps) => {
     type = "button",
     variant,
     color,
+    size,
     isRound,
     href = "",
     target,
@@ -32,7 +34,8 @@ export const Button = (props: ButtonProps) => {
         "button",
         `is-${variant}`,
         color && `is-${color}`,
-        isRound && "is-round"
+        isRound && "is-round",
+        size && `is-size-${size}`
       )}
       type={DOMElement === "button" ? type : undefined}
       href={DOMElement === "a" ? href : undefined}
