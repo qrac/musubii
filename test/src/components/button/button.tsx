@@ -8,7 +8,7 @@ export interface ButtonProps {
   color?: "primary" | "secondary" | "success" | "danger" | (string & {})
   size?: "xs" | "sm" | "md" | "lg" | "xl" | (string & {})
   aspect?: "square" | (string & {})
-  isRound?: boolean
+  rounded?: "full" | (string & {})
   href?: string
   target?: "_self" | "_blank"
   isDisabled?: boolean
@@ -27,7 +27,7 @@ export const Button = (props: ButtonProps) => {
     color,
     size,
     aspect,
-    isRound,
+    rounded,
     href = "",
     target,
     isDisabled,
@@ -47,7 +47,7 @@ export const Button = (props: ButtonProps) => {
         color && `is-${color}`,
         size && `is-size-${size}`,
         aspect && `is-aspect-${aspect}`,
-        isRound && "is-round",
+        rounded && `is-rounded-${rounded}`,
         customClass && customClass
       )}
       type={DOMElement === "button" ? type : undefined}

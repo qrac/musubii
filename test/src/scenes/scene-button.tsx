@@ -12,7 +12,8 @@ import { DemoRadios, DemoCheckbox, Button, ButtonProps } from "../components"
 export const SceneButton = () => {
   const variants = ["solid", "outline", "ghost"]
   const [variant, setVariant] = useState<ButtonProps["variant"]>("solid")
-  const [isRound, setIsRound] = useState<boolean>(false)
+  const [isRoundedFull, setIsRoundedFull] = useState<boolean>(false)
+  const roundedAttr = isRoundedFull ? "full" : undefined
   const domElements = ["button", "a"]
   const [domElement, setDomElement] =
     useState<ButtonProps["DOMElement"]>("button")
@@ -48,9 +49,9 @@ export const SceneButton = () => {
             }
           />
           <DemoCheckbox
-            value="round"
-            isChecked={isRound}
-            onChange={() => setIsRound(!isRound)}
+            value="rounded full"
+            isChecked={isRoundedFull}
+            onChange={() => setIsRoundedFull(!isRoundedFull)}
           />
         </div>
         <div className="demo-options">
@@ -94,7 +95,7 @@ export const SceneButton = () => {
               type={type}
               variant={variant}
               color={item.color}
-              isRound={isRound}
+              rounded={roundedAttr}
               target={targetAttr}
               isDisabled={isDisabled}
               text={item.text}
@@ -111,8 +112,8 @@ export const SceneButton = () => {
               type={type}
               variant={variant}
               color={item.color}
-              isRound={isRound}
               aspect="square"
+              rounded={roundedAttr}
               target={targetAttr}
               isDisabled={isDisabled}
             >
@@ -130,7 +131,7 @@ export const SceneButton = () => {
               type={type}
               variant={variant}
               color="primary"
-              isRound={isRound}
+              rounded={roundedAttr}
               size={item}
               target={targetAttr}
               isDisabled={isDisabled}
@@ -147,7 +148,7 @@ export const SceneButton = () => {
             type={type}
             variant={variant}
             color="primary"
-            isRound={isRound}
+            rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="id"
@@ -157,7 +158,7 @@ export const SceneButton = () => {
             type={type}
             variant={variant}
             color="primary"
-            isRound={isRound}
+            rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="class"
@@ -168,7 +169,7 @@ export const SceneButton = () => {
             type={type}
             variant={variant}
             color="primary"
-            isRound={isRound}
+            rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="style"
@@ -179,7 +180,7 @@ export const SceneButton = () => {
             type={type}
             variant={variant}
             color="primary"
-            isRound={isRound}
+            rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
           >
