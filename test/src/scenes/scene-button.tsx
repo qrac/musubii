@@ -1,4 +1,11 @@
 import { useState } from "react"
+import {
+  FaListUl,
+  FaCheck,
+  FaPalette,
+  FaSave,
+  FaTrashAlt,
+} from "react-icons/fa"
 
 import { DemoRadios, DemoCheckbox, Button, ButtonProps } from "../components"
 
@@ -16,12 +23,16 @@ export const SceneButton = () => {
   const targetAttr = target === "_blank" ? target : undefined
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
 
-  const buttonList: { color: ButtonProps["color"]; text: string }[] = [
-    { color: undefined, text: "戻る" },
-    { color: "primary", text: "決定" },
-    { color: "secondary", text: "変更" },
-    { color: "success", text: "登録" },
-    { color: "danger", text: "削除" },
+  const buttonList: {
+    color: ButtonProps["color"]
+    text: string
+    icon?: React.ReactElement
+  }[] = [
+    { color: undefined, text: "詳細", icon: <FaListUl /> },
+    { color: "primary", text: "決定", icon: <FaCheck /> },
+    { color: "secondary", text: "変更", icon: <FaPalette /> },
+    { color: "success", text: "登録", icon: <FaSave /> },
+    { color: "danger", text: "削除", icon: <FaTrashAlt /> },
   ]
   const buttonSizes: ButtonProps["size"][] = ["xs", "sm", "md", "lg", "xl"]
   return (
@@ -88,6 +99,25 @@ export const SceneButton = () => {
               isDisabled={isDisabled}
               text={item.text}
             />
+          ))}
+        </div>
+      </div>
+      <div className="demo-content">
+        <div className="demo-buttons">
+          {buttonList.map((item, index) => (
+            <Button
+              key={index}
+              DOMElement={domElement}
+              type={type}
+              variant={variant}
+              color={item.color}
+              isRound={isRound}
+              aspect="square"
+              target={targetAttr}
+              isDisabled={isDisabled}
+            >
+              {item.icon}
+            </Button>
           ))}
         </div>
       </div>
