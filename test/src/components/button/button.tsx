@@ -4,9 +4,9 @@ export interface ButtonProps {
   id?: string
   DOMElement?: "button" | "a"
   type?: "button" | "reset" | "submit"
-  variant: "solid" | "outline" | "ghost"
-  color?: "primary" | "secondary" | "success" | "danger"
-  size?: "xs" | "sm" | "md" | "lg" | "xl"
+  variant: "solid" | "outline" | "ghost" | (string & {})
+  color?: "primary" | "secondary" | "success" | "danger" | (string & {})
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | (string & {})
   aspect?: "square" | (string & {})
   isRound?: boolean
   href?: string
