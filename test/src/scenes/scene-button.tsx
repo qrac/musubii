@@ -7,7 +7,13 @@ import {
   FaTrashAlt,
 } from "react-icons/fa"
 
-import { DemoRadios, DemoCheckbox, Button, ButtonProps } from "../components"
+import {
+  DemoFieldset,
+  DemoRadios,
+  DemoCheckbox,
+  Button,
+  ButtonProps,
+} from "../components"
 
 export const SceneButton = () => {
   const variants = ["solid", "outline", "ghost"]
@@ -16,10 +22,10 @@ export const SceneButton = () => {
   const widthAttr = isWidthFull ? "full" : undefined
   const [isRoundedFull, setIsRoundedFull] = useState<boolean>(false)
   const roundedAttr = isRoundedFull ? "full" : undefined
-  const widthIcons = ["none", "left-icon", "right-icon"]
+  const widthIcons = ["none", "left", "right"]
   const [widthIcon, setWidthIcon] = useState<string>("none")
-  const isLeftIcon = widthIcon === "left-icon"
-  const isRightIcon = widthIcon === "right-icon"
+  const isLeftIcon = widthIcon === "left"
+  const isRightIcon = widthIcon === "right"
   const domElements = ["button", "a"]
   const [domElement, setDomElement] =
     useState<ButtonProps["DOMElement"]>("button")
@@ -46,63 +52,75 @@ export const SceneButton = () => {
     <div className="demo-contents">
       <div className="demo-content">
         <div className="demo-options">
-          <DemoRadios
-            items={variants}
-            checkedItem={variant}
-            name="variant"
-            onChange={(event) =>
-              setVariant(event.target.value as ButtonProps["variant"])
-            }
-          />
-          <DemoCheckbox
-            value="width-full"
-            isChecked={isWidthFull}
-            onChange={() => setIsWidthFull(!isWidthFull)}
-          />
-          <DemoCheckbox
-            value="rounded-full"
-            isChecked={isRoundedFull}
-            onChange={() => setIsRoundedFull(!isRoundedFull)}
-          />
-        </div>
-        <div className="demo-options">
-          <DemoRadios
-            items={widthIcons}
-            checkedItem={widthIcon}
-            name="with-icon"
-            onChange={(event) => setWidthIcon(event.target.value)}
-          />
-        </div>
-        <div className="demo-options">
-          <DemoRadios
-            items={domElements}
-            checkedItem={domElement}
-            name="domElement"
-            onChange={(event) =>
-              setDomElement(event.target.value as ButtonProps["DOMElement"])
-            }
-          />
-          <DemoRadios
-            items={types}
-            checkedItem={type}
-            name="type"
-            onChange={(event) =>
-              setType(event.target.value as ButtonProps["type"])
-            }
-          />
-          <DemoRadios
-            items={targets}
-            checkedItem={target}
-            name="target"
-            onChange={(event) =>
-              setTarget(event.target.value as ButtonProps["target"])
-            }
-          />
-          <DemoCheckbox
-            value="disabled"
-            isChecked={isDisabled}
-            onChange={() => setIsDisabled(!isDisabled)}
-          />
+          <DemoFieldset legend="variant">
+            <DemoRadios
+              items={variants}
+              checkedItem={variant}
+              name="variant"
+              onChange={(event) =>
+                setVariant(event.target.value as ButtonProps["variant"])
+              }
+            />
+          </DemoFieldset>
+          <DemoFieldset legend="width">
+            <DemoCheckbox
+              value="full"
+              isChecked={isWidthFull}
+              onChange={() => setIsWidthFull(!isWidthFull)}
+            />
+          </DemoFieldset>
+          <DemoFieldset legend="rounded">
+            <DemoCheckbox
+              value="full"
+              isChecked={isRoundedFull}
+              onChange={() => setIsRoundedFull(!isRoundedFull)}
+            />
+          </DemoFieldset>
+          <DemoFieldset legend="icon">
+            <DemoRadios
+              items={widthIcons}
+              checkedItem={widthIcon}
+              name="with-icon"
+              onChange={(event) => setWidthIcon(event.target.value)}
+            />
+          </DemoFieldset>
+          <DemoFieldset legend="DOMElement">
+            <DemoRadios
+              items={domElements}
+              checkedItem={domElement}
+              name="domElement"
+              onChange={(event) =>
+                setDomElement(event.target.value as ButtonProps["DOMElement"])
+              }
+            />
+          </DemoFieldset>
+          <DemoFieldset legend="type">
+            <DemoRadios
+              items={types}
+              checkedItem={type}
+              name="type"
+              onChange={(event) =>
+                setType(event.target.value as ButtonProps["type"])
+              }
+            />
+          </DemoFieldset>
+          <DemoFieldset legend="target">
+            <DemoRadios
+              items={targets}
+              checkedItem={target}
+              name="target"
+              onChange={(event) =>
+                setTarget(event.target.value as ButtonProps["target"])
+              }
+            />
+          </DemoFieldset>
+          <DemoFieldset legend="other">
+            <DemoCheckbox
+              value="disabled"
+              isChecked={isDisabled}
+              onChange={() => setIsDisabled(!isDisabled)}
+            />
+          </DemoFieldset>
         </div>
       </div>
       <div className="demo-content">
