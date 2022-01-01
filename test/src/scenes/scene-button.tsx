@@ -12,6 +12,8 @@ import { DemoRadios, DemoCheckbox, Button, ButtonProps } from "../components"
 export const SceneButton = () => {
   const variants = ["solid", "outline", "ghost"]
   const [variant, setVariant] = useState<ButtonProps["variant"]>("solid")
+  const [isWidthFull, setIsWidthFull] = useState<boolean>(false)
+  const widthAttr = isWidthFull ? "full" : undefined
   const [isRoundedFull, setIsRoundedFull] = useState<boolean>(false)
   const roundedAttr = isRoundedFull ? "full" : undefined
   const domElements = ["button", "a"]
@@ -47,6 +49,11 @@ export const SceneButton = () => {
             onChange={(event) =>
               setVariant(event.target.value as ButtonProps["variant"])
             }
+          />
+          <DemoCheckbox
+            value="width full"
+            isChecked={isWidthFull}
+            onChange={() => setIsWidthFull(!isWidthFull)}
           />
           <DemoCheckbox
             value="rounded full"
@@ -95,10 +102,30 @@ export const SceneButton = () => {
               type={type}
               variant={variant}
               color={item.color}
+              width={widthAttr}
               rounded={roundedAttr}
               target={targetAttr}
               isDisabled={isDisabled}
               text={item.text}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="demo-content">
+        <div className="demo-buttons">
+          {buttonSizes.map((item, index) => (
+            <Button
+              key={index}
+              DOMElement={domElement}
+              type={type}
+              variant={variant}
+              color="primary"
+              width={widthAttr}
+              rounded={roundedAttr}
+              size={item}
+              target={targetAttr}
+              isDisabled={isDisabled}
+              text="決定"
             />
           ))}
         </div>
@@ -119,24 +146,6 @@ export const SceneButton = () => {
             >
               {item.icon}
             </Button>
-          ))}
-        </div>
-      </div>
-      <div className="demo-content">
-        <div className="demo-buttons">
-          {buttonSizes.map((item, index) => (
-            <Button
-              key={index}
-              DOMElement={domElement}
-              type={type}
-              variant={variant}
-              color="primary"
-              rounded={roundedAttr}
-              size={item}
-              target={targetAttr}
-              isDisabled={isDisabled}
-              text="決定"
-            />
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 @import "./styles/base.css";
 @import "./styles/variant.css";
-@import "./styles/rounded.css";
-@import "./styles/aspect.css";
 @import "./styles/size.css";
+@import "./styles/width.css";
+@import "./styles/aspect.css";
+@import "./styles/rounded.css";
 @import "./styles/disabled.css";

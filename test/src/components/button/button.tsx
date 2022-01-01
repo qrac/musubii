@@ -7,6 +7,7 @@ export interface ButtonProps {
   variant: "solid" | "outline" | "ghost" | (string & {})
   color?: "primary" | "secondary" | "success" | "danger" | (string & {})
   size?: "xs" | "sm" | "md" | "lg" | "xl" | (string & {})
+  width?: "full" | (string & {})
   aspect?: "square" | (string & {})
   rounded?: "full" | (string & {})
   href?: string
@@ -26,6 +27,7 @@ export const Button = (props: ButtonProps) => {
     variant,
     color,
     size,
+    width,
     aspect,
     rounded,
     href = "",
@@ -46,6 +48,7 @@ export const Button = (props: ButtonProps) => {
         `is-${variant}`,
         color && `is-${color}`,
         size && `is-size-${size}`,
+        width && `is-width-${width}`,
         aspect && `is-aspect-${aspect}`,
         rounded && `is-rounded-${rounded}`,
         customClass && customClass
