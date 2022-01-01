@@ -1,0 +1,61 @@
+.button.is-angle-left:where(:not(.is-width-full)) {
+  padding-left: 1.875em;
+}
+
+.button:is(.is-angle-left-up, .is-angle-left-down):where(:not(.is-width-full)) {
+  padding-left: 2em;
+}
+
+.button.is-angle-right:where(:not(.is-width-full)) {
+  padding-right: 1.875em;
+}
+
+.button:is(.is-angle-right-up, .is-angle-right-down):where(:not(.is-width-full)) {
+  padding-right: 2em;
+}
+
+.button:is(.is-angle-left, .is-angle-left-up, .is-angle-left-down, .is-angle-right, .is-angle-right-up, .is-angle-right-down):before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: var(--theme-bd-2);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 76.6% 100%, 76.6% 23.4%, 0 23.4%);
+}
+
+.button:is(.is-angle-left, .is-angle-left-up, .is-angle-left-down, .is-angle-right, .is-angle-right-up, .is-angle-right-down):is(.is-primary, .is-secondary, .is-success, .is-danger):before {
+  background-color: currentColor;
+}
+
+.button:is(.is-angle-left, .is-angle-left-up, .is-angle-left-down):before {
+  left: 0.875em;
+}
+
+.button.is-angle-left:before {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.button.is-angle-left-up:before {
+  transform: translateY(-25%) rotate(-45deg);
+}
+
+.button.is-angle-left-down:before {
+  transform: translateY(-65%) rotate(135deg);
+}
+
+.button:is(.is-angle-right, .is-angle-right-up, .is-angle-right-down):before {
+  right: 0.875em;
+}
+
+.button.is-angle-right:before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.button.is-angle-right-up:before {
+  transform: translateY(-25%) rotate(-45deg);
+}
+
+.button.is-angle-right-down:before {
+  transform: translateY(-65%) rotate(135deg);
+}

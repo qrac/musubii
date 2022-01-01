@@ -10,6 +10,14 @@ export interface ButtonProps {
   width?: "full" | (string & {})
   aspect?: "square" | (string & {})
   rounded?: "full" | (string & {})
+  angle?:
+    | "left"
+    | "left-up"
+    | "left-down"
+    | "right"
+    | "right-up"
+    | "right-down"
+    | (string & {})
   href?: string
   target?: "_self" | "_blank"
   isDisabled?: boolean
@@ -32,6 +40,7 @@ export const Button = (props: ButtonProps) => {
     width,
     aspect,
     rounded,
+    angle,
     href = "",
     target,
     isDisabled,
@@ -55,6 +64,7 @@ export const Button = (props: ButtonProps) => {
         width && `is-width-${width}`,
         aspect && `is-aspect-${aspect}`,
         rounded && `is-rounded-${rounded}`,
+        angle && `is-angle-${angle}`,
         customClass && customClass
       )}
       type={DOMElement === "button" ? type : undefined}

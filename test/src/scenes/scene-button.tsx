@@ -22,6 +22,17 @@ export const SceneButton = () => {
   const widthAttr = isWidthFull ? "full" : undefined
   const [isRoundedFull, setIsRoundedFull] = useState<boolean>(false)
   const roundedAttr = isRoundedFull ? "full" : undefined
+  const angles = [
+    "none",
+    "left",
+    "left-up",
+    "left-down",
+    "right",
+    "right-up",
+    "right-down",
+  ]
+  const [angle, setAngle] = useState<ButtonProps["angle"]>("none")
+  const angleAttr = angle !== "none" ? angle : undefined
   const widthIcons = ["none", "left", "right"]
   const [widthIcon, setWidthIcon] = useState<string>("none")
   const isLeftIcon = widthIcon === "left"
@@ -76,11 +87,19 @@ export const SceneButton = () => {
               onChange={() => setIsRoundedFull(!isRoundedFull)}
             />
           </DemoFieldset>
+          <DemoFieldset legend="angle">
+            <DemoRadios
+              items={angles}
+              checkedItem={angle}
+              name="angle"
+              onChange={(event) => setAngle(event.target.value)}
+            />
+          </DemoFieldset>
           <DemoFieldset legend="icon">
             <DemoRadios
               items={widthIcons}
               checkedItem={widthIcon}
-              name="with-icon"
+              name="icon"
               onChange={(event) => setWidthIcon(event.target.value)}
             />
           </DemoFieldset>
@@ -134,6 +153,7 @@ export const SceneButton = () => {
               color={item.color}
               width={widthAttr}
               rounded={roundedAttr}
+              angle={angleAttr}
               target={targetAttr}
               isDisabled={isDisabled}
               text={item.text}
@@ -154,6 +174,7 @@ export const SceneButton = () => {
               color="primary"
               width={widthAttr}
               rounded={roundedAttr}
+              angle={angleAttr}
               size={item}
               target={targetAttr}
               isDisabled={isDisabled}
