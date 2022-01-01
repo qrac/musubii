@@ -16,6 +16,10 @@ export const SceneButton = () => {
   const widthAttr = isWidthFull ? "full" : undefined
   const [isRoundedFull, setIsRoundedFull] = useState<boolean>(false)
   const roundedAttr = isRoundedFull ? "full" : undefined
+  const widthIcons = ["none", "left-icon", "right-icon"]
+  const [widthIcon, setWidthIcon] = useState<string>("none")
+  const isLeftIcon = widthIcon === "left-icon"
+  const isRightIcon = widthIcon === "right-icon"
   const domElements = ["button", "a"]
   const [domElement, setDomElement] =
     useState<ButtonProps["DOMElement"]>("button")
@@ -51,14 +55,22 @@ export const SceneButton = () => {
             }
           />
           <DemoCheckbox
-            value="width full"
+            value="width-full"
             isChecked={isWidthFull}
             onChange={() => setIsWidthFull(!isWidthFull)}
           />
           <DemoCheckbox
-            value="rounded full"
+            value="rounded-full"
             isChecked={isRoundedFull}
             onChange={() => setIsRoundedFull(!isRoundedFull)}
+          />
+        </div>
+        <div className="demo-options">
+          <DemoRadios
+            items={widthIcons}
+            checkedItem={widthIcon}
+            name="with-icon"
+            onChange={(event) => setWidthIcon(event.target.value)}
           />
         </div>
         <div className="demo-options">
@@ -107,6 +119,8 @@ export const SceneButton = () => {
               target={targetAttr}
               isDisabled={isDisabled}
               text={item.text}
+              leftIcon={isLeftIcon ? item.icon : undefined}
+              rightIcon={isRightIcon ? item.icon : undefined}
             />
           ))}
         </div>
@@ -126,6 +140,8 @@ export const SceneButton = () => {
               target={targetAttr}
               isDisabled={isDisabled}
               text="決定"
+              leftIcon={isLeftIcon ? <FaCheck /> : undefined}
+              rightIcon={isRightIcon ? <FaCheck /> : undefined}
             />
           ))}
         </div>

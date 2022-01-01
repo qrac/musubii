@@ -14,6 +14,8 @@ export interface ButtonProps {
   target?: "_self" | "_blank"
   isDisabled?: boolean
   text?: string
+  leftIcon?: React.ReactElement
+  rightIcon?: React.ReactElement
   customClass?: string
   customStyle?: React.CSSProperties
   children?: React.ReactNode
@@ -34,6 +36,8 @@ export const Button = (props: ButtonProps) => {
     target,
     isDisabled,
     text,
+    leftIcon,
+    rightIcon,
     customClass,
     customStyle,
     children,
@@ -61,8 +65,10 @@ export const Button = (props: ButtonProps) => {
       tabIndex={DOMElement !== "button" ? tabIndex : undefined}
       style={customStyle}
     >
+      {leftIcon}
       {text}
       {children}
+      {rightIcon}
     </DOMElement>
   )
 }
