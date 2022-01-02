@@ -18,10 +18,12 @@ import {
 export const SceneButton = () => {
   const variantList = ["solid", "outline", "ghost"]
   const [variant, setVariant] = useState<ButtonProps["variant"]>("solid")
-  const [isWidthFull, setIsWidthFull] = useState<boolean>(false)
-  const widthAttr = isWidthFull ? "full" : undefined
-  const [isRoundedFull, setIsRoundedFull] = useState<boolean>(false)
-  const roundedAttr = isRoundedFull ? "full" : undefined
+  const widthList = ["unset", "full"]
+  const [width, setWidth] = useState<ButtonProps["width"]>("unset")
+  const widthAttr = width !== "unset" ? width : undefined
+  const roundedList = ["unset", "none", "full"]
+  const [rounded, setRounded] = useState<ButtonProps["rounded"]>("unset")
+  const roundedAttr = rounded !== "unset" ? rounded : undefined
   const angleList = [
     "unset",
     "left",
@@ -33,10 +35,10 @@ export const SceneButton = () => {
   ]
   const [angle, setAngle] = useState<ButtonProps["angle"]>("unset")
   const angleAttr = angle !== "unset" ? angle : undefined
-  const widthIconList = ["unset", "left", "right"]
-  const [widthIcon, setWidthIcon] = useState<string>("unset")
-  const isLeftIcon = widthIcon === "left"
-  const isRightIcon = widthIcon === "right"
+  const withIconList = ["unset", "left", "right"]
+  const [withIcon, setWithIcon] = useState<string>("unset")
+  const isLeftIcon = withIcon === "left"
+  const isRightIcon = withIcon === "right"
   const domElementList = ["button", "a"]
   const [domElement, setDomElement] =
     useState<ButtonProps["DOMElement"]>("button")
@@ -74,17 +76,23 @@ export const SceneButton = () => {
             />
           </DemoFieldset>
           <DemoFieldset legend="width">
-            <DemoCheckbox
-              value="full"
-              isChecked={isWidthFull}
-              onChange={() => setIsWidthFull(!isWidthFull)}
+            <DemoRadios
+              items={widthList}
+              checkedItem={width}
+              name="width"
+              onChange={(event) =>
+                setWidth(event.target.value as ButtonProps["width"])
+              }
             />
           </DemoFieldset>
           <DemoFieldset legend="rounded">
-            <DemoCheckbox
-              value="full"
-              isChecked={isRoundedFull}
-              onChange={() => setIsRoundedFull(!isRoundedFull)}
+            <DemoRadios
+              items={roundedList}
+              checkedItem={rounded}
+              name="rounded"
+              onChange={(event) =>
+                setRounded(event.target.value as ButtonProps["rounded"])
+              }
             />
           </DemoFieldset>
           <DemoFieldset legend="angle">
@@ -97,10 +105,10 @@ export const SceneButton = () => {
           </DemoFieldset>
           <DemoFieldset legend="icon">
             <DemoRadios
-              items={widthIconList}
-              checkedItem={widthIcon}
+              items={withIconList}
+              checkedItem={withIcon}
               name="icon"
-              onChange={(event) => setWidthIcon(event.target.value)}
+              onChange={(event) => setWithIcon(event.target.value)}
             />
           </DemoFieldset>
           <DemoFieldset legend="DOMElement">
