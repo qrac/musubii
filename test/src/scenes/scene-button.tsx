@@ -16,14 +16,14 @@ import {
 } from "../components"
 
 export const SceneButton = () => {
-  const variants = ["solid", "outline", "ghost"]
+  const variantList = ["solid", "outline", "ghost"]
   const [variant, setVariant] = useState<ButtonProps["variant"]>("solid")
   const [isWidthFull, setIsWidthFull] = useState<boolean>(false)
   const widthAttr = isWidthFull ? "full" : undefined
   const [isRoundedFull, setIsRoundedFull] = useState<boolean>(false)
   const roundedAttr = isRoundedFull ? "full" : undefined
-  const angles = [
-    "none",
+  const angleList = [
+    "unset",
     "left",
     "left-up",
     "left-down",
@@ -31,20 +31,20 @@ export const SceneButton = () => {
     "right-up",
     "right-down",
   ]
-  const [angle, setAngle] = useState<ButtonProps["angle"]>("none")
-  const angleAttr = angle !== "none" ? angle : undefined
-  const widthIcons = ["none", "left", "right"]
-  const [widthIcon, setWidthIcon] = useState<string>("none")
+  const [angle, setAngle] = useState<ButtonProps["angle"]>("unset")
+  const angleAttr = angle !== "unset" ? angle : undefined
+  const widthIconList = ["unset", "left", "right"]
+  const [widthIcon, setWidthIcon] = useState<string>("unset")
   const isLeftIcon = widthIcon === "left"
   const isRightIcon = widthIcon === "right"
-  const domElements = ["button", "a"]
+  const domElementList = ["button", "a"]
   const [domElement, setDomElement] =
     useState<ButtonProps["DOMElement"]>("button")
-  const types = ["button", "reset", "submit"]
+  const typeList = ["button", "reset", "submit"]
   const [type, setType] = useState<ButtonProps["type"]>("button")
-  const targets = ["_self", "_blank"]
-  const [target, setTarget] = useState<ButtonProps["target"]>("_self")
-  const targetAttr = target === "_blank" ? target : undefined
+  const targetList = ["unset", "_self", "_blank"]
+  const [target, setTarget] = useState<ButtonProps["target"]>("unset")
+  const targetAttr = target !== "unset" ? target : undefined
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
 
   const buttonList: {
@@ -58,14 +58,14 @@ export const SceneButton = () => {
     { color: "success", text: "登録", icon: <FaSave /> },
     { color: "danger", text: "削除", icon: <FaTrashAlt /> },
   ]
-  const buttonSizes: ButtonProps["size"][] = ["xs", "sm", "md", "lg", "xl"]
+  const buttonSizeList: ButtonProps["size"][] = ["xs", "sm", "md", "lg", "xl"]
   return (
     <div className="demo-contents">
       <div className="demo-content">
         <div className="demo-options">
           <DemoFieldset legend="variant">
             <DemoRadios
-              items={variants}
+              items={variantList}
               checkedItem={variant}
               name="variant"
               onChange={(event) =>
@@ -89,7 +89,7 @@ export const SceneButton = () => {
           </DemoFieldset>
           <DemoFieldset legend="angle">
             <DemoRadios
-              items={angles}
+              items={angleList}
               checkedItem={angle}
               name="angle"
               onChange={(event) => setAngle(event.target.value)}
@@ -97,7 +97,7 @@ export const SceneButton = () => {
           </DemoFieldset>
           <DemoFieldset legend="icon">
             <DemoRadios
-              items={widthIcons}
+              items={widthIconList}
               checkedItem={widthIcon}
               name="icon"
               onChange={(event) => setWidthIcon(event.target.value)}
@@ -105,7 +105,7 @@ export const SceneButton = () => {
           </DemoFieldset>
           <DemoFieldset legend="DOMElement">
             <DemoRadios
-              items={domElements}
+              items={domElementList}
               checkedItem={domElement}
               name="domElement"
               onChange={(event) =>
@@ -115,7 +115,7 @@ export const SceneButton = () => {
           </DemoFieldset>
           <DemoFieldset legend="type">
             <DemoRadios
-              items={types}
+              items={typeList}
               checkedItem={type}
               name="type"
               onChange={(event) =>
@@ -125,7 +125,7 @@ export const SceneButton = () => {
           </DemoFieldset>
           <DemoFieldset legend="target">
             <DemoRadios
-              items={targets}
+              items={targetList}
               checkedItem={target}
               name="target"
               onChange={(event) =>
@@ -165,7 +165,7 @@ export const SceneButton = () => {
       </div>
       <div className="demo-content">
         <div className="demo-buttons">
-          {buttonSizes.map((item, index) => (
+          {buttonSizeList.map((item, index) => (
             <Button
               key={index}
               DOMElement={domElement}

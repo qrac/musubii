@@ -19,7 +19,7 @@ export interface ButtonProps {
     | "right-down"
     | (string & {})
   href?: string
-  target?: "_self" | "_blank"
+  target?: "_self" | "_blank" | (string & {})
   isDisabled?: boolean
   text?: string
   leftIcon?: React.ReactElement
