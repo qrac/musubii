@@ -233,8 +233,8 @@ export const SceneButton = () => {
             rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
-            text="class"
-            customClass="is-disabled"
+            text="className"
+            className="is-disabled"
           />
           <Button
             DOMElement={domElement}
@@ -245,7 +245,18 @@ export const SceneButton = () => {
             target={targetAttr}
             isDisabled={isDisabled}
             text="style"
-            customStyle={{ backgroundColor: "rgb(17, 24, 39)" }}
+            style={{ backgroundColor: "rgb(17, 24, 39)" }}
+          />
+          <Button
+            DOMElement={domElement}
+            type={type}
+            variant={variant}
+            color="primary"
+            rounded={roundedAttr}
+            target={targetAttr}
+            isDisabled={isDisabled}
+            text="data-*"
+            data-custom="custom"
           />
           <Button
             DOMElement={domElement}

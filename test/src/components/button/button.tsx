@@ -1,8 +1,8 @@
 import classNames from "classnames"
 
-export interface ButtonProps {
-  id?: string
+export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   DOMElement?: "button" | "a"
+  className?: string
   type?: "button" | "reset" | "submit"
   variant: "solid" | "outline" | "ghost" | (string & {})
   color?: "primary" | "secondary" | "success" | "danger" | (string & {})
@@ -24,15 +24,14 @@ export interface ButtonProps {
   text?: string
   leftIcon?: React.ReactElement
   rightIcon?: React.ReactElement
-  customClass?: string
-  customStyle?: React.CSSProperties
   children?: React.ReactNode
+  attributes?: React.HTMLAttributes<HTMLElement>
 }
 
 export const Button = (props: ButtonProps) => {
   const {
-    id,
     DOMElement = "button",
+    className,
     type = "button",
     variant,
     color,
@@ -47,15 +46,13 @@ export const Button = (props: ButtonProps) => {
     text,
     leftIcon,
     rightIcon,
-    customClass,
-    customStyle,
     children,
+    ...attributes
   } = props
   const ariaDisabled = isDisabled ? true : undefined
   const tabIndex = isDisabled ? -1 : undefined
   return (
     <DOMElement
-      id={id}
       className={classNames(
         "button",
         `is-${variant}`,
@@ -65,7 +62,7 @@ export const Button = (props: ButtonProps) => {
         aspect && `is-aspect-${aspect}`,
         rounded && `is-rounded-${rounded}`,
         angle && `is-angle-${angle}`,
-        customClass && customClass
+        className && className
       )}
       type={DOMElement === "button" ? type : undefined}
       href={DOMElement === "a" ? href : undefined}
@@ -73,7 +70,7 @@ export const Button = (props: ButtonProps) => {
       disabled={DOMElement === "button" ? isDisabled : undefined}
       aria-disabled={DOMElement !== "button" ? ariaDisabled : undefined}
       tabIndex={DOMElement !== "button" ? tabIndex : undefined}
-      style={customStyle}
+      {...attributes}
     >
       {leftIcon}
       {text}
