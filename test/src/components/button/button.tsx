@@ -21,9 +21,9 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   href?: string
   target?: "_self" | "_blank" | (string & {})
   isDisabled?: boolean
-  text?: string
   leftIcon?: React.ReactElement
   rightIcon?: React.ReactElement
+  text?: string
   children?: React.ReactNode
   attributes?: React.HTMLAttributes<HTMLElement>
 }
@@ -43,9 +43,9 @@ export const Button = (props: ButtonProps) => {
     href = "",
     target,
     isDisabled,
-    text,
     leftIcon,
     rightIcon,
+    text,
     children,
     ...attributes
   } = props

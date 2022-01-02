@@ -164,9 +164,9 @@ export const SceneButton = () => {
               angle={angleAttr}
               target={targetAttr}
               isDisabled={isDisabled}
-              text={item.text}
               leftIcon={isLeftIcon ? item.icon : undefined}
               rightIcon={isRightIcon ? item.icon : undefined}
+              text={item.text}
             />
           ))}
         </div>
@@ -186,9 +186,9 @@ export const SceneButton = () => {
               size={item}
               target={targetAttr}
               isDisabled={isDisabled}
-              text="決定"
               leftIcon={isLeftIcon ? <FaCheck /> : undefined}
               rightIcon={isRightIcon ? <FaCheck /> : undefined}
+              text="決定"
             />
           ))}
         </div>
