@@ -13,22 +13,27 @@
     0 2px 4px -2px var(--theme-shadow);
 }
 
+.button.is-shadow {
+  box-shadow: 0 1px 3px 0 var(--theme-shadow),
+    0 1px 2px -1px var(--theme-shadow);
+}
+
 .button.is-shadow-sm {
   box-shadow: 0 1px 2px 0 var(--theme-shadow);
 }
 
-.button.is-primary {
+.button.is-shadow-colored.is-primary {
   --theme-shadow: var(--theme-primary-shadow);
 }
 
-.button.is-secondary {
+.button.is-shadow-colored.is-secondary {
   --theme-shadow: var(--theme-secondary-shadow);
 }
 
-.button.is-success {
+.button.is-shadow-colored.is-success {
   --theme-shadow: var(--theme-success-shadow);
 }
 
-.button.is-danger {
+.button.is-shadow-colored.is-danger {
   --theme-shadow: var(--theme-danger-shadow);
 }

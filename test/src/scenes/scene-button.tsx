@@ -35,9 +35,12 @@ export const SceneButton = () => {
   ]
   const [angle, setAngle] = useState<ButtonProps["angle"]>("unset")
   const angleAttr = angle !== "unset" ? angle : undefined
-  const shadowList = ["unset", "sm", "md", "lg", "xl"]
-  const [shadow, setShadow] = useState<ButtonProps["shadow"]>("unset")
-  const shadowAttr = shadow !== "unset" ? shadow : undefined
+  const [isShadow, setIsShadow] = useState<boolean>(false)
+  const [isShadowColored, setIsShadowColored] = useState<boolean>(false)
+  const shadowSizeList = ["unset", "sm", "md", "lg", "xl"]
+  const [shadowSize, setShadowSize] =
+    useState<ButtonProps["shadowSize"]>("unset")
+  const shadowSizeAttr = shadowSize !== "unset" ? shadowSize : undefined
   const withIconList = ["unset", "left", "right"]
   const [withIcon, setWithIcon] = useState<string>("unset")
   const isLeftIcon = withIcon === "left"
@@ -107,11 +110,25 @@ export const SceneButton = () => {
             />
           </DemoFieldset>
           <DemoFieldset legend="shadow">
+            <div className="demo-labels">
+              <DemoCheckbox
+                value="shadow-use"
+                isChecked={isShadow}
+                onChange={() => setIsShadow(!isShadow)}
+              />
+              <DemoCheckbox
+                value="shadow-colored"
+                isChecked={isShadowColored}
+                onChange={() => setIsShadowColored(!isShadowColored)}
+              />
+            </div>
+          </DemoFieldset>
+          <DemoFieldset legend="shadow size">
             <DemoRadios
-              items={shadowList}
-              checkedItem={shadow}
-              name="shadow"
-              onChange={(event) => setShadow(event.target.value)}
+              items={shadowSizeList}
+              checkedItem={shadowSize}
+              name="shadow-size"
+              onChange={(event) => setShadowSize(event.target.value)}
             />
           </DemoFieldset>
           <DemoFieldset legend="icon">
@@ -175,7 +192,9 @@ export const SceneButton = () => {
               width={widthAttr}
               rounded={roundedAttr}
               angle={angleAttr}
-              shadow={shadowAttr}
+              isShadow={isShadow}
+              isShadowColored={isShadowColored}
+              shadowSize={shadowSizeAttr}
               target={targetAttr}
               isDisabled={isDisabled}
               leftIcon={isLeftIcon ? item.icon : undefined}
@@ -197,7 +216,9 @@ export const SceneButton = () => {
               width={widthAttr}
               rounded={roundedAttr}
               angle={angleAttr}
-              shadow={shadowAttr}
+              isShadow={isShadow}
+              isShadowColored={isShadowColored}
+              shadowSize={shadowSizeAttr}
               size={item}
               target={targetAttr}
               isDisabled={isDisabled}
@@ -219,7 +240,9 @@ export const SceneButton = () => {
               color={item.color}
               aspect="square"
               rounded={roundedAttr}
-              shadow={shadowAttr}
+              isShadow={isShadow}
+              isShadowColored={isShadowColored}
+              shadowSize={shadowSizeAttr}
               target={targetAttr}
               isDisabled={isDisabled}
             >
@@ -237,7 +260,9 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
-            shadow={shadowAttr}
+            isShadow={isShadow}
+            isShadowColored={isShadowColored}
+            shadowSize={shadowSizeAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="id"
@@ -248,7 +273,9 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
-            shadow={shadowAttr}
+            isShadow={isShadow}
+            isShadowColored={isShadowColored}
+            shadowSize={shadowSizeAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="className"
@@ -260,7 +287,9 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
-            shadow={shadowAttr}
+            isShadow={isShadow}
+            isShadowColored={isShadowColored}
+            shadowSize={shadowSizeAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="style"
@@ -272,7 +301,9 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
-            shadow={shadowAttr}
+            isShadow={isShadow}
+            isShadowColored={isShadowColored}
+            shadowSize={shadowSizeAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="data-*"
@@ -284,7 +315,9 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
-            shadow={shadowAttr}
+            isShadow={isShadow}
+            isShadowColored={isShadowColored}
+            shadowSize={shadowSizeAttr}
             target={targetAttr}
             isDisabled={isDisabled}
           >
