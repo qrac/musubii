@@ -10,7 +10,7 @@ body {
   padding: 16px;
   background-color: var(--theme-bg-1);
   border: 1px solid var(--theme-bd-1);
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .demo-content + .demo-content {
