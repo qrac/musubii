@@ -1,0 +1,9 @@
+.button.is-solid {
+  background-color: var(--theme-bg-2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-solid:hover {
+    filter: brightness(0.94);
+  }
+}

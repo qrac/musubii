@@ -1,0 +1,8 @@
+.button.is-angle-right-up:where(:not(.is-width-full)) {
+  padding-right: 2em;
+}
+
+.button.is-angle-right-up:before {
+  right: 0.875em;
+  transform: translateY(-25%) rotate(-45deg);
+}

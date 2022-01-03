@@ -1,0 +1,10 @@
+.button.is-outline.is-danger {
+  border-color: currentColor;
+  color: var(--theme-danger);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-outline.is-danger:hover {
+    background-color: var(--theme-danger-light);
+  }
+}

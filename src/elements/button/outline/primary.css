@@ -1,0 +1,10 @@
+.button.is-outline.is-primary {
+  border-color: currentColor;
+  color: var(--theme-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-outline.is-primary:hover {
+    background-color: var(--theme-primary-light);
+  }
+}

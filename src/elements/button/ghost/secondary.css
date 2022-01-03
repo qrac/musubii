@@ -1,0 +1,9 @@
+.button.is-ghost.is-secondary {
+  color: var(--theme-secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-ghost.is-secondary:hover {
+    background-color: var(--theme-secondary-light);
+  }
+}

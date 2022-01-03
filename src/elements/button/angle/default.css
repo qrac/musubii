@@ -1,0 +1,9 @@
+.button.is-angle:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: var(--theme-bd-2);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 76.6% 100%, 76.6% 23.4%, 0 23.4%);
+}

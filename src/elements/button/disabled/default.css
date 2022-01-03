@@ -1,0 +1,6 @@
+.button[disabled],
+.button[aria-disabled="true"],
+.button.is-disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}

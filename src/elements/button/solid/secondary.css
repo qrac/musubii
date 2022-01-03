@@ -1,0 +1,4 @@
+.button.is-solid.is-secondary {
+  background-color: var(--theme-secondary);
+  color: var(--theme-lk-tx);
+}

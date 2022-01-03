@@ -1,0 +1,4 @@
+.button.is-mild.is-danger {
+  background-color: var(--theme-danger-mild);
+  color: var(--theme-danger);
+}

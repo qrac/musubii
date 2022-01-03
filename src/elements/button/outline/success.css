@@ -1,0 +1,10 @@
+.button.is-outline.is-success {
+  border-color: currentColor;
+  color: var(--theme-success);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-outline.is-success:hover {
+    background-color: var(--theme-success-light);
+  }
+}

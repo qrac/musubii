@@ -1,0 +1,10 @@
+.button.is-outline {
+  background-color: var(--theme-bg-1);
+  border-color: var(--theme-bd-1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-outline:hover {
+    background-color: var(--theme-bg-2);
+  }
+}

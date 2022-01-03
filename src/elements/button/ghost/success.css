@@ -1,0 +1,9 @@
+.button.is-ghost.is-success {
+  color: var(--theme-success);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-ghost.is-success:hover {
+    background-color: var(--theme-success-light);
+  }
+}

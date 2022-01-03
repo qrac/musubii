@@ -1,0 +1,9 @@
+.button.is-ghost.is-danger {
+  color: var(--theme-danger);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-ghost.is-danger:hover {
+    background-color: var(--theme-danger-light);
+  }
+}

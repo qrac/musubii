@@ -1,0 +1,4 @@
+.button.is-mild.is-primary {
+  background-color: var(--theme-primary-mild);
+  color: var(--theme-primary);
+}

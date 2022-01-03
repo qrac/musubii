@@ -1,7 +1,3 @@
-.button.is-rounded-none {
-  border-radius: 0px;
-}
-
 .button.is-rounded-full {
   border-radius: 9999px;
 }

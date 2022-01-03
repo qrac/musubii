@@ -1,0 +1,4 @@
+.button.is-solid.is-success {
+  background-color: var(--theme-success);
+  color: var(--theme-lk-tx);
+}

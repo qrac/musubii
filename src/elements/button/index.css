@@ -1,8 +1,51 @@
-@import "./styles/base.css";
-@import "./styles/variant.css";
-@import "./styles/size.css";
-@import "./styles/width.css";
-@import "./styles/aspect.css";
-@import "./styles/rounded.css";
-@import "./styles/angle.css";
-@import "./styles/disabled.css";
+@import "./base/default.css";
+
+@import "./solid/default.css";
+@import "./solid/primary.css";
+@import "./solid/secondary.css";
+@import "./solid/success.css";
+@import "./solid/danger.css";
+
+@import "./mild/default.css";
+@import "./mild/primary.css";
+@import "./mild/secondary.css";
+@import "./mild/success.css";
+@import "./mild/danger.css";
+
+@import "./outline/default.css";
+@import "./outline/primary.css";
+@import "./outline/secondary.css";
+@import "./outline/success.css";
+@import "./outline/danger.css";
+
+@import "./ghost/default.css";
+@import "./ghost/primary.css";
+@import "./ghost/secondary.css";
+@import "./ghost/success.css";
+@import "./ghost/danger.css";
+
+@import "./size/xl.css";
+@import "./size/lg.css";
+@import "./size/md.css";
+@import "./size/sm.css";
+@import "./size/xs.css";
+
+@import "./width/full.css";
+@import "./aspect/square.css";
+
+@import "./rounded/none.css";
+@import "./rounded/full.css";
+
+@import "./angle/default.css";
+@import "./angle/left.css";
+@import "./angle/left-up.css";
+@import "./angle/left-down.css";
+@import "./angle/right.css";
+@import "./angle/right-up.css";
+@import "./angle/right-down.css";
+@import "./angle/primary.css";
+@import "./angle/secondary.css";
+@import "./angle/success.css";
+@import "./angle/danger.css";
+
+@import "./disabled/default.css";

@@ -61,6 +61,7 @@ export const Button = (props: ButtonProps) => {
         width && `is-width-${width}`,
         aspect && `is-aspect-${aspect}`,
         rounded && `is-rounded-${rounded}`,
+        angle && "is-angle",
         angle && `is-angle-${angle}`,
         className && className
       )}
