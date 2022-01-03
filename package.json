@@ -22,8 +22,8 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "build": "npm run build:concat && npm run build:beautify && npm run build:minify",
-    "build:concat": "postcss ./src/*.css -d ./dist --no-map",
+    "build": "npm run build:postcss && npm run build:beautify && npm run build:minify",
+    "build:postcss": "postcss ./src/*.css -d ./dist --no-map",
     "build:beautify": "js-beautify dist/*.css -s 2 -m 1 -r",
     "build:minify": "cleancss --batch --batch-suffix '.min' dist/*.css !dist/*.min.css -d",
     "clean": "trash ./dist"
@@ -43,6 +43,7 @@
     "clean-css-cli": "^5.5.0",
     "js-beautify": "^1.14.0",
     "postcss-cli": "^9.1.0",
+    "postcss-discard-comments": "^5.0.1",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.0.2",
     "postcss-sort-media-queries": "^4.2.1"
