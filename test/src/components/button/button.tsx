@@ -18,9 +18,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
     | "right-up"
     | "right-down"
     | (string & {})
-  isShadow?: boolean
-  isShadowColored?: boolean
-  shadowSize?: "sm" | "md" | "lg" | "xl" | (string & {})
   href?: string
   target?: "_self" | "_blank" | (string & {})
   isDisabled?: boolean
@@ -43,9 +40,6 @@ export const Button = (props: ButtonProps) => {
     aspect,
     rounded,
     angle,
-    isShadow,
-    isShadowColored,
-    shadowSize,
     href = "",
     target,
     isDisabled,
@@ -68,8 +62,6 @@ export const Button = (props: ButtonProps) => {
         aspect && `is-aspect-${aspect}`,
         rounded && `is-rounded-${rounded}`,
         angle && `is-angle-${angle}`,
-        isShadow && "is-shadow" + (shadowSize ? `-${shadowSize}` : ""),
-        isShadowColored && "is-shadow-colored",
         className && className
       )}
       type={DOMElement === "button" ? type : undefined}

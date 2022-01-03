@@ -11,19 +11,13 @@
   --theme-primary: #02abc9;
   --theme-primary-light: #ecfeff;
   --theme-primary-mild: #ddfcff;
-  --theme-primary-shadow: rgb(6 182 212 / 0.5);
   --theme-secondary: #5b52ce;
   --theme-secondary-light: #f5f3ff;
   --theme-secondary-mild: #ede9fe;
-  --theme-secondary-shadow: rgb(91 82 206 / 0.5);
   --theme-success: #05ad05;
   --theme-success-light: #f0fdf4;
   --theme-success-mild: #dcfce7;
-  --theme-success-shadow: rgb(5 173 5 / 0.5);
   --theme-danger: #ce4141;
   --theme-danger-light: #fef2f2;
   --theme-danger-mild: #fee2e2;
-  --theme-danger-shadow: rgb(206 65 65 / 0.5);
-  /*--theme-info: #4b9bd8;
-  --theme-warning: #ec8313;*/
 }
