@@ -35,6 +35,9 @@ export const SceneButton = () => {
   ]
   const [angle, setAngle] = useState<ButtonProps["angle"]>("unset")
   const angleAttr = angle !== "unset" ? angle : undefined
+  const shadowList = ["unset", "sm", "md", "lg", "xl"]
+  const [shadow, setShadow] = useState<ButtonProps["shadow"]>("unset")
+  const shadowAttr = shadow !== "unset" ? shadow : undefined
   const withIconList = ["unset", "left", "right"]
   const [withIcon, setWithIcon] = useState<string>("unset")
   const isLeftIcon = withIcon === "left"
@@ -103,6 +106,14 @@ export const SceneButton = () => {
               onChange={(event) => setAngle(event.target.value)}
             />
           </DemoFieldset>
+          <DemoFieldset legend="shadow">
+            <DemoRadios
+              items={shadowList}
+              checkedItem={shadow}
+              name="shadow"
+              onChange={(event) => setShadow(event.target.value)}
+            />
+          </DemoFieldset>
           <DemoFieldset legend="icon">
             <DemoRadios
               items={withIconList}
@@ -142,11 +153,13 @@ export const SceneButton = () => {
             />
           </DemoFieldset>
           <DemoFieldset legend="other">
-            <DemoCheckbox
-              value="disabled"
-              isChecked={isDisabled}
-              onChange={() => setIsDisabled(!isDisabled)}
-            />
+            <div className="demo-labels">
+              <DemoCheckbox
+                value="disabled"
+                isChecked={isDisabled}
+                onChange={() => setIsDisabled(!isDisabled)}
+              />
+            </div>
           </DemoFieldset>
         </div>
       </div>
@@ -162,6 +175,7 @@ export const SceneButton = () => {
               width={widthAttr}
               rounded={roundedAttr}
               angle={angleAttr}
+              shadow={shadowAttr}
               target={targetAttr}
               isDisabled={isDisabled}
               leftIcon={isLeftIcon ? item.icon : undefined}
@@ -183,6 +197,7 @@ export const SceneButton = () => {
               width={widthAttr}
               rounded={roundedAttr}
               angle={angleAttr}
+              shadow={shadowAttr}
               size={item}
               target={targetAttr}
               isDisabled={isDisabled}
@@ -204,6 +219,7 @@ export const SceneButton = () => {
               color={item.color}
               aspect="square"
               rounded={roundedAttr}
+              shadow={shadowAttr}
               target={targetAttr}
               isDisabled={isDisabled}
             >
@@ -221,6 +237,7 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
+            shadow={shadowAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="id"
@@ -231,6 +248,7 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
+            shadow={shadowAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="className"
@@ -242,6 +260,7 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
+            shadow={shadowAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="style"
@@ -253,6 +272,7 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
+            shadow={shadowAttr}
             target={targetAttr}
             isDisabled={isDisabled}
             text="data-*"
@@ -264,6 +284,7 @@ export const SceneButton = () => {
             variant={variant}
             color="primary"
             rounded={roundedAttr}
+            shadow={shadowAttr}
             target={targetAttr}
             isDisabled={isDisabled}
           >
