@@ -4,7 +4,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   DOMElement?: "button" | "a"
   className?: string
   type?: "button" | "reset" | "submit"
-  variant: "solid" | "outline" | "ghost" | (string & {})
+  variant: "solid" | "mild" | "outline" | "ghost" | (string & {})
   color?: "primary" | "secondary" | "success" | "danger" | (string & {})
   size?: "xs" | "sm" | "md" | "lg" | "xl" | (string & {})
   width?: "full" | (string & {})

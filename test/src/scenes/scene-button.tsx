@@ -16,7 +16,7 @@ import {
 } from "../components"
 
 export const SceneButton = () => {
-  const variantList = ["solid", "outline", "ghost"]
+  const variantList = ["solid", "mild", "outline", "ghost"]
   const [variant, setVariant] = useState<ButtonProps["variant"]>("solid")
   const widthList = ["unset", "full"]
   const [width, setWidth] = useState<ButtonProps["width"]>("unset")

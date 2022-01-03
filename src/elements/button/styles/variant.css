@@ -23,9 +23,45 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button.is-solid:hover {
-    filter: brightness(0.9);
+  .button:is(.is-solid, .is-mild):hover {
+    filter: brightness(0.94);
   }
+}
+
+.button.is-mild {
+  background-color: var(--theme-bg-1);
+}
+
+.button.is-mild.is-primary {
+  background-color: var(--theme-primary-mild);
+}
+
+.button.is-mild.is-secondary {
+  background-color: var(--theme-secondary-mild);
+}
+
+.button.is-mild.is-success {
+  background-color: var(--theme-success-mild);
+}
+
+.button.is-mild.is-danger {
+  background-color: var(--theme-danger-mild);
+}
+
+.button:is(.is-mild, .is-outline, .is-ghost).is-primary {
+  color: var(--theme-primary);
+}
+
+.button:is(.is-mild, .is-outline, .is-ghost).is-secondary {
+  color: var(--theme-secondary);
+}
+
+.button:is(.is-mild, .is-outline, .is-ghost).is-success {
+  color: var(--theme-success);
+}
+
+.button:is(.is-mild, .is-outline, .is-ghost).is-danger {
+  color: var(--theme-danger);
 }
 
 .button.is-outline {
@@ -35,22 +71,6 @@
 
 .button.is-outline:is(.is-primary, .is-secondary, .is-success, .is-danger) {
   border-color: currentColor;
-}
-
-.button:is(.is-outline, .is-ghost).is-primary {
-  color: var(--theme-primary);
-}
-
-.button:is(.is-outline, .is-ghost).is-secondary {
-  color: var(--theme-secondary);
-}
-
-.button:is(.is-outline, .is-ghost).is-success {
-  color: var(--theme-success);
-}
-
-.button:is(.is-outline, .is-ghost).is-danger {
-  color: var(--theme-danger);
 }
 
 @media (hover: hover) and (pointer: fine) {
