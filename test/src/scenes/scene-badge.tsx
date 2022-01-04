@@ -16,8 +16,8 @@ import {
 } from "../components"
 
 export const SceneBadge = () => {
-  const variantList = ["solid", "mild", "outline"]
-  const [variant, setVariant] = useState<BadgeProps["variant"]>("solid")
+  const variantList = ["mild", "solid", "outline"]
+  const [variant, setVariant] = useState<BadgeProps["variant"]>("mild")
   const widthList = ["unset", "full"]
   const [width, setWidth] = useState<BadgeProps["width"]>("unset")
   const widthAttr = width !== "unset" ? width : undefined
