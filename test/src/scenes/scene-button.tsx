@@ -50,15 +50,15 @@ export const SceneButton = () => {
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
 
   const buttonList: {
-    color: ButtonProps["color"]
+    colorScheme: ButtonProps["colorScheme"]
     text: string
     icon?: React.ReactElement
   }[] = [
-    { color: undefined, text: "詳細", icon: <FaListUl /> },
-    { color: "primary", text: "決定", icon: <FaCheck /> },
-    { color: "secondary", text: "変更", icon: <FaPalette /> },
-    { color: "success", text: "登録", icon: <FaSave /> },
-    { color: "danger", text: "削除", icon: <FaTrashAlt /> },
+    { colorScheme: undefined, text: "詳細", icon: <FaListUl /> },
+    { colorScheme: "primary", text: "決定", icon: <FaCheck /> },
+    { colorScheme: "secondary", text: "変更", icon: <FaPalette /> },
+    { colorScheme: "success", text: "登録", icon: <FaSave /> },
+    { colorScheme: "danger", text: "削除", icon: <FaTrashAlt /> },
   ]
   const buttonSizeList: ButtonProps["size"][] = ["xs", "sm", "md", "lg", "xl"]
   return (
@@ -160,7 +160,7 @@ export const SceneButton = () => {
               DOMElement={domElement}
               type={type}
               variant={variant}
-              color={item.color}
+              colorScheme={item.colorScheme}
               width={widthAttr}
               rounded={roundedAttr}
               angle={angleAttr}
@@ -181,7 +181,7 @@ export const SceneButton = () => {
               DOMElement={domElement}
               type={type}
               variant={variant}
-              color="primary"
+              colorScheme="primary"
               width={widthAttr}
               rounded={roundedAttr}
               angle={angleAttr}
@@ -203,7 +203,7 @@ export const SceneButton = () => {
               DOMElement={domElement}
               type={type}
               variant={variant}
-              color={item.color}
+              colorScheme={item.colorScheme}
               aspect="square"
               rounded={roundedAttr}
               target={targetAttr}
@@ -221,7 +221,7 @@ export const SceneButton = () => {
             DOMElement={domElement}
             type={type}
             variant={variant}
-            color="primary"
+            colorScheme="primary"
             rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
@@ -231,7 +231,7 @@ export const SceneButton = () => {
             DOMElement={domElement}
             type={type}
             variant={variant}
-            color="primary"
+            colorScheme="primary"
             rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
@@ -242,7 +242,7 @@ export const SceneButton = () => {
             DOMElement={domElement}
             type={type}
             variant={variant}
-            color="primary"
+            colorScheme="primary"
             rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
@@ -253,7 +253,7 @@ export const SceneButton = () => {
             DOMElement={domElement}
             type={type}
             variant={variant}
-            color="primary"
+            colorScheme="primary"
             rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}
@@ -264,7 +264,7 @@ export const SceneButton = () => {
             DOMElement={domElement}
             type={type}
             variant={variant}
-            color="primary"
+            colorScheme="primary"
             rounded={roundedAttr}
             target={targetAttr}
             isDisabled={isDisabled}

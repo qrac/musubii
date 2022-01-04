@@ -5,7 +5,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
   className?: string
   type?: "button" | "reset" | "submit"
   variant: "solid" | "mild" | "outline" | "ghost" | (string & {})
-  color?: "primary" | "secondary" | "success" | "danger" | (string & {})
+  colorScheme?: "primary" | "secondary" | "success" | "danger" | (string & {})
   size?: "xs" | "sm" | "md" | "lg" | "xl" | (string & {})
   width?: "full" | (string & {})
   aspect?: "square" | (string & {})
@@ -34,7 +34,7 @@ export const Button = (props: ButtonProps) => {
     className,
     type = "button",
     variant,
-    color,
+    colorScheme,
     size,
     width,
     aspect,
@@ -56,7 +56,7 @@ export const Button = (props: ButtonProps) => {
       className={classNames(
         "button",
         `is-${variant}`,
-        color && `is-${color}`,
+        colorScheme && `is-${colorScheme}`,
         size && `is-size-${size}`,
         width && `is-width-${width}`,
         aspect && `is-aspect-${aspect}`,
