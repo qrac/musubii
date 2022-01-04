@@ -153,7 +153,7 @@ export const SceneButton = () => {
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-buttons">
+        <div className="demo-flex is-gap-8px">
           {buttonList.map((item, index) => (
             <Button
               key={index}
@@ -174,7 +174,7 @@ export const SceneButton = () => {
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-buttons">
+        <div className="demo-flex is-gap-8px">
           {buttonSizeList.map((item, index) => (
             <Button
               key={index}
@@ -196,7 +196,7 @@ export const SceneButton = () => {
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-buttons">
+        <div className="demo-flex is-gap-8px">
           {buttonList.map((item, index) => (
             <Button
               key={index}
@@ -215,7 +215,7 @@ export const SceneButton = () => {
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-buttons">
+        <div className="demo-flex is-gap-8px">
           <Button
             id="button-id-demo"
             DOMElement={domElement}

@@ -1,0 +1,4 @@
+.badge.is-outline.is-primary {
+  border-color: currentColor;
+  color: var(--theme-primary);
+}

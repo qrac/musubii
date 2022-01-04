@@ -1,0 +1,4 @@
+.badge.is-outline {
+  background-color: var(--theme-bg-1);
+  border-color: var(--theme-bd-1);
+}

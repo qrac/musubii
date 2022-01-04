@@ -1,0 +1,4 @@
+.badge.is-outline.is-success {
+  border-color: currentColor;
+  color: var(--theme-success);
+}

@@ -1,0 +1,4 @@
+.badge.is-mild.is-success {
+  background-color: var(--theme-success-2);
+  color: var(--theme-success);
+}

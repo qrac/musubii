@@ -18,6 +18,19 @@ body {
   margin-top: 16px;
 }
 
+.demo-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.demo-flex.is-gap-8px {
+  gap: 8px;
+}
+
+.demo-flex.is-gap-6px {
+  gap: 6px;
+}
+
 .demo-buttons {
   display: flex;
   flex-wrap: wrap;

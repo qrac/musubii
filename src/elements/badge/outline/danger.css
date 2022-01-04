@@ -1,0 +1,4 @@
+.badge.is-outline.is-danger {
+  border-color: currentColor;
+  color: var(--theme-danger);
+}

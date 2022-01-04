@@ -1,0 +1,4 @@
+.badge.is-solid.is-danger {
+  background-color: var(--theme-danger);
+  color: var(--theme-lk-tx);
+}

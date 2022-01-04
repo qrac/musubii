@@ -1,0 +1,4 @@
+.badge.is-mild.is-secondary {
+  background-color: var(--theme-secondary-2);
+  color: var(--theme-secondary);
+}

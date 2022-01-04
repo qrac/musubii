@@ -1,0 +1,4 @@
+.badge.is-mild.is-primary {
+  background-color: var(--theme-primary-2);
+  color: var(--theme-primary);
+}

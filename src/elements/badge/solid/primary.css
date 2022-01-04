@@ -1,0 +1,4 @@
+.badge.is-solid.is-primary {
+  background-color: var(--theme-primary);
+  color: var(--theme-lk-tx);
+}
