@@ -1,4 +1,11 @@
 .button.is-mild.is-primary {
-  background-color: var(--theme-primary-mild);
+  background-color: var(--theme-primary-2);
   color: var(--theme-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-mild.is-primary:hover {
+    background-color: var(--theme-primary-2);
+    filter: brightness(0.94);
+  }
 }

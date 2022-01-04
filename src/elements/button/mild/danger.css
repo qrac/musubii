@@ -1,4 +1,11 @@
 .button.is-mild.is-danger {
-  background-color: var(--theme-danger-mild);
+  background-color: var(--theme-danger-2);
   color: var(--theme-danger);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-mild.is-danger:hover {
+    background-color: var(--theme-danger-2);
+    filter: brightness(0.94);
+  }
 }

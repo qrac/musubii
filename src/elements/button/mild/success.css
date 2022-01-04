@@ -1,4 +1,11 @@
 .button.is-mild.is-success {
-  background-color: var(--theme-success-mild);
+  background-color: var(--theme-success-2);
   color: var(--theme-success);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-mild.is-success:hover {
+    background-color: var(--theme-success-2);
+    filter: brightness(0.94);
+  }
 }

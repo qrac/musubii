@@ -5,6 +5,6 @@
 
 @media (hover: hover) and (pointer: fine) {
   .button.is-outline.is-danger:hover {
-    background-color: var(--theme-danger-light);
+    background-color: var(--theme-danger-1);
   }
 }

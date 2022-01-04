@@ -4,6 +4,6 @@
 
 @media (hover: hover) and (pointer: fine) {
   .button.is-ghost.is-primary:hover {
-    background-color: var(--theme-primary-light);
+    background-color: var(--theme-primary-1);
   }
 }

@@ -5,6 +5,6 @@
 
 @media (hover: hover) and (pointer: fine) {
   .button.is-outline.is-success:hover {
-    background-color: var(--theme-success-light);
+    background-color: var(--theme-success-1);
   }
 }

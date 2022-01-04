@@ -11,6 +11,7 @@ body {
   background-color: var(--theme-bg-1);
   border: 1px solid var(--theme-bd-1);
   border-radius: 8px;
+  color: var(--theme-tx-2);
 }
 
 .demo-content + .demo-content {

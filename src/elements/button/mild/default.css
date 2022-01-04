@@ -4,6 +4,6 @@
 
 @media (hover: hover) and (pointer: fine) {
   .button.is-mild:hover {
-    filter: brightness(0.94);
+    background-color: var(--theme-bg-2);
   }
 }
