@@ -1,23 +1,42 @@
 :root {
-  --theme-tx-1: #101827;
-  --theme-tx-2: #3e4858;
-  --theme-tx-3: #6f7583;
+  /* tailwind gray-900 #111827 */
+  --theme-tx-1: #111827;
+  /* tailwind gray-700 #374151 */
+  --theme-tx-2: #374151;
+  /* tailwind gray-500 #6b7280 */
+  --theme-tx-3: #6b7280;
+  /* white #ffffff */
   --theme-bg-1: #ffffff;
-  --theme-bg-2: #f5f5f5;
-  --theme-bd-1: #d1d8dc;
-  --theme-bd-2: #b5bcc0;
-  --theme-lk-1: #02abc9;
+  /* tailwind gray-100 #f3f4f6 */
+  --theme-bg-2: #f3f4f6;
+  /* tailwind gray-200 #e5e7eb */
+  --theme-bd-1: #e5e7eb;
+  /* tailwind cyan-500 #00b5d8 */
+  --theme-lk-1: #00b5d8;
+  /* white #ffffff */
   --theme-lk-tx: #ffffff;
-  --theme-primary: #02abc9;
+  /* tailwind cyan-500 #00b5d8 */
+  --theme-primary: #00b5d8;
+  /* tailwind cyan-50 #ecfeff */
   --theme-primary-light: #ecfeff;
-  --theme-primary-mild: #ddfcff;
-  --theme-secondary: #5b52ce;
-  --theme-secondary-light: #f5f3ff;
-  --theme-secondary-mild: #ede9fe;
-  --theme-success: #05ad05;
+  /* tailwind cyan-100 #cffafe */
+  --theme-primary-mild: #cffafe;
+  /* tailwind indigo-600 #4f46e5 */
+  --theme-secondary: #4f46e5;
+  /* tailwind indigo-50 #eef2ff */
+  --theme-secondary-light: #eef2ff;
+  /* tailwind indigo-100 #e0e7ff */
+  --theme-secondary-mild: #e0e7ff;
+  /* tailwind green-600 #16a34a */
+  --theme-success: #16a34a;
+  /* tailwind green-50 #f0fdf4 */
   --theme-success-light: #f0fdf4;
+  /* tailwind green-100 #dcfce7 */
   --theme-success-mild: #dcfce7;
-  --theme-danger: #ce4141;
+  /* tailwind red-600 #dc2626 */
+  --theme-danger: #dc2626;
+  /* tailwind red-50 #fef2f2 */
   --theme-danger-light: #fef2f2;
+  /* tailwind red-100 #fee2e2 */
   --theme-danger-mild: #fee2e2;
 }
