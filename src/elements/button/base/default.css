@@ -5,9 +5,9 @@
   justify-content: center;
   align-items: center;
   gap: 0.5em;
-  min-width: 2.5em;
+  min-width: calc(2.5em + 2px);
   width: auto;
-  height: 2.5em;
+  height: calc(2.5em + 2px);
   padding: 0 1em;
   background-color: transparent;
   border: 1px solid transparent;
