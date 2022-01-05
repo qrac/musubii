@@ -6,11 +6,11 @@
 @import "./solid/success.css";
 @import "./solid/danger.css";
 
-@import "./mild/default.css";
-@import "./mild/primary.css";
-@import "./mild/secondary.css";
-@import "./mild/success.css";
-@import "./mild/danger.css";
+@import "./subtle/default.css";
+@import "./subtle/primary.css";
+@import "./subtle/secondary.css";
+@import "./subtle/success.css";
+@import "./subtle/danger.css";
 
 @import "./outline/default.css";
 @import "./outline/primary.css";

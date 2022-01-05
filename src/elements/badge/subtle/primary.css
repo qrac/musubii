@@ -1,4 +1,4 @@
-.badge.is-mild.is-primary {
+.badge.is-subtle.is-primary {
   background-color: var(--theme-primary-2);
   color: var(--theme-primary);
 }

@@ -1,10 +1,10 @@
-.button.is-mild.is-secondary {
+.button.is-subtle.is-secondary {
   background-color: var(--theme-secondary-2);
   color: var(--theme-secondary);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button.is-mild.is-secondary:hover {
+  .button.is-subtle.is-secondary:hover {
     background-color: var(--theme-secondary-2);
     filter: brightness(0.94);
   }

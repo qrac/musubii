@@ -1,4 +1,4 @@
-.badge.is-mild.is-danger {
+.badge.is-subtle.is-danger {
   background-color: var(--theme-danger-2);
   color: var(--theme-danger);
 }

@@ -1,9 +1,9 @@
-.button.is-mild {
+.button.is-subtle {
   background-color: var(--theme-bg-1);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button.is-mild:hover {
+  .button.is-subtle:hover {
     background-color: var(--theme-bg-2);
   }
 }
