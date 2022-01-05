@@ -13,13 +13,17 @@
   --theme-primary: #0ea5e9; /* tailwind sky-500 #0ea5e9 */
   --theme-primary-1: #f0f9ff; /* tailwind sky-50 #f0f9ff */
   --theme-primary-2: #e0f2fe; /* tailwind sky-100 #e0f2fe */
+  --theme-primary-3: #075985; /* tailwind sky-800 #075985 */
   --theme-secondary: #6366f1; /* tailwind indigo-500 #6366f1 */
   --theme-secondary-1: #eef2ff; /* tailwind indigo-50 #eef2ff */
   --theme-secondary-2: #e0e7ff; /* tailwind indigo-100 #e0e7ff */
+  --theme-secondary-3: #3730a3; /* tailwind indigo-800 #3730a3 */
   --theme-success: #16a34a; /* tailwind green-600 #16a34a */
   --theme-success-1: #f0fdf4; /* tailwind green-50 #f0fdf4 */
   --theme-success-2: #dcfce7; /* tailwind green-100 #dcfce7 */
+  --theme-success-3: #166534; /* tailwind green-800 #166534 */
   --theme-danger: #dc2626; /* tailwind red-600 #dc2626 */
   --theme-danger-1: #fef2f2; /* tailwind red-50 #fef2f2 */
   --theme-danger-2: #fee2e2; /* tailwind red-100 #fee2e2 */
+  --theme-danger-3: #991b1b; /* tailwind red-800 #991b1b */
 }

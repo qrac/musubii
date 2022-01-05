@@ -1,6 +1,6 @@
 .button.is-subtle.is-success {
   background-color: var(--theme-success-2);
-  color: var(--theme-success);
+  color: var(--theme-success-3);
 }
 
 @media (hover: hover) and (pointer: fine) {

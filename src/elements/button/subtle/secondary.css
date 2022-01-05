@@ -1,6 +1,6 @@
 .button.is-subtle.is-secondary {
   background-color: var(--theme-secondary-2);
-  color: var(--theme-secondary);
+  color: var(--theme-secondary-3);
 }
 
 @media (hover: hover) and (pointer: fine) {

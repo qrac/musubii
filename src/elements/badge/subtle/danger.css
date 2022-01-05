@@ -1,4 +1,4 @@
 .badge.is-subtle.is-danger {
   background-color: var(--theme-danger-2);
-  color: var(--theme-danger);
+  color: var(--theme-danger-3);
 }
