@@ -7,6 +7,9 @@ body {
 }
 
 .demo-content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 16px;
   background-color: var(--theme-bg-1);
   border: 1px solid var(--theme-bd-1);
