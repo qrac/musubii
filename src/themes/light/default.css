@@ -32,14 +32,14 @@
   /* white #ffffff */
   --theme-lk-tx: #ffffff;
 
-  /* tailwind cyan-500 #00b5d8 */
-  --theme-primary: #00b5d8;
+  /* tailwind sky-500 #0ea5e9 */
+  --theme-primary: #0ea5e9;
 
-  /* tailwind cyan-50 #ecfeff */
-  --theme-primary-1: #ecfeff;
+  /* tailwind sky-50 #f0f9ff */
+  --theme-primary-1: #f0f9ff;
 
-  /* tailwind cyan-100 #cffafe */
-  --theme-primary-2: #cffafe;
+  /* tailwind sky-100 #e0f2fe */
+  --theme-primary-2: #e0f2fe;
 
   /* tailwind indigo-500 #6366f1 */
   --theme-secondary: #6366f1;
