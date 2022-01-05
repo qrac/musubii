@@ -31,6 +31,10 @@ body {
   gap: 6px;
 }
 
+.demo-flex.is-gap-4px {
+  gap: 4px;
+}
+
 .demo-buttons {
   display: flex;
   flex-wrap: wrap;

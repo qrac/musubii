@@ -4,7 +4,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLElement> {
   className?: string
   variant: "solid" | "mild" | "outline" | (string & {})
   colorScheme?: "primary" | "secondary" | "success" | "danger" | (string & {})
-  size?: "xs" | "sm" | "md" | "lg" | "xl" | (string & {})
+  size?: "sm" | "md" | "lg" | "xl" | (string & {})
   width?: "full" | (string & {})
   aspect?: "square" | (string & {})
   rounded?: "full" | (string & {})

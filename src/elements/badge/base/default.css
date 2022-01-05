@@ -1,5 +1,6 @@
 .badge {
   position: relative;
+  vertical-align: middle;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +12,9 @@
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 2px;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
   line-height: 1;
+  text-transform: uppercase;
   white-space: nowrap;
 }

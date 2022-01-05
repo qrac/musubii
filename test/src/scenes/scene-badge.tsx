@@ -16,8 +16,8 @@ import {
 } from "../components"
 
 export const SceneBadge = () => {
-  const variantList = ["mild", "solid", "outline"]
-  const [variant, setVariant] = useState<BadgeProps["variant"]>("mild")
+  const variantList = ["solid", "mild", "outline"]
+  const [variant, setVariant] = useState<BadgeProps["variant"]>("solid")
   const widthList = ["unset", "full"]
   const [width, setWidth] = useState<BadgeProps["width"]>("unset")
   const widthAttr = width !== "unset" ? width : undefined
@@ -40,7 +40,7 @@ export const SceneBadge = () => {
     { colorScheme: "success", text: "登録", icon: <FaSave /> },
     { colorScheme: "danger", text: "必須", icon: <FaTrashAlt /> },
   ]
-  const badgeSizeList: BadgeProps["size"][] = ["xs", "sm", "md", "lg", "xl"]
+  const badgeSizeList: BadgeProps["size"][] = ["sm", "md", "lg", "xl"]
   return (
     <div className="demo-contents">
       <div className="demo-content">
@@ -86,13 +86,12 @@ export const SceneBadge = () => {
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-flex is-gap-6px">
+        <div className="demo-flex is-gap-4px">
           {badgeList.map((item, index) => (
             <Badge
               key={index}
               variant={variant}
               colorScheme={item.colorScheme}
-              size="sm"
               width={widthAttr}
               rounded={roundedAttr}
               leftIcon={isLeftIcon ? item.icon : undefined}
@@ -103,7 +102,7 @@ export const SceneBadge = () => {
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-flex is-gap-6px">
+        <div className="demo-flex is-gap-4px">
           {badgeSizeList.map((item, index) => (
             <Badge
               key={index}
@@ -120,13 +119,12 @@ export const SceneBadge = () => {
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-flex is-gap-6px">
+        <div className="demo-flex is-gap-4px">
           {badgeList.map((item, index) => (
             <Badge
               key={index}
               variant={variant}
               colorScheme={item.colorScheme}
-              size="sm"
               aspect="square"
               rounded={roundedAttr}
             >
@@ -136,19 +134,17 @@ export const SceneBadge = () => {
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-flex is-gap-6px">
+        <div className="demo-flex is-gap-4px">
           <Badge
             id="badge-id-demo"
             variant={variant}
             colorScheme="primary"
-            size="sm"
             rounded={roundedAttr}
             text="id"
           />
           <Badge
             variant={variant}
             colorScheme="primary"
-            size="sm"
             rounded={roundedAttr}
             text="className"
             className="is-disabled"
@@ -156,7 +152,6 @@ export const SceneBadge = () => {
           <Badge
             variant={variant}
             colorScheme="primary"
-            size="sm"
             rounded={roundedAttr}
             text="style"
             style={{ backgroundColor: "rgb(17, 24, 39)" }}
@@ -164,17 +159,11 @@ export const SceneBadge = () => {
           <Badge
             variant={variant}
             colorScheme="primary"
-            size="sm"
             rounded={roundedAttr}
             text="data-*"
             data-custom="custom"
           />
-          <Badge
-            variant={variant}
-            colorScheme="primary"
-            size="sm"
-            rounded={roundedAttr}
-          >
+          <Badge variant={variant} colorScheme="primary" rounded={roundedAttr}>
             <span>children</span>
           </Badge>
         </div>
