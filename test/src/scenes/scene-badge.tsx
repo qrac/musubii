@@ -112,6 +112,30 @@ export const SceneBadge = () => {
       </div>
       <div className="demo-content">
         <div className="demo-flex is-gap-4px">
+          <Badge variant="solid" colorScheme="danger" rounded="full" />
+          <Badge variant="solid" colorScheme="danger" rounded="full" text="1" />
+          <Badge
+            variant="solid"
+            colorScheme="danger"
+            rounded="full"
+            text="12"
+          />
+          <Badge
+            variant="solid"
+            colorScheme="danger"
+            rounded="full"
+            text="99+"
+          />
+          <Badge
+            variant="solid"
+            colorScheme="danger"
+            rounded="full"
+            text="999+"
+          />
+        </div>
+      </div>
+      <div className="demo-content">
+        <div className="demo-flex is-gap-4px">
           <Badge
             id="badge-id-demo"
             variant={variant}
