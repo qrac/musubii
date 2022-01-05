@@ -35,9 +35,9 @@ export const SceneBadge = () => {
     icon?: React.ReactElement
   }[] = [
     { colorScheme: undefined, text: "任意", icon: <FaListUl /> },
-    { colorScheme: "primary", text: "決定", icon: <FaCheck /> },
+    { colorScheme: "primary", text: "推奨", icon: <FaCheck /> },
     { colorScheme: "secondary", text: "変更", icon: <FaPalette /> },
-    { colorScheme: "success", text: "登録", icon: <FaSave /> },
+    { colorScheme: "success", text: "成功", icon: <FaSave /> },
     { colorScheme: "danger", text: "必須", icon: <FaTrashAlt /> },
   ]
   const badgeSizeList: BadgeProps["size"][] = ["sm", "md", "lg", "xl"]
@@ -113,7 +113,7 @@ export const SceneBadge = () => {
               size={item}
               leftIcon={isLeftIcon ? <FaCheck /> : undefined}
               rightIcon={isRightIcon ? <FaCheck /> : undefined}
-              text="決定"
+              text="推奨"
             />
           ))}
         </div>
