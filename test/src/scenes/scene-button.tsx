@@ -2,8 +2,8 @@ import { useState } from "react"
 import {
   FaListUl,
   FaCheck,
-  FaPalette,
-  FaSave,
+  FaPen,
+  FaPaperPlane,
   FaTrashAlt,
 } from "react-icons/fa"
 
@@ -56,8 +56,8 @@ export const SceneButton = () => {
   }[] = [
     { colorScheme: undefined, text: "詳細", icon: <FaListUl /> },
     { colorScheme: "primary", text: "決定", icon: <FaCheck /> },
-    { colorScheme: "secondary", text: "変更", icon: <FaPalette /> },
-    { colorScheme: "success", text: "登録", icon: <FaSave /> },
+    { colorScheme: "secondary", text: "変更", icon: <FaPen /> },
+    { colorScheme: "success", text: "送信", icon: <FaPaperPlane /> },
     { colorScheme: "danger", text: "削除", icon: <FaTrashAlt /> },
   ]
   const buttonSizeList: ButtonProps["size"][] = ["xs", "sm", "md", "lg", "xl"]

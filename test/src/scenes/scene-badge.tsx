@@ -86,11 +86,11 @@ export const SceneBadge = () => {
             <Badge
               key={index}
               variant={variant}
-              colorScheme="primary"
+              colorScheme="success"
               width={widthAttr}
               rounded={roundedAttr}
               size={item}
-              text="推奨"
+              text="新規"
             />
           ))}
         </div>
