@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 import {
+  DemoDetails,
   DemoFieldset,
   DemoRadios,
   //DemoCheckbox,
@@ -33,38 +34,40 @@ export const SceneBadge = () => {
   return (
     <div className="demo-contents">
       <div className="demo-content">
-        <div className="demo-options">
-          <DemoFieldset legend="variant">
-            <DemoRadios
-              items={variantList}
-              checkedItem={variant}
-              name="variant"
-              onChange={(event) =>
-                setVariant(event.target.value as BadgeProps["variant"])
-              }
-            />
-          </DemoFieldset>
-          <DemoFieldset legend="width">
-            <DemoRadios
-              items={widthList}
-              checkedItem={width}
-              name="width"
-              onChange={(event) =>
-                setWidth(event.target.value as BadgeProps["width"])
-              }
-            />
-          </DemoFieldset>
-          <DemoFieldset legend="rounded">
-            <DemoRadios
-              items={roundedList}
-              checkedItem={rounded}
-              name="rounded"
-              onChange={(event) =>
-                setRounded(event.target.value as BadgeProps["rounded"])
-              }
-            />
-          </DemoFieldset>
-        </div>
+        <DemoDetails summary="options">
+          <div className="demo-options">
+            <DemoFieldset legend="variant">
+              <DemoRadios
+                items={variantList}
+                checkedItem={variant}
+                name="variant"
+                onChange={(event) =>
+                  setVariant(event.target.value as BadgeProps["variant"])
+                }
+              />
+            </DemoFieldset>
+            <DemoFieldset legend="width">
+              <DemoRadios
+                items={widthList}
+                checkedItem={width}
+                name="width"
+                onChange={(event) =>
+                  setWidth(event.target.value as BadgeProps["width"])
+                }
+              />
+            </DemoFieldset>
+            <DemoFieldset legend="rounded">
+              <DemoRadios
+                items={roundedList}
+                checkedItem={rounded}
+                name="rounded"
+                onChange={(event) =>
+                  setRounded(event.target.value as BadgeProps["rounded"])
+                }
+              />
+            </DemoFieldset>
+          </div>
+        </DemoDetails>
       </div>
       <div className="demo-content">
         <div className="demo-flex is-gap-4px">
