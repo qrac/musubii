@@ -1,11 +1,4 @@
 import { useState } from "react"
-import {
-  FaListUl,
-  FaCheck,
-  FaPalette,
-  FaSave,
-  FaTrashAlt,
-} from "react-icons/fa"
 
 import {
   DemoFieldset,
@@ -24,21 +17,17 @@ export const SceneBadge = () => {
   const roundedList = ["unset", "none", "full"]
   const [rounded, setRounded] = useState<BadgeProps["rounded"]>("unset")
   const roundedAttr = rounded !== "unset" ? rounded : undefined
-  const withIconList = ["unset", "left", "right"]
-  const [withIcon, setWithIcon] = useState<string>("unset")
-  const isLeftIcon = withIcon === "left"
-  const isRightIcon = withIcon === "right"
 
   const badgeList: {
     colorScheme: BadgeProps["colorScheme"]
     text: string
     icon?: React.ReactElement
   }[] = [
-    { colorScheme: undefined, text: "任意", icon: <FaListUl /> },
-    { colorScheme: "primary", text: "推奨", icon: <FaCheck /> },
-    { colorScheme: "secondary", text: "変更", icon: <FaPalette /> },
-    { colorScheme: "success", text: "成功", icon: <FaSave /> },
-    { colorScheme: "danger", text: "必須", icon: <FaTrashAlt /> },
+    { colorScheme: undefined, text: "任意" },
+    { colorScheme: "primary", text: "推奨" },
+    { colorScheme: "secondary", text: "保留" },
+    { colorScheme: "success", text: "成功" },
+    { colorScheme: "danger", text: "必須" },
   ]
   const badgeSizeList: BadgeProps["size"][] = ["sm", "md", "lg", "xl"]
   return (
@@ -75,14 +64,6 @@ export const SceneBadge = () => {
               }
             />
           </DemoFieldset>
-          <DemoFieldset legend="icon">
-            <DemoRadios
-              items={withIconList}
-              checkedItem={withIcon}
-              name="icon"
-              onChange={(event) => setWithIcon(event.target.value)}
-            />
-          </DemoFieldset>
         </div>
       </div>
       <div className="demo-content">
@@ -94,8 +75,6 @@ export const SceneBadge = () => {
               colorScheme={item.colorScheme}
               width={widthAttr}
               rounded={roundedAttr}
-              leftIcon={isLeftIcon ? item.icon : undefined}
-              rightIcon={isRightIcon ? item.icon : undefined}
               text={item.text}
             />
           ))}
@@ -111,27 +90,22 @@ export const SceneBadge = () => {
               width={widthAttr}
               rounded={roundedAttr}
               size={item}
-              leftIcon={isLeftIcon ? <FaCheck /> : undefined}
-              rightIcon={isRightIcon ? <FaCheck /> : undefined}
               text="推奨"
             />
           ))}
         </div>
       </div>
       <div className="demo-content">
-        <div className="demo-flex is-gap-4px">
-          {badgeList.map((item, index) => (
-            <Badge
-              key={index}
-              variant={variant}
-              colorScheme={item.colorScheme}
-              aspect="square"
-              rounded={roundedAttr}
-            >
-              {item.icon}
-            </Badge>
-          ))}
-        </div>
+        <p>
+          <span style={{ marginRight: "4px" }}>お名前</span>
+          <Badge
+            variant={variant}
+            colorScheme="danger"
+            rounded={roundedAttr}
+            text="必須"
+            style={{ verticalAlign: "text-bottom" }}
+          />
+        </p>
       </div>
       <div className="demo-content">
         <div className="demo-flex is-gap-4px">

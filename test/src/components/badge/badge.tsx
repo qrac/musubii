@@ -8,8 +8,6 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLElement> {
   width?: "full" | (string & {})
   aspect?: "square" | (string & {})
   rounded?: "full" | (string & {})
-  leftIcon?: React.ReactElement
-  rightIcon?: React.ReactElement
   text?: string
   children?: React.ReactNode
   attributes?: React.HTMLAttributes<HTMLElement>
@@ -24,8 +22,6 @@ export const Badge = (props: BadgeProps) => {
     width,
     aspect,
     rounded,
-    leftIcon,
-    rightIcon,
     text,
     children,
     ...attributes
@@ -44,10 +40,8 @@ export const Badge = (props: BadgeProps) => {
       )}
       {...attributes}
     >
-      {leftIcon}
       {text}
       {children}
-      {rightIcon}
     </span>
   )
 }
