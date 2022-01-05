@@ -20,8 +20,11 @@
   /* tailwind gray-700 #374151 */
   --theme-bd-1: #374151;
 
+  /* tailwind gray-600 #4b5563 */
+  --theme-bd-2: #4b5563;
+
   /* tailwind gray-500 #6b7280 */
-  --theme-bd-2: #6b7280;
+  --theme-bd-3: #6b7280;
 
   /* tailwind cyan-500 #00b5d8 */
   --theme-lk-1: #00b5d8;
