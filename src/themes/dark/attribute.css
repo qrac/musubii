@@ -1,44 +1,67 @@
 [data-theme="dark"] {
   /* tailwind gray-200 #e5e7eb */
   --theme-tx-1: #e5e7eb;
+
   /* tailwind gray-400 #9ca3af */
   --theme-tx-2: #9ca3af;
+
   /* tailwind gray-500 #6b7280 */
   --theme-tx-3: #6b7280;
+
   /* tailwind gray-900 #111827 */
   --theme-bg-1: #111827;
+
   /* tailwind gray-800 #1f2937 */
   --theme-bg-2: #1f2937;
+
+  /* tailwind gray-700 #374151 */
+  --theme-bg-3: #374151;
+
   /* tailwind gray-700 #374151 */
   --theme-bd-1: #374151;
+
   /* tailwind gray-500 #6b7280 */
   --theme-bd-2: #6b7280;
+
   /* tailwind cyan-500 #00b5d8 */
   --theme-lk-1: #00b5d8;
+
   /* tailwind gray-800 #1f2937 */
   --theme-lk-tx: #1f2937;
+
   /* tailwind cyan-400 #22d3ee */
   --theme-primary: #22d3ee;
+
   /* tailwind cyan-900 #164e63 */
   --theme-primary-1: #164e63;
+
   /* tailwind cyan-800 #155e75 */
   --theme-primary-2: #155e75;
+
   /* tailwind indigo-300 #a5b4fc */
   --theme-secondary: #a5b4fc;
+
   /* tailwind indigo-900 #312e81 */
   --theme-secondary-1: #312e81;
+
   /* tailwind indigo-800 #3730a3 */
   --theme-secondary-2: #3730a3;
+
   /* tailwind green-400 #4ade80 */
   --theme-success: #4ade80;
+
   /* tailwind green-900 #14532d */
   --theme-success-1: #14532d;
+
   /* tailwind green-800 #166534 */
   --theme-success-2: #166534;
+
   /* tailwind red-400 #f87171 */
   --theme-danger: #f87171;
+
   /* tailwind red-900 #7f1d1d */
   --theme-danger-1: #7f1d1d;
+
   /* tailwind red-800 #991b1b */
   --theme-danger-2: #991b1b;
 }

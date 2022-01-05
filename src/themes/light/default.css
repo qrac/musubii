@@ -1,44 +1,67 @@
 :root {
   /* tailwind gray-900 #111827 */
   --theme-tx-1: #111827;
+
   /* tailwind gray-700 #374151 */
   --theme-tx-2: #374151;
+
   /* tailwind gray-500 #6b7280 */
   --theme-tx-3: #6b7280;
+
   /* white #ffffff */
   --theme-bg-1: #ffffff;
+
   /* tailwind gray-100 #f3f4f6 */
   --theme-bg-2: #f3f4f6;
+
+  /* tailwind gray-200 #e5e7eb */
+  --theme-bg-3: #e5e7eb;
+
   /* tailwind gray-200 #e5e7eb */
   --theme-bd-1: #e5e7eb;
+
   /* tailwind gray-400 #9ca3af */
   --theme-bd-2: #9ca3af;
+
   /* tailwind cyan-500 #00b5d8 */
   --theme-lk-1: #00b5d8;
+
   /* white #ffffff */
   --theme-lk-tx: #ffffff;
+
   /* tailwind cyan-500 #00b5d8 */
   --theme-primary: #00b5d8;
+
   /* tailwind cyan-50 #ecfeff */
   --theme-primary-1: #ecfeff;
+
   /* tailwind cyan-100 #cffafe */
   --theme-primary-2: #cffafe;
+
   /* tailwind indigo-600 #4f46e5 */
   --theme-secondary: #4f46e5;
+
   /* tailwind indigo-50 #eef2ff */
   --theme-secondary-1: #eef2ff;
+
   /* tailwind indigo-100 #e0e7ff */
   --theme-secondary-2: #e0e7ff;
+
   /* tailwind green-600 #16a34a */
   --theme-success: #16a34a;
+
   /* tailwind green-50 #f0fdf4 */
   --theme-success-1: #f0fdf4;
+
   /* tailwind green-100 #dcfce7 */
   --theme-success-2: #dcfce7;
+
   /* tailwind red-600 #dc2626 */
   --theme-danger: #dc2626;
+
   /* tailwind red-50 #fef2f2 */
   --theme-danger-1: #fef2f2;
+
   /* tailwind red-100 #fee2e2 */
   --theme-danger-2: #fee2e2;
 }
