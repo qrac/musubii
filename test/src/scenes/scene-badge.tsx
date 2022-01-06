@@ -11,7 +11,7 @@ import {
 
 export const SceneBadge = () => {
   const variantList = ["solid", "subtle", "outline"]
-  const [variant, setVariant] = useState<BadgeProps["variant"]>("subtle")
+  const [variant, setVariant] = useState<BadgeProps["variant"]>("solid")
   const widthList = ["unset", "full"]
   const [width, setWidth] = useState<BadgeProps["width"]>("unset")
   const widthAttr = width !== "unset" ? width : undefined
@@ -30,7 +30,7 @@ export const SceneBadge = () => {
     { colorScheme: "success", text: "成功" },
     { colorScheme: "danger", text: "必須" },
   ]
-  const badgeSizeList: BadgeProps["size"][] = ["sm", "md", "lg", "xl"]
+  const badgeSizeList: BadgeProps["size"][] = ["md", "lg", "xl", "2xl"]
   return (
     <div className="demo-contents">
       <div className="demo-content">
@@ -112,22 +112,27 @@ export const SceneBadge = () => {
       </div>
       <div className="demo-content">
         <div className="demo-flex is-gap-4px">
-          <Badge variant="solid" colorScheme="danger" rounded="full" />
-          <Badge variant="solid" colorScheme="danger" rounded="full" text="1" />
+          <Badge variant={variant} colorScheme="danger" rounded="full" />
           <Badge
-            variant="solid"
+            variant={variant}
+            colorScheme="danger"
+            rounded="full"
+            text="1"
+          />
+          <Badge
+            variant={variant}
             colorScheme="danger"
             rounded="full"
             text="12"
           />
           <Badge
-            variant="solid"
+            variant={variant}
             colorScheme="danger"
             rounded="full"
             text="99+"
           />
           <Badge
-            variant="solid"
+            variant={variant}
             colorScheme="danger"
             rounded="full"
             text="999+"

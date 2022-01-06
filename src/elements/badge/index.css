@@ -18,10 +18,10 @@
 @import "./outline/success.css";
 @import "./outline/danger.css";
 
+@import "./size/2xl.css";
 @import "./size/xl.css";
 @import "./size/lg.css";
 @import "./size/md.css";
-@import "./size/sm.css";
 
 @import "./width/full.css";
 @import "./aspect/square.css";
