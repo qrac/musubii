@@ -13,6 +13,7 @@
   border: 1px solid transparent;
   border-radius: 6px;
   font-size: 1rem;
+  font-weight: 500;
   font-family: var(--theme-font-sans-mix);
   line-height: 1;
   white-space: nowrap;
