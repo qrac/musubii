@@ -5,14 +5,15 @@
   justify-content: center;
   align-items: center;
   gap: 0.5em;
-  min-width: calc(2.5em + 2px);
+  min-width: 2.5em;
   width: auto;
-  height: calc(2.5em + 2px);
+  height: 2.5em;
   padding: 0 1em;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 6px;
   font-size: 1rem;
+  font-family: var(--theme-font-sans-mix);
   line-height: 1;
   white-space: nowrap;
   appearance: none;

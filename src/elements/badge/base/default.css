@@ -4,15 +4,16 @@
   justify-content: center;
   align-items: center;
   gap: 0.25em;
-  min-width: calc(1.5em + 2px);
+  min-width: 1.5em;
   width: auto;
-  height: calc(1.5em + 2px);
+  height: 1.5em;
   padding: 0 4px;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 2px;
   font-size: 0.75rem;
   font-weight: 600;
+  font-family: var(--theme-font-sans-mix);
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
