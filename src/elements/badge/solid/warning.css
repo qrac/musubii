@@ -1,0 +1,4 @@
+.badge.is-solid.is-warning {
+  background-color: var(--theme-warning);
+  color: var(--theme-lk-tx);
+}

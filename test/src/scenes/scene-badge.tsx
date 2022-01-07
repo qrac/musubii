@@ -27,7 +27,9 @@ export const SceneBadge = () => {
     { colorScheme: undefined, text: "任意" },
     { colorScheme: "primary", text: "推奨" },
     { colorScheme: "secondary", text: "保留" },
+    { colorScheme: "info", text: "新規" },
     { colorScheme: "success", text: "成功" },
+    { colorScheme: "warning", text: "注意" },
     { colorScheme: "danger", text: "必須" },
   ]
   const badgeSizeList: BadgeProps["size"][] = ["md", "lg", "xl", "2xl"]
@@ -93,7 +95,7 @@ export const SceneBadge = () => {
               width={widthAttr}
               rounded={roundedAttr}
               size={item}
-              text="新規"
+              text="成功"
             />
           ))}
         </div>

@@ -1,0 +1,4 @@
+.badge.is-subtle.is-warning {
+  background-color: var(--theme-warning-2);
+  color: var(--theme-warning-3);
+}

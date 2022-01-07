@@ -1,0 +1,4 @@
+.badge.is-outline.is-info {
+  border-color: currentColor;
+  color: var(--theme-info);
+}

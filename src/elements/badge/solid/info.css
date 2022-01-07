@@ -1,0 +1,4 @@
+.badge.is-solid.is-info {
+  background-color: var(--theme-info);
+  color: var(--theme-lk-tx);
+}

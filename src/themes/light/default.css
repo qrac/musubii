@@ -18,10 +18,18 @@
   --theme-secondary-1: #eef2ff; /* tailwind indigo-50 #eef2ff */
   --theme-secondary-2: #e0e7ff; /* tailwind indigo-100 #e0e7ff */
   --theme-secondary-3: #4338ca; /* tailwind indigo-700 #4338ca */
+  --theme-info: #3b82f6; /* tailwind blue-500 #3b82f6 */
+  --theme-info-1: #eff6ff; /* tailwind blue-50 #eff6ff */
+  --theme-info-2: #dbeafe; /* tailwind blue-100 #dbeafe */
+  --theme-info-3: #1d4ed8; /* tailwind blue-700 #1d4ed8 */
   --theme-success: #16a34a; /* tailwind green-600 #16a34a */
   --theme-success-1: #f0fdf4; /* tailwind green-50 #f0fdf4 */
   --theme-success-2: #dcfce7; /* tailwind green-100 #dcfce7 */
   --theme-success-3: #15803d; /* tailwind green-700 #15803d */
+  --theme-warning: #d97706; /* tailwind amber-600 #d97706 */
+  --theme-warning-1: #fffbeb; /* tailwind amber-50 #fffbeb */
+  --theme-warning-2: #fef3c7; /* tailwind amber-100 #fef3c7 */
+  --theme-warning-3: #b45309; /* tailwind amber-700 #b45309 */
   --theme-danger: #dc2626; /* tailwind red-600 #dc2626 */
   --theme-danger-1: #fef2f2; /* tailwind red-50 #fef2f2 */
   --theme-danger-2: #fee2e2; /* tailwind red-100 #fee2e2 */

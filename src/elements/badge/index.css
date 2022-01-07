@@ -3,19 +3,25 @@
 @import "./solid/default.css";
 @import "./solid/primary.css";
 @import "./solid/secondary.css";
+@import "./solid/info.css";
 @import "./solid/success.css";
+@import "./solid/warning.css";
 @import "./solid/danger.css";
 
 @import "./subtle/default.css";
 @import "./subtle/primary.css";
 @import "./subtle/secondary.css";
+@import "./subtle/info.css";
 @import "./subtle/success.css";
+@import "./subtle/warning.css";
 @import "./subtle/danger.css";
 
 @import "./outline/default.css";
 @import "./outline/primary.css";
 @import "./outline/secondary.css";
+@import "./outline/info.css";
 @import "./outline/success.css";
+@import "./outline/warning.css";
 @import "./outline/danger.css";
 
 @import "./size/2xl.css";
