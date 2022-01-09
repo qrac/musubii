@@ -24,6 +24,7 @@ export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   size?: "xs" | "sm" | "md" | "lg" | "xl" | (string & {})
   href?: string
   target?: "_self" | "_blank" | (string & {})
+  isSubdued?: boolean
   isDisabled?: boolean
   children?: React.ReactNode
   attributes?: React.HTMLAttributes<HTMLElement>
@@ -37,6 +38,7 @@ export const Text = (props: TextProps) => {
     size,
     href = "",
     target,
+    isSubdued,
     isDisabled,
     children,
     ...attributes
@@ -49,6 +51,7 @@ export const Text = (props: TextProps) => {
         "text",
         colorScheme && `is-${colorScheme}`,
         size && `is-size-${size}`,
+        isSubdued && "is-subdued",
         className && className
       )}
       href={DOMElement === "a" ? href : undefined}

@@ -1,3 +1,13 @@
+@import "./base/primary.css";
+@import "./base/secondary.css";
+@import "./base/info.css";
+@import "./base/success.css";
+@import "./base/warning.css";
+@import "./base/danger.css";
+
+@import "./base/subdued.css";
+@import "./base/disabled.css";
+
 @import "./size/xl.css";
 @import "./size/lg.css";
 @import "./size/md.css";

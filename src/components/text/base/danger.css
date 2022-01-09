@@ -1,0 +1,3 @@
+.text.is-danger {
+  color: var(--theme-danger);
+}
