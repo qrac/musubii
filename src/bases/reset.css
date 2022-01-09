@@ -4,15 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   color: inherit;
-  font-size: 1em;
   font-family: inherit;
-  font-weight: inherit;
-}
-
-::before,
-::after {
-  vertical-align: inherit;
-  text-decoration: inherit;
 }
 
 html {
