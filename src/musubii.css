@@ -1,6 +1,6 @@
 @import "./themes/light/default.css";
 @import "./themes/dark/attribute.css";
-@import "./themes/variable.css";
+@import "./themes/variable/default.css";
 
 @import "./components/global/index.css";
 @import "./components/button/index.css";
