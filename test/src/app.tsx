@@ -1,13 +1,13 @@
 import { useState } from "react"
 
 import { DemoFieldset, DemoRadios } from "./components"
-import { SceneButton, SceneBadge } from "./scenes"
+import { SceneButton, SceneBadge, SceneText } from "./scenes"
 
 import "musubii/src/musubii.css"
 import "./demo.css"
 
 const App = () => {
-  const sceneList = ["button", "badge"]
+  const sceneList = ["button", "badge", "text"]
   const [scene, setScene] = useState("button")
   const themeList = ["light", "dark"]
   const [theme, setTheme] = useState("light")
@@ -37,6 +37,7 @@ const App = () => {
       </div>
       {scene === "button" && <SceneButton />}
       {scene === "badge" && <SceneBadge />}
+      {scene === "text" && <SceneText />}
     </div>
   )
 }

@@ -4,7 +4,6 @@ import {
   DemoDetails,
   DemoFieldset,
   DemoRadios,
-  //DemoCheckbox,
   Badge,
   BadgeProps,
 } from "../components"

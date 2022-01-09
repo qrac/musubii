@@ -1,0 +1,6 @@
+.text {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--theme-font-sans);
+  line-height: 1.5;
+}
