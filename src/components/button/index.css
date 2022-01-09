@@ -1,4 +1,5 @@
 @import "./base/default.css";
+@import "./base/disabled.css";
 
 @import "./solid/default.css";
 @import "./solid/primary.css";
@@ -47,5 +48,3 @@
 @import "./angle/secondary.css";
 @import "./angle/success.css";
 @import "./angle/danger.css";
-
-@import "./disabled/default.css";
