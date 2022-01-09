@@ -148,7 +148,7 @@ export const SceneBadge = () => {
             variant={variant}
             colorScheme="primary"
             rounded={roundedAttr}
-            text="id"
+            text="ID"
           />
           <Badge
             variant={variant}
@@ -161,7 +161,7 @@ export const SceneBadge = () => {
             variant={variant}
             colorScheme="primary"
             rounded={roundedAttr}
-            text="style"
+            text="STYLE"
             style={{ backgroundColor: "rgb(17, 24, 39)" }}
           />
           <Badge

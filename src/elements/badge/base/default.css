@@ -15,6 +15,5 @@
   font-weight: 600;
   font-family: var(--theme-font-sans-mix);
   line-height: 1;
-  text-transform: uppercase;
   white-space: nowrap;
 }
