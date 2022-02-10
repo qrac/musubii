@@ -62,7 +62,7 @@
     "js-beautify": "^1.10.3",
     "next": "^9.3.3",
     "next-compose-plugins": "^2.2.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "postcss-cli": "^7.1.0",
     "postcss-flexbugs-fixes": "^4.2.0",
     "postcss-sort-media-queries": "^1.4.23",
