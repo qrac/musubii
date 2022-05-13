@@ -59,6 +59,7 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-sort-media-queries": "^4.2.1",
     "replace": "^1.2.1",
+    "sass": "^1.51.0",
     "sass-export": "^2.1.1"
   }
 }
