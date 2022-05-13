@@ -37,6 +37,9 @@
     "extract:replace": "bash ./tasks/extract-replace.sh",
     "clean": "rmtrash ./out ./.next ./temp ./src/assets/extracts/.temp"
   },
+  "prettier": {
+    "semi": false
+  },
   "browserslist": [
     "last 1 Chrome versions",
     "last 1 Edge versions",
