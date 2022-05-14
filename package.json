@@ -7,6 +7,7 @@
   "homepage": "https://musubii.qranoko.jp",
   "repository": "https://github.com/qrac/musubii",
   "bugs": "https://github.com/qrac/musubii/issues",
+  "type": "module",
   "keywords": [
     "css",
     "sass",
@@ -24,18 +25,10 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "dev": "next",
-    "generate": "next build && next export",
-    "build": "yarn build:sass && yarn build:header && yarn build:postcss && yarn build:cleancss",
-    "build:sass": "bash ./tasks/build-sass.sh",
-    "build:header": "bash ./tasks/build-header.sh",
-    "build:postcss": "bash ./tasks/build-postcss.sh",
-    "build:cleancss": "bash ./tasks/build-cleancss.sh",
-    "extract": "yarn extract:sass && yarn extract:json && yarn extract:replace",
-    "extract:sass": "bash ./tasks/extract-sass.sh",
-    "extract:json": "bash ./tasks/extract-json.sh",
-    "extract:replace": "bash ./tasks/extract-replace.sh",
-    "clean": "rmtrash ./out ./.next ./temp ./src/assets/extracts/.temp"
+    "build": "node ./src",
+    "test": "node ./test",
+    "prepublishOnly": "npm run build",
+    "clean": "trash ./dist"
   },
   "prettier": {
     "semi": false
@@ -52,14 +45,11 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.4.7",
-    "clean-css-cli": "^5.6.0",
-    "concat": "^1.0.3",
-    "css-vars-ponyfill": "^2.4.7",
-    "postcss-cli": "^9.1.0",
+    "clean-css": "^5.3.0",
+    "fs-extra": "^10.1.0",
+    "postcss": "^8.4.13",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-sort-media-queries": "^4.2.1",
-    "replace": "^1.2.1",
-    "sass": "^1.51.0",
-    "sass-export": "^2.1.1"
+    "sass": "^1.51.0"
   }
 }
