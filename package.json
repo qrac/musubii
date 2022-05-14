@@ -3,11 +3,15 @@
   "description": "Simple CSS Framework for JP",
   "version": "7.1.0",
   "main": "dist/musubii.css",
+  "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
   "license": "CC0-1.0",
   "homepage": "https://musubii.qranoko.jp",
   "repository": "https://github.com/qrac/musubii",
   "bugs": "https://github.com/qrac/musubii/issues",
-  "type": "module",
   "keywords": [
     "css",
     "sass",
