@@ -58,8 +58,8 @@ const stylePaths = [
   "./src/scss/styles/utilities/_clearfix.scss",
 ]
 
-function sortObjects(objects) {
-  const sortedObjects = objects.sort((a, b) => {
+function sortById(objects) {
+  const result = objects.sort((a, b) => {
     const idA = a.id
     const idB = b.id
     if (idA < idB) {
@@ -70,7 +70,22 @@ function sortObjects(objects) {
     }
     return 0
   })
-  return sortedObjects
+  return result
+}
+
+function ignoreByPath(objects, includesPath) {
+  const result = objects.filter((item) => !item.path.includes(includesPath))
+  return result
+}
+
+function matchByPath(objects, matchPath) {
+  const result = objects.filter((item) => item.path === matchPath)
+  return result
+}
+
+function concatCodeObjects(objects) {
+  const result = objects.map((item) => item.code).join("\n\n")
+  return result
 }
 
 async function getCodeObjects(paths) {
@@ -81,11 +96,11 @@ async function getCodeObjects(paths) {
       return configObects.push({ id: index, path: path, code: code })
     })
   )
-  const sortedObjects = sortObjects(configObects)
+  const sortedObjects = sortById(configObects)
   return sortedObjects
 }
 
-function fixDartSassCode(code) {
+function fixSass(code) {
   const useMath = `@use "sass:math";`
   const replacedCode = code
     .replaceAll(
@@ -113,22 +128,63 @@ async function buildCode(code, output, minify) {
     postcssFlexbugsFixes,
     postcssSortMediaQueries,
   ]).process(sassResult, { from: undefined })
-  const rerultStr = header + "\n\n" + postcssResult
+  const rerultStr = [header, postcssResult].join("\n\n")
   const result = minify ? new CleanCSS().minify(rerultStr).styles : rerultStr
   await fs.outputFile(output, result)
 }
 
 await fs.emptyDir("./dist")
 
-const configCodeObjects = await getCodeObjects(configPaths)
-const configCode = configCodeObjects.map((item) => item.code).join("\n\n")
-const styleCodeObjects = await getCodeObjects(stylePaths)
-const styleCode = styleCodeObjects.map((item) => item.code).join("\n\n")
+const configObjects = await getCodeObjects(configPaths)
+const configCode = concatCodeObjects(configObjects)
+const styleObjects = await getCodeObjects(stylePaths)
+const styleCode = concatCodeObjects(styleObjects)
 
-const musubiiCode = configCode + "\n\n" + styleCode
-const fixedMusubiiCode = fixDartSassCode(musubiiCode)
+const rootPath = "./src/scss/styles/bases/_root-"
+const lightPath = "./src/scss/styles/bases/_root-light.scss"
+const darkPath = "./src/scss/styles/bases/_root-dark.scss"
+const noRootObjects = ignoreByPath(styleObjects, rootPath)
+const noRootCode = concatCodeObjects(noRootObjects)
+const rootLightObjects = matchByPath(styleObjects, lightPath)
+const rootLightCode = concatCodeObjects(rootLightObjects)
+const rootDarkObjects = matchByPath(styleObjects, darkPath)
+const rootDarkCode = concatCodeObjects(rootDarkObjects)
+
+const useVar = `$option-css-variables: true;`
+const useMedia = `$option-theme-trigger-media: true;`
+const defDark = `$option-theme-default: "dark";`
+const plainArray = [configCode, styleCode]
+const plainCode = fixSass(plainArray.join("\n\n"))
+const cssvarArray = [useVar, configCode, noRootCode]
+const cssvarCode = fixSass(cssvarArray.join("\n\n"))
+const defaultLightArray = [useVar, configCode, rootLightCode]
+const defaultLightCode = fixSass(defaultLightArray.join("\n\n"))
+const defaultDarkArray = [useVar, defDark, configCode, rootDarkCode]
+const defaultDarkCode = fixSass(defaultDarkArray.join("\n\n"))
+const mediaLightArray = [useVar, useMedia, defDark, configCode, rootLightCode]
+const mediaLightCode = fixSass(mediaLightArray.join("\n\n"))
+const mediaDarkArray = [useVar, useMedia, configCode, rootDarkCode]
+const mediaDarkCode = fixSass(mediaDarkArray.join("\n\n"))
+const dataLightArray = [useVar, defDark, configCode, rootLightCode]
+const dataLightCode = fixSass(dataLightArray.join("\n\n"))
+const dataDarkArray = [useVar, configCode, rootDarkCode]
+const dataDarkCode = fixSass(dataDarkArray.join("\n\n"))
 
 await Promise.all([
-  buildCode(fixedMusubiiCode, "./dist/musubii.css", false),
-  buildCode(fixedMusubiiCode, "./dist/musubii.min.css", true),
+  buildCode(plainCode, "./dist/musubii.css", false),
+  buildCode(plainCode, "./dist/musubii.min.css", true),
+  buildCode(cssvarCode, "./dist/musubii-cssvar.css", false),
+  buildCode(cssvarCode, "./dist/musubii-cssvar.min.css", true),
+  buildCode(defaultLightCode, "./dist/theme-default-light.css", false),
+  buildCode(defaultLightCode, "./dist/theme-default-light.min.css", true),
+  buildCode(defaultDarkCode, "./dist/theme-default-dark.css", false),
+  buildCode(defaultDarkCode, "./dist/theme-default-dark.min.css", true),
+  buildCode(mediaLightCode, "./dist/theme-media-light.css", false),
+  buildCode(mediaLightCode, "./dist/theme-media-light.min.css", true),
+  buildCode(mediaDarkCode, "./dist/theme-media-dark.css", false),
+  buildCode(mediaDarkCode, "./dist/theme-media-dark.min.css", true),
+  buildCode(dataLightCode, "./dist/theme-data-light.css", false),
+  buildCode(dataLightCode, "./dist/theme-data-light.min.css", true),
+  buildCode(dataDarkCode, "./dist/theme-data-dark.css", false),
+  buildCode(dataDarkCode, "./dist/theme-data-dark.min.css", true),
 ])
