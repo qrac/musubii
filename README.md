@@ -1,17 +1,11 @@
 <p align="center">
-  <br>
-  <a href="https://musubii.qranoko.jp">
+<br/>
     <img src="https://i.gyazo.com/fe915845b753d96c6d539022049e7a02.png" width="90"/>
-  </a>
 </p>
 
-<h1 align="center">MUSUBii</h1>
-<h3 align="center">Simple CSS Framework for JP</h3>
-<p align="center">
-MUSUBiiは日本語サイトのインブラウザデザインを想定したシンプルで薄味のレスポンシブ対応CSSフレームワークです。
-</p>
+# MUSUBii
 
-<p align="center">
+<p>
   <a aria-label="Made by QRANOKO" href="https://qranoko.jp">
     <img src="https://img.shields.io/badge/MADE%20BY%20QRANOKO-212121.svg?style=for-the-badge&labelColor=212121">
   </a>
@@ -31,7 +25,7 @@ MUSUBiiは日本語サイトのインブラウザデザインを想定したシ�
 
 _「腹が減ってはコードが書けぬ」_
 
-Web デザインの腹ごなしに、CSS フレームワーク「MUSUBii（むすびー）」をどうぞ。MUSUBii は、日本語サイトのデザイン・コーディングを元気づけます。
+Web デザインの腹ごなしに、CSS フレームワーク「MUSUBii（むすびー）」をどうぞ。MUSUBii は、日本語サイトのデザイン・コーディングを元気づける薄味のレスポンシブ対応 CSS フレームワークです。
 
 - OOCSS を応用したラフな設計
 - 日本語フォントの利用を想定
@@ -72,20 +66,14 @@ CSS の単位は em と px を採用。エレメントの大きさをフォン�
 
 ### File size
 
-出力される [CSS ファイル](https://github.com/qrac/musubii/blob/master/dist/musubii.min.css) の容量は [Bootstrap](https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap.min.css)・[Bulma](https://github.com/jgthms/bulma/blob/master/css/bulma.min.css) の半分以下で、72KB 程度です。
+出力される [CSS ファイル](https://github.com/qrac/musubii/blob/master/dist/musubii.min.css) の容量は [Bootstrap](https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap.min.css)・[Bulma](https://github.com/jgthms/bulma/blob/master/css/bulma.min.css) の半分以下で、82KB 程度です。
 
 ## Install
-
-npm インストールからの SCSS 利用を想定しています。
 
 - [musubii - npm](https://www.npmjs.com/package/musubii)
 
 ```
 npm install musubii
-```
-
-```
-yarn add musubii
 ```
 
 ## Support
