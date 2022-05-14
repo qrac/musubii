@@ -1,8 +1,0 @@
-{
-  "mixins": [
-    {
-      "name": "placeholder",
-      "parameters": []
-    }
-  ]
-}

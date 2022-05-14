@@ -1,8 +1,0 @@
-{
-  "mixins": [
-    {
-      "name": "musubii-style-reset",
-      "parameters": []
-    }
-  ]
-}
