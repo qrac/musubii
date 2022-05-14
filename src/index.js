@@ -187,4 +187,6 @@ await Promise.all([
   buildCode(dataLightCode, "./dist/theme-data-light.min.css", true),
   buildCode(dataDarkCode, "./dist/theme-data-dark.css", false),
   buildCode(dataDarkCode, "./dist/theme-data-dark.min.css", true),
+  fs.outputFile("./dist/_musubii.scss", plainCode),
+  fs.outputFile("./dist/_configs.scss", configCode),
 ])
