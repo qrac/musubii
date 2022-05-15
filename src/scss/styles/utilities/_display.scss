@@ -62,6 +62,21 @@ $modifier-display-desktop-only-inline: "\.is-desktop-only-inline" !default;
 $modifier-display-desktop-only-inline-block: "\.is-desktop-only-inline-block" !default;
 $modifier-display-desktop-only-none: "\.is-desktop-only-none" !default;
 
+$modifier-display-mobile-fablet-block: "\.is-mobile-fablet-block" !default;
+$modifier-display-mobile-fablet-inline: "\.is-mobile-fablet-inline" !default;
+$modifier-display-mobile-fablet-inline-block: "\.is-mobile-fablet-inline-block" !default;
+$modifier-display-mobile-fablet-none: "\.is-mobile-fablet-none" !default;
+
+$modifier-display-mobile-tablet-block: "\.is-mobile-tablet-block" !default;
+$modifier-display-mobile-tablet-inline: "\.is-mobile-tablet-inline" !default;
+$modifier-display-mobile-tablet-inline-block: "\.is-mobile-tablet-inline-block" !default;
+$modifier-display-mobile-tablet-none: "\.is-mobile-tablet-none" !default;
+
+$modifier-display-mobile-desktop-block: "\.is-mobile-desktop-block" !default;
+$modifier-display-mobile-desktop-inline: "\.is-mobile-desktop-inline" !default;
+$modifier-display-mobile-desktop-inline-block: "\.is-mobile-desktop-inline-block" !default;
+$modifier-display-mobile-desktop-none: "\.is-mobile-desktop-none" !default;
+
 $modifier-display-landscape-block: "\.is-landscape-block" !default;
 $modifier-display-landscape-inline: "\.is-landscape-inline" !default;
 $modifier-display-landscape-inline-block: "\.is-landscape-inline-block" !default;
@@ -345,6 +360,57 @@ $display-important: if(
         @include musubii-style-display-inline-block();
       }
       #{$modifier-display-desktop-only-none} {
+        @include musubii-style-display-none();
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Display Combination
+//----------------------------------------------------
+
+@include generate-style($option-generate-style-display) {
+  @if $option-add-style-display-combination == true {
+    @include mobile-fablet() {
+      #{$modifier-display-mobile-fablet-block} {
+        @include musubii-style-display-block();
+      }
+      #{$modifier-display-mobile-fablet-inline} {
+        @include musubii-style-display-inline();
+      }
+      #{$modifier-display-mobile-fablet-inline-block} {
+        @include musubii-style-display-inline-block();
+      }
+      #{$modifier-display-mobile-fablet-none} {
+        @include musubii-style-display-none();
+      }
+    }
+    @include mobile-tablet() {
+      #{$modifier-display-mobile-tablet-block} {
+        @include musubii-style-display-block();
+      }
+      #{$modifier-display-mobile-tablet-inline} {
+        @include musubii-style-display-inline();
+      }
+      #{$modifier-display-mobile-tablet-inline-block} {
+        @include musubii-style-display-inline-block();
+      }
+      #{$modifier-display-mobile-tablet-none} {
+        @include musubii-style-display-none();
+      }
+    }
+    @include mobile-desktop() {
+      #{$modifier-display-mobile-desktop-block} {
+        @include musubii-style-display-block();
+      }
+      #{$modifier-display-mobile-desktop-inline} {
+        @include musubii-style-display-inline();
+      }
+      #{$modifier-display-mobile-desktop-inline-block} {
+        @include musubii-style-display-inline-block();
+      }
+      #{$modifier-display-mobile-desktop-none} {
         @include musubii-style-display-none();
       }
     }

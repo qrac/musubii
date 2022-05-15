@@ -8,20 +8,28 @@
 
 // Modifiers
 $modifier-flex: "\.is" !default;
+
 $modifier-flex-mobile: "\.is-mobile" !default;
 $modifier-flex-fablet: "\.is-fablet" !default;
 $modifier-flex-tablet: "\.is-tablet" !default;
 $modifier-flex-desktop: "\.is-desktop" !default;
 $modifier-flex-wide: "\.is-wide" !default;
+
 $modifier-flex-iphone5-only: "\.is-iphone5-only" !default;
 $modifier-flex-mobile-only: "\.is-mobile-only" !default;
 $modifier-flex-fablet-only: "\.is-fablet-only" !default;
 $modifier-flex-tablet-only: "\.is-mobile-only" !default;
 $modifier-flex-desktop-only: "\.is-desktop-only" !default;
+
+$modifier-flex-mobile-fablet: "\.is-mobile-fablet" !default;
+$modifier-flex-mobile-tablet: "\.is-mobile-tablet" !default;
+$modifier-flex-mobile-desktop: "\.is-mobile-desktop" !default;
+
 $modifier-flex-landscape: "\.is-landscape" !default;
 $modifier-flex-landscape-all: "\.is-landscape-all" !default;
 $modifier-flex-portrait: "\.is-portrait" !default;
 $modifier-flex-portrait-all: "\.is-portrait-all" !default;
+
 $modifier-flex-chrome: "\.is-chrome" !default;
 $modifier-flex-firefox: "\.is-firefox" !default;
 $modifier-flex-edge: "\.is-edge" !default;
@@ -299,6 +307,63 @@ $flex-important: if($option-important-flex == true, !important, null) !default;
         @include musubii-style-flex-full();
       }
       #{$modifier-flex-desktop-only}#{$suffix-flex-auto} {
+        @include musubii-style-flex-auto();
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Flex Combination
+//----------------------------------------------------
+
+@include generate-style($option-generate-style-flex) {
+  @if $option-add-style-flex-combination == true {
+    @include mobile-fablet() {
+      #{$modifier-flex-mobile-fablet}#{$suffix-flex-grow} {
+        @include musubii-style-flex-grow();
+      }
+      @for $i from 1 through $flex-split {
+        #{$modifier-flex-mobile-fablet}#{$suffix-flex-pipe}#{$i} {
+          @include musubii-style-flex-split($i);
+        }
+      }
+      #{$modifier-flex-mobile-fablet}#{$suffix-flex-full} {
+        @include musubii-style-flex-full();
+      }
+      #{$modifier-flex-mobile-fablet}#{$suffix-flex-auto} {
+        @include musubii-style-flex-auto();
+      }
+    }
+    @include mobile-tablet() {
+      #{$modifier-flex-mobile-tablet}#{$suffix-flex-grow} {
+        @include musubii-style-flex-grow();
+      }
+      @for $i from 1 through $flex-split {
+        #{$modifier-flex-mobile-tablet}#{$suffix-flex-pipe}#{$i} {
+          @include musubii-style-flex-split($i);
+        }
+      }
+      #{$modifier-flex-mobile-tablet}#{$suffix-flex-full} {
+        @include musubii-style-flex-full();
+      }
+      #{$modifier-flex-mobile-tablet}#{$suffix-flex-auto} {
+        @include musubii-style-flex-auto();
+      }
+    }
+    @include mobile-desktop() {
+      #{$modifier-flex-mobile-desktop}#{$suffix-flex-grow} {
+        @include musubii-style-flex-grow();
+      }
+      @for $i from 1 through $flex-split {
+        #{$modifier-flex-mobile-desktop}#{$suffix-flex-pipe}#{$i} {
+          @include musubii-style-flex-split($i);
+        }
+      }
+      #{$modifier-flex-mobile-desktop}#{$suffix-flex-full} {
+        @include musubii-style-flex-full();
+      }
+      #{$modifier-flex-mobile-desktop}#{$suffix-flex-auto} {
         @include musubii-style-flex-auto();
       }
     }

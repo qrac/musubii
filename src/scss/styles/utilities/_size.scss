@@ -95,6 +95,30 @@ $modifier-size-desktop-only-sm: "\.is-desktop-only-sm" !default;
 $modifier-size-desktop-only-xs: "\.is-desktop-only-xs" !default;
 $modifier-size-desktop-only-xxs: "\.is-desktop-only-xxs" !default;
 
+$modifier-size-mobile-fablet-xxl: "\.is-mobile-fablet-xxl" !default;
+$modifier-size-mobile-fablet-xl: "\.is-mobile-fablet-xl" !default;
+$modifier-size-mobile-fablet-lg: "\.is-mobile-fablet-lg" !default;
+$modifier-size-mobile-fablet-md: "\.is-mobile-fablet-md" !default;
+$modifier-size-mobile-fablet-sm: "\.is-mobile-fablet-sm" !default;
+$modifier-size-mobile-fablet-xs: "\.is-mobile-fablet-xs" !default;
+$modifier-size-mobile-fablet-xxs: "\.is-mobile-fablet-xxs" !default;
+
+$modifier-size-mobile-tablet-xxl: "\.is-mobile-tablet-xxl" !default;
+$modifier-size-mobile-tablet-xl: "\.is-mobile-tablet-xl" !default;
+$modifier-size-mobile-tablet-lg: "\.is-mobile-tablet-lg" !default;
+$modifier-size-mobile-tablet-md: "\.is-mobile-tablet-md" !default;
+$modifier-size-mobile-tablet-sm: "\.is-mobile-tablet-sm" !default;
+$modifier-size-mobile-tablet-xs: "\.is-mobile-tablet-xs" !default;
+$modifier-size-mobile-tablet-xxs: "\.is-mobile-tablet-xxs" !default;
+
+$modifier-size-mobile-desktop-xxl: "\.is-mobile-desktop-xxl" !default;
+$modifier-size-mobile-desktop-xl: "\.is-mobile-desktop-xl" !default;
+$modifier-size-mobile-desktop-lg: "\.is-mobile-desktop-lg" !default;
+$modifier-size-mobile-desktop-md: "\.is-mobile-desktop-md" !default;
+$modifier-size-mobile-desktop-sm: "\.is-mobile-desktop-sm" !default;
+$modifier-size-mobile-desktop-xs: "\.is-mobile-desktop-xs" !default;
+$modifier-size-mobile-desktop-xxs: "\.is-mobile-desktop-xxs" !default;
+
 $modifier-size-landscape-xxl: "\.is-landscape-xxl" !default;
 $modifier-size-landscape-xl: "\.is-landscape-xl" !default;
 $modifier-size-landscape-lg: "\.is-landscape-lg" !default;
@@ -512,6 +536,84 @@ $size-important: if($option-important-size == true, !important, null) !default;
         @include musubii-style-size-xs();
       }
       #{$modifier-size-desktop-only-xxs} {
+        @include musubii-style-size-xxs();
+      }
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Size Combination
+//----------------------------------------------------
+
+@include generate-style($option-generate-style-size) {
+  @if $option-add-style-size-combination == true {
+    @include mobile-fablet() {
+      #{$modifier-size-mobile-fablet-xxl} {
+        @include musubii-style-size-xxl();
+      }
+      #{$modifier-size-mobile-fablet-xl} {
+        @include musubii-style-size-xl();
+      }
+      #{$modifier-size-mobile-fablet-lg} {
+        @include musubii-style-size-lg();
+      }
+      #{$modifier-size-mobile-fablet-md} {
+        @include musubii-style-size-md();
+      }
+      #{$modifier-size-mobile-fablet-sm} {
+        @include musubii-style-size-sm();
+      }
+      #{$modifier-size-mobile-fablet-xs} {
+        @include musubii-style-size-xs();
+      }
+      #{$modifier-size-mobile-fablet-xxs} {
+        @include musubii-style-size-xxs();
+      }
+    }
+    @include mobile-tablet() {
+      #{$modifier-size-mobile-tablet-xxl} {
+        @include musubii-style-size-xxl();
+      }
+      #{$modifier-size-mobile-tablet-xl} {
+        @include musubii-style-size-xl();
+      }
+      #{$modifier-size-mobile-tablet-lg} {
+        @include musubii-style-size-lg();
+      }
+      #{$modifier-size-mobile-tablet-md} {
+        @include musubii-style-size-md();
+      }
+      #{$modifier-size-mobile-tablet-sm} {
+        @include musubii-style-size-sm();
+      }
+      #{$modifier-size-mobile-tablet-xs} {
+        @include musubii-style-size-xs();
+      }
+      #{$modifier-size-mobile-tablet-xxs} {
+        @include musubii-style-size-xxs();
+      }
+    }
+    @include mobile-desktop() {
+      #{$modifier-size-mobile-desktop-xxl} {
+        @include musubii-style-size-xxl();
+      }
+      #{$modifier-size-mobile-desktop-xl} {
+        @include musubii-style-size-xl();
+      }
+      #{$modifier-size-mobile-desktop-lg} {
+        @include musubii-style-size-lg();
+      }
+      #{$modifier-size-mobile-desktop-md} {
+        @include musubii-style-size-md();
+      }
+      #{$modifier-size-mobile-desktop-sm} {
+        @include musubii-style-size-sm();
+      }
+      #{$modifier-size-mobile-desktop-xs} {
+        @include musubii-style-size-xs();
+      }
+      #{$modifier-size-mobile-desktop-xxs} {
         @include musubii-style-size-xxs();
       }
     }
