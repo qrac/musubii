@@ -63,7 +63,9 @@ $card-radius-xxs: $radius-xxs !default;
 @mixin musubii-style-card() {
   position: relative;
   display: block;
-  overflow: hidden;
+  @if $option-add-style-card-overflow-hidden == true {
+    overflow: hidden;
+  }
 }
 
 @mixin musubii-style-card-bg-light() {
