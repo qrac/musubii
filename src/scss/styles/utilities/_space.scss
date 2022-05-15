@@ -52,6 +52,24 @@ $modifier-space-left-sm: "\.is-space-left-sm" !default;
 $modifier-space-left-xs: "\.is-space-left-xs" !default;
 $modifier-space-left-xxs: "\.is-space-left-xxs" !default;
 
+$modifier-space-horizontal: "\.is-space-horizontal" !default;
+$modifier-space-horizontal-xxl: "\.is-space-horizontal-xxl" !default;
+$modifier-space-horizontal-xl: "\.is-space-horizontal-xl" !default;
+$modifier-space-horizontal-lg: "\.is-space-horizontal-lg" !default;
+$modifier-space-horizontal-md: "\.is-space-horizontal-md" !default;
+$modifier-space-horizontal-sm: "\.is-space-horizontal-sm" !default;
+$modifier-space-horizontal-xs: "\.is-space-horizontal-xs" !default;
+$modifier-space-horizontal-xxs: "\.is-space-horizontal-xxs" !default;
+
+$modifier-space-vertical: "\.is-space-vertical" !default;
+$modifier-space-vertical-xxl: "\.is-space-vertical-xxl" !default;
+$modifier-space-vertical-xl: "\.is-space-vertical-xl" !default;
+$modifier-space-vertical-lg: "\.is-space-vertical-lg" !default;
+$modifier-space-vertical-md: "\.is-space-vertical-md" !default;
+$modifier-space-vertical-sm: "\.is-space-vertical-sm" !default;
+$modifier-space-vertical-xs: "\.is-space-vertical-xs" !default;
+$modifier-space-vertical-xxs: "\.is-space-vertical-xxs" !default;
+
 // Space Size
 $space-size-xxl: $meter-xxl !default;
 $space-size-xl: $meter-xl !default;
@@ -247,6 +265,82 @@ $space-important: if(
     }
     #{$modifier-space-left-xxs} {
       @include musubii-style-space-left($space-size-xxs);
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Space Horizontal
+//----------------------------------------------------
+
+@mixin musubii-style-space-horizontal($space-size) {
+  margin-left: -$space-size $space-important;
+  > * {
+    margin-left: $space-size $space-important;
+  }
+}
+
+@include generate-style($option-generate-style-space) {
+  @if $option-add-style-space-way == true {
+    #{$modifier-space-horizontal-xxl} {
+      @include musubii-style-space-horizontal($space-size-xxl);
+    }
+    #{$modifier-space-horizontal-xl} {
+      @include musubii-style-space-horizontal($space-size-xl);
+    }
+    #{$modifier-space-horizontal-lg} {
+      @include musubii-style-space-horizontal($space-size-lg);
+    }
+    #{$modifier-space-horizontal},
+    #{$modifier-space-horizontal-md} {
+      @include musubii-style-space-horizontal($space-size-md);
+    }
+    #{$modifier-space-horizontal-sm} {
+      @include musubii-style-space-horizontal($space-size-sm);
+    }
+    #{$modifier-space-horizontal-xs} {
+      @include musubii-style-space-horizontal($space-size-xs);
+    }
+    #{$modifier-space-horizontal-xxs} {
+      @include musubii-style-space-horizontal($space-size-xxs);
+    }
+  }
+}
+
+//----------------------------------------------------
+// / Style - Space Vertical
+//----------------------------------------------------
+
+@mixin musubii-style-space-vertical($space-size) {
+  margin-bottom: -$space-size $space-important;
+  > * {
+    margin-bottom: $space-size $space-important;
+  }
+}
+
+@include generate-style($option-generate-style-space) {
+  @if $option-add-style-space-way == true {
+    #{$modifier-space-vertical-xxl} {
+      @include musubii-style-space-vertical($space-size-xxl);
+    }
+    #{$modifier-space-vertical-xl} {
+      @include musubii-style-space-vertical($space-size-xl);
+    }
+    #{$modifier-space-vertical-lg} {
+      @include musubii-style-space-vertical($space-size-lg);
+    }
+    #{$modifier-space-vertical},
+    #{$modifier-space-vertical-md} {
+      @include musubii-style-space-vertical($space-size-md);
+    }
+    #{$modifier-space-vertical-sm} {
+      @include musubii-style-space-vertical($space-size-sm);
+    }
+    #{$modifier-space-vertical-xs} {
+      @include musubii-style-space-vertical($space-size-xs);
+    }
+    #{$modifier-space-vertical-xxs} {
+      @include musubii-style-space-vertical($space-size-xxs);
     }
   }
 }
