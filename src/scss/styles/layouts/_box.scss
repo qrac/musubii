@@ -284,6 +284,9 @@ $box-angle-border-color: $convert-border-1 !default;
 }
 
 @mixin musubii-style-box-angle-right() {
+  @if $option-add-style-box-angle-padding == true {
+    padding-right: $box-angle-size * 3.5;
+  }
   &:after {
     right: $box-angle-size * 1.5;
     transform: translateY(-50%) rotate(45deg);
@@ -291,6 +294,9 @@ $box-angle-border-color: $convert-border-1 !default;
 }
 
 @mixin musubii-style-box-angle-left() {
+  @if $option-add-style-box-angle-padding == true {
+    padding-left: $box-angle-size * 3.5;
+  }
   &:after {
     left: $box-angle-size * 1.5;
     transform: translateY(-50%) rotate(-135deg);
