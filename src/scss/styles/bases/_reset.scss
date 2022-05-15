@@ -31,8 +31,10 @@
   }
   body {
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @if $option-add-style-reset-font-smoothing == true {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
   }
   header,
   footer,
