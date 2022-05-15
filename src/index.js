@@ -1,4 +1,5 @@
 import fs from "fs-extra"
+import path from "path"
 import sass from "sass"
 import postcss from "postcss"
 import autoprefixer from "autoprefixer"
@@ -91,9 +92,15 @@ function concatCodeObjects(objects) {
 async function getCodeObjects(paths) {
   const configObects = []
   await Promise.all(
-    paths.map(async (path, index) => {
-      const code = await fs.readFile(path, "utf8")
-      return configObects.push({ id: index, path: path, code: code })
+    paths.map(async (filePath, index) => {
+      const name = path.parse(filePath).name.replace(/^_/, "")
+      const code = await fs.readFile(filePath, "utf8")
+      return configObects.push({
+        id: index,
+        name: name,
+        path: filePath,
+        code: code,
+      })
     })
   )
   const sortedObjects = sortById(configObects)
@@ -119,7 +126,7 @@ function fixSass(code) {
   return fixedCode
 }
 
-async function buildCode(code, output, minify) {
+async function buildCss(code, output, minify) {
   const sassResult = sass.compileString(code, {
     outputStyle: "expanded",
   }).css
@@ -130,6 +137,11 @@ async function buildCode(code, output, minify) {
   ]).process(sassResult, { from: undefined })
   const rerultStr = [header, postcssResult].join("\n\n")
   const result = minify ? new CleanCSS().minify(rerultStr).styles : rerultStr
+  await fs.outputFile(output, result)
+}
+
+async function buildScss(code, output) {
+  const result = code
   await fs.outputFile(output, result)
 }
 
@@ -171,22 +183,22 @@ const dataDarkArray = [useVar, configCode, rootDarkCode]
 const dataDarkCode = fixSass(dataDarkArray.join("\n\n"))
 
 await Promise.all([
-  buildCode(plainCode, "./dist/musubii.css", false),
-  buildCode(plainCode, "./dist/musubii.min.css", true),
-  buildCode(cssvarCode, "./dist/musubii-cssvar.css", false),
-  buildCode(cssvarCode, "./dist/musubii-cssvar.min.css", true),
-  buildCode(defaultLightCode, "./dist/theme-default-light.css", false),
-  buildCode(defaultLightCode, "./dist/theme-default-light.min.css", true),
-  buildCode(defaultDarkCode, "./dist/theme-default-dark.css", false),
-  buildCode(defaultDarkCode, "./dist/theme-default-dark.min.css", true),
-  buildCode(mediaLightCode, "./dist/theme-media-light.css", false),
-  buildCode(mediaLightCode, "./dist/theme-media-light.min.css", true),
-  buildCode(mediaDarkCode, "./dist/theme-media-dark.css", false),
-  buildCode(mediaDarkCode, "./dist/theme-media-dark.min.css", true),
-  buildCode(dataLightCode, "./dist/theme-data-light.css", false),
-  buildCode(dataLightCode, "./dist/theme-data-light.min.css", true),
-  buildCode(dataDarkCode, "./dist/theme-data-dark.css", false),
-  buildCode(dataDarkCode, "./dist/theme-data-dark.min.css", true),
-  fs.outputFile("./dist/_musubii.scss", plainCode),
-  fs.outputFile("./dist/_configs.scss", configCode),
+  buildCss(plainCode, "./dist/musubii.css", false),
+  buildCss(plainCode, "./dist/musubii.min.css", true),
+  buildCss(cssvarCode, "./dist/css/musubii-cssvar.css", false),
+  buildCss(cssvarCode, "./dist/css/musubii-cssvar.min.css", true),
+  buildCss(defaultLightCode, "./dist/css/theme-default-light.css", false),
+  buildCss(defaultLightCode, "./dist/css/theme-default-light.min.css", true),
+  buildCss(defaultDarkCode, "./dist/css/theme-default-dark.css", false),
+  buildCss(defaultDarkCode, "./dist/css/theme-default-dark.min.css", true),
+  buildCss(mediaLightCode, "./dist/css/theme-media-light.css", false),
+  buildCss(mediaLightCode, "./dist/css/theme-media-light.min.css", true),
+  buildCss(mediaDarkCode, "./dist/css/theme-media-dark.css", false),
+  buildCss(mediaDarkCode, "./dist/css/theme-media-dark.min.css", true),
+  buildCss(dataLightCode, "./dist/css/theme-data-light.css", false),
+  buildCss(dataLightCode, "./dist/css/theme-data-light.min.css", true),
+  buildCss(dataDarkCode, "./dist/css/theme-data-dark.css", false),
+  buildCss(dataDarkCode, "./dist/css/theme-data-dark.min.css", true),
+  buildScss(plainCode, "./dist/scss/_musubii.scss"),
+  buildScss(plainCode, "./dist/scss/_configs.scss"),
 ])
