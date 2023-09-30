@@ -44,7 +44,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
-    "vite": "^4.4.9",
-    "vite-plugin-banner": "^0.7.1"
+    "vite": "^4.4.9"
   }
 }
