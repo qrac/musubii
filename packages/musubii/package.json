@@ -31,5 +31,10 @@
     "name": "QRANOKO",
     "url": "https://qranoko.jp"
   },
-  "scripts": {}
+  "scripts": {
+    "build": "npm run clean && npm run build:src",
+    "build:src": "vite build",
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run build"
+  }
 }
