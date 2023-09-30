@@ -1,8 +1,0 @@
-//----------------------------------------------------
-// Mixins: Safe Area
-//----------------------------------------------------
-
-@mixin safe-area-padding($way) {
-  padding-#{$way}: constant(safe-area-inset-#{$way});
-  padding-#{$way}: env(safe-area-inset-#{$way});
-}
