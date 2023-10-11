@@ -1,0 +1,169 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+html {
+  line-height: 1.5;
+  tab-size: 4;
+  word-break: break-word;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  line-height: inherit;
+  -webkit-print-color-adjust: exact;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+address {
+  font-style: normal;
+}
+
+summary {
+  cursor: pointer;
+  display: list-item;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-color: inherit;
+  border-collapse: collapse;
+  text-indent: 0;
+}
+
+hr {
+  border-top-width: 1px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  line-height: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: button;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+:disabled {
+  cursor: default;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+}
+
+textarea {
+  resize: vertical;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+[hidden] {
+  display: none;
+}

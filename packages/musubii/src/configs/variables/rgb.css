@@ -1,0 +1,270 @@
+:root {
+  --rgb-slate-50: 248, 250, 252; /* tailwind slate-50 #f8fafc */
+  --rgb-slate-100: 241, 245, 249; /* tailwind slate-100 #f1f5f9 */
+  --rgb-slate-200: 226, 232, 240; /* tailwind slate-200 #e2e8f0 */
+  --rgb-slate-300: 203, 213, 225; /* tailwind slate-300 #cbd5e1 */
+  --rgb-slate-400: 148, 163, 184; /* tailwind slate-400 #94a3b8 */
+  --rgb-slate-500: 100, 116, 139; /* tailwind slate-500 #64748b */
+  --rgb-slate-600: 71, 85, 105; /* tailwind slate-600 #475569 */
+  --rgb-slate-700: 51, 65, 85; /* tailwind slate-700 #334155 */
+  --rgb-slate-800: 30, 41, 59; /* tailwind slate-800 #1e293b */
+  --rgb-slate-900: 15, 23, 42; /* tailwind slate-900 #0f172a */
+  --rgb-slate-950: 2, 6, 23; /* tailwind slate-950 #020617 */
+
+  --rgb-gray-50: 249, 250, 251; /* tailwind gray-50 #f9fafb */
+  --rgb-gray-100: 243, 244, 246; /* tailwind gray-100 #f3f4f6 */
+  --rgb-gray-200: 229, 231, 235; /* tailwind gray-200 #e5e7eb */
+  --rgb-gray-300: 209, 213, 219; /* tailwind gray-300 #d1d5db */
+  --rgb-gray-400: 156, 163, 175; /* tailwind gray-400 #9ca3af */
+  --rgb-gray-500: 107, 114, 128; /* tailwind gray-500 #6b7280 */
+  --rgb-gray-600: 75, 85, 99; /* tailwind gray-600 #4b5563 */
+  --rgb-gray-700: 55, 65, 81; /* tailwind gray-700 #374151 */
+  --rgb-gray-800: 31, 41, 55; /* tailwind gray-800 #1f2937 */
+  --rgb-gray-900: 17, 24, 39; /* tailwind gray-900 #111827 */
+  --rgb-gray-950: 3, 7, 18; /* tailwind gray-950 #030712 */
+
+  --rgb-zinc-50: 250, 250, 250; /* tailwind zinc-50 #fafafa */
+  --rgb-zinc-100: 244, 244, 245; /* tailwind zinc-100 #f4f4f5 */
+  --rgb-zinc-200: 228, 228, 231; /* tailwind zinc-200 #e4e4e7 */
+  --rgb-zinc-300: 212, 212, 216; /* tailwind zinc-300 #d4d4d8 */
+  --rgb-zinc-400: 161, 161, 170; /* tailwind zinc-400 #a1a1aa */
+  --rgb-zinc-500: 113, 113, 122; /* tailwind zinc-500 #71717a */
+  --rgb-zinc-600: 82, 82, 91; /* tailwind zinc-600 #52525b */
+  --rgb-zinc-700: 63, 63, 70; /* tailwind zinc-700 #3f3f46 */
+  --rgb-zinc-800: 39, 39, 42; /* tailwind zinc-800 #27272a */
+  --rgb-zinc-900: 24, 24, 27; /* tailwind zinc-900 #18181b */
+  --rgb-zinc-950: 9, 9, 11; /* tailwind zinc-950 #09090b */
+
+  --rgb-neutral-50: 250, 250, 250; /* tailwind neutral-50 #fafafa */
+  --rgb-neutral-100: 245, 245, 245; /* tailwind neutral-100 #f5f5f5 */
+  --rgb-neutral-200: 229, 229, 229; /* tailwind neutral-200 #e5e5e5 */
+  --rgb-neutral-300: 212, 212, 212; /* tailwind neutral-300 #d4d4d4 */
+  --rgb-neutral-400: 163, 163, 163; /* tailwind neutral-400 #a3a3a3 */
+  --rgb-neutral-500: 115, 115, 115; /* tailwind neutral-500 #737373 */
+  --rgb-neutral-600: 82, 82, 82; /* tailwind neutral-600 #525252 */
+  --rgb-neutral-700: 64, 64, 64; /* tailwind neutral-700 #404040 */
+  --rgb-neutral-800: 38, 38, 38; /* tailwind neutral-800 #262626 */
+  --rgb-neutral-900: 23, 23, 23; /* tailwind neutral-900 #171717 */
+  --rgb-neutral-950: 10, 10, 10; /* tailwind neutral-950 #0a0a0a */
+
+  --rgb-stone-50: 250, 250, 249; /* tailwind stone-50 #fafaf9 */
+  --rgb-stone-100: 245, 245, 244; /* tailwind stone-100 #f5f5f4 */
+  --rgb-stone-200: 231, 229, 228; /* tailwind stone-200 #e7e5e4 */
+  --rgb-stone-300: 214, 211, 209; /* tailwind stone-300 #d6d3d1 */
+  --rgb-stone-400: 168, 162, 158; /* tailwind stone-400 #a8a29e */
+  --rgb-stone-500: 120, 113, 108; /* tailwind stone-500 #78716c */
+  --rgb-stone-600: 87, 83, 78; /* tailwind stone-600 #57534e */
+  --rgb-stone-700: 68, 64, 60; /* tailwind stone-700 #44403c */
+  --rgb-stone-800: 41, 37, 36; /* tailwind stone-800 #292524 */
+  --rgb-stone-900: 28, 25, 23; /* tailwind stone-900 #1c1917 */
+  --rgb-stone-950: 12, 10, 9; /* tailwind stone-950 #0c0a09 */
+
+  --rgb-red-50: 254, 242, 242; /* tailwind red-50 #fef2f2 */
+  --rgb-red-100: 254, 226, 226; /* tailwind red-100 #fee2e2 */
+  --rgb-red-200: 254, 202, 202; /* tailwind red-200 #fecaca */
+  --rgb-red-300: 252, 165, 165; /* tailwind red-300 #fca5a5 */
+  --rgb-red-400: 248, 113, 113; /* tailwind red-400 #f87171 */
+  --rgb-red-500: 239, 68, 68; /* tailwind red-500 #ef4444 */
+  --rgb-red-600: 220, 38, 38; /* tailwind red-600 #dc2626 */
+  --rgb-red-700: 185, 28, 28; /* tailwind red-700 #b91c1c */
+  --rgb-red-800: 153, 27, 27; /* tailwind red-800 #991b1b */
+  --rgb-red-900: 127, 29, 29; /* tailwind red-900 #7f1d1d */
+  --rgb-red-950: 69, 10, 10; /* tailwind red-950 #450a0a */
+
+  --rgb-orange-50: 255, 247, 237; /* tailwind orange-50 #fff7ed */
+  --rgb-orange-100: 255, 237, 213; /* tailwind orange-100 #ffedd5 */
+  --rgb-orange-200: 254, 215, 170; /* tailwind orange-200 #fed7aa */
+  --rgb-orange-300: 253, 186, 116; /* tailwind orange-300 #fdba74 */
+  --rgb-orange-400: 251, 146, 60; /* tailwind orange-400 #fb923c */
+  --rgb-orange-500: 249, 115, 22; /* tailwind orange-500 #f97316 */
+  --rgb-orange-600: 234, 88, 12; /* tailwind orange-600 #ea580c */
+  --rgb-orange-700: 194, 65, 12; /* tailwind orange-700 #c2410c */
+  --rgb-orange-800: 154, 52, 18; /* tailwind orange-800 #9a3412 */
+  --rgb-orange-900: 124, 45, 18; /* tailwind orange-900 #7c2d12 */
+  --rgb-orange-950: 67, 20, 7; /* tailwind orange-950 #431407 */
+
+  --rgb-amber-50: 255, 251, 235; /* tailwind amber-50 #fffbeb */
+  --rgb-amber-100: 254, 243, 199; /* tailwind amber-100 #fef3c7 */
+  --rgb-amber-200: 253, 230, 138; /* tailwind amber-200 #fde68a */
+  --rgb-amber-300: 252, 211, 77; /* tailwind amber-300 #fcd34d */
+  --rgb-amber-400: 251, 191, 36; /* tailwind amber-400 #fbbf24 */
+  --rgb-amber-500: 245, 158, 11; /* tailwind amber-500 #f59e0b */
+  --rgb-amber-600: 217, 119, 6; /* tailwind amber-600 #d97706 */
+  --rgb-amber-700: 180, 83, 9; /* tailwind amber-700 #b45309 */
+  --rgb-amber-800: 146, 64, 14; /* tailwind amber-800 #92400e */
+  --rgb-amber-900: 120, 53, 15; /* tailwind amber-900 #78350f */
+  --rgb-amber-950: 69, 26, 3; /* tailwind amber-950 #451a03 */
+
+  --rgb-yellow-50: 254, 252, 232; /* tailwind yellow-50 #fefce8 */
+  --rgb-yellow-100: 254, 249, 195; /* tailwind yellow-100 #fef9c3 */
+  --rgb-yellow-200: 254, 240, 138; /* tailwind yellow-200 #fef08a */
+  --rgb-yellow-300: 253, 224, 71; /* tailwind yellow-300 #fde047 */
+  --rgb-yellow-400: 250, 204, 21; /* tailwind yellow-400 #facc15 */
+  --rgb-yellow-500: 234, 179, 8; /* tailwind yellow-500 #eab308 */
+  --rgb-yellow-600: 202, 138, 4; /* tailwind yellow-600 #ca8a04 */
+  --rgb-yellow-700: 161, 98, 7; /* tailwind yellow-700 #a16207 */
+  --rgb-yellow-800: 133, 77, 14; /* tailwind yellow-800 #854d0e */
+  --rgb-yellow-900: 113, 63, 18; /* tailwind yellow-900 #713f12 */
+  --rgb-yellow-950: 66, 32, 6; /* tailwind yellow-950 #422006 */
+
+  --rgb-lime-50: 247, 254, 231; /* tailwind lime-50 #f7fee7 */
+  --rgb-lime-100: 236, 252, 203; /* tailwind lime-100 #ecfccb */
+  --rgb-lime-200: 217, 249, 157; /* tailwind lime-200 #d9f99d */
+  --rgb-lime-300: 190, 242, 100; /* tailwind lime-300 #bef264 */
+  --rgb-lime-400: 163, 230, 53; /* tailwind lime-400 #a3e635 */
+  --rgb-lime-500: 132, 204, 22; /* tailwind lime-500 #84cc16 */
+  --rgb-lime-600: 101, 163, 13; /* tailwind lime-600 #65a30d */
+  --rgb-lime-700: 77, 124, 15; /* tailwind lime-700 #4d7c0f */
+  --rgb-lime-800: 63, 98, 18; /* tailwind lime-800 #3f6212 */
+  --rgb-lime-900: 54, 83, 20; /* tailwind lime-900 #365314 */
+  --rgb-lime-950: 26, 46, 5; /* tailwind lime-950 #1a2e05 */
+
+  --rgb-green-50: 240, 253, 244; /* tailwind green-50 #f0fdf4 */
+  --rgb-green-100: 220, 252, 231; /* tailwind green-100 #dcfce7 */
+  --rgb-green-200: 187, 247, 208; /* tailwind green-200 #bbf7d0 */
+  --rgb-green-300: 134, 239, 172; /* tailwind green-300 #86efac */
+  --rgb-green-400: 74, 222, 128; /* tailwind green-400 #4ade80 */
+  --rgb-green-500: 34, 197, 94; /* tailwind green-500 #22c55e */
+  --rgb-green-600: 22, 163, 74; /* tailwind green-600 #16a34a */
+  --rgb-green-700: 21, 128, 61; /* tailwind green-700 #15803d */
+  --rgb-green-800: 22, 101, 52; /* tailwind green-800 #166534 */
+  --rgb-green-900: 20, 83, 45; /* tailwind green-900 #14532d */
+  --rgb-green-950: 5, 46, 22; /* tailwind green-950 #052e16 */
+
+  --rgb-emerald-50: 236, 253, 245; /* tailwind emerald-50 #ecfdf5 */
+  --rgb-emerald-100: 209, 250, 229; /* tailwind emerald-100 #d1fae5 */
+  --rgb-emerald-200: 167, 243, 208; /* tailwind emerald-200 #a7f3d0 */
+  --rgb-emerald-300: 110, 231, 183; /* tailwind emerald-300 #6ee7b7 */
+  --rgb-emerald-400: 52, 211, 153; /* tailwind emerald-400 #34d399 */
+  --rgb-emerald-500: 16, 185, 129; /* tailwind emerald-500 #10b981 */
+  --rgb-emerald-600: 5, 150, 105; /* tailwind emerald-600 #059669 */
+  --rgb-emerald-700: 4, 120, 87; /* tailwind emerald-700 #047857 */
+  --rgb-emerald-800: 6, 95, 70; /* tailwind emerald-800 #065f46 */
+  --rgb-emerald-900: 6, 78, 59; /* tailwind emerald-900 #064e3b */
+  --rgb-emerald-950: 2, 44, 34; /* tailwind emerald-950 #022c22 */
+
+  --rgb-teal-50: 240, 253, 250; /* tailwind teal-50 #f0fdfa */
+  --rgb-teal-100: 204, 251, 241; /* tailwind teal-100 #ccfbf1 */
+  --rgb-teal-200: 153, 246, 228; /* tailwind teal-200 #99f6e4 */
+  --rgb-teal-300: 94, 234, 212; /* tailwind teal-300 #5eead4 */
+  --rgb-teal-400: 45, 212, 191; /* tailwind teal-400 #2dd4bf */
+  --rgb-teal-500: 20, 184, 166; /* tailwind teal-500 #14b8a6 */
+  --rgb-teal-600: 13, 148, 136; /* tailwind teal-600 #0d9488 */
+  --rgb-teal-700: 15, 118, 110; /* tailwind teal-700 #0f766e */
+  --rgb-teal-800: 17, 94, 89; /* tailwind teal-800 #115e59 */
+  --rgb-teal-900: 19, 78, 74; /* tailwind teal-900 #134e4a */
+  --rgb-teal-950: 4, 47, 46; /* tailwind teal-950 #042f2e */
+
+  --rgb-cyan-50: 236, 254, 255; /* tailwind cyan-50 #ecfeff */
+  --rgb-cyan-100: 207, 250, 254; /* tailwind cyan-100 #cffafe */
+  --rgb-cyan-200: 165, 243, 252; /* tailwind cyan-200 #a5f3fc */
+  --rgb-cyan-300: 103, 232, 249; /* tailwind cyan-300 #67e8f9 */
+  --rgb-cyan-400: 34, 211, 238; /* tailwind cyan-400 #22d3ee */
+  --rgb-cyan-500: 6, 182, 212; /* tailwind cyan-500 #06b6d4 */
+  --rgb-cyan-600: 8, 145, 178; /* tailwind cyan-600 #0891b2 */
+  --rgb-cyan-700: 14, 116, 144; /* tailwind cyan-700 #0e7490 */
+  --rgb-cyan-800: 21, 94, 117; /* tailwind cyan-800 #155e75 */
+  --rgb-cyan-900: 22, 78, 99; /* tailwind cyan-900 #164e63 */
+  --rgb-cyan-950: 8, 51, 68; /* tailwind cyan-950 #083344 */
+
+  --rgb-sky-50: 240, 249, 255; /* tailwind sky-50 #f0f9ff */
+  --rgb-sky-100: 224, 242, 254; /* tailwind sky-100 #e0f2fe */
+  --rgb-sky-200: 186, 230, 253; /* tailwind sky-200 #bae6fd */
+  --rgb-sky-300: 125, 211, 252; /* tailwind sky-300 #7dd3fc */
+  --rgb-sky-400: 56, 189, 248; /* tailwind sky-400 #38bdf8 */
+  --rgb-sky-500: 14, 165, 233; /* tailwind sky-500 #0ea5e9 */
+  --rgb-sky-600: 2, 132, 199; /* tailwind sky-600 #0284c7 */
+  --rgb-sky-700: 3, 105, 161; /* tailwind sky-700 #0369a1 */
+  --rgb-sky-800: 7, 89, 133; /* tailwind sky-800 #075985 */
+  --rgb-sky-900: 12, 74, 110; /* tailwind sky-900 #0c4a6e */
+  --rgb-sky-950: 8, 47, 73; /* tailwind sky-950 #082f49 */
+
+  --rgb-blue-50: 239, 246, 255; /* tailwind blue-50 #eff6ff */
+  --rgb-blue-100: 219, 234, 254; /* tailwind blue-100 #dbeafe */
+  --rgb-blue-200: 191, 219, 254; /* tailwind blue-200 #bfdbfe */
+  --rgb-blue-300: 147, 197, 253; /* tailwind blue-300 #93c5fd */
+  --rgb-blue-400: 96, 165, 250; /* tailwind blue-400 #60a5fa */
+  --rgb-blue-500: 59, 130, 246; /* tailwind blue-500 #3b82f6 */
+  --rgb-blue-600: 37, 99, 235; /* tailwind blue-600 #2563eb */
+  --rgb-blue-700: 29, 78, 216; /* tailwind blue-700 #1d4ed8 */
+  --rgb-blue-800: 30, 64, 175; /* tailwind blue-800 #1e40af */
+  --rgb-blue-900: 30, 58, 138; /* tailwind blue-900 #1e3a8a */
+  --rgb-blue-950: 23, 37, 84; /* tailwind blue-950 #172554 */
+
+  --rgb-indigo-50: 238, 242, 255; /* tailwind indigo-50 #eef2ff */
+  --rgb-indigo-100: 224, 231, 255; /* tailwind indigo-100 #e0e7ff */
+  --rgb-indigo-200: 199, 210, 254; /* tailwind indigo-200 #c7d2fe */
+  --rgb-indigo-300: 165, 180, 252; /* tailwind indigo-300 #a5b4fc */
+  --rgb-indigo-400: 129, 140, 248; /* tailwind indigo-400 #818cf8 */
+  --rgb-indigo-500: 99, 102, 241; /* tailwind indigo-500 #6366f1 */
+  --rgb-indigo-600: 79, 70, 229; /* tailwind indigo-600 #4f46e5 */
+  --rgb-indigo-700: 67, 56, 202; /* tailwind indigo-700 #4338ca */
+  --rgb-indigo-800: 55, 48, 163; /* tailwind indigo-800 #3730a3 */
+  --rgb-indigo-900: 49, 46, 129; /* tailwind indigo-900 #312e81 */
+  --rgb-indigo-950: 30, 27, 75; /* tailwind indigo-950 #1e1b4b */
+
+  --rgb-violet-50: 245, 243, 255; /* tailwind violet-50 #f5f3ff */
+  --rgb-violet-100: 237, 233, 254; /* tailwind violet-100 #ede9fe */
+  --rgb-violet-200: 221, 214, 254; /* tailwind violet-200 #ddd6fe */
+  --rgb-violet-300: 196, 181, 253; /* tailwind violet-300 #c4b5fd */
+  --rgb-violet-400: 167, 139, 250; /* tailwind violet-400 #a78bfa */
+  --rgb-violet-500: 139, 92, 246; /* tailwind violet-500 #8b5cf6 */
+  --rgb-violet-600: 124, 58, 237; /* tailwind violet-600 #7c3aed */
+  --rgb-violet-700: 109, 40, 217; /* tailwind violet-700 #6d28d9 */
+  --rgb-violet-800: 91, 33, 182; /* tailwind violet-800 #5b21b6 */
+  --rgb-violet-900: 76, 29, 149; /* tailwind violet-900 #4c1d95 */
+  --rgb-violet-950: 46, 16, 101; /* tailwind violet-950 #2e1065 */
+
+  --rgb-purple-50: 250, 245, 255; /* tailwind purple-50 #faf5ff */
+  --rgb-purple-100: 243, 232, 255; /* tailwind purple-100 #f3e8ff */
+  --rgb-purple-200: 233, 213, 255; /* tailwind purple-200 #e9d5ff */
+  --rgb-purple-300: 216, 180, 254; /* tailwind purple-300 #d8b4fe */
+  --rgb-purple-400: 192, 132, 252; /* tailwind purple-400 #c084fc */
+  --rgb-purple-500: 168, 85, 247; /* tailwind purple-500 #a855f7 */
+  --rgb-purple-600: 147, 51, 234; /* tailwind purple-600 #9333ea */
+  --rgb-purple-700: 126, 34, 206; /* tailwind purple-700 #7e22ce */
+  --rgb-purple-800: 107, 33, 168; /* tailwind purple-800 #6b21a8 */
+  --rgb-purple-900: 88, 28, 135; /* tailwind purple-900 #581c87 */
+  --rgb-purple-950: 59, 7, 100; /* tailwind purple-950 #3b0764 */
+
+  --rgb-fuchsia-50: 253, 244, 255; /* tailwind fuchsia-50 #fdf4ff */
+  --rgb-fuchsia-100: 250, 232, 255; /* tailwind fuchsia-100 #fae8ff */
+  --rgb-fuchsia-200: 245, 208, 254; /* tailwind fuchsia-200 #f5d0fe */
+  --rgb-fuchsia-300: 240, 171, 252; /* tailwind fuchsia-300 #f0abfc */
+  --rgb-fuchsia-400: 232, 121, 249; /* tailwind fuchsia-400 #e879f9 */
+  --rgb-fuchsia-500: 217, 70, 239; /* tailwind fuchsia-500 #d946ef */
+  --rgb-fuchsia-600: 192, 38, 211; /* tailwind fuchsia-600 #c026d3 */
+  --rgb-fuchsia-700: 162, 28, 175; /* tailwind fuchsia-700 #a21caf */
+  --rgb-fuchsia-800: 134, 25, 143; /* tailwind fuchsia-800 #86198f */
+  --rgb-fuchsia-900: 112, 26, 117; /* tailwind fuchsia-900 #701a75 */
+  --rgb-fuchsia-950: 74, 4, 78; /* tailwind fuchsia-950 #4a044e */
+
+  --rgb-pink-50: 253, 242, 248; /* tailwind pink-50 #fdf2f8 */
+  --rgb-pink-100: 252, 231, 243; /* tailwind pink-100 #fce7f3 */
+  --rgb-pink-200: 251, 207, 232; /* tailwind pink-200 #fbcfe8 */
+  --rgb-pink-300: 249, 168, 212; /* tailwind pink-300 #f9a8d4 */
+  --rgb-pink-400: 244, 114, 182; /* tailwind pink-400 #f472b6 */
+  --rgb-pink-500: 236, 72, 153; /* tailwind pink-500 #ec4899 */
+  --rgb-pink-600: 219, 39, 119; /* tailwind pink-600 #db2777 */
+  --rgb-pink-700: 190, 24, 93; /* tailwind pink-700 #be185d */
+  --rgb-pink-800: 157, 23, 77; /* tailwind pink-800 #9d174d */
+  --rgb-pink-900: 131, 24, 67; /* tailwind pink-900 #831843 */
+  --rgb-pink-950: 80, 7, 36; /* tailwind pink-950 #500724 */
+
+  --rgb-rose-50: 255, 241, 242; /* tailwind rose-50 #fff1f2 */
+  --rgb-rose-100: 255, 228, 230; /* tailwind rose-100 #ffe4e6 */
+  --rgb-rose-200: 254, 205, 211; /* tailwind rose-200 #fecdd3 */
+  --rgb-rose-300: 253, 164, 175; /* tailwind rose-300 #fda4af */
+  --rgb-rose-400: 251, 113, 133; /* tailwind rose-400 #fb7185 */
+  --rgb-rose-500: 244, 63, 94; /* tailwind rose-500 #f43f5e */
+  --rgb-rose-600: 225, 29, 72; /* tailwind rose-600 #e11d48 */
+  --rgb-rose-700: 190, 18, 60; /* tailwind rose-700 #be123c */
+  --rgb-rose-800: 159, 18, 57; /* tailwind rose-800 #9f1239 */
+  --rgb-rose-900: 136, 19, 55; /* tailwind rose-900 #881337 */
+  --rgb-rose-950: 76, 5, 25; /* tailwind rose-950 #4c0519 */
+}
+
+:root {
+  --rgb-white: 255, 255, 255; /* white #fff1f2 */
+  --rgb-black: 0, 0, 0; /* black #fff1f2 */
+}

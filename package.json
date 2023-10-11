@@ -18,10 +18,12 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "build": "npm run build:main",
-    "build:src": "npm run build:main-src",
+    "build": "npm run build:main && npm run build:react",
+    "build:src": "npm run build:main-src && npm run build:react-src",
     "build:main": "cd ./packages/musubii && npm run build",
     "build:main-src": "cd ./packages/musubii && npm run build:src",
+    "build:react": "cd ./packages/react-musubii && npm run build",
+    "build:react-src": "cd ./packages/react-musubii && npm run build:src",
     "play": "vite ./playground/_default",
     "up": "npx npm-check-updates --deep",
     "up:u": "npx npm-check-updates --deep -u",
@@ -40,10 +42,12 @@
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.8",
     "@vitejs/plugin-react": "^4.1.0",
+    "esbuild": "^0.19.4",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
+    "typescript": "^5.2.2",
     "vite": "^4.4.9"
   }
 }

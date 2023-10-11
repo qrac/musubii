@@ -1,0 +1,19 @@
+:root {
+  --theme-tx-1: var(--color-slate-700);
+  --theme-bg-1: var(--color-white);
+  --theme-bg-2: var(--color-slate-100);
+  --theme-bd-1: var(--color-slate-200);
+  --theme-bd-2: var(--color-slate-400);
+  --theme-lk: var(--color-sky-500);
+  --theme-lk-tx: var(--color-white);
+  --theme-placeholder: var(--color-slate-400);
+
+  --theme-primary: var(--color-sky-500);
+  --theme-primary-light: var(--color-sky-100);
+  --theme-secondary: var(--color-indigo-500);
+  --theme-secondary-light: var(--color-indigo-100);
+  --theme-success: var(--color-green-600);
+  --theme-success-light: var(--color-green-100);
+  --theme-danger: var(--color-red-600);
+  --theme-danger-light: var(--color-red-100);
+}
