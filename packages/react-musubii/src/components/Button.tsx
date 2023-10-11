@@ -36,6 +36,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const isButton = DOMElement === "button"
+  const isAnchor = DOMElement === "a"
   return (
     <DOMElement
       className={classNames(
@@ -45,7 +46,7 @@ export function Button({
         className && className
       )}
       type={isButton ? type : undefined}
-      href={!isButton ? href : undefined}
+      href={isAnchor ? href : undefined}
       disabled={isButton ? isDisabled : undefined}
       aria-disabled={!isButton ? isDisabled : undefined}
       {...props}
