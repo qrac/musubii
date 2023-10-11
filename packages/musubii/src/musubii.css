@@ -1,7 +1,7 @@
 @import "./configs/variables/color.css";
 @import "./configs/variables/rem.css";
 @import "./configs/variables/font.css";
-@import "./configs/themes/default.css";
+@import "./configs/themes/default-light.css";
 @import "./styles/bases/reset.css";
 @import "./styles/bases/html.css";
 @import "./styles/elements/button.css";

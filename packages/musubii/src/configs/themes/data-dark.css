@@ -1,0 +1,20 @@
+[data-theme="dark"] {
+  --theme-tx-1: var(--color-slate-200);
+  --theme-tx-2: var(--color-slate-400);
+  --theme-bg-1: var(--color-slate-900);
+  --theme-bg-2: var(--color-slate-800);
+  --theme-bd-1: var(--color-slate-700);
+  --theme-bd-2: var(--color-slate-600);
+  --theme-lk: var(--color-sky-400);
+  --theme-lk-tx: var(--color-slate-800);
+  --theme-placeholder: var(--color-slate-500);
+
+  --theme-primary: var(--color-sky-400);
+  --theme-primary-light: var(--color-sky-900);
+  --theme-secondary: var(--color-indigo-400);
+  --theme-secondary-light: var(--color-indigo-900);
+  --theme-success: var(--color-green-400);
+  --theme-success-light: var(--color-green-900);
+  --theme-danger: var(--color-red-400);
+  --theme-danger-light: var(--color-red-900);
+}

@@ -10,7 +10,7 @@ html {
 
 body {
   background-color: var(--theme-bg-1);
-  color: var(--theme-tx-1);
+  color: var(--theme-tx-2);
   font-size: var(--rem-16px);
 }
 
