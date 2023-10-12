@@ -18,3 +18,7 @@
   --theme-danger: var(--color-red-400);
   --theme-danger-light: var(--color-red-900);
 }
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}

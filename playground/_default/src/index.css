@@ -75,13 +75,13 @@
 .demo-labels {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 12px;
+  gap: 8px 16px;
 }
 
 .demo-label {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   color: var(--theme-tx-1);
 }
 
