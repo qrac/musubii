@@ -2,6 +2,7 @@
   min-height: 100vh;
   background-color: var(--theme-bg-1);
   color: var(--theme-tx-2);
+  transition: background-color 0.5s;
 }
 
 .demo-header {
