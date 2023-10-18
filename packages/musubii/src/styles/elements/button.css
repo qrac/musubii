@@ -133,5 +133,5 @@
 .button:where([aria-disabled="true"]),
 .button:where(.is-disabled) {
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0.5;
 }
