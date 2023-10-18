@@ -2,6 +2,6 @@
 @import "./configs/variables/rem.css";
 @import "./configs/variables/font.css";
 @import "./configs/themes/light/default.css";
-@import "./styles/bases/reset.css";
-@import "./styles/bases/html.css";
-@import "./styles/elements/button.css";
+@import "./styles/base/reset.css";
+@import "./styles/base/html.css";
+@import "./styles/components/button.css";

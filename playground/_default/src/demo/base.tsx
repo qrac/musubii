@@ -1,23 +1,23 @@
-export function DemoBases() {
+export function DemoBase() {
   return (
     <div className="demo-boxes">
-      <DemoBasesHeading />
-      <DemoBasesParagraph />
-      <DemoBasesAddress />
-      <DemoBasesDetails />
-      <DemoBasesCode />
-      <DemoBasesList />
-      <DemoBasesTable />
-      <DemoBasesHr />
-      <DemoBasesButton />
-      <DemoBasesForm />
-      <DemoBasesProgress />
-      <DemoBasesMedia />
+      <DemoBaseHeading />
+      <DemoBaseParagraph />
+      <DemoBaseAddress />
+      <DemoBaseDetails />
+      <DemoBaseCode />
+      <DemoBaseList />
+      <DemoBaseTable />
+      <DemoBaseHr />
+      <DemoBaseButton />
+      <DemoBaseForm />
+      <DemoBaseProgress />
+      <DemoBaseMedia />
     </div>
   )
 }
 
-function DemoBasesHeading() {
+function DemoBaseHeading() {
   return (
     <div className="demo-box">
       <h1>見出しh1</h1>
@@ -30,7 +30,7 @@ function DemoBasesHeading() {
   )
 }
 
-function DemoBasesParagraph() {
+function DemoBaseParagraph() {
   return (
     <div className="demo-box">
       <p>文章p</p>
@@ -64,7 +64,7 @@ function DemoBasesParagraph() {
   )
 }
 
-function DemoBasesAddress() {
+function DemoBaseAddress() {
   return (
     <div className="demo-box">
       <address>アドレスaddress</address>
@@ -72,7 +72,7 @@ function DemoBasesAddress() {
   )
 }
 
-function DemoBasesDetails() {
+function DemoBaseDetails() {
   return (
     <div className="demo-box">
       <details>
@@ -83,7 +83,7 @@ function DemoBasesDetails() {
   )
 }
 
-function DemoBasesCode() {
+function DemoBaseCode() {
   return (
     <div className="demo-box">
       <pre>
@@ -104,7 +104,7 @@ function DemoBasesCode() {
   )
 }
 
-function DemoBasesList() {
+function DemoBaseList() {
   return (
     <div className="demo-box">
       <ul>
@@ -119,7 +119,7 @@ function DemoBasesList() {
   )
 }
 
-function DemoBasesTable() {
+function DemoBaseTable() {
   return (
     <div className="demo-box">
       <table>
@@ -164,7 +164,7 @@ function DemoBasesTable() {
   )
 }
 
-function DemoBasesHr() {
+function DemoBaseHr() {
   return (
     <div className="demo-box">
       <p>罫線hr</p>
@@ -174,7 +174,7 @@ function DemoBasesHr() {
   )
 }
 
-function DemoBasesButton() {
+function DemoBaseButton() {
   return (
     <div className="demo-box">
       <button type="button">ボタン</button>
@@ -183,7 +183,7 @@ function DemoBasesButton() {
   )
 }
 
-function DemoBasesForm() {
+function DemoBaseForm() {
   return (
     <div className="demo-box">
       <form>
@@ -359,7 +359,7 @@ function DemoBasesForm() {
   )
 }
 
-function DemoBasesProgress() {
+function DemoBaseProgress() {
   return (
     <div className="demo-box">
       <progress></progress>
@@ -367,7 +367,7 @@ function DemoBasesProgress() {
   )
 }
 
-function DemoBasesMedia() {
+function DemoBaseMedia() {
   return (
     <div className="demo-box">
       <figure>

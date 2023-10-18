@@ -4,15 +4,15 @@ import queryString from "query-string"
 import "musubii/src/musubii.css"
 import "musubii/src/configs/themes/dark/attribute.css"
 import "./index.css"
-import { DemoBases } from "./demo/bases"
+import { DemoBase } from "./demo/base"
 import { DemoButton } from "./demo/button"
 
-const demos = ["bases", "button"]
+const demos = ["base", "button"]
 const themes = ["light", "dark"]
 
 export default function () {
   const [mounted, setMounted] = useState(false)
-  const [demo, setDemo] = useState("bases")
+  const [demo, setDemo] = useState("base")
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
@@ -65,9 +65,9 @@ export default function () {
         </div>
       </header>
       <main className="demo-main">
-        {demo === "bases" && (
+        {demo === "base" && (
           <div className="demo-section">
-            <DemoBases />
+            <DemoBase />
           </div>
         )}
         {demo === "button" && (
