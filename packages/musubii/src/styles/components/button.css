@@ -1,131 +1,182 @@
 .button {
+  --button-gap: 0.5em;
+  --button-px: 1em;
+  --button-py: 0.5em;
+  --button-bg: transparent;
+  --button-bd-width: 1px;
+  --button-bd-color: transparent;
+  --button-rounded: 6px;
+  --button-tx-color: inherit;
+  --button-font-weight: 500;
+  --button-line-height: 1.25;
   cursor: pointer;
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5em;
-  min-width: 2.5em;
-  min-height: 2.5em;
+  gap: var(--button-gap);
   width: auto;
-  padding: 0 1em;
-  background-color: transparent;
-  border-width: 1px;
-  border-color: transparent;
-  border-radius: 6px;
-  font-weight: 500;
-  line-height: 1;
+  padding: var(--button-py) var(--button-px);
+  background: var(--button-bg);
+  border-width: var(--button-bd-width);
+  border-color: var(--button-bd-color);
+  border-radius: var(--button-rounded);
+  color: var(--button-tx-color);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
   white-space: nowrap;
   appearance: none;
 }
 
-.button:where(.is-solid) {
-  background-color: var(--theme-bg-2);
+.button:where(.is-plain) {
+  --button-bg: var(--theme-bg-2);
 }
 
-.button:where(.is-solid.is-primary) {
-  background-color: var(--theme-primary);
-  color: var(--theme-lk-tx);
+.button:where(.is-plain.is-primary) {
+  --button-bg: var(--theme-primary);
+  --button-tx-color: var(--theme-lk-tx);
 }
 
-.button:where(.is-solid.is-secondary) {
-  background-color: var(--theme-secondary);
-  color: var(--theme-lk-tx);
+.button:where(.is-plain.is-secondary) {
+  --button-bg: var(--theme-secondary);
+  --button-tx-color: var(--theme-lk-tx);
 }
 
-.button:where(.is-solid.is-success) {
-  background-color: var(--theme-success);
-  color: var(--theme-lk-tx);
+.button:where(.is-plain.is-info) {
+  --button-bg: var(--theme-info);
+  --button-tx-color: var(--theme-lk-tx);
 }
 
-.button:where(.is-solid.is-danger) {
-  background-color: var(--theme-danger);
-  color: var(--theme-lk-tx);
+.button:where(.is-plain.is-success) {
+  --button-bg: var(--theme-success);
+  --button-tx-color: var(--theme-lk-tx);
+}
+
+.button:where(.is-plain.is-warning) {
+  --button-bg: var(--theme-warning);
+  --button-tx-color: var(--theme-lk-tx);
+}
+
+.button:where(.is-plain.is-danger) {
+  --button-bg: var(--theme-danger);
+  --button-tx-color: var(--theme-lk-tx);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button:where(.is-solid):hover {
-    filter: brightness(0.94);
+  .button:where(.is-plain):hover {
+    filter: brightness(0.9);
   }
 }
 
 .button:where(.is-outline) {
-  border-color: var(--theme-bd-2);
+  --button-bd-color: var(--theme-bd-2);
 }
 
 .button:where(.is-outline.is-primary) {
-  border-color: var(--theme-primary);
-  color: var(--theme-primary);
+  --button-bd-color: var(--theme-primary);
+  --button-tx-color: var(--theme-primary);
 }
 
 .button:where(.is-outline.is-secondary) {
-  border-color: var(--theme-secondary);
-  color: var(--theme-secondary);
+  --button-bd-color: var(--theme-secondary);
+  --button-tx-color: var(--theme-secondary);
+}
+
+.button:where(.is-outline.is-info) {
+  --button-bd-color: var(--theme-info);
+  --button-tx-color: var(--theme-info);
 }
 
 .button:where(.is-outline.is-success) {
-  border-color: var(--theme-success);
-  color: var(--theme-success);
+  --button-bd-color: var(--theme-success);
+  --button-tx-color: var(--theme-success);
+}
+
+.button:where(.is-outline.is-warning) {
+  --button-bd-color: var(--theme-warning);
+  --button-tx-color: var(--theme-warning);
 }
 
 .button:where(.is-outline.is-danger) {
-  border-color: var(--theme-danger);
-  color: var(--theme-danger);
+  --button-bd-color: var(--theme-danger);
+  --button-tx-color: var(--theme-danger);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .button:where(.is-outline):hover {
-    background-color: var(--theme-bg-2);
+    --button-bg: var(--theme-bg-2);
   }
   .button:where(.is-outline.is-primary):hover {
-    background-color: var(--theme-primary);
-    color: var(--theme-lk-tx);
+    --button-bg: var(--theme-primary);
+    --button-tx-color: var(--theme-lk-tx);
   }
   .button:where(.is-outline.is-secondary):hover {
-    background-color: var(--theme-secondary);
-    color: var(--theme-lk-tx);
+    --button-bg: var(--theme-secondary);
+    --button-tx-color: var(--theme-lk-tx);
+  }
+  .button:where(.is-outline.is-info):hover {
+    --button-bg: var(--theme-info);
+    --button-tx-color: var(--theme-lk-tx);
   }
   .button:where(.is-outline.is-success):hover {
-    background-color: var(--theme-success);
-    color: var(--theme-lk-tx);
+    --button-bg: var(--theme-success);
+    --button-tx-color: var(--theme-lk-tx);
+  }
+  .button:where(.is-outline.is-warning):hover {
+    --button-bg: var(--theme-warning);
+    --button-tx-color: var(--theme-lk-tx);
   }
   .button:where(.is-outline.is-danger):hover {
-    background-color: var(--theme-danger);
-    color: var(--theme-lk-tx);
+    --button-bg: var(--theme-danger);
+    --button-tx-color: var(--theme-lk-tx);
   }
 }
 
-.button:where(.is-ghost.is-primary) {
-  color: var(--theme-primary);
+.button:where(.is-melt.is-primary) {
+  --button-tx-color: var(--theme-primary);
 }
 
-.button:where(.is-ghost.is-secondary) {
-  color: var(--theme-secondary);
+.button:where(.is-melt.is-secondary) {
+  --button-tx-color: var(--theme-secondary);
 }
 
-.button:where(.is-ghost.is-success) {
-  color: var(--theme-success);
+.button:where(.is-melt.is-info) {
+  --button-tx-color: var(--theme-info);
 }
 
-.button:where(.is-ghost.is-danger) {
-  color: var(--theme-danger);
+.button:where(.is-melt.is-success) {
+  --button-tx-color: var(--theme-success);
+}
+
+.button:where(.is-melt.is-warning) {
+  --button-tx-color: var(--theme-warning);
+}
+
+.button:where(.is-melt.is-danger) {
+  --button-tx-color: var(--theme-danger);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button:where(.is-ghost):hover {
-    background-color: var(--theme-bg-2);
+  .button:where(.is-melt):hover {
+    --button-bg: var(--theme-bg-2);
   }
-  .button:where(.is-ghost.is-primary):hover {
-    background-color: var(--theme-primary-light);
+  .button:where(.is-melt.is-primary):hover {
+    --button-bg: var(--theme-primary-light);
   }
-  .button:where(.is-ghost.is-secondary):hover {
-    background-color: var(--theme-secondary-light);
+  .button:where(.is-melt.is-secondary):hover {
+    --button-bg: var(--theme-secondary-light);
   }
-  .button:where(.is-ghost.is-success):hover {
-    background-color: var(--theme-success-light);
+  .button:where(.is-melt.is-info):hover {
+    --button-bg: var(--theme-info-light);
   }
-  .button:where(.is-ghost.is-danger):hover {
-    background-color: var(--theme-danger-light);
+  .button:where(.is-melt.is-success):hover {
+    --button-bg: var(--theme-success-light);
+  }
+  .button:where(.is-melt.is-warning):hover {
+    --button-bg: var(--theme-warning-light);
+  }
+  .button:where(.is-melt.is-danger):hover {
+    --button-bg: var(--theme-danger-light);
   }
 }
 

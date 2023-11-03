@@ -1,8 +1,15 @@
 import classNames from "classnames"
 
 const DOMElements = ["button", "a"] as const
-const variants = ["solid", "outline", "ghost"] as const
-const colorSchemes = ["primary", "secondary", "success", "danger"] as const
+const variants = ["plain", "outline", "melt"] as const
+const colorSchemes = [
+  "primary",
+  "secondary",
+  "info",
+  "success",
+  "warning",
+  "danger",
+] as const
 const types = ["button", "reset", "submit"] as const
 
 export const buttonPatterns = {
@@ -27,7 +34,7 @@ export type ButtonProps = {
 export function Button({
   DOMElement = "button",
   className,
-  variant = "solid",
+  variant = "plain",
   colorScheme,
   type = "button",
   href = "",

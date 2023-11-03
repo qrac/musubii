@@ -98,7 +98,7 @@
 }
 
 .demo-button-loading {
-  animation: demoButtonLoadingRotate 2s linear infinite;
+  animation: demoButtonLoadingRotate 1s linear infinite;
 }
 
 @keyframes demoButtonLoadingRotate {

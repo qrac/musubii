@@ -1,11 +1,13 @@
 import { useState } from "react"
 import {
-  FaListUl,
-  FaCheck,
-  FaPen,
-  FaPaperPlane,
-  FaTrashAlt,
-} from "react-icons/fa"
+  FiList,
+  FiCheck,
+  FiEdit,
+  FiInfo,
+  FiSend,
+  FiAlertTriangle,
+  FiTrash2,
+} from "react-icons/fi"
 import { LuLoader2 } from "react-icons/lu"
 
 import type { ButtonProps } from "react-musubii/src"
@@ -18,7 +20,7 @@ const colorSchemesWithBlank = [undefined, ...colorSchemes]
 export function DemoButton() {
   const [DOMElement, setDOMElements] =
     useState<ButtonProps["DOMElement"]>("button")
-  const [variant, setVariant] = useState<ButtonProps["variant"]>("solid")
+  const [variant, setVariant] = useState<ButtonProps["variant"]>("plain")
   const [hasText, setHasText] = useState<boolean>(true)
   const [hasIcon, setHasIcon] = useState<boolean>(false)
   const [hasLoading, setHasLoading] = useState<boolean>(false)
@@ -111,35 +113,49 @@ function DemoButtonChildren({
       {!colorScheme && (
         <>
           {hasLoading && <DemoButtonLoading />}
-          {hasIcon && <FaListUl />}
+          {hasIcon && <FiList />}
           {hasText && "詳細"}
         </>
       )}
       {colorScheme === "primary" && (
         <>
           {hasLoading && <DemoButtonLoading />}
-          {hasIcon && <FaCheck />}
+          {hasIcon && <FiCheck />}
           {hasText && "決定"}
         </>
       )}
       {colorScheme === "secondary" && (
         <>
           {hasLoading && <DemoButtonLoading />}
-          {hasIcon && <FaPen />}
+          {hasIcon && <FiEdit />}
           {hasText && "変更"}
+        </>
+      )}
+      {colorScheme === "info" && (
+        <>
+          {hasLoading && <DemoButtonLoading />}
+          {hasIcon && <FiInfo />}
+          {hasText && "情報"}
         </>
       )}
       {colorScheme === "success" && (
         <>
           {hasLoading && <DemoButtonLoading />}
-          {hasIcon && <FaPaperPlane />}
+          {hasIcon && <FiSend />}
           {hasText && "送信"}
+        </>
+      )}
+      {colorScheme === "warning" && (
+        <>
+          {hasLoading && <DemoButtonLoading />}
+          {hasIcon && <FiAlertTriangle />}
+          {hasText && "注意"}
         </>
       )}
       {colorScheme === "danger" && (
         <>
           {hasLoading && <DemoButtonLoading />}
-          {hasIcon && <FaTrashAlt />}
+          {hasIcon && <FiTrash2 />}
           {hasText && "削除"}
         </>
       )}

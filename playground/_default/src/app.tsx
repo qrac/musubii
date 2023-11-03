@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import queryString from "query-string"
 
 import "musubii/src/musubii.css"
-import "musubii/src/configs/themes/dark/attribute.css"
+import "musubii/src/configs/theme/dark/attribute.css"
 import "./index.css"
 import { DemoBase } from "./demo/base"
 import { DemoButton } from "./demo/button"
