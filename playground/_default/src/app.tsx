@@ -2,17 +2,17 @@ import { useState, useEffect } from "react"
 import queryString from "query-string"
 
 import "musubii/src/musubii.css"
-import "musubii/src/configs/theme/dark/attribute.css"
+import "musubii/src/configs/themes/dark/attribute.css"
 import "./index.css"
-import { DemoBase } from "./demo/base"
+import { DemoReset } from "./demo/reset"
 import { DemoButton } from "./demo/button"
 
-const demos = ["base", "button"]
+const demos = ["reset", "button"]
 const themes = ["light", "dark"]
 
 export default function () {
   const [mounted, setMounted] = useState(false)
-  const [demo, setDemo] = useState("base")
+  const [demo, setDemo] = useState("reset")
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
@@ -65,9 +65,9 @@ export default function () {
         </div>
       </header>
       <main className="demo-main">
-        {demo === "base" && (
+        {demo === "reset" && (
           <div className="demo-section">
-            <DemoBase />
+            <DemoReset />
           </div>
         )}
         {demo === "button" && (

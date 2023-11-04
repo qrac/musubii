@@ -1,23 +1,23 @@
-export function DemoBase() {
+export function DemoReset() {
   return (
     <div className="demo-boxes">
-      <DemoBaseHeading />
-      <DemoBaseParagraph />
-      <DemoBaseAddress />
-      <DemoBaseDetails />
-      <DemoBaseCode />
-      <DemoBaseList />
-      <DemoBaseTable />
-      <DemoBaseHr />
-      <DemoBaseButton />
-      <DemoBaseForm />
-      <DemoBaseProgress />
-      <DemoBaseMedia />
+      <DemoResetHeading />
+      <DemoResetParagraph />
+      <DemoResetAddress />
+      <DemoResetDetails />
+      <DemoResetCode />
+      <DemoResetList />
+      <DemoResetTable />
+      <DemoResetHr />
+      <DemoResetButton />
+      <DemoResetForm />
+      <DemoResetProgress />
+      <DemoResetMedia />
     </div>
   )
 }
 
-function DemoBaseHeading() {
+function DemoResetHeading() {
   return (
     <div className="demo-box">
       <h1>見出しh1</h1>
@@ -30,7 +30,7 @@ function DemoBaseHeading() {
   )
 }
 
-function DemoBaseParagraph() {
+function DemoResetParagraph() {
   return (
     <div className="demo-box">
       <p>文章p</p>
@@ -64,7 +64,7 @@ function DemoBaseParagraph() {
   )
 }
 
-function DemoBaseAddress() {
+function DemoResetAddress() {
   return (
     <div className="demo-box">
       <address>アドレスaddress</address>
@@ -72,7 +72,7 @@ function DemoBaseAddress() {
   )
 }
 
-function DemoBaseDetails() {
+function DemoResetDetails() {
   return (
     <div className="demo-box">
       <details>
@@ -83,7 +83,7 @@ function DemoBaseDetails() {
   )
 }
 
-function DemoBaseCode() {
+function DemoResetCode() {
   return (
     <div className="demo-box">
       <pre>
@@ -104,7 +104,7 @@ function DemoBaseCode() {
   )
 }
 
-function DemoBaseList() {
+function DemoResetList() {
   return (
     <div className="demo-box">
       <ul>
@@ -119,7 +119,7 @@ function DemoBaseList() {
   )
 }
 
-function DemoBaseTable() {
+function DemoResetTable() {
   return (
     <div className="demo-box">
       <table>
@@ -164,7 +164,7 @@ function DemoBaseTable() {
   )
 }
 
-function DemoBaseHr() {
+function DemoResetHr() {
   return (
     <div className="demo-box">
       <p>罫線hr</p>
@@ -174,7 +174,7 @@ function DemoBaseHr() {
   )
 }
 
-function DemoBaseButton() {
+function DemoResetButton() {
   return (
     <div className="demo-box">
       <button type="button">ボタン</button>
@@ -183,7 +183,7 @@ function DemoBaseButton() {
   )
 }
 
-function DemoBaseForm() {
+function DemoResetForm() {
   return (
     <div className="demo-box">
       <form>
@@ -359,7 +359,7 @@ function DemoBaseForm() {
   )
 }
 
-function DemoBaseProgress() {
+function DemoResetProgress() {
   return (
     <div className="demo-box">
       <progress></progress>
@@ -367,7 +367,7 @@ function DemoBaseProgress() {
   )
 }
 
-function DemoBaseMedia() {
+function DemoResetMedia() {
   return (
     <div className="demo-box">
       <figure>
