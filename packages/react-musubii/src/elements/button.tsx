@@ -1,4 +1,4 @@
-import classNames from "classnames"
+import clsx from "clsx"
 
 const DOMElements = ["button", "a"] as const
 const variants = ["plain", "outline", "melt"] as const
@@ -46,7 +46,7 @@ export function Button({
   const isAnchor = DOMElement === "a"
   return (
     <DOMElement
-      className={classNames(
+      className={clsx(
         "button",
         `is-${variant}`,
         colorScheme && `is-${colorScheme}`,
