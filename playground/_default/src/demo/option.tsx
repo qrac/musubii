@@ -17,7 +17,7 @@ export function DemoOption({
   )
 }
 
-export function DemoRadios<T extends string>({
+export function DemoRadios<T extends string | undefined>({
   patterns,
   checkedValue,
   onChange,
@@ -35,7 +35,7 @@ export function DemoRadios<T extends string>({
             onChange={() => onChange(item)}
             checked={checkedValue === item}
           />
-          <span>{item}</span>
+          <span>{item ? item : "unset"}</span>
         </label>
       ))}
     </>

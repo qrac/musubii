@@ -14,16 +14,20 @@ import type { ButtonProps } from "react-musubii/src"
 import { Button, buttonPatterns } from "react-musubii/src"
 import { DemoOptions, DemoOption, DemoRadios, DemoCheckbox } from "./option"
 
-const { DOMElements, variants, colorSchemes } = buttonPatterns
+const { DOMElements, variants, colorSchemes, shapes } = buttonPatterns
 const colorSchemesWithBlank = [undefined, ...colorSchemes]
 
 export function DemoButton() {
   const [DOMElement, setDOMElements] =
     useState<ButtonProps["DOMElement"]>("button")
-  const [variant, setVariant] = useState<ButtonProps["variant"]>("plain")
   const [hasText, setHasText] = useState<boolean>(true)
   const [hasIcon, setHasIcon] = useState<boolean>(false)
   const [hasLoading, setHasLoading] = useState<boolean>(false)
+  const [variant, setVariant] = useState<ButtonProps["variant"]>("plain")
+  const [shape, setShape] = useState<ButtonProps["shape"]>()
+  const [isStrong, setIsStrong] = useState<boolean>(false)
+  const [isFloating, setIsFloating] = useState<boolean>(false)
+  const [isRound, setIsRound] = useState<boolean>(false)
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
   return (
     <div className="demo-boxes">
@@ -34,13 +38,6 @@ export function DemoButton() {
               patterns={DOMElements}
               checkedValue={DOMElement}
               onChange={setDOMElements}
-            />
-          </DemoOption>
-          <DemoOption title="variant">
-            <DemoRadios
-              patterns={variants}
-              checkedValue={variant}
-              onChange={setVariant}
             />
           </DemoOption>
           <DemoOption title="children">
@@ -60,7 +57,31 @@ export function DemoButton() {
               onChange={setHasLoading}
             />
           </DemoOption>
+          <DemoOption title="variant">
+            <DemoRadios
+              patterns={variants}
+              checkedValue={variant}
+              onChange={setVariant}
+            />
+          </DemoOption>
+          <DemoOption title="shape">
+            <DemoRadios
+              patterns={[undefined, ...shapes]}
+              checkedValue={shape}
+              onChange={setShape}
+            />
+          </DemoOption>
           <DemoOption title="other">
+            <DemoCheckbox
+              label="strong"
+              checkedValue={isStrong}
+              onChange={setIsStrong}
+            />
+            <DemoCheckbox
+              label="floating"
+              checkedValue={isFloating}
+              onChange={setIsFloating}
+            />
             <DemoCheckbox
               label="disabled"
               checkedValue={isDisabled}
@@ -77,6 +98,9 @@ export function DemoButton() {
               DOMElement={DOMElement}
               variant={variant}
               colorScheme={item}
+              shape={shape}
+              isStrong={isStrong}
+              isFloating={isFloating}
               isDisabled={isDisabled}
             >
               <DemoButtonChildren
