@@ -265,6 +265,6 @@
 }
 
 :root {
-  --rgb-white: 255, 255, 255; /* white #fff1f2 */
-  --rgb-black: 0, 0, 0; /* black #fff1f2 */
+  --rgb-white: 255, 255, 255; /* white #ffffff */
+  --rgb-black: 0, 0, 0; /* black #000000 */
 }

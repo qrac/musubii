@@ -28,6 +28,12 @@
   appearance: none;
 }
 
+.button:where([disabled]),
+.button:where([aria-disabled="true"]),
+.button:where(.is-disabled) {
+  pointer-events: none;
+}
+
 .button:where(.is-plain) {
   --button-bg: var(--theme-bg-2);
 }
@@ -62,7 +68,14 @@
   --button-tx-color: var(--theme-lk-tx);
 }
 
-@media (hover: hover) and (pointer: fine) {
+.button:where(.is-plain[disabled]),
+.button:where(.is-plain[aria-disabled="true"]),
+.button:where(.is-plain.is-disabled) {
+  --button-bg: var(--theme-disabled);
+  --button-tx-color: var(--theme-disabled-tx);
+}
+
+@media (hover: hover) {
   .button:where(.is-plain):hover {
     filter: brightness(0.9);
   }
@@ -100,6 +113,14 @@
 .button:where(.is-outline.is-danger) {
   --button-bd-color: var(--theme-danger);
   --button-tx-color: var(--theme-danger);
+}
+
+.button:where(.is-outline[disabled]),
+.button:where(.is-outline[aria-disabled="true"]),
+.button:where(.is-outline.is-disabled) {
+  --button-bg: var(--theme-disabled);
+  --button-bd-color: var(--theme-disabled);
+  --button-tx-color: var(--theme-disabled-tx);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -156,6 +177,12 @@
   --button-tx-color: var(--theme-danger);
 }
 
+.button:where(.is-melt[disabled]),
+.button:where(.is-melt[aria-disabled="true"]),
+.button:where(.is-melt.is-disabled) {
+  --button-tx-color: var(--theme-disabled-tx);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .button:where(.is-melt):hover {
     --button-bg: var(--theme-bg-2);
@@ -178,11 +205,4 @@
   .button:where(.is-melt.is-danger):hover {
     --button-bg: var(--theme-danger-light);
   }
-}
-
-.button:where([disabled]),
-.button:where([aria-disabled="true"]),
-.button:where(.is-disabled) {
-  pointer-events: none;
-  opacity: 0.5;
 }

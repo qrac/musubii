@@ -1,25 +1,27 @@
 [data-theme="dark"] {
-  --theme-tx-1: var(--color-slate-200);
-  --theme-tx-2: var(--color-slate-400);
-  --theme-bg-1: var(--color-slate-900);
-  --theme-bg-2: var(--color-slate-800);
-  --theme-bd-1: var(--color-slate-700);
-  --theme-bd-2: var(--color-slate-600);
-  --theme-lk: var(--color-cyan-400);
-  --theme-lk-tx: var(--color-slate-800);
-  --theme-placeholder: var(--color-slate-500);
-  --theme-primary: var(--color-cyan-400);
-  --theme-primary-light: var(--color-cyan-900);
-  --theme-secondary: var(--color-indigo-400);
-  --theme-secondary-light: var(--color-indigo-900);
-  --theme-info: var(--color-sky-400);
-  --theme-info-light: var(--color-sky-900);
-  --theme-success: var(--color-green-400);
-  --theme-success-light: var(--color-green-900);
-  --theme-warning: var(--color-amber-400);
-  --theme-warning-light: var(--color-amber-900);
-  --theme-danger: var(--color-red-400);
-  --theme-danger-light: var(--color-red-900);
+  --theme-tx-1: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
+  --theme-tx-2: #94a3b8; /* tailwind slate-400 #94a3b8 */
+  --theme-bg-1: #0f172a; /* tailwind slate-900 #0f172a */
+  --theme-bg-2: #1e293b; /* tailwind slate-800 #1e293b */
+  --theme-bd-1: #334155; /* tailwind slate-700 #334155 */
+  --theme-bd-2: #475569; /* tailwind slate-600 #475569 */
+  --theme-lk: #22d3ee; /* tailwind cyan-400 #22d3ee */
+  --theme-lk-tx: #1e293b; /* tailwind slate-800 #1e293b */
+  --theme-primary: #22d3ee; /* tailwind cyan-400 #22d3ee */
+  --theme-primary-light: #164e63; /* tailwind cyan-900 #164e63 */
+  --theme-secondary: #818cf8; /* tailwind indigo-400 #818cf8 */
+  --theme-secondary-light: #312e81; /* tailwind indigo-900 #312e81 */
+  --theme-info: #38bdf8; /* tailwind sky-400 #38bdf8 */
+  --theme-info-light: #0c4a6e; /* tailwind sky-900 #0c4a6e */
+  --theme-success: #4ade80; /* tailwind green-400 #4ade80 */
+  --theme-success-light: #14532d; /* tailwind green-900 #14532d */
+  --theme-warning: #fbbf24; /* tailwind amber-400 #fbbf24 */
+  --theme-warning-light: #78350f; /* tailwind amber-900 #78350f */
+  --theme-danger: #f87171; /* tailwind red-400 #f87171 */
+  --theme-danger-light: #7f1d1d; /* tailwind red-900 #7f1d1d */
+  --theme-placeholder: #64748b; /* tailwind slate-500 #64748b */
+  --theme-disabled: #374151; /* tailwind grey-700 #374151 */
+  --theme-disabled-tx: #6b7280; /* tailwind grey-500 #6b7280 */
 }
 
 [data-theme="dark"] {
