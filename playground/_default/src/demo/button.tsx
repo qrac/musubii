@@ -14,8 +14,7 @@ import type { ButtonProps } from "react-musubii/src"
 import { Button, buttonPatterns } from "react-musubii/src"
 import { DemoOptions, DemoOption, DemoRadios, DemoCheckbox } from "./option"
 
-const { DOMElements, variants, colorSchemes, shapes } = buttonPatterns
-const colorSchemesWithBlank = [undefined, ...colorSchemes]
+const { DOMElements, variants, colorSchemes, shapes, angles } = buttonPatterns
 
 export function DemoButton() {
   const [DOMElement, setDOMElements] =
@@ -25,9 +24,9 @@ export function DemoButton() {
   const [hasLoading, setHasLoading] = useState<boolean>(false)
   const [variant, setVariant] = useState<ButtonProps["variant"]>("plain")
   const [shape, setShape] = useState<ButtonProps["shape"]>()
+  const [angle, setAngle] = useState<ButtonProps["angle"]>()
   const [isStrong, setIsStrong] = useState<boolean>(false)
   const [isFloating, setIsFloating] = useState<boolean>(false)
-  const [isRound, setIsRound] = useState<boolean>(false)
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
   return (
     <div className="demo-boxes">
@@ -71,6 +70,13 @@ export function DemoButton() {
               onChange={setShape}
             />
           </DemoOption>
+          <DemoOption title="angle">
+            <DemoRadios
+              patterns={[undefined, ...angles]}
+              checkedValue={angle}
+              onChange={setAngle}
+            />
+          </DemoOption>
           <DemoOption title="other">
             <DemoCheckbox
               label="strong"
@@ -92,16 +98,18 @@ export function DemoButton() {
       </div>
       <div className="demo-box">
         <div className="demo-buttons">
-          {colorSchemesWithBlank.map((item, index) => (
+          {[undefined, ...colorSchemes].map((item, index) => (
             <Button
               key={index}
               DOMElement={DOMElement}
               variant={variant}
               colorScheme={item}
               shape={shape}
+              angle={angle}
               isStrong={isStrong}
               isFloating={isFloating}
               isDisabled={isDisabled}
+              style={angle ? { width: "8em" } : undefined}
             >
               <DemoButtonChildren
                 colorScheme={item}

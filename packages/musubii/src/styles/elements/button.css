@@ -1,228 +1,295 @@
 .button {
   --button-gap: 0.5em;
-  --button-width: auto;
-  --button-height: auto;
-  --button-px: 1em;
-  --button-py: 0.5em;
+  --button-padding: 0.5em 1em;
   --button-bg: transparent;
-  --button-bd-width: 1px;
-  --button-bd-color: transparent;
-  --button-rounded: 6px;
-  --button-tx-color: inherit;
+  --button-border-width: 1px;
+  --button-border-color: transparent;
+  --button-border-radius: 6px;
+  --button-color: inherit;
   --button-font-weight: 500;
-  --button-line-height: 1.25;
+  --button-line-height: 1.5;
+  --button-transition: ease-out 0.12s;
+  --button-plain-hover-bg: color-mix(
+    in srgb,
+    var(--button-bg) 90%,
+    #000000 10%
+  );
+  --button-round-border-radius: 9999em;
+  --button-square-size: calc(2.5em + 1px * 2);
+  --button-square-padding: 0;
+  --button-angle-position: 0.75em;
+  --button-angle-size: 0.5em;
+  --button-angle-border-width: 2px;
+  --button-angle-color: var(--theme-bd-2);
+  --button-strong-font-weight: 700;
+  --button-floating-shadow-color: color-mix(
+    in srgb,
+    var(--theme-shadow) 24%,
+    transparent 76%
+  );
+  --button-floating-shadow-size: 0 2px 6px 0;
+  --button-floating-hover-shadow-size: 0 4px 12px 0;
+}
+
+.button {
   cursor: pointer;
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: var(--button-gap);
-  width: var(--button-width);
-  height: var(--button-height);
-  padding: var(--button-py) var(--button-px);
+  width: auto;
+  padding: var(--button-padding);
   background: var(--button-bg);
-  border-width: var(--button-bd-width);
-  border-color: var(--button-bd-color);
-  border-radius: var(--button-rounded);
-  color: var(--button-tx-color);
+  border-width: var(--button-border-width);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  color: var(--button-color);
   font-weight: var(--button-font-weight);
   line-height: var(--button-line-height);
+  transition: var(--button-transition);
   white-space: nowrap;
   appearance: none;
 }
 
-.button:where([disabled]),
-.button:where([aria-disabled="true"]),
-.button:where(.is-disabled) {
-  pointer-events: none;
-}
-
-.button:where(.is-plain) {
+.button.is-plain {
   --button-bg: var(--theme-bg-2);
 }
 
-.button:where(.is-plain.is-primary) {
+.button.is-plain.is-primary {
   --button-bg: var(--theme-primary);
-  --button-tx-color: var(--theme-lk-tx);
+  --button-color: var(--theme-lk-tx);
 }
 
-.button:where(.is-plain.is-secondary) {
+.button.is-plain.is-secondary {
   --button-bg: var(--theme-secondary);
-  --button-tx-color: var(--theme-lk-tx);
+  --button-color: var(--theme-lk-tx);
 }
 
-.button:where(.is-plain.is-info) {
+.button.is-plain.is-info {
   --button-bg: var(--theme-info);
-  --button-tx-color: var(--theme-lk-tx);
+  --button-color: var(--theme-lk-tx);
 }
 
-.button:where(.is-plain.is-success) {
+.button.is-plain.is-success {
   --button-bg: var(--theme-success);
-  --button-tx-color: var(--theme-lk-tx);
+  --button-color: var(--theme-lk-tx);
 }
 
-.button:where(.is-plain.is-warning) {
+.button.is-plain.is-warning {
   --button-bg: var(--theme-warning);
-  --button-tx-color: var(--theme-lk-tx);
+  --button-color: var(--theme-lk-tx);
 }
 
-.button:where(.is-plain.is-danger) {
+.button.is-plain.is-danger {
   --button-bg: var(--theme-danger);
-  --button-tx-color: var(--theme-lk-tx);
+  --button-color: var(--theme-lk-tx);
 }
 
 @media (hover: hover) {
-  .button:where(.is-plain):hover {
-    filter: brightness(0.9);
+  .button.is-plain:hover {
+    background: var(--button-plain-hover-bg);
   }
 }
 
-.button:where(.is-outline) {
-  --button-bd-color: var(--theme-bd-2);
+.button.is-outline {
+  --button-bg: var(--theme-bg-1);
+  --button-border-color: var(--theme-bd-2);
 }
 
-.button:where(.is-outline.is-primary) {
-  --button-bd-color: var(--theme-primary);
-  --button-tx-color: var(--theme-primary);
+.button.is-outline.is-primary {
+  --button-border-color: var(--theme-primary);
+  --button-color: var(--theme-primary);
 }
 
-.button:where(.is-outline.is-secondary) {
-  --button-bd-color: var(--theme-secondary);
-  --button-tx-color: var(--theme-secondary);
+.button.is-outline.is-secondary {
+  --button-border-color: var(--theme-secondary);
+  --button-color: var(--theme-secondary);
 }
 
-.button:where(.is-outline.is-info) {
-  --button-bd-color: var(--theme-info);
-  --button-tx-color: var(--theme-info);
+.button.is-outline.is-info {
+  --button-border-color: var(--theme-info);
+  --button-color: var(--theme-info);
 }
 
-.button:where(.is-outline.is-success) {
-  --button-bd-color: var(--theme-success);
-  --button-tx-color: var(--theme-success);
+.button.is-outline.is-success {
+  --button-border-color: var(--theme-success);
+  --button-color: var(--theme-success);
 }
 
-.button:where(.is-outline.is-warning) {
-  --button-bd-color: var(--theme-warning);
-  --button-tx-color: var(--theme-warning);
+.button.is-outline.is-warning {
+  --button-border-color: var(--theme-warning);
+  --button-color: var(--theme-warning);
 }
 
-.button:where(.is-outline.is-danger) {
-  --button-bd-color: var(--theme-danger);
-  --button-tx-color: var(--theme-danger);
+.button.is-outline.is-danger {
+  --button-border-color: var(--theme-danger);
+  --button-color: var(--theme-danger);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button:where(.is-outline):hover {
+  .button.is-outline:hover {
     --button-bg: var(--theme-bg-2);
   }
-  .button:where(.is-outline.is-primary):hover {
+  .button.is-outline.is-primary:hover {
     --button-bg: var(--theme-primary);
-    --button-tx-color: var(--theme-lk-tx);
+    --button-color: var(--theme-lk-tx);
   }
-  .button:where(.is-outline.is-secondary):hover {
+  .button.is-outline.is-secondary:hover {
     --button-bg: var(--theme-secondary);
-    --button-tx-color: var(--theme-lk-tx);
+    --button-color: var(--theme-lk-tx);
   }
-  .button:where(.is-outline.is-info):hover {
+  .button.is-outline.is-info:hover {
     --button-bg: var(--theme-info);
-    --button-tx-color: var(--theme-lk-tx);
+    --button-color: var(--theme-lk-tx);
   }
-  .button:where(.is-outline.is-success):hover {
+  .button.is-outline.is-success:hover {
     --button-bg: var(--theme-success);
-    --button-tx-color: var(--theme-lk-tx);
+    --button-color: var(--theme-lk-tx);
   }
-  .button:where(.is-outline.is-warning):hover {
+  .button.is-outline.is-warning:hover {
     --button-bg: var(--theme-warning);
-    --button-tx-color: var(--theme-lk-tx);
+    --button-color: var(--theme-lk-tx);
   }
-  .button:where(.is-outline.is-danger):hover {
+  .button.is-outline.is-danger:hover {
     --button-bg: var(--theme-danger);
-    --button-tx-color: var(--theme-lk-tx);
+    --button-color: var(--theme-lk-tx);
   }
 }
 
 .button:where(.is-melt.is-primary) {
-  --button-tx-color: var(--theme-primary);
+  --button-color: var(--theme-primary);
 }
 
 .button:where(.is-melt.is-secondary) {
-  --button-tx-color: var(--theme-secondary);
+  --button-color: var(--theme-secondary);
 }
 
 .button:where(.is-melt.is-info) {
-  --button-tx-color: var(--theme-info);
+  --button-color: var(--theme-info);
 }
 
 .button:where(.is-melt.is-success) {
-  --button-tx-color: var(--theme-success);
+  --button-color: var(--theme-success);
 }
 
 .button:where(.is-melt.is-warning) {
-  --button-tx-color: var(--theme-warning);
+  --button-color: var(--theme-warning);
 }
 
 .button:where(.is-melt.is-danger) {
-  --button-tx-color: var(--theme-danger);
+  --button-color: var(--theme-danger);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button:where(.is-melt):hover {
+  .button.is-melt:hover {
     --button-bg: var(--theme-bg-2);
   }
-  .button:where(.is-melt.is-primary):hover {
+  .button.is-melt.is-primary:hover {
     --button-bg: var(--theme-primary-light);
   }
-  .button:where(.is-melt.is-secondary):hover {
+  .button.is-melt.is-secondary:hover {
     --button-bg: var(--theme-secondary-light);
   }
-  .button:where(.is-melt.is-info):hover {
+  .button.is-melt.is-info:hover {
     --button-bg: var(--theme-info-light);
   }
-  .button:where(.is-melt.is-success):hover {
+  .button.is-melt.is-success:hover {
     --button-bg: var(--theme-success-light);
   }
-  .button:where(.is-melt.is-warning):hover {
+  .button.is-melt.is-warning:hover {
     --button-bg: var(--theme-warning-light);
   }
-  .button:where(.is-melt.is-danger):hover {
+  .button.is-melt.is-danger:hover {
     --button-bg: var(--theme-danger-light);
   }
 }
 
-.button:where(.is-round),
-.button:where(.is-circle) {
-  --button-rounded: 9999em;
+.button:is(.is-round, .is-circle) {
+  border-radius: var(--button-round-border-radius);
 }
 
-.button:where(.is-square),
-.button:where(.is-circle) {
-  --button-width: calc(2.5em + 1px * 2);
-  --button-height: calc(2.5em + 1px * 2);
-  --button-px: 0;
-  --button-py: 0;
+.button:is(.is-square, .is-circle) {
+  width: var(--button-square-size);
+  height: var(--button-square-size);
+  padding: var(--button-square-padding);
 }
 
-.button:where(.is-strong) {
-  --button-font-weight: 700;
+.button:is(.is-angle-right, .is-angle-left):after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: var(--button-angle-size);
+  height: var(--button-angle-size);
+  border-top: var(--button-angle-border-width) solid var(--button-angle-color);
+  border-right: var(--button-angle-border-width) solid var(--button-angle-color);
+  z-index: 2;
 }
 
-.button:where(.is-outline[disabled]),
-.button:where(.is-outline[aria-disabled="true"]),
-.button:where(.is-outline.is-disabled) {
+.button.is-angle-right:after {
+  right: var(--button-angle-position);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.button.is-angle-left:after {
+  left: var(--button-angle-position);
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.button.is-angle-up:after {
+  transform: translateY(-30%) rotate(-45deg);
+}
+
+.button.is-angle-down:after {
+  transform: translateY(-70%) rotate(135deg);
+}
+
+.button:is(
+    .is-primary,
+    .is-secondary,
+    .is-info,
+    .is-success,
+    .is-warning,
+    .is-danger
+  ) {
+  --button-angle-color: currentColor;
+}
+
+.button.is-strong {
+  font-weight: var(--button-strong-font-weight);
+}
+
+.button.is-floating:where(
+    :not(:is([disabled], [aria-disabled="true"], .is-disabled))
+  ) {
+  box-shadow: var(--button-floating-shadow-size)
+    var(--button-floating-shadow-color);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button.is-floating:where(
+      :not(:is([disabled], [aria-disabled="true"], .is-disabled))
+    ):hover {
+    box-shadow: var(--button-floating-hover-shadow-size)
+      var(--button-floating-shadow-color);
+  }
+}
+
+.button:is([disabled], [aria-disabled="true"], .is-disabled) {
+  pointer-events: none;
+}
+
+.button.is-plain:is([disabled], [aria-disabled="true"], .is-disabled) {
   --button-bg: var(--theme-disabled);
-  --button-bd-color: var(--theme-disabled);
-  --button-tx-color: var(--theme-disabled-tx);
+  --button-color: var(--theme-disabled-tx);
 }
 
-.button:where(.is-plain[disabled]),
-.button:where(.is-plain[aria-disabled="true"]),
-.button:where(.is-plain.is-disabled) {
+.button.is-outline:is([disabled], [aria-disabled="true"], .is-disabled) {
   --button-bg: var(--theme-disabled);
-  --button-tx-color: var(--theme-disabled-tx);
+  --button-border-color: var(--theme-disabled);
+  --button-color: var(--theme-disabled-tx);
 }
 
-.button:where(.is-melt[disabled]),
-.button:where(.is-melt[aria-disabled="true"]),
-.button:where(.is-melt.is-disabled) {
-  --button-tx-color: var(--theme-disabled-tx);
+.button.is-melt:is([disabled], [aria-disabled="true"], .is-disabled) {
+  --button-color: var(--theme-disabled-tx);
 }
