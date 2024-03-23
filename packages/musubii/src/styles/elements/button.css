@@ -7,8 +7,8 @@
   --button-border-radius: 6px;
   --button-color: inherit;
   --button-font-weight: 500;
-  --button-line-height: 1.5;
-  --button-transition: ease-out 0.12s;
+  --button-line-height: 1.25;
+  --button-transition: none;
   --button-plain-bg: var(--theme-bg-2);
   --button-plain-color: inherit;
   --button-plain-disabled-bg: var(--theme-disabled);
