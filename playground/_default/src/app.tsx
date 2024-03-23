@@ -6,8 +6,9 @@ import "musubii/src/configs/themes/dark/attribute.css"
 import "./index.css"
 import { DemoReset } from "./demo/reset"
 import { DemoButton } from "./demo/button"
+import { DemoBadge } from "./demo/badge"
 
-const demos = ["reset", "button"]
+const demos = ["reset", "button", "badge"]
 const themes = ["light", "dark"]
 
 export default function () {
@@ -73,6 +74,11 @@ export default function () {
         {demo === "button" && (
           <div className="demo-section">
             <DemoButton />
+          </div>
+        )}
+        {demo === "badge" && (
+          <div className="demo-section">
+            <DemoBadge />
           </div>
         )}
       </main>

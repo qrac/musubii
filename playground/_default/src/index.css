@@ -91,17 +91,18 @@
   cursor: pointer;
 }
 
-.demo-buttons {
+.demo-buttons,
+.demo-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.demo-button-loading {
-  animation: demoButtonLoadingRotate 1s linear infinite;
+.demo-loading {
+  animation: demoLoadingRotate 1s linear infinite;
 }
 
-@keyframes demoButtonLoadingRotate {
+@keyframes demoLoadingRotate {
   0% {
     transform: rotate(0deg);
   }
