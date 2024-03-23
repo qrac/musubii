@@ -47,7 +47,7 @@
   --button-outline-hover-bg: var(--theme-primary);
   --button-outline-hover-color: var(--theme-lk-tx);
   --button-melt-color: var(--theme-primary);
-  --button-bg: var(--theme-primary-light);
+  --button-melt-hover-bg: var(--theme-primary-light);
   --button-angle-color: currentColor;
   --button-floating-shadow-color: var(--theme-primary);
   --button-floating-shadow-opacity: 50%;
