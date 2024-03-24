@@ -9,10 +9,11 @@ import { DemoFieldset } from "./demos/fieldset"
 import { DemoSelect } from "./demos/select"
 import { DemoCheckbox } from "./demos/checkbox"
 import { ExampleReset } from "./examples/reset"
+import { ExampleSection } from "./examples/section"
 import { ExampleButton } from "./examples/button"
 import { ExampleBadge } from "./examples/badge"
 
-const examples = ["reset", "button", "badge"]
+const examples = ["reset", "section", "button", "badge"]
 const themes = ["light", "dark"]
 
 export default function () {
@@ -69,6 +70,11 @@ export default function () {
         {example === "reset" && (
           <div className="demo-section">
             <ExampleReset />
+          </div>
+        )}
+        {example === "section" && (
+          <div className="demo-section is-100vw">
+            <ExampleSection />
           </div>
         )}
         {example === "button" && (

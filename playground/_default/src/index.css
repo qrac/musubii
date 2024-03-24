@@ -7,7 +7,7 @@
 
 .demo-header {
   max-width: 800px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 16px;
 }
 
@@ -28,8 +28,23 @@
 
 .demo-section {
   max-width: 800px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 0 16px;
+}
+
+.demo-section.is-100vw {
+  max-width: none;
+  padding: 0;
+}
+
+.demo-section.is-100vw > .demo-boxes {
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.demo-section.is-100vw > .demo-boxes > .demo-box {
+  padding: 20px 0;
 }
 
 .demo-boxes {
@@ -45,6 +60,11 @@
 
 .demo-box + .demo-box {
   border-top: 1px solid var(--theme-bd-1);
+}
+
+.demo-card {
+  min-height: 100px;
+  background: var(--theme-primary);
 }
 
 .demo-fieldsets {

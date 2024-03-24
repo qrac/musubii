@@ -2,6 +2,7 @@
 @import "./configs/variables/font.css";
 @import "./styles/bases/reset.css";
 @import "./styles/bases/html.css";
+@import "./styles/layouts/section.css";
 @import "./styles/elements/button.css";
 @import "./styles/elements/badge.css";
 @import "./styles/utilities/rounded.css";
