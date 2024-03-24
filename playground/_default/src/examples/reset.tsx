@@ -1,23 +1,23 @@
-export function DemoReset() {
+export function ExampleReset() {
   return (
     <div className="demo-boxes">
-      <DemoResetHeading />
-      <DemoResetParagraph />
-      <DemoResetAddress />
-      <DemoResetDetails />
-      <DemoResetCode />
-      <DemoResetList />
-      <DemoResetTable />
-      <DemoResetHr />
-      <DemoResetButton />
-      <DemoResetForm />
-      <DemoResetProgress />
-      <DemoResetMedia />
+      <ExampleResetHeading />
+      <ExampleResetParagraph />
+      <ExampleResetAddress />
+      <ExampleResetDetails />
+      <ExampleResetCode />
+      <ExampleResetList />
+      <ExampleResetTable />
+      <ExampleResetHr />
+      <ExampleResetButton />
+      <ExampleResetForm />
+      <ExampleResetProgress />
+      <ExampleResetMedia />
     </div>
   )
 }
 
-function DemoResetHeading() {
+function ExampleResetHeading() {
   return (
     <div className="demo-box">
       <h1>見出しh1</h1>
@@ -30,7 +30,7 @@ function DemoResetHeading() {
   )
 }
 
-function DemoResetParagraph() {
+function ExampleResetParagraph() {
   return (
     <div className="demo-box">
       <p>文章p</p>
@@ -64,7 +64,7 @@ function DemoResetParagraph() {
   )
 }
 
-function DemoResetAddress() {
+function ExampleResetAddress() {
   return (
     <div className="demo-box">
       <address>アドレスaddress</address>
@@ -72,7 +72,7 @@ function DemoResetAddress() {
   )
 }
 
-function DemoResetDetails() {
+function ExampleResetDetails() {
   return (
     <div className="demo-box">
       <details>
@@ -83,7 +83,7 @@ function DemoResetDetails() {
   )
 }
 
-function DemoResetCode() {
+function ExampleResetCode() {
   return (
     <div className="demo-box">
       <pre>
@@ -104,7 +104,7 @@ function DemoResetCode() {
   )
 }
 
-function DemoResetList() {
+function ExampleResetList() {
   return (
     <div className="demo-box">
       <ul>
@@ -119,7 +119,7 @@ function DemoResetList() {
   )
 }
 
-function DemoResetTable() {
+function ExampleResetTable() {
   return (
     <div className="demo-box">
       <table>
@@ -164,7 +164,7 @@ function DemoResetTable() {
   )
 }
 
-function DemoResetHr() {
+function ExampleResetHr() {
   return (
     <div className="demo-box">
       <p>罫線hr</p>
@@ -174,7 +174,7 @@ function DemoResetHr() {
   )
 }
 
-function DemoResetButton() {
+function ExampleResetButton() {
   return (
     <div className="demo-box">
       <button type="button">ボタン</button>
@@ -183,7 +183,7 @@ function DemoResetButton() {
   )
 }
 
-function DemoResetForm() {
+function ExampleResetForm() {
   return (
     <div className="demo-box">
       <form>
@@ -359,7 +359,7 @@ function DemoResetForm() {
   )
 }
 
-function DemoResetProgress() {
+function ExampleResetProgress() {
   return (
     <div className="demo-box">
       <progress></progress>
@@ -367,7 +367,7 @@ function DemoResetProgress() {
   )
 }
 
-function DemoResetMedia() {
+function ExampleResetMedia() {
   return (
     <div className="demo-box">
       <figure>

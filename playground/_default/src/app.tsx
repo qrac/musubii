@@ -4,81 +4,81 @@ import queryString from "query-string"
 import "musubii/src/musubii.css"
 import "musubii/src/configs/themes/dark/attribute.css"
 import "./index.css"
-import { DemoReset } from "./demo/reset"
-import { DemoButton } from "./demo/button"
-import { DemoBadge } from "./demo/badge"
+import migrateCss from "musubii/src/migrate.css?inline"
+import { DemoFieldset } from "./demos/fieldset"
+import { DemoSelect } from "./demos/select"
+import { DemoCheckbox } from "./demos/checkbox"
+import { ExampleReset } from "./examples/reset"
+import { ExampleButton } from "./examples/button"
+import { ExampleBadge } from "./examples/badge"
 
-const demos = ["reset", "button", "badge"]
+const examples = ["reset", "button", "badge"]
 const themes = ["light", "dark"]
 
 export default function () {
   const [mounted, setMounted] = useState(false)
-  const [demo, setDemo] = useState("reset")
+  const [example, setExample] = useState("reset")
   const [theme, setTheme] = useState("light")
+  const [isMigrated, setIsMigrated] = useState(false)
 
   useEffect(() => {
     if (mounted) {
       let paramString = window.location.search
       let params = queryString.parse(paramString)
-      params = { ...params, demo, theme }
+      params = { ...params, example, theme, isMigrated: isMigrated.toString() }
       paramString = queryString.stringify(params)
       const newUrl = window.location.pathname + "?" + paramString
       window.history.pushState({}, "", newUrl)
     }
-  }, [demo, theme])
+  }, [example, theme, isMigrated])
 
   useEffect(() => {
     const paramString = window.location.search
     if (paramString) {
       const params = queryString.parse(paramString)
-      params?.demo && setDemo(params.demo as string)
+      params?.example && setExample(params.example as string)
       params?.theme && setTheme(params.theme as string)
+      params?.isMigrated && setIsMigrated(params.isMigrated === "true")
     }
     setMounted(true)
   }, [])
   return (
     <div className="demo-theme" data-theme={theme}>
+      {isMigrated && <style dangerouslySetInnerHTML={{ __html: migrateCss }} />}
       <header className="demo-header">
-        <h1 className="demo-title">MUSUBii</h1>
-        <div className="demo-selects">
-          <select
-            className="demo-select"
-            value={demo}
-            onChange={(e) => setDemo(e.target.value)}
-          >
-            {demos.map((item) => (
-              <option value={item} key={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-          <select
-            className="demo-select"
-            value={theme}
-            onChange={(e) => setTheme(e.target.value)}
-          >
-            {themes.map((item) => (
-              <option value={item} key={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-        </div>
+        <h1 className="demo-header-title">MUSUBii</h1>
+        <DemoFieldset>
+          <DemoSelect
+            options={examples}
+            selectedValue={example}
+            onChange={setExample}
+          />
+          <DemoSelect
+            options={themes}
+            selectedValue={theme}
+            onChange={setTheme}
+          />
+          <DemoCheckbox
+            label="migrate"
+            checkedValue={isMigrated}
+            onChange={setIsMigrated}
+          />
+        </DemoFieldset>
       </header>
       <main className="demo-main">
-        {demo === "reset" && (
+        {example === "reset" && (
           <div className="demo-section">
-            <DemoReset />
+            <ExampleReset />
           </div>
         )}
-        {demo === "button" && (
+        {example === "button" && (
           <div className="demo-section">
-            <DemoButton />
+            <ExampleButton />
           </div>
         )}
-        {demo === "badge" && (
+        {example === "badge" && (
           <div className="demo-section">
-            <DemoBadge />
+            <ExampleBadge />
           </div>
         )}
       </main>

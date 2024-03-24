@@ -1,43 +1,47 @@
 import { useState } from "react"
 import {
-  FiHash,
+  FiList,
   FiCheck,
-  FiGitPullRequest,
+  FiEdit,
   FiInfo,
-  FiThumbsUp,
+  FiSend,
   FiAlertTriangle,
-  FiLock,
+  FiTrash2,
 } from "react-icons/fi"
-import { LuLoader2 } from "react-icons/lu"
 
-import type { BadgeProps } from "react-musubii/src"
-import { Badge, badgePatterns } from "react-musubii/src"
-import { DemoOptions, DemoOption, DemoRadios, DemoCheckbox } from "./option"
+import type { ButtonProps } from "react-musubii/src"
+import { Button, buttonPatterns } from "react-musubii/src"
+import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
+import { DemoRadios } from "../demos/radio"
+import { DemoCheckbox } from "../demos/checkbox"
+import { DemoLoading } from "../demos/loading"
 
-const { DOMElements, variants, colorSchemes, shapes } = badgePatterns
+const { DOMElements, variants, colorSchemes, shapes, angles } = buttonPatterns
 
-export function DemoBadge() {
+export function ExampleButton() {
   const [DOMElement, setDOMElements] =
-    useState<BadgeProps["DOMElement"]>("span")
+    useState<ButtonProps["DOMElement"]>("button")
   const [hasText, setHasText] = useState<boolean>(true)
   const [hasIcon, setHasIcon] = useState<boolean>(false)
   const [hasLoading, setHasLoading] = useState<boolean>(false)
-  const [variant, setVariant] = useState<BadgeProps["variant"]>("plain")
-  const [shape, setShape] = useState<BadgeProps["shape"]>()
+  const [variant, setVariant] = useState<ButtonProps["variant"]>("plain")
+  const [shape, setShape] = useState<ButtonProps["shape"]>()
+  const [angle, setAngle] = useState<ButtonProps["angle"]>()
   const [isStrong, setIsStrong] = useState<boolean>(false)
+  const [isFloating, setIsFloating] = useState<boolean>(false)
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
   return (
     <div className="demo-boxes">
       <div className="demo-box">
-        <DemoOptions>
-          <DemoOption title="DOMElement">
+        <DemoFieldsets>
+          <DemoFieldset title="DOMElement">
             <DemoRadios
               patterns={DOMElements}
               checkedValue={DOMElement}
               onChange={setDOMElements}
             />
-          </DemoOption>
-          <DemoOption title="children">
+          </DemoFieldset>
+          <DemoFieldset title="children">
             <DemoCheckbox
               label="text"
               checkedValue={hasText}
@@ -53,54 +57,69 @@ export function DemoBadge() {
               checkedValue={hasLoading}
               onChange={setHasLoading}
             />
-          </DemoOption>
-          <DemoOption title="variant">
+          </DemoFieldset>
+          <DemoFieldset title="variant">
             <DemoRadios
               patterns={variants}
               checkedValue={variant}
               onChange={setVariant}
             />
-          </DemoOption>
-          <DemoOption title="shape">
+          </DemoFieldset>
+          <DemoFieldset title="shape">
             <DemoRadios
               patterns={[undefined, ...shapes]}
               checkedValue={shape}
               onChange={setShape}
             />
-          </DemoOption>
-          <DemoOption title="other">
+          </DemoFieldset>
+          <DemoFieldset title="angle">
+            <DemoRadios
+              patterns={[undefined, ...angles]}
+              checkedValue={angle}
+              onChange={setAngle}
+            />
+          </DemoFieldset>
+          <DemoFieldset title="other">
             <DemoCheckbox
               label="strong"
               checkedValue={isStrong}
               onChange={setIsStrong}
             />
             <DemoCheckbox
+              label="floating"
+              checkedValue={isFloating}
+              onChange={setIsFloating}
+            />
+            <DemoCheckbox
               label="disabled"
               checkedValue={isDisabled}
               onChange={setIsDisabled}
             />
-          </DemoOption>
-        </DemoOptions>
+          </DemoFieldset>
+        </DemoFieldsets>
       </div>
       <div className="demo-box">
-        <div className="demo-badges">
+        <div className="demo-buttons">
           {[undefined, ...colorSchemes].map((item, index) => (
-            <Badge
+            <Button
               key={index}
               DOMElement={DOMElement}
               variant={variant}
               colorScheme={item}
               shape={shape}
+              angle={angle}
               isStrong={isStrong}
+              isFloating={isFloating}
               isDisabled={isDisabled}
+              style={angle ? { width: "8em" } : undefined}
             >
-              <DemoBadgeChildren
+              <ExampleButtonChildren
                 colorScheme={item}
                 hasText={hasText}
                 hasIcon={hasIcon}
                 hasLoading={hasLoading}
               />
-            </Badge>
+            </Button>
           ))}
         </div>
       </div>
@@ -108,17 +127,13 @@ export function DemoBadge() {
   )
 }
 
-function DemoBadgeLoading() {
-  return <LuLoader2 className="demo-loading" />
-}
-
-function DemoBadgeChildren({
+function ExampleButtonChildren({
   colorScheme,
   hasText,
   hasIcon,
   hasLoading,
 }: {
-  colorScheme?: BadgeProps["colorScheme"]
+  colorScheme?: ButtonProps["colorScheme"]
   hasText: boolean
   hasIcon: boolean
   hasLoading: boolean
@@ -127,51 +142,51 @@ function DemoBadgeChildren({
     <>
       {!colorScheme && (
         <>
-          {hasLoading && <DemoBadgeLoading />}
-          {hasIcon && <FiHash />}
-          {hasText && "任意"}
+          {hasLoading && <DemoLoading />}
+          {hasIcon && <FiList />}
+          {hasText && "詳細"}
         </>
       )}
       {colorScheme === "primary" && (
         <>
-          {hasLoading && <DemoBadgeLoading />}
-          {hasIcon && <FiThumbsUp />}
-          {hasText && "推奨"}
+          {hasLoading && <DemoLoading />}
+          {hasIcon && <FiCheck />}
+          {hasText && "決定"}
         </>
       )}
       {colorScheme === "secondary" && (
         <>
-          {hasLoading && <DemoBadgeLoading />}
-          {hasIcon && <FiGitPullRequest />}
-          {hasText && "差分"}
+          {hasLoading && <DemoLoading />}
+          {hasIcon && <FiEdit />}
+          {hasText && "変更"}
         </>
       )}
       {colorScheme === "info" && (
         <>
-          {hasLoading && <DemoBadgeLoading />}
+          {hasLoading && <DemoLoading />}
           {hasIcon && <FiInfo />}
           {hasText && "情報"}
         </>
       )}
       {colorScheme === "success" && (
         <>
-          {hasLoading && <DemoBadgeLoading />}
-          {hasIcon && <FiCheck />}
-          {hasText && "完了"}
+          {hasLoading && <DemoLoading />}
+          {hasIcon && <FiSend />}
+          {hasText && "送信"}
         </>
       )}
       {colorScheme === "warning" && (
         <>
-          {hasLoading && <DemoBadgeLoading />}
+          {hasLoading && <DemoLoading />}
           {hasIcon && <FiAlertTriangle />}
           {hasText && "注意"}
         </>
       )}
       {colorScheme === "danger" && (
         <>
-          {hasLoading && <DemoBadgeLoading />}
-          {hasIcon && <FiLock />}
-          {hasText && "必須"}
+          {hasLoading && <DemoLoading />}
+          {hasIcon && <FiTrash2 />}
+          {hasText && "削除"}
         </>
       )}
     </>
