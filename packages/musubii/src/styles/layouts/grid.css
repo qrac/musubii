@@ -1,0 +1,165 @@
+.grid {
+  --grid-gap-y: 0;
+  --grid-gap-x: 0;
+}
+
+.is-gap-xxl {
+  --grid-gap-y: 28px;
+  --grid-gap-x: 28px;
+}
+
+.is-gap-xl {
+  --grid-gap-y: 24px;
+  --grid-gap-x: 24px;
+}
+
+.is-gap-lg {
+  --grid-gap-y: 20px;
+  --grid-gap-x: 20px;
+}
+
+.is-gap-md,
+.is-gap {
+  --grid-gap-y: 16px;
+  --grid-gap-x: 16px;
+}
+
+.is-gap-sm {
+  --grid-gap-y: 12px;
+  --grid-gap-x: 12px;
+}
+
+.is-gap-xs {
+  --grid-gap-y: 8px;
+  --grid-gap-x: 8px;
+}
+
+.is-gap-xxs {
+  --grid-gap-y: 4px;
+  --grid-gap-x: 4px;
+}
+
+.is-gap-y-xxl,
+:is(.is-gap-vertical-xxl, .is-gap-row-xxl) {
+  --grid-gap-y: 28px;
+}
+
+.is-gap-y-xl,
+:is(.is-gap-vertical-xl, .is-gap-row-xl) {
+  --grid-gap-y: 24px;
+}
+
+.is-gap-y-lg,
+:is(.is-gap-vertical-lg, .is-gap-row-lg) {
+  --grid-gap-y: 20px;
+}
+
+.is-gap-y-md,
+:is(.is-gap-vertical-md, .is-gap-row-md),
+:is(.is-gap-vertical, .is-gap-row) {
+  --grid-gap-y: 16px;
+}
+
+.is-gap-y-sm,
+:is(.is-gap-vertical-sm, .is-gap-row-sm) {
+  --grid-gap-y: 12px;
+}
+
+.is-gap-y-xs,
+:is(.is-gap-vertical-xs, .is-gap-row-xs) {
+  --grid-gap-y: 8px;
+}
+
+.is-gap-y-xxs,
+:is(.is-gap-vertical-xxs, .is-gap-row-xxs) {
+  --grid-gap-y: 4px;
+}
+
+.is-gap-x-xxl,
+:is(.is-gap-horizontal-xxl, .is-gap-column-xxl) {
+  --grid-gap-x: 28px;
+}
+
+.is-gap-x-xl,
+:is(.is-gap-horizontal-xl, .is-gap-column-xl) {
+  --grid-gap-x: 24px;
+}
+
+.is-gap-x-lg,
+:is(.is-gap-horizontal-lg, .is-gap-column-lg) {
+  --grid-gap-x: 20px;
+}
+
+.is-gap-x-md,
+:is(.is-gap-horizontal-md, .is-gap-column-md),
+:is(.is-gap-horizontal, .is-gap-column) {
+  --grid-gap-x: 16px;
+}
+
+.is-gap-x-sm,
+:is(.is-gap-horizontal-sm, .is-gap-column-sm) {
+  --grid-gap-x: 12px;
+}
+
+.is-gap-x-xs,
+:is(.is-gap-horizontal-xs, .is-gap-column-xs) {
+  --grid-gap-x: 8px;
+}
+
+.is-gap-x-xxs,
+:is(.is-gap-horizontal-xxs, .is-gap-column-xxs) {
+  --grid-gap-x: 4px;
+}
+
+.grid {
+  display: flex;
+}
+
+.grid:is(.is-gap, [class*="is-gap-"]) {
+  row-gap: var(--grid-gap-y);
+  margin-left: calc(var(--grid-gap-x) * -1);
+}
+
+.grid:is(.is-gap, [class*="is-gap-"]) > .column {
+  padding-left: var(--grid-gap-x);
+}
+
+.grid:where(:not(.is-nowrap)) {
+  flex-wrap: wrap;
+}
+
+.grid.is-baseline {
+  align-items: baseline;
+}
+
+.grid.is-middle {
+  align-items: center;
+}
+
+.grid.is-bottom {
+  align-items: flex-end;
+}
+
+.grid.is-center {
+  justify-content: center;
+}
+
+.grid.is-right {
+  justify-content: flex-end;
+}
+
+.grid.is-between {
+  justify-content: space-between;
+}
+
+.grid.is-around {
+  justify-content: space-around;
+}
+
+.grid.is-reverse {
+  flex-direction: row-reverse;
+}
+
+.grid.is-stretch > .column {
+  display: flex;
+}

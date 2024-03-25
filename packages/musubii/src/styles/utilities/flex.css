@@ -1,0 +1,342 @@
+.is-flex-0,
+:is(.is-0, .is-mobile-0) {
+  flex: 1 0;
+}
+
+.is-flex-1,
+:is(.is-1, .is-mobile-1) {
+  flex: 0 0 calc(100% / 12 * 1);
+}
+
+.is-flex-2,
+:is(.is-2, .is-mobile-2) {
+  flex: 0 0 calc(100% / 12 * 2);
+}
+
+.is-flex-3,
+:is(.is-3, .is-mobile-3) {
+  flex: 0 0 calc(100% / 12 * 3);
+}
+
+.is-flex-4,
+:is(.is-4, .is-mobile-4) {
+  flex: 0 0 calc(100% / 12 * 4);
+}
+
+.is-flex-5,
+:is(.is-5, .is-mobile-5) {
+  flex: 0 0 calc(100% / 12 * 5);
+}
+
+.is-flex-6,
+:is(.is-6, .is-mobile-6) {
+  flex: 0 0 calc(100% / 12 * 6);
+}
+
+.is-flex-7,
+:is(.is-7, .is-mobile-7) {
+  flex: 0 0 calc(100% / 12 * 7);
+}
+
+.is-flex-8,
+:is(.is-8, .is-mobile-8) {
+  flex: 0 0 calc(100% / 12 * 8);
+}
+
+.is-flex-9,
+:is(.is-9, .is-mobile-9) {
+  flex: 0 0 calc(100% / 12 * 9);
+}
+
+.is-flex-10,
+:is(.is-10, .is-mobile-10) {
+  flex: 0 0 calc(100% / 12 * 10);
+}
+
+.is-flex-11,
+:is(.is-11, .is-mobile-11) {
+  flex: 0 0 calc(100% / 12 * 11);
+}
+
+.is-flex-12,
+:is(.is-12, .is-mobile-12) {
+  flex: 0 0 100%;
+}
+
+.is-flex-full,
+:is(.is-full, .is-mobile-full) {
+  flex: 0 1 100%;
+}
+
+.is-flex-auto,
+:is(.is-auto, .is-mobile-auto) {
+  flex: 0 1 auto;
+}
+
+.is-flex-none {
+  flex: none;
+}
+
+@media (576px <= width) {
+  .fablet\:is-flex-0,
+  .is-fablet-0 {
+    flex: 1 0;
+  }
+  .fablet\:is-flex-1,
+  .is-fablet-1 {
+    flex: 0 0 calc(100% / 12 * 1);
+  }
+  .fablet\:is-flex-2,
+  .is-fablet-2 {
+    flex: 0 0 calc(100% / 12 * 2);
+  }
+  .fablet\:is-flex-3,
+  .is-fablet-3 {
+    flex: 0 0 calc(100% / 12 * 3);
+  }
+  .fablet\:is-flex-4,
+  .is-fablet-4 {
+    flex: 0 0 calc(100% / 12 * 4);
+  }
+  .fablet\:is-flex-5,
+  .is-fablet-5 {
+    flex: 0 0 calc(100% / 12 * 5);
+  }
+  .fablet\:is-flex-6,
+  .is-fablet-6 {
+    flex: 0 0 calc(100% / 12 * 6);
+  }
+  .fablet\:is-flex-7,
+  .is-fablet-7 {
+    flex: 0 0 calc(100% / 12 * 7);
+  }
+  .fablet\:is-flex-8,
+  .is-fablet-8 {
+    flex: 0 0 calc(100% / 12 * 8);
+  }
+  .fablet\:is-flex-9,
+  .is-fablet-9 {
+    flex: 0 0 calc(100% / 12 * 9);
+  }
+  .fablet\:is-flex-10,
+  .is-fablet-10 {
+    flex: 0 0 calc(100% / 12 * 10);
+  }
+  .fablet\:is-flex-11,
+  .is-fablet-11 {
+    flex: 0 0 calc(100% / 12 * 11);
+  }
+  .fablet\:is-flex-12,
+  .is-fablet-12 {
+    flex: 0 0 100%;
+  }
+  .fablet\:is-flex-full,
+  .is-fablet-full {
+    flex: 0 1 100%;
+  }
+  .fablet\:is-flex-auto,
+  .is-fablet-auto {
+    flex: 0 1 auto;
+  }
+  .fablet\:is-flex-none {
+    flex: none;
+  }
+}
+
+@media (768px <= width) {
+  .tablet\:is-flex-0,
+  .is-tablet-0 {
+    flex: 1 0;
+  }
+  .tablet\:is-flex-1,
+  .is-tablet-1 {
+    flex: 0 0 calc(100% / 12 * 1);
+  }
+  .tablet\:is-flex-2,
+  .is-tablet-2 {
+    flex: 0 0 calc(100% / 12 * 2);
+  }
+  .tablet\:is-flex-3,
+  .is-tablet-3 {
+    flex: 0 0 calc(100% / 12 * 3);
+  }
+  .tablet\:is-flex-4,
+  .is-tablet-4 {
+    flex: 0 0 calc(100% / 12 * 4);
+  }
+  .tablet\:is-flex-5,
+  .is-tablet-5 {
+    flex: 0 0 calc(100% / 12 * 5);
+  }
+  .tablet\:is-flex-6,
+  .is-tablet-6 {
+    flex: 0 0 calc(100% / 12 * 6);
+  }
+  .tablet\:is-flex-7,
+  .is-tablet-7 {
+    flex: 0 0 calc(100% / 12 * 7);
+  }
+  .tablet\:is-flex-8,
+  .is-tablet-8 {
+    flex: 0 0 calc(100% / 12 * 8);
+  }
+  .tablet\:is-flex-9,
+  .is-tablet-9 {
+    flex: 0 0 calc(100% / 12 * 9);
+  }
+  .tablet\:is-flex-10,
+  .is-tablet-10 {
+    flex: 0 0 calc(100% / 12 * 10);
+  }
+  .tablet\:is-flex-11,
+  .is-tablet-11 {
+    flex: 0 0 calc(100% / 12 * 11);
+  }
+  .tablet\:is-flex-12,
+  .is-tablet-12 {
+    flex: 0 0 100%;
+  }
+  .tablet\:is-flex-full,
+  .is-tablet-full {
+    flex: 0 1 100%;
+  }
+  .tablet\:is-flex-auto,
+  .is-tablet-auto {
+    flex: 0 1 auto;
+  }
+  .tablet\:is-flex-none {
+    flex: none;
+  }
+}
+
+@media (992px <= width) {
+  .desktop\:is-flex-0,
+  .is-desktop-0 {
+    flex: 1 0;
+  }
+  .desktop\:is-flex-1,
+  .is-desktop-1 {
+    flex: 0 0 calc(100% / 12 * 1);
+  }
+  .desktop\:is-flex-2,
+  .is-desktop-2 {
+    flex: 0 0 calc(100% / 12 * 2);
+  }
+  .desktop\:is-flex-3,
+  .is-desktop-3 {
+    flex: 0 0 calc(100% / 12 * 3);
+  }
+  .desktop\:is-flex-4,
+  .is-desktop-4 {
+    flex: 0 0 calc(100% / 12 * 4);
+  }
+  .desktop\:is-flex-5,
+  .is-desktop-5 {
+    flex: 0 0 calc(100% / 12 * 5);
+  }
+  .desktop\:is-flex-6,
+  .is-desktop-6 {
+    flex: 0 0 calc(100% / 12 * 6);
+  }
+  .desktop\:is-flex-7,
+  .is-desktop-7 {
+    flex: 0 0 calc(100% / 12 * 7);
+  }
+  .desktop\:is-flex-8,
+  .is-desktop-8 {
+    flex: 0 0 calc(100% / 12 * 8);
+  }
+  .desktop\:is-flex-9,
+  .is-desktop-9 {
+    flex: 0 0 calc(100% / 12 * 9);
+  }
+  .desktop\:is-flex-10,
+  .is-desktop-10 {
+    flex: 0 0 calc(100% / 12 * 10);
+  }
+  .desktop\:is-flex-11,
+  .is-desktop-11 {
+    flex: 0 0 calc(100% / 12 * 11);
+  }
+  .desktop\:is-flex-12,
+  .is-desktop-12 {
+    flex: 0 0 100%;
+  }
+  .desktop\:is-flex-full,
+  .is-desktop-full {
+    flex: 0 1 100%;
+  }
+  .desktop\:is-flex-auto,
+  .is-desktop-auto {
+    flex: 0 1 auto;
+  }
+  .desktop\:is-flex-none {
+    flex: none;
+  }
+}
+
+@media (1200px <= width) {
+  .wide\:is-flex-0,
+  .is-wide-0 {
+    flex: 1 0;
+  }
+  .wide\:is-flex-1,
+  .is-wide-1 {
+    flex: 0 0 calc(100% / 12 * 1);
+  }
+  .wide\:is-flex-2,
+  .is-wide-2 {
+    flex: 0 0 calc(100% / 12 * 2);
+  }
+  .wide\:is-flex-3,
+  .is-wide-3 {
+    flex: 0 0 calc(100% / 12 * 3);
+  }
+  .wide\:is-flex-4,
+  .is-wide-4 {
+    flex: 0 0 calc(100% / 12 * 4);
+  }
+  .wide\:is-flex-5,
+  .is-wide-5 {
+    flex: 0 0 calc(100% / 12 * 5);
+  }
+  .wide\:is-flex-6,
+  .is-wide-6 {
+    flex: 0 0 calc(100% / 12 * 6);
+  }
+  .wide\:is-flex-7,
+  .is-wide-7 {
+    flex: 0 0 calc(100% / 12 * 7);
+  }
+  .wide\:is-flex-8,
+  .is-wide-8 {
+    flex: 0 0 calc(100% / 12 * 8);
+  }
+  .wide\:is-flex-9,
+  .is-wide-9 {
+    flex: 0 0 calc(100% / 12 * 9);
+  }
+  .wide\:is-flex-10,
+  .is-wide-10 {
+    flex: 0 0 calc(100% / 12 * 10);
+  }
+  .wide\:is-flex-11,
+  .is-wide-11 {
+    flex: 0 0 calc(100% / 12 * 11);
+  }
+  .wide\:is-flex-12,
+  .is-wide-12 {
+    flex: 0 0 100%;
+  }
+  .wide\:is-flex-full,
+  .is-wide-full {
+    flex: 0 1 100%;
+  }
+  .wide\:is-flex-auto,
+  .is-wide-auto {
+    flex: 0 1 auto;
+  }
+  .wide\:is-flex-none {
+    flex: none;
+  }
+}

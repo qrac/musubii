@@ -63,8 +63,9 @@
 }
 
 .demo-card {
-  min-height: 100px;
+  padding: 12px 20px;
   background: var(--theme-primary);
+  color: var(--theme-lk-tx);
 }
 
 .demo-fieldsets {
