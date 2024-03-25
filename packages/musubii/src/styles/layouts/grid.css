@@ -3,111 +3,111 @@
   --grid-gap-x: 0;
 }
 
-.is-gap-xxl {
+.grid.is-gap-xxl {
   --grid-gap-y: 28px;
   --grid-gap-x: 28px;
 }
 
-.is-gap-xl {
+.grid.is-gap-xl {
   --grid-gap-y: 24px;
   --grid-gap-x: 24px;
 }
 
-.is-gap-lg {
+.grid.is-gap-lg {
   --grid-gap-y: 20px;
   --grid-gap-x: 20px;
 }
 
-.is-gap-md,
-.is-gap {
+.grid.is-gap-md,
+.grid.is-gap {
   --grid-gap-y: 16px;
   --grid-gap-x: 16px;
 }
 
-.is-gap-sm {
+.grid.is-gap-sm {
   --grid-gap-y: 12px;
   --grid-gap-x: 12px;
 }
 
-.is-gap-xs {
+.grid.is-gap-xs {
   --grid-gap-y: 8px;
   --grid-gap-x: 8px;
 }
 
-.is-gap-xxs {
+.grid.is-gap-xxs {
   --grid-gap-y: 4px;
   --grid-gap-x: 4px;
 }
 
-.is-gap-y-xxl,
-:is(.is-gap-vertical-xxl, .is-gap-row-xxl) {
+.grid.is-gap-y-xxl,
+.grid:is(.is-gap-vertical-xxl, .is-gap-row-xxl) {
   --grid-gap-y: 28px;
 }
 
-.is-gap-y-xl,
-:is(.is-gap-vertical-xl, .is-gap-row-xl) {
+.grid.is-gap-y-xl,
+.grid:is(.is-gap-vertical-xl, .is-gap-row-xl) {
   --grid-gap-y: 24px;
 }
 
-.is-gap-y-lg,
-:is(.is-gap-vertical-lg, .is-gap-row-lg) {
+.grid.is-gap-y-lg,
+.grid:is(.is-gap-vertical-lg, .is-gap-row-lg) {
   --grid-gap-y: 20px;
 }
 
-.is-gap-y-md,
-:is(.is-gap-vertical-md, .is-gap-row-md),
-:is(.is-gap-vertical, .is-gap-row) {
+.grid.is-gap-y-md,
+.grid:is(.is-gap-vertical-md, .is-gap-row-md),
+.grid:is(.is-gap-vertical, .is-gap-row) {
   --grid-gap-y: 16px;
 }
 
-.is-gap-y-sm,
-:is(.is-gap-vertical-sm, .is-gap-row-sm) {
+.grid.is-gap-y-sm,
+.grid:is(.is-gap-vertical-sm, .is-gap-row-sm) {
   --grid-gap-y: 12px;
 }
 
-.is-gap-y-xs,
-:is(.is-gap-vertical-xs, .is-gap-row-xs) {
+.grid.is-gap-y-xs,
+.grid:is(.is-gap-vertical-xs, .is-gap-row-xs) {
   --grid-gap-y: 8px;
 }
 
-.is-gap-y-xxs,
-:is(.is-gap-vertical-xxs, .is-gap-row-xxs) {
+.grid.is-gap-y-xxs,
+.grid:is(.is-gap-vertical-xxs, .is-gap-row-xxs) {
   --grid-gap-y: 4px;
 }
 
-.is-gap-x-xxl,
-:is(.is-gap-horizontal-xxl, .is-gap-column-xxl) {
+.grid.is-gap-x-xxl,
+.grid:is(.is-gap-horizontal-xxl, .is-gap-column-xxl) {
   --grid-gap-x: 28px;
 }
 
-.is-gap-x-xl,
-:is(.is-gap-horizontal-xl, .is-gap-column-xl) {
+.grid.is-gap-x-xl,
+.grid:is(.is-gap-horizontal-xl, .is-gap-column-xl) {
   --grid-gap-x: 24px;
 }
 
-.is-gap-x-lg,
-:is(.is-gap-horizontal-lg, .is-gap-column-lg) {
+.grid.is-gap-x-lg,
+.grid:is(.is-gap-horizontal-lg, .is-gap-column-lg) {
   --grid-gap-x: 20px;
 }
 
-.is-gap-x-md,
-:is(.is-gap-horizontal-md, .is-gap-column-md),
-:is(.is-gap-horizontal, .is-gap-column) {
+.grid.is-gap-x-md,
+.grid:is(.is-gap-horizontal-md, .is-gap-column-md),
+.grid:is(.is-gap-horizontal, .is-gap-column) {
   --grid-gap-x: 16px;
 }
 
-.is-gap-x-sm,
-:is(.is-gap-horizontal-sm, .is-gap-column-sm) {
+.grid.is-gap-x-sm,
+.grid:is(.is-gap-horizontal-sm, .is-gap-column-sm) {
   --grid-gap-x: 12px;
 }
 
-.is-gap-x-xs,
-:is(.is-gap-horizontal-xs, .is-gap-column-xs) {
+.grid.is-gap-x-xs,
+.grid:is(.is-gap-horizontal-xs, .is-gap-column-xs) {
   --grid-gap-x: 8px;
 }
 
-.is-gap-x-xxs,
-:is(.is-gap-horizontal-xxs, .is-gap-column-xxs) {
+.grid.is-gap-x-xxs,
+.grid:is(.is-gap-horizontal-xxs, .is-gap-column-xxs) {
   --grid-gap-x: 4px;
 }
 
