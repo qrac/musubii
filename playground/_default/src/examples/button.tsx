@@ -9,8 +9,8 @@ import {
   FiTrash2,
 } from "react-icons/fi"
 
-import type { ButtonProps } from "react-musubii/src"
-import { Button, buttonPatterns } from "react-musubii/src"
+import type { ButtonProps } from "../components/button"
+import { Button, buttonPatterns } from "../components/button"
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"

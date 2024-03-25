@@ -9,8 +9,8 @@ import {
   FiLock,
 } from "react-icons/fi"
 
-import type { BadgeProps } from "../components/badge"
-import { Badge, badgePatterns } from "../components/badge"
+import type { BadgeProps } from "react-musubii/src"
+import { Badge, badgePatterns } from "react-musubii/src"
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
@@ -18,7 +18,7 @@ import { DemoLoading } from "../demos/loading"
 
 const { DOMElements, variants, colorSchemes, shapes } = badgePatterns
 
-export function ExampleBadge() {
+export function ExampleGrid() {
   const [DOMElement, setDOMElements] =
     useState<BadgeProps["DOMElement"]>("span")
   const [hasText, setHasText] = useState<boolean>(true)
