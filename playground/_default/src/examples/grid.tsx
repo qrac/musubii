@@ -1,36 +1,14 @@
 import { useState } from "react"
-import clsx from "clsx"
 
+import type { GridProps } from "../components/grid"
+import { Grid, Column, gridPatterns } from "../components/grid"
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 
-const gaps = [
-  undefined,
-  "xxs",
-  "xs",
-  "sm",
-  "md",
-  "lg",
-  "xl",
-  "xxl",
-  "y-xxs",
-  "y-xs",
-  "y-sm",
-  "y-md",
-  "y-lg",
-  "y-xl",
-  "y-xxl",
-  "x-xxs",
-  "x-xs",
-  "x-sm",
-  "x-md",
-  "x-lg",
-  "x-xl",
-  "x-xxl",
-]
+const { gaps } = gridPatterns
 
 export function ExampleGrid() {
-  const [gap, setGap] = useState<(typeof gaps)[number]>("md")
+  const [gap, setGap] = useState<GridProps["gap"]>("md")
   return (
     <div className="demo-boxes">
       <div className="demo-box">
@@ -41,67 +19,67 @@ export function ExampleGrid() {
         </DemoFieldsets>
       </div>
       <div className="demo-box">
-        <div className={clsx("grid", gap && `is-gap-${gap}`)}>
-          <div className="column is-flex-0">
+        <Grid gap={gap}>
+          <Column flex={0}>
             <div className="demo-card">is-flex-0</div>
-          </div>
-          <div className="column is-flex-0">
+          </Column>
+          <Column flex={0}>
             <div className="demo-card">is-flex-0</div>
-          </div>
-          <div className="column is-flex-0">
+          </Column>
+          <Column flex={0}>
             <div className="demo-card">is-flex-0</div>
-          </div>
-        </div>
+          </Column>
+        </Grid>
       </div>
       <div className="demo-box">
-        <div className={clsx("grid", gap && `is-gap-${gap}`)}>
-          <div className="column is-flex-3">
+        <Grid gap={gap}>
+          <Column flex={3}>
             <div className="demo-card">is-flex-3</div>
-          </div>
-          <div className="column is-flex-4">
+          </Column>
+          <Column flex={4}>
             <div className="demo-card">is-flex-4</div>
-          </div>
-          <div className="column is-flex-5">
+          </Column>
+          <Column flex={5}>
             <div className="demo-card">is-flex-5</div>
-          </div>
-        </div>
+          </Column>
+        </Grid>
       </div>
       <div className="demo-box">
-        <div className={clsx("grid", gap && `is-gap-${gap}`)}>
-          <div className="column is-flex-6">
+        <Grid gap={gap}>
+          <Column flex={6}>
             <div className="demo-card">is-flex-6</div>
-          </div>
-          <div className="column is-flex-6">
+          </Column>
+          <Column flex={6}>
             <div className="demo-card">is-flex-6</div>
-          </div>
-          <div className="column is-flex-full">
+          </Column>
+          <Column flex={"full"}>
             <div className="demo-card">is-flex-full</div>
-          </div>
-        </div>
+          </Column>
+        </Grid>
       </div>
       <div className="demo-box">
-        <div className={clsx("grid is-stretch", gap && `is-gap-${gap}`)}>
-          <div className="column is-flex-6">
+        <Grid gap={gap} isStretch>
+          <Column flex={6}>
             <div className="demo-card is-flex-full">is-stretch</div>
-          </div>
-          <div className="column is-flex-6">
+          </Column>
+          <Column flex={6}>
             <div className="demo-card is-flex-full">
               <div>is-stretch</div>
               <div>is-stretch</div>
               <div>is-stretch</div>
             </div>
-          </div>
-        </div>
+          </Column>
+        </Grid>
       </div>
       <div className="demo-box">
-        <div className={clsx("grid", gap && `is-gap-${gap}`)}>
-          <div className="column is-flex-12 desktop:is-flex-0">
+        <Grid gap={gap}>
+          <Column flex={12} desktopFlex={0}>
             <div className="demo-card">is-flex-12 desktop:is-flex-0</div>
-          </div>
-          <div className="column is-flex-12 desktop:is-flex-0">
+          </Column>
+          <Column flex={12} desktopFlex={0}>
             <div className="demo-card">is-flex-12 desktop:is-flex-0</div>
-          </div>
-        </div>
+          </Column>
+        </Grid>
       </div>
     </div>
   )
