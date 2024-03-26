@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import queryString from "query-string"
 
 import "musubii/src/musubii.css"
-import "musubii/src/configs/themes/dark/attribute.css"
+import "musubii/src/configs/theme/dark-attr.css"
 import "./index.css"
 import migrateCss from "musubii/src/migrate.css?inline"
 import { DemoFieldset } from "./demos/fieldset"

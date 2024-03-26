@@ -1,0 +1,78 @@
+.is-flex-0,
+:is(.is-0, .is-mobile-0) {
+  flex: 1 0;
+}
+
+.is-flex-1,
+:is(.is-1, .is-mobile-1) {
+  flex: 0 0 calc(100% / 12 * 1);
+}
+
+.is-flex-2,
+:is(.is-2, .is-mobile-2) {
+  flex: 0 0 calc(100% / 12 * 2);
+}
+
+.is-flex-3,
+:is(.is-3, .is-mobile-3) {
+  flex: 0 0 calc(100% / 12 * 3);
+}
+
+.is-flex-4,
+:is(.is-4, .is-mobile-4) {
+  flex: 0 0 calc(100% / 12 * 4);
+}
+
+.is-flex-5,
+:is(.is-5, .is-mobile-5) {
+  flex: 0 0 calc(100% / 12 * 5);
+}
+
+.is-flex-6,
+:is(.is-6, .is-mobile-6) {
+  flex: 0 0 calc(100% / 12 * 6);
+}
+
+.is-flex-7,
+:is(.is-7, .is-mobile-7) {
+  flex: 0 0 calc(100% / 12 * 7);
+}
+
+.is-flex-8,
+:is(.is-8, .is-mobile-8) {
+  flex: 0 0 calc(100% / 12 * 8);
+}
+
+.is-flex-9,
+:is(.is-9, .is-mobile-9) {
+  flex: 0 0 calc(100% / 12 * 9);
+}
+
+.is-flex-10,
+:is(.is-10, .is-mobile-10) {
+  flex: 0 0 calc(100% / 12 * 10);
+}
+
+.is-flex-11,
+:is(.is-11, .is-mobile-11) {
+  flex: 0 0 calc(100% / 12 * 11);
+}
+
+.is-flex-12,
+:is(.is-12, .is-mobile-12) {
+  flex: 0 0 100%;
+}
+
+.is-flex-full,
+:is(.is-full, .is-mobile-full) {
+  flex: 0 1 100%;
+}
+
+.is-flex-auto,
+:is(.is-auto, .is-mobile-auto) {
+  flex: 0 1 auto;
+}
+
+.is-flex-none {
+  flex: none;
+}

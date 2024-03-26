@@ -1,3 +1,3 @@
-@import "./configs/themes/legacy/default.css";
-@import "./migrations/elements/button.css";
-@import "./migrations/elements/badge.css";
+@import "./configs/theme/legacy.css";
+@import "./styles/button/legacy.css";
+@import "./styles/badge/legacy.css";
