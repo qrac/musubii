@@ -33,12 +33,12 @@ export const buttonPatterns = {
 export type ButtonProps = {
   DOMElement?: (typeof DOMElements)[number]
   className?: string
+  type?: (typeof types)[number]
+  href?: string
   variant?: (typeof variants)[number]
   colorScheme?: (typeof colorSchemes)[number]
   shape?: (typeof shapes)[number]
   angle?: (typeof angles)[number]
-  type?: (typeof types)[number]
-  href?: string
   isStrong?: boolean
   isFloating?: boolean
   isDisabled?: boolean
