@@ -11,10 +11,11 @@ import { DemoCheckbox } from "./demos/checkbox"
 import { ExampleReset } from "./examples/reset"
 import { ExampleSection } from "./examples/section"
 import { ExampleGrid } from "./examples/grid"
+import { ExampleCard } from "./examples/card"
 import { ExampleButton } from "./examples/button"
 import { ExampleBadge } from "./examples/badge"
 
-const examples = ["reset", "section", "grid", "button", "badge"]
+const examples = ["reset", "section", "grid", "card", "button", "badge"]
 const themes = ["light", "dark"]
 
 export default function () {
@@ -81,6 +82,11 @@ export default function () {
         {example === "grid" && (
           <div className="demo-section">
             <ExampleGrid />
+          </div>
+        )}
+        {example === "card" && (
+          <div className="demo-section">
+            <ExampleCard />
           </div>
         )}
         {example === "button" && (

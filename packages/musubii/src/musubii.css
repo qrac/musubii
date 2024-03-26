@@ -4,6 +4,7 @@
 @import "./styles/base/html.css";
 @import "./styles/section/main.css";
 @import "./styles/grid/main.css";
+@import "./styles/card/main.css";
 @import "./styles/button/main.css";
 @import "./styles/badge/main.css";
 @import "./styles/flex/main.css";
