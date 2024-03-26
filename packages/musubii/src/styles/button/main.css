@@ -234,9 +234,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .button.is-floating:where(
-      :not(:is([disabled], [aria-disabled="true"], .is-disabled))
-    ):hover {
+  .button.is-floating:hover {
     box-shadow: var(--button-floating-hover-shadow-size)
       color-mix(
         in srgb,
