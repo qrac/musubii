@@ -123,21 +123,21 @@
   font-weight: var(--badge-strong-font-weight);
 }
 
-.badge:is([aria-disabled="true"], .is-disabled) {
+.badge:is([disabled], [aria-disabled="true"], .is-disabled) {
   pointer-events: none;
 }
 
-.badge.is-plain:is([aria-disabled="true"], .is-disabled) {
+.badge.is-plain:is([disabled], [aria-disabled="true"], .is-disabled) {
   background: var(--badge-plain-disabled-bg);
   color: var(--badge-plain-disabled-color);
 }
 
-.badge.is-outline:is([aria-disabled="true"], .is-disabled) {
+.badge.is-outline:is([disabled], [aria-disabled="true"], .is-disabled) {
   background: var(--badge-outline-disabled-bg);
   border-color: var(--badge-outline-disabled-border-color);
   color: var(--badge-outline-disabled-color);
 }
 
-.badge.is-melt:is([aria-disabled="true"], .is-disabled) {
+.badge.is-melt:is([disabled], [aria-disabled="true"], .is-disabled) {
   color: var(--badge-melt-disabled-color);
 }
