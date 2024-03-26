@@ -14,7 +14,11 @@ export function ExampleGrid() {
       <div className="demo-box">
         <DemoFieldsets>
           <DemoFieldset title="gap">
-            <DemoRadios patterns={gaps} checkedValue={gap} onChange={setGap} />
+            <DemoRadios
+              patterns={[undefined, ...gaps]}
+              checkedValue={gap}
+              onChange={setGap}
+            />
           </DemoFieldset>
         </DemoFieldsets>
       </div>

@@ -94,15 +94,20 @@ export function Column({
   wideFlex,
   children,
 }: ColumnProps) {
+  const hasFlex = flex !== undefined && flex !== null
+  const hasFabletFlex = fabletFlex !== undefined && fabletFlex !== null
+  const hasTabletFlex = tabletFlex !== undefined && tabletFlex !== null
+  const hasDesktopFlex = desktopFlex !== undefined && desktopFlex !== null
+  const hasWideFlex = wideFlex !== undefined && wideFlex !== null
   return (
     <div
       className={clsx(
         "column",
-        flex && `is-flex-${flex}`,
-        fabletFlex && `fablet:is-flex-${fabletFlex}`,
-        tabletFlex && `tablet:is-flex-${tabletFlex}`,
-        desktopFlex && `desktop:is-flex-${desktopFlex}`,
-        wideFlex && `wide:is-flex-${wideFlex}`,
+        hasFlex && `is-flex-${flex}`,
+        hasFabletFlex && `fablet:is-flex-${fabletFlex}`,
+        hasTabletFlex && `tablet:is-flex-${tabletFlex}`,
+        hasDesktopFlex && `desktop:is-flex-${desktopFlex}`,
+        hasWideFlex && `wide:is-flex-${wideFlex}`,
         className && className
       )}
     >
