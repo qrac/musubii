@@ -99,6 +99,7 @@
 }
 
 .demo-select {
+  cursor: pointer;
   padding: 0.125rem;
   background: none;
   border: 1px solid var(--theme-bd-2);
