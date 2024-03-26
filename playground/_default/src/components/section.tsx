@@ -1,3 +1,5 @@
+import clsx from "clsx"
+
 const DOMElements = ["section", "div"] as const
 
 export const sectionPatterns = {
@@ -11,9 +13,13 @@ export type SectionProps = {
   children?: React.ReactNode
 }
 
-export function Section({ DOMElement = "section", children }: SectionProps) {
+export function Section({
+  DOMElement = "section",
+  className,
+  children,
+}: SectionProps) {
   return (
-    <DOMElement className="section">
+    <DOMElement className={clsx("section", className && className)}>
       <div className="inner">{children}</div>
     </DOMElement>
   )
