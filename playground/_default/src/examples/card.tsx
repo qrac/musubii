@@ -1,5 +1,4 @@
 import { useState } from "react"
-import clsx from "clsx"
 
 import type { CardProps } from "../components/card"
 import { Card, cardPatterns } from "../components/card"
@@ -12,7 +11,7 @@ const { radiuses } = cardPatterns
 export function ExampleCard() {
   const [isBackground, setIsBackground] = useState<boolean>(true)
   const [isOutline, setIsOutline] = useState<boolean>(false)
-  const [radius, setRadius] = useState<(typeof radiuses)[number]>("md")
+  const [radius, setRadius] = useState<CardProps["radius"]>("md")
   const [isFloating, setIsfloating] = useState<boolean>(true)
   const [isLink, setIsLink] = useState<boolean>(false)
   const [isZoom, setIsZoom] = useState<boolean>(false)
