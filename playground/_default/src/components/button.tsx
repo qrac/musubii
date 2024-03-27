@@ -47,6 +47,8 @@ export type ButtonProps = {
   onClick?: React.MouseEventHandler
 }
 
+type splitItem = (typeof angles)[number] | undefined
+
 export function Button({
   DOMElement = "button",
   className,
@@ -62,26 +64,14 @@ export function Button({
   children,
   ...props
 }: ButtonProps) {
+  function splitClasses(title: string, item: splitItem) {
+    if (!item) return ""
+    const items = item && item.split("-")
+    return items.map((item) => `is-${title}-${item}`).join(" ")
+  }
   const isButton = DOMElement === "button"
   const isAnchor = DOMElement === "a"
-  const angleClasses = () => {
-    switch (angle) {
-      case "right":
-        return "is-angle-right"
-      case "left":
-        return "is-angle-left"
-      case "right-up":
-        return "is-angle-right is-angle-up"
-      case "right-down":
-        return "is-angle-right is-angle-down"
-      case "left-up":
-        return "is-angle-left is-angle-up"
-      case "left-down":
-        return "is-angle-left is-angle-down"
-      default:
-        return ""
-    }
-  }
+  const angleClasses = splitClasses("angle", angle)
   return (
     <DOMElement
       className={clsx(
@@ -89,7 +79,7 @@ export function Button({
         `is-${variant}`,
         colorScheme && `is-${colorScheme}`,
         shape && `is-${shape}`,
-        angleClasses(),
+        angleClasses,
         isStrong && "is-strong",
         isFloating && "is-floating",
         className && className
