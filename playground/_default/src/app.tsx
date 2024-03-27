@@ -12,10 +12,11 @@ import { ExampleReset } from "./examples/reset"
 import { ExampleSection } from "./examples/section"
 import { ExampleGrid } from "./examples/grid"
 import { ExampleCard } from "./examples/card"
+import { ExampleBox } from "./examples/box"
 import { ExampleButton } from "./examples/button"
 import { ExampleBadge } from "./examples/badge"
 
-const examples = ["reset", "section", "grid", "card", "button", "badge"]
+const examples = ["reset", "section", "grid", "card", "box", "button", "badge"]
 const themes = ["light", "dark"]
 
 export default function () {
@@ -87,6 +88,11 @@ export default function () {
         {example === "card" && (
           <div className="demo-section">
             <ExampleCard />
+          </div>
+        )}
+        {example === "box" && (
+          <div className="demo-section">
+            <ExampleBox />
           </div>
         )}
         {example === "button" && (
