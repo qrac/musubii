@@ -1,8 +1,4 @@
 .card {
-  --card-bg: transparent;
-  --card-border-width: 0;
-  --card-border-color: transparent;
-  --card-border-radius: 0;
   --card-overflow: hidden;
   --card-bg-light-bg: var(--theme-bg-1);
   --card-outline-border-width: 1px;
@@ -20,10 +16,6 @@
 .card {
   position: relative;
   display: block;
-  background: var(--card-bg);
-  border-width: var(--card-border-width);
-  border-color: var(--card-border-color);
-  border-radius: var(--card-border-radius);
   overflow: var(--card-overflow);
 }
 
