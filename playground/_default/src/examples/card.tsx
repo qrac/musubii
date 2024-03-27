@@ -65,6 +65,7 @@ export function ExampleCard() {
       </div>
       <div className="demo-box">
         <Card
+          DOMElement={isLink ? "a" : "div"}
           isBackground={isBackground}
           isOutline={isOutline}
           radius={radius}
