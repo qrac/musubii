@@ -42,6 +42,90 @@
   flex-direction: row-reverse;
 }
 
+:is(.is-flex, .is-inline-flex).is-gap-xxl {
+  gap: 28px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-xl {
+  gap: 24px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-lg {
+  gap: 20px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-md {
+  gap: 16px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-sm {
+  gap: 12px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-xs {
+  gap: 8px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-xxs {
+  gap: 4px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-y-xxl {
+  row-gap: 28px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-y-xl {
+  row-gap: 24px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-y-lg {
+  row-gap: 20px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-y-md {
+  row-gap: 16px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-y-sm {
+  row-gap: 12px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-y-xs {
+  row-gap: 8px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-y-xxs {
+  row-gap: 4px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-x-xxl {
+  column-gap: 28px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-x-xl {
+  column-gap: 24px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-x-lg {
+  column-gap: 20px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-x-md {
+  column-gap: 16px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-x-sm {
+  column-gap: 12px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-x-xs {
+  column-gap: 8px;
+}
+
+:is(.is-flex, .is-inline-flex).is-gap-x-xxs {
+  column-gap: 4px;
+}
+
 .is-flex-0,
 :is(.is-0, .is-mobile-0) {
   flex: 1 0;
