@@ -28,35 +28,6 @@
   border-color: var(--card-outline-border-color);
 }
 
-.card.is-radius-xxl {
-  border-radius: 16px;
-}
-
-.card.is-radius-xl {
-  border-radius: 12px;
-}
-
-.card.is-radius-lg {
-  border-radius: 8px;
-}
-
-.card.is-radius-md,
-.card.is-radius {
-  border-radius: 4px;
-}
-
-.card.is-radius-sm {
-  border-radius: 3px;
-}
-
-.card.is-radius-xs {
-  border-radius: 2px;
-}
-
-.card.is-radius-xxs {
-  border-radius: 1px;
-}
-
 .card.is-floating:where(
     :not(:is([disabled], [aria-disabled="true"], .is-disabled))
   ) {
