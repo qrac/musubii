@@ -19,50 +19,6 @@
   overflow: var(--card-overflow);
 }
 
-.card.is-flex {
-  display: flex;
-}
-
-.card.is-inline-flex {
-  display: inline-flex;
-}
-
-.card:is(.is-flex, .is-inline-flex):where(:not(.is-nowrap)) {
-  flex-wrap: wrap;
-}
-
-.card:is(.is-flex, .is-inline-flex).is-baseline {
-  align-items: baseline;
-}
-
-.card:is(.is-flex, .is-inline-flex).is-middle {
-  align-items: center;
-}
-
-.card:is(.is-flex, .is-inline-flex).is-bottom {
-  align-items: flex-end;
-}
-
-.card:is(.is-flex, .is-inline-flex).is-center {
-  justify-content: center;
-}
-
-.card:is(.is-flex, .is-inline-flex).is-right {
-  justify-content: flex-end;
-}
-
-.card:is(.is-flex, .is-inline-flex).is-between {
-  justify-content: space-between;
-}
-
-.card:is(.is-flex, .is-inline-flex).is-around {
-  justify-content: space-around;
-}
-
-.card:is(.is-flex, .is-inline-flex).is-reverse {
-  flex-direction: row-reverse;
-}
-
 .card:is(.is-bg, .is-bg-light) {
   background: var(--card-bg-light-bg);
 }

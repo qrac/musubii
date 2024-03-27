@@ -1,3 +1,47 @@
+.is-flex {
+  display: flex;
+}
+
+.is-inline-flex {
+  display: inline-flex;
+}
+
+:is(.is-flex, .is-inline-flex):where(:not(.is-nowrap)) {
+  flex-wrap: wrap;
+}
+
+:is(.is-flex, .is-inline-flex).is-baseline {
+  align-items: baseline;
+}
+
+:is(.is-flex, .is-inline-flex).is-middle {
+  align-items: center;
+}
+
+:is(.is-flex, .is-inline-flex).is-bottom {
+  align-items: flex-end;
+}
+
+:is(.is-flex, .is-inline-flex).is-center {
+  justify-content: center;
+}
+
+:is(.is-flex, .is-inline-flex).is-right {
+  justify-content: flex-end;
+}
+
+:is(.is-flex, .is-inline-flex).is-between {
+  justify-content: space-between;
+}
+
+:is(.is-flex, .is-inline-flex).is-around {
+  justify-content: space-around;
+}
+
+:is(.is-flex, .is-inline-flex).is-reverse {
+  flex-direction: row-reverse;
+}
+
 .is-flex-0,
 :is(.is-0, .is-mobile-0) {
   flex: 1 0;
