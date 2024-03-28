@@ -1,29 +1,29 @@
 @media (1200px <= width) {
-  .wide\:is-size-xxl,
+  .wide\:is-xxl,
   .is-wide-xxl {
     font-size: 200%;
   }
-  .wide\:is-size-xl,
+  .wide\:is-xl,
   .is-wide-xl {
     font-size: 150%;
   }
-  .wide\:is-size-lg,
+  .wide\:is-lg,
   .is-wide-lg {
     font-size: 125%;
   }
-  .wide\:is-size-md,
+  .wide\:is-md,
   .is-wide-md {
     font-size: 100%;
   }
-  .wide\:is-size-sm,
+  .wide\:is-sm,
   .is-wide-sm {
     font-size: 87.5%;
   }
-  .wide\:is-size-xs,
+  .wide\:is-xs,
   .is-wide-xs {
     font-size: 75%;
   }
-  .wide\:is-size-xxs,
+  .wide\:is-xxs,
   .is-wide-xxs {
     font-size: 62.5%;
   }

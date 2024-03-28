@@ -1,29 +1,29 @@
 @media (768px <= width) {
-  .tablet\:is-size-xxl,
+  .tablet\:is-xxl,
   .is-tablet-xxl {
     font-size: 200%;
   }
-  .tablet\:is-size-xl,
+  .tablet\:is-xl,
   .is-tablet-xl {
     font-size: 150%;
   }
-  .tablet\:is-size-lg,
+  .tablet\:is-lg,
   .is-tablet-lg {
     font-size: 125%;
   }
-  .tablet\:is-size-md,
+  .tablet\:is-md,
   .is-tablet-md {
     font-size: 100%;
   }
-  .tablet\:is-size-sm,
+  .tablet\:is-sm,
   .is-tablet-sm {
     font-size: 87.5%;
   }
-  .tablet\:is-size-xs,
+  .tablet\:is-xs,
   .is-tablet-xs {
     font-size: 75%;
   }
-  .tablet\:is-size-xxs,
+  .tablet\:is-xxs,
   .is-tablet-xxs {
     font-size: 62.5%;
   }
