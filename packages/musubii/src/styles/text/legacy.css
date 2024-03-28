@@ -1,0 +1,23 @@
+.text.is-link:where(
+    :not(:is([disabled], [aria-disabled="true"], .is-disabled))
+  ) {
+  cursor: pointer;
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+.text.is-link-reverse:where(
+    :not(:is([disabled], [aria-disabled="true"], .is-disabled))
+  ) {
+  cursor: pointer;
+  border-bottom: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .text.is-link:hover {
+    text-decoration: none;
+  }
+  .text.is-link-reverse:hover {
+    text-decoration: underline;
+  }
+}

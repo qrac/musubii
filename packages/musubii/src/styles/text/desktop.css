@@ -1,0 +1,11 @@
+@media (992px <= width) {
+  .text:is(.desktop\:is-right, .is-desktop-right) {
+    text-align: right;
+  }
+  .text:is(.desktop\:is-center, .is-desktop-center) {
+    text-align: center;
+  }
+  .text:is(.desktop\:is-left, .is-desktop-left) {
+    text-align: left;
+  }
+}

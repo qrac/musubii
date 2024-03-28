@@ -1,0 +1,15 @@
+.blockquote {
+  --blockquote-padding: 1.5em;
+  --blockquote-bg: var(--theme-bg-2);
+  --blockquote-border-width: 0.5em;
+  --blockquote-border-color: var(--theme-bd-1);
+  --blockquote-radius: 2px;
+}
+
+.blockquote {
+  padding: 1.5em;
+  background: var(--blockquote-bg);
+  border-left-width: var(--blockquote-border-width);
+  border-left-color: var(--blockquote-border-color);
+  border-radius: var(--blockquote-radius);
+}

@@ -1,0 +1,39 @@
+:not(.pre) > .code {
+  --code-padding: 0.2em 0.5em;
+  --code-bg: var(--theme-bg-2);
+  --code-border-radius: 2px;
+  --code-font-size: 87.5%;
+}
+
+.pre {
+  --pre-bg: var(--theme-bg-2);
+  --pre-border-radius: 2px;
+  --pre-code-padding: 1.25em 1.5em;
+}
+
+:not(.pre) > .code {
+  padding: var(--code-padding);
+  background: var(--code-bg);
+  border-radius: var(-code-border-radius);
+  color: var(--theme-code);
+  font-size: var(--code-font-size);
+  font-family: var(--font-mono);
+  word-break: break-all;
+}
+
+.pre {
+  background: var(--pre-bg);
+  border-radius: var(--code-border-radius);
+  color: var(--theme-code);
+  font-family: var(--font-mono);
+  white-space: pre;
+  word-wrap: normal;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pre > .code {
+  display: block;
+  padding: var(--pre-code-padding);
+}

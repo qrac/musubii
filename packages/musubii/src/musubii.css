@@ -6,6 +6,13 @@
 @import "./styles/grid/main.css";
 @import "./styles/card/main.css";
 @import "./styles/box/main.css";
+@import "./styles/text/main.css";
+@import "./styles/text/blockquote.css";
+@import "./styles/text/code.css";
+@import "./styles/text/fablet.css";
+@import "./styles/text/tablet.css";
+@import "./styles/text/desktop.css";
+@import "./styles/text/wide.css";
 @import "./styles/button/main.css";
 @import "./styles/badge/main.css";
 @import "./styles/display/main.css";

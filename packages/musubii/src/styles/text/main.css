@@ -1,0 +1,268 @@
+.text {
+  --text-normal-font-weight: 400;
+  --text-strong-font-weight: 700;
+}
+
+.text.is-dark {
+  color: var(--theme-dark);
+}
+
+.text.is-dark-1 {
+  color: color-mix(in srgb, var(--theme-dark) 87%, transparent 13%);
+}
+
+.text.is-dark-2 {
+  color: color-mix(in srgb, var(--theme-dark) 70%, transparent 30%);
+}
+
+.text.is-dark-3 {
+  color: color-mix(in srgb, var(--theme-dark) 60%, transparent 40%);
+}
+
+.text.is-dark-4 {
+  color: color-mix(in srgb, var(--theme-dark) 50%, transparent 50%);
+}
+
+.text.is-dark-5 {
+  color: color-mix(in srgb, var(--theme-dark) 40%, transparent 60%);
+}
+
+.text.is-dark-6 {
+  color: color-mix(in srgb, var(--theme-dark) 26%, transparent 74%);
+}
+
+.text.is-dark-7 {
+  color: color-mix(in srgb, var(--theme-dark) 15%, transparent 85%);
+}
+
+.text.is-dark-8 {
+  color: color-mix(in srgb, var(--theme-dark) 12%, transparent 88%);
+}
+
+.text.is-dark-9 {
+  color: color-mix(in srgb, var(--theme-dark) 5%, transparent 95%);
+}
+
+.text.is-light {
+  color: var(--theme-light);
+}
+
+.text.is-light-1 {
+  color: color-mix(in srgb, var(--theme-light) 87%, transparent 13%);
+}
+
+.text.is-light-2 {
+  color: color-mix(in srgb, var(--theme-light) 70%, transparent 30%);
+}
+
+.text.is-light-3 {
+  color: color-mix(in srgb, var(--theme-light) 60%, transparent 40%);
+}
+
+.text.is-light-4 {
+  color: color-mix(in srgb, var(--theme-light) 50%, transparent 50%);
+}
+
+.text.is-light-5 {
+  color: color-mix(in srgb, var(--theme-light) 40%, transparent 60%);
+}
+
+.text.is-light-6 {
+  color: color-mix(in srgb, var(--theme-light) 26%, transparent 74%);
+}
+
+.text.is-light-7 {
+  color: color-mix(in srgb, var(--theme-light) 15%, transparent 85%);
+}
+
+.text.is-light-8 {
+  color: color-mix(in srgb, var(--theme-light) 12%, transparent 88%);
+}
+
+.text.is-light-9 {
+  color: color-mix(in srgb, var(--theme-light) 5%, transparent 95%);
+}
+
+.text.is-primary {
+  color: var(--theme-primary);
+}
+
+.text.is-secondary {
+  color: var(--theme-secondary);
+}
+
+.text.is-info {
+  color: var(--theme-info);
+}
+
+.text.is-success {
+  color: var(--theme-success);
+}
+
+.text.is-warning {
+  color: var(--theme-warning);
+}
+
+.text.is-danger {
+  color: var(--theme-danger);
+}
+
+.text.is-normal {
+  font-weight: var(--text-normal-font-weight);
+}
+
+.text.is-strong {
+  font-weight: var(--text-strong-font-weight);
+}
+
+.text.is-weight-100 {
+  font-weight: 100;
+}
+
+.text.is-weight-200 {
+  font-weight: 200;
+}
+
+.text.is-weight-300 {
+  font-weight: 300;
+}
+
+.text.is-weight-400 {
+  font-weight: 400;
+}
+
+.text.is-weight-500 {
+  font-weight: 500;
+}
+
+.text.is-weight-600 {
+  font-weight: 600;
+}
+
+.text.is-weight-700 {
+  font-weight: 700;
+}
+
+.text.is-weight-800 {
+  font-weight: 800;
+}
+
+.text.is-weight-900 {
+  font-weight: 900;
+}
+
+.text.is-line-height-xxl {
+  line-height: 2;
+}
+
+.text.is-line-height-xl {
+  line-height: 1.9;
+}
+
+.text.is-line-height-lg {
+  line-height: 1.75;
+}
+
+.text.is-line-height-md {
+  line-height: 1.5;
+}
+
+.text.is-line-height-sm {
+  line-height: 1.375;
+}
+
+.text.is-line-height-xs {
+  line-height: 1.25;
+}
+
+.text.is-line-height-xxs {
+  line-height: 1;
+}
+
+.text.is-italic {
+  font-style: italic;
+}
+
+.text.is-delete {
+  text-decoration: line-through;
+}
+
+.text.is-capitalize {
+  text-transform: capitalize;
+}
+
+.text.is-lowercase {
+  text-transform: lowercase;
+}
+
+.text.is-uppercase {
+  text-transform: uppercase;
+}
+
+.text:is(.is-right, .is-mobile-right) {
+  text-align: right;
+}
+
+.text:is(.is-center, .is-mobile-center) {
+  text-align: center;
+}
+
+.text:is(.is-left, .is-mobile-left) {
+  text-align: left;
+}
+
+.text.is-justify {
+  text-align: justify;
+}
+
+.text.is-baseline {
+  vertical-align: baseline;
+}
+
+.text.is-top {
+  vertical-align: top;
+}
+
+.text.is-middle {
+  vertical-align: middle;
+}
+
+.text.is-bottom {
+  vertical-align: bottom;
+}
+
+.text.is-nowrap {
+  white-space: nowrap;
+}
+
+.text.is-break {
+  word-break: break-all;
+}
+
+.text.is-link:where(
+    :not(:is([disabled], [aria-disabled="true"], .is-disabled))
+  ) {
+  cursor: pointer;
+  border-bottom: 1px solid currentColor;
+}
+
+.text.is-link-reverse:where(
+    :not(:is([disabled], [aria-disabled="true"], .is-disabled))
+  ) {
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .text.is-link:hover {
+    border-bottom-color: transparent;
+  }
+  .text.is-link-reverse:hover {
+    border-color: currentColor;
+  }
+}
+
+.text:is([disabled], [aria-disabled="true"], .is-disabled) {
+  pointer-events: none;
+  color: var(--theme-disabled-tx);
+}

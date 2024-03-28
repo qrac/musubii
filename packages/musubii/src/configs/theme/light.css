@@ -7,6 +7,8 @@
   --theme-bd-2: #94a3b8; /* tailwind slate-400 #94a3b8 */
   --theme-lk: #06b6d4; /* tailwind cyan-500 #06b6d4 */
   --theme-lk-tx: #ffffff; /* white #ffffff */
+  --theme-dark: #000000; /* black #000000 */
+  --theme-light: #ffffff; /* white #ffffff */
   --theme-primary: #06b6d4; /* tailwind cyan-500 #06b6d4 */
   --theme-primary-light: #cffafe; /* tailwind cyan-100 #cffafe */
   --theme-info: #0ea5e9; /* tailwind sky-500 #0ea5e9 */
@@ -21,6 +23,7 @@
   --theme-danger-light: #fee2e2; /* tailwind red-100 #fee2e2 */
   --theme-placeholder: #94a3b8; /* tailwind slate-400 #94a3b8 */
   --theme-shadow: #0f172a; /* tailwind slate-900 #0f172a */
+  --theme-code: #6366f1; /* tailwind indigo-500 #6366f1 */
   --theme-disabled: #d1d5db; /* tailwind grey-300 #d1d5db */
   --theme-disabled-tx: #6b7280; /* tailwind grey-500 #6b7280 */
 }
