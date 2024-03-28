@@ -1,0 +1,30 @@
+@media (992px <= width) {
+  .desktop\:is-size-xxl,
+  .is-desktop-xxl {
+    font-size: 200%;
+  }
+  .desktop\:is-size-xl,
+  .is-desktop-xl {
+    font-size: 150%;
+  }
+  .desktop\:is-size-lg,
+  .is-desktop-lg {
+    font-size: 125%;
+  }
+  .desktop\:is-size-md,
+  .is-desktop-md {
+    font-size: 100%;
+  }
+  .desktop\:is-size-sm,
+  .is-desktop-sm {
+    font-size: 87.5%;
+  }
+  .desktop\:is-size-xs,
+  .is-desktop-xs {
+    font-size: 75%;
+  }
+  .desktop\:is-size-xxs,
+  .is-desktop-xxs {
+    font-size: 62.5%;
+  }
+}

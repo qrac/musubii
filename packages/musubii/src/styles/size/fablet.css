@@ -1,0 +1,30 @@
+@media (576px <= width) {
+  .fablet\:is-size-xxl,
+  .is-fablet-xxl {
+    font-size: 200%;
+  }
+  .fablet\:is-size-xl,
+  .is-fablet-xl {
+    font-size: 150%;
+  }
+  .fablet\:is-size-lg,
+  .is-fablet-lg {
+    font-size: 125%;
+  }
+  .fablet\:is-size-md,
+  .is-fablet-md {
+    font-size: 100%;
+  }
+  .fablet\:is-size-sm,
+  .is-fablet-sm {
+    font-size: 87.5%;
+  }
+  .fablet\:is-size-xs,
+  .is-fablet-xs {
+    font-size: 75%;
+  }
+  .fablet\:is-size-xxs,
+  .is-fablet-xxs {
+    font-size: 62.5%;
+  }
+}

@@ -23,3 +23,8 @@
 @import "./styles/space/main.css";
 @import "./styles/padding/main.css";
 @import "./styles/radius/main.css";
+@import "./styles/size/main.css";
+@import "./styles/size/fablet.css";
+@import "./styles/size/tablet.css";
+@import "./styles/size/desktop.css";
+@import "./styles/size/wide.css";

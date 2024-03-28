@@ -1,0 +1,30 @@
+@media (1200px <= width) {
+  .wide\:is-size-xxl,
+  .is-wide-xxl {
+    font-size: 200%;
+  }
+  .wide\:is-size-xl,
+  .is-wide-xl {
+    font-size: 150%;
+  }
+  .wide\:is-size-lg,
+  .is-wide-lg {
+    font-size: 125%;
+  }
+  .wide\:is-size-md,
+  .is-wide-md {
+    font-size: 100%;
+  }
+  .wide\:is-size-sm,
+  .is-wide-sm {
+    font-size: 87.5%;
+  }
+  .wide\:is-size-xs,
+  .is-wide-xs {
+    font-size: 75%;
+  }
+  .wide\:is-size-xxs,
+  .is-wide-xxs {
+    font-size: 62.5%;
+  }
+}
