@@ -22,6 +22,6 @@ pre {
 
 input::placeholder,
 textarea::placeholder {
-  opacity: 1;
   color: var(--theme-placeholder);
+  opacity: 1;
 }
