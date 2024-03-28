@@ -1,0 +1,17 @@
+.is-float-right {
+  float: right;
+}
+
+.is-float-left {
+  float: left;
+}
+
+.is-float-none {
+  float: none;
+}
+
+.is-clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
