@@ -19,7 +19,7 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "build": "npm run build:main && npm run build:react",
+    "build": "npm run build:main",
     "build:src": "npm run build:main-src",
     "build:main": "cd ./packages/musubii && npm run build",
     "build:main-src": "cd ./packages/musubii && npm run build:src",
