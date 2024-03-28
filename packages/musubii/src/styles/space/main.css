@@ -1,0 +1,28 @@
+.is-space-xxl > :not(:first-child) {
+  margin-top: 28px;
+}
+
+.is-space-xl > :not(:first-child) {
+  margin-top: 24px;
+}
+
+.is-space-lg > :not(:first-child) {
+  margin-top: 20px;
+}
+
+.is-space-md > :not(:first-child),
+.is-space > :not(:first-child) {
+  margin-top: 16px;
+}
+
+.is-space-sm > :not(:first-child) {
+  margin-top: 12px;
+}
+
+.is-space-xs > :not(:first-child) {
+  margin-top: 8px;
+}
+
+.is-space-xxs > :not(:first-child) {
+  margin-top: 4px;
+}
