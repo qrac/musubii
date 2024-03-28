@@ -8,6 +8,11 @@
 @import "./styles/box/main.css";
 @import "./styles/button/main.css";
 @import "./styles/badge/main.css";
+@import "./styles/display/main.css";
+@import "./styles/display/fablet.css";
+@import "./styles/display/tablet.css";
+@import "./styles/display/desktop.css";
+@import "./styles/display/wide.css";
 @import "./styles/flex/main.css";
 @import "./styles/flex/fablet.css";
 @import "./styles/flex/tablet.css";
