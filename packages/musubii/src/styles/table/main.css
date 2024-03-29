@@ -1,0 +1,146 @@
+.table {
+  --table-width: 100%;
+  --table-bg: var(--theme-bg-1);
+  --table-border-width: 1px;
+  --table-border-color: var(--theme-bd-1);
+  --table-item-padding: 0.75em 1em;
+  --table-item-vertical-align: top;
+  --table-th-border-bottom-width: 1px;
+  --table-paint-bg: var(--theme-primary);
+  --table-paint-color: var(--theme-lk-tx);
+  --table-spot-bg: var(--theme-warning-light);
+  --table-danger-bg: var(--theme-danger-light);
+  --table-stripe-bg: var(--theme-bg-2);
+  --table-wrap-shadow-color: var(--theme-dark);
+  --table-wrap-shadow-opacity: 15%;
+}
+
+.table {
+  width: var(--table-width);
+  background: var(--table-bg);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table :where(:is(th, td)) {
+  padding: var(--table-item-padding);
+  vertical-align: var(--table-item-vertical-align);
+}
+
+.table :where(thead > tr:last-child > th) {
+  border-bottom-width: var(--table-th-border-bottom-width);
+  border-bottom-color: var(--table-border-color);
+}
+
+.table :where(tr.box) {
+  display: table-row;
+}
+
+.table :where(:is(th.box, td.box)) {
+  display: table-cell;
+}
+
+.table:is(.is-border, .is-outline) {
+  border-width: var(--table-border-width);
+  border-color: var(--table-border-color);
+}
+
+.table.is-border :where(:is(td, th)) {
+  border-width: var(--table-border-width);
+  border-color: var(--table-border-color);
+}
+
+.table.is-line {
+  border-top-width: var(--table-border-width);
+  border-top-color: var(--table-border-color);
+  border-bottom-width: var(--table-border-width);
+  border-bottom-color: var(--table-border-color);
+}
+
+.table.is-line :where(tbody > tr:not(:first-child)) {
+  border-top-width: var(--table-border-width);
+  border-top-color: var(--table-border-color);
+}
+
+.table :where(:is(tr, th, td).is-paint) {
+  background: var(--table-paint-bg);
+  color: var(--table-paint-color);
+}
+
+.table :where(:is(tr, th, td).is-spot) {
+  background: var(--table-spot-bg);
+}
+
+.table :where(:is(tr, th, td).is-danger) {
+  background: var(--table-danger-bg);
+}
+
+.table:where(.is-stripe thead) {
+  background: var(--table-stripe-bg);
+}
+
+.table:where(.is-stripe tbody tr:nth-child(even)) {
+  background: var(--table-stripe-bg);
+}
+
+.table:where(.is-right :is(th, td)),
+.table :where(:is(tr, th, td).is-right) {
+  text-align: right;
+}
+
+.table:where(.is-center :is(th, td)),
+.table :where(:is(tr, th, td).is-center) {
+  text-align: center;
+}
+
+.table:where(.is-left :is(th, td)),
+.table :where(:is(tr, th, td).is-left) {
+  text-align: left;
+}
+
+.table:where(.is-middle :is(th, td)),
+.table :where(:is(tr, th, td).is-middle) {
+  vertical-align: middle;
+}
+
+.table.is-fixed {
+  table-layout: fixed;
+}
+
+.table-wrap {
+  background: var(--table-bg);
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrap.is-shadow {
+  background-image: linear-gradient(to right, var(--table-bg), var(--table-bg)),
+    linear-gradient(to right, var(--table-bg), var(--table-bg)),
+    linear-gradient(
+      to right,
+      color-mix(
+        in srgb,
+        var(--table-wrap-shadow-color) var(--table-wrap-shadow-opacity),
+        transparent calc(100% - var(--table-wrap-shadow-opacity))
+      ),
+      color-mix(in srgb, var(--table-bg) 0%, transparent 100%)
+    ),
+    linear-gradient(
+      to left,
+      color-mix(
+        in srgb,
+        var(--table-wrap-shadow-color) var(--table-wrap-shadow-opacity),
+        transparent calc(100% - var(--table-wrap-shadow-opacity))
+      ),
+      color-mix(in srgb, var(--table-bg) 0%, transparent 100%)
+    );
+  background-position: left center, right center, left center, right center;
+  background-size: 40px 100%, 40px 100%, 20px 100%, 20px 100%;
+  background-attachment: local, local, scroll, scroll;
+  background-repeat: no-repeat;
+}
+
+.table-wrap .table {
+  background: transparent;
+}
