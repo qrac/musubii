@@ -11,7 +11,7 @@
   --table-spot-bg: var(--theme-warning-light);
   --table-danger-bg: var(--theme-danger-light);
   --table-stripe-bg: var(--theme-bg-2);
-  --table-wrap-shadow-color: var(--theme-dark);
+  --table-wrap-shadow-color: var(--theme-shadow);
   --table-wrap-shadow-opacity: 15%;
 }
 
