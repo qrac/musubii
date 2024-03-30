@@ -15,9 +15,7 @@
   --badge-outline-color: inherit;
   --badge-melt-bg: transparent;
   --badge-melt-color: inherit;
-  --badge-round-border-radius: 9999em;
   --badge-square-size: calc(1.75em + 1px * 2);
-  --badge-square-padding: 0;
   --badge-strong-font-weight: 700;
   --badge-disabled-bg: var(--theme-disabled);
   --badge-disabled-border-color: var(--theme-disabled);
@@ -107,13 +105,13 @@
 }
 
 .badge:is(.is-round, .is-circle) {
-  border-radius: var(--badge-round-border-radius);
+  border-radius: 9999em;
 }
 
 .badge:is(.is-square, .is-circle) {
   width: var(--badge-square-size);
   height: var(--badge-square-size);
-  padding: var(--badge-square-padding);
+  padding: 0;
 }
 
 .badge.is-strong {
