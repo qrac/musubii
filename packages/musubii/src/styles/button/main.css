@@ -11,20 +11,14 @@
   --button-transition: ease-out 0.12s;
   --button-plain-bg: var(--theme-bg-2);
   --button-plain-color: inherit;
-  --button-plain-disabled-bg: var(--theme-disabled);
-  --button-plain-disabled-color: var(--theme-disabled-tx);
   --button-outline-bg: var(--theme-bg-1);
   --button-outline-border-color: var(--theme-bd-2);
   --button-outline-color: inherit;
   --button-outline-hover-bg: var(--theme-bg-2);
   --button-outline-hover-color: inherit;
-  --button-outline-disabled-bg: var(--theme-disabled);
-  --button-outline-disabled-border-color: var(--theme-disabled);
-  --button-outline-disabled-color: var(--theme-disabled-tx);
   --button-melt-bg: transparent;
   --button-melt-color: inherit;
   --button-melt-hover-bg: var(--theme-bg-2);
-  --button-melt-disabled-color: var(--theme-disabled-tx);
   --button-round-border-radius: 9999em;
   --button-square-size: calc(2.5em + 1px * 2);
   --button-square-padding: 0;
@@ -37,6 +31,9 @@
   --button-floating-shadow-opacity: 24%;
   --button-floating-shadow-size: 0 2px 6px 0;
   --button-floating-hover-shadow-size: 0 4px 12px 0;
+  --button-disabled-bg: var(--theme-disabled);
+  --button-disabled-border-color: var(--theme-disabled);
+  --button-disabled-color: var(--theme-disabled-tx);
 }
 
 .button.is-primary {
@@ -250,16 +247,16 @@
 }
 
 .button.is-plain:is([disabled], [aria-disabled="true"], .is-disabled) {
-  background: var(--button-plain-disabled-bg);
-  color: var(--button-plain-disabled-color);
+  background: var(--button-disabled-bg);
+  color: var(--button-disabled-color);
 }
 
 .button.is-outline:is([disabled], [aria-disabled="true"], .is-disabled) {
-  background: var(--button-outline-disabled-bg);
-  border-color: var(--button-outline-disabled-border-color);
-  color: var(--button-outline-disabled-color);
+  background: var(--button-disabled-bg);
+  border-color: var(--button-disabled-border-color);
+  color: var(--button-disabled-color);
 }
 
 .button.is-melt:is([disabled], [aria-disabled="true"], .is-disabled) {
-  color: var(--button-melt-disabled-color);
+  color: var(--button-disabled-color);
 }
