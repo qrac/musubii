@@ -19,9 +19,7 @@
   --button-melt-bg: transparent;
   --button-melt-color: inherit;
   --button-melt-hover-bg: var(--theme-bg-2);
-  --button-round-border-radius: 9999em;
   --button-square-size: calc(2.5em + 1px * 2);
-  --button-square-padding: 0;
   --button-angle-position: 0.75em;
   --button-angle-size: 0.5em;
   --button-angle-border-width: 2px;
@@ -177,13 +175,13 @@
 }
 
 .button:is(.is-round, .is-circle) {
-  border-radius: var(--button-round-border-radius);
+  border-radius: 9999em;
 }
 
 .button:is(.is-square, .is-circle) {
   width: var(--button-square-size);
   height: var(--button-square-size);
-  padding: var(--button-square-padding);
+  padding: 0;
 }
 
 .button:is(.is-angle-right, .is-angle-left):after {
