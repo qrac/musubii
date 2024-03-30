@@ -184,7 +184,7 @@
   padding: 0;
 }
 
-.button:is(.is-angle-right, .is-angle-left):after {
+.button:is(.is-angle-right, .is-angle-left)::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -195,21 +195,21 @@
   z-index: 2;
 }
 
-.button.is-angle-right:after {
+.button.is-angle-right::after {
   right: var(--button-angle-position);
   transform: translateY(-50%) rotate(45deg);
 }
 
-.button.is-angle-left:after {
+.button.is-angle-left::after {
   left: var(--button-angle-position);
   transform: translateY(-50%) rotate(-135deg);
 }
 
-.button.is-angle-up:after {
+.button.is-angle-up::after {
   transform: translateY(-30%) rotate(-45deg);
 }
 
-.button.is-angle-down:after {
+.button.is-angle-down::after {
   transform: translateY(-70%) rotate(135deg);
 }
 

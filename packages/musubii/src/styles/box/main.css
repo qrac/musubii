@@ -68,7 +68,7 @@
   border-bottom-color: var(--box-separate-border-color);
 }
 
-.box:is(.is-angle-right, .is-angle-left):after {
+.box:is(.is-angle-right, .is-angle-left)::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -79,21 +79,21 @@
   z-index: 2;
 }
 
-.box.is-angle-right:after {
+.box.is-angle-right::after {
   right: var(--box-angle-position);
   transform: translateY(-50%) rotate(45deg);
 }
 
-.box.is-angle-left:after {
+.box.is-angle-left::after {
   left: var(--box-angle-position);
   transform: translateY(-50%) rotate(-135deg);
 }
 
-.box.is-angle-up:after {
+.box.is-angle-up::after {
   transform: translateY(-30%) rotate(-45deg);
 }
 
-.box.is-angle-down:after {
+.box.is-angle-down::after {
   transform: translateY(-70%) rotate(135deg);
 }
 

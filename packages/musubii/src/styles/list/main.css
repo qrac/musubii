@@ -50,7 +50,7 @@
   display: block;
 }
 
-.list.is-kome > .item:before {
+.list.is-kome > .item::before {
   content: var(--list-kome-item-content);
   position: absolute;
   inset: var(--list-kome-item-inset);

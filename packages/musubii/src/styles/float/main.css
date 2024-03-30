@@ -10,7 +10,7 @@
   float: none;
 }
 
-.is-clearfix:after {
+.is-clearfix::after {
   content: "";
   display: block;
   clear: both;
