@@ -26,7 +26,7 @@
   --button-angle-color: var(--theme-bd-2);
   --button-strong-font-weight: 700;
   --button-floating-shadow-color: var(--theme-shadow);
-  --button-floating-shadow-opacity: 24%;
+  --button-floating-shadow-alpha: 24%;
   --button-floating-shadow-size: 0 2px 6px 0;
   --button-floating-hover-shadow-size: 0 4px 12px 0;
   --button-disabled-bg: var(--theme-disabled);
@@ -45,7 +45,7 @@
   --button-melt-hover-bg: var(--theme-primary-light);
   --button-angle-color: currentColor;
   --button-floating-shadow-color: var(--theme-primary);
-  --button-floating-shadow-opacity: 50%;
+  --button-floating-shadow-alpha: 50%;
 }
 
 .button.is-secondary {
@@ -59,7 +59,7 @@
   --button-melt-hover-bg: var(--theme-secondary-light);
   --button-angle-color: currentColor;
   --button-floating-shadow-color: var(--theme-secondary);
-  --button-floating-shadow-opacity: 50%;
+  --button-floating-shadow-alpha: 50%;
 }
 
 .button.is-info {
@@ -73,7 +73,7 @@
   --button-melt-hover-bg: var(--theme-info-light);
   --button-angle-color: currentColor;
   --button-floating-shadow-color: var(--theme-info);
-  --button-floating-shadow-opacity: 50%;
+  --button-floating-shadow-alpha: 50%;
 }
 
 .button.is-success {
@@ -87,7 +87,7 @@
   --button-melt-hover-bg: var(--theme-success-light);
   --button-angle-color: currentColor;
   --button-floating-shadow-color: var(--theme-success);
-  --button-floating-shadow-opacity: 50%;
+  --button-floating-shadow-alpha: 50%;
 }
 
 .button.is-warning {
@@ -101,7 +101,7 @@
   --button-melt-hover-bg: var(--theme-warning-light);
   --button-angle-color: currentColor;
   --button-floating-shadow-color: var(--theme-warning);
-  --button-floating-shadow-opacity: 50%;
+  --button-floating-shadow-alpha: 50%;
 }
 
 .button.is-danger {
@@ -115,7 +115,7 @@
   --button-melt-hover-bg: var(--theme-danger-light);
   --button-angle-color: currentColor;
   --button-floating-shadow-color: var(--theme-danger);
-  --button-floating-shadow-opacity: 50%;
+  --button-floating-shadow-alpha: 50%;
 }
 
 .button {
@@ -223,8 +223,8 @@
   box-shadow: var(--button-floating-shadow-size)
     color-mix(
       in srgb,
-      var(--button-floating-shadow-color) var(--button-floating-shadow-opacity),
-      transparent calc(100% - var(--button-floating-shadow-opacity))
+      var(--button-floating-shadow-color) var(--button-floating-shadow-alpha),
+      transparent calc(100% - var(--button-floating-shadow-alpha))
     );
 }
 
@@ -233,9 +233,8 @@
     box-shadow: var(--button-floating-hover-shadow-size)
       color-mix(
         in srgb,
-        var(--button-floating-shadow-color)
-          var(--button-floating-shadow-opacity),
-        transparent calc(100% - var(--button-floating-shadow-opacity))
+        var(--button-floating-shadow-color) var(--button-floating-shadow-alpha),
+        transparent calc(100% - var(--button-floating-shadow-alpha))
       );
   }
 }

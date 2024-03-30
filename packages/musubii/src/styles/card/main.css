@@ -4,7 +4,7 @@
   --card-outline-border-width: 1px;
   --card-outline-border-color: var(--theme-bd-1);
   --card-floating-shadow-color: var(--theme-shadow);
-  --card-floating-shadow-opacity: 24%;
+  --card-floating-shadow-alpha: 24%;
   --card-floating-shadow-size: 0 1px 3px 0;
   --card-floating-link-hover-shadow-size: 0 4px 12px 0;
   --card-link-transition: ease-out 0.12s;
@@ -34,8 +34,8 @@
   box-shadow: var(--card-floating-shadow-size)
     color-mix(
       in srgb,
-      var(--card-floating-shadow-color) var(--card-floating-shadow-opacity),
-      transparent calc(100% - var(--card-floating-shadow-opacity))
+      var(--card-floating-shadow-color) var(--card-floating-shadow-alpha),
+      transparent calc(100% - var(--card-floating-shadow-alpha))
     );
 }
 
@@ -44,8 +44,8 @@
     box-shadow: var(--card-floating-link-hover-shadow-size)
       color-mix(
         in srgb,
-        var(--card-floating-shadow-color) var(--card-floating-shadow-opacity),
-        transparent calc(100% - var(--card-floating-shadow-opacity))
+        var(--card-floating-shadow-color) var(--card-floating-shadow-alpha),
+        transparent calc(100% - var(--card-floating-shadow-alpha))
       );
   }
 }

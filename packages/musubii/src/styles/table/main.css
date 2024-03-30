@@ -12,7 +12,7 @@
   --table-danger-bg: var(--theme-danger-light);
   --table-stripe-bg: var(--theme-bg-2);
   --table-wrap-shadow-color: var(--theme-shadow);
-  --table-wrap-shadow-opacity: 15%;
+  --table-wrap-shadow-alpha: 15%;
 }
 
 .table {
@@ -121,8 +121,8 @@
       to right,
       color-mix(
         in srgb,
-        var(--table-wrap-shadow-color) var(--table-wrap-shadow-opacity),
-        transparent calc(100% - var(--table-wrap-shadow-opacity))
+        var(--table-wrap-shadow-color) var(--table-wrap-shadow-alpha),
+        transparent calc(100% - var(--table-wrap-shadow-alpha))
       ),
       color-mix(in srgb, var(--table-bg) 0%, transparent 100%)
     ),
@@ -130,8 +130,8 @@
       to left,
       color-mix(
         in srgb,
-        var(--table-wrap-shadow-color) var(--table-wrap-shadow-opacity),
-        transparent calc(100% - var(--table-wrap-shadow-opacity))
+        var(--table-wrap-shadow-color) var(--table-wrap-shadow-alpha),
+        transparent calc(100% - var(--table-wrap-shadow-alpha))
       ),
       color-mix(in srgb, var(--table-bg) 0%, transparent 100%)
     );
