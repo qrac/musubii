@@ -1,0 +1,18 @@
+.iframe {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.iframe.is-aspect-16x9 {
+  aspect-ratio: 16 / 9;
+}
+
+.iframe.is-aspect-4x3 {
+  aspect-ratio: 4 / 3;
+}
+
+.iframe > iframe {
+  position: absolute;
+  inset: 0;
+}
