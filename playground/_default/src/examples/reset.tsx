@@ -377,7 +377,7 @@ function ExampleResetMedia() {
           height={1084}
           alt="MUSIBii site in dark theme"
         />
-        <figcaption>MUSUBiiのダークテーマ</figcaption>
+        <figcaption>キャプション</figcaption>
       </figure>
       <iframe
         width="560"
