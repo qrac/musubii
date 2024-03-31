@@ -1,0 +1,151 @@
+.select {
+  --select-height: calc(2.5em + (1px * 2));
+  --select-padding: 0.5em 0.75em;
+  --select-padding-right: 2.5em;
+  --select-bg: var(--theme-bg-1);
+  --select-border-width: 1px;
+  --select-border-color: var(--theme-bd-1);
+  --select-border-radius: 2px;
+  --select-color: inherit;
+  --select-line-height: 1.5;
+  --select-transition: none;
+  --select-icon-position: 1em;
+  --select-icon-size: 0.5em;
+  --select-icon-border-width: 2px;
+  --select-icon-border-color: var(--theme-dark);
+  --select-icon-border-alpha: 24%;
+  --select-icon-z-index: 3;
+  --select-multiple-option-min-height: 1.5em;
+  --select-multiple-option-padding: 0.5em 0.75em;
+  --select-plain-bg: var(--theme-bg-2);
+  --select-inside-bg: transparent;
+  --select-disabled-bg: var(--theme-disabled);
+  --select-disabled-border-color: var(--theme-bd-1);
+  --select-disabled-color: var(--theme-dark);
+  --select-disabled-color-alpha: 36%;
+}
+
+.select.is-success {
+  --select-border-color: var(--theme-success);
+  --select-plain-bg: var(--theme-success-light);
+  --select-inside-bg: var(--theme-success-light);
+}
+
+.select.is-danger {
+  --select-border-color: var(--theme-danger);
+  --select-plain-bg: var(--theme-danger-light);
+  --select-inside-bg: var(--theme-danger-light);
+}
+
+.select {
+  position: relative;
+  display: inline-flex;
+}
+
+.select > select {
+  cursor: pointer;
+  flex: none;
+  width: 100%;
+  height: var(--select-height);
+  padding: var(--select-padding);
+  background: var(--select-bg);
+  border-width: var(--select-border-width);
+  border-color: var(--select-border-color);
+  border-radius: var(--select-border-radius);
+  color: var(--select-color);
+  line-height: var(--select-line-height);
+  transition: var(--select-transition);
+  appearance: none;
+}
+
+.select:where(:not(.is-multiple)) > select {
+  padding-right: var(--select-padding-right);
+}
+
+.select:where(:not(.is-multiple))::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: var(--select-icon-position);
+  width: var(--select-icon-size);
+  height: var(--select-icon-size);
+  border-right-width: var(--select-icon-border-width);
+  border-right-color: color-mix(
+    in srgb,
+    var(--select-icon-border-color) var(--select-icon-border-alpha),
+    transparent calc(100% - var(--select-icon-border-alpha))
+  );
+  border-bottom-width: var(--select-icon-border-width);
+  border-bottom-color: color-mix(
+    in srgb,
+    var(--select-icon-border-color) var(--select-icon-border-alpha),
+    transparent calc(100% - var(--select-icon-border-alpha))
+  );
+  transform: translateY(-70%) rotate(45deg);
+  z-index: var(--select-icon-z-index);
+}
+
+.select.is-multiple > select {
+  height: auto;
+  padding: 0;
+}
+
+.select.is-multiple > select > option {
+  min-height: var(--select-multiple-option-min-height);
+  padding: var(--select-multiple-option-padding);
+}
+
+.select.is-plain > select {
+  background: var(--select-plain-bg);
+  border-color: transparent;
+}
+
+.select.is-underline > select {
+  padding-right: 0;
+  padding-left: 0;
+  background: transparent;
+  border-color: transparent;
+  border-bottom-color: var(--select-border-color);
+  border-radius: 0;
+}
+
+.select.is-inside > select {
+  background: var(--select-inside-bg);
+  border-color: transparent;
+}
+
+.select.is-right > select {
+  text-align: right;
+}
+
+.select.is-center > select {
+  text-align: center;
+}
+
+.select.is-left > select {
+  text-align: left;
+}
+
+.select.is-round > select {
+  border-radius: 9999em;
+}
+
+.select > select:is([disabled], [aria-disabled="true"], .is-disabled) {
+  color: color-mix(
+    in srgb,
+    var(--select-disabled-color) var(--select-disabled-color-alpha),
+    transparent calc(100% - var(--select-disabled-color-alpha))
+  );
+}
+
+.select:not(.is-underline, .is-inside)
+  > select:is([disabled], [aria-disabled="true"], .is-disabled) {
+  background: var(--select-disabled-bg);
+  border-color: var(--select-disabled-border-color);
+}
+
+.select.is-underline
+  > select:is([disabled], [aria-disabled="true"], .is-disabled) {
+  border-bottom-color: var(--select-disabled-border-color);
+}

@@ -1,0 +1,50 @@
+.label {
+  display: flex;
+}
+
+:where(:not(:is([disabled], [aria-disabled="true"], .is-disabled)))
+  + .label:where(
+    :has(:not(:is([disabled], [aria-disabled="true"], .is-disabled)))
+  ) {
+  cursor: pointer;
+}
+
+.label.is-center {
+  justify-content: center;
+}
+
+.label.is-middle {
+  align-items: center;
+}
+
+:where(.label:not(.is-middle)) :is(.radio, .checkbox) {
+  top: 0.25em;
+}
+
+.label.is-gap-xxl {
+  column-gap: 28px;
+}
+
+.label.is-gap-xl {
+  column-gap: 24px;
+}
+
+.label.is-gap-lg {
+  column-gap: 20px;
+}
+
+.label.is-gap-md {
+  column-gap: 16px;
+}
+
+.label.is-gap-sm {
+  column-gap: 12px;
+}
+
+.label.is-gap-xs {
+  column-gap: 8px;
+}
+
+.label.is-gap-xxs {
+  column-gap: 4px;
+}
