@@ -17,6 +17,11 @@
 @import "./styles/badge/main.css";
 @import "./styles/list/main.css";
 @import "./styles/table/main.css";
+@import "./styles/form/main.css";
+@import "./styles/form/label.css";
+@import "./styles/form/radio.css";
+@import "./styles/form/checkbox.css";
+@import "./styles/form/select.css";
 @import "./styles/display/main.css";
 @import "./styles/display/fablet.css";
 @import "./styles/display/tablet.css";
