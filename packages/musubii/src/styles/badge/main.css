@@ -19,7 +19,8 @@
   --badge-strong-font-weight: 700;
   --badge-disabled-bg: var(--theme-disabled);
   --badge-disabled-border-color: var(--theme-disabled);
-  --badge-disabled-color: var(--theme-disabled-tx);
+  --badge-disabled-color: var(--theme-dark);
+  --badge-disabled-color-alpha: 24%;
 }
 
 .badge.is-primary {
@@ -122,17 +123,23 @@
   pointer-events: none;
 }
 
+.badge:is(.is-plain, .is-outline, .is-melt):is(
+    [disabled],
+    [aria-disabled="true"],
+    .is-disabled
+  ) {
+  color: color-mix(
+    in srgb,
+    var(--badge-disabled-color) var(--badge-disabled-color-alpha),
+    transparent calc(100% - var(--badge-disabled-color-alpha))
+  );
+}
+
 .badge.is-plain:is([disabled], [aria-disabled="true"], .is-disabled) {
   background: var(--badge-disabled-bg);
-  color: var(--badge-disabled-color);
 }
 
 .badge.is-outline:is([disabled], [aria-disabled="true"], .is-disabled) {
   background: var(--badge-disabled-bg);
   border-color: var(--badge-disabled-border-color);
-  color: var(--badge-disabled-color);
-}
-
-.badge.is-melt:is([disabled], [aria-disabled="true"], .is-disabled) {
-  color: var(--badge-disabled-color);
 }
