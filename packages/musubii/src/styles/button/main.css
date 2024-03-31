@@ -31,7 +31,8 @@
   --button-floating-hover-shadow-size: 0 4px 12px 0;
   --button-disabled-bg: var(--theme-disabled);
   --button-disabled-border-color: var(--theme-disabled);
-  --button-disabled-color: var(--theme-disabled-tx);
+  --button-disabled-color: var(--theme-dark);
+  --button-disabled-color-alpha: 24%;
 }
 
 .button.is-primary {
@@ -243,17 +244,23 @@
   pointer-events: none;
 }
 
+.button:is(.is-plain, .is-outline, .is-melt):is(
+    [disabled],
+    [aria-disabled="true"],
+    .is-disabled
+  ) {
+  color: color-mix(
+    in srgb,
+    var(--button-disabled-color) var(--button-disabled-color-alpha),
+    transparent calc(100% - var(--button-disabled-color-alpha))
+  );
+}
+
 .button.is-plain:is([disabled], [aria-disabled="true"], .is-disabled) {
   background: var(--button-disabled-bg);
-  color: var(--button-disabled-color);
 }
 
 .button.is-outline:is([disabled], [aria-disabled="true"], .is-disabled) {
   background: var(--button-disabled-bg);
   border-color: var(--button-disabled-border-color);
-  color: var(--button-disabled-color);
-}
-
-.button.is-melt:is([disabled], [aria-disabled="true"], .is-disabled) {
-  color: var(--button-disabled-color);
 }
