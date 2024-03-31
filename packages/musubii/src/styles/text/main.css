@@ -9,8 +9,6 @@
   --text-danger-color: var(--theme-danger);
   --text-normal-font-weight: 400;
   --text-strong-font-weight: 700;
-  --text-link-border-width: 1px;
-  --text-link-border-color: currentColor;
   --text-disabled-color: var(--theme-dark);
   --text-disabled-color-alpha: 36%;
 }
@@ -255,24 +253,21 @@
     :not(:is([disabled], [aria-disabled="true"], .is-disabled))
   ) {
   cursor: pointer;
-  border-bottom-width: var(--text-link-border-width);
-  border-bottom-color: var(--text-link-border-color);
+  text-decoration: underline;
 }
 
 .text.is-link-reverse:where(
     :not(:is([disabled], [aria-disabled="true"], .is-disabled))
   ) {
   cursor: pointer;
-  border-bottom-width: var(--text-link-border-width);
-  border-bottom-color: transparent;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .text.is-link:hover {
-    border-bottom-color: transparent;
+    text-decoration: none;
   }
   .text.is-link-reverse:hover {
-    border-bottom-color: var(--text-link-border-color);
+    text-decoration: underline;
   }
 }
 
