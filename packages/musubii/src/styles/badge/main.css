@@ -20,7 +20,7 @@
   --badge-disabled-bg: var(--theme-disabled);
   --badge-disabled-border-color: var(--theme-disabled);
   --badge-disabled-color: var(--theme-dark);
-  --badge-disabled-color-alpha: 24%;
+  --badge-disabled-color-alpha: 36%;
 }
 
 .badge.is-primary {
