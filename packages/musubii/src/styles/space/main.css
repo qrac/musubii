@@ -26,3 +26,235 @@
 .is-space-xxs > :not(:first-child) {
   margin-top: 4px;
 }
+
+.is-space-top-xxl > :not(:first-child) {
+  margin-top: 28px;
+}
+
+.is-space-top-xl > :not(:first-child) {
+  margin-top: 24px;
+}
+
+.is-space-top-lg > :not(:first-child) {
+  margin-top: 20px;
+}
+
+.is-space-top-md > :not(:first-child),
+.is-space-top > :not(:first-child) {
+  margin-top: 16px;
+}
+
+.is-space-top-sm > :not(:first-child) {
+  margin-top: 12px;
+}
+
+.is-space-top-xs > :not(:first-child) {
+  margin-top: 8px;
+}
+
+.is-space-top-xxs > :not(:first-child) {
+  margin-top: 4px;
+}
+
+.is-space-right-xxl > :not(:first-child) {
+  margin-right: 28px;
+}
+
+.is-space-right-xl > :not(:first-child) {
+  margin-right: 24px;
+}
+
+.is-space-right-lg > :not(:first-child) {
+  margin-right: 20px;
+}
+
+.is-space-right-md > :not(:first-child),
+.is-space-right > :not(:first-child) {
+  margin-right: 16px;
+}
+
+.is-space-right-sm > :not(:first-child) {
+  margin-right: 12px;
+}
+
+.is-space-right-xs > :not(:first-child) {
+  margin-right: 8px;
+}
+
+.is-space-right-xxs > :not(:first-child) {
+  margin-right: 4px;
+}
+
+.is-space-bottom-xxl > :not(:first-child) {
+  margin-bottom: 28px;
+}
+
+.is-space-bottom-xl > :not(:first-child) {
+  margin-bottom: 24px;
+}
+
+.is-space-bottom-lg > :not(:first-child) {
+  margin-bottom: 20px;
+}
+
+.is-space-bottom-md > :not(:first-child),
+.is-space-bottom > :not(:first-child) {
+  margin-bottom: 16px;
+}
+
+.is-space-bottom-sm > :not(:first-child) {
+  margin-bottom: 12px;
+}
+
+.is-space-bottom-xs > :not(:first-child) {
+  margin-bottom: 8px;
+}
+
+.is-space-bottom-xxs > :not(:first-child) {
+  margin-bottom: 4px;
+}
+
+.is-space-left-xxl > :not(:first-child) {
+  margin-left: 28px;
+}
+
+.is-space-left-xl > :not(:first-child) {
+  margin-left: 24px;
+}
+
+.is-space-left-lg > :not(:first-child) {
+  margin-left: 20px;
+}
+
+.is-space-left-md > :not(:first-child),
+.is-space-left > :not(:first-child) {
+  margin-left: 16px;
+}
+
+.is-space-left-sm > :not(:first-child) {
+  margin-left: 12px;
+}
+
+.is-space-left-xs > :not(:first-child) {
+  margin-left: 8px;
+}
+
+.is-space-left-xxs > :not(:first-child) {
+  margin-left: 4px;
+}
+
+.is-space-row-xxl {
+  margin-bottom: -28px;
+}
+
+.is-space-row-xxl > * {
+  margin-bottom: 28px;
+}
+
+.is-space-row-xl {
+  margin-bottom: -24px;
+}
+
+.is-space-row-xl > * {
+  margin-bottom: 24px;
+}
+
+.is-space-row-lg {
+  margin-bottom: -20px;
+}
+
+.is-space-row-lg > * {
+  margin-bottom: 20px;
+}
+
+.is-space-row-md,
+.is-space-row {
+  margin-bottom: -16px;
+}
+
+.is-space-row-md > *,
+.is-space-row > * {
+  margin-bottom: 16px;
+}
+
+.is-space-row-sm {
+  margin-bottom: -12px;
+}
+
+.is-space-row-sm > * {
+  margin-bottom: 12px;
+}
+
+.is-space-row-xs {
+  margin-bottom: -8px;
+}
+
+.is-space-row-xs > * {
+  margin-bottom: 8px;
+}
+
+.is-space-row-xxs {
+  margin-bottom: -4px;
+}
+
+.is-space-row-xxs > * {
+  margin-bottom: 4px;
+}
+
+.is-space-column-xxl {
+  margin-left: -28px;
+}
+
+.is-space-column-xxl > * {
+  margin-left: 28px;
+}
+
+.is-space-column-xl {
+  margin-left: -24px;
+}
+
+.is-space-column-xl > * {
+  margin-left: 24px;
+}
+
+.is-space-column-lg {
+  margin-left: -20px;
+}
+
+.is-space-column-lg > * {
+  margin-left: 20px;
+}
+
+.is-space-column-md,
+.is-space-column {
+  margin-left: -16px;
+}
+
+.is-space-column-md > *,
+.is-space-column > * {
+  margin-left: 16px;
+}
+
+.is-space-column-sm {
+  margin-left: -12px;
+}
+
+.is-space-column-sm > * {
+  margin-left: 12px;
+}
+
+.is-space-column-xs {
+  margin-left: -8px;
+}
+
+.is-space-column-xs > * {
+  margin-left: 8px;
+}
+
+.is-space-column-xxs {
+  margin-left: -4px;
+}
+
+.is-space-column-xxs > * {
+  margin-left: 4px;
+}
