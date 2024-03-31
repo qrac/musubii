@@ -24,7 +24,6 @@
   --theme-shadow: #0f172a; /* tailwind slate-900 #0f172a */
   --theme-code: #818cf8; /* tailwind indigo-400 #818cf8 */
   --theme-disabled: #374151; /* tailwind grey-700 #374151 */
-  --theme-disabled-tx: #6b7280; /* tailwind grey-500 #6b7280 */
 }
 
 [data-theme="dark"] {
