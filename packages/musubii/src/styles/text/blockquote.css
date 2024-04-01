@@ -7,7 +7,7 @@
 }
 
 .blockquote {
-  padding: 1.5em;
+  padding: var(--blockquote-padding);
   background: var(--blockquote-bg);
   border-left-width: var(--blockquote-border-width);
   border-left-color: var(--blockquote-border-color);
