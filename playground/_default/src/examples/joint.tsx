@@ -21,37 +21,34 @@ export function ExampleJoint() {
       </div>
       <div className="demo-box">
         <div className="demo-buttons">
-          {[...Array(2)].map((_, index) => (
-            <div className={clsx(isActive && "joint")}>
-              <button
-                className={clsx(
-                  "button",
-                  index === 0 ? "is-plain" : "is-outline"
-                )}
-              >
-                <FiAlignLeft />
-                <span className="text">左揃え</span>
-              </button>
-              <button
-                className={clsx(
-                  "button",
-                  index === 0 ? "is-plain" : "is-outline"
-                )}
-              >
-                <FiAlignCenter />
-                <span className="text">中央揃え</span>
-              </button>
-              <button
-                className={clsx(
-                  "button",
-                  index === 0 ? "is-plain" : "is-outline"
-                )}
-              >
-                <FiAlignRight />
-                <span className="text">右揃え</span>
-              </button>
-            </div>
-          ))}
+          <div className={clsx(isActive && "joint")}>
+            <button className="button is-plain">
+              <FiAlignLeft />
+              <span className="text">左揃え</span>
+            </button>
+            <button className="button is-plain">
+              <FiAlignCenter />
+              <span className="text">中央揃え</span>
+            </button>
+            <button className="button is-plain">
+              <FiAlignRight />
+              <span className="text">右揃え</span>
+            </button>
+          </div>
+          <div className={clsx(isActive && "joint")}>
+            <button className="button is-outline">
+              <FiAlignLeft />
+              <span className="text">左揃え</span>
+            </button>
+            <button className="button is-outline">
+              <FiAlignCenter />
+              <span className="text">中央揃え</span>
+            </button>
+            <button className="button is-outline">
+              <FiAlignRight />
+              <span className="text">右揃え</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
