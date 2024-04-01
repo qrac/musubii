@@ -13,10 +13,20 @@ import { ExampleSection } from "./examples/section"
 import { ExampleGrid } from "./examples/grid"
 import { ExampleCard } from "./examples/card"
 import { ExampleBox } from "./examples/box"
+import { ExampleJoint } from "./examples/joint"
 import { ExampleButton } from "./examples/button"
 import { ExampleBadge } from "./examples/badge"
 
-const examples = ["reset", "section", "grid", "card", "box", "button", "badge"]
+const examples = [
+  "reset",
+  "section",
+  "grid",
+  "card",
+  "box",
+  "joint",
+  "button",
+  "badge",
+]
 const themes = ["light", "dark"]
 
 export default function () {
@@ -93,6 +103,11 @@ export default function () {
         {example === "box" && (
           <div className="demo-section">
             <ExampleBox />
+          </div>
+        )}
+        {example === "joint" && (
+          <div className="demo-section">
+            <ExampleJoint />
           </div>
         )}
         {example === "button" && (

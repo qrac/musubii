@@ -1,0 +1,15 @@
+.joint {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.joint > :is(.button, .badge, .input):not(:first-child) {
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.joint > :is(.button, .badge, .input):not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
