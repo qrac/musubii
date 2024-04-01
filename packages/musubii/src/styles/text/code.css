@@ -16,7 +16,7 @@
   --pre-code-font-family: var(--font-mono);
 }
 
-:not(.pre) > .code {
+*:not(.pre) > .code {
   padding: var(--code-padding);
   background: var(--code-bg);
   border-radius: var(-code-border-radius);
