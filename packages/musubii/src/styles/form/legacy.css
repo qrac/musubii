@@ -1,0 +1,11 @@
+:is(.input, .textarea) {
+  --input-height: calc(2.5em + (1px * 2));
+  --input-border-radius: 2px;
+  --input-line-height: 1.5;
+}
+
+.select {
+  --select-height: calc(2.5em + (1px * 2));
+  --select-border-radius: 2px;
+  --select-line-height: 1.5;
+}

@@ -1,15 +1,15 @@
 :is(.input, .textarea) {
-  --input-height: calc(2.5em + (1px * 2));
+  --input-height: calc(2.25em + (1px * 2));
   --input-padding: 0.5em 0.75em;
   --input-bg: var(--theme-bg-1);
   --input-border-width: 1px;
   --input-border-color: var(--theme-bd-1);
-  --input-border-radius: 2px;
+  --input-border-radius: 6px;
   --input-inset-shadow-color: var(--theme-shadow);
   --input-inset-shadow-alpha: 7.5%;
   --input-inset-shadow-size: 0 1px 1px;
   --input-color: inherit;
-  --input-line-height: 1.5;
+  --input-line-height: 1.25;
   --input-transition: none;
   --input-placeholder-color: var(--theme-tx-1);
   --input-placeholder-alpha: 26%;
