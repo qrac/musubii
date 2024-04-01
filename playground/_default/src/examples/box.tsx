@@ -7,7 +7,7 @@ import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 
-const { outlines, separates, angles } = boxPatterns
+const { outlines, angles } = boxPatterns
 
 type ExcludedOutline = Exclude<
   BoxProps["outline"],
