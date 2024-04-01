@@ -1,30 +1,31 @@
 import { useState } from "react"
+import clsx from "clsx"
 import { FiArchive } from "react-icons/fi"
 
-import type { BoxProps } from "../components/box"
-import { Box, boxPatterns } from "../components/box"
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
+import { splitClasses } from "../functions/class"
 
-const { outlines, angles } = boxPatterns
-
-type ExcludedOutline = Exclude<
-  BoxProps["outline"],
-  ("all" | "top" | "right" | "bottom" | "left")[]
->
-type ExcludedSeparate = Exclude<
-  BoxProps["separate"],
-  ("all" | "parent" | "child")[]
->
+const outlines = ["all", "top", "right", "bottom", "left"]
+const angles = [
+  "right",
+  "left",
+  "right-up",
+  "right-down",
+  "left-up",
+  "left-down",
+]
 
 export function ExampleBox() {
   const [isBackground, setIsBackground] = useState<boolean>(true)
-  const [outline, setOutline] = useState<ExcludedOutline>("all")
-  const [separate, setSeparate] = useState<ExcludedSeparate>("all")
-  const [angle, setAngle] = useState<BoxProps["angle"]>()
+  const [outline, setOutline] = useState<string | undefined>("all")
+  const [separate, setSeparate] = useState<string | undefined>("all")
+  const [angle, setAngle] = useState<string | undefined>()
   const [isLink, setIsLink] = useState<boolean>(false)
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
+  const DOMElement = isLink ? "a" : "div"
+  const angleClasses = splitClasses("angle", angle)
   return (
     <div className="demo-boxes">
       <div className="demo-box">
@@ -72,27 +73,39 @@ export function ExampleBox() {
         </DemoFieldsets>
       </div>
       <div className="demo-box">
-        <Box outline={outline} separate={separate}>
+        <div
+          className={clsx(
+            "box",
+            outline === "all" && "is-outline",
+            outline && outline !== "all" && `is-outline-${outline}`,
+            separate === "all" && "is-separate",
+            separate === "parent" && "is-separate-parent"
+          )}
+        >
           {[...Array(3)].map((_, index) => (
-            <Box
-              DOMElement={isLink ? "a" : "div"}
-              isBackground={isBackground}
-              isLink={isLink}
-              isDisabled={isDisabled}
+            <DOMElement
+              className={clsx(
+                "box is-flex is-middle is-gap-sm is-pl-sm",
+                isBackground && "is-bg",
+                isLink && "is-link"
+              )}
+              href={DOMElement === "a" ? "" : undefined}
+              aria-disabled={isDisabled ? isDisabled : undefined}
               key={index}
-              className="is-flex is-middle is-gap-sm is-pl-sm"
             >
               <FiArchive />
-              <Box
-                separate={separate === "parent" ? "child" : undefined}
-                angle={angle}
-                className="is-flex-0 is-py-xs"
+              <div
+                className={clsx(
+                  "box is-flex-0 is-py-xs",
+                  separate === "parent" && "is-separate-child",
+                  angleClasses
+                )}
               >
                 box
-              </Box>
-            </Box>
+              </div>
+            </DOMElement>
           ))}
-        </Box>
+        </div>
       </div>
     </div>
   )

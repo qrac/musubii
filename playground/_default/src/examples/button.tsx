@@ -1,4 +1,5 @@
 import { useState } from "react"
+import clsx from "clsx"
 import {
   FiList,
   FiCheck,
@@ -9,27 +10,47 @@ import {
   FiTrash2,
 } from "react-icons/fi"
 
-import type { ButtonProps } from "../components/button"
-import { Button, buttonPatterns } from "../components/button"
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 import { DemoLoading } from "../demos/loading"
+import { splitClasses } from "../functions/class"
 
-const { DOMElements, variants, colorSchemes, shapes, angles } = buttonPatterns
+const DOMElements = ["button", "a"] as const
+const variants = ["plain", "outline", "melt"]
+const colorSchemes = [
+  "primary",
+  "secondary",
+  "info",
+  "success",
+  "warning",
+  "danger",
+]
+const shapes = ["round", "square", "circle"]
+const angles = [
+  "right",
+  "left",
+  "right-up",
+  "right-down",
+  "left-up",
+  "left-down",
+]
 
 export function ExampleButton() {
   const [DOMElement, setDOMElements] =
-    useState<ButtonProps["DOMElement"]>("button")
+    useState<(typeof DOMElements)[number]>("button")
   const [hasText, setHasText] = useState<boolean>(true)
   const [hasIcon, setHasIcon] = useState<boolean>(false)
   const [hasLoading, setHasLoading] = useState<boolean>(false)
-  const [variant, setVariant] = useState<ButtonProps["variant"]>("plain")
-  const [shape, setShape] = useState<ButtonProps["shape"]>()
-  const [angle, setAngle] = useState<ButtonProps["angle"]>()
+  const [variant, setVariant] = useState("plain")
+  const [shape, setShape] = useState<string | undefined>()
+  const [angle, setAngle] = useState<string | undefined>()
   const [isStrong, setIsStrong] = useState<boolean>(false)
   const [isFloating, setIsFloating] = useState<boolean>(false)
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
+  const isButton = DOMElement === "button"
+  const isAnchor = DOMElement === "a"
+  const angleClasses = splitClasses("angle", angle)
   return (
     <div className="demo-boxes">
       <div className="demo-box">
@@ -100,26 +121,31 @@ export function ExampleButton() {
       </div>
       <div className="demo-box">
         <div className="demo-buttons">
-          {[undefined, ...colorSchemes].map((item, index) => (
-            <Button
-              key={index}
-              DOMElement={DOMElement}
-              variant={variant}
-              colorScheme={item}
-              shape={shape}
-              angle={angle}
-              isStrong={isStrong}
-              isFloating={isFloating}
-              isDisabled={isDisabled}
+          {[undefined, ...colorSchemes].map((colorScheme, index) => (
+            <DOMElement
+              className={clsx(
+                "button",
+                `is-${variant}`,
+                colorScheme && `is-${colorScheme}`,
+                shape && `is-${shape}`,
+                angleClasses,
+                isStrong && "is-strong",
+                isFloating && "is-floating"
+              )}
+              type={isButton ? "button" : undefined}
+              href={isAnchor ? "" : undefined}
+              disabled={isButton ? isDisabled : undefined}
+              aria-disabled={!isButton ? isDisabled : undefined}
               style={angle ? { width: "8em" } : undefined}
+              key={index}
             >
               <ExampleButtonChildren
-                colorScheme={item}
+                colorScheme={colorScheme}
                 hasText={hasText}
                 hasIcon={hasIcon}
                 hasLoading={hasLoading}
               />
-            </Button>
+            </DOMElement>
           ))}
         </div>
       </div>
@@ -133,7 +159,7 @@ function ExampleButtonChildren({
   hasIcon,
   hasLoading,
 }: {
-  colorScheme?: ButtonProps["colorScheme"]
+  colorScheme?: string
   hasText: boolean
   hasIcon: boolean
   hasLoading: boolean

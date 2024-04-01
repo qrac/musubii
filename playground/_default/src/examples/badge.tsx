@@ -1,4 +1,5 @@
 import { useState } from "react"
+import clsx from "clsx"
 import {
   FiHash,
   FiCheck,
@@ -9,23 +10,31 @@ import {
   FiLock,
 } from "react-icons/fi"
 
-import type { BadgeProps } from "../components/badge"
-import { Badge, badgePatterns } from "../components/badge"
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 import { DemoLoading } from "../demos/loading"
 
-const { DOMElements, variants, colorSchemes, shapes } = badgePatterns
+const DOMElements = ["span", "div"] as const
+const variants = ["plain", "outline", "melt"]
+const colorSchemes = [
+  "primary",
+  "secondary",
+  "info",
+  "success",
+  "warning",
+  "danger",
+]
+const shapes = ["round", "square", "circle"]
 
 export function ExampleBadge() {
   const [DOMElement, setDOMElements] =
-    useState<BadgeProps["DOMElement"]>("span")
+    useState<(typeof DOMElements)[number]>("span")
   const [hasText, setHasText] = useState<boolean>(true)
   const [hasIcon, setHasIcon] = useState<boolean>(false)
   const [hasLoading, setHasLoading] = useState<boolean>(false)
-  const [variant, setVariant] = useState<BadgeProps["variant"]>("plain")
-  const [shape, setShape] = useState<BadgeProps["shape"]>()
+  const [variant, setVariant] = useState("plain")
+  const [shape, setShape] = useState<string | undefined>()
   const [isStrong, setIsStrong] = useState<boolean>(false)
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
   return (
@@ -86,23 +95,25 @@ export function ExampleBadge() {
       </div>
       <div className="demo-box">
         <div className="demo-badges">
-          {[undefined, ...colorSchemes].map((item, index) => (
-            <Badge
+          {[undefined, ...colorSchemes].map((colorScheme, index) => (
+            <DOMElement
+              className={clsx(
+                "badge",
+                `is-${variant}`,
+                colorScheme && `is-${colorScheme}`,
+                shape && `is-${shape}`,
+                isStrong && "is-strong"
+              )}
+              aria-disabled={isDisabled ? isDisabled : undefined}
               key={index}
-              DOMElement={DOMElement}
-              variant={variant}
-              colorScheme={item}
-              shape={shape}
-              isStrong={isStrong}
-              isDisabled={isDisabled}
             >
               <ExampleBadgeChildren
-                colorScheme={item}
+                colorScheme={colorScheme}
                 hasText={hasText}
                 hasIcon={hasIcon}
                 hasLoading={hasLoading}
               />
-            </Badge>
+            </DOMElement>
           ))}
         </div>
       </div>
@@ -116,7 +127,7 @@ function ExampleBadgeChildren({
   hasIcon,
   hasLoading,
 }: {
-  colorScheme?: BadgeProps["colorScheme"]
+  colorScheme?: string
   hasText: boolean
   hasIcon: boolean
   hasLoading: boolean

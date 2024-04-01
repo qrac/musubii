@@ -3,7 +3,6 @@ import clsx from "clsx"
 import { FiAlignLeft, FiAlignCenter, FiAlignRight } from "react-icons/fi"
 
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
-import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 
 export function ExampleJoint() {
@@ -11,13 +10,15 @@ export function ExampleJoint() {
   return (
     <div className="demo-boxes">
       <div className="demo-box">
-        <DemoFieldset title="joint">
-          <DemoCheckbox
-            label="actice"
-            checkedValue={isActive}
-            onChange={setIsActive}
-          />
-        </DemoFieldset>
+        <DemoFieldsets>
+          <DemoFieldset title="joint">
+            <DemoCheckbox
+              label="actice"
+              checkedValue={isActive}
+              onChange={setIsActive}
+            />
+          </DemoFieldset>
+        </DemoFieldsets>
       </div>
       <div className="demo-box">
         <div className="demo-buttons">

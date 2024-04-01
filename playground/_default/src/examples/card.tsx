@@ -1,21 +1,21 @@
 import { useState } from "react"
+import clsx from "clsx"
 
-import type { CardProps } from "../components/card"
-import { Card, cardPatterns } from "../components/card"
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 
-const { radiuses } = cardPatterns
+const radiuses = ["xxs", "xs", "sm", "md", "lg", "xl", "xxl"]
 
 export function ExampleCard() {
   const [isBackground, setIsBackground] = useState<boolean>(true)
   const [isOutline, setIsOutline] = useState<boolean>(false)
-  const [radius, setRadius] = useState<CardProps["radius"]>("md")
+  const [radius, setRadius] = useState<string | undefined>("md")
   const [isFloating, setIsfloating] = useState<boolean>(true)
   const [isLink, setIsLink] = useState<boolean>(false)
   const [isZoom, setIsZoom] = useState<boolean>(false)
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
+  const DOMElement = isLink ? "a" : "div"
   return (
     <div className="demo-boxes">
       <div className="demo-box">
@@ -64,18 +64,21 @@ export function ExampleCard() {
         </DemoFieldsets>
       </div>
       <div className="demo-box">
-        <Card
-          DOMElement={isLink ? "a" : "div"}
-          isBackground={isBackground}
-          isOutline={isOutline}
-          radius={radius}
-          isFloating={isFloating}
-          isLink={isLink}
-          isZoom={isZoom}
-          isDisabled={isDisabled}
+        <DOMElement
+          className={clsx(
+            "card",
+            isBackground && "is-bg",
+            isOutline && "is-outline",
+            radius && `is-radius-${radius}`,
+            isFloating && "is-floating",
+            isLink && "is-link",
+            isZoom && "is-zoom"
+          )}
+          href={DOMElement === "a" ? "" : undefined}
+          aria-disabled={isDisabled ? isDisabled : undefined}
         >
           <div style={{ padding: "1rem" }}>card</div>
-        </Card>
+        </DOMElement>
       </div>
     </div>
   )
