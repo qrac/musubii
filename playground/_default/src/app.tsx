@@ -14,6 +14,7 @@ import { ExampleGrid } from "./examples/grid"
 import { ExampleCard } from "./examples/card"
 import { ExampleBox } from "./examples/box"
 import { ExampleJoint } from "./examples/joint"
+import { ExampleText } from "./examples/text"
 import { ExampleButton } from "./examples/button"
 import { ExampleBadge } from "./examples/badge"
 
@@ -24,6 +25,7 @@ const examples = [
   "card",
   "box",
   "joint",
+  "text",
   "button",
   "badge",
 ]
@@ -108,6 +110,11 @@ export default function () {
         {example === "joint" && (
           <div className="demo-section">
             <ExampleJoint />
+          </div>
+        )}
+        {example === "text" && (
+          <div className="demo-section">
+            <ExampleText />
           </div>
         )}
         {example === "button" && (
