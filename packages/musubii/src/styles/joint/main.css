@@ -9,9 +9,14 @@
   border-bottom-right-radius: 0;
 }
 
-.joint > :is(.button, .badge, .input, ):not(:first-child),
+.joint > :is(.button, .badge, .input):not(:first-child),
 .joint > .select:not(:first-child) > select {
   border-left: none;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.joint > :is(.button, .badge, .input):focus,
+.joint > .select > select {
+  z-index: 2;
 }
