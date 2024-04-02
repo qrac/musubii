@@ -17,6 +17,7 @@ import { ExampleJoint } from "./examples/joint"
 import { ExampleText } from "./examples/text"
 import { ExampleButton } from "./examples/button"
 import { ExampleBadge } from "./examples/badge"
+import { ExampleList } from "./examples/list"
 
 const examples = [
   "reset",
@@ -28,6 +29,7 @@ const examples = [
   "text",
   "button",
   "badge",
+  "list",
 ]
 const themes = ["light", "dark"]
 
@@ -125,6 +127,11 @@ export default function () {
         {example === "badge" && (
           <div className="demo-section">
             <ExampleBadge />
+          </div>
+        )}
+        {example === "list" && (
+          <div className="demo-section">
+            <ExampleList />
           </div>
         )}
       </main>

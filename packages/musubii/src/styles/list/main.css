@@ -1,7 +1,6 @@
 .list {
   --list-margin-left: 1.5em;
   --list-item-margin-top: 0.25em;
-  --list-item-list-margin-top: 0.5em;
   --list-kome-item-content: "\203B";
   --list-kome-item-inset: 0 auto auto -1em;
   --list-note-item-gap: 0.25em;
@@ -37,12 +36,6 @@
       > .item:not(:first-child)
   ) {
   margin-top: var(--list-item-margin-top);
-}
-
-.list:where(
-    :is(.is-disc, .is-circle, .is-square, .is-decimal, .is-kome) > .item > .list
-  ) {
-  margin-top: var(--list-item-list-margin-top);
 }
 
 .list.is-kome > .item {
