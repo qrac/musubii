@@ -12,6 +12,8 @@ import { DemoCheckbox } from "../demos/checkbox"
 
 export function ExampleJoint() {
   const [isActive, setIsActive] = useState<boolean>(true)
+  const [isRound, setIsRound] = useState<boolean>(false)
+  const roundClass = isRound ? "is-round" : undefined
   return (
     <div className="demo-boxes">
       <div className="demo-box">
@@ -23,43 +25,44 @@ export function ExampleJoint() {
               onChange={setIsActive}
             />
           </DemoFieldset>
+          <DemoFieldset title="other">
+            <DemoCheckbox
+              label="round"
+              checkedValue={isRound}
+              onChange={setIsRound}
+            />
+          </DemoFieldset>
         </DemoFieldsets>
       </div>
+      {["plain", "outline"].map((variant, index) => (
+        <div className="demo-box" key={index}>
+          <div className={clsx(isActive && "joint")}>
+            <button className={clsx("button", `is-${variant}`, roundClass)}>
+              <FiAlignLeft />
+              <span className="text">左揃え</span>
+            </button>
+            <button className={clsx("button", `is-${variant}`, roundClass)}>
+              <FiAlignCenter />
+              <span className="text">中央揃え</span>
+            </button>
+            <button className={clsx("button", `is-${variant}`, roundClass)}>
+              <FiAlignRight />
+              <span className="text">右揃え</span>
+            </button>
+          </div>
+        </div>
+      ))}
       <div className="demo-box">
         <div className={clsx(isActive && "joint")}>
-          <button className="button is-plain">
-            <FiAlignLeft />
-            <span className="text">左揃え</span>
-          </button>
-          <button className="button is-plain">
-            <FiAlignCenter />
-            <span className="text">中央揃え</span>
-          </button>
-          <button className="button is-plain">
-            <FiAlignRight />
-            <span className="text">右揃え</span>
-          </button>
+          <span className={clsx("badge is-plain", roundClass)}>Build</span>
+          <span className={clsx("badge is-plain is-success", roundClass)}>
+            Passing
+          </span>
         </div>
       </div>
       <div className="demo-box">
         <div className={clsx(isActive && "joint")}>
-          <button className="button is-outline">
-            <FiAlignLeft />
-            <span className="text">左揃え</span>
-          </button>
-          <button className="button is-outline">
-            <FiAlignCenter />
-            <span className="text">中央揃え</span>
-          </button>
-          <button className="button is-outline">
-            <FiAlignRight />
-            <span className="text">右揃え</span>
-          </button>
-        </div>
-      </div>
-      <div className="demo-box">
-        <div className={clsx(isActive && "joint")}>
-          <div className="select">
+          <div className={clsx("select", roundClass)}>
             <select>
               <option>Select A</option>
               <option>Select B</option>
@@ -68,11 +71,14 @@ export function ExampleJoint() {
           </div>
           <input
             type="text"
-            className="input"
+            className={clsx("input", roundClass)}
             name="text"
             placeholder="キーワード"
           />
-          <button type="button" className="button is-plain is-info is-square">
+          <button
+            type="button"
+            className={clsx("button is-plain is-info is-square", roundClass)}
+          >
             <FiSearch />
           </button>
         </div>
