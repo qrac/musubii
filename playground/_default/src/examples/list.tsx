@@ -14,13 +14,15 @@ export function ExampleList() {
   return (
     <div className="demo-boxes">
       <div className="demo-box">
-        <DemoFieldset title="variant">
-          <DemoRadios
-            patterns={variants}
-            checkedValue={variant}
-            onChange={setVariant}
-          />
-        </DemoFieldset>
+        <DemoFieldsets>
+          <DemoFieldset title="variant">
+            <DemoRadios
+              patterns={variants}
+              checkedValue={variant}
+              onChange={setVariant}
+            />
+          </DemoFieldset>
+        </DemoFieldsets>
       </div>
       <div className="demo-box">
         <ul className={clsx("list", `is-${variant}`)}>
