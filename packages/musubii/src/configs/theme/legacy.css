@@ -1,6 +1,6 @@
 :root {
-  --theme-tx-1: rgba(0, 0, 0, 0.7);
-  --theme-tx-2: rgba(0, 0, 0, 0.7);
+  --theme-tx-1: #212121;
+  --theme-tx-2: #4c4c4c;
   --theme-bg-1: #ffffff;
   --theme-bg-2: #f5f5f5;
   --theme-bd-1: #e7e1e0;
@@ -23,5 +23,8 @@
   --theme-danger-light: #fbeeee;
   --theme-shadow: #000000;
   --theme-code: #5d69a8;
+  --theme-paint: #227e89;
+  --theme-paint-tx: #ffffff;
+  --theme-spot: #f4dd1c;
   --theme-disabled: #bdbdbd;
 }
