@@ -11,6 +11,7 @@
   --button-transition: ease-out 0.12s;
   --button-plain-bg: var(--theme-bg-2);
   --button-plain-color: inherit;
+  --button-plain-hover-bg-darken: 10%;
   --button-outline-bg: var(--theme-bg-1);
   --button-outline-border-color: var(--theme-bd-2);
   --button-outline-color: inherit;
@@ -147,7 +148,11 @@
 
 @media (hover: hover) and (pointer: fine) {
   .button.is-plain:hover {
-    background: color-mix(in srgb, var(--button-plain-bg) 90%, #000000 10%);
+    background: color-mix(
+      in srgb,
+      var(--button-plain-bg) calc(100% - var(--button-plain-hover-bg-darken)),
+      #000000 var(--button-plain-hover-bg-darken)
+    );
   }
 }
 
