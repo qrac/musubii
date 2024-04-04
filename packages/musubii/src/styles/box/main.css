@@ -58,12 +58,12 @@
   border-left-color: var(--box-outline-border-color);
 }
 
-.box.is-separate > :not(:last-child) {
+.box.is-separate > *:not(:last-child) {
   border-bottom-width: var(--box-separate-border-width);
   border-bottom-color: var(--box-separate-border-color);
 }
 
-.box.is-separate-parent > :not(:last-child) .is-separate-child {
+.box.is-separate-parent > *:not(:last-child) .is-separate-child {
   border-bottom-width: var(--box-separate-border-width);
   border-bottom-color: var(--box-separate-border-color);
 }
