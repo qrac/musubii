@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import queryString from "query-string"
 
+import { version } from "../../../package.json"
 import "musubii/src/musubii.css"
 import "musubii/src/configs/theme/dark-attr.css"
 import "./index.css"
@@ -68,7 +69,10 @@ export default function () {
     <div className="demo-theme" data-theme={theme}>
       {isMigrated && <style dangerouslySetInnerHTML={{ __html: migrateCss }} />}
       <header className="demo-header">
-        <h1 className="demo-header-title">MUSUBii</h1>
+        <h1 className="demo-header-title">
+          <span>MUSUBii</span>
+          <small>v{version}</small>
+        </h1>
         <DemoFieldset>
           <DemoSelect
             options={examples}
