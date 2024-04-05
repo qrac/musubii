@@ -1,4 +1,9 @@
 .label {
+  --label-disabled-color: var(--theme-dark);
+  --label-disabled-color-alpha: 36%;
+}
+
+.label {
   display: flex;
 }
 
@@ -47,4 +52,12 @@
 
 .label.is-gap-xxs {
   column-gap: 4px;
+}
+
+:where(.input:is([type="radio"], [type="checkbox"]):disabled) + .label {
+  color: color-mix(
+    in srgb,
+    var(--label-disabled-color) var(--label-disabled-color-alpha),
+    transparent calc(100% - var(--label-disabled-color-alpha))
+  );
 }

@@ -13,6 +13,7 @@
   --input-transition: none;
   --input-placeholder-color: var(--theme-tx-1);
   --input-placeholder-alpha: 26%;
+  --input-accent-mix: 50%;
   --input-plain-bg: var(--theme-bg-2);
   --input-inside-bg: transparent;
   --input-readonly-bg: var(--theme-bg-2);
@@ -24,33 +25,27 @@
 }
 
 :is(.input, .textarea).is-success {
-  --input-border-color: var(--theme-success);
+  --input-border-color: color-mix(
+    in srgb,
+    var(--theme-success) calc(100% - var(--input-accent-mix)),
+    var(--theme-success-light) var(--input-accent-mix)
+  );
   --input-plain-bg: var(--theme-success-light);
   --input-inside-bg: var(--theme-success-light);
 }
 
 :is(.input, .textarea).is-danger {
-  --input-border-color: var(--theme-danger);
+  --input-bg: var(--theme-danger-light);
+  --input-border-color: color-mix(
+    in srgb,
+    var(--theme-danger) calc(100% - var(--input-accent-mix)),
+    var(--theme-danger-light) var(--input-accent-mix)
+  );
   --input-plain-bg: var(--theme-danger-light);
   --input-inside-bg: var(--theme-danger-light);
 }
 
-.input:where(
-    :is(
-        [type="text"],
-        [type="number"],
-        [type="url"],
-        [type="email"],
-        [type="tel"],
-        [type="password"],
-        [type="search"],
-        [type="datetime-local"],
-        [type="date"],
-        [type="month"],
-        [type="week"],
-        [type="time"]
-      )
-  ) {
+.input {
   max-width: 100%;
   height: var(--input-height);
   padding: var(--input-padding);
@@ -134,41 +129,11 @@
   border-radius: 9999em;
 }
 
-:is(.input, .textarea):where(
-    :is(
-        [type="text"],
-        [type="number"],
-        [type="url"],
-        [type="email"],
-        [type="tel"],
-        [type="password"],
-        [type="search"],
-        [type="datetime-local"],
-        [type="date"],
-        [type="month"],
-        [type="week"],
-        [type="time"]
-      )[readonly]
-  ) {
+:is(.input, .textarea):where([readonly]) {
   background: var(--input-readonly-bg);
 }
 
-:is(.input, .textarea):where(
-    :is(
-        [type="text"],
-        [type="number"],
-        [type="url"],
-        [type="email"],
-        [type="tel"],
-        [type="password"],
-        [type="search"],
-        [type="datetime-local"],
-        [type="date"],
-        [type="month"],
-        [type="week"],
-        [type="time"]
-      )
-  ):is([disabled], [aria-disabled="true"], .is-disabled) {
+:is(.input, .textarea):is([disabled], [aria-disabled="true"], .is-disabled) {
   color: color-mix(
     in srgb,
     var(--input-disabled-color) var(--input-disabled-color-alpha),
@@ -176,27 +141,19 @@
   );
 }
 
-:is(.input, .textarea):where(
-    :is(
-        [type="text"],
-        [type="number"],
-        [type="url"],
-        [type="email"],
-        [type="tel"],
-        [type="password"],
-        [type="search"],
-        [type="datetime-local"],
-        [type="date"],
-        [type="month"],
-        [type="week"],
-        [type="time"]
-      )
-  ):not(.is-underline, .is-inside):is(
+:is(.input, .textarea):where(:not(.is-underline)):is(
     [disabled],
     [aria-disabled="true"],
     .is-disabled
   ) {
   background: var(--input-disabled-bg);
+}
+
+:is(.input, .textarea):where(:not(.is-underline):not(.is-inside)):is(
+    [disabled],
+    [aria-disabled="true"],
+    .is-disabled
+  ) {
   border-color: var(--input-disabled-border-color);
 }
 

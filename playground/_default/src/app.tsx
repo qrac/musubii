@@ -19,6 +19,7 @@ import { ExampleButton } from "./examples/button"
 import { ExampleBadge } from "./examples/badge"
 import { ExampleList } from "./examples/list"
 import { ExampleTable } from "./examples/table"
+import { ExampleForm } from "./examples/form"
 
 const examples = [
   "reset",
@@ -32,6 +33,7 @@ const examples = [
   "badge",
   "list",
   "table",
+  "form",
 ]
 const themes = ["light", "dark"]
 
@@ -139,6 +141,11 @@ export default function () {
         {example === "table" && (
           <div className="demo-section">
             <ExampleTable />
+          </div>
+        )}
+        {example === "form" && (
+          <div className="demo-section">
+            <ExampleForm />
           </div>
         )}
       </main>

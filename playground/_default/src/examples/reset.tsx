@@ -194,9 +194,9 @@ function ExampleResetForm() {
           <input type="text" readOnly defaultValue="Readonly" />
         </fieldset>
         <fieldset>
-          <legend>SEARCH</legend>
-          <input type="search" placeholder="Search" />
-          <input type="search" placeholder="Search" disabled />
+          <legend>NUMBER</legend>
+          <input type="number" step="10" />
+          <input type="number" step="10" disabled />
         </fieldset>
         <fieldset>
           <legend>URL</legend>
@@ -230,6 +230,11 @@ function ExampleResetForm() {
           <input type="password" disabled />
         </fieldset>
         <fieldset>
+          <legend>SEARCH</legend>
+          <input type="search" placeholder="Search" />
+          <input type="search" placeholder="Search" disabled />
+        </fieldset>
+        <fieldset>
           <legend>DATETIME LOCAL</legend>
           <input type="datetime-local" defaultValue="2017-02-02T00:00:00" />
           <input
@@ -252,11 +257,6 @@ function ExampleResetForm() {
           <legend>TIME</legend>
           <input type="time" defaultValue="00:00:00" />
           <input type="time" disabled defaultValue="00:00:00" />
-        </fieldset>
-        <fieldset>
-          <legend>NUMBER</legend>
-          <input type="number" step="10" />
-          <input type="number" step="10" disabled />
         </fieldset>
         <fieldset>
           <legend>FILE</legend>
