@@ -21,6 +21,7 @@ import { ExampleBadge } from "./examples/badge"
 import { ExampleList } from "./examples/list"
 import { ExampleTable } from "./examples/table"
 import { ExampleForm } from "./examples/form"
+import { ExampleIframe } from "./examples/iframe"
 
 const examples = [
   "reset",
@@ -35,6 +36,7 @@ const examples = [
   "list",
   "table",
   "form",
+  "iframe",
 ]
 const themes = ["light", "dark"]
 
@@ -150,6 +152,11 @@ export default function () {
         {example === "form" && (
           <div className="demo-section">
             <ExampleForm />
+          </div>
+        )}
+        {example === "iframe" && (
+          <div className="demo-section">
+            <ExampleIframe />
           </div>
         )}
       </main>
