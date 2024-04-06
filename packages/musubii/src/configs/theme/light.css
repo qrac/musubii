@@ -10,17 +10,17 @@
   --theme-dark: #0f172a; /* tailwind slate-900 #0f172a */
   --theme-light: #ffffff; /* white #ffffff */
   --theme-primary: #06b6d4; /* tailwind cyan-500 #06b6d4 */
-  --theme-primary-light: #cffafe; /* tailwind cyan-100 #cffafe */
-  --theme-info: #0ea5e9; /* tailwind sky-500 #0ea5e9 */
-  --theme-info-light: #e0f2fe; /* tailwind sky-100 #e0f2fe */
+  --theme-primary-light: #ecfeff; /* tailwind cyan-50 #ecfeff */
   --theme-secondary: #6366f1; /* tailwind indigo-500 #6366f1 */
-  --theme-secondary-light: #e0e7ff; /* tailwind indigo-100 #e0e7ff */
+  --theme-secondary-light: #eef2ff; /* tailwind indigo-50 #eef2ff */
+  --theme-info: #0ea5e9; /* tailwind sky-500 #0ea5e9 */
+  --theme-info-light: #f0f9ff; /* tailwind sky-50 #f0f9ff */
   --theme-success: #16a34a; /* tailwind green-600 #16a34a */
-  --theme-success-light: #dcfce7; /* tailwind green-100 #dcfce7 */
+  --theme-success-light: #f0fdf4; /* tailwind green-50 #f0fdf4 */
   --theme-warning: #f59e0b; /* tailwind amber-500 #f59e0b */
-  --theme-warning-light: #fef3c7; /* tailwind amber-100 #fef3c7 */
+  --theme-warning-light: #fffbeb; /* tailwind amber-50 #fffbeb */
   --theme-danger: #dc2626; /* tailwind red-600 #dc2626 */
-  --theme-danger-light: #fee2e2; /* tailwind red-100 #fee2e2 */
+  --theme-danger-light: #fef2f2; /* tailwind red-50 #fef2f2 */
   --theme-shadow: #0f172a; /* tailwind slate-900 #0f172a */
   --theme-code: #6366f1; /* tailwind indigo-500 #6366f1 */
   --theme-paint: #0e7490; /* tailwind cyan-700 #0e7490 */
