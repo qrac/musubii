@@ -28,9 +28,7 @@
   border-color: var(--card-outline-border-color);
 }
 
-.card.is-floating:where(
-    :not(:is([disabled], [aria-disabled="true"], .is-disabled))
-  ) {
+.card.is-floating {
   box-shadow: var(--card-floating-shadow-size)
     color-mix(
       in srgb,
