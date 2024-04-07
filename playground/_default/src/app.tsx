@@ -24,6 +24,7 @@ import { ExampleForm } from "./examples/form"
 import { ExampleIframe } from "./examples/iframe"
 import { ExampleIcon } from "./examples/icon"
 import { ExampleAlert } from "./examples/alert"
+import { ExampleWysiwyg } from "./examples/wysiwyg"
 
 const examples = [
   "reset",
@@ -41,6 +42,7 @@ const examples = [
   "iframe",
   "icon",
   "alert",
+  "wysiwyg",
 ]
 const themes = ["light", "dark"]
 
@@ -171,6 +173,11 @@ export default function () {
         {example === "alert" && (
           <div className="demo-section">
             <ExampleAlert />
+          </div>
+        )}
+        {example === "wysiwyg" && (
+          <div className="demo-section">
+            <ExampleWysiwyg />
           </div>
         )}
       </main>
