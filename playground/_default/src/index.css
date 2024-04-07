@@ -121,6 +121,10 @@
   gap: 8px;
 }
 
+.demo-alerts > *:not(:first-child) {
+  margin-top: 12px;
+}
+
 .demo-loading {
   animation: demoLoadingRotate 1s linear infinite;
 }
