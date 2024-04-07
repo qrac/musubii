@@ -96,6 +96,8 @@ export function ExampleText() {
         modifiedClasses={modifiedClasses}
         overflowClass={overflowClass}
       />
+      <ExampleTextBlockquote />
+      <ExampleTextCode />
     </div>
   )
 }
@@ -244,6 +246,34 @@ function ExampleTextLong({
           to move to a cheap place. When you realize that it is difficult to
           live wherever you go, poetry is born and you can paint.
         </p>
+      </div>
+    </>
+  )
+}
+
+function ExampleTextBlockquote() {
+  return (
+    <div className="demo-box">
+      <blockquote className="blockquote">
+        引用の「blockquote」を使う場合。border-left と background-color
+        を用いた装飾。
+      </blockquote>
+    </div>
+  )
+}
+
+function ExampleTextCode() {
+  return (
+    <>
+      <div className="demo-box">
+        <p>
+          テキストの途中に<code className="code">code</code>を表示させる。
+        </p>
+      </div>
+      <div className="demo-box">
+        <pre className="pre">
+          <code className="code">{".my-css { color: red; }"}</code>
+        </pre>
       </div>
     </>
   )

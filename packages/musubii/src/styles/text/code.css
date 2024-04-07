@@ -1,7 +1,7 @@
 .code {
   --code-padding: 0.2em 0.5em;
   --code-bg: var(--theme-bg-2);
-  --code-border-radius: 2px;
+  --code-border-radius: 4px;
   --code-color: var(--theme-code);
   --code-font-size: 87.5%;
   --code-font-family: var(--font-mono);
@@ -9,7 +9,7 @@
 
 .pre {
   --pre-bg: var(--theme-bg-2);
-  --pre-border-radius: 2px;
+  --pre-border-radius: 4px;
   --pre-code-padding: 1.25em 1.5em;
   --pre-code-color: var(--theme-code);
   --pre-code-font-size: 87.5%;
@@ -19,7 +19,7 @@
 *:not(.pre) > .code {
   padding: var(--code-padding);
   background: var(--code-bg);
-  border-radius: var(-code-border-radius);
+  border-radius: var(--code-border-radius);
   color: var(--code-color);
   font-size: var(--code-font-size);
   font-family: var(--code-font-family);
