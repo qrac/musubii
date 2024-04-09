@@ -1,0 +1,16 @@
+.section.is-header {
+  background: var(--theme-bg-2);
+}
+
+.section.is-header > .inner {
+  padding: 20px 16px;
+}
+
+.section.is-header.is-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--theme-bg-1);
+  border-bottom-width: 1px;
+  border-bottom-color: var(--theme-bd-1);
+}

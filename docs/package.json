@@ -1,4 +1,5 @@
 {
   "name": "docs",
-  "private": true
+  "private": true,
+  "type": "module"
 }

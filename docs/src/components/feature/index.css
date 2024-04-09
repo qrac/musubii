@@ -1,0 +1,7 @@
+.section.is-feature {
+  padding: 56px 0;
+}
+
+.section.is-feature:nth-child(odd) {
+  background: var(--theme-bg-2);
+}

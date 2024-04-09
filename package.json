@@ -19,6 +19,9 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
+    "docs": "minista ./docs -c ./docs/miinsta.config.ts",
+    "docs:build": "minista build ./docs -c ./docs/miinsta.config.ts",
+    "docs:preview": "minista preview ./docs -c ./docs/miinsta.config.ts",
     "build": "npm run build:main",
     "build:src": "npm run build:main-src",
     "build:main": "cd ./packages/musubii && npm run build",
@@ -40,20 +43,25 @@
     "playground/*"
   ],
   "devDependencies": {
-    "@types/react": "^18.2.67",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
     "@vitejs/plugin-react": "^4.2.1",
     "clsx": "^2.1.0",
     "esbuild": "^0.20.2",
+    "minista": "^4.0.0-alpha.6",
+    "minista-plugin-entry": "^4.0.0-alpha.6",
+    "minista-plugin-mdx": "^4.0.0-alpha.6",
+    "minista-plugin-ssg": "^4.0.0-alpha.6",
     "query-string": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "rimraf": "^5.0.5",
-    "typescript": "^5.4.3",
-    "vite": "^5.2.2"
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.14.0"
+    "@rollup/rollup-linux-x64-gnu": "4.14.1"
   }
 }
