@@ -2,10 +2,6 @@
   background: var(--theme-bg-2);
 }
 
-.section.is-header > .inner {
-  padding: 20px 16px;
-}
-
 .section.is-header.is-sticky {
   position: sticky;
   top: 0;
@@ -13,4 +9,25 @@
   background: var(--theme-bg-1);
   border-bottom-width: 1px;
   border-bottom-color: var(--theme-bd-1);
+}
+
+[data-header-menu="theme"] {
+  position: relative;
+}
+
+[data-header-menu="theme"] [data-header-menu-contents] {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+[data-header-menu="theme"][open] [data-header-menu-button]::before {
+  cursor: default;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: none;
+  z-index: 80;
 }

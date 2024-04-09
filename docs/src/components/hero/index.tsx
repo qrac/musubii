@@ -54,7 +54,7 @@ export function Hero() {
             </p>
           </div>
           <div className="box is-flex-full is-px-xl fablet:is-flex-0">
-            <SvgHero />
+            <SvgHero className="illustration" />
           </div>
         </div>
       </div>

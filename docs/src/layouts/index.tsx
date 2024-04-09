@@ -5,6 +5,7 @@ import { site } from "../../project"
 import { Header } from "../components/header"
 import { Sidebar } from "../components/sidebar"
 import { Footer } from "../components/footer"
+import themeInit from "../components/theme/init.js?raw"
 
 type CustomLayoutProps = LayoutProps & { layout?: string; noindex?: boolean }
 
@@ -42,6 +43,7 @@ export default function ({
         <meta name="twitter:creator" content={twitterId} />
         {isNoindex && <meta name="robots" content="noindex" />}
         <link rel="stylesheet" href="/src/assets/style.css" />
+        <script type="module" src="/src/assets/script.ts" />
         <link rel="apple-touch-icon" href={appleTouchIcon} />
         <link rel="icon" href={favicon} />
       </Head>
@@ -61,6 +63,7 @@ export default function ({
         )}
       </main>
       <Footer />
+      <script dangerouslySetInnerHTML={{ __html: themeInit }} />
     </>
   )
 }

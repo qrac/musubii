@@ -40,13 +40,13 @@ export function Feature1() {
       <div className="inner is-px-xl">
         <div className="grid is-flex is-center is-middle is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
-            <SvgFeature1 />
+            <SvgFeature1 className="illustration" />
           </div>
           <div className="column is-flex-full tablet:is-flex-6 ">
             <div className="box is-feature-texts is-space-md">
               <h2 className="text is-xl">必要なものを食べておく</h2>
               <p className="text is-auto-phrase is-line-height-lg is-sm">
-                ウェブ制作は小技の積み重ねなので、毎回1から作っていたら辛いですよね。MUSUBiiにはリセットCSS・ボタン・グリッドなど利用頻度の高い汎用スタイルが詰まっています。まずはMUSUBiiをほおばってウェブ制作を始めてみましょう。
+                ウェブ制作は小技の積み重ねなので、毎回1から作っていたら辛いですよね。MUSUBiiにはボタン・フォーム・グリッドなど利用頻度の高い汎用スタイルが詰まっています。まずはMUSUBiiをほおばってウェブ制作を始めてみましょう。
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ export function Feature2() {
       <div className="inner is-px-xl">
         <div className="grid is-flex is-center is-middle is-reverse is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
-            <SvgFeature2 />
+            <SvgFeature2 className="illustration" />
           </div>
           <div className="column is-flex-full tablet:is-flex-6 ">
             <div className="box is-feature-texts is-space-md">
@@ -86,7 +86,7 @@ export function Feature3() {
       <div className="inner is-px-xl">
         <div className="grid is-flex is-center is-middle is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
-            <SvgFeature3 />
+            <SvgFeature3 className="illustration" />
           </div>
           <div className="column is-flex-full tablet:is-flex-6 ">
             <div className="box is-feature-texts is-space-md">
@@ -110,7 +110,7 @@ export function Feature4() {
       <div className="inner is-px-xl">
         <div className="grid is-flex is-center is-middle is-reverse is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
-            <SvgFeature4 />
+            <SvgFeature4 className="illustration" />
           </div>
           <div className="column is-flex-full tablet:is-flex-6 ">
             <div className="box is-feature-texts is-space-md">
