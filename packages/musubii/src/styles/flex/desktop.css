@@ -2,6 +2,7 @@
   .desktop\:is-flex-0,
   .is-desktop-0 {
     flex: 1 0;
+    max-width: 100%;
   }
   .desktop\:is-flex-1,
   .is-desktop-1 {

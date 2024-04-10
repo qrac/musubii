@@ -129,6 +129,7 @@
 .is-flex-0,
 :is(.is-0, .is-mobile-0) {
   flex: 1 0;
+  max-width: 100%;
 }
 
 .is-flex-1,
