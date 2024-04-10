@@ -2,63 +2,78 @@
   .desktop\:is-flex-0,
   .is-desktop-0 {
     flex: 1 0;
-    max-width: 100%;
+    min-width: 0;
   }
   .desktop\:is-flex-1,
   .is-desktop-1 {
     flex: 0 0 calc(100% / 12 * 1);
+    min-width: 0;
   }
   .desktop\:is-flex-2,
   .is-desktop-2 {
     flex: 0 0 calc(100% / 12 * 2);
+    min-width: 0;
   }
   .desktop\:is-flex-3,
   .is-desktop-3 {
     flex: 0 0 calc(100% / 12 * 3);
+    min-width: 0;
   }
   .desktop\:is-flex-4,
   .is-desktop-4 {
     flex: 0 0 calc(100% / 12 * 4);
+    min-width: 0;
   }
   .desktop\:is-flex-5,
   .is-desktop-5 {
     flex: 0 0 calc(100% / 12 * 5);
+    min-width: 0;
   }
   .desktop\:is-flex-6,
   .is-desktop-6 {
     flex: 0 0 calc(100% / 12 * 6);
+    min-width: 0;
   }
   .desktop\:is-flex-7,
   .is-desktop-7 {
     flex: 0 0 calc(100% / 12 * 7);
+    min-width: 0;
   }
   .desktop\:is-flex-8,
   .is-desktop-8 {
     flex: 0 0 calc(100% / 12 * 8);
+    min-width: 0;
   }
   .desktop\:is-flex-9,
   .is-desktop-9 {
     flex: 0 0 calc(100% / 12 * 9);
+    min-width: 0;
   }
   .desktop\:is-flex-10,
   .is-desktop-10 {
     flex: 0 0 calc(100% / 12 * 10);
+    min-width: 0;
   }
   .desktop\:is-flex-11,
   .is-desktop-11 {
     flex: 0 0 calc(100% / 12 * 11);
+    min-width: 0;
   }
   .desktop\:is-flex-12,
   .is-desktop-12 {
     flex: 0 0 100%;
+    min-width: 0;
   }
   .desktop\:is-flex-full,
   .is-desktop-full {
     flex: 0 1 100%;
+    min-width: 0;
+    width: 100%;
   }
   .desktop\:is-flex-auto,
   .is-desktop-auto {
     flex: 0 1 auto;
+    min-width: 0;
   }
   .desktop\:is-flex-none {
     flex: none;
