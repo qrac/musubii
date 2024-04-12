@@ -12,9 +12,10 @@
 }
 
 html {
+  overflow-wrap: anywhere;
+  line-break: strict;
   line-height: 1.5;
   tab-size: 4;
-  word-break: break-word;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
 }
