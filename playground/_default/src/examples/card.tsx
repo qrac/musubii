@@ -5,7 +5,7 @@ import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 
-const radiuses = ["xxs", "xs", "sm", "md", "lg", "xl", "xxl"]
+const radiuses = ["xxs", "xs", "sm", "md", "ml", "lg", "xl", "xxl"]
 
 export function ExampleCard() {
   const [isBackground, setIsBackground] = useState<boolean>(true)

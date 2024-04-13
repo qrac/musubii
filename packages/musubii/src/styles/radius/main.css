@@ -10,6 +10,10 @@
   border-radius: 8px;
 }
 
+.is-radius-ml {
+  border-radius: 6px;
+}
+
 .is-radius-md,
 .is-radius {
   border-radius: 4px;
