@@ -4,6 +4,7 @@ import { Head } from "minista-plugin-ssg/client"
 import { site } from "../../project"
 import { Header } from "../components/header"
 import { Sidebar } from "../components/sidebar"
+import { Docs } from "../components/docs"
 import { Footer } from "../components/footer"
 import setupTheme from "../components/theme/setup.js?raw"
 
@@ -50,11 +51,13 @@ export default function ({
       <Header isStiky={layout === "docs"} />
       <main className="section" id="main">
         {layout === "docs" ? (
-          <section className="section is-docs">
-            <div className="inner">
+          <section className="section">
+            <div className="inner is-px-md">
               <div className="box is-flex is-gap-xl">
                 <Sidebar />
-                <div className="box is-flex-0">{children}</div>
+                <div className="box is-flex-0">
+                  <Docs>{children}</Docs>
+                </div>
               </div>
             </div>
           </section>

@@ -5,4 +5,6 @@
 @import "../components/header/index.css";
 @import "../components/hero/index.css";
 @import "../components/feature/index.css";
+@import "../components/docs/index.css";
+@import "../components/docs/hljs.css";
 @import "../components/footer/index.css";
