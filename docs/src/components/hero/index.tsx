@@ -2,8 +2,8 @@ import { FiBookOpen, FiGithub, FiExternalLink } from "react-icons/fi"
 
 import { license, repository } from "musubii/package.json"
 import { site } from "../../../project"
-import SvgTitle from "../../assets/images/title.svg?react"
-import SvgHero from "../../assets/images/hero.svg?react"
+import svgTitle from "../../assets/images/title.svg"
+import svgHero from "../../assets/images/hero.svg"
 
 export function Hero() {
   return (
@@ -11,7 +11,14 @@ export function Hero() {
       <div className="inner">
         <div className="box is-flex is-middle is-gap-y-xxl">
           <div className="box is-flex-full is-px-xl fablet:is-flex-0 is-space-md">
-            <SvgTitle />
+            <div>
+              <img
+                src={svgTitle}
+                width={972}
+                height={326}
+                alt="Simple CSS Framework for JP"
+              />
+            </div>
             <h1 className="text is-auto-phrase is-line-height-lg is-sm">
               {site.description}
             </h1>
@@ -54,7 +61,13 @@ export function Hero() {
             </p>
           </div>
           <div className="box is-flex-full is-px-xl fablet:is-flex-0">
-            <SvgHero className="illustration" />
+            <img
+              src={svgHero}
+              width={528}
+              height={418}
+              className="illustration"
+              alt="Hero"
+            />
           </div>
         </div>
       </div>

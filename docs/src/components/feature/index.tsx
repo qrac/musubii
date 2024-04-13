@@ -1,7 +1,7 @@
-import SvgFeature1 from "../../assets/images/feature-1.svg?react"
-import SvgFeature2 from "../../assets/images/feature-2.svg?react"
-import SvgFeature3 from "../../assets/images/feature-3.svg?react"
-import SvgFeature4 from "../../assets/images/feature-4.svg?react"
+import svgFeature1 from "../../assets/images/feature-1.svg"
+import svgFeature2 from "../../assets/images/feature-2.svg"
+import svgFeature3 from "../../assets/images/feature-3.svg"
+import svgFeature4 from "../../assets/images/feature-4.svg"
 
 export function Features() {
   return (
@@ -40,7 +40,13 @@ export function Feature1() {
       <div className="inner is-px-xl">
         <div className="grid is-flex is-center is-middle is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
-            <SvgFeature1 className="illustration" />
+            <img
+              src={svgFeature1}
+              width={528}
+              height={418}
+              className="illustration"
+              alt="Feature 1"
+            />
           </div>
           <div className="column is-flex-full tablet:is-flex-6 ">
             <div className="box is-feature-texts is-space-md">
@@ -62,7 +68,13 @@ export function Feature2() {
       <div className="inner is-px-xl">
         <div className="grid is-flex is-center is-middle is-reverse is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
-            <SvgFeature2 className="illustration" />
+            <img
+              src={svgFeature2}
+              width={528}
+              height={418}
+              className="illustration"
+              alt="Feature 2"
+            />
           </div>
           <div className="column is-flex-full tablet:is-flex-6 ">
             <div className="box is-feature-texts is-space-md">
@@ -86,7 +98,13 @@ export function Feature3() {
       <div className="inner is-px-xl">
         <div className="grid is-flex is-center is-middle is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
-            <SvgFeature3 className="illustration" />
+            <img
+              src={svgFeature3}
+              width={528}
+              height={418}
+              className="illustration"
+              alt="Feature 3"
+            />
           </div>
           <div className="column is-flex-full tablet:is-flex-6 ">
             <div className="box is-feature-texts is-space-md">
@@ -110,7 +128,13 @@ export function Feature4() {
       <div className="inner is-px-xl">
         <div className="grid is-flex is-center is-middle is-reverse is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
-            <SvgFeature4 className="illustration" />
+            <img
+              src={svgFeature4}
+              width={528}
+              height={418}
+              className="illustration"
+              alt="Feature 4"
+            />
           </div>
           <div className="column is-flex-full tablet:is-flex-6 ">
             <div className="box is-feature-texts is-space-md">
