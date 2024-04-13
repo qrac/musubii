@@ -1,4 +1,4 @@
-function changeTheme(theme: string, lightModeQuery: MediaQueryList) {
+function switchAttr(theme: string, lightModeQuery: MediaQueryList) {
   switch (theme) {
     case "light":
       document.documentElement.setAttribute("data-theme", "light")
@@ -16,7 +16,7 @@ function changeTheme(theme: string, lightModeQuery: MediaQueryList) {
   }
 }
 
-function changeMode(
+function switchMode(
   lightModeQuery: MediaQueryList,
   darkModeQuery: MediaQueryList
 ) {
@@ -30,7 +30,7 @@ function changeMode(
   }
 }
 
-function changeActive(els: HTMLButtonElement[], theme: string) {
+function switchActive(els: HTMLButtonElement[], theme: string) {
   els.forEach((el) => {
     if (el.dataset.themeButton === theme) {
       el.classList.add("is-active")
@@ -40,7 +40,7 @@ function changeActive(els: HTMLButtonElement[], theme: string) {
   })
 }
 
-export function eventTheme() {
+export function changeTheme() {
   const savedTheme = localStorage.getItem("theme") || "system"
 
   const lightModeQuery = window.matchMedia("(prefers-color-scheme: light)")
@@ -50,15 +50,15 @@ export function eventTheme() {
     ...document.querySelectorAll("[data-theme-button]"),
   ] as HTMLButtonElement[]
 
-  changeActive(buttonEls, savedTheme)
+  switchActive(buttonEls, savedTheme)
 
   buttonEls.forEach((el) => {
     el.addEventListener("click", () => {
       const theme = el.dataset.themeButton
 
       if (theme) {
-        changeTheme(theme, lightModeQuery)
-        changeActive(buttonEls, theme)
+        switchAttr(theme, lightModeQuery)
+        switchActive(buttonEls, theme)
         localStorage.setItem("theme", theme)
       }
       el.blur()
@@ -66,9 +66,9 @@ export function eventTheme() {
   })
 
   lightModeQuery.addEventListener("change", () =>
-    changeMode(lightModeQuery, darkModeQuery)
+    switchMode(lightModeQuery, darkModeQuery)
   )
   darkModeQuery.addEventListener("change", () =>
-    changeMode(lightModeQuery, darkModeQuery)
+    switchMode(lightModeQuery, darkModeQuery)
   )
 }

@@ -1,4 +1,4 @@
-;(function () {
+function setupTheme() {
   const savedTheme = localStorage.getItem("theme") || "system"
 
   switch (savedTheme) {
@@ -16,4 +16,6 @@
       }
       break
   }
-})()
+}
+
+setupTheme()

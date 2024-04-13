@@ -5,7 +5,7 @@ import { site } from "../../project"
 import { Header } from "../components/header"
 import { Sidebar } from "../components/sidebar"
 import { Footer } from "../components/footer"
-import themeInit from "../components/theme/init.js?raw"
+import setupTheme from "../components/theme/setup.js?raw"
 
 type CustomLayoutProps = LayoutProps & { layout?: string; noindex?: boolean }
 
@@ -63,7 +63,7 @@ export default function ({
         )}
       </main>
       <Footer />
-      <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      <script dangerouslySetInnerHTML={{ __html: setupTheme }} />
     </>
   )
 }

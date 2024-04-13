@@ -1,5 +1,5 @@
-import { eventTheme } from "../components/theme/event"
-import { closeMenu } from "../components/header/close"
+import { changeTheme } from "../components/theme/action"
+import { closeMenu } from "../components/header/action"
 
-eventTheme()
+changeTheme()
 closeMenu()
