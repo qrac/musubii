@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 64px;
+}
+
 .site {
   display: grid;
   grid-template-columns: 100%;
@@ -9,7 +13,7 @@
   font-family: var(--font-sans-en);
 }
 
-.site *.is-half-indent {
+.site *.is-indent-half {
   text-indent: 0.5em;
 }
 

@@ -20,7 +20,7 @@ export function FeatureAbout() {
     <section className="section is-feature wide:is-lg">
       <div className="inner is-px-xl">
         <div className="box is-space-md">
-          <h2 className="text is-primary is-strong is-center is-lg fablet:is-xl tablet:is-xxl is-half-indent">
+          <h2 className="text is-primary is-strong is-center is-lg fablet:is-xl tablet:is-xxl is-indent-half">
             腹が減ってはコードが書けぬ！
           </h2>
           <p className="text is-auto-phrase is-line-height-lg is-center is-sm">
