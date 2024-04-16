@@ -19,9 +19,9 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "docs": "minista ./docs -c ./docs/miinsta.config.ts",
-    "docs:build": "minista build ./docs -c ./docs/miinsta.config.ts",
-    "docs:preview": "minista preview ./docs -c ./docs/miinsta.config.ts",
+    "docs": "minista ./docs",
+    "docs:build": "minista build ./docs",
+    "docs:preview": "minista preview ./docs",
     "build": "npm run build:main",
     "build:src": "npm run build:main-src",
     "build:main": "cd ./packages/musubii && npm run build",
