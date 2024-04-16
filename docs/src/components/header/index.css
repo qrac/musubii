@@ -22,11 +22,15 @@
   z-index: 10;
 }
 
-[data-header-theme-menu] {
+.section.is-header:not(.is-sticky) .button.is-plain {
+  --button-border-color: var(--theme-bd-1);
+}
+
+[data-header-pulldown-menu] {
   position: relative;
 }
 
-[data-header-theme-menu] [data-header-theme-menu-contents] {
+[data-header-pulldown-menu] [data-header-pulldown-menu-contents] {
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
@@ -34,7 +38,7 @@
   z-index: 100;
 }
 
-[data-header-theme-menu][open] [data-header-theme-menu-button]::before {
+[data-header-pulldown-menu][open] [data-header-pulldown-menu-button]::before {
   cursor: default;
   content: "";
   position: fixed;

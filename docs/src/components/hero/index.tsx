@@ -28,7 +28,7 @@ export function Hero() {
                 className="button is-plain is-primary is-round is-py-md is-flex-0 is-lg"
               >
                 <FiBookOpen className="icon is-lg" />
-                <span className="text is-font-sans-en">Getting Started</span>
+                <span className="text is-font-sans-en">Read the docs</span>
               </a>
             </div>
             <p className="text is-font-sans-en is-flex is-center is-gap-md is-middle is-sm">

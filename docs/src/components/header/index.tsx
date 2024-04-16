@@ -1,7 +1,6 @@
 import clsx from "clsx"
 import {
   FiExternalLink,
-  FiGithub,
   FiSun,
   FiMoon,
   FiMonitor,
@@ -9,7 +8,7 @@ import {
   FiX,
 } from "react-icons/fi"
 
-import { version, repository } from "musubii/package.json"
+import { version } from "musubii/package.json"
 import { site } from "../../../project"
 import SvgLogo from "../../assets/images/logo.svg?react"
 
@@ -28,13 +27,11 @@ export function Header({
     >
       <div className="inner is-py-sm is-pr-md is-pl-lg">
         <div className="box is-flex is-between is-middle is-gap-sm">
-          <div className="box is-flex is-bottom is-gap-sm">
+          <div className="box is-flex is-middle is-gap-sm">
             <a href="/">
               <SvgLogo width={160} height={23} />
             </a>
-            <span className="text is-font-sans-en is-line-height-xs is-xs">
-              v{version}
-            </span>
+            <VersionMenu />
           </div>
           <div className="box is-flex is-middle is-gap-xs">
             <DesktopMenu />
@@ -48,12 +45,52 @@ export function Header({
   )
 }
 
+function VersionMenu() {
+  return (
+    <details data-header-pulldown-menu="">
+      <summary
+        className="button is-plain is-round is-angle-right is-angle-down is-pr-xl is-font-sans-en is-xs"
+        data-header-pulldown-menu-button=""
+      >
+        v{version}
+      </summary>
+      <div
+        className="box is-bg-light is-outline is-p-sm is-radius-xl is-font-sans-en"
+        data-header-pulldown-menu-contents=""
+      >
+        <ul>
+          <li className="box is-flex">
+            <div className="box is-flex is-middle is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-ml is-flex-full">
+              <span className="text is-primary">{`Latest(v${version})`}</span>
+            </div>
+          </li>
+          {site.menu.version.items.map((item, itemIndex) => (
+            <li className="box is-flex" key={itemIndex}>
+              <a
+                href={item.path}
+                className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-ml is-flex-full"
+                rel={item.externalLink ? "noopener noreferrer" : undefined}
+                target={item.externalLink ? "_blank" : undefined}
+              >
+                <span className="text">{item.title}</span>
+                {item.externalLink && (
+                  <FiExternalLink className="icon is-dark-4" />
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </details>
+  )
+}
+
 function DesktopMenu() {
   return (
     <div className="box is-none desktop:is-block">
-      <div className="box is-flex is-middle is-gap-xl is-font-sans-en">
+      <div className="box is-flex is-middle is-gap-xl is-px-md is-font-sans-en">
         <ul className="box is-flex is-gap-xl">
-          {site.menu.main.map((item, itemIndex) => (
+          {site.menu.main.items.map((item, itemIndex) => (
             <li key={itemIndex}>
               <a
                 href={item.path}
@@ -69,16 +106,6 @@ function DesktopMenu() {
             </li>
           ))}
         </ul>
-        <div className="box is-flex is-middle is-gap-xxs">
-          <a
-            href={repository.url}
-            rel="noopener noreferrer"
-            target="_blank"
-            className="box is-flex is-p-xs is-link is-radius-ml"
-          >
-            <FiGithub title="GitHub" className="icon is-lg" />
-          </a>
-        </div>
       </div>
     </div>
   )
@@ -86,10 +113,10 @@ function DesktopMenu() {
 
 function ThemeMenu() {
   return (
-    <details data-header-theme-menu="">
+    <details data-header-pulldown-menu="">
       <summary
         className="box is-flex is-p-xs is-link is-radius-ml"
-        data-header-theme-menu-button=""
+        data-header-pulldown-menu-button=""
       >
         <FiSun
           title="Theme"
@@ -104,7 +131,7 @@ function ThemeMenu() {
       </summary>
       <div
         className="box is-bg-light is-outline is-p-sm is-radius-xl is-font-sans-en"
-        data-header-theme-menu-contents=""
+        data-header-pulldown-menu-contents=""
       >
         <ul>
           <li className="box is-flex">
@@ -112,7 +139,7 @@ function ThemeMenu() {
               type="button"
               className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-ml is-flex-full"
               data-theme-button="light"
-              data-header-theme-menu-close=""
+              data-header-pulldown-menu-close=""
             >
               <FiSun className="icon is-lg" />
               <span className="text">Lignt</span>
@@ -123,7 +150,7 @@ function ThemeMenu() {
               type="button"
               className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-ml is-flex-full"
               data-theme-button="dark"
-              data-header-theme-menu-close=""
+              data-header-pulldown-menu-close=""
             >
               <FiMoon className="icon is-lg" />
               <span className="text">Dark</span>
@@ -134,7 +161,7 @@ function ThemeMenu() {
               type="button"
               className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-ml is-flex-full"
               data-theme-button="system"
-              data-header-theme-menu-close=""
+              data-header-pulldown-menu-close=""
             >
               <FiMonitor className="icon is-lg" />
               <span className="text">System</span>
@@ -169,6 +196,32 @@ function MobileMenuContents({ currentPath }: { currentPath?: string }) {
       <div data-header-mobile-menu-contents="">
         <div className="box is-px-lg is-pt-xl is-pb-xxl is-space-xl is-font-sans-en">
           <div className="grid is-gap-xl">
+            <div className="column is-flex-6">
+              <div className="box is-space-sm">
+                <h3 className="text is-weight-700 is-uppercase">
+                  {site.menu.main.title}
+                </h3>
+                <ul>
+                  {site.menu.main.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>
+                      <a
+                        className="box is-flex is-middle is-gap-xxs is-flex-full is-py-xs is-px-md is-radius-ml"
+                        href={item.path}
+                        rel={
+                          item.externalLink ? "noopener noreferrer" : undefined
+                        }
+                        target={item.externalLink ? "_blank" : undefined}
+                      >
+                        <span className="text">{item.title}</span>
+                        {item.externalLink && (
+                          <FiExternalLink className="icon is-dark-4" />
+                        )}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
             {site.menu.docs.map((group, groupIndex) => (
               <div className="column is-flex-6" key={groupIndex}>
                 <div className="box is-space-sm">

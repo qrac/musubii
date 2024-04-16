@@ -12,21 +12,44 @@ export const site = {
     startYear: 2016,
   },
   menu: {
-    main: [
-      {
-        title: "Docs",
-        path: "/docs/",
-        externalLink: false,
-      },
-      {
-        title: "Demo",
-        path: "/demo/",
-        externalLink: true,
-      },
-    ],
+    main: {
+      title: "Main",
+      items: [
+        {
+          title: "Docs",
+          path: "/docs/",
+          externalLink: false,
+        },
+        {
+          title: "Demo",
+          path: "/demo/",
+          externalLink: true,
+        },
+        {
+          title: "GitHub",
+          path: "https://github.com/qrac/musubii",
+          externalLink: true,
+        },
+      ],
+    },
+    version: {
+      title: "Versions",
+      items: [
+        {
+          title: "v7.1.0",
+          path: "https://musubii-archive-v7-1-0.netlify.app/",
+          externalLink: true,
+        },
+        {
+          title: "v6.6.0",
+          path: "https://musubii-archive-v6-6-0.netlify.app/",
+          externalLink: true,
+        },
+      ],
+    },
     docs: [
       {
-        title: "Getting Started",
+        title: "Guides",
         items: [
           {
             title: "Introduction",
@@ -100,24 +123,12 @@ export const site = {
             path: "/docs/badge",
           },
           {
-            title: "Alert",
-            path: "/docs/alert",
-          },
-          {
             title: "List",
             path: "/docs/list",
           },
           {
-            title: "Table",
-            path: "/docs/table",
-          },
-          {
             title: "iframe",
             path: "/docs/iframe",
-          },
-          {
-            title: "WYSIWYG",
-            path: "/docs/wysiwyg",
           },
         ],
       },
@@ -143,6 +154,27 @@ export const site = {
           {
             title: "Select",
             path: "/docs/select",
+          },
+        ],
+      },
+      {
+        title: "Wrappers",
+        items: [
+          {
+            title: "Alert",
+            path: "/docs/alert",
+          },
+          {
+            title: "Joint",
+            path: "/docs/joint",
+          },
+          {
+            title: "Table",
+            path: "/docs/table",
+          },
+          {
+            title: "WYSIWYG",
+            path: "/docs/wysiwyg",
           },
         ],
       },
