@@ -1,3 +1,5 @@
 .section.is-footer {
   padding: 40px 0;
+  border-top-width: 1px;
+  border-top-color: var(--theme-bd-1);
 }
