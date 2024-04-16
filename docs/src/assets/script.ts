@@ -1,5 +1,9 @@
-import { changeTheme } from "../components/theme/action"
-import { closeMenu } from "../components/header/action"
+import { actionThemeSwitch } from "../components/theme/action"
+import {
+  actionHeaderThemeMenuClose,
+  actionHeaderMobileMenuToggle,
+} from "../components/header/action"
 
-changeTheme()
-closeMenu()
+actionThemeSwitch()
+actionHeaderThemeMenuClose()
+actionHeaderMobileMenuToggle()

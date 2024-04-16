@@ -1,16 +1,32 @@
 import clsx from "clsx"
-import { FiSun, FiMoon, FiMonitor } from "react-icons/fi"
+import {
+  FiExternalLink,
+  FiGithub,
+  FiSun,
+  FiMoon,
+  FiMonitor,
+  FiMenu,
+  FiX,
+} from "react-icons/fi"
 
-import { version } from "musubii/package.json"
+import { version, repository } from "musubii/package.json"
+import { site } from "../../../project"
 import SvgLogo from "../../assets/images/logo.svg?react"
 
-export function Header({ isStiky }: { isStiky?: boolean }) {
+export function Header({
+  isStiky,
+  currentPath,
+}: {
+  isStiky?: boolean
+  currentPath?: string
+}) {
   return (
     <header
-      className={clsx("section is-header is-py-sm", isStiky && "is-sticky")}
+      className={clsx("section is-header", isStiky && "is-sticky")}
       id="header"
+      data-header-mobile-menu-parent=""
     >
-      <div className="inner is-px-md">
+      <div className="inner is-py-sm is-pr-md is-pl-lg">
         <div className="box is-flex is-between is-middle is-gap-sm">
           <div className="box is-flex is-bottom is-gap-sm">
             <a href="/">
@@ -20,31 +36,83 @@ export function Header({ isStiky }: { isStiky?: boolean }) {
               v{version}
             </span>
           </div>
-          <HeaderMenuTheme />
+          <div className="box is-flex is-middle is-gap-xs">
+            <DesktopMenu />
+            <ThemeMenu />
+            <MobileMenuButton />
+          </div>
         </div>
       </div>
+      <MobileMenuContents currentPath={currentPath} />
     </header>
   )
 }
 
-function HeaderMenuTheme() {
+function DesktopMenu() {
   return (
-    <details data-header-menu="theme">
-      <summary className="box is-flex is-p-xs" data-header-menu-button="">
-        <FiSun className="icon is-lg" data-theme-content="light" />
-        <FiMoon className="icon is-lg" data-theme-content="dark" />
+    <div className="box is-none desktop:is-block">
+      <div className="box is-flex is-middle is-gap-xl is-font-sans-en">
+        <ul className="box is-flex is-gap-xl">
+          {site.menu.main.map((item, itemIndex) => (
+            <li key={itemIndex}>
+              <a
+                href={item.path}
+                className="box is-flex is-middle is-gap-xxs"
+                rel={item.externalLink ? "noopener noreferrer" : undefined}
+                target={item.externalLink ? "_blank" : undefined}
+              >
+                <span className="text is-weight-500">{item.title}</span>
+                {item.externalLink && (
+                  <FiExternalLink className="icon is-dark-4" />
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="box is-flex is-middle is-gap-xxs">
+          <a
+            href={repository.url}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="box is-flex is-p-xs is-link is-radius-ml"
+          >
+            <FiGithub title="GitHub" className="icon is-lg" />
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ThemeMenu() {
+  return (
+    <details data-header-theme-menu="">
+      <summary
+        className="box is-flex is-p-xs is-link is-radius-ml"
+        data-header-theme-menu-button=""
+      >
+        <FiSun
+          title="Theme"
+          className="icon is-lg"
+          data-theme-content="light"
+        />
+        <FiMoon
+          title="Theme"
+          className="icon is-lg"
+          data-theme-content="dark"
+        />
       </summary>
       <div
-        className="box is-bg-light is-outline is-p-sm is-radius-lg is-font-sans-en"
-        data-header-menu-contents=""
+        className="box is-bg-light is-outline is-p-sm is-radius-xl is-font-sans-en"
+        data-header-theme-menu-contents=""
       >
         <ul>
           <li className="box is-flex">
             <button
               type="button"
-              className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-sm is-flex-full"
+              className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-ml is-flex-full"
               data-theme-button="light"
-              data-header-menu-close=""
+              data-header-theme-menu-close=""
             >
               <FiSun className="icon is-lg" />
               <span className="text">Lignt</span>
@@ -53,9 +121,9 @@ function HeaderMenuTheme() {
           <li className="box is-flex">
             <button
               type="button"
-              className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-sm is-flex-full"
+              className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-ml is-flex-full"
               data-theme-button="dark"
-              data-header-menu-close=""
+              data-header-theme-menu-close=""
             >
               <FiMoon className="icon is-lg" />
               <span className="text">Dark</span>
@@ -64,9 +132,9 @@ function HeaderMenuTheme() {
           <li className="box is-flex">
             <button
               type="button"
-              className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-sm is-flex-full"
+              className="box is-flex is-middle is-link is-nowrap is-py-xs is-px-sm is-gap-xs is-radius-ml is-flex-full"
               data-theme-button="system"
-              data-header-menu-close=""
+              data-header-theme-menu-close=""
             >
               <FiMonitor className="icon is-lg" />
               <span className="text">System</span>
@@ -78,16 +146,60 @@ function HeaderMenuTheme() {
   )
 }
 
-function HeaderMenuThemeSelect() {
+function MobileMenuButton() {
   return (
-    <div className="box is-flex is-middle is-gap-xs">
-      <span className="text is-strong is-sm">Theme:</span>
-      <div className="select is-font-sans-en">
-        <select defaultValue={"system"}>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-          <option value="system">System</option>
-        </select>
+    <div className="box desktop:is-none">
+      <div className="box is-flex is-middle is-gap-xxs">
+        <button
+          type="button"
+          className="box is-flex is-p-xs"
+          data-header-mobile-menu-toggle=""
+        >
+          <FiMenu title="Menu" className="icon is-lg" />
+          <FiX title="Close" className="icon is-lg" />
+        </button>
+      </div>
+    </div>
+  )
+}
+
+function MobileMenuContents({ currentPath }: { currentPath?: string }) {
+  return (
+    <div className="box desktop:is-none">
+      <div data-header-mobile-menu-contents="">
+        <div className="box is-px-lg is-pt-xl is-pb-xxl is-space-xl is-font-sans-en">
+          <div className="grid is-gap-xl">
+            {site.menu.docs.map((group, groupIndex) => (
+              <div className="column is-flex-6" key={groupIndex}>
+                <div className="box is-space-sm">
+                  <h3 className="text is-weight-700 is-uppercase">
+                    {group.title}
+                  </h3>
+                  <ul>
+                    {group.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        {currentPath === item.path ? (
+                          <span className="box is-flex is-flex-full is-py-xs is-px-md">
+                            <span className="text is-primary">
+                              {item.title}
+                            </span>
+                          </span>
+                        ) : (
+                          <a
+                            className="box is-flex is-flex-full is-link is-py-xs is-px-md is-radius-ml"
+                            href={item.path}
+                          >
+                            {item.title}
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

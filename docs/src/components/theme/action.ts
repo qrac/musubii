@@ -40,7 +40,7 @@ function switchActive(els: HTMLButtonElement[], theme: string) {
   })
 }
 
-export function changeTheme() {
+export function actionThemeSwitch() {
   const savedTheme = localStorage.getItem("theme") || "system"
 
   const lightModeQuery = window.matchMedia("(prefers-color-scheme: light)")

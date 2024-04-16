@@ -50,8 +50,7 @@
 
 .docs > #table-of-contents {
   margin-bottom: 12px;
-  font-size: 87.5%;
-  letter-spacing: 0.175em;
+  font-size: 100%;
   text-transform: uppercase;
 }
 
@@ -86,7 +85,7 @@
 }
 
 .docs > p {
-  text-align: justify;
+  line-height: 1.75;
   word-break: auto-phrase;
 }
 

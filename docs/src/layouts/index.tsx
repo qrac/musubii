@@ -48,19 +48,19 @@ export default function ({
         <link rel="apple-touch-icon" href={appleTouchIcon} />
         <link rel="icon" href={favicon} />
       </Head>
-      <Header isStiky={layout === "docs"} />
+      <Header isStiky={layout === "docs"} currentPath={url} />
       <main className="section" id="main">
         {layout === "docs" ? (
-          <section className="section">
-            <div className="inner is-px-md">
-              <div className="box is-flex is-gap-xl">
-                <Sidebar />
-                <div className="box is-flex-0">
-                  <Docs>{children}</Docs>
-                </div>
+          <div className="inner is-px-lg">
+            <div className="box is-flex is-gap-xl">
+              <div className="box is-none desktop:is-block">
+                <Sidebar currentPath={url} />
+              </div>
+              <div className="box is-flex-0">
+                <Docs>{children}</Docs>
               </div>
             </div>
-          </section>
+          </div>
         ) : (
           <>{children}</>
         )}
