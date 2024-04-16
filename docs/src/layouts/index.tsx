@@ -52,7 +52,7 @@ export default function ({
       <main className="section" id="main">
         {layout === "docs" ? (
           <div className="inner is-px-lg">
-            <div className="box is-flex is-gap-xl">
+            <div className="box is-flex is-gap-xxl">
               <div className="box is-none desktop:is-block">
                 <Sidebar currentPath={url} />
               </div>
