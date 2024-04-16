@@ -101,6 +101,10 @@ export const site = {
             title: "Grid",
             path: "/docs/grid",
           },
+          {
+            title: "Joint",
+            path: "/docs/joint",
+          },
         ],
       },
       {
@@ -123,54 +127,24 @@ export const site = {
             path: "/docs/badge",
           },
           {
-            title: "List",
-            path: "/docs/list",
-          },
-          {
-            title: "iframe",
-            path: "/docs/iframe",
-          },
-        ],
-      },
-      {
-        title: "Forms",
-        items: [
-          {
-            title: "Label",
-            path: "/docs/label",
-          },
-          {
-            title: "Input",
-            path: "/docs/input",
-          },
-          {
-            title: "Radio",
-            path: "/docs/radio",
-          },
-          {
-            title: "Checkbox",
-            path: "/docs/checkbox",
-          },
-          {
-            title: "Select",
-            path: "/docs/select",
-          },
-        ],
-      },
-      {
-        title: "Wrappers",
-        items: [
-          {
             title: "Alert",
             path: "/docs/alert",
           },
           {
-            title: "Joint",
-            path: "/docs/joint",
+            title: "List",
+            path: "/docs/list",
           },
           {
             title: "Table",
             path: "/docs/table",
+          },
+          {
+            title: "Form",
+            path: "/docs/form",
+          },
+          {
+            title: "iframe",
+            path: "/docs/iframe",
           },
           {
             title: "WYSIWYG",
