@@ -86,7 +86,16 @@
 
 .docs > p {
   line-height: 1.75;
-  word-break: auto-phrase;
+}
+
+.docs > p a {
+  color: var(--theme-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .docs > p a:hover {
+    text-decoration: underline;
+  }
 }
 
 .docs > ol:not([class]),
@@ -102,11 +111,13 @@
 
 .docs > table {
   width: 100%;
+  border-width: 1px;
+  border-color: var(--theme-bd-1);
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-@media (1000px < width) {
+@media (992px <= width) {
   .docs > table {
     display: block;
     max-width: 100%;
@@ -116,21 +127,28 @@
   }
 }
 
-.docs > table tr {
-  border-top: 1px solid var(--theme-tx-4);
+.docs > table thead tr {
+  background: color-mix(
+    in srgb,
+    var(--theme-paint) 70%,
+    transparent calc(100% - 70%)
+  );
+  color: var(--theme-paint-tx);
 }
 
 .docs > table th,
 .docs > table td {
   padding: 12px 16px;
-  border: 1px solid var(--theme-tx-4);
+  border-width: 1px;
+  border-color: var(--theme-bd-1);
 }
 
 .docs > table th {
   font-weight: 600;
 }
 
-.docs > p code {
+.docs > p code,
+.docs > table code {
   padding: 0.2em 0.5em;
   background: var(--theme-bg-2);
   border-radius: 4px;
