@@ -308,7 +308,8 @@
   margin-left: 4px;
 }
 
-.is-mx-auto {
+.is-mx-auto,
+.is-centering {
   margin-right: auto;
   margin-left: auto;
 }
