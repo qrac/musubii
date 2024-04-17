@@ -128,6 +128,10 @@
   flex-wrap: wrap;
 }
 
+.grid.is-top {
+  align-items: flex-start;
+}
+
 .grid.is-baseline {
   align-items: baseline;
 }
