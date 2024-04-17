@@ -1,4 +1,5 @@
 @import "./bases/theme/light.css";
+@import "./bases/theme/dark-attr.css";
 @import "./bases/typo/font.css";
 @import "./bases/base/reset.css";
 @import "./bases/base/html.css";
