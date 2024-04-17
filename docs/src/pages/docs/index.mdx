@@ -3,4 +3,52 @@ title: Introduction
 layout: docs
 ---
 
-Introduction
+# Introduction
+
+MUSUBii（むすびー）は [YakuHanJP](https://yakuhanjp.qranoko.jp/) を開発しているデザイナーの[クラク](https://twitter.com/Qrac_JP)が作った CSS フレームワークです。マークアップを覚え始めた 2016 年初頭から自分用に開発を始めました。
+
+デザインや機能面のコーディングがフレームワークに依存しないよう、大きなコンポーネント・JavaScript は含まずベース CSS + α というミニマムな構成にしています。
+
+MUSUBii を使うだけでサイトは完成しませんが、毎度同じような CSS を書いている時間を大幅に減らすことができ、疲弊することなくデザイン・コーディングを進められます。
+
+日本のウェブデザイナーが腹ごなしに MUSUBii を使い、元気にデザインしてくれたら幸いです。
+
+## Markup
+
+MUSUBii の CSS は、要素 `.(xxxx)` 1 つに対して、装飾 `.is-(yyyy)` を複数追加してスタイリングするのが基本です。すべての class は英小文字・数字・ハイフンで構成されています。
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-top is-gap-xs">
+    <button className="button is-plain" type="button">ボタン A</button>
+    <button className="button is-plain is-primary" type="button">ボタン B</button>
+    <button className="button is-outline is-secondary" type="button">ボタン C</button>
+    <button className="button is-melt is-info" type="button">ボタン D</button>
+    <button className="button is-plain is-success is-floating" type="button">ボタン E</button>
+    <button className="button is-plain is-warning is-round is-sm" type="button">ボタン F</button>
+    <button className="button is-outline is-danger is-flex-0 is-angle-right is-lg" type="button">ボタン G</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain" type="button">ボタン A</button>
+<button class="button is-plain is-primary" type="button">ボタン B</button>
+<button class="button is-outline is-secondary" type="button">ボタン C</button>
+<button class="button is-melt is-info" type="button">ボタン D</button>
+<button class="button is-plain is-success is-floating" type="button">ボタン E</button>
+<button class="button is-plain is-warning is-round is-sm" type="button">ボタン F</button>
+<button class="button is-outline is-danger is-flex-0 is-angle-right is-lg" type="button">ボタン G</button>
+```
+
+## Media Query
+
+メディアクエリによって変化できる装飾は 5 つの画面サイズを設定しています。
+
+| Name      | width             |
+| --------- | ----------------- |
+| `mobile`  | `0 <= width`      |
+| `fablet`  | `576px <= width`  |
+| `tablet`  | `768px <= width`  |
+| `desktop` | `992px <= width`  |
+| `wide`    | `1200px <= width` |
