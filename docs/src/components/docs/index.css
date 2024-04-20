@@ -28,6 +28,10 @@
   font-size: 150%;
 }
 
+.docs > h3 {
+  font-size: 125%;
+}
+
 .docs > :is(h2, h3, h4, h5, h6) a {
   position: absolute;
   left: 0;
@@ -84,7 +88,8 @@
   }
 }
 
-.docs > p {
+.docs > p,
+.docs > .alert p {
   line-height: 1.75;
 }
 
