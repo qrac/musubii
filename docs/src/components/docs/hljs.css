@@ -53,9 +53,9 @@
 }
 
 .hljs-tag {
-  color: var(--theme-tx-1);
+  color: var(--theme-tx-2);
 }
 
 .hljs-comment {
-  color: var(--theme-tx-1);
+  color: color-mix(in srgb, var(--theme-tx-2) 50%, transparent 50%);
 }

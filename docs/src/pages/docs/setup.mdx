@@ -3,13 +3,20 @@ title: Setup
 layout: docs
 ---
 
+import { ExternalLink } from "../../components/docs"
 import CodeImportMusubii from "../../assets/markdown/code-import-musubii.md"
 
 # Setup
 
+MUSUBii は CDN または npm で利用できます。
+
+## Table of Contents
+
+contents list
+
 ## CDN
 
-以下リンクで基本構成（ドキュメント記載のすべての CSS）が使えます。ダークテーマは `data-theme="dark"` の付与で反映されます。
+各バージョンを <ExternalLink href="https://www.jsdelivr.com/package/npm/musubii">jsDelivr</ExternalLink> のリンクで使えます。
 
 {/* prettier-ignore */}
 ```html
@@ -18,11 +25,13 @@ import CodeImportMusubii from "../../assets/markdown/code-import-musubii.md"
 
 ## npm
 
-基本構成をすべてを利用する場合は PostCSS の処理の中で `musubii` をインポート。
+各バージョンを <ExternalLink href="https://www.npmjs.com/package/musubii">npm</ExternalLink> でからインストールできます。
 
 ```sh
 $ npm install musubii
 ```
+
+すべての CSS を利用する場合は PostCSS の処理の中で `musubii` をインポート。
 
 ```css
 @import "musubii";

@@ -18,9 +18,13 @@ v7 と v8 には見た目上の大きな変化はありませんが、内部の�
 
 :::
 
+## Table of Contents
+
+contents list
+
 ## CDN
 
-v8 で使えなくなった基本構成のクラス名はありません。CDN を利用されている場合は読み込んでいるパスを変更するだけで移行完了です。`migrate.css` を追加で読み込むことで色やサイズ感も v7 を再現できます。
+v8 で使えなくなったクラス名はありません。CDN を利用されている場合は読み込んでいるパスを変更するだけで移行完了です。`migrate.css` を追加で読み込むことで色やサイズ感も v7 を再現できます。
 
 {/* prettier-ignore */}
 ```html
@@ -75,7 +79,6 @@ async function build({
     entryNames,
     outbase,
     outdir,
-    bundle: true,
     minify,
     bundle: true,
     logLevel: "info",

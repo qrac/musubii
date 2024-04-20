@@ -1,0 +1,252 @@
+---
+title: Theme
+layout: docs
+---
+
+import { ExternalLink } from "../../components/docs"
+
+# Theme
+
+下地となる色変数。上書きすることで全体の色をカスタマイズできます。
+
+## Table of Contents
+
+contents list
+
+## Light
+
+ライトテーマ。<ExternalLink href="https://tailwindcss.com/docs/customizing-colors">Tailwind CSS</ExternalLink> のカラーパレットを採用しています。
+
+```css
+:root {
+  --theme-tx-1: #0f172a; /* tailwind slate-900 #0f172a */
+  --theme-tx-2: #334155; /* tailwind slate-700 #334155 */
+  --theme-bg-1: #ffffff; /* white #ffffff */
+  --theme-bg-2: #f1f5f9; /* tailwind slate-100 #f1f5f9 */
+  --theme-bd-1: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
+  --theme-bd-2: #cbd5e1; /* tailwind slate-300 #cbd5e1 */
+  --theme-lk: #06b6d4; /* tailwind cyan-500 #06b6d4 */
+  --theme-lk-tx: #ffffff; /* white #ffffff */
+  --theme-dark: #0f172a; /* tailwind slate-900 #0f172a */
+  --theme-light: #ffffff; /* white #ffffff */
+  --theme-primary: #06b6d4; /* tailwind cyan-500 #06b6d4 */
+  --theme-primary-light: #ecfeff; /* tailwind cyan-50 #ecfeff */
+  --theme-secondary: #6366f1; /* tailwind indigo-500 #6366f1 */
+  --theme-secondary-light: #eef2ff; /* tailwind indigo-50 #eef2ff */
+  --theme-info: #0ea5e9; /* tailwind sky-500 #0ea5e9 */
+  --theme-info-light: #f0f9ff; /* tailwind sky-50 #f0f9ff */
+  --theme-success: #16a34a; /* tailwind green-600 #16a34a */
+  --theme-success-light: #f0fdf4; /* tailwind green-50 #f0fdf4 */
+  --theme-warning: #f59e0b; /* tailwind amber-500 #f59e0b */
+  --theme-warning-light: #fffbeb; /* tailwind amber-50 #fffbeb */
+  --theme-danger: #dc2626; /* tailwind red-600 #dc2626 */
+  --theme-danger-light: #fef2f2; /* tailwind red-50 #fef2f2 */
+  --theme-shadow: #0f172a; /* tailwind slate-900 #0f172a */
+  --theme-code: #6366f1; /* tailwind indigo-500 #6366f1 */
+  --theme-paint: #0e7490; /* tailwind cyan-700 #0e7490 */
+  --theme-paint-tx: #ffffff; /* white #ffffff */
+  --theme-spot: #fde047; /* tailwind yellow-300 #fde047 */
+  --theme-disabled: #cbd5e1; /* tailwind slate-300 #cbd5e1 */
+}
+```
+
+## Dark
+
+ダークテーマ。`data-theme="dark"` を付与することで反映されます。ライトテーマと同様に <ExternalLink href="https://tailwindcss.com/docs/customizing-colors">Tailwind CSS</ExternalLink> のカラーパレットを採用しています。
+
+```css
+[data-theme="dark"] {
+  --theme-tx-1: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
+  --theme-tx-2: #cbd5e1; /* tailwind slate-300 #cbd5e1 */
+  --theme-bg-1: #0f172a; /* tailwind slate-900 #0f172a */
+  --theme-bg-2: #1e293b; /* tailwind slate-800 #1e293b */
+  --theme-bd-1: #334155; /* tailwind slate-700 #334155 */
+  --theme-bd-2: #475569; /* tailwind slate-600 #475569 */
+  --theme-lk: #22d3ee; /* tailwind cyan-400 #22d3ee */
+  --theme-lk-tx: #1e293b; /* tailwind slate-800 #1e293b */
+  --theme-dark: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
+  --theme-light: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
+  --theme-primary: #22d3ee; /* tailwind cyan-400 #22d3ee */
+  --theme-primary-light: #164e63; /* tailwind cyan-900 #164e63 */
+  --theme-secondary: #818cf8; /* tailwind indigo-400 #818cf8 */
+  --theme-secondary-light: #312e81; /* tailwind indigo-900 #312e81 */
+  --theme-info: #38bdf8; /* tailwind sky-400 #38bdf8 */
+  --theme-info-light: #0c4a6e; /* tailwind sky-900 #0c4a6e */
+  --theme-success: #4ade80; /* tailwind green-400 #4ade80 */
+  --theme-success-light: #14532d; /* tailwind green-900 #14532d */
+  --theme-warning: #fbbf24; /* tailwind amber-400 #fbbf24 */
+  --theme-warning-light: #78350f; /* tailwind amber-900 #78350f */
+  --theme-danger: #f87171; /* tailwind red-400 #f87171 */
+  --theme-danger-light: #7f1d1d; /* tailwind red-900 #7f1d1d */
+  --theme-shadow: #0f172a; /* tailwind slate-900 #0f172a */
+  --theme-code: #818cf8; /* tailwind indigo-400 #818cf8 */
+  --theme-paint: #083344; /* tailwind cyan-950 #083344 */
+  --theme-paint-tx: #cbd5e1; /* tailwind slate-300 #cbd5e1 */
+  --theme-spot: #ca8a04; /* tailwind yellow-600 #ca8a04 */
+  --theme-disabled: #374151; /* tailwind grey-700 #374151 */
+}
+```
+
+### with JavaScript
+
+`data-theme="dark"` はローカルストレージの値を確認して付与することが一般的です。ただし、ページのレンダリングよりも先に付与しないと FOUC と呼ばれる CSS の適応遅れによるフラッシュ現象がおきます。そこで以下のようなスクリプトを HTML の `body` 内に設置してレンダリング前に実行します。
+
+```html
+<script>
+  function setupTheme() {
+    const savedTheme = localStorage.getItem("theme") || "system"
+
+    switch (savedTheme) {
+      case "light":
+        document.documentElement.setAttribute("data-theme", "light")
+        break
+      case "dark":
+        document.documentElement.setAttribute("data-theme", "dark")
+        break
+      default:
+        if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+          document.documentElement.setAttribute("data-theme", "light")
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark")
+        }
+        break
+    }
+  }
+  setupTheme()
+</script>
+```
+
+テーマを切り替えるイベントリスナーの設定はページのレンダリング後で構いません。このドキュメントでは TypeScript で以下のように書き、ビルド後のスクリプトを非同期に読み込んでいます。ボタンによる切り替えと、OS のモードが切り替わった場合の切り替えに対応しています。
+
+```ts
+function switchAttr(theme: string, lightModeQuery: MediaQueryList) {
+  switch (theme) {
+    case "light":
+      document.documentElement.setAttribute("data-theme", "light")
+      break
+    case "dark":
+      document.documentElement.setAttribute("data-theme", "dark")
+      break
+    default:
+      if (lightModeQuery.matches) {
+        document.documentElement.setAttribute("data-theme", "light")
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark")
+      }
+      break
+  }
+}
+
+function switchMode(
+  lightModeQuery: MediaQueryList,
+  darkModeQuery: MediaQueryList
+) {
+  if (localStorage.getItem("theme") === "system") {
+    if (lightModeQuery.matches) {
+      document.documentElement.setAttribute("data-theme", "light")
+    }
+    if (darkModeQuery.matches) {
+      document.documentElement.setAttribute("data-theme", "dark")
+    }
+  }
+}
+
+function switchActive(els: HTMLButtonElement[], theme: string) {
+  els.forEach((el) => {
+    if (el.dataset.themeButton === theme) {
+      el.classList.add("is-active")
+    } else {
+      el.classList.remove("is-active")
+    }
+  })
+}
+
+export function actionThemeSwitch() {
+  const savedTheme = localStorage.getItem("theme") || "system"
+
+  const lightModeQuery = window.matchMedia("(prefers-color-scheme: light)")
+  const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)")
+
+  const buttonEls = [
+    ...document.querySelectorAll("[data-theme-button]"),
+  ] as HTMLButtonElement[]
+
+  switchActive(buttonEls, savedTheme)
+
+  buttonEls.forEach((el) => {
+    el.addEventListener("click", () => {
+      const theme = el.dataset.themeButton
+
+      if (theme) {
+        switchAttr(theme, lightModeQuery)
+        switchActive(buttonEls, theme)
+        localStorage.setItem("theme", theme)
+      }
+      el.blur()
+    })
+  })
+
+  lightModeQuery.addEventListener("change", () =>
+    switchMode(lightModeQuery, darkModeQuery)
+  )
+  darkModeQuery.addEventListener("change", () =>
+    switchMode(lightModeQuery, darkModeQuery)
+  )
+}
+
+actionThemeSwitch()
+```
+
+## Legacy
+
+レガシーテーマ。読み込むことで v7 以前のカラーリングを再現できます。レガシーテーマはライトテーマの差し替えを目的としておりダークテーマ版はありません。
+
+カラーリングは <ExternalLink href="/demo/">Demo</ExternalLink> でチェックボックス `migrate` をオンにすることで確認できます。
+
+```css
+:root {
+  --theme-tx-1: #212121;
+  --theme-tx-2: #4c4c4c;
+  --theme-bg-1: #ffffff;
+  --theme-bg-2: #f5f5f5;
+  --theme-bd-1: #e7e1e0;
+  --theme-bd-2: #d1d8dc;
+  --theme-lk: #37b0be;
+  --theme-lk-tx: #ffffff;
+  --theme-dark: #000000;
+  --theme-light: #ffffff;
+  --theme-primary: #37b0be;
+  --theme-primary-light: #ebf8f9;
+  --theme-secondary: #737eb4;
+  --theme-secondary-light: #e9eefe;
+  --theme-info: #4b9bd8;
+  --theme-info-light: #eaf3fa;
+  --theme-success: #2ca52c;
+  --theme-success-light: #e7f9e7;
+  --theme-warning: #ec9213;
+  --theme-warning-light: #fdf0e3;
+  --theme-danger: #ec4032;
+  --theme-danger-light: #fbeeee;
+  --theme-shadow: #000000;
+  --theme-code: #5d69a8;
+  --theme-paint: #227e89;
+  --theme-paint-tx: #ffffff;
+  --theme-spot: #f4dd1c;
+  --theme-disabled: #bdbdbd;
+}
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+/* ライトテーマ */
+@import "musubii/src/bases/theme/light.css";
+
+/* ダークテーマ */
+@import "musubii/src/bases/theme/dark-attr.css";
+
+/* レガシーテーマ */
+@import "musubii/src/bases/theme/legacy.css";
+```

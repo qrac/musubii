@@ -3,15 +3,21 @@ title: Introduction
 layout: docs
 ---
 
+import { ExternalLink } from "../../components/docs"
+
 # Introduction
 
-MUSUBii（むすびー）は [YakuHanJP](https://yakuhanjp.qranoko.jp/) を開発しているデザイナーの[クラク](https://twitter.com/Qrac_JP)が作った CSS フレームワークです。マークアップを覚え始めた 2016 年初頭から自分用に開発を始めました。
+MUSUBii（むすびー）は <ExternalLink href="https://yakuhanjp.qranoko.jp/">YakuHanJP</ExternalLink> を開発しているデザイナーの <ExternalLink href="https://twitter.com/Qrac_JP">クラク</ExternalLink> が作った CSS フレームワークです。マークアップを覚え始めた 2016 年初頭から自分用に開発を始めました。
 
 デザインや機能面のコーディングがフレームワークに依存しないよう、大きなコンポーネント・JavaScript は含まずベース CSS + α というミニマムな構成にしています。
 
 MUSUBii を使うだけでサイトは完成しませんが、毎度同じような CSS を書いている時間を大幅に減らすことができ、疲弊することなくデザイン・コーディングを進められます。
 
 日本のウェブデザイナーが腹ごなしに MUSUBii を使い、元気にデザインしてくれたら幸いです。
+
+## Table of Contents
+
+contents list
 
 ## Markup
 
@@ -41,11 +47,22 @@ MUSUBii の CSS は、要素 `.(xxxx)` 1 つに対して、装飾 `.is-(yyyy)` �
 <button class="button is-outline is-danger is-flex-0 is-angle-right is-lg" type="button">ボタン G</button>
 ```
 
+## Layers
+
+CSS は大きく 4 つに分類されます。
+
+| Name        | Detail                                        |
+| ----------- | --------------------------------------------- |
+| `bases`     | 下地となる色変数・文字変数・リセット CSS など |
+| `layouts`   | セクション・グリッドシステムなど              |
+| `elements`  | テキスト・ボタン・フォームなど                |
+| `utilities` | 調整用のモディファイア                        |
+
 ## Media Query
 
-メディアクエリによって変化できる装飾は 5 つの画面サイズを設定しています。
+`utilities` の一部はメディアクエリによって 5 つの画面サイズで有効化できます。
 
-| Name      | width             |
+| Name      | Width             |
 | --------- | ----------------- |
 | `mobile`  | `0 <= width`      |
 | `fablet`  | `576px <= width`  |
