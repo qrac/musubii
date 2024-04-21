@@ -23,6 +23,7 @@
 
 .box:is(.is-bg-cover, .is-bg-contain) {
   background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .box.is-bg-cover {
