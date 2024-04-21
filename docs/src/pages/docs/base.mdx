@@ -1,0 +1,45 @@
+---
+title: Base
+layout: docs
+---
+
+import { ExternalLink } from "../../components/docs"
+
+# Base
+
+下地となるリセット CSS と HTML タグの設定。<ExternalLink href="/demo/">Demo</ExternalLink> でスタイルを確認できます。
+
+## Table of Contents
+
+contents list
+
+## Concept
+
+主な設計は以下のようになっています。
+
+### reset
+
+- すべての要素と `::before` `::after` の余白をリセット
+- すべての要素と `::before` `::after` に `box-sizing: border-box;` を設定
+- すべての要素と `::before` `::after` に文字周りの設定を引き継ぐ
+- 日本語・英語の折り返し位置を最適化
+- スマホのデフォルトタップハイライトを削除
+- スタイルを印刷時にも適応
+- アンカーリンクのスタイルをリセット
+- リストのスタイルをリセット
+- フォーム要素に文字色などのスタイルを引き継ぐ
+- 画像や iframe を親要素からはみ出さないように調整
+
+### html
+
+- 背景と文字に変数を設定
+- placeholder に変数を設定
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/bases/base/reset.css";
+@import "musubii/src/bases/base/html.css";
+```
