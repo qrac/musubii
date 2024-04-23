@@ -93,12 +93,12 @@
   line-height: 1.75;
 }
 
-.docs > p a {
+.docs > :is(p, table, ul, ol, .alert) a {
   color: var(--theme-primary);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .docs > p a:hover {
+  .docs > :is(p, table, ul, ol, .alert) a:hover {
     text-decoration: underline;
   }
 }
@@ -116,46 +116,27 @@
 
 .docs > table {
   width: 100%;
-  border-width: 1px;
-  border-color: var(--theme-bd-1);
+  border-top-width: 1px;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-@media (992px <= width) {
-  .docs > table {
-    display: block;
-    max-width: 100%;
-    width: max-content;
-    overflow: auto;
-    white-space: nowrap;
-  }
-}
-
-.docs > table thead tr {
-  background: color-mix(
-    in srgb,
-    var(--theme-paint) 70%,
-    transparent calc(100% - 70%)
-  );
-  color: var(--theme-paint-tx);
+.docs > table tr {
+  border-bottom-width: 1px;
 }
 
 .docs > table th,
 .docs > table td {
-  padding: 12px 16px;
-  border-width: 1px;
-  border-color: var(--theme-bd-1);
+  padding: 12px 16px 12px 0;
 }
 
 .docs > table th {
+  font-size: 87.5%;
   font-weight: 600;
+  text-align: left;
 }
 
-.docs > p code,
-.docs > table code,
-.docs > ul code,
-.docs > ol code {
+.docs > :is(p, table, ul, ol, .alert) code {
   padding: 0.2em 0.5em;
   background: var(--theme-bg-2);
   border-radius: 4px;
@@ -163,6 +144,11 @@
   font-size: 87.5%;
   font-family: var(--font-mono);
   word-break: break-all;
+}
+
+.docs > table code {
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .docs > pre {

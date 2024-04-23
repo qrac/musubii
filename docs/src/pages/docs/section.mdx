@@ -3,18 +3,40 @@ title: Section
 layout: docs
 ---
 
+import { ExternalLink } from "../../components/docs"
+
 # Section
+
+ページのセクションと直下のインナー要素を設定するレイアウト CSS。
 
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.section` の直下に `.inner` を設置します
+- `.inner` は自動的に中央よせとなり画面サイズに応じて固定幅が適応されます
+- 固定幅は <ExternalLink href="/demo/">Demo</ExternalLink> で確認できます
+
+{/* prettier-ignore */}
+```html
+<section class="section">
+  <div class="inner">children</div>
+</section>
+```
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+.section {
+  --section-inner-fablet-width: 540px;
+  --section-inner-tablet-width: 720px;
+  --section-inner-desktop-width: 960px;
+  --section-inner-wide-width: 1140px;
+}
 ```
 
 ## Import
@@ -22,5 +44,5 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
-
+@import "musubii/src/layouts/section/main.css";
 ```

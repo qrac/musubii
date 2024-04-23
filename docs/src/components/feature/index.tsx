@@ -82,7 +82,7 @@ export function Feature2() {
               <p className="text is-auto-phrase is-line-height-lg is-sm">
                 命名規則は単純で、特定の要素に{" "}
                 <code className="code">.is-(xxxx)</code>{" "}
-                のclassを加えていくだけです。英小文字・数字・ハイフン1つで繋ぐルールなので覚えやすい。インブラウザデザイン中にスピーディな修正・追加を試すことができます。
+                のクラスを加えていくだけです。英小文字・数字・ハイフン1つで繋ぐルールなので覚えやすい。インブラウザデザイン中にスピーディな修正・追加を試すことができます。
               </p>
             </div>
           </div>
@@ -112,7 +112,7 @@ export function Feature3() {
               <p className="text is-auto-phrase is-line-height-lg is-sm">
                 CSS
                 Variablesでダークモードに対応したテーマカラーを使用できます。また、MUSUBiiはv8でTailwind
-                CSSのカラーパレットを採用したため、v7以前の色を再現するレガシーテーマも付属しています。
+                CSSのカラーパレットを採用しました。v7以前の色を再現するレガシーテーマも付属しています。
               </p>
             </div>
           </div>
