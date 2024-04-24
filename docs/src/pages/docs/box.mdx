@@ -133,8 +133,8 @@ contents list
 
 ## Angle
 
-- `.is-angle-right` または `.is-angle-left` に指定方向に角マークを付与します
-- `.is-angle-up` または `.is-angle-down` で角マークが指定方向を向きます
+- `.is-angle-right` や `.is-angle-left` で指定方向に角マークを付与します
+- `.is-angle-up` や `.is-angle-down` で角マークが指定方向を向きます
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -168,6 +168,21 @@ contents list
 {/* prettier-ignore */}
 ```html
 <div className="box is-link">ボックス</div>
+```
+
+## Disabled
+
+- `[disabled]` または `[aria-disabled="true"]` または `.is-disabled` で非活性化します
+- 非活性化すると `pointer-events: none;` が付与されホバー効果などが打ち消されます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-link" aria-disabled="true">ボックス</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div className="box is-link" aria-disabled="true">ボックス</div>
 ```
 
 ## Compatible
