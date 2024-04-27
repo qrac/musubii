@@ -5,16 +5,124 @@ layout: docs
 
 # Grid
 
+Flexbox を用いたグリッドレイアウト CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.grid` を設置し直下に `.column` を配置します
+- `.column` の幅は [flex](/docs/flex) の `.is-flex-{num}` で設定します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="grid">
+    <div className="column is-flex-0">カラム</div>
+    <div className="column is-flex-0">カラム</div>
+    <div className="column is-flex-0">カラム</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div className="grid">
+  <div className="column is-flex-0">カラム</div>
+  <div className="column is-flex-0">カラム</div>
+  <div className="column is-flex-0">カラム</div>
+</div>
+```
+
+## Gap
+
+- `.is-gap-{size}` で溝を設定できます
+- `.is-gap-y-{size}` で上下方向のみに溝を設定
+- `.is-gap-x-{size}` で左右方向のみに溝を設定
+- サイズは最大 `xxl` から最小 `xxs` まで
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="grid is-gap-md">
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div className="grid is-gap-md">
+  <div className="column is-flex-0">カラム</div>
+  <div className="column is-flex-0">カラム</div>
+  <div className="column is-flex-0">カラム</div>
+</div>
+```
+
+| 上下左右      | 上下のみ        | 左右のみ        |
+| ------------- | --------------- | --------------- |
+| `.is-gap-xxl` | `.is-gap-y-xxl` | `.is-gap-x-xxl` |
+| `.is-gap-xl`  | `.is-gap-y-xl`  | `.is-gap-x-xl`  |
+| `.is-gap-lg`  | `.is-gap-y-lg`  | `.is-gap-x-lg`  |
+| `.is-gap-md`  | `.is-gap-y-md`  | `.is-gap-x-md`  |
+| `.is-gap-sm`  | `.is-gap-y-sm`  | `.is-gap-x-sm`  |
+| `.is-gap-xs`  | `.is-gap-y-xs`  | `.is-gap-x-xs`  |
+| `.is-gap-xxs` | `.is-gap-y-xxs` | `.is-gap-x-xxs` |
+
+## Arrange
+
+- [flex](/docs/flex) と同様の配置調整が可能です
+- `.is-stretch` でカラムを flexbox にして高さを引き継げます（グリッド専用）
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="grid is-between">
+    <div className="column">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div className="grid is-between">
+  <div className="column">カラム</div>
+  <div className="column">カラム</div>
+  <div className="column">カラム</div>
+</div>
+```
+
+| クラス名       | 効果                                     |
+| -------------- | ---------------------------------------- |
+| `.is-top`      | カラムを上に揃える                       |
+| `.is-baseline` | カラムをベースラインに揃える             |
+| `.is-middle`   | カラムを上下中央に揃える                 |
+| `.is-bottom`   | カラムを下に揃える                       |
+| `.is-center`   | カラムを左右中央に揃える                 |
+| `.is-right`    | カラムを右に揃える                       |
+| `.is-between`  | カラムを左右均等に並べる（端に溝幅なし） |
+| `.is-around`   | カラムを左右均等に並べる（端に溝幅あり） |
+| `.is-reverse`  | カラムを左右逆に並べる                   |
+| `.is-stretch`  | カラムを flexbox にして高さを引き継ぐ    |
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+/* None */
 ```
 
 ## Import
@@ -22,5 +130,5 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
-
+@import "musubii/src/layouts/grid/main.css";
 ```
