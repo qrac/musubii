@@ -1,0 +1,36 @@
+.sidetoc {
+  position: sticky;
+  top: 62px;
+  width: 132px;
+  max-height: calc(100svh - 62px);
+  padding-top: 34px;
+  padding-bottom: 20vh;
+  overflow-y: auto;
+}
+
+[data-sidetoc-box] {
+  opacity: 0;
+  transition: opacity 0.35s ease-in;
+}
+
+[data-sidetoc-box] li > ul > li {
+  padding-left: 8px;
+}
+
+[data-sidetoc-box] a {
+  display: flex;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 75%;
+  transition: 0.12s ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  [data-sidetoc-box] a:hover {
+    background: var(--theme-bg-2);
+  }
+}
+
+[data-sidetoc-box] a.is-active {
+  color: var(--theme-primary);
+}

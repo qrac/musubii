@@ -5,6 +5,7 @@ import { site } from "../../project"
 import { Header } from "../components/header"
 import { Sidebar } from "../components/sidebar"
 import { Docs } from "../components/docs"
+import { Sidetoc } from "../components/sidetoc"
 import { Footer } from "../components/footer"
 import setupTheme from "../components/theme/setup.js?raw"
 
@@ -58,6 +59,9 @@ export default function ({
               </div>
               <div className="box is-flex-0">
                 <Docs>{children}</Docs>
+              </div>
+              <div className="box is-none wide:is-block" data-sidetoc="">
+                <Sidetoc />
               </div>
             </div>
           </div>

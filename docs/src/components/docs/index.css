@@ -88,6 +88,19 @@
   }
 }
 
+.docs > #table-of-contents + ul > li > ul {
+  display: none;
+}
+
+@media (1200px <= width) {
+  .docs > #table-of-contents {
+    display: none;
+  }
+  .docs > #table-of-contents + ul {
+    display: none;
+  }
+}
+
 .docs > p,
 .docs > .alert p {
   line-height: 1.75;

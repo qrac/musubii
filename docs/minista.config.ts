@@ -11,7 +11,7 @@ import rehypeSlug from "rehype-slug"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
 const remarkTocOptions = {
-  maxDepth: 2,
+  maxDepth: 3,
 }
 
 export default defineConfig({

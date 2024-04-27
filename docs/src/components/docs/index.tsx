@@ -15,5 +15,9 @@ export function ExternalLink({
 }
 
 export function Docs({ children }: { children: React.ReactNode }) {
-  return <div className="docs">{children}</div>
+  return (
+    <div className="docs" data-sidetoc-target="">
+      {children}
+    </div>
+  )
 }
