@@ -34,6 +34,9 @@ function highlightToc() {
 
   const links = [
     ...document.querySelectorAll("[data-sidetoc-box] a"),
+    ...document.querySelectorAll(
+      "[data-sidetoc-target] > :is(h2, h3):not(#table-of-contents) > a"
+    ),
   ] as HTMLElement[]
 
   if (headings.length === 0 || links.length === 0) {
