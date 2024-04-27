@@ -1,3 +1,4 @@
 .alert {
+  --alert-padding: 0.675em 0.875em;
   --alert-border-radius: 2px;
 }
