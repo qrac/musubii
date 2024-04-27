@@ -81,7 +81,7 @@ export function Feature2() {
               <h2 className="text is-xl">簡単で分かりやすい記法</h2>
               <p className="text is-auto-phrase is-line-height-lg is-sm">
                 命名規則は単純で、特定の要素に{" "}
-                <code className="code">.is-(xxxx)</code>{" "}
+                <code className="code">{".is-{xxxx}"}</code>{" "}
                 のクラスを加えていくだけです。英小文字・数字・ハイフン1つで繋ぐルールなので覚えやすい。インブラウザデザイン中にスピーディな修正・追加を試すことができます。
               </p>
             </div>

@@ -160,8 +160,7 @@
 }
 
 .docs > table code {
-  overflow-wrap: break-word;
-  word-break: normal;
+  white-space: nowrap;
 }
 
 .docs > pre {
