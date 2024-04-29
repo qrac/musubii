@@ -5,16 +5,358 @@ layout: docs
 
 # Text
 
+テキストを装飾するエレメント CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.text` がベースとなります
+- `.text` 単体に付与されているスタイルはありません
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p className="text">テキスト</p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p class="text">テキスト</p>
+```
+
+## Dark
+
+- `.is-dark` または `.is-dark-{num}` で黒文字を表現します
+- `.is-dark` は最も濃くなります
+- `.is-dark-{num}` の数値は `1` から `9` までで増えるほど薄くなります
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p>
+    <span className="text is-dark">ダーク</span>
+    <span className="text is-dark-1">ダーク</span>
+    <span className="text is-dark-2">ダーク</span>
+    <span className="text is-dark-3">ダーク</span>
+    <span className="text is-dark-4">ダーク</span>
+    <span className="text is-dark-5">ダーク</span>
+    <span className="text is-dark-6">ダーク</span>
+    <span className="text is-dark-7">ダーク</span>
+    <span className="text is-dark-8">ダーク</span>
+    <span className="text is-dark-9">ダーク</span>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<span class="text is-dark">ダーク</span>
+<span class="text is-dark-1">ダーク</span>
+<span class="text is-dark-2">ダーク</span>
+<span class="text is-dark-3">ダーク</span>
+<span class="text is-dark-4">ダーク</span>
+<span class="text is-dark-5">ダーク</span>
+<span class="text is-dark-6">ダーク</span>
+<span class="text is-dark-7">ダーク</span>
+<span class="text is-dark-8">ダーク</span>
+<span class="text is-dark-9">ダーク</span>
+```
+
+## Light
+
+- `.is-light` または `.is-light-{num}` で白文字を表現します
+- `.is-light` は最も濃くなります
+- `.is-light-{num}` の数値は `1` から `9` までで増えるほど薄くなります
+
+{/* prettier-ignore */}
+<div className="docs-preview" style={{background:"#0f172a"}}>
+  <p>
+    <span className="text is-light">ライト</span>
+    <span className="text is-light-1">ライト</span>
+    <span className="text is-light-2">ライト</span>
+    <span className="text is-light-3">ライト</span>
+    <span className="text is-light-4">ライト</span>
+    <span className="text is-light-5">ライト</span>
+    <span className="text is-light-6">ライト</span>
+    <span className="text is-light-7">ライト</span>
+    <span className="text is-light-8">ライト</span>
+    <span className="text is-light-9">ライト</span>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<span class="text is-light">ライト</span>
+<span class="text is-light-1">ライト</span>
+<span class="text is-light-2">ライト</span>
+<span class="text is-light-3">ライト</span>
+<span class="text is-light-4">ライト</span>
+<span class="text is-light-5">ライト</span>
+<span class="text is-light-6">ライト</span>
+<span class="text is-light-7">ライト</span>
+<span class="text is-light-8">ライト</span>
+<span class="text is-light-9">ライト</span>
+```
+
+## Color
+
+- `.is-{color}` で色付き文字を表現します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p>
+    <span className="text is-primary">重要です</span>
+    <span className="text is-secondary">重要かも</span>
+    <span className="text is-info">情報あり</span>
+    <span className="text is-success">成功した</span>
+    <span className="text is-warning">注意する</span>
+    <span className="text is-danger">禁止する</span>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<span class="text is-primary">重要です</span>
+<span class="text is-secondary">重要かも</span>
+<span class="text is-info">情報あり</span>
+<span class="text is-success">成功した</span>
+<span class="text is-warning">注意する</span>
+<span class="text is-danger">禁止する</span>
+```
+
+## Weight
+
+- `.is-normal` で文字の太さを通常にします
+- `.is-strong` で文字を太文字にします
+- `.is-weight-{num}` で文字の太さを調整します
+- 数値は最小 `100` からステップ 100 毎に `900` まで
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p>
+    <span className="text is-normal">普通</span>
+    <span className="text is-strong">太い</span>
+    <span className="text is-weight-100">調整</span>
+    <span className="text is-weight-200">調整</span>
+    <span className="text is-weight-300">調整</span>
+    <span className="text is-weight-400">調整</span>
+    <span className="text is-weight-500">調整</span>
+    <span className="text is-weight-600">調整</span>
+    <span className="text is-weight-700">調整</span>
+    <span className="text is-weight-800">調整</span>
+    <span className="text is-weight-900">調整</span>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<span class="text is-normal">普通</span>
+<span class="text is-strong">太い</span>
+<span class="text is-weight-100">調整</span>
+<span class="text is-weight-200">調整</span>
+<span class="text is-weight-300">調整</span>
+<span class="text is-weight-400">調整</span>
+<span class="text is-weight-500">調整</span>
+<span class="text is-weight-600">調整</span>
+<span class="text is-weight-700">調整</span>
+<span class="text is-weight-800">調整</span>
+<span class="text is-weight-900">調整</span>
+```
+
+## Line Height
+
+- `.is-line-height-{size}` で行間を変化させられます
+- サイズは最大 `xxl` から最小 `xxs` まで
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-outline is-separate">
+    <p className="text is-line-height-xxl">Line Heightの調整</p>
+    <p className="text is-line-height-xl">Line Heightの調整</p>
+    <p className="text is-line-height-lg">Line Heightの調整</p>
+    <p className="text is-line-height-md">Line Heightの調整</p>
+    <p className="text is-line-height-sm">Line Heightの調整</p>
+    <p className="text is-line-height-xs">Line Heightの調整</p>
+    <p className="text is-line-height-xxs">Line Heightの調整</p>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p class="text is-line-height-xxl">Line Heightの調整</p>
+<p class="text is-line-height-xl">Line Heightの調整</p>
+<p class="text is-line-height-lg">Line Heightの調整</p>
+<p class="text is-line-height-md">Line Heightの調整</p>
+<p class="text is-line-height-sm">Line Heightの調整</p>
+<p class="text is-line-height-xs">Line Heightの調整</p>
+<p class="text is-line-height-xxs">Line Heightの調整</p>
+```
+
+## Transform
+
+- `.is-italic` で文字を斜めにします
+- `.is-delete` で文字に打ち消し線を引きます
+- `.is-capitalize` で文字の先頭を大文字にします
+- `.is-lowercase` で文字を小文字にします
+- `.is-uppercase` で文字を大文字にします
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p>
+    <span className="text is-italic">italic</span>{" "}
+    <span className="text is-delete">delete</span>{" "}
+    <span className="text is-capitalize">capitalize</span>{" "}
+    <span className="text is-lowercase">lowercase</span>{" "}
+    <span className="text is-uppercase">uppercase</span>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<span class="text is-italic">italic</span>
+<span class="text is-delete">delete</span>
+<span class="text is-capitalize">capitalize</span>
+<span class="text is-lowercase">lowercase</span>
+<span class="text is-uppercase">uppercase</span>
+```
+
+## Align
+
+- `.is-right` で文章を右寄せにします
+- `.is-center` で文章を中央寄せにします
+- `.is-left` で文章を左寄せにします
+- `.is-justify` で文章を両端揃えにします
+- `.is-right` `.is-center` `.is-left` は画面サイズに応じて適応できます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <p className="text is-right">山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+    <p className="text is-center">山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+    <p className="text is-left">山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+    <p className="text is-justify">山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p class="text is-right">山路を登りながら...</p>
+<p class="text is-center">山路を登りながら...</p>
+<p class="text is-left">山路を登りながら...</p>
+<p class="text is-justify">山路を登りながら...</p>
+```
+
+| すべて       | 576px 以上          | 768px 以上          | 992px 以上           | 1200px 以上       |
+| ------------ | ------------------- | ------------------- | -------------------- | ----------------- |
+| `.is-right`  | `.fablet:is-right`  | `.tablet:is-right`  | `.desktop:is-right`  | `.wide:is-right`  |
+| `.is-center` | `.fablet:is-center` | `.tablet:is-center` | `.desktop:is-center` | `.wide:is-center` |
+| `.is-left`   | `.fablet:is-left`   | `.tablet:is-left`   | `.desktop:is-left`   | `.wide:is-left`   |
+
+## Vertical Align
+
+- `.is-baseline` で文字をベースラインに揃えます
+- `.is-top` で文字を上部に揃えます
+- `.is-middle` で文字を上下中央に揃えます
+- `.is-bottom` で文字を下部に揃えます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p>
+    <span className="text is-baseline">ベースライン</span>{" "}
+    <span className="text is-top">トップ</span>{" "}
+    <span className="text is-middle">ミドル</span>{" "}
+    <span className="text is-bottom">ボトム</span>{" "}
+    <span className="text is-xxl">大きい文字</span>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<span class="text is-baseline">ベースライン</span>
+<span class="text is-top">トップ</span>
+<span class="text is-middle">ミドル</span>
+<span class="text is-bottom">ボトム</span>
+```
+
+## Word Break
+
+- `.is-nowrap` で文字の折り返しを防ぎます
+- `.is-break` で文字を単語の途中でも折り返させます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <p className="text is-nowrap">
+      {"nowrap nowrap nowrap nowrap nowrap nowrap nowrap nowrap nowrap nowrap nowrap nowrap"}
+    </p>
+    <p className="text is-break">
+      {"WordBreakWordBreakWordBreakWordBreakWordBreakWordBreakWordBreakWordBreakWordBreak"}
+    </p>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p class="text is-nowrap">nowrap...</p>
+<p class="text is-break">WordBreak...</p>
+```
+
+## Link
+
+- `.is-link` で文字に下線とホバー効果を付与します
+- `.is-link-reverse` で文字にホバーで下線を表示させます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p>
+    <a href="" className="text is-link">リンク</a>{" "}
+    <a href="" className="text is-link-reverse">リンク</a>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<a href="" class="text is-link">リンク</a>
+<a href="" class="text is-link-reverse">リンク</a>
+```
+
+## Disabled
+
+- `[disabled]` または `[aria-disabled="true"]` または `.is-disabled` で非活性化します
+- 非活性化すると `pointer-events: none;` が付与されホバー効果などが打ち消されます
+- 非活性化した `.text` は薄くなります
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p>
+    <a href="" className="text is-link" aria-disabled="true">リンク</a>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<a href="" class="text is-link" aria-disabled="true">リンク</a>
+```
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+.text {
+  --text-dark-color: var(--theme-dark);
+  --text-light-color: var(--theme-light);
+  --text-primary-color: var(--theme-primary);
+  --text-secondary-color: var(--theme-secondary);
+  --text-info-color: var(--theme-info);
+  --text-success-color: var(--theme-success);
+  --text-warning-color: var(--theme-warning);
+  --text-danger-color: var(--theme-danger);
+  --text-normal-font-weight: 400;
+  --text-strong-font-weight: 700;
+  --text-disabled-color: var(--theme-dark);
+  --text-disabled-color-alpha: 36%;
+}
 ```
 
 ## Import
@@ -22,5 +364,17 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
+@import "musubii/src/elements/text/main.css";
+@import "musubii/src/elements/text/fablet.css";
+@import "musubii/src/elements/text/tablet.css";
+@import "musubii/src/elements/text/desktop.css";
+@import "musubii/src/elements/text/wide.css";
+@import "musubii/src/elements/text/blockquote.css";
+@import "musubii/src/elements/text/code.css";
+```
 
+v7 を再現する場合は `legacy.css` を追加で読み込んでください。
+
+```css
+@import "musubii/src/layouts/text/legacy.css";
 ```
