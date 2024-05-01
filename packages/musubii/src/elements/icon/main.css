@@ -17,6 +17,8 @@
 }
 
 :is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons) {
+  color: currentColor;
+  fill: currentColor;
   font-size: var(--icon-font-size);
   line-height: var(--icon-line-height);
 }
