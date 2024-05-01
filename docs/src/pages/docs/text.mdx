@@ -338,6 +338,61 @@ contents list
 <a href="" class="text is-link" aria-disabled="true">リンク</a>
 ```
 
+## Blockquote
+
+- `.blockquote` で引用の装飾を作れます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <blockquote className="blockquote">引用の「blockquote」を表現</blockquote>
+</div>
+
+{/* prettier-ignore */}
+```html
+<blockquote class="blockquote">引用の「blockquote」を使う場合</blockquote>
+```
+
+## Code
+
+- `.code` でインラインコードの装飾を作れます
+- `.pre` と `.code` でコードブロックの装飾を作れます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <p className="text">テキストの途中に<code className="code">code</code>を表示させる。</p>
+    <pre className="pre"><code className="code">{".my-css { color: red; }"}</code></pre>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p class="text">テキストの途中に<code class="code">code</code>を表示させる。</p>
+<pre class="pre"><code class="code">.my-css { color: red; }</code></pre>
+```
+
+## Compatible
+
+推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
+
+| 推奨のクラス名       | 互換のあるクラス名   |
+| -------------------- | -------------------- |
+| `.is-right`          | `.is-mobile-right`   |
+| `.is-center`         | `.is-mobile-center`  |
+| `.is-left`           | `.is-mobile-left`    |
+| `.fablet:is-right`   | `.is-fablet-right`   |
+| `.fablet:is-center`  | `.is-fablet-center`  |
+| `.fablet:is-left`    | `.is-fablet-left`    |
+| `.tablet:is-right`   | `.is-tablet-right`   |
+| `.tablet:is-center`  | `.is-tablet-center`  |
+| `.tablet:is-left`    | `.is-tablet-left`    |
+| `.desktop:is-right`  | `.is-desktop-right`  |
+| `.desktop:is-center` | `.is-desktop-center` |
+| `.desktop:is-left`   | `.is-desktop-left`   |
+| `.wide:is-right`     | `.is-wide-right`     |
+| `.wide:is-center`    | `.is-wide-center`    |
+| `.wide:is-left`      | `.is-wide-left`      |
+
 ## Variables
 
 上書きできる変数は以下の通りです。
@@ -356,6 +411,32 @@ contents list
   --text-strong-font-weight: 700;
   --text-disabled-color: var(--theme-dark);
   --text-disabled-color-alpha: 36%;
+}
+
+.blockquote {
+  --blockquote-padding: 1.5em;
+  --blockquote-bg: var(--theme-bg-2);
+  --blockquote-border-width: 0.5em;
+  --blockquote-border-color: var(--theme-bd-1);
+  --blockquote-radius: 4px;
+}
+
+.code {
+  --code-padding: 0.2em 0.5em;
+  --code-bg: var(--theme-bg-2);
+  --code-border-radius: 4px;
+  --code-color: var(--theme-code);
+  --code-font-size: 87.5%;
+  --code-font-family: var(--font-mono);
+}
+
+.pre {
+  --pre-bg: var(--theme-bg-2);
+  --pre-border-radius: 4px;
+  --pre-code-padding: 1.25em 1.5em;
+  --pre-code-color: var(--theme-code);
+  --pre-code-font-size: 87.5%;
+  --pre-code-font-family: var(--font-mono);
 }
 ```
 
