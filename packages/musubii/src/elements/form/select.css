@@ -9,13 +9,17 @@
   --select-color: inherit;
   --select-line-height: 1.25;
   --select-transition: none;
+  --select-success: var(--theme-success);
+  --select-success-light: var(--theme-success-light);
+  --select-danger: var(--theme-danger);
+  --select-danger-light: var(--theme-danger-light);
   --select-accent-mix: 50%;
-  --select-icon-position: 1em;
-  --select-icon-size: 0.5em;
-  --select-icon-border-width: 2px;
-  --select-icon-border-color: var(--theme-dark);
-  --select-icon-border-alpha: 24%;
-  --select-icon-z-index: 3;
+  --select-angle-position: 1em;
+  --select-angle-size: 0.5em;
+  --select-angle-width: 2px;
+  --select-angle-color: var(--theme-dark);
+  --select-angle-color-alpha: 24%;
+  --select-angle-z-index: 3;
   --select-multiple-option-min-height: 1.5em;
   --select-multiple-option-padding: 0.5em 0.75em;
   --select-plain-bg: var(--theme-bg-2);
@@ -28,25 +32,40 @@
   --select-disabled-color-alpha: 36%;
 }
 
-.select.is-success {
-  --select-border-color: color-mix(
+.select {
+  --select-success-mix: color-mix(
     in srgb,
-    var(--theme-success) calc(100% - var(--select-accent-mix)),
-    var(--theme-success-light) var(--select-accent-mix)
+    var(--select-success) calc(100% - var(--select-accent-mix)),
+    var(--select-success-light) var(--select-accent-mix)
   );
-  --select-plain-bg: var(--theme-success-light);
-  --select-inside-bg: var(--theme-success-light);
+  --select-danger-mix: color-mix(
+    in srgb,
+    var(--select-danger) calc(100% - var(--select-accent-mix)),
+    var(--select-danger-light) var(--select-accent-mix)
+  );
+  --select-angle-color-mix: color-mix(
+    in srgb,
+    var(--select-angle-color) var(--select-angle-color-alpha),
+    transparent calc(100% - var(--select-angle-color-alpha))
+  );
+  --select-disabled-color-mix: color-mix(
+    in srgb,
+    var(--select-disabled-color) var(--select-disabled-color-alpha),
+    transparent calc(100% - var(--select-disabled-color-alpha))
+  );
+}
+
+.select.is-success {
+  --select-border-color: var(--select-success-mix);
+  --select-plain-bg: var(--select-success-light);
+  --select-inside-bg: var(--select-success-light);
 }
 
 .select.is-danger {
-  --select-bg: var(--theme-danger-light);
-  --select-border-color: color-mix(
-    in srgb,
-    var(--theme-danger) calc(100% - var(--select-accent-mix)),
-    var(--theme-danger-light) var(--select-accent-mix)
-  );
-  --select-plain-bg: var(--theme-danger-light);
-  --select-inside-bg: var(--theme-danger-light);
+  --select-bg: var(--select-danger-light);
+  --select-border-color: var(--select-danger-mix);
+  --select-plain-bg: var(--select-danger-light);
+  --select-inside-bg: var(--select-danger-light);
 }
 
 .select {
@@ -79,23 +98,15 @@
   pointer-events: none;
   position: absolute;
   top: 50%;
-  right: var(--select-icon-position);
-  width: var(--select-icon-size);
-  height: var(--select-icon-size);
-  border-right-width: var(--select-icon-border-width);
-  border-right-color: color-mix(
-    in srgb,
-    var(--select-icon-border-color) var(--select-icon-border-alpha),
-    transparent calc(100% - var(--select-icon-border-alpha))
-  );
-  border-bottom-width: var(--select-icon-border-width);
-  border-bottom-color: color-mix(
-    in srgb,
-    var(--select-icon-border-color) var(--select-icon-border-alpha),
-    transparent calc(100% - var(--select-icon-border-alpha))
-  );
+  right: var(--select-angle-position);
+  width: var(--select-angle-size);
+  height: var(--select-angle-size);
+  border-right-width: var(--select-angle-width);
+  border-right-color: var(--select-angle-color-mix);
+  border-bottom-width: var(--select-angle-width);
+  border-bottom-color: var(--select-angle-color-mix);
   transform: translateY(-70%) rotate(45deg);
-  z-index: var(--select-icon-z-index);
+  z-index: var(--select-angle-z-index);
 }
 
 .select.is-multiple > select {
@@ -148,11 +159,7 @@
 }
 
 .select > select:is([disabled], [aria-disabled="true"], .is-disabled) {
-  color: color-mix(
-    in srgb,
-    var(--select-disabled-color) var(--select-disabled-color-alpha),
-    transparent calc(100% - var(--select-disabled-color-alpha))
-  );
+  color: var(--select-disabled-color-mix);
 }
 
 .select:where(:not(.is-underline))
