@@ -16,7 +16,35 @@
   --table-stripe-bg: var(--theme-tx-1);
   --table-stripe-bg-alpha: 5%;
   --table-wrap-shadow-color: var(--theme-shadow);
-  --table-wrap-shadow-alpha: 15%;
+  --table-wrap-shadow-color-alpha: 15%;
+}
+
+:is(.table, .table-wrap) {
+  --table-paint-bg-mix: color-mix(
+    in srgb,
+    var(--table-paint-bg) var(--table-paint-bg-alpha),
+    transparent calc(100% - var(--table-paint-bg-alpha))
+  );
+  --table-spot-bg-mix: color-mix(
+    in srgb,
+    var(--table-spot-bg) var(--table-spot-bg-alpha),
+    transparent calc(100% - var(--table-spot-bg-alpha))
+  );
+  --table-danger-bg-mix: color-mix(
+    in srgb,
+    var(--table-danger-bg) var(--table-danger-bg-alpha),
+    transparent calc(100% - var(--table-danger-bg-alpha))
+  );
+  --table-stripe-bg-mix: color-mix(
+    in srgb,
+    var(--table-stripe-bg) var(--table-stripe-bg-alpha),
+    transparent calc(100% - var(--table-stripe-bg-alpha))
+  );
+  --table-wrap-shadow-color-mix: color-mix(
+    in srgb,
+    var(--table-wrap-shadow-color) var(--table-wrap-shadow-color-alpha),
+    transparent calc(100% - var(--table-wrap-shadow-color-alpha))
+  );
 }
 
 .table {
@@ -67,44 +95,24 @@
 }
 
 .table :where(:is(tr, th, td)).is-paint {
-  background: color-mix(
-    in srgb,
-    var(--table-paint-bg) var(--table-paint-bg-alpha),
-    transparent calc(100% - var(--table-paint-bg-alpha))
-  );
+  background: var(--table-paint-bg-mix);
   color: var(--table-paint-color);
 }
 
 .table :where(:is(tr, th, td)).is-spot {
-  background: color-mix(
-    in srgb,
-    var(--table-spot-bg) var(--table-spot-bg-alpha),
-    transparent calc(100% - var(--table-spot-bg-alpha))
-  );
+  background: var(--table-spot-bg-mix);
 }
 
 .table :where(:is(tr, th, td)).is-danger {
-  background: color-mix(
-    in srgb,
-    var(--table-danger-bg) var(--table-danger-bg-alpha),
-    transparent calc(100% - var(--table-danger-bg-alpha))
-  );
+  background: var(--table-danger-bg-mix);
 }
 
 .table:where(.is-stripe) :where(thead tr) {
-  background: color-mix(
-    in srgb,
-    var(--table-stripe-bg) var(--table-stripe-bg-alpha),
-    transparent calc(100% - var(--table-stripe-bg-alpha))
-  );
+  background: var(--table-stripe-bg-mix);
 }
 
 .table:where(.is-stripe) :where(tbody tr:nth-child(even)) {
-  background: color-mix(
-    in srgb,
-    var(--table-stripe-bg) var(--table-stripe-bg-alpha),
-    transparent calc(100% - var(--table-stripe-bg-alpha))
-  );
+  background: var(--table-stripe-bg-mix);
 }
 
 .table.is-right :is(th, td),
@@ -136,20 +144,12 @@
     linear-gradient(to right, var(--table-bg), var(--table-bg)),
     linear-gradient(
       to right,
-      color-mix(
-        in srgb,
-        var(--table-wrap-shadow-color) var(--table-wrap-shadow-alpha),
-        transparent calc(100% - var(--table-wrap-shadow-alpha))
-      ),
+      var(--table-wrap-shadow-color-mix),
       color-mix(in srgb, var(--table-bg) 0%, transparent 100%)
     ),
     linear-gradient(
       to left,
-      color-mix(
-        in srgb,
-        var(--table-wrap-shadow-color) var(--table-wrap-shadow-alpha),
-        transparent calc(100% - var(--table-wrap-shadow-alpha))
-      ),
+      var(--table-wrap-shadow-color-mix),
       color-mix(in srgb, var(--table-bg) 0%, transparent 100%)
     );
   background-position: left center, right center, left center, right center;
