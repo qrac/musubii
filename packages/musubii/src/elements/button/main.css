@@ -24,7 +24,7 @@
   --button-square-size: calc(2.25em + 1px * 2);
   --button-angle-position: 0.75em;
   --button-angle-size: 0.5em;
-  --button-angle-border-width: 2px;
+  --button-angle-width: 2px;
   --button-angle-color: var(--theme-dark);
   --button-angle-color-alpha: 24%;
   --button-strong-font-weight: 700;
@@ -214,10 +214,8 @@
   top: 50%;
   width: var(--button-angle-size);
   height: var(--button-angle-size);
-  border-top: var(--button-angle-border-width) solid
-    var(--button-angle-color-mix);
-  border-right: var(--button-angle-border-width) solid
-    var(--button-angle-color-mix);
+  border-top: var(--button-angle-width) solid var(--button-angle-color-mix);
+  border-right: var(--button-angle-width) solid var(--button-angle-color-mix);
   z-index: 2;
 }
 

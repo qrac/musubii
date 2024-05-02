@@ -7,7 +7,15 @@
   --radio-checked-border-color: var(--theme-primary);
   --radio-checked-icon-size: 0.5em;
   --radio-checked-icon-color: var(--theme-primary);
-  --radio-disabled-border-alpha: 36%;
+  --radio-disabled-color-alpha: 36%;
+}
+
+.radio {
+  --radio-disabled-color-mix: color-mix(
+    in srgb,
+    var(--radio-border-color) var(--radio-disabled-color-alpha),
+    transparent calc(100% - var(--radio-disabled-color-alpha))
+  );
 }
 
 .radio {
@@ -56,9 +64,5 @@
 :where(.input[type="radio"]:disabled + *) .radio,
 :where(.input[type="radio"]:disabled) + .radio,
 .radio:where(:is([disabled], [aria-disabled="true"], .is-disabled)) {
-  border-color: color-mix(
-    in srgb,
-    var(--radio-border-color) var(--radio-disabled-border-alpha),
-    transparent calc(100% - var(--radio-disabled-border-alpha))
-  );
+  border-color: var(--radio-disabled-color-mix);
 }

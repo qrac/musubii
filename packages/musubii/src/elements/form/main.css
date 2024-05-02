@@ -6,13 +6,17 @@
   --input-border-color: var(--theme-bd-1);
   --input-border-radius: 6px;
   --input-inset-shadow-color: var(--theme-shadow);
-  --input-inset-shadow-alpha: 7.5%;
+  --input-inset-shadow-color-alpha: 7.5%;
   --input-inset-shadow-size: 0 1px 1px;
   --input-color: inherit;
   --input-line-height: 1.25;
   --input-transition: none;
   --input-placeholder-color: var(--theme-tx-1);
-  --input-placeholder-alpha: 26%;
+  --input-placeholder-color-alpha: 26%;
+  --input-success: var(--theme-success);
+  --input-success-light: var(--theme-success-light);
+  --input-danger: var(--theme-danger);
+  --input-danger-light: var(--theme-danger-light);
   --input-accent-mix: 50%;
   --input-plain-bg: var(--theme-bg-2);
   --input-inside-bg: transparent;
@@ -24,25 +28,45 @@
   --textarea-padding: calc(0.5em - 1.5px) 0.5em;
 }
 
-:is(.input, .textarea).is-success {
-  --input-border-color: color-mix(
+:is(.input, .textarea) {
+  --input-inset-shadow-color-mix: color-mix(
     in srgb,
-    var(--theme-success) calc(100% - var(--input-accent-mix)),
-    var(--theme-success-light) var(--input-accent-mix)
+    var(--input-inset-shadow-color) var(--input-inset-shadow-color-alpha),
+    transparent calc(100% - var(--input-inset-shadow-color-alpha))
   );
-  --input-plain-bg: var(--theme-success-light);
-  --input-inside-bg: var(--theme-success-light);
+  --input-placeholder-color-mix: color-mix(
+    in srgb,
+    var(--input-placeholder-color) var(--input-placeholder-color-alpha),
+    transparent calc(100% - var(--input-placeholder-color-alpha))
+  );
+  --input-success-mix: color-mix(
+    in srgb,
+    var(--input-success) calc(100% - var(--input-accent-mix)),
+    var(--input-success-light) var(--input-accent-mix)
+  );
+  --input-danger-mix: color-mix(
+    in srgb,
+    var(--input-danger) calc(100% - var(--input-accent-mix)),
+    var(--input-danger-light) var(--input-accent-mix)
+  );
+  --input-disabled-color-mix: color-mix(
+    in srgb,
+    var(--input-disabled-color) var(--input-disabled-color-alpha),
+    transparent calc(100% - var(--input-disabled-color-alpha))
+  );
+}
+
+:is(.input, .textarea).is-success {
+  --input-border-color: var(--input-success-mix);
+  --input-plain-bg: var(--input-success-light);
+  --input-inside-bg: var(--input-success-light);
 }
 
 :is(.input, .textarea).is-danger {
-  --input-bg: var(--theme-danger-light);
-  --input-border-color: color-mix(
-    in srgb,
-    var(--theme-danger) calc(100% - var(--input-accent-mix)),
-    var(--theme-danger-light) var(--input-accent-mix)
-  );
-  --input-plain-bg: var(--theme-danger-light);
-  --input-inside-bg: var(--theme-danger-light);
+  --input-bg: var(--input-danger-light);
+  --input-border-color: var(--input-danger-mix);
+  --input-plain-bg: var(--input-danger-light);
+  --input-inside-bg: var(--input-danger-light);
 }
 
 .input {
@@ -54,11 +78,7 @@
   border-color: var(--input-border-color);
   border-radius: var(--input-border-radius);
   box-shadow: inset var(--input-inset-shadow-size)
-    color-mix(
-      in srgb,
-      var(--input-inset-shadow-color) var(--input-inset-shadow-alpha),
-      transparent calc(100% - var(--input-inset-shadow-alpha))
-    );
+    var(--input-inset-shadow-color-mix);
   color: var(--input-color);
   line-height: var(--input-line-height);
   transition: var(--input-transition);
@@ -73,22 +93,14 @@
   border-color: var(--input-border-color);
   border-radius: var(--input-border-radius);
   box-shadow: inset var(--input-inset-shadow-size)
-    color-mix(
-      in srgb,
-      var(--input-inset-shadow-color) var(--input-inset-shadow-alpha),
-      transparent calc(100% - var(--input-inset-shadow-alpha))
-    );
+    var(--input-inset-shadow-color-mix);
   color: var(--input-color);
   transition: var(--input-transition);
   appearance: none;
 }
 
 :is(.input, .textarea)::placeholder {
-  color: color-mix(
-    in srgb,
-    var(--input-placeholder-color) var(--input-placeholder-alpha),
-    transparent calc(100% - var(--input-placeholder-alpha))
-  );
+  color: var(--input-placeholder-color-mix);
 }
 
 :is(.input, .textarea).is-plain {
@@ -134,11 +146,7 @@
 }
 
 :is(.input, .textarea):is([disabled], [aria-disabled="true"], .is-disabled) {
-  color: color-mix(
-    in srgb,
-    var(--input-disabled-color) var(--input-disabled-color-alpha),
-    transparent calc(100% - var(--input-disabled-color-alpha))
-  );
+  color: var(--input-disabled-color-mix);
 }
 
 :is(.input, .textarea):where(:not(.is-underline)):is(
