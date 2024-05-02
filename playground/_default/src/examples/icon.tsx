@@ -91,6 +91,36 @@ function ExampleIconColor({ modifiedClasses }: { modifiedClasses?: string }) {
         <FiAlertTriangle className={clsx("icon is-warning", modifiedClasses)} />
         <FiTrash2 className={clsx("icon is-danger", modifiedClasses)} />
       </div>
+      <div className="demo-box">
+        <FiUser
+          className={clsx("icon", modifiedClasses)}
+          aria-disabled="true"
+        />
+        <FiCheckSquare
+          className={clsx("icon is-primary", modifiedClasses)}
+          aria-disabled="true"
+        />
+        <FiCheckCircle
+          className={clsx("icon is-secondary", modifiedClasses)}
+          aria-disabled="true"
+        />
+        <FiAlertCircle
+          className={clsx("icon is-info", modifiedClasses)}
+          aria-disabled="true"
+        />
+        <FiSave
+          className={clsx("icon is-success", modifiedClasses)}
+          aria-disabled="true"
+        />
+        <FiAlertTriangle
+          className={clsx("icon is-warning", modifiedClasses)}
+          aria-disabled="true"
+        />
+        <FiTrash2
+          className={clsx("icon is-danger", modifiedClasses)}
+          aria-disabled="true"
+        />
+      </div>
     </>
   )
 }

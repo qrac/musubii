@@ -181,6 +181,26 @@ contents list
 <svg class="icon is-danger" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
 ```
 
+## Disabled
+
+- `[disabled]` または `[aria-disabled="true"]` または `.is-disabled` で非活性化します
+- 非活性化すると `pointer-events: none;` が付与されホバー効果などが打ち消されます
+- 非活性化した `.icon` は薄くなります
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div>
+    <svg className="icon is-primary" aria-disabled="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<svg class="icon is-primary" aria-disabled="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+```
+
 ## Fit
 
 - `.is-fit` でアイコンに `width: 1em;` `text-align: center;` を付与します
