@@ -4,13 +4,21 @@
   --card-outline-border-width: 1px;
   --card-outline-border-color: var(--theme-bd-1);
   --card-floating-shadow-color: var(--theme-shadow);
-  --card-floating-shadow-alpha: 24%;
+  --card-floating-shadow-color-alpha: 24%;
   --card-floating-shadow-size: 0 1px 3px 0;
   --card-floating-link-hover-shadow-size: 0 4px 12px 0;
   --card-link-transition: ease-out 0.12s;
   --card-link-hover-bg: var(--theme-bg-2);
   --card-zoom-transform: scale(1.025);
   --card-zoom-transition: ease-out 0.12s;
+}
+
+.card {
+  --card-floating-shadow-color-mix: color-mix(
+    in srgb,
+    var(--card-floating-shadow-color) var(--card-floating-shadow-color-alpha),
+    transparent calc(100% - var(--card-floating-shadow-color-alpha))
+  );
 }
 
 .card {
@@ -30,21 +38,13 @@
 
 .card.is-floating {
   box-shadow: var(--card-floating-shadow-size)
-    color-mix(
-      in srgb,
-      var(--card-floating-shadow-color) var(--card-floating-shadow-alpha),
-      transparent calc(100% - var(--card-floating-shadow-alpha))
-    );
+    var(--card-floating-shadow-color-mix);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .card.is-floating:where(.is-link):hover {
     box-shadow: var(--card-floating-link-hover-shadow-size)
-      color-mix(
-        in srgb,
-        var(--card-floating-shadow-color) var(--card-floating-shadow-alpha),
-        transparent calc(100% - var(--card-floating-shadow-alpha))
-      );
+      var(--card-floating-shadow-color-mix);
   }
 }
 
