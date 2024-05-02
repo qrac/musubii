@@ -59,6 +59,19 @@
   --wysiwyg-figure-figcaption-font-size: 87.5%;
 }
 
+.wysiwyg {
+  --wysiwyg-table-th-bg-mix: color-mix(
+    in srgb,
+    var(--wysiwyg-table-th-bg) var(--wysiwyg-table-th-bg-alpha),
+    transparent calc(100% - var(--wysiwyg-table-th-bg-alpha))
+  );
+  --wysiwyg-dl-dt-bg-mix: color-mix(
+    in srgb,
+    var(--wysiwyg-dl-dt-bg) var(--wysiwyg-dl-dt-bg-alpha),
+    transparent calc(100% - var(--wysiwyg-dl-dt-bg-alpha))
+  );
+}
+
 .wysiwyg :is(h1, h2, h3, h4, h5, h6) {
   font-weight: var(--wysiwyg-heading-font-weight);
 }
@@ -196,11 +209,7 @@
 }
 
 .wysiwyg table th {
-  background: color-mix(
-    in srgb,
-    var(--wysiwyg-table-th-bg) var(--wysiwyg-table-th-bg-alpha),
-    transparent calc(100% - var(--wysiwyg-table-th-bg-alpha))
-  );
+  background: var(--wysiwyg-table-th-bg-mix);
   color: var(--wysiwyg-table-th-color);
   font-weight: var(--wysiwyg-table-th-font-weight);
 }
@@ -220,11 +229,7 @@
   padding: var(--wysiwyg-dl-item-padding);
   border-top-width: var(--wysiwyg-dl-border-width);
   border-top-color: var(--wysiwyg-dl-border-color);
-  background: color-mix(
-    in srgb,
-    var(--wysiwyg-dl-dt-bg) var(--wysiwyg-dl-dt-bg-alpha),
-    transparent calc(100% - var(--wysiwyg-dl-dt-bg-alpha))
-  );
+  background: var(--wysiwyg-dl-dt-bg-mix);
   color: var(--wysiwyg-dl-dt-color);
   font-weight: var(--wysiwyg-dl-dt-font-weight);
 }
