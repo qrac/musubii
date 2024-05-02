@@ -63,6 +63,10 @@ export const site = {
             title: "Migration",
             path: "/docs/migration",
           },
+          {
+            title: "Optimize",
+            path: "/docs/optimize",
+          },
         ],
       },
       {

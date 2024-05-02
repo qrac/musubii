@@ -8,13 +8,13 @@ import CodeImportMigrate from "../../assets/markdown/code-import-migrate.md"
 
 # Migration
 
-v7, v7-alpha.41~42 から v8 への移行方法を説明します。どのバージョンからでも作業は同じです。
+v7, v7-alpha.41~42 から v8 への移行方法を説明します。どのバージョンでも作業は同じです。
 
 :::div{.alert.is-warning.is-space-xxs}
 
 ::p[WARNING]{.text.is-warning.is-strong.is-font-sans-en}
 
-v7 と v8 には見た目上の大きな変化はありませんが、内部の仕組みが大きく変わりました。v7 で高度な Sass カスタマイズ（クラス名変更・mixin を使ったスタイルの転用）を行なっている場合は移行できませんので、v8 は新たな制作から導入し直すことをおすすめします。
+v8 は見た目上の大きな変化はありませんが、内部の仕組みが大きく変わりました。v7 で高度な Sass カスタマイズ（クラス名変更・mixin を使ったスタイルの転用）を行なっている場合は移行できませんので、v8 は新たな制作からの導入をおすすめします。
 
 :::
 
@@ -24,7 +24,9 @@ contents list
 
 ## CDN
 
-v8 で使えなくなったクラス名はありません。CDN を利用されている場合は読み込んでいるパスを変更するだけで移行完了です。`migrate.css` を追加で読み込むことで色やサイズ感も v7 を再現できます。
+v8 で使えなくなったクラス名はありません。CDN を利用されている場合は読み込んでいるパスを変更するだけで移行完了です。
+
+`migrate.css` を追加で読み込むことで色やサイズ感も v7 を再現できます。
 
 {/* prettier-ignore */}
 ```html
@@ -133,7 +135,7 @@ $ npm install musubii@latest
 
 ### 4. Import MUSUBii with migrate
 
-CSS ファイルで `@import` を再設定します。MUSUBii 本体に加え `migrate.css` を読み込んでください。これにより色やサイズ感を v7 と同じにできます。
+CSS ファイルで `@import` を設定します。MUSUBii 本体に加え `migrate.css` を読み込んでください。これにより色やサイズ感を v7 と同じにできます。
 
 ```css
 @import "musubii";
@@ -145,9 +147,9 @@ CSS ファイルで `@import` を再設定します。MUSUBii 本体に加え `m
 <CodeImportMusubii />
 <CodeImportMigrate />
 
-### 5. Import Override and Project CSS
+### 5. Import override and project CSS
 
-抽出しておいた MUSUBii のカスタマイズとプロジェクトの固有 CSS のインポートを追加します。ビルドを行い、サイトの CSS に問題があれば調整を行なってください。
+抽出しておいた MUSUBii のカスタマイズ CSS とプロジェクト固有の CSS をインポートします。ビルドを行い、サイトの CSS に問題があれば調整を行なってください。
 
 ```css
 /* ex. style.css */
@@ -159,179 +161,8 @@ CSS ファイルで `@import` を再設定します。MUSUBii 本体に加え `m
 @import "./project/slider.css";
 ```
 
-### 6. Search and Replace
+### 6. Search and replace
 
 ※この作業は任意です。行わなずとも運用上の問題はありません。
 
-v8 ではユーティリティの一部のクラス名を短縮して書けるようになりました。既存のサイトやテンプレートのクラス名を一括置換して HTML を少し圧縮できます。
-
-以下はユーティリティの置換リストです。VS Code や IntelliJ IDEA で左のクラス名を検索して右のクラス名に置換します。最後に表示に問題がないか確認してください。お疲れ様でした。
-
-#### margin
-
-| 検索するクラス名            | 置換後のクラス名 |
-| --------------------------- | ---------------- |
-| `.is-margin-xxl`            | `.is-m-xxl`      |
-| `.is-margin-xl`             | `.is-m-xl`       |
-| `.is-margin-lg`             | `.is-m-lg`       |
-| `.is-margin-md`             | `.is-m-md`       |
-| `.is-margin-sm`             | `.is-m-sm`       |
-| `.is-margin-xs`             | `.is-m-xs`       |
-| `.is-margin-xxs`            | `.is-m-xxs`      |
-| `.is-margin-top-xxl`        | `.is-mt-xxl`     |
-| `.is-margin-top-xl`         | `.is-mt-xl`      |
-| `.is-margin-top-lg`         | `.is-mt-lg`      |
-| `.is-margin-top-md`         | `.is-mt-md`      |
-| `.is-margin-top-sm`         | `.is-mt-sm`      |
-| `.is-margin-top-xs`         | `.is-mt-xs`      |
-| `.is-margin-top-xxs`        | `.is-mt-xxs`     |
-| `.is-margin-right-xxl`      | `.is-mr-xxl`     |
-| `.is-margin-right-xl`       | `.is-mr-xl`      |
-| `.is-margin-right-lg`       | `.is-mr-lg`      |
-| `.is-margin-right-md`       | `.is-mr-md`      |
-| `.is-margin-right-sm`       | `.is-mr-sm`      |
-| `.is-margin-right-xs`       | `.is-mr-xs`      |
-| `.is-margin-right-xxs`      | `.is-mr-xxs`     |
-| `.is-margin-bottom-xxl`     | `.is-mb-xxl`     |
-| `.is-margin-bottom-xl`      | `.is-mb-xl`      |
-| `.is-margin-bottom-lg`      | `.is-mb-lg`      |
-| `.is-margin-bottom-md`      | `.is-mb-md`      |
-| `.is-margin-bottom-sm`      | `.is-mb-sm`      |
-| `.is-margin-bottom-xs`      | `.is-mb-xs`      |
-| `.is-margin-bottom-xxs`     | `.is-mb-xxs`     |
-| `.is-margin-left-xxl`       | `.is-ml-xxl`     |
-| `.is-margin-left-xl`        | `.is-ml-xl`      |
-| `.is-margin-left-lg`        | `.is-ml-lg`      |
-| `.is-margin-left-md`        | `.is-ml-md`      |
-| `.is-margin-left-sm`        | `.is-ml-sm`      |
-| `.is-margin-left-xs`        | `.is-ml-xs`      |
-| `.is-margin-left-xxs`       | `.is-ml-xxs`     |
-| `.is-margin-vertical-xxl`   | `.is-my-xxl`     |
-| `.is-margin-vertical-xl`    | `.is-my-xl`      |
-| `.is-margin-vertical-lg`    | `.is-my-lg`      |
-| `.is-margin-vertical-md`    | `.is-my-md`      |
-| `.is-margin-vertical-sm`    | `.is-my-sm`      |
-| `.is-margin-vertical-xs`    | `.is-my-xs`      |
-| `.is-margin-vertical-xxs`   | `.is-my-xxs`     |
-| `.is-margin-horizontal-xxl` | `.is-mx-xxl`     |
-| `.is-margin-horizontal-xl`  | `.is-mx-xl`      |
-| `.is-margin-horizontal-lg`  | `.is-mx-lg`      |
-| `.is-margin-horizontal-md`  | `.is-mx-md`      |
-| `.is-margin-horizontal-sm`  | `.is-mx-sm`      |
-| `.is-margin-horizontal-xs`  | `.is-mx-xs`      |
-| `.is-margin-horizontal-xxs` | `.is-mx-xxs`     |
-
-#### negative
-
-| 検索するクラス名                  | 置換後のクラス名 |
-| --------------------------------- | ---------------- |
-| `.is-margin-minus-xxl`            | `.is-n-xxl`      |
-| `.is-margin-minus-xl`             | `.is-n-xl`       |
-| `.is-margin-minus-lg`             | `.is-n-lg`       |
-| `.is-margin-minus-md`             | `.is-n-md`       |
-| `.is-margin-minus-sm`             | `.is-n-sm`       |
-| `.is-margin-minus-xs`             | `.is-n-xs`       |
-| `.is-margin-minus-xxs`            | `.is-n-xxs`      |
-| `.is-margin-minus-top-xxl`        | `.is-nt-xxl`     |
-| `.is-margin-minus-top-xl`         | `.is-nt-xl`      |
-| `.is-margin-minus-top-lg`         | `.is-nt-lg`      |
-| `.is-margin-minus-top-md`         | `.is-nt-md`      |
-| `.is-margin-minus-top-sm`         | `.is-nt-sm`      |
-| `.is-margin-minus-top-xs`         | `.is-nt-xs`      |
-| `.is-margin-minus-top-xxs`        | `.is-nt-xxs`     |
-| `.is-margin-minus-right-xxl`      | `.is-nr-xxl`     |
-| `.is-margin-minus-right-xl`       | `.is-nr-xl`      |
-| `.is-margin-minus-right-lg`       | `.is-nr-lg`      |
-| `.is-margin-minus-right-md`       | `.is-nr-md`      |
-| `.is-margin-minus-right-sm`       | `.is-nr-sm`      |
-| `.is-margin-minus-right-xs`       | `.is-nr-xs`      |
-| `.is-margin-minus-right-xxs`      | `.is-nr-xxs`     |
-| `.is-margin-minus-bottom-xxl`     | `.is-nb-xxl`     |
-| `.is-margin-minus-bottom-xl`      | `.is-nb-xl`      |
-| `.is-margin-minus-bottom-lg`      | `.is-nb-lg`      |
-| `.is-margin-minus-bottom-md`      | `.is-nb-md`      |
-| `.is-margin-minus-bottom-sm`      | `.is-nb-sm`      |
-| `.is-margin-minus-bottom-xs`      | `.is-nb-xs`      |
-| `.is-margin-minus-bottom-xxs`     | `.is-nb-xxs`     |
-| `.is-margin-minus-left-xxl`       | `.is-nl-xxl`     |
-| `.is-margin-minus-left-xl`        | `.is-nl-xl`      |
-| `.is-margin-minus-left-lg`        | `.is-nl-lg`      |
-| `.is-margin-minus-left-md`        | `.is-nl-md`      |
-| `.is-margin-minus-left-sm`        | `.is-nl-sm`      |
-| `.is-margin-minus-left-xs`        | `.is-nl-xs`      |
-| `.is-margin-minus-left-xxs`       | `.is-nl-xxs`     |
-| `.is-margin-minus-vertical-xxl`   | `.is-ny-xxl`     |
-| `.is-margin-minus-vertical-xl`    | `.is-ny-xl`      |
-| `.is-margin-minus-vertical-lg`    | `.is-ny-lg`      |
-| `.is-margin-minus-vertical-md`    | `.is-ny-md`      |
-| `.is-margin-minus-vertical-sm`    | `.is-ny-sm`      |
-| `.is-margin-minus-vertical-xs`    | `.is-ny-xs`      |
-| `.is-margin-minus-vertical-xxs`   | `.is-ny-xxs`     |
-| `.is-margin-minus-horizontal-xxl` | `.is-nx-xxl`     |
-| `.is-margin-minus-horizontal-xl`  | `.is-nx-xl`      |
-| `.is-margin-minus-horizontal-lg`  | `.is-nx-lg`      |
-| `.is-margin-minus-horizontal-md`  | `.is-nx-md`      |
-| `.is-margin-minus-horizontal-sm`  | `.is-nx-sm`      |
-| `.is-margin-minus-horizontal-xs`  | `.is-nx-xs`      |
-| `.is-margin-minus-horizontal-xxs` | `.is-nx-xxs`     |
-
-#### padding
-
-| 検索するクラス名              | 置換後のクラス名 |
-| ----------------------------- | ---------------- |
-| `.is-padding-xxl`             | `.is-p-xxl`      |
-| `.is-padding-xl`              | `.is-p-xl`       |
-| `.is-padding-lg`              | `.is-p-lg`       |
-| `.is-padding-md`              | `.is-p-md`       |
-| `.is-padding-sm`              | `.is-p-sm`       |
-| `.is-padding-xs`              | `.is-p-xs`       |
-| `.is-padding-xxs`             | `.is-p-xxs`      |
-| `.is-padding-top-xxl`         | `.is-pt-xxl`     |
-| `.is-padding-top-xl`          | `.is-pt-xl`      |
-| `.is-padding-top-lg`          | `.is-pt-lg`      |
-| `.is-padding-top-md`          | `.is-pt-md`      |
-| `.is-padding-top-sm`          | `.is-pt-sm`      |
-| `.is-padding-top-xs`          | `.is-pt-xs`      |
-| `.is-padding-top-xxs`         | `.is-pt-xxs`     |
-| `.is-padding-right-xxl`       | `.is-pr-xxl`     |
-| `.is-padding-right-xl`        | `.is-pr-xl`      |
-| `.is-padding-right-lg`        | `.is-pr-lg`      |
-| `.is-padding-right-md`        | `.is-pr-md`      |
-| `.is-padding-right-sm`        | `.is-pr-sm`      |
-| `.is-padding-right-xs`        | `.is-pr-xs`      |
-| `.is-padding-right-xxs`       | `.is-pr-xxs`     |
-| `.is-padding-bottom-xxl`      | `.is-pb-xxl`     |
-| `.is-padding-bottom-xl`       | `.is-pb-xl`      |
-| `.is-padding-bottom-lg`       | `.is-pb-lg`      |
-| `.is-padding-bottom-md`       | `.is-pb-md`      |
-| `.is-padding-bottom-sm`       | `.is-pb-sm`      |
-| `.is-padding-bottom-xs`       | `.is-pb-xs`      |
-| `.is-padding-bottom-xxs`      | `.is-pb-xxs`     |
-| `.is-padding-left-xxl`        | `.is-pl-xxl`     |
-| `.is-padding-left-xl`         | `.is-pl-xl`      |
-| `.is-padding-left-lg`         | `.is-pl-lg`      |
-| `.is-padding-left-md`         | `.is-pl-md`      |
-| `.is-padding-left-sm`         | `.is-pl-sm`      |
-| `.is-padding-left-xs`         | `.is-pl-xs`      |
-| `.is-padding-left-xxs`        | `.is-pl-xxs`     |
-| `.is-padding-vertical-xxl`    | `.is-py-xxl`     |
-| `.is-padding-vertical-xl`     | `.is-py-xl`      |
-| `.is-padding-vertical-lg`     | `.is-py-lg`      |
-| `.is-padding-vertical-md`     | `.is-py-md`      |
-| `.is-padding-vertical-sm`     | `.is-py-sm`      |
-| `.is-padding-vertical-xs`     | `.is-py-xs`      |
-| `.is-padding-vertical-xxs`    | `.is-py-xxs`     |
-| `.is-padding-horizontal-xxl`  | `.is-px-xxl`     |
-| `.is-padding-horizontal-xl`   | `.is-px-xl`      |
-| `.is-padding-horizontal-lg`   | `.is-px-lg`      |
-| `.is-padding-horizontal-md`   | `.is-px-md`      |
-| `.is-padding-horizontal-sm`   | `.is-px-sm`      |
-| `.is-padding-horizontal-xs`   | `.is-px-xs`      |
-| `.is-padding-horizontal-xxs`  | `.is-px-xxs`     |
-| `.is-padding-safe`            | `.is-p-safe`     |
-| `.is-padding-top-safe`        | `.is-pt-safe`    |
-| `.is-padding-right-safe`      | `.is-pr-safe`    |
-| `.is-padding-bottom-safe`     | `.is-pb-safe`    |
-| `.is-padding-left-safe`       | `.is-pl-safe`    |
-| `.is-padding-vertical-safe`   | `.is-py-safe`    |
-| `.is-padding-horizontal-safe` | `.is-px-safe`    |
+v8 で追加された短縮版のクラス名を適応する場合は [Optimize](/docs/optimize) のページを参照してください。

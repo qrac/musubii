@@ -1,0 +1,27 @@
+---
+title: Optimize
+layout: docs
+---
+
+# Optimize
+
+v8 ではユーティリティの一部のクラス名を短縮して書けるようになりました。これを利用して、既存テンプレートの HTML を少し圧縮できます。
+
+- 対応ユーティリティは [margin](/docs/margin#compatible)・[negative](/docs/negative#compatible)・[padding](/docs/padding#compatible) の 3 種類
+- クラス名の Before / After は各ページの Compatible で確認できます
+
+```html
+<!-- ex. Before -->
+<div class="box is-margin-bottom-sm is-padding-top-lg">ボックス</div>
+
+<!-- ex. After -->
+<div class="box is-mb-sm is-pt-lg">ボックス</div>
+```
+
+## Table of Contents
+
+contents list
+
+## npm
+
+既存テンプレートのクラス名を手動ですべて置換するのは時間がかかります。
