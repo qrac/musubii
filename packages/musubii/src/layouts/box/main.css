@@ -6,7 +6,7 @@
   --box-separate-border-color: var(--theme-bd-1);
   --box-angle-position: 0.75em;
   --box-angle-size: 0.5em;
-  --box-angle-border-width: 2px;
+  --box-angle-width: 2px;
   --box-angle-color: var(--theme-dark);
   --box-angle-color-alpha: 24%;
   --box-link-transition: ease-out 0.12s;
@@ -84,8 +84,8 @@
   top: 50%;
   width: var(--box-angle-size);
   height: var(--box-angle-size);
-  border-top: var(--box-angle-border-width) solid var(--box-angle-color-mix);
-  border-right: var(--box-angle-border-width) solid var(--box-angle-color-mix);
+  border-top: var(--box-angle-width) solid var(--box-angle-color-mix);
+  border-right: var(--box-angle-width) solid var(--box-angle-color-mix);
   z-index: 2;
 }
 
