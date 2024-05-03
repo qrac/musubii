@@ -171,7 +171,8 @@
   white-space: nowrap;
 }
 
-.docs > pre {
+.docs > pre,
+.docs [data-rehype-pretty-code-figure] pre {
   background: var(--theme-bg-2);
   border-radius: 12px;
   white-space: pre;
@@ -182,7 +183,8 @@
 }
 
 .docs > pre code,
-.docs > pre .hljs {
+.docs > pre .hljs,
+.docs [data-rehype-pretty-code-figure] code {
   display: block;
   padding: 1.25em 1.5em;
   color: var(--theme-tx-2);
