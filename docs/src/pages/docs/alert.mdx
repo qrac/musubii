@@ -5,16 +5,154 @@ layout: docs
 
 # Alert
 
+アラートを装飾するエレメント CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.alert` がベースとなります
+- `.alert` には文字色などは付与されていません
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="alert">アラート</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="alert">アラート</div>
+```
+
+## Color
+
+- `.is-{color}` でテキストに色を付けます
+- `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+- アラート内の色付けは別途 [text](/docs/text) や [icon](/docs/icon) で行います
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="alert is-primary">
+      <span className="text is-primary">重要かもしれないアラート</span>
+    </div>
+    <div className="alert is-secondary">
+      <span className="text is-secondary">重要かもしれないアラート</span>
+    </div>
+    <div className="alert is-info">
+      <span className="text is-info">情報を表すアラート</span>
+    </div>
+    <div className="alert is-success">
+      <span className="text is-success">成功したことを表すアラート</span>
+    </div>
+    <div className="alert is-warning">
+      <span className="text is-warning">警告を表すアラート</span>
+    </div>
+    <div className="alert is-danger">
+      <span className="text is-danger">禁止やエラーを表すアラート</span>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="alert is-primary">...</div>
+<div class="alert is-secondary">...</div>
+<div class="alert is-info">...</div>
+<div class="alert is-success">...</div>
+<div class="alert is-warning">...</div>
+<div class="alert is-danger">...</div>
+```
+
+## Tail
+
+- `.is-tail-{way}-{position}` 形式で吹き出しになります
+- `{way}` は `top` `right` `bottom` `left` の 4 種類
+- `{way}` が `top` `bottom` の場合 `{position}` は `left` `center` `right` の 3 種類
+- `{way}` が `right` `left` の場合 `{position}` は `top` `middle` `bottom` の 3 種類
+- 吹き出しの色は Color を引き継ぎます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="alert is-tail-top-left">アラート</div>
+    <div className="alert is-tail-top-center">アラート</div>
+    <div className="alert is-tail-top-right">アラート</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="alert is-tail-top-left">アラート</div>
+<div class="alert is-tail-top-center">アラート</div>
+<div class="alert is-tail-top-right">アラート</div>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="alert is-tail-right-top">アラート</div>
+    <div className="alert is-tail-right-middle">アラート</div>
+    <div className="alert is-tail-right-bottom">アラート</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="alert is-tail-right-top">アラート</div>
+<div class="alert is-tail-right-middle">アラート</div>
+<div class="alert is-tail-right-bottom">アラート</div>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="alert is-tail-bottom-left">アラート</div>
+    <div className="alert is-tail-bottom-center">アラート</div>
+    <div className="alert is-tail-bottom-right">アラート</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="alert is-tail-bottom-left">アラート</div>
+<div class="alert is-tail-bottom-center">アラート</div>
+<div class="alert is-tail-bottom-right">アラート</div>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="alert is-tail-left-top">アラート</div>
+    <div className="alert is-tail-left-middle">アラート</div>
+    <div className="alert is-tail-left-bottom">アラート</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="alert is-tail-left-top">アラート</div>
+<div class="alert is-tail-left-middle">アラート</div>
+<div class="alert is-tail-left-bottom">アラート</div>
+```
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+.alert {
+  --alert-padding: 0.675em 1.125em;
+  --alert-bg: var(--theme-bg-2);
+  --alert-border-width: 1px;
+  --alert-border-color: var(--theme-bd-2);
+  --alert-border-radius: 6px;
+  --alert-tail-width: 1em;
+  --alert-tail-height: 0.5em;
+  --alert-tail-position: 10%;
+}
 ```
 
 ## Import
@@ -22,5 +160,11 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
+@import "musubii/src/elements/alert/main.css";
+```
 
+v7 を再現する場合は `legacy.css` を追加で読み込んでください。
+
+```css
+@import "musubii/src/layouts/alert/legacy.css";
 ```
