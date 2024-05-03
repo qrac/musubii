@@ -117,6 +117,141 @@ contents list
 <button class="button is-melt is-danger" type="button">削除</button>
 ```
 
+## Shape
+
+- `.is-round` で角を完全に丸くできます
+- `.is-circle` で正円ボタンにします
+- `.is-square` で正方形ボタンにします
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain is-primary is-round" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-circle" type="button">
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+    </button>
+    <button className="button is-plain is-primary is-square" type="button">
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-primary is-round" type="button">...</button>
+<button class="button is-plain is-primary is-circle" type="button">...</button>
+<button class="button is-plain is-primary is-square" type="button">...</button>
+```
+
+## Angle
+
+- `.is-angle-right` で右に角アイコンを表示させます
+- `.is-angle-left` で左に角アイコンを表示させます
+- `.is-angle-up` で角アイコンを上向きにします
+- `.is-angle-bottom` でで角アイコンを下向きにします
+- 角アイコン分の余白が足りない場合は [padding](/docs/padding) で設定します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain is-primary is-angle-right is-pr-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-left is-pl-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-right is-angle-up is-pr-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-left is-angle-up is-pl-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-right is-angle-down is-pr-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-left is-angle-down is-pl-xxl" type="button">ボタン</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-primary is-angle-right is-pr-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-left is-pl-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-right is-angle-up is-pr-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-left is-angle-up is-pl-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-right is-angle-down is-pr-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-left is-angle-down is-pl-xxl" type="button">ボタン</button>
+```
+
+## Strong
+
+- `.is-strong` でボタン内を太文字にします
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain is-primary is-strong" type="button">ボタン</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-primary is-strong" type="button">ボタン</button>
+```
+
+## Floating
+
+- `.is-floating` でドロップシャドウを付与します
+- `.is-plain` と併用します
+- 影は `.is-{color}` の色を引き継ぎます
+- 色は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain is-floating" type="button">詳細</button>
+    <button className="button is-plain is-floating is-primary" type="button">決定</button>
+    <button className="button is-plain is-floating is-secondary" type="button">変更</button>
+    <button className="button is-plain is-floating is-info" type="button">情報</button>
+    <button className="button is-plain is-floating is-success" type="button">送信</button>
+    <button className="button is-plain is-floating is-warning" type="button">注意</button>
+    <button className="button is-plain is-floating is-danger" type="button">削除</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-floating" type="button">詳細</button>
+<button class="button is-plain is-floating is-primary" type="button">決定</button>
+<button class="button is-plain is-floating is-secondary" type="button">変更</button>
+<button class="button is-plain is-floating is-info" type="button">情報</button>
+<button class="button is-plain is-floating is-success" type="button">送信</button>
+<button class="button is-plain is-floating is-warning" type="button">注意</button>
+<button class="button is-plain is-floating is-danger" type="button">削除</button>
+```
+
+## Disabled
+
+- `[disabled]` または `[aria-disabled="true"]` または `.is-disabled` で非活性化します
+- 非活性化すると `pointer-events: none;` が付与されホバー効果などが打ち消されます
+- 非活性化した `.button` は専用の色味に変化します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain" type="button" disabled>詳細</button>
+    <button className="button is-plain is-primary" type="button" disabled>決定</button>
+    <button className="button is-outline" type="button" disabled>詳細</button>
+    <button className="button is-outline is-secondary" type="button" disabled>変更</button>
+    <button className="button is-melt" type="button" disabled>詳細</button>
+    <button className="button is-melt is-info" type="button" disabled>情報</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain" type="button" disabled>詳細</button>
+<button class="button is-plain is-primary" type="button" disabled>決定</button>
+<button class="button is-outline" type="button" disabled>詳細</button>
+<button class="button is-outline is-secondary" type="button" disabled>変更</button>
+<button class="button is-melt" type="button" disabled>詳細</button>
+<button class="button is-melt is-info" type="button" disabled>情報</button>
+```
+
 ## Variables
 
 上書きできる変数は以下の通りです。
