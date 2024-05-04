@@ -15,7 +15,7 @@ contents list
 
 - `.badge` がベースとなります
 - `.badge` によってサイズなどは設定されますが単体では完成しません
-- `.is-plain` または `.is-outline` または `.is-melt` を併用してください
+- 次項の Variants を併用してください
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -27,11 +27,15 @@ contents list
 <span class="badge">バッジ</span>
 ```
 
-## Plain
+## Variants
 
 - `.is-plain` でプレーンタイプのバッジ装飾を作ります
-- `.is-{color}` でバッジに色を付けます
+- `.is-outline` でアウトラインタイプのバッジ装飾を作ります
+- `.is-melt` で溶け込むタイプのバッジ装飾を作ります
+- `.is-{color}` を追加するとバッジに色が付きます
 - `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+
+### plain
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -57,11 +61,7 @@ contents list
 <span class="badge is-plain is-danger">必須</span>
 ```
 
-## Outline
-
-- `.is-outline` でアウトラインタイプのバッジ装飾を作ります
-- `.is-{color}` でバッジに色を付けます
-- `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+### outline
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -87,11 +87,7 @@ contents list
 <span class="badge is-outline is-danger">必須</span>
 ```
 
-## Melt
-
-- `.is-melt` で溶け込むタイプのバッジ装飾を作ります
-- `.is-{color}` でバッジに色を付けます
-- `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+### melt
 
 {/* prettier-ignore */}
 <div className="docs-preview">

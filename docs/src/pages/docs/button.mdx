@@ -15,7 +15,7 @@ contents list
 
 - `.button` がベースとなります
 - `.button` によってサイズなどは設定されますが単体では完成しません
-- `.is-plain` または `.is-outline` または `.is-melt` を併用してください
+- 次項の Variants を併用してください
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -27,11 +27,15 @@ contents list
 <button class="button" type="button">ボタン</button>
 ```
 
-## Plain
+## Variants
 
 - `.is-plain` でプレーンタイプのボタン装飾を作ります
-- `.is-{color}` でボタンに色を付けます
+- `.is-outline` でアウトラインタイプのボタン装飾を作ります
+- `.is-melt` で溶け込むタイプのボタン装飾を作ります
+- `.is-{color}` を追加するとボタンに色が付きます
 - `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+
+### plain
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -57,11 +61,7 @@ contents list
 <button class="button is-plain is-danger" type="button">削除</button>
 ```
 
-## Outline
-
-- `.is-outline` でアウトラインタイプのボタン装飾を作ります
-- `.is-{color}` でボタンに色を付けます
-- `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+### outline
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -87,11 +87,7 @@ contents list
 <button class="button is-outline is-danger" type="button">削除</button>
 ```
 
-## Melt
-
-- `.is-melt` で溶け込むタイプのボタン装飾を作ります
-- `.is-{color}` でボタンに色を付けます
-- `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+### melt
 
 {/* prettier-ignore */}
 <div className="docs-preview">
