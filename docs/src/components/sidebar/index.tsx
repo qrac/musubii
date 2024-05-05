@@ -10,7 +10,7 @@ export function Sidebar({ currentPath }: { currentPath?: string }) {
 
 function Menu({ currentPath }: { currentPath?: string }) {
   return (
-    <div className="box is-space-xl is-font-sans-en">
+    <div className="box is-pr-md is-space-xl is-font-sans-en">
       {site.menu.docs.map((group, groupIndex) => (
         <div className="box is-space-sm" key={groupIndex}>
           <h3 className="text is-weight-700 is-uppercase">{group.title}</h3>
