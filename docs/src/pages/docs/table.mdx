@@ -5,16 +5,327 @@ layout: docs
 
 # Table
 
+テーブル装飾を作るエレメント CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.table` がベースとなります
+- `.table` によって基本設定は行われますが単体では完成しません
+- 次項の Variants を併用してください
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <table className="table">
+    <thead>
+      <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    </tbody>
+  </table>
+</div>
+
+{/* prettier-ignore */}
+```html
+<table class="table">
+  <thead>
+    <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+  </tbody>
+</table>
+```
+
+## Variants
+
+- `.is-border` で縦線・横線・外周線のあるテーブル装飾になります
+- `.is-outline` でテーブルの周りに線を引きます
+- `.is-line` で横線で区切ったテーブル装飾になります
+
+### border
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <table className="table is-border">
+    <thead>
+      <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    </tbody>
+  </table>
+</div>
+
+{/* prettier-ignore */}
+```html
+<table class="table is-border">
+  <thead>
+    <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+  </tbody>
+</table>
+```
+
+### outline
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <table className="table is-outline">
+    <thead>
+      <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    </tbody>
+  </table>
+</div>
+
+{/* prettier-ignore */}
+```html
+<table class="table is-outline">
+  <thead>
+    <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+  </tbody>
+</table>
+```
+
+### line
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <table className="table is-line">
+    <thead>
+      <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    </tbody>
+  </table>
+</div>
+
+{/* prettier-ignore */}
+```html
+<table class="table is-line">
+  <thead>
+    <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+  </tbody>
+</table>
+```
+
+## Background
+
+- `.is-paint` でセル背景をベタ塗りにします（主に `thead > tr` 用）
+- `.is-spot` でセル背景を強調させます
+- `.is-danger` でセル背景をエラー装飾にします
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <table className="table is-border">
+    <thead>
+      <tr className="box is-paint"><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>データセル</td><td className="box is-spot">データセル</td><td>データセル</td><td>データセル</td></tr>
+      <tr><td className="box is-danger">データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    </tbody>
+  </table>
+</div>
+
+{/* prettier-ignore */}
+```html
+<table class="table is-border">
+  <thead>
+    <tr class="box is-paint"><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>データセル</td><td class="box is-spot">データセル</td><td>データセル</td><td>データセル</td></tr>
+    <tr><td class="box is-danger">データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+  </tbody>
+</table>
+```
+
+## Stripe
+
+- `.is-stripe` で行背景色を交互に塗ります
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <table className="table is-border is-stripe">
+    <thead>
+      <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+      <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    </tbody>
+  </table>
+</div>
+
+{/* prettier-ignore */}
+```html
+<table class="table is-border is-stripe">
+  <thead>
+    <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+    <tr><td>データセル</td><td>データセル</td><td>データセル</td><td>データセル</td></tr>
+  </tbody>
+</table>
+```
+
+## Align
+
+- `.is-{align}` でセル内の文章の揃いを変更します
+- `.is-{align}` は全体の `.table` または個別の `tr` `th` `td` で機能します
+- `.is-right` でセル内の文章を右揃いにします
+- `.is-center` でセル内の文章を左右中央揃いにします
+- `.is-left` でセル内の文章を左揃いにします
+- `.is-middle` でセル内の文章を上下中央揃いにします
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <table className="table is-border">
+    <thead>
+      <tr><th className="box is-right">見出しセル</th><th className="box is-left">見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td className="box is-center">データセル</td><td>データセル<br />データセル</td><td className="box is-middle">データセル</td><td>データセル</td></tr>
+    </tbody>
+  </table>
+</div>
+
+{/* prettier-ignore */}
+```html
+<table class="table is-border">
+  <thead>
+    <tr><th class="box is-right">見出しセル</th><th class="box is-left">見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="box is-center">データセル</td><td>データセル<br />データセル</td><td class="box is-middle">データセル</td><td>データセル</td></tr>
+  </tbody>
+</table>
+```
+
+## Fixed
+
+- `.is-fixed` でセルの幅が最初の行で固定されます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <table className="table is-border is-fixed">
+    <thead>
+      <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>データセルデータセル</td><td>データセル</td><td>データセル</td><td>データセルデータセルデータセル</td></tr>
+      <tr><td>データセル</td><td>データセル</td><td>データセルデータセルデータセル</td><td>データセル</td></tr>
+    </tbody>
+  </table>
+</div>
+
+{/* prettier-ignore */}
+```html
+<table class="table is-border is-fixed">
+  <thead>
+    <tr><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>データセルデータセル</td><td>データセル</td><td>データセル</td><td>データセルデータセルデータセル</td></tr>
+    <tr><td>データセル</td><td>データセル</td><td>データセルデータセルデータセル</td><td>データセル</td></tr>
+  </tbody>
+</table>
+```
+
+## Wrap
+
+- `.table-wrap` で `.table` を囲うと横スクロール効果を付与できます
+- `.table-wrap` にはスクロールの有無を示す影が付きます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div class="table-wrap">
+    <table class="table is-border is-stripe">
+      <thead>
+        <tr class="box is-paint"><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td></tr>
+        <tr><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td></tr>
+        <tr><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td></tr>
+        <tr><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="table-wrap">
+  <table class="table is-border is-stripe">
+    <thead>
+      <tr class="box is-paint"><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th><th>見出しセル</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td></tr>
+      <tr><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td></tr>
+      <tr><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td></tr>
+      <tr><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td><td><span class="text is-nowrap">折り返さないテキスト＋折り返さないテキスト</span></td></tr>
+    </tbody>
+  </table>
+</div>
+```
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+:is(.table, .table-wrap) {
+  --table-width: 100%;
+  --table-bg: var(--theme-bg-1);
+  --table-border-width: 1px;
+  --table-border-color: var(--theme-bd-1);
+  --table-item-padding: 0.75em 1em;
+  --table-item-vertical-align: top;
+  --table-th-border-bottom-width: 1px;
+  --table-paint-bg: var(--theme-paint);
+  --table-paint-bg-alpha: 70%;
+  --table-paint-color: var(--theme-paint-tx);
+  --table-spot-bg: var(--theme-spot);
+  --table-spot-bg-alpha: 30%;
+  --table-danger-bg: var(--theme-danger);
+  --table-danger-bg-alpha: 20%;
+  --table-stripe-bg: var(--theme-tx-1);
+  --table-stripe-bg-alpha: 5%;
+  --table-wrap-shadow-color: var(--theme-shadow);
+  --table-wrap-shadow-color-alpha: 15%;
+}
 ```
 
 ## Import
@@ -22,5 +333,5 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
-
+@import "musubii/src/elements/table/main.css";
 ```
