@@ -118,112 +118,6 @@ export function ExampleForm() {
               disabled={isDisabled ? true : undefined}
             />
           </div>
-        </div>
-      </div>
-      <div className="demo-box">
-        <div className="demo-fieldset-contents">
-          <div>
-            <input
-              className="input"
-              id="radio-demo-1-1"
-              type="radio"
-              name="radio-demo-1"
-              defaultChecked
-            />
-            <label
-              className="label is-middle is-gap-xxs"
-              htmlFor="radio-demo-1-1"
-            >
-              <span className="radio" />
-              <span className="text">むすびー</span>
-            </label>
-          </div>
-          <div>
-            <input
-              className="input"
-              id="radio-demo-1-2"
-              type="radio"
-              name="radio-demo-1"
-            />
-            <label
-              className="label is-middle is-gap-xxs"
-              htmlFor="radio-demo-1-2"
-            >
-              <span className="radio" />
-              <span className="text">むすびい</span>
-            </label>
-          </div>
-          <div>
-            <input
-              className="input"
-              id="radio-demo-1-3"
-              type="radio"
-              name="radio-demo-1"
-              disabled
-            />
-            <label
-              className="label is-middle is-gap-xxs"
-              htmlFor="radio-demo-1-3"
-            >
-              <span className="radio" />
-              <span className="text">むすび</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div className="demo-box">
-        <div className="demo-fieldset-contents">
-          <div>
-            <input
-              className="input"
-              id="checkbox-demo-1-1"
-              type="checkbox"
-              name="checkbox-demo-1"
-              defaultChecked
-            />
-            <label
-              className="label is-middle is-gap-xxs"
-              htmlFor="checkbox-demo-1-1"
-            >
-              <span className="checkbox" />
-              <span className="text">むすびー</span>
-            </label>
-          </div>
-          <div>
-            <input
-              className="input"
-              id="checkbox-demo-1-2"
-              type="checkbox"
-              name="checkbox-demo-1"
-            />
-            <label
-              className="label is-middle is-gap-xxs"
-              htmlFor="checkbox-demo-1-2"
-            >
-              <span className="checkbox" />
-              <span className="text">むすびい</span>
-            </label>
-          </div>
-          <div>
-            <input
-              className="input"
-              id="checkbox-demo-1-3"
-              type="checkbox"
-              name="checkbox-demo-1"
-              disabled
-            />
-            <label
-              className="label is-middle is-gap-xxs"
-              htmlFor="checkbox-demo-1-3"
-            >
-              <span className="checkbox" />
-              <span className="text">むすび</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div className="demo-box">
-        <div className="demo-fieldset-contents">
           <div>
             <div
               className={clsx(
@@ -238,8 +132,6 @@ export function ExampleForm() {
                 <option>Select A</option>
                 <option>Select B</option>
                 <option>Select C</option>
-                <option>Select D</option>
-                <option>Select E</option>
               </select>
             </div>
           </div>
@@ -253,17 +145,129 @@ export function ExampleForm() {
               )}
             >
               <select
-                size={5}
+                size={3}
                 multiple
                 disabled={isDisabled ? true : undefined}
               >
                 <option>Select A</option>
                 <option>Select B</option>
                 <option>Select C</option>
-                <option>Select D</option>
-                <option>Select E</option>
               </select>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="demo-box">
+        <div className="demo-fieldset-contents">
+          <div>
+            <label className="label is-middle is-gap-xxs">
+              <input
+                className="input"
+                type="radio"
+                name="test-a-1"
+                defaultChecked
+                disabled={isDisabled ? true : undefined}
+              />
+              <span className="radio" />
+              <span className="text">むすびー</span>
+            </label>
+          </div>
+          <div>
+            <label className="label is-middle is-gap-xxs">
+              <input
+                className="input"
+                type="radio"
+                name="test-a-1"
+                disabled={isDisabled ? true : undefined}
+              />
+              <span className="radio" />
+              <span className="text">むすびい</span>
+            </label>
+          </div>
+          <div>｜</div>
+          <div>
+            <input
+              className="input"
+              id="test-a-2-1"
+              type="radio"
+              name="test-a-2"
+              defaultChecked
+              disabled={isDisabled ? true : undefined}
+            />
+            <label className="label is-middle is-gap-xxs" htmlFor="test-a-2-1">
+              <span className="radio" />
+              <span className="text">むすびー</span>
+            </label>
+          </div>
+          <div>
+            <input
+              className="input"
+              id="test-a-2-2"
+              type="radio"
+              name="test-a-2"
+              disabled={isDisabled ? true : undefined}
+            />
+            <label className="label is-middle is-gap-xxs" htmlFor="test-a-2-2">
+              <span className="radio" />
+              <span className="text">むすびい</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div className="demo-box">
+        <div className="demo-fieldset-contents">
+          <div>
+            <label className="label is-middle is-gap-xxs">
+              <input
+                className="input"
+                type="checkbox"
+                name="test-b-1-1"
+                defaultChecked
+                disabled={isDisabled ? true : undefined}
+              />
+              <span className="checkbox" />
+              <span className="text">ムスビー</span>
+            </label>
+          </div>
+          <div>
+            <label className="label is-middle is-gap-xxs">
+              <input
+                className="input"
+                type="checkbox"
+                name="test-b-1-2"
+                disabled={isDisabled ? true : undefined}
+              />
+              <span className="checkbox" />
+              <span className="text">ムスビイ</span>
+            </label>
+          </div>
+          <div>｜</div>
+          <div>
+            <input
+              className="input"
+              id="test-b-2-1"
+              type="checkbox"
+              name="test-b-2-1"
+              defaultChecked
+              disabled={isDisabled ? true : undefined}
+            />
+            <label className="label is-middle is-gap-xxs" htmlFor="test-b-2-1">
+              <span className="checkbox" />
+              <span className="text">ムスビー</span>
+            </label>
+          </div>
+          <div>
+            <input
+              className="input"
+              id="test-b-2-2"
+              type="checkbox"
+              name="test-b-2-2"
+              disabled={isDisabled ? true : undefined}
+            />
+            <label className="label is-middle is-gap-xxs" htmlFor="test-b-2-2">
+              <span className="checkbox" />
+              <span className="text">ムスビイ</span>
+            </label>
           </div>
         </div>
       </div>

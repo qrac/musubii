@@ -58,19 +58,24 @@
   z-index: -1;
 }
 
-:where(.input[type="checkbox"]:checked + *) .checkbox,
-:where(.input[type="checkbox"]:checked) + .checkbox {
+:where([type="checkbox"]:checked + *) .checkbox,
+:where([type="checkbox"]:checked) + .checkbox {
   background: var(--checkbox-checked-bg);
   border-color: var(--checkbox-checked-border-color);
 }
 
-:where(.input[type="checkbox"]:checked + *) .checkbox::before,
-:where(.input[type="checkbox"]:checked) + .checkbox::before {
+:where([type="checkbox"]:checked + *) .checkbox::before,
+:where([type="checkbox"]:checked) + .checkbox::before {
   opacity: 1;
 }
 
-:where(.input[type="checkbox"]:disabled + *) .checkbox,
-:where(.input[type="checkbox"]:disabled) + .checkbox,
-.checkbox:where(:is([disabled], [aria-disabled="true"], .is-disabled)) {
+:where([type="checkbox"]:disabled + *) .checkbox,
+:where([type="checkbox"]:disabled) + .checkbox {
   border-color: var(--checkbox-disabled-color-mix);
+}
+
+:where([type="checkbox"]:checked:disabled + *) .checkbox,
+:where([type="checkbox"]:checked:disabled) + .checkbox {
+  background: var(--checkbox-disabled-color-mix);
+  border-color: transparent;
 }

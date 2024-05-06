@@ -51,18 +51,22 @@
   z-index: -1;
 }
 
-:where(.input[type="radio"]:checked + *) .radio,
-:where(.input[type="radio"]:checked) + .radio {
+:where([type="radio"]:checked + *) .radio,
+:where([type="radio"]:checked) + .radio {
   border-color: var(--radio-checked-border-color);
 }
 
-:where(.input[type="radio"]:checked + *) .radio::before,
-:where(.input[type="radio"]:checked) + .radio::before {
+:where([type="radio"]:checked + *) .radio::before,
+:where([type="radio"]:checked) + .radio::before {
   opacity: 1;
 }
 
-:where(.input[type="radio"]:disabled + *) .radio,
-:where(.input[type="radio"]:disabled) + .radio,
-.radio:where(:is([disabled], [aria-disabled="true"], .is-disabled)) {
+:where([type="radio"]:disabled + *) .radio,
+:where([type="radio"]:disabled) + .radio {
   border-color: var(--radio-disabled-color-mix);
+}
+
+:where([type="radio"]:checked:disabled + *) .radio::before,
+:where([type="radio"]:checked:disabled) + .radio::before {
+  background: var(--radio-disabled-color-mix);
 }

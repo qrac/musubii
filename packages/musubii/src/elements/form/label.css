@@ -12,14 +12,8 @@
 }
 
 .label {
-  display: flex;
-}
-
-:where(:not(:is([disabled], [aria-disabled="true"], .is-disabled)))
-  + .label:where(
-    :has(:not(:is([disabled], [aria-disabled="true"], .is-disabled)))
-  ) {
   cursor: pointer;
+  display: flex;
 }
 
 .label.is-center {
@@ -62,6 +56,8 @@
   column-gap: 4px;
 }
 
-:where(.input:is([type="radio"], [type="checkbox"]):disabled) + .label {
+:where(:is([type="radio"], [type="checkbox"]):disabled) + .label,
+.label:where(:has(:is([type="radio"], [type="checkbox"]):disabled)) {
+  cursor: default;
   color: var(--label-disabled-color-mix);
 }
