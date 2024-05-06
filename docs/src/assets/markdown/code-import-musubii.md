@@ -24,10 +24,10 @@
 @import "musubii/src/elements/list/main.css";
 @import "musubii/src/elements/table/main.css";
 @import "musubii/src/elements/form/main.css";
+@import "musubii/src/elements/form/select.css";
 @import "musubii/src/elements/form/label.css";
 @import "musubii/src/elements/form/radio.css";
 @import "musubii/src/elements/form/checkbox.css";
-@import "musubii/src/elements/form/select.css";
 @import "musubii/src/elements/iframe/main.css";
 @import "musubii/src/elements/wysiwyg/main.css";
 @import "musubii/src/utilities/display/main.css";

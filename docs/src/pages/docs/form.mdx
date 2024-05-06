@@ -5,16 +5,797 @@ layout: docs
 
 # Form
 
+フォームの装飾を作るエレメント CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.input` `.textarea` `.select` `.label` `.radio` `.checkbox` が利用できます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input" type="text" placeholder="テキスト" /></div>
+      <div><textarea className="textarea" placeholder="テキストエリア"></textarea></div>
+      <div>
+        <div className="select">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+    <div className="box is-flex is-gap-md">
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="radio" name="test-1-a-1" defaultChecked />
+          <span className="radio"></span><span className="text">むすびー</span>
+        </label>
+      </div>
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="radio" name="test-1-a-1" />
+          <span className="radio"></span><span className="text">むすびい</span>
+        </label>
+      </div>
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="checkbox" name="test-1-b-1" />
+          <span className="checkbox"></span><span className="text">ムスビー</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input" type="text" placeholder="テキスト" />
+
+<textarea class="textarea" placeholder="テキストエリア"></textarea>
+
+<div class="select">
+  <select>
+    <option>Select A</option>
+    <option>Select B</option>
+    <option>Select C</option>
+  </select>
+</div>
+
+<label class="label is-gap-xxs">
+  <input class="input" type="radio" name="test-1-a-1" checked />
+  <span class="radio"></span>
+  <span class="text">むすびー</span>
+</label>
+
+<label class="label is-gap-xxs">
+  <input class="input" type="radio" name="test-1-a-1" />
+  <span class="radio"></span>
+  <span class="text">むすびい</span>
+</label>
+
+<label class="label is-gap-xxs">
+  <input class="input" type="checkbox" name="test-1-b-1" />
+  <span class="checkbox"></span>
+  <span class="text">ムスビー</span>
+</label>
+```
+
+## Variants
+
+- `.input` `.textarea` `.select` は装飾のバリュエーションがあります
+- `.is-plain` で塗り主体の装飾になります
+- `.is-underline` でアンダーラインのみの装飾になります
+- `.is-inside` で装飾のない埋め込みタイプになります
+
+### plain
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input is-plain" type="text" placeholder="テキスト" /></div>
+      <div><textarea className="textarea is-plain" placeholder="テキストエリア"></textarea></div>
+      <div>
+        <div className="select is-plain">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input is-plain" type="text" placeholder="テキスト" />
+
+<textarea class="textarea is-plain" placeholder="テキストエリア"></textarea>
+
+<div class="select is-plain">
+  <select>
+    <option>Select A</option>
+    <option>Select B</option>
+    <option>Select C</option>
+  </select>
+</div>
+```
+
+### underline
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input is-underline" type="text" placeholder="テキスト" /></div>
+      <div><textarea className="textarea is-underline" placeholder="テキストエリア"></textarea></div>
+      <div>
+        <div className="select is-underline">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input is-underline" type="text" placeholder="テキスト" />
+
+<textarea class="textarea is-underline" placeholder="テキストエリア"></textarea>
+
+<div class="select is-underline">
+  <select>
+    <option>Select A</option>
+    <option>Select B</option>
+    <option>Select C</option>
+  </select>
+</div>
+```
+
+### inside
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input is-inside" type="text" placeholder="テキスト" /></div>
+      <div><textarea className="textarea is-inside" placeholder="テキストエリア"></textarea></div>
+      <div>
+        <div className="select is-inside">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input is-inside" type="text" placeholder="テキスト" />
+
+<textarea class="textarea is-inside" placeholder="テキストエリア"></textarea>
+
+<div class="select is-inside">
+  <select>
+    <option>Select A</option>
+    <option>Select B</option>
+    <option>Select C</option>
+  </select>
+</div>
+```
+
+## Validation
+
+- `.input` `.textarea` `.select` はバリデーション用の装飾があります
+- `.is-success` で `valid` な装飾になります
+- `.is-danger` で `invalid` な装飾になります
+
+### success
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input is-success" type="text" placeholder="テキスト" /></div>
+      <div><textarea className="textarea is-success" placeholder="テキストエリア"></textarea></div>
+      <div>
+        <div className="select is-success">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input is-success" type="text" placeholder="テキスト" />
+
+<textarea class="textarea is-success" placeholder="テキストエリア"></textarea>
+
+<div class="select is-success">
+  <select>
+    <option>Select A</option>
+    <option>Select B</option>
+    <option>Select C</option>
+  </select>
+</div>
+```
+
+### danger
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input is-danger" type="text" placeholder="テキスト" /></div>
+      <div><textarea className="textarea is-danger" placeholder="テキストエリア"></textarea></div>
+      <div>
+        <div className="select is-danger">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input is-danger" type="text" placeholder="テキスト" />
+
+<textarea class="textarea is-danger" placeholder="テキストエリア"></textarea>
+
+<div class="select is-danger">
+  <select>
+    <option>Select A</option>
+    <option>Select B</option>
+    <option>Select C</option>
+  </select>
+</div>
+```
+
+## Align
+
+- `.input` `.textarea` `.select` は `.is-{align}` でテキストの揃え方を変更できます
+- `.is-right` でテキストを右揃いにします
+- `.is-center` でテキストを左右中央揃いにします
+- `.is-left` でテキストを左揃いにします（デフォルトに戻す）
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div className="box is-flex-12 tablet:is-flex-0">
+        <input className="input is-right is-flex-full" type="text" placeholder="テキスト" />
+      </div>
+      <div className="box is-flex-12 tablet:is-flex-0">
+        <textarea className="textarea is-right is-flex-full" placeholder="テキストエリア"></textarea>
+      </div>
+      <div className="box is-flex-12 tablet:is-flex-0">
+        <div className="select is-right is-flex-full">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+    <div className="box is-flex is-gap-md">
+      <div className="box is-flex-12 tablet:is-flex-0">
+        <input className="input is-center is-flex-full" type="text" placeholder="テキスト" />
+      </div>
+      <div className="box is-flex-12 tablet:is-flex-0">
+        <textarea className="textarea is-center is-flex-full" placeholder="テキストエリア"></textarea>
+      </div>
+      <div className="box is-flex-12 tablet:is-flex-0">
+        <div className="select is-center is-flex-full">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input is-right" type="text" placeholder="テキスト" />
+<textarea class="textarea is-right" placeholder="テキストエリア"></textarea>
+<div class="select is-right">
+  <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+</div>
+
+<input class="input is-center" type="text" placeholder="テキスト" />
+<textarea class="textarea is-center" placeholder="テキストエリア"></textarea>
+<div class="select is-center">
+  <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+</div>
+```
+
+## Round
+
+- `.input` `.select` は `.is-round` で角を完全に丸くできます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input is-round" type="text" placeholder="テキスト" /></div>
+      <div>
+        <div className="select is-round">
+          <select><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input is-round" type="text" placeholder="テキスト" />
+
+<div class="select is-round">
+  <select>
+    <option>Select A</option>
+    <option>Select B</option>
+    <option>Select C</option>
+  </select>
+</div>
+```
+
+## Label
+
+- `.label` は関連付けを行うラベル用のクラスです
+- `.radio` `.checkbox` のレイアウトも兼ねて利用できます
+- `.is-center` で左右中央揃いにできます
+- `.is-middle` で上下中央揃いにできます
+- `.is-gap-{size}` で溝を設定できます
+- `{size}` は最大 `xxl` から最小 `xxs` まで
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div>
+        <label className="label is-middle is-gap-xxs">
+          <input className="input" type="checkbox" name="test-2-b-1" />
+          <span className="checkbox"></span><span className="text">ムスビー</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<label class="label is-middle is-gap-xxs">
+  <input class="input" type="checkbox" name="test-2-b-1" />
+  <span class="checkbox"></span>
+  <span class="text">ムスビー</span>
+</label>
+```
+
+## Radio
+
+- `.input[type="radio"]` と `.radio` の組み合わせでラジオボックスになります
+- 簡易構成: `[type="radio"]` と `.radio` を隣接させます
+- 従来構成: `[type="radio"]` と `.label` を隣接させ id と for で連携させます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="radio" name="test-3-a-1" defaultChecked />
+          <span className="radio"></span><span className="text">むすびー</span>
+        </label>
+      </div>
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="radio" name="test-3-a-1" />
+          <span className="radio"></span><span className="text">むすびい</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<label class="label is-gap-xxs">
+  <input class="input" type="radio" name="test-3-a-1" checked />
+  <span class="radio"></span>
+  <span class="text">むすびー</span>
+</label>
+
+<label class="label is-gap-xxs">
+  <input class="input" type="radio" name="test-3-a-1" />
+  <span class="radio"></span>
+  <span class="text">むすびい</span>
+</label>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div>
+        <input className="input" type="radio" name="test-3-a-2" id="test-3-a-2-1" defaultChecked />
+        <label className="label is-gap-xxs" htmlFor="test-3-a-2-1">
+          <span className="radio"></span><span className="text">むすびー</span>
+        </label>
+      </div>
+      <div>
+        <input className="input" type="radio" name="test-3-a-2" id="test-3-a-2-2" />
+        <label className="label is-gap-xxs" htmlFor="test-3-a-2-2">
+          <span className="radio"></span><span className="text">むすびい</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input" type="radio" name="test-3-a-2" id="test-3-a-2-1" checked />
+<label class="label is-gap-xxs" for="test-3-a-2-1">
+  <span class="radio"></span><span class="text">むすびー</span>
+</label>
+
+<input class="input" type="radio" name="test-3-a-2" id="test-3-a-2-2" />
+<label class="label is-gap-xxs" for="test-3-a-2-2">
+  <span class="radio"></span><span class="text">むすびい</span>
+</label>
+```
+
+## Checkbox
+
+- `.input[type="checkbox"]` と `.checkbox` の組み合わせでラジオボックスになります
+- 簡易構成: `[type="checkbox"]` と `.checkbox` を隣接させます
+- 従来構成: `[type="checkbox"]` と `.label` を隣接させ id と for で連携させます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div>
+        <label className="label is-middle is-gap-xxs">
+          <input className="input" type="checkbox" name="test-4-b-1-1" defaultChecked />
+          <span className="checkbox"></span><span className="text">ムスビー</span>
+        </label>
+      </div>
+      <div>
+        <label className="label is-middle is-gap-xxs">
+          <input className="input" type="checkbox" name="test-4-b-1-2" />
+          <span className="checkbox"></span><span className="text">ムスビイ</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<label class="label is-middle is-gap-xxs">
+  <input class="input" type="checkbox" name="test-4-b-1-1" checked />
+  <span class="checkbox"></span>
+  <span class="text">ムスビー</span>
+</label>
+
+<label class="label is-middle is-gap-xxs">
+  <input class="input" type="checkbox" name="test-4-b-1-2" />
+  <span class="checkbox"></span>
+  <span class="text">ムスビイ</span>
+</label>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div>
+        <input className="input" type="checkbox" name="test-4-b-2-1" id="test-4-b-2-1" defaultChecked />
+        <label className="label is-middle is-gap-xxs" htmlFor="test-4-b-2-1">
+          <span className="checkbox"></span><span className="text">ムスビー</span>
+        </label>
+      </div>
+      <div>
+        <input className="input" type="checkbox" name="test-4-b-2-2" id="test-4-b-2-2" />
+        <label className="label is-middle is-gap-xxs" htmlFor="test-4-b-2-2">
+          <span className="checkbox"></span><span className="text">ムスビイ</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input" type="checkbox" name="test-4-b-2-1" id="test-4-b-2-1" checked />
+<label class="label is-middle is-gap-xxs" for="test-4-b-2-1">
+  <span class="checkbox"></span>
+  <span class="text">ムスビー</span>
+</label>
+
+<input class="input" type="checkbox" name="test-4-b-2-2" id="test-4-b-2-2" />
+<label class="label is-middle is-gap-xxs" for="test-4-b-2-2">
+  <span class="checkbox"></span>
+  <span class="text">ムスビー</span>
+</label>
+```
+
+## Readonly
+
+- `.input` `.textarea` は `[readonly]` 属性で読み取り専用になります
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input" type="text" defaultValue="リードオンリー" readOnly /></div>
+      <div><textarea className="textarea" defaultValue="リードオンリー" readOnly></textarea></div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input" type="text" value="リードオンリー" readonly />
+
+<textarea class="textarea" readonly>リードオンリー</textarea>
+```
+
+## Disabled
+
+- `[disabled]` または `[aria-disabled="true"]` または `.is-disabled` で非活性化します
+- 非活性化すると `pointer-events: none;` が付与されホバー効果などが打ち消されます
+- 非活性化した要素・連動する要素は専用の色味に変化します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div><input className="input" type="text" placeholder="テキスト" disabled /></div>
+      <div><textarea className="textarea" placeholder="テキストエリア" disabled></textarea></div>
+      <div>
+        <div className="select">
+          <select disabled><option>Select A</option><option>Select B</option><option>Select C</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input" type="text" placeholder="テキスト" disabled />
+
+<textarea class="textarea" placeholder="テキストエリア" disabled></textarea>
+
+<div class="select">
+  <select disabled>
+    <option>Select A</option>
+    <option>Select B</option>
+    <option>Select C</option>
+  </select>
+</div>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="radio" name="test-5-a-1" defaultChecked disabled />
+          <span className="radio"></span><span className="text">むすびー</span>
+        </label>
+      </div>
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="radio" name="test-5-a-1" disabled />
+          <span className="radio"></span><span className="text">むすびい</span>
+        </label>
+      </div>
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="checkbox" name="test-5-b-1-1" defaultChecked disabled />
+          <span className="checkbox"></span><span className="text">ムスビー</span>
+        </label>
+      </div>
+      <div>
+        <label className="label is-gap-xxs">
+          <input className="input" type="checkbox" name="test-5-b-1-2" disabled />
+          <span className="checkbox"></span><span className="text">ムスビイ</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<label class="label is-gap-xxs">
+  <input class="input" type="radio" name="test-5-a-1" checked disabled />
+  <span class="radio"></span>
+  <span class="text">むすびー</span>
+</label>
+
+<label class="label is-gap-xxs">
+  <input class="input" type="radio" name="test-5-a-1" disabled />
+  <span class="radio"></span>
+  <span class="text">むすびい</span>
+</label>
+
+<label class="label is-gap-xxs">
+  <input class="input" type="checkbox" name="test-5-b-1-1" checked disabled />
+  <span class="checkbox"></span>
+  <span class="text">ムスビー</span>
+</label>
+
+<label class="label is-gap-xxs">
+  <input class="input" type="checkbox" name="test-5-b-1-2" disabled />
+  <span class="checkbox"></span>
+  <span class="text">ムスビイ</span>
+</label>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-flex is-gap-md">
+      <div>
+        <input className="input" type="radio" name="test-5-a-2" id="test-5-a-2-1" defaultChecked disabled />
+        <label className="label is-gap-xxs" htmlFor="test-5-a-2-1">
+          <span className="radio"></span><span className="text">むすびー</span>
+        </label>
+      </div>
+      <div>
+        <input className="input" type="radio" name="test-5-a-2" id="test-5-a-2-2" disabled />
+        <label className="label is-gap-xxs" htmlFor="test-5-a-2-2">
+          <span className="radio"></span><span className="text">むすびい</span>
+        </label>
+      </div>
+      <div>
+        <input className="input" type="checkbox" name="test-5-b-2-1" id="test-5-b-2-1" defaultChecked disabled />
+        <label className="label is-gap-xxs" htmlFor="test-5-b-2-1">
+          <span className="checkbox"></span><span className="text">ムスビー</span>
+        </label>
+      </div>
+      <div>
+        <input className="input" type="checkbox" name="test-5-b-2-2" id="test-5-b-2-2" disabled />
+        <label className="label is-gap-xxs" htmlFor="test-5-b-2-2">
+          <span className="checkbox"></span><span className="text">ムスビー</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<input class="input" type="radio" name="test-5-a-2" id="test-5-a-2-1" checked disabled />
+<label class="label is-gap-xxs" for="test-5-a-2-1">
+  <span class="radio"></span><span class="text">むすびー</span>
+</label>
+
+<input class="input" type="radio" name="test-5-a-2" id="test-5-a-2-2" disabled />
+<label class="label is-gap-xxs" for="test-5-a-2-2">
+  <span class="radio"></span><span class="text">むすびい</span>
+</label>
+
+<input class="input" type="checkbox" name="test-5-b-2-1" id="test-5-b-2-1" checked disabled />
+<label class="label is-gap-xxs" for="test-5-b-2-1">
+  <span class="checkbox"></span><span class="text">ムスビー</span>
+</label>
+
+<input class="input" type="checkbox" name="test-5-b-2-2" id="test-5-b-2-2" disabled />
+<label class="label is-gap-xxs" for="test-5-b-2-2">
+  <span class="checkbox"></span><span class="text">ムスビー</span>
+</label>
+
+```
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
+:is(.input, .textarea) {
+  --input-height: calc(2.25em + (1px * 2));
+  --input-padding: 0.5em 0.75em;
+  --input-bg: var(--theme-bg-1);
+  --input-border-width: 1px;
+  --input-border-color: var(--theme-bd-1);
+  --input-border-radius: 6px;
+  --input-inset-shadow-color: var(--theme-shadow);
+  --input-inset-shadow-color-alpha: 7.5%;
+  --input-inset-shadow-size: 0 1px 1px;
+  --input-color: inherit;
+  --input-line-height: 1.25;
+  --input-transition: none;
+  --input-placeholder-color: var(--theme-tx-1);
+  --input-placeholder-color-alpha: 26%;
+  --input-success: var(--theme-success);
+  --input-success-light: var(--theme-success-light);
+  --input-danger: var(--theme-danger);
+  --input-danger-light: var(--theme-danger-light);
+  --input-accent-mix: 50%;
+  --input-plain-bg: var(--theme-bg-2);
+  --input-inside-bg: transparent;
+  --input-readonly-bg: var(--theme-bg-2);
+  --input-disabled-bg: var(--theme-disabled);
+  --input-disabled-border-color: var(--theme-bd-1);
+  --input-disabled-color: var(--theme-dark);
+  --input-disabled-color-alpha: 36%;
+  --textarea-padding: calc(0.5em - 1.5px) 0.5em;
+}
 
+.select {
+  --select-height: calc(2.25em + (1px * 2));
+  --select-padding: 0.5em 0.75em;
+  --select-padding-right: 2.5em;
+  --select-bg: var(--theme-bg-1);
+  --select-border-width: 1px;
+  --select-border-color: var(--theme-bd-1);
+  --select-border-radius: 6px;
+  --select-color: inherit;
+  --select-line-height: 1.25;
+  --select-transition: none;
+  --select-success: var(--theme-success);
+  --select-success-light: var(--theme-success-light);
+  --select-danger: var(--theme-danger);
+  --select-danger-light: var(--theme-danger-light);
+  --select-accent-mix: 50%;
+  --select-angle-position: 1em;
+  --select-angle-size: 0.5em;
+  --select-angle-width: 2px;
+  --select-angle-color: var(--theme-dark);
+  --select-angle-color-alpha: 24%;
+  --select-angle-z-index: 3;
+  --select-multiple-option-min-height: 1.5em;
+  --select-multiple-option-padding: 0.5em 0.75em;
+  --select-plain-bg: var(--theme-bg-2);
+  --select-underline-padding-right: 1.75em;
+  --select-underline-icon-position: 0.25em;
+  --select-inside-bg: transparent;
+  --select-disabled-bg: var(--theme-disabled);
+  --select-disabled-border-color: var(--theme-bd-1);
+  --select-disabled-color: var(--theme-dark);
+  --select-disabled-color-alpha: 36%;
+}
+
+.label {
+  --label-disabled-color: var(--theme-dark);
+  --label-disabled-color-alpha: 36%;
+}
+
+.radio {
+  --radio-size: 1em;
+  --radio-bg: var(--theme-bg-1);
+  --radio-border-width: 2px;
+  --radio-border-color: var(--theme-bd-2);
+  --radio-transition: none;
+  --radio-checked-border-color: var(--theme-primary);
+  --radio-checked-icon-size: 0.5em;
+  --radio-checked-icon-color: var(--theme-primary);
+  --radio-disabled-color-alpha: 36%;
+}
+
+.checkbox {
+  --checkbox-size: 1em;
+  --checkbox-bg: var(--theme-bg-1);
+  --checkbox-border-width: 2px;
+  --checkbox-border-color: var(--theme-bd-2);
+  --checkbox-border-radius: 2px;
+  --checkbox-transition: none;
+  --checkbox-checked-bg: var(--theme-primary);
+  --checkbox-checked-border-color: transparent;
+  --checkbox-checked-icon-width: 0.75em;
+  --checkbox-checked-icon-height: 0.375em;
+  --checkbox-checked-icon-border-width: 0.125em;
+  --checkbox-checked-icon-color: var(--theme-lk-tx);
+  --checkbox-disabled-color-alpha: 36%;
+}
 ```
 
 ## Import
@@ -22,5 +803,15 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
+@import "musubii/src/elements/form/main.css";
+@import "musubii/src/elements/form/select.css";
+@import "musubii/src/elements/form/label.css";
+@import "musubii/src/elements/form/radio.css";
+@import "musubii/src/elements/form/checkbox.css";
+```
 
+v7 を再現する場合は `legacy.css` を追加で読み込んでください。
+
+```css
+@import "musubii/src/layouts/form/legacy.css";
 ```
