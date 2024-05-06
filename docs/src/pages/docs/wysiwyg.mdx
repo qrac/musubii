@@ -5,16 +5,349 @@ layout: docs
 
 # WYSIWYG
 
+WYSIWYG や Markdown から出力された「クラス名の無いプレーンな HTML タグ」に対して、一括で装飾を施すエレメント CSS。[text](/docs/text)・[list](/docs/list)・[table](/docs/table) に近いスタイリングを行えます。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.wysiwyg` でスタイリングを適応したいエリアを囲います
+- `.wysiwyg` 配下すべての要素にスタイルが適応されます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <h2>見出しh2</h2>
+    <p>テキスト</p>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <h2>見出しh2</h2>
+  <p>テキスト</p>
+</div>
+```
+
+## Heading
+
+- 見出しの装飾は `h1` から `h6` まで対応しています
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <h1>見出しh1</h1>
+    <h2>見出しh2</h2>
+    <h3>見出しh3</h3>
+    <h4>見出しh4</h4>
+    <h5>見出しh5</h5>
+    <h6>見出しh6</h6>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <h1>見出しh1</h1>
+  <h2>見出しh2</h2>
+  <h3>見出しh3</h3>
+  <h4>見出しh4</h4>
+  <h5>見出しh5</h5>
+  <h6>見出しh6</h6>
+</div>
+```
+
+## Text
+
+- テキストの装飾は `p` `small` `strong` `em` `del` に対応しています
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <p>WYSIWYGには、<small>小さい文字</small>・<strong>強調</strong>・<em>イタリック</em>・<del>打ち消し線</del>などのスタイルが使えます。</p>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <p>WYSIWYGには、<small>小さい文字</small>・<strong>強調</strong>・<em>イタリック</em>・<del>打ち消し線</del>などのスタイルが使えます。</p>
+</div>
+```
+
+## Link
+
+- リンクの装飾は `a` に対応しています
+- `.wysiwyg` に `.is-link-reverse` を追加すると下線のホバー効果が逆になります
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <p>WYSIWYG内の<a href="#">アンカータグ</a>は自動的に装飾されます。</p>
+  </div>
+  <div className="wysiwyg is-link-reverse">
+    <p>WYSIWYG内の<a href="#">アンカータグ</a>は自動的に装飾されます。</p>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <p>WYSIWYG内の<a href="#">アンカータグ</a>は自動的に装飾されます。</p>
+</div>
+
+<div class="wysiwyg is-link-reverse">
+  <p>WYSIWYG内の<a href="#">アンカータグ</a>は自動的に装飾されます。</p>
+</div>
+```
+
+## Blockquote
+
+- 引用の装飾は `blockquote` に対応しています
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <blockquote>WYSIWYG内で引用のblockquoteタグを使った場合の装飾。</blockquote>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <blockquote>WYSIWYG内で引用のblockquoteタグを使った場合の装飾。</blockquote>
+</div>
+```
+
+## Code
+
+- コードの装飾は `code` `pre` に対応しています
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <p>WYSIWYG内に<code>code</code>を表示させる。</p>
+    <pre><code>{".my-css { color: red; }"}</code></pre>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <p>WYSIWYG内に<code>code</code>を表示させる。</p>
+  <pre><code>.my-css { color: red; }</code></pre>
+</div>
+```
+
+## List
+
+- リストの装飾は `ul` `ol` に対応しています
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <ul>
+      <li>リストアイテム</li>
+      <li>リストアイテム</li>
+    </ul>
+    <ol>
+      <li>リストアイテム</li>
+      <li>リストアイテム</li>
+    </ol>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <ul>
+    <li>リストアイテム</li>
+    <li>リストアイテム</li>
+  </ul>
+  <ol>
+    <li>リストアイテム</li>
+    <li>リストアイテム</li>
+  </ol>
+</div>
+```
+
+## Table
+
+- テーブルの装飾は `table` に対応しています
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <table>
+      <thead>
+        <tr>
+          <th>見出しセル</th>
+          <th>見出しセル</th>
+          <th>見出しセル</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>データセル</td>
+          <td>データセル</td>
+          <td>データセル</td>
+        </tr>
+        <tr>
+          <td>データセル</td>
+          <td>データセル</td>
+          <td>データセル</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <table>
+    <thead>
+      <tr>
+        <th>見出しセル</th>
+        <th>見出しセル</th>
+        <th>見出しセル</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>データセル</td>
+        <td>データセル</td>
+        <td>データセル</td>
+      </tr>
+      <tr>
+        <td>データセル</td>
+        <td>データセル</td>
+        <td>データセル</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+## Definition List
+
+- 定義リストの装飾は `dl` に対応しています
+- 画面幅 576px まではタイトルと文章が縦に並びます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <dl>
+      <dt>タイトル</dt><dd>文章</dd>
+      <dt>タイトル</dt><dd>文章</dd>
+      <dt>タイトル</dt><dd>文章</dd>
+    </dl>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <dl>
+    <dt>タイトル</dt><dd>文章</dd>
+    <dt>タイトル</dt><dd>文章</dd>
+    <dt>タイトル</dt><dd>文章</dd>
+  </dl>
+</div>
+```
+
+## Figure
+
+- 図要素の装飾は `figure` `figcaption` に対応しています
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="wysiwyg">
+    <figure>
+      <img src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png" alt="MUSIBii site in dark theme" />
+      <figcaption>MUSUBiiのダークテーマ</figcaption>
+    </figure>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="wysiwyg">
+  <figure>
+    <img src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png" alt="MUSIBii site in dark theme" />
+    <figcaption>MUSUBiiのダークテーマ</figcaption>
+  </figure>
+</div>
+```
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+.wysiwyg {
+  --wysiwyg-heading-font-weight: 700;
+  --wysiwyg-heading-1-font-size: 200%;
+  --wysiwyg-heading-2-font-size: 150%;
+  --wysiwyg-heading-3-font-size: 125%;
+  --wysiwyg-heading-4-font-size: 100%;
+  --wysiwyg-heading-5-font-size: 87.5%;
+  --wysiwyg-heading-6-font-size: 75%;
+  --wysiwyg-paragraph-line-height: 1.9;
+  --wysiwyg-small-font-size: 87.5;
+  --wysiwyg-strong-font-weight: 700;
+  --wysiwyg-link-color: var(--theme-lk);
+  --wysiwyg-blockquote-padding: 1.5em;
+  --wysiwyg-blockquote-bg: var(--theme-bg-2);
+  --wysiwyg-blockquote-border-width: 0.5em;
+  --wysiwyg-blockquote-border-color: var(--theme-bd-1);
+  --wysiwyg-blockquote-radius: 4px;
+  --wysiwyg-code-padding: 0.2em 0.5em;
+  --wysiwyg-code-bg: var(--theme-bg-2);
+  --wysiwyg-code-border-radius: 4px;
+  --wysiwyg-code-color: var(--theme-code);
+  --wysiwyg-code-font-size: 87.5%;
+  --wysiwyg-code-font-family: var(--font-mono);
+  --wysiwyg-pre-bg: var(--theme-bg-2);
+  --wysiwyg-pre-border-radius: 4px;
+  --wysiwyg-pre-code-padding: 1.25em 1.5em;
+  --wysiwyg-pre-code-color: var(--theme-code);
+  --wysiwyg-pre-code-font-size: 87.5%;
+  --wysiwyg-pre-code-font-family: var(--font-mono);
+  --wysiwyg-list-margin-left: 1.5em;
+  --wysiwyg-list-item-margin-top: 0.25em;
+  --wysiwyg-table-width: 100%;
+  --wysiwyg-table-bg: var(--theme-bg-1);
+  --wysiwyg-table-border-width: 1px;
+  --wysiwyg-table-border-color: var(--theme-bd-1);
+  --wysiwyg-table-item-padding: 0.75em 1em;
+  --wysiwyg-table-th-bg: var(--theme-paint);
+  --wysiwyg-table-th-bg-alpha: 70%;
+  --wysiwyg-table-th-color: var(--theme-paint-tx);
+  --wysiwyg-table-th-font-weight: 400;
+  --wysiwyg-dl-width: 100%;
+  --wysiwyg-dl-bg: var(--theme-bg-1);
+  --wysiwyg-dl-border-width: 1px;
+  --wysiwyg-dl-border-color: var(--theme-bd-1);
+  --wysiwyg-dl-item-padding: 0.75em 1em;
+  --wysiwyg-dl-dt-width: 100%;
+  --wysiwyg-dl-dt-bg: var(--theme-paint);
+  --wysiwyg-dl-dt-bg-alpha: 70%;
+  --wysiwyg-dl-dt-color: var(--theme-paint-tx);
+  --wysiwyg-dl-dt-font-weight: 400;
+  --wysiwyg-dl-dd-width: 100%;
+  --wysiwyg-fablet-dl-dt-width: 30%;
+  --wysiwyg-fablet-dl-dd-width: 70%;
+  --wysiwyg-fablet-dl-dd-border-left-width: 1px;
+  --wysiwyg-hr-border-width: 1px;
+  --wysiwyg-hr-border-color: var(--theme-bd-1);
+  --wysiwyg-figure-text-align: center;
+  --wysiwyg-figure-figcaption-margin-top: 12px;
+  --wysiwyg-figure-figcaption-font-size: 87.5%;
+}
 ```
 
 ## Import
@@ -22,5 +355,11 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
+@import "musubii/src/elements/wysiwyg/main.css";
+```
 
+v7 を再現する場合は `legacy.css` を追加で読み込んでください。
+
+```css
+@import "musubii/src/layouts/wysiwyg/legacy.css";
 ```
