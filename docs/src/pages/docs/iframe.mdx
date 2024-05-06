@@ -5,16 +5,47 @@ layout: docs
 
 # iframe
 
+iframe を制御するエレメント CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.iframe` で `iframe` を囲うことで制御します
+- `.is-aspect-{ratio}` で縦横比を固定できます
+- `{ratio}` は `16x9` または `4x3` の 2 種類
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="iframe is-aspect-16x9">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+    </div>
+    <div className="iframe is-aspect-4x3">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div className="iframe is-aspect-16x9">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+</div>
+
+<div className="iframe is-aspect-4x3">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+</div>
+```
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+/* None */
 ```
 
 ## Import
@@ -22,5 +53,5 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
-
+@import "musubii/src/elements/iframe/main.css";
 ```
