@@ -6,10 +6,6 @@
   display: inline-flex;
 }
 
-:is(.is-flex, .is-inline-flex):where(:not(.is-nowrap)) {
-  flex-wrap: wrap;
-}
-
 :is(.is-flex, .is-inline-flex).is-top {
   align-items: flex-start;
 }
@@ -46,87 +42,91 @@
   flex-direction: row-reverse;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-xxl {
+:is(.is-flex, .is-inline-flex):where(:not(.is-nowrap)) {
+  flex-wrap: wrap;
+}
+
+:where(:not(.grid)).is-gap-xxl {
   gap: 28px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-xl {
+:where(:not(.grid)).is-gap-xl {
   gap: 24px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-lg {
+:where(:not(.grid)).is-gap-lg {
   gap: 20px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-md {
+:where(:not(.grid)).is-gap-md {
   gap: 16px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-sm {
+:where(:not(.grid)).is-gap-sm {
   gap: 12px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-xs {
+:where(:not(.grid)).is-gap-xs {
   gap: 8px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-xxs {
+:where(:not(.grid)).is-gap-xxs {
   gap: 4px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-y-xxl {
+:where(:not(.grid)).is-gap-y-xxl {
   row-gap: 28px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-y-xl {
+:where(:not(.grid)).is-gap-y-xl {
   row-gap: 24px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-y-lg {
+:where(:not(.grid)).is-gap-y-lg {
   row-gap: 20px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-y-md {
+:where(:not(.grid)).is-gap-y-md {
   row-gap: 16px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-y-sm {
+:where(:not(.grid)).is-gap-y-sm {
   row-gap: 12px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-y-xs {
+:where(:not(.grid)).is-gap-y-xs {
   row-gap: 8px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-y-xxs {
+:where(:not(.grid)).is-gap-y-xxs {
   row-gap: 4px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-x-xxl {
+:where(:not(.grid)).is-gap-x-xxl {
   column-gap: 28px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-x-xl {
+:where(:not(.grid)).is-gap-x-xl {
   column-gap: 24px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-x-lg {
+:where(:not(.grid)).is-gap-x-lg {
   column-gap: 20px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-x-md {
+:where(:not(.grid)).is-gap-x-md {
   column-gap: 16px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-x-sm {
+:where(:not(.grid)).is-gap-x-sm {
   column-gap: 12px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-x-xs {
+:where(:not(.grid)).is-gap-x-xs {
   column-gap: 8px;
 }
 
-:is(.is-flex, .is-inline-flex).is-gap-x-xxs {
+:where(:not(.grid)).is-gap-x-xxs {
   column-gap: 4px;
 }
 
