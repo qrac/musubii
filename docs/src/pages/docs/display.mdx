@@ -14,76 +14,50 @@ contents list
 ## Basic
 
 - `display` プロパティを `block` `inline` `inline-block` `none` へ変更可能です
+- `.is-hidden` で非表示にしつつ機能を残すことができます（主に `input` 用）
 - flexbox は [flex](/docs/flex) を参照ください
 
-| block       | inline       | inline-block       | none       |
-| ----------- | ------------ | ------------------ | ---------- |
-| `.is-block` | `.is-inline` | `.is-inline-block` | `.is-none` |
+| 効果                              | すべて             | 576px 以上                | 768px 以上                | 992px 以上                 | 1200px 以上             |
+| --------------------------------- | ------------------ | ------------------------- | ------------------------- | -------------------------- | ----------------------- |
+| <small>block</small>              | `.is-block`        | `.fablet:is-block`        | `.tablet:is-block`        | `.desktop:is-block`        | `.wide:is-block`        |
+| <small>inline</small>             | `.is-inline`       | `.fablet:is-inline`       | `.tablet:is-inline`       | `.desktop:is-inline`       | `.wide:is-inline`       |
+| <small>inline-block</small>       | `.is-inline-block` | `.fablet:is-inline-block` | `.tablet:is-inline-block` | `.desktop:is-inline-block` | `.wide:is-inline-block` |
+| <small>非表示（機能なし）</small> | `.is-none`         | `.fablet:is-none`         | `.tablet:is-none`         | `.desktop:is-none`         | `.wide:is-none`         |
+| <small>非表示（機能あり）</small> | `.is-hidden`       | `.fablet:is-hidden`       | `.tablet:is-hidden`       | `.desktop:is-hidden`       | `.wide:is-hidden`       |
 
 {/* prettier-ignore */}
 <div className="docs-preview">
   <p>
-    <span>「文章のテスト」</span>
+    <span>「文章のテスト1」</span>
     <span className="text is-block">「ブロック」</span>
-    <span>「文章のテスト」</span>
+    <span>「文章のテスト2」</span>
     <span className="text is-inline">「インライン」</span>
-    <span>「文章のテスト」</span>
+    <span>「文章のテスト3」</span>
     <span className="text is-inline-block">「インラインブロック」</span>
-    <span>「文章のテスト」</span>
+    <span>「文章のテスト4」</span>
     <span className="text is-none">「ノーン」</span>
-    <span>「文章のテスト」</span>
-  </p>
-</div>
-
-{/* prettier-ignore */}
-```html
-<p>
-  <span>「文章のテスト」</span>
-  <span class="text is-block">「ブロック」</span>
-  <span>「文章のテスト」</span>
-  <span class="text is-inline">「インライン」</span>
-  <span>「文章のテスト」</span>
-  <span class="text is-inline-block">「インラインブロック」</span>
-  <span>「文章のテスト」</span>
-  <span class="text is-none">「ノーン」</span>
-  <span>「文章のテスト」</span>
-</p>
-```
-
-## Hidden
-
-- `.is-hidden` で非表示にしつつ機能を残すことができます
-- 主に不可視な `input` 要素に使います
-
-{/* prettier-ignore */}
-<div className="docs-preview">
-  <p>
-    <span>「文章のテスト」</span>
+    <span>「文章のテスト5」</span>
     <span className="text is-hidden">「ヒドゥン」</span>
-    <span>「文章のテスト」</span>
+    <span>「文章のテスト6」</span>
   </p>
 </div>
 
 {/* prettier-ignore */}
 ```html
 <p>
-  <span>「文章のテスト」</span>
+  <span>「文章のテスト1」</span>
+  <span class="text is-block">「ブロック」</span>
+  <span>「文章のテスト2」</span>
+  <span class="text is-inline">「インライン」</span>
+  <span>「文章のテスト3」</span>
+  <span class="text is-inline-block">「インラインブロック」</span>
+  <span>「文章のテスト4」</span>
+  <span class="text is-none">「ノーン」</span>
+  <span>「文章のテスト5」</span>
   <span class="text is-hidden">「ヒドゥン」</span>
-  <span>「文章のテスト」</span>
+  <span>「文章のテスト6」</span>
 </p>
 ```
-
-## Media Query
-
-- 各クラスは画面サイズに応じて適応できます
-
-| すべて             | 576px 以上                | 768px 以上                | 992px 以上                 | 1200px 以上             |
-| ------------------ | ------------------------- | ------------------------- | -------------------------- | ----------------------- |
-| `.is-block`        | `.fablet:is-block`        | `.tablet:is-block`        | `.desktop:is-block`        | `.wide:is-block`        |
-| `.is-inline`       | `.fablet:is-inline`       | `.tablet:is-inline`       | `.desktop:is-inline`       | `.wide:is-inline`       |
-| `.is-inline-block` | `.fablet:is-inline-block` | `.tablet:is-inline-block` | `.desktop:is-inline-block` | `.wide:is-inline-block` |
-| `.is-none`         | `.fablet:is-none`         | `.tablet:is-none`         | `.desktop:is-none`         | `.wide:is-none`         |
-| `.is-hidden`       | `.fablet:is-hidden`       | `.tablet:is-hidden`       | `.desktop:is-hidden`       | `.wide:is-hidden`       |
 
 ## Compatible
 

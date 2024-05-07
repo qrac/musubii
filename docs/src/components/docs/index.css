@@ -147,7 +147,12 @@
 
 .docs > table th + th,
 .docs > table td + td {
-  padding-left: 32px;
+  padding-left: 20px;
+}
+
+.docs > table small {
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .docs > table th {

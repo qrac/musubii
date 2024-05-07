@@ -230,6 +230,12 @@ contents list
 - `.is-justify` でテキストを両端揃いにします
 - `.is-right` `.is-center` `.is-left` は画面サイズに応じて適応できます
 
+| 効果                        | すべて       | 576px 以上          | 768px 以上          | 992px 以上           | 1200px 以上       |
+| --------------------------- | ------------ | ------------------- | ------------------- | -------------------- | ----------------- |
+| <small>右揃い</small>       | `.is-right`  | `.fablet:is-right`  | `.tablet:is-right`  | `.desktop:is-right`  | `.wide:is-right`  |
+| <small>左右中央揃い</small> | `.is-center` | `.fablet:is-center` | `.tablet:is-center` | `.desktop:is-center` | `.wide:is-center` |
+| <small>左揃い</small>       | `.is-left`   | `.fablet:is-left`   | `.tablet:is-left`   | `.desktop:is-left`   | `.wide:is-left`   |
+
 {/* prettier-ignore */}
 <div className="docs-preview">
   <div className="box is-space-md">
@@ -247,12 +253,6 @@ contents list
 <p class="text is-left">山路を登りながら...</p>
 <p class="text is-justify">山路を登りながら...</p>
 ```
-
-| すべて       | 576px 以上          | 768px 以上          | 992px 以上           | 1200px 以上       |
-| ------------ | ------------------- | ------------------- | -------------------- | ----------------- |
-| `.is-right`  | `.fablet:is-right`  | `.tablet:is-right`  | `.desktop:is-right`  | `.wide:is-right`  |
-| `.is-center` | `.fablet:is-center` | `.tablet:is-center` | `.desktop:is-center` | `.wide:is-center` |
-| `.is-left`   | `.fablet:is-left`   | `.tablet:is-left`   | `.desktop:is-left`   | `.wide:is-left`   |
 
 ## Vertical Align
 

@@ -14,6 +14,7 @@ contents list
 ## Basic
 
 - `.input` `.textarea` `.select` `.label` `.radio` `.checkbox` が利用できます
+- `.input` `.textarea` `.select` は単体で機能します
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -356,12 +357,11 @@ contents list
 
 ## Label
 
-- `.label` は関連付けを行うラベル用のクラスです
-- `.radio` `.checkbox` のレイアウトも兼ねて利用できます
+- `.label` は関連付けを行う `label` 用のクラスです
+- [flex](/docs/flex) が適応されており `.radio` `.checkbox` のレイアウト調整もできます
+- [flex](/docs/flex) の `.is-gap-{size}` で溝を設定できます
 - `.is-center` で左右中央揃いにできます
 - `.is-middle` で上下中央揃いにできます
-- `.is-gap-{size}` で溝を設定できます
-- `{size}` は最大 `xxl` から最小 `xxs` まで
 
 {/* prettier-ignore */}
 <div className="docs-preview">

@@ -5,16 +5,305 @@ layout: docs
 
 # Flex
 
+Flexbox に関するユーティリティ CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.is-flex` で `display` プロパティを `flex` に変更できます
+- `.is-inline-flex` で `display` プロパティを `inline-flex` に変更できます
+- デフォルトでは子要素が折り返します（防ぐ場合は次項の `.is-nowrap` を使用）
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex">
+    <div>子要素</div>
+    <div>子要素</div>
+    <div>子要素</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-flex">
+  <div>子要素</div>
+  <div>子要素</div>
+  <div>子要素</div>
+</div>
+```
+
+## Arrange
+
+- `.is-flex` `.is-inline-flex` には子要素の配置調整クラスが使用できます
+
+| クラス名       | 効果                                     |
+| -------------- | ---------------------------------------- |
+| `.is-top`      | 子要素を上に揃える                       |
+| `.is-baseline` | 子要素をベースラインに揃える             |
+| `.is-middle`   | 子要素を上下中央に揃える                 |
+| `.is-bottom`   | 子要素を下に揃える                       |
+| `.is-center`   | 子要素を左右中央に揃える                 |
+| `.is-right`    | 子要素を右に揃える                       |
+| `.is-between`  | 子要素を左右均等に並べる（端に溝幅なし） |
+| `.is-around`   | 子要素を左右均等に並べる（端に溝幅あり） |
+| `.is-reverse`  | 子要素を左右逆に並べる                   |
+| `.is-nowrap`   | 子要素を折り返させない                   |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-between">
+    <div style={{background:"var(--theme-bg-2)"}}>子要素</div>
+    <div style={{background:"var(--theme-bg-2)"}}>子要素</div>
+    <div style={{background:"var(--theme-bg-2)"}}>子要素</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-flex is-between">
+  <div>子要素</div>
+  <div>子要素</div>
+  <div>子要素</div>
+</div>
+```
+
+## Gap
+
+- `.is-gap-{size}` で溝を設定できます
+- `.is-gap-y-{size}` で上下方向のみに溝を設定
+- `.is-gap-x-{size}` で左右方向のみに溝を設定
+- `{size}` は最大 `xxl` から最小 `xxs` まで
+
+| サイズ              | 上下左右      | 上下のみ        | 左右のみ        |
+| ------------------- | ------------- | --------------- | --------------- |
+| <small>28px</small> | `.is-gap-xxl` | `.is-gap-y-xxl` | `.is-gap-x-xxl` |
+| <small>24px</small> | `.is-gap-xl`  | `.is-gap-y-xl`  | `.is-gap-x-xl`  |
+| <small>20px</small> | `.is-gap-lg`  | `.is-gap-y-lg`  | `.is-gap-x-lg`  |
+| <small>16px</small> | `.is-gap-md`  | `.is-gap-y-md`  | `.is-gap-x-md`  |
+| <small>12px</small> | `.is-gap-sm`  | `.is-gap-y-sm`  | `.is-gap-x-sm`  |
+| <small>8px</small>  | `.is-gap-xs`  | `.is-gap-y-xs`  | `.is-gap-x-xs`  |
+| <small>4px</small>  | `.is-gap-xxs` | `.is-gap-y-xxs` | `.is-gap-x-xxs` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-md">
+    <div className="box is-flex-0" style={{background:"var(--theme-bg-2)"}}>子要素</div>
+    <div className="box is-flex-0" style={{background:"var(--theme-bg-2)"}}>子要素</div>
+    <div className="box is-flex-0" style={{background:"var(--theme-bg-2)"}}>子要素</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-flex is-gap-md">
+  <div class="box is-flex-0">子要素</div>
+  <div class="box is-flex-0">子要素</div>
+  <div class="box is-flex-0">子要素</div>
+</div>
+```
+
+## Flexibility
+
+- Flexbox の子要素の横幅を操作する CSS
+- `.is-flex-{num}` `.is-flex-full` `.is-flex-auto` `.is-flex-none` が利用できます
+- `{num}` は `0` から `12` まで
+- `.is-flex-0` は残りの横幅を等分して埋めるサイズになります
+- `.is-flex-1` 〜 `.is-flex-12` の場合は 12 分割した横幅の割合サイズになります
+- `.is-flex-full` は横幅最大サイズになります
+- `.is-flex-auto` は子要素の幅になります（親要素による伸縮の影響あり）
+- `.is-flex-none` は子要素の幅になります（親要素による伸縮の影響なし）
+- 各クラスは画面サイズに応じて適応できます
+
+| サイズ                        | すべて          | 576px 以上             | 768px 以上             | 992px 以上              | 1200px 以上          |
+| ----------------------------- | --------------- | ---------------------- | ---------------------- | ----------------------- | -------------------- |
+| <small>等分して埋める</small> | `.is-flex-0`    | `.fablet:is-flex-0`    | `.tablet:is-flex-0`    | `.desktop:is-flex-0`    | `.wide:is-flex-0`    |
+| <small>1 / 12</small>         | `.is-flex-1`    | `.fablet:is-flex-1`    | `.tablet:is-flex-1`    | `.desktop:is-flex-1`    | `.wide:is-flex-1`    |
+| <small>2 / 12</small>         | `.is-flex-2`    | `.fablet:is-flex-2`    | `.tablet:is-flex-2`    | `.desktop:is-flex-2`    | `.wide:is-flex-2`    |
+| <small>3 / 12</small>         | `.is-flex-3`    | `.fablet:is-flex-3`    | `.tablet:is-flex-3`    | `.desktop:is-flex-3`    | `.wide:is-flex-3`    |
+| <small>4 / 12</small>         | `.is-flex-4`    | `.fablet:is-flex-4`    | `.tablet:is-flex-4`    | `.desktop:is-flex-4`    | `.wide:is-flex-4`    |
+| <small>5 / 12</small>         | `.is-flex-5`    | `.fablet:is-flex-5`    | `.tablet:is-flex-5`    | `.desktop:is-flex-5`    | `.wide:is-flex-5`    |
+| <small>6 / 12</small>         | `.is-flex-6`    | `.fablet:is-flex-6`    | `.tablet:is-flex-6`    | `.desktop:is-flex-6`    | `.wide:is-flex-6`    |
+| <small>7 / 12</small>         | `.is-flex-7`    | `.fablet:is-flex-7`    | `.tablet:is-flex-7`    | `.desktop:is-flex-7`    | `.wide:is-flex-7`    |
+| <small>8 / 12</small>         | `.is-flex-8`    | `.fablet:is-flex-8`    | `.tablet:is-flex-8`    | `.desktop:is-flex-8`    | `.wide:is-flex-8`    |
+| <small>9 / 12</small>         | `.is-flex-9`    | `.fablet:is-flex-9`    | `.tablet:is-flex-9`    | `.desktop:is-flex-9`    | `.wide:is-flex-9`    |
+| <small>10 / 12</small>        | `.is-flex-10`   | `.fablet:is-flex-10`   | `.tablet:is-flex-10`   | `.desktop:is-flex-10`   | `.wide:is-flex-10`   |
+| <small>11 / 12</small>        | `.is-flex-11`   | `.fablet:is-flex-11`   | `.tablet:is-flex-11`   | `.desktop:is-flex-11`   | `.wide:is-flex-11`   |
+| <small>12 / 12</small>        | `.is-flex-12`   | `.fablet:is-flex-12`   | `.tablet:is-flex-12`   | `.desktop:is-flex-12`   | `.wide:is-flex-12`   |
+| <small>100%</small>           | `.is-flex-full` | `.fablet:is-flex-full` | `.tablet:is-flex-full` | `.desktop:is-flex-full` | `.wide:is-flex-full` |
+| <small>auto</small>           | `.is-flex-auto` | `.fablet:is-flex-auto` | `.tablet:is-flex-auto` | `.desktop:is-flex-auto` | `.wide:is-flex-auto` |
+| <small>子要素サイズ</small>   | `.is-flex-none` | `.fablet:is-flex-none` | `.tablet:is-flex-none` | `.desktop:is-flex-none` | `.wide:is-flex-none` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex">
+    <div className="box is-flex-0" style={{background:"var(--theme-bg-2)"}}>子要素0</div>
+    <div className="box is-flex-0" style={{background:"var(--theme-bg-2)"}}>子要素0</div>
+    <div className="box is-flex-7" style={{background:"var(--theme-bg-2)"}}>子要素7</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-flex">
+  <div class="box is-flex-0">子要素0</div>
+  <div class="box is-flex-0">子要素0</div>
+  <div class="box is-flex-7">子要素7</div>
+</div>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex">
+    <div className="box is-flex-4" style={{background:"var(--theme-bg-2)"}}>子要素4</div>
+    <div className="box is-flex-5" style={{background:"var(--theme-bg-2)"}}>子要素5</div>
+    <div className="box is-flex-3" style={{background:"var(--theme-bg-2)"}}>子要素3</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-flex">
+  <div class="box is-flex-4">子要素4</div>
+  <div class="box is-flex-5">子要素5</div>
+  <div class="box is-flex-3">子要素3</div>
+</div>
+```
+
+:::div{.alert.is-warning.is-space-xxs}
+
+::p[WARNING]{.text.is-warning.is-strong.is-font-sans-en}
+
+Flexbox は子要素の幅の合計に Gap を含めません。そのため、固定の幅設定で分割した上で Gap を設定すると段落ちします。このようなシーンでは Gap を吸収する [grid](/docs/grid) を使うか、Gap 分を縮ませるために `.is-flex-0` を含めてください。
+
+:::
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-md">
+    <div className="box is-flex-4" style={{background:"var(--theme-bg-2)"}}>子要素4</div>
+    <div className="box is-flex-5" style={{background:"var(--theme-bg-2)"}}>子要素5</div>
+    <div className="box is-flex-3" style={{background:"var(--theme-bg-2)"}}>子要素3</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-flex is-gap-md">
+  <div class="box is-flex-4">子要素4</div>
+  <div class="box is-flex-5">子要素5</div>
+  <div class="box is-flex-3">子要素3</div>
+</div>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-md">
+    <div className="box is-flex-4" style={{background:"var(--theme-bg-2)"}}>子要素4</div>
+    <div className="box is-flex-5" style={{background:"var(--theme-bg-2)"}}>子要素5</div>
+    <div className="box is-flex-0" style={{background:"var(--theme-bg-2)"}}>子要素0</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-flex is-gap-md">
+  <div class="box is-flex-4">子要素4</div>
+  <div class="box is-flex-5">子要素5</div>
+  <div class="box is-flex-0">子要素0</div>
+</div>
+```
+
+## Compatible
+
+推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
+
+| 推奨のクラス名          | 互換のあるクラス名           |
+| ----------------------- | ---------------------------- |
+| `.is-flex-0`            | `.is-0` `.is-mobile-0`       |
+| `.is-flex-1`            | `.is-1` `.is-mobile-1`       |
+| `.is-flex-2`            | `.is-2` `.is-mobile-2`       |
+| `.is-flex-3`            | `.is-3` `.is-mobile-3`       |
+| `.is-flex-4`            | `.is-4` `.is-mobile-4`       |
+| `.is-flex-5`            | `.is-5` `.is-mobile-5`       |
+| `.is-flex-6`            | `.is-6` `.is-mobile-6`       |
+| `.is-flex-7`            | `.is-7` `.is-mobile-7`       |
+| `.is-flex-8`            | `.is-8` `.is-mobile-8`       |
+| `.is-flex-9`            | `.is-9` `.is-mobile-9`       |
+| `.is-flex-10`           | `.is-10` `.is-mobile-10`     |
+| `.is-flex-11`           | `.is-11` `.is-mobile-11`     |
+| `.is-flex-12`           | `.is-12` `.is-mobile-12`     |
+| `.is-flex-full`         | `.is-full` `.is-mobile-full` |
+| `.is-flex-auto`         | `.is-auto` `.is-mobile-auto` |
+| `.fablet:is-flex-0`     | `.is-fablet-0`               |
+| `.fablet:is-flex-1`     | `.is-fablet-1`               |
+| `.fablet:is-flex-2`     | `.is-fablet-2`               |
+| `.fablet:is-flex-3`     | `.is-fablet-3`               |
+| `.fablet:is-flex-4`     | `.is-fablet-4`               |
+| `.fablet:is-flex-5`     | `.is-fablet-5`               |
+| `.fablet:is-flex-6`     | `.is-fablet-6`               |
+| `.fablet:is-flex-7`     | `.is-fablet-7`               |
+| `.fablet:is-flex-8`     | `.is-fablet-8`               |
+| `.fablet:is-flex-9`     | `.is-fablet-9`               |
+| `.fablet:is-flex-10`    | `.is-fablet-10`              |
+| `.fablet:is-flex-11`    | `.is-fablet-11`              |
+| `.fablet:is-flex-12`    | `.is-fablet-12`              |
+| `.fablet:is-flex-full`  | `.is-fablet-full`            |
+| `.fablet:is-flex-auto`  | `.is-fablet-auto`            |
+| `.tablet:is-flex-0`     | `.is-tablet-0`               |
+| `.tablet:is-flex-1`     | `.is-tablet-1`               |
+| `.tablet:is-flex-2`     | `.is-tablet-2`               |
+| `.tablet:is-flex-3`     | `.is-tablet-3`               |
+| `.tablet:is-flex-4`     | `.is-tablet-4`               |
+| `.tablet:is-flex-5`     | `.is-tablet-5`               |
+| `.tablet:is-flex-6`     | `.is-tablet-6`               |
+| `.tablet:is-flex-7`     | `.is-tablet-7`               |
+| `.tablet:is-flex-8`     | `.is-tablet-8`               |
+| `.tablet:is-flex-9`     | `.is-tablet-9`               |
+| `.tablet:is-flex-10`    | `.is-tablet-10`              |
+| `.tablet:is-flex-11`    | `.is-tablet-11`              |
+| `.tablet:is-flex-12`    | `.is-tablet-12`              |
+| `.tablet:is-flex-full`  | `.is-tablet-full`            |
+| `.tablet:is-flex-auto`  | `.is-tablet-auto`            |
+| `.desktop:is-flex-0`    | `.is-desktop-0`              |
+| `.desktop:is-flex-1`    | `.is-desktop-1`              |
+| `.desktop:is-flex-2`    | `.is-desktop-2`              |
+| `.desktop:is-flex-3`    | `.is-desktop-3`              |
+| `.desktop:is-flex-4`    | `.is-desktop-4`              |
+| `.desktop:is-flex-5`    | `.is-desktop-5`              |
+| `.desktop:is-flex-6`    | `.is-desktop-6`              |
+| `.desktop:is-flex-7`    | `.is-desktop-7`              |
+| `.desktop:is-flex-8`    | `.is-desktop-8`              |
+| `.desktop:is-flex-9`    | `.is-desktop-9`              |
+| `.desktop:is-flex-10`   | `.is-desktop-10`             |
+| `.desktop:is-flex-11`   | `.is-desktop-11`             |
+| `.desktop:is-flex-12`   | `.is-desktop-12`             |
+| `.desktop:is-flex-full` | `.is-desktop-full`           |
+| `.desktop:is-flex-auto` | `.is-desktop-auto`           |
+| `.wide:is-flex-0`       | `.is-wide-0`                 |
+| `.wide:is-flex-1`       | `.is-wide-1`                 |
+| `.wide:is-flex-2`       | `.is-wide-2`                 |
+| `.wide:is-flex-3`       | `.is-wide-3`                 |
+| `.wide:is-flex-4`       | `.is-wide-4`                 |
+| `.wide:is-flex-5`       | `.is-wide-5`                 |
+| `.wide:is-flex-6`       | `.is-wide-6`                 |
+| `.wide:is-flex-7`       | `.is-wide-7`                 |
+| `.wide:is-flex-8`       | `.is-wide-8`                 |
+| `.wide:is-flex-9`       | `.is-wide-9`                 |
+| `.wide:is-flex-10`      | `.is-wide-10`                |
+| `.wide:is-flex-11`      | `.is-wide-11`                |
+| `.wide:is-flex-12`      | `.is-wide-12`                |
+| `.wide:is-flex-full`    | `.is-wide-full`              |
+| `.wide:is-flex-auto`    | `.is-wide-auto`              |
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+/* None */
 ```
 
 ## Import
@@ -22,5 +311,9 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
-
+@import "musubii/src/utilities/flex/main.css";
+@import "musubii/src/utilities/flex/fablet.css";
+@import "musubii/src/utilities/flex/tablet.css";
+@import "musubii/src/utilities/flex/desktop.css";
+@import "musubii/src/utilities/flex/wide.css";
 ```
