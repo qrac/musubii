@@ -1,4 +1,52 @@
 .grid {
+  display: flex;
+}
+
+.grid.is-top {
+  align-items: flex-start;
+}
+
+.grid.is-baseline {
+  align-items: baseline;
+}
+
+.grid.is-middle {
+  align-items: center;
+}
+
+.grid.is-bottom {
+  align-items: flex-end;
+}
+
+.grid.is-center {
+  justify-content: center;
+}
+
+.grid.is-right {
+  justify-content: flex-end;
+}
+
+.grid.is-between {
+  justify-content: space-between;
+}
+
+.grid.is-around {
+  justify-content: space-around;
+}
+
+.grid.is-reverse {
+  flex-direction: row-reverse;
+}
+
+.grid:where(:not(.is-nowrap)) {
+  flex-wrap: wrap;
+}
+
+.grid.is-stretch > .column {
+  display: flex;
+}
+
+.grid {
   --grid-gap-y: 0;
   --grid-gap-x: 0;
 }
@@ -111,10 +159,6 @@
   --grid-gap-x: 4px;
 }
 
-.grid {
-  display: flex;
-}
-
 .grid:is(.is-gap, [class*="is-gap-"]) {
   row-gap: var(--grid-gap-y);
   margin-left: calc(var(--grid-gap-x) * -1);
@@ -122,48 +166,4 @@
 
 .grid:is(.is-gap, [class*="is-gap-"]) > .column {
   padding-left: var(--grid-gap-x);
-}
-
-.grid:where(:not(.is-nowrap)) {
-  flex-wrap: wrap;
-}
-
-.grid.is-top {
-  align-items: flex-start;
-}
-
-.grid.is-baseline {
-  align-items: baseline;
-}
-
-.grid.is-middle {
-  align-items: center;
-}
-
-.grid.is-bottom {
-  align-items: flex-end;
-}
-
-.grid.is-center {
-  justify-content: center;
-}
-
-.grid.is-right {
-  justify-content: flex-end;
-}
-
-.grid.is-between {
-  justify-content: space-between;
-}
-
-.grid.is-around {
-  justify-content: space-around;
-}
-
-.grid.is-reverse {
-  flex-direction: row-reverse;
-}
-
-.grid.is-stretch > .column {
-  display: flex;
 }

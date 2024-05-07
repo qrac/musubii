@@ -34,47 +34,6 @@ contents list
 </div>
 ```
 
-## Gap
-
-- `.is-gap-{size}` で溝を設定できます
-- `.is-gap-y-{size}` で上下方向のみに溝を設定
-- `.is-gap-x-{size}` で左右方向のみに溝を設定
-- `{size}` は最大 `xxl` から最小 `xxs` まで
-
-{/* prettier-ignore */}
-<div className="docs-preview">
-  <div className="grid is-gap-md">
-    <div className="column is-flex-0">
-      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
-    </div>
-    <div className="column is-flex-0">
-      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
-    </div>
-    <div className="column is-flex-0">
-      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
-    </div>
-  </div>
-</div>
-
-{/* prettier-ignore */}
-```html
-<div class="grid is-gap-md">
-  <div class="column is-flex-0">カラム</div>
-  <div class="column is-flex-0">カラム</div>
-  <div class="column is-flex-0">カラム</div>
-</div>
-```
-
-| 上下左右      | 上下のみ        | 左右のみ        |
-| ------------- | --------------- | --------------- |
-| `.is-gap-xxl` | `.is-gap-y-xxl` | `.is-gap-x-xxl` |
-| `.is-gap-xl`  | `.is-gap-y-xl`  | `.is-gap-x-xl`  |
-| `.is-gap-lg`  | `.is-gap-y-lg`  | `.is-gap-x-lg`  |
-| `.is-gap-md`  | `.is-gap-y-md`  | `.is-gap-x-md`  |
-| `.is-gap-sm`  | `.is-gap-y-sm`  | `.is-gap-x-sm`  |
-| `.is-gap-xs`  | `.is-gap-y-xs`  | `.is-gap-x-xs`  |
-| `.is-gap-xxs` | `.is-gap-y-xxs` | `.is-gap-x-xxs` |
-
 ## Arrange
 
 - [flex](/docs/flex) と同様の配置調整が可能です
@@ -115,7 +74,49 @@ contents list
 | `.is-between`  | カラムを左右均等に並べる（端に溝幅なし） |
 | `.is-around`   | カラムを左右均等に並べる（端に溝幅あり） |
 | `.is-reverse`  | カラムを左右逆に並べる                   |
+| `.is-nowrap`   | カラムを折り返さない                     |
 | `.is-stretch`  | カラムを flexbox にして高さを引き継ぐ    |
+
+## Gap
+
+- `.is-gap-{size}` で溝を設定できます
+- `.is-gap-y-{size}` で上下方向のみに溝を設定
+- `.is-gap-x-{size}` で左右方向のみに溝を設定
+- `{size}` は最大 `xxl` から最小 `xxs` まで
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="grid is-gap-md">
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="grid is-gap-md">
+  <div class="column is-flex-0">カラム</div>
+  <div class="column is-flex-0">カラム</div>
+  <div class="column is-flex-0">カラム</div>
+</div>
+```
+
+| 上下左右      | 上下のみ        | 左右のみ        |
+| ------------- | --------------- | --------------- |
+| `.is-gap-xxl` | `.is-gap-y-xxl` | `.is-gap-x-xxl` |
+| `.is-gap-xl`  | `.is-gap-y-xl`  | `.is-gap-x-xl`  |
+| `.is-gap-lg`  | `.is-gap-y-lg`  | `.is-gap-x-lg`  |
+| `.is-gap-md`  | `.is-gap-y-md`  | `.is-gap-x-md`  |
+| `.is-gap-sm`  | `.is-gap-y-sm`  | `.is-gap-x-sm`  |
+| `.is-gap-xs`  | `.is-gap-y-xs`  | `.is-gap-x-xs`  |
+| `.is-gap-xxs` | `.is-gap-y-xxs` | `.is-gap-x-xxs` |
 
 ## Compatible
 
