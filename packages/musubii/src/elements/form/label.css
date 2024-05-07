@@ -28,34 +28,6 @@
   top: 0.25em;
 }
 
-.label.is-gap-xxl {
-  column-gap: 28px;
-}
-
-.label.is-gap-xl {
-  column-gap: 24px;
-}
-
-.label.is-gap-lg {
-  column-gap: 20px;
-}
-
-.label.is-gap-md {
-  column-gap: 16px;
-}
-
-.label.is-gap-sm {
-  column-gap: 12px;
-}
-
-.label.is-gap-xs {
-  column-gap: 8px;
-}
-
-.label.is-gap-xxs {
-  column-gap: 4px;
-}
-
 :where(:is([type="radio"], [type="checkbox"]):disabled) + .label,
 .label:where(:has(:is([type="radio"], [type="checkbox"]):disabled)) {
   cursor: default;
