@@ -69,13 +69,15 @@
   opacity: 1;
 }
 
-:where([type="checkbox"]:disabled + *) .checkbox,
-:where([type="checkbox"]:disabled) + .checkbox {
+/* prettier-ignore */
+:where([type="checkbox"]:is([disabled], [aria-disabled="true"], .is-disabled) + *) .checkbox,
+:where([type="checkbox"]:is([disabled], [aria-disabled="true"], .is-disabled)) + .checkbox {
   border-color: var(--checkbox-disabled-color-mix);
 }
 
-:where([type="checkbox"]:checked:disabled + *) .checkbox,
-:where([type="checkbox"]:checked:disabled) + .checkbox {
+/* prettier-ignore */
+:where([type="checkbox"]:checked:is([disabled], [aria-disabled="true"], .is-disabled) + *) .checkbox,
+:where([type="checkbox"]:checked:is([disabled], [aria-disabled="true"], .is-disabled)) + .checkbox {
   background: var(--checkbox-disabled-color-mix);
   border-color: transparent;
 }

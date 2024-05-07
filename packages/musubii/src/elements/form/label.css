@@ -28,8 +28,9 @@
   top: 0.25em;
 }
 
-:where(:is([type="radio"], [type="checkbox"]):disabled) + .label,
-.label:where(:has(:is([type="radio"], [type="checkbox"]):disabled)) {
+/* prettier-ignore */
+:where(:is([type="radio"], [type="checkbox"]):is([disabled], [aria-disabled="true"], .is-disabled)) + .label,
+.label:where(:has(:is([type="radio"], [type="checkbox"]):is([disabled], [aria-disabled="true"], .is-disabled))) {
   cursor: default;
   color: var(--label-disabled-color-mix);
 }
