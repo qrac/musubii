@@ -31,10 +31,10 @@
   border-radius: 1px;
 }
 
-.is-radius-full {
-  border-radius: 9999em;
-}
-
 .is-radius-none {
   border-radius: 0;
+}
+
+.is-radius-full {
+  border-radius: 9999em;
 }
