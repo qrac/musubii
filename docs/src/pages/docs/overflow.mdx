@@ -5,16 +5,74 @@ layout: docs
 
 # Overflow
 
+表示の `overflow` に関するプロパティを設定するユーティリティ CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.is-overflow-hidden` ではみ出した部分を消します
+- `.is-overflow-ellipsis` ではみ出したテキストを 3 点リーダーで省略します
+- `.is-overflow-scroll-y` で縦スクロールをサポートします
+- `.is-overflow-scroll-x` で横スクロールをサポートします
+- スクロールタイプには iOS 用の `-webkit-overflow-scrolling: touch;` が付与されます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-p-md" style={{background:"var(--theme-bg-2)"}}>
+      <p className="text is-nowrap is-overflow-hidden">オーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテスト</p>
+    </div>
+    <div className="box is-p-md" style={{background:"var(--theme-bg-2)"}}>
+      <p className="text is-nowrap is-overflow-ellipsis">オーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテスト</p>
+    </div>
+    <div className="box is-p-md is-overflow-scroll-y" style={{background:"var(--theme-bg-2)", maxHeight: "5em"}}>
+      <p className="text">オーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテスト</p>
+    </div>
+    <div className="box is-p-md is-overflow-scroll-x" style={{background:"var(--theme-bg-2)"}}>
+      <p className="text is-nowrap">オーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテストオーバーフロウテスト</p>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-p-md">
+  <p class="text is-nowrap is-overflow-hidden">オーバーフロウテスト...</p>
+</div>
+
+<div class="box is-p-md">
+  <p class="text is-nowrap is-overflow-ellipsis">オーバーフロウテスト...</p>
+</div>
+
+<div class="box is-p-md is-overflow-scroll-y">
+  <p class="text">オーバーフロウテスト...</p>
+</div>
+
+<div class="box is-p-md is-overflow-scroll-x">
+  <p class="text is-nowrap">オーバーフロウテスト...</p>
+</div>
+```
+
+## Compatible
+
+推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
+
+| 推奨のクラス名          | 互換のあるクラス名 |
+| ----------------------- | ------------------ |
+| `.is-overflow-hidden`   | `.is-hidden`       |
+| `.is-overflow-ellipsis` | `.is-ellipsis`     |
+| `.is-overflow-scroll-y` | `.is-scroll-y`     |
+| `.is-overflow-scroll-x` | `.is-scroll-x`     |
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+/* None */
 ```
 
 ## Import
@@ -22,5 +80,5 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
-
+@import "musubii/src/utilities/overflow/main.css";
 ```
