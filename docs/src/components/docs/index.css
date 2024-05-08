@@ -192,6 +192,7 @@
 .docs > table th,
 .docs > table td {
   padding: 12px 0;
+  line-height: 1.75;
   vertical-align: baseline;
 }
 

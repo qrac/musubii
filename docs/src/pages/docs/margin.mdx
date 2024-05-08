@@ -5,16 +5,56 @@ layout: docs
 
 # Margin
 
+マージンを付与するユーティリティ CSS。
+
 ## Table of Contents
 
 contents list
+
+## Basic
+
+- `.is-margin-{way}-{size}` で各方向に `margin` を付与します
+- `.is-margin-{size}` は全方向（※`.is-m-{size}` に短縮可能）
+- `.is-margin-top-{size}` は上方向（※`.is-mt-{size}` に短縮可能）
+- `.is-margin-right-{size}` は右方向（※`.is-mr-{size}` に短縮可能）
+- `.is-margin-bottom-{size}` は下方向（※`.is-mb-{size}` に短縮可能）
+- `.is-margin-left-{size}` は左方向（※`.is-ml-{size}` に短縮可能）
+- `.is-margin-vertical-{size}` は上下方向（※`.is-my-{size}` に短縮可能）
+- `.is-margin-horizontal-{size}` は上下方向（※`.is-mx-{size}` に短縮可能）
+- `{size}` は最大 `xxl` から最小 `xxs` に加え `auto` `none` を指定できます
+
+| サイズ              | 全方向                            | 上方向                                 | 右方向                                   | 下方向                                    | 左方向                                  | 上下方向                                    | 左右方向                                      |
+| ------------------- | --------------------------------- | -------------------------------------- | ---------------------------------------- | ----------------------------------------- | --------------------------------------- | ------------------------------------------- | --------------------------------------------- |
+| <small>28px</small> | `.is-margin-xxl` or `.is-m-xxl`   | `.is-margin-top-xxl` or `.is-mt-xxl`   | `.is-margin-right-xxl` or `.is-mr-xxl`   | `.is-margin-bottom-xxl` or `.is-mb-xxl`   | `.is-margin-left-xxl` or `.is-ml-xxl`   | `.is-margin-vertical-xxl` or `.is-my-xxl`   | `.is-margin-horizontal-xxl` or `.is-my-xxl`   |
+| <small>24px</small> | `.is-margin-xl` or `.is-m-xl`     | `.is-margin-top-xl` or `.is-mt-xl`     | `.is-margin-right-xl` or `.is-mr-xl`     | `.is-margin-bottom-xl` or `.is-mb-xl`     | `.is-margin-left-xl` or `.is-ml-xl`     | `.is-margin-vertical-xl` or `.is-my-xl`     | `.is-margin-horizontal-xl` or `.is-my-xl`     |
+| <small>20px</small> | `.is-margin-lg` or `.is-m-lg`     | `.is-margin-top-lg` or `.is-mt-lg`     | `.is-margin-right-lg` or `.is-mr-lg`     | `.is-margin-bottom-lg` or `.is-mb-lg`     | `.is-margin-left-lg` or `.is-ml-lg`     | `.is-margin-vertical-lg` or `.is-my-lg`     | `.is-margin-horizontal-lg` or `.is-my-lg`     |
+| <small>16px</small> | `.is-margin-md` or `.is-m-md`     | `.is-margin-top-md` or `.is-mt-md`     | `.is-margin-right-md` or `.is-mr-md`     | `.is-margin-bottom-md` or `.is-mb-md`     | `.is-margin-left-md` or `.is-ml-md`     | `.is-margin-vertical-md` or `.is-my-md`     | `.is-margin-horizontal-md` or `.is-my-md`     |
+| <small>12px</small> | `.is-margin-sm` or `.is-m-sm`     | `.is-margin-top-sm` or `.is-mt-sm`     | `.is-margin-right-sm` or `.is-mr-sm`     | `.is-margin-bottom-sm` or `.is-mb-sm`     | `.is-margin-left-sm` or `.is-ml-sm`     | `.is-margin-vertical-sm` or `.is-my-sm`     | `.is-margin-horizontal-sm` or `.is-my-sm`     |
+| <small>8px</small>  | `.is-margin-xs` or `.is-m-xs`     | `.is-margin-top-xs` or `.is-mt-xs`     | `.is-margin-right-xs` or `.is-mr-xs`     | `.is-margin-bottom-xs` or `.is-mb-xs`     | `.is-margin-left-xs` or `.is-ml-xs`     | `.is-margin-vertical-xs` or `.is-my-xs`     | `.is-margin-horizontal-xs` or `.is-my-xs`     |
+| <small>4px</small>  | `.is-margin-xxs` or `.is-m-xxs`   | `.is-margin-top-xxs` or `.is-mt-xxs`   | `.is-margin-right-xxs` or `.is-mr-xxs`   | `.is-margin-bottom-xxs` or `.is-mb-xxs`   | `.is-margin-left-xxs` or `.is-ml-xxs`   | `.is-margin-vertical-xxs` or `.is-my-xxs`   | `.is-margin-horizontal-xxs` or `.is-my-xxs`   |
+| <small>auto</small> | `.is-margin-auto` or `.is-m-auto` | `.is-margin-top-auto` or `.is-mt-auto` | `.is-margin-right-auto` or `.is-mr-auto` | `.is-margin-bottom-auto` or `.is-mb-auto` | `.is-margin-left-auto` or `.is-ml-auto` | `.is-margin-vertical-auto` or `.is-my-auto` | `.is-margin-horizontal-auto` or `.is-my-auto` |
+| <small>none</small> | `.is-margin-none` or `.is-m-none` | `.is-margin-top-none` or `.is-mt-none` | `.is-margin-right-none` or `.is-mr-none` | `.is-margin-bottom-none` or `.is-mb-none` | `.is-margin-left-none` or `.is-ml-none` | `.is-margin-vertical-none` or `.is-my-none` | `.is-margin-horizontal-none` or `.is-my-none` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div>マージンテスト</div>
+  <div className="box is-mt-md">マージンテスト</div>
+  <div>マージンテスト</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div>マージンテスト</div>
+<div class="box is-mt-md">マージンテスト</div>
+<div>マージンテスト</div>
+```
 
 ## Variables
 
 上書きできる変数は以下の通りです。
 
 ```css
-
+/* None */
 ```
 
 ## Import
@@ -22,5 +62,5 @@ contents list
 PostCSS で読み込む場合の各パスは以下となります。
 
 ```css
-
+@import "musubii/src/utilities/margin/main.css";
 ```
