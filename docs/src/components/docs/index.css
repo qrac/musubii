@@ -104,6 +104,7 @@
 .docs > p,
 .docs > .alert p {
   line-height: 1.75;
+  word-break: auto-phrase;
 }
 
 .docs > :is(p, table, ul, ol, .alert) a {
@@ -116,27 +117,76 @@
   }
 }
 
-.docs > ol:not([class]),
-.docs > ul:not([class]) {
+.docs > ul:not([class]),
+.docs > ol:not([class]) {
   padding-left: 32px;
+  line-height: 1.75;
   list-style: initial;
+  word-break: auto-phrase;
 }
 
-.docs > ol:not([class]) > li,
-.docs > ul:not([class]) > li {
+.docs > ul:not([class]) {
+  list-style-type: circle;
+}
+
+.docs > ol:not([class]) {
+  list-style-type: decimal;
+}
+
+.docs > ul:not([class]) > li,
+.docs > ol:not([class]) > li {
   margin-top: 8px;
 }
 
 .docs > table {
   display: block;
   max-width: 100%;
-  width: max-content;
-  overflow: auto;
+  padding-bottom: 12px;
+  font-size: 0.875rem;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .docs > table tr {
   position: relative;
   border-bottom-width: 1px;
+  border-bottom-color: transparent;
+}
+
+.docs > table tr::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  min-width: calc(100vw - 40px);
+  width: 100%;
+  height: 0;
+  border-top-width: 1px;
+}
+
+@media (576px <= width) {
+  .docs > table tr::after {
+    min-width: calc(var(--section-inner-fablet-width) - 40px);
+  }
+}
+
+@media (768px <= width) {
+  .docs > table tr::after {
+    min-width: calc(var(--section-inner-tablet-width) - 40px);
+  }
+}
+
+@media (992px <= width) {
+  .docs > table tr::after {
+    min-width: 732px;
+  }
+}
+
+@media (1200px <= width) {
+  .docs > table tr::after {
+    min-width: 752px;
+  }
 }
 
 .docs > table th,
@@ -151,12 +201,12 @@
 }
 
 .docs > table small {
+  font-size: 0.875rem;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .docs > table th {
-  font-size: 87.5%;
   font-weight: 600;
   text-align: left;
   white-space: nowrap;
@@ -167,9 +217,8 @@
   background: var(--theme-bg-2);
   border-radius: 4px;
   color: var(--theme-code);
-  font-size: 87.5%;
+  font-size: 0.875rem;
   font-family: var(--font-mono);
-  word-break: break-all;
 }
 
 .docs > table code {
@@ -180,6 +229,7 @@
 .docs [data-rehype-pretty-code-figure] pre {
   background: var(--theme-bg-2);
   border-radius: 12px;
+  font-size: 0.875rem;
   white-space: pre;
   word-wrap: normal;
   overflow: hidden;
@@ -191,7 +241,7 @@
 .docs > pre .hljs,
 .docs [data-rehype-pretty-code-figure] code {
   display: block;
-  padding: 1.25em 1.5em;
+  padding: 20px 24px;
   color: var(--theme-tx-2);
   font-family: var(--font-mono);
 }

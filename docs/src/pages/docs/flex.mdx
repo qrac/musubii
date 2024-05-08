@@ -157,18 +157,18 @@ contents list
 {/* prettier-ignore */}
 <div className="docs-preview">
   <div className="box is-flex">
-    <div className="box is-flex-4" style={{background:"var(--theme-bg-2)"}}>子要素4</div>
-    <div className="box is-flex-5" style={{background:"var(--theme-bg-2)"}}>子要素5</div>
-    <div className="box is-flex-3" style={{background:"var(--theme-bg-2)"}}>子要素3</div>
+    <div className="box is-flex-12 desktop:is-flex-4" style={{background:"var(--theme-bg-2)"}}>子要素12→4</div>
+    <div className="box is-flex-12 desktop:is-flex-5" style={{background:"var(--theme-bg-2)"}}>子要素12→5</div>
+    <div className="box is-flex-12 desktop:is-flex-3" style={{background:"var(--theme-bg-2)"}}>子要素12→3</div>
   </div>
 </div>
 
 {/* prettier-ignore */}
 ```html
 <div class="box is-flex">
-  <div class="box is-flex-4">子要素4</div>
-  <div class="box is-flex-5">子要素5</div>
-  <div class="box is-flex-3">子要素3</div>
+  <div class="box is-flex-12 desktop:is-flex-4">子要素12→4</div>
+  <div class="box is-flex-12 desktop:is-flex-5">子要素12→5</div>
+  <div class="box is-flex-12 desktop:is-flex-3">子要素12→3</div>
 </div>
 ```
 
