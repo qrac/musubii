@@ -2,6 +2,13 @@
   overflow: hidden;
 }
 
+.is-overflow-ellipsis,
+.is-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .is-overflow-scroll-y,
 .is-scroll-y {
   overflow: hidden;
@@ -14,11 +21,4 @@
   overflow: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-.is-overflow-ellipsis,
-.is-ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
