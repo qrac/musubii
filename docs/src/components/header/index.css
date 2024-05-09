@@ -30,6 +30,10 @@
   position: relative;
 }
 
+[data-header-pulldown-menu] summary::-webkit-details-marker {
+  display: none;
+}
+
 [data-header-pulldown-menu] [data-header-pulldown-menu-contents] {
   position: absolute;
   top: calc(100% + 8px);
