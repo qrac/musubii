@@ -33,7 +33,7 @@
   },
   "scripts": {
     "build": "npm run clean && npm run build:src",
-    "build:src": "esbuild ./src/*.* --bundle --minify-whitespace --minify-syntax --outdir=dist",
+    "build-src": "esbuild ./src/*.* --bundle --minify-whitespace --minify-syntax --outdir=dist",
     "clean": "rimraf ./dist",
     "prepublishOnly": "npm run build"
   }
