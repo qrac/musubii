@@ -29,7 +29,7 @@ export default function ({
   const twitterId = "@" + site.twitter.id
   const isNoindex = noindex || false
   const appleTouchIcon = "/apple-touch-icon.png"
-  const favicon = "/favicon.png"
+  //const favicon = "/favicon.png"
   return (
     <>
       <Head bodyAttributes={{ class: "site" }}>
@@ -47,7 +47,6 @@ export default function ({
         <link rel="stylesheet" href="/src/assets/style.css" />
         <script type="module" src="/src/assets/script.ts" />
         <link rel="apple-touch-icon" href={appleTouchIcon} />
-        <link rel="icon" href={favicon} />
       </Head>
       <Header isStiky={layout === "docs"} currentPath={url} />
       <main className="section" id="main">

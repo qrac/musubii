@@ -1,8 +1,3 @@
-import svgFeature1 from "../../assets/images/feature-1.svg"
-import svgFeature2 from "../../assets/images/feature-2.svg"
-import svgFeature3 from "../../assets/images/feature-3.svg"
-import svgFeature4 from "../../assets/images/feature-4.svg"
-
 export function Features() {
   return (
     <>
@@ -41,7 +36,7 @@ export function Feature1() {
         <div className="grid is-flex is-center is-middle is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
             <img
-              src={svgFeature1}
+              src="/assets/images/feature-1.svg"
               width={528}
               height={418}
               className="illustration"
@@ -69,7 +64,7 @@ export function Feature2() {
         <div className="grid is-flex is-center is-middle is-reverse is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
             <img
-              src={svgFeature2}
+              src="/assets/images/feature-2.svg"
               width={528}
               height={418}
               className="illustration"
@@ -99,7 +94,7 @@ export function Feature3() {
         <div className="grid is-flex is-center is-middle is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
             <img
-              src={svgFeature3}
+              src="/assets/images/feature-3.svg"
               width={528}
               height={418}
               className="illustration"
@@ -129,7 +124,7 @@ export function Feature4() {
         <div className="grid is-flex is-center is-middle is-reverse is-gap-xl">
           <div className="column is-flex-full tablet:is-flex-4">
             <img
-              src={svgFeature4}
+              src="/assets/images/feature-4.svg"
               width={528}
               height={418}
               className="illustration"
