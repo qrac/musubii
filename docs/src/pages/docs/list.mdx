@@ -1,0 +1,194 @@
+---
+title: List
+layout: docs
+---
+
+# List
+
+リストの装飾を作るエレメント CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.list` を設置し直下に `.item` を配置します
+- `.list` と `.item` は単体に付与されているスタイルはありません
+- 次項の Variants を併用してください
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <ul className="list">
+    <li className="item">リストアイテム</li>
+  </ul>
+</div>
+
+{/* prettier-ignore */}
+```html
+<ul class="list">
+  <li class="item">リストアイテム</li>
+</ul>
+```
+
+## Variants
+
+- `.is-disc` で塗り円のリスト装飾になります
+- `.is-circle` で白抜き円のリスト装飾になります
+- `.is-square` で塗り四角形のリスト装飾になります
+- `.is-kome` で米印のリスト装飾になります
+- `.is-decimal` で数字の番号リストになります
+
+### disc
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <ul className="list is-disc">
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+  </ul>
+</div>
+
+{/* prettier-ignore */}
+```html
+<ul class="list is-disc">
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+</ul>
+```
+
+### circle
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <ul className="list is-circle">
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+  </ul>
+</div>
+
+{/* prettier-ignore */}
+```html
+<ul class="list is-circle">
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+</ul>
+```
+
+### square
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <ul className="list is-square">
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+  </ul>
+</div>
+
+{/* prettier-ignore */}
+```html
+<ul class="list is-square">
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+</ul>
+```
+
+### decimal
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <ul className="list is-decimal">
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+  </ul>
+</div>
+
+{/* prettier-ignore */}
+```html
+<ul class="list is-decimal">
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+</ul>
+```
+
+### kome
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <ul className="list is-kome">
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+    <li className="item">リストアイテム</li>
+  </ul>
+</div>
+
+{/* prettier-ignore */}
+```html
+<ul class="list is-kome">
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+  <li class="item">リストアイテム</li>
+</ul>
+```
+
+## Note
+
+- `.is-note` は `item` を flexbox にして直書きで装飾を行う設定です
+- `.item` 直下の最初の要素がリストスタイルになります
+- `.item` 直下の 2 番目の要素には [flex](/docs/flex) の `.is-flex-0` を使うのがおすすめです
+- 主に「※1」など特殊な合判を行う場合に使用します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <ul className="list is-note">
+    <li className="item"><span>※1</span><div className="text is-flex-0">リストアイテム</div></li>
+    <li className="item"><span>※2</span><div className="text is-flex-0">リストアイテム</div></li>
+    <li className="item"><span>※3</span><div className="text is-flex-0">リストアイテム</div></li>
+  </ul>
+</div>
+
+{/* prettier-ignore */}
+```html
+<ul class="list is-note">
+  <li class="item"><span>※1</span><div class="text is-flex-0">リストアイテム</div></li>
+  <li class="item"><span>※2</span><div class="text is-flex-0">リストアイテム</div></li>
+  <li class="item"><span>※3</span><div class="text is-flex-0">リストアイテム</div></li>
+</ul>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+.list {
+  --list-margin-left: 1.5em;
+  --list-item-margin-top: 0.25em;
+  --list-kome-item-content: "\203B";
+  --list-kome-item-inset: 0 auto auto -1em;
+  --list-note-item-gap: 0.25em;
+  --list-note-item-margin-top: 0.25em;
+}
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/elements/list/main.css";
+```
+
+v7 を再現する場合は `legacy.css` を追加で読み込んでください。
+
+```css
+@import "musubii/src/layouts/list/legacy.css";
+```

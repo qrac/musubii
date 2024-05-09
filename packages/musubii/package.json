@@ -1,0 +1,40 @@
+{
+  "name": "musubii",
+  "description": "Simple CSS Framework for JP",
+  "version": "8.0.0",
+  "main": "dist/musubii.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "CC0-1.0",
+  "homepage": "https://musubii.qranoko.jp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qrac/musubii",
+    "directory": "packages/musubii"
+  },
+  "bugs": {
+    "url": "https://github.com/qrac/musubii/issues"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "japanese",
+    "musubii"
+  ],
+  "author": {
+    "name": "Qrac",
+    "url": "https://qrac.jp"
+  },
+  "organization": {
+    "name": "QRANOKO",
+    "url": "https://qranoko.jp"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:src",
+    "build:src": "esbuild ./src/*.* --bundle --minify-whitespace --minify-syntax --outdir=dist",
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run build"
+  }
+}

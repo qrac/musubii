@@ -1,0 +1,27 @@
+*,
+::before,
+::after {
+  border-color: var(--theme-bd-1);
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--theme-bg-1);
+  color: var(--theme-tx-2);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--theme-placeholder);
+  opacity: 1;
+}

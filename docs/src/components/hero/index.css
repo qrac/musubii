@@ -1,0 +1,15 @@
+.section.is-hero {
+  background: var(--theme-bg-2);
+}
+
+.section.is-hero > .inner {
+  padding: 40px 20px 92px;
+}
+
+.box.is-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 40px;
+  align-items: middle;
+}

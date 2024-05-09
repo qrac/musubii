@@ -1,0 +1,74 @@
+.radio {
+  --radio-size: 1em;
+  --radio-bg: var(--theme-bg-1);
+  --radio-border-width: 2px;
+  --radio-border-color: var(--theme-bd-2);
+  --radio-transition: none;
+  --radio-checked-border-color: var(--theme-primary);
+  --radio-checked-icon-size: 0.5em;
+  --radio-checked-icon-color: var(--theme-primary);
+  --radio-disabled-color-alpha: 36%;
+}
+
+.radio {
+  --radio-disabled-color-mix: color-mix(
+    in srgb,
+    var(--radio-border-color) var(--radio-disabled-color-alpha),
+    transparent calc(100% - var(--radio-disabled-color-alpha))
+  );
+}
+
+.radio {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: var(--radio-size);
+  height: var(--radio-size);
+  background: var(--radio-bg);
+  border-width: var(--radio-border-width);
+  border-color: var(--radio-border-color);
+  border-radius: 9999em;
+  transition: var(--radio-transition);
+}
+
+.radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--radio-checked-icon-size);
+  height: var(--radio-checked-icon-size);
+  background: var(--radio-checked-icon-color);
+  border-radius: 9999em;
+  translate: -50% -50%;
+  transition: var(--radio-transition);
+  opacity: 0;
+}
+
+.input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+:where([type="radio"]:checked + *) .radio,
+:where([type="radio"]:checked) + .radio {
+  border-color: var(--radio-checked-border-color);
+}
+
+:where([type="radio"]:checked + *) .radio::before,
+:where([type="radio"]:checked) + .radio::before {
+  opacity: 1;
+}
+
+/* prettier-ignore */
+:where([type="radio"]:is([disabled], [aria-disabled="true"], .is-disabled) + *) .radio,
+:where([type="radio"]:is([disabled], [aria-disabled="true"], .is-disabled)) + .radio {
+  border-color: var(--radio-disabled-color-mix);
+}
+
+/* prettier-ignore */
+:where([type="radio"]:checked:is([disabled], [aria-disabled="true"], .is-disabled) + *) .radio::before,
+:where([type="radio"]:checked:is([disabled], [aria-disabled="true"], .is-disabled)) + .radio::before {
+  background: var(--radio-disabled-color-mix);
+}

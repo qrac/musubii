@@ -1,0 +1,11 @@
+@media (768px <= width) {
+  .text:is(.tablet\:is-right, .is-tablet-right) {
+    text-align: right;
+  }
+  .text:is(.tablet\:is-center, .is-tablet-center) {
+    text-align: center;
+  }
+  .text:is(.tablet\:is-left, .is-tablet-left) {
+    text-align: left;
+  }
+}

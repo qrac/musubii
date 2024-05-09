@@ -1,0 +1,168 @@
+---
+title: Migration
+layout: docs
+---
+
+import CodeImportMusubii from "../../assets/markdown/code-import-musubii.md"
+import CodeImportMigrate from "../../assets/markdown/code-import-migrate.md"
+
+# Migration
+
+v7, v7-alpha.41~42 から v8 への移行方法を説明します。どのバージョンでも作業は同じです。
+
+:::div{.alert.is-warning.is-space-xxs}
+
+::p[WARNING]{.text.is-warning.is-strong.is-font-sans-en}
+
+v8 は見た目上の大きな変化はありませんが、内部の仕組みが大きく変わりました。v7 で高度な Sass カスタマイズ（クラス名変更・mixin を使ったスタイルの転用）を行なっている場合は移行できませんので、v8 は新たな制作からの導入をおすすめします。
+
+:::
+
+## Table of Contents
+
+contents list
+
+## CDN
+
+v8 で使えなくなったクラス名はありません。CDN を利用されている場合は読み込んでいるパスを変更するだけで移行完了です。
+
+`migrate.css` を追加で読み込むことで色やサイズ感も v7 を再現できます。
+
+{/* prettier-ignore */}
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@8.0.0/dist/musubii.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@8.0.0/dist/migrate.css" />
+```
+
+## npm
+
+### 1. Sass to CSS
+
+v8 は Sass に対応していないため、既存の SCSS ファイルは CSS に書き直す必要があります。
+
+手っ取り早いのは Sass のビルド後ファイルを分割する方法です。ここで MUSUBii に行なっていたカスタマイズとプロジェクト固有の CSS を抽出しておきます。
+
+```
+/src/assets/css
+├── musubii-override
+│   ├── button.css
+│   └── badge.css
+├── project
+│   ├── tab.css
+│   └── slider.css
+└── style.css
+```
+
+### 2. Support PostCSS
+
+CSS ファイルを `@import` 文で結合させるために、ビルド環境を PostCSS に対応したものに切り替えます。ここでは gulp を [esbuild](https://esbuild.github.io/) へ置き換えたと仮定して進めます。
+
+```sh
+$ npm install --save-dev esbuild
+$ touch ./build.assets.js
+```
+
+esbuild で実行するスクリプトは例えば以下のように書けます。
+
+```js
+// ex. build.assets.js
+import esbuild from "esbuild"
+
+async function build({
+  entryPoints,
+  entryNames,
+  outbase,
+  outdir,
+  minify,
+  isWatch,
+}) {
+  const options = {
+    entryPoints,
+    entryNames,
+    outbase,
+    outdir,
+    minify,
+    bundle: true,
+    logLevel: "info",
+  }
+
+  if (isWatch) {
+    let ctx = await esbuild.context(options)
+    await ctx.watch()
+    console.log("watching...")
+  } else {
+    await esbuild.build(options).catch(() => {
+      process.exit(1)
+    })
+  }
+}
+
+const isWatch = process.argv.includes("-w")
+
+Promise.all([
+  build({
+    entryPoints: ["./src/assets/css/*.css"],
+    entryNames: "[name]",
+    outbase: "",
+    outdir: "./dist/assets/css",
+    minify: true,
+    isWatch,
+  }),
+])
+```
+
+`package.json` でスクリプトを実行しやすくしておきます。
+
+```json
+{
+  "name": "example-project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.assets.js",
+    "watch": "node build.assets.js -w"
+  }
+}
+```
+
+### 3. Upgrade MUSUBii
+
+MUSUBii を v8 にアップグレード。
+
+```sh
+$ npm install musubii@latest
+```
+
+### 4. Import MUSUBii with migrate
+
+CSS ファイルで `@import` を設定します。MUSUBii 本体に加え `migrate.css` を読み込んでください。これにより色やサイズ感を v7 と同じにできます。
+
+```css
+@import "musubii";
+@import "musubii/dist/migrate.css";
+```
+
+部分的にインポートする場合は以下から必要なものを選択してください。
+
+<CodeImportMusubii />
+<CodeImportMigrate />
+
+### 5. Import override and project CSS
+
+抽出しておいた MUSUBii のカスタマイズ CSS とプロジェクト固有の CSS をインポートします。ビルドを行い、サイトの CSS に問題があれば調整を行なってください。
+
+```css
+/* ex. style.css */
+@import "musubii";
+@import "musubii/dist/migrate.css";
+@import "./musubii-override/button.css";
+@import "./musubii-override/badge.css";
+@import "./project/tab.css";
+@import "./project/slider.css";
+```
+
+### 6. Search and replace
+
+※この作業は任意です。行わなずとも運用上の問題はありません。
+
+v8 で追加された短縮版のクラス名を適応する場合は [Optimize](/docs/optimize) のページを参照してください。

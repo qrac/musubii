@@ -1,0 +1,23 @@
+@media (576px <= width) {
+  .fablet\:is-block,
+  .is-fablet-block {
+    display: block;
+  }
+  .fablet\:is-inline,
+  .is-fablet-inline {
+    display: inline;
+  }
+  .fablet\:is-inline-block,
+  .is-fablet-inline-block {
+    display: inline-block;
+  }
+  .fablet\:is-none,
+  .is-fablet-none {
+    display: none;
+  }
+  .fablet\:is-hidden {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}

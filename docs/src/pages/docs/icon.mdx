@@ -1,0 +1,259 @@
+---
+title: Icon
+layout: docs
+---
+
+# Icon
+
+アイコンを装飾するエレメント CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.icon` がベースとなります
+- `.icon` はテキストの色や `font-size` `line-height` を引き継ぎます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+  </svg>
+</div>
+
+{/* prettier-ignore */}
+```html
+<svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+</svg>
+```
+
+## Dark
+
+- `.is-dark` または `.is-dark-{num}` で黒文字を表現します
+- `.is-dark` は最も濃くなります
+- `{num}` は `1` から `9` までで増えるほど薄くなります
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div>
+    <svg className="icon is-dark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-4" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-5" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-7" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-8" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-dark-9" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<svg class="icon is-dark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-4" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-5" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-7" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-8" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-dark-9" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+```
+
+## Light
+
+- `.is-light` または `.is-light-{num}` で白文字を表現します
+- `.is-light` は最も濃くなります
+- `{num}` は `1` から `9` までで増えるほど薄くなります
+
+{/* prettier-ignore */}
+<div className="docs-preview" style={{background:"#0f172a"}}>
+  <div>
+    <svg className="icon is-light" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-4" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-5" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-7" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-8" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-light-9" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<svg class="icon is-light" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-4" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-5" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-7" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-8" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-light-9" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+```
+
+## Color
+
+- `.is-{color}` でアイコンに色を付けます
+- `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div>
+    <svg className="icon is-primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-secondary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-info" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-success" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-warning" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+    <svg className="icon is-danger" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<svg class="icon is-primary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-secondary" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-info" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-success" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-warning" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+<svg class="icon is-danger" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+```
+
+## Disabled
+
+- `[disabled]` または `[aria-disabled="true"]` または `.is-disabled` で非活性化します
+- 非活性化すると `pointer-events: none;` が付与されホバー効果などが打ち消されます
+- 非活性化した `.icon` は薄くなります
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div>
+    <svg className="icon is-primary" aria-disabled="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+    </svg>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<svg class="icon is-primary" aria-disabled="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+```
+
+## Fit
+
+- `.is-fit` でアイコンに `width: 1em;` `text-align: center;` を付与します
+- 主にアイコンの幅が不揃いのアイコンフォントを揃える場合に使います
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <svg className="icon is-fit" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+  </svg>
+</div>
+
+{/* prettier-ignore */}
+```html
+<svg class="icon is-fit" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">...</svg>
+```
+
+## Compatible
+
+推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
+
+| 推奨のクラス名 | 互換のあるクラス名                                        |
+| -------------- | --------------------------------------------------------- |
+| `.icon`        | `.im` `.fa` `.fas` `.far` `.fal` `.fab` `.material-icons` |
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons) {
+  --icon-font-size: inherit;
+  --icon-line-height: inherit;
+  --icon-svg-width: 1em;
+  --icon-svg-height: 1em;
+  --icon-svg-vertical-align: text-bottom;
+  --icon-material-vertical-align: bottom;
+  --icon-dark-color: var(--theme-dark);
+  --icon-light-color: var(--theme-light);
+  --icon-primary-color: var(--theme-primary);
+  --icon-secondary-color: var(--theme-secondary);
+  --icon-info-color: var(--theme-info);
+  --icon-success-color: var(--theme-success);
+  --icon-warning-color: var(--theme-warning);
+  --icon-danger-color: var(--theme-danger);
+  --icon-fit-width: 1em;
+}
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/elements/icon/main.css";
+```

@@ -1,0 +1,157 @@
+.alert {
+  --alert-padding: 0.675em 1.125em;
+  --alert-bg: var(--theme-bg-2);
+  --alert-border-width: 1px;
+  --alert-border-color: var(--theme-bd-2);
+  --alert-border-radius: 6px;
+  --alert-tail-width: 1em;
+  --alert-tail-height: 0.5em;
+  --alert-tail-position: 10%;
+}
+
+.alert.is-primary {
+  --alert-bg: var(--theme-primary-light);
+  --alert-border-color: var(--theme-primary);
+}
+
+.alert.is-secondary {
+  --alert-bg: var(--theme-secondary-light);
+  --alert-border-color: var(--theme-secondary);
+}
+
+.alert.is-info {
+  --alert-bg: var(--theme-info-light);
+  --alert-border-color: var(--theme-info);
+}
+
+.alert.is-success {
+  --alert-bg: var(--theme-success-light);
+  --alert-border-color: var(--theme-success);
+}
+
+.alert.is-warning {
+  --alert-bg: var(--theme-warning-light);
+  --alert-border-color: var(--theme-warning);
+}
+
+.alert.is-danger {
+  --alert-bg: var(--theme-danger-light);
+  --alert-border-color: var(--theme-danger);
+}
+
+.alert {
+  position: relative;
+  padding: var(--alert-padding);
+  background: var(--alert-bg);
+  border-width: var(--alert-border-width);
+  border-color: var(--alert-border-color);
+  border-radius: var(--alert-border-radius);
+}
+
+.alert[class*="is-tail-"]::before,
+.alert[class*="is-tail-"]::after {
+  content: "";
+  position: absolute;
+}
+
+.alert[class*="is-tail-"]::before {
+  background: var(--alert-border-color);
+}
+
+.alert[class*="is-tail-"]::after {
+  background: var(--alert-bg);
+}
+
+.alert:is([class*="is-tail-top-"], [class*="is-tail-bottom-"])::before,
+.alert:is([class*="is-tail-top-"], [class*="is-tail-bottom-"])::after {
+  width: var(--alert-tail-width);
+  height: var(--alert-tail-height);
+}
+
+.alert:is([class*="is-tail-right-"], [class*="is-tail-left-"])::before,
+.alert:is([class*="is-tail-right-"], [class*="is-tail-left-"])::after {
+  width: var(--alert-tail-height);
+  height: var(--alert-tail-width);
+}
+
+.alert[class*="is-tail-top-"]::before,
+.alert[class*="is-tail-top-"]::after {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.alert[class*="is-tail-bottom-"]::before,
+.alert[class*="is-tail-bottom-"]::after {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.alert[class*="is-tail-right-"]::before,
+.alert[class*="is-tail-right-"]::after {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.alert[class*="is-tail-left-"]::before,
+.alert[class*="is-tail-left-"]::after {
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+.alert[class*="is-tail-top-"]::before {
+  top: calc(var(--alert-tail-height) * -1);
+}
+
+.alert[class*="is-tail-top-"]::after {
+  top: calc(var(--alert-tail-height) * -1 + var(--alert-border-width));
+}
+
+.alert[class*="is-tail-bottom-"]::before {
+  bottom: calc(var(--alert-tail-height) * -1);
+}
+
+.alert[class*="is-tail-bottom-"]::after {
+  bottom: calc(var(--alert-tail-height) * -1 + var(--alert-border-width));
+}
+
+.alert[class*="is-tail-right-"]::before {
+  right: calc(var(--alert-tail-height) * -1);
+}
+
+.alert[class*="is-tail-right-"]::after {
+  right: calc(var(--alert-tail-height) * -1 + var(--alert-border-width));
+}
+
+.alert[class*="is-tail-left-"]::before {
+  left: calc(var(--alert-tail-height) * -1);
+}
+
+.alert[class*="is-tail-left-"]::after {
+  left: calc(var(--alert-tail-height) * -1 + var(--alert-border-width));
+}
+
+.alert:is(.is-tail-top-left, .is-tail-bottom-left)::before,
+.alert:is(.is-tail-top-left, .is-tail-bottom-left)::after {
+  left: var(--alert-tail-position);
+}
+
+.alert:is(.is-tail-top-center, .is-tail-bottom-center)::before,
+.alert:is(.is-tail-top-center, .is-tail-bottom-center)::after {
+  left: calc(50% - var(--alert-tail-width) / 2);
+}
+
+.alert:is(.is-tail-top-right, .is-tail-bottom-right)::before,
+.alert:is(.is-tail-top-right, .is-tail-bottom-right)::after {
+  right: var(--alert-tail-position);
+}
+
+.alert:is(.is-tail-right-top, .is-tail-left-top)::before,
+.alert:is(.is-tail-right-top, .is-tail-left-top)::after {
+  top: var(--alert-tail-position);
+}
+
+.alert:is(.is-tail-right-middle, .is-tail-left-middle)::before,
+.alert:is(.is-tail-right-middle, .is-tail-left-middle)::after {
+  top: calc(50% - var(--alert-tail-width) / 2);
+}
+
+.alert:is(.is-tail-right-bottom, .is-tail-left-bottom)::before,
+.alert:is(.is-tail-right-bottom, .is-tail-left-bottom)::after {
+  bottom: var(--alert-tail-position);
+}

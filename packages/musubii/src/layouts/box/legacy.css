@@ -1,0 +1,11 @@
+.box:is(.box.is-angle-right, .box.is-angle-left) {
+  --box-angle-padding: 1.75em;
+}
+
+.box.is-angle-right {
+  padding-right: var(--box-angle-padding);
+}
+
+.box.is-angle-left {
+  padding-left: var(--box-angle-padding);
+}

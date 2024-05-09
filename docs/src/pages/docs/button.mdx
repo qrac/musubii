@@ -1,0 +1,383 @@
+---
+title: Button
+layout: docs
+---
+
+# Button
+
+ボタンの装飾を作るエレメント CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.button` がベースとなります
+- `.button` によってサイズなどは設定されますが単体では完成しません
+- 次項の Variants を併用してください
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <button className="button" type="button">ボタン</button>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button" type="button">ボタン</button>
+```
+
+## Variants
+
+- `.is-plain` でプレーンタイプのボタン装飾を作ります
+- `.is-outline` でアウトラインタイプのボタン装飾を作ります
+- `.is-melt` で溶け込むタイプのボタン装飾を作ります
+- `.is-{color}` を追加するとボタンに色が付きます
+- `{color}` は `primary` `secondary` `info` `success` `warning` `danger` の 6 種類
+
+### plain
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain" type="button">詳細</button>
+    <button className="button is-plain is-primary" type="button">決定</button>
+    <button className="button is-plain is-secondary" type="button">変更</button>
+    <button className="button is-plain is-info" type="button">情報</button>
+    <button className="button is-plain is-success" type="button">送信</button>
+    <button className="button is-plain is-warning" type="button">注意</button>
+    <button className="button is-plain is-danger" type="button">削除</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain" type="button">詳細</button>
+<button class="button is-plain is-primary" type="button">決定</button>
+<button class="button is-plain is-secondary" type="button">変更</button>
+<button class="button is-plain is-info" type="button">情報</button>
+<button class="button is-plain is-success" type="button">送信</button>
+<button class="button is-plain is-warning" type="button">注意</button>
+<button class="button is-plain is-danger" type="button">削除</button>
+```
+
+### outline
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-outline" type="button">詳細</button>
+    <button className="button is-outline is-primary" type="button">決定</button>
+    <button className="button is-outline is-secondary" type="button">変更</button>
+    <button className="button is-outline is-info" type="button">情報</button>
+    <button className="button is-outline is-success" type="button">送信</button>
+    <button className="button is-outline is-warning" type="button">注意</button>
+    <button className="button is-outline is-danger" type="button">削除</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-outline" type="button">詳細</button>
+<button class="button is-outline is-primary" type="button">決定</button>
+<button class="button is-outline is-secondary" type="button">変更</button>
+<button class="button is-outline is-info" type="button">情報</button>
+<button class="button is-outline is-success" type="button">送信</button>
+<button class="button is-outline is-warning" type="button">注意</button>
+<button class="button is-outline is-danger" type="button">削除</button>
+```
+
+### melt
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-melt" type="button">詳細</button>
+    <button className="button is-melt is-primary" type="button">決定</button>
+    <button className="button is-melt is-secondary" type="button">変更</button>
+    <button className="button is-melt is-info" type="button">情報</button>
+    <button className="button is-melt is-success" type="button">送信</button>
+    <button className="button is-melt is-warning" type="button">注意</button>
+    <button className="button is-melt is-danger" type="button">削除</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-melt" type="button">詳細</button>
+<button class="button is-melt is-primary" type="button">決定</button>
+<button class="button is-melt is-secondary" type="button">変更</button>
+<button class="button is-melt is-info" type="button">情報</button>
+<button class="button is-melt is-success" type="button">送信</button>
+<button class="button is-melt is-warning" type="button">注意</button>
+<button class="button is-melt is-danger" type="button">削除</button>
+```
+
+## Shape
+
+- `.is-round` で角を完全に丸くできます
+- `.is-circle` で正円ボタンにします
+- `.is-square` で正方形ボタンにします
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain is-primary is-round" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-circle" type="button">
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+    </button>
+    <button className="button is-plain is-primary is-square" type="button">
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-primary is-round" type="button">...</button>
+<button class="button is-plain is-primary is-circle" type="button">...</button>
+<button class="button is-plain is-primary is-square" type="button">...</button>
+```
+
+## Angle
+
+- `.is-angle-right` で右に角アイコンを表示させます
+- `.is-angle-left` で左に角アイコンを表示させます
+- `.is-angle-up` で角アイコンを上向きにします
+- `.is-angle-bottom` でで角アイコンを下向きにします
+- 角アイコン分の余白が足りない場合は [padding](/docs/padding) で設定します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain is-primary is-angle-right is-pr-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-left is-pl-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-right is-angle-up is-pr-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-left is-angle-up is-pl-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-right is-angle-down is-pr-xxl" type="button">ボタン</button>
+    <button className="button is-plain is-primary is-angle-left is-angle-down is-pl-xxl" type="button">ボタン</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-primary is-angle-right is-pr-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-left is-pl-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-right is-angle-up is-pr-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-left is-angle-up is-pl-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-right is-angle-down is-pr-xxl" type="button">ボタン</button>
+<button class="button is-plain is-primary is-angle-left is-angle-down is-pl-xxl" type="button">ボタン</button>
+```
+
+## Strong
+
+- `.is-strong` でボタン内を太文字にします
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain is-primary is-strong" type="button">ボタン</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-primary is-strong" type="button">ボタン</button>
+```
+
+## Floating
+
+- `.is-floating` でドロップシャドウを付与します
+- `.is-plain` と併用します
+- 影は Color の色を引き継ぎます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain is-floating" type="button">詳細</button>
+    <button className="button is-plain is-floating is-primary" type="button">決定</button>
+    <button className="button is-plain is-floating is-secondary" type="button">変更</button>
+    <button className="button is-plain is-floating is-info" type="button">情報</button>
+    <button className="button is-plain is-floating is-success" type="button">送信</button>
+    <button className="button is-plain is-floating is-warning" type="button">注意</button>
+    <button className="button is-plain is-floating is-danger" type="button">削除</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-floating" type="button">詳細</button>
+<button class="button is-plain is-floating is-primary" type="button">決定</button>
+<button class="button is-plain is-floating is-secondary" type="button">変更</button>
+<button class="button is-plain is-floating is-info" type="button">情報</button>
+<button class="button is-plain is-floating is-success" type="button">送信</button>
+<button class="button is-plain is-floating is-warning" type="button">注意</button>
+<button class="button is-plain is-floating is-danger" type="button">削除</button>
+```
+
+## Disabled
+
+- `[disabled]` または `[aria-disabled="true"]` または `.is-disabled` で非活性化します
+- 非活性化すると `pointer-events: none;` が付与されホバー効果などが打ち消されます
+- 非活性化した `.button` は専用の色味に変化します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-xs">
+    <button className="button is-plain" type="button" disabled>詳細</button>
+    <button className="button is-plain is-primary" type="button" disabled>決定</button>
+    <button className="button is-outline" type="button" disabled>詳細</button>
+    <button className="button is-outline is-secondary" type="button" disabled>変更</button>
+    <button className="button is-melt" type="button" disabled>詳細</button>
+    <button className="button is-melt is-info" type="button" disabled>情報</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain" type="button" disabled>詳細</button>
+<button class="button is-plain is-primary" type="button" disabled>決定</button>
+<button class="button is-outline" type="button" disabled>詳細</button>
+<button class="button is-outline is-secondary" type="button" disabled>変更</button>
+<button class="button is-melt" type="button" disabled>詳細</button>
+<button class="button is-melt is-info" type="button" disabled>情報</button>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+.button {
+  --button-gap: 0.5em;
+  --button-padding: 0.5em 1em;
+  --button-bg: transparent;
+  --button-border-width: 1px;
+  --button-border-color: transparent;
+  --button-border-radius: 6px;
+  --button-color: inherit;
+  --button-font-weight: 500;
+  --button-line-height: 1.25;
+  --button-transition: ease-out 0.12s;
+  --button-plain-bg: var(--theme-bg-2);
+  --button-plain-color: inherit;
+  --button-plain-hover-bg-darken: 10%;
+  --button-outline-bg: var(--theme-bg-1);
+  --button-outline-border-color: var(--theme-bd-2);
+  --button-outline-color: inherit;
+  --button-outline-hover-bg: var(--theme-bg-2);
+  --button-outline-hover-color: inherit;
+  --button-melt-bg: transparent;
+  --button-melt-color: inherit;
+  --button-melt-hover-bg: var(--theme-dark);
+  --button-melt-hover-bg-alpha: 7.5%;
+  --button-square-size: calc(2.25em + 1px * 2);
+  --button-angle-position: 0.75em;
+  --button-angle-size: 0.5em;
+  --button-angle-width: 2px;
+  --button-angle-color: var(--theme-dark);
+  --button-angle-color-alpha: 24%;
+  --button-strong-font-weight: 700;
+  --button-floating-shadow-size: 0 2px 6px 0;
+  --button-floating-shadow-color: var(--theme-shadow);
+  --button-floating-shadow-color-alpha: 24%;
+  --button-floating-hover-shadow-size: 0 4px 12px 0;
+  --button-disabled-bg: var(--theme-disabled);
+  --button-disabled-border-color: var(--theme-disabled);
+  --button-disabled-color: var(--theme-dark);
+  --button-disabled-color-alpha: 36%;
+}
+
+.button:is(
+    .is-primary,
+    .is-secondary,
+    .is-info,
+    .is-success,
+    .is-warning,
+    .is-danger
+  ) {
+  --button-plain-color: var(--theme-lk-tx);
+  --button-outline-hover-color: var(--theme-lk-tx);
+  --button-angle-color: currentColor;
+  --button-angle-color-alpha: 100%;
+  --button-floating-shadow-color-alpha: 50%;
+}
+
+.button.is-primary {
+  --button-plain-bg: var(--theme-primary);
+  --button-outline-border-color: var(--theme-primary);
+  --button-outline-color: var(--theme-primary);
+  --button-outline-hover-bg: var(--theme-primary);
+  --button-melt-color: var(--theme-primary);
+  --button-melt-hover-bg: var(--theme-primary);
+  --button-floating-shadow-color: var(--theme-primary);
+}
+
+.button.is-secondary {
+  --button-plain-bg: var(--theme-secondary);
+  --button-outline-border-color: var(--theme-secondary);
+  --button-outline-color: var(--theme-secondary);
+  --button-outline-hover-bg: var(--theme-secondary);
+  --button-melt-color: var(--theme-secondary);
+  --button-melt-hover-bg: var(--theme-secondary);
+  --button-floating-shadow-color: var(--theme-secondary);
+}
+
+.button.is-info {
+  --button-plain-bg: var(--theme-info);
+  --button-outline-border-color: var(--theme-info);
+  --button-outline-color: var(--theme-info);
+  --button-outline-hover-bg: var(--theme-info);
+  --button-melt-color: var(--theme-info);
+  --button-melt-hover-bg: var(--theme-info);
+  --button-floating-shadow-color: var(--theme-info);
+}
+
+.button.is-success {
+  --button-plain-bg: var(--theme-success);
+  --button-outline-border-color: var(--theme-success);
+  --button-outline-color: var(--theme-success);
+  --button-outline-hover-bg: var(--theme-success);
+  --button-melt-color: var(--theme-success);
+  --button-melt-hover-bg: var(--theme-success);
+  --button-floating-shadow-color: var(--theme-success);
+}
+
+.button.is-warning {
+  --button-plain-bg: var(--theme-warning);
+  --button-outline-border-color: var(--theme-warning);
+  --button-outline-color: var(--theme-warning);
+  --button-outline-hover-bg: var(--theme-warning);
+  --button-melt-color: var(--theme-warning);
+  --button-melt-hover-bg: var(--theme-warning);
+  --button-floating-shadow-color: var(--theme-warning);
+}
+
+.button.is-danger {
+  --button-plain-bg: var(--theme-danger);
+  --button-outline-border-color: var(--theme-danger);
+  --button-outline-color: var(--theme-danger);
+  --button-outline-hover-bg: var(--theme-danger);
+  --button-melt-color: var(--theme-danger);
+  --button-melt-hover-bg: var(--theme-danger);
+  --button-floating-shadow-color: var(--theme-danger);
+}
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/elements/button/main.css";
+```
+
+v7 を再現する場合は `legacy.css` を追加で読み込んでください。
+
+```css
+@import "musubii/src/layouts/button/legacy.css";
+```

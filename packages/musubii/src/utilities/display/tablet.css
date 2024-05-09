@@ -1,0 +1,23 @@
+@media (768px <= width) {
+  .tablet\:is-block,
+  .is-tablet-block {
+    display: block;
+  }
+  .tablet\:is-inline,
+  .is-tablet-inline {
+    display: inline;
+  }
+  .tablet\:is-inline-block,
+  .is-tablet-inline-block {
+    display: inline-block;
+  }
+  .tablet\:is-none,
+  .is-tablet-none {
+    display: none;
+  }
+  .tablet\:is-hidden {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}

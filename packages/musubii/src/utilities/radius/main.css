@@ -1,0 +1,40 @@
+.is-radius-xxl {
+  border-radius: 16px;
+}
+
+.is-radius-xl {
+  border-radius: 12px;
+}
+
+.is-radius-lg {
+  border-radius: 8px;
+}
+
+.is-radius-ml {
+  border-radius: 6px;
+}
+
+.is-radius-md,
+.is-radius {
+  border-radius: 4px;
+}
+
+.is-radius-sm {
+  border-radius: 3px;
+}
+
+.is-radius-xs {
+  border-radius: 2px;
+}
+
+.is-radius-xxs {
+  border-radius: 1px;
+}
+
+.is-radius-none {
+  border-radius: 0;
+}
+
+.is-radius-full {
+  border-radius: 9999em;
+}

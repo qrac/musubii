@@ -1,0 +1,5 @@
+.wysiwyg {
+  --wysiwyg-blockquote-radius: 2px;
+  --wysiwyg-code-border-radius: 2px;
+  --wysiwyg-pre-border-radius: 2px;
+}

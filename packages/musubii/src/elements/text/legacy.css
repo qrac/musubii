@@ -1,0 +1,11 @@
+.blockquote {
+  --blockquote-radius: 2px;
+}
+
+.code {
+  --code-border-radius: 2px;
+}
+
+.pre {
+  --pre-border-radius: 2px;
+}

@@ -1,0 +1,11 @@
+@media (576px <= width) {
+  .text:is(.fablet\:is-right, .is-fablet-right) {
+    text-align: right;
+  }
+  .text:is(.fablet\:is-center, .is-fablet-center) {
+    text-align: center;
+  }
+  .text:is(.fablet\:is-left, .is-fablet-left) {
+    text-align: left;
+  }
+}

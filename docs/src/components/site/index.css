@@ -1,0 +1,22 @@
+html {
+  scroll-padding-top: 64px;
+}
+
+.site {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100svh;
+}
+
+.site *.is-font-sans-en {
+  font-family: var(--font-sans-en);
+}
+
+.site *.is-indent-half {
+  text-indent: 0.5em;
+}
+
+.site *.is-auto-phrase {
+  word-break: auto-phrase;
+}

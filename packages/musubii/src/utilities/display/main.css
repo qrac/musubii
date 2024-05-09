@@ -1,0 +1,25 @@
+.is-block,
+.is-mobile-block {
+  display: block;
+}
+
+.is-inline,
+.is-mobile-inline {
+  display: inline;
+}
+
+.is-inline-block,
+.is-mobile-inline-block {
+  display: inline-block;
+}
+
+.is-none,
+.is-mobile-none {
+  display: none;
+}
+
+.is-hidden {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}

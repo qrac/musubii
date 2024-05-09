@@ -1,0 +1,27 @@
+:is(.is-xxl, .is-mobile-xxl) {
+  font-size: 200%;
+}
+
+:is(.is-xl, .is-mobile-xl) {
+  font-size: 150%;
+}
+
+:is(.is-lg, .is-mobile-lg) {
+  font-size: 125%;
+}
+
+:is(.is-md, .is-mobile-md) {
+  font-size: 100%;
+}
+
+:is(.is-sm, .is-mobile-sm) {
+  font-size: 87.5%;
+}
+
+:is(.is-xs, .is-mobile-xs) {
+  font-size: 75%;
+}
+
+:is(.is-xxs, .is-mobile-xxs) {
+  font-size: 62.5%;
+}

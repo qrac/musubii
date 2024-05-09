@@ -1,0 +1,157 @@
+---
+title: Grid
+layout: docs
+---
+
+# Grid
+
+Flexbox を用いたグリッドレイアウト CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.grid` を設置し直下に `.column` を配置します
+- `.column` の幅は [flex](/docs/flex) の `.is-flex-{num}` で設定します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="grid">
+    <div className="column is-flex-0">カラム</div>
+    <div className="column is-flex-0">カラム</div>
+    <div className="column is-flex-0">カラム</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="grid">
+  <div class="column is-flex-0">カラム</div>
+  <div class="column is-flex-0">カラム</div>
+  <div class="column is-flex-0">カラム</div>
+</div>
+```
+
+## Arrange
+
+- [flex](/docs/flex) と同様の配置調整が可能です
+- `.is-stretch` でカラムを Flexbox にして高さを引き継げます（グリッド専用）
+
+| クラス名       | 効果                                     |
+| -------------- | ---------------------------------------- |
+| `.is-top`      | カラムを上に揃える                       |
+| `.is-baseline` | カラムをベースラインに揃える             |
+| `.is-middle`   | カラムを上下中央に揃える                 |
+| `.is-bottom`   | カラムを下に揃える                       |
+| `.is-center`   | カラムを左右中央に揃える                 |
+| `.is-right`    | カラムを右に揃える                       |
+| `.is-between`  | カラムを左右均等に並べる（端に溝幅なし） |
+| `.is-around`   | カラムを左右均等に並べる（端に溝幅あり） |
+| `.is-reverse`  | カラムを左右逆に並べる                   |
+| `.is-nowrap`   | カラムを折り返さない                     |
+| `.is-stretch`  | カラムを flexbox にして高さを引き継ぐ    |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="grid is-between">
+    <div className="column">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="grid is-between">
+  <div class="column">カラム</div>
+  <div class="column">カラム</div>
+  <div class="column">カラム</div>
+</div>
+```
+
+## Gap
+
+- `.is-gap-{size}` で溝を設定できます
+- `.is-gap-y-{size}` で上下方向のみに溝を設定
+- `.is-gap-x-{size}` で左右方向のみに溝を設定
+- `{size}` は最大 `xxl` から最小 `xxs` まで
+
+| サイズ              | 上下左右      | 上下のみ        | 左右のみ        |
+| ------------------- | ------------- | --------------- | --------------- |
+| <small>28px</small> | `.is-gap-xxl` | `.is-gap-y-xxl` | `.is-gap-x-xxl` |
+| <small>24px</small> | `.is-gap-xl`  | `.is-gap-y-xl`  | `.is-gap-x-xl`  |
+| <small>20px</small> | `.is-gap-lg`  | `.is-gap-y-lg`  | `.is-gap-x-lg`  |
+| <small>16px</small> | `.is-gap-md`  | `.is-gap-y-md`  | `.is-gap-x-md`  |
+| <small>12px</small> | `.is-gap-sm`  | `.is-gap-y-sm`  | `.is-gap-x-sm`  |
+| <small>8px</small>  | `.is-gap-xs`  | `.is-gap-y-xs`  | `.is-gap-x-xs`  |
+| <small>4px</small>  | `.is-gap-xxs` | `.is-gap-y-xxs` | `.is-gap-x-xxs` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="grid is-gap-md">
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+    <div className="column is-flex-0">
+      <div style={{background:"var(--theme-bg-2)"}}>カラム</div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="grid is-gap-md">
+  <div class="column is-flex-0">カラム</div>
+  <div class="column is-flex-0">カラム</div>
+  <div class="column is-flex-0">カラム</div>
+</div>
+```
+
+## Compatible
+
+推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
+
+| 推奨のクラス名  | 互換のあるクラス名                                                                |
+| --------------- | --------------------------------------------------------------------------------- |
+| `.is-gap-md`    | `.is-gap`                                                                         |
+| `.is-gap-y-xxl` | `.is-gap-vertical-xxl` `.is-gap-row-xxl`                                          |
+| `.is-gap-y-xl`  | `.is-gap-vertical-xl` `.is-gap-row-xl`                                            |
+| `.is-gap-y-lg`  | `.is-gap-vertical-lg` `.is-gap-row-lg`                                            |
+| `.is-gap-y-md`  | `.is-gap-vertical-md` `.is-gap-row-md` `.is-gap-vertical` `.is-gap-row`           |
+| `.is-gap-y-sm`  | `.is-gap-vertical-sm` `.is-gap-row-sm`                                            |
+| `.is-gap-y-xs`  | `.is-gap-vertical-xs` `.is-gap-row-xs`                                            |
+| `.is-gap-y-xxs` | `.is-gap-vertical-xxs` `.is-gap-row-xxs`                                          |
+| `.is-gap-x-xxl` | `.is-gap-horizontal-xxl` `.is-gap-column-xxl`                                     |
+| `.is-gap-x-xl`  | `.is-gap-horizontal-xl` `.is-gap-column-xl`                                       |
+| `.is-gap-x-lg`  | `.is-gap-horizontal-lg` `.is-gap-column-lg`                                       |
+| `.is-gap-x-md`  | `.is-gap-horizontal-md` `.is-gap-column-md` `.is-gap-horizontal` `.is-gap-column` |
+| `.is-gap-x-sm`  | `.is-gap-horizontal-sm` `.is-gap-column-sm`                                       |
+| `.is-gap-x-xs`  | `.is-gap-horizontal-xs` `.is-gap-column-xs`                                       |
+| `.is-gap-x-xxs` | `.is-gap-horizontal-xxs` `.is-gap-column-xxs`                                     |
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/layouts/grid/main.css";
+```

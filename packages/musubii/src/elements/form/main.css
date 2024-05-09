@@ -1,0 +1,178 @@
+:is(.input, .textarea) {
+  --input-height: calc(2.25em + (1px * 2));
+  --input-padding: 0.5em 0.75em;
+  --input-bg: var(--theme-bg-1);
+  --input-border-width: 1px;
+  --input-border-color: var(--theme-bd-1);
+  --input-border-radius: 6px;
+  --input-inset-shadow-color: var(--theme-shadow);
+  --input-inset-shadow-color-alpha: 7.5%;
+  --input-inset-shadow-size: 0 1px 1px;
+  --input-color: inherit;
+  --input-line-height: 1.25;
+  --input-transition: none;
+  --input-placeholder-color: var(--theme-tx-1);
+  --input-placeholder-color-alpha: 26%;
+  --input-success: var(--theme-success);
+  --input-success-light: var(--theme-success-light);
+  --input-danger: var(--theme-danger);
+  --input-danger-light: var(--theme-danger-light);
+  --input-accent-mix: 50%;
+  --input-plain-bg: var(--theme-bg-2);
+  --input-inside-bg: transparent;
+  --input-readonly-bg: var(--theme-bg-2);
+  --input-disabled-bg: var(--theme-disabled);
+  --input-disabled-border-color: var(--theme-bd-1);
+  --input-disabled-color: var(--theme-dark);
+  --input-disabled-color-alpha: 36%;
+  --textarea-padding: calc(0.5em - 1.5px) 0.5em;
+}
+
+:is(.input, .textarea) {
+  --input-inset-shadow-color-mix: color-mix(
+    in srgb,
+    var(--input-inset-shadow-color) var(--input-inset-shadow-color-alpha),
+    transparent calc(100% - var(--input-inset-shadow-color-alpha))
+  );
+  --input-placeholder-color-mix: color-mix(
+    in srgb,
+    var(--input-placeholder-color) var(--input-placeholder-color-alpha),
+    transparent calc(100% - var(--input-placeholder-color-alpha))
+  );
+  --input-success-mix: color-mix(
+    in srgb,
+    var(--input-success) calc(100% - var(--input-accent-mix)),
+    var(--input-success-light) var(--input-accent-mix)
+  );
+  --input-danger-mix: color-mix(
+    in srgb,
+    var(--input-danger) calc(100% - var(--input-accent-mix)),
+    var(--input-danger-light) var(--input-accent-mix)
+  );
+  --input-disabled-color-mix: color-mix(
+    in srgb,
+    var(--input-disabled-color) var(--input-disabled-color-alpha),
+    transparent calc(100% - var(--input-disabled-color-alpha))
+  );
+}
+
+:is(.input, .textarea).is-success {
+  --input-border-color: var(--input-success-mix);
+  --input-plain-bg: var(--input-success-light);
+  --input-inside-bg: var(--input-success-light);
+}
+
+:is(.input, .textarea).is-danger {
+  --input-bg: var(--input-danger-light);
+  --input-border-color: var(--input-danger-mix);
+  --input-plain-bg: var(--input-danger-light);
+  --input-inside-bg: var(--input-danger-light);
+}
+
+.input {
+  max-width: 100%;
+  height: var(--input-height);
+  padding: var(--input-padding);
+  background: var(--input-bg);
+  border-width: var(--input-border-width);
+  border-color: var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  box-shadow: inset var(--input-inset-shadow-size)
+    var(--input-inset-shadow-color-mix);
+  color: var(--input-color);
+  line-height: var(--input-line-height);
+  transition: var(--input-transition);
+  appearance: none;
+}
+
+.textarea {
+  max-width: 100%;
+  padding: var(--textarea-padding);
+  background: var(--input-bg);
+  border-width: var(--input-border-width);
+  border-color: var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  box-shadow: inset var(--input-inset-shadow-size)
+    var(--input-inset-shadow-color-mix);
+  color: var(--input-color);
+  transition: var(--input-transition);
+  appearance: none;
+}
+
+:is(.input, .textarea)::placeholder {
+  color: var(--input-placeholder-color-mix);
+}
+
+:is(.input, .textarea).is-plain {
+  background: var(--input-plain-bg);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+:is(.input, .textarea).is-underline {
+  padding-right: 0;
+  padding-left: 0;
+  background: transparent;
+  border-color: transparent;
+  border-bottom-color: var(--input-border-color);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+:is(.input, .textarea).is-inside {
+  background: var(--input-inside-bg);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+:is(.input, .textarea).is-right {
+  text-align: right;
+}
+
+:is(.input, .textarea).is-center {
+  text-align: center;
+}
+
+:is(.input, .textarea).is-left {
+  text-align: left;
+}
+
+.input.is-round {
+  border-radius: 9999em;
+}
+
+:is(.input, .textarea):where([readonly]) {
+  background: var(--input-readonly-bg);
+}
+
+:is(.input, .textarea):is([disabled], [aria-disabled="true"], .is-disabled) {
+  color: var(--input-disabled-color-mix);
+}
+
+:is(.input, .textarea):where(:not(.is-underline)):is(
+    [disabled],
+    [aria-disabled="true"],
+    .is-disabled
+  ) {
+  background: var(--input-disabled-bg);
+}
+
+:is(.input, .textarea):where(:not(.is-underline):not(.is-inside)):is(
+    [disabled],
+    [aria-disabled="true"],
+    .is-disabled
+  ) {
+  border-color: var(--input-disabled-border-color);
+}
+
+:is(.input, .textarea).is-underline:is(
+    [disabled],
+    [aria-disabled="true"],
+    .is-disabled
+  ) {
+  border-bottom-color: var(--input-disabled-border-color);
+}
+
+.input[type="file"] {
+  display: none;
+}

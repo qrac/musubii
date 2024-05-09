@@ -1,0 +1,97 @@
+---
+title: Joint
+layout: docs
+---
+
+# Joint
+
+直下の [Button](/docs/button)・[Badge](/docs/badge)・[Form](/docs/form) の `.input` や `.select` を連結させられるレイアウト CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.joint` を設置し直下に `.button` `.badge` `.input` `.select` を配置します
+- 自動的に角丸と区切りのボーダーが調整されます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="joint">
+    <button className="button is-outline" type="button">ボタン</button>
+    <button className="button is-outline" type="button">ボタン</button>
+    <button className="button is-outline" type="button">ボタン</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="joint">
+  <button class="button is-outline" type="button">ボタン</button>
+  <button class="button is-outline" type="button">ボタン</button>
+  <button class="button is-outline" type="button">ボタン</button>
+</div>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="joint">
+    <span className="badge is-plain">Build</span>
+    <span className="badge is-plain is-success">Passing</span>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="joint">
+  <span class="badge is-plain">Build</span>
+  <span class="badge is-plain is-success">Passing</span>
+</div>
+```
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="joint">
+    <div className="select">
+      <select>
+        <option>Select A</option>
+        <option>Select B</option>
+        <option>Select C</option>
+      </select>
+    </div>
+    <input type="text" className="input" name="text" placeholder="キーワード" />
+    <button type="submit" className="button is-plain is-info">検索</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="joint">
+  <div class="select">
+    <select>
+      <option>Select A</option>
+      <option>Select B</option>
+      <option>Select C</option>
+    </select>
+  </div>
+  <input type="text" class="input" name="text" placeholder="キーワード">
+  <button type="submit" class="button is-plain is-info">検索</button>
+</div>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/layouts/joint/main.css";
+```

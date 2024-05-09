@@ -1,0 +1,23 @@
+@media (992px <= width) {
+  .desktop\:is-block,
+  .is-desktop-block {
+    display: block;
+  }
+  .desktop\:is-inline,
+  .is-desktop-inline {
+    display: inline;
+  }
+  .desktop\:is-inline-block,
+  .is-desktop-inline-block {
+    display: inline-block;
+  }
+  .desktop\:is-none,
+  .is-desktop-none {
+    display: none;
+  }
+  .desktop\:is-hidden {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}

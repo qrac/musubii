@@ -1,0 +1,103 @@
+---
+title: Space
+layout: docs
+---
+
+# Space
+
+直下要素の間にマージンを付与するユーティリティ CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.is-space-{size}` で直下の最初の要素以外に `margin-top` を付与します
+- `{size}` は最大 `xxl` から最小 `xxs` まで
+
+| サイズ              | クラス名        |
+| ------------------- | --------------- |
+| <small>28px</small> | `.is-space-xxl` |
+| <small>24px</small> | `.is-space-xl`  |
+| <small>20px</small> | `.is-space-lg`  |
+| <small>16px</small> | `.is-space-md`  |
+| <small>12px</small> | `.is-space-sm`  |
+| <small>8px</small>  | `.is-space-xs`  |
+| <small>4px</small>  | `.is-space-xxs` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div>スペーステスト</div>
+    <div>スペーステスト</div>
+    <div>スペーステスト</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-space-md">
+  <div>スペーステスト</div>
+  <div>スペーステスト</div>
+  <div>スペーステスト</div>
+</div>
+```
+
+## Way
+
+- `.is-space-{way}-{size}` で直下のすべての要素に `margin-{way}` を付与します
+- `{way}` は `top` `right` `bottom` `left` の 4 種類
+- `{size}` は最大 `xxl` から最小 `xxs` まで
+
+:::div{.alert.is-info.is-space-xxs}
+
+::p[INFO]{.text.is-info.is-strong.is-font-sans-en}
+
+Flexbox を使用している場合は [flex の gap](/docs/flex#gap) を使う方が望ましいです
+
+:::
+
+| サイズ              | Top                 | Right                 | Bottom                 | Left                 |
+| ------------------- | ------------------- | --------------------- | ---------------------- | -------------------- |
+| <small>28px</small> | `.is-space-top-xxl` | `.is-space-right-xxl` | `.is-space-bottom-xxl` | `.is-space-left-xxl` |
+| <small>24px</small> | `.is-space-top-xl`  | `.is-space-right-xl`  | `.is-space-bottom-xl`  | `.is-space-left-xl`  |
+| <small>20px</small> | `.is-space-top-lg`  | `.is-space-right-lg`  | `.is-space-bottom-lg`  | `.is-space-left-lg`  |
+| <small>16px</small> | `.is-space-top-md`  | `.is-space-right-md`  | `.is-space-bottom-md`  | `.is-space-left-md`  |
+| <small>12px</small> | `.is-space-top-sm`  | `.is-space-right-sm`  | `.is-space-bottom-sm`  | `.is-space-left-sm`  |
+| <small>8px</small>  | `.is-space-top-xs`  | `.is-space-right-xs`  | `.is-space-bottom-xs`  | `.is-space-left-xs`  |
+| <small>4px</small>  | `.is-space-top-xxs` | `.is-space-right-xxs` | `.is-space-bottom-xxs` | `.is-space-left-xxs` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-space-right-md">
+    <div>スペーステスト</div>
+    <div>スペーステスト</div>
+    <div>スペーステスト</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-flex is-space-right-md">
+  <div>スペーステスト</div>
+  <div>スペーステスト</div>
+  <div>スペーステスト</div>
+</div>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/utilities/space/main.css";
+```

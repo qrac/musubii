@@ -1,0 +1,36 @@
+.label {
+  --label-disabled-color: var(--theme-dark);
+  --label-disabled-color-alpha: 36%;
+}
+
+.label {
+  --label-disabled-color-mix: color-mix(
+    in srgb,
+    var(--label-disabled-color) var(--label-disabled-color-alpha),
+    transparent calc(100% - var(--label-disabled-color-alpha))
+  );
+}
+
+.label {
+  cursor: pointer;
+  display: flex;
+}
+
+.label.is-center {
+  justify-content: center;
+}
+
+.label.is-middle {
+  align-items: center;
+}
+
+:where(.label:not(.is-middle)) :is(.radio, .checkbox) {
+  top: 0.25em;
+}
+
+/* prettier-ignore */
+:where(:is([type="radio"], [type="checkbox"]):is([disabled], [aria-disabled="true"], .is-disabled)) + .label,
+.label:where(:has(:is([type="radio"], [type="checkbox"]):is([disabled], [aria-disabled="true"], .is-disabled))) {
+  cursor: default;
+  color: var(--label-disabled-color-mix);
+}

@@ -1,0 +1,154 @@
+.badge {
+  --badge-gap: 0.25em;
+  --badge-padding: 0.25em 0.375em;
+  --badge-bg: transparent;
+  --badge-border-width: 1px;
+  --badge-border-color: transparent;
+  --badge-border-radius: 4px;
+  --badge-color: inherit;
+  --badge-font-weight: 500;
+  --badge-line-height: 1.25;
+  --badge-plain-bg: var(--theme-bg-2);
+  --badge-plain-color: inherit;
+  --badge-outline-bg: var(--theme-bg-1);
+  --badge-outline-border-color: var(--theme-bd-2);
+  --badge-outline-color: inherit;
+  --badge-melt-bg: transparent;
+  --badge-melt-color: inherit;
+  --badge-square-size: calc(1.75em + 1px * 2);
+  --badge-strong-font-weight: 700;
+  --badge-disabled-bg: var(--theme-disabled);
+  --badge-disabled-border-color: var(--theme-disabled);
+  --badge-disabled-color: var(--theme-dark);
+  --badge-disabled-color-alpha: 36%;
+}
+
+.badge:is(
+    .is-primary,
+    .is-secondary,
+    .is-info,
+    .is-success,
+    .is-warning,
+    .is-danger
+  ) {
+  --badge-plain-color: var(--theme-lk-tx);
+}
+
+.badge.is-primary {
+  --badge-plain-bg: var(--theme-primary);
+  --badge-outline-border-color: var(--theme-primary);
+  --badge-outline-color: var(--theme-primary);
+  --badge-melt-color: var(--theme-primary);
+}
+
+.badge.is-secondary {
+  --badge-plain-bg: var(--theme-secondary);
+  --badge-outline-border-color: var(--theme-secondary);
+  --badge-outline-color: var(--theme-secondary);
+  --badge-melt-color: var(--theme-secondary);
+}
+
+.badge.is-info {
+  --badge-plain-bg: var(--theme-info);
+  --badge-outline-border-color: var(--theme-info);
+  --badge-outline-color: var(--theme-info);
+  --badge-melt-color: var(--theme-info);
+}
+
+.badge.is-success {
+  --badge-plain-bg: var(--theme-success);
+  --badge-outline-border-color: var(--theme-success);
+  --badge-outline-color: var(--theme-success);
+  --badge-melt-color: var(--theme-success);
+}
+
+.badge.is-warning {
+  --badge-plain-bg: var(--theme-warning);
+  --badge-outline-border-color: var(--theme-warning);
+  --badge-outline-color: var(--theme-warning);
+  --badge-melt-color: var(--theme-warning);
+}
+
+.badge.is-danger {
+  --badge-plain-bg: var(--theme-danger);
+  --badge-outline-border-color: var(--theme-danger);
+  --badge-outline-color: var(--theme-danger);
+  --badge-melt-color: var(--theme-danger);
+}
+
+.badge {
+  --badge-disabled-color-mix: color-mix(
+    in srgb,
+    var(--badge-disabled-color) var(--badge-disabled-color-alpha),
+    transparent calc(100% - var(--badge-disabled-color-alpha))
+  );
+}
+
+.badge {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--badge-gap);
+  width: auto;
+  padding: var(--badge-padding);
+  background: var(--badge-bg);
+  border-width: var(--badge-border-width);
+  border-color: var(--badge-border-color);
+  border-radius: var(--badge-border-radius);
+  color: var(--badge-color);
+  font-weight: var(--badge-font-weight);
+  line-height: var(--badge-line-height);
+  white-space: nowrap;
+}
+
+.badge.is-plain {
+  background: var(--badge-plain-bg);
+  color: var(--badge-plain-color);
+}
+
+.badge.is-outline {
+  background: var(--badge-outline-bg);
+  border-color: var(--badge-outline-border-color);
+  color: var(--badge-outline-color);
+}
+
+.badge.is-melt {
+  background: var(--badge-melt-bg);
+  color: var(--badge-melt-color);
+}
+
+.badge:is(.is-round, .is-circle) {
+  border-radius: 9999em;
+}
+
+.badge:is(.is-square, .is-circle) {
+  width: var(--badge-square-size);
+  height: var(--badge-square-size);
+  padding: 0;
+}
+
+.badge.is-strong {
+  font-weight: var(--badge-strong-font-weight);
+}
+
+.badge:is([disabled], [aria-disabled="true"], .is-disabled) {
+  pointer-events: none;
+}
+
+.badge:is(.is-plain, .is-outline, .is-melt):is(
+    [disabled],
+    [aria-disabled="true"],
+    .is-disabled
+  ) {
+  color: var(--badge-disabled-color-mix);
+}
+
+.badge.is-plain:is([disabled], [aria-disabled="true"], .is-disabled) {
+  background: var(--badge-disabled-bg);
+}
+
+.badge.is-outline:is([disabled], [aria-disabled="true"], .is-disabled) {
+  background: var(--badge-disabled-bg);
+  border-color: var(--badge-disabled-border-color);
+}

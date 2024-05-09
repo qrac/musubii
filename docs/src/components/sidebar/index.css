@@ -1,0 +1,9 @@
+.sidebar {
+  position: sticky;
+  top: 62px;
+  width: 160px;
+  max-height: calc(100svh - 62px);
+  padding-top: 40px;
+  padding-bottom: 20vh;
+  overflow-y: auto;
+}

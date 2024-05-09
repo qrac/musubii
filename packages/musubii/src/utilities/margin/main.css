@@ -1,0 +1,334 @@
+.is-m-xxl,
+.is-margin-xxl {
+  margin: 28px;
+}
+
+.is-m-xl,
+.is-margin-xl {
+  margin: 24px;
+}
+
+.is-m-lg,
+.is-margin-lg {
+  margin: 20px;
+}
+
+.is-m-md,
+.is-margin-md,
+.is-margin {
+  margin: 16px;
+}
+
+.is-m-sm,
+.is-margin-sm {
+  margin: 12px;
+}
+
+.is-m-xs,
+.is-margin-xs {
+  margin: 8px;
+}
+
+.is-m-xxs,
+.is-margin-xxs {
+  margin: 4px;
+}
+
+.is-m-none,
+.is-margin-none {
+  margin: 0;
+}
+
+.is-m-auto,
+.is-margin-auto {
+  margin: auto;
+}
+
+.is-mt-xxl,
+.is-margin-top-xxl {
+  margin-top: 28px;
+}
+
+.is-mt-xl,
+.is-margin-top-xl {
+  margin-top: 24px;
+}
+
+.is-mt-lg,
+.is-margin-top-lg {
+  margin-top: 20px;
+}
+
+.is-mt-md,
+.is-margin-top-md {
+  margin-top: 16px;
+}
+
+.is-mt-sm,
+.is-margin-top-sm {
+  margin-top: 12px;
+}
+
+.is-mt-xs,
+.is-margin-top-xs {
+  margin-top: 8px;
+}
+
+.is-mt-xxs,
+.is-margin-top-xxs {
+  margin-top: 4px;
+}
+
+.is-mt-none,
+.is-margin-top-none {
+  margin-top: 0;
+}
+
+.is-mt-auto,
+.is-margin-top-auto {
+  margin-top: auto;
+}
+
+.is-mr-xxl,
+.is-margin-right-xxl {
+  margin-right: 28px;
+}
+
+.is-mr-xl,
+.is-margin-right-xl {
+  margin-right: 24px;
+}
+
+.is-mr-lg,
+.is-margin-right-lg {
+  margin-right: 20px;
+}
+
+.is-mr-md,
+.is-margin-right-md {
+  margin-right: 16px;
+}
+
+.is-mr-sm,
+.is-margin-right-sm {
+  margin-right: 12px;
+}
+
+.is-mr-xs,
+.is-margin-right-xs {
+  margin-right: 8px;
+}
+
+.is-mr-xxs,
+.is-margin-right-xxs {
+  margin-right: 4px;
+}
+
+.is-mr-none,
+.is-margin-right-none {
+  margin-right: 0;
+}
+
+.is-mr-auto,
+.is-margin-right-auto {
+  margin-right: auto;
+}
+
+.is-mb-xxl,
+.is-margin-bottom-xxl {
+  margin-bottom: 28px;
+}
+
+.is-mb-xl,
+.is-margin-bottom-xl {
+  margin-bottom: 24px;
+}
+
+.is-mb-lg,
+.is-margin-bottom-lg {
+  margin-bottom: 20px;
+}
+
+.is-mb-md,
+.is-margin-bottom-md {
+  margin-bottom: 16px;
+}
+
+.is-mb-sm,
+.is-margin-bottom-sm {
+  margin-bottom: 12px;
+}
+
+.is-mb-xs,
+.is-margin-bottom-xs {
+  margin-bottom: 8px;
+}
+
+.is-mb-xxs,
+.is-margin-bottom-xxs {
+  margin-bottom: 4px;
+}
+
+.is-mb-none,
+.is-margin-bottom-none {
+  margin-bottom: 0;
+}
+
+.is-mb-auto,
+.is-margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.is-ml-xxl,
+.is-margin-left-xxl {
+  margin-left: 28px;
+}
+
+.is-ml-xl,
+.is-margin-left-xl {
+  margin-left: 24px;
+}
+
+.is-ml-lg,
+.is-margin-left-lg {
+  margin-left: 20px;
+}
+
+.is-ml-md,
+.is-margin-left-md {
+  margin-left: 16px;
+}
+
+.is-ml-sm,
+.is-margin-left-sm {
+  margin-left: 12px;
+}
+
+.is-ml-xs,
+.is-margin-left-xs {
+  margin-left: 8px;
+}
+
+.is-ml-xxs,
+.is-margin-left-xxs {
+  margin-left: 4px;
+}
+
+.is-ml-none,
+.is-margin-left-none {
+  margin-left: 0;
+}
+
+.is-ml-auto,
+.is-margin-left-auto {
+  margin-left: auto;
+}
+
+.is-my-xxl,
+.is-margin-vertical-xxl {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.is-my-xl,
+.is-margin-vertical-xl {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.is-my-lg,
+.is-margin-vertical-lg {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.is-my-md,
+.is-margin-vertical-md {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.is-my-sm,
+.is-margin-vertical-sm {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.is-my-xs,
+.is-margin-vertical-xs {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.is-my-xxs,
+.is-margin-vertical-xxs {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.is-my-none,
+.is-margin-vertical-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.is-my-auto,
+.is-margin-vertical-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.is-mx-xxl,
+.is-margin-horizontal-xxl {
+  margin-right: 28px;
+  margin-left: 28px;
+}
+
+.is-mx-xl,
+.is-margin-horizontal-xl {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.is-mx-lg,
+.is-margin-horizontal-lg {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.is-mx-md,
+.is-margin-horizontal-md {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.is-mx-sm,
+.is-margin-horizontal-sm {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.is-mx-xs,
+.is-margin-horizontal-xs {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.is-mx-xxs,
+.is-margin-horizontal-xxs {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.is-mx-none,
+.is-margin-horizontal-none {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.is-mx-auto,
+.is-margin-horizontal-auto,
+.is-centering {
+  margin-right: auto;
+  margin-left: auto;
+}

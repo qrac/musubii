@@ -1,0 +1,108 @@
+---
+title: Display
+layout: docs
+---
+
+# Display
+
+表示方法を変更するユーティリティ CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `display` プロパティを `block` `inline` `inline-block` `none` へ変更可能です
+- `.is-hidden` で非表示にしつつ機能を残すことができます（主に `input` 用）
+- 各クラスは画面サイズに応じて適応できます
+- ※flexbox は [flex](/docs/flex) を参照ください
+
+| 効果                              | すべて             | 576px 以上                | 768px 以上                | 992px 以上                 | 1200px 以上             |
+| --------------------------------- | ------------------ | ------------------------- | ------------------------- | -------------------------- | ----------------------- |
+| <small>block</small>              | `.is-block`        | `.fablet:is-block`        | `.tablet:is-block`        | `.desktop:is-block`        | `.wide:is-block`        |
+| <small>inline</small>             | `.is-inline`       | `.fablet:is-inline`       | `.tablet:is-inline`       | `.desktop:is-inline`       | `.wide:is-inline`       |
+| <small>inline-block</small>       | `.is-inline-block` | `.fablet:is-inline-block` | `.tablet:is-inline-block` | `.desktop:is-inline-block` | `.wide:is-inline-block` |
+| <small>非表示（機能なし）</small> | `.is-none`         | `.fablet:is-none`         | `.tablet:is-none`         | `.desktop:is-none`         | `.wide:is-none`         |
+| <small>非表示（機能あり）</small> | `.is-hidden`       | `.fablet:is-hidden`       | `.tablet:is-hidden`       | `.desktop:is-hidden`       | `.wide:is-hidden`       |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <p>
+    <span>「文章のテスト1」</span>
+    <span className="text is-block">「ブロック」</span>
+    <span>「文章のテスト2」</span>
+    <span className="text is-inline">「インライン」</span>
+    <span>「文章のテスト3」</span>
+    <span className="text is-inline-block">「インラインブロック」</span>
+    <span>「文章のテスト4」</span>
+    <span className="text is-none">「ノーン」</span>
+    <span>「文章のテスト5」</span>
+    <span className="text is-hidden">「ヒドゥン」</span>
+    <span>「文章のテスト6」</span>
+  </p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p>
+  <span>「文章のテスト1」</span>
+  <span class="text is-block">「ブロック」</span>
+  <span>「文章のテスト2」</span>
+  <span class="text is-inline">「インライン」</span>
+  <span>「文章のテスト3」</span>
+  <span class="text is-inline-block">「インラインブロック」</span>
+  <span>「文章のテスト4」</span>
+  <span class="text is-none">「ノーン」</span>
+  <span>「文章のテスト5」</span>
+  <span class="text is-hidden">「ヒドゥン」</span>
+  <span>「文章のテスト6」</span>
+</p>
+```
+
+## Compatible
+
+推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
+
+| 推奨のクラス名             | 互換のあるクラス名         |
+| -------------------------- | -------------------------- |
+| `.is-block`                | `.is-mobile-block`         |
+| `.is-inline`               | `.is-mobile-inline`        |
+| `.is-inline-block`         | `.is-mobile-inline-block`  |
+| `.is-none`                 | `.is-mobile-none`          |
+| `.fablet:is-block`         | `.is-fablet-block`         |
+| `.fablet:is-inline`        | `.is-fablet-inline`        |
+| `.fablet:is-inline-block`  | `.is-fablet-inline-block`  |
+| `.fablet:is-none`          | `.is-fablet-none`          |
+| `.tablet:is-block`         | `.is-tablet-block`         |
+| `.tablet:is-inline`        | `.is-tablet-inline`        |
+| `.tablet:is-inline-block`  | `.is-tablet-inline-block`  |
+| `.tablet:is-none`          | `.is-tablet-none`          |
+| `.desktop:is-block`        | `.is-desktop-block`        |
+| `.desktop:is-inline`       | `.is-desktop-inline`       |
+| `.desktop:is-inline-block` | `.is-desktop-inline-block` |
+| `.desktop:is-none`         | `.is-desktop-none`         |
+| `.wide:is-block`           | `.is-wide-block`           |
+| `.wide:is-inline`          | `.is-wide-inline`          |
+| `.wide:is-inline-block`    | `.is-wide-inline-block`    |
+| `.wide:is-none`            | `.is-wide-none`            |
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/utilities/display/main.css";
+@import "musubii/src/utilities/display/fablet.css";
+@import "musubii/src/utilities/display/tablet.css";
+@import "musubii/src/utilities/display/desktop.css";
+@import "musubii/src/utilities/display/wide.css";
+```

@@ -1,0 +1,178 @@
+.select {
+  --select-height: calc(2.25em + (1px * 2));
+  --select-padding: 0.5em 0.75em;
+  --select-padding-right: 2.5em;
+  --select-bg: var(--theme-bg-1);
+  --select-border-width: 1px;
+  --select-border-color: var(--theme-bd-1);
+  --select-border-radius: 6px;
+  --select-color: inherit;
+  --select-line-height: 1.25;
+  --select-transition: none;
+  --select-success: var(--theme-success);
+  --select-success-light: var(--theme-success-light);
+  --select-danger: var(--theme-danger);
+  --select-danger-light: var(--theme-danger-light);
+  --select-accent-mix: 50%;
+  --select-angle-position: 1em;
+  --select-angle-size: 0.5em;
+  --select-angle-width: 2px;
+  --select-angle-color: var(--theme-dark);
+  --select-angle-color-alpha: 24%;
+  --select-angle-z-index: 3;
+  --select-multiple-option-min-height: 1.5em;
+  --select-multiple-option-padding: 0.5em 0.75em;
+  --select-plain-bg: var(--theme-bg-2);
+  --select-underline-padding-right: 1.75em;
+  --select-underline-icon-position: 0.25em;
+  --select-inside-bg: transparent;
+  --select-disabled-bg: var(--theme-disabled);
+  --select-disabled-border-color: var(--theme-bd-1);
+  --select-disabled-color: var(--theme-dark);
+  --select-disabled-color-alpha: 36%;
+}
+
+.select {
+  --select-success-mix: color-mix(
+    in srgb,
+    var(--select-success) calc(100% - var(--select-accent-mix)),
+    var(--select-success-light) var(--select-accent-mix)
+  );
+  --select-danger-mix: color-mix(
+    in srgb,
+    var(--select-danger) calc(100% - var(--select-accent-mix)),
+    var(--select-danger-light) var(--select-accent-mix)
+  );
+  --select-angle-color-mix: color-mix(
+    in srgb,
+    var(--select-angle-color) var(--select-angle-color-alpha),
+    transparent calc(100% - var(--select-angle-color-alpha))
+  );
+  --select-disabled-color-mix: color-mix(
+    in srgb,
+    var(--select-disabled-color) var(--select-disabled-color-alpha),
+    transparent calc(100% - var(--select-disabled-color-alpha))
+  );
+}
+
+.select.is-success {
+  --select-border-color: var(--select-success-mix);
+  --select-plain-bg: var(--select-success-light);
+  --select-inside-bg: var(--select-success-light);
+}
+
+.select.is-danger {
+  --select-bg: var(--select-danger-light);
+  --select-border-color: var(--select-danger-mix);
+  --select-plain-bg: var(--select-danger-light);
+  --select-inside-bg: var(--select-danger-light);
+}
+
+.select {
+  position: relative;
+  display: inline-flex;
+}
+
+.select > select {
+  cursor: pointer;
+  flex: none;
+  width: 100%;
+  height: var(--select-height);
+  padding: var(--select-padding);
+  background: var(--select-bg);
+  border-width: var(--select-border-width);
+  border-color: var(--select-border-color);
+  border-radius: var(--select-border-radius);
+  color: var(--select-color);
+  line-height: var(--select-line-height);
+  transition: var(--select-transition);
+  appearance: none;
+}
+
+.select:where(:not(.is-multiple)) > select {
+  padding-right: var(--select-padding-right);
+}
+
+.select:where(:not(.is-multiple))::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: var(--select-angle-position);
+  width: var(--select-angle-size);
+  height: var(--select-angle-size);
+  border-right-width: var(--select-angle-width);
+  border-right-color: var(--select-angle-color-mix);
+  border-bottom-width: var(--select-angle-width);
+  border-bottom-color: var(--select-angle-color-mix);
+  transform: translateY(-70%) rotate(45deg);
+  z-index: var(--select-angle-z-index);
+}
+
+.select.is-multiple > select {
+  height: auto;
+  padding: 0;
+}
+
+.select.is-multiple > select > option {
+  min-height: var(--select-multiple-option-min-height);
+  padding: var(--select-multiple-option-padding);
+}
+
+.select.is-plain > select {
+  background: var(--select-plain-bg);
+  border-color: transparent;
+}
+
+.select.is-underline > select {
+  padding-right: var(--select-underline-padding-right);
+  padding-left: 0;
+  background: transparent;
+  border-color: transparent;
+  border-bottom-color: var(--select-border-color);
+  border-radius: 0;
+}
+
+.select.is-underline:where(:not(.is-multiple))::after {
+  right: var(--select-underline-icon-position);
+}
+
+.select.is-inside > select {
+  background: var(--select-inside-bg);
+  border-color: transparent;
+}
+
+.select.is-right > select {
+  text-align: right;
+}
+
+.select.is-center > select {
+  text-align: center;
+}
+
+.select.is-left > select {
+  text-align: left;
+}
+
+.select.is-round > select {
+  border-radius: 9999em;
+}
+
+.select > select:is([disabled], [aria-disabled="true"], .is-disabled) {
+  color: var(--select-disabled-color-mix);
+}
+
+.select:where(:not(.is-underline))
+  > select:is([disabled], [aria-disabled="true"], .is-disabled) {
+  background: var(--select-disabled-bg);
+}
+
+.select:where(:not(.is-underline):not(.is-inside))
+  > select:is([disabled], [aria-disabled="true"], .is-disabled) {
+  border-color: var(--select-disabled-border-color);
+}
+
+.select.is-underline
+  > select:is([disabled], [aria-disabled="true"], .is-disabled) {
+  border-bottom-color: var(--select-disabled-border-color);
+}

@@ -1,0 +1,230 @@
+---
+title: Box
+layout: docs
+---
+
+# Box
+
+グルーピングや区分けの際に設置する汎用的なレイアウト CSS。
+
+:::div{.alert.is-info.is-space-xxs}
+
+::p[INFO]{.text.is-info.is-strong.is-font-sans-en}
+
+v8 で Flexbox の設定 `.is-flex` は [flex](/docs/flex) に移動しました
+
+:::
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.box` でコンテンツを包みます
+- `.box` には `position: relative;` `display: block;` が付与されています
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box">ボックス</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box">ボックス</div>
+```
+
+## Background
+
+- `.is-bg-light` で背景を `var(--theme-bg-1)` で塗れます
+- `.is-bg-cover` で背景画像をいっぱいに広げられます
+- `.is-bg-contain` で背景画像を見切れないサイズにできます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-bg-light">ボックス</div>
+  <div className="box is-bg-cover"
+    style={{backgroundImage: "url(/favicon.png)"}}
+  >ボックス</div>
+  <div className="box is-bg-contain"
+    style={{backgroundImage: "url(/favicon.png)"}}
+  >ボックス</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-bg-light">ボックス</div>
+<div class="box is-bg-cover">ボックス</div>
+<div class="box is-bg-contain">ボックス</div>
+```
+
+## Outline
+
+- `.is-outline` で周囲にボーダーを引けます
+- `.is-outline-{way}` で指定した方向にボーダーを引けます
+- `{way}` は `top` `right` `bottom` `left` の 4 種類
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-outline">ボックス</div>
+    <div className="box is-outline-top">ボックス</div>
+    <div className="box is-outline-right">ボックス</div>
+    <div className="box is-outline-bottom">ボックス</div>
+    <div className="box is-outline-left">ボックス</div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-outline">ボックス</div>
+<div class="box is-outline-top">ボックス</div>
+<div class="box is-outline-right">ボックス</div>
+<div class="box is-outline-bottom">ボックス</div>
+<div class="box is-outline-left">ボックス</div>
+```
+
+## Separate
+
+- `.is-separate` で子要素の境にボーダーを付与できます
+- `.is-separate-parent` と `.is-separate-child` で任意の子要素の境にボーダーを付与
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <div className="box is-separate">
+      <div>子要素</div>
+      <div>子要素</div>
+      <div>子要素</div>
+    </div>
+    <div className="box is-separate-parent">
+      <div className="box is-flex">
+        <div>子要素1</div><div className="box is-separate-child">子要素2</div>
+      </div>
+      <div className="box is-flex">
+        <div>子要素1</div><div className="box is-separate-child">子要素2</div>
+      </div>
+      <div className="box is-flex">
+        <div>子要素1</div><div className="box is-separate-child">子要素2</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-separate">
+  <div>子要素</div>
+  <div>子要素</div>
+  <div>子要素</div>
+</div>
+
+<div class="box is-separate-parent">
+  <div class="box is-flex">
+    <div>子要素1</div><div class="box is-separate-child">子要素2</div>
+  </div>
+  <div class="box is-flex">
+    <div>子要素1</div><div class="box is-separate-child">子要素2</div>
+  </div>
+  <div class="box is-flex">
+    <div>子要素1</div><div class="box is-separate-child">子要素2</div>
+  </div>
+</div>
+```
+
+## Angle
+
+- `.is-angle-right` や `.is-angle-left` で指定方向に角マークを付与します
+- `.is-angle-up` や `.is-angle-down` で角マークが指定方向を向きます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-angle-right"><p className="text">テキスト</p></div>
+  <div className="box is-angle-left"><p className="text is-right">テキスト</p></div>
+  <div className="box is-angle-right is-angle-up"><p className="text">テキスト</p></div>
+  <div className="box is-angle-left is-angle-up"><p className="text is-right">テキスト</p></div>
+  <div className="box is-angle-right is-angle-down"><p className="text">テキスト</p></div>
+  <div className="box is-angle-left is-angle-down"><p className="text is-right">テキスト</p></div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-angle-right"><p class="text">テキスト</p></div>
+<div class="box is-angle-left"><p class="text is-right">テキスト</p></div>
+<div class="box is-angle-right is-angle-up"><p class="text">テキスト</p></div>
+<div class="box is-angle-left is-angle-up"><p class="text is-right">テキスト</p></div>
+<div class="box is-angle-right is-angle-down"><p class="text">テキスト</p></div>
+<div class="box is-angle-left is-angle-down"><p class="text is-right">テキスト</p></div>
+```
+
+## Link
+
+- `.is-link` でホバー効果が付与されます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-link">ボックス</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-link">ボックス</div>
+```
+
+## Disabled
+
+- `[disabled]` または `[aria-disabled="true"]` または `.is-disabled` で非活性化します
+- 非活性化すると `pointer-events: none;` が付与されホバー効果などが打ち消されます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-link" aria-disabled="true">ボックス</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-link" aria-disabled="true">ボックス</div>
+```
+
+## Compatible
+
+推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
+
+| 推奨のクラス名 | 互換のあるクラス名 |
+| -------------- | ------------------ |
+| `.is-bg-light` | `.is-bg`           |
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+.box {
+  --box-bg-light-bg: var(--theme-bg-1);
+  --box-outline-border-width: 1px;
+  --box-outline-border-color: var(--theme-bd-1);
+  --box-separate-border-width: 1px;
+  --box-separate-border-color: var(--theme-bd-1);
+  --box-angle-position: 0.75em;
+  --box-angle-size: 0.5em;
+  --box-angle-width: 2px;
+  --box-angle-color: var(--theme-dark);
+  --box-angle-color-alpha: 24%;
+  --box-link-transition: ease-out 0.12s;
+  --box-link-hover-bg: var(--theme-bg-2);
+}
+```
+
+## Import
+
+PostCSS で読み込む場合のパスは以下となります。
+
+```css
+@import "musubii/src/layouts/box/main.css";
+```
+
+v7 を再現する場合は `legacy.css` を追加で読み込んでください。
+
+```css
+@import "musubii/src/layouts/box/legacy.css";
+```

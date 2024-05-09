@@ -1,0 +1,62 @@
+---
+title: Optimize
+layout: docs
+---
+
+# Optimize
+
+MUSUBii はクラス名の後方互換があるため、既存のテンプレートを無理に書き換える必要はありませんが、新しいバージョンの推奨するクラス名に変更することでテンプレートの見通しは良くなります。プロジェクトに余裕がある場合は試してみてください。
+
+## Table of Contents
+
+contents list
+
+## Change point
+
+### Shorten
+
+v8 ではユーティリティの一部のクラス名を短縮して書けるようになりました。これを利用して、既存テンプレートの HTML を少し圧縮できます。
+
+- 対応したユーティリティは [margin](/docs/margin)・[negative](/docs/negative)・[padding](/docs/padding) の 3 種類
+- 短縮形のクラス名は各ページで確認できます
+
+```html
+<!-- ex. Before -->
+<div class="box is-margin-bottom-sm is-padding-top-lg">ボックス</div>
+
+<!-- ex. After -->
+<div class="box is-mb-sm is-pt-lg">ボックス</div>
+```
+
+### Flexibility
+
+v8 では Flexbox の子要素の横幅を操作する CSS の命名を調整しました。これを適応することよって flex の操作を行なっているプロパティであることが明確になります。
+
+- クラス名は [flex](/docs/flex) のページで確認できます
+
+```html
+<!-- ex. Before -->
+<div class="box is-0">ボックス</div>
+
+<!-- ex. After -->
+<div class="box is-flex-0">ボックス</div>
+```
+
+### Media Query
+
+v8 では特定の画面サイズで適応する CSS の命名を調整しました。これを適応することによって他の CSS と視覚的な差別化ができます。
+
+- 調整を行なった CSS は [text](/docs/text)・[display](/docs/display)・[flex](/docs/flex)・[size](/docs/size) です
+- クラス名は各ページで確認できます
+
+```html
+<!-- ex. Before -->
+<div class="box is-tablet-12 is-desktop-6">ボックス</div>
+
+<!-- ex. After -->
+<div class="box tablet:is-flex-12 desktop:is-flex-6">ボックス</div>
+```
+
+## npm
+
+※開発検討中

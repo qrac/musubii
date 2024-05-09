@@ -1,0 +1,105 @@
+---
+title: Size
+layout: docs
+---
+
+# Size
+
+エレメントのサイズを変更するユーティリティ CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.is-{size}` で `font-size` を変更します
+- `{size}` は最大 `xxl` から最小 `xxs` まで
+- エレメントのほとんどは em で設計されているため相対的にサイズ変更できます
+- 各クラスは画面サイズに応じて適応できます
+
+| サイズ               | すべて    | 576px 以上       | 768px 以上       | 992px 以上        | 1200px 以上    |
+| -------------------- | --------- | ---------------- | ---------------- | ----------------- | -------------- |
+| <small>200%</small>  | `.is-xxl` | `.fablet:is-xxl` | `.tablet:is-xxl` | `.desktop:is-xxl` | `.wide:is-xxl` |
+| <small>150%</small>  | `.is-xl`  | `.fablet:is-xl`  | `.tablet:is-xl`  | `.desktop:is-xl`  | `.wide:is-xl`  |
+| <small>125%</small>  | `.is-lg`  | `.fablet:is-lg`  | `.tablet:is-lg`  | `.desktop:is-lg`  | `.wide:is-lg`  |
+| <small>100%</small>  | `.is-md`  | `.fablet:is-md`  | `.tablet:is-md`  | `.desktop:is-md`  | `.wide:is-md`  |
+| <small>87.5%</small> | `.is-sm`  | `.fablet:is-sm`  | `.tablet:is-sm`  | `.desktop:is-sm`  | `.wide:is-sm`  |
+| <small>75%</small>   | `.is-xs`  | `.fablet:is-xs`  | `.tablet:is-xs`  | `.desktop:is-xs`  | `.wide:is-xs`  |
+| <small>62.5%</small> | `.is-xxs` | `.fablet:is-xxs` | `.tablet:is-xxs` | `.desktop:is-xxs` | `.wide:is-xxs` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <p className="text is-xl">サイズテスト</p>
+    <button type="button" className="button is-plain is-primary is-xs">サイズテスト</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p class="text is-xl">サイズテスト</p>
+<button type="button" class="button is-plain is-primary is-xs">サイズテスト</button>
+```
+
+## Compatible
+
+推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
+
+| 推奨のクラス名    | 互換のあるクラス名 |
+| ----------------- | ------------------ |
+| `.is-xxl`         | `.is-mobile-xxl`   |
+| `.is-xl`          | `.is-mobile-xl`    |
+| `.is-lg`          | `.is-mobile-lg`    |
+| `.is-md`          | `.is-mobile-md`    |
+| `.is-sm`          | `.is-mobile-sm`    |
+| `.is-xs`          | `.is-mobile-xs`    |
+| `.is-xxs`         | `.is-mobile-xxs`   |
+| `.fablet:is-xxl`  | `.is-fablet-xxl`   |
+| `.fablet:is-xl`   | `.is-fablet-xl`    |
+| `.fablet:is-lg`   | `.is-fablet-lg`    |
+| `.fablet:is-md`   | `.is-fablet-md`    |
+| `.fablet:is-sm`   | `.is-fablet-sm`    |
+| `.fablet:is-xs`   | `.is-fablet-xs`    |
+| `.fablet:is-xxs`  | `.is-fablet-xxs`   |
+| `.tablet:is-xxl`  | `.is-tablet-xxl`   |
+| `.tablet:is-xl`   | `.is-tablet-xl`    |
+| `.tablet:is-lg`   | `.is-tablet-lg`    |
+| `.tablet:is-md`   | `.is-tablet-md`    |
+| `.tablet:is-sm`   | `.is-tablet-sm`    |
+| `.tablet:is-xs`   | `.is-tablet-xs`    |
+| `.tablet:is-xxs`  | `.is-tablet-xxs`   |
+| `.desktop:is-xxl` | `.is-desktop-xxl`  |
+| `.desktop:is-xl`  | `.is-desktop-xl`   |
+| `.desktop:is-lg`  | `.is-desktop-lg`   |
+| `.desktop:is-md`  | `.is-desktop-md`   |
+| `.desktop:is-sm`  | `.is-desktop-sm`   |
+| `.desktop:is-xs`  | `.is-desktop-xs`   |
+| `.desktop:is-xxs` | `.is-desktop-xxs`  |
+| `.wide:is-xxl`    | `.is-wide-xxl`     |
+| `.wide:is-xl`     | `.is-wide-xl`      |
+| `.wide:is-lg`     | `.is-wide-lg`      |
+| `.wide:is-md`     | `.is-wide-md`      |
+| `.wide:is-sm`     | `.is-wide-sm`      |
+| `.wide:is-xs`     | `.is-wide-xs`      |
+| `.wide:is-xxs`    | `.is-wide-xxs`     |
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/utilities/size/main.css";
+@import "musubii/src/utilities/size/fablet.css";
+@import "musubii/src/utilities/size/tablet.css";
+@import "musubii/src/utilities/size/desktop.css";
+@import "musubii/src/utilities/size/wide.css";
+```

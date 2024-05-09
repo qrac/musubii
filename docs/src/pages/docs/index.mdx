@@ -1,0 +1,69 @@
+---
+title: Introduction
+layout: docs
+---
+
+import { ExternalLink } from "../../components/docs"
+
+# Introduction
+
+MUSUBii（むすびー）はデザイナーの <ExternalLink href="https://twitter.com/Qrac_JP">クラク</ExternalLink> が作った CSS フレームワークです。マークアップを覚え始めた 2016 年初頭から自分用に開発を始めました。
+
+ウェブ制作の下地として使うことを想定しており、大きなコンポーネントや JavaScript を含まないミニマムな構成になっています。
+
+MUSUBii だけではサイトは完成しませんが、CSS を書く労力は減らせます。
+
+日本のウェブデザイナーが腹ごなしに MUSUBii を使い、元気にデザインしてくれたら幸いです。
+
+## Table of Contents
+
+contents list
+
+## Markup
+
+MUSUBii は、要素クラス 1 つに対して、装飾クラス `.is-{xxxx}` を追加して使います。すべてのクラスは英小文字・数字・ハイフンで構成されています。
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-top is-gap-xs">
+    <button className="button is-plain" type="button">ボタン A</button>
+    <button className="button is-plain is-primary" type="button">ボタン B</button>
+    <button className="button is-outline is-secondary" type="button">ボタン C</button>
+    <button className="button is-melt is-info" type="button">ボタン D</button>
+    <button className="button is-plain is-success is-floating" type="button">ボタン E</button>
+    <button className="button is-plain is-warning is-round is-sm" type="button">ボタン F</button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain" type="button">ボタン A</button>
+<button class="button is-plain is-primary" type="button">ボタン B</button>
+<button class="button is-outline is-secondary" type="button">ボタン C</button>
+<button class="button is-melt is-info" type="button">ボタン D</button>
+<button class="button is-plain is-success is-floating" type="button">ボタン E</button>
+<button class="button is-plain is-warning is-round is-sm" type="button">ボタン F</button>
+```
+
+## Layers
+
+CSS は大きく 4 つに分類されます。
+
+| 種類        | 詳細                                          |
+| ----------- | --------------------------------------------- |
+| `bases`     | 下地となる色変数・文字変数・リセット CSS など |
+| `layouts`   | セクション・グリッドシステムなど              |
+| `elements`  | テキスト・ボタン・フォームなど                |
+| `utilities` | 調整用のユーティリティ                        |
+
+## Media Query
+
+一部はメディアクエリによって 5 つの画面サイズで有効化できます。
+
+| 定義      | 画面サイズ        |
+| --------- | ----------------- |
+| `mobile`  | `0 <= width`      |
+| `fablet`  | `576px <= width`  |
+| `tablet`  | `768px <= width`  |
+| `desktop` | `992px <= width`  |
+| `wide`    | `1200px <= width` |

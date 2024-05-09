@@ -1,0 +1,51 @@
+---
+title: Float
+layout: docs
+---
+
+# Float
+
+Float のプロパティを切り替えるユーティリティ CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.is-float-right` で `float: right;` を設定します
+- `.is-float-left` で `float: left;` を設定します
+- `.is-float-none` で `float: none;` を設定します
+- `.is-clearfix` を付与した要素の後で Float を解除します
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <img className="img is-float-right" src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png" width={240} height={108} alt="MUSIBii site in dark theme" />
+  <p className="text is-clearfix">文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。文章のテスト1。</p>
+  <p>文章のテスト2。文章のテスト2。文章のテスト2。文章のテスト2。文章のテスト2。文章のテスト2。文章のテスト2。文章のテスト2。文章のテスト2。文章のテスト2。</p>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div>
+  <img className="img is-float-right" src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png" width="240" height="108" alt="MUSIBii site in dark theme" />
+  <p className="text is-clearfix">文章のテスト1...</p>
+  <p>文章のテスト2...</p>
+</div>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/utilities/float/main.css";
+```

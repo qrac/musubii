@@ -1,21 +1,11 @@
 {
-  "name": "musubii",
-  "description": "Simple CSS Framework for JP",
-  "version": "7.2.0",
-  "main": "dist/musubii.css",
+  "name": "musubii-monorepo",
+  "version": "8.0.0",
+  "private": true,
   "type": "module",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "license": "CC0-1.0",
   "homepage": "https://musubii.qranoko.jp",
-  "repository": "https://github.com/qrac/musubii",
-  "bugs": "https://github.com/qrac/musubii/issues",
   "keywords": [
     "css",
-    "sass",
-    "scss",
     "framework",
     "japanese",
     "musubii"
@@ -29,31 +19,49 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "build": "node ./src",
-    "test": "node ./test",
-    "prepublishOnly": "npm run build",
-    "clean": "trash ./dist"
+    "docs": "minista ./docs",
+    "docs:build": "minista build ./docs",
+    "docs:preview": "minista preview ./docs",
+    "build": "npm run build:main",
+    "build:src": "npm run build:main-src",
+    "build:main": "cd ./packages/musubii && npm run build",
+    "build:main-src": "cd ./packages/musubii && npm run build:src",
+    "play": "vite dev ./playground/_default",
+    "play-build": "vite build ./playground/_default",
+    "play-preview": "vite preview ./playground/_default",
+    "up": "npx npm-check-updates --deep",
+    "up:u": "npx npm-check-updates --deep -u",
+    "rev": "npx npm-replace-versions",
+    "release": "npm run release:main",
+    "release:main": "cd ./packages/musubii && npm publish",
+    "clean": "npm run clean:main",
+    "clean:main": "cd ./packages/musubii && npm run clean"
   },
-  "prettier": {
-    "semi": false
-  },
-  "browserslist": [
-    "last 1 Chrome versions",
-    "last 1 Edge versions",
-    "last 1 Firefox versions",
-    "last 1 Safari versions",
-    "last 1 iOS versions",
-    "last 1 ChromeAndroid versions",
-    "ie 11",
-    "android 4.4"
+  "workspaces": [
+    "docs",
+    "packages/*",
+    "playground/*"
   ],
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "clean-css": "^5.3.0",
-    "fs-extra": "^10.1.0",
-    "postcss": "^8.4.13",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-sort-media-queries": "^4.2.1",
-    "sass": "^1.51.0"
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "@vitejs/plugin-react": "^4.2.1",
+    "clsx": "^2.1.0",
+    "esbuild": "^0.20.2",
+    "minista": "^4.0.0-alpha.6",
+    "minista-plugin-entry": "^4.0.0-alpha.6",
+    "minista-plugin-mdx": "^4.0.0-alpha.6",
+    "minista-plugin-ssg": "^4.0.0-alpha.6",
+    "query-string": "^9.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8",
+    "vite-plugin-svgr": "^4.2.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.14.1"
   }
 }

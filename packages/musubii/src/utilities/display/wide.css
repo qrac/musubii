@@ -1,0 +1,23 @@
+@media (1200px <= width) {
+  .wide\:is-block,
+  .is-wide-block {
+    display: block;
+  }
+  .wide\:is-inline,
+  .is-wide-inline {
+    display: inline;
+  }
+  .wide\:is-inline-block,
+  .is-wide-inline-block {
+    display: inline-block;
+  }
+  .wide\:is-none,
+  .is-wide-none {
+    display: none;
+  }
+  .wide\:is-hidden {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}

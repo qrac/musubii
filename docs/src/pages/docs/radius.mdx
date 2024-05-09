@@ -1,0 +1,57 @@
+---
+title: Radius
+layout: docs
+---
+
+# Radius
+
+角丸となる `border-radius` を変更するユーティリティ CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.is-radius-{size}` で `border-radius` を付与します
+- `{size}` は最大 `xxl` から最小 `xxs` に加え `none` `full` を指定できます
+- ※他のサイズ展開と異なり `ml` が含まれています
+
+| サイズ                | クラス名          |
+| --------------------- | ----------------- |
+| <small>16px</small>   | `.is-radius-xxl`  |
+| <small>12px</small>   | `.is-radius-xl`   |
+| <small>8px</small>    | `.is-radius-lg`   |
+| <small>6px</small>    | `.is-radius-ml`   |
+| <small>4px</small>    | `.is-radius-md`   |
+| <small>3px</small>    | `.is-radius-sm`   |
+| <small>2px</small>    | `.is-radius-xs`   |
+| <small>1px</small>    | `.is-radius-xxs`  |
+| <small>0</small>      | `.is-radius-none` |
+| <small>9999em</small> | `.is-radius-full` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-radius-lg" style={{background:"var(--theme-bg-2)"}}>ラディステスト</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-radius-lg">ラディステスト</div>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/utilities/radius/main.css";
+```

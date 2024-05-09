@@ -1,0 +1,42 @@
+---
+title: Setup
+layout: docs
+---
+
+import { ExternalLink } from "../../components/docs"
+import CodeImportMusubii from "../../assets/markdown/code-import-musubii.md"
+
+# Setup
+
+MUSUBii は CDN または npm で利用できます。
+
+## Table of Contents
+
+contents list
+
+## CDN
+
+各バージョンを <ExternalLink href="https://www.jsdelivr.com/package/npm/musubii">jsDelivr</ExternalLink> のリンクで使えます。
+
+{/* prettier-ignore */}
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/musubii@8.0.0/dist/musubii.css" />
+```
+
+## npm
+
+各バージョンを <ExternalLink href="https://www.npmjs.com/package/musubii">npm</ExternalLink> からインストールできます。
+
+```sh
+$ npm install musubii
+```
+
+すべての CSS を利用する場合は PostCSS の処理の中で `musubii` をインポート。
+
+```css
+@import "musubii";
+```
+
+部分的に利用する場合は以下から必要なものを選択してください。
+
+<CodeImportMusubii />

@@ -1,0 +1,7 @@
+.button {
+  --button-border-radius: 3px;
+  --button-font-weight: 400;
+  --button-line-height: 1.5;
+  --button-square-size: calc(2.5em + 1px * 2);
+  --button-disabled-color-alpha: 26%;
+}

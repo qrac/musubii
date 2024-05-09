@@ -1,0 +1,61 @@
+.hljs {
+  --hljs-ac-1: #63a35c;
+  --hljs-ac-2: #80e3f4;
+  --hljs-ac-3: #032f62;
+  --hljs-ac-4: #b75501;
+  --hljs-ac-5: #6f42c1;
+}
+
+[data-theme="dark"] .hljs {
+  --hljs-ac-1: #ff7fc7;
+  --hljs-ac-2: #80e3f4;
+  --hljs-ac-3: #e5ee8c;
+  --hljs-ac-4: #00ea78;
+  --hljs-ac-5: #c59cf4;
+}
+
+.diff .hljs-meta,
+.hljs-keyword,
+.hljs-template-tag,
+.hljs-type {
+  color: var(--hljs-ac-1);
+}
+
+.hljs-attr,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-symbol,
+.hljs-variable.constant_ {
+  color: var(--hljs-ac-5);
+}
+
+.hljs-class .hljs-title,
+.hljs-title,
+.hljs-title.class_ {
+  color: var(--hljs-ac-4);
+}
+
+.hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+  color: var(--hljs-ac-3);
+}
+
+.hljs-bullet,
+.hljs-deletion,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-template-variable,
+.hljs-variable {
+  color: var(--hljs-ac-1);
+}
+
+.hljs-tag {
+  color: var(--theme-tx-2);
+}
+
+.hljs-comment {
+  color: color-mix(in srgb, var(--theme-tx-2) 50%, transparent 50%);
+}

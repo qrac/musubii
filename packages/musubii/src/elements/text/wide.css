@@ -1,0 +1,11 @@
+@media (1200px <= width) {
+  .text:is(.wide\:is-right, .is-wide-right) {
+    text-align: right;
+  }
+  .text:is(.wide\:is-center, .is-wide-center) {
+    text-align: center;
+  }
+  .text:is(.wide\:is-left, .is-wide-left) {
+    text-align: left;
+  }
+}

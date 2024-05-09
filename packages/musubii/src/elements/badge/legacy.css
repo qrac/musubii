@@ -1,0 +1,5 @@
+.badge {
+  --badge-border-radius: 3px;
+  --badge-font-weight: 400;
+  --badge-disabled-color-alpha: 26%;
+}

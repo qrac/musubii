@@ -1,0 +1,24 @@
+.is-overflow-hidden {
+  overflow: hidden;
+}
+
+.is-overflow-ellipsis,
+.is-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.is-overflow-scroll-y,
+.is-scroll-y {
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.is-overflow-scroll-x,
+.is-scroll-x {
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

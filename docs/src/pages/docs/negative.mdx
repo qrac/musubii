@@ -1,0 +1,64 @@
+---
+title: Negative
+layout: docs
+---
+
+# Negative
+
+ネガティブマージンを付与するユーティリティ CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.is-margin-minus-{way}-{size}` で各方向にマイナスの `margin` を付与します
+- `.is-margin-minus-{size}` は全方向（※`.is-n-{size}` に短縮可能）
+- `.is-margin-minus-top-{size}` は上方向（※`.is-nt-{size}` に短縮可能）
+- `.is-margin-minus-right-{size}` は右方向（※`.is-nr-{size}` に短縮可能）
+- `.is-margin-minus-bottom-{size}` は下方向（※`.is-nb-{size}` に短縮可能）
+- `.is-margin-minus-left-{size}` は左方向（※`.is-nl-{size}` に短縮可能）
+- `.is-margin-minus-vertical-{size}` は上下方向（※`.is-ny-{size}` に短縮可能）
+- `.is-margin-minus-horizontal-{size}` は上下方向（※`.is-nx-{size}` に短縮可能）
+- `{size}` は最大 `xxl` から最小 `xxs` まで
+
+| サイズ               | 全方向                                | 上方向                                     | 右方向                                       | 下方向                                        | 左方向                                      | 上下方向                                        | 左右方向                                          |
+| -------------------- | ------------------------------------- | ------------------------------------------ | -------------------------------------------- | --------------------------------------------- | ------------------------------------------- | ----------------------------------------------- | ------------------------------------------------- |
+| <small>-28px</small> | `.is-margin-minus-xxl` or `.is-n-xxl` | `.is-margin-minus-top-xxl` or `.is-nt-xxl` | `.is-margin-minus-right-xxl` or `.is-nr-xxl` | `.is-margin-minus-bottom-xxl` or `.is-nb-xxl` | `.is-margin-minus-left-xxl` or `.is-nl-xxl` | `.is-margin-minus-vertical-xxl` or `.is-ny-xxl` | `.is-margin-minus-horizontal-xxl` or `.is-nx-xxl` |
+| <small>-24px</small> | `.is-margin-minus-xl` or `.is-n-xl`   | `.is-margin-minus-top-xl` or `.is-nt-xl`   | `.is-margin-minus-right-xl` or `.is-nr-xl`   | `.is-margin-minus-bottom-xl` or `.is-nb-xl`   | `.is-margin-minus-left-xl` or `.is-nl-xl`   | `.is-margin-minus-vertical-xl` or `.is-ny-xl`   | `.is-margin-minus-horizontal-xl` or `.is-nx-xl`   |
+| <small>-20px</small> | `.is-margin-minus-lg` or `.is-n-lg`   | `.is-margin-minus-top-lg` or `.is-nt-lg`   | `.is-margin-minus-right-lg` or `.is-nr-lg`   | `.is-margin-minus-bottom-lg` or `.is-nb-lg`   | `.is-margin-minus-left-lg` or `.is-nl-lg`   | `.is-margin-minus-vertical-lg` or `.is-ny-lg`   | `.is-margin-minus-horizontal-lg` or `.is-nx-lg`   |
+| <small>-16px</small> | `.is-margin-minus-md` or `.is-n-md`   | `.is-margin-minus-top-md` or `.is-nt-md`   | `.is-margin-minus-right-md` or `.is-nr-md`   | `.is-margin-minus-bottom-md` or `.is-nb-md`   | `.is-margin-minus-left-md` or `.is-nl-md`   | `.is-margin-minus-vertical-md` or `.is-ny-md`   | `.is-margin-minus-horizontal-md` or `.is-nx-md`   |
+| <small>-12px</small> | `.is-margin-minus-sm` or `.is-n-sm`   | `.is-margin-minus-top-sm` or `.is-nt-sm`   | `.is-margin-minus-right-sm` or `.is-nr-sm`   | `.is-margin-minus-bottom-sm` or `.is-nb-sm`   | `.is-margin-minus-left-sm` or `.is-nl-sm`   | `.is-margin-minus-vertical-sm` or `.is-ny-sm`   | `.is-margin-minus-horizontal-sm` or `.is-nx-sm`   |
+| <small>-8px</small>  | `.is-margin-minus-xs` or `.is-n-xs`   | `.is-margin-minus-top-xs` or `.is-nt-xs`   | `.is-margin-minus-right-xs` or `.is-nr-xs`   | `.is-margin-minus-bottom-xs` or `.is-nb-xs`   | `.is-margin-minus-left-xs` or `.is-nl-xs`   | `.is-margin-minus-vertical-xs` or `.is-ny-xs`   | `.is-margin-minus-horizontal-xs` or `.is-nx-xs`   |
+| <small>-4px</small>  | `.is-margin-minus-xxs` or `.is-n-xxs` | `.is-margin-minus-top-xxs` or `.is-nt-xxs` | `.is-margin-minus-right-xxs` or `.is-nr-xxs` | `.is-margin-minus-bottom-xxs` or `.is-nb-xxs` | `.is-margin-minus-left-xxs` or `.is-nl-xxs` | `.is-margin-minus-vertical-xxs` or `.is-ny-xxs` | `.is-margin-minus-horizontal-xxs` or `.is-nx-xxs` |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div>ネガティブマージンテスト</div>
+  <div className="box is-nt-md" style={{background:"var(--theme-bg-2)"}}>ネガティブマージンテスト</div>
+  <div>ネガティブマージンテスト</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div>ネガティブマージンテスト</div>
+<div class="box is-nt-md">ネガティブマージンテスト</div>
+<div>ネガティブマージンテスト</div>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/utilities/negative/main.css";
+```
