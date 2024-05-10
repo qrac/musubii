@@ -35,225 +35,225 @@
 }
 
 .is-nt-xxl,
-.is-margin-minus-top-xxl {
+.is-margin-top-minus-xxl {
   margin-top: -28px;
 }
 
 .is-nt-xl,
-.is-margin-minus-top-xl {
+.is-margin-top-minus-xl {
   margin-top: -24px;
 }
 
 .is-nt-lg,
-.is-margin-minus-top-lg {
+.is-margin-top-minus-lg {
   margin-top: -20px;
 }
 
 .is-nt-md,
-.is-margin-minus-top-md {
+.is-margin-top-minus-md {
   margin-top: -16px;
 }
 
 .is-nt-sm,
-.is-margin-minus-top-sm {
+.is-margin-top-minus-sm {
   margin-top: -12px;
 }
 
 .is-nt-xs,
-.is-margin-minus-top-xs {
+.is-margin-top-minus-xs {
   margin-top: -8px;
 }
 
 .is-nt-xxs,
-.is-margin-minus-top-xxs {
+.is-margin-top-minus-xxs {
   margin-top: -4px;
 }
 
 .is-nr-xxl,
-.is-margin-minus-right-xxl {
+.is-margin-right-minus-xxl {
   margin-right: -28px;
 }
 
 .is-nr-xl,
-.is-margin-minus-right-xl {
+.is-margin-right-minus-xl {
   margin-right: -24px;
 }
 
 .is-nr-lg,
-.is-margin-minus-right-lg {
+.is-margin-right-minus-lg {
   margin-right: -20px;
 }
 
 .is-nr-md,
-.is-margin-minus-right-md {
+.is-margin-right-minus-md {
   margin-right: -16px;
 }
 
 .is-nr-sm,
-.is-margin-minus-right-sm {
+.is-margin-right-minus-sm {
   margin-right: -12px;
 }
 
 .is-nr-xs,
-.is-margin-minus-right-xs {
+.is-margin-right-minus-xs {
   margin-right: -8px;
 }
 
 .is-nr-xxs,
-.is-margin-minus-right-xxs {
+.is-margin-right-minus-xxs {
   margin-right: -4px;
 }
 
 .is-nb-xxl,
-.is-margin-minus-bottom-xxl {
+.is-margin-bottom-minus-xxl {
   margin-bottom: -28px;
 }
 
 .is-nb-xl,
-.is-margin-minus-bottom-xl {
+.is-margin-bottom-minus-xl {
   margin-bottom: -24px;
 }
 
 .is-nb-lg,
-.is-margin-minus-bottom-lg {
+.is-margin-bottom-minus-lg {
   margin-bottom: -20px;
 }
 
 .is-nb-md,
-.is-margin-minus-bottom-md {
+.is-margin-bottom-minus-md {
   margin-bottom: -16px;
 }
 
 .is-nb-sm,
-.is-margin-minus-bottom-sm {
+.is-margin-bottom-minus-sm {
   margin-bottom: -12px;
 }
 
 .is-nb-xs,
-.is-margin-minus-bottom-xs {
+.is-margin-bottom-minus-xs {
   margin-bottom: -8px;
 }
 
 .is-nb-xxs,
-.is-margin-minus-bottom-xxs {
+.is-margin-bottom-minus-xxs {
   margin-bottom: -4px;
 }
 
 .is-nl-xxl,
-.is-margin-minus-left-xxl {
+.is-margin-left-minus-xxl {
   margin-left: -28px;
 }
 
 .is-nl-xl,
-.is-margin-minus-left-xl {
+.is-margin-left-minus-xl {
   margin-left: -24px;
 }
 
 .is-nl-lg,
-.is-margin-minus-left-lg {
+.is-margin-left-minus-lg {
   margin-left: -20px;
 }
 
 .is-nl-md,
-.is-margin-minus-left-md {
+.is-margin-left-minus-md {
   margin-left: -16px;
 }
 
 .is-nl-sm,
-.is-margin-minus-left-sm {
+.is-margin-left-minus-sm {
   margin-left: -12px;
 }
 
 .is-nl-xs,
-.is-margin-minus-left-xs {
+.is-margin-left-minus-xs {
   margin-left: -8px;
 }
 
 .is-nl-xxs,
-.is-margin-minus-left-xxs {
+.is-margin-left-minus-xxs {
   margin-left: -4px;
 }
 
 .is-ny-xxl,
-.is-margin-minus-vertical-xxl {
+.is-margin-vertical-minus-xxl {
   margin-top: -28px;
   margin-bottom: -28px;
 }
 
 .is-ny-xl,
-.is-margin-minus-vertical-xl {
+.is-margin-vertical-minus-xl {
   margin-top: -24px;
   margin-bottom: -24px;
 }
 
 .is-ny-lg,
-.is-margin-minus-vertical-lg {
+.is-margin-vertical-minus-lg {
   margin-top: -20px;
   margin-bottom: -20px;
 }
 
 .is-ny-md,
-.is-margin-minus-vertical-md {
+.is-margin-vertical-minus-md {
   margin-top: -16px;
   margin-bottom: -16px;
 }
 
 .is-ny-sm,
-.is-margin-minus-vertical-sm {
+.is-margin-vertical-minus-sm {
   margin-top: -12px;
   margin-bottom: -12px;
 }
 
 .is-ny-xs,
-.is-margin-minus-vertical-xs {
+.is-margin-vertical-minus-xs {
   margin-top: -8px;
   margin-bottom: -8px;
 }
 
 .is-ny-xxs,
-.is-margin-minus-vertical-xxs {
+.is-margin-vertical-minus-xxs {
   margin-top: -4px;
   margin-bottom: -4px;
 }
 
 .is-nx-xxl,
-.is-margin-minus-horizontal-xxl {
+.is-margin-horizontal-minus-xxl {
   margin-right: -28px;
   margin-left: -28px;
 }
 
 .is-nx-xl,
-.is-margin-minus-horizontal-xl {
+.is-margin-horizontal-minus-xl {
   margin-right: -24px;
   margin-left: -24px;
 }
 
 .is-nx-lg,
-.is-margin-minus-horizontal-lg {
+.is-margin-horizontal-minus-lg {
   margin-right: -20px;
   margin-left: -20px;
 }
 
 .is-nx-md,
-.is-margin-minus-horizontal-md {
+.is-margin-horizontal-minus-md {
   margin-right: -16px;
   margin-left: -16px;
 }
 
 .is-nx-sm,
-.is-margin-minus-horizontal-sm {
+.is-margin-horizontal-minus-sm {
   margin-right: -12px;
   margin-left: -12px;
 }
 
 .is-nx-xs,
-.is-margin-minus-horizontal-xs {
+.is-margin-horizontal-minus-xs {
   margin-right: -8px;
   margin-left: -8px;
 }
 
 .is-nx-xxs,
-.is-margin-minus-horizontal-xxs {
+.is-margin-horizontal-minus-xxs {
   margin-right: -4px;
   margin-left: -4px;
 }
