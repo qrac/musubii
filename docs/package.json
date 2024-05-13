@@ -9,6 +9,6 @@
     "remark-directive": "^3.0.0",
     "remark-directive-rehype": "^0.4.2",
     "remark-toc": "^9.0.0",
-    "shiki": "^1.4.0"
+    "shiki": "^1.5.1"
   }
 }
