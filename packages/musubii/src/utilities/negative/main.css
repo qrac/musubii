@@ -50,7 +50,8 @@
 }
 
 .is-nt-md,
-.is-margin-top-minus-md {
+.is-margin-top-minus-md,
+.is-margin-top-minus {
   margin-top: -16px;
 }
 
@@ -85,7 +86,8 @@
 }
 
 .is-nr-md,
-.is-margin-right-minus-md {
+.is-margin-right-minus-md,
+.is-margin-right-minus {
   margin-right: -16px;
 }
 
@@ -120,7 +122,8 @@
 }
 
 .is-nb-md,
-.is-margin-bottom-minus-md {
+.is-margin-bottom-minus-md,
+.is-margin-bottom-minus {
   margin-bottom: -16px;
 }
 
@@ -155,7 +158,8 @@
 }
 
 .is-nl-md,
-.is-margin-left-minus-md {
+.is-margin-left-minus-md,
+.is-margin-left-minus {
   margin-left: -16px;
 }
 
@@ -193,7 +197,8 @@
 }
 
 .is-ny-md,
-.is-margin-vertical-minus-md {
+.is-margin-vertical-minus-md,
+.is-margin-vertical-minus {
   margin-top: -16px;
   margin-bottom: -16px;
 }
@@ -235,7 +240,8 @@
 }
 
 .is-nx-md,
-.is-margin-horizontal-minus-md {
+.is-margin-horizontal-minus-md,
+.is-margin-horizontal-minus {
   margin-right: -16px;
   margin-left: -16px;
 }

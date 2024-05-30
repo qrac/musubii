@@ -55,7 +55,8 @@
 }
 
 .is-pt-md,
-.is-padding-top-md {
+.is-padding-top-md,
+.is-padding-top {
   padding-top: 16px;
 }
 
@@ -95,7 +96,8 @@
 }
 
 .is-pr-md,
-.is-padding-right-md {
+.is-padding-right-md,
+.is-padding-right {
   padding-right: 16px;
 }
 
@@ -135,7 +137,8 @@
 }
 
 .is-pb-md,
-.is-padding-bottom-md {
+.is-padding-bottom-md,
+.is-padding-bottom {
   padding-bottom: 16px;
 }
 
@@ -175,7 +178,8 @@
 }
 
 .is-pl-md,
-.is-padding-left-md {
+.is-padding-left-md,
+.is-padding-left {
   padding-left: 16px;
 }
 
@@ -218,7 +222,8 @@
 }
 
 .is-py-md,
-.is-padding-vertical-md {
+.is-padding-vertical-md,
+.is-padding-vertical {
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -266,7 +271,8 @@
 }
 
 .is-px-md,
-.is-padding-horizontal-md {
+.is-padding-horizontal-md,
+.is-padding-horizontal {
   padding-right: 16px;
   padding-left: 16px;
 }
