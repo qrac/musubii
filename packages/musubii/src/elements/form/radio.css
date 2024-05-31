@@ -61,6 +61,14 @@
   opacity: 1;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  :where([type="radio"]:focus + *) .radio,
+  :where([type="radio"]:focus) + .radio {
+    outline: auto;
+    outline: auto -webkit-focus-ring-color;
+  }
+}
+
 /* prettier-ignore */
 :where([type="radio"]:is([disabled], [aria-disabled="true"], .is-disabled) + *) .radio,
 :where([type="radio"]:is([disabled], [aria-disabled="true"], .is-disabled)) + .radio {

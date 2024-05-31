@@ -69,6 +69,14 @@
   opacity: 1;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  :where([type="checkbox"]:focus + *) .checkbox,
+  :where([type="checkbox"]:focus) + .checkbox {
+    outline: auto;
+    outline: auto -webkit-focus-ring-color;
+  }
+}
+
 /* prettier-ignore */
 :where([type="checkbox"]:is([disabled], [aria-disabled="true"], .is-disabled) + *) .checkbox,
 :where([type="checkbox"]:is([disabled], [aria-disabled="true"], .is-disabled)) + .checkbox {
