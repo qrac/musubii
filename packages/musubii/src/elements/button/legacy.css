@@ -1,4 +1,5 @@
 .button {
+  --button-gap: 0;
   --button-border-radius: 3px;
   --button-font-weight: 400;
   --button-line-height: 1.5;
