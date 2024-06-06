@@ -10,10 +10,8 @@ MUSUBii（ムスビー）は、日本語ウェブサイトの下地として使�
 
 ## Packages
 
-| Directory                                                                       | Detail                         |
-| ------------------------------------------------------------------------------- | ------------------------------ |
-| [musubii](https://github.com/qrac/musubii/tree/main/packages/musubii)           | MUSUBii 本体                   |
-| [musubii-optimize](https://github.com/qrac/musubii/tree/main/packages/optimize) | MUSUBii のクラス名最適化ツール |
+- [musubii](https://github.com/qrac/musubii/tree/main/packages/musubii) — MUSUBii 本体
+- [musubii-optimize](https://github.com/qrac/musubii/tree/main/packages/optimize) — MUSUBii のクラス名最適化ツール
 
 ## Credit
 
