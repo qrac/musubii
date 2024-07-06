@@ -3,6 +3,7 @@
 ::after {
   margin: 0;
   padding: 0;
+  min-width: 0;
   border-width: 0;
   border-style: solid;
   box-sizing: border-box;

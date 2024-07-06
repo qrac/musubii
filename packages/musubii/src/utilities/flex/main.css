@@ -134,98 +134,84 @@
 .is-0,
 .is-mobile-0 {
   flex: 1 0;
-  min-width: 0;
 }
 
 .is-flex-1,
 .is-1,
 .is-mobile-1 {
   flex: 0 0 calc(100% / 12 * 1);
-  min-width: 0;
 }
 
 .is-flex-2,
 .is-2,
 .is-mobile-2 {
   flex: 0 0 calc(100% / 12 * 2);
-  min-width: 0;
 }
 
 .is-flex-3,
 .is-3,
 .is-mobile-3 {
   flex: 0 0 calc(100% / 12 * 3);
-  min-width: 0;
 }
 
 .is-flex-4,
 .is-4,
 .is-mobile-4 {
   flex: 0 0 calc(100% / 12 * 4);
-  min-width: 0;
 }
 
 .is-flex-5,
 .is-5,
 .is-mobile-5 {
   flex: 0 0 calc(100% / 12 * 5);
-  min-width: 0;
 }
 
 .is-flex-6,
 .is-6,
 .is-mobile-6 {
   flex: 0 0 calc(100% / 12 * 6);
-  min-width: 0;
 }
 
 .is-flex-7,
 .is-7,
 .is-mobile-7 {
   flex: 0 0 calc(100% / 12 * 7);
-  min-width: 0;
 }
 
 .is-flex-8,
 .is-8,
 .is-mobile-8 {
   flex: 0 0 calc(100% / 12 * 8);
-  min-width: 0;
 }
 
 .is-flex-9,
 .is-9,
 .is-mobile-9 {
   flex: 0 0 calc(100% / 12 * 9);
-  min-width: 0;
 }
 
 .is-flex-10,
 .is-10,
 .is-mobile-10 {
   flex: 0 0 calc(100% / 12 * 10);
-  min-width: 0;
 }
 
 .is-flex-11,
 .is-11,
 .is-mobile-11 {
   flex: 0 0 calc(100% / 12 * 11);
-  min-width: 0;
 }
 
 .is-flex-12,
 .is-12,
 .is-mobile-12 {
   flex: 0 0 100%;
-  min-width: 0;
 }
 
 .is-flex-full,
 .is-full,
 .is-mobile-full {
   flex: 0 1 100%;
-  min-width: 0;
   width: 100%;
 }
 
@@ -233,7 +219,6 @@
 .is-auto,
 .is-mobile-auto {
   flex: 0 1 auto;
-  min-width: 0;
 }
 
 .is-flex-none {

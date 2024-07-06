@@ -2,72 +2,58 @@
   .wide\:is-flex-0,
   .is-wide-0 {
     flex: 1 0;
-    min-width: 0;
   }
   .wide\:is-flex-1,
   .is-wide-1 {
     flex: 0 0 calc(100% / 12 * 1);
-    min-width: 0;
   }
   .wide\:is-flex-2,
   .is-wide-2 {
     flex: 0 0 calc(100% / 12 * 2);
-    min-width: 0;
   }
   .wide\:is-flex-3,
   .is-wide-3 {
     flex: 0 0 calc(100% / 12 * 3);
-    min-width: 0;
   }
   .wide\:is-flex-4,
   .is-wide-4 {
     flex: 0 0 calc(100% / 12 * 4);
-    min-width: 0;
   }
   .wide\:is-flex-5,
   .is-wide-5 {
     flex: 0 0 calc(100% / 12 * 5);
-    min-width: 0;
   }
   .wide\:is-flex-6,
   .is-wide-6 {
     flex: 0 0 calc(100% / 12 * 6);
-    min-width: 0;
   }
   .wide\:is-flex-7,
   .is-wide-7 {
     flex: 0 0 calc(100% / 12 * 7);
-    min-width: 0;
   }
   .wide\:is-flex-8,
   .is-wide-8 {
     flex: 0 0 calc(100% / 12 * 8);
-    min-width: 0;
   }
   .wide\:is-flex-9,
   .is-wide-9 {
     flex: 0 0 calc(100% / 12 * 9);
-    min-width: 0;
   }
   .wide\:is-flex-10,
   .is-wide-10 {
     flex: 0 0 calc(100% / 12 * 10);
-    min-width: 0;
   }
   .wide\:is-flex-11,
   .is-wide-11 {
     flex: 0 0 calc(100% / 12 * 11);
-    min-width: 0;
   }
   .wide\:is-flex-12,
   .is-wide-12 {
     flex: 0 0 100%;
-    min-width: 0;
   }
   .wide\:is-flex-full,
   .is-wide-full {
     flex: 0 1 100%;
-    min-width: 0;
     width: 100%;
   }
   .wide\:is-flex-auto,
