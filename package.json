@@ -52,30 +52,30 @@
   ],
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.14.10",
     "@types/prompts": "^2.4.9",
-    "@types/react": "^18.3.2",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "^4.3.1",
     "clsx": "^2.1.1",
     "cpy-cli": "^5.0.0",
-    "esbuild": "^0.21.2",
+    "esbuild": "^0.23.0",
     "minista": "^4.0.0-alpha.6",
     "minista-plugin-entry": "^4.0.0-alpha.6",
     "minista-plugin-mdx": "^4.0.0-alpha.6",
     "minista-plugin-ssg": "^4.0.0-alpha.6",
-    "npm-run-all2": "^6.1.2",
+    "npm-run-all2": "^6.2.2",
     "query-string": "^9.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
     "rimraf": "^5.0.7",
-    "tsx": "^4.10.1",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.11",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
     "vite-plugin-svgr": "^4.2.0"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.17.2"
+    "@rollup/rollup-linux-x64-gnu": "4.18.0"
   }
 }
