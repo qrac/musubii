@@ -3,11 +3,13 @@ import clsx from "clsx"
 
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
+import { DemoCheckbox } from "../demos/checkbox"
 
 const aspects = ["16x9", "4x3"]
 
 export function ExampleIframe() {
   const [aspect, setAspect] = useState<string | undefined>()
+  const [isCover, setIsCover] = useState<boolean>(false)
   return (
     <div className="demo-boxes">
       <div className="demo-box">
@@ -19,10 +21,24 @@ export function ExampleIframe() {
               onChange={setAspect}
             />
           </DemoFieldset>
+          <DemoFieldset title="other">
+            <DemoCheckbox
+              label="cover"
+              checkedValue={isCover}
+              onChange={setIsCover}
+            />
+          </DemoFieldset>
         </DemoFieldsets>
       </div>
       <div className="demo-box">
-        <div className={clsx("iframe", aspect && `is-aspect-${aspect}`)}>
+        <div
+          className={clsx(
+            "iframe",
+            aspect && `is-aspect-${aspect}`,
+            isCover && "is-cover"
+          )}
+          style={isCover ? { height: "400px" } : undefined}
+        >
           <iframe
             width="560"
             height="315"

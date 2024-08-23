@@ -16,6 +16,7 @@ contents list
 - `.iframe` で `iframe` を囲うことで制御します
 - `.is-aspect-{ratio}` で縦横比を固定できます
 - `{ratio}` は `16x9` または `4x3` の 2 種類
+- `.is-cover` で `iframe` は親要素いっぱいのサイズになります
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -26,16 +27,23 @@ contents list
     <div className="iframe is-aspect-4x3">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
     </div>
+    <div className="iframe is-cover" style={{ height: "400px" }}>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+    </div>
   </div>
 </div>
 
 {/* prettier-ignore */}
 ```html
-<div className="iframe is-aspect-16x9">
+<div class="iframe is-aspect-16x9">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
 </div>
 
-<div className="iframe is-aspect-4x3">
+<div class="iframe is-aspect-4x3">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+</div>
+
+<div class="iframe is-cover" style="height: 400px;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/llQkSr6fzXg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
 </div>
 ```
