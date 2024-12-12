@@ -1,4 +1,4 @@
-@media (768px <= width) {
+@media (744px <= width) {
   .tablet\:is-flex-0,
   .is-tablet-0 {
     flex: 1 0;
