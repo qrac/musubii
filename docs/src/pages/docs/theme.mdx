@@ -54,6 +54,8 @@ contents list
 
 ダークテーマ。`data-theme="dark"` を付与することで反映されます。ライトテーマと同様に <ExternalLink href="https://tailwindcss.com/docs/customizing-colors">Tailwind CSS</ExternalLink> のカラーパレットを採用しています。
 
+メディアクエリ `prefers-color-scheme: dark` で適応させる場合はスタイルシートの import を `musubii/src/bases/theme/dark-media.css` に変更します。
+
 ```css
 [data-theme="dark"] {
   --theme-tx-1: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
@@ -246,8 +248,11 @@ PostCSS で読み込む場合のパスは以下となります。
 /* ライトテーマ */
 @import "musubii/src/bases/theme/light.css";
 
-/* ダークテーマ */
+/* ダークテーマ > [data-theme="dark"] */
 @import "musubii/src/bases/theme/dark-attr.css";
+
+/* ダークテーマ > @media (prefers-color-scheme: dark) */
+@import "musubii/src/bases/theme/dark-media.css";
 
 /* レガシーテーマ */
 @import "musubii/src/bases/theme/legacy.css";

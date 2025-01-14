@@ -1,7 +1,7 @@
 {
   "name": "musubii",
   "description": "Simple CSS Framework for JP",
-  "version": "8.4.0",
+  "version": "8.5.0",
   "main": "dist/musubii.css",
   "files": [
     "dist",
