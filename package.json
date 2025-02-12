@@ -59,7 +59,7 @@
     "@vitejs/plugin-react": "^4.3.1",
     "clsx": "^2.1.1",
     "cpy-cli": "^5.0.0",
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.25.0",
     "minista": "^4.0.0-alpha.9",
     "minista-plugin-bundle": "^4.0.0-alpha.9",
     "minista-plugin-mdx": "^4.0.0-alpha.9",
