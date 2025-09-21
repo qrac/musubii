@@ -2,7 +2,7 @@ import {
   defineConfig,
   pluginSsg,
   pluginMdx,
-  pluginBundle,
+  pluginEntry,
   pluginSvg,
 } from "minista"
 
@@ -41,7 +41,7 @@ export default defineConfig({
         [rehypePrettyCode, rehypePrettyCodeOptions],
       ],
     }),
-    pluginBundle(),
+    pluginEntry(),
     pluginSvg(),
   ],
 })
