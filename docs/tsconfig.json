@@ -2,7 +2,7 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "types": ["minista/client", "vite-plugin-svgr/client"]
+    "types": ["minista/client"]
   },
   "include": ["minista-config.ts", "project.ts", "src"]
 }

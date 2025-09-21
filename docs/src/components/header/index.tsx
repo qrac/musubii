@@ -7,10 +7,10 @@ import {
   FiMenu,
   FiX,
 } from "react-icons/fi"
+import { Svg } from "minista/assets"
 
 import { version } from "musubii/package.json"
 import { site } from "../../../project"
-import SvgLogo from "../../assets/images/logo.svg?react"
 
 export function Header({
   isStiky,
@@ -29,7 +29,7 @@ export function Header({
         <div className="box is-flex is-between is-middle is-gap-sm">
           <div className="box is-flex is-middle is-gap-sm">
             <a href="/">
-              <SvgLogo width={160} height={23} />
+              <Svg src="/src/assets/images/logo.svg" width={160} height={23} />
             </a>
             <VersionMenu />
           </div>

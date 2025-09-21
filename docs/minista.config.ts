@@ -1,9 +1,12 @@
-import { defineConfig } from "minista"
-import { pluginSsg } from "minista-plugin-ssg"
-import { pluginMdx } from "minista-plugin-mdx"
-import { pluginBundle } from "minista-plugin-bundle"
-import svgr from "vite-plugin-svgr"
+import {
+  defineConfig,
+  pluginSsg,
+  pluginMdx,
+  pluginBundle,
+  pluginSvg,
+} from "minista"
 
+import remarkGfm from "remark-gfm"
 import remarkToc from "remark-toc"
 import remarkDirective from "remark-directive"
 import remarkDirectiveRehype from "remark-directive-rehype"
@@ -26,21 +29,19 @@ export default defineConfig({
   plugins: [
     pluginSsg(),
     pluginMdx({
-      useRehypeHighlight: false,
-      mdxOptions: {
-        remarkPlugins: [
-          [remarkToc, remarkTocOptions],
-          remarkDirective,
-          remarkDirectiveRehype,
-        ],
-        rehypePlugins: [
-          rehypeSlug,
-          rehypeAutolinkHeadings,
-          [rehypePrettyCode, rehypePrettyCodeOptions],
-        ],
-      },
+      remarkPlugins: [
+        remarkGfm,
+        [remarkToc, remarkTocOptions],
+        remarkDirective,
+        remarkDirectiveRehype,
+      ],
+      rehypePlugins: [
+        rehypeSlug,
+        rehypeAutolinkHeadings,
+        [rehypePrettyCode, rehypePrettyCodeOptions],
+      ],
     }),
     pluginBundle(),
-    svgr(),
+    pluginSvg(),
   ],
 })

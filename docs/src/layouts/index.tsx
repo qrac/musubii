@@ -1,5 +1,5 @@
-import type { LayoutProps } from "minista-plugin-ssg/client"
-import { Head } from "minista-plugin-ssg/client"
+import type { LayoutProps } from "minista/client"
+import { Head } from "minista/head"
 
 import { site } from "../../project"
 import { Header } from "../components/header"
