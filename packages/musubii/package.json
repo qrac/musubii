@@ -32,9 +32,8 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "build": "npm run clean && npm run build-src",
-    "build-src": "esbuild ./src/*.* --bundle --minify-whitespace --minify-syntax --outdir=dist",
-    "clean": "rimraf ./dist",
-    "prepublishOnly": "npm run build"
+    "build": "esbuild ./src/*.* --bundle --minify-whitespace --minify-syntax --outdir=dist",
+    "clean": "trash ./dist",
+    "prepublishOnly": "npm run clean && npm run build"
   }
 }

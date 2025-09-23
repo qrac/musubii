@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import queryString from "query-string"
 
 import { version } from "../../../package.json"
 import "musubii/src/musubii.css"
@@ -42,36 +41,49 @@ const examples = [
   "form",
   "iframe",
   "wysiwyg",
-]
-const themes = ["light", "dark"]
+] as const
 
-export default function () {
+const themes = ["light", "dark"] as const
+
+type Example = (typeof examples)[number]
+type Theme = (typeof themes)[number]
+
+export default function App() {
   const [mounted, setMounted] = useState(false)
-  const [example, setExample] = useState("reset")
-  const [theme, setTheme] = useState("light")
+  const [example, setExample] = useState<Example>("reset")
+  const [theme, setTheme] = useState<Theme>("light")
   const [isMigrated, setIsMigrated] = useState(false)
 
   useEffect(() => {
-    if (mounted) {
-      let paramString = window.location.search
-      let params = queryString.parse(paramString)
-      params = { ...params, example, theme, isMigrated: isMigrated.toString() }
-      paramString = queryString.stringify(params)
-      const newUrl = window.location.pathname + "?" + paramString
-      window.history.pushState({}, "", newUrl)
-    }
-  }, [example, theme, isMigrated])
+    const sp = new URLSearchParams(window.location.search)
+    const qExample = sp.get("example")
+    const qTheme = sp.get("theme")
+    const qIsMigrated = sp.get("isMigrated")
 
-  useEffect(() => {
-    const paramString = window.location.search
-    if (paramString) {
-      const params = queryString.parse(paramString)
-      params?.example && setExample(params.example as string)
-      params?.theme && setTheme(params.theme as string)
-      params?.isMigrated && setIsMigrated(params.isMigrated === "true")
+    if (qExample && (examples as readonly string[]).includes(qExample)) {
+      setExample(qExample as Example)
+    }
+    if (qTheme && (themes as readonly string[]).includes(qTheme)) {
+      setTheme(qTheme as Theme)
+    }
+    if (qIsMigrated != null) {
+      setIsMigrated(qIsMigrated === "true")
     }
     setMounted(true)
   }, [])
+
+  useEffect(() => {
+    if (!mounted) return
+
+    const sp = new URLSearchParams(window.location.search)
+    sp.set("example", example)
+    sp.set("theme", theme)
+    sp.set("isMigrated", String(isMigrated))
+
+    const newUrl = `${window.location.pathname}?${sp.toString()}`
+    window.history.replaceState({}, "", newUrl)
+  }, [mounted, example, theme, isMigrated])
+
   return (
     <div className="demo-theme" data-theme={theme}>
       {isMigrated && <style dangerouslySetInnerHTML={{ __html: migrateCss }} />}
@@ -82,14 +94,14 @@ export default function () {
         </h1>
         <DemoFieldset>
           <DemoSelect
-            options={examples}
+            options={examples as unknown as string[]}
             selectedValue={example}
-            onChange={setExample}
+            onChange={(v) => setExample(v as Example)}
           />
           <DemoSelect
-            options={themes}
+            options={themes as unknown as string[]}
             selectedValue={theme}
-            onChange={setTheme}
+            onChange={(v) => setTheme(v as Theme)}
           />
           <DemoCheckbox
             label="migrate"
