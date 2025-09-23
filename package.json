@@ -21,9 +21,7 @@
     "up:u": "npx npm-check-updates --deep -u",
     "rev": "npx npm-replace-versions",
     "release": "run-s release:*",
-    "release:main": "cd ./packages/musubii && npm publish",
-    "clean": "run-p clean:*",
-    "clean:main": "cd ./packages/musubii && npm run clean"
+    "release:main": "cd ./packages/musubii && npm publish"
   },
   "devDependencies": {
     "@types/node": "^24.5.2",

@@ -33,7 +33,6 @@
   },
   "scripts": {
     "build": "esbuild ./src/*.* --bundle --minify-whitespace --minify-syntax --outdir=dist",
-    "clean": "trash ./dist",
-    "prepublishOnly": "npm run clean && npm run build"
+    "prepublishOnly": "npm run build"
   }
 }
