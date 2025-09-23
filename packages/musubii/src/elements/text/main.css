@@ -173,6 +173,26 @@
   line-height: 2;
 }
 
+.text.is-font-sans {
+  font-family: var(--font-sans);
+}
+
+.text.is-font-sans-en {
+  font-family: var(--font-sans-en);
+}
+
+.text.is-font-serif {
+  font-family: var(--font-serif);
+}
+
+.text.is-font-serif-en {
+  font-family: var(--font-serif-en);
+}
+
+.text.is-font-mono {
+  font-family: var(--font-mono);
+}
+
 .text.is-line-height-xl {
   line-height: 1.9;
 }
