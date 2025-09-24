@@ -109,9 +109,10 @@ contents list
 
 - Flexbox の子要素の横幅を操作する CSS
 - `.is-flex-{num}` `.is-flex-full` `.is-flex-auto` `.is-flex-none` が利用できます
-- `{num}` は `0` から `12` まで
-- `.is-flex-0` は残りの横幅を等分して埋めるサイズになります
+- `{num}` は `1` から `12` まで（または `0`）
 - `.is-flex-1` 〜 `.is-flex-12` の場合は 12 分割した横幅の割合サイズになります
+- `.is-flex-0` は残りの横幅を等分して埋めるサイズになります
+- `.is-flex-fill` は子要素の幅に残りの横幅の等分を足したサイズになります
 - `.is-flex-full` は横幅最大サイズになります
 - `.is-flex-auto` は子要素の幅になります（親要素による伸縮の影響あり）
 - `.is-flex-none` は子要素の幅になります（親要素による伸縮の影響なし）
@@ -119,7 +120,6 @@ contents list
 
 | サイズ                        | すべて          | 576px 以上             | 744px 以上             | 992px 以上              | 1200px 以上          |
 | ----------------------------- | --------------- | ---------------------- | ---------------------- | ----------------------- | -------------------- |
-| <small>等分して埋める</small> | `.is-flex-0`    | `.fablet:is-flex-0`    | `.tablet:is-flex-0`    | `.desktop:is-flex-0`    | `.wide:is-flex-0`    |
 | <small>1 / 12</small>         | `.is-flex-1`    | `.fablet:is-flex-1`    | `.tablet:is-flex-1`    | `.desktop:is-flex-1`    | `.wide:is-flex-1`    |
 | <small>2 / 12</small>         | `.is-flex-2`    | `.fablet:is-flex-2`    | `.tablet:is-flex-2`    | `.desktop:is-flex-2`    | `.wide:is-flex-2`    |
 | <small>3 / 12</small>         | `.is-flex-3`    | `.fablet:is-flex-3`    | `.tablet:is-flex-3`    | `.desktop:is-flex-3`    | `.wide:is-flex-3`    |
@@ -132,6 +132,8 @@ contents list
 | <small>10 / 12</small>        | `.is-flex-10`   | `.fablet:is-flex-10`   | `.tablet:is-flex-10`   | `.desktop:is-flex-10`   | `.wide:is-flex-10`   |
 | <small>11 / 12</small>        | `.is-flex-11`   | `.fablet:is-flex-11`   | `.tablet:is-flex-11`   | `.desktop:is-flex-11`   | `.wide:is-flex-11`   |
 | <small>12 / 12</small>        | `.is-flex-12`   | `.fablet:is-flex-12`   | `.tablet:is-flex-12`   | `.desktop:is-flex-12`   | `.wide:is-flex-12`   |
+| <small>等分して埋める</small> | `.is-flex-0`    | `.fablet:is-flex-0`    | `.tablet:is-flex-0`    | `.desktop:is-flex-0`    | `.wide:is-flex-0`    |
+| <small>子要素＋等分</small>   | `.is-flex-fill` | `.fablet:is-flex-fill` | `.tablet:is-flex-fill` | `.desktop:is-flex-fill` | `.wide:is-flex-fill` |
 | <small>100%</small>           | `.is-flex-full` | `.fablet:is-flex-full` | `.tablet:is-flex-full` | `.desktop:is-flex-full` | `.wide:is-flex-full` |
 | <small>auto</small>           | `.is-flex-auto` | `.fablet:is-flex-auto` | `.tablet:is-flex-auto` | `.desktop:is-flex-auto` | `.wide:is-flex-auto` |
 | <small>子要素サイズ</small>   | `.is-flex-none` | `.fablet:is-flex-none` | `.tablet:is-flex-none` | `.desktop:is-flex-none` | `.wide:is-flex-none` |

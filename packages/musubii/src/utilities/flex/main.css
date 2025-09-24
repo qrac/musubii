@@ -130,12 +130,6 @@
   column-gap: 4px;
 }
 
-.is-flex-0,
-.is-0,
-.is-mobile-0 {
-  flex: 1 0;
-}
-
 .is-flex-1,
 .is-1,
 .is-mobile-1 {
@@ -206,6 +200,16 @@
 .is-12,
 .is-mobile-12 {
   flex: 0 0 100%;
+}
+
+.is-flex-0,
+.is-0,
+.is-mobile-0 {
+  flex: 1 0;
+}
+
+.is-flex-fill {
+  flex: 1 0 auto;
 }
 
 .is-flex-full,

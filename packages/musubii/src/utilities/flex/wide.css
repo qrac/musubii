@@ -1,8 +1,4 @@
 @media (1200px <= width) {
-  .wide\:is-flex-0,
-  .is-wide-0 {
-    flex: 1 0;
-  }
   .wide\:is-flex-1,
   .is-wide-1 {
     flex: 0 0 calc(100% / 12 * 1);
@@ -50,6 +46,13 @@
   .wide\:is-flex-12,
   .is-wide-12 {
     flex: 0 0 100%;
+  }
+  .wide\:is-flex-0,
+  .is-wide-0 {
+    flex: 1 0;
+  }
+  .wide\:is-flex-fill {
+    flex: 1 0 auto;
   }
   .wide\:is-flex-full,
   .is-wide-full {

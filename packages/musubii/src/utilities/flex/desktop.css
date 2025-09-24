@@ -1,8 +1,4 @@
 @media (992px <= width) {
-  .desktop\:is-flex-0,
-  .is-desktop-0 {
-    flex: 1 0;
-  }
   .desktop\:is-flex-1,
   .is-desktop-1 {
     flex: 0 0 calc(100% / 12 * 1);
@@ -50,6 +46,13 @@
   .desktop\:is-flex-12,
   .is-desktop-12 {
     flex: 0 0 100%;
+  }
+  .desktop\:is-flex-0,
+  .is-desktop-0 {
+    flex: 1 0;
+  }
+  .desktop\:is-flex-fill {
+    flex: 1 0 auto;
   }
   .desktop\:is-flex-full,
   .is-desktop-full {

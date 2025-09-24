@@ -1,8 +1,4 @@
 @media (576px <= width) {
-  .fablet\:is-flex-0,
-  .is-fablet-0 {
-    flex: 1 0;
-  }
   .fablet\:is-flex-1,
   .is-fablet-1 {
     flex: 0 0 calc(100% / 12 * 1);
@@ -50,6 +46,13 @@
   .fablet\:is-flex-12,
   .is-fablet-12 {
     flex: 0 0 100%;
+  }
+  .fablet\:is-flex-0,
+  .is-fablet-0 {
+    flex: 1 0;
+  }
+  .fablet\:is-flex-fill {
+    flex: 1 0 auto;
   }
   .fablet\:is-flex-full,
   .is-fablet-full {

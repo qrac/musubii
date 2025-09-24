@@ -1,8 +1,4 @@
 @media (744px <= width) {
-  .tablet\:is-flex-0,
-  .is-tablet-0 {
-    flex: 1 0;
-  }
   .tablet\:is-flex-1,
   .is-tablet-1 {
     flex: 0 0 calc(100% / 12 * 1);
@@ -50,6 +46,13 @@
   .tablet\:is-flex-12,
   .is-tablet-12 {
     flex: 0 0 100%;
+  }
+  .tablet\:is-flex-0,
+  .is-tablet-0 {
+    flex: 1 0;
+  }
+  .tablet\:is-flex-fill {
+    flex: 1 0 auto;
   }
   .tablet\:is-flex-full,
   .is-tablet-full {
