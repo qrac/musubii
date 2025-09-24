@@ -74,6 +74,10 @@
   gap: 4px;
 }
 
+.is-gap-none {
+  gap: 0;
+}
+
 :where(:not(.grid)).is-gap-y-xxl {
   row-gap: 28px;
 }
@@ -102,6 +106,10 @@
   row-gap: 4px;
 }
 
+.is-gap-y-none {
+  row-gap: 0;
+}
+
 :where(:not(.grid)).is-gap-x-xxl {
   column-gap: 28px;
 }
@@ -128,6 +136,10 @@
 
 :where(:not(.grid)).is-gap-x-xxs {
   column-gap: 4px;
+}
+
+.is-gap-x-none {
+  column-gap: 0;
 }
 
 .is-flex-1,
