@@ -13,28 +13,28 @@ contents list
 
 ## Basic
 
-- `.is-padding-{way}-{size}` で各方向に `padding` を付与します
-- `.is-padding-{size}` は全方向（※`.is-p-{size}` に短縮可能）
-- `.is-padding-top-{size}` は上方向（※`.is-pt-{size}` に短縮可能）
-- `.is-padding-right-{size}` は右方向（※`.is-pr-{size}` に短縮可能）
-- `.is-padding-bottom-{size}` は下方向（※`.is-pb-{size}` に短縮可能）
-- `.is-padding-left-{size}` は左方向（※`.is-pl-{size}` に短縮可能）
-- `.is-padding-vertical-{size}` は上下方向（※`.is-py-{size}` に短縮可能）
-- `.is-padding-horizontal-{size}` は上下方向（※`.is-px-{size}` に短縮可能）
+- `.is-p{way}-{size}` で各方向に `padding` を付与します
+- `.is-p-{size}` は全方向
+- `.is-pt-{size}` は上方向
+- `.is-pr-{size}` は右方向
+- `.is-pb-{size}` は下方向
+- `.is-pl-{size}` は左方向
+- `.is-py-{size}` は上下方向
+- `.is-px-{size}` は左右方向
 - `{size}` は最大 `xxl` から最小 `xxs` に加え `none` `safe` を指定できます
 - `safe` は iOS Safari のセーフエリアパディングです
 
-| サイズ              | 全方向                             | 上方向                                  | 右方向                                    | 下方向                                     | 左方向                                   | 上下方向                                     | 左右方向                                       |
-| ------------------- | ---------------------------------- | --------------------------------------- | ----------------------------------------- | ------------------------------------------ | ---------------------------------------- | -------------------------------------------- | ---------------------------------------------- |
-| <small>28px</small> | `.is-padding-xxl` or `.is-p-xxl`   | `.is-padding-top-xxl` or `.is-pt-xxl`   | `.is-padding-right-xxl` or `.is-pr-xxl`   | `.is-padding-bottom-xxl` or `.is-pb-xxl`   | `.is-padding-left-xxl` or `.is-pl-xxl`   | `.is-padding-vertical-xxl` or `.is-py-xxl`   | `.is-padding-horizontal-xxl` or `.is-px-xxl`   |
-| <small>24px</small> | `.is-padding-xl` or `.is-p-xl`     | `.is-padding-top-xl` or `.is-pt-xl`     | `.is-padding-right-xl` or `.is-pr-xl`     | `.is-padding-bottom-xl` or `.is-pb-xl`     | `.is-padding-left-xl` or `.is-pl-xl`     | `.is-padding-vertical-xl` or `.is-py-xl`     | `.is-padding-horizontal-xl` or `.is-px-xl`     |
-| <small>20px</small> | `.is-padding-lg` or `.is-p-lg`     | `.is-padding-top-lg` or `.is-pt-lg`     | `.is-padding-right-lg` or `.is-pr-lg`     | `.is-padding-bottom-lg` or `.is-pb-lg`     | `.is-padding-left-lg` or `.is-pl-lg`     | `.is-padding-vertical-lg` or `.is-py-lg`     | `.is-padding-horizontal-lg` or `.is-px-lg`     |
-| <small>16px</small> | `.is-padding-md` or `.is-p-md`     | `.is-padding-top-md` or `.is-pt-md`     | `.is-padding-right-md` or `.is-pr-md`     | `.is-padding-bottom-md` or `.is-pb-md`     | `.is-padding-left-md` or `.is-pl-md`     | `.is-padding-vertical-md` or `.is-py-md`     | `.is-padding-horizontal-md` or `.is-px-md`     |
-| <small>12px</small> | `.is-padding-sm` or `.is-p-sm`     | `.is-padding-top-sm` or `.is-pt-sm`     | `.is-padding-right-sm` or `.is-pr-sm`     | `.is-padding-bottom-sm` or `.is-pb-sm`     | `.is-padding-left-sm` or `.is-pl-sm`     | `.is-padding-vertical-sm` or `.is-py-sm`     | `.is-padding-horizontal-sm` or `.is-px-sm`     |
-| <small>8px</small>  | `.is-padding-xs` or `.is-p-xs`     | `.is-padding-top-xs` or `.is-pt-xs`     | `.is-padding-right-xs` or `.is-pr-xs`     | `.is-padding-bottom-xs` or `.is-pb-xs`     | `.is-padding-left-xs` or `.is-pl-xs`     | `.is-padding-vertical-xs` or `.is-py-xs`     | `.is-padding-horizontal-xs` or `.is-px-xs`     |
-| <small>4px</small>  | `.is-padding-xxs` or `.is-p-xxs`   | `.is-padding-top-xxs` or `.is-pt-xxs`   | `.is-padding-right-xxs` or `.is-pr-xxs`   | `.is-padding-bottom-xxs` or `.is-pb-xxs`   | `.is-padding-left-xxs` or `.is-pl-xxs`   | `.is-padding-vertical-xxs` or `.is-py-xxs`   | `.is-padding-horizontal-xxs` or `.is-px-xxs`   |
-| <small>0</small>    | `.is-padding-none` or `.is-p-none` | `.is-padding-top-none` or `.is-pt-none` | `.is-padding-right-none` or `.is-pr-none` | `.is-padding-bottom-none` or `.is-pb-none` | `.is-padding-left-none` or `.is-pl-none` | `.is-padding-vertical-none` or `.is-py-none` | `.is-padding-horizontal-none` or `.is-px-none` |
-| <small>safe</small> | `.is-padding-safe` or `.is-p-safe` | `.is-padding-top-safe` or `.is-pt-safe` | `.is-padding-right-safe` or `.is-pr-safe` | `.is-padding-bottom-safe` or `.is-pb-safe` | `.is-padding-left-safe` or `.is-pl-safe` | `.is-padding-vertical-safe` or `.is-py-safe` | `.is-padding-horizontal-safe` or `.is-px-safe` |
+| サイズ              | 全方向       | 上方向        | 右方向        | 下方向        | 左方向        | 上下方向      | 左右方向      |
+| ------------------- | ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| <small>28px</small> | `.is-p-xxl`  | `.is-pt-xxl`  | `.is-pr-xxl`  | `.is-pb-xxl`  | `.is-pl-xxl`  | `.is-py-xxl`  | `.is-px-xxl`  |
+| <small>24px</small> | `.is-p-xl`   | `.is-pt-xl`   | `.is-pr-xl`   | `.is-pb-xl`   | `.is-pl-xl`   | `.is-py-xl`   | `.is-px-xl`   |
+| <small>20px</small> | `.is-p-lg`   | `.is-pt-lg`   | `.is-pr-lg`   | `.is-pb-lg`   | `.is-pl-lg`   | `.is-py-lg`   | `.is-px-lg`   |
+| <small>16px</small> | `.is-p-md`   | `.is-pt-md`   | `.is-pr-md`   | `.is-pb-md`   | `.is-pl-md`   | `.is-py-md`   | `.is-px-md`   |
+| <small>12px</small> | `.is-p-sm`   | `.is-pt-sm`   | `.is-pr-sm`   | `.is-pb-sm`   | `.is-pl-sm`   | `.is-py-sm`   | `.is-px-sm`   |
+| <small>8px</small>  | `.is-p-xs`   | `.is-pt-xs`   | `.is-pr-xs`   | `.is-pb-xs`   | `.is-pl-xs`   | `.is-py-xs`   | `.is-px-xs`   |
+| <small>4px</small>  | `.is-p-xxs`  | `.is-pt-xxs`  | `.is-pr-xxs`  | `.is-pb-xxs`  | `.is-pl-xxs`  | `.is-py-xxs`  | `.is-px-xxs`  |
+| <small>0</small>    | `.is-p-none` | `.is-pt-none` | `.is-pr-none` | `.is-pb-none` | `.is-pl-none` | `.is-py-none` | `.is-px-none` |
+| <small>safe</small> | `.is-p-safe` | `.is-pt-safe` | `.is-pr-safe` | `.is-pb-safe` | `.is-pl-safe` | `.is-py-safe` | `.is-px-safe` |
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -54,15 +54,15 @@ contents list
 
 推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
 
-| 推奨のクラス名                             | 互換のあるクラス名       |
-| ------------------------------------------ | ------------------------ |
-| `.is-padding-md` or `.is-p-md`             | `.is-padding`            |
-| `.is-padding-top-md` or `.is-pt-md`        | `.is-padding-top`        |
-| `.is-padding-right-md` or `.is-pr-md`      | `.is-padding-right`      |
-| `.is-padding-bottom-md` or `.is-pb-md`     | `.is-padding-bottom`     |
-| `.is-padding-left-md` or `.is-pl-md`       | `.is-padding-left`       |
-| `.is-padding-vertical-md` or `.is-py-md`   | `.is-padding-vertical`   |
-| `.is-padding-horizontal-md` or `.is-px-md` | `.is-padding-horizontal` |
+| 推奨のクラス名 | 互換のあるクラス名                                   |
+| -------------- | ---------------------------------------------------- |
+| `.is-p-md`     | `.is-padding-md` `.is-padding`                       |
+| `.is-pt-md`    | `.is-padding-top-md` `.is-padding-top`               |
+| `.is-pr-md`    | `.is-padding-right-md` `.is-padding-right`           |
+| `.is-pb-md`    | `.is-padding-bottom-md` `.is-padding-bottom`         |
+| `.is-pl-md`    | `.is-padding-left-md` `.is-padding-left`             |
+| `.is-py-md`    | `.is-padding-vertical-md` `.is-padding-vertical`     |
+| `.is-px-md`    | `.is-padding-horizontal-md` `.is-padding-horizontal` |
 
 ## Variables
 
