@@ -173,6 +173,45 @@ contents list
 <button class="button is-plain is-primary is-angle-left is-angle-down is-pl-xxl" type="button">ボタン</button>
 ```
 
+## Arrange
+
+- ボタンの子要素の配置を調整します
+
+| クラス名       | 効果                         |
+| -------------- | ---------------------------- |
+| `.is-baseline` | 子要素をベースラインに揃える |
+| `.is-left`     | 子要素を左に揃える           |
+| `.is-right`    | 子要素を右に揃える           |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <button className="button is-plain is-primary is-gap-none is-baseline" type="button">
+    <span className="text is-lg">登録する</span>
+    <span className="text is-xs">（無料）</span>
+  </button>
+  <div className="box is-flex is-gap-xs is-mt-sm">
+    <button className="button is-plain is-primary is-flex-0 is-left" type="button">
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+      <span className="text">ボタン</span>
+    </button>
+    <button className="button is-plain is-primary is-flex-0 is-right" type="button">
+      <span className="text">ボタン</span>
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<button class="button is-plain is-primary is-baseline" type="button">...</button>
+<button class="button is-plain is-primary is-left" type="button">...</button>
+<button class="button is-plain is-primary is-right" type="button">...</button>
+```
+
 ## Strong
 
 - `.is-strong` でボタン内を太文字にします

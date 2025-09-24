@@ -237,6 +237,18 @@
   transform: translateY(-70%) rotate(135deg);
 }
 
+.button.is-baseline {
+  align-items: baseline;
+}
+
+.button.is-left {
+  justify-content: flex-start;
+}
+
+.button.is-right {
+  justify-content: flex-end;
+}
+
 .button.is-strong {
   font-weight: var(--button-strong-font-weight);
 }
