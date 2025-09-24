@@ -128,6 +128,18 @@
   padding: 0;
 }
 
+.badge.is-baseline {
+  align-items: baseline;
+}
+
+.badge.is-left {
+  justify-content: flex-start;
+}
+
+.badge.is-right {
+  justify-content: flex-end;
+}
+
 .badge.is-strong {
   font-weight: var(--badge-strong-font-weight);
 }

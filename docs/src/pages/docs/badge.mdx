@@ -143,6 +143,45 @@ contents list
 <span class="badge is-plain is-primary is-square">...</span>
 ```
 
+## Arrange
+
+- バッジの子要素の配置を調整します
+
+| クラス名       | 効果                         |
+| -------------- | ---------------------------- |
+| `.is-baseline` | 子要素をベースラインに揃える |
+| `.is-left`     | 子要素を左に揃える           |
+| `.is-right`    | 子要素を右に揃える           |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <button className="badge is-plain is-baseline">
+    <span className="text is-lg">バッジ</span>
+    <span className="text is-xs">補足</span>
+  </button>
+  <div className="box is-flex is-gap-xs is-mt-sm">
+    <span className="badge is-plain is-flex-0 is-left">
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+      <span className="text">バッジ</span>
+    </span>
+    <span className="badge is-plain is-flex-0 is-right">
+      <span className="text">バッジ</span>
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+    </span>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<span class="badge is-plain is-baseline">...</span>
+<span class="badge is-plain is-left">...</span>
+<span class="badge is-plain is-right">...</span>
+```
+
 ## Strong
 
 - `.is-strong` でバッジ内を太文字にします
