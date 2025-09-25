@@ -116,6 +116,7 @@ button,
 
 :disabled {
   cursor: default;
+  opacity: 1;
 }
 
 ::-webkit-inner-spin-button,

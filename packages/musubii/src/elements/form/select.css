@@ -162,6 +162,9 @@
 .select > select:is([disabled], [aria-disabled="true"], .is-disabled) {
   pointer-events: none;
   color: var(--select-disabled-color-mix);
+}
+
+.select:has(select:is([disabled], [aria-disabled="true"], .is-disabled)) {
   opacity: var(--select-disabled-opacity);
 }
 
