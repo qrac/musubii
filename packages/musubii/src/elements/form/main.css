@@ -11,8 +11,8 @@
   --input-color: inherit;
   --input-line-height: 1.25;
   --input-transition: none;
-  --input-placeholder-color: var(--theme-tx-1);
-  --input-placeholder-color-alpha: 26%;
+  --input-placeholder-color: var(--theme-tx-2);
+  --input-placeholder-color-alpha: 24%;
   --input-success: var(--theme-success);
   --input-success-light: var(--theme-success-light);
   --input-danger: var(--theme-danger);
@@ -22,10 +22,10 @@
   --input-inside-bg: transparent;
   --input-readonly-bg: var(--theme-bg-2);
   --input-disabled-bg: var(--theme-disabled);
-  --input-disabled-border-color: var(--theme-bd-1);
+  --input-disabled-border-color: var(--theme-bd-2);
   --input-disabled-color: var(--theme-dark);
-  --input-disabled-color-alpha: 36%;
-  --input-disabled-opacity: 1;
+  --input-disabled-color-alpha: 24%;
+  --input-disabled-opacity: 0.7;
   --textarea-padding: calc(0.5em - 1.5px) 0.5em;
 }
 
@@ -158,14 +158,6 @@
     .is-disabled
   ) {
   background: var(--input-disabled-bg);
-}
-
-:is(.input, .textarea):where(:not(.is-underline):not(.is-inside)):is(
-    [disabled],
-    [aria-disabled="true"],
-    .is-disabled
-  ) {
-  border-color: var(--input-disabled-border-color);
 }
 
 :is(.input, .textarea).is-underline:is(

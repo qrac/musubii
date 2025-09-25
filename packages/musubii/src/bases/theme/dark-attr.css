@@ -6,7 +6,7 @@
   --theme-bd-1: #1f2937; /* tailwind gray-800 */
   --theme-bd-2: #374151; /* tailwind grey-700 */
   --theme-lk: #22d3ee; /* tailwind cyan-400 */
-  --theme-lk-tx: #1f2937; /* tailwind grey-800 */
+  --theme-lk-tx: #030712; /* tailwind grey-950 */
   --theme-dark: #e5e7eb; /* tailwind grey-200 */
   --theme-light: #e5e7eb; /* tailwind grey-200 */
   --theme-primary: #22d3ee; /* tailwind cyan-400 */
@@ -26,7 +26,7 @@
   --theme-paint: #083344; /* tailwind cyan-950 */
   --theme-paint-tx: #d1d5db; /* tailwind grey-300 */
   --theme-spot: #ca8a04; /* tailwind yellow-600 */
-  --theme-disabled: #374151; /* tailwind grey-700 */
+  --theme-disabled: #1f2937; /* tailwind grey-800 */
 }
 
 [data-theme="dark"] {

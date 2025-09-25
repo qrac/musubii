@@ -2,7 +2,7 @@
   --table-width: 100%;
   --table-bg: var(--theme-bg-1);
   --table-border-width: 1px;
-  --table-border-color: var(--theme-bd-1);
+  --table-border-color: var(--theme-bd-2);
   --table-item-padding: 0.75em 1em;
   --table-item-vertical-align: top;
   --table-th-border-bottom-width: 1px;
@@ -13,10 +13,10 @@
   --table-spot-bg-alpha: 30%;
   --table-danger-bg: var(--theme-danger);
   --table-danger-bg-alpha: 20%;
-  --table-stripe-bg: var(--theme-tx-1);
+  --table-stripe-bg: var(--theme-dark);
   --table-stripe-bg-alpha: 5%;
   --table-wrap-shadow-color: var(--theme-shadow);
-  --table-wrap-shadow-color-alpha: 15%;
+  --table-wrap-shadow-color-alpha: 10%;
 }
 
 :is(.table, .table-wrap) {

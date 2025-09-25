@@ -11,15 +11,7 @@
   --checkbox-checked-icon-height: 0.375em;
   --checkbox-checked-icon-border-width: 0.125em;
   --checkbox-checked-icon-color: var(--theme-lk-tx);
-  --checkbox-disabled-color-alpha: 36%;
-}
-
-.checkbox {
-  --checkbox-disabled-color-mix: color-mix(
-    in srgb,
-    var(--checkbox-border-color) var(--checkbox-disabled-color-alpha),
-    transparent calc(100% - var(--checkbox-disabled-color-alpha))
-  );
+  --checkbox-disabled-border-color: var(--theme-disabled);
 }
 
 .checkbox {
@@ -80,12 +72,12 @@
 /* prettier-ignore */
 :where([type="checkbox"]:is([disabled], [aria-disabled="true"], .is-disabled) + *) .checkbox,
 :where([type="checkbox"]:is([disabled], [aria-disabled="true"], .is-disabled)) + .checkbox {
-  border-color: var(--checkbox-disabled-color-mix);
+  border-color: var(--checkbox-disabled-border-color);
 }
 
 /* prettier-ignore */
 :where([type="checkbox"]:checked:is([disabled], [aria-disabled="true"], .is-disabled) + *) .checkbox,
 :where([type="checkbox"]:checked:is([disabled], [aria-disabled="true"], .is-disabled)) + .checkbox {
-  background: var(--checkbox-disabled-color-mix);
+  background: var(--checkbox-disabled-border-color);
   border-color: transparent;
 }

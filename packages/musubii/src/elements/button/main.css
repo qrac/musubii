@@ -35,7 +35,7 @@
   --button-disabled-bg: var(--theme-disabled);
   --button-disabled-border-color: var(--theme-disabled);
   --button-disabled-color: var(--theme-dark);
-  --button-disabled-color-alpha: 36%;
+  --button-disabled-color-alpha: 24%;
   --button-disabled-opacity: 1;
 }
 

@@ -27,10 +27,10 @@
   --select-underline-icon-position: 0.25em;
   --select-inside-bg: transparent;
   --select-disabled-bg: var(--theme-disabled);
-  --select-disabled-border-color: var(--theme-bd-1);
+  --select-disabled-border-color: var(--theme-bd-2);
   --select-disabled-color: var(--theme-dark);
-  --select-disabled-color-alpha: 36%;
-  --select-disabled-opacity: 1;
+  --select-disabled-color-alpha: 24%;
+  --select-disabled-opacity: 0.7;
 }
 
 .select {
@@ -168,14 +168,13 @@
   opacity: var(--select-disabled-opacity);
 }
 
+.select > select:is([disabled], [aria-disabled="true"], .is-disabled) > option {
+  color: var(--select-disabled-color-mix);
+}
+
 .select:where(:not(.is-underline))
   > select:is([disabled], [aria-disabled="true"], .is-disabled) {
   background: var(--select-disabled-bg);
-}
-
-.select:where(:not(.is-underline):not(.is-inside))
-  > select:is([disabled], [aria-disabled="true"], .is-disabled) {
-  border-color: var(--select-disabled-border-color);
 }
 
 .select.is-underline
