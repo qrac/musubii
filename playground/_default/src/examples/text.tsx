@@ -164,6 +164,22 @@ function ExampleTextColor({ modifiedClasses }: { modifiedClasses?: string }) {
     <>
       <div className="demo-box">
         <p className={clsx("text", modifiedClasses)}>
+          <span className="text is-tx-1">テキスト1</span>
+          <span className="text is-tx-2">テキスト2</span>
+          <span className="text is-tx-3">テキスト3</span>
+          <span className="text is-bd-1">ボーダー1</span>
+          <span className="text is-bd-2">ボーダー2</span>
+          <span className="text is-lk">リンク</span>
+          <span
+            className="text is-lk-tx"
+            style={{ background: "var(--theme-lk)" }}
+          >
+            リンクテキスト
+          </span>
+        </p>
+      </div>
+      <div className="demo-box">
+        <p className={clsx("text", modifiedClasses)}>
           <span className="text">基本です</span>
           <span className="text is-primary">重要です</span>
           <span className="text is-secondary">重要かも</span>

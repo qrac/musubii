@@ -1,4 +1,11 @@
 .text {
+  --text-tx-1-color: var(--theme-tx-1);
+  --text-tx-2-color: var(--theme-tx-2);
+  --text-tx-3-color: var(--theme-tx-3);
+  --text-bd-1-color: var(--theme-bd-1);
+  --text-bd-2-color: var(--theme-bd-2);
+  --text-lk-color: var(--theme-lk);
+  --text-lk-tx-color: var(--theme-lk-tx);
   --text-dark-color: var(--theme-dark);
   --text-light-color: var(--theme-light);
   --text-primary-color: var(--theme-primary);
@@ -99,6 +106,34 @@
 
 .text.is-light-9 {
   color: color-mix(in srgb, var(--text-light-color) 5%, transparent 95%);
+}
+
+.text.is-tx-1 {
+  color: var(--text-tx-1-color);
+}
+
+.text.is-tx-2 {
+  color: var(--text-tx-2-color);
+}
+
+.text.is-tx-3 {
+  color: var(--text-tx-3-color);
+}
+
+.text.is-bd-1 {
+  color: var(--text-bd-1-color);
+}
+
+.text.is-bd-2 {
+  color: var(--text-bd-2-color);
+}
+
+.text.is-lk {
+  color: var(--text-lk-color);
+}
+
+.text.is-lk-tx {
+  color: var(--text-lk-tx-color);
 }
 
 .text.is-primary {
