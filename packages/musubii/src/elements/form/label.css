@@ -31,6 +31,6 @@
 /* prettier-ignore */
 :where(:is([type="radio"], [type="checkbox"]):is([disabled], [aria-disabled="true"], .is-disabled)) + .label,
 .label:where(:has(:is([type="radio"], [type="checkbox"]):is([disabled], [aria-disabled="true"], .is-disabled))) {
-  cursor: default;
+  pointer-events: none;
   color: var(--label-disabled-color-mix);
 }

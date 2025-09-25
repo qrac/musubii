@@ -147,6 +147,7 @@
 }
 
 :is(.input, .textarea):is([disabled], [aria-disabled="true"], .is-disabled) {
+  pointer-events: none;
   color: var(--input-disabled-color-mix);
   opacity: var(--input-disabled-opacity);
 }
