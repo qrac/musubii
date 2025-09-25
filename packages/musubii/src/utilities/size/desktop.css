@@ -11,6 +11,9 @@
   .is-desktop-lg {
     font-size: 125%;
   }
+  .desktop\:is-mlg {
+    font-size: 112.5%;
+  }
   .desktop\:is-md,
   .is-desktop-md {
     font-size: 100%;

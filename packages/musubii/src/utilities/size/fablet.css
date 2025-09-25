@@ -11,6 +11,9 @@
   .is-fablet-lg {
     font-size: 125%;
   }
+  .fablet\:is-mlg {
+    font-size: 112.5%;
+  }
   .fablet\:is-md,
   .is-fablet-md {
     font-size: 100%;

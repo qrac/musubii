@@ -10,6 +10,10 @@
   font-size: 125%;
 }
 
+.is-mlg {
+  font-size: 112.5%;
+}
+
 :is(.is-md, .is-mobile-md) {
   font-size: 100%;
 }

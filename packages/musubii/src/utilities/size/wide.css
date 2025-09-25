@@ -11,6 +11,9 @@
   .is-wide-lg {
     font-size: 125%;
   }
+  .wide\:is-mlg {
+    font-size: 112.5%;
+  }
   .wide\:is-md,
   .is-wide-md {
     font-size: 100%;

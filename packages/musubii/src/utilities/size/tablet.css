@@ -11,6 +11,9 @@
   .is-tablet-lg {
     font-size: 125%;
   }
+  .tablet\:is-mlg {
+    font-size: 112.5%;
+  }
   .tablet\:is-md,
   .is-tablet-md {
     font-size: 100%;
