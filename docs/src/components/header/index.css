@@ -23,7 +23,7 @@
 }
 
 .section.is-header:not(.is-sticky) .button.is-plain {
-  --button-border-color: var(--theme-bd-1);
+  --button-border-color: var(--theme-bd-2);
 }
 
 [data-header-pulldown-menu] {
