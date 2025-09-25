@@ -2,6 +2,7 @@
   :root {
     --theme-tx-1: #e5e7eb; /* tailwind grey-200 */
     --theme-tx-2: #d1d5db; /* tailwind grey-300 */
+    --theme-tx-3: #6b7280; /* tailwind grey-500 */
     --theme-bg-1: #030712; /* tailwind grey-950 */
     --theme-bg-2: #18212f; /* tailwind grey-800-x-gray-900 */
     --theme-bd-1: #1f2937; /* tailwind gray-800 */

@@ -1,6 +1,7 @@
 :root {
   --theme-tx-1: #030712; /* tailwind grey-950 */
   --theme-tx-2: #374151; /* tailwind grey-700 */
+  --theme-tx-3: #9ca3af; /* tailwind grey-400 */
   --theme-bg-1: #ffffff; /* white */
   --theme-bg-2: #f6f7f9; /* tailwind grey-50-x-grey-100 */
   --theme-bd-1: #eceef1; /* tailwind grey-100-x-grey-200 */
