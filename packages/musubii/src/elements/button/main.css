@@ -36,6 +36,7 @@
   --button-disabled-border-color: var(--theme-disabled);
   --button-disabled-color: var(--theme-dark);
   --button-disabled-color-alpha: 36%;
+  --button-disabled-opacity: 1;
 }
 
 .button:is(
@@ -269,6 +270,7 @@
 
 .button:is([disabled], [aria-disabled="true"], .is-disabled) {
   pointer-events: none;
+  opacity: var(--button-disabled-opacity);
 }
 
 .button:is(.is-plain, .is-outline, .is-melt):is(
