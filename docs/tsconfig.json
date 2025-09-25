@@ -1,8 +1,6 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
     "types": ["minista/client"]
-  },
-  "include": ["minista-config.ts", "project.ts", "src"]
+  }
 }
