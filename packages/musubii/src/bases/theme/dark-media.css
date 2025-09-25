@@ -1,15 +1,15 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --theme-tx-1: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
-    --theme-tx-2: #cbd5e1; /* tailwind slate-300 #cbd5e1 */
-    --theme-bg-1: #0f172a; /* tailwind slate-900 #0f172a */
-    --theme-bg-2: #1e293b; /* tailwind slate-800 #1e293b */
-    --theme-bd-1: #334155; /* tailwind slate-700 #334155 */
-    --theme-bd-2: #475569; /* tailwind slate-600 #475569 */
+    --theme-tx-1: #e5e7eb; /* tailwind grey-200 */
+    --theme-tx-2: #d1d5db; /* tailwind grey-300 */
+    --theme-bg-1: #030712; /* tailwind grey-950 */
+    --theme-bg-2: #18212f; /* tailwind grey-800-x-gray-900 */
+    --theme-bd-1: #1f2937; /* tailwind gray-800 */
+    --theme-bd-2: #374151; /* tailwind grey-700 */
     --theme-lk: #22d3ee; /* tailwind cyan-400 #22d3ee */
-    --theme-lk-tx: #1e293b; /* tailwind slate-800 #1e293b */
-    --theme-dark: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
-    --theme-light: #e2e8f0; /* tailwind slate-200 #e2e8f0 */
+    --theme-lk-tx: #1f2937; /* tailwind grey-800 */
+    --theme-dark: #e5e7eb; /* tailwind grey-200 */
+    --theme-light: #e5e7eb; /* tailwind grey-200 */
     --theme-primary: #22d3ee; /* tailwind cyan-400 #22d3ee */
     --theme-primary-light: #164e63; /* tailwind cyan-900 #164e63 */
     --theme-secondary: #818cf8; /* tailwind indigo-400 #818cf8 */
@@ -22,10 +22,10 @@
     --theme-warning-light: #78350f; /* tailwind amber-900 #78350f */
     --theme-danger: #f87171; /* tailwind red-400 #f87171 */
     --theme-danger-light: #7f1d1d; /* tailwind red-900 #7f1d1d */
-    --theme-shadow: #0f172a; /* tailwind slate-900 #0f172a */
+    --theme-shadow: #111827; /* tailwind grey-900 */
     --theme-code: #818cf8; /* tailwind indigo-400 #818cf8 */
     --theme-paint: #083344; /* tailwind cyan-950 #083344 */
-    --theme-paint-tx: #cbd5e1; /* tailwind slate-300 #cbd5e1 */
+    --theme-paint-tx: #d1d5db; /* tailwind grey-300 */
     --theme-spot: #ca8a04; /* tailwind yellow-600 #ca8a04 */
     --theme-disabled: #374151; /* tailwind grey-700 #374151 */
   }
