@@ -25,6 +25,7 @@
   --input-disabled-border-color: var(--theme-bd-1);
   --input-disabled-color: var(--theme-dark);
   --input-disabled-color-alpha: 36%;
+  --input-disabled-opacity: 1;
   --textarea-padding: calc(0.5em - 1.5px) 0.5em;
 }
 
@@ -147,6 +148,7 @@
 
 :is(.input, .textarea):is([disabled], [aria-disabled="true"], .is-disabled) {
   color: var(--input-disabled-color-mix);
+  opacity: var(--input-disabled-opacity);
 }
 
 :is(.input, .textarea):where(:not(.is-underline)):is(

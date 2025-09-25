@@ -30,6 +30,7 @@
   --select-disabled-border-color: var(--theme-bd-1);
   --select-disabled-color: var(--theme-dark);
   --select-disabled-color-alpha: 36%;
+  --select-disabled-opacity: 1;
 }
 
 .select {
@@ -160,6 +161,7 @@
 
 .select > select:is([disabled], [aria-disabled="true"], .is-disabled) {
   color: var(--select-disabled-color-mix);
+  opacity: var(--select-disabled-opacity);
 }
 
 .select:where(:not(.is-underline))
