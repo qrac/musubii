@@ -7,6 +7,7 @@ import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 import { splitClasses } from "../functions/class"
 
+const backgrounds = ["bg-1", "bg-2"]
 const outlines = ["all", "top", "right", "bottom", "left"]
 const angles = [
   "right",
@@ -18,6 +19,7 @@ const angles = [
 ]
 
 export function ExampleBox() {
+  const [background, setBackground] = useState<string | undefined>()
   const [isBackground, setIsBackground] = useState<boolean>(true)
   const [outline, setOutline] = useState<string | undefined>("all")
   const [separate, setSeparate] = useState<string | undefined>("all")
@@ -31,10 +33,10 @@ export function ExampleBox() {
       <div className="demo-box">
         <DemoFieldsets>
           <DemoFieldset title="basic">
-            <DemoCheckbox
-              label="background"
-              checkedValue={isBackground}
-              onChange={setIsBackground}
+            <DemoRadios
+              patterns={[undefined, ...backgrounds]}
+              checkedValue={background}
+              onChange={setBackground}
             />
           </DemoFieldset>
           <DemoFieldset title="outline">
@@ -76,6 +78,7 @@ export function ExampleBox() {
         <div
           className={clsx(
             "box",
+            background && `is-${background}`,
             outline === "all" && "is-outline",
             outline && outline !== "all" && `is-outline-${outline}`,
             separate === "all" && "is-separate",
@@ -86,7 +89,6 @@ export function ExampleBox() {
             <DOMElement
               className={clsx(
                 "box is-flex is-middle is-gap-sm is-pl-sm",
-                isBackground && "is-bg",
                 isLink && "is-link"
               )}
               href={DOMElement === "a" ? "" : undefined}

@@ -36,13 +36,15 @@ contents list
 
 ## Background
 
-- `.is-bg-light` で背景を `var(--theme-bg-1)` で塗れます
+- `.is-bg-1` で背景を `var(--theme-bg-1)` で塗れます
+- `.is-bg-2` で背景を `var(--theme-bg-2)` で塗れます
 - `.is-bg-cover` で背景画像をいっぱいに広げられます
 - `.is-bg-contain` で背景画像を見切れないサイズにできます
 
 {/* prettier-ignore */}
 <div className="docs-preview">
-  <div className="box is-bg-light">ボックス</div>
+  <div className="box is-bg-1">ボックス</div>
+  <div className="box is-bg-2">ボックス</div>
   <div className="box is-bg-cover"
     style={{backgroundImage: "url(/favicon.png)"}}
   >ボックス</div>
@@ -53,7 +55,8 @@ contents list
 
 {/* prettier-ignore */}
 ```html
-<div class="box is-bg-light">ボックス</div>
+<div class="box is-bg-1">ボックス</div>
+<div class="box is-bg-2">ボックス</div>
 <div class="box is-bg-cover">ボックス</div>
 <div class="box is-bg-contain">ボックス</div>
 ```
@@ -190,9 +193,9 @@ contents list
 
 推奨のクラス名と同様の効果を互換のあるクラス名で得ることもできます。
 
-| 推奨のクラス名 | 互換のあるクラス名 |
-| -------------- | ------------------ |
-| `.is-bg-light` | `.is-bg`           |
+| 推奨のクラス名 | 互換のあるクラス名      |
+| -------------- | ----------------------- |
+| `.is-bg-1`     | `.is-bg-light` `.is-bg` |
 
 ## Variables
 
