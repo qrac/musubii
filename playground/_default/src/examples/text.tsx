@@ -3,6 +3,7 @@ import clsx from "clsx"
 
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
+import { DemoCheckbox } from "../demos/checkbox"
 
 const weightStrings = ["normal", "strong"]
 const weightNums = [100, 200, 300, 400, 500, 600, 700, 800, 900]
@@ -21,6 +22,7 @@ export function ExampleText() {
   const [transform, setTransform] = useState<string | undefined>()
   const [textAlign, setTextAlign] = useState<string | undefined>()
   const [wrap, setWrap] = useState<string | undefined>()
+  const [isDisabled, setIsDisabled] = useState<boolean>(false)
   const [overflow, setOverflow] = useState<string | undefined>()
   const fontClass = font ? `is-font-${font}` : undefined
   const weightClass = weight
@@ -96,11 +98,27 @@ export function ExampleText() {
               onChange={setOverflow}
             />
           </DemoFieldset>
+          <DemoFieldset title="other">
+            <DemoCheckbox
+              label="disabled"
+              checkedValue={isDisabled}
+              onChange={setIsDisabled}
+            />
+          </DemoFieldset>
         </DemoFieldsets>
       </div>
-      <ExampleTextDark modifiedClasses={modifiedClasses} />
-      <ExampleTextLight modifiedClasses={modifiedClasses} />
-      <ExampleTextColor modifiedClasses={modifiedClasses} />
+      <ExampleTextDark
+        modifiedClasses={modifiedClasses}
+        isDisabled={isDisabled}
+      />
+      <ExampleTextLight
+        modifiedClasses={modifiedClasses}
+        isDisabled={isDisabled}
+      />
+      <ExampleTextColor
+        modifiedClasses={modifiedClasses}
+        isDisabled={isDisabled}
+      />
       <ExampleTextVercial modifiedClasses={modifiedClasses} />
       <ExampleTextLink modifiedClasses={modifiedClasses} />
       <ExampleTextLong
@@ -113,7 +131,13 @@ export function ExampleText() {
   )
 }
 
-function ExampleTextDark({ modifiedClasses }: { modifiedClasses?: string }) {
+function ExampleTextDark({
+  modifiedClasses,
+  isDisabled,
+}: {
+  modifiedClasses?: string
+  isDisabled?: boolean
+}) {
   return (
     <>
       <div className="demo-box">
@@ -126,6 +150,7 @@ function ExampleTextDark({ modifiedClasses }: { modifiedClasses?: string }) {
                 index === 0 && "is-dark",
                 index !== 0 && `is-dark-${index}`
               )}
+              aria-disabled={isDisabled ? true : undefined}
             >
               ダーク
             </span>
@@ -136,7 +161,13 @@ function ExampleTextDark({ modifiedClasses }: { modifiedClasses?: string }) {
   )
 }
 
-function ExampleTextLight({ modifiedClasses }: { modifiedClasses?: string }) {
+function ExampleTextLight({
+  modifiedClasses,
+  isDisabled,
+}: {
+  modifiedClasses?: string
+  isDisabled?: boolean
+}) {
   return (
     <>
       <div className="demo-box" style={{ background: "#0f172a" }}>
@@ -149,6 +180,7 @@ function ExampleTextLight({ modifiedClasses }: { modifiedClasses?: string }) {
                 index === 0 && "is-light",
                 index !== 0 && `is-light-${index}`
               )}
+              aria-disabled={isDisabled ? true : undefined}
             >
               ライト
             </span>
@@ -159,19 +191,56 @@ function ExampleTextLight({ modifiedClasses }: { modifiedClasses?: string }) {
   )
 }
 
-function ExampleTextColor({ modifiedClasses }: { modifiedClasses?: string }) {
+function ExampleTextColor({
+  modifiedClasses,
+  isDisabled,
+}: {
+  modifiedClasses?: string
+  isDisabled?: boolean
+}) {
   return (
     <>
       <div className="demo-box">
         <p className={clsx("text", modifiedClasses)}>
-          <span className="text is-tx-1">テキスト1</span>
-          <span className="text is-tx-2">テキスト2</span>
-          <span className="text is-tx-3">テキスト3</span>
-          <span className="text is-bd-1">ボーダー1</span>
-          <span className="text is-bd-2">ボーダー2</span>
-          <span className="text is-lk">リンク</span>
+          <span
+            className="text is-tx-1"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            テキスト1
+          </span>
+          <span
+            className="text is-tx-2"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            テキスト2
+          </span>
+          <span
+            className="text is-tx-3"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            テキスト3
+          </span>
+          <span
+            className="text is-bd-1"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            ボーダー1
+          </span>
+          <span
+            className="text is-bd-2"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            ボーダー2
+          </span>
+          <span
+            className="text is-lk"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            リンク
+          </span>
           <span
             className="text is-lk-tx"
+            aria-disabled={isDisabled ? true : undefined}
             style={{ background: "var(--theme-lk)" }}
           >
             リンクテキスト
@@ -180,13 +249,45 @@ function ExampleTextColor({ modifiedClasses }: { modifiedClasses?: string }) {
       </div>
       <div className="demo-box">
         <p className={clsx("text", modifiedClasses)}>
-          <span className="text">基本です</span>
-          <span className="text is-primary">重要です</span>
-          <span className="text is-secondary">重要かも</span>
-          <span className="text is-info">情報あり</span>
-          <span className="text is-success">成功した</span>
-          <span className="text is-warning">注意する</span>
-          <span className="text is-danger">禁止する</span>
+          <span className="text" aria-disabled={isDisabled ? true : undefined}>
+            基本です
+          </span>
+          <span
+            className="text is-primary"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            重要です
+          </span>
+          <span
+            className="text is-secondary"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            重要かも
+          </span>
+          <span
+            className="text is-info"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            情報あり
+          </span>
+          <span
+            className="text is-success"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            成功した
+          </span>
+          <span
+            className="text is-warning"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            注意する
+          </span>
+          <span
+            className="text is-danger"
+            aria-disabled={isDisabled ? true : undefined}
+          >
+            禁止する
+          </span>
         </p>
       </div>
     </>
