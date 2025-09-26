@@ -5,6 +5,13 @@
   --icon-svg-height: 1em;
   --icon-svg-vertical-align: text-bottom;
   --icon-material-vertical-align: bottom;
+  --icon-tx-1-color: var(--theme-tx-1);
+  --icon-tx-2-color: var(--theme-tx-2);
+  --icon-tx-3-color: var(--theme-tx-3);
+  --icon-bd-1-color: var(--theme-bd-1);
+  --icon-bd-2-color: var(--theme-bd-2);
+  --icon-lk-color: var(--theme-lk);
+  --icon-lk-tx-color: var(--theme-lk-tx);
   --icon-dark-color: var(--theme-dark);
   --icon-light-color: var(--theme-light);
   --icon-primary-color: var(--theme-primary);
@@ -121,6 +128,34 @@
 
 :is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-light-9 {
   color: color-mix(in srgb, var(--icon-light-color) 5%, transparent 95%);
+}
+
+:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-tx-1 {
+  color: var(--icon-tx-1-color);
+}
+
+:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-tx-2 {
+  color: var(--icon-tx-2-color);
+}
+
+:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-tx-3 {
+  color: var(--icon-tx-3-color);
+}
+
+:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-bd-1 {
+  color: var(--icon-bd-1-color);
+}
+
+:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-bd-2 {
+  color: var(--icon-bd-2-color);
+}
+
+:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-lk {
+  color: var(--icon-lk-color);
+}
+
+:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-lk-tx {
+  color: var(--icon-lk-tx-color);
 }
 
 :is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-primary {

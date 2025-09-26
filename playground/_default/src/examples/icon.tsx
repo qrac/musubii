@@ -3,6 +3,7 @@ import clsx from "clsx"
 import {
   FiSunrise,
   FiSunset,
+  FiHeart,
   FiUser,
   FiCheckSquare,
   FiCheckCircle,
@@ -82,6 +83,18 @@ function ExampleIconLight({ modifiedClasses }: { modifiedClasses?: string }) {
 function ExampleIconColor({ modifiedClasses }: { modifiedClasses?: string }) {
   return (
     <>
+      <div className="demo-box">
+        <FiHeart className={clsx("icon", modifiedClasses)} />
+        <FiHeart className={clsx("icon is-tx-1", modifiedClasses)} />
+        <FiHeart className={clsx("icon is-tx-2", modifiedClasses)} />
+        <FiHeart className={clsx("icon is-tx-3", modifiedClasses)} />
+        <FiHeart className={clsx("icon is-bd-1", modifiedClasses)} />
+        <FiHeart className={clsx("icon is-bd-2", modifiedClasses)} />
+        <FiHeart className={clsx("icon is-lk", modifiedClasses)} />
+        <span style={{ background: "var(--theme-lk)" }}>
+          <FiHeart className={clsx("icon is-lk-tx", modifiedClasses)} />
+        </span>
+      </div>
       <div className="demo-box">
         <FiUser className={clsx("icon", modifiedClasses)} />
         <FiCheckSquare className={clsx("icon is-primary", modifiedClasses)} />
