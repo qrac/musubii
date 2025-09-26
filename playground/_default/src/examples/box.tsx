@@ -20,7 +20,6 @@ const angles = [
 
 export function ExampleBox() {
   const [background, setBackground] = useState<string | undefined>()
-  const [isBackground, setIsBackground] = useState<boolean>(true)
   const [outline, setOutline] = useState<string | undefined>("all")
   const [separate, setSeparate] = useState<string | undefined>("all")
   const [angle, setAngle] = useState<string | undefined>()
