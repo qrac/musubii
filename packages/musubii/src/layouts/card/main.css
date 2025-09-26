@@ -1,5 +1,7 @@
 .card {
   --card-overflow: hidden;
+  --card-bg-1: var(--theme-bg-1);
+  --card-bg-2: var(--theme-bg-2);
   --card-bg-light-bg: var(--theme-bg-1);
   --card-outline-border-width: 1px;
   --card-outline-border-color: var(--theme-bd-1);
@@ -25,6 +27,14 @@
   position: relative;
   display: block;
   overflow: var(--card-overflow);
+}
+
+.card.is-bg-1 {
+  background: var(--card-bg-1);
+}
+
+.card.is-bg-2 {
+  background: var(--card-bg-2);
 }
 
 .card:is(.is-bg, .is-bg-light) {

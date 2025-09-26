@@ -5,10 +5,11 @@ import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 
+const backgrounds = ["bg-1", "bg-2"]
 const radiuses = ["xxs", "xs", "sm", "md", "ml", "lg", "xl", "xxl"]
 
 export function ExampleCard() {
-  const [isBackground, setIsBackground] = useState<boolean>(true)
+  const [background, setBackground] = useState<string | undefined>()
   const [isOutline, setIsOutline] = useState<boolean>(false)
   const [radius, setRadius] = useState<string | undefined>("md")
   const [isFloating, setIsfloating] = useState<boolean>(true)
@@ -21,10 +22,10 @@ export function ExampleCard() {
       <div className="demo-box">
         <DemoFieldsets>
           <DemoFieldset title="basic">
-            <DemoCheckbox
-              label="background"
-              checkedValue={isBackground}
-              onChange={setIsBackground}
+            <DemoRadios
+              patterns={[undefined, ...backgrounds]}
+              checkedValue={background}
+              onChange={setBackground}
             />
             <DemoCheckbox
               label="outline"
@@ -67,7 +68,7 @@ export function ExampleCard() {
         <DOMElement
           className={clsx(
             "card",
-            isBackground && "is-bg",
+            background && `is-${background}`,
             isOutline && "is-outline",
             radius && `is-radius-${radius}`,
             isFloating && "is-floating",
