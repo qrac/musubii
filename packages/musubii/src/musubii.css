@@ -44,6 +44,7 @@
 @import "./utilities/negative/main.css";
 @import "./utilities/padding/main.css";
 @import "./utilities/radius/main.css";
+@import "./utilities/aspect/main.css";
 @import "./utilities/size/main.css";
 @import "./utilities/size/fablet.css";
 @import "./utilities/size/tablet.css";

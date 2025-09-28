@@ -5,7 +5,7 @@ import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 
-const aspects = ["16x9", "4x3"]
+const aspects = ["16x9", "4x3", "3x2", "1x1"]
 
 export function ExampleIframe() {
   const [aspect, setAspect] = useState<string | undefined>()

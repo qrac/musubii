@@ -1,0 +1,15 @@
+.is-aspect-16x9 {
+  aspect-ratio: 16 / 9;
+}
+
+.is-aspect-3x2 {
+  aspect-ratio: 3 / 2;
+}
+
+.is-aspect-4x3 {
+  aspect-ratio: 4 / 3;
+}
+
+.is-aspect-1x1 {
+  aspect-ratio: 1 / 1;
+}

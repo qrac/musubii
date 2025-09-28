@@ -1,0 +1,50 @@
+---
+title: Aspect
+layout: docs
+---
+
+# Aspect
+
+アスペクト比を設定するユーティリティ CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.is-aspect-{ratio}` で縦横比を固定できます
+- `{ratio}` は `16x9` `3x2` `4x3` `1x1` の 4 種類
+
+| アスペクト比        | クラス名          |
+| ------------------- | ----------------- |
+| <small>16x9</small> | `.is-aspect-16x9` |
+| <small>3x2</small>  | `.is-aspect-3x2`  |
+| <small>4x3</small>  | `.is-aspect-4x3`  |
+| <small>1x1</small>  | `.is-aspect-1x1`  |
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-aspect-16x9" style={{background:"var(--theme-bg-2)"}}>アスペクト比 16x9</div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-aspect-16x9">アスペクト比 16x9</div>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/utilities/aspect/main.css";
+```

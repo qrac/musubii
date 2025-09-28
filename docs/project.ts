@@ -192,6 +192,10 @@ export const site = {
             path: "/docs/radius",
           },
           {
+            title: "Aspect",
+            path: "/docs/aspect",
+          },
+          {
             title: "Size",
             path: "/docs/size",
           },
