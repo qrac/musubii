@@ -1,6 +1,4 @@
 .box {
-  --box-bg-1: var(--theme-bg-1);
-  --box-bg-2: var(--theme-bg-2);
   --box-bg-light-bg: var(--theme-bg-1);
   --box-outline-border-width: 1px;
   --box-outline-border-color: var(--theme-bd-1);
@@ -29,11 +27,11 @@
 }
 
 .box.is-bg-1 {
-  background: var(--box-bg-1);
+  background: var(--theme-bg-1);
 }
 
 .box.is-bg-2 {
-  background: var(--box-bg-2);
+  background: var(--theme-bg-2);
 }
 
 .box:is(.is-bg, .is-bg-light) {
