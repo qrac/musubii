@@ -1,11 +1,4 @@
 .text {
-  --text-tx-1-color: var(--theme-tx-1);
-  --text-tx-2-color: var(--theme-tx-2);
-  --text-tx-3-color: var(--theme-tx-3);
-  --text-bd-1-color: var(--theme-bd-1);
-  --text-bd-2-color: var(--theme-bd-2);
-  --text-lk-color: var(--theme-lk);
-  --text-lk-tx-color: var(--theme-lk-tx);
   --text-dark-color: var(--theme-dark);
   --text-light-color: var(--theme-light);
   --text-primary-color: var(--theme-primary);
@@ -110,31 +103,31 @@
 }
 
 .text.is-tx-1 {
-  color: var(--text-tx-1-color);
+  color: var(--theme-tx-1);
 }
 
 .text.is-tx-2 {
-  color: var(--text-tx-2-color);
+  color: var(--theme-tx-2);
 }
 
 .text.is-tx-3 {
-  color: var(--text-tx-3-color);
+  color: var(--theme-tx-3);
 }
 
 .text.is-bd-1 {
-  color: var(--text-bd-1-color);
+  color: var(--theme-bd-1);
 }
 
 .text.is-bd-2 {
-  color: var(--text-bd-2-color);
+  color: var(--theme-bd-2);
 }
 
 .text.is-lk {
-  color: var(--text-lk-color);
+  color: var(--theme-lk);
 }
 
 .text.is-lk-tx {
-  color: var(--text-lk-tx-color);
+  color: var(--theme-lk-tx);
 }
 
 .text.is-primary {
