@@ -13,7 +13,7 @@ export function ExampleList() {
   const [variant, setVariant] = useState("disc")
   return (
     <div className="demo-boxes">
-      <div className="demo-box">
+      <div className="demo-box is-settings">
         <DemoFieldsets>
           <DemoFieldset title="variant">
             <DemoRadios

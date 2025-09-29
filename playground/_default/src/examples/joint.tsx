@@ -16,7 +16,7 @@ export function ExampleJoint() {
   const roundClass = isRound ? "is-round" : undefined
   return (
     <div className="demo-boxes">
-      <div className="demo-box">
+      <div className="demo-box is-settings">
         <DemoFieldsets>
           <DemoFieldset title="joint">
             <DemoCheckbox

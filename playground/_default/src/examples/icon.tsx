@@ -22,7 +22,7 @@ export function ExampleIcon() {
   const modifiedClasses = clsx(fitClass)
   return (
     <div className="demo-boxes">
-      <div className="demo-box">
+      <div className="demo-box is-settings">
         <DemoFieldsets>
           <DemoFieldset title="fit">
             <DemoCheckbox

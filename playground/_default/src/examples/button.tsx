@@ -53,7 +53,7 @@ export function ExampleButton() {
   const angleClasses = splitClasses("angle", angle)
   return (
     <div className="demo-boxes">
-      <div className="demo-box">
+      <div className="demo-box is-settings">
         <DemoFieldsets>
           <DemoFieldset title="DOMElement">
             <DemoRadios

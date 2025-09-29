@@ -13,7 +13,7 @@ export function ExampleGrid() {
   const [gap, setGap] = useState<string | undefined>("md")
   return (
     <div className="demo-boxes">
-      <div className="demo-box">
+      <div className="demo-box is-settings">
         <DemoFieldsets>
           <DemoFieldset title="gap">
             <DemoRadios

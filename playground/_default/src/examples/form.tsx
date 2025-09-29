@@ -40,7 +40,7 @@ export function ExampleForm() {
   }
   return (
     <div className="demo-boxes">
-      <div className="demo-box">
+      <div className="demo-box is-settings">
         <DemoFieldsets>
           <DemoFieldset title="type">
             <DemoRadios
