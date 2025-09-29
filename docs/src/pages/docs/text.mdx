@@ -210,6 +210,8 @@ contents list
 <span class="text is-font-mono">FontMono</span>
 ```
 
+## Feature
+
 - 日本語を含む文字詰めの設定（font-feature-settings）
 - 主に見出しやカード内タイトルに使用します
 - `.is-halt`: 全角幅の約物を半角幅に調整
@@ -219,6 +221,7 @@ contents list
 {/* prettier-ignore */}
 <div className="docs-preview">
   <div className="box is-space-md">
+    <p className="text is-strong is-lg">「日本語の見出し」を、調整（font-feature-settings）する</p>
     <p className="text is-strong is-lg is-halt">「日本語の見出し」を、調整（font-feature-settings）する</p>
     <p className="text is-strong is-lg is-palt">「日本語の見出し」を、調整（font-feature-settings）する</p>
     <p className="text is-strong is-lg is-palt-fix">「日本語の見出し」を、調整（font-feature-settings）する</p>
@@ -227,9 +230,33 @@ contents list
 
 {/* prettier-ignore */}
 ```html
+<p class="text">「日本語の見出し」を...</p>
 <p class="text is-halt">「日本語の見出し」を...</p>
 <p class="text is-palt">「日本語の見出し」を...</p>
 <p class="text is-palt-fix">「日本語の見出し」を...</p>
+```
+
+## Trim
+
+- `.is-trim-{way}` でテキストの上下余白をトリミングします
+- `{way}` は `both` `start` `end` の 3 種類
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <p className="text is-strong is-lk-tx is-lg" style={{background: "var(--theme-primary)"}}>「日本語の見出し」を、調整（trim）する</p>
+    <p className="text is-strong is-lk-tx is-lg is-trim-both" style={{background: "var(--theme-primary)"}}>「日本語の見出し」を、調整（trim）する</p>
+    <p className="text is-strong is-lk-tx is-lg is-trim-start" style={{background: "var(--theme-primary)"}}>「日本語の見出し」を、調整（trim）する</p>
+    <p className="text is-strong is-lk-tx is-lg is-trim-end" style={{background: "var(--theme-primary)"}}>「日本語の見出し」を、調整（trim）する</p>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p class="text">「日本語の見出し」を...</p>
+<p class="text is-trim-both">「日本語の見出し」を...</p>
+<p class="text is-trim-start">「日本語の見出し」を...</p>
+<p class="text is-trim-end">「日本語の見出し」を...</p>
 ```
 
 ## Line Height

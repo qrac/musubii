@@ -10,6 +10,7 @@ const weightNums = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 const weights = [...weightStrings, ...weightNums.map((weight) => `${weight}`)]
 const fonts = ["sans", "sans-en", "serif", "serif-en", "mono"]
 const features = ["halt", "palt", "palt-fix"]
+const trims = ["both", "start", "end"]
 const lineHeights = ["xxs", "xs", "sm", "md", "lg", "xl", "xxl"]
 const transforms = ["italic", "delete", "capitalize", "uppercase", "lowercase"]
 const textAligns = ["left", "center", "right", "justify"]
@@ -20,6 +21,7 @@ export function ExampleText() {
   const [weight, setWeight] = useState<string | undefined>()
   const [font, setFont] = useState<string | undefined>()
   const [feature, setFeature] = useState<string | undefined>()
+  const [trim, setTrim] = useState<string | undefined>()
   const [lineHeight, setLineHeight] = useState<string | undefined>()
   const [transform, setTransform] = useState<string | undefined>()
   const [textAlign, setTextAlign] = useState<string | undefined>()
@@ -28,6 +30,7 @@ export function ExampleText() {
   const [overflow, setOverflow] = useState<string | undefined>()
   const fontClass = font ? `is-font-${font}` : undefined
   const featureClass = feature ? `is-${feature}` : undefined
+  const trimClass = trim ? `is-trim-${trim}` : undefined
   const weightClass = weight
     ? weight?.match(/\d+/)
       ? `is-weight-${weight}`
@@ -43,6 +46,7 @@ export function ExampleText() {
   const modifiedClasses = clsx(
     fontClass,
     featureClass,
+    trimClass,
     weightClass,
     lineHeightClass,
     transformClass,
@@ -51,7 +55,7 @@ export function ExampleText() {
   )
   return (
     <div className="demo-boxes">
-      <div className="demo-box">
+      <div className="demo-box is-settings">
         <DemoFieldsets>
           <DemoFieldset title="weight">
             <DemoRadios
@@ -72,6 +76,13 @@ export function ExampleText() {
               patterns={[undefined, ...features]}
               checkedValue={feature}
               onChange={setFeature}
+            />
+          </DemoFieldset>
+          <DemoFieldset title="trim">
+            <DemoRadios
+              patterns={[undefined, ...trims]}
+              checkedValue={trim}
+              onChange={setTrim}
             />
           </DemoFieldset>
           <DemoFieldset title="line-height">

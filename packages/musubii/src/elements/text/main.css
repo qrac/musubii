@@ -238,6 +238,18 @@
   letter-spacing: var(--text-palt-fix-space);
 }
 
+.text.is-trim-both {
+  text-box-trim: trim-both;
+}
+
+.text.is-trim-start {
+  text-box-trim: trim-start;
+}
+
+.text.is-trim-end {
+  text-box-trim: trim-end;
+}
+
 .text.is-line-height-xxl {
   line-height: 2;
 }

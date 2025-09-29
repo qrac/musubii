@@ -55,9 +55,8 @@
 }
 
 .demo-boxes {
+  position: relative;
   border: 1px solid var(--theme-bd-1);
-  border-radius: 12px;
-  overflow: hidden;
 }
 
 .demo-box {
@@ -65,8 +64,17 @@
   overflow: hidden;
 }
 
-.demo-box + .demo-box {
-  border-top: 1px solid var(--theme-bd-1);
+.demo-box.is-settings {
+  position: sticky;
+  top: 0;
+  max-height: 25vh;
+  background: var(--theme-bg-1);
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.demo-box:not(:last-child) {
+  border-bottom: 1px solid var(--theme-bd-1);
 }
 
 .demo-card {
