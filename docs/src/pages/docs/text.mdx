@@ -184,6 +184,7 @@ contents list
 ## Font
 
 - `.is-font-{family}` でフォントファミリーを変更します
+- `{family}` は `sans` `sans-en` `serif` `serif-en` `mono` の 5 種類
 
 {/* prettier-ignore */}
 <div className="docs-preview">
@@ -207,6 +208,28 @@ contents list
 <span class="text is-font-serif">FontSerif</span>
 <span class="text is-font-serif-en">FontSerifEN</span>
 <span class="text is-font-mono">FontMono</span>
+```
+
+- 日本語を含む文字詰めの設定（font-feature-settings）
+- 主に見出しやカード内タイトルに使用します
+- `.is-halt`: 全角幅の約物を半角幅に調整
+- `.is-palt`: プロポーショナル幅で文字間を詰める
+- `.is-palt-fix`: プロポーショナル幅で詰めつつ文字間を整える
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-space-md">
+    <p className="text is-strong is-lg is-halt">「日本語の見出し」を、調整（font-feature-settings）する</p>
+    <p className="text is-strong is-lg is-palt">「日本語の見出し」を、調整（font-feature-settings）する</p>
+    <p className="text is-strong is-lg is-palt-fix">「日本語の見出し」を、調整（font-feature-settings）する</p>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<p class="text is-halt">「日本語の見出し」を...</p>
+<p class="text is-palt">「日本語の見出し」を...</p>
+<p class="text is-palt-fix">「日本語の見出し」を...</p>
 ```
 
 ## Line Height

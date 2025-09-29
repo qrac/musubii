@@ -14,6 +14,7 @@
   --text-success-color: var(--theme-success);
   --text-warning-color: var(--theme-warning);
   --text-danger-color: var(--theme-danger);
+  --text-palt-fix-space: 0.0125em;
   --text-normal-font-weight: 400;
   --text-strong-font-weight: 700;
   --text-disabled-color: var(--theme-dark);
@@ -204,10 +205,6 @@
   font-weight: 900;
 }
 
-.text.is-line-height-xxl {
-  line-height: 2;
-}
-
 .text.is-font-sans {
   font-family: var(--font-sans);
 }
@@ -226,6 +223,23 @@
 
 .text.is-font-mono {
   font-family: var(--font-mono);
+}
+
+.text.is-halt {
+  font-feature-settings: "halt" 1;
+}
+
+.text.is-palt {
+  font-feature-settings: "palt" 1;
+}
+
+.text.is-palt-fix {
+  font-feature-settings: "palt" 1;
+  letter-spacing: var(--text-palt-fix-space);
+}
+
+.text.is-line-height-xxl {
+  line-height: 2;
 }
 
 .text.is-line-height-xl {

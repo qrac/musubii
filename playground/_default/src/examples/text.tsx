@@ -9,6 +9,7 @@ const weightStrings = ["normal", "strong"]
 const weightNums = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 const weights = [...weightStrings, ...weightNums.map((weight) => `${weight}`)]
 const fonts = ["sans", "sans-en", "serif", "serif-en", "mono"]
+const features = ["halt", "palt", "palt-fix"]
 const lineHeights = ["xxs", "xs", "sm", "md", "lg", "xl", "xxl"]
 const transforms = ["italic", "delete", "capitalize", "uppercase", "lowercase"]
 const textAligns = ["left", "center", "right", "justify"]
@@ -18,6 +19,7 @@ const overflows = ["hidden", "scroll-x", "scroll-y", "ellipsis"]
 export function ExampleText() {
   const [weight, setWeight] = useState<string | undefined>()
   const [font, setFont] = useState<string | undefined>()
+  const [feature, setFeature] = useState<string | undefined>()
   const [lineHeight, setLineHeight] = useState<string | undefined>()
   const [transform, setTransform] = useState<string | undefined>()
   const [textAlign, setTextAlign] = useState<string | undefined>()
@@ -25,6 +27,7 @@ export function ExampleText() {
   const [isDisabled, setIsDisabled] = useState<boolean>(false)
   const [overflow, setOverflow] = useState<string | undefined>()
   const fontClass = font ? `is-font-${font}` : undefined
+  const featureClass = feature ? `is-${feature}` : undefined
   const weightClass = weight
     ? weight?.match(/\d+/)
       ? `is-weight-${weight}`
@@ -39,6 +42,7 @@ export function ExampleText() {
   const overflowClass = `is-overflow-${overflow}`
   const modifiedClasses = clsx(
     fontClass,
+    featureClass,
     weightClass,
     lineHeightClass,
     transformClass,
@@ -61,6 +65,13 @@ export function ExampleText() {
               patterns={[undefined, ...fonts]}
               checkedValue={font}
               onChange={setFont}
+            />
+          </DemoFieldset>
+          <DemoFieldset title="feature">
+            <DemoRadios
+              patterns={[undefined, ...features]}
+              checkedValue={feature}
+              onChange={setFeature}
             />
           </DemoFieldset>
           <DemoFieldset title="line-height">
@@ -354,6 +365,17 @@ function ExampleTextLong({
   }
   return (
     <>
+      <div className="demo-box">
+        <p
+          className={clsx(
+            "text is-strong is-lg",
+            modifiedClasses,
+            overflowClass
+          )}
+        >
+          「日本語の見出し」を、調整（font-feature-settings）する
+        </p>
+      </div>
       <div className="demo-box">
         <p
           className={clsx("text", modifiedClasses, overflowClass)}
