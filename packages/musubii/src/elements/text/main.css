@@ -114,14 +114,6 @@
   color: var(--theme-tx-3);
 }
 
-.text.is-bd-1 {
-  color: var(--theme-bd-1);
-}
-
-.text.is-bd-2 {
-  color: var(--theme-bd-2);
-}
-
 .text.is-lk {
   color: var(--theme-lk);
 }

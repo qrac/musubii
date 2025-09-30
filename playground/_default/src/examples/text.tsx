@@ -243,18 +243,6 @@ function ExampleTextColor({
             テキスト3
           </span>
           <span
-            className="text is-bd-1"
-            aria-disabled={isDisabled ? true : undefined}
-          >
-            ボーダー1
-          </span>
-          <span
-            className="text is-bd-2"
-            aria-disabled={isDisabled ? true : undefined}
-          >
-            ボーダー2
-          </span>
-          <span
             className="text is-lk"
             aria-disabled={isDisabled ? true : undefined}
           >
