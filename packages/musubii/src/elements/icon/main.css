@@ -135,14 +135,6 @@
   color: var(--theme-tx-3);
 }
 
-:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-bd-1 {
-  color: var(--theme-bd-1);
-}
-
-:is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-bd-2 {
-  color: var(--theme-bd-2);
-}
-
 :is(.icon, .im, .fa, .fas, .far, .fal, .fab, .material-icons).is-lk {
   color: var(--theme-lk);
 }

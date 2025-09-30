@@ -88,8 +88,6 @@ function ExampleIconColor({ modifiedClasses }: { modifiedClasses?: string }) {
         <FiHeart className={clsx("icon is-tx-1", modifiedClasses)} />
         <FiHeart className={clsx("icon is-tx-2", modifiedClasses)} />
         <FiHeart className={clsx("icon is-tx-3", modifiedClasses)} />
-        <FiHeart className={clsx("icon is-bd-1", modifiedClasses)} />
-        <FiHeart className={clsx("icon is-bd-2", modifiedClasses)} />
         <FiHeart className={clsx("icon is-lk", modifiedClasses)} />
         <span style={{ background: "var(--theme-lk)" }}>
           <FiHeart className={clsx("icon is-lk-tx", modifiedClasses)} />
