@@ -34,6 +34,10 @@
   background: var(--theme-bg-2);
 }
 
+.box.is-bg-3 {
+  background: var(--theme-bg-3);
+}
+
 .box:is(.is-bg, .is-bg-light) {
   background: var(--box-bg-light-bg);
 }

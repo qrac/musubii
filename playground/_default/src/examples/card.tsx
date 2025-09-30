@@ -5,7 +5,7 @@ import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 
-const backgrounds = ["bg-1", "bg-2"]
+const backgrounds = ["bg-1", "bg-2", "bg-3"]
 const radiuses = ["xxs", "xs", "sm", "md", "ml", "lg", "xl", "xxl"]
 
 export function ExampleCard() {

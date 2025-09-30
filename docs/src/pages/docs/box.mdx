@@ -36,8 +36,7 @@ contents list
 
 ## Background
 
-- `.is-bg-1` で背景を `var(--theme-bg-1)` で塗れます
-- `.is-bg-2` で背景を `var(--theme-bg-2)` で塗れます
+- `.is-bg-1` `.is-bg-2` `.is-bg-3` は背景を変数色で塗れます
 - `.is-bg-cover` で背景画像をいっぱいに広げられます
 - `.is-bg-contain` で背景画像を見切れないサイズにできます
 
@@ -45,6 +44,7 @@ contents list
 <div className="docs-preview">
   <div className="box is-bg-1">ボックス</div>
   <div className="box is-bg-2">ボックス</div>
+  <div className="box is-bg-3">ボックス</div>
   <div className="box is-bg-cover"
     style={{backgroundImage: "url(/favicon.png)"}}
   >ボックス</div>
@@ -57,6 +57,7 @@ contents list
 ```html
 <div class="box is-bg-1">ボックス</div>
 <div class="box is-bg-2">ボックス</div>
+<div class="box is-bg-3">ボックス</div>
 <div class="box is-bg-cover">ボックス</div>
 <div class="box is-bg-contain">ボックス</div>
 ```

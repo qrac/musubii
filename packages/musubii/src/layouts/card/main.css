@@ -35,6 +35,10 @@
   background: var(--theme-bg-2);
 }
 
+.card.is-bg-3 {
+  background: var(--theme-bg-3);
+}
+
 .card:is(.is-bg, .is-bg-light) {
   background: var(--card-bg-light-bg);
 }

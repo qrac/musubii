@@ -7,7 +7,7 @@ import { DemoRadios } from "../demos/radio"
 import { DemoCheckbox } from "../demos/checkbox"
 import { splitClasses } from "../functions/class"
 
-const backgrounds = ["bg-1", "bg-2"]
+const backgrounds = ["bg-1", "bg-2", "bg-3"]
 const outlines = ["all", "top", "right", "bottom", "left"]
 const angles = [
   "right",
