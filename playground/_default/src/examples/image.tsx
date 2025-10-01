@@ -3,13 +3,13 @@ import clsx from "clsx"
 
 import { DemoFieldsets, DemoFieldset } from "../demos/fieldset"
 import { DemoRadios } from "../demos/radio"
-import { DemoCheckbox } from "../demos/checkbox"
 
 const aspects = ["16x9", "3x2", "4x3", "1x1"]
+const objectFits = ["contain", "cover"]
 
-export function ExampleIframe() {
+export function ExampleImage() {
   const [aspect, setAspect] = useState<string | undefined>()
-  const [isCover, setIsCover] = useState<boolean>(false)
+  const [objectFit, setObjectFit] = useState<string | undefined>()
   return (
     <div className="demo-boxes">
       <div className="demo-box is-settings">
@@ -22,29 +22,22 @@ export function ExampleIframe() {
             />
           </DemoFieldset>
           <DemoFieldset title="other">
-            <DemoCheckbox
-              label="cover"
-              checkedValue={isCover}
-              onChange={setIsCover}
+            <DemoRadios
+              patterns={[undefined, ...objectFits]}
+              checkedValue={objectFit}
+              onChange={setObjectFit}
             />
           </DemoFieldset>
         </DemoFieldsets>
       </div>
       <div className="demo-box">
-        <div
-          className={clsx(
-            "iframe",
-            aspect && `is-aspect-${aspect}`,
-            isCover && "is-cover"
-          )}
-          style={isCover ? { height: "400px" } : undefined}
-        >
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/llQkSr6fzXg"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+        <div className={clsx("box is-bg-3", aspect && `is-aspect-${aspect}`)}>
+          <img
+            className={clsx("image", objectFit && `is-${objectFit}`)}
+            src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png"
+            width={2400}
+            height={1084}
+            alt="MUSIBii site in dark theme"
           />
         </div>
       </div>

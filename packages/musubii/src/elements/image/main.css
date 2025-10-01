@@ -1,0 +1,14 @@
+.image:is(.is-contain, .is-cover) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image.is-contain {
+  object-fit: contain;
+}
+
+.image.is-cover {
+  object-fit: cover;
+}

@@ -26,6 +26,7 @@
 @import "./elements/form/label.css";
 @import "./elements/form/radio.css";
 @import "./elements/form/checkbox.css";
+@import "./elements/image/main.css";
 @import "./elements/iframe/main.css";
 @import "./elements/wysiwyg/main.css";
 @import "./utilities/display/main.css";

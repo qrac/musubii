@@ -19,6 +19,7 @@ import { ExampleBadge } from "./examples/badge"
 import { ExampleList } from "./examples/list"
 import { ExampleTable } from "./examples/table"
 import { ExampleForm } from "./examples/form"
+import { ExampleImage } from "./examples/image"
 import { ExampleIframe } from "./examples/iframe"
 import { ExampleIcon } from "./examples/icon"
 import { ExampleAlert } from "./examples/alert"
@@ -39,6 +40,7 @@ const examples = [
   "list",
   "table",
   "form",
+  "image",
   "iframe",
   "wysiwyg",
 ] as const
@@ -146,6 +148,11 @@ export default function App() {
             <ExampleText />
           </div>
         )}
+        {example === "icon" && (
+          <div className="demo-section">
+            <ExampleIcon />
+          </div>
+        )}
         {example === "button" && (
           <div className="demo-section">
             <ExampleButton />
@@ -154,6 +161,11 @@ export default function App() {
         {example === "badge" && (
           <div className="demo-section">
             <ExampleBadge />
+          </div>
+        )}
+        {example === "alert" && (
+          <div className="demo-section">
+            <ExampleAlert />
           </div>
         )}
         {example === "list" && (
@@ -171,19 +183,14 @@ export default function App() {
             <ExampleForm />
           </div>
         )}
+        {example === "image" && (
+          <div className="demo-section">
+            <ExampleImage />
+          </div>
+        )}
         {example === "iframe" && (
           <div className="demo-section">
             <ExampleIframe />
-          </div>
-        )}
-        {example === "icon" && (
-          <div className="demo-section">
-            <ExampleIcon />
-          </div>
-        )}
-        {example === "alert" && (
-          <div className="demo-section">
-            <ExampleAlert />
           </div>
         )}
         {example === "wysiwyg" && (

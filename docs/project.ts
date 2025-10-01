@@ -147,6 +147,10 @@ export const site = {
             path: "/docs/form",
           },
           {
+            title: "Image",
+            path: "/docs/image",
+          },
+          {
             title: "iframe",
             path: "/docs/iframe",
           },

@@ -1,0 +1,102 @@
+---
+title: Image
+layout: docs
+---
+
+# Image
+
+画像を装飾するエレメント CSS。
+
+## Table of Contents
+
+contents list
+
+## Basic
+
+- `.image` がベースとなります
+- `.image` 単体に付与されているスタイルはありません
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <img
+    className="image"
+    src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png"
+    width={2400}
+    height={1084}
+    alt="MUSIBii site in dark theme"
+  />
+</div>
+
+{/* prettier-ignore */}
+```html
+<img class="image" src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png" width="2400" height="1084" alt="MUSIBii site in dark theme" />
+```
+
+## Object Fit
+
+- 親要素に [Box](/docs/box) を設置し縦横比を [Aspect](/docs/aspect) で指定します
+- `.is-contain` で画像全体が表示されるように調整されます
+- `.is-cover` で親要素いっぱいに表示されます
+
+{/* prettier-ignore */}
+<div className="docs-preview">
+  <div className="box is-flex is-gap-md">
+    <div className="box is-bg-3 is-aspect-3x2 is-flex-0">
+      <img
+        className="image is-contain"
+        src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png"
+        width={2400}
+        height={1084}
+        alt="MUSIBii site in dark theme"
+      />
+    </div>
+    <div className="box is-bg-3 is-aspect-3x2 is-flex-0">
+      <img
+        className="image is-cover"
+        src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png"
+        width={2400}
+        height={1084}
+        alt="MUSIBii site in dark theme"
+      />
+    </div>
+  </div>
+</div>
+
+{/* prettier-ignore */}
+```html
+<div class="box is-bg-3 is-aspect-3x2 is-flex-0">
+  <img
+    class="image is-contain"
+    src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png"
+    width="2400"
+    height="1084"
+    alt="MUSIBii site in dark theme"
+  />
+</div>
+
+<div class="box is-bg-3 is-aspect-3x2 is-flex-0">
+  <img
+    class="image is-cover"
+    src="https://i.gyazo.com/a21c7b01996b7640ff84a1d6788135ea.png"
+    width="2400"
+    height="1084"
+    alt="MUSIBii site in dark theme"
+  />
+</div>
+```
+
+## Variables
+
+上書きできる変数は以下の通りです。
+
+```css
+/* None */
+```
+
+## Import
+
+PostCSS で読み込む場合の各パスは以下となります。
+
+```css
+@import "musubii/src/elements/image/main.css";
+```
