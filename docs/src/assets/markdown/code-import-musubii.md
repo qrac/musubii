@@ -28,6 +28,7 @@
 @import "musubii/src/elements/form/label.css";
 @import "musubii/src/elements/form/radio.css";
 @import "musubii/src/elements/form/checkbox.css";
+@import "musubii/src/elements/image/main.css";
 @import "musubii/src/elements/iframe/main.css";
 @import "musubii/src/elements/wysiwyg/main.css";
 @import "musubii/src/utilities/display/main.css";
@@ -46,6 +47,7 @@
 @import "musubii/src/utilities/negative/main.css";
 @import "musubii/src/utilities/padding/main.css";
 @import "musubii/src/utilities/radius/main.css";
+@import "musubii/src/utilities/aspect/main.css";
 @import "musubii/src/utilities/size/main.css";
 @import "musubii/src/utilities/size/fablet.css";
 @import "musubii/src/utilities/size/tablet.css";

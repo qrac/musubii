@@ -36,6 +36,11 @@ export const site = {
       title: "Versions",
       items: [
         {
+          title: "v8.6.0",
+          path: "https://musubii-archive-v8-6-0.netlify.app/",
+          externalLink: true,
+        },
+        {
           title: "v7.1.0",
           path: "https://musubii-archive-v7-1-0.netlify.app/",
           externalLink: true,
