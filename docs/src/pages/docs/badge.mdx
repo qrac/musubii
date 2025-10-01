@@ -115,13 +115,20 @@ contents list
 
 ## Shape
 
+- `.is-slim` でスリムなバッジにします
 - `.is-round` で角を完全に丸くできます
 - `.is-circle` で正円バッジにします
 - `.is-square` で正方形バッジにします
 
 {/* prettier-ignore */}
 <div className="docs-preview">
-  <div className="box is-flex is-gap-xs">
+  <div className="box is-flex is-top is-gap-xs">
+    <span className="badge is-plain is-primary is-slim">
+      <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 30 A 20 20 0 0 1 50 30 A 20 20 0 0 1 90 30 Q 90 60 50 90 Q 10 60 10 30 Z" />
+      </svg>
+      バッジ
+    </span>
     <span className="badge is-plain is-primary is-round">バッジ</span>
     <span className="badge is-plain is-primary is-circle">
       <svg className="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

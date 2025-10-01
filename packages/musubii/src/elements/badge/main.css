@@ -15,6 +15,9 @@
   --badge-outline-color: inherit;
   --badge-melt-bg: transparent;
   --badge-melt-color: inherit;
+  --badge-slim-gap: 0.125em;
+  --badge-slim-padding: 0.125em 0.25em;
+  --badge-slim-line-height: 1.125;
   --badge-square-size: calc(1.75em + 1px * 2);
   --badge-strong-font-weight: 700;
   --badge-disabled-bg: var(--theme-disabled);
@@ -116,6 +119,12 @@
 .badge.is-melt {
   background: var(--badge-melt-bg);
   color: var(--badge-melt-color);
+}
+
+.badge.is-slim {
+  gap: var(--badge-slim-gap);
+  padding: var(--badge-slim-padding);
+  line-height: var(--badge-slim-line-height);
 }
 
 .badge:is(.is-round, .is-circle) {

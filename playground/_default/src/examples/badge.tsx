@@ -25,7 +25,7 @@ const colorSchemes = [
   "warning",
   "danger",
 ]
-const shapes = ["round", "square", "circle"]
+const shapes = ["slim", "round", "square", "circle"]
 
 export function ExampleBadge() {
   const [DOMElement, setDOMElements] =
