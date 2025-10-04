@@ -119,7 +119,7 @@ export default function App() {
           </div>
         )}
         {example === "section" && (
-          <div className="demo-section is-100vw">
+          <div className="demo-section">
             <ExampleSection />
           </div>
         )}

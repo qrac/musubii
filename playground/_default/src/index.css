@@ -39,21 +39,6 @@
   padding: 0 16px;
 }
 
-.demo-section.is-100vw {
-  max-width: none;
-  padding: 0;
-}
-
-.demo-section.is-100vw > .demo-boxes {
-  border-right: none;
-  border-left: none;
-  border-radius: 0;
-}
-
-.demo-section.is-100vw > .demo-boxes > .demo-box {
-  padding: 20px 0;
-}
-
 .demo-boxes {
   position: relative;
   border: 1px solid var(--theme-bd-1);
@@ -71,6 +56,12 @@
   background: var(--theme-bg-1);
   overflow-y: auto;
   z-index: 1;
+}
+
+.demo-box.is-100vw {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 20px 0;
 }
 
 .demo-box:not(:last-child) {

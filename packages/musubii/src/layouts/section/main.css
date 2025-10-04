@@ -5,6 +5,18 @@
   --section-inner-wide-width: 1140px;
 }
 
+.section.is-bg-1 {
+  background: var(--theme-bg-1);
+}
+
+.section.is-bg-2 {
+  background: var(--theme-bg-2);
+}
+
+.section.is-bg-3 {
+  background: var(--theme-bg-3);
+}
+
 .section > .inner {
   margin-inline: auto;
 }
