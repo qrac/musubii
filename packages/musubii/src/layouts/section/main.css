@@ -17,6 +17,11 @@
   background: var(--theme-bg-3);
 }
 
+.section,
+.section > .inner {
+  position: relative;
+}
+
 .section > .inner {
   margin-inline: auto;
 }
