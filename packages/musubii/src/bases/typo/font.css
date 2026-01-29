@@ -1,7 +1,69 @@
+@font-face {
+  font-family: "Noto Sans JP";
+  src: local("Noto Sans JP");
+  font-weight: 100;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: local("Noto Sans JP");
+  font-weight: 300;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: local("Noto Sans JP");
+  font-weight: 350;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: local("Noto Sans JP");
+  font-weight: 400;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: local("Noto Sans JP");
+  font-weight: 500;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: local("Noto Sans JP");
+  font-weight: 700;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: local("Noto Sans JP");
+  font-weight: 900;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+@font-face {
+  font-family: "Meiryo";
+  src: local("Meiryo");
+  font-weight: 400;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+@font-face {
+  font-family: "Meiryo";
+  src: local("Meiryo-Bold");
+  font-weight: 700;
+  ascent-override: 100%;
+  descent-override: 20%;
+}
+
 :root {
-  --font-sans:
-    "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Noto Sans JP", Meiryo,
-    sans-serif;
+  --font-sans: "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
   --font-sans-en:
     system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
