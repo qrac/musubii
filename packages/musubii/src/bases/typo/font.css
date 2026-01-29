@@ -1,13 +1,14 @@
 :root {
-  --font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial,
-    "Noto Sans JP", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --font-sans-en: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", YuMincho,
-    serif;
+  --font-sans:
+    "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Noto Sans JP", Meiryo,
+    sans-serif;
+  --font-sans-en:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-serif:
+    "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", YuMincho, serif;
   --font-serif-en: Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  --font-mono:
+    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
 }
