@@ -13,12 +13,17 @@
 }
 
 html {
-  overflow-wrap: anywhere;
-  line-break: strict;
   line-height: 1.5;
+  line-break: strict;
   tab-size: 4;
+  text-autospace: normal;
+  overflow-wrap: anywhere;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+:where(html) :is(input, textarea, pre, time) {
+  text-autospace: no-autospace;
 }
 
 body {
