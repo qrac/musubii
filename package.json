@@ -18,26 +18,25 @@
     "play": "vite dev ./playground/_default --host",
     "play-build": "vite build ./playground/_default",
     "play-preview": "vite preview ./playground/_default --host",
-    "up": "npx npm-check-updates --deep",
-    "up:u": "npx npm-check-updates --deep -u",
+    "up": "npx npm-check-updates --deep --cooldown 7",
+    "up:u": "npx npm-check-updates --deep --cooldown 7 -u",
     "rev": "npx npm-replace-versions",
     "release": "run-s release:*",
     "release:main": "cd ./packages/musubii && npm publish"
   },
   "devDependencies": {
-    "@types/node": "^24.9.1",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "@vitejs/plugin-react": "^5.0.4",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
     "clsx": "^2.1.1",
-    "esbuild": "^0.25.11",
-    "minista": "^4.0.0-alpha.17",
+    "esbuild": "^0.27.4",
+    "minista": "^4.0.0",
     "npm-run-all2": "^8.0.4",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-icons": "^5.5.0",
-    "rolldown-vite": "^7.1.19",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-icons": "^5.6.0",
     "typescript": "^5.9.3",
-    "vite": "npm:rolldown-vite@latest"
+    "vite": "^8.0.0"
   }
 }
